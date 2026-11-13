@@ -1,0 +1,56 @@
+{
+ "puppet": "frog",
+ "size": 0.03,
+ "metres_per_pixel": 0.00010273972602739725,
+ "rest": {
+  "throat": 0
+ },
+ "versions": [
+  "day",
+  "evening",
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/frog/body.png",
+   "size": [
+    0.03318,
+    0.03
+   ],
+   "pivot": [
+    0.5,
+    0.0
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "throat",
+   "png": "cards/puppets/frog/throat.png",
+   "size": [
+    0.01531,
+    0.00914
+   ],
+   "pivot": [
+    0.4832,
+    0.8652
+   ],
+   "parent": "body",
+   "attach": [
+    0.4799,
+    0.5548
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": 0,
+    "max": 40
+   }
+  }
+ ]
+}

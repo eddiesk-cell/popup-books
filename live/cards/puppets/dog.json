@@ -1,0 +1,78 @@
+{
+ "puppet": "dog",
+ "size": 0.07,
+ "metres_per_pixel": 0.00013325981475933047,
+ "rest": {
+  "head": 0,
+  "tail": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/dog/body.png",
+   "size": [
+    0.07169,
+    0.05863
+   ],
+   "pivot": [
+    0.5,
+    0.0068
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/dog/head.png",
+   "size": [
+    0.04704,
+    0.04091
+   ],
+   "pivot": [
+    0.1631,
+    0.5839
+   ],
+   "parent": "body",
+   "attach": [
+    0.8963,
+    0.806
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -15,
+    "max": 15
+   }
+  },
+  {
+   "name": "tail",
+   "png": "cards/puppets/dog/tail.png",
+   "size": [
+    0.03238,
+    0.03438
+   ],
+   "pivot": [
+    0.3602,
+    0.2298
+   ],
+   "parent": "body",
+   "attach": [
+    0.0751,
+    0.7422
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -40,
+    "max": 60
+   }
+  }
+ ]
+}

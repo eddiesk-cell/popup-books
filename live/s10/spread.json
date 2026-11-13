@@ -1,0 +1,1135 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "day",
+  "lights": [
+   {
+    "name": "sun",
+    "type": "area",
+    "at": [
+     -1.6,
+     1.4,
+     2.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 210,
+    "color": [
+     1.0,
+     0.93,
+     0.82
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "sky",
+    "type": "area",
+    "at": [
+     1.4,
+     2.4,
+     2.0
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     0.65,
+     0.8,
+     1.0
+    ],
+    "size": 3.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.2,
+     -2.6,
+     1.2
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 22,
+    "color": [
+     1.0,
+     0.95,
+     0.9
+    ],
+    "size": 3.0
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "bobo",
+   "model": "assets/kapi-bobo.glb",
+   "height": 0.12,
+   "at": [
+    0.45,
+    0.06,
+    -0.03
+   ],
+   "rot": -89,
+   "face": -90,
+   "clip": "Idle",
+   "bob": true,
+   "drift": 0.006,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "kapi",
+   "model": "assets/kapi.glb",
+   "height": 0.15,
+   "at": [
+    0.03,
+    0.077,
+    0.228
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "lulu",
+   "model": "assets/kapi-lulu.glb",
+   "height": 0.11,
+   "at": [
+    0.8,
+    -0.01,
+    -0.15
+   ],
+   "rot": -81,
+   "face": -90,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "fruit0",
+  "fruit1",
+  "fruit2",
+  "fruit3",
+  "fruit4"
+ ],
+ "touch": [
+  "kapi",
+  "bobo",
+  "lulu",
+  "tree-1",
+  "tree1",
+  "jamun-branch-1",
+  "jamun-branch1",
+  "backdrop-village-day",
+  "river-grass",
+  "river-grass-2",
+  "flowers",
+  "hyacinth",
+  "reed-clump",
+  "log",
+  "lilypads",
+  "jamun-fallen",
+  "grass-near",
+  "pebbles",
+  "frog-stone",
+  "ferns",
+  "butterfly0",
+  "butterfly1",
+  "butterfly2",
+  "fish0",
+  "fish1"
+ ],
+ "acts": [
+  {
+   "line": "10.1",
+   "who": "lulu",
+   "do": "rise",
+   "word": "river",
+   "by": 0.12,
+   "secs": 0.8
+  },
+  {
+   "line": "10.1",
+   "who": "lulu",
+   "do": "swim",
+   "word": "river",
+   "after": "rise",
+   "to": [
+    0.49,
+    -0.06,
+    -0.03
+   ],
+   "stop": 0,
+   "wait": true
+  },
+  {
+   "line": "10.1",
+   "word": "river",
+   "who": "lulu",
+   "do": "rise",
+   "after": "swim",
+   "by": 0.03,
+   "secs": 0.8
+  },
+  {
+   "line": "10.1",
+   "word": "river",
+   "who": "lulu",
+   "do": "swim",
+   "after": "rise",
+   "to": [
+    0.28,
+    -0.09,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.6,
+    -0.25,
+    0.0
+   ],
+   "wait": true
+  },
+  {
+   "line": "10.1",
+   "who": "bobo",
+   "do": "swim",
+   "word": "came",
+   "to": [
+    0.55,
+    0.06,
+    -0.03
+   ],
+   "stop": 0,
+   "face": "lulu"
+  },
+  {
+   "line": "10.1",
+   "who": "kapi",
+   "do": "face",
+   "word": "came",
+   "face": [
+    0.3,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "10.2",
+   "word": "Bobo",
+   "who": "lulu",
+   "do": "face",
+   "face": [
+    0.6,
+    -0.25,
+    0.0
+   ]
+  },
+  {
+   "line": "10.2",
+   "who": "lulu",
+   "do": "clip",
+   "word": "Bobo",
+   "clip": "Snap",
+   "then": "Idle"
+  },
+  {
+   "line": "10.2",
+   "who": "bobo",
+   "do": "rise",
+   "word": "said",
+   "by": -0.015,
+   "secs": 1.0
+  },
+  {
+   "line": "10.2",
+   "who": "kapi",
+   "do": "face",
+   "word": "seed",
+   "face": "lulu"
+  },
+  {
+   "line": "10.2",
+   "who": "bobo",
+   "do": "rise",
+   "word": "medicine",
+   "by": 0.015,
+   "secs": 0.8
+  },
+  {
+   "line": "10.3",
+   "who": "bobo",
+   "do": "face",
+   "word": "looked",
+   "face": "kapi"
+  },
+  {
+   "line": "10.3",
+   "who": "kapi",
+   "do": "face",
+   "word": "Kapi looked",
+   "face": [
+    0.55,
+    -0.3,
+    0.0
+   ]
+  },
+  {
+   "line": "10.3",
+   "who": "kapi",
+   "do": "face",
+   "word": "laugh",
+   "face": [
+    0.3,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "10.3",
+   "who": "bobo",
+   "do": "face",
+   "word": "laugh",
+   "face": [
+    0.55,
+    -1.5,
+    0.0
+   ]
+  },
+  {
+   "line": "10.3",
+   "who": "lulu",
+   "do": "face",
+   "word": "laugh",
+   "face": [
+    0.28,
+    -1.5,
+    0.0
+   ]
+  },
+  {
+   "line": "10.3",
+   "who": "bobo",
+   "do": "clip",
+   "word": "laugh",
+   "after": "face",
+   "clip": "Laugh",
+   "then": "Idle"
+  },
+  {
+   "line": "10.3",
+   "who": "lulu",
+   "do": "clip",
+   "word": "laugh",
+   "after": "face",
+   "clip": "Laugh",
+   "then": "Idle"
+  },
+  {
+   "line": "10.3",
+   "who": "kapi",
+   "do": "clip",
+   "word": "laugh",
+   "after": "face",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "10.4",
+   "who": "kapi",
+   "do": "face",
+   "word": "Kapi",
+   "face": [
+    0.3,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "10.4",
+   "who": "kapi",
+   "do": "clip",
+   "word": "seeds",
+   "after": "face",
+   "clip": "Throw",
+   "then": "Idle",
+   "to": "lulu"
+  },
+  {
+   "line": "10.4",
+   "who": "kapi",
+   "do": "clip",
+   "word": "down",
+   "after": "face",
+   "clip": "Throw",
+   "then": "Idle",
+   "to": "lulu"
+  },
+  {
+   "line": "10.4",
+   "who": "lulu",
+   "do": "face",
+   "word": "dropped",
+   "face": "kapi"
+  },
+  {
+   "line": "10.4",
+   "word": "little",
+   "who": "lulu",
+   "do": "clip",
+   "clip": "Snap",
+   "then": "Idle"
+  },
+  {
+   "line": "10.4",
+   "who": "lulu",
+   "do": "clip",
+   "word": "Lulu",
+   "clip": "Snap",
+   "then": "Idle"
+  },
+  {
+   "line": "10.5",
+   "word": "Soon",
+   "who": "lulu",
+   "do": "face",
+   "face": [
+    0.28,
+    -1.5,
+    0.0
+   ]
+  },
+  {
+   "line": "10.5",
+   "who": "lulu",
+   "do": "clip",
+   "word": "well",
+   "clip": "Laugh",
+   "then": "Idle"
+  },
+  {
+   "line": "10.5",
+   "who": "kapi",
+   "do": "clip",
+   "word": "friends",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "10.5",
+   "who": "bobo",
+   "do": "clip",
+   "word": "friends",
+   "clip": "Laugh",
+   "then": "Idle"
+  }
+ ],
+ "ambient": {
+  "clouds": 3,
+  "birds": {
+   "count": 4,
+   "every": 15,
+   "kind": "bird",
+   "on": [
+    [
+     "10.5",
+     "forever"
+    ]
+   ]
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "grass-near"
+   }
+  ],
+  "motes": {
+   "over": "water",
+   "count": 50,
+   "color": [
+    1,
+    0.85,
+    0.55
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.05
+  },
+  "fog": 0.25,
+  "shadows": 0.15,
+  "shafts": 4,
+  "smoke": [
+   "backdrop-village-day"
+  ],
+  "drift": {
+   "card": "kapi/leaf",
+   "count": 3,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.35,
+   "flow": 0.012
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "owlet",
+    "puppet": "owl",
+    "at": [
+     -0.12,
+     0.1225,
+     0.345
+    ],
+    "seen_from": "left",
+    "pose": "sleep",
+    "move": "wake"
+   },
+   {
+    "name": "jamun-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.3,
+     -0.5,
+     0.0
+    ],
+    "seen_from": "low"
+   },
+   {
+    "name": "leaf-frog",
+    "puppet": "frog",
+    "at": "lilypads",
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": null,
+ "backdrop": [
+  "backdrop-village-day"
+ ],
+ "title": "The Heart of the Fruit",
+ "shots": {
+  "open": {
+   "from": [
+    1.22,
+    -1.93,
+    0.63
+   ],
+   "look": [
+    0.4,
+    0.1,
+    0.08
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "10.1": {
+   "target": "lulu",
+   "framing": "medium",
+   "move": "follow",
+   "focus": "lulu",
+   "seconds": 5,
+   "yaw": 15
+  },
+  "10.2": {
+   "target": [
+    0.42,
+    0.0,
+    0.05
+   ],
+   "framing": "medium",
+   "move": "push",
+   "focus": "lulu",
+   "seconds": 6
+  },
+  "10.3": "reading",
+  "10.4": "reading",
+  "10.5": "reading",
+  "game": "reading",
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "buffalo",
+   "puppet": "buffalo",
+   "layer": "back",
+   "at": [
+    0.62,
+    0.28,
+    0
+   ],
+   "routine": [
+    [
+     "chew",
+     3
+    ],
+    [
+     "flick",
+     0.8
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "lift",
+     1.5,
+     "buffalo-snort"
+    ],
+    [
+     "egret-peck",
+     1
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "lift",
+    "buffalo-moo"
+   ],
+   "cues": [
+    [
+     "10.5",
+     "friends",
+     "lift"
+    ]
+   ]
+  },
+  {
+   "name": "pot-carrier",
+   "puppet": "pot-carrier",
+   "layer": "back",
+   "at": [
+    -0.45,
+    0.28,
+    0
+   ],
+   "routine": [
+    [
+     "dip",
+     2,
+     "pot-fill"
+    ],
+    [
+     "lift",
+     1.5
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "look",
+     1.5
+    ],
+    [
+     "wait",
+     8
+    ]
+   ],
+   "tap": [
+    "wave",
+    "pot-fill"
+   ],
+   "cues": [
+    [
+     "10.5",
+     "friends",
+     "wave"
+    ]
+   ]
+  },
+  {
+   "name": "duck",
+   "puppet": "duck",
+   "layer": "middle",
+   "at": [
+    -0.55,
+    0.05,
+    0
+   ],
+   "path": [
+    [
+     -0.55,
+     0.05,
+     0
+    ],
+    [
+     -0.32,
+     0.1,
+     0
+    ],
+    [
+     -0.48,
+     0.16,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "go",
+     3
+    ],
+    [
+     "dabble",
+     1.2
+    ],
+    [
+     "wait",
+     2
+    ],
+    [
+     "quack",
+     0.6,
+     "duck-quack"
+    ],
+    [
+     "go",
+     3
+    ]
+   ],
+   "tap": [
+    "quack",
+    "duck-quack"
+   ],
+   "cues": [
+    [
+     "10.3",
+     "laugh",
+     "quack"
+    ]
+   ]
+  },
+  {
+   "name": "ducklings",
+   "puppet": "duckling",
+   "layer": "middle",
+   "at": [
+    -0.61,
+    0.03,
+    0
+   ],
+   "count": 3,
+   "trail": 0.05,
+   "path": [
+    [
+     -0.61,
+     0.03,
+     0
+    ],
+    [
+     -0.38,
+     0.08,
+     0
+    ],
+    [
+     -0.54,
+     0.14,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "go",
+     3,
+     "duckling-peep"
+    ],
+    [
+     "bob",
+     2
+    ],
+    [
+     "tilt",
+     0.5
+    ],
+    [
+     "go",
+     3
+    ]
+   ],
+   "tap": [
+    "tilt",
+    "duckling-peep"
+   ]
+  },
+  {
+   "name": "parakeet-1",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "at": [
+    0.11,
+    0.1216,
+    0.298
+   ],
+   "path": [
+    [
+     0.11,
+     0.1216,
+     0.298
+    ],
+    [
+     0.13,
+     0.1234,
+     0.3
+    ]
+   ],
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "cues": [
+    [
+     "10.5",
+     "forever",
+     "flutter"
+    ],
+    [
+     "game:won",
+     "",
+     "flutter"
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "parakeet-2",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "at": [
+    0.19,
+    0.1286,
+    0.324
+   ],
+   "path": [
+    [
+     0.19,
+     0.1286,
+     0.324
+    ],
+    [
+     0.205,
+     0.1299,
+     0.333
+    ]
+   ],
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "cues": [
+    [
+     "10.5",
+     "forever",
+     "flutter"
+    ],
+    [
+     "game:won",
+     "",
+     "flutter"
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "fisherman",
+   "puppet": "fisher-boat",
+   "layer": "back",
+   "at": [
+    0.85,
+    0.28,
+    0
+   ],
+   "path": [
+    [
+     0.7,
+     0.28,
+     0
+    ],
+    [
+     -0.25,
+     0.28,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "pole",
+     4,
+     "oar-splash"
+    ],
+    [
+     "go",
+     22
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "go",
+     22
+    ],
+    [
+     "turn",
+     0.3
+    ]
+   ],
+   "tap": [
+    "hat",
+    "boatman-hum"
+   ],
+   "cues": [
+    [
+     "10.5",
+     "friends",
+     "wave"
+    ]
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.2,
+  "gust": 0.5,
+  "gust_every": [
+   10,
+   16
+  ],
+  "dir": -1,
+  "sway": [
+   [
+    "tree",
+    1
+   ],
+   [
+    "jamun-branch",
+    2.5
+   ],
+   [
+    "reed-clump",
+    5
+   ],
+   [
+    "grass-near",
+    4
+   ],
+   [
+    "ferns",
+    3
+   ],
+   [
+    "hyacinth",
+    2
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "10.1",
+    "light": "sun",
+    "level": 0.95,
+    "tint": [
+     1,
+     0.82,
+     0.6
+    ],
+    "at": [
+     2.0,
+     1.4,
+     1.2
+    ],
+    "seconds": 3
+   },
+   {
+    "line": "10.3",
+    "word": "laugh",
+    "light": "sun",
+    "level": 1.1,
+    "tint": [
+     1,
+     0.85,
+     0.62
+    ],
+    "seconds": 1.5
+   },
+   {
+    "line": "10.5",
+    "word": "well",
+    "light": "sun",
+    "level": 1.2,
+    "tint": [
+     1,
+     0.8,
+     0.55
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "10.5",
+    "word": "forever",
+    "light": "fill",
+    "level": 1.3,
+    "tint": [
+     1,
+     0.88,
+     0.7
+    ],
+    "seconds": 2
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-slow",
+    0.26
+   ],
+   [
+    "birds-afternoon",
+    0.18
+   ],
+   [
+    "village-day",
+    0.08
+   ],
+   [
+    "leaves-breeze",
+    0.1
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "act:lulu:swim": [
+    "water-swish",
+    0.3
+   ],
+   "line:10.3:laugh": [
+    "laugh-trio",
+    0.35
+   ],
+   "game:fruit": [
+    "seed-plop",
+    0.4
+   ],
+   "game:won": [
+    "cheer-chime",
+    0.45
+   ],
+   "tap:tree": [
+    "leaves-shake",
+    0.4
+   ],
+   "tap:kapi": [
+    "kapi-giggle",
+    0.3
+   ],
+   "tap:bobo": [
+    "tail-splash",
+    0.35
+   ]
+  }
+ },
+ "exit_frames": 73
+}

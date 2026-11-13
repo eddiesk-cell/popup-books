@@ -1,0 +1,96 @@
+{
+ "kapi": {
+  "Climb Up": {
+   "rise": 0.0447,
+   "cycle": 1.3667,
+   "loop": false,
+   "height": 0.15
+  },
+  "Walk": {
+   "speed": 0.0687,
+   "speed_h": 0.458,
+   "cycle": 1.3,
+   "loop": true,
+   "height": 0.15
+  },
+  "Run": {
+   "speed": 0.2665,
+   "speed_h": 1.7764,
+   "cycle": 0.5667,
+   "loop": true,
+   "height": 0.15
+  },
+  "Sneak": {
+   "speed": 0.0321,
+   "speed_h": 0.2138,
+   "cycle": 2.08,
+   "loop": true,
+   "height": 0.15
+  },
+  "Step Back": {
+   "speed": 0.0491,
+   "speed_h": 0.3271,
+   "cycle": 1.82,
+   "loop": true,
+   "height": 0.15,
+   "back": true
+  }
+ },
+ "mali": {
+  "Walk": {
+   "speed": 0.0833,
+   "speed_h": 0.502,
+   "cycle": 1.3,
+   "loop": true,
+   "height": 0.166
+  },
+  "Run": {
+   "speed": 0.3183,
+   "speed_h": 1.9176,
+   "cycle": 0.5667,
+   "loop": true,
+   "height": 0.166
+  },
+  "Climb Up": {
+   "rise": 0.0561,
+   "cycle": 1.3667,
+   "loop": false,
+   "height": 0.166
+  },
+  "Sneak": {
+   "speed": 0.0373,
+   "speed_h": 0.2245,
+   "cycle": 2.08,
+   "loop": true,
+   "height": 0.166
+  },
+  "Step Back": {
+   "speed": 0.0595,
+   "speed_h": 0.3586,
+   "cycle": 1.82,
+   "loop": true,
+   "height": 0.166,
+   "back": true
+  }
+ },
+ "bobo": {
+  "Worry": {
+   "cycle": 4.0,
+   "loop": true
+  },
+  "Worry Talk": {
+   "cycle": 2.0,
+   "loop": true
+  }
+ },
+ "lulu": {
+  "Worry": {
+   "cycle": 4.0,
+   "loop": true
+  },
+  "Worry Talk": {
+   "cycle": 2.0,
+   "loop": true
+  }
+ }
+}

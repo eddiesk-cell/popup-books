@@ -1,0 +1,854 @@
+{
+ "title": "Kapi and the Crocodile",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "kapi": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 4
+  },
+  "bobo": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -3
+  },
+  "lulu": {
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": 2
+  }
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Jamun Tree",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "By a wide, slow river, there was a tall jamun tree.",
+     "say": [
+      [
+       "narrator",
+       "By a wide, slow river, there was a tall jamun tree."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Its fruit was small, purple and very sweet.",
+     "say": [
+      [
+       "narrator",
+       "Its fruit was small, purple and very sweet."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "A little monkey named Kapi lived in the tree.",
+     "say": [
+      [
+       "narrator",
+       "A little monkey named Kapi lived in the tree."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "He ate jamuns for breakfast, jamuns for lunch, and jamuns for dinner!",
+     "say": [
+      [
+       "narrator",
+       "He ate jamuns for breakfast, jamuns for lunch, and jamuns for dinner!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "A New Friend",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "One morning, a big crocodile swam up to the tree. His name was Bobo.",
+     "say": [
+      [
+       "narrator",
+       "One morning, a big crocodile swam up to the tree. His name was Bobo."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "He looked hungry and a little lonely.",
+     "say": [
+      [
+       "narrator",
+       "He looked hungry and a little lonely."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "\"Hello!\" said Kapi. \"Would you like some fruit?\"",
+     "say": [
+      [
+       "kapi",
+       "Hello!"
+      ],
+      [
+       "narrator",
+       "said Kapi."
+      ],
+      [
+       "kapi",
+       "Would you like some fruit?"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Bobo ate one jamun. \"Mmm! Thank you!\" he said with a big smile.",
+     "say": [
+      [
+       "narrator",
+       "Bobo ate one jamun."
+      ],
+      [
+       "bobo",
+       "Mmm! Thank you!"
+      ],
+      [
+       "narrator",
+       "he said with a big smile."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Friends Every Day",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Every day, Bobo came to the tree, and every day, Kapi shared his fruit.",
+     "say": [
+      [
+       "narrator",
+       "Every day, Bobo came to the tree, and every day, Kapi shared his fruit."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "They told stories. They watched the birds. They laughed and laughed.",
+     "say": [
+      [
+       "narrator",
+       "They told stories. They watched the birds. They laughed and laughed."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Kapi and Bobo became the best of friends.",
+     "say": [
+      [
+       "narrator",
+       "Kapi and Bobo became the best of friends."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Lulu at Home",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "One evening, Bobo took some jamuns home to his wife, Lulu.",
+     "say": [
+      [
+       "narrator",
+       "One evening, Bobo took some jamuns home to his wife, Lulu."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Lulu was ill. She felt hot and tired.",
+     "say": [
+      [
+       "narrator",
+       "Lulu was ill. She felt hot and tired."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "\"These are from my friend Kapi,\" said Bobo.",
+     "say": [
+      [
+       "bobo",
+       "These are from my friend Kapi,"
+      ],
+      [
+       "narrator",
+       "said Bobo."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Lulu ate the fruit and smiled a little.",
+     "say": [
+      [
+       "narrator",
+       "Lulu ate the fruit and smiled a little."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Lulu's Wish",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "\"Bobo,\" said Lulu softly, \"please bring me the heart of the jamun. The heart will make me well.\"",
+     "say": [
+      [
+       "lulu",
+       "Bobo,"
+      ],
+      [
+       "narrator",
+       "said Lulu softly,"
+      ],
+      [
+       "lulu",
+       "please bring me the heart of the jamun. The heart will make me well."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "But Bobo was sleepy, and he was not listening carefully.",
+     "say": [
+      [
+       "narrator",
+       "But Bobo was sleepy, and he was not listening carefully."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "He only heard: \"...bring me the heart...\"",
+     "say": [
+      [
+       "narrator",
+       "He only heard:"
+      ],
+      [
+       "lulu",
+       "...bring me the heart..."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Bobo's Worry",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "That night, Bobo could not sleep.",
+     "say": [
+      [
+       "narrator",
+       "That night, Bobo could not sleep."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"Whose heart does Lulu want?\" he thought.",
+     "say": [
+      [
+       "bobo",
+       "Whose heart does Lulu want?"
+      ],
+      [
+       "narrator",
+       "he thought."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"The heart of the one who gives the sweet fruit? Kapi's heart? Oh no!\"",
+     "say": [
+      [
+       "bobo",
+       "The heart of the one who gives the sweet fruit? Kapi's heart? Oh no!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Bobo loved his wife, and Bobo loved his friend. What could he do?",
+     "say": [
+      [
+       "narrator",
+       "Bobo loved his wife, and Bobo loved his friend. What could he do?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "A Ride on the River",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "The next day, Bobo said, \"Kapi, come to my home. Lulu wants to meet you.\"",
+     "say": [
+      [
+       "narrator",
+       "The next day, Bobo said,"
+      ],
+      [
+       "bobo",
+       "Kapi, come to my home. Lulu wants to meet you."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"But I can't swim,\" said Kapi.",
+     "say": [
+      [
+       "kapi",
+       "But I can't swim,"
+      ],
+      [
+       "narrator",
+       "said Kapi."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"Sit on my back,\" said Bobo. \"I will carry you.\"",
+     "say": [
+      [
+       "bobo",
+       "Sit on my back,"
+      ],
+      [
+       "narrator",
+       "said Bobo."
+      ],
+      [
+       "bobo",
+       "I will carry you."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "So Kapi jumped onto Bobo's back, and off they went across the river.",
+     "say": [
+      [
+       "narrator",
+       "So Kapi jumped onto Bobo's back, and off they went across the river."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Truth",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "In the middle of the river, Bobo stopped. He felt very sad.",
+     "say": [
+      [
+       "narrator",
+       "In the middle of the river, Bobo stopped. He felt very sad."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "\"Kapi,\" he said, \"I must tell you the truth. Lulu wants your heart.\"",
+     "say": [
+      [
+       "bobo",
+       "Kapi,"
+      ],
+      [
+       "narrator",
+       "he said,"
+      ],
+      [
+       "bobo",
+       "I must tell you the truth. Lulu wants your heart."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Kapi was scared. The water was deep, and the bank was far away.",
+     "say": [
+      [
+       "narrator",
+       "Kapi was scared. The water was deep, and the bank was far away."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "But Kapi did not cry. He thought, and he thought fast.",
+     "say": [
+      [
+       "narrator",
+       "But Kapi did not cry. He thought, and he thought fast."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Kapi Thinks Fast",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "\"Oh, Bobo!\" said Kapi. \"Why didn't you tell me before? I keep my heart up in the jamun tree! Take me back, and I will get it.\"",
+     "say": [
+      [
+       "kapi",
+       "Oh, Bobo!"
+      ],
+      [
+       "narrator",
+       "said Kapi."
+      ],
+      [
+       "kapi",
+       "Why didn't you tell me before? I keep my heart up in the jamun tree! Take me back, and I will get it."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Bobo turned around and swam back to the tree.",
+     "say": [
+      [
+       "narrator",
+       "Bobo turned around and swam back to the tree."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Kapi jumped from Bobo's back, up, up, up into the branches.",
+     "say": [
+      [
+       "narrator",
+       "Kapi jumped from Bobo's back, up, up, up into the branches."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "He was safe!",
+     "say": [
+      [
+       "narrator",
+       "He was safe!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "The Heart of the Fruit",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Just then, Lulu came up the river. She felt a little better, and she was cross.",
+     "say": [
+      [
+       "narrator",
+       "Just then, Lulu came up the river. She felt a little better, and she was cross."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "\"Bobo!\" she said. \"I asked for the heart of the jamun, the seed inside the fruit. The seed is good medicine!\"",
+     "say": [
+      [
+       "lulu",
+       "Bobo!"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "lulu",
+       "I asked for the heart of the jamun, the seed inside the fruit. The seed is good medicine!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "Bobo looked at Kapi. Kapi looked at Bobo. Then all three began to laugh.",
+     "say": [
+      [
+       "narrator",
+       "Bobo looked at Kapi. Kapi looked at Bobo. Then all three began to laugh."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Kapi dropped the seeds, the little hearts of the fruit, down to Lulu.",
+     "say": [
+      [
+       "narrator",
+       "Kapi dropped the seeds, the little hearts of the fruit, down to Lulu."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Soon Lulu was well again, and the three of them were friends forever.",
+     "say": [
+      [
+       "narrator",
+       "Soon Lulu was well again, and the three of them were friends forever."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "narrator",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Think fast when you are in danger. Kapi did.",
+   "say": [
+    [
+     "narrator",
+     "Think fast when you are in danger. Kapi did."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Listen carefully before you act. Bobo didn't, at first.",
+   "say": [
+    [
+     "narrator",
+     "Listen carefully before you act. Bobo didn't, at first."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Be kind, even when someone makes a mistake. Kapi shared his fruit again.",
+   "say": [
+    [
+     "narrator",
+     "Be kind, even when someone makes a mistake. Kapi shared his fruit again."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Heart has two meanings: the heart inside your body, and the heart of a fruit, the seed in the middle.",
+   "say": [
+    [
+     "narrator",
+     "Heart has two meanings: the heart inside your body, and the heart of a fruit, the seed in the middle."
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "kapi": [
+   "Hi! I'm Kapi!",
+   "Yum!",
+   "Whee!",
+   "Hee hee!"
+  ],
+  "bobo": [
+   "Hello, little friend!",
+   "Splash!",
+   "Hmm?"
+  ],
+  "lulu": [
+   "Thank you, dear.",
+   "Hello, sweetie."
+  ]
+ },
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Can you find the purple jamuns? Tap them!",
+   "say": [
+    [
+     "narrator",
+     "Can you find the purple jamuns? Tap them!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "You found them all! Yum, yum!",
+   "say": [
+    [
+     "narrator",
+     "You found them all! Yum, yum!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Bobo is hungry! Drop the jamuns into his mouth!",
+   "say": [
+    [
+     "narrator",
+     "Bobo is hungry! Drop the jamuns into his mouth!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Yum! Bobo says more, please!",
+   "say": [
+    [
+     "narrator",
+     "Yum! Bobo says more, please!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Wait for the right moment. Then tap!",
+   "say": [
+    [
+     "narrator",
+     "Wait for the right moment. Then tap!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Perfect timing! Well done!",
+   "say": [
+    [
+     "narrator",
+     "Perfect timing! Well done!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.hint",
+   "text": "Tap just as the seed reaches Bobo's tail!",
+   "say": [
+    [
+     "narrator",
+     "Tap just as the seed reaches Bobo's tail!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "It is dark. Can you light the fireflies? Tap them!",
+   "say": [
+    [
+     "narrator",
+     "It is dark. Can you light the fireflies? Tap them!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Look how they glow! Lovely!",
+   "say": [
+    [
+     "narrator",
+     "Look how they glow! Lovely!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Tap Lulu's words. Listen carefully, like Bobo should have!",
+   "say": [
+    [
+     "narrator",
+     "Tap Lulu's words. Listen carefully, like Bobo should have!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Now you heard it all. Listen carefully before you act!",
+   "say": [
+    [
+     "narrator",
+     "Now you heard it all. Listen carefully before you act!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Bobo is worried. Tap the stars to see his thoughts!",
+   "say": [
+    [
+     "narrator",
+     "Bobo is worried. Tap the stars to see his thoughts!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "You found every worry. Good looking!",
+   "say": [
+    [
+     "narrator",
+     "You found every worry. Good looking!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Swipe left or right! Steer Bobo past the rocks!",
+   "say": [
+    [
+     "narrator",
+     "Swipe left or right! Steer Bobo past the rocks!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Splish, splash! You steered him safely!",
+   "say": [
+    [
+     "narrator",
+     "Splish, splash! You steered him safely!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.hint",
+   "text": "The fish are splashing there. Go round the other side!",
+   "say": [
+    [
+     "narrator",
+     "The fish are splashing there. Go round the other side!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "The waves are rocking! Tap to help Kapi hold on tight!",
+   "say": [
+    [
+     "narrator",
+     "The waves are rocking! Tap to help Kapi hold on tight!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Phew! Kapi held on. Great job!",
+   "say": [
+    [
+     "narrator",
+     "Phew! Kapi held on. Great job!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.hint",
+   "text": "Tap just as the wave lifts Bobo!",
+   "say": [
+    [
+     "narrator",
+     "Tap just as the wave lifts Bobo!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Wait... wait... now tap! Make Kapi leap!",
+   "say": [
+    [
+     "narrator",
+     "Wait... wait... now tap! Make Kapi leap!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Wow, what a leap! Perfect!",
+   "say": [
+    [
+     "narrator",
+     "Wow, what a leap! Perfect!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Tap the jamuns to drop the seeds to Lulu!",
+   "say": [
+    [
+     "narrator",
+     "Tap the jamuns to drop the seeds to Lulu!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Lulu is well! Everyone cheers! Hooray!",
+   "say": [
+    [
+     "narrator",
+     "Lulu is well! Everyone cheers! Hooray!"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,864 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "evening",
+  "lights": [
+   {
+    "name": "low-sun",
+    "type": "area",
+    "at": [
+     -2.4,
+     2.2,
+     1.5
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 140,
+    "color": [
+     1.0,
+     0.55,
+     0.28
+    ],
+    "size": 1.5
+   },
+   {
+    "name": "sky",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.8
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 50,
+    "color": [
+     0.55,
+     0.5,
+     0.9
+    ],
+    "size": 2.5
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.2,
+     -2.4,
+     1.2
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 32,
+    "color": [
+     1.0,
+     0.8,
+     0.7
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "kapi",
+   "model": "assets/kapi.glb",
+   "height": 0.15,
+   "at": [
+    0.03,
+    0.077,
+    0.228
+   ],
+   "rot": 21,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bobo",
+   "model": "assets/kapi-bobo.glb",
+   "height": 0.12,
+   "at": [
+    0.55,
+    0.06,
+    -0.03
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": "Idle",
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "lulu",
+   "model": "assets/kapi-lulu.glb",
+   "height": 0.11,
+   "at": [
+    0.28,
+    -0.09,
+    0.0
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 4,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [],
+ "touch": [
+  "kapi",
+  "bobo",
+  "lulu",
+  "tree-1",
+  "tree1",
+  "jamun-branch-1",
+  "jamun-branch1",
+  "reed-gold",
+  "log-eve",
+  "rocks",
+  "flowers-eve",
+  "frog-stone-eve",
+  "hyacinth-eve",
+  "lilypads-eve",
+  "fish0",
+  "fish1"
+ ],
+ "acts": [
+  {
+   "line": "moral.1",
+   "word": "What",
+   "who": "lulu",
+   "do": "swim",
+   "to": [
+    0.36,
+    -0.08,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.36,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.1",
+   "word": "What",
+   "who": "kapi",
+   "do": "fly",
+   "to": [
+    0.12,
+    -0.16,
+    0.0
+   ],
+   "clip": "Jump",
+   "face": [
+    0.12,
+    -2.0,
+    0.0
+   ],
+   "wait": true
+  },
+  {
+   "line": "moral.2",
+   "word": "Kapi",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.3",
+   "word": "Listen",
+   "who": "bobo",
+   "do": "face",
+   "face": [
+    0.25,
+    -0.46,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.3",
+   "word": "Bobo",
+   "who": "lulu",
+   "do": "face",
+   "face": [
+    0.6,
+    -0.5,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.3",
+   "word": "first",
+   "who": "bobo",
+   "do": "clip",
+   "clip": "Laugh",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.4",
+   "word": "kind",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.5,
+    -0.5,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.4",
+   "word": "Kapi",
+   "who": "bobo",
+   "do": "face",
+   "face": "kapi"
+  },
+  {
+   "line": "moral.4",
+   "word": "shared",
+   "who": "lulu",
+   "do": "face",
+   "face": "kapi"
+  },
+  {
+   "line": "moral.4",
+   "word": "shared",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Throw",
+   "then": "Idle",
+   "to": "bobo"
+  },
+  {
+   "line": "moral.4",
+   "word": "again",
+   "who": "bobo",
+   "do": "clip",
+   "clip": "Snap",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.5",
+   "word": "Heart",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.12,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.5",
+   "word": "Heart",
+   "who": "bobo",
+   "do": "face",
+   "face": [
+    0.55,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.5",
+   "word": "Heart",
+   "who": "lulu",
+   "do": "face",
+   "face": [
+    0.36,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "moral.5",
+   "word": "fruit",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Eat",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.5",
+   "word": "middle",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Wave",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.5",
+   "word": "middle",
+   "who": "lulu",
+   "do": "clip",
+   "clip": "Laugh",
+   "then": "Idle"
+  },
+  {
+   "line": "moral.5",
+   "word": "middle",
+   "who": "bobo",
+   "do": "clip",
+   "clip": "Laugh",
+   "then": "Idle"
+  }
+ ],
+ "ambient": {
+  "clouds": 3,
+  "birds": {
+   "count": 5,
+   "every": 20,
+   "kind": "egret"
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "grass-near"
+   }
+  ],
+  "motes": {
+   "over": "grass-near",
+   "count": 15,
+   "color": [
+    1,
+    0.9,
+    0.55
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.1
+  },
+  "fog": 0.28,
+  "shadows": 0.08,
+  "shafts": 3,
+  "smoke": [],
+  "drift": {
+   "card": "kapi/leaf",
+   "count": 2,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.2,
+   "flow": 0.01
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "owlet",
+    "puppet": "owl",
+    "at": [
+     -0.2,
+     -0.302,
+     0.06
+    ],
+    "seen_from": "left",
+    "pose": "sleep",
+    "move": "wake"
+   },
+   {
+    "name": "trunk-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.05,
+     0.128,
+     0.05
+    ],
+    "seen_from": "left"
+   }
+  ]
+ },
+ "next": null,
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "What did we learn?",
+ "shots": {
+  "open": {
+   "from": [
+    0.0,
+    -1.72,
+    1.57
+   ],
+   "look": [
+    0,
+    0.1,
+    0.15
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "moral.1": "reading",
+  "moral.2": {
+   "target": "kapi",
+   "framing": "medium",
+   "move": "push",
+   "focus": "kapi",
+   "seconds": 4
+  },
+  "moral.3": "reading",
+  "moral.4": "reading",
+  "moral.5": "reading",
+  "end": {
+   "target": "jamun-branch",
+   "framing": "close",
+   "move": "push",
+   "focus": "jamun-branch",
+   "seconds": 5
+  }
+ },
+ "extras": [
+  {
+   "name": "squirrel",
+   "puppet": "squirrel",
+   "layer": "middle",
+   "at": [
+    -0.07,
+    0.125,
+    0.08
+   ],
+   "path": [
+    [
+     -0.07,
+     0.125,
+     0.08
+    ],
+    [
+     -0.075,
+     0.127,
+     0.2
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "nibble",
+     2
+    ],
+    [
+     "flick",
+     0.6,
+     "squirrel-chirp"
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "hide:behind",
+     0.6
+    ],
+    [
+     "wait",
+     10
+    ]
+   ],
+   "tap": [
+    "flick",
+    "squirrel-chirp"
+   ]
+  },
+  {
+   "name": "parakeet-1",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "at": [
+    0.005,
+    0.057,
+    0.226
+   ]
+  },
+  {
+   "name": "parakeet-2",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "at": [
+    0.048,
+    0.064,
+    0.222
+   ]
+  },
+  {
+   "name": "heron",
+   "puppet": "heron",
+   "layer": "middle",
+   "at": [
+    0.8,
+    0.2,
+    0
+   ],
+   "path": [
+    [
+     0.8,
+     0.2,
+     0
+    ],
+    [
+     0.72,
+     0.15,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     1
+    ],
+    [
+     "go",
+     3,
+     "wade"
+    ],
+    [
+     "freeze",
+     2.5
+    ],
+    [
+     "strike",
+     0.5,
+     "splash-small"
+    ],
+    [
+     "swallow",
+     1.2,
+     "gulp"
+    ],
+    [
+     "wait",
+     8
+    ]
+   ],
+   "tap": [
+    "flap",
+    "heron-croak"
+   ]
+  },
+  {
+   "name": "frog-a",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    0.592,
+    -0.5,
+    0.072
+   ],
+   "routine": [
+    [
+     "wait",
+     4
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ]
+  },
+  {
+   "name": "frog-b",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    0.54,
+    -0.5,
+    0.072
+   ],
+   "routine": [
+    [
+     "wait",
+     4
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ]
+  },
+  {
+   "name": "turtle-a",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    -0.428,
+    -0.3,
+    0.067
+   ],
+   "routine": [
+    [
+     "show",
+     1.5
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "tuck",
+     1
+    ]
+   ],
+   "tap": [
+    "hide:under",
+    "plop"
+   ]
+  },
+  {
+   "name": "turtle-b",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    -0.315,
+    -0.3,
+    0.054
+   ],
+   "routine": [
+    [
+     "show",
+     1.5
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "tuck",
+     1
+    ]
+   ],
+   "tap": [
+    "hide:under",
+    "plop"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.1,
+  "gust": 0.3,
+  "gust_every": [
+   14,
+   22
+  ],
+  "dir": -1,
+  "sway": [
+   [
+    "tree",
+    0.8
+   ],
+   [
+    "jamun-branch",
+    2
+   ],
+   [
+    "reed-gold",
+    4
+   ],
+   [
+    "grass-near",
+    3
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "moral.5",
+    "word": "seed",
+    "light": "fill",
+    "level": 1.4,
+    "tint": [
+     1,
+     0.8,
+     0.6
+    ],
+    "seconds": 2
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-evening",
+    0.22
+   ],
+   [
+    "birds-dusk",
+    0.16
+   ],
+   [
+    "crickets",
+    0.06
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:moral.5:seed": [
+    "seed-glow",
+    0.3
+   ],
+   "tap:kapi": [
+    "kapi-giggle",
+    0.3
+   ],
+   "tap:bobo": [
+    "tail-splash",
+    0.35
+   ],
+   "tap:tree": [
+    "leaves-shake",
+    0.4
+   ]
+  }
+ },
+ "exit_frames": 73
+}

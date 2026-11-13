@@ -1,0 +1,80 @@
+{
+ "puppet": "crab",
+ "size": 0.03,
+ "metres_per_pixel": 6.621767755497226e-05,
+ "rest": {
+  "claw-l": 0,
+  "claw-r": 0
+ },
+ "versions": [
+  "day",
+  "evening",
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/crab/body.png",
+   "size": [
+    0.04311,
+    0.02622
+   ],
+   "pivot": [
+    0.5,
+    0.0076
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "claw-l",
+   "png": "cards/puppets/crab/claw-l.png",
+   "size": [
+    0.01987,
+    0.0104
+   ],
+   "pivot": [
+    0.868,
+    0.3689
+   ],
+   "parent": "body",
+   "attach": [
+    0.23,
+    0.6
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -45,
+    "max": 10
+   }
+  },
+  {
+   "name": "claw-r",
+   "png": "cards/puppets/crab/claw-r.png",
+   "size": [
+    0.02854,
+    0.01761
+   ],
+   "pivot": [
+    0.0897,
+    0.19
+   ],
+   "parent": "body",
+   "attach": [
+    0.78,
+    0.6
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -10,
+    "max": 45
+   }
+  }
+ ]
+}

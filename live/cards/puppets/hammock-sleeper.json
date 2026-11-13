@@ -1,0 +1,29 @@
+{
+ "puppet": "hammock-sleeper",
+ "size": 0.08,
+ "metres_per_pixel": 0.00014388489208633093,
+ "rest": {},
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "hammock",
+   "png": "cards/puppets/hammock-sleeper/hammock.png",
+   "size": [
+    0.12532,
+    0.08
+   ],
+   "pivot": [
+    0.5,
+    0.9843
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

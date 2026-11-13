@@ -1,0 +1,78 @@
+{
+ "puppet": "dragonfly",
+ "size": 0.04,
+ "metres_per_pixel": 5.961251862891207e-05,
+ "rest": {
+  "wing-front": 0,
+  "wing-back": 0
+ },
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/dragonfly/body.png",
+   "size": [
+    0.01478,
+    0.04
+   ],
+   "pivot": [
+    0.5,
+    0.0015
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "wing-front",
+   "png": "cards/puppets/dragonfly/wing-front.png",
+   "size": [
+    0.0592,
+    0.01091
+   ],
+   "pivot": [
+    0.5025,
+    0.2459
+   ],
+   "parent": "body",
+   "attach": [
+    0.5121,
+    0.763
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 30
+   }
+  },
+  {
+   "name": "wing-back",
+   "png": "cards/puppets/dragonfly/wing-back.png",
+   "size": [
+    0.05592,
+    0.01186
+   ],
+   "pivot": [
+    0.5032,
+    0.9497
+   ],
+   "parent": "body",
+   "attach": [
+    0.5121,
+    0.696
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 30
+   }
+  }
+ ]
+}

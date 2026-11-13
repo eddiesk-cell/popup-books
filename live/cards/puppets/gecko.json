@@ -1,0 +1,54 @@
+{
+ "puppet": "gecko",
+ "size": 0.04,
+ "metres_per_pixel": 9.632517714918634e-05,
+ "rest": {
+  "tail": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/gecko/body.png",
+   "size": [
+    0.08949,
+    0.03342
+   ],
+   "pivot": [
+    0.5,
+    0.0086
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "tail",
+   "png": "cards/puppets/gecko/tail.png",
+   "size": [
+    0.04874,
+    0.02553
+   ],
+   "pivot": [
+    0.8553,
+    0.2778
+   ],
+   "parent": "body",
+   "attach": [
+    0.0395,
+    0.6452
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -60,
+    "max": 60
+   }
+  }
+ ]
+}

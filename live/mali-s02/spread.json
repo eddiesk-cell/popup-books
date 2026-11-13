@@ -1,0 +1,1131 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "mali",
+   "model": "assets/mali.glb",
+   "height": 0.166,
+   "at": [
+    0.55,
+    -0.32,
+    0.0
+   ],
+   "rot": -73,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "enter": [
+    [
+     0,
+     [
+      0.55,
+      -0.32,
+      0.0
+     ]
+    ]
+   ],
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "stone0",
+  "stone1",
+  "stone2",
+  "stone3",
+  "stone4",
+  "stone5"
+ ],
+ "touch": [
+  "mali",
+  "islet-1",
+  "islet1",
+  "islet-reeds-1",
+  "islet-reeds1",
+  "mid-river-1",
+  "mid-river1",
+  "backdrop-1",
+  "backdrop1",
+  "kite",
+  "lilypads-night",
+  "reed-night",
+  "hyacinth-night",
+  "pebbles-night",
+  "flowers-night",
+  "river-grass-night"
+ ],
+ "acts": [
+  {
+   "line": "2.1",
+   "what": "stone0",
+   "do": "fly",
+   "to": [
+    0.3,
+    -0.16,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "what": "stone1",
+   "do": "fly",
+   "to": [
+    0.16,
+    -0.092,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "what": "stone2",
+   "do": "fly",
+   "to": [
+    0.02,
+    -0.024,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "what": "stone3",
+   "do": "fly",
+   "to": [
+    -0.12,
+    0.044,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "what": "stone4",
+   "do": "fly",
+   "to": [
+    -0.26,
+    0.112,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "what": "stone5",
+   "do": "fly",
+   "to": [
+    -0.4,
+    0.18,
+    -0.04
+   ],
+   "secs": 0.1,
+   "arc": 0
+  },
+  {
+   "line": "2.1",
+   "word": "stood",
+   "who": "mali",
+   "do": "walk",
+   "to": [
+    0.45,
+    -0.27,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.3,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "2.2",
+   "word": "one",
+   "what": "stone0",
+   "do": "fly",
+   "to": [
+    0.3,
+    -0.16,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "by",
+   "what": "stone1",
+   "do": "fly",
+   "to": [
+    0.16,
+    -0.092,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "round",
+   "what": "stone2",
+   "do": "fly",
+   "to": [
+    0.02,
+    -0.024,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "stones",
+   "what": "stone3",
+   "do": "fly",
+   "to": [
+    -0.12,
+    0.044,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "of",
+   "what": "stone4",
+   "do": "fly",
+   "to": [
+    -0.26,
+    0.112,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "moonlight",
+   "what": "stone5",
+   "do": "fly",
+   "to": [
+    -0.4,
+    0.18,
+    0.004
+   ],
+   "secs": 0.8,
+   "arc": 0
+  },
+  {
+   "line": "2.2",
+   "word": "one",
+   "who": "mali",
+   "do": "stepback",
+   "to": [
+    0.51,
+    -0.3,
+    0.0
+   ],
+   "stop": 0,
+   "face": "stone2"
+  },
+  {
+   "line": "2.3",
+   "word": "bridge",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.45,
+    -1.0,
+    0.0
+   ]
+  },
+  {
+   "line": "2.3",
+   "word": "bridge",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "2.4",
+   "word": "kite",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -1.0,
+    -0.15,
+    0.0
+   ]
+  },
+  {
+   "line": "2.4",
+   "word": "Wait",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Wave",
+   "then": "Idle"
+  },
+  {
+   "line": "game.2.praise",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.3,
+    -1.0,
+    0.0
+   ]
+  },
+  {
+   "line": "2.5",
+   "word": "Hop",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.3,
+    -1.0,
+    0.0
+   ]
+  },
+  {
+   "line": "2.5",
+   "word": "Hop",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Jump",
+   "then": "Idle"
+  },
+  {
+   "line": "2.5",
+   "word": "across",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "2.1",
+   "who": "mali",
+   "do": "mood",
+   "mood": "sad"
+  },
+  {
+   "line": "2.2",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "moonlight"
+  },
+  {
+   "line": "2.3",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy",
+   "word": "bridge"
+  },
+  {
+   "line": "2.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "worried",
+   "word": "Wait"
+  },
+  {
+   "line": "game.2.praise",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "2.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  }
+ ],
+ "ambient": {
+  "clouds": 3,
+  "birds": {
+   "count": 0,
+   "every": 0,
+   "kind": "bat"
+  },
+  "crawlers": [],
+  "motes": {
+   "over": "water",
+   "count": 50,
+   "color": [
+    0.85,
+    0.9,
+    1
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.28
+  },
+  "fog": 0.35,
+  "shadows": 0.1,
+  "shafts": 0,
+  "smoke": [],
+  "drift": {
+   "card": "mali/petal",
+   "count": 2,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.15,
+   "flow": 0.006
+  },
+  "retire": [
+   "kapi/fish"
+  ],
+  "surprises": [
+   {
+    "name": "pebble-crab",
+    "puppet": "crab",
+    "at": [
+     0.75,
+     -0.05,
+     0
+    ],
+    "seen_from": "right",
+    "move": "wave",
+    "sound": "crab-click"
+   },
+   {
+    "name": "pad-frog",
+    "puppet": "frog",
+    "at": "lilypads-night",
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   },
+   {
+    "name": "hut-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.66,
+     0.391,
+     0.06
+    ],
+    "seen_from": "left"
+   }
+  ]
+ },
+ "next": "mali-s03",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Moon Bridge",
+ "shots": {
+  "open": {
+   "from": [
+    -0.38,
+    -2.01,
+    0.79
+   ],
+   "look": [
+    0,
+    0.1,
+    0.1
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "2.1": {
+   "target": "mali",
+   "framing": "medium",
+   "move": "follow",
+   "focus": "mali",
+   "seconds": 4
+  },
+  "2.2": {
+   "word": "one",
+   "target": [
+    "stone0",
+    "stone1",
+    "stone2",
+    "stone3",
+    "stone4",
+    "stone5",
+    "mali"
+   ],
+   "framing": "medium",
+   "move": "drift",
+   "focus": "stone2",
+   "seconds": 5.6
+  },
+  "2.3": {
+   "target": [
+    "stone0",
+    "stone5",
+    "mali"
+   ],
+   "framing": "wide",
+   "move": "pull",
+   "focus": "stone3",
+   "seconds": 3.5,
+   "word": "bridge"
+  },
+  "2.4": [
+   {
+    "word": "Wait",
+    "target": "mali",
+    "framing": "face",
+    "move": "hold",
+    "focus": "mali",
+    "seconds": 2.5
+   }
+  ],
+  "2.5": {
+   "target": [
+    "mali",
+    "stone0"
+   ],
+   "framing": "wide",
+   "move": "pull",
+   "focus": "mali",
+   "seconds": 4,
+   "phone": {
+    "framing": "medium",
+    "target": [
+     "mali",
+     "old-turtle"
+    ]
+   }
+  },
+  "game": {
+   "target": [
+    "stone0",
+    "stone5"
+   ],
+   "framing": "medium",
+   "move": "hold",
+   "focus": "stone2",
+   "seconds": 2
+  },
+  "game:won": {
+   "target": [
+    "mali",
+    "old-turtle"
+   ],
+   "framing": "medium",
+   "move": "hold",
+   "focus": "old-turtle",
+   "seconds": 1.5
+  },
+  "end": "reading"
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "2.1",
+    "word": "bright",
+    "light": "moon",
+    "level": 1.15,
+    "tint": [
+     0.95,
+     0.97,
+     1
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "2.2",
+    "word": "moonlight",
+    "light": "moon",
+    "level": 1.3,
+    "tint": [
+     1,
+     0.95,
+     0.82
+    ],
+    "seconds": 3
+   },
+   {
+    "line": "2.3",
+    "word": "bridge",
+    "light": "fill",
+    "level": 1.4,
+    "tint": [
+     1,
+     0.88,
+     0.6
+    ],
+    "seconds": 2
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-night-still",
+    0.15
+   ],
+   [
+    "frogs-chorus",
+    0.1
+   ],
+   [
+    "crickets",
+    0.1
+   ],
+   [
+    "festival-far",
+    0.04
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "act:stone:rise": [
+    "stone-rise",
+    0.35
+   ],
+   "line:2.3:bridge": [
+    "bridge-shimmer",
+    0.35
+   ],
+   "act:mali:clip": [
+    "hop-land",
+    0.25
+   ],
+   "tap:mali": [
+    "paper-pat",
+    0.3
+   ],
+   "tap:backdrop": [
+    "moon-shimmer",
+    0.3
+   ]
+  }
+ },
+ "extras": [
+  {
+   "name": "night-heron",
+   "puppet": "heron",
+   "layer": "middle",
+   "at": [
+    -0.62,
+    -0.1,
+    0
+   ],
+   "path": [
+    [
+     -0.62,
+     -0.1,
+     0
+    ],
+    [
+     -0.52,
+     -0.04,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     1
+    ],
+    [
+     "go",
+     3,
+     "wade"
+    ],
+    [
+     "freeze",
+     2.5
+    ],
+    [
+     "strike",
+     0.5,
+     "splash-small"
+    ],
+    [
+     "swallow",
+     1.2,
+     "gulp"
+    ],
+    [
+     "wait",
+     8
+    ]
+   ],
+   "tap": [
+    "flap",
+    "heron-croak"
+   ]
+  },
+  {
+   "name": "frog-1",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    -0.793,
+    -0.515,
+    0.048
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ],
+   "path": [
+    [
+     -0.793,
+     -0.515,
+     0.048
+    ],
+    [
+     -0.718,
+     -0.515,
+     0.067
+    ],
+    [
+     -0.592,
+     -0.515,
+     0.023
+    ]
+   ]
+  },
+  {
+   "name": "frog-2",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    -0.718,
+    -0.515,
+    0.067
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ],
+   "path": [
+    [
+     -0.718,
+     -0.515,
+     0.067
+    ],
+    [
+     -0.592,
+     -0.515,
+     0.023
+    ],
+    [
+     -0.793,
+     -0.515,
+     0.048
+    ]
+   ]
+  },
+  {
+   "name": "frog-3",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    -0.592,
+    -0.515,
+    0.023
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ],
+   "path": [
+    [
+     -0.592,
+     -0.515,
+     0.023
+    ],
+    [
+     -0.793,
+     -0.515,
+     0.048
+    ],
+    [
+     -0.718,
+     -0.515,
+     0.067
+    ]
+   ]
+  },
+  {
+   "name": "fish",
+   "puppet": "fish",
+   "layer": "middle",
+   "at": [
+    0.6,
+    0.12,
+    0
+   ],
+   "count": 2,
+   "routine": [
+    [
+     "hide:under",
+     0.5
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "show",
+     0.8,
+     "fish-rise"
+    ],
+    [
+     "flick",
+     0.6
+    ],
+    [
+     "hide:under",
+     0.6
+    ]
+   ],
+   "tap": [
+    "jump",
+    "splash-small"
+   ],
+   "cues": [
+    [
+     "2.2",
+     "one",
+     "jump"
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "old-turtle",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    -0.22,
+    0.19,
+    0
+   ],
+   "face": -1,
+   "routine": [
+    [
+     "show",
+     1,
+     "fish-rise"
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "hide:under",
+     1
+    ],
+    [
+     "wait",
+     10
+    ]
+   ],
+   "tap": [
+    "stretch",
+    "turtle-blink"
+   ],
+   "cues": [
+    [
+     "2.5",
+     "across",
+     "show"
+    ],
+    [
+     "game",
+     "",
+     "hide",
+     [
+      "game.2.praise",
+      "river"
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "fisherman",
+   "puppet": "fisher-boat",
+   "layer": "middle",
+   "at": [
+    -0.9,
+    0.26,
+    0
+   ],
+   "path": [
+    [
+     -0.9,
+     0.26,
+     0
+    ],
+    [
+     -0.55,
+     0.26,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "pole",
+     4,
+     "oar-splash"
+    ],
+    [
+     "go",
+     14
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "go",
+     14
+    ],
+    [
+     "turn",
+     0.3
+    ]
+   ],
+   "tap": [
+    "hat",
+    "boatman-hum"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.05,
+  "gust": 0.2,
+  "gust_every": [
+   16,
+   26
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "islet-1",
+    1
+   ],
+   [
+    "islet1",
+    1
+   ],
+   [
+    "reed-night",
+    3
+   ],
+   [
+    "mid-river-1",
+    1.5
+   ],
+   [
+    "mid-river1",
+    1.5
+   ],
+   [
+    "river-grass-night",
+    2
+   ],
+   [
+    "flowers-night",
+    2
+   ],
+   [
+    "hyacinth-night",
+    1.5
+   ],
+   [
+    "islet-reeds-1",
+    3
+   ],
+   [
+    "islet-reeds1",
+    3
+   ]
+  ],
+  "cues": []
+ },
+ "cut": true,
+ "exit_frames": 73
+}

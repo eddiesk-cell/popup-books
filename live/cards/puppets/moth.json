@@ -1,0 +1,78 @@
+{
+ "puppet": "moth",
+ "size": 0.025,
+ "metres_per_pixel": 0.00015625,
+ "rest": {
+  "wing-l": 0,
+  "wing-r": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/moth/body.png",
+   "size": [
+    0.00734,
+    0.02297
+   ],
+   "pivot": [
+    0.5,
+    0.0
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "wing-l",
+   "png": "cards/puppets/moth/wing-l.png",
+   "size": [
+    0.01766,
+    0.02469
+   ],
+   "pivot": [
+    0.9823,
+    0.5127
+   ],
+   "parent": "body",
+   "attach": [
+    0.1489,
+    0.5646
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -10,
+    "max": 60
+   }
+  },
+  {
+   "name": "wing-r",
+   "png": "cards/puppets/moth/wing-r.png",
+   "size": [
+    0.0175,
+    0.02469
+   ],
+   "pivot": [
+    0.0089,
+    0.5127
+   ],
+   "parent": "body",
+   "attach": [
+    0.8298,
+    0.5646
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -60,
+    "max": 10
+   }
+  }
+ ]
+}

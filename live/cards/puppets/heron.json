@@ -1,0 +1,152 @@
+{
+ "puppet": "heron",
+ "size": 0.12,
+ "metres_per_pixel": 0.00015404378068995897,
+ "rest": {
+  "neck": 0,
+  "head": 0,
+  "leg-l": 0,
+  "leg-r": 0,
+  "wing": 0
+ },
+ "versions": [
+  "day",
+  "evening",
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/heron/body.png",
+   "size": [
+    0.05268,
+    0.03451
+   ],
+   "pivot": [
+    0.5,
+    -1.0806
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "neck",
+   "png": "cards/puppets/heron/neck.png",
+   "size": [
+    0.02634,
+    0.0516
+   ],
+   "pivot": [
+    0.32,
+    0.075
+   ],
+   "parent": "body",
+   "attach": [
+    0.9,
+    0.7
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -55,
+    "max": 20
+   }
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/heron/head.png",
+   "size": [
+    0.05422,
+    0.02249
+   ],
+   "pivot": [
+    0.1486,
+    0.4308
+   ],
+   "parent": "neck",
+   "attach": [
+    0.7699,
+    0.9528
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 25
+   }
+  },
+  {
+   "name": "leg-l",
+   "png": "cards/puppets/heron/leg-l.png",
+   "size": [
+    0.02511,
+    0.04806
+   ],
+   "pivot": [
+    0.4045,
+    0.9131
+   ],
+   "parent": "body",
+   "attach": [
+    0.42,
+    0.1778
+   ],
+   "z": 3,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 30
+   }
+  },
+  {
+   "name": "leg-r",
+   "png": "cards/puppets/heron/leg-r.png",
+   "size": [
+    0.02865,
+    0.04683
+   ],
+   "pivot": [
+    0.2828,
+    0.9092
+   ],
+   "parent": "body",
+   "attach": [
+    0.58,
+    0.14
+   ],
+   "z": 4,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 30
+   }
+  },
+  {
+   "name": "wing",
+   "png": "cards/puppets/heron/wing.png",
+   "size": [
+    0.06254,
+    0.03959
+   ],
+   "pivot": [
+    0.91,
+    0.75
+   ],
+   "parent": "body",
+   "attach": [
+    0.6,
+    0.6
+   ],
+   "z": 5,
+   "hinge": {
+    "axis": "z",
+    "min": -80,
+    "max": 0
+   }
+  }
+ ]
+}

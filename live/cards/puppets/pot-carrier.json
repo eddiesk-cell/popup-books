@@ -1,0 +1,29 @@
+{
+ "puppet": "pot-carrier",
+ "size": 0.11,
+ "metres_per_pixel": 0.00012910798122065727,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/pot-carrier/body.png",
+   "size": [
+    0.05552,
+    0.11
+   ],
+   "pivot": [
+    0.5,
+    0.0035
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

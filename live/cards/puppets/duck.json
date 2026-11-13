@@ -1,0 +1,54 @@
+{
+ "puppet": "duck",
+ "size": 0.06,
+ "metres_per_pixel": 0.00012545326938354114,
+ "rest": {
+  "head": 0
+ },
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/duck/body.png",
+   "size": [
+    0.10337,
+    0.04479
+   ],
+   "pivot": [
+    0.5,
+    0.0084
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/duck/head.png",
+   "size": [
+    0.05821,
+    0.04102
+   ],
+   "pivot": [
+    0.163,
+    0.347
+   ],
+   "parent": "body",
+   "attach": [
+    0.8893,
+    0.7416
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 20
+   }
+  }
+ ]
+}

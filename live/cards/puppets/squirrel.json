@@ -1,0 +1,79 @@
+{
+ "puppet": "squirrel",
+ "size": 0.05,
+ "metres_per_pixel": 8.704512809080836e-05,
+ "rest": {
+  "head": 0,
+  "tail": 0
+ },
+ "versions": [
+  "day",
+  "evening"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/squirrel/body.png",
+   "size": [
+    0.03456,
+    0.03525
+   ],
+   "pivot": [
+    0.5,
+    -0.0396
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/squirrel/head.png",
+   "size": [
+    0.02629,
+    0.02133
+   ],
+   "pivot": [
+    0.1969,
+    0.3198
+   ],
+   "parent": "body",
+   "attach": [
+    0.8136,
+    0.8931
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -12,
+    "max": 12
+   }
+  },
+  {
+   "name": "tail",
+   "png": "cards/puppets/squirrel/tail.png",
+   "size": [
+    0.02855,
+    0.04805
+   ],
+   "pivot": [
+    0.467,
+    0.1484
+   ],
+   "parent": "body",
+   "attach": [
+    0.0998,
+    0.0886
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -40,
+    "max": 40
+   }
+  }
+ ]
+}

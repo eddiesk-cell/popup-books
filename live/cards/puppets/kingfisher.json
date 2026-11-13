@@ -1,0 +1,78 @@
+{
+ "puppet": "kingfisher",
+ "size": 0.04,
+ "metres_per_pixel": 6.818614611960204e-05,
+ "rest": {
+  "head": 0,
+  "wing": 0
+ },
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/kingfisher/body.png",
+   "size": [
+    0.03628,
+    0.03512
+   ],
+   "pivot": [
+    0.5,
+    0.0039
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/kingfisher/head.png",
+   "size": [
+    0.03723,
+    0.01473
+   ],
+   "pivot": [
+    0.1289,
+    0.4389
+   ],
+   "parent": "body",
+   "attach": [
+    0.8554,
+    0.9037
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -20,
+    "max": 20
+   }
+  },
+  {
+   "name": "wing",
+   "png": "cards/puppets/kingfisher/wing.png",
+   "size": [
+    0.03143,
+    0.01786
+   ],
+   "pivot": [
+    0.9078,
+    0.8361
+   ],
+   "parent": "body",
+   "attach": [
+    0.7378,
+    0.7186
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -90,
+    "max": 0
+   }
+  }
+ ]
+}

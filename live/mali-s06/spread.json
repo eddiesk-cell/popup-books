@@ -1,0 +1,1137 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "boatA",
+   "model": "assets/raw/boat.glb",
+   "height": 0.16,
+   "at": [
+    0.45,
+    -0.1,
+    0.0
+   ],
+   "rot": -90,
+   "face": -90,
+   "clip": null,
+   "bob": true,
+   "drift": 0,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "mali",
+   "model": "assets/mali.glb",
+   "height": 0.166,
+   "at": [
+    -0.078,
+    0.0,
+    0.0355
+   ],
+   "rot": -10,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": "boatA",
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "pip",
+   "model": "assets/raw/pip.glb",
+   "height": 0.11,
+   "at": [
+    1.1,
+    0.1,
+    0.3
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "tong",
+   "model": "puppet:tong",
+   "height": 0.07,
+   "at": [
+    -0.073,
+    -0.028,
+    0.034
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": "boatA",
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "nok",
+   "model": "puppet:nok",
+   "height": 0.12,
+   "at": [
+    0.11,
+    0.0,
+    0.035
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": "Sit Idle",
+   "bob": false,
+   "drift": null,
+   "on": "boatA",
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "lantern0",
+  "lantern1",
+  "lantern2",
+  "lantern3",
+  "lantern4",
+  "lantern5",
+  "lantern6",
+  "lantern7"
+ ],
+ "touch": [
+  "mali",
+  "pip",
+  "boatA",
+  "kite",
+  "village-1",
+  "village1",
+  "home-door-1",
+  "home-door1",
+  "mid-village-1",
+  "mid-village1",
+  "lotus-spirits",
+  "lilypads-night",
+  "flowers-night",
+  "reeds",
+  "hyacinth-night",
+  "river-grass-night",
+  "tong",
+  "nok"
+ ],
+ "acts": [
+  {
+   "line": "6.1",
+   "word": "gold",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.616,
+    -0.543,
+    0.0
+   ]
+  },
+  {
+   "line": "6.2",
+   "word": "flew",
+   "who": "pip",
+   "do": "fly",
+   "to": "mali",
+   "bone": "leftUpperArm",
+   "beside": true,
+   "secs": 2.4
+  },
+  {
+   "line": "6.2",
+   "word": "flew",
+   "what": "kite",
+   "do": "fly",
+   "to": "mali",
+   "up": 0.1,
+   "secs": 2.4,
+   "arc": 0.05
+  },
+  {
+   "line": "6.2",
+   "word": "held",
+   "who": "mali",
+   "do": "hold",
+   "what": "kite",
+   "hand": "right"
+  },
+  {
+   "line": "6.3",
+   "word": "Thank",
+   "who": "mali",
+   "do": "face",
+   "face": "tong"
+  },
+  {
+   "line": "6.3",
+   "word": "Thank",
+   "who": "tong",
+   "do": "face",
+   "face": [
+    0.57,
+    -0.16,
+    0.0
+   ]
+  },
+  {
+   "line": "game.6.start",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.616,
+    -0.543,
+    0.0
+   ]
+  },
+  {
+   "line": "6.4",
+   "word": "sang",
+   "who": "nok",
+   "do": "clip",
+   "clip": "Sing",
+   "then": "Sit Idle"
+  },
+  {
+   "line": "6.4",
+   "word": "sang",
+   "who": "boatA",
+   "do": "swim",
+   "to": [
+    0.09,
+    -0.1,
+    0.0
+   ],
+   "stop": 0
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.048,
+    -1.176,
+    0.0
+   ]
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern0",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern1",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern2",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern3",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern4",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern5",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern6",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.4",
+   "word": "rose",
+   "what": "lantern7",
+   "do": "rise",
+   "by": 0.6,
+   "secs": 4
+  },
+  {
+   "line": "6.5",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Jump",
+   "to": [
+    -0.08,
+    0.04,
+    0.0
+   ],
+   "then": "Idle",
+   "word": "Her"
+  },
+  {
+   "line": "6.5",
+   "after": "clip",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.05,
+    -1.0,
+    0.0
+   ]
+  },
+  {
+   "line": "6.5",
+   "word": "waved",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Wave",
+   "then": "Idle",
+   "after": "face"
+  },
+  {
+   "line": "6.5",
+   "word": "door",
+   "who": "pip",
+   "do": "fly",
+   "to": [
+    0.08,
+    0.06,
+    0.12
+   ],
+   "secs": 1.2
+  },
+  {
+   "line": "6.5",
+   "after": "fly",
+   "who": "pip",
+   "do": "face",
+   "face": [
+    0.08,
+    -1,
+    0
+   ]
+  },
+  {
+   "line": "6.5",
+   "word": "waved",
+   "who": "tong",
+   "do": "clip",
+   "clip": "Wave",
+   "then": "Idle"
+  },
+  {
+   "line": "6.5",
+   "word": "glowed",
+   "who": "pip",
+   "do": "glow",
+   "by": 1
+  },
+  {
+   "line": "6.1",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "gold"
+  },
+  {
+   "line": "6.2",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy",
+   "word": "kite"
+  },
+  {
+   "line": "6.3",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm"
+  },
+  {
+   "line": "game.6.praise",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "6.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "rose"
+  },
+  {
+   "line": "6.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm"
+  },
+  {
+   "line": "6.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "sleepy",
+   "word": "goodnight"
+  }
+ ],
+ "ambient": {
+  "clouds": 2,
+  "birds": {
+   "count": 0,
+   "every": 0,
+   "kind": "bat"
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "flowers-night"
+   }
+  ],
+  "motes": {
+   "over": "water",
+   "count": 60,
+   "color": [
+    1,
+    0.85,
+    0.5
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.12
+  },
+  "fog": 0.25,
+  "shadows": 0,
+  "shafts": 0,
+  "smoke": [
+   "village"
+  ],
+  "drift": {
+   "card": "mali/petal",
+   "count": 4,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.25,
+   "flow": 0.008
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "flowers-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.742,
+     -0.502,
+     0.0905
+    ],
+    "seen_from": "low"
+   },
+   {
+    "name": "wall-gecko",
+    "puppet": "gecko",
+    "at": [
+     0.66,
+     0.391,
+     0.1
+    ],
+    "seen_from": "right",
+    "move": "look",
+    "sound": "gecko-chirp"
+   },
+   {
+    "name": "hyacinth-frog",
+    "puppet": "frog",
+    "at": [
+     -0.46,
+     -0.506,
+     0.056
+    ],
+    "seen_from": "left",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": null,
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "Home",
+ "cut": true,
+ "shots": {
+  "open": {
+   "from": [
+    0.9,
+    -1.76,
+    1.37
+   ],
+   "look": [
+    0.3,
+    0.1,
+    0.15
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "6.1": {
+   "target": [
+    "mali",
+    "tong",
+    "nok"
+   ],
+   "framing": "medium",
+   "move": "drift",
+   "focus": "mali",
+   "seconds": 5
+  },
+  "6.2": [
+   {
+    "target": "mali",
+    "framing": "medium",
+    "move": "hold",
+    "focus": "mali",
+    "seconds": 3,
+    "word": "flew"
+   },
+   {
+    "word": "tight",
+    "target": "mali",
+    "framing": "face",
+    "move": "hold",
+    "focus": "mali",
+    "seconds": 2.5
+   }
+  ],
+  "6.3": {
+   "target": [
+    "tong",
+    "mali"
+   ],
+   "framing": "close",
+   "move": "hold",
+   "focus": "tong",
+   "seconds": 4
+  },
+  "6.4": {
+   "target": [
+    "nok",
+    "mali"
+   ],
+   "framing": "medium",
+   "move": "follow",
+   "focus": "nok",
+   "seconds": 3
+  },
+  "6.5": [
+   {
+    "target": "mali",
+    "framing": "medium",
+    "move": "follow",
+    "focus": "mali",
+    "seconds": 4,
+    "word": "carried"
+   },
+   {
+    "word": "goodnight",
+    "target": "mali",
+    "framing": "face",
+    "move": "hold",
+    "focus": "mali",
+    "seconds": 2.5
+   }
+  ],
+  "game": {
+   "target": [
+    "lantern0",
+    "lantern7"
+   ],
+   "framing": "medium",
+   "move": "hold",
+   "focus": "lantern3",
+   "seconds": 2
+  },
+  "end": "reading"
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "6.1",
+    "word": "gold",
+    "light": "key-lamp",
+    "level": 1.35,
+    "tint": [
+     1,
+     0.82,
+     0.5
+    ],
+    "seconds": 3
+   },
+   {
+    "line": "6.4",
+    "word": "rose",
+    "light": "fill",
+    "level": 1.3,
+    "tint": [
+     1,
+     0.85,
+     0.6
+    ],
+    "seconds": 3
+   },
+   {
+    "line": "6.5",
+    "word": "home",
+    "light": "key-lamp",
+    "back": true,
+    "seconds": 3
+   },
+   {
+    "line": "6.5",
+    "word": "goodnight",
+    "light": "fill",
+    "level": 0.8,
+    "tint": [
+     0.9,
+     0.9,
+     1
+    ],
+    "seconds": 3
+   }
+  ],
+  "flicker": [
+   "mid-village",
+   "lantern",
+   "home-door"
+  ]
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-night",
+    0.15
+   ],
+   [
+    "festival-murmur",
+    0.1
+   ],
+   [
+    "khaen-music",
+    0.1
+   ],
+   [
+    "crickets",
+    0.06
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:6.1:gold": [
+    "gold-shimmer",
+    0.4
+   ],
+   "line:6.2:kite": [
+    "kite-flap",
+    0.3
+   ],
+   "game:lantern": [
+    "lantern-up",
+    0.35
+   ],
+   "line:6.4:rose": [
+    "rise-swell",
+    0.3
+   ],
+   "line:6.5:door": [
+    "door-creak",
+    0.25
+   ],
+   "line:6.5:goodnight": [
+    "pip-glow",
+    0.35
+   ],
+   "tap:home-door": [
+    "door-creak",
+    0.25
+   ],
+   "tap:pip": [
+    "pip-chirp",
+    0.35
+   ],
+   "tap:tong": [
+    "leaf-rustle",
+    0.3
+   ]
+  }
+ },
+ "extras": [
+  {
+   "name": "aunt",
+   "puppet": "aunt",
+   "layer": "front",
+   "at": [
+    -0.62,
+    0.05,
+    0
+   ],
+   "routine": [
+    [
+     "wait",
+     4
+    ],
+    [
+     "look",
+     1.5
+    ],
+    [
+     "nod",
+     0.8
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "wave",
+    "boat-release"
+   ],
+   "cues": [
+    [
+     "6.4",
+     "rose",
+     "look"
+    ],
+    [
+     "6.5",
+     "waved",
+     "wave"
+    ]
+   ]
+  },
+  {
+   "name": "boy",
+   "puppet": "boy",
+   "layer": "front",
+   "at": [
+    -0.7,
+    0.06,
+    0
+   ],
+   "routine": [
+    [
+     "bounce",
+     1.5
+    ],
+    [
+     "point",
+     1.2,
+     "child-giggle"
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "point",
+    "child-giggle"
+   ],
+   "cues": [
+    [
+     "6.4",
+     "rose",
+     "point"
+    ],
+    [
+     "6.5",
+     "waved",
+     "wave"
+    ]
+   ]
+  },
+  {
+   "name": "khaen-player",
+   "puppet": "khaen-player",
+   "layer": "middle",
+   "at": [
+    -0.42,
+    0.16,
+    0
+   ],
+   "routine": [
+    [
+     "play",
+     8
+    ],
+    [
+     "nod",
+     1
+    ],
+    [
+     "play",
+     6
+    ]
+   ],
+   "tap": [
+    "play",
+    "khaen-run"
+   ],
+   "cues": [
+    [
+     "6.4",
+     "sang",
+     "play"
+    ]
+   ]
+  },
+  {
+   "name": "dog",
+   "puppet": "dog",
+   "layer": "front",
+   "at": [
+    -0.24,
+    0.13,
+    0
+   ],
+   "routine": [
+    [
+     "wait",
+     5
+    ],
+    [
+     "sniff",
+     1.2
+    ],
+    [
+     "wag",
+     2
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "wag",
+    "dog-woof"
+   ],
+   "cues": [
+    [
+     "6.5",
+     "door",
+     "jump"
+    ],
+    [
+     "6.5",
+     "goodbye",
+     "wag"
+    ]
+   ]
+  },
+  {
+   "name": "cat",
+   "puppet": "cat",
+   "layer": "middle",
+   "at": [
+    0.62,
+    0.393,
+    0.21
+   ],
+   "routine": [
+    [
+     "swish",
+     3
+    ],
+    [
+     "groom",
+     2
+    ],
+    [
+     "watch",
+     3
+    ],
+    [
+     "wait",
+     4
+    ]
+   ],
+   "tap": [
+    "startle",
+    "cat-mew"
+   ],
+   "cues": [
+    [
+     "6.4",
+     "sky",
+     "watch"
+    ]
+   ]
+  },
+  {
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "6.5",
+     "goodbye",
+     "cheer"
+    ]
+   ],
+   "game": "hide",
+   "name": "palm-sprite-1",
+   "at": [
+    0.1,
+    0.02,
+    0.0
+   ]
+  },
+  {
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "6.5",
+     "goodbye",
+     "cheer"
+    ]
+   ],
+   "game": "hide",
+   "name": "palm-sprite-2",
+   "at": [
+    0.15,
+    0.03,
+    0.0
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.12,
+  "gust": 0.35,
+  "gust_every": [
+   12,
+   18
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "mid-village-1",
+    2
+   ],
+   [
+    "mid-village1",
+    2
+   ],
+   [
+    "flowers-night",
+    3
+   ],
+   [
+    "reeds",
+    5
+   ],
+   [
+    "river-grass-night",
+    3
+   ],
+   [
+    "hyacinth-night",
+    2
+   ],
+   [
+    "home-door-1",
+    0.3
+   ],
+   [
+    "home-door1",
+    0.3
+   ]
+  ],
+  "cues": []
+ },
+ "_todo": [
+  "palm-sprites ride boatA in DIRECTION: extras cannot ride a moving prop yet, so they stand on the bank by the door",
+  "kite: Pip has no hands; it flies in beside him to Mali until a creature can carry a prop"
+ ],
+ "exit_frames": 73
+}

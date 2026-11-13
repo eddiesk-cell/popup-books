@@ -1,0 +1,277 @@
+{
+ "title": "Kapi and the Crocodile",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Jamun Tree",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4"
+   ],
+   "game": {
+    "type": "collect",
+    "praise": "You found them all! Yum, yum!",
+    "react": {
+     "*": "touch.kapi.1"
+    },
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    },
+    "start": "Can you find the purple jamuns? Tap them!"
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "A New Friend",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4"
+   ],
+   "game": {
+    "type": "collect",
+    "toss": [
+     "kapi",
+     "bobo"
+    ],
+    "praise": "Yum! Bobo says more, please!",
+    "react": {
+     "*": "touch.bobo.1"
+    },
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    },
+    "start": "Bobo is hungry! Drop the jamuns into his mouth!"
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Friends Every Day",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3"
+   ],
+   "game": {
+    "type": "rally",
+    "praise": "Perfect timing! Well done!",
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise",
+     "hint": "game.3.hint"
+    },
+    "start": "Wait for the right moment. Then tap!",
+    "count": 5,
+    "hint": "Tap just as the seed reaches Bobo's tail!"
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "Lulu at Home",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "praise": "Look how they glow! Lovely!",
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    },
+    "start": "It is dark. Can you light the fireflies? Tap them!",
+    "halo": "#d9ec5c"
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Lulu's Wish",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3"
+   ],
+   "game": {
+    "type": "listen",
+    "line": "5.1",
+    "say": "of the jamun",
+    "start": "Tap Lulu's words. Listen carefully, like Bobo should have!",
+    "praise": "Now you heard it all. Listen carefully before you act!",
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Bobo's Worry",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "who": "bobo",
+    "thoughts": [
+     "Whose heart does Lulu want?",
+     "The one who gives the sweet fruit?",
+     "Kapi's heart? Oh no!",
+     "I love Lulu, my wife.",
+     "But Kapi is my friend!"
+    ],
+    "react": {
+     "*": "touch.bobo.2"
+    },
+    "praise": "You found every worry. Good looking!",
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    },
+    "start": "Bobo is worried. Tap the stars to see his thoughts!",
+    "halo": "#ffd257"
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "A Ride on the River",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4"
+   ],
+   "game": {
+    "type": "steer",
+    "praise": "Splish, splash! You steered him safely!",
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise",
+     "hint": "game.7.hint"
+    },
+    "start": "Swipe left or right! Steer Bobo past the rocks!",
+    "hint": "The fish are splashing there. Go round the other side!"
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "The Truth",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4"
+   ],
+   "game": {
+    "type": "waves",
+    "praise": "Phew! Kapi held on. Great job!",
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise",
+     "hint": "game.8.hint"
+    },
+    "start": "The waves are rocking! Tap to help Kapi hold on tight!",
+    "count": 4,
+    "wave": "waves",
+    "hint": "Tap just as the wave lifts Bobo!"
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Kapi Thinks Fast",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4"
+   ],
+   "game": {
+    "type": "leap",
+    "praise": "Wow, what a leap! Perfect!",
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    },
+    "start": "Wait... wait... now tap! Make Kapi leap!",
+    "before": "9.3",
+    "leap": {
+     "clip": "Jump",
+     "to": [
+      0.027,
+      0.077,
+      0.228
+     ],
+     "then": "Idle",
+     "face": [
+      0.03,
+      -2.0,
+      0.0
+     ]
+    },
+    "hint": "Tap just as the ring closes on Kapi!"
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "The Heart of the Fruit",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "collect",
+    "toss": [
+     "kapi",
+     "lulu"
+    ],
+    "praise": "Lulu is well! Everyone cheers! Hooray!",
+    "react": {
+     "*": "touch.lulu.0"
+    },
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    },
+    "start": "Tap the jamuns to drop the seeds to Lulu!"
+   }
+  },
+  {
+   "dir": "moral",
+   "title": "What did we learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ],
+ "moral": {
+  "lines": [
+   "moral.1",
+   "moral.2",
+   "moral.3",
+   "moral.4",
+   "moral.5"
+  ]
+ }
+}

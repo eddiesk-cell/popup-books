@@ -1,0 +1,29 @@
+{
+ "puppet": "duckling",
+ "size": 0.025,
+ "metres_per_pixel": 0.00010121457489878543,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/duckling/body.png",
+   "size": [
+    0.02591,
+    0.025
+   ],
+   "pivot": [
+    0.5,
+    0.0121
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "puppet": "flower-seller",
+ "size": 0.08,
+ "metres_per_pixel": 8.307372793354102e-05,
+ "rest": {},
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/flower-seller/body.png",
+   "size": [
+    0.03448,
+    0.08
+   ],
+   "pivot": [
+    0.5,
+    0.0031
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

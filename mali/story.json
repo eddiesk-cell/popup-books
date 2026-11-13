@@ -1,0 +1,617 @@
+{
+ "title": "Mali and the Lantern Market",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "mali": {
+   "voice": "bm_george",
+   "speed": 1.06,
+   "pitch": 5
+  },
+  "pip": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 8
+  },
+  "nok": {
+   "voice": "bm_george",
+   "speed": 0.88,
+   "pitch": 2
+  },
+  "tong": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -3
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  }
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Kite",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "It was the night of the boat festival in Mali's village by the river.",
+     "say": [
+      [
+       "narrator",
+       "It was the night of the boat festival in Mali's village by the river."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Everyone put a little leaf boat with a candle on the water.",
+     "say": [
+      [
+       "narrator",
+       "Everyone put a little leaf boat with a candle on the water."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Mali walked down to the water with her red kite. It was her favourite thing in the world.",
+     "say": [
+      [
+       "narrator",
+       "Mali walked down to the water with her red kite. It was her favourite thing in the world."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Then the wind came. Whoosh! Snap! The kite string broke.",
+     "say": [
+      [
+       "narrator",
+       "Then the wind came. Whoosh! Snap! The kite string broke."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "\"My kite!\" cried Mali. She ran after it, but it flew far away over the dark river.",
+     "say": [
+      [
+       "mali",
+       "My kite!"
+      ],
+      [
+       "narrator",
+       "cried Mali. She ran after it, but it flew far away over the dark river."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "The Moon Bridge",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Mali stood at the edge of the river. The moon was big and bright.",
+     "say": [
+      [
+       "narrator",
+       "Mali stood at the edge of the river. The moon was big and bright."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Then, one by one, round stones of moonlight came up out of the water.",
+     "say": [
+      [
+       "narrator",
+       "Then, one by one, round stones of moonlight came up out of the water."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "It was a bridge! A moon bridge, all the way across the river.",
+     "say": [
+      [
+       "narrator",
+       "It was a bridge! A moon bridge, all the way across the river."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Far away, the red kite danced in the air. \"Wait for me!\" said Mali.",
+     "say": [
+      [
+       "narrator",
+       "Far away, the red kite danced in the air."
+      ],
+      [
+       "mali",
+       "Wait for me!"
+      ],
+      [
+       "narrator",
+       "said Mali."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Hop, hop, hop! Mali jumped from stone to stone, all the way across.",
+     "say": [
+      [
+       "narrator",
+       "Hop, hop, hop! Mali jumped from stone to stone, all the way across."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "The Lantern Market",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "The kite came down on a high roof. Mali walked closer and gasped.",
+     "say": [
+      [
+       "narrator",
+       "The kite came down on a high roof. Mali walked closer and gasped."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "It was a market on boats! Shy little spirits sold flowers, fruit and paper lanterns.",
+     "say": [
+      [
+       "narrator",
+       "It was a market on boats! Shy little spirits sold flowers, fruit and paper lanterns."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "But five lanterns were dark, and the spirits looked sad.",
+     "say": [
+      [
+       "narrator",
+       "But five lanterns were dark, and the spirits looked sad."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Behind a basket, something tiny was hiding. Mali crouched down to look. It was Pip, a little lantern-moth.",
+     "say": [
+      [
+       "narrator",
+       "Behind a basket, something tiny was hiding. Mali crouched down to look. It was Pip, a little lantern-moth."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "\"I don't like the dark,\" Pip whispered. \"Can you help us?\"",
+     "say": [
+      [
+       "pip",
+       "I don't like the dark,"
+      ],
+      [
+       "narrator",
+       "Pip whispered."
+      ],
+      [
+       "pip",
+       "Can you help us?"
+      ]
+     ]
+    },
+    {
+     "id": "3.6",
+     "text": "Mali left her kite on the roof and lit the lanterns, one by one. Pip glowed brighter and brighter!",
+     "say": [
+      [
+       "narrator",
+       "Mali left her kite on the roof and lit the lanterns, one by one. Pip glowed brighter and brighter!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Lost Shadow",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Pip flew up and sat on Mali's shoulder. \"Thank you! Now come and meet Tong.\"",
+     "say": [
+      [
+       "narrator",
+       "Pip flew up and sat on Mali's shoulder."
+      ],
+      [
+       "pip",
+       "Thank you! Now come and meet Tong."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Mali followed Pip to a little leaf spirit called Tong. He was crying.",
+     "say": [
+      [
+       "narrator",
+       "Mali followed Pip to a little leaf spirit called Tong. He was crying."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "\"I lost my shadow,\" said Tong. \"Everybody has a shadow, but not me!\"",
+     "say": [
+      [
+       "tong",
+       "I lost my shadow,"
+      ],
+      [
+       "narrator",
+       "said Tong."
+      ],
+      [
+       "tong",
+       "Everybody has a shadow, but not me!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Mali picked up a lamp. \"A shadow needs light,\" she said. \"Let's find it.\"",
+     "say": [
+      [
+       "narrator",
+       "Mali picked up a lamp."
+      ],
+      [
+       "mali",
+       "A shadow needs light,"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "mali",
+       "Let's find it."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "She moved the lamp, and there it was! Tong and his shadow danced together.",
+     "say": [
+      [
+       "narrator",
+       "She moved the lamp, and there it was! Tong and his shadow danced together."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Lost Song",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Grandma Nok sat in her boat. She was an old boat-singer. Mali sat down next to her.",
+     "say": [
+      [
+       "narrator",
+       "Grandma Nok sat in her boat. She was an old boat-singer. Mali sat down next to her."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "\"I lost my song,\" said Grandma Nok sadly. \"My song shows the boats the way home.\"",
+     "say": [
+      [
+       "nok",
+       "I lost my song,"
+      ],
+      [
+       "narrator",
+       "said Grandma Nok sadly."
+      ],
+      [
+       "nok",
+       "My song shows the boats the way home."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Mali listened. The lotus flowers rang softly: ding, dong, ding.",
+     "say": [
+      [
+       "narrator",
+       "Mali listened. The lotus flowers rang softly: ding, dong, ding."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "\"I know this song!\" said Mali. She jumped up. \"My grandma sings it at bedtime.\"",
+     "say": [
+      [
+       "mali",
+       "I know this song!"
+      ],
+      [
+       "narrator",
+       "said Mali. She jumped up."
+      ],
+      [
+       "mali",
+       "My grandma sings it at bedtime."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Mali played the song on the lotus bells, note by note. Then Grandma Nok began to sing again.",
+     "say": [
+      [
+       "narrator",
+       "Mali played the song on the lotus bells, note by note. Then Grandma Nok began to sing again."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Home",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "All the spirits lit their lanterns, and the river shone like gold.",
+     "say": [
+      [
+       "narrator",
+       "All the spirits lit their lanterns, and the river shone like gold."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Then Pip flew in with the red kite! Mali held it tight.",
+     "say": [
+      [
+       "narrator",
+       "Then Pip flew in with the red kite! Mali held it tight."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"Thank you, Mali,\" said Tong. \"Now we will take you home.\"",
+     "say": [
+      [
+       "tong",
+       "Thank you, Mali,"
+      ],
+      [
+       "narrator",
+       "said Tong."
+      ],
+      [
+       "tong",
+       "Now we will take you home."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Grandma Nok sang, and the lanterns rose up into the sky to show the way.",
+     "say": [
+      [
+       "narrator",
+       "Grandma Nok sang, and the lanterns rose up into the sky to show the way."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Her song carried the boat gently home. Mali waved goodbye at her door, and Pip glowed goodnight.",
+     "say": [
+      [
+       "narrator",
+       "Her song carried the boat gently home. Mali waved goodbye at her door, and Pip glowed goodnight."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "Kindness is like a lantern.",
+   "say": [
+    [
+     "closing",
+     "Kindness is like a lantern."
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "When you share your light with others, it helps you find your way home.",
+   "say": [
+    [
+     "closing",
+     "When you share your light with others, it helps you find your way home."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Tap the dark boats to light their candles!",
+   "say": [
+    [
+     "narrator",
+     "Tap the dark boats to light their candles!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "All the boats are sailing!",
+   "say": [
+    [
+     "narrator",
+     "All the boats are sailing!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Tap the glowing stone. Help Mali hop!",
+   "say": [
+    [
+     "narrator",
+     "Tap the glowing stone. Help Mali hop!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Mali crossed the river!",
+   "say": [
+    [
+     "narrator",
+     "Mali crossed the river!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Tap the dark lanterns to light them!",
+   "say": [
+    [
+     "narrator",
+     "Tap the dark lanterns to light them!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Every lantern shines!",
+   "say": [
+    [
+     "narrator",
+     "Every lantern shines!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Where should Mali put the lamp? Tap a spot!",
+   "say": [
+    [
+     "narrator",
+     "Where should Mali put the lamp? Tap a spot!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Tong found his shadow!",
+   "say": [
+    [
+     "narrator",
+     "Tong found his shadow!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Listen to the bells. Then tap them the same way!",
+   "say": [
+    [
+     "narrator",
+     "Listen to the bells. Then tap them the same way!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "You played the song!",
+   "say": [
+    [
+     "narrator",
+     "You played the song!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Tap the lanterns to wake them up!",
+   "say": [
+    [
+     "narrator",
+     "Tap the lanterns to wake them up!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "All the lanterns are awake!",
+   "say": [
+    [
+     "narrator",
+     "All the lanterns are awake!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "mali": [
+   "Hi! I'm Mali!",
+   "Ooh, pretty!",
+   "Wow!",
+   "Hee hee!"
+  ],
+  "pip": [
+   "Hello! I'm Pip!",
+   "Flutter, flutter!",
+   "Look, I glow!",
+   "Hee hee!"
+  ],
+  "tong": [
+   "Hello! I'm Tong!",
+   "Hee hee, that tickles!"
+  ],
+  "nok": [
+   "Hello, little one.",
+   "La la la!"
+  ]
+ }
+}

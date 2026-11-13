@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pop-up book</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { --ink: #f6e7c8; --glow: #ffb45a; --night: #07080f; }
+  /* readalong.js places its page and book button by these; on a phone the button goes under the language row */
+  @media (max-width: 560px) { :root { --ra-btn-top: 58px; --ra-top: 112px; } }
+  html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif; overflow: hidden; touch-action: none; user-select: none; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+  [hidden] { display: none !important; }
+  button { font: inherit; color: var(--night); background: var(--glow); border: 0; border-radius: 999px; padding: .5em 1.3em; cursor: pointer; }
+  button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  #note { position: fixed; top: 50%; left: 50%; translate: -50% -50%; text-align: center; font-size: clamp(16px, 2.4vw, 26px);
+    text-shadow: 0 2px 10px #000; pointer-events: none; }
+  #note.stub { top: auto; bottom: 14vh; translate: -50%; color: #ffd27a; font-size: 15px; }
+  #msg { position: fixed; bottom: max(18vh, 140px); left: 50%; translate: -50%; width: min(80vw, 34em); text-align: center; opacity: 0;
+    transition: opacity .6s; text-shadow: 0 2px 10px #000; font-size: clamp(16px, 2.2vw, 26px); pointer-events: none; }
+  #msg p { margin: 0; } #msg.show { opacity: 1; }
+  /* a game's count: a small badge just above the reading bar, in whichever bottom corner has nothing behind it */
+  #count { position: fixed; right: 3vw; bottom: calc(9vh + 8px); z-index: 5; padding: .2em .8em; border-radius: 999px; background: #0009;
+    color: var(--ink); border: 1px solid #f6e7c855; font-size: 15px; pointer-events: none; transition: opacity .3s; }
+  #count.left { right: auto; left: 3vw; } #count.dim { opacity: .3; }
+  /* once, on an upright phone: a sideways phone shows the book far bigger */
+  #turnhint { position: fixed; left: 50%; bottom: calc(9vh + 52px); translate: -50%; z-index: 5; display: flex; align-items: center; gap: 10px;
+    padding: .5em 1em; border-radius: 999px; background: #000a; color: var(--ink); border: 1px solid #f6e7c855; font-size: 15px; white-space: nowrap;
+    pointer-events: none; animation: turnhint 4s ease both; }
+  #turnhint svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+    animation: turnphone 1.6s ease-in-out infinite; }
+  @keyframes turnhint { 0%, 100% { opacity: 0; } 12%, 85% { opacity: 1; } }
+  @keyframes turnphone { 0%, 30% { rotate: 0deg; } 60%, 100% { rotate: -90deg; } }
+  @media (prefers-reduced-motion: reduce) { #turnhint svg { animation: none; } }
+  /* listen: the words Bobo missed, lit as the line is said again */
+  .miss { color: #ffb86b !important; opacity: 1 !important; text-decoration: underline 2px #ffb86b99; text-underline-offset: .2em; }
+  /* top right: languages, then sound and Reset (on a phone those two wrap under the languages, clear of the turn corners) */
+  #top { position: fixed; top: 12px; right: 12px; left: 64px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; z-index: 6; pointer-events: none; }
+  #top > * { pointer-events: auto; }
+  #langs { display: flex; gap: 6px; }
+  #top button { font-size: 15px; padding: .3em .8em; background: #0008; color: var(--ink); border: 1px solid #f6e7c855; white-space: nowrap; }
+  #langs [aria-pressed="true"] { background: var(--glow); color: var(--night); }
+  #snd { min-width: 2.6em; }
+  /* the reading bar: compact, at the very bottom, and it never takes a tap */
+  #bar { position: fixed; left: 0; right: 0; bottom: 0; min-height: 9vh; padding: 0 3vw; display: flex; align-items: center; gap: 2vw;
+    background: linear-gradient(#0000, #000c 40%); opacity: 0; transition: opacity .4s; pointer-events: none; }
+  #bar.on { opacity: 1; }
+  #bar:not(.on) #replay { visibility: hidden; }
+  #replay { pointer-events: auto; font-size: 16px; flex: none; }
+  .rd { opacity: 0; transition: opacity .3s; line-height: 1.15; } .rd.show { opacity: 1; }
+  #read { flex: 1; min-width: 0; }
+  .rd p { margin: 0; } .rd .en { font-size: clamp(16px, 2.6vh, 26px); } .rd .sub { font-size: clamp(13px, 2vh, 20px); opacity: .85; margin-top: .3vh; }
+  .en span { opacity: .55; transition: opacity .15s; } .en .said { opacity: 1; }
+  .en .now { color: var(--glow); text-shadow: 0 0 8px var(--glow); }
+  /* the moral: a calm page over the closed book; its words are read in the bar and glow in the read-along page */
+  #moral { position: fixed; inset: 0; z-index: 4; display: grid; place-content: center; gap: 3vh; text-align: center;
+    background: radial-gradient(circle at 50% 50%, #1c1a2cd0 0%, #07080ff0 75%); }
+  #moral h2 { margin: 0; font-weight: normal; font-style: italic; font-size: clamp(28px, 5vw, 56px); opacity: .85; }
+  #moral .row { display: flex; gap: 2vw; justify-content: center; font-size: clamp(16px, 2vw, 22px); }
+  #bar { z-index: 5; }
+  /* the turn hint: a softly glowing page corner where the finger should pull */
+  .curl { position: fixed; z-index: 3; width: 58px; height: 58px; translate: -50% -50%; pointer-events: none; border-radius: 50%;
+    background: radial-gradient(circle, #ffe9a8aa 0%, #ffd27a40 40%, transparent 70%); animation: curl 2.6s ease-in-out infinite; }
+  .curl::after { content: ""; position: absolute; inset: 17px; border-radius: 0 0 7px 0; box-shadow: -2px -2px 6px #0005;
+    background: linear-gradient(135deg, transparent 50%, #fff6dd 50%, #ecd7a8 100%); }
+  #curlL::after { transform: scaleX(-1); }
+  .curl.pulse { animation: curl-pulse 1.4s ease-out, curl 2.6s ease-in-out 1.4s infinite; }
+  @keyframes curl { 50% { opacity: .5; scale: .9; } }
+  @keyframes curl-pulse { 35% { scale: 1.7; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .curl, .curl.pulse { animation: none; } }
+  #sbub { position: fixed; translate: -50% -100%; background: #fffaf0; color: #2a2230; border-radius: 18px; padding: 10px 16px;
+    font-size: clamp(16px, 2.2vw, 24px); max-width: 30vw; text-align: center; box-shadow: 0 6px 18px #0007; pointer-events: none; z-index: 2; }
+  #sbub::after { content: ""; position: absolute; left: 50%; bottom: -10px; translate: -50%; border: 11px solid transparent; border-top-color: #fffaf0; border-bottom: 0; }
+  #sbub i { display: block; font-size: .75em; opacity: .7; }
+  /* listen: the speaker's line in a bubble over them, the words Bobo missed lit; a tap hears it again (the old player's #lbub) */
+  #lbub { position: fixed; translate: -50% -100%; background: #fffaf0; color: #2a2230; border-radius: 18px; padding: 10px 16px; z-index: 3;
+    font-size: clamp(16px, 2.2vw, 24px); max-width: min(70vw, 24em); text-align: center; box-shadow: 0 6px 18px #0007; border: 3px solid var(--glow); }
+  #lbub::after { content: ""; position: absolute; left: 50%; bottom: -12px; translate: -50%; border: 11px solid transparent; border-top-color: var(--glow); border-bottom: 0; }
+  #lbub { width: max-content; } #lbub .miss { background: #ffd34d; color: #2a2230 !important; text-decoration: none; border-radius: 6px; padding: 0 4px; font-weight: bold; }
+  /* a phone: the languages keep to one row (it scrolls if it must), sound and Reset take the row under it, above the read-along page */
+  @media (max-width: 560px) {
+    #langs { flex: 1 1 100%; justify-content: flex-end; overflow-x: auto; scrollbar-width: none; }
+    #top button { font-size: 13px; padding: .3em .6em; }
+  }
+</style>
+<script type="importmap">
+{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }
+</script>
+</head>
+<body>
+<canvas id="view" tabindex="0" aria-label="The pop-up book. Drag the bottom of a page to turn it, drag elsewhere to look around, tap things to make them react. Arrow keys turn the page."></canvas>
+<div id="note">Opening the book…</div>
+<div id="top"><div id="langs" role="group" aria-label="Subtitle language"></div>
+  <button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
+<div id="msg" aria-live="polite"></div>
+<div id="count" aria-live="polite" hidden></div>
+<div id="turnhint" role="status" hidden><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="6" width="16" height="30" rx="3"/><path d="M8 34a16 16 0 0 0 26 8m0 0-5 1m5-1-1-5"/></svg>Turn your phone for a bigger book</div>
+<div id="curlL" class="curl" hidden></div><div id="curlR" class="curl" hidden></div>
+<div id="sbub" hidden></div>
+<button id="lbub" hidden aria-label="Hear it again"></button>
+<div id="moral" hidden><h2>The End</h2><div class="row"><button id="again">Read it again</button><button id="back">Back</button></div></div>
+<div id="bar"><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
+<script src="../readalong.js" data-source="#read" data-theme="firefly" defer></script>
+<script>  /* each book's read-along theme; the deferred readalong.js above reads it once the page has loaded */
+  const ra = document.currentScript.previousElementSibling, book = new URLSearchParams(location.search).get("book") || "kapi";
+  Object.assign(ra.dataset, { theme: { mali: "lantern" }[book] || "firefly", story: `../${book}/story.json`, voice: `../${book}/voice/` });
+</script>
+<script type="module" src="live.js"></script>
+</body>
+</html>

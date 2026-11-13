@@ -1,0 +1,774 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "day",
+  "lights": [
+   {
+    "name": "sun",
+    "type": "area",
+    "at": [
+     -1.6,
+     1.4,
+     2.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 210,
+    "color": [
+     1.0,
+     0.93,
+     0.82
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "sky",
+    "type": "area",
+    "at": [
+     1.4,
+     2.4,
+     2.0
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     0.65,
+     0.8,
+     1.0
+    ],
+    "size": 3.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.2,
+     -2.6,
+     1.2
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 22,
+    "color": [
+     1.0,
+     0.95,
+     0.9
+    ],
+    "size": 3.0
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "bobo",
+   "model": "assets/kapi-bobo.glb",
+   "height": 0.12,
+   "at": [
+    -0.36,
+    -0.1,
+    -0.03
+   ],
+   "rot": 90,
+   "face": -90,
+   "clip": "Swim",
+   "bob": true,
+   "drift": 0.006,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "kapi",
+   "model": "assets/kapi.glb",
+   "height": 0.15,
+   "at": [
+    0.0,
+    0.0,
+    0.002
+   ],
+   "rot": 90,
+   "face": 0,
+   "clip": "Ride Idle",
+   "bob": false,
+   "drift": null,
+   "on": "bobo",
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "fish0",
+  "fish1",
+  "fish2",
+  "fish3"
+ ],
+ "touch": [
+  "bobo",
+  "kapi",
+  "waves",
+  "reed-clump",
+  "rocks",
+  "rocks-l",
+  "hyacinth",
+  "frog-stone",
+  "lilypads",
+  "lilypads-l",
+  "fish0",
+  "fish1",
+  "fish2",
+  "fish3"
+ ],
+ "acts": [
+  {
+   "line": "8.1",
+   "word": "middle",
+   "who": "bobo",
+   "do": "swim",
+   "to": [
+    -0.14,
+    -0.24,
+    -0.03
+   ],
+   "stop": 0,
+   "wait": true
+  },
+  {
+   "line": "8.1",
+   "word": "middle",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.3,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "8.1",
+   "word": "sad",
+   "who": "bobo",
+   "do": "face",
+   "face": [
+    0.1,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "8.1",
+   "word": "sad",
+   "who": "bobo",
+   "do": "clip",
+   "clip": "Worry",
+   "then": "Worry"
+  },
+  {
+   "line": "8.2",
+   "word": "heart",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Sit",
+   "then": "Sit",
+   "face": [
+    0.3,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "8.3",
+   "word": "scared",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.5,
+    -1.0,
+    0.0
+   ]
+  },
+  {
+   "line": "8.3",
+   "word": "deep",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.9,
+    -0.7,
+    0.0
+   ]
+  },
+  {
+   "line": "8.3",
+   "word": "bank",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    -1.2,
+    -0.7,
+    0.0
+   ]
+  },
+  {
+   "line": "8.4",
+   "word": "thought",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    -1.0,
+    -1.2,
+    0.0
+   ]
+  },
+  {
+   "line": "8.4",
+   "word": "fast",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    -0.12,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "8.4",
+   "word": "fast",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Stand Up",
+   "then": "Idle"
+  }
+ ],
+ "ambient": {
+  "clouds": 5,
+  "birds": {
+   "count": 2,
+   "every": 18,
+   "kind": "bird"
+  },
+  "crawlers": [],
+  "motes": {
+   "over": "water",
+   "count": 2,
+   "color": [
+    1,
+    1,
+    1
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0
+  },
+  "fog": 0.25,
+  "shadows": 0.4,
+  "shafts": 0,
+  "smoke": [],
+  "drift": {
+   "card": "kapi/leaf",
+   "count": 4,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.7,
+   "flow": 0.04
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "rock-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.66,
+     -0.222,
+     0.107
+    ],
+    "seen_from": "low"
+   },
+   {
+    "name": "hyacinth-frog",
+    "puppet": "frog",
+    "at": [
+     0.63,
+     -0.152,
+     0.07
+    ],
+    "seen_from": "right",
+    "move": "croak",
+    "sound": "frog-croak"
+   },
+   {
+    "name": "rock-crab",
+    "puppet": "crab",
+    "at": [
+     0.66,
+     -0.19,
+     0.0
+    ],
+    "seen_from": "right",
+    "move": "wave",
+    "sound": "crab-click"
+   }
+  ]
+ },
+ "next": "s09",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Truth",
+ "cut": true,
+ "shots": {
+  "open": {
+   "from": [
+    0.0,
+    -1.2,
+    2.4
+   ],
+   "look": [
+    0,
+    0.0,
+    0
+   ],
+   "settle": [
+    -0.14,
+    -0.24,
+    0
+   ],
+   "seconds": 3
+  },
+  "8.1": {
+   "target": [
+    "bobo",
+    "kapi"
+   ],
+   "framing": "medium",
+   "move": "pull",
+   "seconds": 5
+  },
+  "8.2": {
+   "target": "bobo",
+   "framing": "close",
+   "move": "push",
+   "focus": "bobo",
+   "seconds": 5
+  },
+  "8.3": {
+   "target": [
+    "bobo",
+    "kapi"
+   ],
+   "framing": "wide",
+   "move": "pull",
+   "focus": "kapi",
+   "seconds": 3,
+   "word": "water"
+  },
+  "8.4": {
+   "target": "kapi",
+   "framing": "close",
+   "move": "push",
+   "focus": "kapi",
+   "seconds": 4,
+   "yaw": -8
+  },
+  "game": "reading",
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "otter",
+   "puppet": "otter",
+   "layer": "middle",
+   "at": [
+    -0.45,
+    0.05,
+    0
+   ],
+   "path": [
+    [
+     -0.45,
+     0.05,
+     0
+    ],
+    [
+     -0.3,
+     0.12,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     0.8,
+     "otter-squeak"
+    ],
+    [
+     "look",
+     1.5
+    ],
+    [
+     "roll",
+     2
+    ],
+    [
+     "go",
+     2
+    ],
+    [
+     "hide:under",
+     0.6
+    ],
+    [
+     "wait",
+     7
+    ]
+   ],
+   "tap": [
+    "roll",
+    "otter-squeak"
+   ],
+   "cues": [
+    [
+     "8.2",
+     "truth",
+     "hide:under",
+     [
+      "8.4",
+      "thought"
+     ]
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "fisherman",
+   "puppet": "fisher-boat",
+   "layer": "middle",
+   "at": [
+    0.72,
+    0.2,
+    0
+   ],
+   "path": [
+    [
+     0.72,
+     0.2,
+     0
+    ],
+    [
+     0.52,
+     0.2,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "pole",
+     4,
+     "oar-splash"
+    ],
+    [
+     "go",
+     20
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "go",
+     20
+    ],
+    [
+     "turn",
+     0.3
+    ]
+   ],
+   "tap": [
+    "hat",
+    "boatman-hum"
+   ]
+  },
+  {
+   "name": "kingfisher",
+   "puppet": "kingfisher",
+   "layer": "middle",
+   "at": [
+    0.32,
+    0.06,
+    0.2
+   ],
+   "path": [
+    [
+     0.32,
+     0.06,
+     0.2
+    ],
+    [
+     0.32,
+     0.06,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "hover",
+     3,
+     "wing-buzz"
+    ],
+    [
+     "go+dive",
+     0.6,
+     "splash-small"
+    ],
+    [
+     "hide:under",
+     0.4
+    ],
+    [
+     "show",
+     0.4
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "hover",
+     3
+    ],
+    [
+     "wait",
+     3
+    ]
+   ],
+   "tap": [
+    "hover",
+    "kingfisher-call"
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "heron",
+   "puppet": "heron",
+   "layer": "middle",
+   "at": "rocks",
+   "routine": [
+    [
+     "wait",
+     6
+    ],
+    [
+     "preen",
+     1.5
+    ],
+    [
+     "freeze",
+     2
+    ],
+    [
+     "strike",
+     0.5,
+     "splash-small"
+    ],
+    [
+     "swallow",
+     1.2,
+     "gulp"
+    ],
+    [
+     "wait",
+     7
+    ]
+   ],
+   "tap": [
+    "flap",
+    "heron-croak"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.3,
+  "gust": 0.8,
+  "gust_every": [
+   6,
+   10
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "wave-crest",
+    4
+   ],
+   [
+    "waves",
+    2
+   ],
+   [
+    "reed-clump",
+    7
+   ],
+   [
+    "river-grass",
+    6
+   ],
+   [
+    "hyacinth",
+    3
+   ]
+  ],
+  "cues": [
+   [
+    "8.3",
+    "deep",
+    0.95
+   ]
+  ]
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "8.2",
+    "word": "truth",
+    "light": "sun",
+    "level": 0.6,
+    "tint": [
+     0.85,
+     0.9,
+     1
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "8.3",
+    "word": "deep",
+    "light": "sky",
+    "level": 0.8,
+    "tint": [
+     0.8,
+     0.85,
+     1
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "8.4",
+    "word": "fast",
+    "light": "sun",
+    "level": 1.15,
+    "tint": [
+     1,
+     0.92,
+     0.78
+    ],
+    "seconds": 1.2
+   },
+   {
+    "line": "8.4",
+    "word": "fast",
+    "light": "sky",
+    "back": true,
+    "seconds": 1.2
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-deep",
+    0.3
+   ],
+   [
+    "wind-gusty",
+    0.18
+   ],
+   [
+    "birds-far",
+    0.06
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:8.2:truth": [
+    "hush-swell",
+    0.18
+   ],
+   "line:8.3:deep": [
+    "wave-slap",
+    0.3
+   ],
+   "line:8.4:fast": [
+    "idea-pling",
+    0.35
+   ],
+   "tap:bobo": [
+    "tail-splash",
+    0.35
+   ],
+   "tap:kapi": [
+    "paper-pat",
+    0.3
+   ],
+   "game:fish": [
+    "paper-grip",
+    0.25
+   ]
+  },
+  "hush": [
+   [
+    "8.2",
+    "8.4"
+   ]
+  ]
+ },
+ "exit_frames": 73
+}

@@ -1,0 +1,1094 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "day",
+  "lights": [
+   {
+    "name": "sun",
+    "type": "area",
+    "at": [
+     -1.6,
+     1.4,
+     2.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 210,
+    "color": [
+     1.0,
+     0.93,
+     0.82
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "sky",
+    "type": "area",
+    "at": [
+     1.4,
+     2.4,
+     2.0
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     0.65,
+     0.8,
+     1.0
+    ],
+    "size": 3.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.2,
+     -2.6,
+     1.2
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 22,
+    "color": [
+     1.0,
+     0.95,
+     0.9
+    ],
+    "size": 3.0
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "kapi",
+   "model": "assets/kapi.glb",
+   "height": 0.15,
+   "at": [
+    0.045,
+    0.05,
+    0.226
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bobo",
+   "model": "assets/kapi-bobo.glb",
+   "height": 0.12,
+   "at": [
+    0.62,
+    0.3,
+    -0.18
+   ],
+   "rot": -60,
+   "face": -90,
+   "clip": "Idle",
+   "bob": true,
+   "drift": 0.008,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "fruit0",
+  "fruit1",
+  "fruit2",
+  "fruit3",
+  "fruit4"
+ ],
+ "touch": [
+  "kapi",
+  "bobo",
+  "tree",
+  "jamun-branch",
+  "reed-clump",
+  "log",
+  "rocks",
+  "flowers",
+  "frog-stone",
+  "hyacinth",
+  "ferns",
+  "butterfly0",
+  "butterfly1",
+  "butterfly2",
+  "fish0",
+  "fish1"
+ ],
+ "acts": [
+  {
+   "line": "1.1",
+   "word": "river",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.7,
+    -0.9,
+    0.0
+   ]
+  },
+  {
+   "line": "1.2",
+   "word": "purple",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.045,
+    -2.0,
+    0.0
+   ]
+  },
+  {
+   "line": "1.2",
+   "word": "sweet",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Eat",
+   "then": "Idle"
+  },
+  {
+   "line": "1.3",
+   "word": "monkey",
+   "who": "kapi",
+   "do": "climb",
+   "to": [
+    0.06,
+    0.09,
+    0.287
+   ],
+   "clip": "Climb Up",
+   "then": "Sit",
+   "wait": true
+  },
+  {
+   "line": "1.3",
+   "word": "monkey",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    1.2,
+    0.25,
+    0.0
+   ]
+  },
+  {
+   "line": "1.4",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.3,
+    -1.6,
+    0.0
+   ]
+  },
+  {
+   "line": "1.4",
+   "word": "breakfast",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Eat",
+   "then": "Sit"
+  },
+  {
+   "line": "1.4",
+   "word": "breakfast",
+   "who": "bobo",
+   "do": "rise",
+   "by": 0.15,
+   "secs": 1.5
+  },
+  {
+   "line": "1.4",
+   "after": "rise",
+   "who": "bobo",
+   "do": "swim",
+   "to": [
+    0.55,
+    -0.05,
+    -0.03
+   ],
+   "stop": 0,
+   "face": "kapi",
+   "wait": true
+  },
+  {
+   "line": "1.4",
+   "word": "lunch",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Eat",
+   "then": "Sit"
+  },
+  {
+   "line": "1.4",
+   "word": "dinner",
+   "who": "kapi",
+   "do": "clip",
+   "clip": "Eat",
+   "then": "Sit"
+  },
+  {
+   "line": "1.4",
+   "after": "clip",
+   "who": "kapi",
+   "do": "face",
+   "face": "bobo"
+  },
+  {
+   "line": "game.1.start",
+   "after": "face",
+   "who": "kapi",
+   "do": "face",
+   "face": [
+    0.06,
+    -2.0,
+    0.0
+   ]
+  }
+ ],
+ "ambient": {
+  "clouds": 3,
+  "birds": {
+   "count": 2,
+   "every": 12,
+   "kind": "bird"
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "grass-near"
+   }
+  ],
+  "motes": {
+   "over": "water",
+   "count": 6,
+   "color": [
+    1,
+    0.97,
+    0.9
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.06
+  },
+  "fog": 0.2,
+  "shadows": 0.2,
+  "shafts": 3,
+  "smoke": [],
+  "drift": {
+   "card": "kapi/leaf",
+   "count": 3,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.35,
+   "flow": 0.015
+  },
+  "retire": [
+   "kapi/dragonfly"
+  ],
+  "surprises": [
+   {
+    "name": "trunk-ladybug",
+    "card": "ladybug",
+    "at": [
+     -0.05,
+     0.128,
+     0.05
+    ],
+    "seen_from": "left"
+   },
+   {
+    "name": "sleeping-bat",
+    "puppet": "fruit-bat",
+    "at": [
+     -0.2,
+     0.135,
+     0.28
+    ],
+    "seen_from": "left",
+    "pose": "hang",
+    "move": "stretch"
+   },
+   {
+    "name": "leaf-frog",
+    "puppet": "frog",
+    "at": [
+     0.48,
+     -0.38,
+     0
+    ],
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": "s02",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Jamun Tree",
+ "shots": {
+  "open": {
+   "from": [
+    0.0,
+    -1.66,
+    1.63
+   ],
+   "look": [
+    0,
+    0.1,
+    0.15
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "1.1": "reading",
+  "1.2": {
+   "target": "jamun-branch",
+   "framing": "close",
+   "move": "push",
+   "focus": "jamun-branch",
+   "seconds": 4,
+   "yaw": -10
+  },
+  "1.3": {
+   "target": "kapi",
+   "framing": "medium",
+   "move": "follow",
+   "focus": "kapi",
+   "seconds": 3.7,
+   "word": "monkey"
+  },
+  "1.4": {
+   "target": "kapi",
+   "framing": "medium",
+   "move": "crane",
+   "focus": "kapi",
+   "seconds": 5,
+   "yaw": 10
+  },
+  "game": "reading",
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "heron",
+   "puppet": "heron",
+   "layer": "middle",
+   "at": [
+    0.55,
+    0.12,
+    0
+   ],
+   "path": [
+    [
+     0.55,
+     0.12,
+     0
+    ],
+    [
+     0.44,
+     0.06,
+     0
+    ],
+    [
+     0.62,
+     0.02,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     1
+    ],
+    [
+     "go",
+     3,
+     "wade"
+    ],
+    [
+     "freeze",
+     2
+    ],
+    [
+     "strike",
+     0.5,
+     "splash-small"
+    ],
+    [
+     "swallow",
+     1.2,
+     "gulp"
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "flap",
+    "heron-croak"
+   ],
+   "cues": [
+    [
+     "1.4",
+     "breakfast",
+     "flap"
+    ]
+   ]
+  },
+  {
+   "name": "turtle-1",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    0.37,
+    -0.276,
+    0.05
+   ],
+   "routine": [
+    [
+     "show",
+     1.5
+    ],
+    [
+     "wait",
+     8
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "tuck",
+     1
+    ]
+   ],
+   "tap": [
+    "hide:under",
+    "plop"
+   ],
+   "cues": [
+    [
+     "1.4",
+     "breakfast",
+     "hide:under",
+     [
+      "game:won",
+      ""
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "turtle-2",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    0.41,
+    -0.276,
+    0.05
+   ],
+   "routine": [
+    [
+     "show",
+     1.5
+    ],
+    [
+     "wait",
+     10
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "tuck",
+     1
+    ]
+   ],
+   "tap": [
+    "hide:under",
+    "plop"
+   ],
+   "cues": [
+    [
+     "1.4",
+     "breakfast",
+     "hide:under",
+     [
+      "game:won",
+      ""
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "turtle-3",
+   "puppet": "turtle",
+   "layer": "middle",
+   "at": [
+    0.45,
+    -0.276,
+    0.05
+   ],
+   "routine": [
+    [
+     "show",
+     1.5
+    ],
+    [
+     "wait",
+     12
+    ],
+    [
+     "stretch",
+     1.5
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "tuck",
+     1
+    ]
+   ],
+   "tap": [
+    "hide:under",
+    "plop"
+   ],
+   "cues": [
+    [
+     "1.4",
+     "breakfast",
+     "hide:under",
+     [
+      "game:won",
+      ""
+     ]
+    ]
+   ]
+  },
+  {
+   "name": "kingfisher",
+   "puppet": "kingfisher",
+   "layer": "middle",
+   "at": "reed-clump",
+   "path": [
+    "reed-clump",
+    [
+     0.66,
+     -0.02,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "wait",
+     5
+    ],
+    [
+     "perch",
+     0.5,
+     "kingfisher-call"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "go+dive",
+     0.7,
+     "splash-small"
+    ],
+    [
+     "hide:under",
+     0.4
+    ],
+    [
+     "show",
+     0.4
+    ],
+    [
+     "go",
+     1.2
+    ],
+    [
+     "swallow",
+     0.6
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "perch",
+    "kingfisher-call"
+   ]
+  },
+  {
+   "name": "parakeet-1",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "at": [
+    0.11,
+    0.1275,
+    0.298
+   ],
+   "path": [
+    [
+     0.11,
+     0.1275,
+     0.298
+    ],
+    [
+     0.13,
+     0.1303,
+     0.3
+    ]
+   ],
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "peck",
+     0.6
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "cues": [
+    [
+     "game:won",
+     "",
+     "flutter"
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "parakeet-2",
+   "puppet": "parakeet",
+   "layer": "middle",
+   "at": [
+    0.19,
+    0.1387,
+    0.324
+   ],
+   "path": [
+    [
+     0.19,
+     0.1387,
+     0.324
+    ],
+    [
+     0.205,
+     0.1408,
+     0.333
+    ]
+   ],
+   "routine": [
+    [
+     "peck",
+     0.6,
+     "parakeet-chatter"
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "go",
+     1
+    ],
+    [
+     "peck",
+     0.6
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "parakeet-squawk"
+   ],
+   "cues": [
+    [
+     "game:won",
+     "",
+     "flutter"
+    ]
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "gecko",
+   "puppet": "gecko",
+   "layer": "middle",
+   "at": [
+    -0.07,
+    0.125,
+    0.08
+   ],
+   "path": [
+    [
+     -0.07,
+     0.125,
+     0.08
+    ],
+    [
+     -0.075,
+     0.127,
+     0.2
+    ]
+   ],
+   "routine": [
+    [
+     "go",
+     2
+    ],
+    [
+     "look",
+     0.6
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "go",
+     2
+    ],
+    [
+     "curl",
+     0.8
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "curl",
+    "paper-pat"
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "dragonflies",
+   "puppet": "dragonfly",
+   "layer": "front",
+   "at": [
+    0.4,
+    -0.3,
+    0.06
+   ],
+   "count": 2,
+   "path": [
+    [
+     0.4,
+     -0.3,
+     0.06
+    ],
+    [
+     0.56,
+     -0.2,
+     0.09
+    ],
+    [
+     0.3,
+     -0.16,
+     0.05
+    ]
+   ],
+   "routine": [
+    [
+     "hover",
+     2,
+     "wing-buzz"
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "hover",
+     1.5
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "dip",
+     0.3
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "hover",
+     2
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "hover",
+     1.5
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "dip",
+     0.3
+    ],
+    [
+     "go",
+     0.4
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "hover",
+    "wing-buzz"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.2,
+  "gust": 0.6,
+  "gust_every": [
+   10,
+   16
+  ],
+  "dir": -1,
+  "sway": [
+   [
+    "tree",
+    1.2
+   ],
+   [
+    "jamun-branch",
+    3
+   ],
+   [
+    "reed-clump",
+    6
+   ],
+   [
+    "grass-near",
+    4
+   ],
+   [
+    "river-grass",
+    5
+   ],
+   [
+    "ferns",
+    3
+   ],
+   [
+    "flowers",
+    3
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "1.4",
+    "word": "breakfast",
+    "light": "sun",
+    "level": 0.85,
+    "tint": [
+     1,
+     0.8,
+     0.62
+    ],
+    "at": [
+     -2.4,
+     1.2,
+     1.0
+    ],
+    "seconds": 1
+   },
+   {
+    "line": "1.4",
+    "word": "lunch",
+    "light": "sun",
+    "level": 1.15,
+    "tint": [
+     1,
+     1,
+     0.95
+    ],
+    "at": [
+     0,
+     1.0,
+     3.0
+    ],
+    "seconds": 1
+   },
+   {
+    "line": "1.4",
+    "word": "dinner",
+    "light": "sun",
+    "level": 0.7,
+    "tint": [
+     1,
+     0.62,
+     0.4
+    ],
+    "at": [
+     2.4,
+     1.2,
+     0.9
+    ],
+    "seconds": 1
+   },
+   {
+    "line": "game",
+    "light": "sun",
+    "back": true,
+    "seconds": 2
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-slow",
+    0.3
+   ],
+   [
+    "birds-day",
+    0.18
+   ],
+   [
+    "leaves-breeze",
+    0.12
+   ],
+   [
+    "insects-day",
+    0.06
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "tap:kapi": [
+    "paper-pat",
+    0.3
+   ],
+   "tap:tree": [
+    "leaves-shake",
+    0.4
+   ],
+   "game:fruit": [
+    "jamun-pluck",
+    0.45
+   ],
+   "act:kapi:clip": [
+    "jamun-chomp",
+    0.3
+   ],
+   "act:kapi:climb": [
+    "bark-scramble",
+    0.3
+   ]
+  }
+ },
+ "exit_frames": 73
+}

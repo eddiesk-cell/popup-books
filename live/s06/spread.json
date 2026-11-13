@@ -1,0 +1,934 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "lulu",
+   "model": "assets/kapi-lulu.glb",
+   "height": 0.11,
+   "at": [
+    0.25,
+    0.0,
+    0.0
+   ],
+   "rot": -83,
+   "face": -90,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bobo",
+   "model": "assets/kapi-bobo.glb",
+   "height": 0.12,
+   "at": [
+    -0.16,
+    -0.05,
+    0.0
+   ],
+   "rot": 97,
+   "face": -90,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "lantern0",
+  "lantern1",
+  "lantern2",
+  "lantern3",
+  "lantern4"
+ ],
+ "touch": [
+  "lulu",
+  "bobo",
+  "nest-1",
+  "nest1",
+  "reed-night-1",
+  "reed-night1",
+  "backdrop-river-night",
+  "sandbank-night",
+  "river-grass-night",
+  "reeds-right",
+  "hyacinth-night",
+  "frog-stone-night",
+  "lilypads-night",
+  "pebbles-night",
+  "log-night",
+  "ferns-night"
+ ],
+ "acts": [
+  {
+   "line": "6.1",
+   "who": "bobo",
+   "do": "clip",
+   "word": "Bobo",
+   "clip": "Turn",
+   "then": "Idle"
+  },
+  {
+   "line": "6.1",
+   "who": "bobo",
+   "do": "swim",
+   "word": "sleep",
+   "after": "clip",
+   "to": [
+    -0.3,
+    -0.1,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.5,
+    -0.65,
+    0.0
+   ],
+   "wait": true
+  },
+  {
+   "line": "6.2",
+   "who": "bobo",
+   "do": "think"
+  },
+  {
+   "line": "6.2",
+   "who": "bobo",
+   "do": "swim",
+   "word": "Whose",
+   "to": [
+    -0.2,
+    -0.1,
+    0.0
+   ],
+   "stop": 0
+  },
+  {
+   "line": "6.2",
+   "who": "bobo",
+   "do": "swim",
+   "after": "swim",
+   "to": [
+    -0.3,
+    -0.1,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.5,
+    -0.65,
+    0.0
+   ]
+  },
+  {
+   "line": "6.3",
+   "who": "bobo",
+   "do": "think",
+   "face": [
+    -0.5,
+    -0.65,
+    0.0
+   ]
+  },
+  {
+   "line": "6.3",
+   "who": "bobo",
+   "do": "swim",
+   "word": "Kapi's",
+   "to": [
+    -0.38,
+    -0.13,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.5,
+    -0.65,
+    0.0
+   ]
+  },
+  {
+   "line": "6.3",
+   "who": "bobo",
+   "do": "clip",
+   "word": "no",
+   "clip": "Turn",
+   "then": "Worry"
+  },
+  {
+   "line": "6.4",
+   "who": "bobo",
+   "do": "swim",
+   "word": "wife",
+   "to": [
+    -0.24,
+    -0.09,
+    0.0
+   ],
+   "stop": 0,
+   "face": "lulu"
+  },
+  {
+   "line": "6.4",
+   "who": "bobo",
+   "do": "swim",
+   "word": "friend",
+   "to": [
+    -0.37,
+    -0.13,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.9,
+    -0.4,
+    0.0
+   ]
+  },
+  {
+   "line": "6.4",
+   "who": "bobo",
+   "do": "clip",
+   "word": "What",
+   "clip": "Turn",
+   "then": "Worry"
+  },
+  {
+   "line": "6.4",
+   "who": "bobo",
+   "do": "face",
+   "word": "What",
+   "face": [
+    -0.1,
+    -0.6,
+    0.0
+   ]
+  }
+ ],
+ "ambient": {
+  "clouds": 2,
+  "birds": {
+   "count": 2,
+   "every": 24,
+   "kind": "bat"
+  },
+  "crawlers": [],
+  "motes": {
+   "over": "water",
+   "count": 8,
+   "color": [
+    0.55,
+    0.6,
+    0.75
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.2
+  },
+  "fog": 0.4,
+  "shadows": 0.15,
+  "shafts": 0,
+  "smoke": [],
+  "drift": {
+   "card": "kapi/leaf",
+   "count": 1,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.15,
+   "flow": 0.008
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "nest-ladybug",
+    "card": "ladybug",
+    "at": [
+     0.2,
+     0.15,
+     0.06
+    ],
+    "seen_from": "left"
+   },
+   {
+    "name": "sleeping-lapwing",
+    "puppet": "lapwing",
+    "at": [
+     -0.19,
+     -0.525,
+     0.069
+    ],
+    "move": "call"
+   },
+   {
+    "name": "leaf-frog",
+    "puppet": "frog",
+    "at": [
+     0.7,
+     -0.445,
+     0.057
+    ],
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": "s07",
+ "backdrop": [
+  "backdrop-river-night"
+ ],
+ "title": "Bobo's Worry",
+ "shots": {
+  "open": {
+   "from": [
+    -0.21,
+    -1.8,
+    1.64
+   ],
+   "look": [
+    0.3,
+    0.1,
+    0.1
+   ],
+   "settle": "bobo",
+   "seconds": 3
+  },
+  "6.1": {
+   "target": "bobo",
+   "framing": "medium",
+   "move": "drift",
+   "focus": "bobo",
+   "seconds": 3.2
+  },
+  "6.2": {
+   "target": "bobo",
+   "framing": "close",
+   "move": "push",
+   "focus": "bobo",
+   "seconds": 4
+  },
+  "6.3": {
+   "target": "bobo",
+   "framing": "close",
+   "move": "push",
+   "focus": "bobo",
+   "seconds": 5,
+   "yaw": -10
+  },
+  "6.4": {
+   "target": [
+    "bobo",
+    "lulu"
+   ],
+   "framing": "medium",
+   "move": "pull",
+   "focus": "bobo",
+   "seconds": 5
+  },
+  "game": "reading",
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "owlet",
+   "puppet": "owl",
+   "layer": "front",
+   "at": [
+    -0.33,
+    -0.525,
+    0.054
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "blink",
+     0.4
+    ],
+    [
+     "look",
+     1.5
+    ],
+    [
+     "hoot",
+     1,
+     "owl-hoot"
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "ruffle",
+    "owl-hoot"
+   ],
+   "cues": [
+    [
+     "6.3",
+     "no",
+     "look"
+    ]
+   ]
+  },
+  {
+   "name": "bats",
+   "puppet": "fruit-bat",
+   "layer": "back",
+   "at": [
+    -1.1,
+    0.28,
+    0.32
+   ],
+   "count": 2,
+   "trail": 0.12,
+   "path": [
+    [
+     -1.1,
+     0.28,
+     0.32
+    ],
+    [
+     1.1,
+     0.28,
+     0.32
+    ]
+   ],
+   "routine": [
+    [
+     "hide:away",
+     0.5
+    ],
+    [
+     "wait",
+     16
+    ],
+    [
+     "show",
+     0.5
+    ],
+    [
+     "go+flap",
+     6,
+     "bat-flutter"
+    ],
+    [
+     "hide:away",
+     0.5
+    ]
+   ],
+   "tap": [
+    "flap",
+    "bat-flutter"
+   ],
+   "game": "hide"
+  },
+  {
+   "name": "frogs",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    0.44,
+    -0.445,
+    0.087
+   ],
+   "path": [
+    [
+     0.44,
+     -0.445,
+     0.087
+    ],
+    [
+     0.48,
+     -0.445,
+     0.088
+    ]
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "go",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ]
+  },
+  {
+   "name": "frogs-2",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    0.55,
+    -0.445,
+    0.11
+   ],
+   "path": [
+    [
+     0.55,
+     -0.445,
+     0.11
+    ],
+    [
+     0.6,
+     -0.445,
+     0.094
+    ]
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "go",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ]
+  },
+  {
+   "name": "frogs-3",
+   "puppet": "frog",
+   "layer": "front",
+   "at": [
+    0.64,
+    -0.445,
+    0.101
+   ],
+   "path": [
+    [
+     0.64,
+     -0.445,
+     0.101
+    ],
+    [
+     0.66,
+     -0.445,
+     0.098
+    ]
+   ],
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "go",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ]
+  },
+  {
+   "name": "fish",
+   "puppet": "fish",
+   "layer": "middle",
+   "at": [
+    -0.62,
+    -0.3,
+    0
+   ],
+   "count": 2,
+   "routine": [
+    [
+     "hide:under",
+     0.5
+    ],
+    [
+     "wait",
+     9
+    ],
+    [
+     "show",
+     0.8,
+     "fish-rise"
+    ],
+    [
+     "flick",
+     0.6
+    ],
+    [
+     "hide:under",
+     0.6
+    ],
+    [
+     "wait",
+     3
+    ]
+   ],
+   "tap": [
+    "jump",
+    "splash-small"
+   ]
+  },
+  {
+   "name": "crabs",
+   "puppet": "crab",
+   "layer": "front",
+   "at": [
+    0.24,
+    -0.24,
+    0
+   ],
+   "path": [
+    [
+     0.24,
+     -0.24,
+     0
+    ],
+    [
+     0.32,
+     -0.22,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "go",
+     1.5
+    ],
+    [
+     "wave",
+     0.8
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "hide:behind",
+     0.6
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "click",
+    "crab-click"
+   ]
+  },
+  {
+   "name": "crabs-2",
+   "puppet": "crab",
+   "layer": "front",
+   "at": [
+    0.3,
+    -0.19,
+    0
+   ],
+   "path": [
+    [
+     0.3,
+     -0.19,
+     0
+    ],
+    [
+     0.38,
+     -0.17,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "go",
+     1.5
+    ],
+    [
+     "wave",
+     0.8
+    ],
+    [
+     "wait",
+     3
+    ],
+    [
+     "hide:behind",
+     0.6
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "click",
+    "crab-click"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.1,
+  "gust": 0.3,
+  "gust_every": [
+   14,
+   22
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "reed-night",
+    4
+   ],
+   [
+    "river-grass-night",
+    3
+   ],
+   [
+    "hyacinth-night",
+    1.5
+   ],
+   [
+    "ferns-night",
+    2
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "6.1",
+    "light": "key-lamp",
+    "level": 0.6,
+    "tint": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "6.3",
+    "word": "no",
+    "light": "key-lamp",
+    "level": 0.25,
+    "tint": [
+     0.55,
+     0.65,
+     1.0
+    ],
+    "seconds": 1.5
+   },
+   {
+    "line": "6.4",
+    "word": "friend",
+    "light": "key-lamp",
+    "level": 0.75,
+    "tint": [
+     0.9,
+     0.88,
+     1.0
+    ],
+    "seconds": 3
+   }
+  ],
+  "flicker": []
+ },
+ "sound": {
+  "bed": [
+   [
+    "night-frogs",
+    0.16
+   ],
+   [
+    "crickets",
+    0.16
+   ],
+   [
+    "river-night",
+    0.14
+   ],
+   [
+    "night-breeze",
+    0.05
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "act:bobo:clip": [
+    "sand-shift",
+    0.2
+   ],
+   "game:lantern": [
+    "star-chime",
+    0.35
+   ],
+   "tap:nest": [
+    "straw-rustle",
+    0.3
+   ],
+   "tap:bobo": [
+    "tail-splash",
+    0.3
+   ],
+   "tap:backdrop-river-night": [
+    "moon-shimmer",
+    0.3
+   ]
+  }
+ },
+ "exit_frames": 73
+}

@@ -1,0 +1,926 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "mali",
+   "model": "assets/mali.glb",
+   "height": 0.166,
+   "at": [
+    0.25,
+    0.06,
+    0.0
+   ],
+   "rot": -51,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "tong",
+   "model": "puppet:tong",
+   "height": 0.07,
+   "at": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 3,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "pip",
+   "model": "assets/raw/pip.glb",
+   "height": 0.11,
+   "at": [
+    0.17,
+    -0.02,
+    0.17
+   ],
+   "rot": 24,
+   "face": -90,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "lamp",
+   "model": "assets/mali/lamp.glb",
+   "height": 0.02,
+   "at": [
+    0.06,
+    0.2,
+    0.0
+   ],
+   "rot": 270,
+   "face": 0,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 3,
+   "candle": true,
+   "dark": true
+  },
+  {
+   "name": "lampspot0",
+   "model": "assets/mali/lampspot.glb",
+   "height": 0.003,
+   "at": [
+    -0.15,
+    -0.12,
+    0.0
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 4,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "lampspot1",
+   "model": "assets/mali/lampspot.glb",
+   "height": 0.003,
+   "at": [
+    0.0,
+    -0.12,
+    0.0
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 5,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "lampspot2",
+   "model": "assets/mali/lampspot.glb",
+   "height": 0.003,
+   "at": [
+    0.15,
+    -0.12,
+    0.0
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 6,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "lampspot0",
+  "lampspot1",
+  "lampspot2"
+ ],
+ "touch": [
+  "mali",
+  "pip",
+  "tong",
+  "lamp",
+  "screen-1",
+  "screen1",
+  "houseboat-1",
+  "houseboat1",
+  "mid-market-1",
+  "mid-market1",
+  "lotus-spirits",
+  "lotus",
+  "lilypads-night",
+  "hyacinth-night",
+  "lilypads-right",
+  "reed-night",
+  "moth0",
+  "moth1"
+ ],
+ "acts": [
+  {
+   "line": "4.1",
+   "who": "pip",
+   "do": "fly",
+   "word": "flew",
+   "to": "mali",
+   "bone": "rightUpperArm",
+   "beside": true
+  },
+  {
+   "line": "4.1",
+   "who": "mali",
+   "do": "face",
+   "word": "flew",
+   "face": [
+    0.0,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "4.2",
+   "who": "mali",
+   "do": "walk",
+   "word": "followed",
+   "to": [
+    0.15,
+    0.06,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.0,
+    0.08,
+    0.0
+   ],
+   "wait": true
+  },
+  {
+   "line": "4.2",
+   "word": "crying",
+   "who": "tong",
+   "do": "clip",
+   "clip": "Cry",
+   "then": "Cry"
+  },
+  {
+   "line": "4.3",
+   "who": "mali",
+   "do": "face",
+   "word": "shadow",
+   "face": [
+    0.0,
+    0.08,
+    0.0
+   ]
+  },
+  {
+   "line": "4.4",
+   "who": "mali",
+   "do": "stepback",
+   "to": [
+    0.06,
+    0.2,
+    0.0
+   ],
+   "stop": 0.03,
+   "wait": true
+  },
+  {
+   "line": "4.4",
+   "after": "stepback",
+   "who": "pip",
+   "do": "float",
+   "to": [
+    0.17,
+    0.16,
+    0.06
+   ],
+   "secs": 0.6,
+   "clip": "Fly"
+  },
+  {
+   "line": "4.4",
+   "who": "mali",
+   "do": "hold",
+   "word": "lamp",
+   "after": "stepback",
+   "what": "lamp",
+   "hand": "right"
+  },
+  {
+   "line": "4.4",
+   "who": "pip",
+   "do": "float",
+   "word": "she",
+   "to": [
+    0.135,
+    0.096,
+    0.033
+   ],
+   "secs": 0.4,
+   "clip": "Fly"
+  },
+  {
+   "line": "4.4",
+   "after": "float",
+   "who": "pip",
+   "do": "glow",
+   "by": 0.6,
+   "secs": 0.5
+  },
+  {
+   "line": "4.4",
+   "after": "glow",
+   "who": "pip",
+   "do": "float",
+   "to": [
+    0.27,
+    0.09,
+    0.03
+   ],
+   "secs": 0.6,
+   "clip": "Fly"
+  },
+  {
+   "line": "4.4",
+   "after": "float",
+   "who": "pip",
+   "do": "float",
+   "to": [
+    0.28,
+    0.05,
+    0.1
+   ],
+   "secs": 0.5,
+   "clip": "Fly"
+  },
+  {
+   "line": "4.4",
+   "word": "find",
+   "who": "pip",
+   "do": "glow",
+   "by": 0,
+   "secs": 0.8
+  },
+  {
+   "line": "4.4",
+   "who": "mali",
+   "do": "face",
+   "word": "find",
+   "face": [
+    -0.1,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "game.4.praise",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.2,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "4.5",
+   "word": "moved",
+   "who": "mali",
+   "do": "walk",
+   "to": [
+    -0.3,
+    -0.2,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.2,
+    -0.6,
+    0.0
+   ]
+  },
+  {
+   "line": "4.5",
+   "who": "mali",
+   "do": "clip",
+   "word": "danced",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "4.5",
+   "word": "danced",
+   "who": "tong",
+   "do": "clip",
+   "clip": "Bounce",
+   "then": "Idle"
+  },
+  {
+   "line": "4.1",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "4.2",
+   "who": "mali",
+   "do": "mood",
+   "mood": "pity",
+   "word": "crying"
+  },
+  {
+   "line": "4.3",
+   "who": "mali",
+   "do": "mood",
+   "mood": "sad"
+  },
+  {
+   "line": "4.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm"
+  },
+  {
+   "line": "game.4.praise",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "4.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "there"
+  },
+  {
+   "line": "4.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy",
+   "word": "danced"
+  }
+ ],
+ "ambient": {
+  "clouds": 2,
+  "birds": {
+   "count": 0,
+   "every": 0,
+   "kind": "bat"
+  },
+  "crawlers": [],
+  "motes": {
+   "over": "water",
+   "count": 25,
+   "color": [
+    1,
+    0.85,
+    0.55
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.15
+  },
+  "fog": 0.3,
+  "shadows": 0,
+  "shafts": 0,
+  "smoke": [],
+  "drift": {
+   "card": "mali/petal",
+   "count": 2,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.2,
+   "flow": 0.006
+  },
+  "retire": [
+   "kapi/fish"
+  ],
+  "surprises": [
+   {
+    "name": "rope-sprite",
+    "puppet": "palm-sprite",
+    "at": [
+     -0.5,
+     0.2,
+     0
+    ],
+    "seen_from": "left",
+    "pose": "doze",
+    "move": "peek",
+    "sound": "sprite-giggle"
+   },
+   {
+    "name": "lotus-ladybug",
+    "card": "ladybug",
+    "at": "lotus",
+    "seen_from": "left"
+   },
+   {
+    "name": "pad-frog",
+    "puppet": "frog",
+    "at": "lilypads-night",
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": "mali-s05",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Lost Shadow",
+ "shots": {
+  "open": {
+   "from": [
+    -0.66,
+    -1.67,
+    0.67
+   ],
+   "look": [
+    0,
+    0.15,
+    0.15
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "4.1": {
+   "target": "pip",
+   "framing": "medium",
+   "move": "follow",
+   "focus": "pip",
+   "seconds": 3,
+   "word": "flew"
+  },
+  "4.2": {
+   "target": "mali",
+   "framing": "medium",
+   "move": "follow",
+   "focus": "mali",
+   "seconds": 3,
+   "word": "followed"
+  },
+  "4.3": {
+   "target": [
+    "tong",
+    "screen"
+   ],
+   "framing": "medium",
+   "move": "hold",
+   "focus": "tong",
+   "seconds": 4
+  },
+  "4.4": {
+   "target": "mali",
+   "framing": "face",
+   "move": "hold",
+   "focus": "mali",
+   "seconds": 3,
+   "word": "picked"
+  },
+  "4.5": {
+   "target": [
+    "tong",
+    "screen",
+    "mali"
+   ],
+   "framing": "medium",
+   "move": "pull",
+   "seconds": 5
+  },
+  "game": "reading",
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "hammock-sleeper",
+   "puppet": "hammock-sleeper",
+   "layer": "middle",
+   "at": [
+    -0.72,
+    0.419,
+    0.14
+   ],
+   "routine": [
+    [
+     "rock",
+     6,
+     "snore"
+    ],
+    [
+     "wait",
+     2
+    ]
+   ],
+   "tap": [
+    "wake",
+    "snore"
+   ],
+   "cues": [
+    [
+     "4.5",
+     "danced",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "gecko",
+   "puppet": "gecko",
+   "layer": "middle",
+   "at": [
+    0.6,
+    0.402,
+    0.1
+   ],
+   "routine": [
+    [
+     "wait",
+     6
+    ],
+    [
+     "look",
+     1,
+     "gecko-chirp"
+    ],
+    [
+     "curl",
+     1
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "curl",
+    "gecko-chirp"
+   ]
+  },
+  {
+   "name": "palm-sprites",
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "at": [
+    0.5,
+    0.2,
+    0
+   ],
+   "count": 2,
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "hide:behind",
+     0.5
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "fish",
+   "puppet": "fish",
+   "layer": "middle",
+   "at": [
+    0.3,
+    -0.36,
+    0
+   ],
+   "count": 2,
+   "routine": [
+    [
+     "hide:under",
+     0.5
+    ],
+    [
+     "wait",
+     9
+    ],
+    [
+     "show",
+     0.8,
+     "fish-rise"
+    ],
+    [
+     "flick",
+     0.6
+    ],
+    [
+     "hide:under",
+     0.6
+    ]
+   ],
+   "tap": [
+    "jump",
+    "splash-small"
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.1,
+  "gust": 0.3,
+  "gust_every": [
+   12,
+   20
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "screen",
+    1
+   ],
+   [
+    "houseboat",
+    0.4
+   ],
+   [
+    "mid-market",
+    2
+   ],
+   [
+    "reed-night",
+    4
+   ],
+   [
+    "lotus",
+    2
+   ],
+   [
+    "lotus-spirits",
+    1
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "4.4",
+    "word": "light",
+    "light": "key-lamp",
+    "level": 0.6,
+    "tint": [
+     0.9,
+     0.85,
+     1
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "4.4",
+    "word": "said",
+    "light": "lamp-flame",
+    "level": 1,
+    "seconds": 0.6
+   },
+   {
+    "line": "4.5",
+    "word": "danced",
+    "light": "key-lamp",
+    "level": 1.1,
+    "tint": [
+     1,
+     0.88,
+     0.7
+    ],
+    "seconds": 2
+   }
+  ],
+  "flicker": [
+   "houseboat",
+   "mid-market",
+   "lamp"
+  ]
+ },
+ "sound": {
+  "bed": [
+   [
+    "water-lap-boats",
+    0.16
+   ],
+   [
+    "market-murmur",
+    0.05
+   ],
+   [
+    "crickets",
+    0.08
+   ],
+   [
+    "rope-creak",
+    0.05
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:4.2:crying": [
+    "tong-sniffle",
+    0.25
+   ],
+   "tap:tong": [
+    "leaf-rustle",
+    0.3
+   ],
+   "act:mali:hold": [
+    "lamp-clink",
+    0.3
+   ],
+   "game:won": [
+    "shadow-chime",
+    0.4
+   ],
+   "line:4.5:danced": [
+    "music-box",
+    0.18
+   ],
+   "tap:pip": [
+    "pip-chirp",
+    0.35
+   ],
+   "tap:lamp": [
+    "lamp-clink",
+    0.3
+   ],
+   "line:4.4:light": [
+    "flame-catch",
+    0.3
+   ]
+  }
+ },
+ "exit_frames": 73
+}

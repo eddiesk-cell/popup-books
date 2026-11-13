@@ -1,0 +1,1123 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "mali",
+   "model": "assets/mali.glb",
+   "height": 0.166,
+   "at": [
+    0.62,
+    0.02,
+    0.0
+   ],
+   "rot": -90,
+   "face": 0,
+   "clip": "Walk",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "enter": [
+    [
+     40,
+     [
+      1.05,
+      0.02,
+      0.0
+     ]
+    ],
+    [
+     164,
+     [
+      0.62,
+      0.02,
+      0.0
+     ]
+    ]
+   ],
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "pip",
+   "model": "assets/raw/pip.glb",
+   "height": 0.11,
+   "at": [
+    0.21,
+    0.085,
+    -0.12
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "boatA",
+   "model": "assets/raw/boat.glb",
+   "height": 0.13,
+   "at": [
+    -0.12,
+    -0.36,
+    0.0
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": null,
+   "bob": true,
+   "drift": 0,
+   "on": null,
+   "delay": 4,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "boatB",
+   "model": "assets/raw/boat.glb",
+   "height": 0.12,
+   "at": [
+    0.3,
+    -0.37,
+    0.0
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": null,
+   "bob": true,
+   "drift": 0,
+   "on": null,
+   "delay": 8,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "lantern2",
+  "lantern5",
+  "lantern9",
+  "lantern12",
+  "lantern15"
+ ],
+ "touch": [
+  "mali",
+  "pip",
+  "market-1",
+  "market1",
+  "basket-stall-1",
+  "basket-stall1",
+  "mid-market-1",
+  "mid-market1",
+  "lotus-spirits",
+  "boatA",
+  "boatB",
+  "kite",
+  "lotus",
+  "hyacinth-night",
+  "lilypads-night",
+  "reed-night"
+ ],
+ "acts": [
+  {
+   "line": "3.1",
+   "word": "walked",
+   "who": "mali",
+   "do": "walk",
+   "to": [
+    0.3,
+    0.06,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.0,
+    0.08,
+    0.0
+   ]
+  },
+  {
+   "line": "3.1",
+   "after": "walk",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Step Back",
+   "to": [
+    0.34,
+    0.055,
+    0.0
+   ],
+   "then": "Idle"
+  },
+  {
+   "line": "3.2",
+   "word": "Shy",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.6,
+    -0.5,
+    0.0
+   ]
+  },
+  {
+   "line": "3.3",
+   "word": "dark",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.3,
+    -0.12,
+    0.0
+   ]
+  },
+  {
+   "line": "3.4",
+   "word": "crouched",
+   "who": "mali",
+   "do": "stepback",
+   "to": [
+    0.36,
+    0.085,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    0.2,
+    0.075,
+    0.0
+   ]
+  },
+  {
+   "line": "3.4",
+   "after": "sneak",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Sit Down",
+   "then": "Sit"
+  },
+  {
+   "line": "3.4",
+   "word": "Pip",
+   "who": "pip",
+   "do": "rise",
+   "by": 0.14,
+   "secs": 1.5
+  },
+  {
+   "line": "3.5",
+   "word": "whispered",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Stand Up",
+   "then": "Idle"
+  },
+  {
+   "line": "3.5",
+   "after": "clip",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.2,
+    0.06,
+    0.0
+   ]
+  },
+  {
+   "line": "game.3.start",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    0.1,
+    -0.4,
+    0.0
+   ]
+  },
+  {
+   "line": "3.6",
+   "word": "lit",
+   "who": "mali",
+   "do": "walk",
+   "to": [
+    0.25,
+    0.06,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.2,
+    -0.3,
+    0.0
+   ]
+  },
+  {
+   "line": "3.6",
+   "word": "glowed",
+   "who": "pip",
+   "do": "fly",
+   "to": [
+    0.17,
+    -0.02,
+    0.17
+   ]
+  },
+  {
+   "line": "3.6",
+   "after": "fly",
+   "who": "pip",
+   "do": "face",
+   "face": [
+    0.58,
+    -0.93,
+    0.0
+   ]
+  },
+  {
+   "line": "3.6",
+   "word": "brighter",
+   "who": "mali",
+   "do": "clip",
+   "clip": "Cheer",
+   "then": "Idle"
+  },
+  {
+   "line": "3.1",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "gasped"
+  },
+  {
+   "line": "3.2",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm",
+   "word": "Shy"
+  },
+  {
+   "line": "3.3",
+   "who": "mali",
+   "do": "mood",
+   "mood": "pity",
+   "word": "sad"
+  },
+  {
+   "line": "3.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "natural",
+   "word": "hiding"
+  },
+  {
+   "line": "3.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm",
+   "word": "Pip"
+  },
+  {
+   "line": "3.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "pity"
+  },
+  {
+   "line": "game.3.praise",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "3.6",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy",
+   "word": "lit"
+  }
+ ],
+ "ambient": {
+  "clouds": 2,
+  "birds": {
+   "count": 0,
+   "every": 0,
+   "kind": "bat"
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "basket-stall"
+   }
+  ],
+  "motes": {
+   "over": "water",
+   "count": 40,
+   "color": [
+    1,
+    0.8,
+    0.45
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.12
+  },
+  "fog": 0.3,
+  "shadows": 0,
+  "shafts": 0,
+  "smoke": [
+   "market"
+  ],
+  "drift": {
+   "card": "mali/petal",
+   "count": 3,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.25,
+   "flow": 0.008
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "basket-sprite",
+    "puppet": "palm-sprite",
+    "at": [
+     -0.32,
+     0.0,
+     0
+    ],
+    "seen_from": "left",
+    "pose": "doze",
+    "move": "peek",
+    "sound": "sprite-giggle"
+   },
+   {
+    "name": "gecko",
+    "puppet": "gecko",
+    "at": [
+     0.58,
+     0.38,
+     0.1
+    ],
+    "seen_from": "right",
+    "move": "look",
+    "sound": "gecko-chirp"
+   },
+   {
+    "name": "lotus-frog",
+    "puppet": "frog",
+    "at": [
+     0.857,
+     -0.486,
+     0.05
+    ],
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   }
+  ]
+ },
+ "next": "mali-s04",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Lantern Market",
+ "cut": true,
+ "shots": {
+  "open": {
+   "from": [
+    0.25,
+    -1.68,
+    1.47
+   ],
+   "look": [
+    0,
+    0.12,
+    0.15
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "3.1": [
+   {
+    "target": "mali",
+    "framing": "medium",
+    "move": "follow",
+    "focus": "mali",
+    "seconds": 2.7,
+    "word": "walked"
+   },
+   {
+    "word": "gasped",
+    "target": "mali",
+    "framing": "face",
+    "move": "hold",
+    "focus": "mali",
+    "seconds": 2.5
+   }
+  ],
+  "3.2": "reading",
+  "3.3": {
+   "target": [
+    "lantern2",
+    "lantern9",
+    "lantern15"
+   ],
+   "framing": "medium",
+   "move": "pan",
+   "focus": "lantern9",
+   "seconds": 4
+  },
+  "3.4": {
+   "target": [
+    "mali",
+    "basket-stall"
+   ],
+   "framing": "medium",
+   "move": "push",
+   "focus": "basket-stall",
+   "seconds": 3,
+   "word": "crouched",
+   "yaw": -10
+  },
+  "3.5": {
+   "target": [
+    "pip",
+    "mali"
+   ],
+   "framing": "close",
+   "move": "hold",
+   "focus": "pip",
+   "seconds": 4
+  },
+  "3.6": {
+   "target": [
+    "mali",
+    "pip"
+   ],
+   "framing": "medium",
+   "move": "push",
+   "focus": "pip",
+   "seconds": 4
+  },
+  "game": {
+   "target": "market",
+   "framing": "medium",
+   "move": "hold",
+   "focus": "market",
+   "seconds": 2
+  },
+  "end": "reading"
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "3.3",
+    "word": "dark",
+    "light": "key-lamp",
+    "level": 0.7,
+    "tint": [
+     0.85,
+     0.85,
+     1
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "game:won",
+    "light": "key-lamp",
+    "level": 1.0,
+    "tint": [
+     1,
+     0.9,
+     0.75
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "3.6",
+    "word": "brighter",
+    "light": "key-lamp",
+    "level": 1.15,
+    "tint": [
+     1,
+     0.85,
+     0.65
+    ],
+    "seconds": 2
+   },
+   {
+    "line": "3.6",
+    "word": "brighter",
+    "light": "fill",
+    "level": 1.3,
+    "tint": [
+     1,
+     0.9,
+     0.7
+    ],
+    "seconds": 2
+   }
+  ],
+  "flicker": [
+   "mid-market",
+   "market",
+   "lantern"
+  ]
+ },
+ "sound": {
+  "bed": [
+   [
+    "market-murmur",
+    0.12
+   ],
+   [
+    "water-lap-boats",
+    0.16
+   ],
+   [
+    "wind-chimes",
+    0.06
+   ],
+   [
+    "crickets",
+    0.06
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:3.3:dark": [
+    "lanterns-dim",
+    0.25
+   ],
+   "game:lantern": [
+    "lantern-relight",
+    0.4
+   ],
+   "game:won": [
+    "market-cheer",
+    0.4
+   ],
+   "tap:basket-stall": [
+    "basket-creak",
+    0.3
+   ],
+   "tap:pip": [
+    "pip-chirp",
+    0.35
+   ],
+   "tap:market": [
+    "wind-chime",
+    0.3
+   ],
+   "act:mali:walk": [
+    "wood-steps",
+    0.2
+   ],
+   "act:mali:clip": [
+    "cloth-rustle",
+    0.15
+   ]
+  }
+ },
+ "extras": [
+  {
+   "name": "flower-seller",
+   "puppet": "flower-seller",
+   "layer": "middle",
+   "at": [
+    -0.12,
+    -0.42,
+    0.02
+   ],
+   "routine": [
+    [
+     "offer",
+     1.5,
+     "bell-tinkle"
+    ],
+    [
+     "sway",
+     3
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "offer",
+    "bell-tinkle"
+   ],
+   "cues": [
+    [
+     "3.3",
+     "sad",
+     "droop",
+     [
+      "game:won",
+      ""
+     ]
+    ],
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "fruit-seller",
+   "puppet": "fruit-seller",
+   "layer": "middle",
+   "at": [
+    0.3,
+    -0.425,
+    0.018
+   ],
+   "routine": [
+    [
+     "weigh",
+     2.5,
+     "scale-clink"
+    ],
+    [
+     "wait",
+     4
+    ],
+    [
+     "weigh",
+     2
+    ],
+    [
+     "wait",
+     4
+    ]
+   ],
+   "tap": [
+    "weigh",
+    "scale-clink"
+   ],
+   "cues": [
+    [
+     "3.3",
+     "sad",
+     "droop",
+     [
+      "game:won",
+      ""
+     ]
+    ],
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "palm-sprite-1",
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "at": [
+    -0.14,
+    0.072,
+    0.0
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "hide:behind",
+     0.5
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "3.4",
+     "crouched",
+     "hide:behind",
+     [
+      "game:won",
+      ""
+     ]
+    ],
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "palm-sprite-2",
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "at": [
+    -0.115,
+    0.068,
+    0.0
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "hide:behind",
+     0.5
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "3.4",
+     "crouched",
+     "hide:behind",
+     [
+      "game:won",
+      ""
+     ]
+    ],
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "palm-sprite-3",
+   "puppet": "palm-sprite",
+   "layer": "front",
+   "at": [
+    -0.165,
+    0.07,
+    0.0
+   ],
+   "routine": [
+    [
+     "show",
+     0.6
+    ],
+    [
+     "peek",
+     1.5
+    ],
+    [
+     "giggle",
+     0.8,
+     "sprite-giggle"
+    ],
+    [
+     "hide:behind",
+     0.5
+    ],
+    [
+     "wait",
+     5
+    ]
+   ],
+   "tap": [
+    "hide:behind",
+    "sprite-giggle"
+   ],
+   "cues": [
+    [
+     "3.4",
+     "crouched",
+     "hide:behind",
+     [
+      "game:won",
+      ""
+     ]
+    ],
+    [
+     "game:won",
+     "",
+     "cheer"
+    ]
+   ]
+  },
+  {
+   "name": "shrine-turtle",
+   "puppet": "shrine-turtle",
+   "layer": "middle",
+   "at": [
+    0.66,
+    -0.24,
+    0
+   ],
+   "path": [
+    [
+     0.66,
+     -0.24,
+     0
+    ],
+    [
+     0.8,
+     -0.24,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "show",
+     1
+    ],
+    [
+     "go",
+     6
+    ],
+    [
+     "stretch",
+     1.5,
+     "shrine-tinkle"
+    ],
+    [
+     "hide:under",
+     1
+    ],
+    [
+     "wait",
+     12
+    ]
+   ],
+   "tap": [
+    "stretch",
+    "shrine-tinkle"
+   ]
+  },
+  {
+   "name": "moths",
+   "puppet": "moth",
+   "layer": "middle",
+   "at": [
+    -0.7,
+    0.396,
+    0.24
+   ],
+   "count": 2,
+   "path": [
+    [
+     -0.7,
+     0.396,
+     0.24
+    ],
+    [
+     -0.64,
+     0.388,
+     0.21
+    ],
+    [
+     -0.76,
+     0.405,
+     0.26
+    ]
+   ],
+   "routine": [
+    [
+     "go+flutter",
+     1.2
+    ],
+    [
+     "go+flutter",
+     1.2
+    ],
+    [
+     "flutter",
+     1,
+     "moth-flutter"
+    ]
+   ],
+   "tap": [
+    "flutter",
+    "moth-flutter"
+   ],
+   "game": "hide"
+  }
+ ],
+ "wind": {
+  "base": 0.1,
+  "gust": 0.3,
+  "gust_every": [
+   12,
+   18
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "mid-market-1",
+    2
+   ],
+   [
+    "mid-market1",
+    2
+   ],
+   [
+    "lotus",
+    2
+   ],
+   [
+    "hyacinth-night",
+    2
+   ],
+   [
+    "market-1",
+    0.3
+   ],
+   [
+    "market1",
+    0.3
+   ],
+   [
+    "lotus-spirits",
+    1
+   ],
+   [
+    "reed-night",
+    3
+   ]
+  ],
+  "cues": []
+ },
+ "exit_frames": 73
+}

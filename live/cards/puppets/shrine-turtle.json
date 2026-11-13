@@ -1,0 +1,54 @@
+{
+ "puppet": "shrine-turtle",
+ "size": 0.09,
+ "metres_per_pixel": 0.000136986301369863,
+ "rest": {
+  "head": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "shell",
+   "png": "cards/puppets/shrine-turtle/shell.png",
+   "size": [
+    0.08411,
+    0.09
+   ],
+   "pivot": [
+    0.5,
+    0.003
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/shrine-turtle/head.png",
+   "size": [
+    0.05027,
+    0.03521
+   ],
+   "pivot": [
+    0.2449,
+    0.2793
+   ],
+   "parent": "shell",
+   "attach": [
+    0.887,
+    0.1719
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -15,
+    "max": 25
+   }
+  }
+ ]
+}

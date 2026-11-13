@@ -1,0 +1,80 @@
+{
+ "puppet": "owl",
+ "size": 0.06,
+ "metres_per_pixel": 8.810184573366812e-05,
+ "rest": {
+  "head": 0,
+  "eyelid": 0
+ },
+ "versions": [
+  "day",
+  "evening",
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/owl/body.png",
+   "size": [
+    0.03251,
+    0.03788
+   ],
+   "pivot": [
+    0.5,
+    0.007
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/owl/head.png",
+   "size": [
+    0.03489,
+    0.0274
+   ],
+   "pivot": [
+    0.5,
+    0.07
+   ],
+   "parent": "body",
+   "attach": [
+    0.5,
+    0.8845
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -12,
+    "max": 12
+   }
+  },
+  {
+   "name": "eyelid",
+   "png": "cards/puppets/owl/eyelid.png",
+   "size": [
+    0.02608,
+    0.00969
+   ],
+   "pivot": [
+    0.5,
+    -0.0091
+   ],
+   "parent": "head",
+   "attach": [
+    0.5,
+    0.68
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": 0,
+    "max": 180
+   }
+  }
+ ]
+}

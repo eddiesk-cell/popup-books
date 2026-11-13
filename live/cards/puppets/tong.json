@@ -1,0 +1,126 @@
+{
+ "puppet": "tong",
+ "size": 0.1,
+ "metres_per_pixel": 0.00013327642247081925,
+ "rest": {
+  "head": 0,
+  "flame": 0,
+  "arm-l": 0,
+  "arm-r": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/tong/body.png",
+   "size": [
+    0.05344,
+    0.03878
+   ],
+   "pivot": [
+    0.5,
+    0.0103
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/tong/head.png",
+   "size": [
+    0.04305,
+    0.04771
+   ],
+   "pivot": [
+    0.5007,
+    0.1904
+   ],
+   "parent": "body",
+   "attach": [
+    0.4996,
+    0.854
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -25,
+    "max": 25
+   }
+  },
+  {
+   "name": "flame",
+   "png": "cards/puppets/tong/flame.png",
+   "size": [
+    0.01293,
+    0.03598
+   ],
+   "pivot": [
+    0.4987,
+    0.1353
+   ],
+   "parent": "head",
+   "attach": [
+    0.5,
+    0.94
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -15,
+    "max": 15
+   }
+  },
+  {
+   "name": "arm-l",
+   "png": "cards/puppets/tong/arm-l.png",
+   "size": [
+    0.04078,
+    0.02292
+   ],
+   "pivot": [
+    0.7679,
+    0.6894
+   ],
+   "parent": "body",
+   "attach": [
+    0.07,
+    0.85
+   ],
+   "z": 3,
+   "hinge": {
+    "axis": "z",
+    "min": -140,
+    "max": 40
+   }
+  },
+  {
+   "name": "arm-r",
+   "png": "cards/puppets/tong/arm-r.png",
+   "size": [
+    0.04038,
+    0.02319
+   ],
+   "pivot": [
+    0.2316,
+    0.6823
+   ],
+   "parent": "body",
+   "attach": [
+    0.93,
+    0.85
+   ],
+   "z": 4,
+   "hinge": {
+    "axis": "z",
+    "min": -40,
+    "max": 140
+   }
+  }
+ ]
+}

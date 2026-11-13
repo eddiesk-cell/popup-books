@@ -1,0 +1,995 @@
+{
+ "fps": 24,
+ "frames": {
+  "turn": [
+   12,
+   84
+  ],
+  "alive": 80,
+  "loop": [
+   168,
+   263
+  ],
+  "last": 263
+ },
+ "camera": {
+  "at": [
+   0,
+   -2.0,
+   0.95
+  ],
+  "look": [
+   0,
+   0.1,
+   0.15
+  ],
+  "lens_mm": 45.0
+ },
+ "stage": {
+  "name": "night",
+  "lights": [
+   {
+    "name": "key-lamp",
+    "type": "area",
+    "at": [
+     -1.8,
+     -1.6,
+     2.4
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 70,
+    "color": [
+     1.0,
+     0.72,
+     0.45
+    ],
+    "size": 1.2
+   },
+   {
+    "name": "moon",
+    "type": "area",
+    "at": [
+     1.2,
+     2.6,
+     1.6
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 60,
+    "color": [
+     0.45,
+     0.6,
+     1.0
+    ],
+    "size": 2.0
+   },
+   {
+    "name": "fill",
+    "type": "area",
+    "at": [
+     1.6,
+     -2.4,
+     0.9
+    ],
+    "look": [
+     0,
+     0.1,
+     0.2
+    ],
+    "watts": 10,
+    "color": [
+     0.6,
+     0.7,
+     1.0
+    ],
+    "size": 2.5
+   }
+  ]
+ },
+ "characters": [
+  {
+   "name": "mali",
+   "model": "assets/mali.glb",
+   "height": 0.166,
+   "at": [
+    0.42,
+    0.04,
+    0.0
+   ],
+   "rot": -93,
+   "face": 0,
+   "clip": "Idle",
+   "bob": false,
+   "drift": null,
+   "on": null,
+   "delay": 2,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "pip",
+   "model": "assets/raw/pip.glb",
+   "height": 0.11,
+   "at": [
+    0.0,
+    0.0,
+    0.15
+   ],
+   "rot": 0,
+   "face": -90,
+   "clip": null,
+   "bob": false,
+   "drift": null,
+   "on": "mali",
+   "delay": 0,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bell0",
+   "model": "assets/mali/bell0.glb",
+   "height": 0.035,
+   "at": [
+    -0.4,
+    -0.3,
+    -0.007
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 4,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bell1",
+   "model": "assets/mali/bell1.glb",
+   "height": 0.035,
+   "at": [
+    -0.25,
+    -0.3,
+    -0.007
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 5,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bell2",
+   "model": "assets/mali/bell2.glb",
+   "height": 0.035,
+   "at": [
+    -0.1,
+    -0.3,
+    -0.007
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 6,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bell3",
+   "model": "assets/mali/bell3.glb",
+   "height": 0.035,
+   "at": [
+    0.05,
+    -0.3,
+    -0.007
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 7,
+   "candle": false,
+   "dark": false
+  },
+  {
+   "name": "bell4",
+   "model": "assets/mali/bell4.glb",
+   "height": 0.035,
+   "at": [
+    0.2,
+    -0.3,
+    -0.007
+   ],
+   "rot": 0,
+   "face": 0,
+   "clip": null,
+   "bob": true,
+   "drift": 0.004,
+   "on": null,
+   "delay": 8,
+   "candle": false,
+   "dark": false
+  }
+ ],
+ "targets": [
+  "bell0",
+  "bell1",
+  "bell2",
+  "bell3",
+  "bell4"
+ ],
+ "touch": [
+  "mali",
+  "pip",
+  "bell0",
+  "bell1",
+  "bell2",
+  "bell3",
+  "bell4",
+  "spirit-house-1",
+  "spirit-house1",
+  "lotus-1",
+  "lotus1",
+  "nok-boat-1",
+  "nok-boat1",
+  "mid-river-1",
+  "mid-river1",
+  "lotus-spirits",
+  "reeds",
+  "lilypads-night",
+  "hyacinth-night",
+  "river-grass-night",
+  "moth0",
+  "moth1"
+ ],
+ "acts": [
+  {
+   "line": "5.1",
+   "who": "pip",
+   "do": "fly",
+   "to": "mali",
+   "bone": "rightUpperArm",
+   "beside": true,
+   "secs": 0.01
+  },
+  {
+   "line": "5.1",
+   "who": "mali",
+   "do": "walk",
+   "to": [
+    0.06,
+    0.02,
+    0.0
+   ],
+   "stop": 0,
+   "face": [
+    -0.08,
+    0.02,
+    0.0
+   ],
+   "wait": true,
+   "word": "Grandma"
+  },
+  {
+   "line": "5.1",
+   "who": "mali",
+   "do": "clip",
+   "after": "walk",
+   "clip": "Sit Down",
+   "then": "Sit"
+  },
+  {
+   "line": "5.2",
+   "who": "mali",
+   "do": "face",
+   "word": "sadly",
+   "face": [
+    -0.08,
+    0.02,
+    0.0
+   ]
+  },
+  {
+   "line": "5.3",
+   "who": "mali",
+   "do": "face",
+   "word": "listened",
+   "face": [
+    -0.15,
+    -0.3,
+    0.0
+   ]
+  },
+  {
+   "line": "5.3",
+   "who": "pip",
+   "do": "fly",
+   "word": "ding",
+   "to": "bell3",
+   "up": 0.06,
+   "secs": 0.4
+  },
+  {
+   "line": "5.3",
+   "who": "pip",
+   "do": "fly",
+   "word": "dong",
+   "to": "bell1",
+   "up": 0.06,
+   "secs": 0.4
+  },
+  {
+   "line": "5.3",
+   "who": "pip",
+   "do": "fly",
+   "word": "dong",
+   "after": "fly",
+   "to": "bell3",
+   "up": 0.06,
+   "secs": 0.4
+  },
+  {
+   "line": "5.4",
+   "who": "mali",
+   "do": "clip",
+   "word": "jumped",
+   "clip": "Stand Up",
+   "then": "Idle"
+  },
+  {
+   "line": "5.4",
+   "who": "mali",
+   "do": "clip",
+   "word": "jumped",
+   "after": "clip",
+   "clip": "Jump",
+   "then": "Idle"
+  },
+  {
+   "line": "5.4",
+   "who": "mali",
+   "do": "face",
+   "word": "grandma",
+   "face": [
+    -0.08,
+    0.02,
+    0.0
+   ]
+  },
+  {
+   "line": "5.5",
+   "who": "mali",
+   "do": "face",
+   "word": "played",
+   "face": [
+    -0.15,
+    -0.3,
+    0.0
+   ]
+  },
+  {
+   "line": "5.5",
+   "who": "pip",
+   "do": "fly",
+   "word": "sing",
+   "to": "mali",
+   "bone": "rightUpperArm",
+   "beside": true
+  },
+  {
+   "line": "5.1",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm"
+  },
+  {
+   "line": "5.2",
+   "who": "mali",
+   "do": "mood",
+   "mood": "pity",
+   "word": "sadly"
+  },
+  {
+   "line": "5.3",
+   "who": "mali",
+   "do": "mood",
+   "mood": "natural",
+   "word": "listened"
+  },
+  {
+   "line": "5.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "surprise",
+   "word": "know"
+  },
+  {
+   "line": "5.4",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy",
+   "word": "grandma"
+  },
+  {
+   "line": "game.5.praise",
+   "who": "mali",
+   "do": "mood",
+   "mood": "happy"
+  },
+  {
+   "line": "5.5",
+   "who": "mali",
+   "do": "mood",
+   "mood": "warm",
+   "word": "sing"
+  }
+ ],
+ "ambient": {
+  "clouds": 2,
+  "birds": {
+   "count": 2,
+   "every": 28,
+   "kind": "bat"
+  },
+  "crawlers": [
+   {
+    "card": "ladybug",
+    "on": "lotus"
+   }
+  ],
+  "motes": {
+   "over": "water",
+   "count": 30,
+   "color": [
+    0.9,
+    0.92,
+    1
+   ]
+  },
+  "mist": {
+   "over": "water",
+   "opacity": 0.25
+  },
+  "fog": 0.35,
+  "shadows": 0.08,
+  "shafts": 0,
+  "smoke": [],
+  "drift": {
+   "card": "mali/petal",
+   "count": 2,
+   "over": "water"
+  },
+  "water": {
+   "ripple": 0.15,
+   "flow": 0.005
+  },
+  "retire": [],
+  "surprises": [
+   {
+    "name": "grass-sprite",
+    "puppet": "palm-sprite",
+    "at": [
+     -0.4,
+     0.22,
+     0
+    ],
+    "seen_from": "left",
+    "pose": "doze",
+    "move": "peek",
+    "sound": "sprite-giggle"
+   },
+   {
+    "name": "pad-frog",
+    "puppet": "frog",
+    "at": "lilypads-night",
+    "seen_from": "low",
+    "move": "croak",
+    "sound": "frog-croak"
+   },
+   {
+    "name": "gecko",
+    "puppet": "gecko",
+    "at": [
+     0.12,
+     0.252,
+     0.3
+    ],
+    "seen_from": "right",
+    "move": "look",
+    "sound": "gecko-chirp"
+   }
+  ]
+ },
+ "next": "mali-s06",
+ "backdrop": [
+  "backdrop"
+ ],
+ "title": "The Lost Song",
+ "cut": true,
+ "shots": {
+  "open": {
+   "from": [
+    0.71,
+    -1.83,
+    0.68
+   ],
+   "look": [
+    0,
+    0.12,
+    0.12
+   ],
+   "settle": "reading",
+   "seconds": 2.5
+  },
+  "5.1": {
+   "target": [
+    "mali",
+    "nok"
+   ],
+   "framing": "medium",
+   "move": "push",
+   "focus": "nok",
+   "seconds": 2.7,
+   "word": "Mali"
+  },
+  "5.2": {
+   "target": "nok",
+   "framing": "close",
+   "move": "push",
+   "focus": "nok",
+   "seconds": 5
+  },
+  "5.3": {
+   "target": [
+    "bell0",
+    "bell1",
+    "bell2",
+    "bell3",
+    "bell4"
+   ],
+   "framing": "medium",
+   "move": "push",
+   "focus": "bell3",
+   "seconds": 2,
+   "word": "listened"
+  },
+  "5.4": {
+   "target": "mali",
+   "framing": "face",
+   "move": "hold",
+   "focus": "mali",
+   "seconds": 3
+  },
+  "5.5": {
+   "target": [
+    "mali",
+    "nok"
+   ],
+   "framing": "medium",
+   "move": "pull",
+   "focus": "nok",
+   "seconds": 6
+  },
+  "game": {
+   "target": [
+    "bell0",
+    "bell1",
+    "bell2",
+    "bell3",
+    "bell4"
+   ],
+   "framing": "medium",
+   "move": "hold",
+   "focus": "bell2",
+   "seconds": 2
+  },
+  "end": "reading"
+ },
+ "extras": [
+  {
+   "name": "nok",
+   "puppet": "nok",
+   "layer": "middle",
+   "at": [
+    -0.08,
+    0.02,
+    0.0
+   ],
+   "routine": [
+    [
+     "sit-idle",
+     4
+    ],
+    [
+     "wait",
+     2
+    ]
+   ],
+   "tap": [
+    "wave",
+    "paper-pat"
+   ],
+   "cues": [
+    [
+     "5.2",
+     "",
+     "talk"
+    ],
+    [
+     "5.5",
+     "sing",
+     "sing"
+    ]
+   ]
+  },
+  {
+   "name": "spirit-boatman",
+   "puppet": "spirit-poler",
+   "layer": "middle",
+   "at": [
+    -0.88,
+    0.06,
+    0
+   ],
+   "path": [
+    [
+     -0.88,
+     0.06,
+     0
+    ],
+    [
+     -0.58,
+     0.06,
+     0
+    ]
+   ],
+   "routine": [
+    [
+     "pole",
+     4,
+     "oar-splash"
+    ],
+    [
+     "go",
+     12
+    ],
+    [
+     "wait",
+     6
+    ],
+    [
+     "turn",
+     0.3
+    ],
+    [
+     "go",
+     12
+    ],
+    [
+     "turn",
+     0.3
+    ]
+   ],
+   "tap": [
+    "bow",
+    "oar-splash"
+   ],
+   "cues": [
+    [
+     "5.5",
+     "sing",
+     "bow"
+    ]
+   ]
+  },
+  {
+   "name": "shrine-turtle",
+   "puppet": "shrine-turtle",
+   "layer": "middle",
+   "at": [
+    0.56,
+    -0.3,
+    0
+   ],
+   "routine": [
+    [
+     "hide:under",
+     0.5
+    ],
+    [
+     "wait",
+     14
+    ],
+    [
+     "show",
+     1
+    ],
+    [
+     "stretch",
+     1.5,
+     "shrine-tinkle"
+    ],
+    [
+     "wait",
+     3
+    ]
+   ],
+   "tap": [
+    "stretch",
+    "shrine-tinkle"
+   ],
+   "cues": [
+    [
+     "5.3",
+     "listened",
+     "show"
+    ]
+   ],
+   "game": "hide",
+   "path": [
+    [
+     0.56,
+     -0.3,
+     0
+    ],
+    [
+     0.6,
+     -0.34,
+     0
+    ]
+   ]
+  },
+  {
+   "name": "frogs",
+   "puppet": "frog",
+   "layer": "front",
+   "at": "lilypads-night",
+   "routine": [
+    [
+     "wait",
+     3
+    ],
+    [
+     "croak",
+     0.8,
+     "frog-croak"
+    ],
+    [
+     "wait",
+     5
+    ],
+    [
+     "jump",
+     0.5,
+     "frog-plop"
+    ]
+   ],
+   "tap": [
+    "croak",
+    "frog-plop"
+   ],
+   "cues": [
+    [
+     "5.5",
+     "sing",
+     "croak"
+    ]
+   ]
+  },
+  {
+   "name": "owlet",
+   "puppet": "owl",
+   "layer": "middle",
+   "at": [
+    -0.62,
+    0.413,
+    0.27
+   ],
+   "routine": [
+    [
+     "wait",
+     4
+    ],
+    [
+     "blink",
+     0.4
+    ],
+    [
+     "look",
+     1.5
+    ],
+    [
+     "hoot",
+     1,
+     "owl-hoot"
+    ],
+    [
+     "wait",
+     6
+    ]
+   ],
+   "tap": [
+    "ruffle",
+    "owl-hoot"
+   ],
+   "cues": [
+    [
+     "5.3",
+     "rang",
+     "look"
+    ]
+   ]
+  }
+ ],
+ "wind": {
+  "base": 0.08,
+  "gust": 0.25,
+  "gust_every": [
+   16,
+   24
+  ],
+  "dir": 1,
+  "sway": [
+   [
+    "lotus",
+    2
+   ],
+   [
+    "mid-river",
+    1.5
+   ],
+   [
+    "reeds",
+    3
+   ],
+   [
+    "river-grass-night",
+    2
+   ],
+   [
+    "hyacinth-night",
+    1.5
+   ],
+   [
+    "nok-boat",
+    0.4
+   ]
+  ],
+  "cues": []
+ },
+ "light": {
+  "cues": [
+   {
+    "line": "5.2",
+    "word": "sadly",
+    "light": "moon",
+    "level": 0.8,
+    "tint": [
+     0.82,
+     0.86,
+     1
+    ],
+    "seconds": 2.5
+   },
+   {
+    "line": "5.3",
+    "word": "rang",
+    "light": "fill",
+    "level": 1.2,
+    "tint": [
+     1,
+     0.9,
+     0.75
+    ],
+    "seconds": 1.5
+   },
+   {
+    "line": "5.5",
+    "word": "sing",
+    "light": "key-lamp",
+    "level": 1.2,
+    "tint": [
+     1,
+     0.86,
+     0.66
+    ],
+    "seconds": 3
+   },
+   {
+    "line": "5.5",
+    "word": "sing",
+    "light": "moon",
+    "back": true,
+    "seconds": 3
+   }
+  ],
+  "flicker": [
+   "nok-boat"
+  ]
+ },
+ "sound": {
+  "bed": [
+   [
+    "river-night-still",
+    0.15
+   ],
+   [
+    "frogs-chorus",
+    0.1
+   ],
+   [
+    "crickets",
+    0.08
+   ],
+   [
+    "spirit-hum",
+    0.05
+   ]
+  ],
+  "foley": {
+   "turn": [
+    "page-turn",
+    0.6
+   ],
+   "rise": [
+    "paper-rustle",
+    0.4
+   ],
+   "line:5.3:ding": [
+    "lotus-bell-4",
+    0.4
+   ],
+   "line:5.3:dong": [
+    "lotus-bell-2",
+    0.4
+   ],
+   "tap:spirit-house": [
+    "bell-tinkle",
+    0.3
+   ],
+   "tap:nok-boat": [
+    "wood-knock",
+    0.3
+   ],
+   "tap:nok": [
+    "paper-pat",
+    0.3
+   ],
+   "act:mali:clip": [
+    "cloth-rustle",
+    0.15
+   ],
+   "line:5.5:sing": [
+    "nok-song",
+    0.45
+   ]
+  },
+  "hush": [
+   [
+    "game",
+    "game:won"
+   ]
+  ]
+ },
+ "_todo": [
+  "acts lane: Grandma Nok is a stand-in extra (puppet nok, seated on the deck at [-0.08, 0.02]) until the person-puppet redo passes review (REVIEW-BRIEF 3c); as a story character she talks on 5.2 and sings on 5.5 (the echo game, won by real taps on desktop and phone, already uses her as its replay)"
+ ],
+ "exit_frames": 73
+}

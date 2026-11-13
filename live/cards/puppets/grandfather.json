@@ -1,0 +1,29 @@
+{
+ "puppet": "grandfather",
+ "size": 0.2,
+ "metres_per_pixel": 0.0003610108303249098,
+ "rest": {},
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "thighs",
+   "png": "cards/puppets/grandfather/thighs.png",
+   "size": [
+    0.10397,
+    0.2
+   ],
+   "pivot": [
+    0.5,
+    0.0054
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "puppet": "palm-sprite",
+ "size": 0.03,
+ "metres_per_pixel": 4.196646206976432e-05,
+ "rest": {
+  "head": 0,
+  "arm": 0
+ },
+ "versions": [
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/palm-sprite/body.png",
+   "size": [
+    0.01926,
+    0.01725
+   ],
+   "pivot": [
+    0.5,
+    0.0073
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "head",
+   "png": "cards/puppets/palm-sprite/head.png",
+   "size": [
+    0.01838,
+    0.01683
+   ],
+   "pivot": [
+    0.1143,
+    0.1417
+   ],
+   "parent": "body",
+   "attach": [
+    0.8744,
+    0.9019
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -40,
+    "max": 40
+   }
+  },
+  {
+   "name": "arm",
+   "png": "cards/puppets/palm-sprite/arm.png",
+   "size": [
+    0.01343,
+    0.00445
+   ],
+   "pivot": [
+    0.1932,
+    0.4546
+   ],
+   "parent": "body",
+   "attach": [
+    0.7,
+    0.65
+   ],
+   "z": 2,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 120
+   }
+  }
+ ]
+}

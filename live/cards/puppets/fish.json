@@ -1,0 +1,55 @@
+{
+ "puppet": "fish",
+ "size": 0.06,
+ "metres_per_pixel": 0.00010273972602739725,
+ "rest": {
+  "tail": 0
+ },
+ "versions": [
+  "day",
+  "night"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/fish/body.png",
+   "size": [
+    0.07459,
+    0.0449
+   ],
+   "pivot": [
+    0.5,
+    -0.3341
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  },
+  {
+   "name": "tail",
+   "png": "cards/puppets/fish/tail.png",
+   "size": [
+    0.02466,
+    0.02435
+   ],
+   "pivot": [
+    0.25,
+    0.8439
+   ],
+   "parent": "body",
+   "attach": [
+    0.949,
+    0.1213
+   ],
+   "z": 1,
+   "hinge": {
+    "axis": "z",
+    "min": -30,
+    "max": 30
+   }
+  }
+ ]
+}
