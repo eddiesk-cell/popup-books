@@ -589,11 +589,47 @@
    "framing": "medium",
    "move": "push",
    "focus": "lulu",
-   "seconds": 6
+   "seconds": 6,
+   "phone": {
+    "target": "lulu"
+   }
   },
-  "10.3": "reading",
-  "10.4": "reading",
-  "10.5": "reading",
+  "10.3": {
+   "phone": {
+    "target": [
+     "kapi",
+     "bobo",
+     "lulu"
+    ],
+    "framing": "medium",
+    "move": "hold",
+    "seconds": 4
+   }
+  },
+  "10.4": {
+   "phone": {
+    "target": [
+     "kapi",
+     "bobo",
+     "lulu"
+    ],
+    "framing": "medium",
+    "move": "hold",
+    "seconds": 4
+   }
+  },
+  "10.5": {
+   "phone": {
+    "target": [
+     "kapi",
+     "bobo",
+     "lulu"
+    ],
+    "framing": "medium",
+    "move": "hold",
+    "seconds": 4
+   }
+  },
   "game": "reading",
   "end": "reading"
  },

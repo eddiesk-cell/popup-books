@@ -21,6 +21,10 @@ import { glow } from "./games.js";
 const B = ([x, y, z]) => new THREE.Vector3(x, z, -y);  // Blender (z up) -> three (y up)
 const rnd = (a, b) => a + Math.random() * (b - a), jit = s => s * rnd(0.75, 1.25);  // waits jitter ±25%: loops never line up
 const clamp01 = k => Math.min(1, Math.max(0, k)), deg = THREE.MathUtils.degToRad;
+export const swingRig = (a, b, k) => {  // a camera move from rig a to rig b (pos, look), its view turning at an even rate: lerping the look point instead whips a camera close to a face round
+  const u = a.look.clone().sub(a.pos), v = b.look.clone().sub(b.pos), la = u.length(), lb = v.length(), q = new THREE.Quaternion().setFromUnitVectors(u.normalize(), v.normalize()), pos = a.pos.clone().lerp(b.pos, k);
+  return { pos, look: u.applyQuaternion(new THREE.Quaternion().slerp(q, k)).multiplyScalar(la + (lb - la) * k).add(pos) };
+};
 const ease = k => 1 - (1 - clamp01(k)) ** 3;  // gentle ease-out
 const smooth = k => (k = clamp01(k), k * k * k * (k * (6 * k - 15) + 10));
 const pop = k => (k = clamp01(k), k + Math.sin(k * Math.PI) * 0.18);  // a pop-up rising, as popup.py's bloom
@@ -52,8 +56,9 @@ const ROOM = { day: { top: "#5b4a3c", low: "#7a6048", foot: "#3a2b20", win: "#ff
 
 // ---------- paper: card pictures and stand-in cut shapes ----------
 const texLoader = new THREE.TextureLoader(), cache = {};
-const picture = file => cache[file] ??= new Promise(ok => texLoader.load(new URL(file.replace(/\.png$/, ".webp"), CARDS).href,
-  t => (t.colorSpace = THREE.SRGBColorSpace, t.anisotropy = 4, ok(t)), undefined, () => ok(null)));
+let using = new Set();  // the card pictures asked for by the ambient being built, freed when it goes (see dispose)
+const picture = file => (using.add(file), cache[file] ??= new Promise(ok => texLoader.load(new URL(file.replace(/\.png$/, ".webp"), CARDS).href,
+  t => (t.colorSpace = THREE.SRGBColorSpace, t.anisotropy = 4, ok(t)), undefined, () => ok(null))));
 const json = file => cache[file] ??= fetch(new URL(file, CARDS)).then(r => (r.ok ? r.json() : null)).catch(() => null);
 function cutShape(color) {  // a stand-in die-cut: a shaded ellipse with a cream paper rim, until the art lane's card lands
   return cache[color] ??= (() => {
@@ -235,7 +240,7 @@ export const ambient = {
       const r = L.reader, lines = () => sp.page?.lines || [], gate = () => (sp.G?.before ? lines().indexOf(sp.G.before) : lines().length);  // the game comes before its line, or after the last
       current = addAmbient(scene, cam, sp.m, { root: sp.root, parent: sp.group, lights: sp.stage, controls: L.controls, composer: L.composer, cast: sp.cast,
         backdrop: sp.sky, frame: () => L.frame,  // the viewer's measure as the spread loaded (standing); the named backdrop is measured again at build
-        mode: () => L.mode, home: () => L.home,  // the viewer's reading view (phone framing included), kept current on resize
+        mode: () => L.mode, home: () => L.home, halt: () => L.halt?.(),  // the viewer's reading view (phone framing included), kept current on resize; halt stops its glide home
         story: () => ({ line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused,
           // "next": the line before the game has been read (the pause before its prompt); "wait": its prompt and play; a read again starts over
           game: game(sp) && (game(sp).targets?.length ?? sp.targets?.length) ? (game(sp).complete ? "won" : sp.at >= gate() ? "wait" : sp.at === gate() - 1 && r?.audio.ended ? "next" : null) : null,
@@ -263,7 +268,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   let HOME, LOOK;  // the reading view the shots offset from: the viewer's (window.live.home), else the manifest camera
   const reHome = () => { const h = opts.home?.(); HOME = h ? h.pos.clone() : B(m.camera.at); LOOK = h ? h.look.clone() : B(m.camera.look); };
   reHome();
-  const ticks = [], disposers = [], tmp = new THREE.Vector3(), pups = [], story = { line: null, t: 0, game: null, end: false };
+  const ticks = [], disposers = [], tmp = new THREE.Vector3(), pups = [], story = { line: null, t: 0, game: null, end: false }, used = using = new Set();
   let wind = 0.3, built = false, now = 0, flockAt = null, clock = null;
   parent.add(group);
 
@@ -384,11 +389,12 @@ export function addAmbient(scene, cam, m, opts = {}) {
   }
 
   // ---------- the camera: the opening shot, a shot per line (DIRECTION.md "shots"), breathing; the reader's hands win ----------
-  const probe = cam.clone(), lim = controls || {};
+  let faceLim = null;  // the reader's orbit limits while a face shot runs
+  const probe = cam.clone(), lim = controls || {}, lims = () => faceLim ?? lim;  // lims: the reader's own limits, also while a face shot has the orbit's let out
   const fit = (pos, look) => {  // inside the reader's orbit limits and the director's: above z 0.3, at most 25° off the reading axis
     const s = new THREE.Spherical().setFromVector3(tmp.copy(pos).sub(look)), e = 0.02, a0 = Math.atan2(HOME.x - LOOK.x, HOME.z - LOOK.z);  // margins wider than the breathing drift
-    s.radius = Math.min(Math.max(s.radius, (lim.minDistance ?? 0) + 0.03), (lim.maxDistance ?? Infinity) - 0.03);
-    s.phi = Math.min(Math.max(s.phi, (lim.minPolarAngle ?? 0) + e), (lim.maxPolarAngle ?? Math.PI) - e);
+    s.radius = Math.min(Math.max(s.radius, (lims().minDistance ?? 0) + 0.03), (lim.maxDistance ?? Infinity) - 0.03);
+    s.phi = Math.min(Math.max(s.phi, (lim.minPolarAngle ?? 0) + e), (lims().maxPolarAngle ?? Math.PI) - e);
     s.theta = Math.min(Math.max(s.theta, Math.max(lim.minAzimuthAngle ?? -Infinity, a0 - deg(25)) + e), Math.min(lim.maxAzimuthAngle ?? Infinity, a0 + deg(25)) - e);
     pos.setFromSpherical(s).add(look);
     if (pos.y < 0.3) { pos.y = 0.3; if (look.y > 0.29) look.y = 0.29; }
@@ -397,7 +403,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const faceRig = s => {  // "face": her head and shoulders from in front of her face, the camera level with her chin looking up a little, near enough
     const c = subjects(s)[0], head = c?.model?.getObjectByName("head");  // that her face stands 100 px tall (75 on an upright phone); no fit, room or keep pushes it out
     if (!head) return null;
-    const faceH = 0.24 * c.height, d = faceH * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 75 : 100)), chin = head.getWorldPosition(new THREE.Vector3());
+    const faceH = 0.24 * c.height, d = faceH * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 80 : 100)), chin = head.getWorldPosition(new THREE.Vector3());
     const axis = HOME.clone().sub(LOOK).setY(0).normalize(), her = new THREE.Vector3(Math.sin(c.yaw ?? 0), 0, Math.cos(c.yaw ?? 0)), a = Math.atan2(axis.x, axis.z), b = Math.atan2(her.x, her.z);
     const yaw = a + Math.max(-deg(30), Math.min(deg(30), Math.atan2(Math.sin(b - a), Math.cos(b - a))));  // toward her face, at most 30° off the reading axis
     return { pos: chin.clone().add(new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)).multiplyScalar(d)), look: chin.clone().setY(chin.y + faceH / 2), face: true };
@@ -469,7 +475,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const roomOf = r => { probe.copy(cam); probe.position.copy(r.pos); probe.lookAt(r.look); probe.updateMatrixWorld(); return room(probe, bd); };
   const fitIn = r => {  // no frame shows the room past the backdrop: move in toward the look, else across toward its middle (its ends), then down (its top)
     if (!bd || (phone() && story.game === "wait")) return r;  // a phone's game view frames every target itself; moving in would push edge targets off screen (eased() lets the correction go over ~0.4 s)
-    const spare = 0.02, d = r.pos.distanceTo(r.look), fMax = Math.max(0, 1 - Math.max(0.6, (lim.minDistance ?? 0) + 0.03) / d);  // spare: the breathing drift
+    const spare = 0.02, d = r.pos.distanceTo(r.look), fMax = Math.max(0, 1 - Math.max(0.6, (lims().minDistance ?? 0) + 0.03) / d);  // spare: the breathing drift
     const dolly = f => ({ pos: r.pos.clone().lerp(r.look, f), look: r.look.clone() }), slide = (q, s) => ({ pos: q.pos.clone().setY(q.pos.y - s), look: q.look.clone().setY(q.look.y - s) });
     const least = (lo, hi, bad) => { if (!bad(lo)) return lo; if (bad(hi)) return hi; for (let i = 0; i < 14; i++) { const mid = (lo + hi) / 2; bad(mid) ? (lo = mid) : (hi = mid); } return hi; };  // smooth in r: no steps
     const q0 = dolly(least(0, fMax, f => roomOf(dolly(f)).side > -spare)), mid = (bd.x0 + bd.x1) / 2 - q0.look.x;  // the orbit's nearest limit can stop the move in
@@ -505,9 +511,16 @@ export function addAmbient(scene, cam, m, opts = {}) {
     wideFit ??= fitIn({ pos: wide.pos.clone(), look: wide.look.clone() });
     return mixRig(wide, wideFit, smooth((clamp01(((opts.frame?.() ?? T0) - T0) / (T1 - T0)) - 0.35) / 0.65));
   };
-  let faceLim = null;  // the reader's orbit limits while a face shot runs
+  const orbit = new THREE.Spherical(), inOrbit = () => {  // the camera inside the orbit's limits, as controls.update() would clamp it: that clamp would read as the reader's hand, and the director would let go
+    orbit.setFromVector3(tmp.copy(cam.position).sub(controls.target));
+    orbit.radius = Math.min(Math.max(orbit.radius, controls.minDistance), controls.maxDistance);
+    orbit.phi = Math.min(Math.max(orbit.phi, controls.minPolarAngle), controls.maxPolarAngle);
+    orbit.theta = Math.min(Math.max(orbit.theta, controls.minAzimuthAngle), controls.maxAzimuthAngle);
+    cam.position.setFromSpherical(orbit.makeSafe()).add(controls.target);
+  };
+  const inside = l => { const v = cam.position.clone().sub(controls.target), d = v.length(); return d >= l.minDistance - 1e-3 && Math.acos(v.y / d) <= l.maxPolarAngle + 1e-3; };
   let shot = calm || !controls ? "off" : cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";
-  let yielded = shot === "off", last = null, touched = -1e9, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
+  let yielded = shot === "off", last = null, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
   const onStart = () => { held.on = true; }, onEnd = () => { held.on = false; };
   controls?.addEventListener("start", onStart); controls?.addEventListener("end", onEnd);
   disposers.push(() => { controls?.removeEventListener("start", onStart); controls?.removeEventListener("end", onEnd); });
@@ -518,7 +531,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       if (run !== keptRun) keptRun = run, keptFrom.copy(kept), keptT = now;  // a new shot: its keep blends in from the last over 1 s, so nothing steps
       const others = phone() || run?.s?.target != null ? cast.filter(c => c.body.visible && !who.includes(c)) : [], w = shot === "in" ? 1 : smooth((now - keptT) / (run?.over ? run.secs : 1));  // a desktop's reading view is the viewer's own; a take-over's keep comes in with its move
       const at = a => {  // the frame for a tilt a (up over the look point; below 0, down), inside the orbit's limits, with the subjects kept whole: exact within a shot
-        const v = p.pos.clone().sub(p.look), pol = Math.acos(v.y / v.length()), b = Math.max(-Math.max(0, (lim.maxPolarAngle ?? Math.PI) - pol - 0.02), Math.min(a, Math.max(0, pol - (lim.minPolarAngle ?? 0) - 0.02)));
+        const v = p.pos.clone().sub(p.look), pol = Math.acos(v.y / v.length()), b = Math.max(-Math.max(0, (lims().maxPolarAngle ?? Math.PI) - pol - 0.02), Math.min(a, Math.max(0, pol - (lim.minPolarAngle ?? 0) - 0.02)));
         const q = { pos: v.applyAxisAngle(new THREE.Vector3(v.z, 0, -v.x).normalize(), -b).add(p.look), look: p.look.clone() }, n = need(q, who, others, desk), x = n.x + od;
         const kv = new THREE.Vector3().lerpVectors(keptFrom, new THREE.Vector3(x + (Math.min(Math.max(x, n.lx), n.hx) - x) * w, n.y, n.back), w);
         aim(q); const ax = i => new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, i), side = ax(0).multiplyScalar(kv.x).add(ax(1).multiplyScalar(kv.y));
@@ -536,7 +549,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (left > limit * step) { p.pos.sub(cam.position).multiplyScalar(limit * step / left).add(cam.position); p.look.sub(controls.target).multiplyScalar(limit * step / left).add(controls.target); }
     cam.position.copy(p.pos);
     if (t != null) { const b = smooth((t - calmFrom) / 2); cam.position.add(tmp.set(0.01 * b * Math.sin(TAU * t / 7), 0.006 * b * Math.sin(TAU * t / 5.6 + 1), 0)); }
-    controls.target.copy(p.look); last = cam.position.clone();
+    controls.target.copy(p.look); inOrbit(); last = cam.position.clone();
     return left - limit * step;  // how far it still trails
   };
   if (shot === "hold") write(opening());  // a fresh book: the camera starts wide and high
@@ -545,26 +558,26 @@ export function addAmbient(scene, cam, m, opts = {}) {
     s = s === "reading" ? { target: null, seconds: 3 } : [s].flat()[0];
     const base = rigOf(s); if (!base) return;
     const over = shot === "in";  // the opening push-in has not landed: the line's shot blends on from where it has got to
-    if (over) shot = "done", calmFrom = now;
-    const from = yielded ? { pos: cam.position.clone(), look: controls.target.clone() } : cur;  // after the reader's hands: from where they left it
+    if (over) shot = "done";
+    const edge = !!run?.base?.face !== !!base.face, real = yielded || edge || over, from = real ? { pos: cam.position.clone(), look: controls.target.clone() } : cur;  // after the reader's hands, into or out of a face shot (no keep, tilt or slide), or over a push-in (which trails its rig at 1.4 m/s): from where the camera really is
     from.ease = !!bd;  // the fit always eases in from where the camera stands: a view inside fitIn's 0.02 spare would otherwise snap
-    if (yielded) calmFrom = now, dz = tilt = od = 0, kept.set(0, 0, 0), keptFrom.set(0, 0, 0);  // breathing eases in again; the camera stands where the reader left it, slide and keep included
+    if (real) calmFrom = now, dz = tilt = od = 0, kept.set(0, 0, 0), keptFrom.set(0, 0, 0);  // breathing eases in again; the camera stands where it is, slide and keep included
     yielded = false; focus.goal = s.focus || s.target;
-    run = { s, from, base, t0: now, f0: frame(s.target), over, secs: over ? Math.max(2, 3 * from.pos.distanceTo(base.pos)) : 2 };  // taking over: no faster than a push-in (about 0.6 m/s at most)
+    const turn = from.look.clone().sub(from.pos).angleTo(base.look.clone().sub(base.pos));
+    run = { s, from, base, t0: now, f0: frame(s.target), over, swing: edge, secs: over ? Math.max(2, 3 * from.pos.distanceTo(base.pos)) : edge ? Math.max(2, turn / deg(40)) : 2 };  // taking over: no faster than a push-in (about 0.6 m/s at most); into or out of a face: the view turns at most 75°/s
   };
   function camera(t, dt) {
     const moved = last && cam.position.distanceToSquared(last) > 1e-8; step = dt;
-    if (held.on || (moved && shot !== "wait")) { touched = t; if (!yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off"; }
-    else if (moved) touched = t;
+    if ((held.on || (moved && shot !== "wait")) && !yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off";
     last = null;
     if (!controls || calm) return;
-    if (shot === "wait") {  // a later spread: the viewer glides home first; once still, move out to the opening view
-      if (opts.mode?.() !== "closed") return void (shot = "done");
-      if (t - touched > 0.6) { shot = "out"; run = { from: { pos: cam.position.clone(), look: controls.target.clone() }, t0: t }; }
-      return void (last = cam.position.clone());
+    if (shot === "wait") {  // a later spread: its text page waits still at the viewer's reading view, so a finger can find its corner; the reader's turn takes the camera out with the page, then the push-in
+      const m = opts.mode?.();
+      if (m === "turn") opts.halt?.(), (cur = { pos: cam.position.clone(), look: controls.target.clone() }), (shot = "hold");
+      else if (m !== "closed") return void (shot = "done");
+      else return void (last = cam.position.clone());
     }
     const capped = r => ({ pos: cur.pos.clone().add(r.pos.clone().sub(cur.pos).clampLength(0, 0.83 * dt)), look: cur.look.clone().add(r.look.clone().sub(cur.look).clampLength(0, 0.83 * dt)) });  // at most 1.2 s a metre, as the viewer's glides
-    if (shot === "out") { write(capped(mixRig(run.from, opening(), smooth((t - run.t0) / 1.4)))); if (opts.mode?.() !== "closed" || t - run.t0 >= 1.4) shot = "hold"; return; }
     if (shot === "hold") {  // the opening view while the book is shut; it comes in with the turning page, so the open spread never shows the room
       if (isOpen()) { shot = "in"; run = { from: cur, t0: t, to: (O?.settle && O.settle !== "reading" && rigOf({ target: O.settle, framing: "medium" })) || rigOf("reading") }; run.secs = Math.max(O?.seconds || 2.5, 2 * run.from.pos.distanceTo(run.to.pos)); }  // the ease's first speed, 3 d / secs, at most 1.5 m/s: under 0.05 m in a 33 ms frame
       else write(capped(opening()));  // the page's turn may sweep faster than that: the camera follows at its own pace
@@ -579,7 +592,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       return;
     }
     if (shot === "off") shot = "done";
-    if (faceLim && (yielded || !run?.base?.face)) Object.assign(controls, faceLim), (faceLim = null);  // the reader's orbit limits back after a face shot
+    if (faceLim && (yielded || !run?.base?.face) && inside(faceLim)) Object.assign(controls, faceLim), (faceLim = null);  // the reader's orbit limits back after a face shot, once the camera is inside them: the orbit would clamp it there in one frame
     if (!isOpen() || yielded) return;  // turning or closed: the camera is the reader's and the page's; or the reader took it
     if (!run) return write(cur, t, 1);
     const { s } = run, k = clamp01((t - run.t0) / Math.max(2, s.seconds || 3)), g = { pos: run.base.pos.clone(), look: run.base.look.clone() };
@@ -591,7 +604,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     }
     const r = s.move === "pan"  // turn from where the camera stands to the new target, then settle to the framing
       ? { pos: run.from.pos.clone().lerp(g.pos, smooth((t - run.t0 - 1.5) / 2)), look: run.from.look.clone().lerp(g.look, smooth((t - run.t0) / 1.5)) }
-      : mixRig(run.from, g, smooth((t - run.t0) / run.secs));  // moves ease in and out over at least 2 s, never a cut
+      : (run.swing ? swingRig : mixRig)(run.from, g, smooth((t - run.t0) / run.secs));  // moves ease in and out over at least 2 s, never a cut
     if (run.base.face) {  // close and level with her face: past the reader's orbit limits (kept from the shot before, given back after it)
       faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
       Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });
@@ -1131,6 +1144,11 @@ export function addAmbient(scene, cam, m, opts = {}) {
     },
     dispose() {
       disposers.forEach(f => f());
+      setTimeout(async () => {  // this spread's card pictures leave the GPU once nothing on the desk or in the loaded spreads shows them: cached forever,
+        const shown = new Set(), look = r => r?.traverse(o => [].concat(o.material ?? []).forEach(m => Object.values(m).forEach(v => v?.isTexture && shown.add(v))));  // every spread read piled up (77 left over by s08) and a phone dropped the page
+        look(scene); for (const p of Object.values(window.live?.spreads ?? {})) look((await Promise.resolve(p).catch(() => null))?.root);
+        for (const k of used) { const t = await cache[k]; if (t && !shown.has(t) && !using.has(k)) { t.dispose(); delete cache[k]; } }
+      }, 8000);
       passes.forEach(p => (opts.composer.removePass(p), p.dispose?.()));
       if (fogOn && scene.fog) scene.fog = null;
       SHADE.uCloudAt.value.z = 0;

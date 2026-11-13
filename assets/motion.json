@@ -92,5 +92,42 @@
    "cycle": 2.0,
    "loop": true
   }
+ },
+ "dog": {
+  "Walk": {
+   "speed": 0.0228,
+   "speed_h": 0.3501,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.065
+  }
+ },
+ "cat": {
+  "Walk": {
+   "speed": 0.0124,
+   "speed_h": 0.3095,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.04
+  }
+ },
+ "otter": {
+  "Swim": {
+   "speed": 0.0295,
+   "speed_h": 0.7366,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.04
+  },
+  "float": 0.45
+ },
+ "squirrel": {
+  "Run": {
+   "speed": 0.0113,
+   "speed_h": 0.3227,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.035
+  }
  }
 }

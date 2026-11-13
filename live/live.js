@@ -21,7 +21,7 @@ import { loadWords, languages, touchLine, unlock } from "../reading.js";
 import { Acting, mount, carry, puppetModel, byRim } from "./acts.js";
 import { makeGame, glow } from "./games.js";
 import { addSound, manifestFor } from "./sound.js";
-import { ambient, skyline, roomShown, storyPuppet } from "./ambient.js";
+import { ambient, skyline, roomShown, storyPuppet, swingRig } from "./ambient.js";
 
 const $ = id => document.getElementById(id);
 const q = new URLSearchParams(location.search), FPS = 24, rad = THREE.MathUtils.degToRad;
@@ -41,6 +41,7 @@ const REACTIONS = ["Wave", "Cheer", "Jump", "Snap", "Laugh"];  // whichever of t
 
 // ---------- renderer, scene, post ----------
 const canvas = $("view"), renderer = new THREE.WebGLRenderer({ canvas });
+canvas.addEventListener("webglcontextlost", e => (e.preventDefault(), location.reload()));  // a phone that drops the GPU blanks the book and freezes it: reload; the address names the page on the desk, so it reopens there
 let dpr = Math.min(devicePixelRatio, 1.5);  // retina at 2x costs most of a frame (review A3E2 #10): 1.5, and 1 if frames stay slow
 renderer.setPixelRatio(dpr);
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -208,7 +209,8 @@ function arm(sp) {  // the page's game, fresh (games.js: collect, order, shadow,
 async function character(c, sp) {
   const g = c.model.startsWith("puppet:") ? puppetModel(THREE, await storyPuppet(c.model.slice(7), sp.m.stage?.name))  // "puppet:tong": a paper puppet
     : await (models[c.model] ??= loader.loadAsync(`chars/${c.model.split("/").pop()}`)  // "assets/kapi.glb": its slim copy, web/live/chars
-      .catch(() => loader.loadAsync(`../${c.model}`)));  // no slim copy (yet): the original, through web/assets
+      .catch(() => loader.loadAsync(`../${c.model}`))  // no slim copy (yet): the original, through web/assets
+      .then(g => (g.animations.forEach(a => { const t0 = Math.min(...a.tracks.map(k => k.times[0])); if (t0 > 0 && t0 < Infinity) { new Set(a.tracks.map(k => k.times)).forEach(t => t.forEach((v, i) => (t[i] = v - t0))); a.resetDuration(); } }), g)));  // every clip starts at 0: one whose first key is late (0.042 s in some exports) holds a frame at each loop's wrap. Tracks share their times arrays, so each array moves once
   const model = clone(g.scene), pivot = new THREE.Group(), body = new THREE.Group();
   body.name = c.name;  // a game reads a tapped one by name (the shadow game's spots)
   model.traverse(o => { if (o.isMesh) { o.visible = !o.name.startsWith("Icosphere"); o.castShadow = o.receiveShadow = true; o.frustumCulled = false; } });
@@ -340,7 +342,7 @@ function drop(sp) {
     for (const m of [].concat(o.material ?? [])) { Object.values(m).forEach(v => v?.isTexture && v.dispose()); m.dispose(); }
   });
   sp.exit?.then(ex => ex && gone(ex.root));
-  gone(sp.root); sp.stage.traverse(o => o.shadow?.map?.dispose()); sp.mixer.stopAllAction(); sp.mixer.uncacheRoot(sp.root);
+  gone(sp.root); sp.stage.traverse(o => (o.shadow?.map?.depthTexture?.dispose(), o.shadow?.map?.dispose()));  // a shadow map's depth texture is its own: 22 MB a spread stayed on the GPU sp.mixer.stopAllAction(); sp.mixer.uncacheRoot(sp.root);
 }
 function showExit(ex) {  // the exit turn is its own scene: it stands in for the spread while a page turns away
   exitOn?.root.removeFromParent(); exitOn = ex;
@@ -349,10 +351,11 @@ function showExit(ex) {  // the exit turn is its own scene: it stands in for the
 }
 
 // a page turn scrubbed by PageDrag: `set(i)` shows step i of n; `node` turns and carries `corner` (in its own space)
-function scrub({ set, node, corner, n }, a, b, auto, x0, land) {
+function scrub({ set, node, corner, n }, a, b, auto, x0, land, at) {
   mode = "turn"; say(""); foley("turn", "turn");
+  if (at) { set(a); node.updateWorldMatrix(true, false); corner = node.worldToLocal(at.clone()); }  // the point the finger took (the hint's, when the corner itself is off screen) turns under it
   const world = [], p = new THREE.Vector3();
-  for (let i = 0; i <= n; i++) { set(i); node.updateWorldMatrix(true, false); world.push(corner.clone().applyMatrix4(node.matrixWorld)); }  // the turning page's outer bottom corner at each step
+  for (let i = 0; i <= n; i++) { set(i); node.updateWorldMatrix(true, false); world.push(corner.clone().applyMatrix4(node.matrixWorld).setY(S.flat.max.y)); }  // the turning page's outer bottom corner at each step, laid flat on the page: seen close (a phone), the lifting page swings past where it lands, and the finger would find that swing first
   const track = () => world.map(w => (p.copy(w).project(cam), [(p.x + 1) / 2, (1 - p.y) / 2]));  // ... on screen (fractions of the canvas), as the camera is now
   const c = track();
   set(a);
@@ -371,10 +374,10 @@ function fling() {  // the finger lets go: the page keeps its speed; a quick fli
 const inTurn = () => ({ set: i => show(S.T0 + i), node: S.leaf, corner: S.corner, n: S.N });
 const outTurn = ex => ({ set: i => ex.show(1 + i), node: ex.leaf, corner: ex.corner, n: ex.n });
 
-async function turn(fwd, auto, x0 = fingerX) {
-  if (mode === "closed" && fwd) return scrub(inTurn(), 0, S.N, auto, x0, e => (e ? opened() : closed()));
+async function turn(fwd, auto, x0 = fingerX, at) {  // at: the page point the finger took
+  if (mode === "closed" && fwd) return scrub(inTurn(), 0, S.N, auto, x0, e => (e ? opened() : closed()), at);
   if (mode === "open") quiet();  // a page turning away takes its line with it; if it falls back open, the line is read again
-  if (mode === "open" && !fwd) { await duck(); return scrub(inTurn(), S.N, 0, auto, x0, e => (e ? closed() : opened(true))); }
+  if (mode === "open" && !fwd) { await duck(); return scrub(inTurn(), S.N, 0, auto, x0, e => (e ? closed() : opened(true)), at); }
   if (mode === "open" && fwd) {  // on to the next spread (or the moral): the page turns away through exit.glb
     const sp = S, id = sp.nextId !== undefined ? sp.nextId : (sp.nextId = await neighbour(sp, 1));
     const next = id && load(id), on = async () => (next ? (mode = "load", enter(await next, "closed")) : moral());
@@ -382,14 +385,14 @@ async function turn(fwd, auto, x0 = fingerX) {
     const ex = await exitOf(sp);
     if (!ex) return on();  // no exit turn exported: a plain cut
     showExit(ex);
-    return scrub(outTurn(ex), 0, ex.n, auto, x0, e => (e ? on() : (showExit(null), opened(true))));
+    return scrub(outTurn(ex), 0, ex.n, auto, x0, e => (e ? on() : (showExit(null), opened(true))), at);
   }
   const back = mode === "closed" && !fwd && (S.prevId !== undefined ? S.prevId : await neighbour(S, -1));
   if (back) {  // back to the previous spread: its exit turn, played in reverse
     mode = "load"; const sp = await load(back), ex = await exitOf(sp);
     if (!ex) return enter(sp, "open");  // no exit turn exported: a plain cut
     quiet(); showExit(ex);
-    scrub(outTurn(ex), ex.n, 0, auto, x0, e => (e ? enter(sp, "open") : (showExit(null), closed())));
+    scrub(outTurn(ex), ex.n, 0, auto, x0, e => (e ? enter(sp, "open") : (showExit(null), closed())), at);
   }
 }
 
@@ -686,23 +689,26 @@ const at = e => { const b = canvas.getBoundingClientRect(); return [(e.clientX -
 const turnable = s => (mode === "open" && s !== 0) || (mode === "closed" && (s > 0 || (s < 0 && !!S.prevId)));
 
 // ---------- the turn hint: a softly glowing page corner where the finger should pull, and the only place a pull turns ----------
-const hint = { els: { "-1": $("curlL"), 1: $("curlR") }, spots: [], pulse: 0 };
+const hint = { els: { "-1": $("curlL"), 1: $("curlR") }, spots: [], pulse: 0, at: {} };
 function spot(s, view) {  // the bottom corner of side s (+1 right, -1 left), or the point of the page nearest it that the screen shows
-  const f = S.flat, v = new THREE.Vector3();
+  const f = S.flat, v = new THREE.Vector3(), seen = at => { v.copy(at).project(view); const px = (v.x + 1) / 2, py = (1 - v.y) / 2; return px > 0.04 && px < 0.96 && py > 0.06 && py < 0.86 && { s, x: px, y: py, at }; };
+  const last = hint.moving && hint.at[s] && seen(hint.at[s]);  // while the camera moves, the point shown last (still on screen): the glow slides with the page, it does not hop about it under a finger
+  if (last) return last;
   let best = null, bd = Infinity;
   for (let i = 0; i <= 13; i++) for (let j = 0; j <= 13; j++) {  // the whole half page, nearest the corner first: a close shot may show only its middle
     const dx = i * 0.07 * S.pageW, dz = j * 0.07 * S.pageD, d = Math.hypot(dx, dz);
     if (d >= bd) continue;
-    v.set(s * (S.pageW - dx), f.max.y, f.max.z - dz).project(view);
-    const px = (v.x + 1) / 2, py = (1 - v.y) / 2;
-    if (px > 0.04 && px < 0.96 && py > 0.06 && py < 0.86) { best = { s, x: px, y: py }; bd = d; }
+    const p = seen(new THREE.Vector3(s * (S.pageW - dx), f.max.y, f.max.z - dz));
+    if (p) { best = p; bd = d; }
   }
   return best;
 }
 function showHint(now) {
   let view = cam;
+  hint.moving = !!hint.cp && cam.position.distanceTo(hint.cp) > 0.05 * (now - hint.t) / 1000; hint.cp = cam.position.clone(); hint.t = now;  // faster than 5 cm/s: more than the breathing drift
   if (homing) { view = cam.clone(); view.position.copy(HOME); view.lookAt(LOOK); view.updateMatrixWorld(); }  // gliding home: where the corner will be
   hint.spots = ["closed", "open"].includes(mode) ? [1, -1].filter(turnable).map(s => spot(s, view)).filter(Boolean) : [];
+  hint.at = Object.fromEntries(hint.spots.map(p => [p.s, p.at]));
   for (const [s, el] of Object.entries(hint.els)) {
     const p = hint.spots.find(p => p.s === +s);
     el.hidden = !p;
@@ -710,6 +716,9 @@ function showHint(now) {
     if (p && hint.pulse) { el.classList.remove("pulse"); void el.offsetWidth; el.classList.add("pulse"); }
   }
   if (hint.spots.length) hint.pulse = 0;
+  const read = mode === "open" && S.at >= S.page.lines.length && (S.play.complete || !S.play.targets.length);  // a read page always offers its forward corner: a shot that hides it 3.5 s hands the camera back to the reading view
+  if (!read || !turnable(1) || homing || hint.spots.some(p => p.s > 0)) hint.lost = null;
+  else if ((hint.lost ??= now) < now - 3500) { hint.lost = null; fit(); home(); }
 }
 const grabAt = (x, y) => hint.spots.find(p => Math.hypot((p.x - x) * innerWidth, (p.y - y) * innerHeight) < Math.max(48, innerWidth * 0.08))?.s ?? 0;
 
@@ -717,7 +726,7 @@ canvas.addEventListener("pointerdown", e => {
   if (!primed) { primed = true; unlock(reader.audio, speak); snd.ctx.resume().catch(() => {}); }  // iPad: unlock sound inside a touch
   const [x, y] = at(e), s = grabAt(x, y); fingerX = x; press = [e.clientX, e.clientY, performance.now()]; trail = [[performance.now(), x]];
   if (pid !== null || !turnable(s)) return;  // not a page turn: OrbitControls has it
-  e.stopImmediatePropagation(); pid = e.pointerId; canvas.setPointerCapture(pid); down = true; pend = { x, fwd: s > 0 };
+  e.stopImmediatePropagation(); pid = e.pointerId; canvas.setPointerCapture(pid); down = true; pend = { x, fwd: s > 0, at: hint.spots.find(p => p.s === s)?.at };
 });
 canvas.addEventListener("pointermove", e => {
   const [x, y] = at(e); fingerX = x;
@@ -725,7 +734,7 @@ canvas.addEventListener("pointermove", e => {
   if (e.pointerId !== pid) return;
   canvas.style.cursor = "grabbing";
   const t = performance.now(); trail.push([t, x]); trail = trail.filter(([u]) => t - u < 100);  // the last 0.1 s, for a flick's speed
-  if (pend && (pend.fwd ? pend.x - x : x - pend.x) > 0.03) { turn(pend.fwd, false, pend.x); pend = null; }  // only a pull the turning way
+  if (pend && (pend.fwd ? pend.x - x : x - pend.x) > 0.03) { turn(pend.fwd, false, pend.x, pend.at); pend = null; }  // only a pull the turning way
   else if (drag?.live && drag.held && !drag.isAuto) drag.move(x);
 });
 const up = e => {
@@ -748,9 +757,9 @@ let homing = null;
 function home(ms = 700) {  // glide back to the reading view; its length in ms
   if (![...cam.position.toArray(), ...controls.target.toArray()].every(Number.isFinite)) { cam.position.copy(HOME); controls.target.copy(LOOK); }
   const p0 = cam.position.clone(), t0 = controls.target.clone();
-  ms = Math.max(ms, 1200 * Math.max(p0.distanceTo(HOME), t0.distanceTo(LOOK)));  // never faster than 0.027 m a frame at its peak
+  ms = Math.max(ms, 1200 * Math.max(p0.distanceTo(HOME), t0.distanceTo(LOOK)), 25 * THREE.MathUtils.radToDeg(t0.clone().sub(p0).angleTo(LOOK.clone().sub(HOME))));  // never faster than 0.027 m a frame at its peak, nor a turn of 75°/s
   let t = 0, prev = performance.now();  // the glide's own clock, at most 17 ms a frame: a stalled frame (a shader compiling) never jumps the camera
-  homing = now => { t += Math.min(now - prev, 17); prev = now; const k = smooth(0, 1, t / ms); cam.position.lerpVectors(p0, HOME, k); controls.target.lerpVectors(t0, LOOK, k); return k < 1; };
+  homing = now => { t += Math.min(now - prev, 17); prev = now; const k = smooth(0, 1, t / ms), r = swingRig({ pos: p0, look: t0 }, { pos: HOME, look: LOOK }, k); cam.position.copy(r.pos); controls.target.copy(r.look); return k < 1; };  // from a face shot's close view too, no whip
   return ms;
 }
 $("reset").onclick = () => home();
@@ -816,12 +825,12 @@ function fit() {  // the manifest's camera on a wide screen; on a narrow one clo
         const slid = (r, x) => { const dz = first(dz => (at(r, x, dz), roomShown(cam, above) === 0), 0, 1, 10); at(r, x, dz); return dz; };  // skyline at the top
         const key = [S.id, w, h, ...subjects.flatMap(c => [c.pos.x, c.pos.z, c.yaw].map(v => v.toFixed(2)))].join();  // the same page, screen and places: the same view
         if (S.phone?.key !== key) {
-          S.phone = { key, found: false, rank: 3 };  // best: no room and the frame's bottom on the page, then over the desk; none such: whole, room or not
-          search: for (const deg of [40, 35, 30, 25, 20, 15]) for (const x of [0, -0.1, 0.1, -0.2, 0.2].map(o => mid + o)) {
+          S.phone = { key, found: false, rank: 6 };  // best: no room and the frame's bottom on the page, then over the desk; none such: whole, room or not
+          search: for (const deg of [40, 35, 30, 25, 20, 15]) for (const x of [...[0, -0.1, 0.1, -0.2, 0.2].map(o => mid + o), L0.x]) {
             sph.phi = rad(deg);
             const r = first(r => (slid(r, x), whole()), 0.4, 2.5, 10), dz = slid(r, x);  // the nearest that holds them all
             if (!whole()) continue;
-            const rank = dz < 1 && !roomShown(cam, S.sky) ? (onPage() ? 0 : 1) : 2;
+            const rank = (dz < 1 && !roomShown(cam, S.sky) ? (onPage() ? 0 : 1) : 2) + (spot(1, cam) ? 0 : 3);  // and the forward corner on screen: a phone has no other way on
             if (rank < S.phone.rank) S.phone = { key, found: true, rank, x, dz, phi: sph.phi, r };
             if (!rank) break search;
           }
@@ -980,4 +989,5 @@ enter(await load(first), "closed");
 canvas.focus();
 window.live = { get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; },  // the reading view, current after every resize
   get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
-  get acting() { return S.acting; }, get game() { return S.play; }, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home };
+  get acting() { return S.acting; }, get game() { return S.play; }, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
+  halt: () => (homing = null, true) };  // the director takes the camera from the glide home (ambient.js, a spread turned to)

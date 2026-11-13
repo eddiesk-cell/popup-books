@@ -370,6 +370,17 @@
    "then": "Idle"
   },
   {
+   "line": "2.4",
+   "word": "Wait",
+   "who": "mali",
+   "do": "face",
+   "face": [
+    -0.6,
+    -1.0,
+    0.0
+   ]
+  },
+  {
    "line": "game.2.praise",
    "who": "mali",
    "do": "face",

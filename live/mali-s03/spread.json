@@ -542,14 +542,6 @@
     "focus": "mali",
     "seconds": 2.7,
     "word": "walked"
-   },
-   {
-    "word": "gasped",
-    "target": "mali",
-    "framing": "face",
-    "move": "hold",
-    "focus": "mali",
-    "seconds": 2.5
    }
   ],
   "3.2": "reading",
