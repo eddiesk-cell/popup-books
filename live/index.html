@@ -58,7 +58,7 @@
   #moral { position: fixed; inset: 0; z-index: 4; display: grid; place-content: center; gap: 3vh; text-align: center;
     background: radial-gradient(circle at 50% 50%, #1c1a2cd0 0%, #07080ff0 75%); }
   #moral h2 { margin: 0; font-weight: normal; font-style: italic; font-size: clamp(28px, 5vw, 56px); opacity: .85; }
-  #moral .row { display: flex; gap: 2vw; justify-content: center; font-size: clamp(16px, 2vw, 22px); }
+  #moral .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0 16px; font-size: clamp(16px, 2vw, 22px); }
   #bar { z-index: 5; }
   /* the turn hint: a softly glowing page corner where the finger should pull */
   .curl { position: fixed; z-index: 3; width: 58px; height: 58px; translate: -50% -50%; pointer-events: none; border-radius: 50%;
@@ -100,7 +100,7 @@
 <div id="curlL" class="curl" hidden></div><div id="curlR" class="curl" hidden></div>
 <div id="sbub" hidden></div>
 <button id="lbub" hidden aria-label="Hear it again"></button>
-<div id="moral" hidden><h2>The End</h2><div class="row"><button id="again">Read it again</button><button id="back">Back</button></div></div>
+<div id="moral" hidden><h2>The End</h2><div class="row"><button id="start">Start from the beginning</button><button id="again">Read it again</button><button id="back">Back</button></div></div>
 <div id="bar"><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
 <script src="../readalong.js" data-source="#read" data-theme="firefly" defer></script>
 <script>  /* each book's read-along theme; the deferred readalong.js above reads it once the page has loaded */

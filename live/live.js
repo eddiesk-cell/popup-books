@@ -431,6 +431,7 @@ function moral() {  // after the last spread: a calm page, the moral read aloud 
   $("bar").classList.add("on"); if (bare(S.id) !== "moral") reader.read(book.moral?.lines || story.moral.map(l => l.id));
 }
 $("again").onclick = () => mode === "moral" && reader.read(book.moral?.lines || story.moral.map(l => l.id));
+$("start").onclick = () => (q.set("s", "s01"), q.delete("with"), location.search = q);  // The End: the whole book again from spread 1 (Eddie)
 $("back").onclick = () => {
   if (mode !== "moral") return;
   $("moral").hidden = true; $("replay").hidden = false; quiet(); snd.setBed(bedsOf(S));
