@@ -1,0 +1,3767 @@
+{
+"lines": {
+"kapi.0": {
+"en": "Hi! I'm Kapi!",
+"lo": "ສະບາຍດີ! ຂ້ອຍຊື່ ກາປີ!",
+"th": "สวัสดี! ฉันชื่อกาปี!",
+"zh": "你好！我是卡皮！",
+"ja": "やあ！ ぼく、カピだよ！",
+"who": "kapi",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.1": {
+"en": "Kapi is a little monkey.",
+"lo": "ກາປີເປັນລີງນ້ອຍ.",
+"th": "กาปีเป็นลิงตัวน้อย",
+"zh": "卡皮是一只小猴子。",
+"ja": "カピは ちいさな さるだよ。",
+"who": "kapi",
+"tag": "who"
+},
+"kapi.2": {
+"en": "Yum!",
+"lo": "ແຊບ!",
+"th": "อร่อยจัง!",
+"zh": "真好吃！",
+"ja": "おいしい！",
+"who": "kapi",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.3": {
+"en": "Whee!",
+"lo": "ວີ້!",
+"th": "วี้!",
+"zh": "哇呼！",
+"ja": "わーい！",
+"who": "kapi",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.4": {
+"en": "Hee hee!",
+"lo": "ຄິກໆ!",
+"th": "คิกๆ!",
+"zh": "嘻嘻！",
+"ja": "えへへ！",
+"who": "kapi",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.5": {
+"en": "I am a monkey.",
+"lo": "ຂ້ອຍເປັນລີງ.",
+"th": "ฉันเป็นลิง",
+"zh": "我是一只猴子。",
+"ja": "ぼくは さるだよ。",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.6": {
+"en": "I live in the tree.",
+"lo": "ຂ້ອຍອາໄສຢູ່ເທິງຕົ້ນໄມ້.",
+"th": "ฉันอาศัยอยู่บนต้นไม้",
+"zh": "我住在树上。",
+"ja": "ぼくは きの うえに すんでるよ。",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.7": {
+"en": "I like jamuns.",
+"lo": "ຂ້ອຍມັກໝາກຫວ້າ.",
+"th": "ฉันชอบลูกหว้า",
+"zh": "我喜欢蒲桃。",
+"ja": "ぼく、ジャムンが だいすき！",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.8": {
+"en": "Jamuns are purple.",
+"lo": "ໝາກຫວ້າມີສີມ່ວງ.",
+"th": "ลูกหว้าสีม่วง",
+"zh": "蒲桃是紫色的。",
+"ja": "ジャムンは むらさきいろ！",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.9": {
+"en": "I can climb!",
+"lo": "ຂ້ອຍປີນໄດ້!",
+"th": "ฉันปีนได้!",
+"zh": "我会爬树！",
+"ja": "ぼく、のぼれるよ！",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.10": {
+"en": "I can jump!",
+"lo": "ຂ້ອຍໂດດໄດ້!",
+"th": "ฉันกระโดดได้!",
+"zh": "我会跳！",
+"ja": "ぼく、ジャンプできるよ！",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.11": {
+"en": "Up, up, up!",
+"lo": "ຂຶ້ນ, ຂຶ້ນ, ຂຶ້ນ!",
+"th": "ขึ้น ขึ้น ขึ้น!",
+"zh": "上，上，上！",
+"ja": "のぼれ、のぼれ！",
+"who": "kapi",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.12": {
+"en": "I can't swim.",
+"lo": "ຂ້ອຍລອຍນ້ຳບໍ່ເປັນ.",
+"th": "ฉันว่ายน้ำไม่เป็น",
+"zh": "我不会游泳。",
+"ja": "ぼく、およげないんだ。",
+"who": "kapi",
+"tag": "say"
+},
+"kapi.13": {
+"en": "Bobo is my friend.",
+"lo": "ໂບໂບເປັນໝູ່ຂອງຂ້ອຍ.",
+"th": "โบโบเป็นเพื่อนของฉัน",
+"zh": "波波是我的好朋友。",
+"ja": "ボボは ぼくの ともだちだよ。",
+"who": "kapi",
+"sp": [
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"kapi.14": {
+"en": "I must think fast!",
+"lo": "ຂ້ອຍຕ້ອງຄິດໄວໆ!",
+"th": "ฉันต้องคิดให้เร็ว!",
+"zh": "我得快点想办法！",
+"ja": "はやく かんがえなくちゃ！",
+"who": "kapi",
+"sp": [
+"s08"
+],
+"tag": "say"
+},
+"kapi.15": {
+"en": "Take me back to my tree!",
+"lo": "ພາຂ້ອຍກັບໄປຕົ້ນໄມ້!",
+"th": "พาฉันกลับไปที่ต้นไม้!",
+"zh": "带我回我的树上去！",
+"ja": "ぼくの きに もどって！",
+"who": "kapi",
+"sp": [
+"s08"
+],
+"tag": "say"
+},
+"bobo.0": {
+"en": "I am Bobo.",
+"lo": "ຂ້ອຍແມ່ນໂບໂບ.",
+"th": "ฉันคือโบโบ",
+"zh": "我是波波。",
+"ja": "ぼくは ボボだよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.1": {
+"en": "Bobo is a big crocodile.",
+"lo": "ໂບໂບເປັນແຂ້ໂຕໃຫຍ່.",
+"th": "โบโบเป็นจระเข้ตัวใหญ่",
+"zh": "波波是一条大鳄鱼。",
+"ja": "ボボは おおきな ワニだよ。",
+"who": "bobo",
+"tag": "who"
+},
+"bobo.2": {
+"en": "Hello, little friend!",
+"lo": "ສະບາຍດີ ໝູ່ນ້ອຍ!",
+"th": "สวัสดี เพื่อนตัวน้อย!",
+"zh": "你好呀，小朋友！",
+"ja": "やあ、ちいさな おともだち！",
+"who": "bobo",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s04",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"bobo.3": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.4": {
+"en": "Hmm?",
+"lo": "ຮຶມ?",
+"th": "หืม?",
+"zh": "嗯？",
+"ja": "ん？",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.5": {
+"en": "I am a crocodile.",
+"lo": "ຂ້ອຍເປັນແຂ້.",
+"th": "ฉันเป็นจระเข้",
+"zh": "我是一条鳄鱼。",
+"ja": "ぼくは ワニだよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.6": {
+"en": "I am big.",
+"lo": "ຂ້ອຍໂຕໃຫຍ່.",
+"th": "ฉันตัวใหญ่",
+"zh": "我个子很大。",
+"ja": "ぼくは おおきいよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.7": {
+"en": "I can swim.",
+"lo": "ຂ້ອຍລອຍນ້ຳໄດ້.",
+"th": "ฉันว่ายน้ำได้",
+"zh": "我会游泳。",
+"ja": "ぼく、およげるよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.8": {
+"en": "I live in the river.",
+"lo": "ຂ້ອຍອາໄສຢູ່ໃນແມ່ນ້ຳ.",
+"th": "ฉันอาศัยอยู่ในแม่น้ำ",
+"zh": "我住在河里。",
+"ja": "ぼくは かわに すんでいるよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.9": {
+"en": "I have a long tail.",
+"lo": "ຂ້ອຍມີຫາງຍາວ.",
+"th": "ฉันมีหางยาว",
+"zh": "我有一条长长的尾巴。",
+"ja": "ぼくは しっぽが ながいよ。",
+"who": "bobo",
+"tag": "say"
+},
+"bobo.10": {
+"en": "I have big teeth.",
+"lo": "ຂ້ອຍມີແຂ້ວໃຫຍ່.",
+"th": "ฉันมีฟันใหญ่",
+"zh": "我有大大的牙齿。",
+"ja": "ぼくは おおきな はが あるよ。",
+"who": "bobo",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"bobo.11": {
+"en": "I like jamuns.",
+"lo": "ຂ້ອຍມັກໝາກຫວ້າ.",
+"th": "ฉันชอบลูกหว้า",
+"zh": "我喜欢蒲桃。",
+"ja": "ぼく、ジャムンが すきだよ。",
+"who": "bobo",
+"sp": [
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"bobo.12": {
+"en": "Kapi is my friend.",
+"lo": "ກາປີເປັນໝູ່ຂອງຂ້ອຍ.",
+"th": "กาปีเป็นเพื่อนของฉัน",
+"zh": "卡皮是我的好朋友。",
+"ja": "カピは ぼくの ともだちだよ。",
+"who": "bobo",
+"sp": [
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"bobo.13": {
+"en": "Lulu is my wife.",
+"lo": "ລູລູແມ່ນເມຍຂອງຂ້ອຍ.",
+"th": "ลูลูคือภรรยาของฉัน",
+"zh": "露露是我的妻子。",
+"ja": "ルルは ぼくの おくさんだよ。",
+"who": "bobo",
+"sp": [
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"lulu.0": {
+"en": "I am Lulu.",
+"lo": "ຂ້ອຍແມ່ນລູລູ.",
+"th": "ฉันคือลูลู",
+"zh": "我是露露。",
+"ja": "わたしは ルルよ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.1": {
+"en": "Lulu is Bobo's wife.",
+"lo": "ລູລູແມ່ນເມຍຂອງໂບໂບ.",
+"th": "ลูลูเป็นภรรยาของโบโบ",
+"zh": "露露是波波的妻子。",
+"ja": "ルルは ボボの おくさんだよ。",
+"who": "lulu",
+"tag": "who"
+},
+"lulu.2": {
+"en": "Thank you, dear.",
+"lo": "ຂອບໃຈ ທີ່ຮັກ.",
+"th": "ขอบใจนะจ๊ะ",
+"zh": "谢谢你，亲爱的。",
+"ja": "ありがとう、あなた。",
+"who": "lulu",
+"sp": [
+"s04"
+],
+"tag": "say"
+},
+"lulu.3": {
+"en": "Hello, sweetie.",
+"lo": "ສະບາຍດີ ຄົນດີ.",
+"th": "สวัสดีจ้ะ คนดี",
+"zh": "你好呀，小宝贝。",
+"ja": "こんにちは、いい こ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.4": {
+"en": "I am a crocodile.",
+"lo": "ຂ້ອຍເປັນແຂ້.",
+"th": "ฉันเป็นจระเข้",
+"zh": "我是一条鳄鱼。",
+"ja": "わたしは ワニよ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.5": {
+"en": "I live in the river.",
+"lo": "ຂ້ອຍອາໄສຢູ່ໃນແມ່ນ້ຳ.",
+"th": "ฉันอาศัยอยู่ในแม่น้ำ",
+"zh": "我住在河里。",
+"ja": "わたしは かわに すんでいるわ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.6": {
+"en": "I like jamuns.",
+"lo": "ຂ້ອຍມັກໝາກຫວ້າ.",
+"th": "ฉันชอบลูกหว้า",
+"zh": "我喜欢蒲桃。",
+"ja": "わたし、ジャムンが すきよ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.7": {
+"en": "I can swim.",
+"lo": "ຂ້ອຍລອຍນ້ຳໄດ້.",
+"th": "ฉันว่ายน้ำได้",
+"zh": "我会游泳。",
+"ja": "わたし、およげるわ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.8": {
+"en": "The river is wide.",
+"lo": "ແມ່ນ້ຳກວ້າງ.",
+"th": "แม่น้ำกว้าง",
+"zh": "河很宽。",
+"ja": "かわは ひろいわね。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.9": {
+"en": "Bobo is my husband.",
+"lo": "ໂບໂບແມ່ນຜົວຂອງຂ້ອຍ.",
+"th": "โบโบคือสามีของฉัน",
+"zh": "波波是我的丈夫。",
+"ja": "ボボは わたしの だんなさんよ。",
+"who": "lulu",
+"tag": "say"
+},
+"lulu.10": {
+"en": "I feel ill.",
+"lo": "ຂ້ອຍບໍ່ສະບາຍ.",
+"th": "ฉันไม่สบาย",
+"zh": "我生病了。",
+"ja": "わたし、びょうきなの。",
+"who": "lulu",
+"sp": [
+"s04",
+"s05",
+"s06"
+],
+"tag": "say"
+},
+"lulu.11": {
+"en": "I feel well!",
+"lo": "ຂ້ອຍສະບາຍດີແລ້ວ!",
+"th": "ฉันสบายดีแล้ว!",
+"zh": "我好啦！",
+"ja": "わたし、げんきに なったわ！",
+"who": "lulu",
+"sp": [
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"tree.0": {
+"en": "A jamun tree. It is a big tree with sweet fruit.",
+"lo": "ຕົ້ນໝາກຫວ້າ. ມັນເປັນຕົ້ນໄມ້ໃຫຍ່ທີ່ມີໝາກຫວານ.",
+"th": "ต้นหว้า มันเป็นต้นไม้ใหญ่ที่มีผลหวาน",
+"zh": "蒲桃树。它是一棵结着甜果子的大树。",
+"ja": "ジャムンの き。あまい みが なる おおきな きだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"tree.1": {
+"en": "Jamuns grow on the tree.",
+"lo": "ໝາກຫວ້າເກີດຢູ່ເທິງຕົ້ນ.",
+"th": "ลูกหว้าออกผลบนต้นไม้",
+"zh": "蒲桃长在树上。",
+"ja": "ジャムンが きに なるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"tree.2": {
+"en": "Kapi lives in the tree.",
+"lo": "ກາປີອາໄສຢູ່ເທິງຕົ້ນໄມ້.",
+"th": "กาปีอาศัยอยู่บนต้นไม้",
+"zh": "卡皮住在树上。",
+"ja": "カピは きの うえに すんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"tree.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"tree.4": {
+"en": "The tree gives shade.",
+"lo": "ຕົ້ນໄມ້ໃຫ້ຮົ່ມເງົາ.",
+"th": "ต้นไม้ให้ร่มเงา",
+"zh": "大树给我们遮阴。",
+"ja": "きは かげを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"tree.5": {
+"en": "Jamun trees grow in India and Southeast Asia.",
+"lo": "ຕົ້ນໝາກຫວ້າເກີດຢູ່ອິນເດຍ ແລະ ອາຊີຕາເວັນອອກສຽງໃຕ້.",
+"th": "ต้นหว้าขึ้นในอินเดียและเอเชียตะวันออกเฉียงใต้",
+"zh": "蒲桃树长在印度和东南亚。",
+"ja": "ジャムンの きは インドや とうなんアジアに はえるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"branch.0": {
+"en": "A branch. It grows out of the trunk.",
+"lo": "ກິ່ງໄມ້. ມັນງອກອອກຈາກລຳຕົ້ນ.",
+"th": "กิ่งไม้ มันงอกออกมาจากลำต้น",
+"zh": "树枝。它从树干上长出来。",
+"ja": "えだ。みきから のびて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"branch.1": {
+"en": "Kapi can jump on a branch.",
+"lo": "ກາປີໂດດຢູ່ເທິງກິ່ງໄມ້ໄດ້.",
+"th": "กาปีกระโดดบนกิ่งไม้ได้",
+"zh": "卡皮能在树枝上跳。",
+"ja": "カピは えだの うえを ぴょんと とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"branch.2": {
+"en": "Leaves grow on a branch.",
+"lo": "ໃບໄມ້ເກີດຢູ່ເທິງກິ່ງໄມ້.",
+"th": "ใบไม้งอกบนกิ่งไม้",
+"zh": "叶子长在树枝上。",
+"ja": "えだに はっぱが はえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"branch.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"branch.4": {
+"en": "A branch is part of a tree.",
+"lo": "ກິ່ງໄມ້ເປັນສ່ວນໜຶ່ງຂອງຕົ້ນໄມ້.",
+"th": "กิ่งไม้เป็นส่วนหนึ่งของต้นไม้",
+"zh": "树枝是树的一部分。",
+"ja": "えだは きの いちぶだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"branch.5": {
+"en": "Birds sit on a branch.",
+"lo": "ນົກເກາະຢູ່ເທິງກິ່ງໄມ້.",
+"th": "นกเกาะอยู่บนกิ่งไม้",
+"zh": "鸟儿停在树枝上。",
+"ja": "とりが えだに とまるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"reeds.0": {
+"en": "Reeds. Reeds are tall grasses that grow by water.",
+"lo": "ຕົ້ນອ້ອ. ຕົ້ນອ້ອເປັນຫຍ້າສູງທີ່ເກີດຢູ່ໃກ້ນ້ຳ.",
+"th": "ต้นอ้อ ต้นอ้อเป็นหญ้าสูงที่ขึ้นใกล้น้ำ",
+"zh": "芦苇。芦苇是长在水边的高草。",
+"ja": "あし。あしは みずの ちかくに はえる せの たかい くさだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"reeds.1": {
+"en": "Tall reeds.",
+"lo": "ຕົ້ນອ້ອສູງໆ.",
+"th": "ต้นอ้อสูงๆ",
+"zh": "高高的芦苇。",
+"ja": "せの たかい あし。",
+"who": "narrator",
+"tag": "looks"
+},
+"reeds.2": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"reeds.3": {
+"en": "Reeds bend in the wind.",
+"lo": "ຕົ້ນອ້ອໂນ້ມຕາມລົມ.",
+"th": "ต้นอ้อเอนไปตามลม",
+"zh": "芦苇随风弯腰。",
+"ja": "あしは かぜで ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"reeds.4": {
+"en": "Birds hide in the reeds.",
+"lo": "ນົກຫຼົບຢູ່ໃນຕົ້ນອ້ອ.",
+"th": "นกซ่อนตัวอยู่ในพงอ้อ",
+"zh": "鸟儿躲在芦苇里。",
+"ja": "とりが あしの なかに かくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"reeds.5": {
+"en": "Reeds have long, thin leaves.",
+"lo": "ຕົ້ນອ້ອມີໃບຍາວ ແລະ ບາງ.",
+"th": "ต้นอ้อมีใบยาวและบาง",
+"zh": "芦苇的叶子又细又长。",
+"ja": "あしの はっぱは ほそながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.0": {
+"en": "A log. A log is a piece of a tree trunk.",
+"lo": "ທ່ອນໄມ້. ທ່ອນໄມ້ແມ່ນຕ່ອນຂອງລຳຕົ້ນໄມ້.",
+"th": "ท่อนไม้ ท่อนไม้คือส่วนหนึ่งของลำต้นไม้",
+"zh": "木头。木头是树干的一段。",
+"ja": "まるた。まるたは きの みきの いちぶだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"log.1": {
+"en": "A log by the river.",
+"lo": "ທ່ອນໄມ້ຢູ່ແຄມແມ່ນ້ຳ.",
+"th": "ท่อนไม้ริมแม่น้ำ",
+"zh": "河边的一根木头。",
+"ja": "かわの そばの まるた。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.2": {
+"en": "A log is made of wood.",
+"lo": "ທ່ອນໄມ້ເຮັດຈາກໄມ້.",
+"th": "ท่อนไม้ทำจากไม้",
+"zh": "木头是用树做的。",
+"ja": "まるたは きで できているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.3": {
+"en": "A log is long and brown.",
+"lo": "ທ່ອນໄມ້ຍາວ ແລະ ສີນ້ຳຕານ.",
+"th": "ท่อนไม้ยาวและสีน้ำตาล",
+"zh": "木头长长的，是棕色的。",
+"ja": "まるたは ながくて ちゃいろいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.4": {
+"en": "It was a tree once.",
+"lo": "ມັນເຄີຍເປັນຕົ້ນໄມ້.",
+"th": "มันเคยเป็นต้นไม้",
+"zh": "它从前是一棵树。",
+"ja": "むかしは きだったよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.5": {
+"en": "A frog can sit on a log.",
+"lo": "ກົບນັ່ງຢູ່ເທິງທ່ອນໄມ້ໄດ້.",
+"th": "กบนั่งบนท่อนไม้ได้",
+"zh": "青蛙能坐在木头上。",
+"ja": "カエルは まるたに すわれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rocks.0": {
+"en": "Rocks. Rocks are hard and heavy.",
+"lo": "ກ້ອນຫີນ. ກ້ອນຫີນແຂງ ແລະ ໜັກ.",
+"th": "ก้อนหิน ก้อนหินแข็งและหนัก",
+"zh": "大石头。石头又硬又重。",
+"ja": "いわ。いわは かたくて おもいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rocks.1": {
+"en": "Rocks sit by the river.",
+"lo": "ກ້ອນຫີນຢູ່ແຄມແມ່ນ້ຳ.",
+"th": "ก้อนหินอยู่ริมแม่น้ำ",
+"zh": "石头在河边。",
+"ja": "いわは かわの そばに あるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rocks.2": {
+"en": "Rocks do not move.",
+"lo": "ກ້ອນຫີນບໍ່ເຄື່ອນທີ່.",
+"th": "ก้อนหินไม่ขยับ",
+"zh": "石头不会动。",
+"ja": "いわは うごかないよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rocks.3": {
+"en": "Rocks sit still for a very long time.",
+"lo": "ກ້ອນຫີນຢູ່ນິ້ງໆເປັນເວລາດົນນານ.",
+"th": "ก้อนหินอยู่นิ่งๆ มานานแสนนาน",
+"zh": "石头一动不动地待了很久很久。",
+"ja": "いわは ながいあいだ じっと しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rocks.4": {
+"en": "Frogs and turtles rest on rocks.",
+"lo": "ກົບ ແລະ ເຕົ່າພັກຢູ່ເທິງກ້ອນຫີນ.",
+"th": "กบและเต่าพักอยู่บนก้อนหิน",
+"zh": "青蛙和乌龟在石头上休息。",
+"ja": "カエルや カメは いわの うえで やすむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rocks.5": {
+"en": "People sit on rocks by the river.",
+"lo": "ຄົນນັ່ງຢູ່ເທິງກ້ອນຫີນຕາມແມ່ນ້ຳ.",
+"th": "ผู้คนนั่งบนก้อนหินริมแม่น้ำ",
+"zh": "人们坐在河边的石头上。",
+"ja": "ひとは かわの そばの いわに すわるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"flowers.0": {
+"en": "Flowers. Flowers are the colourful part of a plant.",
+"lo": "ດອກໄມ້. ດອກໄມ້ແມ່ນສ່ວນທີ່ມີສີສັນຂອງພືດ.",
+"th": "ดอกไม้ ดอกไม้เป็นส่วนที่มีสีสันของพืช",
+"zh": "花。花是植物上五颜六色的部分。",
+"ja": "はな。はなは しょくぶつの いろとりどりの ぶぶんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"flowers.1": {
+"en": "Pretty flowers.",
+"lo": "ດອກໄມ້ງາມໆ.",
+"th": "ดอกไม้สวยๆ",
+"zh": "漂亮的花。",
+"ja": "きれいな はな。",
+"who": "narrator",
+"tag": "looks"
+},
+"flowers.2": {
+"en": "Flowers smell sweet.",
+"lo": "ດອກໄມ້ມີກິ່ນຫອມ.",
+"th": "ดอกไม้หอมหวาน",
+"zh": "花儿香香的。",
+"ja": "はなは いい においが するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"flowers.3": {
+"en": "Bees like flowers.",
+"lo": "ເຜິ້ງມັກດອກໄມ້.",
+"th": "ผึ้งชอบดอกไม้",
+"zh": "蜜蜂喜欢花。",
+"ja": "ミツバチは はなが すき。",
+"who": "narrator",
+"tag": "looks"
+},
+"flowers.4": {
+"en": "Flowers have petals.",
+"lo": "ດອກໄມ້ມີກີບ.",
+"th": "ดอกไม้มีกลีบ",
+"zh": "花有花瓣。",
+"ja": "はなには はなびらが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"flowers.5": {
+"en": "Flowers open in the sun.",
+"lo": "ດອກໄມ້ບານໃນແສງຕາເວັນ.",
+"th": "ดอกไม้บานเมื่อโดนแดด",
+"zh": "花儿在阳光下开放。",
+"ja": "はなは おひさまを あびて ひらくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stone.0": {
+"en": "A stone. A stone is a hard piece of rock.",
+"lo": "ກ້ອນຫີນ. ກ້ອນຫີນແມ່ນຕ່ອນຂອງຫີນທີ່ແຂງ.",
+"th": "ก้อนหิน ก้อนหินคือชิ้นส่วนของหินที่แข็ง",
+"zh": "石头。石头是岩石的一小块，很硬。",
+"ja": "いし。いしは かたい いわの かけらだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stone.1": {
+"en": "A frog can sit on a stone.",
+"lo": "ກົບນັ່ງຢູ່ເທິງກ້ອນຫີນໄດ້.",
+"th": "กบนั่งบนก้อนหินได้",
+"zh": "青蛙能坐在石头上。",
+"ja": "カエルは いしの うえに すわれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stone.2": {
+"en": "Hop, hop, hop!",
+"lo": "ໂດດໆໆ!",
+"th": "กระโดด ๆ ๆ!",
+"zh": "蹦，蹦，蹦！",
+"ja": "ぴょん ぴょん ぴょん！",
+"who": "narrator",
+"tag": "sound"
+},
+"stone.3": {
+"en": "Stones sit in the river.",
+"lo": "ກ້ອນຫີນຢູ່ໃນແມ່ນ້ຳ.",
+"th": "ก้อนหินอยู่ในแม่น้ำ",
+"zh": "石头在河里。",
+"ja": "いしが かわに あるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stone.4": {
+"en": "A stone sinks in water.",
+"lo": "ກ້ອນຫີນຈົມນ້ຳ.",
+"th": "ก้อนหินจมน้ำ",
+"zh": "石头会沉到水里。",
+"ja": "いしは みずに しずむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stone.5": {
+"en": "You can skip a flat stone on the water.",
+"lo": "ເຈົ້າຖິ້ມກ້ອນຫີນແບນໃຫ້ກະໂດດເທິງນ້ຳໄດ້.",
+"th": "เราปาก้อนหินแบนให้กระดอนบนผิวน้ำได้",
+"zh": "你可以把扁石头打水漂。",
+"ja": "ひらたい いしは みずの うえで はねさせて あそべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"hyacinth.0": {
+"en": "Water hyacinths. A water hyacinth is a plant that floats.",
+"lo": "ຜັກຕົບ. ຜັກຕົບເປັນພືດທີ່ລອຍນ້ຳ.",
+"th": "ผักตบชวา ผักตบชวาเป็นพืชที่ลอยน้ำ",
+"zh": "水葫芦。水葫芦是漂在水上的植物。",
+"ja": "ホテイアオイ。ホテイアオイは みずに うく しょくぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"hyacinth.1": {
+"en": "Water hyacinths have purple flowers.",
+"lo": "ຜັກຕົບມີດອກສີມ່ວງ.",
+"th": "ผักตบชวามีดอกสีม่วง",
+"zh": "水葫芦开紫色的花。",
+"ja": "ホテイアオイは むらさきいろの はなが さくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"hyacinth.2": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"hyacinth.3": {
+"en": "Their leaves are round and shiny.",
+"lo": "ໃບຂອງມັນມົນ ແລະ ເງົາ.",
+"th": "ใบของมันกลมและเป็นมัน",
+"zh": "它的叶子圆圆的，亮亮的。",
+"ja": "はっぱは まるくて つやつや。",
+"who": "narrator",
+"tag": "looks"
+},
+"hyacinth.4": {
+"en": "Water hyacinths grow fast and cover the water.",
+"lo": "ຜັກຕົບເຕີບໂຕໄວ ແລະ ປົກຄຸມນ້ຳ.",
+"th": "ผักตบชวาโตเร็วและปกคลุมผิวน้ำ",
+"zh": "水葫芦长得很快，会盖住水面。",
+"ja": "ホテイアオイは はやく ふえて みずを おおうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"hyacinth.5": {
+"en": "Frogs hide under water hyacinths.",
+"lo": "ກົບຫຼົບຢູ່ໃຕ້ຜັກຕົບ.",
+"th": "กบซ่อนตัวอยู่ใต้ผักตบชวา",
+"zh": "青蛙躲在水葫芦下面。",
+"ja": "カエルは ホテイアオイの したに かくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ferns.0": {
+"en": "Ferns. A fern is a plant with feathery leaves.",
+"lo": "ຕົ້ນກູດ. ຕົ້ນກູດເປັນພືດທີ່ມີໃບຄືຂົນນົກ.",
+"th": "ต้นเฟิร์น เฟิร์นเป็นพืชที่มีใบเหมือนขนนก",
+"zh": "蕨草。蕨草是长着羽毛般叶子的植物。",
+"ja": "シダ。シダは はねの ような はっぱの しょくぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ferns.1": {
+"en": "Ferns have many leaves.",
+"lo": "ຕົ້ນກູດມີໃບຫຼາຍ.",
+"th": "ต้นเฟิร์นมีใบมากมาย",
+"zh": "蕨草有很多叶子。",
+"ja": "シダには はっぱが たくさん あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ferns.2": {
+"en": "Ferns like the shade.",
+"lo": "ຕົ້ນກູດມັກບ່ອນຮົ່ມ.",
+"th": "ต้นเฟิร์นชอบที่ร่ม",
+"zh": "蕨草喜欢阴凉的地方。",
+"ja": "シダは かげが すきだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ferns.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ferns.4": {
+"en": "Ferns grow in damp places.",
+"lo": "ຕົ້ນກູດເກີດຢູ່ບ່ອນຊຸ່ມ.",
+"th": "เฟิร์นขึ้นในที่ชื้น",
+"zh": "蕨草长在潮湿的地方。",
+"ja": "シダは しめった ところに はえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ferns.5": {
+"en": "Ferns grow new leaves that curl up.",
+"lo": "ຕົ້ນກູດແຕກໃບໃໝ່ທີ່ມ້ວນຢູ່.",
+"th": "เฟิร์นแตกใบอ่อนที่ม้วนอยู่",
+"zh": "蕨草会长出卷卷的新叶子。",
+"ja": "シダは くるんと まるまった あたらしい はっぱが のびるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"butterfly.0": {
+"en": "A butterfly. A butterfly is an insect with colourful wings.",
+"lo": "ແມງກະເບື້ອ. ແມງກະເບື້ອເປັນແມງໄມ້ທີ່ມີປີກສີສັນ.",
+"th": "ผีเสื้อ ผีเสื้อเป็นแมลงที่มีปีกหลากสี",
+"zh": "蝴蝶。蝴蝶是长着彩色翅膀的昆虫。",
+"ja": "ちょうちょ。ちょうちょは いろとりどりの はねを もつ むしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"butterfly.1": {
+"en": "Hello, butterfly!",
+"lo": "ສະບາຍດີ ແມງກະເບື້ອ!",
+"th": "สวัสดีผีเสื้อ!",
+"zh": "你好，蝴蝶！",
+"ja": "こんにちは、ちょうちょ！",
+"who": "narrator",
+"tag": "greet"
+},
+"butterfly.2": {
+"en": "The butterfly can fly.",
+"lo": "ແມງກະເບື້ອບິນໄດ້.",
+"th": "ผีเสื้อบินได้",
+"zh": "蝴蝶会飞。",
+"ja": "ちょうちょは とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"butterfly.3": {
+"en": "A butterfly has wings.",
+"lo": "ແມງກະເບື້ອມີປີກ.",
+"th": "ผีเสื้อมีปีก",
+"zh": "蝴蝶有翅膀。",
+"ja": "ちょうちょには はねが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"butterfly.4": {
+"en": "Flutter, flutter!",
+"lo": "ກະພືບ, ກະພືບ!",
+"th": "พั่บๆ พั่บๆ!",
+"zh": "扑扑，扑扑！",
+"ja": "パタパタ！",
+"who": "narrator",
+"tag": "sound"
+},
+"butterfly.5": {
+"en": "A butterfly drinks from flowers.",
+"lo": "ແມງກະເບື້ອດູດນ້ຳຫວານຈາກດອກໄມ້.",
+"th": "ผีเสื้อดูดน้ำหวานจากดอกไม้",
+"zh": "蝴蝶从花里喝甜甜的花蜜。",
+"ja": "ちょうちょは はなの みつを すうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"butterfly.6": {
+"en": "A butterfly starts as a caterpillar.",
+"lo": "ແມງກະເບື້ອເລີ່ມຕົ້ນເປັນໜອນ.",
+"th": "ผีเสื้อเริ่มต้นเป็นหนอน",
+"zh": "蝴蝶小时候是毛毛虫。",
+"ja": "ちょうちょは はじめは あおむしだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fish.0": {
+"en": "A fish. A fish is an animal that lives in water.",
+"lo": "ປາ. ປາແມ່ນສັດທີ່ອາໄສຢູ່ໃນນ້ຳ.",
+"th": "ปลา ปลาเป็นสัตว์ที่อาศัยอยู่ในน้ำ",
+"zh": "鱼。鱼是生活在水里的动物。",
+"ja": "さかな。さかなは みずの なかに すむ どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fish.1": {
+"en": "Hello, fish!",
+"lo": "ສະບາຍດີ ປາ!",
+"th": "สวัสดีปลา!",
+"zh": "你好，鱼！",
+"ja": "こんにちは、さかな！",
+"who": "narrator",
+"tag": "greet"
+},
+"fish.2": {
+"en": "The fish swims.",
+"lo": "ປາລອຍນ້ຳ.",
+"th": "ปลาว่ายน้ำ",
+"zh": "鱼在游。",
+"ja": "さかなが およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fish.3": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fish.4": {
+"en": "A fish has fins.",
+"lo": "ປາມີຄີບ.",
+"th": "ปลามีครีบ",
+"zh": "鱼有鱼鳍。",
+"ja": "さかなには ひれが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fish.5": {
+"en": "Fish breathe with gills.",
+"lo": "ປາຫາຍໃຈດ້ວຍເຫງືອກ.",
+"th": "ปลาหายใจด้วยเหงือก",
+"zh": "鱼用鳃呼吸。",
+"ja": "さかなは えらで いきを するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fish.6": {
+"en": "People in river villages catch fish to eat.",
+"lo": "ຄົນໃນບ້ານຕາມແມ່ນ້ຳຈັບປາມາກິນ.",
+"th": "ผู้คนในหมู่บ้านริมแม่น้ำจับปลามากิน",
+"zh": "河边村子里的人捕鱼来吃。",
+"ja": "かわの むらの ひとびとは さかなを とって たべるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"fruit.0": {
+"en": "A jamun. A jamun is a sweet purple fruit.",
+"lo": "ໝາກຫວ້າ. ໝາກຫວ້າເປັນໝາກໄມ້ສີມ່ວງທີ່ຫວານ.",
+"th": "ลูกหว้า ลูกหว้าเป็นผลไม้สีม่วงรสหวาน",
+"zh": "蒲桃。蒲桃是一种紫色的甜水果。",
+"ja": "ジャムン。ジャムンは あまい むらさきいろの くだものだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fruit.1": {
+"en": "A seed is inside.",
+"lo": "ມີເມັດຢູ່ຂ້າງໃນ.",
+"th": "ข้างในมีเมล็ด",
+"zh": "里面有一颗种子。",
+"ja": "なかに たねが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fruit.2": {
+"en": "Kapi eats jamuns every day.",
+"lo": "ກາປີກິນໝາກຫວ້າທຸກມື້.",
+"th": "กาปีกินลูกหว้าทุกวัน",
+"zh": "卡皮每天都吃蒲桃。",
+"ja": "カピは まいにち ジャムンを たべるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fruit.3": {
+"en": "Yum!",
+"lo": "ແຊບ!",
+"th": "อร่อยจัง!",
+"zh": "真好吃！",
+"ja": "おいしい！",
+"who": "narrator",
+"tag": "sound"
+},
+"fruit.4": {
+"en": "The seed is the heart of the jamun.",
+"lo": "ເມັດແມ່ນຫົວໃຈຂອງໝາກຫວ້າ.",
+"th": "เมล็ดคือหัวใจของลูกหว้า",
+"zh": "种子就是蒲桃的“心”。",
+"ja": "たねは ジャムンの こころ なんだよ。",
+"who": "narrator",
+"sp": [
+"s10",
+"moral"
+],
+"tag": "looks"
+},
+"fruit.5": {
+"en": "You can eat a jamun.",
+"lo": "ເຈົ້າກິນໝາກຫວ້າໄດ້.",
+"th": "กินลูกหว้าได้",
+"zh": "蒲桃可以吃。",
+"ja": "ジャムンは たべられるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fruit.6": {
+"en": "Jamuns grow in South and Southeast Asia.",
+"lo": "ໝາກຫວ້າເກີດຢູ່ອາຊີໃຕ້ ແລະ ອາຊີຕາເວັນອອກສຽງໃຕ້.",
+"th": "ลูกหว้าขึ้นในเอเชียใต้และเอเชียตะวันออกเฉียงใต้",
+"zh": "蒲桃长在南亚和东南亚。",
+"ja": "ジャムンは みなみアジアや とうなんアジアで そだつよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"fruit.7": {
+"en": "In the story, the seed is good medicine.",
+"lo": "ໃນນິທານ, ເມັດແມ່ນຢາດີ.",
+"th": "ในนิทาน เมล็ดเป็นยาที่ดี",
+"zh": "在故事里，种子是一味好药。",
+"ja": "おはなしでは、たねは よく きく くすりだよ。",
+"who": "narrator",
+"sp": [
+"s10",
+"moral"
+],
+"tag": "culture"
+},
+"heron.0": {
+"en": "A heron. A heron is a tall bird that wades in water.",
+"lo": "ນົກຍາງ. ນົກຍາງເປັນນົກສູງທີ່ຍ່າງລຸຍນ້ຳ.",
+"th": "นกยาง นกยางเป็นนกตัวสูงที่เดินลุยน้ำ",
+"zh": "苍鹭。苍鹭是在水里涉水的高个子鸟。",
+"ja": "サギ。サギは みずの なかを あるく せの たかい とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"heron.1": {
+"en": "Hello, heron!",
+"lo": "ສະບາຍດີ ນົກຍາງ!",
+"th": "สวัสดีนกยาง!",
+"zh": "你好，苍鹭！",
+"ja": "こんにちは、サギ！",
+"who": "narrator",
+"tag": "greet"
+},
+"heron.2": {
+"en": "A heron has long legs.",
+"lo": "ນົກຍາງຂາຍາວ.",
+"th": "นกยางมีขายาว",
+"zh": "苍鹭的腿很长。",
+"ja": "サギは あしが ながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"heron.3": {
+"en": "A heron eats fish.",
+"lo": "ນົກຍາງກິນປາ.",
+"th": "นกยางกินปลา",
+"zh": "苍鹭吃鱼。",
+"ja": "サギは さかなを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"heron.4": {
+"en": "Herons build nests in tall trees.",
+"lo": "ນົກຍາງເຮັດຮັງຢູ່ເທິງຕົ້ນໄມ້ສູງ.",
+"th": "นกยางทำรังบนต้นไม้สูง",
+"zh": "苍鹭在高高的树上筑巢。",
+"ja": "サギは たかい きの うえに すを つくるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"heron.5": {
+"en": "Its neck folds into an S.",
+"lo": "ຄໍຂອງມັນພັບເປັນຮູບ S.",
+"th": "คอของมันพับเป็นรูปตัว S",
+"zh": "它的脖子能弯成S形。",
+"ja": "くびを Sの かたちに まげるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"heron.6": {
+"en": "A heron waits very still, then catches a fish.",
+"lo": "ນົກຍາງລໍຖ້າຢູ່ນິ້ງໆ ແລ້ວຈັບປາ.",
+"th": "นกยางรออยู่นิ่งๆ แล้วจับปลา",
+"zh": "苍鹭一动不动地等着，然后抓住一条鱼。",
+"ja": "サギは じっと まって、さかなを つかまえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.0": {
+"en": "A turtle. A turtle is a slow animal with a shell.",
+"lo": "ເຕົ່າ. ເຕົ່າເປັນສັດຍ່າງຊ້າທີ່ມີກະດອງ.",
+"th": "เต่า เต่าเป็นสัตว์เดินช้าที่มีกระดอง",
+"zh": "乌龟。乌龟是背着壳的慢动物。",
+"ja": "カメ。カメは こうらを もつ ゆっくりな どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"turtle.1": {
+"en": "Hello, turtle!",
+"lo": "ສະບາຍດີ ເຕົ່າ!",
+"th": "สวัสดีเต่า!",
+"zh": "你好，乌龟！",
+"ja": "こんにちは、カメ！",
+"who": "narrator",
+"tag": "greet"
+},
+"turtle.2": {
+"en": "A turtle can hide in its shell.",
+"lo": "ເຕົ່າຫຼົບຢູ່ໃນກະດອງໄດ້.",
+"th": "เต่าซ่อนตัวในกระดองได้",
+"zh": "乌龟能躲进壳里。",
+"ja": "カメは こうらに かくれられるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.3": {
+"en": "A turtle can swim.",
+"lo": "ເຕົ່າລອຍນ້ຳໄດ້.",
+"th": "เต่าว่ายน้ำได้",
+"zh": "乌龟会游泳。",
+"ja": "カメは およげるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.4": {
+"en": "A turtle eats plants and little animals.",
+"lo": "ເຕົ່າກິນພືດ ແລະ ສັດນ້ອຍ.",
+"th": "เต่ากินพืชและสัตว์ตัวเล็กๆ",
+"zh": "乌龟吃植物和小动物。",
+"ja": "カメは くさや ちいさな どうぶつを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"turtle.5": {
+"en": "A turtle lays eggs.",
+"lo": "ເຕົ່າວາງໄຂ່.",
+"th": "เต่าวางไข่",
+"zh": "乌龟会下蛋。",
+"ja": "カメは たまごを うむよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"kingfisher.0": {
+"en": "A kingfisher. A kingfisher is a small, bright bird.",
+"lo": "ນົກກະເຕັນ. ນົກກະເຕັນເປັນນົກນ້ອຍທີ່ມີສີສັນສົດໃສ.",
+"th": "นกกระเต็น นกกระเต็นเป็นนกตัวเล็กสีสดใส",
+"zh": "翠鸟。翠鸟是羽毛鲜艳的小鸟。",
+"ja": "カワセミ。カワセミは あざやかな いろの ちいさな とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"kingfisher.1": {
+"en": "Hello, kingfisher!",
+"lo": "ສະບາຍດີ ນົກກະເຕັນ!",
+"th": "สวัสดีนกกระเต็น!",
+"zh": "你好，翠鸟！",
+"ja": "こんにちは、カワセミ！",
+"who": "narrator",
+"tag": "greet"
+},
+"kingfisher.2": {
+"en": "A kingfisher dives for fish.",
+"lo": "ນົກກະເຕັນໂຕນລົງຈັບປາ.",
+"th": "นกกระเต็นดำน้ำจับปลา",
+"zh": "翠鸟扎进水里捉鱼。",
+"ja": "カワセミは さかなを とりに もぐるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"kingfisher.3": {
+"en": "Splash! It dives.",
+"lo": "ຕູມ! ມັນໂຕນລົງ.",
+"th": "ตูม! มันดำลงไป",
+"zh": "扑通！它扎下去了。",
+"ja": "ざぶん！ もぐったよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"kingfisher.4": {
+"en": "A kingfisher has a long beak.",
+"lo": "ນົກກະເຕັນມີປາກຍາວ.",
+"th": "นกกระเต็นมีปากยาว",
+"zh": "翠鸟的嘴又长又尖。",
+"ja": "カワセミの くちばしは ながくて とがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"kingfisher.5": {
+"en": "A kingfisher sits still and watches the water.",
+"lo": "ນົກກະເຕັນນັ່ງຢູ່ນິ້ງໆ ແລະ ເບິ່ງນ້ຳ.",
+"th": "นกกระเต็นเกาะนิ่งๆ แล้วมองดูน้ำ",
+"zh": "翠鸟一动不动地望着水面。",
+"ja": "カワセミは じっと みずを みているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"parakeet.0": {
+"en": "A parakeet. A parakeet is a small, noisy parrot.",
+"lo": "ນົກແກ້ວ. ນົກແກ້ວແມ່ນນົກນ້ອຍທີ່ສຽງດັງ.",
+"th": "นกแก้ว นกแก้วเป็นนกตัวเล็กที่ส่งเสียงดัง",
+"zh": "鹦鹉。鹦鹉是一种爱叫的小鸟。",
+"ja": "インコ。インコは さわがしい ちいさな オウムだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"parakeet.1": {
+"en": "Hello, parakeet!",
+"lo": "ສະບາຍດີ ນົກແກ້ວ!",
+"th": "สวัสดีนกแก้ว!",
+"zh": "你好，鹦鹉！",
+"ja": "こんにちは、インコ！",
+"who": "narrator",
+"tag": "greet"
+},
+"parakeet.2": {
+"en": "A parakeet can fly.",
+"lo": "ນົກແກ້ວບິນໄດ້.",
+"th": "นกแก้วบินได้",
+"zh": "鹦鹉会飞。",
+"ja": "インコは とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"parakeet.3": {
+"en": "A parakeet has a curved beak.",
+"lo": "ນົກແກ້ວມີປາກໂຄ້ງ.",
+"th": "นกแก้วมีปากโค้ง",
+"zh": "鹦鹉的嘴弯弯的。",
+"ja": "インコの くちばしは まがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"parakeet.4": {
+"en": "Squawk!",
+"lo": "ແກ້ກໆ!",
+"th": "แก๊กๆ!",
+"zh": "嘎嘎！",
+"ja": "ギャーギャー！",
+"who": "narrator",
+"tag": "sound"
+},
+"parakeet.5": {
+"en": "A parakeet eats seeds and fruit.",
+"lo": "ນົກແກ້ວກິນເມັດ ແລະ ໝາກໄມ້.",
+"th": "นกแก้วกินเมล็ดพืชและผลไม้",
+"zh": "鹦鹉吃种子和水果。",
+"ja": "インコは たねや くだものを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"gecko.0": {
+"en": "A gecko. A gecko is a lizard that climbs walls.",
+"lo": "ຕຸ໊ກແກ. ຕຸ໊ກແກເປັນກິ້ງກ່າທີ່ປີນຝາ.",
+"th": "ตุ๊กแก ตุ๊กแกเป็นสัตว์เลื้อยคลานที่ปีนผนัง",
+"zh": "壁虎。壁虎是会爬墙的蜥蜴。",
+"ja": "ヤモリ。ヤモリは かべを のぼる とかげだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"gecko.1": {
+"en": "Hello, gecko!",
+"lo": "ສະບາຍດີ ຕຸ໊ກແກ!",
+"th": "สวัสดีตุ๊กแก!",
+"zh": "你好，壁虎！",
+"ja": "こんにちは、ヤモリ！",
+"who": "narrator",
+"tag": "greet"
+},
+"gecko.2": {
+"en": "A gecko says its name.",
+"lo": "ຕຸ໊ກແກຮ້ອງຊື່ຂອງມັນ.",
+"th": "ตุ๊กแกร้องชื่อของมันเอง",
+"zh": "壁虎会叫自己的名字。",
+"ja": "ヤモリは じぶんの なまえを なくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gecko.3": {
+"en": "Tok-kae!",
+"lo": "ຕຸ໊ກແກ!",
+"th": "ตุ๊กแก!",
+"zh": "托——嘎！",
+"ja": "トッケー！",
+"who": "narrator",
+"tag": "sound"
+},
+"gecko.4": {
+"en": "A gecko eats little bugs.",
+"lo": "ຕຸ໊ກແກກິນແມງໄມ້ນ້ອຍ.",
+"th": "ตุ๊กแกกินแมลงตัวเล็กๆ",
+"zh": "壁虎吃小虫子。",
+"ja": "ヤモリは ちいさな むしを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"gecko.5": {
+"en": "A gecko has sticky toes.",
+"lo": "ຕຸ໊ກແກມີນິ້ວຕີນທີ່ຕິດ.",
+"th": "ตุ๊กแกมีนิ้วเท้าที่เกาะติด",
+"zh": "壁虎的脚趾能粘住墙。",
+"ja": "ヤモリの あしの ゆびは くっつくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"gecko.6": {
+"en": "A gecko comes out at night.",
+"lo": "ຕຸ໊ກແກອອກມາໃນຕອນກາງຄືນ.",
+"th": "ตุ๊กแกออกมาตอนกลางคืน",
+"zh": "壁虎晚上出来活动。",
+"ja": "ヤモリは よるに でてくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dragonfly.0": {
+"en": "A dragonfly. A dragonfly is an insect with four wings.",
+"lo": "ແມງປໍ. ແມງປໍເປັນແມງໄມ້ທີ່ມີປີກສີ່ປີກ.",
+"th": "แมลงปอ แมลงปอเป็นแมลงที่มีสี่ปีก",
+"zh": "蜻蜓。蜻蜓是有四片翅膀的昆虫。",
+"ja": "トンボ。トンボは はねが よっつ ある むしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"dragonfly.1": {
+"en": "Hello, dragonfly!",
+"lo": "ສະບາຍດີ ແມງປໍ!",
+"th": "สวัสดีแมลงปอ!",
+"zh": "你好，蜻蜓！",
+"ja": "こんにちは、トンボ！",
+"who": "narrator",
+"tag": "greet"
+},
+"dragonfly.2": {
+"en": "The dragonfly can fly fast.",
+"lo": "ແມງປໍບິນໄວ.",
+"th": "แมลงปอบินเร็ว",
+"zh": "蜻蜓飞得很快。",
+"ja": "トンボは はやく とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dragonfly.3": {
+"en": "Zip, zip!",
+"lo": "ວຸບ ວຸບ!",
+"th": "ฟิ้ว ฟิ้ว!",
+"zh": "嗖，嗖！",
+"ja": "スイスイ！",
+"who": "narrator",
+"tag": "sound"
+},
+"dragonfly.4": {
+"en": "A dragonfly likes the water.",
+"lo": "ແມງປໍມັກນ້ຳ.",
+"th": "แมลงปอชอบอยู่ใกล้น้ำ",
+"zh": "蜻蜓喜欢水边。",
+"ja": "トンボは みずの ちかくが すき。",
+"who": "narrator",
+"tag": "fact"
+},
+"dragonfly.5": {
+"en": "A dragonfly eats little bugs.",
+"lo": "ແມງປໍກິນແມງໄມ້ນ້ອຍ.",
+"th": "แมลงปอกินแมลงตัวเล็กๆ",
+"zh": "蜻蜓吃小虫子。",
+"ja": "トンボは ちいさな むしを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"lilypads.0": {
+"en": "Lily pads. A lily pad is a big leaf on the water.",
+"lo": "ໃບບົວ. ໃບບົວເປັນໃບໄມ້ໃຫຍ່ເທິງນ້ຳ.",
+"th": "ใบบัว ใบบัวเป็นใบไม้ใหญ่บนน้ำ",
+"zh": "荷叶。荷叶是水上的一片大叶子。",
+"ja": "はすの は。はすの はは みずの うえの おおきな はっぱだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lilypads.1": {
+"en": "Frogs sit on lily pads.",
+"lo": "ກົບນັ່ງຢູ່ເທິງໃບບົວ.",
+"th": "กบนั่งอยู่บนใบบัว",
+"zh": "青蛙坐在荷叶上。",
+"ja": "カエルは はすの はに すわるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lilypads.2": {
+"en": "A lily pad can hold a frog.",
+"lo": "ໃບບົວຮອງກົບໄດ້.",
+"th": "ใบบัวรับกบได้",
+"zh": "荷叶能托住青蛙。",
+"ja": "はすの はは カエルを のせられるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lilypads.3": {
+"en": "Lily pads have long stems under the water.",
+"lo": "ໃບບົວມີກ້ານຍາວຢູ່ໃຕ້ນ້ຳ.",
+"th": "ใบบัวมีก้านยาวอยู่ใต้น้ำ",
+"zh": "荷叶有一根长长的茎在水下。",
+"ja": "はすの はには みずの なかに ながい くきが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lilypads.4": {
+"en": "Water drops roll on a lily pad.",
+"lo": "ຢອດນ້ຳກິ້ງຢູ່ເທິງໃບບົວ.",
+"th": "หยดน้ำกลิ้งอยู่บนใบบัว",
+"zh": "水珠在荷叶上滚来滚去。",
+"ja": "みずの つぶが はすの はの うえを ころがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lilypads.5": {
+"en": "Many lily pads float together.",
+"lo": "ໃບບົວຫຼາຍໃບລອຍຢູ່ນຳກັນ.",
+"th": "ใบบัวหลายใบลอยอยู่ด้วยกัน",
+"zh": "很多荷叶漂在一起。",
+"ja": "たくさんの はすの はが いっしょに うかぶよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"grass.0": {
+"en": "Grass. Grass is a green plant that covers the ground.",
+"lo": "ຫຍ້າ. ຫຍ້າເປັນພືດສີຂຽວທີ່ປົກຄຸມພື້ນດິນ.",
+"th": "หญ้า หญ้าเป็นพืชสีเขียวที่ปกคลุมพื้นดิน",
+"zh": "草。草是覆盖在地面上的绿色植物。",
+"ja": "くさ。くさは じめんを おおう みどりの しょくぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"grass.1": {
+"en": "Grass grows by the river.",
+"lo": "ຫຍ້າເກີດຢູ່ແຄມແມ່ນ້ຳ.",
+"th": "หญ้าขึ้นริมแม่น้ำ",
+"zh": "草长在河边。",
+"ja": "くさは かわの そばに はえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"grass.2": {
+"en": "Soft grass.",
+"lo": "ຫຍ້າອ່ອນນຸ້ມ.",
+"th": "หญ้านุ่มๆ",
+"zh": "软软的草。",
+"ja": "ふわふわの くさ。",
+"who": "narrator",
+"tag": "looks"
+},
+"grass.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"grass.4": {
+"en": "Buffalo eat grass.",
+"lo": "ຄວາຍກິນຫຍ້າ.",
+"th": "ควายกินหญ้า",
+"zh": "水牛吃草。",
+"ja": "すいぎゅうは くさを たべるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"grass.5": {
+"en": "Grass grows back after it is cut.",
+"lo": "ຫຍ້າງອກຄືນຫຼັງຈາກຕັດ.",
+"th": "หญ้างอกใหม่หลังถูกตัด",
+"zh": "草被割掉以后还会长出来。",
+"ja": "くさは かられても また はえてくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pebbles.0": {
+"en": "Pebbles. Pebbles are small, smooth stones.",
+"lo": "ກ້ອນຫີນນ້ອຍໆ. ກ້ອນຫີນນ້ອຍແມ່ນຫີນກ້ອນນ້ອຍທີ່ລຽບ.",
+"th": "ก้อนกรวด ก้อนกรวดคือหินก้อนเล็กๆ เรียบๆ",
+"zh": "小石子。小石子是又小又光滑的石头。",
+"ja": "こいし。こいしは ちいさくて すべすべの いしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"pebbles.1": {
+"en": "Click, clack!",
+"lo": "ແຄະ ແຄະ!",
+"th": "แกร๊ก แกร๊ก!",
+"zh": "咔嗒咔嗒！",
+"ja": "カチャカチャ！",
+"who": "narrator",
+"tag": "sound"
+},
+"pebbles.2": {
+"en": "One, two, three pebbles!",
+"lo": "ໜຶ່ງ, ສອງ, ສາມ ກ້ອນຫີນນ້ອຍ!",
+"th": "หนึ่ง สอง สาม ก้อนกรวด!",
+"zh": "一颗，两颗，三颗小石子！",
+"ja": "ひとつ、ふたつ、みっつ、こいし！",
+"who": "narrator",
+"tag": "looks"
+},
+"pebbles.3": {
+"en": "Pebbles roll in the river.",
+"lo": "ກ້ອນຫີນນ້ອຍກິ້ງຢູ່ໃນແມ່ນ້ຳ.",
+"th": "ก้อนกรวดกลิ้งอยู่ในแม่น้ำ",
+"zh": "小石子在河里滚动。",
+"ja": "こいしは かわの なかで ころがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pebbles.4": {
+"en": "The river makes pebbles round.",
+"lo": "ແມ່ນ້ຳເຮັດໃຫ້ກ້ອນຫີນນ້ອຍມົນ.",
+"th": "แม่น้ำทำให้ก้อนกรวดกลม",
+"zh": "河水把小石子磨圆了。",
+"ja": "かわが こいしを まるく するよ。",
+"who": "narrator",
+"tag": "what"
+},
+"pebbles.5": {
+"en": "You can hold a pebble in your hand.",
+"lo": "ເຈົ້າຖືກ້ອນຫີນນ້ອຍໄດ້ດ້ວຍມື.",
+"th": "ถือก้อนกรวดไว้ในมือได้",
+"zh": "你可以把小石子握在手里。",
+"ja": "こいしは てに もてるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"frog.0": {
+"en": "A frog. A frog is an animal that jumps and swims.",
+"lo": "ກົບ. ກົບເປັນສັດທີ່ໂດດ ແລະ ລອຍນ້ຳ.",
+"th": "กบ กบเป็นสัตว์ที่กระโดดและว่ายน้ำ",
+"zh": "青蛙。青蛙是会跳也会游的动物。",
+"ja": "カエル。カエルは とんだり およいだり する どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"frog.1": {
+"en": "Hello, frog!",
+"lo": "ສະບາຍດີ ກົບ!",
+"th": "สวัสดีกบ!",
+"zh": "你好，青蛙！",
+"ja": "こんにちは、カエル！",
+"who": "narrator",
+"tag": "greet"
+},
+"frog.2": {
+"en": "The frog jumps.",
+"lo": "ກົບໂດດ.",
+"th": "กบกระโดด",
+"zh": "青蛙在跳。",
+"ja": "カエルが ぴょんと とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"frog.3": {
+"en": "Ribbit, ribbit!",
+"lo": "ອຽບໆ!",
+"th": "อ๊บๆ!",
+"zh": "呱呱！",
+"ja": "ゲロゲロ！",
+"who": "narrator",
+"tag": "sound"
+},
+"frog.4": {
+"en": "A frog has long back legs.",
+"lo": "ກົບມີຂາຫຼັງຍາວ.",
+"th": "กบมีขาหลังยาว",
+"zh": "青蛙的后腿很长。",
+"ja": "カエルの うしろあしは ながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"frog.5": {
+"en": "A frog eats flies.",
+"lo": "ກົບກິນແມງວັນ.",
+"th": "กบกินแมลงวัน",
+"zh": "青蛙吃苍蝇。",
+"ja": "カエルは ハエを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"buffalo.0": {
+"en": "A buffalo. It is a big, strong farm animal.",
+"lo": "ຄວາຍ. ມັນເປັນສັດລ້ຽງໃຫຍ່ ແລະ ແຂງແຮງ.",
+"th": "ควาย มันเป็นสัตว์เลี้ยงตัวใหญ่และแข็งแรง",
+"zh": "水牛。它是一种又大又壮的农场动物。",
+"ja": "すいぎゅう。おおきくて ちからもちの のうじょうの どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"buffalo.1": {
+"en": "Hello, buffalo!",
+"lo": "ສະບາຍດີ ຄວາຍ!",
+"th": "สวัสดีควาย!",
+"zh": "你好，水牛！",
+"ja": "こんにちは、すいぎゅう！",
+"who": "narrator",
+"tag": "greet"
+},
+"buffalo.2": {
+"en": "A big buffalo.",
+"lo": "ຄວາຍໂຕໃຫຍ່.",
+"th": "ควายตัวใหญ่",
+"zh": "大大的水牛。",
+"ja": "おおきな すいぎゅう。",
+"who": "narrator",
+"tag": "looks"
+},
+"buffalo.3": {
+"en": "A buffalo likes the water.",
+"lo": "ຄວາຍມັກນ້ຳ.",
+"th": "ควายชอบน้ำ",
+"zh": "水牛喜欢水。",
+"ja": "すいぎゅうは みずが すきだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"buffalo.4": {
+"en": "Moo!",
+"lo": "ມໍ!",
+"th": "มอ!",
+"zh": "哞！",
+"ja": "モー！",
+"who": "narrator",
+"tag": "sound"
+},
+"buffalo.5": {
+"en": "A buffalo eats grass.",
+"lo": "ຄວາຍກິນຫຍ້າ.",
+"th": "ควายกินหญ้า",
+"zh": "水牛吃草。",
+"ja": "すいぎゅうは くさを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"buffalo.6": {
+"en": "A buffalo cools off in the mud.",
+"lo": "ຄວາຍນອນແຊ່ຕົມເພື່ອໃຫ້ເຢັນ.",
+"th": "ควายนอนแช่โคลนให้เย็นสบาย",
+"zh": "水牛泡在泥里凉快。",
+"ja": "すいぎゅうは どろに つかって すずむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"buffalo.7": {
+"en": "In Asia, water buffalo pull ploughs in the rice fields.",
+"lo": "ໃນອາຊີ, ຄວາຍລາກໄຖໃນນາເຂົ້າ.",
+"th": "ในเอเชีย ควายลากไถในนาข้าว",
+"zh": "在亚洲，水牛在稻田里拉犁。",
+"ja": "アジアでは、すいぎゅうが たんぼで すきを ひくよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"squirrel.0": {
+"en": "A squirrel. A squirrel is a small animal that lives in trees.",
+"lo": "ກະຮອກ. ກະຮອກເປັນສັດນ້ອຍທີ່ອາໄສຢູ່ເທິງຕົ້ນໄມ້.",
+"th": "กระรอก กระรอกเป็นสัตว์ตัวเล็กที่อาศัยอยู่บนต้นไม้",
+"zh": "松鼠。松鼠是住在树上的小动物。",
+"ja": "リス。リスは きの うえに すむ ちいさな どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"squirrel.1": {
+"en": "Hello, squirrel!",
+"lo": "ສະບາຍດີ ກະຮອກ!",
+"th": "สวัสดีกระรอก!",
+"zh": "你好，松鼠！",
+"ja": "こんにちは、リス！",
+"who": "narrator",
+"tag": "greet"
+},
+"squirrel.2": {
+"en": "A squirrel climbs trees.",
+"lo": "ກະຮອກປີນຕົ້ນໄມ້.",
+"th": "กระรอกปีนต้นไม้",
+"zh": "松鼠会爬树。",
+"ja": "リスは きに のぼるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"squirrel.3": {
+"en": "A squirrel has a fluffy tail.",
+"lo": "ກະຮອກມີຫາງຟູ.",
+"th": "กระรอกมีหางฟู",
+"zh": "松鼠有蓬蓬的大尾巴。",
+"ja": "リスの しっぽは ふさふさだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"squirrel.4": {
+"en": "Chirp, chirp!",
+"lo": "ຈິບໆ!",
+"th": "จิ๊บๆ!",
+"zh": "吱吱！",
+"ja": "チチチ！",
+"who": "narrator",
+"tag": "sound"
+},
+"squirrel.5": {
+"en": "A squirrel eats nuts.",
+"lo": "ກະຮອກກິນຖົ່ວ.",
+"th": "กระรอกกินถั่ว",
+"zh": "松鼠吃坚果。",
+"ja": "リスは きのみを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"nest.0": {
+"en": "A nest. Lulu sleeps in this nest of reeds.",
+"lo": "ຮັງ. ລູລູນອນຢູ່ໃນຮັງທີ່ເຮັດຈາກຕົ້ນອ້ອນີ້.",
+"th": "รัง ลูลูนอนอยู่ในรังที่ทำจากต้นอ้อนี้",
+"zh": "窝。露露睡在这个用芦苇做的窝里。",
+"ja": "す。ルルは この あしで できた すで ねているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"nest.1": {
+"en": "A nest is a soft bed.",
+"lo": "ຮັງເປັນບ່ອນນອນອ່ອນນຸ້ມ.",
+"th": "รังเป็นที่นอนนุ่มๆ",
+"zh": "窝是一张软软的床。",
+"ja": "すは やわらかい ベッドだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nest.2": {
+"en": "Lulu rests in her nest.",
+"lo": "ລູລູພັກຢູ່ໃນຮັງຂອງນາງ.",
+"th": "ลูลูพักอยู่ในรังของเธอ",
+"zh": "露露在她的窝里休息。",
+"ja": "ルルは じぶんの すで やすむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"nest.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"nest.4": {
+"en": "It is made of reeds and grass.",
+"lo": "ມັນເຮັດຈາກຕົ້ນອ້ອ ແລະ ຫຍ້າ.",
+"th": "ทำจากต้นอ้อและหญ้า",
+"zh": "它是用芦苇和草做的。",
+"ja": "あしと くさで できているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nest.5": {
+"en": "A mother crocodile makes a nest for her eggs.",
+"lo": "ແມ່ແຂ້ເຮັດຮັງໃຫ້ໄຂ່ຂອງນາງ.",
+"th": "แม่จระเข้ทำรังให้ไข่ของเธอ",
+"zh": "鳄鱼妈妈为她的蛋做窝。",
+"ja": "ワニの おかあさんは たまごの ために すを つくるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"goldreeds.0": {
+"en": "Gold reeds. Reeds are tall grasses that grow by water.",
+"lo": "ຕົ້ນອ້ອສີຄຳ. ຕົ້ນອ້ອເປັນຫຍ້າສູງທີ່ເກີດຢູ່ໃກ້ນ້ຳ.",
+"th": "ต้นอ้อสีทอง ต้นอ้อเป็นหญ้าสูงที่ขึ้นใกล้น้ำ",
+"zh": "金色的芦苇。芦苇是长在水边的高草。",
+"ja": "きんいろの あし。あしは みずの ちかくに はえる せの たかい くさだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"goldreeds.1": {
+"en": "The sun makes the reeds gold.",
+"lo": "ແສງຕາເວັນເຮັດໃຫ້ຕົ້ນອ້ອເປັນສີຄຳ.",
+"th": "แสงอาทิตย์ทำให้ต้นอ้อเป็นสีทอง",
+"zh": "阳光把芦苇染成了金色。",
+"ja": "おひさまが あしを きんいろに するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"goldreeds.2": {
+"en": "It is evening.",
+"lo": "ມັນແມ່ນຕອນແລງ.",
+"th": "ตอนนี้เป็นเวลาเย็น",
+"zh": "现在是傍晚。",
+"ja": "いまは ゆうがただよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"goldreeds.3": {
+"en": "The reeds are tall.",
+"lo": "ຕົ້ນອ້ອສູງ.",
+"th": "ต้นอ้อสูง",
+"zh": "芦苇很高。",
+"ja": "あしは せが たかいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"goldreeds.4": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"goldreeds.5": {
+"en": "Birds hide in the reeds.",
+"lo": "ນົກຫຼົບຢູ່ໃນຕົ້ນອ້ອ.",
+"th": "นกซ่อนตัวอยู่ในพงอ้อ",
+"zh": "鸟儿躲在芦苇里。",
+"ja": "とりが あしの なかに かくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sandbank.0": {
+"en": "A sandbank. A sandbank is sand piled up in a river.",
+"lo": "ດອນຊາຍ. ດອນຊາຍແມ່ນຊາຍທີ່ກອງຢູ່ໃນແມ່ນ້ຳ.",
+"th": "สันทราย สันทรายคือทรายที่กองอยู่ในแม่น้ำ",
+"zh": "沙洲。沙洲是河里堆起来的沙子。",
+"ja": "なかす。なかすは かわに つもった すなだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sandbank.1": {
+"en": "Soft sand.",
+"lo": "ຊາຍອ່ອນນຸ້ມ.",
+"th": "ทรายนุ่มๆ",
+"zh": "软软的沙子。",
+"ja": "ふわふわの すな。",
+"who": "narrator",
+"tag": "looks"
+},
+"sandbank.2": {
+"en": "Sand is made of tiny stones.",
+"lo": "ຊາຍເຮັດຈາກຫີນນ້ອຍໆ.",
+"th": "ทรายทำจากหินเม็ดเล็กๆ",
+"zh": "沙子是由很小很小的石头做成的。",
+"ja": "すなは ちいさな いしで できているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sandbank.3": {
+"en": "Birds walk on the sand.",
+"lo": "ນົກຍ່າງຢູ່ເທິງຊາຍ.",
+"th": "นกเดินบนทราย",
+"zh": "鸟儿在沙子上走。",
+"ja": "とりが すなの うえを あるくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sandbank.4": {
+"en": "Turtles lay eggs in the sand.",
+"lo": "ເຕົ່າວາງໄຂ່ໃນຊາຍ.",
+"th": "เต่าวางไข่ในทราย",
+"zh": "乌龟在沙子里下蛋。",
+"ja": "カメは すなの なかに たまごを うむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sandbank.5": {
+"en": "The river can move a sandbank.",
+"lo": "ແມ່ນ້ຳເຮັດໃຫ້ດອນຊາຍຍ້າຍໄດ້.",
+"th": "แม่น้ำทำให้สันทรายเคลื่อนที่ได้",
+"zh": "河水可以把沙洲冲得挪个地方。",
+"ja": "かわは なかすを うごかすことが あるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"firefly.0": {
+"en": "A firefly. A firefly is a bug that glows.",
+"lo": "ແມງໄຟ. ແມງໄຟແມ່ນແມງໄມ້ທີ່ເຫຼື້ອມແສງ.",
+"th": "หิ่งห้อย หิ่งห้อยคือแมลงที่เรืองแสง",
+"zh": "萤火虫。萤火虫是会发光的小虫。",
+"ja": "ホタル。ホタルは ひかる むしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"firefly.1": {
+"en": "Hello, firefly!",
+"lo": "ສະບາຍດີ ແມງໄຟ!",
+"th": "สวัสดีหิ่งห้อย!",
+"zh": "你好，萤火虫！",
+"ja": "こんにちは、ホタル！",
+"who": "narrator",
+"tag": "greet"
+},
+"firefly.2": {
+"en": "Its tail glows.",
+"lo": "ຫາງຂອງມັນເຫຼື້ອມ.",
+"th": "ก้นของมันเรืองแสง",
+"zh": "它的尾巴会发光。",
+"ja": "おしりが ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"firefly.3": {
+"en": "Fireflies come out at night.",
+"lo": "ແມງໄຟອອກມາໃນຕອນກາງຄືນ.",
+"th": "หิ่งห้อยออกมาตอนกลางคืน",
+"zh": "萤火虫在夜里出来。",
+"ja": "ホタルは よるに でてくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"firefly.4": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"firefly.5": {
+"en": "A firefly flashes to talk to other fireflies.",
+"lo": "ແມງໄຟກະພິບແສງເພື່ອສື່ສານກັບແມງໄຟໂຕອື່ນ.",
+"th": "หิ่งห้อยกะพริบแสงเพื่อคุยกับหิ่งห้อยตัวอื่น",
+"zh": "萤火虫闪光，是在和别的萤火虫说话。",
+"ja": "ホタルは ひかって ほかの ホタルと はなすよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"lapwing.0": {
+"en": "A lapwing. A lapwing is a bird that lives near water.",
+"lo": "ນົກແຕ້ແວ້. ນົກແຕ້ແວ້ເປັນນົກທີ່ອາໄສຢູ່ໃກ້ນ້ຳ.",
+"th": "นกกระแต นกกระแตเป็นนกที่อาศัยอยู่ใกล้น้ำ",
+"zh": "凤头麦鸡。凤头麦鸡是住在水边的鸟。",
+"ja": "タゲリ。タゲリは みずの ちかくに すむ とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lapwing.1": {
+"en": "Hello, lapwing!",
+"lo": "ສະບາຍດີ ນົກແຕ້ແວ້!",
+"th": "สวัสดีนกกระแต!",
+"zh": "你好，凤头麦鸡！",
+"ja": "こんにちは、タゲリ！",
+"who": "narrator",
+"tag": "greet"
+},
+"lapwing.2": {
+"en": "Pee-wit, pee-wit!",
+"lo": "ປີ-ວິດ, ປີ-ວິດ!",
+"th": "ปี-วิต ปี-วิต!",
+"zh": "皮——威，皮——威！",
+"ja": "ピーウィット、ピーウィット！",
+"who": "narrator",
+"tag": "sound"
+},
+"lapwing.3": {
+"en": "A lapwing has long legs.",
+"lo": "ນົກແຕ້ແວ້ມີຂາຍາວ.",
+"th": "นกกระแตมีขายาว",
+"zh": "凤头麦鸡的腿很长。",
+"ja": "タゲリは あしが ながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lapwing.4": {
+"en": "It walks on the sand.",
+"lo": "ມັນຍ່າງຢູ່ເທິງຊາຍ.",
+"th": "มันเดินบนทราย",
+"zh": "它在沙地上走。",
+"ja": "すなの うえを あるくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"lapwing.5": {
+"en": "A lapwing runs fast on the sand.",
+"lo": "ນົກແຕ້ແວ້ແລ່ນໄວຢູ່ເທິງຊາຍ.",
+"th": "นกกระแตวิ่งเร็วบนทราย",
+"zh": "凤头麦鸡在沙地上跑得很快。",
+"ja": "タゲリは すなの うえを はやく はしるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"crab.0": {
+"en": "A crab. A crab has a hard shell and claws.",
+"lo": "ປູ. ປູມີເປືອກແຂງ ແລະ ກ້າມ.",
+"th": "ปู ปูมีกระดองแข็งและก้าม",
+"zh": "螃蟹。螃蟹有硬壳和钳子。",
+"ja": "カニ。カニには かたい こうらと はさみが あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"crab.1": {
+"en": "Hello, crab!",
+"lo": "ສະບາຍດີ ປູ!",
+"th": "สวัสดีปู!",
+"zh": "你好，螃蟹！",
+"ja": "こんにちは、カニ！",
+"who": "narrator",
+"tag": "greet"
+},
+"crab.2": {
+"en": "A crab walks sideways.",
+"lo": "ປູຍ່າງຂ້າງ.",
+"th": "ปูเดินด้านข้าง",
+"zh": "螃蟹横着走。",
+"ja": "カニは よこに あるくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"crab.3": {
+"en": "A crab has two big claws.",
+"lo": "ປູມີກ້າມໃຫຍ່ສອງກ້າມ.",
+"th": "ปูมีก้ามใหญ่สองข้าง",
+"zh": "螃蟹有两只大钳子。",
+"ja": "カニには おおきな はさみが ふたつ あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"crab.4": {
+"en": "Click, click!",
+"lo": "ແຄະໆ!",
+"th": "แกร๊กๆ!",
+"zh": "咔嗒咔嗒！",
+"ja": "カチカチ！",
+"who": "narrator",
+"tag": "sound"
+},
+"crab.5": {
+"en": "A crab lives near the water.",
+"lo": "ປູອາໄສຢູ່ໃກ້ນ້ຳ.",
+"th": "ปูอาศัยอยู่ใกล้น้ำ",
+"zh": "螃蟹住在水边。",
+"ja": "カニは みずの ちかくに すんでいるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"bat.0": {
+"en": "A bat. A bat is a furry animal that flies at night.",
+"lo": "ເຈຍ. ເຈຍເປັນສັດມີຂົນທີ່ບິນໃນຕອນກາງຄືນ.",
+"th": "ค้างคาว ค้างคาวเป็นสัตว์มีขนที่บินตอนกลางคืน",
+"zh": "蝙蝠。蝙蝠是夜里飞的毛茸茸的动物。",
+"ja": "コウモリ。コウモリは よるに とぶ けの ある どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bat.1": {
+"en": "Hello, bat!",
+"lo": "ສະບາຍດີ ເຈຍ!",
+"th": "สวัสดีค้างคาว!",
+"zh": "你好，蝙蝠！",
+"ja": "こんにちは、コウモリ！",
+"who": "narrator",
+"tag": "greet"
+},
+"bat.2": {
+"en": "Bats sleep in the day.",
+"lo": "ເຈຍນອນໃນຕອນກາງເວັນ.",
+"th": "ค้างคาวนอนตอนกลางวัน",
+"zh": "蝙蝠白天睡觉。",
+"ja": "コウモリは ひるまは ねているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"bat.3": {
+"en": "Flap, flap!",
+"lo": "ກະພືບໆ!",
+"th": "กระพือๆ!",
+"zh": "扑啦扑啦！",
+"ja": "バサバサ！",
+"who": "narrator",
+"tag": "sound"
+},
+"bat.4": {
+"en": "A bat hangs upside down.",
+"lo": "ເຈຍຫ້ອຍຫົວລົງ.",
+"th": "ค้างคาวห้อยหัวลง",
+"zh": "蝙蝠倒挂着。",
+"ja": "コウモリは さかさまに ぶらさがるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"bat.5": {
+"en": "A bat can fly in the dark.",
+"lo": "ເຈຍບິນໃນຄວາມມືດໄດ້.",
+"th": "ค้างคาวบินในที่มืดได้",
+"zh": "蝙蝠在黑暗里也能飞。",
+"ja": "コウモリは くらくても とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"owl.0": {
+"en": "An owl. An owl is a bird that is awake at night.",
+"lo": "ນົກເຄົ້າ. ນົກເຄົ້າເປັນນົກທີ່ຕື່ນໃນຕອນກາງຄືນ.",
+"th": "นกฮูก นกฮูกเป็นนกที่ตื่นตอนกลางคืน",
+"zh": "猫头鹰。猫头鹰是夜里醒着的鸟。",
+"ja": "フクロウ。フクロウは よるに おきている とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"owl.1": {
+"en": "Hello, owl!",
+"lo": "ສະບາຍດີ ນົກເຄົ້າ!",
+"th": "สวัสดีนกฮูก!",
+"zh": "你好，猫头鹰！",
+"ja": "こんにちは、フクロウ！",
+"who": "narrator",
+"tag": "greet"
+},
+"owl.2": {
+"en": "An owl can see at night.",
+"lo": "ນົກເຄົ້າເຫັນໄດ້ໃນຕອນກາງຄືນ.",
+"th": "นกฮูกมองเห็นในตอนกลางคืน",
+"zh": "猫头鹰夜里也能看见。",
+"ja": "フクロウは よるでも みえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"owl.3": {
+"en": "An owl has big eyes.",
+"lo": "ນົກເຄົ້າມີຕາໃຫຍ່.",
+"th": "นกฮูกมีตาโต",
+"zh": "猫头鹰的眼睛很大。",
+"ja": "フクロウは おおきな めを しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"owl.4": {
+"en": "Hoo, hoo!",
+"lo": "ຮູ ຮູ!",
+"th": "ฮู ฮู!",
+"zh": "咕咕！",
+"ja": "ホーホー！",
+"who": "narrator",
+"tag": "sound"
+},
+"owl.5": {
+"en": "An owl sleeps in the day.",
+"lo": "ນົກເຄົ້ານອນໃນຕອນກາງເວັນ.",
+"th": "นกฮูกนอนตอนกลางวัน",
+"zh": "猫头鹰白天睡觉。",
+"ja": "フクロウは ひるまは ねているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"nightriver.0": {
+"en": "The river at night. The river keeps flowing in the dark.",
+"lo": "ແມ່ນ້ຳຕອນກາງຄືນ. ແມ່ນ້ຳຍັງໄຫຼໄປໃນຄວາມມືດ.",
+"th": "แม่น้ำตอนกลางคืน แม่น้ำยังไหลไปในความมืด",
+"zh": "夜晚的河。河水在黑暗里继续流淌。",
+"ja": "よるの かわ。かわは くらやみの なかでも ながれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"nightriver.1": {
+"en": "The moon shines on the water.",
+"lo": "ດວງເດືອນສ່ອງແສງໃສ່ນ້ຳ.",
+"th": "พระจันทร์ส่องแสงบนผิวน้ำ",
+"zh": "月亮照在水面上。",
+"ja": "つきが みずに ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nightriver.2": {
+"en": "The night is quiet.",
+"lo": "ກາງຄືນງຽບສະຫງົບ.",
+"th": "กลางคืนเงียบสงบ",
+"zh": "夜晚静悄悄的。",
+"ja": "よるは しずかだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nightriver.3": {
+"en": "Shh, it is night.",
+"lo": "ຊ໌, ມັນແມ່ນກາງຄືນ.",
+"th": "ชู่ว์ ตอนนี้เป็นกลางคืน",
+"zh": "嘘，现在是夜晚。",
+"ja": "しーっ、よるだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nightriver.4": {
+"en": "The river is dark at night.",
+"lo": "ແມ່ນ້ຳມືດໃນຕອນກາງຄືນ.",
+"th": "แม่น้ำมืดในตอนกลางคืน",
+"zh": "夜里河水是黑黑的。",
+"ja": "よるの かわは くらいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"nightriver.5": {
+"en": "Fish swim in the dark water.",
+"lo": "ປາລອຍຢູ່ໃນນ້ຳມືດ.",
+"th": "ปลาว่ายอยู่ในน้ำมืด",
+"zh": "鱼在黑黑的水里游。",
+"ja": "さかなは くらい みずの なかを およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"star.0": {
+"en": "A star. A star is a sun, far, far away.",
+"lo": "ດາວ. ດາວແມ່ນດວງອາທິດທີ່ຢູ່ໄກ, ໄກຫຼາຍ.",
+"th": "ดาว ดาวคือดวงอาทิตย์ที่อยู่ไกลแสนไกล",
+"zh": "星星。星星是离我们很远很远的太阳。",
+"ja": "ほし。ほしは とおい とおい ところに ある たいようだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"star.1": {
+"en": "Stars shine at night.",
+"lo": "ດາວສ່ອງແສງໃນຕອນກາງຄືນ.",
+"th": "ดาวส่องแสงตอนกลางคืน",
+"zh": "星星在夜里发光。",
+"ja": "ほしは よるに ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"star.2": {
+"en": "Stars are bright.",
+"lo": "ດາວສະຫວ່າງ.",
+"th": "ดาวสว่าง",
+"zh": "星星亮亮的。",
+"ja": "ほしは あかるいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"star.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"star.4": {
+"en": "Stars twinkle.",
+"lo": "ດາວກະພິບ.",
+"th": "ดาวระยิบระยับ",
+"zh": "星星一闪一闪的。",
+"ja": "ほしは きらきら ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"village.0": {
+"en": "A village. A village is a small town where families live.",
+"lo": "ບ້ານ. ບ້ານແມ່ນຊຸມຊົນນ້ອຍທີ່ຄອບຄົວອາໄສຢູ່.",
+"th": "หมู่บ้าน หมู่บ้านคือชุมชนเล็กๆ ที่ครอบครัวอาศัยอยู่",
+"zh": "村子。村子是很多家人居住的小地方。",
+"ja": "むら。むらは かぞくが すむ ちいさな まちだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"village.1": {
+"en": "A village has many houses.",
+"lo": "ບ້ານມີເຮືອນຫຼາຍຫຼັງ.",
+"th": "หมู่บ้านมีบ้านหลายหลัง",
+"zh": "村子里有很多房子。",
+"ja": "むらには いえが たくさん あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"village.2": {
+"en": "It is day.",
+"lo": "ມັນແມ່ນກາງເວັນ.",
+"th": "ตอนนี้เป็นกลางวัน",
+"zh": "现在是白天。",
+"ja": "いまは ひるまだよ。",
+"who": "narrator",
+"sp": [
+"s10"
+],
+"tag": "looks"
+},
+"village.3": {
+"en": "Many families live in the village.",
+"lo": "ຫຼາຍຄອບຄົວອາໄສຢູ່ໃນບ້ານ.",
+"th": "หลายครอบครัวอาศัยอยู่ในหมู่บ้าน",
+"zh": "很多家人住在村子里。",
+"ja": "たくさんの かぞくが むらに すんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"village.4": {
+"en": "Children play in the village.",
+"lo": "ເດັກນ້ອຍຫຼິ້ນຢູ່ໃນບ້ານ.",
+"th": "เด็กๆ เล่นกันในหมู่บ้าน",
+"zh": "孩子们在村子里玩耍。",
+"ja": "こどもたちは むらで あそぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"village.5": {
+"en": "Neighbours say hello to each other.",
+"lo": "ເພື່ອນບ້ານທັກທາຍກັນ.",
+"th": "เพื่อนบ้านทักทายกัน",
+"zh": "邻居们互相打招呼。",
+"ja": "おとなりさんは あいさつを かわすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"village.6": {
+"en": "A village is smaller than a city.",
+"lo": "ບ້ານນ້ອຍກວ່າເມືອງ.",
+"th": "หมู่บ้านเล็กกว่าเมือง",
+"zh": "村子比城市小。",
+"ja": "むらは とかいより ちいさいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"village.7": {
+"en": "A village has paths between the houses.",
+"lo": "ບ້ານມີທາງລະຫວ່າງເຮືອນ.",
+"th": "หมู่บ้านมีทางเดินระหว่างบ้าน",
+"zh": "村子里房子之间有小路。",
+"ja": "むらには いえと いえの あいだに みちが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rock.0": {
+"en": "A rock. This big rock sticks up out of the river.",
+"lo": "ກ້ອນຫີນ. ກ້ອນຫີນໃຫຍ່ກ້ອນນີ້ໂຜ່ຂຶ້ນມາຈາກແມ່ນ້ຳ.",
+"th": "ก้อนหิน ก้อนหินใหญ่ก้อนนี้โผล่ขึ้นมาจากแม่น้ำ",
+"zh": "大石头。这块大石头从河里露出来。",
+"ja": "いわ。この おおきな いわは かわから つきでているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rock.1": {
+"en": "Water flows around the rock.",
+"lo": "ນ້ຳໄຫຼອ້ອມກ້ອນຫີນ.",
+"th": "น้ำไหลอ้อมก้อนหิน",
+"zh": "河水绕着大石头流过去。",
+"ja": "みずが いわの まわりを ながれていくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rock.2": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"rock.3": {
+"en": "Bobo swims around the rocks.",
+"lo": "ໂບໂບລອຍອ້ອມກ້ອນຫີນ.",
+"th": "โบโบว่ายน้ำอ้อมก้อนหิน",
+"zh": "波波绕着大石头游。",
+"ja": "ボボは いわを よけて およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rock.4": {
+"en": "Rivers make rocks smooth.",
+"lo": "ແມ່ນ້ຳເຮັດໃຫ້ກ້ອນຫີນກ້ຽງ.",
+"th": "แม่น้ำทำให้ก้อนหินเรียบลื่น",
+"zh": "河水会把石头磨得光光滑滑。",
+"ja": "かわの みずは いわを つるつるに するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"waves.0": {
+"en": "Waves. Waves are moving hills of water.",
+"lo": "ຄື້ນນ້ຳ. ຄື້ນນ້ຳແມ່ນນ້ຳທີ່ຍົກເປັນລູກ.",
+"th": "คลื่น คลื่นคือน้ำที่ยกตัวสูงขึ้นเป็นลูก",
+"zh": "波浪。波浪是水面起伏的水丘。",
+"ja": "なみ。なみは うごく みずの おやまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"waves.1": {
+"en": "Waves on the river.",
+"lo": "ຄື້ນນ້ຳໃນແມ່ນ້ຳ.",
+"th": "คลื่นในแม่น้ำ",
+"zh": "河上的波浪。",
+"ja": "かわの なみ。",
+"who": "narrator",
+"tag": "looks"
+},
+"waves.2": {
+"en": "Waves go up and down.",
+"lo": "ຄື້ນນ້ຳຂຶ້ນລົງ.",
+"th": "คลื่นขึ้นๆ ลงๆ",
+"zh": "波浪起起伏伏。",
+"ja": "なみは あがったり さがったり。",
+"who": "narrator",
+"tag": "looks"
+},
+"waves.3": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"waves.4": {
+"en": "Waves come and go.",
+"lo": "ຄື້ນນ້ຳມາແລ້ວກໍໄປ.",
+"th": "คลื่นมาแล้วก็ไป",
+"zh": "波浪来了又去。",
+"ja": "なみは きて、また いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"waves.5": {
+"en": "Waves push against the bank.",
+"lo": "ຄື້ນນ້ຳຊັດໃສ່ຝັ່ງ.",
+"th": "คลื่นซัดเข้าฝั่ง",
+"zh": "波浪拍打着河岸。",
+"ja": "なみが きしに ぶつかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"duck.0": {
+"en": "A duck. A duck is a bird that swims.",
+"lo": "ເປັດ. ເປັດເປັນນົກທີ່ລອຍນ້ຳ.",
+"th": "เป็ด เป็ดเป็นนกที่ว่ายน้ำ",
+"zh": "鸭子。鸭子是会游泳的鸟。",
+"ja": "アヒル。アヒルは およぐ とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"duck.1": {
+"en": "Hello, duck!",
+"lo": "ສະບາຍດີ ເປັດ!",
+"th": "สวัสดีเป็ด!",
+"zh": "你好，鸭子！",
+"ja": "こんにちは、アヒル！",
+"who": "narrator",
+"tag": "greet"
+},
+"duck.2": {
+"en": "A duck has a flat beak.",
+"lo": "ເປັດມີປາກແບນ.",
+"th": "เป็ดมีปากแบน",
+"zh": "鸭子有扁扁的嘴。",
+"ja": "アヒルの くちばしは ぺたんこだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"duck.3": {
+"en": "Quack, quack!",
+"lo": "ກາບໆ!",
+"th": "แง๊บๆ!",
+"zh": "嘎嘎！",
+"ja": "グワグワ！",
+"who": "narrator",
+"tag": "sound"
+},
+"duck.4": {
+"en": "A duck has webbed feet.",
+"lo": "ເປັດມີຕີນເປັນພັງຜືດ.",
+"th": "เป็ดมีเท้าเป็นพังผืด",
+"zh": "鸭子的脚有蹼。",
+"ja": "アヒルの あしには みずかきが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"duck.5": {
+"en": "A duck dips its head to find food.",
+"lo": "ເປັດຈຸ່ມຫົວລົງຫາອາຫານ.",
+"th": "เป็ดจุ่มหัวลงน้ำหาอาหาร",
+"zh": "鸭子把头扎进水里找吃的。",
+"ja": "アヒルは あたまを みずに いれて たべものを さがすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"duck.6": {
+"en": "A duck eats plants and little bugs.",
+"lo": "ເປັດກິນພືດ ແລະ ແມງໄມ້ນ້ອຍ.",
+"th": "เป็ดกินพืชและแมลงตัวเล็กๆ",
+"zh": "鸭子吃水草和小虫。",
+"ja": "アヒルは くさや ちいさな むしを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"duckling.0": {
+"en": "A duckling. A duckling is a baby duck.",
+"lo": "ລູກເປັດ. ລູກເປັດແມ່ນເປັດນ້ອຍ.",
+"th": "ลูกเป็ด ลูกเป็ดคือเป็ดตัวน้อย",
+"zh": "小鸭子。小鸭子是鸭子的宝宝。",
+"ja": "アヒルの こ。アヒルの こは アヒルの あかちゃんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"duckling.1": {
+"en": "Hello, duckling!",
+"lo": "ສະບາຍດີ ລູກເປັດ!",
+"th": "สวัสดีลูกเป็ด!",
+"zh": "你好，小鸭子！",
+"ja": "こんにちは、アヒルの こ！",
+"who": "narrator",
+"tag": "greet"
+},
+"duckling.2": {
+"en": "Peep, peep!",
+"lo": "ຈິບໆ!",
+"th": "จิ๊บๆ!",
+"zh": "啾啾！",
+"ja": "ピヨピヨ！",
+"who": "narrator",
+"tag": "sound"
+},
+"duckling.3": {
+"en": "A duckling follows its mother.",
+"lo": "ລູກເປັດຕາມແມ່.",
+"th": "ลูกเป็ดเดินตามแม่",
+"zh": "小鸭子跟着妈妈。",
+"ja": "アヒルの こは おかあさんに ついていくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"duckling.4": {
+"en": "A duckling paddles in the water.",
+"lo": "ລູກເປັດພາຍນ້ຳ.",
+"th": "ลูกเป็ดพายน้ำ",
+"zh": "小鸭子在水里划水。",
+"ja": "アヒルの こは みずを かくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"duckling.5": {
+"en": "A duckling has soft feathers.",
+"lo": "ລູກເປັດມີຂົນອ່ອນນຸ້ມ.",
+"th": "ลูกเป็ดมีขนนุ่มๆ",
+"zh": "小鸭子的羽毛软软的。",
+"ja": "アヒルの こは ふわふわの はねが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"potcarrier.0": {
+"en": "A water carrier. A water carrier brings water home in a pot.",
+"lo": "ຄົນຫາບນ້ຳ. ຄົນຫາບນ້ຳນຳນ້ຳກັບບ້ານໃນໝໍ້.",
+"th": "คนหาบน้ำ คนหาบน้ำนำน้ำกลับบ้านในหม้อ",
+"zh": "挑水的人。挑水的人用罐子把水带回家。",
+"ja": "みずはこびの ひと。みずはこびの ひとは つぼで いえに みずを はこぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"potcarrier.1": {
+"en": "Hello, water carrier!",
+"lo": "ສະບາຍດີ ຄົນຫາບນ້ຳ!",
+"th": "สวัสดีคนหาบน้ำ!",
+"zh": "你好，挑水的人！",
+"ja": "こんにちは、みずはこびの ひと！",
+"who": "narrator",
+"tag": "greet"
+},
+"potcarrier.2": {
+"en": "A water carrier carries water.",
+"lo": "ຄົນຫາບນ້ຳຫາບນ້ຳ.",
+"th": "คนหาบน้ำหาบน้ำ",
+"zh": "挑水的人挑水。",
+"ja": "みずはこびの ひとは みずを はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"potcarrier.3": {
+"en": "A pot can hold water.",
+"lo": "ໝໍ້ໃສ່ນ້ຳໄດ້.",
+"th": "หม้อใส่น้ำได้",
+"zh": "罐子可以装水。",
+"ja": "つぼには みずが はいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"potcarrier.4": {
+"en": "Glug, glug!",
+"lo": "ກັກໆ!",
+"th": "ก๊อกๆ!",
+"zh": "咕嘟咕嘟！",
+"ja": "ごくごく！",
+"who": "narrator",
+"tag": "sound"
+},
+"potcarrier.5": {
+"en": "Water is heavy.",
+"lo": "ນ້ຳໜັກ.",
+"th": "น้ำหนัก",
+"zh": "水很重。",
+"ja": "みずは おもいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"potcarrier.6": {
+"en": "Water comes from rivers, wells and rain.",
+"lo": "ນ້ຳມາຈາກແມ່ນ້ຳ, ບໍ່ນ້ຳ ແລະ ຝົນ.",
+"th": "น้ำมาจากแม่น้ำ บ่อน้ำ และฝน",
+"zh": "水来自河流、水井和雨。",
+"ja": "みずは かわや いど、あめから くるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"potcarrier.7": {
+"en": "In many villages, people carry water in clay pots.",
+"lo": "ໃນຫຼາຍບ້ານ, ຄົນຫາບນ້ຳໃສ່ໝໍ້ດິນ.",
+"th": "ในหลายหมู่บ้าน ผู้คนหาบน้ำใส่หม้อดิน",
+"zh": "在很多村子里，人们用陶罐提水。",
+"ja": "おおくの むらで、ひとびとは かめに みずを いれて はこぶよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"otter.0": {
+"en": "An otter. An otter is a furry animal that swims.",
+"lo": "ນາກ. ນາກເປັນສັດມີຂົນທີ່ລອຍນ້ຳ.",
+"th": "นาก นากเป็นสัตว์มีขนที่ว่ายน้ำ",
+"zh": "水獭。水獭是会游泳的毛茸茸的动物。",
+"ja": "カワウソ。カワウソは およぐ ふわふわの どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"otter.1": {
+"en": "Hello, otter!",
+"lo": "ສະບາຍດີ ນາກ!",
+"th": "สวัสดีนาก!",
+"zh": "你好，水獭！",
+"ja": "こんにちは、カワウソ！",
+"who": "narrator",
+"tag": "greet"
+},
+"otter.2": {
+"en": "Otters love to swim.",
+"lo": "ນາກມັກລອຍນ້ຳ.",
+"th": "นากชอบว่ายน้ำ",
+"zh": "水獭爱游泳。",
+"ja": "カワウソは およぐのが だいすき。",
+"who": "narrator",
+"tag": "does"
+},
+"otter.3": {
+"en": "An otter has soft fur.",
+"lo": "ນາກມີຂົນອ່ອນນຸ້ມ.",
+"th": "นากมีขนนุ่มๆ",
+"zh": "水獭的毛软软的。",
+"ja": "カワウソの けは ふわふわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"otter.4": {
+"en": "Squeak!",
+"lo": "ຈິ໊ກ!",
+"th": "จี๊ด!",
+"zh": "吱吱！",
+"ja": "キュッ！",
+"who": "narrator",
+"tag": "sound"
+},
+"otter.5": {
+"en": "An otter eats fish.",
+"lo": "ນາກກິນປາ.",
+"th": "นากกินปลา",
+"zh": "水獭吃鱼。",
+"ja": "カワウソは さかなを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"butterfly.n3": {
+"en": "Three butterflies.",
+"lo": "ແມງກະເບື້ອສາມໂຕ.",
+"th": "ผีเสื้อสามตัว",
+"zh": "三只蝴蝶。",
+"ja": "さんびきの ちょうちょ。",
+"who": "narrator",
+"sp": [
+"s01",
+"s02",
+"s03",
+"s09",
+"s10"
+],
+"tag": "count"
+},
+"fish.n2": {
+"en": "Two fish.",
+"lo": "ປາສອງໂຕ.",
+"th": "ปลาสองตัว",
+"zh": "两条鱼。",
+"ja": "にひきの さかな。",
+"who": "narrator",
+"sp": [
+"s01",
+"s03",
+"s04",
+"s07",
+"s09",
+"s10",
+"moral"
+],
+"tag": "count"
+},
+"dragonfly.n2": {
+"en": "Two dragonflies.",
+"lo": "ແມງປໍສອງໂຕ.",
+"th": "แมลงปอสองตัว",
+"zh": "两只蜻蜓。",
+"ja": "にひきの トンボ。",
+"who": "narrator",
+"sp": [
+"s02"
+],
+"tag": "count"
+},
+"firefly.n5": {
+"en": "Five fireflies.",
+"lo": "ແມງໄຟຫ້າໂຕ.",
+"th": "หิ่งห้อยห้าตัว",
+"zh": "五只萤火虫。",
+"ja": "ごひきの ホタル。",
+"who": "narrator",
+"sp": [
+"s04"
+],
+"tag": "count"
+},
+"star.n5": {
+"en": "Five stars.",
+"lo": "ດາວຫ້າດວງ.",
+"th": "ดาวห้าดวง",
+"zh": "五颗星星。",
+"ja": "いつつの ほし。",
+"who": "narrator",
+"sp": [
+"s06"
+],
+"tag": "count"
+},
+"rock.n3": {
+"en": "Three rocks.",
+"lo": "ກ້ອນຫີນສາມກ້ອນ.",
+"th": "ก้อนหินสามก้อน",
+"zh": "三块大石头。",
+"ja": "みっつの いわ。",
+"who": "narrator",
+"sp": [
+"s07"
+],
+"tag": "count"
+},
+"fish.n4": {
+"en": "Four fish.",
+"lo": "ປາສີ່ໂຕ.",
+"th": "ปลาสี่ตัว",
+"zh": "四条鱼。",
+"ja": "よんひきの さかな。",
+"who": "narrator",
+"sp": [
+"s08"
+],
+"tag": "count"
+}
+},
+"chars": {
+"kapi": [
+"kapi.0",
+"kapi.1",
+"kapi.2",
+"kapi.3",
+"kapi.4",
+"kapi.5",
+"kapi.6",
+"kapi.7",
+"kapi.8",
+"kapi.9",
+"kapi.10",
+"kapi.11",
+"kapi.12",
+"kapi.13",
+"kapi.14",
+"kapi.15"
+],
+"bobo": [
+"bobo.0",
+"bobo.1",
+"bobo.2",
+"bobo.3",
+"bobo.4",
+"bobo.5",
+"bobo.6",
+"bobo.7",
+"bobo.8",
+"bobo.9",
+"bobo.10",
+"bobo.11",
+"bobo.12",
+"bobo.13"
+],
+"lulu": [
+"lulu.0",
+"lulu.1",
+"lulu.2",
+"lulu.3",
+"lulu.4",
+"lulu.5",
+"lulu.6",
+"lulu.7",
+"lulu.8",
+"lulu.9",
+"lulu.10",
+"lulu.11"
+]
+},
+"pools": {
+"tree": [
+"tree.0",
+"tree.1",
+"tree.2",
+"tree.3",
+"tree.4",
+"tree.5"
+],
+"branch": [
+"branch.0",
+"branch.1",
+"branch.2",
+"branch.3",
+"branch.4",
+"branch.5"
+],
+"reeds": [
+"reeds.0",
+"reeds.1",
+"reeds.2",
+"reeds.3",
+"reeds.4",
+"reeds.5"
+],
+"log": [
+"log.0",
+"log.1",
+"log.2",
+"log.3",
+"log.4",
+"log.5"
+],
+"rocks": [
+"rocks.0",
+"rocks.1",
+"rocks.2",
+"rocks.3",
+"rocks.4",
+"rocks.5"
+],
+"flowers": [
+"flowers.0",
+"flowers.1",
+"flowers.2",
+"flowers.3",
+"flowers.4",
+"flowers.5"
+],
+"stone": [
+"stone.0",
+"stone.1",
+"stone.2",
+"stone.3",
+"stone.4",
+"stone.5"
+],
+"hyacinth": [
+"hyacinth.0",
+"hyacinth.1",
+"hyacinth.2",
+"hyacinth.3",
+"hyacinth.4",
+"hyacinth.5"
+],
+"ferns": [
+"ferns.0",
+"ferns.1",
+"ferns.2",
+"ferns.3",
+"ferns.4",
+"ferns.5"
+],
+"butterfly": [
+"butterfly.0",
+"butterfly.1",
+"butterfly.2",
+"butterfly.3",
+"butterfly.4",
+"butterfly.5",
+"butterfly.6",
+"butterfly.n3"
+],
+"fish": [
+"fish.0",
+"fish.1",
+"fish.2",
+"fish.3",
+"fish.4",
+"fish.5",
+"fish.6",
+"fish.n2",
+"fish.n4"
+],
+"fruit": [
+"fruit.0",
+"fruit.1",
+"fruit.2",
+"fruit.3",
+"fruit.4",
+"fruit.5",
+"fruit.6",
+"fruit.7"
+],
+"heron": [
+"heron.0",
+"heron.1",
+"heron.2",
+"heron.3",
+"heron.4",
+"heron.5",
+"heron.6"
+],
+"turtle": [
+"turtle.0",
+"turtle.1",
+"turtle.2",
+"turtle.3",
+"turtle.4",
+"turtle.5"
+],
+"kingfisher": [
+"kingfisher.0",
+"kingfisher.1",
+"kingfisher.2",
+"kingfisher.3",
+"kingfisher.4",
+"kingfisher.5"
+],
+"parakeet": [
+"parakeet.0",
+"parakeet.1",
+"parakeet.2",
+"parakeet.3",
+"parakeet.4",
+"parakeet.5"
+],
+"gecko": [
+"gecko.0",
+"gecko.1",
+"gecko.2",
+"gecko.3",
+"gecko.4",
+"gecko.5",
+"gecko.6"
+],
+"dragonfly": [
+"dragonfly.0",
+"dragonfly.1",
+"dragonfly.2",
+"dragonfly.3",
+"dragonfly.4",
+"dragonfly.5",
+"dragonfly.n2"
+],
+"lilypads": [
+"lilypads.0",
+"lilypads.1",
+"lilypads.2",
+"lilypads.3",
+"lilypads.4",
+"lilypads.5"
+],
+"grass": [
+"grass.0",
+"grass.1",
+"grass.2",
+"grass.3",
+"grass.4",
+"grass.5"
+],
+"pebbles": [
+"pebbles.0",
+"pebbles.1",
+"pebbles.2",
+"pebbles.3",
+"pebbles.4",
+"pebbles.5"
+],
+"frog": [
+"frog.0",
+"frog.1",
+"frog.2",
+"frog.3",
+"frog.4",
+"frog.5"
+],
+"buffalo": [
+"buffalo.0",
+"buffalo.1",
+"buffalo.2",
+"buffalo.3",
+"buffalo.4",
+"buffalo.5",
+"buffalo.6",
+"buffalo.7"
+],
+"squirrel": [
+"squirrel.0",
+"squirrel.1",
+"squirrel.2",
+"squirrel.3",
+"squirrel.4",
+"squirrel.5"
+],
+"nest": [
+"nest.0",
+"nest.1",
+"nest.2",
+"nest.3",
+"nest.4",
+"nest.5"
+],
+"goldreeds": [
+"goldreeds.0",
+"goldreeds.1",
+"goldreeds.2",
+"goldreeds.3",
+"goldreeds.4",
+"goldreeds.5"
+],
+"sandbank": [
+"sandbank.0",
+"sandbank.1",
+"sandbank.2",
+"sandbank.3",
+"sandbank.4",
+"sandbank.5"
+],
+"firefly": [
+"firefly.0",
+"firefly.1",
+"firefly.2",
+"firefly.3",
+"firefly.4",
+"firefly.5",
+"firefly.n5"
+],
+"lapwing": [
+"lapwing.0",
+"lapwing.1",
+"lapwing.2",
+"lapwing.3",
+"lapwing.4",
+"lapwing.5"
+],
+"crab": [
+"crab.0",
+"crab.1",
+"crab.2",
+"crab.3",
+"crab.4",
+"crab.5"
+],
+"bat": [
+"bat.0",
+"bat.1",
+"bat.2",
+"bat.3",
+"bat.4",
+"bat.5"
+],
+"owl": [
+"owl.0",
+"owl.1",
+"owl.2",
+"owl.3",
+"owl.4",
+"owl.5"
+],
+"nightriver": [
+"nightriver.0",
+"nightriver.1",
+"nightriver.2",
+"nightriver.3",
+"nightriver.4",
+"nightriver.5"
+],
+"star": [
+"star.0",
+"star.1",
+"star.2",
+"star.3",
+"star.4",
+"star.n5"
+],
+"village": [
+"village.0",
+"village.1",
+"village.2",
+"village.3",
+"village.4",
+"village.5",
+"village.6",
+"village.7"
+],
+"rock": [
+"rock.0",
+"rock.1",
+"rock.2",
+"rock.3",
+"rock.4",
+"rock.n3"
+],
+"waves": [
+"waves.0",
+"waves.1",
+"waves.2",
+"waves.3",
+"waves.4",
+"waves.5"
+],
+"duck": [
+"duck.0",
+"duck.1",
+"duck.2",
+"duck.3",
+"duck.4",
+"duck.5",
+"duck.6"
+],
+"duckling": [
+"duckling.0",
+"duckling.1",
+"duckling.2",
+"duckling.3",
+"duckling.4",
+"duckling.5"
+],
+"potcarrier": [
+"potcarrier.0",
+"potcarrier.1",
+"potcarrier.2",
+"potcarrier.3",
+"potcarrier.4",
+"potcarrier.5",
+"potcarrier.6",
+"potcarrier.7"
+],
+"otter": [
+"otter.0",
+"otter.1",
+"otter.2",
+"otter.3",
+"otter.4",
+"otter.5"
+]
+},
+"animals": [
+"bat",
+"buffalo",
+"butterfly",
+"crab",
+"dragonfly",
+"duck",
+"duckling",
+"firefly",
+"fish",
+"frog",
+"gecko",
+"heron",
+"kingfisher",
+"lapwing",
+"otter",
+"owl",
+"parakeet",
+"squirrel",
+"turtle"
+],
+"word": {
+"tree": {
+"en": "jamun tree",
+"lo": "ຕົ້ນໝາກຫວ້າ",
+"th": "ต้นหว้า",
+"zh": "蒲桃树",
+"ja": "ジャムンの き"
+},
+"branch": {
+"en": "branch",
+"lo": "ກິ່ງໄມ້",
+"th": "กิ่งไม้",
+"zh": "树枝",
+"ja": "えだ"
+},
+"reeds": {
+"en": "reeds",
+"lo": "ຕົ້ນອ້ອ",
+"th": "ต้นอ้อ",
+"zh": "芦苇",
+"ja": "あし"
+},
+"log": {
+"en": "log",
+"lo": "ທ່ອນໄມ້",
+"th": "ท่อนไม้",
+"zh": "木头",
+"ja": "まるた"
+},
+"rocks": {
+"en": "rocks",
+"lo": "ກ້ອນຫີນ",
+"th": "ก้อนหิน",
+"zh": "大石头",
+"ja": "いわ"
+},
+"flowers": {
+"en": "flowers",
+"lo": "ດອກໄມ້",
+"th": "ดอกไม้",
+"zh": "花",
+"ja": "はな"
+},
+"stone": {
+"en": "stone",
+"lo": "ກ້ອນຫີນ",
+"th": "ก้อนหิน",
+"zh": "石头",
+"ja": "いし"
+},
+"hyacinth": {
+"en": "water hyacinths",
+"lo": "ຜັກຕົບ",
+"th": "ผักตบชวา",
+"zh": "水葫芦",
+"ja": "ホテイアオイ"
+},
+"ferns": {
+"en": "ferns",
+"lo": "ຕົ້ນກູດ",
+"th": "ต้นเฟิร์น",
+"zh": "蕨草",
+"ja": "シダ"
+},
+"butterfly": {
+"en": "butterfly",
+"lo": "ແມງກະເບື້ອ",
+"th": "ผีเสื้อ",
+"zh": "蝴蝶",
+"ja": "ちょうちょ"
+},
+"fish": {
+"en": "fish",
+"lo": "ປາ",
+"th": "ปลา",
+"zh": "鱼",
+"ja": "さかな"
+},
+"fruit": {
+"en": "jamun",
+"lo": "ໝາກຫວ້າ",
+"th": "ลูกหว้า",
+"zh": "蒲桃",
+"ja": "ジャムン"
+},
+"heron": {
+"en": "heron",
+"lo": "ນົກຍາງ",
+"th": "นกยาง",
+"zh": "苍鹭",
+"ja": "サギ"
+},
+"turtle": {
+"en": "turtle",
+"lo": "ເຕົ່າ",
+"th": "เต่า",
+"zh": "乌龟",
+"ja": "カメ"
+},
+"kingfisher": {
+"en": "kingfisher",
+"lo": "ນົກກະເຕັນ",
+"th": "นกกระเต็น",
+"zh": "翠鸟",
+"ja": "カワセミ"
+},
+"parakeet": {
+"en": "parakeet",
+"lo": "ນົກແກ້ວ",
+"th": "นกแก้ว",
+"zh": "鹦鹉",
+"ja": "インコ"
+},
+"gecko": {
+"en": "gecko",
+"lo": "ຕຸ໊ກແກ",
+"th": "ตุ๊กแก",
+"zh": "壁虎",
+"ja": "ヤモリ"
+},
+"dragonfly": {
+"en": "dragonfly",
+"lo": "ແມງປໍ",
+"th": "แมลงปอ",
+"zh": "蜻蜓",
+"ja": "トンボ"
+},
+"lilypads": {
+"en": "lily pads",
+"lo": "ໃບບົວ",
+"th": "ใบบัว",
+"zh": "荷叶",
+"ja": "はすの は"
+},
+"grass": {
+"en": "grass",
+"lo": "ຫຍ້າ",
+"th": "หญ้า",
+"zh": "草",
+"ja": "くさ"
+},
+"pebbles": {
+"en": "pebbles",
+"lo": "ກ້ອນຫີນນ້ອຍໆ",
+"th": "ก้อนกรวด",
+"zh": "小石子",
+"ja": "こいし"
+},
+"frog": {
+"en": "frog",
+"lo": "ກົບ",
+"th": "กบ",
+"zh": "青蛙",
+"ja": "カエル"
+},
+"buffalo": {
+"en": "buffalo",
+"lo": "ຄວາຍ",
+"th": "ควาย",
+"zh": "水牛",
+"ja": "すいぎゅう"
+},
+"squirrel": {
+"en": "squirrel",
+"lo": "ກະຮອກ",
+"th": "กระรอก",
+"zh": "松鼠",
+"ja": "リス"
+},
+"nest": {
+"en": "nest",
+"lo": "ຮັງ",
+"th": "รัง",
+"zh": "窝",
+"ja": "す"
+},
+"goldreeds": {
+"en": "gold reeds",
+"lo": "ຕົ້ນອ້ອສີຄຳ",
+"th": "ต้นอ้อสีทอง",
+"zh": "金色的芦苇",
+"ja": "きんいろの あし"
+},
+"sandbank": {
+"en": "sandbank",
+"lo": "ດອນຊາຍ",
+"th": "สันทราย",
+"zh": "沙洲",
+"ja": "なかす"
+},
+"firefly": {
+"en": "firefly",
+"lo": "ແມງໄຟ",
+"th": "หิ่งห้อย",
+"zh": "萤火虫",
+"ja": "ホタル"
+},
+"lapwing": {
+"en": "lapwing",
+"lo": "ນົກແຕ້ແວ້",
+"th": "นกกระแต",
+"zh": "凤头麦鸡",
+"ja": "タゲリ"
+},
+"crab": {
+"en": "crab",
+"lo": "ປູ",
+"th": "ปู",
+"zh": "螃蟹",
+"ja": "カニ"
+},
+"bat": {
+"en": "bat",
+"lo": "ເຈຍ",
+"th": "ค้างคาว",
+"zh": "蝙蝠",
+"ja": "コウモリ"
+},
+"owl": {
+"en": "owl",
+"lo": "ນົກເຄົ້າ",
+"th": "นกฮูก",
+"zh": "猫头鹰",
+"ja": "フクロウ"
+},
+"nightriver": {
+"en": "river",
+"lo": "ແມ່ນ້ຳ",
+"th": "แม่น้ำ",
+"zh": "河",
+"ja": "かわ"
+},
+"star": {
+"en": "star",
+"lo": "ດາວ",
+"th": "ดาว",
+"zh": "星星",
+"ja": "ほし"
+},
+"village": {
+"en": "village",
+"lo": "ບ້ານ",
+"th": "หมู่บ้าน",
+"zh": "村子",
+"ja": "むら"
+},
+"rock": {
+"en": "rock",
+"lo": "ກ້ອນຫີນ",
+"th": "ก้อนหิน",
+"zh": "大石头",
+"ja": "いわ"
+},
+"waves": {
+"en": "waves",
+"lo": "ຄື້ນນ້ຳ",
+"th": "คลื่น",
+"zh": "波浪",
+"ja": "なみ"
+},
+"duck": {
+"en": "duck",
+"lo": "ເປັດ",
+"th": "เป็ด",
+"zh": "鸭子",
+"ja": "アヒル"
+},
+"duckling": {
+"en": "duckling",
+"lo": "ລູກເປັດ",
+"th": "ลูกเป็ด",
+"zh": "小鸭子",
+"ja": "アヒルの こ"
+},
+"potcarrier": {
+"en": "water carrier",
+"lo": "ຄົນຫາບນ້ຳ",
+"th": "คนหาบน้ำ",
+"zh": "挑水的人",
+"ja": "みずはこびの ひと"
+},
+"otter": {
+"en": "otter",
+"lo": "ນາກ",
+"th": "นาก",
+"zh": "水獭",
+"ja": "カワウソ"
+},
+"kapi": {
+"en": "Kapi",
+"lo": "ກາປີ",
+"th": "กาปี",
+"zh": "卡皮",
+"ja": "カピ"
+},
+"bobo": {
+"en": "Bobo",
+"lo": "ໂບໂບ",
+"th": "โบโบ",
+"zh": "波波",
+"ja": "ボボ"
+},
+"lulu": {
+"en": "Lulu",
+"lo": "ລູລູ",
+"th": "ลูลู",
+"zh": "露露",
+"ja": "ルル"
+}
+},
+"map": {
+"tree": "tree",
+"jamun-branch": "branch",
+"reed-clump": "reeds",
+"log": "log",
+"rocks": "rocks",
+"flowers": "flowers",
+"frog-stone": "stone",
+"hyacinth": "hyacinth",
+"ferns": "ferns",
+"butterfly0": "butterfly",
+"butterfly1": "butterfly",
+"butterfly2": "butterfly",
+"fish0": "fish",
+"fish1": "fish",
+"fruit": "fruit",
+"heron": "heron",
+"turtle-1": "turtle",
+"turtle-2": "turtle",
+"turtle-3": "turtle",
+"kingfisher": "kingfisher",
+"parakeet-1": "parakeet",
+"parakeet-2": "parakeet",
+"gecko": "gecko",
+"dragonflies": "dragonfly",
+"jamun-fallen": "fruit",
+"lilypads": "lilypads",
+"river-grass": "grass",
+"river-grass-2": "grass",
+"pebbles": "pebbles",
+"dragonfly0": "dragonfly",
+"dragonfly1": "dragonfly",
+"frog-1": "frog",
+"frog-2": "frog",
+"frog-3": "frog",
+"fish": "fish",
+"grass-near": "grass",
+"buffalo": "buffalo",
+"turtles": "turtle",
+"turtles-2": "turtle",
+"turtles-3": "turtle",
+"squirrel": "squirrel",
+"nest": "nest",
+"reed-gold": "goldreeds",
+"reeds-right": "goldreeds",
+"sandbank": "sandbank",
+"hyacinth-eve": "hyacinth",
+"river-grass-eve": "grass",
+"pebbles-eve": "pebbles",
+"ferns-eve": "ferns",
+"log-eve": "log",
+"lilypads-eve": "lilypads",
+"lantern": "lantern",
+"lapwing": "lapwing",
+"crabs": "crab",
+"frogs": "frog",
+"bats": "bat",
+"hyacinth-near": "hyacinth",
+"frog-left": "frog",
+"frogs-right": "frog",
+"owlet": "owl",
+"reed-night": "reeds",
+"backdrop-river-night": "nightriver",
+"sandbank-night": "sandbank",
+"river-grass-night": "grass",
+"hyacinth-night": "hyacinth",
+"frog-stone-night": "stone",
+"lilypads-night": "lilypads",
+"pebbles-night": "pebbles",
+"log-night": "log",
+"ferns-night": "ferns",
+"frogs-2": "frog",
+"frogs-3": "frog",
+"crabs-2": "crab",
+"village": "village",
+"village-rocks": "rocks",
+"rock1": "rock",
+"rock2": "rock",
+"rock3": "rock",
+"wave-crest": "waves",
+"rock": "rock",
+"duck": "duck",
+"ducklings": "duckling",
+"pot-carrier": "potcarrier",
+"waves": "waves",
+"rocks-l": "rocks",
+"lilypads-l": "lilypads",
+"fish2": "fish",
+"fish3": "fish",
+"otter": "otter",
+"backdrop-village-day": "village",
+"flowers-eve": "flowers",
+"frog-stone-eve": "stone",
+"frog-a": "frog",
+"frog-b": "frog",
+"turtle-a": "turtle",
+"turtle-b": "turtle"
+},
+"maps": {
+"s04": {
+"lantern": "firefly"
+},
+"s06": {
+"reeds-right": "reeds",
+"lantern": "star"
+}
+}
+}

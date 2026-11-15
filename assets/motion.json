@@ -104,11 +104,11 @@
  },
  "cat": {
   "Walk": {
-   "speed": 0.0124,
+   "speed": 0.0155,
    "speed_h": 0.3095,
    "cycle": 0.5,
    "loop": true,
-   "height": 0.04
+   "height": 0.05
   }
  },
  "otter": {
@@ -123,11 +123,273 @@
  },
  "squirrel": {
   "Run": {
-   "speed": 0.0113,
-   "speed_h": 0.3227,
+   "speed": 0.0305,
+   "speed_h": 0.609,
    "cycle": 0.5,
+   "loop": true,
+   "height": 0.05
+  }
+ },
+ "buffalo": {
+  "float": 0.35,
+  "height": 0.12,
+  "Walk": {
+   "speed": 0.0218,
+   "cycle": 1.5
+  },
+  "Pull": {
+   "speed": 0.0195,
+   "cycle": 1.6667
+  }
+ },
+ "gecko": {
+  "Walk": {
+   "speed": 0.0183,
+   "speed_h": 0.3329,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.055
+  }
+ },
+ "butterfly": {
+  "Fly": {
+   "speed": 0.1,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.07
+  }
+ },
+ "moth": {
+  "Fly": {
+   "speed": 0.05,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.026
+  }
+ },
+ "heron": {
+  "Walk": {
+   "speed": 0.031,
+   "speed_h": 0.2581,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.12
+  }
+ },
+ "lapwing": {
+  "Walk": {
+   "speed": 0.0166,
+   "speed_h": 0.3869,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.043
+  }
+ },
+ "egret": {
+  "Walk": {
+   "speed": 0.009,
+   "speed_h": 0.2579,
+   "cycle": 1.0,
    "loop": true,
    "height": 0.035
   }
+ },
+ "duck": {
+  "Swim": {
+   "speed": 0.0263,
+   "speed_h": 0.5835,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.045
+  },
+  "float": 0.3
+ },
+ "fish": {
+  "Swim": {
+   "speed": 0.05,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.045
+  },
+  "float": 0.5
+ },
+ "turtle": {
+  "Swim": {
+   "speed": 0.0268,
+   "speed_h": 0.4879,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.055
+  },
+  "float": 0.5
+ },
+ "crab": {
+  "Walk": {
+   "speed": 0.0094,
+   "speed_h": 0.2778,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.034
+  }
+ },
+ "dragonfly": {
+  "Fly": {
+   "speed": 0.12,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.024
+  }
+ },
+ "fruit-bat": {
+  "Fly": {
+   "speed": 0.25,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.045
+  }
+ },
+ "shrine-turtle": {
+  "Swim": {
+   "speed": 0.0269,
+   "speed_h": 0.2985,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.09
+  },
+  "float": 0.3
+ },
+ "frog": {
+  "Walk": {
+   "speed": 0.04,
+   "speed_h": 1.3323,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.03
+  }
+ },
+ "punyeu": {
+  "Walk": {
+   "speed": 0.0433,
+   "cycle": 1.0833
+  },
+  "Plough": {
+   "speed": 0.0196,
+   "cycle": 1.9167
+  },
+  "Walk Out": {
+   "speed": 0.0433,
+   "cycle": 1.0833
+  }
+ },
+ "nyanyeu": {
+  "Walk": {
+   "speed": 0.0185,
+   "cycle": 1.0417
+  },
+  "Walk Out": {
+   "cycle": 3.7083,
+   "loop": false
+  }
+ },
+ "lion": {
+  "Walk": {
+   "speed": 0.0177,
+   "cycle": 0.5
+  },
+  "Run": {
+   "speed": 0.072,
+   "cycle": 0.4167
+  },
+  "Step Back": {
+   "speed": 0.008,
+   "cycle": 1.0
+  }
+ },
+ "kankak": {
+  "Walk": {
+   "speed": 0.174,
+   "speed_h": 2.8993,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.06
+  }
+ },
+ "girl": {
+  "Walk": {
+   "cycle": 1.3333,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.0645,
+   "speed_h": 0.43
+  }
+ },
+ "toad-buffalo.glb": {
+  "float": 0.35,
+  "height": 0.15,
+  "Walk": {
+   "speed": 0.045,
+   "speed_h": 0.2997,
+   "cycle": 1.3333,
+   "loop": true,
+   "height": 0.15
+  }
+ },
+ "toad-dog.glb": {
+  "Walk": {
+   "speed": 0.129,
+   "speed_h": 1.1728,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.11
+  },
+  "Stroll": {
+   "speed": 0.0385,
+   "speed_h": 0.3502,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.11
+  }
+ },
+ "toad-cat.glb": {
+  "Walk": {
+   "speed": 0.0993,
+   "speed_h": 1.1678,
+   "cycle": 0.3333,
+   "loop": true,
+   "height": 0.085
+  },
+  "Stroll": {
+   "speed": 0.0263,
+   "speed_h": 0.3089,
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.085
+  }
+ },
+ "kingfisher": {
+  "Fly": {
+   "speed": 0.12,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.035
+  }
+ },
+ "parakeet": {
+  "Hop": {
+   "speed": 0.02,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.042
+  }
+ },
+ "duckling": {
+  "Swim": {
+   "speed": 0.0116,
+   "speed_h": 0.4646,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.025
+  },
+  "float": 0.33
  }
 }

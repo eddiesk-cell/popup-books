@@ -1,0 +1,305 @@
+{
+ "_why": "The only hand-made part of Kapi's question bank: which picture stands for each word-card item, which items look alike (a group is never offered as a wrong answer to its own members), and its colour. Words, voices, counts and sounds all come from ../words.json. An item with img null is listed by the tool and left out of picture games. Colour words in lo/th/zh/ja are a draft for Eddie's check (same for the number words).",
+ "items": {
+  "tree": {
+   "img": "card:tree",
+   "group": "tree"
+  },
+  "branch": {
+   "img": "card:jamun-branch",
+   "group": "tree"
+  },
+  "fruit": {
+   "img": "card:jamun-fallen",
+   "group": "tree"
+  },
+  "reeds": {
+   "img": "card:reeds",
+   "group": "plant",
+   "plural": true
+  },
+  "goldreeds": {
+   "img": "card:reed-gold",
+   "group": "plant",
+   "plural": true
+  },
+  "grass": {
+   "img": "card:river-grass",
+   "group": "plant"
+  },
+  "ferns": {
+   "img": "card:ferns",
+   "group": "plant",
+   "plural": true
+  },
+  "flowers": {
+   "img": "card:flowers",
+   "plural": true
+  },
+  "hyacinth": {
+   "img": "card:hyacinth",
+   "group": "plant"
+  },
+  "lilypads": {
+   "img": "card:lilypads",
+   "group": "plant",
+   "plural": true
+  },
+  "log": {
+   "img": "card:log",
+   "color": "brown"
+  },
+  "rocks": {
+   "img": "card:rocks",
+   "group": "stone",
+   "color": "grey",
+   "plural": true
+  },
+  "pebbles": {
+   "img": "card:pebbles",
+   "group": "stone",
+   "plural": true
+  },
+  "sandbank": {
+   "img": null,
+   "group": "stone"
+  },
+  "stone": {
+   "img": null,
+   "group": "stone"
+  },
+  "rock": {
+   "img": null,
+   "group": "stone"
+  },
+  "nest": {
+   "img": "card:nest"
+  },
+  "village": {
+   "img": "card:village"
+  },
+  "waves": {
+   "img": null
+  },
+  "nightriver": {
+   "img": null
+  },
+  "star": {
+   "img": null
+  },
+  "firefly": {
+   "img": null
+  },
+  "potcarrier": {
+   "img": null
+  },
+  "butterfly": {
+   "img": "glb:animal-butterfly",
+   "color": "orange"
+  },
+  "fish": {
+   "img": "glb:animal-fish"
+  },
+  "heron": {
+   "img": "glb:animal-heron",
+   "group": "bird"
+  },
+  "turtle": {
+   "img": "glb:animal-turtle"
+  },
+  "kingfisher": {
+   "img": "glb:animal-kingfisher",
+   "group": "bird"
+  },
+  "parakeet": {
+   "img": "glb:animal-parakeet",
+   "group": "bird",
+   "color": "green"
+  },
+  "gecko": {
+   "img": "glb:animal-gecko"
+  },
+  "dragonfly": {
+   "img": "glb:animal-dragonfly"
+  },
+  "frog": {
+   "img": "glb:animal-frog",
+   "color": "green"
+  },
+  "buffalo": {
+   "img": "glb:animal-buffalo"
+  },
+  "squirrel": {
+   "img": "glb:animal-squirrel",
+   "color": "brown"
+  },
+  "lapwing": {
+   "img": "glb:animal-lapwing",
+   "group": "bird"
+  },
+  "crab": {
+   "img": "glb:animal-crab"
+  },
+  "bat": {
+   "img": "glb:animal-fruit-bat"
+  },
+  "owl": {
+   "img": "glb:animal-owl",
+   "group": "bird"
+  },
+  "duck": {
+   "img": "glb:animal-duck",
+   "group": "duck",
+   "color": "brown"
+  },
+  "duckling": {
+   "img": "glb:animal-duckling",
+   "group": "duck"
+  },
+  "otter": {
+   "img": "glb:animal-otter",
+   "color": "brown"
+  },
+  "kapi": {
+   "img": "glb:kapi"
+  },
+  "bobo": {
+   "img": "glb:kapi-bobo",
+   "group": "croc"
+  },
+  "lulu": {
+   "img": "glb:kapi-lulu",
+   "color": "green",
+   "group": "croc"
+  }
+ },
+ "colors": {
+  "black": {
+   "en": "black",
+   "lo": "ສີດຳ",
+   "th": "สีดำ",
+   "zh": "黑色",
+   "ja": "くろ",
+   "hex": "#222"
+  },
+  "orange": {
+   "en": "orange",
+   "lo": "ສີສົ້ມ",
+   "th": "สีส้ม",
+   "zh": "橙色",
+   "ja": "オレンジ",
+   "hex": "#f08a24"
+  },
+  "brown": {
+   "en": "brown",
+   "lo": "ສີນ້ຳຕານ",
+   "th": "สีน้ำตาล",
+   "zh": "棕色",
+   "ja": "ちゃいろ",
+   "hex": "#8a5a33"
+  },
+  "green": {
+   "en": "green",
+   "lo": "ສີຂຽວ",
+   "th": "สีเขียว",
+   "zh": "绿色",
+   "ja": "みどり",
+   "hex": "#4fa43c"
+  },
+  "purple": {
+   "en": "purple",
+   "lo": "ສີມ່ວງ",
+   "th": "สีม่วง",
+   "zh": "紫色",
+   "ja": "むらさき",
+   "hex": "#6d3a9c"
+  },
+  "grey": {
+   "en": "grey",
+   "lo": "ສີເທົາ",
+   "th": "สีเทา",
+   "zh": "灰色",
+   "ja": "はいいろ",
+   "hex": "#8d8d8d"
+  },
+  "yellow": {
+   "en": "yellow",
+   "lo": "ສີເຫຼືອງ",
+   "th": "สีเหลือง",
+   "zh": "黄色",
+   "ja": "きいろ",
+   "hex": "#f2cb2e"
+  }
+ },
+ "scenes": [
+  "s01",
+  "s03",
+  "s04",
+  "s06",
+  "s08",
+  "s10"
+ ],
+ "numbers": {
+  "1": {
+   "en": "one",
+   "lo": "ໜຶ່ງ",
+   "th": "หนึ่ง",
+   "zh": "一",
+   "ja": "ひとつ"
+  },
+  "2": {
+   "en": "two",
+   "lo": "ສອງ",
+   "th": "สอง",
+   "zh": "二",
+   "ja": "ふたつ"
+  },
+  "3": {
+   "en": "three",
+   "lo": "ສາມ",
+   "th": "สาม",
+   "zh": "三",
+   "ja": "みっつ"
+  },
+  "4": {
+   "en": "four",
+   "lo": "ສີ່",
+   "th": "สี่",
+   "zh": "四",
+   "ja": "よっつ"
+  },
+  "5": {
+   "en": "five",
+   "lo": "ຫ້າ",
+   "th": "ห้า",
+   "zh": "五",
+   "ja": "いつつ"
+  }
+ },
+ "prompts": {
+  "find": "Which one is the",
+  "what": "What is this?",
+  "colour": "What colour is it?",
+  "count": "How many?",
+  "sound": "Which one makes this sound?",
+  "order0": "Put the story in order. What happened first?",
+  "order": "What happened next?",
+  "mem": "Find the matching pairs!",
+  "hint": "Hmm, look again. Try another one.",
+  "listen": "Listen.",
+  "done": "All done! Here is your sticker.",
+  "find0": "Which one is",
+  "finds": "Which picture shows",
+  "right-find": "Yes, you found it!",
+  "right-colour": "You looked carefully!",
+  "right-count": "You counted well!",
+  "right-sound": "You listened well!",
+  "right-memory": "You found a pair!",
+  "pick": "What shall we play?",
+  "g-quiz": "Picture quiz",
+  "g-memory": "Memory pairs",
+  "g-order": "Story order"
+ },
+ "_scenes_why": "Story-order pictures: live captures with the cast (tools/learn_scenes.mjs); s04 and s10 are cropped from the book's own won frames renders/review/d1-kapi-desktop-sNN-won.png (the moment: Bobo bringing Lulu the jamuns; all three at the tree). 480x320 WebP in scenes/. s07 and others dropped: same moment as a neighbour.",
+ "_colors_why": "A colour is tagged only when one colour clearly fills the picture (checked by eye, 15 Nov); mixed pictures (tree, branch, nest, duckling, bobo) carry none."
+}

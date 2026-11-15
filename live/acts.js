@@ -32,10 +32,29 @@
 //                      `secs` (1.2), and stays up: moonstones from the river, Pip peeking. An object's rises add up (a
 //                      lantern a game woke 0.06 rises 0.6 more on "rose", and stays there).
 //   glow               `who` glows to `by` (1; 0 is as it was) over `secs` (0.8), and stays so: Pip glowing goodnight.
+//   hide | show        `who` (a cast character) or `what` (an object of the spread, via the `find` hook) vanishes / returns at once, or
+//                      over `fade` seconds. Hidden: not drawn, no shadow, no tap, and it does not sink or move. "Read again" shows all.
+//   shape              {"do": "shape", "what": "<prop>", "key": "Step3", "to": 1, "secs": 1, "only": true}: eases that shape key (morph
+//                      target) from its weight now to `to` over `secs` (1), on every mesh under the prop that has it. "only": true eases
+//                      every other key of those meshes to 0 meanwhile. A growth Step1..Step7 is seven acts on successive lines or
+//                      words. A missing key warns once and ends the act. "Read again" puts every key back to its starting weight.
+//                      With "line": "tap:<name>" it runs when that thing is tapped (every tap, also mid-act), not from the reading;
+//                      "back": <secs> returns the keys it moved to the weights they had that long after it has arrived,
+//                      over `secs`: the shy plant folds (Fold 1) and opens again after 3 s.
+//                      "line": "open" runs an act as the spread is built and again on "Read again" (before the first frame is drawn): a
+//                      growth starts with {"line": "open", "do": "shape", "what": "<prop>", "key": "Step1", "to": 1, "secs": 0, "only": true},
+//                      since with every key at 0 the prop shows its rest shape. "back" returns a key to the weight it had before the tap.
 //   mood               `who` shows its face_<mood> (natural, happy, warm, sad, upset, pity, worried, sleepy, surprise), under a
 //                      face_socket on its head; natural at first. Any act may carry "mood" too. No faces in the model: nothing
 //   hold               `who` takes `what` (an object or a character) in its `hand` ("right" or "left") until an act
-//                      with "release": true lets it go.
+//                      with "release": true lets it go. Optional, and a hold without them is as it always was:
+//                      "grip": [x, y, z]  the prop is seated by this point of itself (its own local units) on the hand bone instead of by its
+//                                         origin; a node named "hold_grip" in the prop's glb does the same and wins over the field.
+//                      "aim": [x, y, z] | "<name>"  the prop's long axis points from the hand at that page point or named thing, every
+//                                         frame it is held (the axis: from the grip toward a node named "hold_tip" in the glb, else toward the
+//                                         end of its longest side that is farthest from the grip). Without a grip the prop's origin is the hand.
+//                      A release of a prop held with a grip or aim lets it fall to what is under it (the page or a prop's top, a downward ray
+//                      from five points of its box) in 0.35 s, unless a fly on it follows; "fall": true makes any release do it, false never.
 //   think              the line is `who`'s thought, not said aloud: while it is read `who` neither talks nor turns to
 //                      anyone, and nobody turns to listen. With `face`, it looks there meanwhile (into the night).
 // A character the manifest puts `on` another rides it (its `at` is the offset; with "bone", on that bone's perch, `at` unused)
@@ -242,9 +261,48 @@ export const byRim = (ch, bone, it) => {
   };
   return { at };
 };
-// a character's face: under a "face_socket" on its head, one child "face_<mood>" a mood (natural, happy, warm, sad, upset, pity, worried,
+// a held tool seated by its grip and aimed (hold acts "grip" / "aim", R33). holdOf: what the prop holds in its own local units, read once as it is
+// taken (null: neither field nor a "hold_grip" node, so the old seat); seatHeld: each frame, turn it from its rest so its axis looks along hand -> to
+// (from rest each time, so no roll builds up), then move it so its grip is on the hand; dropOf: how far down a released prop falls
+export const holdOf = (o, a) => {
+  if (!o.getObjectByName("hold_grip") && !a.grip && a.aim == null) return null;  // touches nothing: a hold without the new fields is as it was (a lamp glb has an unrelated node called "grip")
+  o.updateWorldMatrix(true, true);
+  const at = n => { const k = o.getObjectByName(n); return k && o.worldToLocal(k.getWorldPosition(new Vector3())); };
+  const grip = at("hold_grip") ?? (a.grip ? new Vector3(...a.grip) : a.aim != null ? new Vector3() : null);
+  if (!grip) return null;
+  let axis = null;
+  if (a.aim != null) {
+    axis = at("hold_tip")?.sub(grip);
+    if (!axis) {  // shortcut: the box of the meshes' own boxes (a skinned prop's rest pose); fine for a tool, upgrade by naming a "hold_tip" node
+      const inv = new Matrix4().copy(o.matrixWorld).invert(), box = new Box3(), m = new Box3();
+      o.traverse(c => c.isMesh && (c.geometry.boundingBox ?? c.geometry.computeBoundingBox(), box.union(m.copy(c.geometry.boundingBox).applyMatrix4(new Matrix4().multiplyMatrices(inv, c.matrixWorld)))));
+      const s = box.getSize(new Vector3()), k = s.x >= s.y && s.x >= s.z ? "x" : s.y >= s.z ? "y" : "z";
+      axis = new Vector3().setComponent("xyz".indexOf(k), box.max[k] - grip[k] >= grip[k] - box.min[k] ? 1 : -1);
+    }
+    axis.normalize();
+  }
+  return { grip, axis, rest: (o.userData.restQ ??= o.quaternion.clone()) };
+};
+export const seatHeld = (o, h, hand, to) => {
+  if (h.axis && to && to.distanceToSquared(hand) > 1e-12) {
+    o.quaternion.copy(h.rest); o.updateWorldMatrix(true, false);
+    const pq = o.parent.getWorldQuaternion(new Quaternion()), a = h.axis.clone().transformDirection(o.matrixWorld);
+    o.quaternion.premultiply(pq).premultiply(new Quaternion().setFromUnitVectors(a, to.clone().sub(hand).normalize())).premultiply(pq.invert());
+  }
+  o.updateWorldMatrix(true, false);
+  o.position.copy(o.parent.worldToLocal(o.getWorldPosition(new Vector3()).add(hand).sub(o.localToWorld(h.grip.clone()))));
+};
+export const dropOf = (o, root) => {  // a 9 x 9 grid of downward rays over the prop's box, against only the meshes under it; the highest support counts (a stick across a rim rests on the rim)
+  const box = new Box3().setFromObject(o), col = new Box3(new Vector3(box.min.x, -Infinity, box.min.z), new Vector3(box.max.x, box.min.y + 0.002, box.max.z)), under = [], b = new Box3();
+  root.traverse(m => { if (!m.isMesh || /card|wave|grass|crest/.test(m.name) || !b.setFromObject(m).intersectsBox(col)) return; for (let p = m; p; p = p.parent) if (p === o) return; under.push(m); });  // the paper's real height, as live.js's surf() reads it
+  const rc = new Raycaster(), dn = new Vector3(0, -1, 0), v = new Vector3();
+  let top = -Infinity;
+  for (let i = 0; i <= 8; i++) for (let j = 0; j <= 8; j++) (rc.set(v.set(box.min.x + (box.max.x - box.min.x) * i / 8, box.min.y + 0.002, box.min.z + (box.max.z - box.min.z) * j / 8), dn), top = Math.max(top, rc.intersectObjects(under, false)[0]?.point.y ?? -Infinity));
+  return top > -Infinity ? Math.max(0, box.min.y - top) : 0;
+};
+// a character's face: a "face_<mood>" object (a plate under a "face_socket" on its head, or a whole premade head) per mood (natural, happy, warm, sad, upset, pity, worried,
 // sleepy, surprise); exactly the one asked for shows. A model without them (no faces yet): nothing to do
-export const mood = (ch, m) => ch.model?.getObjectByName("face_socket")?.children.forEach(o => /^face_/.test(o.name) && o.scale.setScalar((o.visible = o.name === `face_${m}`) ? 1 : 0));  // the glb hides spare plates at scale 0 (glTF has no visibility)
+export const mood = (ch, m) => { const f = []; ch.model?.traverse(o => /^face_[a-z]+$/.test(o.name) && o.name !== "face_socket" && f.push(o)); if (!f.some(o => o.name === `face_${m}`)) return; f.forEach(o => o.scale.setScalar((o.visible = o.name === `face_${m}`) ? 1 : 0)); };  // anywhere in the model: premade skinned heads are not the socket's children (turtle R12); a mood the model lacks keeps the face it has (gourd R29: s01's "surprise" hid every head); the glb hides spares at scale 0 (glTF has no visibility)
 const perch = (on, name) => {
   const b = on.model?.getObjectByName(name);
   if (!b) return null;
@@ -382,12 +440,14 @@ export class Acting {
   // started(a): told as each act begins (live.js plays its "act:<who>:<do>" foley)
   // spot(what) / put(what, p): where a prop of the spread is now (world) / set it there (it stays): for a prop flying (fly with "what")
   // people: the names that are characters (who speak, or can): only they turn to talk; null, everyone in the cast
-  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null }) {
-    Object.assign(this, { cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map() });
-    this.hold = (ch, what, hand, on) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on));  // who holds what, the games' holds too
+  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null }) {
+    Object.assign(this, { find, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
+    this.hold = (ch, what, hand, on, a) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on, a));  // who holds what, the games' holds too
     for (const ch of cast) (this.by[ch.name] = ch), mood(ch, "natural");
-    this.acts = acts.map((a, i) => ({ ...a, state: "wait", prev: acts.slice(0, i).findLastIndex(b => b.who === a.who) }));
+    this.acts = acts.map((a, i) => ({ ...a, state: "wait", prev: acts.slice(0, i).findLastIndex(b => b.who === a.who && !`${b.line}`.startsWith("tap:")) }));  // a tap act never links a chain
+
     this.thinks = new Map(acts.filter(a => a.do === "think").map(a => [a.line, a.who]));  // line -> who thinks it
+    this.open();  // "line": "open" acts: the page's starting state, set before the spread is first drawn
   }
 
   // line: the line being read (null between pages), t: seconds into its voice, speaker: who says the word at t
@@ -403,6 +463,9 @@ export class Acting {
       for (const ch of this.cast) this.move(ch, step);
       this.rises = this.rises.filter(r => { r.t += step; this.raise(r.what, (this.lifted[r.what] = r.from + r.by * ease(Math.min(1, r.t / r.len)))); return r.t < r.len || void r.done(); });
       this.glows = this.glows.filter(g => { g.t += step; glow(g.ch.body, (g.ch.glowing = g.from + (g.to - g.from) * ease(Math.min(1, g.t / g.len)))); return g.t < g.len || void g.done(); });
+      const ended = []; this.shapes = this.shapes.filter(g => ((g.wait -= step) > 0 || ((g.t += step), g.set(ease(Math.min(1, g.t / g.len)))), g.t < g.len || !ended.push(g)));
+      ended.forEach(g => g.fin(g));  // after the filter: a finished ease may start its return, which the filter would drop
+      this.fades = this.fades.filter(f => (f.t += step, f.tick(Math.min(1, f.t / f.len)), f.t < f.len || void f.end()));
       this.flights = this.flights.filter(f => {  // a prop let go flies on from where it was, along the characters' fly arc
         f.t += step; const k = Math.min(1, f.t / f.len);
         this.put(f.what, f.from.clone().lerp(f.to, ease(k)).add({ x: 0, y: f.arc * 4 * k * (1 - k), z: 0 }));
@@ -412,12 +475,61 @@ export class Acting {
     this.talk(this.thinks.get(line) === speaker ? null : this.by[speaker]);  // a thought: nobody talks or turns
   }
 
+  // hide / show an object: layer 1 and `visible` false on every node (the layer survives live.js setting a body's own `visible` each frame, and
+  // takes the object out of the tap ray and the shadow pass too); the nodes' own state is kept to put back. A fade runs on clones of its materials.
+  // shortcut: a fade on a model with a shared material clones per mesh; upgrade by pooling clones if a page fades many at once.
+  vis(o, on, secs, done) {
+    const hid = this.was.has(o);
+    if (on ? !hid : hid) return done();
+    const flip = () => {
+      if (on) { for (const [m, v, k] of this.was.get(o)) (m.visible = v, m.layers.mask = k); this.was.delete(o); return; }
+      const nodes = []; o.traverse(m => nodes.push([m, m.visible, m.layers.mask])); this.was.set(o, nodes);
+      o.traverse(m => (m.visible = false, m.layers.set(1)));
+    };
+    if (!secs) return flip(), done();
+    if (on) flip();
+    const ms = [];
+    o.traverse(m => { if (!m.isMesh) return; const was = m.material, c = [].concat(was).map(x => x.clone()); m.material = Array.isArray(was) ? c : c[0]; ms.push([m, was, c.map(x => [x, x.opacity, x.transparent])]); c.forEach(x => (x.transparent = true)); });
+    const f = { t: 0, len: secs, tick: k => ms.forEach(([, , cs]) => cs.forEach(([x, o0]) => (x.opacity = o0 * (on ? k : 1 - k)))),
+      end: () => { if (f.over) return; f.over = true; ms.forEach(([m, was, cs]) => (m.material = was, cs.forEach(([x]) => x.dispose()))); if (!on) flip(); done(); } };
+    this.fades.push(f); f.tick(0);
+  }
+
   busy(line) { return this.acts.some(a => a.wait && a.line === line && a.state !== "done"); }  // the reading waits on these
 
   reset() {  // "Read again": every act waits for its line again; nobody is mid-act (live.js puts them back where the page began)
-    this.acts.forEach(a => (a.state = "wait")); this.passed.clear(); this.line = null; this.rises = []; this.glows = []; this.lifted = {};
+    this.fades.forEach(f => f.end()); this.fades = [];
+    this.acts.forEach(a => (a.state = "wait")); this.passed.clear(); this.line = null; this.rises = []; this.glows = []; this.lifted = {}; this.shapes = [];
+    for (const [m, w] of this.base) m.morphTargetInfluences.splice(0, w.length, ...w);
+    for (const o of [...this.was.keys()]) this.vis(o, true, 0, () => {});
     for (const ch of this.cast) if (ch.glowing) glow(ch.body, (ch.glowing = 0));
     for (const ch of this.cast) (ch.goal = ch.slide = ch.facing = null), mood(ch, "natural");
+    this.open();
+  }
+
+  open() { const tell = this.started; this.started = () => {}; this.acts.filter(a => a.line === "open").forEach(a => this.start(a)); this.started = tell; }  // the starting state (the banana plant a pup: Step1, secs 0) before the spread is first drawn, with no act foley
+
+  // a tap on `name`: its acts whose line is "tap:<name>" start (again, whatever state they are in; a running one is cut short)
+  tap(name) { this.acts.filter(a => a.line === `tap:${name}`).forEach(a => this.start(a)); }
+
+  // shape: ease shape keys of the meshes under `o`; with `back`, a second ease returns them after `back` s
+  shape(a, o, done) {
+    const key = a.key, ms = []; o.traverse(m => m.morphTargetDictionary && key in m.morphTargetDictionary && ms.push(m));
+    if (!ms.length) return console.warn(`no shape key "${key}" under "${a.what}"`, a), done();
+    const items = [];  // [mesh, key index, from, to, the weight to go back to]
+    for (const m of ms) {
+      if (!this.base.has(m)) this.base.set(m, [...m.morphTargetInfluences]);
+      for (const [k, i] of Object.entries(m.morphTargetDictionary)) if (k === key || a.only) {  // "back" goes to the weight before this act, or, on a key still easing, before the act that moved it (a second tap mid-fold)
+        const live = this.shapes.flatMap(g => g.items).find(([n, j]) => n === m && j === i);
+        items.push([m, i, m.morphTargetInfluences[i], k === key ? a.to ?? 1 : 0, live ? live[4] : m.morphTargetInfluences[i]]);
+      }
+    }
+    for (const g of this.shapes) g.items = g.items.filter(([m, i]) => !items.some(([n, j]) => n === m && j === i));  // the newest act on a key wins
+    const run = (its, len, wait, fin) => this.shapes.push({ items: its, t: 0, len, wait, fin, set(k) { this.items.forEach(([m, i, f, t]) => (m.morphTargetInfluences[i] = f + (t - f) * k)); } });
+    // shortcut: reset returns keys to their first-seen weight (this.base), then "open" acts run; upgrade if a page needs a reset to somewhere else
+    const len = a.secs ?? 1;
+    if (!len) items.forEach(([m, i, , t]) => (m.morphTargetInfluences[i] = t));  // secs 0: at once, not on the next tick (an "open" act lands before the first frame)
+    run(items, len, 0, g => { done(); if (a.back != null && g.items.length) run(g.items.map(([m, i, , , b]) => [m, i, m.morphTargetInfluences[i], b, b]), len, a.back, () => {}); });  // a key a newer act took is not returned
   }
 
   ready(a, t) {
@@ -436,6 +548,16 @@ export class Acting {
     const done = () => (a.state = "done");
     if (a.face != null && this.by[a.who]) this.by[a.who].faced = a.line;  // where it looks on this line is the page's, not the talk rule's
     if (a.do === "rise" && !a.who) return this.rises.push({ what: a.what, from: this.lifted[a.what] ?? 0, by: a.by ?? 0.12, t: 0, len: a.secs ?? 1.2, done }), void (a.state = "run"), void this.started(a);
+    if (a.do === "hide" || a.do === "show") {
+      const o = a.who ? this.by[a.who]?.body : this.find(a.what);
+      if (!o) return done();
+      return this.vis(o, a.do === "show", a.fade, done), void (a.state = a.state === "done" ? "done" : "run"), void this.started(a);
+    }
+    if (a.do === "shape") {  // the shape keys of a prop of the spread (the banana plant growing, the shy plant folding)
+      const o = this.find(a.what);
+      if (!o) return console.warn("nothing to shape:", a), done();
+      return a.state = "run", this.shape(a, o, done), void this.started(a);
+    }
     if (a.do === "glow") {  // games.js's warm light on a character's body
       const ch = this.by[a.who];
       if (!ch?.body) return done();
@@ -501,7 +623,7 @@ export class Acting {
     } else if (a.do === "rise") {
       const from = ch.pos.clone();
       take("slide", { from, to: from.clone().setY(from.y + (a.by ?? 0.12)), t: 0, len: a.secs ?? 1.2, done });
-    } else if (a.do === "hold") this.hold(ch, a.what, a.hand, !a.release), done();
+    } else if (a.do === "hold") this.hold(ch, a.what, a.hand, !a.release, a), done();
     else if (a.do === "face" || a.do === "think" && a.face) take("facing", { a, done });
     else if (a.do === "think") done();
     else console.warn("unknown act:", a), done();

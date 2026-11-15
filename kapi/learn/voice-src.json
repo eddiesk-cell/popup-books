@@ -1,0 +1,763 @@
+{
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1,
+   "pitch": 0
+  },
+  "kapi": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 4
+  },
+  "bobo": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -3
+  },
+  "lulu": {
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": 2
+  }
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "lines": [
+    {
+     "id": "p.find",
+     "text": "Which one is the",
+     "say": [
+      [
+       "narrator",
+       "Which one is the"
+      ]
+     ]
+    },
+    {
+     "id": "p.what",
+     "text": "What is this?",
+     "say": [
+      [
+       "narrator",
+       "What is this?"
+      ]
+     ]
+    },
+    {
+     "id": "p.colour",
+     "text": "What colour is it?",
+     "say": [
+      [
+       "narrator",
+       "What colour is it?"
+      ]
+     ]
+    },
+    {
+     "id": "p.count",
+     "text": "How many?",
+     "say": [
+      [
+       "narrator",
+       "How many?"
+      ]
+     ]
+    },
+    {
+     "id": "p.sound",
+     "text": "Which one makes this sound?",
+     "say": [
+      [
+       "narrator",
+       "Which one makes this sound?"
+      ]
+     ]
+    },
+    {
+     "id": "p.order0",
+     "text": "Put the story in order. What happened first?",
+     "say": [
+      [
+       "narrator",
+       "Put the story in order. What happened first?"
+      ]
+     ]
+    },
+    {
+     "id": "p.order",
+     "text": "What happened next?",
+     "say": [
+      [
+       "narrator",
+       "What happened next?"
+      ]
+     ]
+    },
+    {
+     "id": "p.mem",
+     "text": "Find the matching pairs!",
+     "say": [
+      [
+       "narrator",
+       "Find the matching pairs!"
+      ]
+     ]
+    },
+    {
+     "id": "p.hint",
+     "text": "Hmm, look again. Try another one.",
+     "say": [
+      [
+       "narrator",
+       "Hmm, look again. Try another one."
+      ]
+     ]
+    },
+    {
+     "id": "p.listen",
+     "text": "Listen.",
+     "say": [
+      [
+       "narrator",
+       "Listen."
+      ]
+     ]
+    },
+    {
+     "id": "p.done",
+     "text": "All done! Here is your sticker.",
+     "say": [
+      [
+       "narrator",
+       "All done! Here is your sticker."
+      ]
+     ]
+    },
+    {
+     "id": "p.find0",
+     "text": "Which one is",
+     "say": [
+      [
+       "narrator",
+       "Which one is"
+      ]
+     ]
+    },
+    {
+     "id": "p.finds",
+     "text": "Which picture shows",
+     "say": [
+      [
+       "narrator",
+       "Which picture shows"
+      ]
+     ]
+    },
+    {
+     "id": "p.right-find",
+     "text": "Yes, you found it!",
+     "say": [
+      [
+       "narrator",
+       "Yes, you found it!"
+      ]
+     ]
+    },
+    {
+     "id": "p.right-colour",
+     "text": "You looked carefully!",
+     "say": [
+      [
+       "narrator",
+       "You looked carefully!"
+      ]
+     ]
+    },
+    {
+     "id": "p.right-count",
+     "text": "You counted well!",
+     "say": [
+      [
+       "narrator",
+       "You counted well!"
+      ]
+     ]
+    },
+    {
+     "id": "p.right-sound",
+     "text": "You listened well!",
+     "say": [
+      [
+       "narrator",
+       "You listened well!"
+      ]
+     ]
+    },
+    {
+     "id": "p.right-memory",
+     "text": "You found a pair!",
+     "say": [
+      [
+       "narrator",
+       "You found a pair!"
+      ]
+     ]
+    },
+    {
+     "id": "p.pick",
+     "text": "What shall we play?",
+     "say": [
+      [
+       "narrator",
+       "What shall we play?"
+      ]
+     ]
+    },
+    {
+     "id": "p.g-quiz",
+     "text": "Picture quiz",
+     "say": [
+      [
+       "narrator",
+       "Picture quiz"
+      ]
+     ]
+    },
+    {
+     "id": "p.g-memory",
+     "text": "Memory pairs",
+     "say": [
+      [
+       "narrator",
+       "Memory pairs"
+      ]
+     ]
+    },
+    {
+     "id": "p.g-order",
+     "text": "Story order",
+     "say": [
+      [
+       "narrator",
+       "Story order"
+      ]
+     ]
+    },
+    {
+     "id": "w.bat",
+     "text": "bat",
+     "say": [
+      [
+       "narrator",
+       "bat"
+      ]
+     ]
+    },
+    {
+     "id": "w.bobo",
+     "text": "Bobo",
+     "say": [
+      [
+       "narrator",
+       "Bobo"
+      ]
+     ]
+    },
+    {
+     "id": "w.branch",
+     "text": "branch",
+     "say": [
+      [
+       "narrator",
+       "branch"
+      ]
+     ]
+    },
+    {
+     "id": "w.buffalo",
+     "text": "buffalo",
+     "say": [
+      [
+       "narrator",
+       "buffalo"
+      ]
+     ]
+    },
+    {
+     "id": "w.butterfly",
+     "text": "butterfly",
+     "say": [
+      [
+       "narrator",
+       "butterfly"
+      ]
+     ]
+    },
+    {
+     "id": "w.crab",
+     "text": "crab",
+     "say": [
+      [
+       "narrator",
+       "crab"
+      ]
+     ]
+    },
+    {
+     "id": "w.dragonfly",
+     "text": "dragonfly",
+     "say": [
+      [
+       "narrator",
+       "dragonfly"
+      ]
+     ]
+    },
+    {
+     "id": "w.duck",
+     "text": "duck",
+     "say": [
+      [
+       "narrator",
+       "duck"
+      ]
+     ]
+    },
+    {
+     "id": "w.duckling",
+     "text": "duckling",
+     "say": [
+      [
+       "narrator",
+       "duckling"
+      ]
+     ]
+    },
+    {
+     "id": "w.ferns",
+     "text": "ferns",
+     "say": [
+      [
+       "narrator",
+       "ferns"
+      ]
+     ]
+    },
+    {
+     "id": "w.fish",
+     "text": "fish",
+     "say": [
+      [
+       "narrator",
+       "fish"
+      ]
+     ]
+    },
+    {
+     "id": "w.flowers",
+     "text": "flowers",
+     "say": [
+      [
+       "narrator",
+       "flowers"
+      ]
+     ]
+    },
+    {
+     "id": "w.frog",
+     "text": "frog",
+     "say": [
+      [
+       "narrator",
+       "frog"
+      ]
+     ]
+    },
+    {
+     "id": "w.fruit",
+     "text": "jamun",
+     "say": [
+      [
+       "narrator",
+       "jamun"
+      ]
+     ]
+    },
+    {
+     "id": "w.gecko",
+     "text": "gecko",
+     "say": [
+      [
+       "narrator",
+       "gecko"
+      ]
+     ]
+    },
+    {
+     "id": "w.goldreeds",
+     "text": "gold reeds",
+     "say": [
+      [
+       "narrator",
+       "gold reeds"
+      ]
+     ]
+    },
+    {
+     "id": "w.grass",
+     "text": "grass",
+     "say": [
+      [
+       "narrator",
+       "grass"
+      ]
+     ]
+    },
+    {
+     "id": "w.heron",
+     "text": "heron",
+     "say": [
+      [
+       "narrator",
+       "heron"
+      ]
+     ]
+    },
+    {
+     "id": "w.hyacinth",
+     "text": "water hyacinths",
+     "say": [
+      [
+       "narrator",
+       "water hyacinths"
+      ]
+     ]
+    },
+    {
+     "id": "w.kapi",
+     "text": "Kapi",
+     "say": [
+      [
+       "narrator",
+       "Kapi"
+      ]
+     ]
+    },
+    {
+     "id": "w.kingfisher",
+     "text": "kingfisher",
+     "say": [
+      [
+       "narrator",
+       "kingfisher"
+      ]
+     ]
+    },
+    {
+     "id": "w.lapwing",
+     "text": "lapwing",
+     "say": [
+      [
+       "narrator",
+       "lapwing"
+      ]
+     ]
+    },
+    {
+     "id": "w.lilypads",
+     "text": "lily pads",
+     "say": [
+      [
+       "narrator",
+       "lily pads"
+      ]
+     ]
+    },
+    {
+     "id": "w.log",
+     "text": "log",
+     "say": [
+      [
+       "narrator",
+       "log"
+      ]
+     ]
+    },
+    {
+     "id": "w.lulu",
+     "text": "Lulu",
+     "say": [
+      [
+       "narrator",
+       "Lulu"
+      ]
+     ]
+    },
+    {
+     "id": "w.nest",
+     "text": "nest",
+     "say": [
+      [
+       "narrator",
+       "nest"
+      ]
+     ]
+    },
+    {
+     "id": "w.otter",
+     "text": "otter",
+     "say": [
+      [
+       "narrator",
+       "otter"
+      ]
+     ]
+    },
+    {
+     "id": "w.owl",
+     "text": "owl",
+     "say": [
+      [
+       "narrator",
+       "owl"
+      ]
+     ]
+    },
+    {
+     "id": "w.parakeet",
+     "text": "parakeet",
+     "say": [
+      [
+       "narrator",
+       "parakeet"
+      ]
+     ]
+    },
+    {
+     "id": "w.pebbles",
+     "text": "pebbles",
+     "say": [
+      [
+       "narrator",
+       "pebbles"
+      ]
+     ]
+    },
+    {
+     "id": "w.reeds",
+     "text": "reeds",
+     "say": [
+      [
+       "narrator",
+       "reeds"
+      ]
+     ]
+    },
+    {
+     "id": "w.rocks",
+     "text": "rocks",
+     "say": [
+      [
+       "narrator",
+       "rocks"
+      ]
+     ]
+    },
+    {
+     "id": "w.squirrel",
+     "text": "squirrel",
+     "say": [
+      [
+       "narrator",
+       "squirrel"
+      ]
+     ]
+    },
+    {
+     "id": "w.tree",
+     "text": "jamun tree",
+     "say": [
+      [
+       "narrator",
+       "jamun tree"
+      ]
+     ]
+    },
+    {
+     "id": "w.turtle",
+     "text": "turtle",
+     "say": [
+      [
+       "narrator",
+       "turtle"
+      ]
+     ]
+    },
+    {
+     "id": "w.village",
+     "text": "village",
+     "say": [
+      [
+       "narrator",
+       "village"
+      ]
+     ]
+    },
+    {
+     "id": "c.orange",
+     "text": "orange",
+     "say": [
+      [
+       "narrator",
+       "orange"
+      ]
+     ]
+    },
+    {
+     "id": "c.brown",
+     "text": "brown",
+     "say": [
+      [
+       "narrator",
+       "brown"
+      ]
+     ]
+    },
+    {
+     "id": "c.green",
+     "text": "green",
+     "say": [
+      [
+       "narrator",
+       "green"
+      ]
+     ]
+    },
+    {
+     "id": "c.grey",
+     "text": "grey",
+     "say": [
+      [
+       "narrator",
+       "grey"
+      ]
+     ]
+    },
+    {
+     "id": "n.1",
+     "text": "one",
+     "say": [
+      [
+       "narrator",
+       "one"
+      ]
+     ]
+    },
+    {
+     "id": "n.2",
+     "text": "two",
+     "say": [
+      [
+       "narrator",
+       "two"
+      ]
+     ]
+    },
+    {
+     "id": "n.3",
+     "text": "three",
+     "say": [
+      [
+       "narrator",
+       "three"
+      ]
+     ]
+    },
+    {
+     "id": "n.4",
+     "text": "four",
+     "say": [
+      [
+       "narrator",
+       "four"
+      ]
+     ]
+    },
+    {
+     "id": "n.5",
+     "text": "five",
+     "say": [
+      [
+       "narrator",
+       "five"
+      ]
+     ]
+    },
+    {
+     "id": "s.s01",
+     "text": "The Jamun Tree",
+     "say": [
+      [
+       "narrator",
+       "The Jamun Tree"
+      ]
+     ]
+    },
+    {
+     "id": "s.s03",
+     "text": "Friends Every Day",
+     "say": [
+      [
+       "narrator",
+       "Friends Every Day"
+      ]
+     ]
+    },
+    {
+     "id": "s.s04",
+     "text": "Lulu at Home",
+     "say": [
+      [
+       "narrator",
+       "Lulu at Home"
+      ]
+     ]
+    },
+    {
+     "id": "s.s06",
+     "text": "Bobo's Worry",
+     "say": [
+      [
+       "narrator",
+       "Bobo's Worry"
+      ]
+     ]
+    },
+    {
+     "id": "s.s08",
+     "text": "The Truth",
+     "say": [
+      [
+       "narrator",
+       "The Truth"
+      ]
+     ]
+    },
+    {
+     "id": "s.s10",
+     "text": "The Heart of the Fruit",
+     "say": [
+      [
+       "narrator",
+       "The Heart of the Fruit"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [],
+ "touch": {}
+}

@@ -1,5 +1,6 @@
 {
  "title": "Kapi and the Crocodile",
+ "fruit": "jamun",
  "story": "story.json",
  "translations": "translations.json",
  "timing": "voice/timing.json",
@@ -160,12 +161,12 @@
     "type": "steer",
     "praise": "Splish, splash! You steered him safely!",
     "voice": {
-     "start": "game.7.start",
+     "start": "game.7.go",
      "praise": "game.7.praise",
-     "hint": "game.7.hint"
+     "hint": "game.7.light"
     },
-    "start": "Swipe left or right! Steer Bobo past the rocks!",
-    "hint": "The fish are splashing there. Go round the other side!"
+    "start": "Tap the golden light! Bobo swims there.",
+    "hint": "Tap the golden light, away from the splashing fish!"
    }
   },
   {
@@ -175,7 +176,8 @@
     "8.1",
     "8.2",
     "8.3",
-    "8.4"
+    "8.4",
+    "8.5"
    ],
    "game": {
     "type": "waves",
@@ -188,7 +190,8 @@
     "start": "The waves are rocking! Tap to help Kapi hold on tight!",
     "count": 4,
     "wave": "waves",
-    "hint": "Tap just as the wave lifts Bobo!"
+    "hint": "Tap just as the wave lifts Bobo!",
+    "before": "8.5"
    }
   },
   {
@@ -197,24 +200,24 @@
    "lines": [
     "9.1",
     "9.2",
-    "9.3",
-    "9.4"
+    "9.3"
    ],
    "game": {
     "type": "leap",
     "praise": "Wow, what a leap! Perfect!",
     "voice": {
      "start": "game.9.start",
-     "praise": "game.9.praise"
+     "praise": "game.9.praise",
+     "hint": "game.9.hint"
     },
     "start": "Wait... wait... now tap! Make Kapi leap!",
-    "before": "9.3",
+    "before": "9.2",
     "leap": {
      "clip": "Jump",
      "to": [
-      0.027,
-      0.077,
-      0.228
+      0.08,
+      0.1149,
+      0.3
      ],
      "then": "Idle",
      "face": [
@@ -222,8 +225,7 @@
       -2.0,
       0.0
      ]
-    },
-    "hint": "Tap just as the ring closes on Kapi!"
+    }
    }
   },
   {

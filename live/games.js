@@ -1,6 +1,6 @@
 // games.js — the games inside the live books (stories/mali/SCENES.md, "Games for the viewer"). book.json names each
 // spread's game: {"type": "collect" | "order" | "shadow" | "echo", "before": line, "targets": [...], "start", "praise",
-// "voice": {"start", "praise"}, ...}. The reading waits at `before` until the game is won; nothing a child taps is
+// "voice": {"start", "praise", "hint", "react", "again", "listen"}, ...}. The reading waits at `before` until the game is won; nothing a child taps is
 // ever wrong (a miss gets a small friendly reaction); a hint comes after a few idle seconds.
 //   collect  tap every target ("tap": "hover": a tapped lantern lifts and hovers, glowing, instead of vanishing; "light": it
 //            lights where it stands; "thoughts": [...]: each one found shows the next of `who`'s thoughts over them)
@@ -8,7 +8,17 @@
 //   shadow   tap a spot: `who` carries the `lamp` there and sets it down; its light throws `caster`'s shadow onto
 //            `screen`; win when the lamp is on `answer` (two wrong spots, and the answer glows)
 //   echo     each round the bells play a tune and the child taps it back; `replay` plays it again; after
-//            `help_after` misses on a note its bell glows; win when the last round is done
+//            `help_after` misses on a note its bell glows; win when the last round is done; "sounds": [pool per bell]
+//            plays those pools instead of the bell notes
+//   pair     "pairs": [[thing, spot], ...]: tap a thing, then where it goes; a right pair joins (correct family), a wrong one
+//            wobbles (try again); win when every pair is made
+//   collect  "targets" may name cast characters (3D animals too) as well as page pieces: a tap on one counts (its hit box), and it wobbles and glows instead of vanishing
+//   timing   "step": {"prop": "axe-tree", "clip": "Notch", "steps": 5}, "light": ["beam0", ...]: one target tapped `steps` times; a good tap plays one
+//            step of the prop's clip (a prop with a model is a cast character) and lights the next of `light`; a miss plays nothing
+//   collect  "count": "game.1.count": each right tap says `<count>.<n>` (the n-th picked) and shows the numeral; a friend (a cast
+//            character target) also pops its number word, then says "<game>.react.<name>"; "clip": [name, secs] plays on it; tapped again: "again" and a wobble
+//   collect  "deal": ["pagong", "matsing"]: each tap sends the tapped one to the next named character in turn (it flies to them), counted per character in game.dealt
+//   collect  "lit_glow": 0: a lit target that is no light (a mud spot) lets its glow go 1 s after the game is won (default: it stays, a lantern's)
 // The state of each game is a small class (tested in games.test.mjs); makeGame() gives it hands in the scene.
 import { Collect, Timing } from "../book.js";  // three.js comes in through env.THREE, so the game logic also runs under node (games.test.mjs)
 
@@ -16,6 +26,19 @@ export class Order {  // only the next one counts
   constructor(n) { Object.assign(this, { n, next: 0 }); }
   tap(i) { if (this.complete) return "ignore"; if (i !== this.next) return "miss"; this.next++; return "hit"; }
   get complete() { return this.next >= this.n; }
+}
+
+export class Pair {  // tap a thing, then its spot
+  constructor(pairs) { Object.assign(this, { pairs, done: new Set(), sel: null }); }
+  get complete() { return this.done.size >= this.pairs.length; }
+  tap(name) {  // "pick" a thing, "hit" its spot, "miss" another spot, "ignore" a joined thing or a spot with nothing picked
+    if (this.complete) return "ignore";
+    const t = this.pairs.findIndex((p, i) => p[0] === name && !this.done.has(i));
+    if (t >= 0) return (this.sel = t), "pick";
+    if (this.sel == null || !this.pairs.some(p => p[1] === name)) return "ignore";
+    const hit = this.pairs[this.sel][1] === name; if (hit) this.done.add(this.sel); this.sel = null;
+    return hit ? (this.complete ? "won" : "hit") : "miss";
+  }
 }
 
 export class Shadow {  // where the lamp stands; two wrong spots and the answer is shown
@@ -68,6 +91,7 @@ export class Steer {  // past each hazard on its free side (-1 left, 1 right); t
 function gestures(sp, env, c, { tap, swipe }) {
   const el = env.renderer?.domElement;
   if (!el) return () => {};
+  c.gesture = true;  // every tap while it is on is the game's: the viewer does not also answer it as a tap on a thing
   const on = () => c.begun && !c.complete && !!sp.group?.parent;
   let p = null;
   const down = e => { p = on() && e.target === el ? { id: e.pointerId, x: e.clientX, y: e.clientY, t: env.now() } : null; };
@@ -155,7 +179,7 @@ function lightOf(o) {
 }
 
 const NOTES = [392, 440, 523.25, 587.33, 659.25];  // G4 A4 C5 D5 E5: one pentatonic scale, so a wrong bell still sounds sweet
-const HINT = { collect: 8, order: 6, shadow: 8, echo: 6, timing: 8, steer: 8, rally: 1e9, waves: 1e9, leap: 1e9 };  // a beat game hints on misses, not idling
+const HINT = { pair: 8, collect: 8, order: 6, shadow: 8, echo: 6, timing: 8, steer: 8, rally: 1e9, waves: 1e9, leap: 1e9 };  // a beat game hints on misses, not idling
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // env: what live.js lends a game: { sp (the spread), now(), say(text), won(), sparkle(at), wobble(o, degrees), lift(name, dy),
@@ -208,13 +232,19 @@ export function inkOutline(env, caster, screen, from) {
 export function makeGame(sp, env) {
   const { THREE } = env, G = sp.G, obj = n => (sp.group ?? sp.root).getObjectByName(n) ?? sp.byName[n]?.body, at = o => o.getWorldPosition(new THREE.Vector3());  // group: a character's own pieces (a boat's flame) too
   const cast = { listen: [G.who ?? "lulu"], rally: ["bobo", "kapi"], waves: ["kapi", "bobo"], leap: ["kapi"] }[G.type];  // listen: the one who speaks; a beat: the pair
-  const targets = (G.targets ?? cast ?? sp.m.targets ?? []).map(obj).filter(Boolean);
+  const targets = (G.targets ?? (G.type === "pair" ? [...new Set(G.pairs.flat())] : cast) ?? sp.m.targets ?? []).map(obj).filter(Boolean);
   const c = { targets, extra: new Map(), begun: false, last: 0, complete: false, open: () => true,
     begin() { c.begun = true; c.last = env.now(); return c.start?.(); },
     resume() { c.last = env.now(); return c.again?.(); },  // back on the page mid-game (the bells play their tune again)
     update(now) { if (c.begun) c.tick?.(now); if (c.begun && !c.complete && now - c.last > HINT[G.type] * 1000) { c.last = now; c.hint?.(); } },
     win() { c.complete = true; env.count(""); env.won(); } };
   const n = targets.length;
+  // spoken words (book.json "voice": {react, again, listen, ...}, each an id in the book's words): `react` on a right tap (a string, or a list per target),
+  // `again` on a wrong one, at most once in 4 s so a child tapping wildly is not talked over; neither plays unless the page names it
+  let lastAgain = -1e9;
+  const react = i => { const v = [].concat(G.voice?.react ?? []); if (v.length) env.voice(v[i] ?? v[0]); };
+  const again = () => { if (G.voice?.again && env.now() - lastAgain > 4000) { lastAgain = env.now(); env.voice(G.voice.again); } };
+  const miss = () => (env.foley("game:miss", "tap"), again());
   // the games played anywhere on the page: a tap on a character while playing is the game's, not a hello
   if (["rally", "waves", "leap", "steer"].includes(G.type)) for (const ch of sp.cast) if (ch.proxy) c.extra.set(ch.proxy, () => (c.begun && !c.complete ? null : env.poke(ch.name)));
 
@@ -225,8 +255,8 @@ export function makeGame(sp, env) {
     c.tap = async i => {
       if (busy || state.complete) return;
       const o = targets[i];
-      if (state.tap(i) === "miss") return env.wobble(o, 6), env.foley("game:miss", "tap");  // a soft "plip", nothing else
-      busy = true; c.last = env.now();
+      if (state.tap(i) === "miss") return env.wobble(o, 6), miss();  // a soft "plip", nothing else
+      busy = true; c.last = env.now(); react(i);
       await env.act({ do: "fly", who, to: o.name, secs: 0.6, clip: "Jump" });  // an arc, landing on its top
       env.sparkle(at(o)); env.play("splash", { gain: 0.5 }); env.wobble(o, 3);  // the stone ripples
       busy = false;
@@ -283,7 +313,7 @@ export function makeGame(sp, env) {
         ink(0, 1500);  // the outline fades into the shadow
         return c.win();
       }
-      env.wobble(caster, 8);  // Tong looks at his shadow and shakes his head
+      miss(); env.wobble(caster, 8);  // Tong looks at his shadow and shakes his head: the try-again voice
       pulse();
       if (r === "help") glow(obj(G.answer), 0.6);  // two wrong spots: the answer glows until it is tapped
     };
@@ -303,22 +333,13 @@ export function makeGame(sp, env) {
   } else if (G.type === "echo") {
     const state = new Echo(G.rounds ?? [], G.help_after ?? 2), pip = sp.byName.pip, names = targets.map(o => o.name);
     let busy = false, help = null;
-    const ring = (name, gain = 1) => {
+    const ring = (name, gain = 1, quiet = false) => {
       const o = obj(name), k = names.indexOf(name);
       if (o) { glow(o, 1); setTimeout(() => glow(o, name === help ? 0.6 : 0), 600); }
-      tone(NOTES[k % NOTES.length] ?? 440, gain);
+      if (!quiet) G.sounds?.[k] ? env.play(G.sounds[k], { gain }) : tone(NOTES[k % NOTES.length] ?? 440, gain);  // a page's own pool per target, else the pentatonic wood notes
       if (pip && o) env.act({ do: "fly", who: "pip", to: name, up: 0.1, secs: 0.45 });  // Pip flies over the ringing bell
     };
-    const tone = (f, gain, hum) => {  // a soft bell made here: a sine with two bell partials, dying away over 1.2 s (a hum: one soft sine)
-      if (env.muted() || !env.ctx) return;
-      const ctx = env.ctx, t = ctx.currentTime, out = ctx.createGain(), dur = hum ? 0.9 : 1.2;
-      out.gain.setValueAtTime(0.0001, t); out.gain.exponentialRampToValueAtTime(0.25 * gain, t + (hum ? 0.15 : 0.01));
-      out.gain.exponentialRampToValueAtTime(0.0001, t + dur); out.connect(ctx.destination);
-      for (const [m, g] of hum ? [[0.5, 1]] : [[1, 1], [2.76, 0.3], [5.4, 0.1]]) {
-        const o = ctx.createOscillator(), og = ctx.createGain();
-        o.frequency.value = f * m; og.gain.value = g; o.connect(og).connect(out); o.start(t); o.stop(t + dur);
-      }
-    };
+    const tone = (f, gain) => env.play("ok", { pitch: f / NOTES[0], gain, exact: true });  // a soft wood or bamboo note from the sound pool at the note's pitch (no bell)
     const playTune = async () => {  // the bells show the tune, 0.7 s apart; then it is the child's turn
       if (busy || state.complete) return;
       busy = true; state.restart();
@@ -334,10 +355,11 @@ export function makeGame(sp, env) {
       if (state.complete) return;
       if (busy) return ring(names[i], 0.3);  // tapping along with the tune: it rings softly and does not count
       const name = names[i], want = state.want, r = state.tap(name);
-      ring(name, r === "miss" || r === "help" ? 0.4 : 1);
-      if (r === "miss" || r === "help") {
-        setTimeout(() => tone(NOTES[names.indexOf(want)] ?? 440, 0.5, true), 450);  // Grandma Nok hums the right note
-        if (r === "help") { help = want; glow(obj(want), 0.6); }
+      const wrong = r === "miss" || r === "help";
+      ring(name, 1, wrong);  // a wrong bell glows but does not sound like a right one: the try-again voice instead
+      if (wrong) {
+        miss();
+        if (r === "help") { help = want; glow(obj(want), 0.6); }  // the right bell glows until it is tapped
         return;
       }
       c.last = env.now();
@@ -356,25 +378,33 @@ export function makeGame(sp, env) {
     c.hint = () => { const o = obj(state.want); if (o) { env.sparkle(at(o)); glow(o, 0.5); setTimeout(() => glow(o, state.want === help ? 0.6 : 0), 700); } };
     c.state = state;
   } else if (G.type === "timing") {  // the old player's game (book.js Timing): a ring closes on the next one; tap as it is nearly shut
-    const state = new Timing(n, G), size = targets.map(o => Math.max(0.012, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius));
+    // "step": {"prop", "clip", "steps"} + "light": [names]: the one target is tapped `steps` times; each good tap plays one step of the prop's clip
+    // (1/steps of its length, then it holds) and lights the next of `light`. Without them: one tap per target, as before.
+    const S = G.step, steps = S ? S.steps ?? n : n, state = new Timing(steps, G), lamps = (G.light ?? []).map(obj), prop = S && sp.byName[S.prop], clip = prop?.clips?.[S.clip];
+    const act = clip && prop.mix.clipAction(clip); let stopAt = 0;
+    c.start = () => { if (act) { act.reset().setLoop(THREE.LoopOnce, 1); act.clampWhenFinished = true; act.play(); act.paused = true; prop.cur = act; prop.done = () => {}; } };  // at rest on its first frame; live.js's loop() never cuts it
+    const size = targets.map(o => Math.max(0.012, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius));
     const ring = ringIn(sp, THREE);
     c.tick = now => {
-      const o = targets[state.cur];
-      ring.material.opacity = o ? 0.9 : 0;
+      if (act && !act.paused && act.time >= stopAt) (act.time = stopAt, act.paused = true);  // one step done: hold
+      const o = targets[S ? 0 : state.cur];
+      ring.material.opacity = o && !state.complete ? 0.9 : 0;
       if (!o) return;
       const p = state.phase(now / 1000);
-      ring.position.copy(at(o)); ring.scale.setScalar(size[state.cur] * (1.1 + 2.4 * (1 - p)));
+      ring.position.copy(at(o)); ring.scale.setScalar(size[S ? 0 : state.cur] * (1.1 + 2.4 * (1 - p)));
       ring.material.color.set(p >= 1 - state.win() ? 0x7dffa0 : 0xffd9a0);  // green: now
     };
     c.tap = i => {
-      const o = targets[i], r = state.tap(i, env.now() / 1000);
+      const o = targets[i], r = state.tap(S ? state.cur : i, env.now() / 1000);
       if (r === "ignore") return env.sparkle(at(o));
       c.last = env.now();
-      if (r === "miss") return env.wobble(o, 6), env.foley("game:miss", "tap"), env.say("Almost! Try again.");
-      env.say(""); env.sparkle(at(o)); glow(o, 0.8, true); env.foley(`game:${o.name.replace(/\d+$/, "")}`, "pick");
-      if (state.complete) { ring.material.opacity = 0; c.win(); } else env.count(`${state.cur} of ${n}`);
+      if (r === "miss") return env.wobble(o, 6), miss();
+      env.say(""); env.sparkle(at(o)); glow(o, 0.8, true); env.foley(`game:${o.name.replace(/\d+$/, "")}`, "pick"); react(i);
+      if (act) (stopAt = clip.duration * state.cur / steps, act.paused = false);
+      glow(lamps[state.cur - 1], 1);
+      if (state.complete) { ring.material.opacity = 0; c.win(); } else env.count(`${state.cur} of ${steps}`);
     };
-    c.hint = () => { const o = targets[state.cur]; if (o) env.wobble(o, 4); };
+    c.hint = () => { const o = targets[S ? 0 : state.cur]; if (o) env.wobble(o, 4); };
     c.stop = () => ring.removeFromParent();
     c.state = state;
   } else if (G.type === "rally" || G.type === "waves" || G.type === "leap") {
@@ -393,7 +423,7 @@ export function makeGame(sp, env) {
     let P = G.period ?? (rally ? 2.4 : 2.2), k = rally ? 0.1 : 0.35, then = 0, off = () => {}, slowed = false, held = false, ret = null, launch = null, gone = false;
     const hint = () => {
       if (G.voice?.hint) env.say(""), env.voice(G.voice.hint);  // a voiced hint is read along, with its subtitle
-      else env.say(G.hint ?? (rally ? "Tap just as the seed reaches Bobo's tail!" : leap ? "Tap just as the ring closes on Kapi!" : "Tap just as the wave lifts Bobo!"));
+      else env.say(G.hint ?? "");
       if (!slowed) { slowed = true; P *= 1.2; }
       env.sparkle(at(mark));
     };
@@ -403,7 +433,7 @@ export function makeGame(sp, env) {
       if (!state.next()) return;
       if (leap) env.wobble(kapi?.body, 5);
       else if (rally) { env.play("splash", { gain: 0.5 }); gone = true; seed.visible = false; env.sparkle(at(mark)); }
-      else { env.play("splash", { gain: 0.5 }); env.wobble(kapi?.body, 12); env.say("Whoa! Hold on tight!"); }
+      else { env.play("splash", { gain: 0.5 }); env.wobble(kapi?.body, 12); }
       missed();
     };
     const finish = () => {
@@ -437,8 +467,8 @@ export function makeGame(sp, env) {
     const hit = () => {
       const r = state.tap(k);
       if (r === "ignore") return;
-      if (r === "miss") return env.foley("game:miss", "tap"), missed();
-      env.say(""); env.sparkle(at(mark)); env.foley(`game:${G.type}`, "pick");
+      if (r === "miss") return miss(), missed();
+      env.say(""); env.sparkle(at(mark)); env.foley(`game:${G.type}`, "pick"); react(0);
       if (rally) { ret = { a: seed.position.clone(), u: 0 }; env.act({ do: "clip", who: bobo.name, clip: G.flick ?? "Turn", then: bobo.hold }); }
       env.count(state.complete || leap ? "" : `${state.done} of ${state.n}`);
       if (leap) env.act({ do: "clip", who: kapi.name, clip: "Jump", then: kapi.hold, ...G.leap }).then(finish);  // up into the branches
@@ -448,70 +478,107 @@ export function makeGame(sp, env) {
     c.tap = () => {};  // a tap anywhere is the game's (gestures); one on a character neither pokes it nor counts twice
     c.stop = () => { off(); ring.removeFromParent(); seed.removeFromParent(); };
     c.state = state; c.phase = () => k;  // how far into the beat (tests, the recorder)
+  } else if (G.type === "pair") {
+    const state = new Pair(G.pairs), name = i => targets[i].name, moves = [];
+    const thing = nm => targets.find(o => o.name === nm);
+    c.open = i => !state.pairs.some((p, k) => state.done.has(k) && p[0] === name(i));  // a joined thing catches no tap
+    c.tap = i => {
+      const o = targets[i], prev = state.sel, r = state.tap(o.name);
+      env.sparkle(at(o)); c.last = env.now();
+      if (r === "pick") { if (prev != null) glow(thing(state.pairs[prev][0]), 0); glow(o, 0.9); return; }
+      if (r === "ignore") return;
+      const t = thing(state.pairs[prev][0]); glow(t, 0);
+      if (r === "miss") return env.wobble(t, 6), env.wobble(o, 4), miss();
+      env.foley("game:pair", "pick"); react(i); glow(t, 0.6); glow(o, 0.6);  // joined: it goes to its spot and stays lit
+      const p = t.parent; if (p) moves.push({ t, from: t.position.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() });
+      if (r === "won") c.win(); else env.count(`${state.done.size} of ${state.pairs.length}`);
+    };
+    c.tick = now => { for (const m of moves) { const k = Math.min(1, (now - m.t0) / 600); m.t.position.lerpVectors(m.from, m.to, k * k * (3 - 2 * k)); } };
+    c.hint = () => { const k = state.sel ?? state.pairs.findIndex((_, i) => !state.done.has(i)), p = state.pairs[k]; if (p) { env.sparkle(at(thing(state.sel == null ? p[0] : p[1]))); env.wobble(thing(state.sel == null ? p[0] : p[1]), 4); } };
+    c.state = state;
   } else if (G.type === "steer") {
-    // steer (s07): Bobo, Kapi on his back, swims up to each hazard (the targets, in order); fish splash on one side of it, and a
-    // swipe, or a tap on that side of Bobo, takes him round the other. The splashing side only bumps him back to try again.
+    // steer (s07), tap-to-go: Bobo, Kapi on his back, swims up to each hazard (the targets, in order). A glowing gold place on the
+    // water beside it shows where to go: a tap near it (a fingertip's radius) takes him there and on past. From the last hazard
+    // there are two places, one calm and one where the fish splash; the splashing one only splashes him back to try again.
     const bobo = sp.byName[G.who ?? "bobo"], kapi = sp.byName[G.rider ?? "kapi"];
     const state = new Steer(G.free ?? targets.map(() => (Math.random() < 0.5 ? -1 : 1)));
     const B = v => [v.x, -v.z, v.y];  // three.js -> the acts' Blender coordinates
     const right = () => new THREE.Vector3(1, 0, 0).applyQuaternion(camOf(env)?.quaternion ?? new THREE.Quaternion()).setY(0).normalize();
     const swim = to => env.act({ do: "swim", who: bobo.name, to: B(to), stop: 0 });
-    let busy = true, off = () => {}, cur = null, splashed = 0;
-    const approach = async () => {  // up to the next hazard, facing it
-      busy = true;
-      const o = targets[state.i], h = at(o).setY(bobo.pos.y), fwd = h.clone().sub(bobo.pos).setY(0).normalize(), r = right();
+    const lights = [0, 1].map(() => {  // a flat gold ring with a soft glow inside, lying on the water; in the scene from the start (unseen)
+      const g = new THREE.Group(), mat = o => new THREE.MeshBasicMaterial({ color: 0xffc94d, transparent: true, opacity: o, depthTest: false, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
+      g.add(new THREE.Mesh(new THREE.RingGeometry(0.78, 1, 40), mat(0.95)), new THREE.Mesh(new THREE.CircleGeometry(0.78, 40), mat(0.35)));
+      g.rotation.x = -Math.PI / 2; g.visible = false; g.children.forEach(m => (m.renderOrder = 10)); (sp.group ?? sp.stage).add(g); return g;
+    });
+    const LIFT = 0.05; let busy = true, off = () => {}, cur = null, splashed = 0, queued = null, shown = [];
+    const show = list => { shown = list; lights.forEach((l, k) => { l.visible = !!list[k]; if (list[k]) l.position.copy(list[k].p); }); };
+    const approach = async () => {  // up to the next hazard, facing it; its place already glows, and a tap on it meanwhile is kept
+      busy = true; queued = null;
+      const o = targets[state.i], h = at(o).setY(bobo.pos.y), fwd = h.clone().sub(bobo.pos).setY(0).normalize(), r = right(), f = state.free[state.i];
       cur = { h, fwd, near: h.clone().addScaledVector(fwd, -0.15), side: s => h.clone().addScaledVector(r, s * 0.11) };
+      const lit = k => ({ side: k, p: cur.side(k).setY(h.y + LIFT) });  // a little above the waterline, so the foreground grass does not hide it
+      show([lit(f), ...(state.i >= 2 ? [lit(-f)] : [])]);  // the last hazard: a second place, where the fish splash
       glow(o, 0.6, true); env.wobble(o, 5);
       await swim(cur.near); await env.act({ do: "face", who: bobo.name, face: B(h) });
       busy = false; c.last = env.now(); splashed = 0;
+      if (queued != null) choose(queued);
     };
     const hint = () => cur && [0, 500].forEach(ms => setTimeout(() => env.sparkle(cur.side(state.free[state.i])), ms));
     const choose = async side => {
-      if (busy || state.complete || !side) return;
+      if (state.complete || !side) return;
+      if (busy) return void (cur && (queued = side));
       busy = true; c.last = env.now();
       const r = state.pick(side);
       if (r === "pass" || r === "won") {
-        env.say(""); env.foley("game:steer", "pick"); glow(targets[state.i - 1], 0);
+        env.say(""); env.foley("game:steer", "pick"); glow(targets[state.i - 1], 0); env.sparkle(cur.side(side)); show([]);
         await swim(cur.side(side)); await swim(cur.side(side).addScaledVector(cur.fwd, 0.12));
         env.count(r === "won" ? "" : `${state.i} of ${n}`);
         if (r === "pass") return approach();
         off(); if (kapi) env.act({ do: "clip", who: kapi.name, clip: "Cheer", then: kapi.hold });
         return c.win();
       }
-      await swim(cur.near.clone().lerp(cur.side(side), 0.6));  // toward the splashing side: a splash in his face, and back
+      await swim(cur.near.clone().lerp(cur.side(side), 0.6));  // toward the splashing place: a splash in his face, and back
       env.sparkle(cur.side(side)); env.play("splash", { gain: 0.6 }); env.wobble(bobo.body, 8);
-      env.say(r !== "help" ? "Splash! Try the other side." : G.voice?.hint ? "" : G.hint ?? "The fish are splashing there. Go round the other side!");
-      if (r === "help") { if (G.voice?.hint) env.voice(G.voice.hint); hint(); }
+      env.say(r !== "help" || G.voice?.hint ? "" : G.hint ?? "");
+      if (r !== "help") again(); else { if (G.voice?.hint) env.voice(G.voice.hint); hint(); }
       await swim(cur.near); await env.act({ do: "face", who: bobo.name, face: B(cur.h) });
       busy = false;
     };
-    c.tick = now => {  // while Bobo waits at a hazard, the fish splash on its blocked side
-      if (busy || !cur || state.complete || now - splashed < 1600) return;
-      splashed = now; env.sparkle(cur.side(-state.free[state.i])); env.play("splash", { gain: 0.25 });
+    c.tick = now => {
+      const k = 1 + 0.12 * Math.sin(now / 260);  // the places breathe
+      lights.forEach((l, i) => l.visible && l.scale.setScalar((shown[i]?.side === state.free[state.i] ? 0.095 : 0.075) * k));
+      if (busy || !cur || state.complete || shown.length < 2 || now - splashed < 1600) return;
+      splashed = now; env.sparkle(shown[1].p); env.play("splash", { gain: 0.25 });  // the fish splash on the blocked place
     };
-    c.start = () => { off = gestures(sp, env, c, { swipe: choose, tap: x => {
-      const b = camOf(env) ? onScreen(env, at(bobo.body))[0] : innerWidth / 2;  // a tap beside Bobo: that side
-      if (Math.abs(x - b) > 12) choose(Math.sign(x - b));
-    } }); return approach(); };
+    // a tap: the place nearest it, if within a fingertip (64 px, or 0.6 of the gap between two); on empty water, nothing
+    const touch = (x, y) => {
+      const px = shown.map(s => onScreen(env, s.p)), gap = px.length > 1 ? Math.hypot(px[0][0] - px[1][0], px[0][1] - px[1][1]) : 1e9, R = Math.min(64, 0.6 * gap);
+      const d = px.map(([a, b]) => Math.hypot(a - x, b - y)), k = d.indexOf(Math.min(...d));
+      if (d[k] <= R) choose(shown[k].side);
+    };
+    c.start = () => { off = gestures(sp, env, c, { tap: touch }); return approach(); };
     c.hint = hint; c.tap = () => {};  // taps are the game's (gestures)
-    c.stop = () => { off(); targets.forEach(o => glow(o, 0)); };
-    c.state = state; c.ready = () => !busy && !!cur;  // waiting at a hazard for a side (tests, the recorder)
+    c.places = () => shown.map(s => ({ side: s.side, calm: s.side === state.free[state.i], p: s.p }));  // (tests, the recorder)
+    c.stop = () => { off(); lights.forEach(l => l.removeFromParent()); targets.forEach(o => glow(o, 0)); };
+    c.state = state; c.ready = () => !busy && !!cur;  // waiting at a hazard for a tap (tests, the recorder)
   } else if (G.type === "listen") {  // the old player's game: tap the speaker and the line is said again, the words Bobo missed lit; one listen wins
-    const state = new Collect(1), who = G.who ?? "lulu";
+    const state = new Collect(1), who = G.who ?? "lulu", line = G.voice?.listen ?? G.line;  // "voice": {"listen": id} names the line when `line` is not set
     let busy = false;
     c.tap = async () => {
       if (!c.begun) return env.poke(who);  // before the game: a tap is the speaker's usual hello
-      if (busy || state.complete) return;
+      if (state.complete) return env.poke(who);  // won: a tap on her is her usual hello again
+      if (busy) return;
       busy = true; c.last = env.now(); env.bubble(null);  // the read-along says it now, the same words lit
-      await env.listen(G.line, G.say ?? "");
+      await env.listen(line, G.say ?? "");
       busy = false;
       if (state.tap(0)) { env.bubble(null); c.win(); }
     };
-    c.start = c.again = () => env.bubble(who, G.line, G.say ?? "");  // her words over her: tap them (or her) to hear them again
+    c.start = c.again = () => env.bubble(who, line, G.say ?? "");  // her words over her: tap them (or her) to hear them again
     c.hint = () => env.wobble(targets[0], 4);
     c.state = state;
   } else {  // collect; "tap": "hover" for lanterns that wake up and rise, "light" for things lit where they stand (fireflies, candles)
     const state = new Collect(n), hover = G.tap === "hover", light = G.tap === "light";
+    c.dealt = {};  // "deal": how many each named one was dealt
     c.open = i => !state.done.has(i);  // a picked one catches no tap meant for the one beside it, hovering or lit
     // paper lanterns built dark (popup.py's "lantern-dim", a grey faceted ball): until lit, the lit lanterns' own paper, dimmed
     // and smooth; lit, exactly their light. shortcut: the smoothing mends the export here until popup.py shades them smooth
@@ -523,29 +590,58 @@ export function makeGame(sp, env) {
       for (let k = 0; k < p.count; k++) { v.fromBufferAttribute(p, k).normalize(); nrm.setXYZ(k, v.x, v.y, v.z); }  // a sphere's own normals
       nrm.needsUpdate = true;
     }
+    // a friend (a cast character named as a target, not a light or a lantern) stays where it stands once counted: it shakes and
+    // glows; counting aloud, its number word pops over it and then it says its own react line ("voice": {"react"}, else the
+    // book's "<game>.react.<name>"); "clip": [name, secs] plays on it as it is counted; tapped again: the soft "again" and a wobble
+    const friend = i => sp.byName[targets[i].name]?.body === targets[i] && !light && !hover;
+    const own = (o, i) => { const id = G.voice?.react ? [].concat(G.voice.react)[i] ?? [].concat(G.voice.react)[0] : `${(G.voice?.start ?? "game").replace(/\.start$/, "")}.react.${o.name}`; return env.line?.(id) ? id : null; };
+    let num = null;  // {o, el, until}: the number word over the friend just counted
+    const pop = (o, t) => {
+      const d = globalThis.document; if (!d || !t) return;
+      if (!d.getElementById("gnum-css")) d.head.insertAdjacentHTML("beforeend", `<style id="gnum-css">
+        #gnum { position: fixed; z-index: 30; pointer-events: none; translate: -50% -100%; font: 800 clamp(26px, 5vw, 44px)/1 "Noto Sans Lao", system-ui, sans-serif; color: #ffe08a;
+          text-shadow: 0 2px 0 #6b3a10, 0 0 14px #ffb34799; animation: gnum .35s cubic-bezier(.3,1.6,.5,1) both; }
+        @keyframes gnum { from { scale: .4; opacity: 0; } } @media (prefers-reduced-motion: reduce) { #gnum { animation: none; } }</style>`);
+      num?.el.remove();
+      const el = d.body.appendChild(Object.assign(d.createElement("div"), { id: "gnum", textContent: t.replace(/[.!]+$/, "") }));
+      num = { o, el, until: env.now() + 1500 };
+    };
+    c.repeat = i => { if (!friend(i) || !state.done.has(i)) return; c.last = env.now(); env.foley("game:again", "tap"); env.wobble(targets[i], 6); };
     c.tap = i => {
       const o = targets[i];
       env.sparkle(at(o));
       if (!state.tap(i)) return;
       c.last = env.now();
       env.foley(`game:${o.name.replace(/\d+$/, "")}`, "pick");
-      const v = G.react?.[i] ?? G.react?.["*"];
-      if (v) env.voice(v);
-      if (hover) { env.act({ do: "rise", what: o.name, by: 0.06, secs: 0.8 }); glow(o, 0.8); }  // woken: up 0.06 to stay, as an act, so a story rise adds to it
+      const v = G.count ? `${G.count}.${state.done.size}` : G.react?.[i] ?? G.react?.["*"];  // counting aloud: the n-th pick says the n-th number
+      const mine = G.count && friend(i) && own(o, i), said = v ? env.voice(v) : react(i);
+      const then = mine ? Promise.resolve(said).then(ok => ok !== false && env.voice(mine)) : null;  // its own line once the number is said (not if another tap cut the number short)
+      if (G.deal) { const to = G.deal[(state.done.size - 1) % G.deal.length]; c.dealt[to] = (c.dealt[to] ?? 0) + 1; env.act({ do: "fly", ...(sp.byName[o.name] ? { who: o.name } : { what: o.name }), to, secs: 0.8, up: 0.05 }); }  // "deal": ["pagong", "matsing"]: each pick goes to the next one named, in turn, and is counted for them
+      else if (hover) { env.act({ do: "rise", what: o.name, by: 0.06, secs: 0.8 }); glow(o, 0.8); }  // woken: up 0.06 to stay, as an act, so a story rise adds to it
       else if (dark[i].length) dark[i].forEach(m => {  // a paper lantern lit: its paper's colour, a warm light inside, no white disc
         m.material.color.copy(paper.color).multiplyScalar(0.9); m.material.emissive.set(0xff8c2a); m.material.emissiveIntensity = 0.85 * LIT; });
-      else if (light) { glow(o, 0.9); glow(obj(`${o.name}-flame`), 1); } else env.vanish(o);
+      else if (light) { glow(o, 0.9); glow(obj(`${o.name}-flame`), 1); }
+      else if (sp.byName[o.name]?.body === o) { env.wobble(o, 6); glow(o, 0.6, true); }  // a character named as a target (an animal, a friend) stays: it shakes and glows, never vanishes
+      else env.vanish(o);
+      if (friend(i) && G.clip) {  // "clip": "Droop" or ["Droop", 1.8]: held that long, then back to what it was doing
+        const [clip, secs] = [].concat(G.clip), was = sp.byName[o.name].hold;
+        env.act({ do: "clip", who: o.name, clip, then: clip });
+        if (secs && was) setTimeout(() => env.act({ do: "clip", who: o.name, clip: was, then: was }), secs * 1000);
+      }
+      if (G.count && friend(i)) pop(o, env.line?.(v));
       if (G.toss) env.toss(...G.toss);  // book.json "toss": ["kapi", "bobo"]: each one picked is thrown into Bobo's mouth
       if (G.thoughts) think(sp.byName[G.who ?? "bobo"], G.thoughts[(state.done.size - 1) % G.thoughts.length]);
-      if (state.complete) c.win(); else env.count(`${state.done.size} of ${n}`);
+      if (G.count) env.count(`${state.done.size}`);  // the numeral
+      if (state.complete) then ? then.then(() => setTimeout(c.win, env.gap ?? 400)) : G.count ? setTimeout(c.win, env.gap ?? 1300) : c.win(); else if (!G.count) env.count(`${state.done.size} of ${n}`);  // the last number (and its own line) is heard and seen before the win
     };
     c.hint = () => { const i = targets.findIndex((_, i) => !state.done.has(i)); if (i >= 0) { env.sparkle(at(targets[i])); env.wobble(targets[i], 4); } };
     // while the game waits on them, each unlit one wears a soft halo in the spread's light colour, at least 44 px across on the
     // screen however small it is drawn; the halo is its tap zone too, and a tap on any halo lights the unlit one nearest the
     // finger: never a lit one, never the character behind. It pulses unless the reader asked for less motion; lit, it fades.
+    let wonAt = null;
     const off = () => {}, still = globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches, size = new Map(), warm = new THREE.Color(1, 0.45, 0.12);
     const halos = targets.map((o, i) => {
-      const h = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTexture(THREE), color: G.halo ?? lightOf(o), transparent: true, opacity: 0,
+      const h = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTexture(THREE), color: G.halo ?? (friend(i) ? 0xffb347 : lightOf(o)), transparent: true, opacity: 0,
         depthTest: false, depthWrite: false }));
       h.renderOrder = 9; h.raycast = off; (sp.group ?? sp.stage).add(h);
       c.extra.set(h, () => c.tap(nearest(env, targets.map((o, j) => !state.done.has(j) && at(o))) ?? i));
@@ -554,19 +650,29 @@ export function makeGame(sp, env) {
     c.tick = now => {
       const cam = camOf(env);
       if (!cam) return;
+      if (num) {  // the number word rides over its friend's head, then goes
+        if (now > num.until) num.el.remove(), (num = null);
+        else { const b = new THREE.Box3().setFromObject(sp.byName[num.o.name].model), [x, y] = onScreen(env, b.getCenter(new THREE.Vector3()).setY(b.max.y)); Object.assign(num.el.style, { left: `${x}px`, top: `${y - 6}px` }); }
+      }
       const unit = 2 * Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2) / innerHeight;  // world size of a pixel, one unit away
       halos.forEach((h, i) => {
         const o = targets[i], p = at(o), d = -p.clone().applyMatrix4(cam.matrixWorldInverse).z, on = !state.done.has(i) && !c.complete;
         if (!size.has(o)) size.set(o, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius * 2);
         // lit (not picked away): the halo becomes a still, soft warm glow round the light, the size of its light, not of a fingertip
         const glowing = !on && state.done.has(i) && (light || hover), want = on ? (still ? 0.85 : 0.7 + 0.25 * Math.sin(now / 230 + i)) : glowing ? 0.5 : 0;
-        h.material.opacity += (want - h.material.opacity) * 0.12;  // in as the game begins; once lit, down to the glow (or out)
+        if (glowing && G.lit_glow === 0 && c.complete) h.material.opacity = 0.5 * Math.max(0, 1 - (now - (wonAt ??= now)) / 1000);  // book.json "lit_glow": 0: a lit thing that is no light (a mud spot) lets its glow go over 1 s once the game is won
+        else h.material.opacity += (want - h.material.opacity) * 0.12;  // in as the game begins; once lit, down to the glow (or out)
         if (glowing) h.material.color.lerp(warm, 0.1);
-        h.position.copy(p); h.scale.setScalar((glowing ? 1.8 * size.get(o) : Math.max(HALO * unit * d, 1.4 * size.get(o))));
+        if (friend(i)) {  // a friend's glow: its own size (1.6 times its height on screen), just behind it, so it never hides the friend
+          const ch = sp.byName[o.name], r = new THREE.Box3().setFromObject(ch.model).getSize(new THREE.Vector3()), top = p.clone().setY(p.y + ch.height);
+          const tall = Math.abs(top.project(cam).y - p.clone().project(cam).y) / 2 * innerHeight;  // its height on the screen, px
+          h.material.depthTest = true; h.position.copy(p).setY(p.y + ch.height / 2).addScaledVector(p.clone().sub(cam.position).normalize(), Math.max(r.x, r.z) / 2);
+          h.scale.setScalar(1.5 * tall * unit * -h.position.clone().applyMatrix4(cam.matrixWorldInverse).z);
+        } else h.position.copy(p), h.scale.setScalar((glowing ? 1.8 * size.get(o) : Math.max(HALO * unit * d, 1.4 * size.get(o))));
         h.raycast = on ? THREE.Sprite.prototype.raycast : off;
       });
     };
-    c.state = state;
+    c.state = state; c.stop = () => num?.el.remove();
   }
   // a game that waits for its line is not played before it: a tap there only sparkles (a child taps all through the story)
   const play = c.tap, early = () => G.before && !c.begun;

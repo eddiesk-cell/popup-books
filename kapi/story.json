@@ -428,15 +428,9 @@
        "But Kapi did not cry. He thought, and he thought fast."
       ]
      ]
-    }
-   ]
-  },
-  {
-   "n": 9,
-   "title": "Kapi Thinks Fast",
-   "lines": [
+    },
     {
-     "id": "9.1",
+     "id": "8.5",
      "text": "\"Oh, Bobo!\" said Kapi. \"Why didn't you tell me before? I keep my heart up in the jamun tree! Take me back, and I will get it.\"",
      "say": [
       [
@@ -452,9 +446,15 @@
        "Why didn't you tell me before? I keep my heart up in the jamun tree! Take me back, and I will get it."
       ]
      ]
-    },
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Kapi Thinks Fast",
+   "lines": [
     {
-     "id": "9.2",
+     "id": "9.1",
      "text": "Bobo turned around and swam back to the tree.",
      "say": [
       [
@@ -464,7 +464,7 @@
      ]
     },
     {
-     "id": "9.3",
+     "id": "9.2",
      "text": "Kapi jumped from Bobo's back, up, up, up into the branches.",
      "say": [
       [
@@ -474,7 +474,7 @@
      ]
     },
     {
-     "id": "9.4",
+     "id": "9.3",
      "text": "He was safe!",
      "say": [
       [
@@ -751,12 +751,12 @@
    ]
   },
   {
-   "id": "game.7.start",
-   "text": "Swipe left or right! Steer Bobo past the rocks!",
+   "id": "game.7.go",
+   "text": "Tap the golden light! Bobo swims there.",
    "say": [
     [
      "narrator",
-     "Swipe left or right! Steer Bobo past the rocks!"
+     "Tap the golden light! Bobo swims there."
     ]
    ]
   },
@@ -771,12 +771,12 @@
    ]
   },
   {
-   "id": "game.7.hint",
-   "text": "The fish are splashing there. Go round the other side!",
+   "id": "game.7.light",
+   "text": "Tap the golden light!",
    "say": [
     [
      "narrator",
-     "The fish are splashing there. Go round the other side!"
+     "Tap the golden light!"
     ]
    ]
   },
@@ -827,6 +827,16 @@
     [
      "narrator",
      "Wow, what a leap! Perfect!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.hint",
+   "text": "Tap just as the ring closes on Kapi!",
+   "say": [
+    [
+     "narrator",
+     "Tap just as the ring closes on Kapi!"
     ]
    ]
   },

@@ -60,6 +60,12 @@
    "zh": "跳，跳，跳！茉莉从一块石头跳到另一块石头，一直跳到了对岸。",
    "ja": "ぴょん、ぴょん、ぴょん！ マリは いしから いしへ とびうつって、むこうぎしまで わたりました。"
   },
+  "2.6": {
+   "lo": "ຢູ່ອີກຝັ່ງ ທຸກສິ່ງສ່ອງແສງຢ່າງນຸ່ມນວນ. ມະລິໄດ້ກ້າວເຂົ້າສູ່ໂລກຂອງເທວະດານ້ອຍແລ້ວ.",
+   "th": "ที่อีกฝั่ง ทุกอย่างส่องแสงนุ่มๆ มะลิได้ก้าวเข้ามาในโลกของเหล่าภูตแล้ว",
+   "zh": "河的另一边，一切都发着柔和的光。茉莉走进了精灵的世界。",
+   "ja": "むこうぎしでは、なにもかもが やさしく ひかっていました。マリは ようせいの せかいに はいって いたのです。"
+  },
   "3.1": {
    "lo": "ວ່າວຕົກລົງມາຄ້າງຢູ່ເທິງຫຼັງຄາສູງ. ມະລິຍ່າງເຂົ້າໄປໃກ້ ແລ້ວກໍອ້າປາກຄ້າງ.",
    "th": "ว่าวตกลงมาค้างอยู่บนหลังคาสูง มะลิเดินเข้าไปใกล้ แล้วก็อ้าปากค้าง",
@@ -181,22 +187,28 @@
    "ja": "ノクおばあさんが うたうと、ちょうちんは みちを てらすように、そらへ のぼっていきました。"
   },
   "6.5": {
-   "lo": "ເພງຂອງນາງພາເຮືອກັບບ້ານຢ່າງນຸ່ມນວນ. ມະລິໂບກມືລາຢູ່ໜ້າປະຕູ, ແລະ ປິບກໍສ່ອງແສງບອກວ່າ ນອນຫຼັບຝັນດີ.",
-   "th": "เพลงของยายพาเรือกลับบ้านอย่างนุ่มนวล มะลิโบกมือลาที่หน้าประตู แล้วปิ๊บก็ส่องแสงบอกราตรีสวัสดิ์",
-   "zh": "她的歌声轻轻地把船送回了家。茉莉在门口挥手说再见，皮皮也亮起小小的光，跟她说晚安。",
-   "ja": "ノクおばあさんの うたが、ふねを そっと おうちまで はこんで くれました。マリは ドアの まえで てを ふり、ピップは ぴかっと ひかって「おやすみ」を いいました。"
+   "lo": "ເພງຂອງນາງພາເຮືອຂ້າມແມ່ນ້ຳກັບມາ ອອກຈາກໂລກຂອງເທວະດານ້ອຍ.",
+   "th": "เพลงของยายพาเรือข้ามแม่น้ำกลับมา ออกจากโลกของเหล่าภูต",
+   "zh": "她的歌声载着小船，渡过河水，离开了精灵的世界。",
+   "ja": "ノクおばあさんの うたが、ふねを かわの こちらがわへ はこび、ようせいの せかいの そとへ つれて いきました。"
+  },
+  "6.6": {
+   "lo": "ເທວະດານ້ອຍພາມະລິກັບບ້ານຈົນເຖິງ. ມະລິໂບກມືລາຢູ່ໜ້າປະຕູ, ແລະ ປິບກໍສ່ອງແສງບອກວ່າ ນອນຫຼັບຝັນດີ.",
+   "th": "เหล่าภูตพามะลิกลับบ้านตลอดทาง มะลิโบกมือลาที่หน้าประตู แล้วปิ๊บก็ส่องแสงบอกราตรีสวัสดิ์",
+   "zh": "精灵们一路把茉莉送回了家。茉莉在门口挥手说再见，皮皮也亮起小小的光，跟她说晚安。",
+   "ja": "ようせいたちは、マリを おうちまで おくって くれました。マリは ドアの まえで てを ふり、ピップは ぴかっと ひかって「おやすみ」を いいました。"
   },
   "moral.1": {
-   "lo": "ຄວາມໃຈດີ ກໍຄືໂຄມໄຟ.",
-   "th": "ความใจดีก็เหมือนโคมไฟ",
-   "zh": "善良就像一盏灯笼。",
-   "ja": "やさしさは、ちょうちんの ようです。"
+   "lo": "ພວກເຮົາໄດ້ຮຽນຮູ້ຫຍັງແດ່?",
+   "th": "เราได้เรียนรู้อะไรบ้าง?",
+   "zh": "我们学到了什么？",
+   "ja": "なにを まなんだかな？"
   },
   "moral.2": {
-   "lo": "ເມື່ອເຈົ້າແບ່ງປັນແສງສະຫວ່າງໃຫ້ຄົນອື່ນ, ມັນກໍຈະຊ່ວຍໃຫ້ເຈົ້າຫາທາງກັບບ້ານ.",
-   "th": "เมื่อเราแบ่งแสงสว่างให้คนอื่น แสงนั้นก็จะช่วยให้เราหาทางกลับบ้านได้",
-   "zh": "当你把光分享给别人，它也会帮你找到回家的路。",
-   "ja": "あなたの ひかりを だれかに わけて あげると、その ひかりが、おうちへ かえる みちを てらして くれます。"
+   "lo": "ຊ່ວຍເຫຼືອຄົນອື່ນ ເຖິງແມ່ນວ່າເຈົ້າຈະເສົ້າໃຈ. ມະລິກໍເຮັດແບບນັ້ນ.",
+   "th": "ช่วยเหลือคนอื่นนะ แม้เราจะเศร้าอยู่ก็ตาม มะลิก็ทำแบบนั้น",
+   "zh": "就算自己心里难过，也要帮助别人。茉莉就是这样做的。",
+   "ja": "かなしい ときでも、ほかの ひとを たすけよう。マリは そう したね。"
   },
   "game.1.start": {
    "lo": "ແຕະກະທົງທີ່ມືດ ເພື່ອຈູດທຽນ!",
@@ -269,6 +281,24 @@
    "th": "โคมทุกดวงตื่นแล้ว!",
    "zh": "所有的灯笼都醒啦！",
    "ja": "ちょうちんが みんな おきたよ！"
+  },
+  "moral.3": {
+   "lo": "ແສງນ້ອຍໆ ເຮັດໃຫ້ຄວາມມືດບໍ່ໜ້າຢ້ານປານໃດ. ປິບໄດ້ຮູ້ແລ້ວວ່າແມ່ນແນວນັ້ນ.",
+   "th": "แสงเล็กๆ ช่วยให้ความมืดไม่น่ากลัวนัก ปิ๊บได้รู้แล้ว",
+   "zh": "一点点光，就能让黑暗不那么可怕。皮皮发现了这一点。",
+   "ja": "ちいさな ひかりが あれば、くらやみは そんなに こわく ないよ。ピップは それを みつけたね。"
+  },
+  "moral.4": {
+   "lo": "ຕັ້ງໃຈຟັງໃຫ້ດີ ແລ້ວເຈົ້າຈະພົບສິ່ງທີ່ເສຍໄປ. ມະລິໄດ້ຍິນເພງນັ້ນ.",
+   "th": "ตั้งใจฟังให้ดี แล้วเราจะเจอสิ่งที่หายไป มะลิได้ยินเพลงนั้น",
+   "zh": "仔细听，就能找回丢失的东西。茉莉听见了那首歌。",
+   "ja": "よく きいて みよう。なくした ものが みつかるよ。マリは あの うたを きいたね。"
+  },
+  "moral.5": {
+   "lo": "ຄວາມໃຈດີ ກໍຄືໂຄມໄຟ. ເມື່ອເຈົ້າແບ່ງປັນແສງສະຫວ່າງໃຫ້ຄົນອື່ນ, ມັນກໍຈະຊ່ວຍໃຫ້ເຈົ້າຫາທາງກັບບ້ານ.",
+   "th": "ความใจดีก็เหมือนโคมไฟ เมื่อเราแบ่งแสงสว่างให้คนอื่น แสงนั้นก็จะช่วยให้เราหาทางกลับบ้านได้",
+   "zh": "善良就像一盏灯笼。当你把光分享给别人，它也会帮你找到回家的路。",
+   "ja": "やさしさは、ちょうちんの ようです。 あなたの ひかりを だれかに わけて あげると、その ひかりが、おうちへ かえる みちを てらして くれます。"
   }
  },
  "touch": {
@@ -403,5 +433,12 @@
    "ja": "おうちへ"
   }
  },
- "notes": "LAO NEEDS A NATIVE SPEAKER'S CHECK before this book is published: every Lao line here is a careful draft, not a native speaker's text. Least sure first: 'spirits' as ເທວະດານ້ອຍ (little deities; ຜີ would read as 'ghost', too scary for the age); 'lantern-moth' as ແມງກະເບື້ອກາງຄືນໂຄມໄຟ (moth = ແມງກະເບື້ອກາງຄືນ; never plain ແມງກະເບື້ອ, which is a butterfly); 1.4 sounds ວູ່ວວ! ປັກ!; 5.3 bells ດິງ, ດ່ອງ, ດິງ; 3.1 ອ້າປາກຄ້າງ for 'gasped'; 3.6 ປະວ່າວໄວ້ for 'left her kite'; 4.2 ເທວະດາໃບຕອງ for 'leaf spirit'; 5.5 ລະຄັງດອກບົວ for 'lotus bells'; 6.5 ນອນຫຼັບຝັນດີ for 'goodnight'; Grandma Nok calling herself ແມ່ຕູ້ in 5.2; touch sounds ກະພືບ, ຈັກກະຈີ້, ຄິກໆ; moral.1 ຄວາມໃຈດີ; and any Thai-sounding wording. Names: Lao ມະລິ/ປິບ/ທອງ/ແມ່ຕູ້ນົກ, Thai มะลิ/ปิ๊บ/ทอง/ยายนก, Chinese 茉莉/皮皮/彤彤/诺克奶奶, Japanese マリ/ピップ/トン/ノクおばあさん. Mali means jasmine in Lao and Thai, so Chinese uses 茉莉 (jasmine, close in sound) rather than 玛丽 (Mary). Tong, a little spirit folded from a banana-leaf boat, means gold in Lao and Thai (ທອງ/ทอง); Chinese 彤彤 is a bright flame red, for the candle on his head; Japanese トン. Pip: Chinese 皮皮, friendlier for children than 皮普. Moth: Thai ผีเสื้อกลางคืน (never plain ผีเสื้อ, a butterfly). The festival: Lao ບຸນລອຍກະທົງ and Thai งานลอยกระทง (leaf boats with candles), Chinese 水灯节, Japanese ろうそくの ふねを ながす おまつり (not とうろうながし, the Obon rite for the dead). Spirits: Thai ภูตน้อย, Chinese 小精灵, Japanese ようせい (ghost words avoided on purpose). Japanese is in hiragana/katakana with spaces between words, as in Kapi's book; ちょうちんガ keeps ガ (moth) in katakana so it is not read as the particle が. NATIVE CHECK, other: Thai ผึง! for the string snapping and พั่บๆ for wings; Chinese 呼——！啪！ in 1.4; Japanese リン、ロン、リン for the lotus bells. Not included: the book title, since the file has no slot for it. Game prompts (game.N.start / game.N.praise) are spoken by the storyteller and subtitled like story lines; NATIVE CHECK, Lao: ແຕະ for 'tap' and ປຸກ for waking the lanterns. Optional, Eddie: Tong's body is banana leaf, which is ຕອງ/ตอง; his name is spelt ທອງ/ทอง (gold); either reading works."
+ "title": {
+  "lo": "ມະລິ ກັບ ຕະຫຼາດໂຄມໄຟ",
+  "th": "มะลิกับตลาดโคมไฟ",
+  "zh": "茉莉和灯笼集市",
+  "ja": "マリと ちょうちんの いちば",
+  "ko": "말리와 등불 시장"
+ },
+ "notes": "LAO NEEDS A NATIVE SPEAKER'S CHECK before this book is published: every Lao line here is a careful draft, not a native speaker's text. Least sure first: 'spirits' as ເທວະດານ້ອຍ (little deities; ຜີ would read as 'ghost', too scary for the age); 'lantern-moth' as ແມງກະເບື້ອກາງຄືນໂຄມໄຟ (moth = ແມງກະເບື້ອກາງຄືນ; never plain ແມງກະເບື້ອ, which is a butterfly); 1.4 sounds ວູ່ວວ! ປັກ!; 5.3 bells ດິງ, ດ່ອງ, ດິງ; 3.1 ອ້າປາກຄ້າງ for 'gasped'; 3.6 ປະວ່າວໄວ້ for 'left her kite'; 4.2 ເທວະດາໃບຕອງ for 'leaf spirit'; 5.5 ລະຄັງດອກບົວ for 'lotus bells'; 6.6 ນອນຫຼັບຝັນດີ for 'goodnight'; Grandma Nok calling herself ແມ່ຕູ້ in 5.2; touch sounds ກະພືບ, ຈັກກະຈີ້, ຄິກໆ; moral.1 ຄວາມໃຈດີ; and any Thai-sounding wording. Names: Lao ມະລິ/ປິບ/ທອງ/ແມ່ຕູ້ນົກ, Thai มะลิ/ปิ๊บ/ทอง/ยายนก, Chinese 茉莉/皮皮/彤彤/诺克奶奶, Japanese マリ/ピップ/トン/ノクおばあさん. Mali means jasmine in Lao and Thai, so Chinese uses 茉莉 (jasmine, close in sound) rather than 玛丽 (Mary). Tong, a little spirit folded from a banana-leaf boat, means gold in Lao and Thai (ທອງ/ทอง); Chinese 彤彤 is a bright flame red, for the candle on his head; Japanese トン. Pip: Chinese 皮皮, friendlier for children than 皮普. Moth: Thai ผีเสื้อกลางคืน (never plain ผีเสื้อ, a butterfly). The festival: Lao ບຸນລອຍກະທົງ and Thai งานลอยกระทง (leaf boats with candles), Chinese 水灯节, Japanese ろうそくの ふねを ながす おまつり (not とうろうながし, the Obon rite for the dead). Spirits: Thai ภูตน้อย, Chinese 小精灵, Japanese ようせい (ghost words avoided on purpose). Japanese is in hiragana/katakana with spaces between words, as in Kapi's book; ちょうちんガ keeps ガ (moth) in katakana so it is not read as the particle が. NATIVE CHECK, other: Thai ผึง! for the string snapping and พั่บๆ for wings; Chinese 呼——！啪！ in 1.4; Japanese リン、ロン、リン for the lotus bells. Not included: the book title, since the file has no slot for it. Game prompts (game.N.start / game.N.praise) are spoken by the storyteller and subtitled like story lines; NATIVE CHECK, Lao: ແຕະ for 'tap' and ປຸກ for waking the lanterns. Optional, Eddie: Tong's body is banana leaf, which is ຕອງ/ตอง; his name is spelt ທອງ/ทอง (gold); either reading works. NEW OR CHANGED 14 Nov (the owner's story change; a Lao speaker to check): 2.6 ຢູ່ອີກຝັ່ງ ທຸກສິ່ງສ່ອງແສງຢ່າງນຸ່ມນວນ. ມະລິໄດ້ກ້າວເຂົ້າສູ່ໂລກຂອງເທວະດານ້ອຍແລ້ວ.  6.5 ເພງຂອງນາງພາເຮືອຂ້າມແມ່ນ້ຳກັບມາ ອອກຈາກໂລກຂອງເທວະດານ້ອຍ.  6.6 ເທວະດານ້ອຍພາມະລິກັບບ້ານຈົນເຖິງ. ມະລິໂບກມືລາຢູ່ໜ້າປະຕູ, ແລະ ປິບກໍສ່ອງແສງບອກວ່າ ນອນຫຼັບຝັນດີ. ('the spirit world' is ໂລກຂອງເທວະດານ້ອຍ; 'glowed softly' ສ່ອງແສງຢ່າງນຸ່ມນວນ.) MORAL PAGE (14 Nov, Lao to check): moral.1 ພວກເຮົາໄດ້ຮຽນຮູ້ຫຍັງແດ່? (as Kapi's); moral.2 ຊ່ວຍເຫຼືອຄົນອື່ນ ເຖິງແມ່ນວ່າເຈົ້າຈະເສົ້າໃຈ. ມະລິກໍເຮັດແບບນັ້ນ.; moral.3 ແສງນ້ອຍໆ ເຮັດໃຫ້ຄວາມມືດບໍ່ໜ້າຢ້ານປານໃດ. ປິບໄດ້ຮູ້ແລ້ວວ່າແມ່ນແນວນັ້ນ.; moral.4 ຕັ້ງໃຈຟັງໃຫ້ດີ ແລ້ວເຈົ້າຈະພົບສິ່ງທີ່ເສຍໄປ. ມະລິໄດ້ຍິນເພງນັ້ນ.; moral.5 is the old two-line closing joined (ຄວາມໃຈດີ ກໍຄືໂຄມໄຟ. ເມື່ອເຈົ້າແບ່ງປັນແສງສະຫວ່າງໃຫ້ຄົນອື່ນ, ມັນກໍຈະຊ່ວຍໃຫ້ເຈົ້າຫາທາງກັບບ້ານ.)."
 }

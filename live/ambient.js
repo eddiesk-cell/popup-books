@@ -17,6 +17,7 @@ import * as THREE from "three";
 import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { markWords } from "../book.js";
 import { glow } from "./games.js";
+import { extra3d } from "./extras3d.js";
 
 const B = ([x, y, z]) => new THREE.Vector3(x, z, -y);  // Blender (z up) -> three (y up)
 const rnd = (a, b) => a + Math.random() * (b - a), jit = s => s * rnd(0.75, 1.25);  // waits jitter ±25%: loops never line up
@@ -52,7 +53,7 @@ const FOCUS = {  // depth of field as one cheap pass: sharp around the focus lin
 // the room around the book, by the spread's light: the wall far beyond (out of focus) and the lamp or sun pool on the desk
 const ROOM = { day: { top: "#5b4a3c", low: "#7a6048", foot: "#3a2b20", win: "#fff3d6", glow: "#ffe2a8", dots: "#ffe9c0", pool: [1, 0.9, 0.72], alpha: 0.85 },
   evening: { top: "#2c1d1c", low: "#4a2e20", foot: "#1e130d", win: "#ffb26a", glow: "#ff9a50", dots: "#ffc27a", pool: [1, 0.72, 0.45], alpha: 0.75 },
-  night: { top: "#0b0d18", low: "#1c150e", foot: "#0b0908", win: "#3a5a8c", glow: "#6d8cc8", dots: "#ffb868", pool: [1, 0.78, 0.5], alpha: 0.7 } };
+  night: { top: "#3b4a7a", low: "#33416b", foot: "#2c3a63", win: "#3a5a8c", glow: "#6d8cc8", dots: "#ffb868", pool: [1, 0.78, 0.5], alpha: 0.7 } };
 
 // ---------- paper: card pictures and stand-in cut shapes ----------
 const texLoader = new THREE.TextureLoader(), cache = {};
@@ -83,6 +84,17 @@ function sprite(stops) {  // a soft round sprite (motes, smoke)
     const c = document.createElement("canvas"), g = c.getContext("2d"); c.width = c.height = 64;
     const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); stops.split(" ").forEach((s, i, a) => r.addColorStop(i / (a.length - 1), s));
     g.fillStyle = r; g.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
+  })();
+}
+
+function seedFluff() {  // a seed of fluff (assets/toad-king/refs/seed-fluff-ref.png): a brown seed under a fan of white tufts
+  return cache.seed ??= (() => {
+    const c = document.createElement("canvas"), g = c.getContext("2d"); c.width = c.height = 64; g.lineCap = "round";
+    for (const a of [-0.7, -0.35, 0, 0.35, 0.7]) for (const [w, col] of [[8, "#d9cfbf"], [5.5, "#fffdf6"]]) {
+      g.strokeStyle = col; g.lineWidth = w; g.beginPath(); g.moveTo(32, 40); g.lineTo(32 + 24 * Math.sin(a), 40 - 26 * Math.cos(a)); g.stroke();
+    }
+    g.fillStyle = "#8a5a2e"; g.beginPath(); g.arc(32, 48, 10, 0, TAU); g.fill();
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
   })();
 }
 
@@ -192,7 +204,7 @@ const pageOf = root => {
 // else the farthest of the cards rising 0.3 above the page in its back 30% (a strip of village standing in front is not the
 // backdrop). top is its skyline, the column tops across its middle 80%, the low 30% of them: the line no frame shows room above
 export function skyline(root, cards = standing(root), names = null) {
-  const page = pageOf(root), D = page.max.z - page.min.z;
+  const page = pageOf(root), D = page.max.z - page.min.z, up = new THREE.Vector3();
   let walls;
   if (names?.length) {  // exactly the named nodes' pictures
     walls = [];
@@ -202,14 +214,17 @@ export function skyline(root, cards = standing(root), names = null) {
   } else {
     const back = cards.filter(c => c.box.max.y - page.max.y > 0.3 && c.box.min.z < page.min.z + 0.3 * D), far = Math.min(...back.map(c => c.box.min.z));
     walls = back.filter(c => c.box.min.z < far + 0.06);
+    for (const c of [...walls]) c.g.children.forEach(o => { if (o !== c.mesh && o.isMesh && /^art-/.test(o.material.name) && !walls.some(w => w.mesh === o) && up.set(0, 1, 0).transformDirection(o.matrixWorld).y > 0.6) walls.push({ g: c.g, mesh: o, box: new THREE.Box3().setFromObject(o) }); });  // a split fold's other half (standing() keeps one card a group): the skyline and the ends are the whole backdrop's, not half
   }
   if (!walls.length) return null;
-  const cols = new Array(40).fill(-Infinity), x0 = Math.min(...walls.map(c => c.box.min.x)), x1 = Math.max(...walls.map(c => c.box.max.x)), v = new THREE.Vector3();
-  for (const c of walls) { const pa = c.mesh.geometry.attributes.position; c.mesh.updateWorldMatrix(true, false);
-    for (let i = 0; i < pa.count; i++) { v.fromBufferAttribute(pa, i).applyMatrix4(c.mesh.matrixWorld); const j = Math.floor((v.x - x0) / (x1 - x0) * 40); if (j >= 4 && j < 36) cols[j] = Math.max(cols[j], v.y); } }
+  const cols = new Array(40).fill(-Infinity), x0 = Math.min(...walls.map(c => c.box.min.x)), x1 = Math.max(...walls.map(c => c.box.max.x)), v = new THREE.Vector3(), w = new THREE.Vector3();
+  const mark = (a, b) => { const n = Math.max(1, Math.ceil(Math.abs(b.x - a.x) / (x1 - x0) * 80)); for (let i = 0; i <= n; i++) { const j = Math.floor((a.x + (b.x - a.x) * i / n - x0) / (x1 - x0) * 40); if (j >= 4 && j < 36) cols[j] = Math.max(cols[j], a.y + (b.y - a.y) * i / n); } };  // along the edge, not at its ends: a card's outline has a vertex every few centimetres, so a column between two had no top (the lower card behind it set the skyline: the land card, 0.46 under a 0.80 sky)
+  for (const c of walls) { const g = c.mesh.geometry, pa = g.attributes.position, ix = g.index; c.mesh.updateWorldMatrix(true, false);
+    const P = Array.from({ length: pa.count }, (_, i) => new THREE.Vector3().fromBufferAttribute(pa, i).applyMatrix4(c.mesh.matrixWorld));
+    for (let i = 0, n = ix ? ix.count : pa.count; i + 2 < n; i += 3) { const a = P[ix ? ix.getX(i) : i], b = P[ix ? ix.getX(i + 1) : i + 1], d = P[ix ? ix.getX(i + 2) : i + 2]; mark(a, b); mark(b, d); mark(d, a); } }
   const tops = cols.filter(isFinite).sort((a, b) => a - b);
   return { top: tops[Math.floor(tops.length * 0.3)] ?? Math.max(...walls.map(c => c.box.max.y)), z: walls.reduce((a, c) => a + c.box.getCenter(v).z, 0) / walls.length, walls,
-    x0, x1, floor: page.max.y };  // its ends, and the page it stands on
+    x0, x1, floor: page.max.y, px0: page.min.x, px1: page.max.x, pz1: page.max.z };  // its ends, and the page it stands on (its sides and its near edge)
 }
 // How far a camera's frame shows the room past the backdrop: above its skyline or beyond its ends, measured at its depth over
 // the page (metres; 0 = none). Every shot is held to 0, and the viewer can hold its reading view to it: roomShown(cam, sp.sky).
@@ -228,6 +243,8 @@ function room(camera, sky) {  // the frame's border against the backdrop: {top, 
 export function roomShown(camera, sky) { if (!sky) return 0; camera.updateMatrixWorld(); const r = room(camera, sky); return Math.max(0, r.top, r.side); }
 
 // ---------- the adapter for live.js's hooks: one ambient per spread, made on the spread's first frame ----------
+let SAYS = {};  // line id -> who says each word, read once from the book's story.json
+fetch(`../${new URLSearchParams(location.search).get("book") || "kapi"}/story.json`).then(r => r.json()).then(j => (SAYS = Object.fromEntries([...j.spreads.flatMap(p => p.lines), ...(j.moral ?? [])].map(l => [l.id, l.say.flatMap(([who, x]) => x.split(" ").map(() => who))])))).catch(() => {});
 const game = sp => sp.play || sp.game;  // the spread's game (games.js; older viewers: Collect)
 let current = null, pending = null;
 export const ambient = {
@@ -240,11 +257,12 @@ export const ambient = {
       const r = L.reader, lines = () => sp.page?.lines || [], gate = () => (sp.G?.before ? lines().indexOf(sp.G.before) : lines().length);  // the game comes before its line, or after the last
       current = addAmbient(scene, cam, sp.m, { root: sp.root, parent: sp.group, lights: sp.stage, controls: L.controls, composer: L.composer, cast: sp.cast,
         backdrop: sp.sky, frame: () => L.frame,  // the viewer's measure as the spread loaded (standing); the named backdrop is measured again at build
-        mode: () => L.mode, home: () => L.home, halt: () => L.halt?.(),  // the viewer's reading view (phone framing included), kept current on resize; halt stops its glide home
+        mode: () => L.mode, home: () => L.home, readHome: () => L.readHome?.(), halt: () => L.halt?.(), titled: () => L.titled,  // titled: before the first pull the viewer's title view stands (no story shot)  // the viewer's reading view (phone framing included), kept current on resize; halt stops its glide home
         story: () => ({ line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused,
           // "next": the line before the game has been read (the pause before its prompt); "wait": its prompt and play; a read again starts over
           game: game(sp) && (game(sp).targets?.length ?? sp.targets?.length) ? (game(sp).complete ? "won" : sp.at >= gate() ? "wait" : sp.at === gate() - 1 && r?.audio.ended ? "next" : null) : null,
           end: sp.at >= lines().length, at: sp.at }),
+        info: id => { const T = r?.timing[id], ls = lines(); return T && { dur: T.duration, words: T.words, say: SAYS[id], prev: ls[ls.indexOf(id) - 1] }; },  // a line's timing and who says each word (stories/<book>/story.json)
         wordAt: (line, word) => { const i = r ? markWords(r.text[line] || "", word).indexOf(true) : -1; return i < 0 ? 0 : r.timing[line].words[i][0]; } });
     }
     current?.update(now / 1000, dt);
@@ -264,6 +282,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const controls = opts.controls, canvas = opts.canvas || controls?.domElement, cast = opts.cast || [];
   const isOpen = () => !opts.mode || opts.mode() === "open";
+  const SCAM = (m.camera?.story === true || new URLSearchParams(location.search).get("story") === "1") && !!controls && !calm;  // the story camera: the page's camera.story, or ?story=1
   const SH = m.shots || {}, W = m.wind || {}, LI = m.light || {};
   let HOME, LOOK;  // the reading view the shots offset from: the viewer's (window.live.home), else the manifest camera
   const reHome = () => { const h = opts.home?.(); HOME = h ? h.pos.clone() : B(m.camera.at); LOOK = h ? h.look.clone() : B(m.camera.look); };
@@ -314,7 +333,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
     Object.assign(story, s);
   };
   const reached = (line, word) => line === "game" ? story.game === "wait" || story.game === "next" : line === "game:won" ? story.game === "won"
-    : line === "end" ? story.end && story.game !== "wait" && story.game !== "next"  // a game after the last line holds its own shot; the end comes once it is won
+    : line === "end" ? story.end && story.game !== "wait" && story.game !== "next"  // a game after the last line holds its own shot; the end comes once it is won,
+      && !(run?.s && now - run.t0 < Math.max(run.secs + 1, run.s.seconds ?? 3))  // and once the last line's own shot has landed and held a second (a face close-up on the last word is seen before the end pulls away)
     : story.line === line && (story.speaking || story.t === Infinity) && story.t >= (word ? opts.wordAt?.(line, word) ?? 0 : 0);
   const when = (line, word = "", who = "") => { const k = `${line}|${word}|${who}`; if (fired.has(k) || !reached(line, word)) return false; fired.add(k); return true; };
 
@@ -371,7 +391,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
         r.addColorStop(0, "#000"); r.addColorStop(0.45, "#000"); r.addColorStop(0.97, "#fff"); g.fillStyle = "#fff"; g.fillRect(0, 0, w, h); g.fillStyle = r; g.beginPath(); g.arc(w / 2, h / 2, w / 2, 0, TAU); g.fill(); }),
       { colorSpace: THREE.NoColorSpace }), transparent: true, depthWrite: false, fog: false }));
     fade.position.set(c.x, floor + 0.0004, c.z);
-    const nook = new THREE.Group(); nook.add(room, fade, pool, contact); scene.add(nook);  // in the scene, not the spread: it stays through exit turns
+    const nook = new THREE.Group(); nook.name = "nook"; nook.add(room, fade, pool, contact); scene.add(nook);  // in the scene, not the spread: it stays through exit turns
     disposers.push(() => { nook.removeFromParent(); nook.traverse(o => o.isMesh && (o.geometry.dispose(), o.material.map?.dispose(), o.material.alphaMap?.dispose(), o.material.dispose())); });
     if (fogOn) scene.fog.color.set(RM.foot);  // far paper and desk fade into the wall's foot, no horizon line
   }
@@ -389,45 +409,69 @@ export function addAmbient(scene, cam, m, opts = {}) {
   }
 
   // ---------- the camera: the opening shot, a shot per line (DIRECTION.md "shots"), breathing; the reader's hands win ----------
-  let faceLim = null;  // the reader's orbit limits while a face shot runs
+  let faceLim = null, near = Infinity;  // the reader's orbit limits while a face shot (or a near shot of a small subject) runs; near: that shot's own nearest distance
+  const nearShot = s => {  // a close or medium shot comes as near as its subject needs to stand 12 percent of the screen's height (never under 0.05 m), not only to 0.6 m and the reader's orbit floor: the Toad King's 6 cm hero; Kapi and Mali need more than 0.6 m for that, so theirs is unchanged
+    if (s?.framing !== "close" && s?.framing !== "medium") return 0.6;
+    const h = Math.max(0, ...cast.filter(c => c.body.visible && [s.target].flat().includes(c.name)).map(c => c.height || 0));
+    return h ? Math.min(0.6, Math.max(0.05, h / (0.12 * 2 * Math.tan(deg(cam.fov) / 2)))) : 0.6;
+  };
   const probe = cam.clone(), lim = controls || {}, lims = () => faceLim ?? lim;  // lims: the reader's own limits, also while a face shot has the orbit's let out
+  const SC = { mem: {}, key: null, beat: null, since: 0, sign: null, half: null, c: null, v: null, out: -9, goal: null, endSince: -1 };
+  let low = false;  // a story beat: seen from at most 25° above its subjects, below the reader's own polar limit (lifted for it as for a face shot)
   const fit = (pos, look) => {  // inside the reader's orbit limits and the director's: above z 0.3, at most 25° off the reading axis
     const s = new THREE.Spherical().setFromVector3(tmp.copy(pos).sub(look)), e = 0.02, a0 = Math.atan2(HOME.x - LOOK.x, HOME.z - LOOK.z);  // margins wider than the breathing drift
-    s.radius = Math.min(Math.max(s.radius, (lims().minDistance ?? 0) + 0.03), (lim.maxDistance ?? Infinity) - 0.03);
-    s.phi = Math.min(Math.max(s.phi, (lim.minPolarAngle ?? 0) + e), (lims().maxPolarAngle ?? Math.PI) - e);
+    s.radius = Math.min(Math.max(s.radius, Math.min((lims().minDistance ?? 0) + 0.03, near)), (lim.maxDistance ?? Infinity) - 0.03);  // near: a close or medium shot of a small subject (nearShot)
+    s.phi = Math.min(Math.max(s.phi, (lim.minPolarAngle ?? 0) + e), Math.max(lims().maxPolarAngle ?? Math.PI, low ? deg(82) : 0) - e);
     s.theta = Math.min(Math.max(s.theta, Math.max(lim.minAzimuthAngle ?? -Infinity, a0 - deg(25)) + e), Math.min(lim.maxAzimuthAngle ?? Infinity, a0 + deg(25)) - e);
     pos.setFromSpherical(s).add(look);
-    if (pos.y < 0.3) { pos.y = 0.3; if (look.y > 0.29) look.y = 0.29; }
+    const fl = low ? 0.18 : 0.3; if (pos.y < fl) { pos.y = fl; if (look.y > fl - 0.01) look.y = fl - 0.01; }  // a story beat may stand lower (0.18): at 0.3 a phone's close shot of a swimmer looked down at him from 28-41 degrees
     return { pos, look };
   };
+  const boneOf = (c, n) => { if (!c?.model) return null; const k = c.boneAt ??= {}; if (!k[n]) c.model.traverse(o => { if (!k[n] && o.name === n && o.matrixWorld.determinant()) k[n] = o; }); return k[n] ?? null; };  // the drawn skeleton's bone, never a spare mood head's (stored at scale 0, its bones gave toad s02's face shot a zero height: the camera on its look point, NaN)
   const faceRig = s => {  // "face": her head and shoulders from in front of her face, the camera level with her chin looking up a little, near enough
-    const c = subjects(s)[0], head = c?.model?.getObjectByName("head");  // that her face stands 100 px tall (75 on an upright phone); no fit, room or keep pushes it out
+    const c = subjects(s)[0], head = boneOf(c, "head");  // that her face stands 100 px tall (75 on an upright phone); no fit, room or keep pushes it out
     if (!head) return null;
-    const faceH = 0.24 * c.height, d = faceH * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 80 : 100)), chin = head.getWorldPosition(new THREE.Vector3());
+    // her head as built, chin to crown: 0.24 of her height gave Mali's head 59 px on a phone, not 80
+    const crown = boneOf(c, "HeadTop_End")?.getWorldPosition(new THREE.Vector3()), faceH = crown ? crown.y - head.getWorldPosition(new THREE.Vector3()).y : 0.24 * c.height, d = faceH * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 80 : 100) * (s.size ?? 1)), chin = head.getWorldPosition(new THREE.Vector3());
     const axis = HOME.clone().sub(LOOK).setY(0).normalize(), her = new THREE.Vector3(Math.sin(c.yaw ?? 0), 0, Math.cos(c.yaw ?? 0)), a = Math.atan2(axis.x, axis.z), b = Math.atan2(her.x, her.z);
     const yaw = a + Math.max(-deg(30), Math.min(deg(30), Math.atan2(Math.sin(b - a), Math.cos(b - a))));  // toward her face, at most 30° off the reading axis
     return { pos: chin.clone().add(new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)).multiplyScalar(d)), look: chin.clone().setY(chin.y + faceH / 2), face: true };
   };
-  const rigOf = s => {  // a shot's camera: its distance along the reading axis swung by yaw, the target's top no higher than 60% up
-    if (!s || s === "reading" || s.target == null) return { pos: HOME.clone(), look: LOOK.clone() };  // exactly the viewer's own framing, so Reset never jumps
+  const faceKept = (r, s, k) => {  // a face shot's view is never further off her face than the swing in began, closing to a cone that keeps her face whole under the
+    const c = subjects(s)[0], head = boneOf(c, "head"); if (!head) return r;  // read-along page: a long swing could pass her by, a wave dip her chin off the screen
+    const d = r.look.clone().sub(r.pos), u = head.getWorldPosition(new THREE.Vector3()).addScaledVector(UP, 0.1 * c.height).sub(r.pos), a = d.angleTo(u);  // to her face's middle (the head bone is at her chin)
+    run.a0 ??= a;
+    const lim = Math.max((1 - smooth(k)) * run.a0, 0.3 * deg(cam.fov) / 2);
+    return a <= lim ? r : { pos: r.pos, look: d.applyQuaternion(new THREE.Quaternion().slerp(new THREE.Quaternion().setFromUnitVectors(d.clone().normalize(), u.normalize()), 1 - lim / a)).add(r.pos) };
+  };
+  const rigOf = s => { const was = near, nr = nearShot(s); try { const r = rig(s); if (r && nr < 0.6 && !r.face) r.near = nr; return r; } finally { near = was; } };  // near reaches fit() only inside this shot's own rig
+  const rig = s => {  // a shot's camera: its distance along the reading axis swung by yaw, the target's top no higher than 60% up
+    if (!s || s === "reading" || s.target == null) { const h = { pos: HOME.clone(), look: LOOK.clone() }; if (!s?.room) return h; const f = fitIn(h); return whole(f, cast.filter(c => c.body.visible && (!s.keep || s.keep.includes(c.name)))) ? f : h; }  // exactly the viewer's own framing, so Reset never jumps (a closing shot off the phone: that view with no room past the backdrop)
     if (s.framing === "face") return faceRig(s);
     const f = frame(s.target, true); if (!f) return null;  // whole bodies (a crocodile is long)
     const half = Math.min(deg(cam.fov) / 2, Math.atan(Math.tan(deg(cam.fov) / 2) * cam.aspect));  // the narrower half-angle: a phone's width
     const allow = phone() ? (s.move === "push" ? 1 / 0.85 : 1) : 1, rr = f.r + (phone() && s.move === "drift" ? 0.04 : 0);  // a phone's subjects stay whole as the move ends: a push ends 15% closer, a drift slides 0.04
-    const dist = Math.max(0.6, (FRAMING[s.framing] ?? FRAMING.medium) * (phone() ? Math.tan(deg(15)) / Math.tan(deg(cam.fov) / 2) : 1), rr / Math.tan(half) * (phone() ? 1.3 : 1.15) * allow);
+    const nr = nearShot(s), dist = Math.max(nr, (FRAMING[s.framing] ?? FRAMING.medium) * (phone() ? Math.tan(deg(15)) / Math.tan(deg(cam.fov) / 2) : 1), rr / Math.tan(half) * (phone() ? 1.3 : 1.15) * allow);
+    if (phone() && Array.isArray(s.target) && !s.lean && dist > 0.7) {  // a phone is too narrow for a river's width of stones and a turtle: past 0.7 m it frames the focus (else the characters), as the shots of one character do
+      const cs = [s.focus, ...s.target].filter(n => cast.some(c => c.name === n && c.body.visible)), one = cs.length ? (cast.some(c => c.name === s.focus && c.body.visible) ? [s.focus] : [...new Set(cs)]) : null;
+      const r = one && rigOf({ ...s, target: one.length === 1 ? one[0] : one, lean: true }); if (r) return { ...r, lean: one.length === 1 ? one[0] : one };
+    }
     const dir = HOME.clone().sub(LOOK).normalize().applyAxisAngle(UP, deg(Math.max(-25, Math.min(25, s.yaw || 0))));
-    const r = fit(f.c.clone().addScaledVector(dir, dist), f.c.clone());
+    if (s.pitch) dir.applyAxisAngle(tmp.set(dir.z, 0, -dir.x).normalize(), -deg(Math.max(0, Math.min(40, s.pitch))));  // pitch: the camera raised over its look point by this many degrees (0 to 40), seen from higher; still inside the room fit, the orbit's limits and the text panel's rule below
+    near = nr < 0.6 ? nr : Infinity; const r = fit(f.c.clone().addScaledVector(dir, dist), f.c.clone());
     for (let i = 0; i < 12; i++) {  // the read-along page covers the top quarter: lift the view until the target's top sits below 60%
       probe.position.copy(r.pos); probe.lookAt(r.look); probe.updateMatrixWorld();
       if (tmp.copy(f.top).project(probe).y <= 0.2) break;
       r.look.y += 0.03; r.pos.y += 0.03;
     }
-    const q = fitIn(r), who = subjects(s);
+    const k = s.move === "push" ? 0.85 : s.move === "pull" && phone() ? 1.15 : 1, end = (x, f = k) => ({ pos: x.pos.clone().sub(x.look).multiplyScalar(f).add(x.look), look: x.look.clone() });  // where the move ends
+    const fitted = top => (k > 1 ? end(fitIn(end(r), top), 1 / k) : fitIn(r, top)), q = fitted(true), who = subjects(s);  // a phone's pull is fitted where it ends, widest (a phone fits its shots once, here)
     if (!who.length) return q;
-    const end = x => ({ pos: x.pos.clone().sub(x.look).multiplyScalar(s.move === "push" ? 0.85 : 1).add(x.look), look: x.look.clone() });
-    return whole(end(q), who) || !whole(end(r), who) ? q : r;  // on a phone the room fit may not cut a subject: then the shot keeps its own framing
+    const ok = [q, ...(phone() ? [fitted(false), r] : [])].find(x => whole(end(x), who));  // the room fit may not cut a subject: then less of it (a phone: only across), else the shot's own framing
+    const room = !phone() && bd && s.yaw ? roomOf(q) : null;  // off the phone no shot shows the room: the view turns less toward the side instead (Kapi 2.1 and 2.3 showed it at yaw 15 and 25)
+    return (!ok || (room && Math.max(room.top, room.side) > 0.01)) && !phone() && Math.abs(s.yaw || 0) > 2 ? rigOf({ ...s, yaw: s.yaw / 2 }) : ok ?? q;
   };
-  const phone = () => cam.aspect < 1, pg = pageOf(root);  // an upright phone: closer in, as the viewer's own phone view, room above allowed, no desk below
+  const phone = () => cam.aspect < 1, pg = pageOf(root);  // an upright phone: closer in, as the viewer's own phone view; no room above where its subjects allow it, then no desk below
   const aim = r => { probe.copy(cam); probe.position.copy(r.pos); probe.lookAt(r.look); probe.updateMatrixWorld(); return probe; };
   const deskOver = r => {  // how far past the page's near edge the tall frame's bottom edge lands, on the desk (below 0: on the page); exact, so it never steps
     const d = tmp.set(0, -1, 0.5).unproject(aim(r)).sub(r.pos).normalize();
@@ -452,7 +496,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const need = (r, who, others, desk = 0) => {  // the least move (across, up, back along the view) that frames every corner of `who` from r under the read-along page,
     aim(r); const P = corners(who), [tx, ty] = halves();  // and the slide across that leaves no one else half in frame; closed form, so it never steps
     const lo = (i, a, b) => Math.max(...P.map(p => p[i] - a * (p[2] + b))), hi = (i, a, b) => Math.min(...P.map(p => p[i] + a * (p[2] + b)));
-    const axes = [[0, 0.94 * tx, 0.94 * tx], [1, 0.6 * ty, 0.94 * ty]];  // x: 3% in from each side; y: the top below 60% (the read-along page), the bottom 3% in
+    const axes = [[0, 0.94 * tx, 0.94 * tx], [1, (P.length ? Math.min(0.6, safeNow().yt) : 0.6) * ty, 0.94 * ty]];  // x: 3% in from each side; y: the top below 60% and under the read-along words as drawn (R28: on desktop they reach 74%), the bottom 3% in
     const back = P.length ? Math.min(0.6, Math.max(0, ...axes.map(([i, a, b]) => (lo(i, a, 0) - hi(i, b, 0)) / (a + b)))) : 0;
     const [lx, hx] = P.length ? [lo(0, axes[0][1], back), hi(0, axes[0][2], back)] : [-0.15, 0.15], s0 = Math.min(Math.max(0, lx), hx);  // slide no further than it must; no subjects (a view of a place, the reading view): at most 15 cm
     const O = others.map(c => corners([c])).filter(Q => Q.length), x = (p, s) => (p[0] - s) / (tx * (p[2] + back));
@@ -461,27 +505,33 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const sx = [s0, ...O.flatMap(Q => [edge(Q, 1, Math.max) + 1e-3, edge(Q, -1, Math.min) - 1e-3, edge(Q, -1, Math.max) + 1e-3, edge(Q, 1, Math.min) - 1e-3])]
       .filter(s => s >= lx && s <= hx).map(s => [half(s) + Math.abs(s - s0), s]).sort((a, b) => a[0] - b[0])[0]?.[1] ?? s0;  // another character wholly in or wholly out, if a slide that keeps the subjects can do it
     const e = tmp.set(r.look.x, pg.max.y, pg.max.z).applyMatrix4(probe.matrixWorldInverse), up = -e.z > 0.05 ? desk * Math.min(0.8, Math.max(0, e.y + ty * (-e.z + back) + 0.01)) : 0;  // at most 80 cm: a reading view farther over the desk is slid the rest of the way  // up far enough that the page's near edge is under the frame: no desk
-    return { x: s0, y: P.length ? Math.min(Math.max(up, lo(1, axes[1][1], back)), hi(1, axes[1][2], back)) : up, back, others: sx - s0, lx, hx };
+    return { x: s0, up, lo: P.length ? lo(1, axes[1][1], back) : -Infinity, hi: P.length ? hi(1, axes[1][2], back) : Infinity, back, others: sx - s0, lx, hx };
   };
   const slack = (r, who) => {  // how far the frame may slide back into the book (along -z) before a subject reaches an edge; closed form
-    aim(r); const [tx, ty] = halves(), u = new THREE.Vector3(0, 0, 1).transformDirection(probe.matrixWorldInverse); let m = Infinity;
-    for (const [x, y, D] of corners(who)) for (const [A, B] of [[0.99 * tx * D - x, -0.99 * tx * u.z - u.x], [0.99 * tx * D + x, -0.99 * tx * u.z + u.x], [0.6 * ty * D - y, -0.6 * ty * u.z - u.y], [0.99 * ty * D + y, -0.99 * ty * u.z + u.y]])  // to the edge, never past it
+    aim(r); const [tx, ty] = halves(), u = new THREE.Vector3(0, 0, 1).transformDirection(probe.matrixWorldInverse), wt = Math.min(0.6, safeNow().yt); let m = Infinity;
+    for (const [x, y, D] of corners(who)) for (const [A, B] of [[0.99 * tx * D - x, -0.99 * tx * u.z - u.x], [0.99 * tx * D + x, -0.99 * tx * u.z + u.x], [wt * ty * D - y, -wt * ty * u.z - u.y], [0.99 * ty * D + y, -0.99 * ty * u.z + u.y]])  // to the edge, never past it
       if (B < 0) m = Math.min(m, Math.max(0, A / -B));
     return m;
   };
   let dz = 0, tilt = 0, od = 0, kept = new THREE.Vector3(), keptFrom = kept.clone(), keptRun, keptT = -9, step = 0;  // an upright phone's desk slide, tilt, others' slide and subject keep (step: this frame's dt)
   const toward = (v, goal, tau, rate) => { const d = goal - v, m = d * (1 - Math.exp(-step / tau)); return v + Math.sign(m) * Math.min(Math.abs(m), rate * step); };  // eased, and never faster than rate m/s
   let bd = opts.backdrop || null;  // the standing backdrop (the viewer measures it as the spread loads; else at build)
-  const roomOf = r => { probe.copy(cam); probe.position.copy(r.pos); probe.lookAt(r.look); probe.updateMatrixWorld(); return room(probe, bd); };
-  const fitIn = r => {  // no frame shows the room past the backdrop: move in toward the look, else across toward its middle (its ends), then down (its top)
-    if (!bd || (phone() && story.game === "wait")) return r;  // a phone's game view frames every target itself; moving in would push edge targets off screen (eased() lets the correction go over ~0.4 s)
+  const roomOf = r => {  // how far the frame shows the room past the backdrop, or the page's own sides (the book's edge and the desk beyond it)
+    probe.copy(cam); probe.position.copy(r.pos); probe.lookAt(r.look); probe.updateMatrixWorld();
+    const o = room(probe, bd); if (bd?.px1 == null) return o;
+    const eye = tmp.setFromMatrixPosition(probe.matrixWorld), e0 = eye.clone(), d = new THREE.Vector3(); let edge = -Infinity;
+    for (const [x, y] of BORDER) { d.set(x, y, 0.5).unproject(probe).sub(e0); if (d.y > -1e-6) continue; const k = (bd.floor - e0.y) / d.y, fz = e0.z + d.z * k; if (fz > bd.pz1 || (SCAM && fz < bd.z)) continue; const fx = e0.x + d.x * k; edge = Math.max(edge, bd.px0 - fx, fx - bd.px1); }  // where the frame's edge lands on the page (under the story camera not behind the backdrop, where the floor is hidden: a low beat's side rays land there, 0.9 m past the page's end)
+    return { top: o.top, side: Math.max(o.side, edge) };
+  };
+  const fitIn = (r, top = !phone()) => {  // no frame shows the room past the backdrop: move in toward the look, else across toward its middle (its ends), then down (its top)
+    if (!bd || story.game === "wait") return r;  // the viewer's game view frames every target itself (on every screen); moving in would push edge targets off screen (eased() lets the correction go over ~0.4 s)
     const spare = 0.02, d = r.pos.distanceTo(r.look), fMax = Math.max(0, 1 - Math.max(0.6, (lims().minDistance ?? 0) + 0.03) / d);  // spare: the breathing drift
     const dolly = f => ({ pos: r.pos.clone().lerp(r.look, f), look: r.look.clone() }), slide = (q, s) => ({ pos: q.pos.clone().setY(q.pos.y - s), look: q.look.clone().setY(q.look.y - s) });
     const least = (lo, hi, bad) => { if (!bad(lo)) return lo; if (bad(hi)) return hi; for (let i = 0; i < 14; i++) { const mid = (lo + hi) / 2; bad(mid) ? (lo = mid) : (hi = mid); } return hi; };  // smooth in r: no steps
     const q0 = dolly(least(0, fMax, f => roomOf(dolly(f)).side > -spare)), mid = (bd.x0 + bd.x1) / 2 - q0.look.x;  // the orbit's nearest limit can stop the move in
     const shift = x => ({ pos: q0.pos.clone().setX(q0.pos.x + x), look: q0.look.clone().setX(q0.look.x + x) });  // across: the angles stay
     const q = shift(Math.sign(mid) * least(0, Math.abs(mid), x => roomOf(shift(Math.sign(mid) * x)).side > -spare));
-    if (phone()) return q;  // an upright phone may show room above the backdrop (its frame is taller than any backdrop)
+    if (!top) return q;  // an upright phone's opening and push-in may show room above the backdrop (its frame is taller than any backdrop); its story shots are slid under it where they can be (rigOf)
     return slide(q, least(0, Math.max(0, q.pos.y - 0.32), s => roomOf(slide(q, s)).top > -spare));  // sliding keeps the angles, so the orbit limits
   };
   const mixRig = (a, b, k) => ({ pos: a.pos.clone().lerp(b.pos, k), look: a.look.clone().lerp(b.look, k) });
@@ -507,6 +557,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
   })();
   let wideFit = null;  // the opening view brought in until the standing spread shows no room past its backdrop
   const opening = () => {  // closed: the opening view; as the page turns and the spread rises, the camera comes in to wideFit with it
+    if (SCAM && opts.mode?.() === "turn") { const l0 = window.live?.S?.page?.lines?.[0], b = l0 && planOf(l0)?.[0], g = b && !b.reading && !phone() && beatRig(b, now, true); if (g) return g; const rh = opts.readHome?.(); if (rh) return phone() ? rh : fitIn(rh); }  // the story camera flies in to the first line's first beat as the page turns: from the title view its push came in after the turn and showed the desk for the first line's 4.5 s; a first beat that is the reading view, and every phone's (a beat's low view is not where a phone's first line begins), take the reading view itself, which shows no room: the title view held to the page's fall showed 1.3 m of it
+    if (opts.titled?.()) return { pos: HOME.clone(), look: LOOK.clone() };  // before the first pull: the viewer's title view (square to the book, both pages whole), no story shot
     if (!bd) return wide;
     wideFit ??= fitIn({ pos: wide.pos.clone(), look: wide.look.clone() });
     return mixRig(wide, wideFit, smooth((clamp01(((opts.frame?.() ?? T0) - T0) / (T1 - T0)) - 0.35) / 0.65));
@@ -518,23 +570,80 @@ export function addAmbient(scene, cam, m, opts = {}) {
     orbit.theta = Math.min(Math.max(orbit.theta, controls.minAzimuthAngle), controls.maxAzimuthAngle);
     cam.position.setFromSpherical(orbit.makeSafe()).add(controls.target);
   };
-  const inside = l => { const v = cam.position.clone().sub(controls.target), d = v.length(); return d >= l.minDistance - 1e-3 && Math.acos(v.y / d) <= l.maxPolarAngle + 1e-3; };
-  let shot = calm || !controls ? "off" : cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";
+  const inside = l => { const v = cam.position.clone().sub(controls.target), d = v.length(), phi = Math.acos(v.y / d); return d >= l.minDistance + 0.015 && phi <= l.maxPolarAngle - 0.01 && d <= (l.maxDistance ?? Infinity) - 0.015 && phi >= (l.minPolarAngle ?? 0) + 0.01; };  // a little inside, not on the limit: a camera still sinking toward it would be clamped each frame (a 0.5 m/s lurch leaving the face shot)
+  let shot = calm || !controls ? "off" : !phone() && cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";  // an upright phone waits at the reading view even on a fresh load: its opening view cannot show the whole book (the orbit limits stop it short), so it cropped the text page
   let yielded = shot === "off", last = null, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
+  let lastShot = null;  // the shot last played: the director returns to it 4 s after the reader lets go
   const onStart = () => { held.on = true; }, onEnd = () => { held.on = false; };
   controls?.addEventListener("start", onStart); controls?.addEventListener("end", onEnd);
   disposers.push(() => { controls?.removeEventListener("start", onStart); controls?.removeEventListener("end", onEnd); });
+  // One motion model for every move (the owner: "it should be more ease into"). The shots work out where the camera should be (pos, look) each frame (the goal).
+  // A carrot walks toward the goal no faster than stories/CAMERA.md section 4 allows (the view turns at most 30 deg/s, 20 while a word is lit; the look point
+  // moves at most 0.35 m/s; the distance changes at most 25% a second) and the camera is a critically damped spring on the carrot: it starts from rest gently,
+  // settles gently, and a new shot (or the reader's hands letting go) starts from the camera's CURRENT place and velocity, never a restart. The spring is
+  // on the look point, the distance (its log) and the two view angles, so a close camera never whips round. Integrated in 1/120 s sub-steps: the same at
+  // 30 and 60 fps.
+  const par = (pos, look) => { const v = pos.clone().sub(look), D = Math.max(v.length(), 1e-4); return { L: look.clone(), q: [Math.log(D), Math.atan2(v.x, v.z), Math.asin(Math.max(-1, Math.min(1, v.y / D)))] }; };
+  const wrapA = a => Math.atan2(Math.sin(a), Math.cos(a)), OMEGA = 3.4;
+  let snap = false;
+  const sp = { s: null, c: null, vL: new THREE.Vector3(), vq: [0, 0, 0], out: null }, mv = { p: null, vL: new THREE.Vector3(), vq: [0, 0, 0] };  // s: the camera, c: the carrot
+  const rigOfPar = ({ L, q: [d, a, e] }) => ({ pos: new THREE.Vector3(Math.sin(a) * Math.cos(e), Math.sin(e), Math.cos(a) * Math.cos(e)).multiplyScalar(Math.exp(d)).add(L), look: L.clone() });
+  const damp1 = (x, v, g, w, h) => { const d = x - g, c = v + w * d, e = Math.exp(-w * h); return [g + (d + c * h) * e, (v - w * c * h) * e]; };
+  const spring = p => {
+    const g = par(p.pos, p.look);
+    if (!sp.s) sp.s = snap ? g : par(cam.position, controls.target), sp.vL.copy(snap ? sp.vL.set(0, 0, 0) : mv.vL), sp.vq = snap ? [0, 0, 0] : [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // a fresh book stands where its opening says; a camera that has been the viewer's carries on from where it is
+    else if (sp.out && cam.position.distanceToSquared(sp.out) > 1e-6) sp.s = par(cam.position, controls.target), sp.vL.copy(mv.vL), sp.vq = [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // someone else moved the camera (the reader, the viewer's glide): carry on from there, at the speed it had
+    const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
+    g.q[1] = C.q[1] + wrapA(g.q[1] - C.q[1]);
+    const dr = SCAM && SC.goal?.face ? 0.8 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there
+    for (let i = 0; i < n; i++) {
+      const dL = g.L.clone().sub(C.L), ml = Math.min(1, 0.35 * (SCAM && shot === "hold" && opts.mode?.() === "turn" ? 0.7 : 1) * h / Math.max(dL.length(), 1e-9)); C.L.addScaledVector(dL, ml);
+      C.q[0] += Math.max(-dr * fly * h, Math.min(dr * fly * h, g.q[0] - C.q[0]));
+      const da = g.q[1] - C.q[1], de = g.q[2] - C.q[2], k = Math.min(1, cap * h / Math.max(Math.hypot(da * Math.cos(C.q[2]), de), 1e-9)); C.q[1] += da * k; C.q[2] += de * k;
+      for (const a of ["x", "y", "z"]) [S.L[a], sp.vL[a]] = damp1(S.L[a], sp.vL[a], C.L[a], om, h);
+      for (let j = 0; j < 3; j++) [S.q[j], sp.vq[j]] = damp1(S.q[j], sp.vq[j], C.q[j], om, h);
+    }
+    const r = rigOfPar(S); p.pos.copy(r.pos); p.look.copy(r.look);
+    return Math.max(S.L.distanceTo(g.L), ...[0, 1, 2].map(j => Math.abs(g.q[j] - S.q[j]) * (j ? Math.exp(g.q[0]) : 1)));  // how far it still trails its goal (metres; the distance in log)
+  };
+  const place = (p, t) => {  // the camera at p (pos, look): through the motion model, with the breathing drift (±0.01, 7 s) laid over it when t is given
+    if (![...p.pos.toArray(), ...p.look.toArray()].every(Number.isFinite) || p.pos.distanceTo(p.look) < 1e-3) return 0;  // a degenerate goal (a zero box, a zero face) is never taken: the camera holds where it is
+    orbit.setFromVector3(tmp.copy(p.pos).sub(p.look)); orbit.radius = Math.min(Math.max(orbit.radius, controls.minDistance), controls.maxDistance); orbit.phi = Math.min(Math.max(orbit.phi, controls.minPolarAngle), controls.maxPolarAngle); orbit.theta = Math.min(Math.max(orbit.theta, controls.minAzimuthAngle), controls.maxAzimuthAngle);
+    p.pos.setFromSpherical(orbit.makeSafe()).add(p.look);  // the goal inside the orbit's limits first, so the camera never rides them and is never pushed off them in one frame
+    const trail = spring(p);  // the one motion model: whatever path the shots above work out is the goal; the camera eases toward it
+    if (SCAM && isOpen()) {  // the story camera on its way between two room-safe frames is kept off the room too (8.5: following Bobo to the backdrop's end showed 0.14 m of it for 2 s): fitIn's correction through its own critically damped spring (smooth even where fitIn jumps), never from a game's view (it shows the room by design: a 1.3 m/s lurch), nor on a phone (its beats keep their own rule: under the read-along panel)
+      const on = shot !== "in" && klass() !== 3 && !/^(game|won)$/.test(SC.key ?? ""), f = on ? fitIn({ pos: p.pos.clone(), look: p.look.clone() }) : null, st = SC.fit ??= [0, 0, 0, 0, 0, 0].map(() => [0, 0]);
+      const g = f ? [...f.pos.sub(p.pos).toArray(), ...f.look.sub(p.look).toArray()] : [0, 0, 0, 0, 0, 0];
+      st.forEach((s, i) => st[i] = damp1(s[0], s[1], g[i], 4, step)); p.pos.add(tmp.set(st[0][0], st[1][0], st[2][0])); p.look.add(tmp.set(st[3][0], st[4][0], st[5][0]));
+    }
+    cam.position.copy(p.pos);
+    if (SCAM && isOpen()) {  // the story camera may stand outside the reader's orbit on its way (in from the title view, 2.6 m out on a phone): the orbit is let out around it, not clamped (a clamp froze the push for 5 frames, 0.45 m/s), and given back once the camera is inside it again
+      const v = tmp.copy(p.pos).sub(p.look), d = v.length(), phi = Math.acos(v.y / d);
+      if (d > controls.maxDistance || d < controls.minDistance || phi > controls.maxPolarAngle || phi < controls.minPolarAngle) {
+        faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
+        faceLim.maxDistance ??= controls.maxDistance; faceLim.minPolarAngle ??= controls.minPolarAngle;
+        Object.assign(controls, { minDistance: Math.min(controls.minDistance, d - 0.01), maxDistance: Math.max(controls.maxDistance, d + 0.01), minPolarAngle: Math.min(controls.minPolarAngle, phi - 0.01), maxPolarAngle: Math.max(controls.maxPolarAngle, phi + 0.01) });
+      }
+    }
+    if (t != null) { const b = smooth((t - calmFrom) / 2); cam.position.add(tmp.set(0.01 * b * Math.sin(TAU * t / 7), 0.006 * b * Math.sin(TAU * t / 5.6 + 1), 0)); }
+    controls.target.copy(p.look); const pre = cam.position.clone(); inOrbit(); if (!pre.equals(cam.position)) sp.s.q = par(rigOfPar(sp.s).pos.add(cam.position).sub(pre), sp.s.L).q; last = cam.position.clone(); sp.out = last.clone();  // an orbit clamp moves the spring with it
+    return trail;  // how far it still trails its goal
+  };
   const write = (r, t, desk = 0, who = [], limit = 0) => {  // the camera, with the breathing drift (±0.01, 7 s) laid over the shot when t is given
     cur = { pos: r.pos.clone(), look: r.look.clone() };
     const p = { pos: r.pos.clone(), look: r.look.clone() };
     if (controls && !run?.base?.face) {  // the shot's subjects kept whole (and no one else half in frame); an upright phone also tilts over the look point and slides back into the book as far as they allow, so the desk stays out (`desk` of the way)
       if (run !== keptRun) keptRun = run, keptFrom.copy(kept), keptT = now;  // a new shot: its keep blends in from the last over 1 s, so nothing steps
-      const others = phone() || run?.s?.target != null ? cast.filter(c => c.body.visible && !who.includes(c)) : [], w = shot === "in" ? 1 : smooth((now - keptT) / (run?.over ? run.secs : 1));  // a desktop's reading view is the viewer's own; a take-over's keep comes in with its move
+      const others = story.game !== "wait" && (phone() || run?.s?.target != null) ? cast.filter(c => c.body.visible && !who.includes(c)) : [], w = shot === "in" ? 1 : smooth((now - keptT) / (run?.over ? run.secs : 1));  // a desktop's reading view is the viewer's own, and so is the game view on every screen (live.js gameView keeps each character wholly in or out; a slide here pushed mali-s04's lampspot0 to x -8 percent on a phone); a take-over's keep comes in with its move
       const at = a => {  // the frame for a tilt a (up over the look point; below 0, down), inside the orbit's limits, with the subjects kept whole: exact within a shot
         const v = p.pos.clone().sub(p.look), pol = Math.acos(v.y / v.length()), b = Math.max(-Math.max(0, (lims().maxPolarAngle ?? Math.PI) - pol - 0.02), Math.min(a, Math.max(0, pol - (lim.minPolarAngle ?? 0) - 0.02)));
         const q = { pos: v.applyAxisAngle(new THREE.Vector3(v.z, 0, -v.x).normalize(), -b).add(p.look), look: p.look.clone() }, n = need(q, who, others, desk), x = n.x + od;
-        const kv = new THREE.Vector3().lerpVectors(keptFrom, new THREE.Vector3(x + (Math.min(Math.max(x, n.lx), n.hx) - x) * w, n.y, n.back), w);
-        aim(q); const ax = i => new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, i), side = ax(0).multiplyScalar(kv.x).add(ax(1).multiplyScalar(kv.y));
+        aim(q); const ax = i => new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, i), up = ax(1);
+        const clear = s => roomOf({ pos: q.pos.clone().addScaledVector(up, s), look: q.look.clone().addScaledVector(up, s) }).top <= -0.02;  // the frame lifted s still under the backdrop's top
+        let cap = n.up;  // an upright phone lifts its frame off the desk no higher than the backdrop's top: the room over it is worse than the desk below (as its reading view ranks them)
+        if (phone() && bd && n.up > 0 && !clear(n.up)) { let lo = 0, hi = n.up; if (!clear(0)) hi = 0; else for (let i = 0; i < 10; i++) { const m = (lo + hi) / 2; clear(m) ? (lo = m) : (hi = m); } cap = lo; }
+        const kv = new THREE.Vector3().lerpVectors(keptFrom, new THREE.Vector3(x + (Math.min(Math.max(x, n.lx), n.hx) - x) * w, Math.min(Math.max(Math.min(n.up, cap), n.lo), n.hi), n.back), w);
+        aim(q); const side = ax(0).multiplyScalar(kv.x).add(ax(1).multiplyScalar(kv.y));
         q.pos.add(side).addScaledVector(ax(2), kv.z); q.look.add(side);
         const room = who.length ? slack(q, who) : Infinity;
         return { q, n, kv, room, slide: Math.min(deskGap(q), room) * desk };
@@ -545,31 +654,41 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const f = at(tilt); od = toward(od, f.n.others, 0.25, 0.3); kept.copy(f.kv); p.pos.copy(f.q.pos); p.look.copy(f.q.look);
       dz = toward(dz, f.slide, 0.08, 0.9); p.pos.z -= dz; p.look.z -= dz;  // what the frame's lift up could not take: close behind it (at most 0.9 m/s, 3 cm in a 33 ms frame)
     }
-    const left = limit ? Math.max(p.pos.distanceTo(cam.position), p.look.distanceTo(controls.target)) : 0;  // the push in: at most `limit` m/s from where the camera stands, everything included
-    if (left > limit * step) { p.pos.sub(cam.position).multiplyScalar(limit * step / left).add(cam.position); p.look.sub(controls.target).multiplyScalar(limit * step / left).add(controls.target); }
-    cam.position.copy(p.pos);
-    if (t != null) { const b = smooth((t - calmFrom) / 2); cam.position.add(tmp.set(0.01 * b * Math.sin(TAU * t / 7), 0.006 * b * Math.sin(TAU * t / 5.6 + 1), 0)); }
-    controls.target.copy(p.look); inOrbit(); last = cam.position.clone();
-    return left - limit * step;  // how far it still trails
+    return place(p, t);
   };
-  if (shot === "hold") write(opening());  // a fresh book: the camera starts wide and high
+  if (shot === "hold") snap = true, write(opening()), snap = false;  // a fresh book: the camera starts wide and high
   const play = s => {  // start a shot from where the camera is now
     if (!s || calm || !controls || held.on) return;
+    lastShot = s; if (yielded && now - SC.out < 4) return;  // the reader let go less than 4 s ago: this shot waits (the next one that begins after it, or the return at 4 s, brings the director back)
     s = s === "reading" ? { target: null, seconds: 3 } : [s].flat()[0];
     const base = rigOf(s); if (!base) return;
+    if (base.lean) s = { ...s, target: base.lean };  // the subjects kept whole are the ones framed
     const over = shot === "in";  // the opening push-in has not landed: the line's shot blends on from where it has got to
-    if (over) shot = "done";
+    if (over) shot = "done", opts.halt?.();  // the line's shot takes the push-in over: not the viewer's glide home as well (a phone's dive at 1.5 m/s)
     const edge = !!run?.base?.face !== !!base.face, real = yielded || edge || over, from = real ? { pos: cam.position.clone(), look: controls.target.clone() } : cur;  // after the reader's hands, into or out of a face shot (no keep, tilt or slide), or over a push-in (which trails its rig at 1.4 m/s): from where the camera really is
-    from.ease = !!bd;  // the fit always eases in from where the camera stands: a view inside fitIn's 0.02 spare would otherwise snap
-    if (real) calmFrom = now, dz = tilt = od = 0, kept.set(0, 0, 0), keptFrom.set(0, 0, 0);  // breathing eases in again; the camera stands where it is, slide and keep included
+    const fitWas = over && run?.dp ? { dp: run.dp.clone(), dl: run.dl.clone() } : null;  // taking over the push-in: its room fit is already on, and carries on (dropping it let the room back in for the line's first seconds, 0.22-0.35 m on every first line on desktop)
+    from.ease = !!bd && !fitWas;  // the fit always eases in from where the camera stands: a view inside fitIn's 0.02 spare would otherwise snap
+    if (real) ((yielded || over) && (calmFrom = now)), dz = tilt = od = 0, kept.set(0, 0, 0), keptFrom.set(0, 0, 0);  // breathing eases in again only after the reader's hands (restarting it while it ran took its 6 mm offset away in one frame: the nudge into a face shot; it eases in after the reader's hands and the opening push, which have none)  // breathing eases in again; the camera stands where it is, slide and keep included
     yielded = false; focus.goal = s.focus || s.target;
     const turn = from.look.clone().sub(from.pos).angleTo(base.look.clone().sub(base.pos));
-    run = { s, from, base, t0: now, f0: frame(s.target), over, swing: edge, secs: over ? Math.max(2, 3 * from.pos.distanceTo(base.pos)) : edge ? Math.max(2, turn / deg(40)) : 2 };  // taking over: no faster than a push-in (about 0.6 m/s at most); into or out of a face: the view turns at most 75°/s
+    run = { s, from, base, t0: now, f0: frame(s.target), over, swing: edge, ...fitWas, secs: over ? Math.max(2, 3 * from.pos.distanceTo(base.pos)) : edge ? Math.max(2, turn / deg(40)) : 2 };  // taking over: no faster than a push-in (about 0.6 m/s at most); into or out of a face: the view turns at most 75°/s
   };
   function camera(t, dt) {
+    if (window.live) window.live.hint.landed = !run || yielded || shot === "done" && (t - run.t0) / Math.max(2, run.s?.seconds || 3) >= 1;  // the shot has landed: the viewer shows its Next cue only then
+    if (controls && dt > 0) {  // the camera's own speed, whoever moves it
+      const c = par(cam.position, controls.target);
+      if (mv.p) { mv.vL.copy(c.L).sub(mv.p.L).divideScalar(dt); mv.vq = c.q.map((x, i) => (i === 1 ? wrapA(x - mv.p.q[1]) : x - mv.p.q[i]) / dt); }
+      mv.p = c;
+    }
     const moved = last && cam.position.distanceToSquared(last) > 1e-8; step = dt;
-    if ((held.on || (moved && shot !== "wait")) && !yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off";
+    if (!calm && controls && !yielded && shot === "done" && (story.game === "next" || story.game === "wait")) opts.halt?.();  // the viewer's own 0.4 s glide to its game view (a phone's) would dash across the director's eased move: Kapi doubled in size in 0.3 s at the end of s01 1.4; the director takes that view itself
+    const glide = !SCAM && moved && !held.on && isOpen() && !opts.titled?.() && (shot === "hold" || shot === "in");  // the viewer's own glide home as a spread opens (a phone's dive at 1.5 m/s): not the reader's hand; the opening push takes the camera over, at the speeds of CAMERA.md section 4
+    if (glide || (SCAM && isOpen() && (shot === "in" || shot === "done"))) opts.halt?.();  // the story camera owns every view once the spread is open: the viewer's own glide home on an upright screen (home(900) at the first pull) stopped its push dead, 0.45 m/s in a frame
+    const hand = held.on || (moved && shot !== "wait" && !SCAM && !glide);  // the story camera: only a real touch is the reader's hand (the viewer's glide and the opening's end are not)
+    if (hand && !yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off";
+    if (hand) SC.out = now;  // when the reader's hand (or the viewer's glide) last moved the camera
     last = null;
+    if (!SCAM && yielded && !held.on && shot === "done" && lastShot && now - SC.out >= 4 && isOpen()) play(lastShot);  // the reader let go 4 s ago: the director eases back to the shot it was on
     if (!controls || calm) return;
     if (shot === "wait") {  // a later spread: its text page waits still at the viewer's reading view, so a finger can find its corner; the reader's turn takes the camera out with the page, then the push-in
       const m = opts.mode?.();
@@ -579,22 +698,25 @@ export function addAmbient(scene, cam, m, opts = {}) {
     }
     const capped = r => ({ pos: cur.pos.clone().add(r.pos.clone().sub(cur.pos).clampLength(0, 0.83 * dt)), look: cur.look.clone().add(r.look.clone().sub(cur.look).clampLength(0, 0.83 * dt)) });  // at most 1.2 s a metre, as the viewer's glides
     if (shot === "hold") {  // the opening view while the book is shut; it comes in with the turning page, so the open spread never shows the room
-      if (isOpen()) { shot = "in"; run = { from: cur, t0: t, to: (O?.settle && O.settle !== "reading" && rigOf({ target: O.settle, framing: "medium" })) || rigOf("reading") }; run.secs = Math.max(O?.seconds || 2.5, 2 * run.from.pos.distanceTo(run.to.pos)); }  // the ease's first speed, 3 d / secs, at most 1.5 m/s: under 0.05 m in a 33 ms frame
-      else write(capped(opening()));  // the page's turn may sweep faster than that: the camera follows at its own pace
-      return;
-    }
+      if (isOpen()) { shot = "in"; opts.halt?.(); run = { from: cur, t0: t, to: (O?.settle && O.settle !== "reading" && rigOf({ target: O.settle, framing: "medium" })) || rigOf("reading") }; run.secs = Math.max(O?.seconds || 2.5, 2 * run.from.pos.distanceTo(run.to.pos)); }  // the ease's first speed, 3 d / secs, at most 1.5 m/s: under 0.05 m in a 33 ms frame
+      else return void write(capped(opening()));  // the page's turn may sweep faster than that: the camera follows at its own pace
+    }  // opened: this very frame is the push's first (it was skipped, a one-frame stall)
     if (shot === "in") {
+      const b0 = SCAM && story.line && !/^game\./.test(story.line) ? planOf(story.line)?.[0] : null, g0 = b0 && (b0.reading ? rigOf("reading") : beatRig(b0, t));
+      if (g0) run.to = g0, lift(g0);  // the story camera's push lands on the first beat's own frame (its subjects move: followed), not on the reading view (8.1 landed on the book on the desk)
       const k = (t - run.t0) / run.secs;
-      const r = mixRig(run.from, run.to, ease(k));  // no room past the backdrop on the way in, landing exactly on the viewer's framing
-      const p = bd ? eased(run, r, smooth(k / 0.3) * (phone() ? 1 : 1 - smooth((k - 0.85) / 0.15)), dt) : r;  // a phone keeps the fit as it lands: the viewer's own phone view shows the desk, and letting the fit go would pull back over it  // the room fit comes in over the push's first third: it may start far out (the turn's sweep is capped)
+      const r = SCAM ? { pos: run.to.pos.clone(), look: run.to.look.clone() } : mixRig(run.from, run.to, ease(k));  // no room past the backdrop on the way in, landing exactly on the viewer's framing; the story camera's goal is the beat itself (the spring eases; a blend from where the camera stood braked a phone's camera already moving in the turn, 0.45 m/s in a frame)
+      const p = bd ? eased(run, r, SCAM && !phone() ? 1 : smooth(k / 0.3) * (phone() || SCAM ? 1 : 1 - smooth((k - 0.85) / 0.15)), dt) : r;  // a phone keeps the fit as it lands: the viewer's own phone view shows the desk, and letting the fit go would pull back over it  // the room fit comes in over the push's first third: it may start far out (the turn's sweep is capped)
       const trail = write(p, undefined, ease(k / 0.25), [], 1.4);  // the desk is out of a phone's frame early in the push (it ramps from nothing, so it needs no blend); at most 1.4 m/s
-      if (k >= 1 && trail < 0.002) shot = "done", run = null, calmFrom = t;  // landed
+      if (k >= 1 && (SCAM || trail < 0.002)) shot = "done", run = null, calmFrom = t;  // landed (the story camera's beat moves with its subjects, so it never trails by less than 2 mm: the spring carries on in storyCam)
       return;
     }
     if (shot === "off") shot = "done";
-    if (faceLim && (yielded || !run?.base?.face) && inside(faceLim)) Object.assign(controls, faceLim), (faceLim = null);  // the reader's orbit limits back after a face shot, once the camera is inside them: the orbit would clamp it there in one frame
+    if (faceLim && (yielded || !(run?.base?.face || run?.base?.near)) && inside(faceLim)) Object.assign(controls, faceLim), (faceLim = null);  // the reader's orbit limits back after a face shot, once the camera is inside them: the orbit would clamp it there in one frame
+    if (SCAM && isOpen() && shot === "done") return storyCam(t);
     if (!isOpen() || yielded) return;  // turning or closed: the camera is the reader's and the page's; or the reader took it
-    if (!run) return write(cur, t, 1);
+    if (!run) return write(cur, t, story.game === "wait" ? 0 : 1);
+    if (story.game === "wait" && run.s.target == null) run.base = rigOf("reading");  // the game view moves with the game (a phone's steer game, hazard by hazard): the shot follows it, through the motion model
     const { s } = run, k = clamp01((t - run.t0) / Math.max(2, s.seconds || 3)), g = { pos: run.base.pos.clone(), look: run.base.look.clone() };
     if (s.move === "push" || s.move === "pull") g.pos.sub(g.look).multiplyScalar(1 + (s.move === "push" ? -0.15 : 0.15) * ease(k)).add(g.look);
     if (s.move === "drift") { const side = tmp.copy(g.look).sub(g.pos).cross(UP).normalize().multiplyScalar(-0.04 + 0.08 * smooth(k)); g.pos.add(side); g.look.add(side); }
@@ -608,17 +730,185 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (run.base.face) {  // close and level with her face: past the reader's orbit limits (kept from the shot before, given back after it)
       faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
       Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });
-      return void write(r, t, 0, []);
+      return void write(faceKept(r, s, clamp01((t - run.t0) / run.secs)), t, 0, []);
     }
-    const q = mixRig(r, fit(r.pos.clone(), r.look.clone()), smooth((t - run.t0) / 2)), w = eased(run, q, phone() && subjects(s).length ? 0 : run.from.ease ? smooth((t - run.t0) / 2) : 1, dt);  // a phone shot of someone keeps its base framing (no per-frame room fit that would cut them)
-    write(w, t, 1, subjects(s));  // never a jump
+    if (run.base.near) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, controls.minDistance = Math.min(faceLim.minDistance, run.base.near - 0.01);  // a near shot of a small subject: the orbit's floor let out to it, given back as after a face shot
+    near = run.base.near ?? Infinity; const q = mixRig(r, fit(r.pos.clone(), r.look.clone()), smooth((t - run.t0) / 2)); near = Infinity; const w = eased(run, q, phone() && subjects(s).length ? 0 : run.from.ease ? smooth((t - run.t0) / 2) : 1, dt);  // a phone shot of someone keeps its base framing (no per-frame room fit that would cut them)
+    write(w, t, story.game === "wait" ? 0 : 1, subjects(s));  // never a jump; the game view is the viewer's on every screen: no slide off the desk (it slid mali-s01's phone game view 0.5 m into the book and lb4's flame to x 103 percent)
   }
-  function shots() {
     const actors = () => [...new Set((m.acts || []).map(a => a.who))].filter(n => cast.some(c => c.name === n && c.body.visible));
-    for (const k of ["end", "game", "game:won"]) if (SH[k] && when(k, "", "shot"))  // the game's shot wins; on an upright phone "reading" is the viewer's game framing, so small targets are tappable
-      play(k === "game" && phone() ? "reading" : k !== "game" && phone() && SH[k] === "reading" ? { target: actors(), framing: "medium", move: "hold", seconds: 3 } : SH[k]);  // a phone's reading view is narrow: it ends on the story's actors where they are, not where they began
-    if (phone() && story.game === "wait") return;  // a phone's game view holds: a line said again (a tap on Lulu) must not pull it off the targets
+    const closing = (s, who) => {  // the closing shot of a page whose cast is on stage keeps the WHOLE cast in frame (every one of them can be tapped as long as the page is up), whatever the shot is aimed at: a close-up on a branch took them all off screen
+      if (!who.length || (s === "reading" ? whole(rigOf("reading"), who) : s && who.every(c => [s.target].flat().includes(c.name)))) return s?.target && [s.target].flat().length > who.length ? { ...s, target: who.map(c => c.name) } : s;  // already all in (the reading view, or a shot of everyone): as authored, held on these bodies only
+      const all = { target: who.map(c => c.name), framing: "wide", move: "hold", seconds: 3 }, r = rigOf(all);
+      return r ? all : "reading";  // as wide as the orbit allows when the cast is wider than any frame it permits (rigOf keeps them all in where it can)
+    };
+  const endShot = () => {  // the closing shot (a phone's reading view is narrow: it ends on the story's actors): the first of everyone (Kapi and Mali: their passed looks),
+    // the living cast (skinned, not a diorama's rigid props and posed copies) and who acts or can talk whose view holds the story's people whole with no room past the
+    // backdrop (off the phone); a body a hide act hid never counts. None: never everyone (gourd-s01's 36 bodies took the view into the room, 0.64 m): the reading view, room-fitted, on the people
+    const hid = window.live?.acting?.was, ppl = window.live?.acting?.people, act = actors(), skinned = c => { let k = false; (c.model || c.body).traverse(o => (k ||= !!o.isSkinnedMesh)); return k; };
+    const shown = keep => cast.filter(c => c.body.visible && !hid?.has(c.body) && keep(c)), people = shown(c => skinned(c) && (act.includes(c.name) || ppl?.has(c.name)));  // the story's people: living bodies that act or talk, not acting props (gourd-s01's mud patches and rice shoots)
+    const shotOf = who => { const s = closing(SH.end, who); return s !== "reading" ? s : phone() ? { target: actors(), framing: "medium", move: "hold", seconds: 3 } : { target: null, seconds: 3, room: true, keep: who.map(c => c.name) }; };
+    const drawn = window.live?.drawn, held = (r, who) => (aim(r), who.every(c => (drawn ? drawn(c) : []).every(p => (tmp.copy(p).project(probe), tmp.z < 1 && Math.abs(tmp.x) <= 0.98 && Math.abs(tmp.y) <= 0.98))));  // every body as drawn now, inside 98 percent of the frame
+    const E = SH.end, authored = E === "reading" || (E && typeof E === "object" && !Array.isArray(E) && (E.target == null || !Array.isArray(E.target) || E.target.length < 2));
+    if (authored) return shotOf(cast.filter(c => c.body.visible));  // an end the author set as the reading view or on one subject is a passed look (every Kapi and Mali page): as it always was, everyone, untouched
+    let last;
+    for (const keep of [() => true, skinned, c => people.includes(c)]) {
+      const who = shown(keep), s = last = shotOf(who), r0 = rigOf(s);
+      if (!r0 || !people.length) return s;
+      const n = need(r0, [s.target].flat().length && s.target ? who : [], [], 0), ax = i => new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, i), d = ax(0).multiplyScalar(n.x).add(ax(1).multiplyScalar(Math.min(Math.max(0, n.lo), n.hi)));
+      const r = { pos: r0.pos.clone().add(d).addScaledVector(ax(2), n.back), look: r0.look.clone().add(d) };  // as the shot's keep will stand it: moved out until its subjects are whole (gourd-s01's 36 bodies took it into the room)
+      const o = !bd ? null : (aim(r), room(probe, bd));  // on a phone too: the ladder only runs where no passed look stands
+      if (held(r, people) && !(o && Math.max(o.top, o.side) > 0.02)) return s;  // that view holds the story's people whole, with no room
+    }
+    return phone() ? { target: people.map(c => c.name), framing: "medium", move: "hold", seconds: 3 } : last;  // none does: the story's people (never everyone: gourd-s01's 36 bodies took the view 0.64 m into the room); a phone frames them as its closing medium
+  };
+  function shots() {
+    for (const k of ["end", "game", "game:won"]) if ((SH[k] || k === "end") && when(k, "", "shot")) {  // a page with no authored end still closes on its people (gourd-s01 R17c)  // the game's shot wins; on an upright phone "reading" is the viewer's game framing, so small targets are tappable
+      play(k === "end" ? endShot() : k === "game" ? "reading" : SH[k]);  // the game: the viewer's own game view (HOME while the game is on), on every screen  // a phone's reading view is narrow: it ends on the story's actors where they are, not where they began
+    }
+    if (story.game === "wait") return;  // the game view holds on every screen: a line said again (a tap on Lulu) must not pull it off the targets
     for (const [k, v] of Object.entries(SH)) if (!["open", "end", "game", "game:won"].includes(k)) for (const s of [v].flat()) if (when(k, s.word, "shot")) play(s);
+  }
+
+  // ---------- the story camera (stories/CAMERA.md): each line cut into beats, a shot per beat, every move through the motion model above; on with camera.story or ?story=1 ----------
+  const FILL = { wide: [0.35, 0.40, 0.50, 0.60], medium: [0.50, 0.55, 0.65, 0.75], close: [0.65, 0.70, 0.78, 0.85] };  // subjects' fill of the safe frame: desktop, tablet landscape, tablet portrait, phone (CAMERA.md section 3)
+  const klass = () => { const lo = Math.min(innerWidth, innerHeight), hi = Math.max(innerWidth, innerHeight); return lo < 600 ? 3 : hi >= 1200 ? 0 : innerWidth > innerHeight ? 1 : 2; };
+  const MOVERS = /^(walk|run|swim|jump|stepback|leap)$/, EMOTE = /^(Worry|Sad|Cry|Cheer|Laugh|Surprise|Scared|Jump|Wave)$/, GAP = 1.4;  // GAP: the pause a line's last beat runs into
+  const hero = n => cast.find(c => c.name === n && c.body.visible);
+  const withPair = ns => { const out = new Set(ns); for (const n of ns) { const c = hero(n); if (c?.ride?.on) out.add(c.ride.on.name); for (const o of cast) if (o.ride?.on === c) out.add(o.name); } return [...out]; };  // a rider and its mount are one subject
+  const sb = new THREE.Box3(), sv = new THREE.Vector3();
+  const boxOf = (ns, at, any) => {  // at: [[x0,y0,z0],[x1,y1,z1]] a box of the page (a painted thing: gourd-s01's Sky King on the sky card); a name no character has: that page piece's box  // the subjects' box from their bones (the skin's own box is the bind pose's, twice as wide as the body that is drawn) and a tenth of their height; null if none is on stage
+    const u = new THREE.Box3();
+    if (at?.length === 2) u.expandByPoint(B(at[0])).expandByPoint(B(at[1]));
+    for (const n of ns) { const c = any ? cast.find(c => c.name === n) : hero(n); if (!c) { const o = n && root.getObjectByName(n); if (o) u.union(new THREE.Box3().setFromObject(o)); continue; } const bones = c.bones ??= (() => { const l = []; (c.model || c.body).traverse(o => o.isBone && l.push(o)); return l; })(); sb.makeEmpty(); for (const o of bones) sb.expandByPoint(o.getWorldPosition(sv)); u.union(sb.expandByScalar(0.15 * c.height)); }  // bones and 15% of the height: a crocodile's snout and tail reach past its bones (the drawn pair touched the frame's edge at 10%)
+    return u.isEmpty() ? null : u;
+  };
+  let safeAt = -9, safeV = null;
+  const safeNow = () => {  // the safe frame in NDC: under the read-along page (+3%), above the bar (10%), 3% in at the sides; measured every quarter second
+    if (now - safeAt > 0.25 || !safeV) { safeAt = now; const r = document.querySelector(".ra-page")?.getBoundingClientRect(); safeV = { x: 0.94, yt: 1 - 2 * (r ? (r.height ? r.bottom / innerHeight : 0.08) + 0.03 : 0.33), yb: -0.8 }; }
+    return safeV;
+  };
+  const extent = (P, r) => { aim(r); let x0 = 9, x1 = -9, y0 = 9, y1 = -9; for (const p of P) { sv.copy(p).project(probe); x0 = Math.min(x0, sv.x); x1 = Math.max(x1, sv.x); y0 = Math.min(y0, sv.y); y1 = Math.max(y1, sv.y); } return { x0, x1, y0, y1 }; };
+  const lowDir = (v, up = 0) => { const EL = deg(klass() === 3 ? 12 : 22) + up, r = Math.hypot(v.x, v.z), e = Math.atan2(v.y, r); return e <= EL ? v.clone().normalize() : new THREE.Vector3(v.x / r * Math.cos(EL), Math.sin(EL), v.z / r * Math.cos(EL)); };  // the reading axis brought down to 25° at most: a pop-up is seen across its layers (review 3: the iPad and phone looked down on a flat map, 42-72° above the speakers)
+  const solveFrame = (P, f, sign, up = 0, S = safeNow(), yaw = 0) => {  // the frame in which P fills `f` of the safe frame, sits under its top (8% headroom) and off its middle away from `sign` (lead room), seen along the reading axis as the spread opened (the game view moves HOME under a running beat: a lurch)
+    const W = 2 * S.x, H = S.yt - S.yb, v0 = (SC.ax ?? HOME.clone().sub(LOOK)).clone().applyAxisAngle(UP, yaw), dir = lowDir(v0, up), L = new THREE.Box3().setFromPoints(P).getCenter(new THREE.Vector3()), [tx, ty] = halves(), lead = sign * (klass() === 3 ? 0.12 : 0.2);
+    f = Math.min(f, 2 * (0.82 - Math.abs(lead)) / W);  // at least 9% of the screen between the subjects and its sides: this wins over the table
+    let D = v0.length();
+    for (let i = 0; i < 8; i++) {
+      const b = extent(P, { pos: L.clone().addScaledVector(dir, D), look: L }), w = b.x1 - b.x0, h = b.y1 - b.y0, tall = h / H >= w / W;
+      D *= Math.max(w / W, h / H) / f;
+      const gy = tall ? S.yt - 0.08 * H - h / 2 : (S.yb + S.yt) / 2, right = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 0), up = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 1);
+      L.addScaledVector(right, ((b.x0 + b.x1) / 2 + lead) * tx * D).addScaledVector(up, ((b.y0 + b.y1) / 2 - gy) * ty * D);
+    }
+    return { pos: L.clone().addScaledVector(dir, D), look: L };
+  };
+  const inSafe = (P, r) => { const S = safeNow(), b = extent(P, r), x = Math.min(S.x, 0.82); return b.x0 >= -x && b.x1 <= x && b.y1 <= S.yt && b.y0 >= S.yb; };  // inside the safe frame, 9% of the screen from its sides
+  const sideOf = (to, P) => {  // +1: `to` (a character, or a point) lies to the screen's right of P, -1: left, 0: no such thing
+    const w = Array.isArray(to) ? B(to) : typeof to === "string" ? frame(to, true)?.c : null; if (!w || !P.length) return 0;
+    aim({ pos: cam.position, look: controls.target }); const d = sv.copy(w).project(probe).x - new THREE.Box3().setFromPoints(P).getCenter(new THREE.Vector3()).project(probe).x;
+    return Math.abs(d) < 0.02 ? 0 : Math.sign(d);
+  };
+  const plans = {};
+  const planOf = line => plans[line] ??= (() => {  // the line's beats: authored (a list of shots), else cut from who speaks and who acts
+    const I = opts.info?.(line) ?? {}, W = I.words ?? [], say = I.say ?? [], dur = I.dur ?? 4, acts = (m.acts || []).filter(a => a.line === line && a.who), at = w => (w ? opts.wordAt?.(line, w) ?? 0 : 0), S = SH[line];
+    if (S === "reading") return [{ line, t0: 0, len: dur + GAP, kind: "reading", reading: true, names: [] }];  // a line authored as the reading view holds the viewer's reading view all through (gourd-s01 1.1, its establishing line: the default beat went to a tight medium on everyone)
+    if (Array.isArray(S)) return S.map(s => ({ line, t0: at(s.word), names: [s.target].flat().filter(Boolean), at: s.at, size: s.framing ?? "medium", num: s.size, pitch: s.pitch, tablet: s.tablet, phone: s.phone, move: s.move ?? "hold", lead: s.lead, by: s.by, after: s.after, len: 3, kind: "authored" }));
+    const trig = [{ t: 0 }];
+    say.forEach((w, i) => i && w !== say[i - 1] && (w !== "narrator" || say[i - 1] !== "narrator") && trig.push({ t: W[i]?.[0] ?? 0 }));
+    for (const a of acts) { const k = MOVERS.test(a.do) ? "go" : (a.do === "clip" && EMOTE.test(a.clip)) || a.do === "mood" ? "emote" : a.do === "face" && Array.isArray(a.face) ? "gaze" : null; if (k) trig.push({ t: at(a.word), k, who: a.who, to: a.to ?? a.face }); }
+    const bs = [];
+    for (const x of trig.sort((a, b) => a.t - b.t)) { const p = bs.at(-1); if (p && x.t - p.t < 0.4) p.k ??= x.k, p.who ??= x.who, p.to ??= x.to; else bs.push({ ...x }); }  // triggers at one moment are one beat
+    const len = i => { const n = bs[i + 1]?.t, ws = W.filter(w => w[0] >= bs[i].t && (n == null || w[0] < n)); return n == null ? dur + GAP - bs[i].t : (ws.at(-1)?.[1] ?? n) - bs[i].t; };  // the speech's length (the last beat runs on into the pause)
+    for (let i = bs.length - 1; i >= 0; i--) if (bs.length > 1 && len(i) < 1.5) { const j = i ? i - 1 : 1; if (!i) bs[1].t = 0; else bs[j].k ??= bs[i].k, bs[j].who ??= bs[i].who, bs[j].to ??= bs[i].to; bs.splice(i, 1); }  // a beat shorter than 1.5 s joins the one before (the first: the one after)
+    const pl = opts.info?.(I.prev), prevSay = pl?.say?.at(-1), everyone = cast.filter(c => c.body.visible).map(c => c.name);
+    bs.forEach((b, i) => { if (b.k === "go" && i) b.t = Math.max(bs[i - 1].t + 1.5, b.t - 1.2); });  // a camera leads the action: the swim's frame is there before the swim
+    return bs.slice(0, 3).map((b, i) => {
+      const w = W.findLastIndex(x => x[0] <= b.t + 0.01), sp = say[Math.max(0, w)], talker = sp && sp !== "narrator" && hero(sp) ? sp : null, o = { line, t0: b.t, len: len(i), kind: "two", names: [...new Set(acts.map(a => a.who))].filter(hero), size: "medium", move: "hold" };
+      if (!o.names.length) o.names = everyone;
+      if (b.k === "go") Object.assign(o, { kind: "travel", names: [b.who], size: "wide", move: "follow", lead: b.to });
+      else if (talker) Object.assign(o, { kind: prevSay && prevSay !== "narrator" && prevSay !== talker ? "reply" : "single", names: [talker], lead: everyone.find(n => n !== talker && !withPair([talker]).includes(n)) });
+      else if (b.k === "emote") Object.assign(o, { kind: "push", names: [b.who], size: "close", move: "push" });
+      else if (b.k === "gaze") Object.assign(o, { kind: "gaze", names: [b.who], lead: b.to });
+      return o;
+    });
+  })();
+  const beatRig = (b, tt, any) => {  // a beat's frame at this moment (its subjects move: it follows them); any: hidden characters count (the page turning, before they stand up)
+    if (!opts.titled?.() && !SC.ax) SC.ax = HOME.clone().sub(LOOK);  // the reading axis as the spread opened (before the first pull HOME is the title view)
+    const ov0 = klass() === 3 ? b.phone : klass() ? b.tablet : null;
+    if ((ov0?.framing ?? b.size) === "face") { const r = faceRig({ target: [ov0?.target ?? b.names].flat()[0], size: ov0?.size ?? b.num }); if (r) return r; }  // a face beat is the face shot (T52: it fell back to the medium fill, Kankak's sad face 2.7-9.2 percent of a phone's height)
+    const u = boxOf(withPair(b.names.filter(Boolean)), b.at, any); if (!u) return null;
+    const c = u.getCenter(new THREE.Vector3()), h = u.getSize(new THREE.Vector3()).multiplyScalar(0.5);
+    const vel = SC.c ? c.clone().sub(SC.c).divideScalar(Math.max(step, 1e-3)) : new THREE.Vector3(); SC.c = c.clone(); SC.v = (SC.v ?? vel).lerp(vel, 1 - Math.exp(-step / 0.25)); c.addScaledVector(SC.v, 0.4);  // aimed 0.4 s ahead of where they are going: a swimmer is never caught at the frame's edge
+    const key = withPair(b.names).sort().join(), hm = h.clone().setX(Math.max(h.x, h.z)).setZ(Math.max(h.x, h.z)), mem = (SC.mem[key] = (SC.mem[key] ?? hm.clone()).multiplyScalar(Math.exp(-step / 200)).max(hm));  // the biggest this subject has been lately, turned any way (a swim stretches Bobo to three times his resting width, and he turns round)
+    SC.half = (SC.half ? SC.half.multiplyScalar(Math.exp(-step / 3)).max(h) : h.clone()).max(mem.clone().multiplyScalar(/travel|gaze/.test(b.kind) ? 0.7 : 0));  // fast attack, slow release: a swinging arm or tail never makes the frame breathe
+    const pad = klass() === 3 ? (b.kind === "travel" ? 1.5 : b.kind === "gaze" ? 1.3 : 1.1) : b.kind === "travel" ? 1.5 : b.kind === "gaze" ? 1.3 : 1.05, P = [-1, 1].flatMap(x => [-1, 1].flatMap(y => [-1, 1].map(z => new THREE.Vector3(c.x + x * SC.half.x * pad, c.y + y * SC.half.y * pad, c.z + z * SC.half.z * pad))));  // a swimmer turns: its box can grow by a third in half a second, more room for it
+    const k = klass(), ov = k === 3 ? b.phone : k ? b.tablet : null;
+    let f = ov?.size ?? b.num ?? FILL[b.size]?.[k] ?? FILL.medium[k];
+    const p = clamp01((tt - SC.since - (b.after != null ? (opts.wordAt?.(b.line, b.after) ?? 0) - b.t0 : 0)) / Math.max(1.5, b.len)), by = b.by ?? (b.move === "pull" ? 0.15 : 0.12);
+    if (b.move === "push") f *= 1 - by * (1 - smooth(p)); else if (b.move === "pull") f *= 1 + by * (1 - smooth(p));
+    // One pitch rule on every screen: the view stays at most 25° above its subjects (lowDir) and is never tipped; the frame is fitted by moving in (fitIn) or by a lower fill (x 0.85, x 0.7).
+    // Off the phone the room-safe frame wins; an upright phone may show the wall only above the read-along panel's bottom edge (its frame is taller than any backdrop).
+    const sign = SC.sign ??= sideOf(b.lead === "travel" ? b.to : b.lead, P), whole_ = (r, Q = P, x = 0.92) => { const e = extent(Q, r); return e.x0 >= -x && e.x1 <= x && e.y0 >= Math.min(safeNow().yb, -x) && e.y1 <= Math.max(0.96, x); };
+    const R = [0, 1].flatMap(x => [0, 1].flatMap(y => [0, 1].map(z => new THREE.Vector3(x ? u.max.x : u.min.x, y ? u.max.y : u.min.y, z ? u.max.z : u.min.z))));  // the subjects as they are now (P is padded for a swim's stretch and aimed ahead)
+    const ka = b.at?.length === 2 && new THREE.Box3().setFromPoints(b.at.map(B)), pa = ka && boxOf(withPair(b.names.filter(Boolean)), null, any);  // a painted thing and its people are two boxes, not one: their union's empty front-top corners asked for a frame three screens tall (R20)
+    if (pa) { const cs = x => R.map((_, i) => new THREE.Vector3(i & 4 ? x.max.x : x.min.x, i & 2 ? x.max.y : x.min.y, i & 1 ? x.max.z : x.min.z)); P.splice(0, 8, ...cs(pa.clone().expandByVector(pa.getSize(new THREE.Vector3()).multiplyScalar((pad - 1) / 2))), ...cs(ka)); R.splice(0, 8, ...cs(pa), ...cs(ka)); }
+    const crowns = withPair(b.names).map(n => boneOf(hero(n), "HeadTop_End")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), underWords = r => (aim(r), crowns.every(p => sv.copy(p).project(probe).y <= safeNow().yt));  // R28: no face under the read-along words (gourd s01's desktop end put Pu Nyeu's head in them: the room-safe fit allowed the top to 96%)
+    const heads = withPair(b.names).map(n => boneOf(hero(n), "head")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), lowEnough = r => heads.every(h => r.pos.y - h.y <= Math.sin(deg(29)) * r.pos.distanceTo(h));  // the pitch rule where it shows, at the subjects' eyes: a close frame sits on the camera's floor and looks down more steeply the nearer it is (a phone's 8.2: 32 degrees above Bobo's head); a lower fill stands it farther back
+    low = true;
+    try {
+      let q, fq, q0, loose, qn;
+      // a phone whose room fit would cut its subjects at every fill (turtle s02 2.2: the pair by the backdrop's end, pushed off the right edge): the view turns instead (the smallest of 8, 15, 22 degrees either way that holds them, room-free) at the full fill, so the size the page asks for holds; not while the opening push flies in (its speed caps are tuned to the unturned beat: Kapi s08's phone push went 0.35 m/s)
+      for (const [sg, up, m, sf, yaw] of [[sign, 0, 1], [sign, 0, 0.85], [sign, 0, 0.7], ...(klass() === 3 ? (shot === "in" ? [] : [8, -8, 15, -15, 22, -22].map(d => [sign, 0, 1, undefined, deg(d)])) : [[0, 0, 1], [0, 0, 1.2], [0, deg(8), 1], [0, deg(8), 0.85]]), ...(b.at && klass() !== 3 ? [1.4, 1.6, 1.8, 1.2, 1].flatMap(m => [-8, -12].map(d => [0, deg(d), m, { ...safeNow(), yt: 0.94 }])) : [])]) {  // a painted thing high on the backdrop (R20: the Sky King, 0.13 m under the skyline): lower and from the backdrop's middle, and the text may cover the backdrop (CAMERA.md 3)  // off the phone, then no lead room (8.5: the lead toward the backdrop's end took the frame past it), closer, a little higher (still at most 30 degrees), before giving up the room (a phone's closer rung went 32 degrees above Bobo on 8.2)
+        const r = solveFrame(P, Math.min(0.92, f * m), sg, up, sf, yaw); if (sf && bd) { const dx = (bd.x0 + bd.x1) / 2 - r.look.x; r.pos.x += dx; r.look.x += dx; } q = fit(r.pos.clone(), r.look.clone()); q0 ??= q; if (!yaw) qn = q; fq = fitIn({ pos: q.pos.clone(), look: q.look.clone() }, !phone());
+        if (phone() && bd) fq = underPanel(fq);
+        if ((klass() === 3 || !bd ? inSafe(P, fq) : whole_(fq)) && lowEnough(fq) && underWords(fq)) return fq;
+        if (b.kind === "end" && klass() === 3 && lowEnough(fq) && whole_(fq, P, 0.98)) loose ??= fq;  // a closing frame no rung holds inside the safe frame: the first that still holds the people whole
+      }
+      if (klass() !== 3 && bd) for (const m of [0.75, 0.85]) {  // closer on the subjects as they are: a narrower frame stays on the backdrop (8.5 ends with the pair 0.35 m from its end, where every wider frame showed the room or lost them)
+        const r = solveFrame(R, m, 0); q = fit(r.pos.clone(), r.look.clone()); fq = fitIn({ pos: q.pos.clone(), look: q.look.clone() });
+        if (whole_(fq, R) && underWords(fq)) return fq;
+      }
+      if (klass() !== 3 && bd) return SC.goal && !SC.goal.face && whole_(SC.goal, R, 0.99) && underWords(SC.goal) ? { pos: SC.goal.pos.clone(), look: SC.goal.look.clone() } : fq;  // none this moment: the frame it is on while that still holds them, else the closest room-safe one; never the wide view into the room (8.5#2: the swim's stretch not yet framed went for a 4.6 m view and held it)
+      return klass() === 3 ? loose ?? qn : q0;  // a phone keeps its subjects whole at the lowest fill (farthest back, least steep: the first rung's frame went 32 degrees above Bobo on 8.2); no backdrop: its own frame  // none keeps them whole with no room: their own frame, whole (room may show: Bobo swimming off in 8.5 was cut half a screen), else the room-safe one
+    } finally { low = false; }
+  };
+  const underPanel = r => {  // an upright phone's frame slid down (angles kept) until the backdrop's top stands at or above the read-along panel's bottom edge: the wall shows only behind the panel
+    const yt = safeNow().yt - 0.02, topAt = q => (aim(q), sv.set((bd.x0 + bd.x1) / 2, bd.top, bd.z).project(probe).y), slide = s => ({ pos: r.pos.clone().setY(r.pos.y - s), look: r.look.clone().setY(r.look.y - s) });
+    if (bd.top == null || topAt(r) >= yt) return r;
+    let lo = 0, hi = Math.max(0, r.pos.y - 0.32); if (topAt(slide(hi)) < yt) return slide(hi);
+    for (let i = 0; i < 14; i++) { const m = (lo + hi) / 2; topAt(slide(m)) >= yt ? (hi = m) : (lo = m); }
+    return slide(hi);
+  };
+  const lift = g => {  // a low beat lies below the reader's polar limit: lift it for the beat, as a face shot does (given back once the camera is inside it again)
+    const v = g.pos.clone().sub(g.look), phi = Math.acos(v.y / v.length());
+    if (phi <= controls.maxPolarAngle - 0.03) return;
+    faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
+    controls.maxPolarAngle = Math.min(deg(85), phi + 0.05);
+  };
+  function storyCam(t) {
+    const s = story, pl = s.line && !/^game\./.test(s.line) ? planOf(s.line) : null;
+    if (s.end && SC.endSince < 0) SC.endSince = now; else if (!s.end) SC.endSince = -1;
+    opts.halt?.();  // the viewer's own glides (to its game view, set 2.4 s before the line ends, before story.game says so) cut across the director's move: 0.5 m in 0.8 s into the game on 8.4; the director takes every view itself
+    let key = null, beat = null;
+    if (s.game === "wait" || s.game === "next") key = "game";  // the line before the game plays its own shot to its end; the game's view from the pause after it (live.js waits there until the camera has landed, then the prompt)
+    else if (/^game\./.test(s.line ?? "") && s.game === "won") key = "won";
+    else if (s.end && now - SC.endSince >= 1.05) key = "end";
+    else if (pl?.length) { let i = 0; pl.forEach((b, j) => { if (b.t0 <= s.t) i = j; }); key = `${s.line}#${i}`, beat = pl[i]; }
+    if (key !== SC.key && key) {  // a new beat: it waits out a speaker's 1.5 s hold
+      const hold = SC.beat && /single|reply/.test(SC.beat.kind) && now - SC.since < 3;
+      if (!hold) { if (!SC.key) opts.halt?.();  // the first beat takes the camera from the viewer's glide home
+        SC.key = key; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
+    }
+    if (yielded) { if (!held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; the director returns at the first beat that begins 4 s after they let go
+    let g = null;
+    if (SC.key === "game") g = rigOf("reading"); else if (SC.key === "won") g = beatRig({ line: "won", t0: 0, len: 3, names: [...new Set([...(m.targets || []), ...actors()])].filter(n => !window.live?.acting?.was?.has(hero(n)?.body)), size: "medium", move: "hold" }, now);  // the game's targets (where its reward grows) and the story's actors, not every visible body: gourd-s01's 36 took the frame to the sky while the rice rose (R26)
+    else if (SC.key === "end") { const e = endShot(), ns = e?.target != null ? [e.target].flat() : actors(); g = beatRig({ line: "end", t0: 0, len: 3, names: ns, size: "wide", move: "hold", kind: "end" }, now) ?? rigOf(e); }  // the story camera's close holds the end's subjects (its people, never everyone: 8.5's otter and kingfisher took it 2.7 m out, into the room) as a beat does (low, room-safe): the reading view's own steep look tipped 8.5's end top-down (34.6°)
+    else if (SC.beat) g = SC.beat.reading ? rigOf("reading") : beatRig(SC.beat, now);
+    if (g) SC.goal = g;
+    if (SC.goal?.face) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });  // the orbit let out for a face beat, as for a face shot (given back once the camera is inside it again)
+    else if (SC.goal) lift(SC.goal);
+    if (SC.goal) place({ pos: SC.goal.pos.clone(), look: SC.goal.look.clone() }, t);
+    if (window.live && s.end) window.live.hint.landed = SC.key === "end";  // the Next page button waits for the closing shot (it showed on the shot before and the close moved the page's corner)
   }
 
   // ---------- light: cues on named lights, flicker (DIRECTION.md "light") ----------
@@ -789,7 +1079,9 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const [up, down] = defs[pid] ? [] : kind === "egret" ? [await picture(`${A.cards}/egret.png`)] : await Promise.all([picture(`${A.cards}/bird-up.png`), picture(`${A.cards}/bird-down.png`)]);
       const flock = await Promise.all(Array.from({ length: BD.count }, async () => {
         const b = new THREE.Group(), w = rnd(0.07, 0.09), f = { b, ph: rnd(0, TAU), f: rnd(2.6, 3.4) };
-        if (defs[pid]) { f.p = await puppet(pid, { ...defs[pid], size: w * 0.8 }, stage); b.add(f.p.root); }
+        if (BD.model) { const m = await extra3d({ name: "bat", model: BD.model, pose: "fly", height: w * 0.8 }, undefined, { stage, cast, pups }); if (m) { f.m = m; b.add(m.root); disposers.push(() => m.dispose?.()); } }  // a 3D flock member (extras3d.js): its Fly clip loops, the flock's group places and flips it; none loaded: the paper below
+        if (f.m) {}
+        else if (defs[pid]) { f.p = await puppet(pid, { ...defs[pid], size: w * 0.8 }, stage); b.add(f.p.root); }
         else {
           f.u = card(w, up ? w * up.image.height / up.image.width : w * 0.4, up || cutShape("#f4f1e8"), 0.3); b.add(f.u);
           if (down) { f.d = card(w, w * down.image.height / down.image.width, down, 0.3); b.add(f.d); }
@@ -812,7 +1104,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
           f.b.visible = k < 1 && u >= 0 && u <= 1;
           f.b.position.set(x, fly.y + fly.rise * k + (i % 2 ? -0.02 : -0.04) * Math.min(i, 1) + 0.006 * flap, fly.z + 0.025 * i);
           f.b.scale.set(fly.dir, 1, 1).multiplyScalar(bd ? Math.max(1e-3, edge) : i ? fly.fold.k : tuck(fly.fold, f.b, 0.06, dt));
-          if (f.p) { const [n, hz] = Object.entries(f.p.def.cycles || {})[0] || []; if (n) pose(f.p, { [n]: beat(hz, t + f.ph) }); }
+          if (f.m) {}
+          else if (f.p) { const [n, hz] = Object.entries(f.p.def.cycles || {})[0] || []; if (n) pose(f.p, { [n]: beat(hz, t + f.ph) }); }
           else if (f.d) { f.u.visible = flap > 0; f.d.visible = flap <= 0; } else f.u.scale.y = 0.75 + 0.25 * flap;
         });
         flockAt = flock[0].b.position;
@@ -902,20 +1195,22 @@ export function addAmbient(scene, cam, m, opts = {}) {
       }
     }
 
-    // drift: leaves floating down the current, or blown across the air
+    // drift: leaves floating down the current, or blown across the air; kind "seed": white tufted seed fluff floating slowly in the air, rising and falling, glinting in the sun
     const DR = A.drift;
     if (DR?.count > 0) {
-      const tex = await picture(DR.card.includes("/") ? `${DR.card}.png` : `${A.cards}/${DR.card}.png`), R = DR.over === "air" ? region(null) : water, air = DR.over === "air";
+      const seed = DR.kind === "seed", tex = seed ? seedFluff() : await picture(DR.card.includes("/") ? `${DR.card}.png` : `${A.cards}/${DR.card}.png`), air = seed || DR.over === "air", R = air ? region(null) : water;
       for (let i = 0; i < DR.count; i++) {
-        const w = rnd(0.035, 0.05), c = card(w, tex ? w * tex.image.height / tex.image.width : w * 0.5, tex || cutShape("#7a9a3c"));
+        const w = seed ? rnd(0.028, 0.036) : rnd(0.035, 0.05), c = card(w, tex ? w * tex.image.height / tex.image.width : w * 0.5, tex || cutShape("#7a9a3c"), seed ? 0.3 : 0.15);
+        if (seed) c.material.emissive.setRGB(1, 0.85, 0.6);  // the low sun through the fluff
         const leaf = new THREE.Group(); leaf.add(c); if (!air) c.rotation.x = -Math.PI / 2;
         const reset = x => leaf.position.set(x, air ? Y + rnd(0.1, 0.45) : R.y + 0.003, rnd(R.z0, R.z1));
         reset(rnd(R.x0, R.x1)); group.add(leaf);
         const ph = rnd(0, TAU);
         ticks.push((t, dt) => {
-          const v = air ? 0.05 * (0.4 + wind) * WD.dir : (A.water?.flow ?? 0.012) + 0.004 * wind * WD.dir;
+          const v = seed ? 0.02 * (0.4 + wind) * WD.dir : air ? 0.05 * (0.4 + wind) * WD.dir : (A.water?.flow ?? 0.012) + 0.004 * wind * WD.dir;
           leaf.position.x += v * dt; leaf.position.z += 0.003 * Math.sin(0.5 * t + ph) * dt;
-          if (air) { leaf.position.y += 0.01 * Math.sin(1.3 * t + ph) * dt; c.rotation.set(0.6 * Math.sin(1.1 * t + ph), 0.8 * t + ph, 0.4 * Math.sin(0.9 * t)); }
+          if (seed) { leaf.position.y += 0.025 * Math.sin(0.45 * t + ph) * dt; leaf.quaternion.copy(cam.quaternion); c.rotation.set(0.2 * Math.sin(0.7 * t + ph), 0.6 * Math.sin(0.3 * t + ph), 0.25 * Math.sin(0.6 * t)); c.material.emissiveIntensity = 0.3 + 0.3 * Math.max(0, Math.sin(0.8 * t + ph)) ** 3; c.visible = leaf.getWorldPosition(tmp).project(cam).y <= safeNow().yt; }  // never across the read-along words (review 1 S4: one drifted through the line on desktop)  // rises and falls ~5 cm over 14 s, facing the camera, tuft up, turning a little (a steep phone view never sees it edge-on); now and then it catches the sun
+          else if (air) { leaf.position.y += 0.01 * Math.sin(1.3 * t + ph) * dt; c.rotation.set(0.6 * Math.sin(1.1 * t + ph), 0.8 * t + ph, 0.4 * Math.sin(0.9 * t)); }
           else { c.rotation.z = 0.3 * t * Math.sign(v) + ph; leaf.position.y = R.y + 0.003 + 0.0015 * Math.sin(1.7 * t + ph); }
           if (leaf.position.x > R.x1 + 0.05 || leaf.position.x < R.x0 - 0.05) reset(v >= 0 ? R.x0 - 0.04 : R.x1 + 0.04);
           leaf.scale.setScalar(Math.max(1e-3, pop((t - born) / 0.8)));
@@ -966,8 +1261,9 @@ export function addAmbient(scene, cam, m, opts = {}) {
     // extras: paper puppets with routines, taps and story cues (DIRECTION.md "extras"), then the surprises a child finds
     const defs = (m.extras?.length || A.surprises?.length) ? await puppetDefs() : {};
     const add = async (e, o) => {
-      const p = e.card && !e.puppet ? await cardPuppet(e.card.includes("/") ? `${e.card}.png` : `${A.cards}/${e.card}.png`, e.size ?? 0.03)  // a surprise that is a card
-        : await puppet(e.puppet || "extra", defs[e.puppet] || { size: 0.06, parts: ["body"], gait: "walk" }, stage), def = p.def;
+      const p = e.model && await extra3d(e, defs[e.puppet], { stage, cast, pups, still: o.still })  // a 3D model (extras3d.js), with a puppet's interface; null if it does not load
+        || (e.card && !e.puppet ? await cardPuppet(e.card.includes("/") ? `${e.card}.png` : `${A.cards}/${e.card}.png`, e.size ?? 0.03)  // a surprise that is a card
+        : await puppet(e.puppet || "extra", defs[e.puppet] || { size: 0.06, parts: ["body"], gait: "walk" }, stage)), def = p.def;
       const home = spot(e.at); if (!home) return null;  // its anchor is not in this spread
       if (o.dx) home.add(o.dx);
       const path = (e.path || []).map(spot).filter(Boolean).map(v => (o.dx ? v.add(o.dx) : v));
@@ -981,6 +1277,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       // face: -1 starts a puppet looking to -x (its art looks to +x); a "go" or "turn" then sets it as before
       p.root.position.copy(home); p.root.rotation.y = { back: Math.PI, left: -0.35, right: 0.35 }[e.seen_from] || 0;  // a flat card leans only 20° to its side: the reader orbits ±50°, so it is never seen edge-on
       p.root.scale.setScalar(1e-3); group.add(p.root); pups.push(x);
+      p.x = x;  // a 3D extra plays the clip of the step its routine is on
       if ((x.sw = sway.find(s => s.b?.containsPoint(home)))) x.sw.carry = true;
       if (coarse) { x.cs = new THREE.Mesh(new THREE.PlaneGeometry(p.size, p.size * 0.4).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0, transparent: true, opacity: 0.3, depthWrite: false, alphaMap: dot }));
         group.add(x.cs); }
@@ -999,6 +1296,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     ticks.push((t, dt) => { for (const x of pups) extra(x, t, dt); });
     if (canvas && pups.length) {  // a tap on an extra: its move and sound at once, then its routine resumes
       const rc = new THREE.Raycaster(), hit = new Map(pups.flatMap(x => x.p.meshes.map(m => [m, x])));
+      rc.params.generous = true;  // extras3d.js: a tap in a 3D extra's box beside its body still answers it
       let press = null;
       const down = e => { press = [e.clientX, e.clientY, performance.now()]; };
       const up = e => {
@@ -1006,15 +1304,15 @@ export function addAmbient(scene, cam, m, opts = {}) {
         press = null;
         const b = canvas.getBoundingClientRect();
         rc.setFromCamera(new THREE.Vector2(2 * (e.clientX - b.left) / b.width - 1, 1 - 2 * (e.clientY - b.top) / b.height), cam);
-        const x = isOpen() && story.game !== "wait" && hit.get(rc.intersectObjects([...hit.keys()].filter(m => m.visible && m.parent.parent), false)[0]?.object);
-        if (!x) return;  // while a game runs, taps pass through to its targets
+        const h = rc.intersectObjects([...hit.keys()].filter(m => m.visible && m.parent.parent), false)[0], x = isOpen() && story.game !== "wait" && hit.get(h?.object);
+        if (!x || ["card", "reaction", "game"].includes(window.live?.lastTap?.kind) && window.live.lastTap.who !== x.e.name) return;  // while a game runs, taps pass through to its targets; on or beside an extra, when live.js has just answered something else (its pointerup listener runs first; it clears lastTap every tap): that thing's tap alone
         dispatchEvent(new CustomEvent("ambient:tap", { detail: { name: x.e.name } }));
         const [mv, snd] = x.e.tap || [x.e.move || "jump", x.e.sound];
         heard.length = 0; sound(snd, x.e.name);  // a tap always answers
         interrupt(x, mv, true);
       };
-      canvas.addEventListener("pointerdown", down); canvas.addEventListener("pointerup", up);
-      disposers.push(() => { canvas.removeEventListener("pointerdown", down); canvas.removeEventListener("pointerup", up); });
+      canvas.addEventListener("pointerdown", down, true); canvas.addEventListener("pointerup", up);  // capture: a press in a page-turn corner (live.js stops it there) still reaches a frog sitting in it
+      disposers.push(() => { canvas.removeEventListener("pointerdown", down, true); canvas.removeEventListener("pointerup", up); });
     }
 
     // cloud shadows slide with the wind
@@ -1119,7 +1417,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
 
   return {
     get shot() { return shot; },
-    get state() { return { shot, yielded, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
+    get state() { return { shot, yielded, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, story: SCAM, beat: SC.key, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
     get extras() { return pups; },  // the extras, the backdrop's top, and everything this layer added, for tests
     get backdrop() { return bd; },
     group,
@@ -1131,7 +1429,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       if (!built && isOpen()) build(t).catch(e => console.error("ambient:", e));
       windTick(t);
       hushTick();
-      if ((shot === "done" || shot === "in") && isOpen()) shots();  // a line's shot may take over a push-in that has not landed
+      if ((shot === "done" || shot === "in") && isOpen() && !SCAM) shots();  // a line's shot may take over a push-in that has not landed
       camera(t, dt);
       if (fogOn) { const d = cam.position.distanceTo(controls?.target || LOOK); scene.fog.near = d; scene.fog.far = d + 1.6 / A.fog; }
       if (passes.length) {  // focus: the sharp line follows the subject (the shot's focus, else what the camera looks at), pulled over 0.8 s
@@ -1144,6 +1442,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     },
     dispose() {
       disposers.forEach(f => f());
+      pups.forEach(x => x.p.dispose?.());  // a 3D extra frees its skeletons and its own copies (extras3d.js); the sweep below frees the rest
       setTimeout(async () => {  // this spread's card pictures leave the GPU once nothing on the desk or in the loaded spreads shows them: cached forever,
         const shown = new Set(), look = r => r?.traverse(o => [].concat(o.material ?? []).forEach(m => Object.values(m).forEach(v => v?.isTexture && shown.add(v))));  // every spread read piled up (77 left over by s08) and a phone dropped the page
         look(scene); for (const p of Object.values(window.live?.spreads ?? {})) look((await Promise.resolve(p).catch(() => null))?.root);

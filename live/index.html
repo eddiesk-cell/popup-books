@@ -5,19 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pop-up book</title>
 <link rel="icon" href="data:,">
+<link rel="stylesheet" href="../fonts/noto-sans-lao/noto-sans-lao.css">
 <style>
   :root { --ink: #f6e7c8; --glow: #ffb45a; --night: #07080f; }
   /* readalong.js places its page and book button by these; on a phone the button goes under the language row */
   @media (max-width: 560px) { :root { --ra-btn-top: 58px; --ra-top: 112px; } }
   html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink);
-    font-family: Georgia, "Times New Roman", serif; overflow: hidden; touch-action: none; user-select: none; }
+    font-family: "Noto Sans Lao", Georgia, "Times New Roman", serif; overflow: hidden; touch-action: none; user-select: none; }
   #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
   [hidden] { display: none !important; }
-  button { font: inherit; color: var(--night); background: var(--glow); border: 0; border-radius: 999px; padding: .5em 1.3em; cursor: pointer; }
+  button, #start { font: inherit; text-decoration: none; color: var(--night); background: var(--glow); border: 0; border-radius: 999px; padding: .5em 1.3em; cursor: pointer; }
   button:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   #note { position: fixed; top: 50%; left: 50%; translate: -50% -50%; text-align: center; font-size: clamp(16px, 2.4vw, 26px);
     text-shadow: 0 2px 10px #000; pointer-events: none; }
+  /* the arrival from the shelf (?from=shelf): a warm veil, the closed leather book comes down onto the desk and its cover swings open (a CSS stand-in for the shelf's own model), then the veil lifts onto the open book */
+  #arrive { position: fixed; inset: 0; z-index: 90; background: #1c1009; perspective: 900px; display: grid; place-items: center; transition: opacity .25s; overflow: hidden; }
+  #arrive[hidden] { display: none; } #note { z-index: 95; }
+  #arrive .bk { width: min(56vw, 280px); aspect-ratio: 3 / 4; position: relative; transform-style: preserve-3d; transform: translateY(8vh) rotateX(58deg); animation: bk-land .9s cubic-bezier(.2, .7, .2, 1) both; }
+  #arrive .pg { position: absolute; inset: 2% 2% 2% 0; background: #efe3c2; box-shadow: 0 0 0 3px #d9b05a inset; transform: translateZ(-6px); } #arrive .pg + .pg { transform: translateZ(-12px); }
+  #arrive .cv { position: absolute; inset: 0; background: var(--leather, #2a1c14); border-radius: 6px; box-shadow: inset 0 0 0 5px var(--leather, #2a1c14), inset 0 0 0 7px var(--gold, #d9a441), 0 18px 30px #000a; transform-origin: left center; animation: bk-open .8s 1s ease-in-out both; }
+  #arrive .sh { position: absolute; left: 50%; bottom: 8%; width: 70%; height: 6%; translate: -50%; background: radial-gradient(#000a, transparent 70%); animation: bk-land .9s cubic-bezier(.2, .7, .2, 1) both; }
+  @keyframes bk-land { from { transform: translateY(-70vh) rotateX(70deg) scale(1.3); opacity: .4; } to { transform: translateY(8vh) rotateX(58deg); opacity: 1; } }
+  @keyframes bk-open { to { transform: rotateY(-168deg); } }
+  .arriving #top, .arriving #msg, .arriving #title, .arriving #bar, .arriving #note { visibility: hidden; }
+  #arrive.veil .bk, #arrive.veil .sh { display: none; }
+  #arrive.calm .bk, #arrive.calm .cv { animation: none; } #arrive.calm .cv { transform: rotateY(-168deg); }
   #note.stub { top: auto; bottom: 14vh; translate: -50%; color: #ffd27a; font-size: 15px; }
+  #title { position: fixed; z-index: 2; left: 50%; top: 19vh; translate: -50%; width: min(86vw, 22em); text-align: center; pointer-events: none; font-style: italic; font-size: clamp(26px, 8vw, 40px); line-height: 1.15;
+    color: #ffe9a8; text-shadow: 0 2px 10px #000c, 0 0 24px #000a; }
+  #title[hidden] { display: none; }
   #msg { position: fixed; bottom: max(18vh, 140px); left: 50%; translate: -50%; width: min(80vw, 34em); text-align: center; opacity: 0;
     transition: opacity .6s; text-shadow: 0 2px 10px #000; font-size: clamp(16px, 2.2vw, 26px); pointer-events: none; }
   #msg p { margin: 0; } #msg.show { opacity: 1; }
@@ -43,9 +59,11 @@
   #top button { font-size: 15px; padding: .3em .8em; background: #0008; color: var(--ink); border: 1px solid #f6e7c855; white-space: nowrap; }
   #langs [aria-pressed="true"] { background: var(--glow); color: var(--night); }
   #snd { min-width: 2.6em; }
+  #auto { display: inline-flex; align-items: center; gap: .35em; } #auto svg { width: 1em; height: 1em; fill: currentColor; }
+  #auto[aria-pressed="true"] { background: var(--glow); color: var(--night); }
   /* the reading bar: compact, at the very bottom, and it never takes a tap */
   #bar { position: fixed; left: 0; right: 0; bottom: 0; min-height: 9vh; padding: 0 3vw; display: flex; align-items: center; gap: 2vw;
-    background: linear-gradient(#0000, #000c 40%); opacity: 0; transition: opacity .4s; pointer-events: none; }
+    background: linear-gradient(#0000, #0005 70%); opacity: 0; transition: opacity .4s; pointer-events: none; }
   #bar.on { opacity: 1; }
   #bar:not(.on) #replay { visibility: hidden; }
   #replay { pointer-events: auto; font-size: 16px; flex: none; }
@@ -60,6 +78,17 @@
   #moral h2 { margin: 0; font-weight: normal; font-style: italic; font-size: clamp(28px, 5vw, 56px); opacity: .85; }
   #moral .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0 16px; font-size: clamp(16px, 2vw, 22px); }
   #bar { z-index: 5; }
+  /* more to read: a quiet row of dots above the reading bar; at the page's end a labelled Next button beside the forward corner */
+  #dots { position: fixed; left: 50%; top: 0; translate: -50%; display: flex; gap: 7px; pointer-events: none; z-index: 51; }  /* under the read-along page's text (live.js sets top), never over the stage */
+  #dots i { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid #ffe9a8bb; box-sizing: border-box; background: #0004; }
+  #dots i.on { background: #ffd27a; border-color: #ffd27a; } #dots i.now { background: #ffd27a66; animation: dot 1.6s ease-in-out infinite; }
+  @keyframes dot { 50% { background: #ffd27a; scale: 1.25; } }
+  #next { position: fixed; z-index: 6; translate: calc(-100% - 36px) -50%; display: flex; align-items: center; gap: .5em; padding: .55em 1em .55em 1.2em;
+    font: inherit; font-size: clamp(16px, 2vw, 22px); white-space: nowrap; color: #2a2230; background: #ffe9a8; border: 0; border-radius: 999px; box-shadow: 0 4px 16px #000a, 0 0 22px #ffd27a88;
+    cursor: pointer; animation: breathe 3.6s ease-in-out infinite; }
+  #next[hidden] { display: none; } #next svg { width: 1.2em; height: 1.2em; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes breathe { 50% { scale: 1.06; box-shadow: 0 4px 16px #000a, 0 0 34px #ffd27acc; } }
+  @media (prefers-reduced-motion: reduce) { #next, #dots i.now { animation: none; } }
   /* the turn hint: a softly glowing page corner where the finger should pull */
   .curl { position: fixed; z-index: 3; width: 58px; height: 58px; translate: -50% -50%; pointer-events: none; border-radius: 50%;
     background: radial-gradient(circle, #ffe9a8aa 0%, #ffd27a40 40%, transparent 70%); animation: curl 2.6s ease-in-out infinite; }
@@ -72,7 +101,12 @@
   @media (prefers-reduced-motion: reduce) { .curl, .curl.pulse { animation: none; } }
   #sbub { position: fixed; translate: -50% -100%; background: #fffaf0; color: #2a2230; border-radius: 18px; padding: 10px 16px;
     font-size: clamp(16px, 2.2vw, 24px); max-width: 30vw; text-align: center; box-shadow: 0 6px 18px #0007; pointer-events: none; z-index: 2; }
+  #sbub { width: max-content; z-index: 4; }  /* above the page-corner marks (.curl is 3) */ @media (max-width: 560px) { #sbub { max-width: 66vw; } }
   #sbub::after { content: ""; position: absolute; left: 50%; bottom: -10px; translate: -50%; border: 11px solid transparent; border-top-color: #fffaf0; border-bottom: 0; }
+  #sbub.below::after { top: -10px; bottom: auto; border-top: 0; border-bottom: 11px solid #fffaf0; }
+  #sbub h4 { margin: 0 0 4px; display: flex; align-items: baseline; justify-content: center; gap: .6em; font-weight: normal; }  /* the word card */
+  #sbub h4 span { font-size: 1.45em; font-weight: bold; color: #7a3b10; } #sbub h4 u { text-decoration: none; font-size: .95em; opacity: .75; }
+  #sbub.card { border: 3px solid #ffd27a; } #sbub.card b { font-weight: normal; display: block; } #sbub.card i { opacity: .8; } #sbub i:not(:lang(en)) { font-style: normal; }
   #sbub i { display: block; font-size: .75em; opacity: .7; }
   /* listen: the speaker's line in a bubble over them, the words Bobo missed lit; a tap hears it again (the old player's #lbub) */
   #lbub { position: fixed; translate: -50% -100%; background: #fffaf0; color: #2a2230; border-radius: 18px; padding: 10px 16px; z-index: 3;
@@ -85,28 +119,33 @@
     #top button { font-size: 13px; padding: .3em .6em; }
   }
 </style>
-<script type="importmap">
-{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }
-</script>
+<link rel="modulepreload" href="../dist/c-4GJWWUN3.js">
+<link rel="modulepreload" href="../dist/c-VHNSBD2M.js">
 </head>
 <body>
 <canvas id="view" tabindex="0" aria-label="The pop-up book. Drag the bottom of a page to turn it, drag elsewhere to look around, tap things to make them react. Arrow keys turn the page."></canvas>
+<div id="arrive" hidden><div class="sh"></div><div class="bk"><i class="pg"></i><i class="pg"></i><div class="cv"></div></div></div>
+<script>if (/[?&]from=shelf/.test(location.search)) { const a = document.getElementById("arrive"); a.hidden = false; a.classList.add("veil"); }  /* the veil from the first paint, before the module runs */</script>
 <div id="note">Opening the book…</div>
 <div id="top"><div id="langs" role="group" aria-label="Subtitle language"></div>
-  <button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
+  <button id="auto" aria-label="Auto play: the story reads itself and turns the pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Auto</button><button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
+<div id="title" hidden></div>
 <div id="msg" aria-live="polite"></div>
 <div id="count" aria-live="polite" hidden></div>
 <div id="turnhint" role="status" hidden><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="6" width="16" height="30" rx="3"/><path d="M8 34a16 16 0 0 0 26 8m0 0-5 1m5-1-1-5"/></svg>Turn your phone for a bigger book</div>
+<button id="next" hidden><span>Next page</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg></button>
 <div id="curlL" class="curl" hidden></div><div id="curlR" class="curl" hidden></div>
 <div id="sbub" hidden></div>
 <button id="lbub" hidden aria-label="Hear it again"></button>
-<div id="moral" hidden><h2>The End</h2><div class="row"><button id="start">Start from the beginning</button><button id="again">Read it again</button><button id="back">Back</button></div></div>
-<div id="bar"><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
+<div id="moral" hidden><h2>The End</h2><div class="row"><a id="start" role="button" href="./">Start from the beginning</a><button id="again">Read it again</button><button id="back">Back</button></div></div>
+<div id="bar"><div id="dots" hidden aria-hidden="true"></div><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
 <script src="../readalong.js" data-source="#read" data-theme="firefly" defer></script>
 <script>  /* each book's read-along theme; the deferred readalong.js above reads it once the page has loaded */
   const ra = document.currentScript.previousElementSibling, book = new URLSearchParams(location.search).get("book") || "kapi";
+  document.getElementById("start").href = `?book=${book}&s=s01`;  // a plain link, so it works even when an old cached live.js has no handler for it
   Object.assign(ra.dataset, { theme: { mali: "lantern" }[book] || "firefly", story: `../${book}/story.json`, voice: `../${book}/voice/` });
 </script>
-<script type="module" src="live.js"></script>
+<script type="module" src="../dist/live-CVCNV75L.js"></script>
+<script type="module" src="paperswap.js"></script>
 </body>
 </html>

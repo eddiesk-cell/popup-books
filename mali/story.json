@@ -1,5 +1,6 @@
 {
  "title": "Mali and the Lantern Market",
+ "origin": "original",
  "voices": {
   "narrator": {
    "voice": "bm_george",
@@ -152,6 +153,16 @@
       [
        "narrator",
        "Hop, hop, hop! Mali jumped from stone to stone, all the way across."
+      ]
+     ]
+    },
+    {
+     "id": "2.6",
+     "text": "On the other side, everything glowed softly. Mali had stepped into the spirit world.",
+     "say": [
+      [
+       "narrator",
+       "On the other side, everything glowed softly. Mali had stepped into the spirit world."
       ]
      ]
     }
@@ -437,11 +448,21 @@
     },
     {
      "id": "6.5",
-     "text": "Her song carried the boat gently home. Mali waved goodbye at her door, and Pip glowed goodnight.",
+     "text": "Her song carried the boat back across the river, out of the spirit world.",
      "say": [
       [
        "narrator",
-       "Her song carried the boat gently home. Mali waved goodbye at her door, and Pip glowed goodnight."
+       "Her song carried the boat back across the river, out of the spirit world."
+      ]
+     ]
+    },
+    {
+     "id": "6.6",
+     "text": "The spirits took Mali all the way home. She waved goodbye at her door, and Pip glowed goodnight.",
+     "say": [
+      [
+       "narrator",
+       "The spirits took Mali all the way home. She waved goodbye at her door, and Pip glowed goodnight."
       ]
      ]
     }
@@ -451,21 +472,51 @@
  "moral": [
   {
    "id": "moral.1",
-   "text": "Kindness is like a lantern.",
+   "text": "What did we learn?",
    "say": [
     [
-     "closing",
-     "Kindness is like a lantern."
+     "narrator",
+     "What did we learn?"
     ]
    ]
   },
   {
    "id": "moral.2",
-   "text": "When you share your light with others, it helps you find your way home.",
+   "text": "Help others, even when you are sad. Mali did.",
+   "say": [
+    [
+     "narrator",
+     "Help others, even when you are sad. Mali did."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "A little light makes the dark less scary. Pip found that out.",
+   "say": [
+    [
+     "narrator",
+     "A little light makes the dark less scary. Pip found that out."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Listen carefully, and you can find what was lost. Mali heard the song.",
+   "say": [
+    [
+     "narrator",
+     "Listen carefully, and you can find what was lost. Mali heard the song."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Kindness is like a lantern. When you share your light with others, it helps you find your way home.",
    "say": [
     [
      "closing",
-     "When you share your light with others, it helps you find your way home."
+     "Kindness is like a lantern. When you share your light with others, it helps you find your way home."
     ]
    ]
   }

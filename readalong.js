@@ -16,12 +16,12 @@
 
   // Andika (SIL, drawn for children learning to read), self-hosted beside this script under the Open Font License
   document.head.insertAdjacentHTML("beforeend",
-    `<link rel="stylesheet" href="${new URL("fonts/andika/andika.css", me.src)}">`);
+    `<link rel="stylesheet" href="${new URL("fonts/andika/andika.css", me.src)}"><link rel="stylesheet" href="${new URL("fonts/noto-sans-lao/noto-sans-lao.css", me.src)}">`);
   const style = document.createElement("style");
   style.textContent = `
   .ra-page { position: fixed; z-index: 50; left: 0; right: 0; top: var(--ra-top, max(12vh, 80px)); margin: auto; width: min(88vw, 30em);
     box-sizing: border-box; padding: .55em 1.2em .65em; border-radius: 1.1em; text-align: center; pointer-events: none;
-    font: clamp(19px, 1.3vw + 1.3vh, 36px)/1.45 Andika, "Trebuchet MS", system-ui, sans-serif; word-spacing: .08em;
+    font: clamp(19px, 1.3vw + 1.3vh, 36px)/1.45 "Noto Sans Lao", Andika, "Trebuchet MS", system-ui, sans-serif; word-spacing: .08em;
     color: var(--ink); background: var(--glass); border: 1px solid var(--edge);
     -webkit-backdrop-filter: blur(10px) saturate(1.3); backdrop-filter: blur(10px) saturate(1.3);
     box-shadow: 0 .4em 2.2em #0007, inset 0 0 1.4em var(--inner);
