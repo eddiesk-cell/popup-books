@@ -36,7 +36,7 @@
 //   sfx.stats()             { live, rings, cards, wakes, draws, effects, slots, held, dropped, budget, caps }   64 effects at once (the oldest is ended, done, to make room), 8 wakes
 //   sfx.onScreen(camera, "rain"|"cards")  how many rain streaks or cards a child sees right now (the check's measure)
 //   sfx.dispose()
-// Guard rails held here, not by pages: nothing draws in the top quarter of the screen (faded out by screen height in every shader); nothing is
+// Guard rails held here, not by pages: nothing draws in the top quarter of the screen (faded out by screen height in every shader; `stars` are the sky and keep only the top 10%, the buttons); nothing is
 // brighter than a light cue and nothing full-frame changes faster than 0.5 s; follow effects sit below the subject's shoulders; nothing is a raycast target.
 import * as THREE from "three";
 
@@ -44,11 +44,12 @@ const NS = 64, TAU = Math.PI * 2, LIFT = .003;  // what lies on the water sits 3
 const BIAS = "gl_Position.z -= 2e-4 * gl_Position.w;";
 const PAGE = "uniform float uGround; float onPage(vec3 w) { vec3 d = w - cameraPosition; vec3 h = d.y < -1e-4 ? cameraPosition + d * max(1., (uGround - cameraPosition.y) / d.y) : w;" +  // where the eye's line through the point meets the page: the point shows over the book only if that does
   " float bx = mix(.06, .2, smoothstep(.1, -.4, h.z)); return smoothstep(uPage.x, uPage.x + bx, h.x) * smoothstep(uPage.y, uPage.y - bx, h.x) * smoothstep(uPage.w, uPage.w - .06, h.z) * smoothstep(uPage.z - 3., uPage.z - 2.5, h.z); }";  // nothing over the room: everything fades out at the open book's edges (wider at the back corners, beside a standing backdrop)
-const TUCK = "a *= 1. - uTuck * smoothstep(.64, .73, gl_FragCoord.y / uH);";  // the read-along words sit in the top quarter: nothing reaches it
+const TUCK = "a *= 1. - uTuck * smoothstep(.64, .73, gl_FragCoord.y / uH);";
+const TUCKP = "a *= 1. - uTuck * mix(smoothstep(.64, .73, gl_FragCoord.y / uH), smoothstep(.9, .93, gl_FragCoord.y / uH), vSky);";  // stars (vSky 1) are the sky: only the top 10% (the buttons) is kept clear  // the read-along words sit in the top quarter: nothing reaches it
 // Particle kinds: 0 dot (a crisp glint, ember) · 1 four-point star · 2 soft glow · 3 rain streak · 4 soft puff · 5 ring of light · 6 paper note · 7 reflection · 8 spot on the ground
 // · 9 dust strung on a funnel helix · 10 wind line (a dot of a ribbon) · 11 fire spark (stretched, orange with a dark rim) · 12 water drop (paper-white, blue edge) · 13 bubble (clear, bright rim, dark outline, a glint)
 const PVS = `uniform float uT, uH, uMinPx; uniform vec4 uS[${NS}], uPage; ${PAGE}
-attribute vec3 aV; attribute vec4 aA, aC, aD, aE, aG; varying vec4 vC; varying float vK, vR, vAge, vW, vPx;
+attribute vec3 aV; attribute vec4 aA, aC, aD, aE, aG; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
 void main() {
   float age = uT - aA.x, life = aA.y, k = aA.w; vec4 S = uS[int(aD.z + .5)];
   if (age < 0. || age > life || S.w <= 0.) { gl_Position = vec4(2., 2., 2., 1.); gl_PointSize = 0.; return; }
@@ -62,10 +63,11 @@ void main() {
   if (aE.w > 0.) a *= .5 + .5 * pow(.5 + .5 * sin(age * aE.w + sd * 6.2832), 2.);
   float s = aA.z * (1. + aG.x * u); if (aG.w > 0. && k < 6.5) s *= 1. + .1 * sin(age * aG.w * 6.2832 + sd * 6.28);
   vec4 c = projectionMatrix * modelViewMatrix * vec4(p, 1.);
-  gl_Position = c; ${BIAS} float px = s * uH * .5 * projectionMatrix[1][1] / c.w; gl_PointSize = clamp(px, k > 10.5 && k < 11.5 ? uMinPx * 2.5 : k < 1.5 || k > 9.5 ? uMinPx : k > 3.5 && k < 4.5 ? uMinPx * 2.5 : k > 2.5 && k < 3.5 ? uMinPx * 5. : 0., k > 2.5 && k < 3.5 ? 90. : k > 12.5 ? 40. : k > 11.5 ? 18. : 256.);  // rain streaks at most 90 px long, drops at most 18 px, at any camera  // a phone keeps dots and stars at least uMinPx wide, puffs 2.5 times that, rain streaks 5 times that long
-  vC = vec4(aC.rgb, a); vK = k; vR = sd; vAge = age; vW = aG.w; vPx = gl_PointSize;
+  gl_Position = c; ${BIAS} float px = s * uH * .5 * projectionMatrix[1][1] / c.w; gl_PointSize = clamp(px, k > 10.5 && k < 11.5 ? uMinPx * 2.5 : k < 1.5 || k > 9.5 ? uMinPx : k > 3.5 && k < 4.5 ? uMinPx * 2.5 : k > 2.5 && k < 3.5 ? uMinPx * 5. : 0., k > 2.5 && k < 3.5 ? 90. : k > 12.5 ? 40. : k > 11.5 ? 18. : aG.z > 2.5 ? 1024. : 256.);  // rain streaks at most 90 px long, drops at most 18 px, at any camera  // a phone keeps dots and stars at least uMinPx wide, puffs 2.5 times that, rain streaks 5 times that long
+  vC = vec4(aC.rgb, a); vK = k; vR = sd; vAge = age; vW = aG.w; vPx = gl_PointSize; vSky = step(1.5, aG.z) * step(aG.z, 2.5);
+  if (aG.z > 2.5) { vec4 cn = projectionMatrix * modelViewMatrix * vec4(p + normalize(cameraPosition - p) * s * .5, 1.); gl_Position.z = cn.z / cn.w * c.w; }  // a flash ball: depth taken at its front, so the ground behind it never cuts it flat
 }`;
-const PFS = `uniform float uH, uTuck; varying vec4 vC; varying float vK, vR, vAge, vW, vPx;
+const PFS = `uniform float uH, uTuck; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
 void main() {
   vec2 q = gl_PointCoord * 2. - 1.; q.y = -q.y; float d = length(q), m = 0.; vec3 col = vC.rgb;
   if (vK < .5) m = smoothstep(1., .5, d);
@@ -85,12 +87,12 @@ void main() {
   else if (vK > 12.5) { vec2 g = q - vec2(-.36, .36); m = smoothstep(1., .9, d) * (.22 + .78 * smoothstep(.45, .78, d)) + .9 * smoothstep(.3, .1, length(g * vec2(1., 1.6)));  // a bubble: a clear disc, a bright rim, a glint
     col = mix(vC.rgb, vec3(.06, .22, .34), smoothstep(.7, .88, d) * (1. - smoothstep(.1, .3, length(g)))); m = min(m, 1.); }
   else { m = smoothstep(1., .8, d); col = mix(vec3(.3, .52, .68), vC.rgb, smoothstep(.85, .45, d)); }  // a drop: paper-white with a blue edge
-  float a = vC.a * m; ${TUCK}
+  float a = vC.a * m; ${TUCKP}
   if (a < .003) discard;
   gl_FragColor = vec4(col, min(a, 1.));
 }`;
-// The flat pool on the water and the ground: 0 ring that opens · 1 wash that spreads and stays · 2 ring held still · 3 wash that only fades in
-const RVS = `uniform float uT; uniform vec4 uS[${NS}], uPage; ${PAGE} attribute vec3 aP; attribute vec4 aR, aC; attribute vec3 aS; varying vec2 vQ; varying float vA, vK, vW; varying vec3 vC;
+// The flat pool on the water and the ground: 0 ring that opens · 1 wash that spreads and stays · 2 ring held still · 3 wash that only fades in · 4 leaf shadows (dappled, swaying) · 5 a warm pool that flickers
+const RVS = `uniform float uT, uMove; uniform vec4 uS[${NS}], uPage; ${PAGE} attribute vec3 aP; attribute vec4 aR, aC; attribute vec3 aS; varying vec2 vQ; varying float vA, vK, vW; varying vec3 vC;
 void main() {
   float age = uT - aR.x, life = aR.y, k = aR.w, u = age / life; vec4 S = uS[int(aS.x + .5)];
   if (age < 0. || age > life || S.w <= 0.) { gl_Position = vec4(2., 2., 2., 1.); return; }
@@ -98,14 +100,18 @@ void main() {
   if (k < .5) { R *= .15 + .85 * (1. - (1. - u) * (1. - u)); a *= (1. - u * u) * min(1., age * 10.); }
   else if (k < 1.5) { float g = clamp(age / 3., 0., 1.); R *= 1. - (1. - g) * (1. - g); a *= min(1., age * 2.) * clamp((life - age) / .8, 0., 1.); }
   else if (k < 2.5) { R *= .75; a *= clamp(age / .15, 0., 1.) * clamp((life - age) / .3, 0., 1.); }
-  else a *= clamp(age, 0., 1.) * clamp((life - age) / .8, 0., 1.);
+  else { a *= clamp(age, 0., 1.) * clamp((life - age) / .8, 0., 1.); if (k > 4.5) { float f = uT * uMove; a *= .8 + .2 * sin(f * 9.1) * sin(f * 3.7 + 1.3); } }  // uMove 0 when reduced: still
   a *= onPage(S.xyz + aP);
   gl_Position = projectionMatrix * viewMatrix * vec4(S.xyz + aP + vec3(position.x * R * 2., ${LIFT}, -position.y * R * 2. * aS.z), 1.); ${BIAS}
+  if (k > 3.5) gl_Position.z -= 3e-4 * gl_Position.w;  // shade and firelight lie on what stands in them too (a prop's ground plate, a trunk's foot, feet): drawn nearer by 0.7 cm at a phone's reading distance (1 m) and 5 cm at a desktop's (2.7 m); measured, near plane 0.02. 1e-3 was 2.4 and 17 cm and warmed a grass card beside the pool
   vQ = position.xy * 2.; vA = a; vK = k; vW = aS.y; vC = aC.rgb;
 }`;
-const RFS = `uniform float uH, uTuck; varying vec2 vQ; varying float vA, vK, vW; varying vec3 vC;
+const RFS = `uniform float uH, uTuck, uT, uMove; varying vec2 vQ; varying float vA, vK, vW; varying vec3 vC;
 void main() { float d = length(vQ); vec3 c = vC; float m;
   if (vK < .5 || (vK > 1.5 && vK < 2.5)) { float crest = smoothstep(vW, 0., abs(d - 1. + vW)), shade = smoothstep(vW * 1.2, 0., abs(d - 1. + vW * 2.6)) * .75; m = max(crest, shade); c = mix(vec3(.05, .16, .2), vC, crest / max(m, 1e-3)); }  // a bright crest over a thin shadow: it reads on painted foam
+  else if (vK > 3.5 && vK < 4.5) { float f = uT * uMove; vec2 p = vQ * 3.2 + vec2(f * .04, f * .025);  // leaf shadows: soft blots with light between them, slowly swaying
+    float n = sin(p.x * 1.9 + sin(p.y * 1.6 + f * .45)) * sin(p.y * 2.2 + sin(p.x * 1.3 - f * .37)) + .35 * sin(p.x * 4.3 - p.y * 3.1 + f * .6);
+    m = smoothstep(1., .7, d) * smoothstep(-.05, .3, n); }
   else m = smoothstep(1., .5, d);
   float a = vA * m; ${TUCK} if (a < .003) discard; gl_FragColor = vec4(c, a); }`;
 // Cards (gust): a cut-paper leaf, petal or straw tumbling on all axes; mode 0 flies, 1 falls and lies where it lands, 2 lies still
@@ -135,9 +141,9 @@ void main() {
   gl_Position = projectionMatrix * viewMatrix * vec4(wp, 1.); ${BIAS}
   vQ = vec2(position.x * 2., t); vA = aW.z * S.w * clamp(age / aW.w, 0., 1.) * smoothstep(.25, .6, length(cameraPosition - p)) * onPage(wp);  // faded in over aW.w s, out near the lens
 }`;
-const BFS = `uniform float uTuck, uH; varying vec2 vQ; varying float vA;
+const BFS = `uniform float uTuck, uH; uniform vec3 uBeamC; varying vec2 vQ; varying float vA;
 void main() { float x = abs(vQ.x), t = vQ.y, a = vA * pow(1. - smoothstep(0., 1., x), 1.5) * smoothstep(0., .3, t) * smoothstep(1., .9, t) * (.8 + .2 * sin(vQ.x * 23. + t * 3.) * sin(vQ.x * 9. - t * 5.));
-  ${TUCK} if (a < .002) discard; a += (fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453) - .5) * .004; gl_FragColor = vec4(1., .74, .3, a); }`;
+  ${TUCK} if (a < .002) discard; a += (fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453) - .5) * .004; gl_FragColor = vec4(uBeamC, a); }`;
 // Wake: a V of two soft bright lines behind a swimmer, its dashes scrolling
 const WVS = `attribute vec3 aUv; varying vec3 vUv; void main() { vUv = aUv; gl_Position = projectionMatrix * viewMatrix * vec4(position, 1.); ${BIAS} }`;
 const WFS = `uniform float uT, uH, uTuck, uScroll; varying vec3 vUv;
@@ -168,14 +174,14 @@ void main() { float a = vA * smoothstep(1., .25, abs(vSide)); ${TUCK} if (a < .0
 const v3 = p => p?.isVector3 ? p.clone() : p ? new THREE.Vector3(...(Array.isArray(p) ? p : [p.x, p.y, p.z])) : null;
 const flatDir = d => { const v = v3(d) ?? new THREE.Vector3(1, 0, 0); v.y = 0; return v.lengthSq() ? v.normalize() : v.set(1, 0, 0); };
 
-export function createStoryFx(scene, renderer, { phone = false, reduced, sound, tuck = true, budget, page } = {}) {  // tuck: false and budget: Infinity are the test page's planted faults only
+export function createStoryFx(scene, renderer, { phone = false, reduced, sound, tuck = true, budget, page, lights = 0 } = {}) {  // tuck: false and budget: Infinity are the test page's planted faults only
   reduced ??= typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
   const PW = phone ? 1.6 : 1, rnd = Math.random,  // a phone draws water lines 1.6 times wider: they must read at 390 px
    r = (a, b) => a + (b - a) * rnd(), size2 = new THREE.Vector2(), BUDGET = budget ?? (phone ? 600 : 3200);  // live particles, both pools together
-  const U = { uT: { value: 0 }, uH: { value: 800 }, uTuck: { value: tuck ? 1 : 0 }, uMinPx: { value: phone ? 4 : 0 }, uPage: { value: new THREE.Vector4(-1, 1, -.666, .666) }, uGround: { value: 0 }, uS: { value: Array.from({ length: NS }, () => new THREE.Vector4()) } };
+  const U = { uT: { value: 0 }, uH: { value: 800 }, uTuck: { value: tuck ? 1 : 0 }, uMinPx: { value: phone ? 4 : 0 }, uMove: { value: reduced ? 0 : 1 }, uPage: { value: new THREE.Vector4(-1, 1, -.666, .666) }, uGround: { value: 0 }, uS: { value: Array.from({ length: NS }, () => new THREE.Vector4()) } };
   if (page) { U.uPage.value.set(page.min.x, page.max.x, page.min.z, page.max.z); U.uGround.value = page.max.y; }  // the open book's box (world): nothing draws over the room
   const PG = U.uPage.value;
-  const root = new THREE.Group(); root.name = "storyfx"; scene.add(root);
+  const root = new THREE.Group(); root.name = "storyfx"; scene.add(root); const fireLs = Array.from({ length: lights }, () => { const l = new THREE.PointLight(0xffaa66, 0, 1, 2); root.add(l); return l; });  // the page's warm lights (`lights`: its entries with "light": true), made with the spread at intensity 0: no light is ever made mid-read, so no shader recompile; a page with none makes none
   let T = 0, cam = null;
 
   // ---- the two particle pools. A living particle is never overwritten: a new one takes a dead place, or is dropped (counted) when the budget is full ----
@@ -234,7 +240,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
   };
   function kill(si) {  // a freed slot's particles end now and never come back when the slot is reused
     for (const Q of [PA, PN, RQ, CQ, BQ]) for (let i = 0; i < Q.n; i++) if (Math.round(Q.slotOf(i)) === si && Q.F[Q.life][i * 4 + 1] > 0) {
-      if ((Q === PA || Q === PN) && alive(Q, i)) { const end = Q.F.aA[i * 4] + Q.F.aA[i * 4 + 1]; ALL.sub(end); if (Q.F.aG[i * 4 + 2] > .5) WX.sub(end); }
+      if ((Q === PA || Q === PN) && alive(Q, i)) { const end = Q.F.aA[i * 4] + Q.F.aA[i * 4 + 1]; ALL.sub(end); if (Math.round(Q.F.aG[i * 4 + 2]) === 1) WX.sub(end); }
       Q.F[Q.life][i * 4 + 1] = -1; Q.lo = Math.min(Q.lo, i); Q.hi = Math.max(Q.hi, i); }
     slots[si].used = false; slots[si].owner = null; U.uS.value[si].w = 0;
   }
@@ -246,7 +252,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
     if (e.follow && s === e.s && p[1] > .6 * e.size) p[1] = .6 * e.size;  // below the subject's shoulders
     const c = o.c ?? [1, 1, 1];
     if (!put(pool, { position: p, aV: o.v ?? [0, 0, 0], aA: [b, life, o.s, o.k ?? 0], aC: [c[0], c[1], c[2], o.a ?? 1], aD: [o.dr ?? 0, o.g ?? 0, s.i, o.seed ?? rnd()],
-      aE: [o.fi ?? .05, o.fo ?? .2, o.wob ?? 0, o.tw ?? 0], aG: [o.grow ?? 0, o.wf ?? 2, e.weather ? 1 : 0, o.br ?? 0] }, b + life, e.weather)) return;
+      aE: [o.fi ?? .05, o.fo ?? .2, o.wob ?? 0, o.tw ?? 0], aG: [o.grow ?? 0, o.wf ?? 2, e.weather ? 1 : o.sky ? 2 : o.near ? 3 : 0, o.br ?? 0] }, b + life, e.weather)) return;
     pool.end = Math.max(pool.end, b + life); e.die = Math.max(e.die, b + life);
   };
   const ring = (e, s, o) => { const b = T + (o.d ?? 0), c = o.c ?? [1, 1, 1];
@@ -286,6 +292,10 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
   const ground = (x, y, gy, m = [0, 0, 0, 0]) => { if (!cam) return null; V2.set(x, y); ray.setFromCamera(V2, cam); plane.constant = -gy; const p = ray.ray.intersectPlane(plane, new THREE.Vector3());
     return p && p.x > PG.x + m[0] && p.x < PG.y - m[1] && p.z > PG.z + m[2] && p.z < PG.w - m[3] ? p : null; };  // on the open pages only, m metres in from their left, right, back, front edges
   const onGround = (y0, y1, gy, m, tries = 8) => { for (let i = 0; i < tries; i++) { const p = ground(r(-1.05, 1.05), r(y0, y1), gy, m); if (p) return p; } return null; };
+  const DOWN = new THREE.Vector3(0, -1, 0), low = new THREE.Raycaster();
+  const floorUnder = p => { low.set(new THREE.Vector3(p.x, .032, p.z), DOWN);  // the paper ground under p (x, z), below a canopy: a page's point under a tree is raised to the treetop by the viewer
+    const shown = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; }, h = low.intersectObjects(scene.children, true).find(h => h.object.isMesh && shown(h.object)); return h ? h.point.y : p.y; };  // the first drawn surface (painted grass too)  // shortcut: ground taken as the first surface below 3 cm (the painted ground layer, over the page); a raised stage would need its own height
+  const settle = e => { const x = e.s.anchor.clone(); let n = 0; return () => { if (n > 16 || T - e.t0 < n * .5) return; n++; e.s.anchor.y = floorUnder(x); }; };  // a page pops up as it opens: the ground is found again every 0.5 s for 8 s (the turn and the bloom)
   const toEdge = (g, d, m = .03) => { let t = 9; if (d.x > 1e-4) t = Math.min(t, (PG.y - m - g.x) / d.x); if (d.x < -1e-4) t = Math.min(t, (PG.x + m - g.x) / d.x);  // how far from g along d to the page's edge
     if (d.z > 1e-4) t = Math.min(t, (PG.w - m - g.z) / d.z); if (d.z < -1e-4) t = Math.min(t, (PG.z + m - g.z) / d.z); return Math.max(0, t); };
 
@@ -302,7 +312,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
     nhead = (i + 1) % WIN; NF.aP.set(start.toArray(), i * 3); NF.aD.set(dir.toArray(), i * 3); NF.aA.set([T, life, len, speed], i * 4); NF.aX.set([len * .05, rnd(), phone ? 5.5 : 4, .9], i * 4);
     for (const k in NS2) ng.attributes[k].needsUpdate = true; nend = Math.max(nend, T + life); };
 
-  const BQ = quads(8, BVS, BFS, { aT: 3, aB: 3, aA: 4, aW: 4 }, THREE.AdditiveBlending, {}, THREE.DoubleSide); BQ.mesh.renderOrder = 6; BQ.slotOf = i => BQ.F.aA[i * 4 + 3];  // sun rays: 8 beams at once (a drawn one is never overwritten)
+  const beamC = { uBeamC: { value: new THREE.Color(1, .74, .3) } }, BQ = quads(8, BVS, BFS, { aT: 3, aB: 3, aA: 4, aW: 4 }, THREE.AdditiveBlending, beamC, THREE.DoubleSide); BQ.mesh.renderOrder = 6; BQ.slotOf = i => BQ.F.aA[i * 4 + 3];  // sun rays: 8 beams at once (a drawn one is never overwritten)
   const effects = [];
   const area = (e, o) => o.area && { w: o.area[0], d: o.area[1] };  // a rectangle on the ground centred at the anchor
   const hook = (name, L) => name && sound?.(name, [.25, .32, .4][(L ?? 2) - 1]);
@@ -490,7 +500,8 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
         for (let j = 0; j < 3; j++) { const an = rnd() * TAU; P(e, S, { p: [p[0], p[1] + rise, p[2]], v: [Math.cos(an) * s * .25, s * r(.3, .6), Math.sin(an) * s * .25], g: 20 * s, d: d + l, l: .22, s: z * .3, k: 12, c, a: 1, fi: .01, fo: .08 }, PN); } }  // the pop: three specks
     },
     sunrays(e, o) {  // soft beams from above onto the main spot (o.at) and up to 3 others (o.spots: [{ at, level? }]); a pool of light on each, dust motes drifting only inside a beam. Fades in over 1.6 s and out over 1.5 s (stop()).
-      const L = e.L, S = e.s, A = e.s.anchor, life = (e.secs ?? 1e6) + 1.5, W = o.width ?? .12, H = o.height ?? .7, lat = o.from ?? [-.25, -.45], fin = reduced ? .15 : 1.6, c = [1.45, 1.0, .4];
+      const L = e.L, S = e.s, A = e.s.anchor, life = (e.secs ?? 1e6) + 1.5, W = o.width ?? .12, H = o.height ?? .7, lat = o.from ?? [-.25, -.45], fin = reduced ? .15 : 1.6, c = tint(o, [1.45, 1.0, .4]);
+      beamC.uBeamC.value.setRGB(...(o.tint ? c.map(x => x * .69) : [1, .74, .3]));  // shortcut: one beam colour per page (the latest sunrays'); per-beam colour if a page ever mixes two
       e.die = Infinity; e.fadeOut = 1.5;
       const spots = [{ at: A, L, w: W, main: 1 }, ...(o.spots ?? []).slice(0, 3).map(s2 => ({ at: v3(Array.isArray(s2) || s2.isVector3 ? s2 : s2.at), L: Math.max(1, s2.level ?? L - 1), w: W * .7 }))], beams = [];
       for (const sp of spots) { const b = sp.at.clone().sub(A);  // the beam ends on the hero (in a tree too); a followed main spot's pool lies on the water or ground under the body, never over a face (reviews 7, 8)
@@ -500,7 +511,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
       e.beams = beams; if (reduced) return;
       const mote = bm => { const t = r(.15, .95), ax = bm.b.clone().sub(bm.t), e1 = new THREE.Vector3(-ax.z, 0, ax.x).normalize(), e2 = ax.clone().normalize().cross(e1), hw = THREE.MathUtils.lerp(bm.w0, bm.w1, t) / 2, an = rnd() * TAU, rr = Math.sqrt(rnd()) * hw * .55,
           p = bm.t.clone().addScaledVector(ax, t).addScaledVector(e1, Math.cos(an) * rr).addScaledVector(e2, Math.sin(an) * rr);
-        P(e, S, { p: p.toArray(), v: [r(-.0015, .0015), r(-.005, .004), r(-.0015, .0015)], l: r(6, 10), s: r(.007, .012) * (phone ? 1.4 : 1), k: 2, c: [1.7, 1.2, .5], a: .9, fi: 1.2, fo: 1.5, wob: .006, wf: r(.4, .9), tw: r(.6, 1.4) }); };
+        P(e, S, { p: p.toArray(), v: [r(-.0015, .0015), r(-.005, .004), r(-.0015, .0015)], l: r(6, 10), s: r(.007, .012) * (phone ? 1.4 : 1), k: 2, c: o.tint ? c.map(x => x * 1.17) : [1.7, 1.2, .5], a: .9, fi: 1.2, fo: 1.5, wob: .006, wf: r(.4, .9), tw: r(.6, 1.4) }); };
       const mpb = [8, 14, 22][L - 1] * (phone ? .6 : 1), per = bm => mpb * (bm.main ? 1 : .45);  // motes hanging in a beam (their lives average 8 s)
       e.tick = dt => { for (const bm of beams) for (bm.acc = (bm.acc ?? 0) + dt * per(bm) / 8; bm.acc >= 1; bm.acc--) mote(bm); };
       for (const bm of beams) for (let i = 0, n = Math.round(per(bm)); i < n; i++) mote(bm);  // the dust is already hanging there when the beam fades in
@@ -541,11 +552,64 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
       const ar = area(e, o), R = ar ? ar.w / 2 : o.radius ?? e.size * 4; e.die = Infinity;
       ring(e, e.s, { p: [0, 0, 0], r: R, asp: ar ? ar.d / ar.w : 1, l: e.secs ?? 1e6, k: reduced ? 3 : 1, c: tint(o, [.45, .75, .3]), a: .35 });
     },
+    "leaf-shadows"(e, o) {  // dappled shade of leaves overhead on the ground (o.area or o.radius), swaying slowly; still when reduced
+      const ar = area(e, o), R = ar ? ar.w / 2 : o.radius ?? e.size * 3; e.die = Infinity; e.tick = settle(e);
+      ring(e, e.s, { p: [0, 0, 0], r: R, asp: ar ? ar.d / ar.w : 1, l: e.secs ?? 1e6, k: 4, c: tint(o, [.03, .07, .05]), a: [.45, .6, .75][e.L - 1] });
+    },
+    fireflies(e, o) {  // points of warm light wandering low over o.area (default 0.8 x 0.4 m round o.at), blinking; level 1-3: 8, 16, 28 (a phone 60%); still when reduced
+      const L = e.L, S = e.s, ar = area(e, o), w = ar?.w ?? .8, dd = ar?.d ?? .4, hy = o.height ?? .12, n = Math.round([8, 16, 28][L - 1] * (phone ? .6 : 1)), c = tint(o, [1.2, 1.35, .45]), k = phone ? 1.6 : 1;
+      e.die = Infinity;
+      const one = d => { const p = [r(-.5, .5) * w, r(.015, 1) * hy, r(-.5, .5) * dd], l = reduced ? e.secs ?? 1e6 : r(4, 7), v = reduced ? [0, 0, 0] : [r(-1, 1) * .006, r(-.002, .004), r(-1, 1) * .006],
+          m = { p, v, d, l, fi: reduced ? .15 : .8, fo: 1, seed: rnd(), wob: reduced ? 0 : .012, wf: r(.6, 1.2), tw: reduced ? 0 : r(1.5, 3) };  // glow and core share a seed: they wander together
+        P(e, S, { ...m, s: .026 * k, k: 2, c, a: .7 }); P(e, S, { ...m, s: .006 * k, k: 0, c: c.map(x => x * 1.3), a: 1 }); };
+      for (let i = 0; i < n; i++) one(reduced ? 0 : -r(0, 3.5));  // already out when the page opens, part-way through their lives
+      if (reduced) return;
+      let acc = 0; e.tick = dt => { for (acc += dt * n / 5.5; acc >= 1; acc--) one(0); };
+    },
+    stars(e, o) {  // twinkling stars on the sky: o.spots (each a star), else level 1-3 (5, 10, 18) over o.area [width, height] (a vertical patch, default 0.6 x 0.2) round o.at; still when reduced
+      const L = e.L, S = e.s, ar = o.area, w = ar?.[0] ?? .6, h = ar?.[1] ?? .2, c = tint(o, [1.35, 1.35, 1.6]), z = e.size / .1, life = e.secs ?? 1e6; e.die = Infinity;
+      const pts = o.spots?.length ? o.spots.map(x => v3(x.at ?? x).sub(e.s.anchor).toArray()) : Array.from({ length: [5, 10, 18][L - 1] }, () => [r(-.5, .5) * w, r(-.5, .5) * h, 0]);
+      for (const p of pts) { const sz = r(.012, .02) * z * (phone ? 1.5 : 1), fi = reduced ? .15 : r(.8, 1.6);
+        P(e, S, { p, l: life, s: sz * 3, k: 2, c, a: .3, fi, fo: .1, sky: 1, tw: reduced ? 0 : r(.8, 1.6) }); P(e, S, { p, l: life, s: sz, k: 1, c, a: 1, fi, fo: .1, sky: 1, tw: reduced ? 0 : r(1.5, 3.5) }); }
+    },
+    "card-glow"(e, o) {  // a glow on PART of a painted card: the page names the card (what) and the place on it (o.toward, world; else the anchor) and its size (o.radius, 0.06)
+      const S = e.s, R = o.radius ?? .06, c = tint(o, [1.3, 1.0, .5]), L = e.L, life = e.secs ?? 1e6, f = front(e.s.anchor), p = (v3(o.toward)?.sub(e.s.anchor) ?? new THREE.Vector3()).addScaledVector(f, .012).toArray();  // a hair in front of the paint
+      e.die = Infinity;
+      P(e, S, { p, l: life, s: R * 2.4, k: 2, c, a: [.3, .45, .6][L - 1], fi: reduced ? .15 : .8, fo: .1, br: reduced ? 0 : .35 });
+      P(e, S, { p, l: life, s: R * .9, k: 2, c: c.map(x => x * 1.2), a: [.25, .35, .45][L - 1], fi: reduced ? .15 : .6, fo: .1 });
+    },
+    flash(e, o) {  // a soft gold ball of light, about 0.44 across (o.radius 0.22), swelling in over 0.6 s and fading over 0.9 s; o.secs its whole length (2.4); level 3 covers most of what is behind it (alpha .78) but never all of it
+      const S = e.s, L = e.L, D = (o.radius ?? .22) * 2, c = tint(o, [1, .68, .24]), l = e.secs ?? 2.4, A = [.5, .65, .78];  // gold, never above 1: a brighter value clamps to white over the night grade
+      if (reduced) return P(e, S, { l, s: D * 1.6, k: 2, c, a: A[L - 1], fi: .15, fo: .3, near: 1 }, PN);
+      hook("gold-shimmer", L);
+      P(e, S, { l, s: D * 1.6, k: 2, c, a: A[L - 1], fi: .6, fo: .9, grow: .12, near: 1 }, PN);  // the ball itself, painted over what is behind it (never opaque: a body inside it stays seen)
+      P(e, S, { l, s: D * 2.6, k: 2, c, a: [.2, .28, .36][L - 1], fi: .7, fo: 1, near: 1 });  // its glow
+      for (let i = 0; i < 14; i++) { const an = rnd() * TAU, rr = D * r(.35, .6); P(e, S, { p: [Math.cos(an) * rr, Math.sin(an) * rr * .8, Math.sin(an * 1.7) * rr * .3], v: [Math.cos(an) * .03, .02, 0], d: r(.2, .8), l: r(1, 1.6), s: D * .12, k: 1, c, a: .9, fi: .2, fo: .6, tw: r(6, 12) }); }
+    },
+    firelight(e, o) {  // the warm look of a fire or a lamp: a flickering pool of firelight on the ground (o.radius, else 1.5 / 2.5 / 4 x size) and a glow on the flame that breathes fast; still when reduced
+      const s = e.size, L = e.L, S = e.s, c = tint(o, [1.3, .62, .25]), R = o.radius ?? s * [1.5, 2.5, 4][L - 1], life = e.secs ?? 1e6; e.die = Infinity;
+      const fl = settle(e); e.tick = fl;
+      ring(e, S, { p: [0, 0, 0], r: R, l: life, k: 5, c, a: [.16, .24, .32][L - 1] });
+      P(e, S, { p: [0, s * .25, 0], l: life, s: s * [1, 1.6, 2.4][L - 1], k: 2, c, a: [.3, .4, .5][L - 1], fi: reduced ? .15 : .4, fo: .1, br: reduced ? 0 : r(1.6, 2.4) });
+      if (!o.light) return;  // a real warm point light on the set, flickering (the viewer must pass a page's "light": true)
+      const pl = fireLs.find(l => !l.userData.busy); if (!pl) return;  // every light the page asked for is lit (or none was asked: lights 0): this one keeps its pool and glow, no light
+      pl.userData.busy = true; pl.color.setRGB(...c.map(x => Math.min(1, x / 1.3))); pl.distance = R * 1.5; pl.position.copy(e.s.anchor).y += s * .3; e.light = pl;  // reach R x 1.5 and a quarter of the first strength: the backdrop stays as it was
+      const base = [.15, .3, .6][L - 1] * .25; e.lit = () => { pl.intensity = base * e.s.fade * Math.min(1, (T - e.t0) / .4) * (reduced ? 1 : .85 + .15 * Math.sin(T * 9.1) * Math.sin(T * 3.7 + 1.3)); };  // its own updater: stop() clears tick, and the light must fade out with the pool, not hold and snap off
+    },
+    drops(e, o) {  // bright water drops thrown up round o.at (o.area, else 0.3 x 0.2) and falling back, glinting: a water blessing, a splashing dance; o.height the top of the throw (below the faces: 0.6 x size); level 1-3: 6, 12, 20 a second; still when reduced
+      const s = e.size, L = e.L, S = e.s, ar = area(e, o), w = ar?.w ?? .3, dd = ar?.d ?? .2, top = o.height ?? s * .6, g = 2.2, n = [6, 12, 20][L - 1], c = [.97, .99, 1];
+      const one = d => { const p = [r(-.5, .5) * w, top * r(.1, .3), r(-.5, .5) * dd], vy = Math.sqrt(2 * g * top * r(.4, .7)), tl = (vy + Math.sqrt(vy * vy + 2 * g * p[1])) / g;
+        P(e, S, { p, v: [r(-1, 1) * .05, vy, r(-1, 1) * .03], g, d, l: tl, s: .017 * (phone ? 2 : 1), k: 12, c, a: 1, fi: .03, fo: .08 }, PN);
+        if (rnd() < .5) P(e, S, { p, v: [0, vy * .6, 0], g: g * .6, d, l: tl * .8, s: .014 * (phone ? 1.8 : 1), k: 1, c: [1.5, 1.5, 1.4], a: .9, fi: .05, fo: .2, tw: 14 }); };  // a glint
+      if (reduced) { for (let i = 0; i < n; i++) P(e, S, { p: [r(-.5, .5) * w, top * r(.1, 1), r(-.5, .5) * dd], l: e.secs ?? 1.5, s: .017 * (phone ? 2 : 1), k: 12, c, a: 1, fi: .15, fo: .3 }, PN); return; }
+      hook("splash-small", 1); e.die = Infinity; let acc = n * .3;
+      e.tick = dt => { for (acc += dt * n; acc >= 1; acc--) one(r(0, dt)); };
+    },
   };
   const ALIAS = { "heat-shimmer": ["haze"], "music-notes": ["notes", 2], "wind-streaks": ["gust"], "green-wash": ["wash"] };
   const RIDE = { wake: 1, sparkle: 1, halo: 1, embers: 1, notes: 1, breath: 1, haze: 1 };  // kinds that ride with o.follow; the rest start where it is
   const REPEAT = { splash: 1, "dust-whirl": 1, "shooting-star": 1, puff: 1 };
-  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1 };  // these end on their own length
+  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1, flash: 1 };  // these end on their own length
   const own = e => (e.w.proxyOf ? [e.s] : [e.s, e.w]);
 
   function play(type, o = {}) {
@@ -566,7 +630,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
   }
   const rings = (every, region, o = {}) => play("rings", { ...o, every, region });
 
-  function finish(e) { e.done = true; for (const s of own(e)) if (s.owner === e) kill(s.i); if (e.wake) { e.wake.owner = null; hideWake(e.wake); } }
+  function finish(e) { e.done = true; if (e.light) { e.light.intensity = 0; e.light.userData.busy = false; } for (const s of own(e)) if (s.owner === e) kill(s.i); if (e.wake) { e.wake.owner = null; hideWake(e.wake); } }
   const camPos = new THREE.Vector3(0, 1, 3), FR = new THREE.Vector3(), front = a => { FR.copy(camPos).sub(a); FR.y = 0; return FR.lengthSq() ? FR.normalize() : FR.set(0, 0, 1); };  // toward the camera, on the ground
   function update(dt, camera) {
     if (camera) { cam = camera; camPos.copy(camera.position); }
@@ -577,6 +641,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
       e.tick?.(dt);
       if (e.wake) buildWake(e.wake, e, e.alpha * (e.stopping ? Math.max(0, 1 - (T - e.fadeT) / .6) : Math.min(1, (T - e.t0) / (reduced ? .15 : .3))));
       if (e.stopping) for (const s of own(e)) s.fade = Math.max(0, s.fade - dt * s.rate);
+      e.lit?.();
       if ((e.stopping && own(e).every(s => s.fade <= 0)) || (!e.stopping && !e.tick && !e.wake && e.end === Infinity && T > e.die + .05)) { finish(e); effects.splice(i, 1); }
     }
     for (const s of slots) if (s.used) U.uS.value[s.i].set(s.anchor.x, s.anchor.y, s.anchor.z, s.fade);

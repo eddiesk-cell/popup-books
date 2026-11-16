@@ -141,6 +141,7 @@ function stubSpread() {  // a flat open book of blank paper, so the viewer can b
 }
 const shade = root => root.traverse(o => { if (o.isMesh) { o.receiveShadow = true; o.castShadow = !o.material.emissive?.getHex(); } });  // glowing bits cast none
 
+const propIn = (sp, what) => sp.root.getObjectByName(what) || sp.byName[what]?.body;  // a prop of the page: a node of the spread's glb, or a cast prop (a model of the page's characters, its body in sp.group); every act kind finds it here
 const breath = () => new Promise(r => setTimeout(r));
 const load = id => spreads[id] ??= (async () => {
   const dir = dirOf(id);
@@ -182,7 +183,7 @@ const load = id => spreads[id] ??= (async () => {
     d.position.copy(B(l.at)); d.target.position.copy(B(l.look || [0, 0.1, 0.2])); sp.stage.add(d, d.target);  // the lights stay on while an exit turn stands in
     if (l === key) {
       sp.key = d;
-      d.castShadow = true; d.shadow.mapSize.setScalar(innerWidth < 600 ? 1024 : 2048); d.shadow.radius = 4; d.shadow.bias = -0.0004; d.shadow.normalBias = 0.01;  // a phone's 390 px wide book does not show the difference
+      d.castShadow = true; d.shadow.mapSize.setScalar(innerWidth < 600 ? 1024 : 2048); d.shadow.radius = d.shadow.mapSize.x / 512; d.shadow.bias = -0.00005; d.shadow.normalBias = 1.4 / d.shadow.mapSize.x;  // a phone's 390 px wide book does not show the difference. Radius 4 texels, a phone's 2 of its twice-as-big texels: one softness (5.5 mm) on both, so a phone's soft edge no longer washes out the shadow where a foot touches. Biases: half a texel of the 2.8 m frustum (0.7 mm, a phone 1.4 mm) and 0.5 mm along the light, so a shadow starts where its prop or foot touches (Eddie 2026-11-16, Kankak: 10 mm lifted every receiver, the lowest 10 mm of a prop cast nothing and a low sun pushed shadows 30 to 40 mm off: things looked afloat; tools/shadow_check.mjs)
       Object.assign(d.shadow.camera, { left: -1.4, right: 1.4, top: 1.4, bottom: -1.4, near: 0.1, far: 10 });
     }
   }
@@ -197,7 +198,7 @@ const load = id => spreads[id] ??= (async () => {
   sp.cast.forEach(ch => sp.group.add(ch.body));
   const tops = {};
   const where = sp.where = (to, top) => {  // a point of the page, a character (where it stands), a prop (or its top), a part of a character (the lamp's wick)
-    if (to == null || Array.isArray(to) || sp.byName[to]) return to == null ? null : Array.isArray(to) ? B(to) : sp.byName[to].body.position.clone();
+    if (to == null || Array.isArray(to) || sp.byName[to]) return to == null ? null : Array.isArray(to) ? B(to) : (c => sp.lifts[to] && !sp.placed[to] ? c.pos.clone().add(new THREE.Vector3(0, sp.lifts[to], 0)) : c.body.position.clone())(sp.byName[to]);  // a risen cast prop: its place plus the rise, whichever side of moveProps asks
     const o = sp.root.getObjectByName(to), part = !o && sp.cast.map(c => c.body.getObjectByName(to)).find(Boolean), it = o || part;
     if (!it) return null;  // a part, or a prop in a hand, moves: its top found afresh (where the hand has it now)
     return top ? (part || sp.held.some(h => h.what === to) ? topOf(it) : (tops[to] ??= topOf(it)))?.clone() ?? null : it.getWorldPosition(new THREE.Vector3());
@@ -205,9 +206,9 @@ const load = id => spreads[id] ??= (async () => {
   sp.lifts = {}; sp.held = []; sp.placed = {}; sp.falls = [];
   sp.acting = new Acting(m.acts || [], sp.cast, { cam, where, wordAt, loop, once, started: a => foley(`act:${[].concat(a.who ?? a.what)[0]?.replace(/\d+$/, "")}:${a.do}`, null),
     people: new Set([...Object.values(speakers).flat(), ...sp.cast.filter(c => c.clips.Talk).map(c => c.name)]),  // who speaks, or can: not boats
-    spot: what => sp.placed[what]?.clone() ?? sp.root.getObjectByName(what)?.getWorldPosition(new THREE.Vector3()) ?? null, put: (what, p) => sp.held.some(h => h.what === what) || (sp.falls = sp.falls.filter(f => f.what !== what), sp.placed[what] = p),  // a flight still running never pulls a prop out of a hand
+    spot: what => sp.placed[what]?.clone() ?? propIn(sp, what)?.getWorldPosition(new THREE.Vector3()) ?? null, put: (what, p) => sp.held.some(h => h.what === what) || (sp.falls = sp.falls.filter(f => f.what !== what), sp.placed[what] = p),  // a flight still running never pulls a prop out of a hand
     motion: Object.fromEntries(sp.cast.map(ch => [ch.name, motionAll[ch.c.model.split("/").pop()] ?? motionAll[ch.name]])),
-    find: what => sp.root.getObjectByName(what) || sp.byName[what]?.body,  // hide / show reach a prop or a cast body by name
+    find: what => propIn(sp, what),  // hide / show / shape reach a prop or a cast body by name
     raise: (what, dy) => (sp.lifts[what] = dy),  // a prop rising: kept as an offset, laid on after the paper's own animation
     hold: (ch, what, hand, on, a = {}) => {  // a prop in a hand follows the hand bone until let go; a cast prop (a bowl, a lamp) is held by its rim; "grip" / "aim" (acts.js) seat and aim it
       const was = sp.held.find(h => h.what === what);
@@ -217,19 +218,29 @@ const load = id => spreads[id] ??= (async () => {
         if (a.fall ?? !!was.pose) { const dy = dropOf(was.o, sp.root); if (dy > 1e-4) sp.falls.push({ what, from: sp.placed[what].clone(), dy, t0: performance.now() }); }  // ...or falls to what is under it
       }
       sp.held = sp.held.filter(h => h.what !== what);
-      const o = sp.root.getObjectByName(what) || sp.byName[what]?.body, bone = ch.model.getObjectByName(`${hand || "right"}Hand`);
-      const pose = on && o && holdOf(o, a);  // null: no grip or aim, the old seat
+      const o = propIn(sp, what), bone = ch.model.getObjectByName(`${hand || "right"}Hand`);
+      const pose = on && o && holdOf(o, { ...a, palm: bone?.children.find(c => c.name === "palm_r" || c.name === "palm_l") });  // null: no grip or aim, the old seat. R41: the palm point is the hand bone's own child, looked up in this one place (none: the act goes on exactly as it was)
       if (on && o && bone) sp.held.push({ what, o, bone, pose, aim: a.aim, seat: !pose && sp.byName[what] && byRim(ch, bone, sp.byName[what]) }), delete sp.placed[what];  // held: where a flight left it no longer counts
       else if (on) console.warn("cannot hold", what, "in", ch.name);
     } });
 
+  // touch_spots: a tap on part of a model: {name, on: <prop or character>, at: [x, y, z] in that model's own units, r: metres}; answers as a touch thing of that name where the model is drawn within r of the spot (pick())
+  sp.spots = (m.touch_spots ?? []).map(t => { const body = sp.byName[t.on]?.body ?? sp.group.getObjectByName(t.on), o = new THREE.Object3D(); if (!body) return null; o.name = t.name; o.position.set(...t.at); body.add(o); return { name: t.name, o, body, r: t.r ?? 0.03 }; }).filter(Boolean);
+  // touch_areas: a patch of the printed page that answers a tap as a touch thing of its name does (area()); made before the game, which may name one as a home or a target; page metres {name, ellipse: {at, rx, ry}} or {name, poly: [[x, y], ...]}
+  sp.areas = (m.touch_areas ?? []).map(a => {
+    const e = a.ellipse, P = a.poly, c = e ? e.at : [P.reduce((t, q) => t + q[0], 0) / P.length, P.reduce((t, q) => t + q[1], 0) / P.length];
+    const inside = (x, y) => e ? ((x - c[0]) / e.rx) ** 2 + ((y - c[1]) / e.ry) ** 2 <= 1 : P.reduce((n, q, i) => { const r = P[(i + 1) % P.length]; return n ^ ((q[1] > y) !== (r[1] > y) && x < q[0] + (y - q[1]) * (r[0] - q[0]) / (r[1] - q[1])); }, 0) === 1;
+    return { name: a.name, inside, at: Object.assign(new THREE.Object3D(), { name: a.name }) };
+  });
+  for (const a of sp.areas) sp.root.add(a.at);
+  sp.areas.forEach((a, i) => { const e = m.touch_areas[i].ellipse, P = m.touch_areas[i].poly; a.at.position.copy(B(e ? [...e.at, 0] : [P.reduce((t, q) => t + q[0], 0) / P.length, P.reduce((t, q) => t + q[1], 0) / P.length, 0])); });
   sp.G = { type: "collect", ...sp.page.game, ...sp.m.game };  // a test page's spread.json may carry its own "game"
   arm(sp);
   sp.props = new Map();
   // a fold piece is two halves, "<name>-1" and "<name>1" (or one parent "<name>"): one touch thing, its sound "tap:<name>"
   const piece = n => { const b = n.replace(/-?1$/, ""); return b !== n && sp.root.getObjectByName(`${b}-1`) && sp.root.getObjectByName(`${b}1`) ? b : n; };
   for (const n of new Set(m.touch.map(piece))) {
-    const one = sp.root.getObjectByName(n), parts = one ? [one] : [`${n}-1`, `${n}1`].map(h => sp.root.getObjectByName(h)).filter(Boolean);
+    const one = sp.group.getObjectByName(n), parts = one ? [one] : [`${n}-1`, `${n}1`].map(h => sp.root.getObjectByName(h)).filter(Boolean);
     if (!sp.byName[n]) parts.forEach(o => sp.props.set(o, () => wiggle(n, parts)));
   }
   for (const o of sp.play.targets) if (!sp.byName[o.name] && !sp.props.has(o)) sp.props.set(o, () => wiggle(o.name, [o]));  // a game target that is only a page piece answers as a thing before its line and once won (pick() gives the game its own handler while it takes taps)
@@ -255,21 +266,23 @@ const exitOf = sp => sp.exit ??= sp.stub ? Promise.resolve(null) : glb(`${dirOf(
 }).catch(e => (console.warn("no exit turn for", sp.id, e), null));
 
 function arm(sp) {  // the page's game, fresh (games.js: collect, order, shadow, echo)
-  sp.play = makeGame(sp, gameEnv(sp)); Object.assign(sp, { promptEnd: 0, touched: false, skip: false });  // auto play: when the prompt ended, whether the child touched, whether the story moved on past the game
+  sp.play = makeGame(sp, gameEnv(sp)); if (sp.G.type !== "listen") { const t0 = sp.play.tap; sp.play.tap = i => { const r = t0(i); S.acting.tap(sp.play.targets[i].name); return r; }; }  // a game tap also runs the page's "tap:<name>" acts (the shy plant folds in the game); not a listen game's: before and after it its tap is the speaker's own poke(), which has run them already (twice a tap, so an "nth" would count by two)
+  if (sp.play.repeat) { const r0 = sp.play.repeat; sp.play.repeat = i => (r0(i), S.acting.tap(sp.play.targets[i].name)); }  // a counted thing tapped again still plays its own tap acts (the shy plant folds again); only where the game answers a second tap at all (collect)
+  Object.assign(sp, { promptEnd: 0, skip: false });  // auto play: when the prompt ended, whether the story moved on past the game
   // what a tap reaches, in order: a target it hits exactly, a character, a target near the fingertip, then a touch thing,
   // so neither a monkey's generous hit box nor the tree swallows the fruit beside it
   const early = () => sp.G.before && !sp.play.begun, kind = () => (early() ? "sparkle" : "game");
   sp.fruit = new Map([...sp.play.targets.map((o, i) => [o, () => (rec(o.name, kind()), sp.play.tap(i))]), ...[...sp.play.extra].map(([o, f]) => [o, () => (rec(o.name || "halo", kind()), f())])]);
 }
-// the paper animals' night and eve cards, measured against their day cards (53 night and 28 eve cards, alpha-weighted mean sRGB): night = luma(day) x [0.645, 0.689, 0.804] (spread 0.01-0.03), eve = luma(day) x [1.20, 0.885, 0.57] (looser, 0.1)
+// the paper animals' night and eve cards, measured against their day cards (53 night and 28 eve cards, alpha-weighted mean sRGB): night = luma(day) x [0.645, 0.689, 0.804] (spread 0.01-0.03), eve = the day colour itself x [0.988, 0.911, 0.890] per channel (41 card parts, sd <= 0.007: hue kept; animal-grade-review-1)
 const GLOW = 0.15;  // the paper cards' own backlight (ambient.js card(): emissiveIntensity 0.15), so a 3D animal is lit the way a card is; calibrated on a flat 50% grey, see the commit
-const GRADE = { night: [0.645, 0.689, 0.804], evening: [1.2, 0.885, 0.57] };
+const GRADE = { night: [0.645, 0.689, 0.804], evening: [0.988, 0.911, 0.89] };
 function gradeAnimal(model, stage) {
   const k = GRADE[stage]; if (!k) return;
   const own = m => {  // its own copy: the loaded model is shared by every spread, day ones too
     m = m.clone(); m.customProgramCacheKey = () => `grade-${stage}`;
     m.onBeforeCompile = sh => (sh.fragmentShader = sh.fragmentShader.replace("#include <color_fragment>", `#include <color_fragment>
-      diffuseColor.rgb = min(pow(vec3(dot(pow(diffuseColor.rgb, vec3(1.0 / 2.2)), vec3(0.2126, 0.7152, 0.0722))) * vec3(${k.join(", ")}), vec3(2.2)), vec3(1.0));`)
+      diffuseColor.rgb = ${stage === "night" ? `min(pow(vec3(dot(pow(diffuseColor.rgb, vec3(1.0 / 2.2)), vec3(0.2126, 0.7152, 0.0722))) * vec3(${k.join(", ")}), vec3(2.2)), vec3(1.0))` : `diffuseColor.rgb * pow(vec3(${k.join(", ")}), vec3(2.2))`};`)
       .replace("#include <emissivemap_fragment>", `#include <emissivemap_fragment>
       totalEmissiveRadiance += diffuseColor.rgb * ${GLOW};`));  // the paper cards' own light through thin paper (ambient.js card()), graded the same
     return m;
@@ -283,7 +296,7 @@ async function character(c, sp) {
   const g = c.model.startsWith("puppet:") ? puppetModel(THREE, await storyPuppet(c.model.slice(7), sp.m.stage?.name))  // "puppet:tong": a paper puppet
     : await modelOf(c.model);
   const model = clone(g.scene), pivot = new THREE.Group(), body = new THREE.Group();
-  if (c.model.includes("/animals/")) gradeAnimal(model, sp.m.stage?.name);  // a 3D animal takes the night/eve grade of the paper cards; the story's own characters stay as lit
+  if (/animal/.test(c.model)) gradeAnimal(model, sp.m.stage?.name);  // any 3D animal (assets/animals/, a book's own lite animal-*.glb copies, as extras3d.js reads them) takes the night/eve grade of the paper cards; the story's own characters stay as lit
   body.name = c.name;  // a game reads a tapped one by name (the shadow game's spots)
   model.traverse(o => { if (o.isMesh) { o.visible = !o.name.startsWith("Icosphere"); o.castShadow = o.receiveShadow = true; o.frustumCulled = false; } });
   pivot.rotation.y = rad(c.face ?? -90); pivot.add(model); body.add(pivot);
@@ -346,14 +359,14 @@ function loop(ch, name) {  // cross-fade into a looping clip (Idle stands in for
   if (!clip) return;
   const a = ch.mix.clipAction(clip);
   if (a === ch.cur) return;
-  a.reset().setLoop(THREE.LoopRepeat, Infinity).play();
+  a.reset().setLoop(THREE.LoopRepeat, Infinity).play(); a.timeScale = 1;  // an act's "rate" lasts only that act
   if (ch.cur) a.crossFadeFrom(ch.cur, 0.3, false);
   ch.cur = a;
 }
 function once(ch, name, done) {  // play a clip once and hold its last pose until `done` moves on; its length, 0 if missing
   const clip = ch.clips[name];
   if (!clip) return done(), 0;
-  if (book.fruit && /^Eat/.test(name)) done = inHand(ch, done);  // the Kapi book's jamun: a book without "fruit" in book.json tosses and eats nothing (turtle s09: Matsing's Throw is Pagong)
+  if (book.fruit && /^Eat/.test(name)) done = inHand(ch, done);  // book.json "fruit" is a flag (any value: the Kapi book's jamun); a book without "fruit" in book.json tosses and eats nothing (turtle s09: Matsing's Throw is Pagong)
   const to = book.fruit && /^Throw/.test(name) && (ch.catcher ?? S.cast.filter(c => c !== ch).sort((a, b) => a.pos.distanceTo(ch.pos) - b.pos.distanceTo(ch.pos))[0]);
   if (to) setTimeout(() => toss(ch, to), clip.duration * 450);  // a Throw lets a jamun go at about its middle, to its named catcher (acts.js), else the nearest one
   const a = ch.mix.clipAction(clip);
@@ -386,7 +399,7 @@ const sfxHook = (() => {
   const named = n => sp.cast.find(c => c.name === n)?.body ?? sp.root.getObjectByName(n);
   const flat = a => { const p = B(a); p.y = Math.max(p.y, surf(p.x, p.z)); return p; };
   const play = (e, who) => {
-    const o = { level: e.level, secs: e.secs, until: e.until, every: e.every, tint: e.tint, radius: e.radius, width: e.width, height: e.height, from: e.from, area: e.area, size: e.size };
+    const o = { level: e.level, secs: e.secs, until: e.until, every: e.every, tint: e.tint, radius: e.radius, width: e.width, height: e.height, from: e.from, area: e.area, size: e.size, light: e.light };
     const sub = who ?? named(e.what), type = e.type ?? e.kind;
     if (sub) { const w = sub.getWorldPosition(new THREE.Vector3()); o.follow = sub; o.at = w; o.waterY = surf(w.x, w.z); o.size ??= sp.cast.find(c => c.body === sub)?.height; }
     else if (e.at) { o.at = flat(e.at); o.waterY = surf(o.at.x, o.at.z); }
@@ -405,7 +418,7 @@ const sfxHook = (() => {
     get fx() { return fx; },
     tap(name) { if (fx) sp.m.storyfx.forEach((e, i) => e.line === `tap:${name}` && start(e, i)); },  // a tapped thing plays its storyfx entry whose "line" is "tap:<name>" (no reader line is ever called that)
     spread(s) { fx?.dispose(); fx = null; on = []; fired = new Set(); sp = s; seen = { line: null, t: 0, at: s.at ?? 0 };
-      if (s.m.storyfx?.length) fx = createStoryFx(scene, renderer, { phone: PHONE, sound: (n, g) => snd.play(n, { gain: g }) }); },
+      if (s.m.storyfx?.length) fx = createStoryFx(scene, renderer, { phone: PHONE, sound: (n, g) => snd.play(n, { gain: g }), lights: s.m.storyfx.reduce((n, e) => n + (e.light ? [].concat(e.who ?? 0).length : 0), 0) }); },  // one idle warm light per "light": true entry (a "who" list plays one each), made with the spread: no light is ever made mid-read
     frame(dt) {
       if (!fx) return; const r = reader, s = { line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused }, E = sp.m.storyfx;
       if (sp.at < seen.at) { fx.clear(); on = []; fired.clear(); }  // "Read again": everything starts over
@@ -429,7 +442,7 @@ function enter(sp, how) {  // make `sp` the spread on the desk: "closed" (its te
       const poses = from.acting.poses;
       for (const ch of sp.cast) {  // a character the new page puts on someone, or walks in, keeps that
         const p = poses[ch.name];
-        if (p && !ch.c.on && !ch.c.enter) Object.assign(ch, { pos: new THREE.Vector3(...p.pos), yaw: p.yaw, hold: p.hold }), loop(ch, p.hold);
+        if (p && !ch.c.on && !ch.c.enter) Object.assign(ch, { pos: new THREE.Vector3(p.pos[0], p.pos[1] + (from.lifts[ch.name] ?? 0), p.pos[2]), yaw: p.yaw, hold: p.hold }), loop(ch, p.hold);
       }
     }
   }
@@ -585,7 +598,7 @@ const sm = manifestFor(bookId, "../"), snd = addSound(sm, { reader, voices: [spe
 const played = [], play0 = snd.play.bind(snd);  // every library sound that starts, for scripted checks (window.live.played)
 snd.play = (n, o) => (sm.sounds[n] && !snd.muted && played.push(n), play0(n, o));
 addEventListener("ambient:sound", e => snd.play(e.detail.name, { gain: 0.3 }));  // the extras' routines, taps and surprises (ambient.js)
-addEventListener("ambient:tap", e => { foley(`tap:${e.detail.name}`, null); learn(e.detail.name); });
+addEventListener("ambient:tap", e => { foley(`tap:${e.detail.name}`, null); learn(e.detail.name, e.detail.at); });
 // the book's own beds when a spread names none (the director's names, stories/*/DIRECTION.md)
 const DEFAULT_BED = { kapi: { day: [["river-slow", 0.3], ["birds-day", 0.18]], evening: [["river-evening", 0.3], ["crickets", 0.12]],
   night: [["night-frogs", 0.25], ["night-breeze", 0.12]] }, mali: { night: [["river-night", 0.3], ["crickets", 0.12]] } };
@@ -614,7 +627,13 @@ showSnd();
 const say = t => { $("msg").innerHTML = t ? `<p>${t}</p>` : ""; $("msg").classList.toggle("show", !!t); };
 const count = t => { $("count").textContent = t; $("count").hidden = !t; };  // a game's "2 of 5", in its own badge
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const sayLine = id => (text[id] ? reader.say(id) : (console.warn("no text for line", id), Promise.resolve(true)));  // a missing line is skipped, never a stop
+let saidEnd = -1e9;  // when the Reader's last voice ended
+const sayLine = async id => {  // a missing line is skipped, never a stop; a voice after a voice waits for PACE.sentence of silence (its own lead-in counts), the owner's sentence-end rule between voices too
+  if (!text[id]) return console.warn("no text for line", id), true;
+  const tk = reader.token, wait = saidEnd + PACE.sentence - performance.now() - (timing[id]?.words[0]?.[0] ?? 0) * 1000;
+  if (wait > 0 && (await sleep(wait), reader.token !== tk)) return false;  // stopped or overtaken while waiting
+  const ok = await reader.say(id); if (ok) saidEnd = performance.now(); return ok;
+};
 async function readFrom(i) {  // the page's lines from line i; S.at keeps the place, so a page turned back to resumes there
   const run = ++runs, sp = S, lines = sp.page.lines;
   $("bar").classList.add("on");
@@ -629,10 +648,11 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
     const rest = reader.audio.ended ? 0 : (timing[lines[i]]?.duration ?? 2) * 1000 - (performance.now() - t0);
     if (rest > 0 && (await sleep(rest), run !== runs)) return;  // no voice (a missing or refused file): the line still takes its time
     while (sp.acting.busy(lines[i])) if ((await sleep(100), run !== runs)) return;  // an act with "wait" finishes first
+    if (au.on) for (const t0 = performance.now(); sp.cast.some(c => c.goal) && performance.now() - t0 < PACE.walk;) if ((await sleep(100), run !== runs)) return;  // Auto: a character still walking arrives first, then the hold
     const game = sp.play.targets.length && !sp.play.complete && (lines[i + 1] === sp.G.before || (!sp.G.before && i === lines.length - 1));
     const glide = game ? gameView(true) : 0;  // the game's view glides in during the pause, so the prompt starts on it
-    if ((await sleep(Math.max(450, glide)), run !== runs)) return;
-    if (game && sp.m.camera?.story) for (let t0 = performance.now(), was = null, n = 0; n < 2 && performance.now() - t0 < 8000;) {  // a story-camera page: the director flies to the game's view after the line (its own shot played to the end, at the speed caps), and the prompt starts once the camera itself has landed (under 4 cm/s for 0.2 s; the corner glow's own slide kept it waiting 8 s)
+    if ((await sleep(Math.max(au.on && (game || i < lines.length - 1) ? PACE.hold : 450, glide)), run !== runs)) return;  // Auto: the calm hold between lines (the last line's wait is the turn's own)
+    if (game && sp.m.camera?.story) for (let t0 = performance.now(), was = null, n = 0; n < 2 && performance.now() - t0 < 3000;) {  // a story-camera page: the director flies to the game's view after the line (its own shot played to the end, at the speed caps), and the prompt starts once the camera itself has landed (under 4 cm/s for 0.2 s), or after 3 s with the targets gliding into frame as it speaks (the orchestrator, turn 8: no 8 s silence; the corner glow's own slide kept it waiting 8 s)
       if ((await sleep(100), run !== runs)) return;
       const now = [cam.position.clone(), controls.target.clone()]; n = was && now[0].distanceTo(was[0]) < 0.004 && now[1].distanceTo(was[1]) < 0.004 ? n + 1 : 0; was = now;
     }
@@ -658,11 +678,11 @@ async function prompt(sp, run) {
 async function won() {
   foley("game:won", null); fit();  // the reading view back for ambient's won/end shot, which moves the camera: moving it here would make ambient let go
   const { G, page } = S, sp = S, gate = page.lines.indexOf(G.before), paused = gate >= 0 && sp.at === gate;  // the reading waits at the game
-  if (!G.voice?.praise) { say(G.praise ?? "You found them all!"); return paused && readFrom(gate); }
+  if (!G.voice?.praise) { say(G.praise ?? "You found them all!"); return paused && (au.on ? sleep(PACE.won).then(() => sp === S && sp.at === gate && readFrom(gate)) : readFrom(gate)); }
   const run = ++runs;
   say(""); $("bar").classList.add("on");
   if (!(await sayLine(G.voice.praise)) || run !== runs || sp !== S) return;
-  await sleep(450);
+  await sleep(au.on ? PACE.won : 450);  // Auto: the praise sinks in, then the story goes on
   if (run === runs && sp.at < page.lines.length) readFrom(sp.at);  // the story goes on: past the game's line, or the line the praise cut short
 }
 $("replay").onclick = () => (mode === "open" ? replay(S) : mode === "moral" && $("again").click());
@@ -833,9 +853,17 @@ let xr = null;
     const [p0, p1, p2, p3] = xr.px;
     return p0 | p1 | p2 | p3 ? 100 * (p0 / 256 + p1 / 65536 + p2 / 16777216 + p3 / (255 * 16777216)) : Infinity;  // unpackRGBAToDepth, times farDistance
   }
+  function over(n) {  // a prop or set piece won the ray: a living character whose posed skin is on the ray (not just beside it) and in front of that piece's surface (a toad on his stone) wins it
+    let set = false; for (let p = n; p && !set; p = p.parent) set = S.props.has(p) || S.cast.some(c => c.body === p && !skin(c));
+    if (!set) return n;
+    const hit = ray.intersectObject(n, true)[0]?.distance ?? Infinity; let best = Infinity, who = n;
+    for (const [b, o] of drawables()) if (o.body && ray.ray.intersectBox(b, at3)) { const t = skinExact(o); if (t < best && t < hit) (best = t), (who = o.body); }  // the GPU's own depth at this pixel: a vertex near the ray can lie in front of a prop whose surface hides the body
+    return who;
+  }
   function pick(game) {  // [the handler, its character or null] of the nearest drawn thing: a game's while it is played (game: the open targets and extras), a character's, a touch piece's; []: none
-  const P = S.play;
-  for (let p = nearest(); p; p = p.parent) {
+  const P = S.play, hit = over(nearest()), spot = S.spots?.find(s => { for (let p = hit; p; p = p.parent) if (p === s.body) return ray.ray.distanceToPoint(s.o.getWorldPosition(at3)) <= s.r; });  // a spot of the model that is drawn there
+  if (spot) { const i = game ? P.targets.findIndex(t => t.name === spot.name) : -1; return [i >= 0 && P.open(i) ? () => (rec(spot.name, "game"), P.tap(i)) : () => wiggle(spot.name, [spot.o]), null]; }  // a spot that is a game's target or home is the game's while it is played (a second spot of the same name too)
+  for (let p = hit; p; p = p.parent) {
     const ch = S.cast.find(c => c.body === p), i = game ? P.targets.indexOf(p) : -1;
     const f = game && (game.get(p) ?? (ch && game.get(ch.proxy)) ?? (i >= 0 && P.repeat && (() => (rec(p.name, "game"), P.repeat(i)))));  // a counted friend tapped again: the game's "again"
     if (f) return [f, ch];
@@ -844,6 +872,22 @@ let xr = null;
     if (S.props.has(p)) return [S.props.get(p), null];
   }
   return [];
+}
+const PAGE_MESH = /^(r?leaf-page|page-(right|prev|next))/, rl = new THREE.Ray();
+function area(x, y) {  // the touch area under the finger: only where the first drawn thing is the page itself (a tile, card, prop or character in front always wins)
+  if (!S.areas?.length) return null;
+  aim(x, y);  // small() may have aimed elsewhere
+  if (!PAGE_MESH.test(nearest()?.name ?? "")) return null;
+  S.root.updateWorldMatrix(true, false);
+  rl.copy(ray.ray).applyMatrix4(new THREE.Matrix4().copy(S.root.matrixWorld).invert());  // the ray in page space, to the page plane (y = 0 there)
+  if (!rl.direction.y) return null;
+  const k = -rl.origin.y / rl.direction.y, px = rl.origin.x + k * rl.direction.x, py = -(rl.origin.z + k * rl.direction.z);
+  const a = k > 0 && S.areas.find(a => a.inside(px, py));
+  const game = a && S.play.begun && !S.play.complete ? S.play.targets.indexOf(a.at) : -1;  // a patch that is one of the game's targets or homes is the game's while it is played
+  if (game >= 0 && S.play.open(game)) return Object.assign(() => (rec(a.name, "game"), S.play.tap(game)), { area: a.name });
+  const pt = a && (S.areaPt ??= S.root.add(new THREE.Object3D()) && S.root.children.at(-1));  // where the finger is on the patch: its card opens there, not at the patch's middle
+  if (a) pt.position.set(px, 0, -py);
+  return a ? Object.assign(() => (rec(a.name, "card"), foley(`tap:${a.name}`, "tap"), learn(a.name, pt), sparkle(pt.getWorldPosition(new THREE.Vector3()).add(new THREE.Vector3(0, 0.1, 0))), sfxHook.tap(a.name), S.acting.tap(a.name)), { area: a.name }) : null;
 }
 const sq = new THREE.Box3(), sc = new THREE.Vector3();
 function small(x, y, game) {  // a small thing (seen under 44 px on the screen) whose 44 px square holds the finger, the nearest first: its handler, as pick() gives it
@@ -857,16 +901,18 @@ function small(x, y, game) {  // a small thing (seen under 44 px on the screen) 
     if (!behind && r[1] > r[0] && r[3] > r[2] && d <= 22 && (c && skin(c) || (r[1] - r[0] < 88 && r[3] - r[2] < 88))) near.push([d, o, r]);  // a living body of any size may be seen small (a crocodile under water); a thing up to twice the size (partly hidden)
   }
   for (const [, o, [X0, X1, Y0, Y1]] of near.sort((a, b) => a[0] - b[0]).slice(0, 2)) {  // the two nearest (a phone's crowded page: a tap costs no more)
-    const seen = [], grid = (X0, X1, Y0, Y1) => { for (let j = 0; j < 3; j++) for (let i = 0; i < 3; i++) {  // where in that box it is the thing drawn: 3 x 3 rays
-      const px = X0 + (X1 - X0) * (i + 0.5) / 3, py = Y0 + (Y1 - Y0) * (j + 0.5) / 3;
+    let seen = [];
+    const grid = (X0, X1, Y0, Y1, n = 3) => { seen = []; for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {  // where in that box it is the thing drawn: n x n rays
+      const px = X0 + (X1 - X0) * (i + 0.5) / n, py = Y0 + (Y1 - Y0) * (j + 0.5) / n;
       aim(px / W, py / H);
       for (let p = nearest(true); p; p = p.parent) if (p === o) { seen.push([px, py]); break; }
     } };
     grid(X0, X1, Y0, Y1);
-    if (!seen.length) grid(Math.max(X0, fx - 22), Math.min(X1, fx + 22), Math.max(Y0, fy - 22), Math.min(Y1, fy + 22));  // none: a body mostly hidden (under water, off the screen) whose shown part fell between them; 3 x 3 more where its box meets the finger's 44 px square
+    const mid = () => { const xs = seen.map(p => p[0]), ys = seen.map(p => p[1]); return [(Math.min(...xs) + Math.max(...xs)) / 2, (Math.min(...ys) + Math.max(...ys)) / 2, Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys))]; };
+    if (!seen.length) grid(Math.max(X0, fx - 22), Math.min(X1, fx + 22), Math.max(Y0, fy - 22), Math.min(Y1, fy + 22), 5);  // none: a body mostly hidden (under water, off the screen) whose shown part fell between them; 5 x 5 more where its box meets the finger's 44 px square
     if (!seen.length) continue;
-    const xs = seen.map(p => p[0]), ys = seen.map(p => p[1]), cx = (Math.min(...xs) + Math.max(...xs)) / 2, cy = (Math.min(...ys) + Math.max(...ys)) / 2;
-    if (Math.max(Math.max(...xs) - Math.min(...xs), Math.max(...ys) - Math.min(...ys)) >= 44 || Math.abs(cx - fx) > 22 || Math.abs(cy - fy) > 22) continue;  // seen small, the finger in its 44 px square
+    const [cx, cy, ext] = mid();
+    if (ext >= 44 || !seen.some(p => Math.abs(p[0] - fx) <= 22 && Math.abs(p[1] - fy) <= 22)) continue;  // seen small, and seen within the finger's 44 px square (a hit box wider than the body puts the rays' middle off it: the duck)
     const at = seen.reduce((a, p) => (Math.hypot(p[0] - cx, p[1] - cy) < Math.hypot(a[0] - cx, a[1] - cy) ? p : a));
     aim(at[0] / W, at[1] / H);
     return pick(game)[0];
@@ -885,18 +931,18 @@ function tap(x, y) {
   // and extras are the game's (a picked one catches no tap)
   const open = (S.G.before && !P.begun) || P.complete ? null : new Map([...S.fruit].filter(([o]) => { const i = P.targets.indexOf(o); return i < 0 || P.open(i); }));
   // small things are hard to hit: the nearest unpicked target within a fingertip also counts
-  const best = open && P.targets.map((o, i) => [i, o.getWorldPosition(new THREE.Vector3()).project(cam)])
-    .map(([i, v]) => [i, Math.hypot(((v.x + 1) / 2 - x) * innerWidth, ((1 - v.y) / 2 - y) * innerHeight)])
-    .filter(([i, d]) => P.open(i) && d < 44).sort((a, b) => a[1] - b[1])[0];
-  const near = best && (() => (rec(P.targets[best[0]].name, "game"), P.tap(best[0])));
+  const tip = open && P.targets.map((o, i) => [i, o.getWorldPosition(new THREE.Vector3()).project(cam)])
+    .map(([i, v]) => [i, Math.hypot(((v.x + 1) / 2 - x) * innerWidth, ((1 - v.y) / 2 - y) * innerHeight)]).filter(([, d]) => d < 44).sort((a, b) => a[1] - b[1]);
+  const best = tip && tip.find(([i]) => P.open(i)), near = best && (() => (rec(P.targets[best[0]].name, "game"), P.tap(best[0])));
+  const done = tip && P.repeat && tip.find(([i]) => !P.open(i) && S.acting.acts.some(a => a.line === `tap:${P.targets[i].name}`)), again = done && (() => (rec(P.targets[done[0]].name, "game"), P.repeat(done[0])));  // and a counted one that has a tap act of its own, last of all (nothing else under the finger): a child who taps the folded leaf again is answered (turtle s06)
   const [f, ch] = pick(open);
-  if (!on) return void (f ?? near ?? (nearest()?.userData.extraTap ? null : small(x, y, open)))?.();  // a thing the finger is on always wins; on the scenery, a small thing beside it
+  if (!on) return void (f ?? near ?? (nearest()?.userData.extraTap ? null : small(x, y, open)) ?? area(x, y) ?? again)?.();  // a thing the finger is on always wins; on the scenery, a small thing beside it
   // while a game is on: its own targets first (by hit box), then one by the fingertip, then a character drawn there, then a halo, then the thing drawn there
   const targets = new Map([...open].filter(([o]) => P.targets.includes(o)));
-  (hitIn(targets) ?? near ?? (ch && f) ?? hitIn(open) ?? f ?? small(x, y, open))?.();
+  (hitIn(targets) ?? near ?? (ch && f) ?? hitIn(open) ?? f ?? small(x, y, open) ?? area(x, y) ?? again)?.();
 }
 
-const talking = () => !reader.audio.paused && !reader.audio.ended;  // the storyteller is mid-line
+const talking = () => (!reader.audio.paused && !reader.audio.ended) || !!au.hush;  // the storyteller is mid-line (a sentence-end hold too)
 let cutT = 0;
 const cutWord = () => {  // a story or game line starts: a word card's voice fades out in 80 ms and its card closes, so there is one voice at a time
   $("sbub").hidden = true; clearTimeout($("sbub").t); if (speak.paused) return;
@@ -990,9 +1036,11 @@ function wiggle(name, parts) {  // a touch thing answers a tap (both halves of a
 }
 
 // a few sparkle bursts kept in the scene for good (invisible at rest): one made and thrown away per tap recompiled its shader, a 0.3-0.6 s stall
+const dot = (() => { const c = document.createElement("canvas"); c.width = c.height = 32; const x = c.getContext("2d"), g = x.createRadialGradient(16, 16, 0, 16, 16, 16);  // a soft round sprite: squares covered the target
+  g.addColorStop(0, "rgba(255,255,255,1)"); g.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = g; x.fillRect(0, 0, 32, 32); return new THREE.CanvasTexture(c); })();
 const sparks = Array.from({ length: 6 }, () => {
   const pts = new THREE.Points(new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(18 * 3, 3)),
-    new THREE.PointsMaterial({ color: new THREE.Color(4, 3.2, 1.6), size: 0.018, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
+    new THREE.PointsMaterial({ color: new THREE.Color(4, 3.2, 1.6), map: dot, size: 7 * renderer.getPixelRatio(), sizeAttenuation: false, alphaTest: 0.01, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
   pts.frustumCulled = false; scene.add(pts);
   return pts;
 });
@@ -1084,46 +1132,102 @@ function showCue(now) {
   const cm = cue.cp && (cam.position.distanceTo(cue.cp) > 0.0008 || controls.target.distanceTo(cue.ct) > 0.0008), lim = 0.02 * Math.max(1, now - (cue.tp ?? now)) / 1000, calm = cue.cp && cam.position.distanceTo(cue.cp) < lim && controls.target.distanceTo(cue.ct) < lim; cue.cp = cam.position.clone(); cue.ct = controls.target.clone(); cue.tp = now; cue.calm = calm ? cue.calm || now : 0;  // calm: the camera itself has stopped (under 2 cm/s; the breathing drift is 1)  // the camera itself: under 0.8 mm a frame, 5 cm/s (the breathing drift is 0.15 mm)
   cue.px = pxy; cue.still = cm || slid ? 0 : cue.still || now;  // since when the camera and the corner have stood still
   if (!done) cue.since = 0; else cue.since ||= now;
-  const on = done && (cue.shown || hint.landed !== false && ((cue.still && cue.calm && now - Math.max(cue.still, cue.calm, cue.since) > 600) || now - cue.since > 20000));  // shown once the camera itself has stopped  // once up it stays until the page is read again  // the page's last shot has landed (or a few seconds on, if the camera never settles)
+  const on = done && (cue.shown || !!hint.hold || hint.landed !== false && ((cue.still && cue.calm && now - Math.max(cue.still, cue.calm, cue.since) > 600) || now - cue.since > 20000));  // shown once the camera itself has stopped  // once up it stays until the page is read again  // the page's last shot has landed (or a few seconds on, if the camera never settles)
   if (on !== cue.shown) { cue.shown = on; $("next").hidden = !on; }
   if (cue.lang !== lang) { cue.lang = lang; $("next").firstElementChild.textContent = NEXT[lang] ?? NEXT[""]; }
   const p = hint.spots.find(p => p.s === 1);
   if (on) {  // beside the forward corner, and still under a finger: it moves only when the corner has moved a good way (the camera's breathing drift would walk it out from under a tap)
-    const x = (p?.x ?? 0.94) * innerWidth, y = (p?.y ?? 0.84) * innerHeight;
+    const hc = hint.hold && cam.clone(), hp = hc && (() => {  // a story page's held close (ambient.js): the corner and the subjects as that frame will show them, so the button stands right from the start, while the camera is still on its way
+      hc.position.copy(hint.hold.pos); hc.lookAt(hint.hold.look); hc.updateMatrixWorld(); const v = new THREE.Vector3();
+      for (let d = 0; d <= 26; d++) for (let i = Math.max(0, d - 13); i <= Math.min(d, 13); i++) { v.set(S.pageW - i * 0.07 * S.pageW, S.flat.max.y, S.flat.max.z - (d - i) * 0.07 * S.pageD).project(hc); const px = (v.x + 1) / 2, py = (1 - v.y) / 2; if (v.z < 1 && px > 0.06 && px < 0.94 && py > 0.06 && py < 0.94) return [px, py]; }
+      return null;
+    })();
+    const x = (hp?.[0] ?? p?.x ?? 0.94) * innerWidth, y = (hp?.[1] ?? p?.y ?? 0.84) * innerHeight;
     const move = !cue.at || cue.at[2] !== innerWidth;  // placed once beside the corner as it shows, and never moved under a finger after (review 5: it jumped twice as gourd s01's phone close, which follows its people, moved the corner); again only for a new screen size
     if (move) {  // R30: never over the end frame's subjects (gourd s01's phone end put it over Pu Nyeu, Nya Nyeu and Little Lion): just below or above the corner
       const [ax, ay] = [x, y], nb = $("next"), w = nb.offsetWidth, h = nb.offsetHeight, acted = new Set((S.m.acts ?? []).flatMap(a => [].concat(a.who ?? []))), v = new THREE.Vector3();
-      const boxes = S.cast.filter(c => c.body.visible && (S.acting.people?.has(c.name) || acted.has(c.name))).map(c => drawn(c).map(p => v.copy(p).project(cam)).filter(q => Number.isFinite(q.x)).reduce((b, q) => [Math.min(b[0], q.x), Math.max(b[1], q.x), Math.min(b[2], q.y), Math.max(b[3], q.y)], [9, -9, 9, -9]).map((n, i) => i < 2 ? (n + 1) / 2 * innerWidth : (1 - n) / 2 * innerHeight));  // each one's box on the screen: [x0, x1, bottom, top] px
+      const boxes = S.cast.filter(c => c.body.visible && (S.acting.people?.has(c.name) || acted.has(c.name))).map(c => drawn(c).map(p => p.clone().project(hc || cam)).filter(q => Number.isFinite(q.x)).reduce((b, q) => [Math.min(b[0], q.x), Math.max(b[1], q.x), Math.min(b[2], q.y), Math.max(b[3], q.y)], [9, -9, 9, -9]).map((n, i) => i < 2 ? (n + 1) / 2 * innerWidth : (1 - n) / 2 * innerHeight));  // each one's box on the screen: [x0, x1, bottom, top] px
       const gap = d => { const l = ax - w - 36, t = ay + d - h / 2; return t > 0.1 * innerHeight && t + h < 0.9 * innerHeight ? Math.min(Infinity, ...boxes.map(([x0, x1, yb, yt]) => Math.max(x0 - l - w, l - x1, t - yb, yt - t - h))) : -Infinity; };  // px to the nearest subject (below 0: over one)
       { const ds = [0, 1.3, -1.3, 2.6, -2.6].map(k => k * h); cue.dy = gap(0) >= 24 ? 0 : ds.reduce((a, d) => (gap(d) > gap(a) ? d : a), 0); cue.at = [ax, ay, innerWidth]; Object.assign(nb.style, { left: `${ax}px`, top: `${ay + cue.dy}px` }); }  // beside the corner, else the spot farthest from every subject (the close follows its people: they move a little after)
     }
-  } else cue.at = null;
+    if (cue.fly !== false && now - (cue.tw ?? 0) > 100) {  // a story page's button stands where the held close will show it clear, but the camera is still on its way there (toad s01's phone close on Kankak, toad s02's dog, a walker crossing): until the close lands (or 20 s) it is hidden, never moved, while a subject on the screen now is under it
+      const nb = $("next"), r = nb.getBoundingClientRect(), acted = new Set((S.m.acts ?? []).flatMap(a => [].concat(a.who ?? []))), m = 12; cue.tw = now;
+      cue.fly = !!hint.hold && !hint.landed && now - cue.since < 20000;
+      const over = cue.fly && S.cast.some(c => c.body.visible && (S.acting.people?.has(c.name) || acted.has(c.name)) && (q => q.length > 0 && Math.min(...q.map(v => v.x)) < r.right + m && Math.max(...q.map(v => v.x)) > r.left - m && Math.min(...q.map(v => v.y)) < r.bottom + m && Math.max(...q.map(v => v.y)) > r.top - m)(drawn(c).map(p => p.clone().project(cam)).filter(v => Number.isFinite(v.x) && v.z < 1).map(v => ({ x: (v.x + 1) / 2 * innerWidth, y: (1 - v.y) / 2 * innerHeight }))));
+      nb.style.visibility = over ? "hidden" : "";
+    }
+  } else cue.at = null, cue.fly = cue.tw = null;
 }
-// ---------- auto play: the page turns by itself 2.5 s after its last line (and its game), through to the end card ----------
-const autoBtn = $("auto"), au = { on: false, t: 0, mode: "", fired: "", n: 0 };  // n: the automatic turns so far (tools/auto_probe.mjs)
+// ---------- auto play: the book reads itself slowly (it is for children learning to read), plays its games and turns its pages, through to the end card ----------
+// The pace (Eddie 2026-11-16, BOOK-STANDARD "Auto Read pace"): one for every book and language, in ms. ?pace=fast (tests only) runs it 5x quicker.
+const PACE = Object.fromEntries(Object.entries({
+  hold: 1500,      // after a line's voice ends (and its acts, a walker arrived): the calm before the next line
+  sentence: 700,   // at least this silence at every sentence end inside a line ('.', '?', '!'): the voice waits when its own gap is shorter
+  turn: 3500,      // after the last line (and its game): before the page turns; the turn itself as fast as a hand's
+  press: 600,      // a button Auto presses (Next page, a game's bubble) shows pressed this long first
+  wait: 4000,      // a game: after its prompt, the reader's own time before Auto helps
+  glow: 1500,      // Auto helping: the next right one shows its hint glow this long, then is tapped
+  after: 2000,     // after each automatic tap: its reaction and voice end, then this calm
+  won: 3000,       // after the win and its praise: then the story goes on
+  back: 20000,     // the reader touched: Auto waits, and helps again only after this long with no touch
+  walk: 15000,     // the longest Auto waits for a walking character before the hold
+  stuck: 120000,   // a game Auto cannot finish (no move for it this long): it is left, as before, and the story goes on
+}).map(([k, v]) => [k, q.get("pace") === "fast" ? v * 0.2 : v]));
+const autoBtn = $("auto"), au = { on: false, t: 0, mode: "", fired: "", n: 0, hush: false, log: [] };  // n: the automatic turns so far; log: [ms, "tap" | "press", what] (tools/auto_probe.mjs)
+document.head.insertAdjacentHTML("beforeend", "<style>.autopress { scale: .92 !important; filter: brightness(1.12); animation: none !important; }</style>");  // a button Auto presses looks pressed
 try { au.on = (q.get("auto") ?? localStorage.getItem("popup-auto")) === "1"; } catch { au.on = q.get("auto") === "1"; }
 const showAuto = () => autoBtn.setAttribute("aria-pressed", au.on);
-autoBtn.onclick = () => { au.on = !au.on; au.t = 0; showAuto(); try { localStorage.setItem("popup-auto", au.on ? "1" : "0"); } catch { /* not remembered */ } };
+autoBtn.onclick = () => { au.on = !au.on; au.t = 0; $("next").classList.remove("autopress"); showAuto(); try { localStorage.setItem("popup-auto", au.on ? "1" : "0"); } catch { /* not remembered */ } };
 showAuto();
 function autoTick(now) {
   const sp = S, n = sp.page.lines.length, key = `${sp.id}|${mode}`;
   if (mode !== au.mode) Object.assign(au, { mode, fired: "", t: 0 });  // a new mode (also a turn that fell back): the wait starts again
+  pause(now);  // every reading, Auto or not: >= PACE.sentence at each sentence end
   if (!au.on || au.fired === key || exitOn || arrival3 && (arrival3.active || arrival3.locked) || (mode !== "open" && mode !== "closed")) return;
   let ready = mode === "closed";  // the flat page: lifted to the open spread after the wait
   if (mode === "open") {
     const game = sp.play.targets.length && !sp.play.complete && !sp.skip;
-    if (game && sp.promptEnd && !sp.touched && now - sp.promptEnd > 10000) sp.skip = true, sp.play.stop?.(), sp.play.begun = false, gameView(false), sp.at < n && readFrom(sp.at);  // nobody touched the game for 10 s: it stops hinting and the story goes on (Read again plays it)
-    ready = sp.at >= n && !(game && !sp.skip) && (sp.skip || reader.audio.paused || reader.audio.ended);  // every line read, the game won or left, the last voice done
+    if (game && sp.promptEnd) help(sp, now);
+    ready = sp.at >= n && !game && !au.hush && (reader.audio.paused || reader.audio.ended) && (speak.paused || speak.ended || !!speak.error);  // every line read, the game won, every voice done
   }
-  if (!ready) return void (au.t = 0);
-  if (!au.t) au.t = now;
-  if (now - au.t >= 2500) au.fired = key, au.n++, turn(true, true);
+  if (!ready) return void (au.t = 0, $("next").classList.remove("autopress"));
+  if (!au.t || (sp.touchAt ?? 0) > au.t) au.t = now;  // a touch starts the turn's wait again
+  if (now - au.t >= PACE.turn - PACE.press && !$("next").hidden) $("next").classList.add("autopress");  // Next page, shown pressed
+  if (now - au.t >= PACE.turn) au.fired = key, au.n++, $("next").classList.remove("autopress"), turn(true, true);
+}
+function pause(now) {  // the voice waits at a sentence end whose own silence is under PACE.sentence, then goes on (Eddie 2026-11-16: all reading, Auto or not); the read-along and the word-cued acts wait with it (they follow the voice's own time)
+  const a = reader.audio, w = timing[reader.id]?.words, h = au.hush;
+  if (h) return void (reader.id !== h.id || reader.token !== h.token ? (au.hush = false) : now >= h.until && (au.hush = false, a.play().catch(() => {})));
+  if ((mode !== "open" && mode !== "moral") || !w || a.paused || a.ended) return;
+  const said = text[reader.id].split(" "), t = a.currentTime, p = au.paused ??= new Set();
+  for (let j = 0; j < w.length - 1; j++) {
+    const gap = w[j + 1][0] - w[j][1], key = `${reader.id}|${reader.token}|${j}`;
+    if (/[.?!]["'”’)]*$/.test(said[j] ?? "") && gap * 1000 < PACE.sentence && t >= w[j][1] && t < Math.max(w[j + 1][0], w[j][1] + 0.1) && !p.has(key)) {
+      p.add(key); a.pause(); au.hush = { id: reader.id, token: reader.token, until: now + PACE.sentence - gap * 1000 }; return;
+    }
+  }
+}
+function help(sp, now) {  // Auto plays the game with the reader: the next right one shows its hint glow, then is tapped the way a finger taps it
+  const P = sp.play, h = sp.help ??= { t: 0, aim: null, n: 0 }, off = () => (h.aim?.o && glow(h.aim.o, 0), (h.aim = null));
+  if (now < Math.max(sp.promptEnd + PACE.wait, (sp.touchAt ?? -1e9) + PACE.back)) return void off();  // the reader's turn (and after their touch, theirs for PACE.back)
+  if (now - Math.max(sp.promptEnd, sp.touchAt ?? 0, h.moved ?? 0) > PACE.stuck) return void (sp.skip = true, off(), P.stop?.(), P.begun = false, gameView(false), sp.at < sp.page.lines.length && readFrom(sp.at));  // a game Auto cannot play: left, as before
+  const a = P.auto?.(now), talk = [reader.audio, speak].some(x => !x.paused && !x.ended && !x.error) || au.hush;  // (a voice file that failed is not talking)
+  if (!a || talk) return void (h.n && (h.t = now + PACE.after));  // a reaction and its voice end first, then the calm
+  if (now < h.t) return;
+  const o = a.o ?? P.targets[a.i];
+  if (!h.aim) return void ((h.aim = { o, at: now }), o && glow(o, 0.5, true), P.hint?.(), (P.last = now));  // the hint, and the game's own idle hint kept quiet
+  if (now - h.aim.at < PACE.glow || a.ready === false) return;
+  off(); h.n++; h.moved = h.t = now + PACE.after;
+  const b = a.press && $(a.press);
+  au.log.push([now, a.press && !b.hidden ? "press" : "tap", o?.name ?? ""]);
+  if (b && !b.hidden) { b.classList.add("autopress"); setTimeout(() => (b.classList.remove("autopress"), sp === S && au.on && b.click()), PACE.press); }
+  else (a.go ?? sp.fruit.get(o))?.();
 }
 $("next").onclick = () => mode === "open" && turn(true, true);
 const grabAt = (x, y) => (hint.past ?? [[0, hint.spots]]).map(([, ps]) => ps.find(p => Math.hypot((p.x - x) * innerWidth, (p.y - y) * innerHeight) < Math.max(48, innerWidth * 0.08))).find(Boolean);  // the glow under the finger, now or a moment ago
 
 canvas.addEventListener("pointerdown", e => {
-  if (S?.promptEnd) S.touched = true;  // auto play: the child is at the game, so it is waited for
+  if (S) S.touchAt = performance.now();  // auto play: the reader is here, so they are waited for (a game: Auto helps again after PACE.back; a turn: its wait starts again)
   if (!primed) { primed = true; unlock(reader.audio, speak); snd.ctx.resume().catch(() => {}); }  // iPad: unlock sound inside a touch
   const [x, y] = at(e), p = grabAt(x, y), s = p?.s ?? 0; fingerX = x; press = [e.clientX, e.clientY, performance.now()]; trail = [[performance.now(), x]];
   if (pid !== null || !turnable(s)) return;  // not a page turn: OrbitControls has it
@@ -1289,6 +1393,7 @@ function gameView(on, force) {  // every screen frames the game while it is on; 
     const steer = S.G.type === "steer" && S.byName[S.G.who ?? "bobo"], rider = steer && S.cast.find(c => c.ride?.on === steer);  // steer: the pair goes round each hazard
     const pts = ts.flatMap(o => {  // where each target goes for the whole game: a boat's flame drifts and bobs with its boat (place(): ±drift, ±0.6 drift)
       const b = new THREE.Box3().setFromObject(o), rc = !(story && !S.play.begun) && S.play.reach?.get(o), at = o.getWorldPosition(new THREE.Vector3()), on = S.cast.find(c => { for (let a = o; a; a = a.parent) if (a === c.body) return true; }), dr = on?.c.bob ? (on.c.drift || 0) + 0.01 : 0;
+      if (b.isEmpty()) b.setFromCenterAndSize(at, new THREE.Vector3(0.05, 0.05, 0.05));  // a spot with no mesh (toad s03's bee nest) is a 5 cm box round its position, so the view frames it
       if (rc) b.min.add(rc.min.clone().sub(at)), b.max.add(rc.max.clone().sub(at));  // its whole reach so far (a lantern bobs, a bell swings), not only where it stands now
       if (steer) { const len = steer.box.getSize(new THREE.Vector3()).multiplyScalar(steer.s0); b.expandByVector(new THREE.Vector3(1, 0, 1).multiplyScalar(one ? 0.21 : 0.15 + Math.max(len.x, len.z) / 2)); b.max.y += steer.height + (rider?.height ?? 0); }  // its sides (0.11), its stop (0.15 short), its length, its rider
       return corners(b).flatMap(p => dr ? [-1, 1].flatMap(sx => [-1, 1].map(sz => p.clone().add(new THREE.Vector3(sx * dr, sz * 0.008, sz * 0.6 * dr)))) : [p]);  // the whole target
@@ -1322,6 +1427,12 @@ function gameView(on, force) {  // every screen frames the game while it is on; 
       const fits = () => (view.position.copy(at).addScaledVector(dir, back), view.lookAt(at), view.updateMatrixWorld(),
         set.every(p => seen(p, 0.5)) && [...boxes.values()].every(b => b.distanceToPoint(view.position) >= clear));
       for (let i = 0; i < 150 && !fits(); i++) back *= 1.03;  // the nearest that holds it all
+      if (story && upright) for (let j = 0, best = fits() && [at.clone(), back]; j < 4; j++) {  // a story page on an upright phone (R26c: turtle s08's pairs game stood 2.55 m back): `at` is the set's middle in the world, but a near target reaches further across the screen than a far one, so one side met the margin with the other 9 percent short, and the set sat low in the tall frame. Its middle as the screen shows it goes on the safe frame's middle, then as near as that allows. Kapi and Mali (no story camera) and every wide screen keep the fit above
+        const xy = set.map(p => q.copy(p).project(view).clone()), mid = k => (Math.min(...xy.map(p => p[k])) + Math.max(...xy.map(p => p[k]))) / 2, ty = Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2);
+        at.addScaledVector(q.setFromMatrixColumn(view.matrixWorld, 0), (mid("x") - (xs[0] + xs[1]) / 2) * ty * cam.aspect * back).addScaledVector(q.setFromMatrixColumn(view.matrixWorld, 1), (mid("y") - (ys[0] + ys[1]) / 2) * ty * back);
+        back *= 0.6; for (let i = 0; i < 150 && !fits(); i++) back *= 1.03;
+        if (fits() && !(best && best[1] <= back)) best = [at.clone(), back]; if (j === 3 && best) at = best[0], back = best[1];  // the nearest of the tries
+      }
       const more = [...hull].filter(([c, ps]) => !inShot.has(c) && (!S.acting.people || S.acting.people.has(c.name)) && ps.some(p => seen(p, 1)));  // people; a boat may run off the edge
       if (!more.length || one) break;
       more.forEach(([c]) => inShot.add(c));
@@ -1348,14 +1459,14 @@ const toWorld = (o, p) => { o.parent.updateWorldMatrix(true, false); o.position.
 const inHandAt = ({ bone, seat }, v) => seat ? seat.at(v) : (bone.updateWorldMatrix(true, false), v.setFromMatrixPosition(bone.matrixWorld));  // a held bowl by its rim (acts.js byRim); else at the hand bone
 function moveProps() {  // props the story moved stay where they are drawn (risen, in a hand, set down), so taps and acts find them there
   for (const [what, dy] of Object.entries(S.lifts)) {
-    const o = S.root.getObjectByName(what);
+    const o = propIn(S, what), cast = S.byName[what]?.body === o;
     if (!o || (S.animated.has(o.name) && !shown)) continue;  // animated: lifted from where the paper's animation put it this frame
-    if (!S.animated.has(o.name)) o.position.copy(o.userData.rest ??= o.position.clone());  // still: lifted from where it stood
+    if (!S.animated.has(o.name) && !cast) o.position.copy(o.userData.rest ??= o.position.clone());  // still: lifted from where it stood (a cast prop: place() has just set it)
     toWorld(o, o.getWorldPosition(head).addScaledVector(up3, dy));
   }
   for (const h of S.held) { const { o } = h; o.userData.rest ??= o.position.clone(); if (h.pose) h.bone.updateWorldMatrix(true, false), head.setFromMatrixPosition(h.bone.matrixWorld), seatHeld(o, h.pose, head, h.aim != null ? S.where(h.aim) : null); else toWorld(o, inHandAt(h, head)); S.cast.find(c => c.body === o)?.pos.copy(head); }  // a held character is there for good: where() and its riders find it in the hand
   S.falls = S.falls.filter(f => { const k = Math.min(1, (performance.now() - f.t0) / 350); S.placed[f.what] = f.from.clone().setY(f.from.y - f.dy * k * k); return k < 1; });  // a released tool falling: slow, then fast
-  for (const [what, p] of Object.entries(S.placed)) { const o = S.root.getObjectByName(what) || S.byName[what]?.body; if (o) { o.userData.rest ??= o.position.clone(); toWorld(o, p.clone()); } }
+  for (const [what, p] of Object.entries(S.placed)) { const o = propIn(S, what); if (o) { o.userData.rest ??= o.position.clone(); toWorld(o, p.clone()); if (S.byName[what]?.body === o) S.byName[what].pos.copy(p); } }  // a flown cast prop's stored place follows it: the next page starts it where it landed
   shown = false;
 }
 function dimReading(now) {  // the read-along page fades while a character's head or a game target is behind it
@@ -1405,7 +1516,7 @@ renderer.setAnimationLoop(now => {
   }
   if (reader.id !== clock.id) Object.assign(clock, { id: reader.id, t0: now });
   if (mode === "open" && reader.id) {  // the acts follow the reader: its line, how far into it (by the clock when no voice plays), and whose words those are
-    const a = reader.audio, t = a.ended ? Infinity : a.error || a.paused ? (now - clock.t0) / 1000 : a.currentTime;  // a failed file stays "playing" at 0
+    const a = reader.audio, t = a.ended ? Infinity : (a.error || a.paused) && !au.hush ? (now - clock.t0) / 1000 : a.currentTime;  // a failed file stays "playing" at 0
     const ws = timing[reader.id]?.words ?? [], wi = ws.findLastIndex(([w]) => w <= t);
     if (word.id !== reader.id || wi < word.i) Object.assign(word, { id: reader.id, i: -1 });  // a new line, or the same one again
     for (let j = word.i + 1; j <= wi; j++)  // each word as it is read: its "line:<id>:<word>" foley, every time (a slow frame skips none; a stale one plays none)
@@ -1443,8 +1554,8 @@ renderer.setAnimationLoop(now => {
   if (dt > 0) camVel[0].subVectors(cam.position, camWas[0]).divideScalar(dt), camVel[1].subVectors(controls.target, camWas[1]).divideScalar(dt); camWas[0].copy(cam.position); camWas[1].copy(controls.target);  // the camera's speed this frame (m/s), for a glide that carries it
   for (const s of [$("sbub"), $("lbub")]) if (!s.hidden && s.who) {  // a bubble rides above its speaker's head; a word card above (else below) the thing's whole box, never on it
     let x, ytop, ybot;
-    if (s.who.box) {
-      cardBox.setFromObject(s.who.body); let x0 = 9, x1 = -9, y0 = 9, y1 = -9;
+    if (s.who.box && !cardBox.setFromObject(s.who.body).isEmpty()) {  // a body with no box (a touch area's anchor) takes the point branch
+      let x0 = 9, x1 = -9, y0 = 9, y1 = -9;
       for (let i = 0; i < 8; i++) { head.set(i & 1 ? cardBox.max.x : cardBox.min.x, i & 2 ? cardBox.max.y : cardBox.min.y, i & 4 ? cardBox.max.z : cardBox.min.z).project(cam); x0 = Math.min(x0, head.x); x1 = Math.max(x1, head.x); y0 = Math.min(y0, head.y); y1 = Math.max(y1, head.y); }
       x = (x0 + x1) / 2; ytop = (1 - y1) / 2 * innerHeight; ybot = (1 - y0) / 2 * innerHeight;
     } else { s.who.body.getWorldPosition(head).add(new THREE.Vector3(0, s.who.c.height * 1.15, 0)).project(cam); x = head.x; ytop = (1 - head.y) / 2 * innerHeight; ybot = ytop + 0.07 * innerHeight; }
@@ -1463,5 +1574,5 @@ enter(await load(first), "closed"); spreadReady = true; lift(); notice.open();
 canvas.focus();
 window.live = { get sfx() { return sfxHook.fx; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
   get auto() { return au; }, get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
-  get acting() { return S.acting; }, get game() { return S.play; }, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, get lastTap() { return tapped; }, nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
+  get acting() { return S.acting; }, get game() { return S.play; }, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
   halt: () => (homing = null, true) };  // the director takes the camera from the glide home (ambient.js, a spread turned to)

@@ -26,9 +26,11 @@ export function makeNotice({ bookId, lib, story, getLang }) {
     async open() {  // the title page, first open of the book (a visit to the shelf's arrival waits until the book is on the desk)
       const h = await html(); if (!h) return;
       const el = Object.assign(document.createElement("div"), { id: "notice", innerHTML: h }); el.setAttribute("role", "note"); document.body.append(el);
-      const gone = () => { clearTimeout(t); removeEventListener("pointerdown", gone, true); removeEventListener("keydown", gone, true); el.classList.add("gone"); setTimeout(() => el.remove(), 500); };
+      const gone = (now) => { clearTimeout(t); live = false; removeEventListener("pointerdown", gone, true); removeEventListener("keydown", gone, true); el.classList.add("gone"); now === true ? el.remove() : setTimeout(() => el.remove(), 500); };
       const place = () => { const r = document.getElementById("title"); r && !r.hidden && (el.style.top = `${Math.max(parseFloat(getComputedStyle(el).top), r.getBoundingClientRect().bottom + 10)}px`); };  // a phone's title above the book can run to two lines: the card sits under it
-      let t; const wait = setInterval(() => document.documentElement.classList.contains("arriving") || (clearInterval(wait), place(), (t = setTimeout(gone, 4000)), addEventListener("pointerdown", gone, true), addEventListener("keydown", gone, true)), 150);  // a tap is seen, never stopped: the page's own taps go on as before
+      // the notice and a story line never share the screen: the book opening (a turn by any road) takes the card away at once, and the page's auto-turn (live.auto, which waits 2.5 s on the closed page) is held until the card's own 4 s are done
+      let t, t0, live = true; const keep = () => { if (!live) return; const L = window.live; if (L?.mode !== "closed") return gone(true); requestAnimationFrame(keep); const au = L.auto; au.on && au.t && (au.t = Math.max(au.t, t0 + 1500)); };  // shortcut: reaches live.auto.t from here; if live.js grows a hold for a splash, ask that instead
+      const wait = setInterval(() => document.documentElement.classList.contains("arriving") || (clearInterval(wait), place(), (t = setTimeout(gone, 4000)), (t0 = performance.now()), requestAnimationFrame(keep), addEventListener("pointerdown", gone, true), addEventListener("keydown", gone, true)), 150);  // a tap is seen, never stopped: the page's own taps go on as before
     },
     async end(host) { const h = await html(); if (!h || host.querySelector("#noticeEnd")) return; host.append(Object.assign(document.createElement("div"), { id: "noticeEnd", innerHTML: h })); },
   };

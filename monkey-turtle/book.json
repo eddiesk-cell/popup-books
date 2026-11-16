@@ -1,0 +1,121 @@
+{
+ "released": true,
+ "chars": "turtle-",
+ "title": "The Monkey and the Turtle",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Floating Banana",
+   "lines": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "1.5",
+    "targets": ["floating-flower", "floating-frond", "floating-coconut", "floating-stick", "banana-float"],
+    "start": "What is floating on the river? Tap everything that floats!",
+    "praise": "They all float! Now swim, Pagong!",
+    "react": ["game.1.react.1", "game.1.react.2", "game.1.react.3", "game.1.react.4", "game.1.react.5"],
+    "voice": {"start": "game.1.start", "praise": "game.1.praise"}
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Top or Roots?",
+   "lines": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "2.2",
+    "targets": ["plant-leaves", "plant-stem", "plant-roots"],
+    "start": "A plant has leaves, a stem and roots. Tap each part!",
+    "praise": "Leaves, stem and roots! You know your plant!",
+    "react": ["game.2.react.1", "game.2.react.2", "game.2.react.3"],
+    "voice": {"start": "game.2.start", "praise": "game.2.praise"}
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Planting Day",
+   "lines": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+   "game": {"type": "timing", "before": "3.4", "targets": ["banana-roots", "hole"], "step": {"prop": "hole", "clip": "Dig", "steps": 5}, "start": "Help Pagong dig a hole. Tap when the ring turns green!", "praise": "A good deep hole!", "voice": {"start": "game.3.start", "praise": "game.3.praise"}}
+  },
+  {
+   "dir": "s04",
+   "title": "Wait and See",
+   "lines": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+   "game": {"type": "timing", "before": "4.4", "targets": ["sun-disc", "banana-plant"], "step": {"prop": "banana-plant", "clip": "Grow", "steps": 5}, "start": "Bananas need sun. Tap the sun when the ring turns green!", "praise": "Rain and sun, sun and rain. Look how it grew!", "voice": {"start": "game.4.start", "praise": "game.4.praise"}}
+  },
+  {
+   "dir": "s05",
+   "title": "Up Goes Matsing",
+   "lines": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+   "game": {
+    "type": "collect",
+    "before": "5.3",
+    "targets": ["banana-1", "banana-2", "banana-3", "banana-4", "banana-5", "banana-6", "banana-7", "banana-8", "banana-9", "banana-10"],
+    "count": "game.5.count",
+    "start": "How many bananas are there? Tap each one and count!",
+    "praise": "Ten bananas! Enough for two friends.",
+    "voice": {"start": "game.5.start", "praise": "game.5.praise"}
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "The Shy Plant",
+   "lines": ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6"],
+   "game": {"type": "collect", "before": "6.5", "targets": ["makahiya-1", "makahiya-2", "makahiya-3", "makahiya-4", "makahiya-5", "makahiya-6"], "clip": ["Fold", 3], "start": "Makahiya is shy. Tap a leaf and watch it close!", "praise": "Shy little leaves! They close when you touch them.", "voice": {"start": "game.6.start", "praise": "game.6.praise"}}
+  },
+  {
+   "dir": "s07",
+   "title": "Hot, Hot, Hot!",
+   "lines": ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6"],
+   "game": {"type": "collect", "tap": "light", "before": "7.5", "lit_glow": 0, "targets": ["plant-squash", "plant-eggplant", "plant-beans", "plant-gourd", "plant-chilli"], "start": "Tap a plant to light it up. What grows here?", "praise": "What a garden! And those little red ones are very hot!", "react": ["game.7.react.1", "game.7.react.2", "game.7.react.3", "game.7.react.4", "game.7.react.5"], "voice": {"start": "game.7.start", "praise": "game.7.praise"}}
+  },
+  {
+   "dir": "s08",
+   "title": "Please, Not the River!",
+   "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
+   "game": {"type": "pair", "before": "8.4", "pairs": [["pagong", "river-glimpse"], ["gecko", "bahay-kubo"], ["hen-a", "coop"]], "start": "Every animal has a home. Tap an animal, then tap its home!", "praise": "A turtle lives in the water. Oh, Matsing!", "voice": {"start": "game.8.start", "praise": "game.8.praise"}}
+  },
+  {
+   "dir": "s09",
+   "title": "Splash!",
+   "lines": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+   "game": {
+    "type": "collect",
+    "before": "9.4",
+    "targets": ["bubble-1", "bubble-2", "bubble-3", "bubble-4", "bubble-5"],
+    "count": "game.9.count",
+    "start": "Where is Pagong? Pop the bubbles and count!",
+    "praise": "There she is! Pagong loves the water!",
+    "react": ["One!", "Two!", "Three!", "Four!", "Five!"],
+    "voice": {"start": "game.9.start", "praise": "game.9.praise"}
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "Roots and All",
+   "lines": ["10.1", "10.2", "10.3", "10.4", "10.5"],
+   "game": {
+    "type": "collect",
+    "targets": ["banana-1", "banana-2", "banana-3", "banana-4", "banana-5", "banana-6", "banana-7", "banana-8", "banana-9", "banana-10"],
+    "count": "game.10.count",
+    "deal": ["matsing", "pagong"],
+    "start": "Help them share! Tap a banana to give it away: one for Pagong, one for Matsing.",
+    "praise": "Five for Pagong, five for Matsing. That's fair!",
+    "react": ["One for Matsing!", "One for Pagong!"],
+    "voice": {"start": "game.10.start", "praise": "game.10.praise"}
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What did we learn?",
+   "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+  }
+ ],
+ "moral": {"lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]}
+}

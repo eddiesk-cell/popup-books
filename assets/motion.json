@@ -272,13 +272,19 @@
    "speed": 0.0433,
    "cycle": 1.0833
   },
+  "Step Back": {
+   "speed": 0.0318,
+   "cycle": 1.0833,
+   "back": true
+  },
   "Plough": {
    "speed": 0.0196,
    "cycle": 1.9167
   },
   "Walk Out": {
    "speed": 0.0433,
-   "cycle": 1.0833
+   "cycle": 3.5833,
+   "loop": false
   }
  },
  "nyanyeu": {
@@ -302,7 +308,8 @@
   },
   "Step Back": {
    "speed": 0.008,
-   "cycle": 1.0
+   "cycle": 1.0,
+   "back": true
   }
  },
  "kankak": {
@@ -391,5 +398,88 @@
    "height": 0.025
   },
   "float": 0.33
+ },
+ "turtle-matsing.glb": {
+  "Walk": {
+   "speed": 0.0687,
+   "speed_h": 0.458,
+   "cycle": 1.3333,
+   "loop": true,
+   "height": 0.15
+  },
+  "Run": {
+   "speed": 0.155,
+   "speed_h": 1.033,
+   "cycle": 1.5,
+   "loop": true,
+   "height": 0.15
+  },
+  "Sneak": {
+   "speed": 0.032,
+   "speed_h": 0.213,
+   "cycle": 3.0,
+   "loop": true,
+   "height": 0.15
+  },
+  "Climb Up": {
+   "rise": 0.0506,
+   "cycle": 0.6,
+   "loop": true,
+   "height": 0.15
+  }
+ },
+ "tik": {
+  "Walk": {
+   "speed": 0.024,
+   "speed_h": 0.8,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.03
+  }
+ },
+ "pinch": {
+  "Walk": {
+   "speed": 0.021,
+   "speed_h": 0.6,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.035
+  }
+ },
+ "frog1": {
+  "Walk": {
+   "speed": 0.0516,
+   "speed_h": 1.289,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.04
+  }
+ },
+ "frog2": {
+  "Walk": {
+   "speed": 0.0516,
+   "speed_h": 1.289,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.04
+  }
+ },
+ "frog3": {
+  "Walk": {
+   "speed": 0.0516,
+   "speed_h": 1.289,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.04
+  }
+ },
+ "frog4": {
+  "Walk": {
+   "speed": 0.0516,
+   "speed_h": 1.289,
+   "cycle": 1.0,
+   "loop": true,
+   "height": 0.04
+  }
  }
 }

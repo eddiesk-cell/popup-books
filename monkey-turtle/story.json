@@ -1,0 +1,1723 @@
+{
+ "title": "The Monkey and the Turtle",
+ "credit": "From the old Filipino story of the turtle and the monkey (Si Pagong at si Matsing), told all over the Philippine islands and written down by José Rizal in 1889. Retold in our own words.",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pagong": {
+   "voice": "bm_george",
+   "speed": 0.88,
+   "pitch": 2
+  },
+  "matsing": {
+   "voice": "bm_george",
+   "speed": 1.14,
+   "pitch": 7
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "narra": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "bird": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "carabao": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "egret": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "heron": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lizard": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "crab": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fish": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "frog": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "nipa": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "bamboo": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "banana": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pup": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "gecko": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "butterfly": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "taro": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "makahiya": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "chilli": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "tarsier": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lamp": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hens": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "jar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "mortar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "squash": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dragonfly": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Pagong": "Pah-gong",
+  "Matsing": "Maht-sing"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Floating Banana",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "It was a hot, hot day by the river.",
+     "say": [
+      [
+       "narrator",
+       "It was a hot, hot day by the river."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Under the big narra tree sat two friends: Pagong the turtle and Matsing the monkey.",
+     "say": [
+      [
+       "narrator",
+       "Under the big narra tree sat two friends: Pah-gong the turtle and Maht-sing the monkey."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Then Matsing saw something in the water. \"Look! A banana plant is floating by!\"",
+     "say": [
+      [
+       "narrator",
+       "Then Maht-sing saw something in the water."
+      ],
+      [
+       "matsing",
+       "Look! A banana plant is floating by!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "\"I can't swim,\" said Matsing. \"But you can, Pagong! Please get it!\"",
+     "say": [
+      [
+       "matsing",
+       "I can't swim,"
+      ],
+      [
+       "narrator",
+       "said Maht-sing."
+      ],
+      [
+       "matsing",
+       "But you can, Pah-gong! Please get it!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "So Pagong swam out, splish, splash! She pulled the banana plant to the bank.",
+     "say": [
+      [
+       "narrator",
+       "So Pah-gong swam out, splish, splash! She pulled the banana plant to the bank."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Top or Roots?",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "\"Let's cut it in two,\" said Matsing. \"One half for you, one half for me.\"",
+     "say": [
+      [
+       "matsing",
+       "Let's cut it in two,"
+      ],
+      [
+       "narrator",
+       "said Maht-sing."
+      ],
+      [
+       "matsing",
+       "One half for you, one half for me."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Chop! The top half had big green leaves. The bottom half had muddy brown roots.",
+     "say": [
+      [
+       "narrator",
+       "Chop! The top half had big green leaves. The bottom half had muddy brown roots."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "\"I want the top! It is the best part!\" said Matsing. And he grabbed it.",
+     "say": [
+      [
+       "matsing",
+       "I want the top! It is the best part!"
+      ],
+      [
+       "narrator",
+       "said Maht-sing. And he grabbed it."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "\"Then I will take the roots,\" said Pagong. She smiled. She knew a secret about roots.",
+     "say": [
+      [
+       "pagong",
+       "Then I will take the roots,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong. She smiled. She knew a secret about roots."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Matsing laughed. \"Roots? Ha! You got the ugly half!\"",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing laughed."
+      ],
+      [
+       "matsing",
+       "Roots? Ha! You got the ugly half!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Planting Day",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Matsing ran up a tall tree. \"My banana will grow up high, just like me!\"",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing ran up a tall tree."
+      ],
+      [
+       "matsing",
+       "My banana will grow up high, just like me!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "He stuck his top half in a branch. But up in the tree, there was no soil.",
+     "say": [
+      [
+       "narrator",
+       "He stuck his top half in a branch. But up in the tree, there was no soil."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Slowly, slowly, Pagong carried her roots to a sunny place in the woods.",
+     "say": [
+      [
+       "narrator",
+       "Slowly, slowly, Pah-gong carried her roots to a sunny place in the woods."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "She dug a hole in the soft brown earth. Dig, dig, dig!",
+     "say": [
+      [
+       "narrator",
+       "She dug a hole in the soft brown earth. Dig, dig, dig!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "She planted the roots, patted the soil, and gave them a drink of water.",
+     "say": [
+      [
+       "narrator",
+       "She planted the roots, patted the soil, and gave them a drink of water."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Wait and See",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Then the rain came, pitter-patter. Then the sun came out, warm and bright.",
+     "say": [
+      [
+       "narrator",
+       "Then the rain came, pitter-patter. Then the sun came out, warm and bright."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Up in the tree, Matsing's top half turned yellow, then brown. It drooped and died.",
+     "say": [
+      [
+       "narrator",
+       "Up in the tree, Maht-sing's top half turned yellow, then brown. It drooped and died."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "But Pagong's roots drank the rain. A new green leaf came up. Then another!",
+     "say": [
+      [
+       "narrator",
+       "But Pah-gong's roots drank the rain. A new green leaf came up. Then another!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "The banana plant grew taller and taller. Then out came a big purple flower.",
+     "say": [
+      [
+       "narrator",
+       "The banana plant grew taller and taller. Then out came a big purple flower."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Then came bananas: green, green, green... and one day, yellow! \"Ripe!\" said Pagong.",
+     "say": [
+      [
+       "narrator",
+       "Then came bananas: green, green, green... and one day, yellow!"
+      ],
+      [
+       "pagong",
+       "Ripe!"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Up Goes Matsing",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "The bananas were high up. Pagong tried to climb. Slip! Bump! Turtles cannot climb.",
+     "say": [
+      [
+       "narrator",
+       "The bananas were high up. Pah-gong tried to climb. Slip! Bump! Turtles cannot climb."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Matsing came swinging through the trees. \"Bananas! I will pick them for you.\"",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing came swinging through the trees."
+      ],
+      [
+       "matsing",
+       "Bananas! I will pick them for you."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"Thank you,\" said Pagong. \"Half for you, and half for me.\"",
+     "say": [
+      [
+       "pagong",
+       "Thank you,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "pagong",
+       "Half for you, and half for me."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Up went Matsing. He ate one banana. Then another. And another!",
+     "say": [
+      [
+       "narrator",
+       "Up went Maht-sing. He ate one banana. Then another. And another!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "\"Where are mine?\" called Pagong. Down came a banana peel. Flop! Right on her head.",
+     "say": [
+      [
+       "pagong",
+       "Where are mine?"
+      ],
+      [
+       "narrator",
+       "called Pah-gong. Down came a banana peel. Flop! Right on her head."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Shy Plant",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Matsing ate every banana. He did not keep even one for his friend.",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing ate every banana. He did not keep even one for his friend."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Then he hugged the banana plant and fell fast asleep. Snore, snore!",
+     "say": [
+      [
+       "narrator",
+       "Then he hugged the banana plant and fell fast asleep. Snore, snore!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Pagong was sad. Then she was cross. Then she had an idea.",
+     "say": [
+      [
+       "narrator",
+       "Pah-gong was sad. Then she was cross. Then she had an idea."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "All around the banana plant, she planted makahiya, the shy plant with prickly stems.",
+     "say": [
+      [
+       "narrator",
+       "All around the banana plant, she planted makahiya, the shy plant with prickly stems."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"Crocodile!\" she called. \"Crocodile is coming!\"",
+     "say": [
+      [
+       "pagong",
+       "Crocodile!"
+      ],
+      [
+       "narrator",
+       "she called."
+      ],
+      [
+       "pagong",
+       "Crocodile is coming!"
+      ]
+     ]
+    },
+    {
+     "id": "6.6",
+     "text": "Matsing woke with a jump, slipped, and slid down into the prickles. \"Ouch! Ouch!\" The shy leaves closed up tight.",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing woke with a jump, slipped, and slid down into the prickles."
+      ],
+      [
+       "matsing",
+       "Ouch! Ouch!"
+      ],
+      [
+       "narrator",
+       "The shy leaves closed up tight."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Hot, Hot, Hot!",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Matsing was angry. That night he looked everywhere for Pagong.",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing was angry. That night he looked everywhere for Pah-gong."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "He found her hiding by the farmer's fence, near a wild bush with tiny red fruits.",
+     "say": [
+      [
+       "narrator",
+       "He found her hiding by the farmer's fence, near a wild bush with tiny red fruits."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"I am looking after these,\" said Pagong. \"I want some!\" said Matsing.",
+     "say": [
+      [
+       "pagong",
+       "I am looking after these,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "matsing",
+       "I want some!"
+      ],
+      [
+       "narrator",
+       "said Maht-sing."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"Take them,\" said Pagong. \"But do not eat them yet. Wait until I have gone.\"",
+     "say": [
+      [
+       "pagong",
+       "Take them,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "pagong",
+       "But do not eat them yet. Wait until I have gone."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Pagong walked away, slowly, slowly. Matsing waited and waited and waited.",
+     "say": [
+      [
+       "narrator",
+       "Pah-gong walked away, slowly, slowly. Maht-sing waited and waited and waited."
+      ]
+     ]
+    },
+    {
+     "id": "7.6",
+     "text": "Then he bit them all. \"HOT! HOT! HOT!\" They were little red chillies!",
+     "say": [
+      [
+       "narrator",
+       "Then he bit them all."
+      ],
+      [
+       "matsing",
+       "HOT! HOT! HOT!"
+      ],
+      [
+       "narrator",
+       "They were little red chillies!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Please, Not the River!",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "In the morning, slow Pagong was only at the gate. Matsing caught her. \"Now I have got you!\"",
+     "say": [
+      [
+       "narrator",
+       "In the morning, slow Pah-gong was only at the gate. Maht-sing caught her."
+      ],
+      [
+       "matsing",
+       "Now I have got you!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "\"I will put you on the fire!\" said Matsing. \"Fire?\" said Pagong. \"Pooh! I will just go inside my shell.\"",
+     "say": [
+      [
+       "matsing",
+       "I will put you on the fire!"
+      ],
+      [
+       "narrator",
+       "said Maht-sing."
+      ],
+      [
+       "pagong",
+       "Fire?"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "pagong",
+       "Pooh! I will just go inside my shell."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "\"Then I will pound you in the rice mortar!\" \"Bonk, bonk,\" said Pagong. \"My shell is very hard.\"",
+     "say": [
+      [
+       "matsing",
+       "Then I will pound you in the rice mortar!"
+      ],
+      [
+       "pagong",
+       "Bonk, bonk,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "pagong",
+       "My shell is very hard."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "\"Then I will throw you into the river!\" said Matsing.",
+     "say": [
+      [
+       "matsing",
+       "Then I will throw you into the river!"
+      ],
+      [
+       "narrator",
+       "said Maht-sing."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "\"Oh no!\" cried Pagong. \"Please, please, not the river! Anything but the river!\"",
+     "say": [
+      [
+       "pagong",
+       "Oh no!"
+      ],
+      [
+       "narrator",
+       "cried Pah-gong."
+      ],
+      [
+       "pagong",
+       "Please, please, not the river! Anything but the river!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Splash!",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Matsing ran to the river with Pagong. \"Into the river you go!\" Splash!",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing ran to the river with Pah-gong."
+      ],
+      [
+       "matsing",
+       "Into the river you go!"
+      ],
+      [
+       "narrator",
+       "Splash!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Pagong sank down, down, down. A few bubbles came up. Then nothing.",
+     "say": [
+      [
+       "narrator",
+       "Pah-gong sank down, down, down. A few bubbles came up. Then nothing."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "\"Pagong?\" said Matsing in a small voice. \"Pagong, come back!\"",
+     "say": [
+      [
+       "matsing",
+       "Pah-gong?"
+      ],
+      [
+       "narrator",
+       "said Maht-sing in a small voice."
+      ],
+      [
+       "matsing",
+       "Pah-gong, come back!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "But then, up popped a little head. Pagong was laughing!",
+     "say": [
+      [
+       "narrator",
+       "But then, up popped a little head. Pah-gong was laughing!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "\"Thank you, Matsing! The river is my home!\" And away she swam.",
+     "say": [
+      [
+       "pagong",
+       "Thank you, Maht-sing! The river is my home!"
+      ],
+      [
+       "narrator",
+       "And away she swam."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Roots and All",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Matsing sat under the big tree. He was hungry, and he had nothing at all.",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing sat under the big tree. He was hungry, and he had nothing at all."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Later, Pagong came back. In her mouth was a baby banana plant from her own plant, roots and all.",
+     "say": [
+      [
+       "narrator",
+       "Later, Pah-gong came back. In her mouth was a baby banana plant from her own plant, roots and all."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "\"Roots can grow, and a banana makes babies at its roots,\" said Pagong. \"That was my secret. This one is for you.\"",
+     "say": [
+      [
+       "pagong",
+       "Roots can grow, and a banana makes babies at its roots,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ],
+      [
+       "pagong",
+       "That was my secret. This one is for you."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Matsing looked at the little roots. \"I was greedy,\" he said. \"I am sorry, Pagong.\" \"And I am sorry for my tricks,\" said Pagong.",
+     "say": [
+      [
+       "narrator",
+       "Maht-sing looked at the little roots."
+      ],
+      [
+       "matsing",
+       "I was greedy,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ],
+      [
+       "matsing",
+       "I am sorry, Pah-gong."
+      ],
+      [
+       "pagong",
+       "And I am sorry for my tricks,"
+      ],
+      [
+       "narrator",
+       "said Pah-gong."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "So they planted it in the ground, roots and all. And when it grew, they shared every banana.",
+     "say": [
+      [
+       "narrator",
+       "So they planted it in the ground, roots and all. And when it grew, they shared every banana."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Matsing grabbed the pretty top, and it died. Pagong took the plain roots, and they grew.",
+   "say": [
+    [
+     "closing",
+     "Maht-sing grabbed the pretty top, and it died. Pah-gong took the plain roots, and they grew."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Matsing kept every banana for himself, and he ended up with nothing.",
+   "say": [
+    [
+     "closing",
+     "Maht-sing kept every banana for himself, and he ended up with nothing."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Pagong was slow, but she was clever. And in the end, she was kind.",
+   "say": [
+    [
+     "closing",
+     "Pah-gong was slow, but she was clever. And in the end, she was kind."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Grab it all and lose it all. Share it, and it grows!",
+   "say": [
+    [
+     "closing",
+     "Grab it all and lose it all. Share it, and it grows!"
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "What is floating on the river? Tap everything that floats!",
+   "say": [
+    [
+     "narrator",
+     "What is floating on the river? Tap everything that floats!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "They all float! Now swim, Pagong!",
+   "say": [
+    [
+     "narrator",
+     "They all float! Now swim, Pah-gong!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "A plant has leaves, a stem and roots. Tap each part!",
+   "say": [
+    [
+     "narrator",
+     "A plant has leaves, a stem and roots. Tap each part!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Leaves, stem and roots! You know your plant!",
+   "say": [
+    [
+     "narrator",
+     "Leaves, stem and roots! You know your plant!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Help Pagong dig a hole. Tap when the ring turns green!",
+   "say": [
+    [
+     "narrator",
+     "Help Pah-gong dig a hole. Tap when the ring turns green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "A good deep hole!",
+   "say": [
+    [
+     "narrator",
+     "A good deep hole!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Bananas need sun. Tap the sun when the ring turns green!",
+   "say": [
+    [
+     "narrator",
+     "Bananas need sun. Tap the sun when the ring turns green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Rain and sun, sun and rain. Look how it grew!",
+   "say": [
+    [
+     "narrator",
+     "Rain and sun, sun and rain. Look how it grew!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "How many bananas are there? Tap each one and count!",
+   "say": [
+    [
+     "narrator",
+     "How many bananas are there? Tap each one and count!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Ten bananas! Enough for two friends.",
+   "say": [
+    [
+     "narrator",
+     "Ten bananas! Enough for two friends."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Makahiya is shy. Tap a leaf and watch it close!",
+   "say": [
+    [
+     "narrator",
+     "Makahiya is shy. Tap a leaf and watch it close!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Shy little leaves! They close when you touch them.",
+   "say": [
+    [
+     "narrator",
+     "Shy little leaves! They close when you touch them."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Tap a plant to light it up. What grows here?",
+   "say": [
+    [
+     "narrator",
+     "Tap a plant to light it up. What grows here?"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "What a garden! And those little red ones are very hot!",
+   "say": [
+    [
+     "narrator",
+     "What a garden! And those little red ones are very hot!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Every animal has a home. Tap an animal, then tap its home!",
+   "say": [
+    [
+     "narrator",
+     "Every animal has a home. Tap an animal, then tap its home!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "A turtle lives in the water. Oh, Matsing!",
+   "say": [
+    [
+     "narrator",
+     "A turtle lives in the water. Oh, Maht-sing!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Where is Pagong? Pop the bubbles and count!",
+   "say": [
+    [
+     "narrator",
+     "Where is Pah-gong? Pop the bubbles and count!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "There she is! Pagong loves the water!",
+   "say": [
+    [
+     "narrator",
+     "There she is! Pah-gong loves the water!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Help them share! Tap a banana to give it away: one for Pagong, one for Matsing.",
+   "say": [
+    [
+     "narrator",
+     "Help them share! Tap a banana to give it away: one for Pah-gong, one for Maht-sing."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Five for Pagong, five for Matsing. That's fair!",
+   "say": [
+    [
+     "narrator",
+     "Five for Pah-gong, five for Maht-sing. That's fair!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.1",
+   "text": "A narra flower!",
+   "say": [
+    [
+     "narrator",
+     "A narra flower!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.2",
+   "text": "A nipa frond!",
+   "say": [
+    [
+     "narrator",
+     "A nipa frond!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.3",
+   "text": "A coconut!",
+   "say": [
+    [
+     "narrator",
+     "A coconut!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.4",
+   "text": "A stick!",
+   "say": [
+    [
+     "narrator",
+     "A stick!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.5",
+   "text": "A banana plant!",
+   "say": [
+    [
+     "narrator",
+     "A banana plant!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.react.1",
+   "text": "Leaves!",
+   "say": [
+    [
+     "narrator",
+     "Leaves!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.react.2",
+   "text": "Stem!",
+   "say": [
+    [
+     "narrator",
+     "Stem!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.react.3",
+   "text": "Roots!",
+   "say": [
+    [
+     "narrator",
+     "Roots!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.react.1",
+   "text": "A squash!",
+   "say": [
+    [
+     "narrator",
+     "A squash!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.react.2",
+   "text": "An eggplant!",
+   "say": [
+    [
+     "narrator",
+     "An eggplant!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.react.3",
+   "text": "Long beans!",
+   "say": [
+    [
+     "narrator",
+     "Long beans!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.react.4",
+   "text": "A gourd!",
+   "say": [
+    [
+     "narrator",
+     "A gourd!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.react.5",
+   "text": "Wild chillies! Very hot!",
+   "say": [
+    [
+     "narrator",
+     "Wild chillies! Very hot!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.6",
+   "text": "Six.",
+   "say": [
+    [
+     "narrator",
+     "Six."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.7",
+   "text": "Seven.",
+   "say": [
+    [
+     "narrator",
+     "Seven."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.8",
+   "text": "Eight.",
+   "say": [
+    [
+     "narrator",
+     "Eight."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.9",
+   "text": "Nine.",
+   "say": [
+    [
+     "narrator",
+     "Nine."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.count.10",
+   "text": "Ten.",
+   "say": [
+    [
+     "narrator",
+     "Ten."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.6",
+   "text": "Six.",
+   "say": [
+    [
+     "narrator",
+     "Six."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.7",
+   "text": "Seven.",
+   "say": [
+    [
+     "narrator",
+     "Seven."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.8",
+   "text": "Eight.",
+   "say": [
+    [
+     "narrator",
+     "Eight."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.9",
+   "text": "Nine.",
+   "say": [
+    [
+     "narrator",
+     "Nine."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.count.10",
+   "text": "Ten.",
+   "say": [
+    [
+     "narrator",
+     "Ten."
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "pagong": [
+   "I am Pagong. Pagong means turtle.",
+   "I am slow, but I am clever.",
+   "My shell is very hard.",
+   "I love the river.",
+   "I like to plant things."
+  ],
+  "matsing": [
+   "I am Matsing. Matsing means monkey!",
+   "I am quick!",
+   "I can climb any tree.",
+   "I love bananas.",
+   "Hee, hee, hee!"
+  ],
+  "narra": [
+   "A narra tree. It has yellow flowers.",
+   "A narra tree gives big, wide shade.",
+   "Narra is the national tree of the Philippines."
+  ],
+  "bird": [
+   "A bird. It has wings.",
+   "Birds sit in the trees.",
+   "Tweet, tweet!"
+  ],
+  "carabao": [
+   "A carabao. It is a water buffalo.",
+   "A carabao likes to sit in the mud.",
+   "Farmers in the Philippines work with carabao."
+  ],
+  "egret": [
+   "An egret. A white bird.",
+   "An egret has long legs.",
+   "An egret rides on a carabao's back."
+  ],
+  "heron": [
+   "A heron. A tall bird.",
+   "A heron stands still in the water.",
+   "A heron catches fish."
+  ],
+  "lizard": [
+   "A sailfin lizard. It has a sail on its back.",
+   "A sailfin lizard can run on water.",
+   "It runs on its back legs."
+  ],
+  "crab": [
+   "A crab. It has two claws.",
+   "A crab walks sideways.",
+   "Crabs live by the water."
+  ],
+  "fish": [
+   "A fish. It lives in the water.",
+   "A fish has fins.",
+   "Splash! A fish jumps!"
+  ],
+  "frog": [
+   "A frog. It jumps.",
+   "A frog likes wet places.",
+   "Ribbit, ribbit!"
+  ],
+  "nipa": [
+   "A nipa palm. Its leaves make roofs.",
+   "Nipa palms grow in shallow water.",
+   "The leaves rustle in the wind."
+  ],
+  "bamboo": [
+   "Bamboo. It is a tall, hollow grass.",
+   "Bamboo grows very fast.",
+   "Creak, creak! The bamboo moves in the wind."
+  ],
+  "banana": [
+   "A banana plant has big leaves.",
+   "A banana plant has roots, a stem and leaves.",
+   "Banana leaves swish in the wind."
+  ],
+  "pup": [
+   "A banana pup. It is a baby banana plant.",
+   "A pup grows at the roots.",
+   "Peep! A pup peeps up from the ground."
+  ],
+  "gecko": [
+   "A gecko. It climbs walls.",
+   "A gecko has sticky toes.",
+   "Tuk-o! Tuk-o!"
+  ],
+  "butterfly": [
+   "A butterfly has four wings.",
+   "A butterfly sips from flowers.",
+   "A butterfly was a caterpillar first."
+  ],
+  "taro": [
+   "A taro leaf. It is big and round.",
+   "Rain rolls off a taro leaf.",
+   "You can hide under a taro leaf."
+  ],
+  "makahiya": [
+   "Makahiya. It is the shy plant.",
+   "Touch it and the leaves close.",
+   "Its stems have small prickles."
+  ],
+  "chilli": [
+   "A wild chilli. It is tiny, red and very hot.",
+   "Chillies make your mouth burn.",
+   "In the Philippines it is called siling labuyo."
+  ],
+  "tarsier": [
+   "A tarsier. It has very big eyes.",
+   "A tarsier is a tiny animal that wakes at night.",
+   "A tarsier can turn its head a long way round."
+  ],
+  "lamp": [
+   "A lamp. It gives light at night.",
+   "A moth flies round the lamp.",
+   "The lamp flickers."
+  ],
+  "hens": [
+   "Hens. They lay eggs.",
+   "A hen says cluck, cluck.",
+   "Hens live in a coop."
+  ],
+  "cat": [
+   "A cat. It sits on the steps.",
+   "A cat says meow.",
+   "The cat stretches and yawns."
+  ],
+  "jar": [
+   "A clay water jar. It holds water.",
+   "Clay keeps water cool.",
+   "Slosh, slosh!"
+  ],
+  "mortar": [
+   "A rice mortar, called a lusong.",
+   "You pound rice with a pestle.",
+   "Thump, thump!"
+  ],
+  "squash": [
+   "A squash. It grows on a vine.",
+   "A squash is round and heavy.",
+   "A squash wobbles on its vine."
+  ],
+  "dragonfly": [
+   "A dragonfly. It hovers.",
+   "It dips its tail in the water.",
+   "It has four thin, shiny wings."
+  ]
+ },
+ "notes": {
+  "respell": "Kokoro reads 'Pagong' as PAG-ung and 'Matsing' as MAT-sing; the owner's ear wants pah-GONG and maht-SING, so `say` and the touch lines carry 'Pah-gong' and 'Maht-sing' (one word for one word, so the timing holds). Never in `text`.",
+  "who speaks": "Only Pagong and Matsing speak (voices pagong, matsing); the narrator reads every tag ('said Matsing'). Things a child taps are read in the narrator's voice.",
+  "extra ids": "game.N.react.* (a tapped part or thing says its name) and game.N.count.* (the storyteller counts) are additions to story.md's games table, in the gourd's game.N.count style."
+ }
+}

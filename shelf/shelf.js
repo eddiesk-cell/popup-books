@@ -13,6 +13,9 @@ import { loadBook } from "./bookmodel.js";
 const $ = id => document.getElementById(id), Q = new URLSearchParams(location.search), POSTER = Q.has("poster"), SOLO = Q.get("solo"), ZOOM = +Q.get("zoom") || 1;
 const AT = (Q.get("at") || "0.02,0.07,0.07").split(",").map(Number), AZ = (+Q.get("az") || 0) * Math.PI / 180;  // ?solo=kapi&zoom=2.4&at=x,y,z&az=deg: one book at the origin, close-ups for the stills
 const LIST = SOLO ? JSON.parse($("books").textContent).filter(b => b.id === SOLO) : JSON.parse($("books").textContent), N = LIST.length, SPACING = 0.42;
+// released = "ready" in the landing's own book list (one source for both pages); if that cannot be read, only kapi and mali open. A book not released is a teaser:
+// it wakes and greets, its button reads "Coming soon", and no route opens it (openBook and go both refuse)
+const READY = await fetch("../landing/books.json").then(r => r.json()).then(j => j.books.filter(b => b.status === "ready").map(b => b.id)).catch(() => ["kapi", "mali"]);
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches, touch = matchMedia("(hover: none)").matches;
 const stage = $("stage"), rail = $("rail"), canvas = $("gl"), rad = THREE.MathUtils.degToRad, clamp = THREE.MathUtils.clamp;
 
@@ -38,7 +41,7 @@ const tex = (u, srgb, rep, flip = false) => tl.loadAsync(u).then(t => { t.colorS
 const REST_Y = -0.14, SH = {};  // SH: what every book shares (the glb, the leather tile, gilt, brass, the table)
 
 // ---------------------------------------------------------------- the books
-const bks = LIST.map((cfg, i) => ({ cfg, i, x: i * SPACING, aim: { x: 0, y: 0 }, cur: { x: 0, y: 0 }, awake: false, openT: 0, hoverT: 0, glowK: 0, rattleT: 0, nextRattle: 0, pop: null }));
+const bks = LIST.map((cfg, i) => ({ cfg, i, soon: !READY.includes(cfg.id), x: i * SPACING, aim: { x: 0, y: 0 }, cur: { x: 0, y: 0 }, awake: false, openT: 0, hoverT: 0, glowK: 0, rattleT: 0, nextRattle: 0, pop: null }));
 const solo = bks.length === 1; let gone = false;
 const gltf = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
 async function loadShared() {  // the table and the soft light blobs (the book itself, its leather and brass are bookmodel.js)
@@ -90,14 +93,15 @@ function plateStep(b) {  // the printed picture gives way to the layers rising t
 
 // ---------------------------------------------------------------- sound: a soft paper sound
 let snd; const apis = {};
-const sound = async (b, n) => { try { snd ??= await import("../live/sound.js"); (apis[b.cfg.id] ??= snd.addSound(snd.manifestFor(b.cfg.id, "../"))).play(n, { gain: 0.8 }); } catch { /* no sound is fine */ } };
+const shelfSounds = m => (m.sounds["book-down"] = ["sfx/book-down.m4a"], m);  // a thick leather book set down on a table, with a low magical hum: the awake sound (replaces the paper rustle, owner 2026-11-16)
+const sound = async (b, n) => { try { snd ??= await import("../live/sound.js"); const id = b.soon ? "kapi" : b.cfg.id; (apis[id] ??= snd.addSound(shelfSounds(snd.manifestFor(id, "../")))).play(n, { gain: 0.8, exact: n === "book-down" }); } catch { /* no sound is fine */ } };  // a book not released has no folder on the site (asking for its sound list would 404): it uses the shared sounds in kapi's
 
 // ---------------------------------------------------------------- state: asleep / awake / opening (one book awake at a time)
 let onScreen = true; const awakeBook = () => bks.find(b => b.awake), current = () => awakeBook() || bks[0];
 function wake(b) {
   if (b.awake || b.openT || gone) return; for (const o of bks) if (o !== b && o.awake) sleep(o);
   b.awake = true; b.slide.classList.add("awake"); b.book.add(leakLight); leakLight.position.set(0.19, 0.06, 0); b.pop.wake(); ensurePopup(b).then(() => reduce && b.awake && plateStep(b));
-  if (!reduce) { b.nextRattle = performance.now() + 3000; sound(b, "paper-rustle"); } kick();  // reduced motion: switched, not animated
+  if (!reduce) { b.nextRattle = performance.now() + 3000; sound(b, "book-down"); } kick();  // reduced motion: switched, not animated
 }
 function sleep(b) {
   if (!b.awake || b.openT) return; b.awake = false; b.slide.classList.remove("awake"); b.pop.sleep();
@@ -109,16 +113,17 @@ function sleep(b) {
 const LIFT = 0.18, CARRY = 0.45, SINK = 0.07, TILT = 0.45, TILT2 = 0.15, T_UP = 0.1, T_UP1 = 0.9, T_GO = 0.4, T_GO1 = 1.6, T_VEIL = 1.25, WARM = "#1c1009";  // metres, radians, seconds
 const carry = t => { const s1 = ease((t - T_UP) / (T_UP1 - T_UP)), u = clamp((t - T_GO) / (T_GO1 - T_GO), 0, 1), s2 = 1 - Math.cos(Math.PI / 2 * u); return { s1, s2, y: LIFT * s1 - SINK * s2, z: CARRY * s2, rx: TILT * s1 + TILT2 * s2, yaw: ease(t / 0.9) }; };  // s2 is eased IN only: the book is at its fastest as it leaves
 function openBook(b) {
+  if (b.soon) { b.awake ? b.pop.P > 0.999 && b.pop.greet() : wake(b); return; }  // not released: asleep it wakes, standing it greets again, and it never opens
   if (b.openT || gone) return; b.openT = performance.now(); b.awake = false; b.slide.classList.remove("awake"); b.pop.sleep(true); sound(b, "page-turn"); view.book = b;
   document.body.classList.add("picking"); const v = $("veil"); v.style.background = WARM; if (reduce) { v.style.transition = "opacity .3s ease"; v.classList.add("on"); setTimeout(() => go(b), 320); return; } kick();
 }
-const go = b => { if (gone) return; gone = true; location.href = b.cfg.href + "&from=shelf"; };
+const go = b => { if (gone || b.soon) return; gone = true; location.href = b.cfg.href + "&from=shelf"; };
 addEventListener("pageshow", e => e.persisted && location.reload());
 
 // ---------------------------------------------------------------- the rail: one slide per book (title caption, button, subtitle), sideways scroll with snap, dots, arrows
 for (const b of bks) {
-  const s = b.slide = document.createElement("section"); s.className = "slide"; s.tabIndex = 0; s.setAttribute("role", "button"); s.setAttribute("aria-label", `${b.cfg.title}. Press Enter to open the book.`);
-  s.innerHTML = `<div class="say" aria-live="polite"><b></b><i></i></div><button class="open" type="button">Open the book</button>`; b.say = s.querySelector(".say"); rail.append(s);
+  const s = b.slide = document.createElement("section"); s.className = "slide"; s.tabIndex = 0; s.setAttribute("role", "button"); s.setAttribute("aria-label", `${b.cfg.title}. ${b.soon ? "Coming soon." : "Press Enter to open the book."}`);
+  s.innerHTML = `<div class="say" aria-live="polite"><b></b><i></i></div><button class="open${b.soon ? " soon" : ""}" type="button">${b.soon ? "Coming soon" : "Open the book"}</button>`; b.say = s.querySelector(".say"); rail.append(s);
   s.querySelector(".open").addEventListener("click", e => { e.stopPropagation(); openBook(b); });
   s.addEventListener("keydown", e => { if (e.target === s && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openBook(b); } });
   s.addEventListener("focus", () => { if (!touch) wake(b); }); s.addEventListener("blur", () => { if (!b.openT && !touch) sleep(b); });

@@ -9,9 +9,12 @@
 // do:
 //   walk | run | swim | sneak | stepback
 //                      go along the ground or water to `to`, end `stop` short of it (0.05) and face it, or `face`.
-//                      The Walk / Run / Swim / Sneak / Step Back clip plays in place at its stride (assets/motion.json),
+//                      The Walk / Run / Swim / Sneak / Step Back clip plays in place at its stride (assets/motion.json);
 //                      or Idle slides. A clip marked "back" there (Step Back) moves backwards: the character keeps its
 //                      face to where it came from, and does not turn round when it arrives.
+//                      "clip": "<name>" on any of them plays that looping gait instead (the grandparents' "Walk Out"), at the
+//                      pace of its motion.json row (one warning, Walk's pace, if there is none); a clip the character lacks: the act's own gait, one warning;
+//                      without "clip" nothing changes.
 //   climb              go straight up to the top surface of `to` (an object: the end point lands ON it), then step
 //                      onto it; `clip` (Climb Up) plays on the way, then it holds `then`. Walk to the foot of it first.
 //                      With motion.json's {"rise", "cycle"} for the clip, it climbs in whole cycles, rising with them
@@ -28,6 +31,8 @@
 //                      motion.json, or 2.5 heights a second.
 //   float              drift gently to `to` (or hover where it is), over `secs` or at 0.35 heights a second,
 //                      swaying a little; plays `clip` or what it holds. Mali rising with the lanterns, coming down at her door.
+//                      "sway": <metres> is how far it bobs up and down on the way (a float 0.012, a fly 0, when the key is absent); write "sway": 0 for a
+//                      body that walks on the ground (a Walk clip under a float), or it dips 12 mm into the floor.
 //   rise               `who` (a character) or `what` (an object of the spread) rises straight up by `by` (0.12) over
 //                      `secs` (1.2), and stays up: moonstones from the river, Pip peeking. An object's rises add up (a
 //                      lantern a game woke 0.06 rises 0.6 more on "rose", and stays there).
@@ -39,6 +44,8 @@
 //                      every other key of those meshes to 0 meanwhile. A growth Step1..Step7 is seven acts on successive lines or
 //                      words. A missing key warns once and ends the act. "Read again" puts every key back to its starting weight.
 //                      With "line": "tap:<name>" it runs when that thing is tapped (every tap, also mid-act), not from the reading;
+//                      with also "nth": 3 it runs only on the 3rd tap of that thing: taps 1 and 2 play its ordinary tap acts (those with no
+//                      "nth"; with none, nothing), and after the highest nth the count starts again; "Read again" resets it;
 //                      "back": <secs> returns the keys it moved to the weights they had that long after it has arrived,
 //                      over `secs`: the shy plant folds (Fold 1) and opens again after 3 s.
 //                      "line": "open" runs an act as the spread is built and again on "Read again" (before the first frame is drawn): a
@@ -50,6 +57,16 @@
 //                      with "release": true lets it go. Optional, and a hold without them is as it always was:
 //                      "grip": [x, y, z]  the prop is seated by this point of itself (its own local units) on the hand bone instead of by its
 //                                         origin; a node named "hold_grip" in the prop's glb does the same and wins over the field.
+//                      The grip lands on the character's PALM, not its wrist (R41): an empty named "palm_r" / "palm_l" under the hand bone of its glb
+//                      (the hand bone's origin is the wrist, 4-5 cm short of a closed fist). No page key: a character with the empty is seated by it, one
+//                      without (every book before the gourd) on the wrist as ever. A hold with no grip, aim or hold_grip keeps the old seat either way.
+//                      With a palm and no "aim" the prop is a TOOL in a fist and turns with it: its handle (its longest side) lies across the palm, its
+//                      head on the thumb's side in either hand, its blade or face (the next longest side) the way the knuckles point. What the prop's glb
+//                      needs: a node "hold_grip" where the fist closes and a node "hold_tip" at its working end (the axe's edge, the mallet's face).
+//                      Without a hold_tip the head is the end farther from the grip, so a prop gripped past its middle must have one.
+//                      "upright": true    for a jar, a lamp, a bowl (a thing that must not tip): with a palm it keeps the turn it stands with on the page
+//                                         and only its grip rides the palm; without the key it is laid across the fist as a tool is. No effect
+//                                         with "aim", or on a character without a palm (nothing turns it there).
 //                      "aim": [x, y, z] | "<name>"  the prop's long axis points from the hand at that page point or named thing, every
 //                                         frame it is held (the axis: from the grip toward a node named "hold_tip" in the glb, else toward the
 //                                         end of its longest side that is farthest from the grip). Without a grip the prop's origin is the hand.
@@ -63,7 +80,7 @@
 // While a character's own words are read it turns to the nearest other character, who turns back, and Talk plays if it has one.
 // Only timing and geometry live here; live.js says where things are, plays the clips and moves the props.
 import { glow } from "./games.js";
-import { Box3, DoubleSide, Matrix4, Quaternion, Raycaster, Triangle, Vector3 } from "../vendor/three/three.module.js";  // the module the page maps "three" to: one three.js
+import { AnimationMixer, Box3, DoubleSide, LoopOnce, Matrix4, Quaternion, Raycaster, Triangle, Vector3 } from "../vendor/three/three.module.js";  // the module the page maps "three" to: one three.js
 
 const MOVE = { walk: "Walk", run: "Run", swim: "Swim", sneak: "Sneak", stepback: "Step Back" };
 const PACE = { walk: 0.9, run: 2.2, swim: 1.0, sneak: 0.45, stepback: 0.5, fly: 2.5, float: 0.35, climb: 0.8 };  // body heights a second, when motion.json has no stride
@@ -265,30 +282,38 @@ export const byRim = (ch, bone, it) => {
 // taken (null: neither field nor a "hold_grip" node, so the old seat); seatHeld: each frame, turn it from its rest so its axis looks along hand -> to
 // (from rest each time, so no roll builds up), then move it so its grip is on the hand; dropOf: how far down a released prop falls
 export const holdOf = (o, a) => {
-  if (!o.getObjectByName("hold_grip") && !a.grip && a.aim == null) return null;  // touches nothing: a hold without the new fields is as it was (a lamp glb has an unrelated node called "grip")
+  if (!o.getObjectByName("hold_grip") && !a.grip && a.aim == null) return null;  // touches nothing: a hold without the new fields is as it was
   o.updateWorldMatrix(true, true);
   const at = n => { const k = o.getObjectByName(n); return k && o.worldToLocal(k.getWorldPosition(new Vector3())); };
   const grip = at("hold_grip") ?? (a.grip ? new Vector3(...a.grip) : a.aim != null ? new Vector3() : null);
   if (!grip) return null;
-  let axis = null;
-  if (a.aim != null) {
-    axis = at("hold_tip")?.sub(grip);
-    if (!axis) {  // shortcut: the box of the meshes' own boxes (a skinned prop's rest pose); fine for a tool, upgrade by naming a "hold_tip" node
+  const rest = (o.userData.restQ ??= o.quaternion.clone());
+  let axis = null, turn = null;
+  if (a.aim == null && a.palm && a.upright) o.quaternion.copy(rest);  // R41 "upright" (a jar, a lamp): it stands as the page built it, whatever an earlier hold turned it to; only its grip rides the palm
+  else if (a.aim != null || a.palm) {  // R41: a palm also needs the handle's axis (the fist turns the prop)
+    const tip = at("hold_tip"), e = a.aim != null ? 0 : 1e-6;  // e: sides or ends this close (of the size) count as equal, so a float error never picks; 0 with an aim: the tests of R33 as they were
+    let front = null;
+    if (a.aim != null && tip) axis = tip.sub(grip);
+    else {  // shortcut: the box of the meshes' own boxes (a skinned prop's rest pose); fine for a tool, upgrade by naming a "hold_tip" node
       const inv = new Matrix4().copy(o.matrixWorld).invert(), box = new Box3(), m = new Box3();
       o.traverse(c => c.isMesh && (c.geometry.boundingBox ?? c.geometry.computeBoundingBox(), box.union(m.copy(c.geometry.boundingBox).applyMatrix4(new Matrix4().multiplyMatrices(inv, c.matrixWorld)))));
-      const s = box.getSize(new Vector3()), k = s.x >= s.y && s.x >= s.z ? "x" : s.y >= s.z ? "y" : "z";
-      axis = new Vector3().setComponent("xyz".indexOf(k), box.max[k] - grip[k] >= grip[k] - box.min[k] ? 1 : -1);
+      const s = box.getSize(new Vector3()), [k, k2] = ["x", "y", "z"].sort((p, q) => (Math.abs(s[q] - s[p]) > e * (s[p] + s[q]) ? s[q] - s[p] : 0));  // the longest side, then the next (equal sides: x, y, z)
+      const end = k => new Vector3().setComponent("xyz".indexOf(k), (tip && Math.abs(tip[k] - grip[k]) > e * s[k] ? tip[k] - grip[k] : box.max[k] - grip[k] - (grip[k] - box.min[k]) + e * s[k]) >= 0 ? 1 : -1);  // which end of a side: toward the prop's hold_tip (its working end) when it has one off the grip that way, else the end farther from the grip (a grip in the middle: the + end)
+      axis = end(k); front = end(k2);  // the handle toward the head; the blade or face
     }
     axis.normalize();
+    const t = a.palm?.name === "palm_l" ? -1 : 1;  // the thumb's side: +X of palm_r, -X of palm_l (both empties: +Y along the fingers, +Z out of the palm, so X swaps sides between the hands)
+    if (a.palm) turn = front ? new Quaternion().setFromRotationMatrix(new Matrix4().makeBasis(axis.clone().multiplyScalar(t), front, axis.clone().cross(front).multiplyScalar(t)).transpose()) : new Quaternion().setFromUnitVectors(axis, new Vector3(t, 0, 0));  // prop -> palm: head to the thumb, blade or face the way the knuckles point (the same grip mirrored in the other hand); with a hold_tip aim axis only the head
   }
-  return { grip, axis, rest: (o.userData.restQ ??= o.quaternion.clone()) };
+  return { grip, axis, turn, rest, palm: a.palm };
 };
 export const seatHeld = (o, h, hand, to) => {
+  if (h.palm) h.palm.updateWorldMatrix(true, false), hand = h.palm.getWorldPosition(new Vector3());  // the palm point, not the wrist the bone's origin is
   if (h.axis && to && to.distanceToSquared(hand) > 1e-12) {
     o.quaternion.copy(h.rest); o.updateWorldMatrix(true, false);
     const pq = o.parent.getWorldQuaternion(new Quaternion()), a = h.axis.clone().transformDirection(o.matrixWorld);
     o.quaternion.premultiply(pq).premultiply(new Quaternion().setFromUnitVectors(a, to.clone().sub(hand).normalize())).premultiply(pq.invert());
-  }
+  } else if (h.turn) o.quaternion.copy(o.parent.getWorldQuaternion(new Quaternion()).invert().multiply(h.palm.getWorldQuaternion(new Quaternion())).multiply(h.turn));  // R41, no aim: a tool in a fist turns with it
   o.updateWorldMatrix(true, false);
   o.position.copy(o.parent.worldToLocal(o.getWorldPosition(new Vector3()).add(hand).sub(o.localToWorld(h.grip.clone()))));
 };
@@ -431,6 +456,44 @@ export function puppetModel(THREE, { root, pins, def, size }) {
 const turn = (a, b, max) => { const d = Math.atan2(Math.sin(b - a), Math.cos(b - a)); return a + Math.max(-max, Math.min(max, d)); };
 const ease = k => k * k * (3 - 2 * k);
 
+// R36, a cross-fade between grounded clips: a weighted mix of hip heights is not a pose any clip stands in (Little Lion, Run into Sit: a paw 6.5 mm
+// under the page). While two or more clips blend and every one is grounded at the ends of the blend (the body's lowest foot within 2 mm of its floor in
+// each clip's own pose: the outgoing ones as they are now, the incoming one at the fade's end), the body is lifted so the lowest foot stands at the mix of
+// the clips' own feet now (no step at the blend's first and last frame). Never pinned: a fade with a leap, climb, hang, fly or swim (by clip name or act:
+// their own take-off is right alone), a floating character (bob), or any clip whose own foot is off the floor.
+const OFF = /^(fly|swim|jump|hop|ouch hop|leap|bounce|climb|pounce|swing|hang|drop|fall)/i, NOT_SOLE = /tail|ear|hair|whisk|finger|thumb|index|middle|ring|pinky|hand|arm|shoulder|head|neck|jaw|eye|chest|wing|antenn|horn|trunk/i, FLOOR = 0.002;
+const soles = ch => (ch.soles ??= (() => {  // the vertices in the lowest 45% of the bind pose (a tail tip or a hand hanging low is no support), as [mesh, ids, out]
+  fresh(ch.model); const ms = [], ys = []; let lo = Infinity, hi = -Infinity;
+  ch.model.traverse(m => m.isSkinnedMesh && m.visible && m.matrixWorld.determinant() && ms.push(m));
+  for (const m of ms) { const { p, n } = rig(m), e = m.matrixWorld.elements, y = new Float32Array(n); for (let i = 0; i < n; i++) lo = Math.min(lo, y[i] = e[1] * p[3 * i] + e[5] * p[3 * i + 1] + e[9] * p[3 * i + 2] + e[13]), hi = Math.max(hi, y[i]); ys.push(y); }
+  return ms.map((m, k) => { const { j, w, n } = rig(m), ids = [], st = Math.max(1, n / 1500 | 0);
+    for (let i = 0; i < n; i += st) { let b = 0; for (let c = 1; c < 4; c++) if (w[4 * i + c] > w[4 * i + b]) b = c; if (ys[k][i] < lo + 0.45 * (hi - lo) && !NOT_SOLE.test(m.skeleton.bones[j[4 * i + b]]?.name ?? "")) ids.push(i); }
+    return [m, ids, new Float32Array(3 * ids.length)]; }).filter(s => s[1].length);
+})());
+const footAt = ch => {  // the lowest of those points above the body's own floor (where its origin stands), as the bones are now
+  fresh(ch.model); let y = Infinity;
+  for (const [m, ids, out] of soles(ch)) { drawn(m, ids, out); for (let i = 1; i < out.length; i += 3) y = Math.min(y, out[i]); }
+  return y - ch.body.getWorldPosition(new Vector3()).y;
+};
+const footIn = (ch, clip, t) => {  // the same, in that clip alone at time t: a spare mixer poses it, then puts the bones back as they were
+  const mx = new AnimationMixer(ch.model), a = mx.clipAction(clip).play(); a.time = t; mx.update(0);
+  const y = footAt(ch); mx.stopAllAction(); mx.uncacheRoot(ch.model); return y;
+};
+const blendGround = ch => {  // after each of the mixer's updates; the body is at its own place here (live.js's place() set it just before)
+  const run = ch.mix._actions.filter(a => a.isRunning() && a.getEffectiveWeight() > 0), was = ch.gset;  // shortcut: the mixer's private list, three has no public one; upgrade: live.js keeps the clip it fades from
+  if (run.length < 2 || ch.ride || ch.c?.bob || !ch.body.visible || Math.abs(ch.body.scale.x - ch.s0) > 0.01 * ch.s0 || !soles(ch).length) return void (ch.gset = ch.grounded = null);
+  ch.gset = new Set(run);
+  const joined = run.filter(a => !was?.has(a));
+  if (joined.length) {  // a clip joined: it is the one fading in (the lightest, when the blend is first seen), the rest stand where they are now
+    const inn = was ? joined : [run.reduce((a, b) => (a.getEffectiveWeight() < b.getEffectiveWeight() ? a : b))], at = a => a.time + 0.3 * (1 - a.getEffectiveWeight()) * a.timeScale;  // 0.3 s: live.js loop()'s fade
+    ch.grounded = (was ? ch.grounded : true) && !["fly", "float", "climb", "swim"].includes(ch.goal?.a?.do) && !run.some(a => OFF.test(a.getClip().name)) &&
+      run.every(a => { const d = a.getClip().duration, t = !inn.includes(a) ? a.time : a.loop === LoopOnce ? Math.min(at(a), d) : at(a) % d; return Math.abs(footIn(ch, a.getClip(), t)) < FLOOR; });
+  }
+  if (!ch.grounded) return;
+  const w = run.map(a => a.getEffectiveWeight()), tot = w.reduce((x, y) => x + y, 0);
+  ch.body.position.y -= footAt(ch) - run.reduce((x, a, i) => x + w[i] * footIn(ch, a.getClip(), a.time), 0) / tot;  // the mix of the clips' own feet now
+};
+
 export class Acting {
   // cast: [{name, pos, yaw, height, hold, clips, ride?: {on, off}}] (pos: a Vector3 at the feet)
   // where(to, top): a point, object or character name -> a new Vector3 or null (top: an object's top surface)
@@ -444,6 +507,8 @@ export class Acting {
     Object.assign(this, { find, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
     this.hold = (ch, what, hand, on, a) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on, a));  // who holds what, the games' holds too
     for (const ch of cast) (this.by[ch.name] = ch), mood(ch, "natural");
+    for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); blendGround(ch); return r; }; }  // R36
+    this.taps = {};  // taps counted per name, for "nth"
     this.acts = acts.map((a, i) => ({ ...a, state: "wait", prev: acts.slice(0, i).findLastIndex(b => b.who === a.who && !`${b.line}`.startsWith("tap:")) }));  // a tap act never links a chain
 
     this.thinks = new Map(acts.filter(a => a.do === "think").map(a => [a.line, a.who]));  // line -> who thinks it
@@ -499,7 +564,7 @@ export class Acting {
 
   reset() {  // "Read again": every act waits for its line again; nobody is mid-act (live.js puts them back where the page began)
     this.fades.forEach(f => f.end()); this.fades = [];
-    this.acts.forEach(a => (a.state = "wait")); this.passed.clear(); this.line = null; this.rises = []; this.glows = []; this.lifted = {}; this.shapes = [];
+    this.acts.forEach(a => (a.state = "wait")); this.taps = {}; this.passed.clear(); this.line = null; this.rises = []; this.glows = []; this.lifted = {}; this.shapes = [];
     for (const [m, w] of this.base) m.morphTargetInfluences.splice(0, w.length, ...w);
     for (const o of [...this.was.keys()]) this.vis(o, true, 0, () => {});
     for (const ch of this.cast) if (ch.glowing) glow(ch.body, (ch.glowing = 0));
@@ -510,7 +575,12 @@ export class Acting {
   open() { const tell = this.started; this.started = () => {}; this.acts.filter(a => a.line === "open").forEach(a => this.start(a)); this.started = tell; }  // the starting state (the banana plant a pup: Step1, secs 0) before the spread is first drawn, with no act foley
 
   // a tap on `name`: its acts whose line is "tap:<name>" start (again, whatever state they are in; a running one is cut short)
-  tap(name) { this.acts.filter(a => a.line === `tap:${name}`).forEach(a => this.start(a)); }
+  tap(name) {
+    const nth = a => +a.nth >= 1 ? +a.nth : (a.nth != null && (a.nthBad ??= (console.warn(`act "nth" is not a number of taps: it plays as an ordinary tap act`, a), true)), 0);  // "3" written as text counts as 3 (it never played, silently); anything else is said once
+    const all = this.acts.filter(a => a.line === `tap:${name}`), top = Math.max(0, ...all.map(nth)), n = top ? this.taps[name] = (this.taps[name] ?? 0) + 1 : 0;
+    (top ? all.filter(a => (all.some(b => nth(b) === n) ? nth(a) === n : !nth(a))) : all).forEach(a => this.start(a));
+    if (n >= top) delete this.taps[name];  // "nth": the count starts again after the last surprise
+  }
 
   // shape: ease shape keys of the meshes under `o`; with `back`, a second ease returns them after `back` s
   shape(a, o, done) {
@@ -537,8 +607,8 @@ export class Acting {
     return heard && (a.after == null || a.prev < 0 || this.acts[a.prev].state === "done");
   }
 
-  pace(ch, kind) {  // motion.json: {"kapi": {"Walk": {"speed": book metres a second, "cycle": seconds}}}
-    const mo = this.motion[ch.name]?.[MOVE[kind] || kind[0].toUpperCase() + kind.slice(1)];
+  pace(ch, kind, clip) {  // motion.json: {"kapi": {"Walk": {"speed": book metres a second, "cycle": seconds}}}; clip: a move act's own gait ("clip": "Walk Out")
+    const mo = this.motion[ch.name]?.[clip ?? (MOVE[kind] || kind[0].toUpperCase() + kind.slice(1))];
     return +(mo?.speed ?? mo) || PACE[kind] * ch.height;
   }
 
@@ -581,8 +651,12 @@ export class Acting {
     const moving = !stay && (MOVE[a.do] || ["fly", "float", "rise", "climb"].includes(a.do) || (a.do === "clip" && (a.to || a.ride)));
     if (moving) { ch.moved = true; ch.ride = null; }  // on its own feet now: off whatever it rode, off its entrance path
     if (MOVE[a.do]) {
-      const back = this.motion[ch.name]?.[MOVE[a.do]]?.back ?? a.do === "stepback";
-      take("goal", { a, pace: this.pace(ch, a.do), back, done }); this.loop(ch, MOVE[a.do]);
+      const clip = a.clip && ch.clips?.[a.clip] ? a.clip : null, gait = clip ?? MOVE[a.do], row = this.motion[ch.name]?.[gait];  // a "clip" the character lacks: the act's own gait, one warning
+      if (a.clip && !clip) console.warn(`${ch.name} has no clip "${a.clip}": ${gait}`, a);
+      else if (clip && !row) console.warn(`no motion row "${clip}" for ${ch.name}: Walk's pace`, a);
+      const back = row?.back ?? a.do === "stepback";
+      take("goal", { a, pace: (clip && !row ? this.pace(ch, "walk") : this.pace(ch, a.do, clip)) * (a.rate ?? 1), back, done }); this.loop(ch, gait);
+      if (ch.cur && ch.cur.getClip() === ch.clips?.[gait]) ch.cur.timeScale = a.rate ?? 1;  // "rate": the clip and its pace both faster, the feet still planted
     } else if (a.do === "clip") {
       if (a.then) ch.hold = a.then;  // a mood is held from the moment it is set: a line said meanwhile is that mood's talk
       if (a.clip === a.then && !a.to && !a.ride) return this.loop(ch, a.clip), done();  // "clip": "Worry", "then": "Worry": worried now
@@ -618,7 +692,7 @@ export class Acting {
       const fly = a.do === "fly", on = this.by[a.to], from = ch.pos.clone(), pp = on && a.bone && perch(on, a.bone), at = pp ? (a.beside ? besidePoint(ch, on, pp, onBone(pp), this.cam?.position) : onBone(pp)) : this.where(a.to, !on);
       const up = a.up ?? (pp ? 0 : on ? on.height * 0.9 : 0), to = (at ?? from.clone()).setY((at?.y ?? from.y) + up);
       const dist = from.distanceTo(to), len = a.secs ?? Math.max(0.5, dist / this.pace(ch, a.do));
-      take("goal", { a, air: true, from, up, on, pp, top: !on, s: 0, len, arc: fly ? 0.25 * dist : 0, sway: fly ? 0 : 0.012, done });
+      take("goal", { a, air: true, from, up, on, pp, top: !on, s: 0, len, arc: fly ? 0.25 * dist : 0, sway: a.sway ?? (fly ? 0 : 0.012), done });
       this.loop(ch, a.clip ?? (fly ? "Fly" : ch.hold));
     } else if (a.do === "rise") {
       const from = ch.pos.clone();

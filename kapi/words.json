@@ -1543,6 +1543,60 @@
 "who": "narrator",
 "tag": "fact"
 },
+"frog.0": {
+"en": "A frog. A frog is an animal that jumps and swims.",
+"lo": "ກົບ. ກົບເປັນສັດທີ່ໂດດ ແລະ ລອຍນ້ຳ.",
+"th": "กบ กบเป็นสัตว์ที่กระโดดและว่ายน้ำ",
+"zh": "青蛙。青蛙是会跳也会游的动物。",
+"ja": "カエル。カエルは とんだり およいだり する どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"frog.1": {
+"en": "Hello, frog!",
+"lo": "ສະບາຍດີ ກົບ!",
+"th": "สวัสดีกบ!",
+"zh": "你好，青蛙！",
+"ja": "こんにちは、カエル！",
+"who": "narrator",
+"tag": "greet"
+},
+"frog.2": {
+"en": "The frog jumps.",
+"lo": "ກົບໂດດ.",
+"th": "กบกระโดด",
+"zh": "青蛙在跳。",
+"ja": "カエルが ぴょんと とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"frog.3": {
+"en": "Ribbit, ribbit!",
+"lo": "ອຽບໆ!",
+"th": "อ๊บๆ!",
+"zh": "呱呱！",
+"ja": "ゲロゲロ！",
+"who": "narrator",
+"tag": "sound"
+},
+"frog.4": {
+"en": "A frog has long back legs.",
+"lo": "ກົບມີຂາຫຼັງຍາວ.",
+"th": "กบมีขาหลังยาว",
+"zh": "青蛙的后腿很长。",
+"ja": "カエルの うしろあしは ながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"frog.5": {
+"en": "A frog eats flies.",
+"lo": "ກົບກິນແມງວັນ.",
+"th": "กบกินแมลงวัน",
+"zh": "青蛙吃苍蝇。",
+"ja": "カエルは ハエを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
 "lilypads.0": {
 "en": "Lily pads. A lily pad is a big leaf on the water.",
 "lo": "ໃບບົວ. ໃບບົວເປັນໃບໄມ້ໃຫຍ່ເທິງນ້ຳ.",
@@ -1705,59 +1759,59 @@
 "who": "narrator",
 "tag": "does"
 },
-"frog.0": {
-"en": "A frog. A frog is an animal that jumps and swims.",
-"lo": "ກົບ. ກົບເປັນສັດທີ່ໂດດ ແລະ ລອຍນ້ຳ.",
-"th": "กบ กบเป็นสัตว์ที่กระโดดและว่ายน้ำ",
-"zh": "青蛙。青蛙是会跳也会游的动物。",
-"ja": "カエル。カエルは とんだり およいだり する どうぶつだよ。",
+"caterpillar.0": {
+"en": "A caterpillar. A caterpillar is a small, soft, many-legged creature.",
+"lo": "",
+"th": "หนอน หนอนเป็นสัตว์ตัวเล็กตัวนุ่มที่มีขาหลายขา",
+"zh": "毛毛虫。毛毛虫是软软的、有很多小脚的小虫子。",
+"ja": "いもむし。いもむしは やわらかくて あしが たくさん ある ちいさな いきものだよ。",
 "who": "narrator",
 "tag": "what"
 },
-"frog.1": {
-"en": "Hello, frog!",
-"lo": "ສະບາຍດີ ກົບ!",
-"th": "สวัสดีกบ!",
-"zh": "你好，青蛙！",
-"ja": "こんにちは、カエル！",
+"caterpillar.1": {
+"en": "Hello, caterpillar!",
+"lo": "",
+"th": "สวัสดีหนอน!",
+"zh": "你好，毛毛虫！",
+"ja": "こんにちは、いもむし！",
 "who": "narrator",
 "tag": "greet"
 },
-"frog.2": {
-"en": "The frog jumps.",
-"lo": "ກົບໂດດ.",
-"th": "กบกระโดด",
-"zh": "青蛙在跳。",
-"ja": "カエルが ぴょんと とぶよ。",
+"caterpillar.2": {
+"en": "A caterpillar crawls slowly.",
+"lo": "",
+"th": "หนอนคลานช้าๆ",
+"zh": "毛毛虫慢慢地爬。",
+"ja": "いもむしは ゆっくり はうよ。",
 "who": "narrator",
 "tag": "does"
 },
-"frog.3": {
-"en": "Ribbit, ribbit!",
-"lo": "ອຽບໆ!",
-"th": "อ๊บๆ!",
-"zh": "呱呱！",
-"ja": "ゲロゲロ！",
-"who": "narrator",
-"tag": "sound"
-},
-"frog.4": {
-"en": "A frog has long back legs.",
-"lo": "ກົບມີຂາຫຼັງຍາວ.",
-"th": "กบมีขาหลังยาว",
-"zh": "青蛙的后腿很长。",
-"ja": "カエルの うしろあしは ながいよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"frog.5": {
-"en": "A frog eats flies.",
-"lo": "ກົບກິນແມງວັນ.",
-"th": "กบกินแมลงวัน",
-"zh": "青蛙吃苍蝇。",
-"ja": "カエルは ハエを たべるよ。",
+"caterpillar.3": {
+"en": "A caterpillar eats leaves.",
+"lo": "",
+"th": "หนอนกินใบไม้",
+"zh": "毛毛虫吃叶子。",
+"ja": "いもむしは はっぱを たべるよ。",
 "who": "narrator",
 "tag": "fact"
+},
+"caterpillar.4": {
+"en": "A caterpillar turns into a butterfly.",
+"lo": "",
+"th": "หนอนกลายเป็นผีเสื้อ",
+"zh": "毛毛虫会变成蝴蝶。",
+"ja": "いもむしは ちょうちょに なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"caterpillar.5": {
+"en": "A caterpillar is green.",
+"lo": "",
+"th": "หนอนสีเขียว",
+"zh": "毛毛虫是绿色的。",
+"ja": "いもむしは みどりいろだよ。",
+"who": "narrator",
+"tag": "looks"
 },
 "buffalo.0": {
 "en": "A buffalo. It is a big, strong farm animal.",
@@ -2260,6 +2314,60 @@
 "th": "ค้างคาวบินในที่มืดได้",
 "zh": "蝙蝠在黑暗里也能飞。",
 "ja": "コウモリは くらくても とべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"snail.0": {
+"en": "A snail. A snail carries its shell on its back.",
+"lo": "",
+"th": "หอยทาก หอยทากแบกเปลือกไว้บนหลัง",
+"zh": "蜗牛。蜗牛背着壳。",
+"ja": "かたつむり。かたつむりは からを せおっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"snail.1": {
+"en": "Hello, snail!",
+"lo": "",
+"th": "สวัสดีหอยทาก!",
+"zh": "你好，蜗牛！",
+"ja": "こんにちは、かたつむり！",
+"who": "narrator",
+"tag": "greet"
+},
+"snail.2": {
+"en": "A snail moves very slowly.",
+"lo": "",
+"th": "หอยทากเคลื่อนที่ช้ามาก",
+"zh": "蜗牛爬得很慢。",
+"ja": "かたつむりは とても ゆっくり すすむよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"snail.3": {
+"en": "A snail has two long feelers.",
+"lo": "",
+"th": "หอยทากมีหนวดยาวสองเส้น",
+"zh": "蜗牛有两根长长的触角。",
+"ja": "かたつむりには ながい つのが にほん あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"snail.4": {
+"en": "A snail likes damp places.",
+"lo": "",
+"th": "หอยทากชอบที่ชื้น",
+"zh": "蜗牛喜欢潮湿的地方。",
+"ja": "かたつむりは しめった ところが すき。",
+"who": "narrator",
+"tag": "fact"
+},
+"snail.5": {
+"en": "A snail glides on one foot.",
+"lo": "",
+"th": "หอยทากไถลไปด้วยเท้าเดียว",
+"zh": "蜗牛用一只脚滑行。",
+"ja": "かたつむりは あしを ひとつ すべらせて すすむよ。",
 "who": "narrator",
 "tag": "does"
 },
@@ -3133,6 +3241,14 @@
 "dragonfly.5",
 "dragonfly.n2"
 ],
+"frog": [
+"frog.0",
+"frog.1",
+"frog.2",
+"frog.3",
+"frog.4",
+"frog.5"
+],
 "lilypads": [
 "lilypads.0",
 "lilypads.1",
@@ -3157,13 +3273,13 @@
 "pebbles.4",
 "pebbles.5"
 ],
-"frog": [
-"frog.0",
-"frog.1",
-"frog.2",
-"frog.3",
-"frog.4",
-"frog.5"
+"caterpillar": [
+"caterpillar.0",
+"caterpillar.1",
+"caterpillar.2",
+"caterpillar.3",
+"caterpillar.4",
+"caterpillar.5"
 ],
 "buffalo": [
 "buffalo.0",
@@ -3239,6 +3355,14 @@
 "bat.3",
 "bat.4",
 "bat.5"
+],
+"snail": [
+"snail.0",
+"snail.1",
+"snail.2",
+"snail.3",
+"snail.4",
+"snail.5"
 ],
 "owl": [
 "owl.0",
@@ -3330,6 +3454,7 @@
 "bat",
 "buffalo",
 "butterfly",
+"caterpillar",
 "crab",
 "dragonfly",
 "duck",
@@ -3344,6 +3469,7 @@
 "otter",
 "owl",
 "parakeet",
+"snail",
 "squirrel",
 "turtle"
 ],
@@ -3474,6 +3600,13 @@
 "zh": "蜻蜓",
 "ja": "トンボ"
 },
+"frog": {
+"en": "frog",
+"lo": "ກົບ",
+"th": "กบ",
+"zh": "青蛙",
+"ja": "カエル"
+},
 "lilypads": {
 "en": "lily pads",
 "lo": "ໃບບົວ",
@@ -3495,12 +3628,12 @@
 "zh": "小石子",
 "ja": "こいし"
 },
-"frog": {
-"en": "frog",
-"lo": "ກົບ",
-"th": "กบ",
-"zh": "青蛙",
-"ja": "カエル"
+"caterpillar": {
+"en": "caterpillar",
+"lo": "",
+"th": "หนอน",
+"zh": "毛毛虫",
+"ja": "いもむし"
 },
 "buffalo": {
 "en": "buffalo",
@@ -3564,6 +3697,13 @@
 "th": "ค้างคาว",
 "zh": "蝙蝠",
 "ja": "コウモリ"
+},
+"snail": {
+"en": "snail",
+"lo": "",
+"th": "หอยทาก",
+"zh": "蜗牛",
+"ja": "かたつむり"
 },
 "owl": {
 "en": "owl",
@@ -3682,6 +3822,8 @@
 "parakeet-2": "parakeet",
 "gecko": "gecko",
 "dragonflies": "dragonfly",
+"fish": "fish",
+"frog-1": "frog",
 "jamun-fallen": "fruit",
 "lilypads": "lilypads",
 "river-grass": "grass",
@@ -3689,10 +3831,9 @@
 "pebbles": "pebbles",
 "dragonfly0": "dragonfly",
 "dragonfly1": "dragonfly",
-"frog-1": "frog",
+"log-caterpillar": "caterpillar",
 "frog-2": "frog",
 "frog-3": "frog",
-"fish": "fish",
 "grass-near": "grass",
 "buffalo": "buffalo",
 "turtles": "turtle",
@@ -3713,8 +3854,10 @@
 "lapwing": "lapwing",
 "crabs": "crab",
 "frogs": "frog",
+"frogs-2": "frog",
 "bats": "bat",
 "hyacinth-near": "hyacinth",
+"log-snail": "snail",
 "frog-left": "frog",
 "frogs-right": "frog",
 "owlet": "owl",
@@ -3728,7 +3871,6 @@
 "pebbles-night": "pebbles",
 "log-night": "log",
 "ferns-night": "ferns",
-"frogs-2": "frog",
 "frogs-3": "frog",
 "crabs-2": "crab",
 "village": "village",
