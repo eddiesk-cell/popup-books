@@ -79,7 +79,7 @@
    "dir": "s08",
    "title": "Please, Not the River!",
    "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
-   "game": {"type": "pair", "before": "8.4", "pairs": [["pagong", "river-glimpse"], ["gecko", "bahay-kubo"], ["hen-a", "coop"]], "start": "Every animal has a home. Tap an animal, then tap its home!", "praise": "A turtle lives in the water. Oh, Matsing!", "voice": {"start": "game.8.start", "praise": "game.8.praise"}}
+   "game": {"type": "pair", "before": "8.4", "pairs": [["pagong", "river-glimpse"], ["gecko", "bahay-kubo"], ["hens", "coop"]], "start": "Every animal has a home. Tap an animal, then tap its home!", "praise": "A turtle lives in the water. Oh, Matsing!", "voice": {"start": "game.8.start", "praise": "game.8.praise"}}
   },
   {
    "dir": "s09",

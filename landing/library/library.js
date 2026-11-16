@@ -52,7 +52,7 @@ let snd = null, sndP = null, gestured = false; const cueLog = [];
 for (const ev of ["pointerdown", "keydown", "touchend"]) addEventListener(ev, () => { gestured = true; }, { capture: true, passive: true });
 const cue = (name, gain = 1) => { const ok = gestured && sndOn(); cueLog.push({ name, ok, t: Math.round(performance.now()) }); if (!ok) return;
   (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("mali", "../../")))).catch(() => null)).then(s => s?.play(name, { gain, tag: "library" })); };
-$("#snd").onclick = () => { sndOff = !sndOff; store.set("popup-sound", sndOff ? "off" : "on"); snd?.mute(sndOff); sndLabel(); };
+$("#snd").onclick = () => { sndOff = !sndOff; store.set("popup-sound", sndOff ? "off" : "on"); snd?.mute(sndOff); sndLabel(); if (sndOff) front?.hush(); };
 
 // ---- the room
 const phoneArt = innerWidth <= 820 || innerWidth < innerHeight, phone = phoneArt;
@@ -85,21 +85,21 @@ const fogAt = y => new THREE.Color(...((y > 25 ? FC.up : y < -10 ? FC.down : FC.
 const hash = str => [...str].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7), rnd = (a, b) => { const x = Math.sin(a * 127.1 + b * 311.7) * 43758.5; return x - Math.floor(x); };
 const vary = (id, k, c) => { const h = hash(id), r = j => rnd(h + j, k); c.r *= .95 + r(1) * .1; c.g *= .96 + r(2) * .08; c.b *= .95 + r(3) * .1; return { mirror: r(4) < .5, dy: r(5) - .5, w: .94 + r(6) * .12, yaw: (r(7) - .5) * .1 }; };
 // a layer is a card: tint multiplies, fog blends toward the well's colour by height (+ fogStep per copy away), repeatY n = n copies centred on p.y spaced spacingY, billboard "y" turns it to face the visitor
-room.layers = room.layers.filter(l => !/^bal_(left|right)$/.test(l.id));  // the home balcony's painted side railings were a torn cut-out (rails and balusters missing, white scraps): built in 3D below instead
+room.layers = room.layers.filter(l => !/art\/(balustrade|arm1|bridge2)\.webp$/.test(l.img) && !/^g_arm\d/.test(l.id));  // the home balcony's painted side railings were a torn cut-out (rails and balusters missing, white scraps): built in 3D below instead
 for (const L of room.layers) {
   const flat = Math.abs(Math.abs(L.rot?.[0] ?? 0) - Math.PI / 2) < .01, side = flat ? THREE.FrontSide : THREE.DoubleSide;  // floors and walkways: seen from below (looking up from a lower room) they vanish instead of hanging as dark slabs in the light
   const url = phoneArt && L.phoneImg ? L.phoneImg : L.img, n = L.repeatY ?? 1, half = n >> 1, e = tex(url), add = L.blend === "add", tint = new THREE.Color(...(L.tint ?? [1, 1, 1]));
   const grade = L.plane === "mid" ? .95 : L.plane === "fore" ? .9 : 1, order = L.tier ?? (L.plane === "back" ? 1 : 3), ro = /^glow/.test(L.id) ? 9 : L.plane === "back" ? 19 : order * 10;  // painter's order: far glows 9, the tower rings 10-18 (far ring first), other back cards 19, floors 20, rays 29, cases and fore 30+  // our 4 cases keep their own bright warm tint; the rest sit a little dimmer
   if (/^tower\d+_/.test(L.id)) { const k = L.id.split("_")[0]; (rings.get(k) ?? rings.set(k, []).get(k)).push({ L, url, e, tint, n, half }); continue; }  // merged below
   if (n > 1 && !L.billboard) {  // one draw for all copies: per-instance colour (tint + fog), the mesh sits at the layer's centre so painter's sorting by distance still works
-    const key = "inst" + url + add + flat; let m = mats.get(key); if (!m) { m = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, side, opacity: 0, visible: false, blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }); mats.set(key, m); e.p.then(() => { if (!e.t.image) return; m.map = e.t; m.visible = true; m.needsUpdate = true; fades.push(m); }); }
+    const key = "inst" + url + add + flat; let m = mats.get(key); if (!m) { m = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: flat, side, opacity: 0, visible: false, blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }); mats.set(key, m); e.p.then(() => { if (!e.t.image) return; m.map = e.t; m.visible = true; m.needsUpdate = true; fades.push(m); }); }
     const im = new THREE.InstancedMesh(plane, m, n), M = new THREE.Matrix4(), q = new THREE.Quaternion(), eu = new THREE.Euler(L.rot?.[0] ?? 0, L.rot?.[1] ?? 0, 0, "YXZ"), sc = new THREE.Vector3(L.size[0] * (L.flip === "h" ? -1 : 1), L.size[1] * (L.flip === "v" ? -1 : 1), 1); q.setFromEuler(eu);
     for (let k = -half; k <= half; k++) { const y = L.p[1] + k * (L.spacingY ?? 0), f = add ? 0 : Math.min(1, (L.fog ?? 0) + (L.fogStep ?? 0) * Math.abs(k)); const c = tint.clone().multiplyScalar(grade).lerp(fogAt(y), f), v = k ? vary(L.id, k, c) : { mirror: false, dy: 0, w: 1, yaw: 0 }; sc.x = Math.abs(sc.x) * v.w * (v.mirror !== (L.flip === "h") ? -1 : 1); im.setMatrixAt(k + half, M.compose(new THREE.Vector3(0, k * (L.spacingY ?? 0) + v.dy * (L.spacingY ?? 0) * .12, 0), q, sc)); im.setColorAt(k + half, c); }
     im.position.set(...L.p); im.renderOrder = ro; im.name = L.id; scene.add(im); if (L.plane !== "back" && !/^(s\d|walk)/.test(L.id)) core.push(e.p); continue;
   }
   for (let k = -half; k <= half; k++) {
     const y = L.p[1] + k * (L.spacingY ?? 0), f = add ? 0 : Math.min(1, (L.fog ?? 0) + (L.fogStep ?? 0) * Math.abs(k)), col = tint.clone().multiplyScalar(grade).lerp(fogAt(y), f), key = url + col.getHexString() + add + flat;
-    let m = mats.get(key); if (!m) { m = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, side, color: col, opacity: 0, visible: false, blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }); mats.set(key, m); e.p.then(() => { if (!e.t.image) return; m.map = e.t; m.visible = true; m.needsUpdate = true; fades.push(m); }); if (/^lantern/.test(L.id)) { m.userData.base = col.clone(); flick.add(m); } }
+    let m = mats.get(key); if (!m) { m = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: flat, side, color: col, opacity: 0, visible: false, blending: add ? THREE.AdditiveBlending : THREE.NormalBlending }); mats.set(key, m); e.p.then(() => { if (!e.t.image) return; m.map = e.t; m.visible = true; m.needsUpdate = true; fades.push(m); }); if (/^lantern/.test(L.id)) { m.userData.base = col.clone(); flick.add(m); } }
     const mesh = new THREE.Mesh(plane, m); mesh.name = L.id; mesh.renderOrder = ro; mesh.rotation.order = "YXZ"; mesh.position.set(L.p[0], y, L.p[2]); mesh.rotation.set(L.rot?.[0] ?? 0, L.rot?.[1] ?? 0, 0);
     mesh.scale.set(L.size[0] * (L.flip === "h" ? -1 : 1), L.size[1] * (L.flip === "v" ? -1 : 1), 1); if (L.billboard) billboards.push(mesh); scene.add(mesh);
   }
@@ -139,19 +139,19 @@ books = makeBooks(THREE, room, { phone, lang, setBooks: grown.sets.map(q => q.bo
 let front = null, living = null; const say = (t, s) => { const e = $("#sub"); if (t == null) { e.classList.remove("on"); return; } e.firstChild.textContent = t; e.lastChild.textContent = s || ""; e.classList.add("on"); clearTimeout(say.t); say.t = setTimeout(() => e.classList.remove("on"), 3600); };
 let ringWas = false, opener = null;  // the ring traps focus while open: the shelf behind it is inert, Esc gives focus back to what opened it
 const ring = createRing(THREE, { scene, camera, books, reduced, chime: false, onChange: a => { disarm(); if (a.isOpen) { hideHint(); $("#hint").hidden = true; } $("#ringx").hidden = $("#ringp").hidden = $("#ringn").hidden = $("#ringb").hidden = !a.isOpen; if (a.isOpen && !ringWas) { ringWas = true; opener = document.activeElement; $("#shelf").inert = true; $("#stage").tabIndex = -1; ringName(); $("#ringb").focus({ preventScroll: true }); } if (!a.isOpen) $("#cap").hidden = true; } });
-front = createFront(THREE, { scene, camera, renderer, ring, books, reduced, getLang: () => lang, getStill: () => W.still, say });
+front = createFront(THREE, { scene, camera, renderer, ring, books, reduced, getLang: () => lang, getStill: () => W.still, say, muted: () => sndOff });
 scene.add(books.mesh);  // opaque: drawn first, the cards depth-test against it
 if (!c3) { const ledgeMesh = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial({ color: 0x5a3a20 }), room.ledges?.length ?? 1);
 (room.ledges ?? []).forEach((l, i) => ledgeMesh.setMatrixAt(i, new THREE.Matrix4().compose(new THREE.Vector3(...l.p), new THREE.Quaternion(), new THREE.Vector3(...l.size))));
 scene.add(ledgeMesh); }
 // the balcony's two side railings, built (owner 2026-11-16, "both sides have broken images"): turned balusters, a top and a foot rail and posts with gold finials along both open sides of the floor; opaque, so the cards behind stop at them
-{ const fl = room.layers.find(l => l.id === "floor"); if (fl) {
-  const x = fl.size[0] / 2, z0 = fl.p[2] - fl.size[1] / 2 + 1.1, z1 = fl.p[2] + fl.size[1] / 2 - .1, n = Math.round((z1 - z0) / .2), wood = new THREE.MeshLambertMaterial({ color: 0x4a2c16 }), gold = new THREE.MeshLambertMaterial({ color: 0xc9a046, emissive: 0x2a1c06 });  // z0: clear of the side doors
+for (const fl of room.layers.filter(l => l.id === "floor" || /^g_floor_r_/.test(l.id))) {
+  const cx = fl.p[0], x = fl.size[0] / 2, z0 = fl.p[2] - fl.size[1] / 2 + (fl.id === "floor" ? 1.1 : 2.6), z1 = fl.p[2] + fl.size[1] / 2 - .1, n = Math.round((z1 - z0) / .2), wood = new THREE.MeshLambertMaterial({ color: 0x4a2c16 }), gold = new THREE.MeshLambertMaterial({ color: 0xc9a046, emissive: 0x2a1c06 });  // z0: clear of the side doors
   const lathe = new THREE.LatheGeometry([[.05, 0], [.05, .06], [.028, .1], [.046, .3], [.022, .5], [.036, .62], [.024, .72], [.04, .76], [.04, .8]].map(([r, y]) => new THREE.Vector2(r, y)), 10), bal = new THREE.InstancedMesh(lathe, wood, 2 * n), M = new THREE.Matrix4();
-  let i = 0; for (const sx of [-1, 1]) for (let k = 0; k < n; k++) bal.setMatrixAt(i++, M.makeTranslation(sx * x, fl.p[1], z0 + (k + .5) * (z1 - z0) / n));
+  let i = 0; for (const sx of [-1, 1]) for (let k = 0; k < n; k++) bal.setMatrixAt(i++, M.makeTranslation(cx + sx * x, fl.p[1], z0 + (k + .5) * (z1 - z0) / n));
   bal.name = "rail"; scene.add(bal);
-  for (const sx of [-1, 1]) { for (const [y, h, w] of [[.83, .07, .12], [.03, .06, .1]]) { const r = new THREE.Mesh(new THREE.BoxGeometry(w, h, z1 - z0), wood); r.position.set(sx * x, fl.p[1] + y, (z0 + z1) / 2); r.name = "rail"; scene.add(r); }
-    for (const z of [z0, (z0 + z1) / 2, z1]) { const q = new THREE.Mesh(new THREE.BoxGeometry(.15, .92, .15), wood), f = new THREE.Mesh(new THREE.SphereGeometry(.075, 12, 8), gold); q.position.set(sx * x, fl.p[1] + .46, z); f.position.set(sx * x, fl.p[1] + 1, z); q.name = f.name = "rail"; scene.add(q, f); } } } }
+  for (const sx of [-1, 1]) { for (const [y, h, w] of [[.83, .07, .12], [.03, .06, .1]]) { const r = new THREE.Mesh(new THREE.BoxGeometry(w, h, z1 - z0), wood); r.position.set(cx + sx * x, fl.p[1] + y, (z0 + z1) / 2); r.name = "rail"; scene.add(r); }
+    for (const z of [z0, (z0 + z1) / 2, z1]) { const q = new THREE.Mesh(new THREE.BoxGeometry(.15, .92, .15), wood), f = new THREE.Mesh(new THREE.SphereGeometry(.075, 12, 8), gold); q.position.set(cx + sx * x, fl.p[1] + .46, z); f.position.set(cx + sx * x, fl.p[1] + 1, z); q.name = f.name = "rail"; scene.add(q, f); } } }
 
 // faint gold motes lingering in the air (the sunray dust lives in the viewer's effects)
 const NM = phone ? 50 : 120, mp = new Float32Array(NM * 3), mv = Array.from({ length: NM }, () => Math.random() * 6.28);
@@ -254,7 +254,7 @@ function goto(id) {
   const w = { pts, len, t: 0, dur: Math.min(3, Math.max(2, 1.4 + len * .12)), y0: yaw, y1: yaw + wrap(sYaw(B) - yaw), p0: pitch, p1: sPitch(B), f0: fov, f1: sFov(B), id, jump: !!l?.portal, pw: l?.floor ? -1.2 : undefined };
   if (l?.portal) w.con = regionPlaque(l, catalog.regions ?? [], lang).con;
   if (reduced) { if (l?.portal) { walk = w; through(w); return; } fade.style.opacity = 1; setTimeout(() => { arrive(w); fade.style.opacity = 0; }, 260); return; }
-  walk = w; vI = [0, 0]; arrowsFor();
+  landed(); walk = w; vI = [0, 0]; arrowsFor();
 }
 function arrive(w) { if (w.jump && w.id === home().id) descend(SHORT);  // back from a room by a portal: the descent plays as the tunnel unwinds
   cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
@@ -305,7 +305,7 @@ let homing = false; $("#home").onclick = goHome;
 // bookcase at once; reduced motion: none.
 const FULL = 3.2, SHORT = 1.8; let desc = null;
 function descend(dur) { if (reduced) return; const h = home(), e = sP(h); desc = { t: 0, dur, from: new THREE.Vector3(e.x, e.y + 7.5, e.z + 3.2), p0: -.55, f0: sFov(h) + 8 }; homing = false; vI = [0, 0]; }
-const landed = () => { if (!desc) return false; desc.t = desc.dur; return true; };
+const landed = () => { if (!desc) return false; const h = home(); camPos = sP(h); yaw = sYaw(h); pitch = sPitch(h); fov = sFov(h); desc = null; return true; };
 
 // ---- input: the mouse's offset from the centre sets the view and, near an edge, keeps turning it; a drag (mouse or finger) looks around with inertia; arrows look; Enter walks
 const cv = $("#stage"), P = { x: 0, y: 0, has: false, mouse: true, down: false, id: -1, sx: 0, sy: 0, lx: 0, ly: 0, lt: 0, t0: 0, moved: 0, ui: false, vx: 0, vy: 0 }, keys = new Set(), ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
@@ -315,7 +315,7 @@ let armed = true, anchor = [0, 0]; const disarm = () => { armed = false; anchor 
 document.documentElement.addEventListener("mouseleave", () => { P.has = false; }); addEventListener("blur", () => { P.has = false; keys.clear(); });
 addEventListener("pointerdown", () => { disarm(); document.body.classList.remove("kb"); }, true); addEventListener("keydown", e => { if (e.key === "Tab") document.body.classList.add("kb"); }, true);
 const kf = () => fov * Math.PI / 180 / innerHeight;  // radians per pixel
-cv.addEventListener("pointerdown", e => { if (!live() || walk) return; if (desc && !warp) { landed(); return; }  /* a tap during the arrival lands it, and is spent on that */ P.down = true; P.id = e.pointerId; P.sx = P.lx = e.clientX; P.sy = P.ly = e.clientY; P.lt = P.t0 = performance.now(); P.moved = 0; P.vx = P.vy = P.rvx = 0; vI = [0, 0]; homing = false; cv.setPointerCapture(e.pointerId); cv.classList.add("drag"); });
+cv.addEventListener("pointerdown", e => { if (!live() || walk) return; if (desc) { landed(); return; }  /* a tap during the arrival lands it, and is spent on that */ P.down = true; P.id = e.pointerId; P.sx = P.lx = e.clientX; P.sy = P.ly = e.clientY; P.lt = P.t0 = performance.now(); P.moved = 0; P.vx = P.vy = P.rvx = 0; vI = [0, 0]; homing = false; cv.setPointerCapture(e.pointerId); cv.classList.add("drag"); });
 cv.addEventListener("pointermove", e => { if (!P.down || e.pointerId !== P.id) return; const dx = e.clientX - P.lx, dy = e.clientY - P.ly, now = performance.now(), dt = Math.max(.008, (now - P.lt) / 1000);
   if (ring.isOpen) { if (!pick && !ring.busy) ring.drag(dx, ring.stepPx()); P.rvx += (dx / dt - P.rvx) * .4; P.moved += Math.abs(dx) + Math.abs(dy); P.lx = e.clientX; P.ly = e.clientY; P.lt = now; return; }
   yaw -= dx * kf(); pitch = cP(pitch + dy * kf()); P.vx += (-dx * kf() / dt - P.vx) * .4; P.vy += (dy * kf() / dt - P.vy) * .4; P.moved += Math.abs(dx) + Math.abs(dy); if (P.moved > 12) hideHint(); P.lx = e.clientX; P.ly = e.clientY; P.lt = now; });

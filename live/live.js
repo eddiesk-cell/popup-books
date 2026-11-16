@@ -218,6 +218,7 @@ const load = id => spreads[id] ??= (async () => {
     spot: what => sp.placed[what]?.clone() ?? propIn(sp, what)?.getWorldPosition(new THREE.Vector3()) ?? null, put: (what, p) => sp.held.some(h => h.what === what) || (sp.falls = sp.falls.filter(f => f.what !== what), sp.placed[what] = p),  // a flight still running never pulls a prop out of a hand
     motion: Object.fromEntries(sp.cast.map(ch => [ch.name, motionAll[ch.c.model.split("/").pop()] ?? motionAll[ch.name]])),
     find: what => propIn(sp, what),  // hide / show / shape reach a prop or a cast body by name
+    ground: !!m.ground,  // "ground": true: go-to travel and the floor rule (acts.js)
     raise: (what, dy) => (sp.lifts[what] = dy),  // a prop rising: kept as an offset, laid on after the paper's own animation
     hold: (ch, what, hand, on, a = {}) => {  // a prop in a hand follows the hand bone until let go; a cast prop (a bowl, a lamp) is held by its rim; "grip" / "aim" (acts.js) seat and aim it
       const was = sp.held.find(h => h.what === what);
@@ -585,7 +586,7 @@ function ahead(sp) {  // what the next turn needs (the next spread, this one's e
 
 function moral() {  // after the last spread: a calm page, the moral read aloud (book.json's "moral" spread, its diorama, has just read it)
   mode = "moral"; quiet(); $("moral").hidden = false; notice.end($("moral")); $("replay").hidden = true; snd.setBed([["night-breeze", 0.15], ["leaves-breeze", 0.15]].filter(([n]) => sm.beds[n]).slice(0, 1));  // a calm page
-  $("bar").classList.add("on"); if (bare(S.id) !== "moral") reader.read(book.moral?.lines || story.moral.map(l => l.id));
+  $("bar").classList.add("on"); const ml = book.moral?.lines || story.moral.map(l => l.id); if (!ml.every(id => S.page.lines.includes(id))) reader.read(ml);  // skipped when the last spread has just read the moral (Kapi's "moral", the turtle's "s11")
   import("./learn.js").then(m => m.offer(bookId, () => lang, () => reader.stop())).catch(() => {});  // the gold "Play and learn" door, only for a book that has a question bank
 }
 $("again").onclick = () => mode === "moral" && reader.read(book.moral?.lines || story.moral.map(l => l.id));

@@ -17,7 +17,7 @@ export function grow(room, catalog, { fake } = {}) {
   const regions = (catalog.regions ?? []).map(r => ({ ...r, books: ready.filter(b => b.region === r.id) })).filter(r => r.books.length);
   const groups = [{ id: "home", books: ready }, ...regions.map(r => ({ id: "r:" + r.id, books: r.books, region: r }))];
   const stations = [], sets = [], portals = [], layers = [], add = (s) => (room.stations.push(s), stations.push(s), s);
-  const mk = (id, p, note) => add({ id, cam: { p, look: [p[0], p[1] + .6, p[2] - 6.134], fov: 60 }, look: { yawMin: -Math.PI, yawMax: Math.PI, pitchMin: -1.4, pitchMax: 1.4 }, note, links: [] });
+  const mk = (id, p, note) => add({ id, cam: { p, look: [p[0], p[1] + .6, p[2] - 6.134], fov: 60 }, look: { yawMin: -Math.PI, yawMax: Math.PI, pitchMin: -1.4, pitchMax: /^r:/.test(id) ? .9 : 1.4 }, note, links: [] });
   const link = (a, b, path) => { a.links.push({ to: b.id, path: path ?? [a.cam.p, b.cam.p] }); b.links.push({ to: a.id, path: [...(path ?? [a.cam.p, b.cam.p])].reverse() }); };
   const floorTex = room.layers.find(l => l.id === "floor") ?? T0(tpl.floor), balTex = room.layers.find(l => l.id === "bal_left"), lampTex = room.layers.find(l => l.id === "s2_lantern") ?? room.layers.find(l => l.id === "lantern_near");
   const card = (id, src, p, size, rot, extra = {}) => { if (src) layers.push({ id, plane: "back", img: src.img, phoneImg: src.phoneImg, p, size, rot, tint: [.85, .85, .95], fog: .1, ...extra }); };

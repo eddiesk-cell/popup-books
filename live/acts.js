@@ -85,6 +85,7 @@ import { AnimationMixer, Box3, DoubleSide, LoopOnce, Matrix4, Quaternion, Raycas
 const MOVE = { walk: "Walk", run: "Run", swim: "Swim", sneak: "Sneak", stepback: "Step Back" };
 const PACE = { walk: 0.9, run: 2.2, swim: 1.0, sneak: 0.45, stepback: 0.5, fly: 2.5, float: 0.35, climb: 0.8 };  // body heights a second, when motion.json has no stride
 const TURN = 5;  // radians a second
+const GO_TURN = 2.5, STEP = 0.35, CELL = 0.005, VY = 3;  // "ground": a go-to turns at 2.5 rad/s and steps up or down 0.35 of its height (its own height following its feet's floor at up to 3 body heights a second); a floor is read once a 5 mm cell
 
 export const yawTo = (a, b) => Math.atan2(b.x - a.x, b.z - a.z);  // a character's front is +z at yaw 0
 const look = (ch, p) => { if (p && Math.hypot(p.x - ch.pos.x, p.z - ch.pos.z) > 0.01) ch.want = yawTo(ch.pos, p); };  // standing on it: keep the heading
@@ -494,6 +495,43 @@ const blendGround = ch => {  // after each of the mixer's updates; the body is a
   ch.body.position.y -= footAt(ch) - run.reduce((x, a, i) => x + w[i] * footIn(ch, a.getClip(), a.time), 0) / tot;  // the mix of the clips' own feet now
 };
 
+// "ground": true on a spread (BOOK-STANDARD "Characters walk; nothing glides; the floor is solid"). The floor under a point: one downward ray from a
+// step above it, at the top faces of the spread's drawn, non-skinned meshes (page, pieces, cast props) whose box (taken once, at the first need) holds
+// the point. shortcut: boxes are taken once and alpha cut-outs count as solid; upgrade if a stood-on prop moves on a spread or a cut-out card is walked over
+const _v = new Vector3(), _n = new Vector3(), _dn = new Vector3(0, -1, 0), _rc = new Raycaster();
+const floorAt = (ms, x, y, z, up, down) => {
+  let top = null;
+  for (const [m, b] of ms) {
+    if (x < b.min.x || x > b.max.x || z < b.min.z || z > b.max.z || b.max.y < y - down || b.min.y > y + up) continue;
+    _rc.set(_v.set(x, y + up, z), _dn); _rc.far = up + down;
+    for (const h of _rc.intersectObject(m, false)) if (h.face && _n.copy(h.face.normal).transformDirection(m.matrixWorld).y > 0.5) { if (top === null || h.point.y > top) top = h.point.y; break; }
+  }
+  return top;
+};
+const floorY = (A, ch, k, x, z) => {  // the floor under (x, z), within a step of the body's height, for side k of the body: read again only when it crosses into a new 5 mm cell
+  const f = (ch.fl ??= [[NaN, NaN, NaN], [NaN, NaN, NaN]])[k], cx = Math.floor(x / CELL), cz = Math.floor(z / CELL);
+  if (f[0] !== cx || f[1] !== cz) { const s = STEP * ch.height; f[0] = cx; f[1] = cz; f[2] = floorAt(A.floors(), x, ch.pos.y, z, s, s) ?? NaN; }
+  return f[2];
+};
+// after the mixer (and blendGround): the floor is the LOWER of the floors under the body's two feet (the lowest sole on each side of it), never the floor
+// under its middle (that floats both feet over a stone narrower than a stride and pops them up in one frame). So a raised piece is stood on once both feet
+// are on it, and nothing lifts a body while one foot is still down beside it (that foot clips the piece instead: no foot placement yet). A go-to walker's
+// height follows that floor at up to VY body heights a second (a step, never a pop); anyone else is lifted at once if a sole is below it, never lowered.
+const solid = (A, ch, dt) => {
+  if (ch.ride || ch.c?.bob || !ch.body.visible || ch.goal?.air || ch.goal?.climb || ch.goal?.hop || ch.slide || ch.goal?.a?.do === "swim" || A.holds.has(ch.name) ||
+    ch.c?.at?.[2] < -0.01 || Math.abs(ch.body.scale.x - ch.s0) > 0.01 * ch.s0 || OFF.test(ch.cur?.getClip().name ?? "") || !soles(ch).length) return;
+  fresh(ch.model); const b = ch.body.position, c = Math.cos(ch.yaw), s = Math.sin(ch.yaw), ft = ch.ft ??= [[0, 0, 0], [0, 0, 0]];
+  ft[0][1] = ft[1][1] = Infinity;
+  for (const [m, ids, out] of soles(ch)) { drawn(m, ids, out); for (let i = 0; i < out.length; i += 3) { const f = ft[(out[i] - b.x) * c - (out[i + 2] - b.z) * s < 0 ? 0 : 1]; if (out[i + 1] < f[1]) f[0] = out[i], f[1] = out[i + 1], f[2] = out[i + 2]; } }
+  let fl = Infinity;
+  for (let k = 0; k < 2; k++) { const f = ft[k]; if (f[1] === Infinity) continue; const y = floorY(A, ch, k, f[0], f[2]); if (y === y) fl = Math.min(fl, y); }
+  if (fl === Infinity) return;  // no floor within a step under its feet (a branch, a trunk): left as placed
+  if (ch.goal?.go) { const v = VY * ch.height * dt, d = Math.max(-v, Math.min(v, fl - ch.pos.y)); ch.pos.y += d; b.y += d; return; }
+  const below = fl - Math.min(ft[0][1], ft[1][1]);
+  if (below > 0) b.y += below;
+};
+const GAIT = /^(walk|run|sneak)/i;
+
 export class Acting {
   // cast: [{name, pos, yaw, height, hold, clips, ride?: {on, off}}] (pos: a Vector3 at the feet)
   // where(to, top): a point, object or character name -> a new Vector3 or null (top: an object's top surface)
@@ -503,11 +541,12 @@ export class Acting {
   // started(a): told as each act begins (live.js plays its "act:<who>:<do>" foley)
   // spot(what) / put(what, p): where a prop of the spread is now (world) / set it there (it stays): for a prop flying (fly with "what")
   // people: the names that are characters (who speak, or can): only they turn to talk; null, everyone in the cast
-  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null }) {
-    Object.assign(this, { find, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
+  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null, ground = false }) {
+    Object.assign(this, { ground, find, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
     this.hold = (ch, what, hand, on, a) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on, a));  // who holds what, the games' holds too
     for (const ch of cast) (this.by[ch.name] = ch), mood(ch, "natural");
-    for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); blendGround(ch); return r; }; }  // R36
+    for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); blendGround(ch); ch.solid?.(dt); return r; }; }  // R36
+    for (const ch of cast) ch.solid = ground ? dt => solid(this, ch, dt) : null;  // "ground": the floor rule
     this.taps = {};  // taps counted per name, for "nth"
     this.acts = acts.map((a, i) => ({ ...a, state: "wait", prev: acts.slice(0, i).findLastIndex(b => b.who === a.who && !`${b.line}`.startsWith("tap:")) }));  // a tap act never links a chain
 
@@ -559,6 +598,25 @@ export class Acting {
       end: () => { if (f.over) return; f.over = true; ms.forEach(([m, was, cs]) => (m.material = was, cs.forEach(([x]) => x.dispose()))); if (!on) flip(); done(); } };
     this.fades.push(f); f.tick(0);
   }
+
+  floors() {  // the stood-on meshes and their world boxes, once (see floorAt)
+    if (this.fms) return this.fms;
+    const root = this.cast[0]?.body.parent, skip = new Set(), b = new Box3(); this.fms = [];
+    for (const c of this.cast) if (skinned(c.model)) c.body.traverse(o => skip.add(o));
+    root?.updateMatrixWorld(true);
+    root?.traverse(m => { if (!m.isMesh || m.isSkinnedMesh || skip.has(m) || !m.visible) return; const mt = [].concat(m.material)[0]; if (mt.visible === false || mt.opacity < 0.98 || mt.depthWrite === false) return;
+      this.fms.push([m, b.setFromObject(m).clone()]); });
+    return this.fms;
+  }
+  goable(ch, a) {  // ground travel this key changes: a float along the ground by a walker (no clip, or a gait clip), or any ground move by a rigid body
+    const rigid = !skinned(ch.model) && !ch.c?.model?.startsWith("puppet:"), on = this.by[a.to], h = ch.height;
+    if (ch.c?.bob || this.holds.has(ch.name) || (rigid && this.prop(ch))) return false;
+    if (MOVE[a.do]) return rigid && a.do !== "swim";
+    if (a.do !== "float" || a.to == null || on || (a.up ?? 0) > STEP * h) return false;
+    const to = this.where(a.to, true); if (!to || Math.abs(to.y - ch.pos.y) > STEP * h) return false;
+    return rigid || (!!(ch.clips?.Walk || ch.clips?.Run) && (!a.clip || GAIT.test(a.clip)));
+  }
+  prop(ch) { return this.acts.some(b => b.do === "hold" && b.what === ch.name) || /prop/i.test(ch.c?.model?.split("/").pop() ?? ""); }  // a thing a hand takes, or a prop model: not a body (Rule 28 is about bodies)
 
   busy(line) { return this.acts.some(a => a.wait && a.line === line && a.state !== "done"); }  // the reading waits on these
 
@@ -643,6 +701,11 @@ export class Acting {
     if (!ch) return console.warn("act for a character not on this page:", a), done();
     if (a.mood) mood(ch, a.mood);  // {"do": "mood", "mood": "sad"}, or a mood on any other act
     if (a.do === "mood") return done();
+    if (this.ground && !a.go && this.goable(ch, a)) {  // "ground": a walker told to float along the ground walks there instead (go-to); a rigid body hops or does not travel
+      const rigid = !skinned(ch.model) && !ch.c?.model?.startsWith("puppet:"), hop = this.motion[ch.name]?.Hop;
+      if (rigid && (a.gait ?? hop?.gait) !== "hop") return (a.warned ??= (console.warn(`${ch.name} is rigid and does not glide along the ground: the act is refused (Rule 28; a hopper needs "gait": "hop")`, a), true)), done();
+      a.go = rigid ? "hop" : a.do === "float" ? (GAIT.test(a.clip ?? "") && /^run/i.test(a.clip) ? "run" : "walk") : a.do;
+    }
     const target = MOVE[a.do] || a.do === "climb" || (a.do === "fly" || a.do === "float") && a.to != null ? a.to : a.do === "face" ? a.face : null;
     if (target != null && !this.where(target)) return console.warn(`nothing to ${a.do} to: "${target}" is not on this page`, a), done();
     a.state = "run"; this.started(a);
@@ -650,12 +713,20 @@ export class Acting {
     const stay = a.do === "clip" && a.ride && !a.to && ch.ride?.on === this.by[a.ride];  // a clip on the mount it rides (Sit Down, Stand Up on Bobo's back): the ride, and its hold, go on
     const moving = !stay && (MOVE[a.do] || ["fly", "float", "rise", "climb"].includes(a.do) || (a.do === "clip" && (a.to || a.ride)));
     if (moving) { ch.moved = true; ch.ride = null; }  // on its own feet now: off whatever it rode, off its entrance path
-    if (MOVE[a.do]) {
-      const clip = a.clip && ch.clips?.[a.clip] ? a.clip : null, gait = clip ?? MOVE[a.do], row = this.motion[ch.name]?.[gait];  // a "clip" the character lacks: the act's own gait, one warning
+    if (a.go === "hop") {  // a rigid hopper: whole hops along the line, each an arc, a landing, and a rest (motion.json "Hop": {"gait": "hop", "hop": m, "hop_h": m, "cycle": s})
+      const mo = this.motion[ch.name]?.Hop ?? {}, from = ch.pos.clone(), to = this.where(a.to).setY(from.y), d = Math.hypot(to.x - from.x, to.z - from.z), L = a.hop ?? mo.hop ?? 0.6 * ch.height;
+      take("goal", { a, hop: true, from, to, n: Math.max(1, Math.ceil(d / L - 1e-6)), cyc: a.cycle ?? mo.cycle ?? 0.6, hh: a.hop_h ?? mo.hop_h ?? 0.35 * ch.height, t: 0, done });
+      ch.want = yawTo(from, to);
+    } else if (MOVE[a.go] || MOVE[a.do]) {
+      const kind = MOVE[a.go] ? a.go : a.do, ground = !!this.ground && kind !== "swim";
+      const clip = a.clip && ch.clips?.[a.clip] && (!a.go || GAIT.test(a.clip)) ? a.clip : null, gait = clip ?? MOVE[kind], row = this.motion[ch.name]?.[gait];  // a "clip" the character lacks: the act's own gait, one warning
       if (a.clip && !clip) console.warn(`${ch.name} has no clip "${a.clip}": ${gait}`, a);
       else if (clip && !row) console.warn(`no motion row "${clip}" for ${ch.name}: Walk's pace`, a);
-      const back = row?.back ?? a.do === "stepback";
-      take("goal", { a, pace: (clip && !row ? this.pace(ch, "walk") : this.pace(ch, a.do, clip)) * (a.rate ?? 1), back, done }); this.loop(ch, gait);
+      if (ground && !ch.clips?.[gait]) return (a.warned ??= (console.warn(`${ch.name} has no "${gait}" clip: it does not glide along the ground, the act is refused`, a), true)), done();  // a go-to moves only while its gait plays: without one it would never arrive
+      const back = row?.back ?? kind === "stepback";
+      // "ground": the stride at the size it is staged (motion.json speed_h x height), so the feet stay where they land; otherwise the row's own speed
+      const pace = (ground && row?.speed_h ? row.speed_h * ch.height : clip && !row ? this.pace(ch, "walk") : this.pace(ch, kind, clip)) * (a.rate ?? 1);
+      take("goal", { a, pace, back, go: ground, gait, stop: a.go ? 0 : 0.05, done }); this.loop(ch, gait);
       if (ch.cur && ch.cur.getClip() === ch.clips?.[gait]) ch.cur.timeScale = a.rate ?? 1;  // "rate": the clip and its pace both faster, the feet still planted
     } else if (a.do === "clip") {
       if (a.then) ch.hold = a.then;  // a mood is held from the moment it is set: a line said meanwhile is that mood's talk
@@ -727,6 +798,27 @@ export class Acting {
         if (g.a.face) look(ch, this.where(g.a.face) ?? to);
         g.done();
       }
+    } else if (g?.hop) {  // hops: each cycle an arc over the first 60% and a rest on the ground; the body faces its travel
+      g.t += dt; const k = Math.min(g.n, g.t / g.cyc), i = Math.floor(k), u = Math.min(1, (k - i) / 0.6), air = i < g.n && k - i < 0.6;
+      ch.pos.lerpVectors(g.from, g.to, Math.min(1, (i + (i < g.n ? ease(u) : 0)) / g.n)).y += air ? 4 * g.hh * u * (1 - u) : 0;
+      if (g.t >= g.n * g.cyc) { ch.goal = null; ch.pos.copy(g.to); if (g.a.face) look(ch, this.where(g.a.face)); g.done(); }
+    } else if (g?.go) {  // "ground" go-to: it turns toward the target at GO_TURN and walks along its own heading at its stride (the clip slowed with it
+      // while it turns, so the planted feet stay planted), straight in over the last 0.4 s of travel; its height is the floor under it, a step up or down
+      const to = this.where(g.a.to), d = to && _v.copy(to).sub(ch.pos).setY(0), left = d ? d.length() - (g.a.stop ?? g.stop) : 0;
+      if (left <= 0.002) {
+        ch.goal = null; if (ch.cur) ch.cur.timeScale = 1; this.loop(ch, ch.hold);
+        if (!g.back || g.a.face) look(ch, this.where(g.a.face ?? g.a.to));
+        g.done();
+      } else {
+        ch.want = Math.atan2(d.x, d.z) + (g.back ? Math.PI : 0);
+        if (ch.cur?.getClip() !== ch.clips?.[g.gait]) { if (!ch.done) this.loop(ch, g.gait); }  // only the gait moves it: a clip the page plays meanwhile (a Dig on a word) waits, its `then` held for the arrival
+        else {
+        const near = left < g.pace * 0.4, k = near ? 1 : Math.max(0.35, Math.cos(ch.want - ch.yaw)), s = Math.min(left, g.pace * k * dt * ch.cur.getEffectiveWeight());  // as far as the gait shows: no travel on legs still fading in from a stand
+        if (ch.cur && ch.cur.getClip() === ch.clips?.[g.gait]) ch.cur.timeScale = (g.a.rate ?? 1) * k;
+        if (near) d.normalize(); else d.set(Math.sin(ch.yaw), 0, Math.cos(ch.yaw)).multiplyScalar(g.back ? -1 : 1);
+        ch.pos.addScaledVector(d, s);  // its height: solid(), from the floor under its feet
+        }
+      }
     } else if (g) {
       const to = this.where(g.a.to), d = to && to.clone().sub(ch.pos).setY(0), left = d ? d.length() - (g.a.stop ?? 0.05) : 0;
       if (left <= 0.002) {  // arrived: face what it came to, or what the act names
@@ -740,13 +832,13 @@ export class Acting {
       if (s.t >= s.len) ch.slide = null, s.done?.();
     }
     if (ch.ride && !ch.slide) carry(ch, o => this.at(o), this.cam?.position);  // riding: carried along
-    if (f) {
+    if (f && !g?.go) {  // a go-to walking: a face act waits for the arrival (it would steer the walk sideways)
       const p = this.where(f.a.face);
       look(ch, p);
       if (!p || ch.want == null || Math.abs(Math.sin((ch.want - ch.yaw) / 2)) < 0.02) { ch.facing = null; f.done(); }
     }
     if (ch.want != null) {
-      ch.yaw = turn(ch.yaw, ch.want, TURN * dt);
+      ch.yaw = turn(ch.yaw, ch.want, (g?.go ? GO_TURN : TURN) * dt);
       if (Math.abs(Math.sin((ch.want - ch.yaw) / 2)) < 1e-4 && !ch.goal && !ch.talking) ch.want = null;  // turned: a rider then turns with its mount
     }
     if (ch.ride) ch.want != null ? (ch.ride.dyaw = ch.yaw - ch.ride.on.yaw) : (ch.yaw = ch.ride.on.yaw + ch.ride.dyaw);

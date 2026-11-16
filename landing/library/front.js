@@ -10,10 +10,10 @@ import { createPopup } from "../../shelf/popup.js";
 
 const POOL = 5, SHELF = new URL("../../shelf/", import.meta.url), WONDERS = new URL("../styles/epic/scene/sprites/wonders", import.meta.url).href, tick = () => new Promise(r => setTimeout(r, 0));
 import { drawTitle } from "./titles.js";
-export function createFront(THREE, { scene, camera, renderer, ring, books, reduced, getLang, getStill, say: say0 }) {
+export function createFront(THREE, { scene, camera, renderer, ring, books, reduced, getLang, getStill, say: say0, muted }) {
   let noted = false; const say = (t, s) => { noted = t != null; say0(t, s); }, clearNote = () => { if (noted) { noted = false; say0(null); } };  // only a note the ring itself set is cleared by the ring (the Wonder Hall's notes live outside it)
   const V = THREE.Vector3, RX = new THREE.Quaternion().setFromAxisAngle(new V(1, 0, 0), Math.PI / 2), gltf = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder), zero = new V(0, 0, 0);
-  const lantern = new THREE.PointLight(0xffc16b, 0, 0.32, 2), front = new THREE.SpotLight(0xffe2b8, 0, 0.9, 0.22, 0.8, 2); scene.add(lantern, front, front.target);  // the shared candle and soft front light, moved into the awake pop-up
+  const lantern = new THREE.PointLight(0xffc16b, 0, 0.32, 2), front = new THREE.SpotLight(0xffe2b8, 0, 0.9, 0.22, 0.8, 2), key = new THREE.SpotLight(0xffd9a8, 0, 0, .7, .9, 2), KP = new V(-.2, .14, .5), KT = new V(0, .05, 0); scene.add(lantern, front, front.target, key, key.target);  // the shared candle and soft front light, moved into the awake pop-up
   const models = new Map(), building = new Map(), ref = new Map(); let list = null, atlas = null, kapiColor = null, kapiSpine = null, kapiOrm = null, dims = null, queue = Promise.resolve();
   const getList = async () => list ??= await fetch(new URL("popups.json", import.meta.url)).then(r => r.json()).catch(() => []);  // shortcut: popups.json is a copy of web/shelf/index.html's #books list, because the published shelf/index.html is only a redirect (no list: every book came out a show book, no pop-up); upgrade: let tools/books_json.mjs write it
   const img = u => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = u; });
@@ -49,7 +49,7 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
     dims ??= { w: sz.x, d: sz.z }; ring.setModel?.(dims);
     m.own = owned(B.group); hold(m.own);
     m.hitBox = new THREE.Mesh(new THREE.BoxGeometry(sz.x, sz.y, sz.z), new THREE.MeshBasicMaterial({ visible: false, side: THREE.DoubleSide })); m.hitBox.position.copy(c); m.hitBox.userData.g = g; B.group.add(m.hitBox);
-    if (e) { const cfg = cfgOf(e); m.pop = createPopup(THREE, scene, cfg, { size: B.panel.userData.size, reduced, book: B.group, lights: { lantern, front }, say, onEvent: () => {} }); B.panel.add(m.pop.group); m.cfg = cfg; await m.pop.load?.(); await m.pop.ready; }
+    if (e) { const cfg = cfgOf(e); m.pop = createPopup(THREE, scene, cfg, { size: B.panel.userData.size, reduced, book: B.group, lights: { lantern, front }, say, onEvent: n => { if (n === "greet" && muted?.()) m.pop.hush(); } }); B.panel.add(m.pop.group); m.cfg = cfg; await m.pop.load?.(); await m.pop.ready; }
     // compile its shaders and push its textures to the GPU now, in small steps, not while the books fly
     scene.add(m.group); m.group.visible = true; m.group.position.set(0, -50, 0); m.group.scale.setScalar(.1); m.group.updateMatrixWorld(true);
     try { await renderer.compileAsync(m.group, camera, scene); } catch { /* the first frame compiles it instead */ }
@@ -66,7 +66,7 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
     const jobs = want.map(w => models.has(w) ? Promise.resolve(models.get(w)) : building.get(w) ?? (() => { const p = (queue = queue.then(() => build(w)).catch(err => console.warn("front: model failed", err))); building.set(w, p); p.finally(() => building.delete(w)); return p; })());
     return Promise.all(jobs);
   }
-  function hide() { for (const m of models.values()) { m.group.visible = false; if (m.awake) { m.awake = false; m.pop.sleep(true); } } lantern.intensity = front.intensity = 0; clearNote(); }
+  function hide() { for (const m of models.values()) { m.group.visible = false; if (m.awake) { m.awake = false; m.pop.sleep(true); } } lantern.intensity = front.intensity = key.intensity = 0; clearNote(); }
 
   function place(m, pose) {  // the model lies cover-up in its own space; rotate its cover normal onto the box's front normal, scale its depth to the box's height, centre the whole book (spine too) and sink it so the cover face meets the box face
     const n = new V(0, 0, 1).applyQuaternion(pose.q), ms = pose.s.y / m.depth; m.ms = ms;
@@ -78,14 +78,15 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
     const want = ring.near(2.6), keep = new Set(want.map(q => q.g));
     for (const q of want.sort((a, b) => a.a - b.a)) if (!models.has(q.g) && !building.has(q.g)) prewarm(q.g);  // swiping to a book whose models are not there yet
     if (models.size > POOL) for (const [g, m] of models) if (!keep.has(g) && models.size > POOL) free(m);
-    const fp = ring.frontPose();
+    const fp = ring.frontPose(); let lit = false;
     for (const [g, m] of models) { const q = want.find(w => w.g === g); if (!q) { m.group.visible = false; if (m.awake) { m.awake = false; m.pop.sleep(true); } continue; } m.group.visible = true; place(m, q.pose); books.set(g, q.pose.p, q.pose.q, zero);
       if (m.pop) { const isFront = fp && fp.global === g && fp.w > .95 && ring.settled || (ring.picked === g);
         if (isFront && !m.awake) { m.awake = true; try { localStorage.setItem(`${m.cfg.who}.lang`, getLang() === "en" ? "" : getLang()); } catch { /* no storage */ } m.pop.wake(); }
         else if (!isFront && m.awake && ring.picked < 0) { m.awake = false; m.pop.sleep(); clearNote(); }
-        if (m.pop.built) { m.pop.update(dt, 0); const pm = m.B.plate.m.material; pm.opacity = 1 - Math.min(1, m.pop.P * 2.4); pm.emissiveIntensity = 0; const k = m.ms; if (m.awake) { lantern.intensity *= k * k; front.intensity *= k * k; lantern.distance = .32 * k; front.distance = .9 * k; } else lantern.intensity = front.intensity = 0; }
+        if (m.pop.built) { m.pop.update(dt, 0); const pm = m.B.plate.m.material; pm.opacity = 1 - Math.min(1, m.pop.P * 2.4); pm.emissiveIntensity = 0; const k = m.ms; if (m.awake) { lit = true; lantern.intensity *= k * k; front.intensity *= k * k; lantern.distance = .32 * k; front.distance = .9 * k; key.position.copy(m.pop.group.localToWorld(KP.clone())); key.target.position.copy(m.pop.group.localToWorld(KT.clone())); key.intensity = 1.2 * m.pop.P * k * k; } }
       } }
+    if (!lit) lantern.intensity = front.intensity = key.intensity = 0;
   }
-  function disposeAll() { for (const m of [...models.values()]) free(m); lantern.intensity = front.intensity = 0; clearNote(); }
-  return { update, prewarm, disposeAll, hitTargets: () => [...models.values()].filter(m => m.group.visible).map(m => m.hitBox), get count() { return models.size; }, models };
+  function disposeAll() { for (const m of [...models.values()]) free(m); lantern.intensity = front.intensity = key.intensity = 0; clearNote(); }
+  return { update, prewarm, disposeAll, hush: () => { for (const m of models.values()) m.pop?.hush(); }, hitTargets: () => [...models.values()].filter(m => m.group.visible).map(m => m.hitBox), get count() { return models.size; }, models };
 }

@@ -399,6 +399,9 @@
   },
   "float": 0.33
  },
+ "turtle-pagong.glb": {
+  "Walk": {"speed": 0.0078, "speed_h": 0.12, "cycle": 1.6667, "loop": true, "height": 0.065}
+ },
  "turtle-matsing.glb": {
   "Walk": {
    "speed": 0.0687,
