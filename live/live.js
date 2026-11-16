@@ -139,6 +139,7 @@ function stubSpread() {  // a flat open book of blank paper, so the viewer can b
   const track = new THREE.QuaternionKeyframeTrack("leaf.quaternion", [t(1), t(12), t(48), t(84)], [...q(-Math.PI), ...q(-Math.PI), ...q(-Math.PI / 2), ...q(0)]);
   return { stub: true, scene: root, animations: [new THREE.AnimationClip("Scene", t(264), [track])] };
 }
+THREE.ShaderChunk.shadowmap_vertex = "#ifndef SHADOW_NB\n#define SHADOW_NB 1.0\n#endif\n" + THREE.ShaderChunk.shadowmap_vertex.replace("shadowWorldNormal * directionalLightShadows[ i ].shadowNormalBias", "shadowWorldNormal * directionalLightShadows[ i ].shadowNormalBias * SHADOW_NB");  // a thing that casts no shadow needs no normal offset: SHADOW_NB 0.0 on its material
 const shade = root => root.traverse(o => { if (o.isMesh) { o.receiveShadow = true; o.castShadow = !o.material.emissive?.getHex(); } });  // glowing bits cast none
 
 const propIn = (sp, what) => sp.root.getObjectByName(what) || sp.byName[what]?.body;  // a prop of the page: a node of the spread's glb, or a cast prop (a model of the page's characters, its body in sp.group); every act kind finds it here
@@ -174,6 +175,14 @@ const load = id => spreads[id] ??= (async () => {
   sp.corner = sp.leaf.worldToLocal(new THREE.Vector3(flat.min.x, flat.max.y, flat.max.z));  // its outer bottom corner, in the leaf's own space
   sp.pageW = -flat.min.x; sp.pageD = flat.max.z - flat.min.z;
   sp.bottom = new THREE.Box3().setFromObject(sp.root).min.y;
+  sp.turning = [];
+  sp.root.traverse(o => {  // what lies flat on the open page (the pages, the floor cards, the words) casts nothing and is looked up where it is (SHADOW_NB 0.0): a shadow starts at the foot that casts it, and the paper cannot shade itself
+    if (!o.isMesh || !o.castShadow || new THREE.Box3().setFromObject(o).getSize(new THREE.Vector3()).y >= 0.004) return;
+    let leaf = false; for (let p = o; p && p !== sp.root; p = p.parent) { if (p === sp.leaf) leaf = true; else if (sp.animated.has(p.name)) return; }  // a butterfly at rest, a dry leaf that will blow away: they fly later and cast then
+    const m = o.material.clone(); m.onBeforeCompile = o.material.onBeforeCompile; m.customProgramCacheKey = o.material.customProgramCacheKey; m.defines = { ...m.defines, SHADOW_NB: "0.0" };  // its own material: a card's edge can share the page's
+    if (leaf) sp.turning.push([o, m, o.material]);  // the turning page: ground while it lies open, a caster again (its shadow sweeps the scene) while it turns
+    o.castShadow = false; o.material = m;
+  });
   sp.sky = skyline(sp.root, undefined, m.backdrop);  // the standing backdrop's skyline and ends (the manifest names its cards)
 
   const key = m.stage.lights.reduce((a, b) => (b.watts > a.watts ? b : a));
@@ -183,7 +192,7 @@ const load = id => spreads[id] ??= (async () => {
     d.position.copy(B(l.at)); d.target.position.copy(B(l.look || [0, 0.1, 0.2])); sp.stage.add(d, d.target);  // the lights stay on while an exit turn stands in
     if (l === key) {
       sp.key = d;
-      d.castShadow = true; d.shadow.mapSize.setScalar(innerWidth < 600 ? 1024 : 2048); d.shadow.radius = d.shadow.mapSize.x / 512; d.shadow.bias = -0.00005; d.shadow.normalBias = 1.4 / d.shadow.mapSize.x;  // a phone's 390 px wide book does not show the difference. Radius 4 texels, a phone's 2 of its twice-as-big texels: one softness (5.5 mm) on both, so a phone's soft edge no longer washes out the shadow where a foot touches. Biases: half a texel of the 2.8 m frustum (0.7 mm, a phone 1.4 mm) and 0.5 mm along the light, so a shadow starts where its prop or foot touches (Eddie 2026-11-16, Kankak: 10 mm lifted every receiver, the lowest 10 mm of a prop cast nothing and a low sun pushed shadows 30 to 40 mm off: things looked afloat; tools/shadow_check.mjs)
+      d.castShadow = true; d.shadow.mapSize.setScalar(innerWidth < 600 ? 1024 : 2048); d.shadow.radius = d.shadow.mapSize.x / 512; d.shadow.bias = -0.0001; d.shadow.normalBias = 0.01;  // a phone's 390 px wide book does not show the difference. Radius 4 texels, a phone's 2 of its twice-as-big texels: one softness (5.5 mm) on both, so a phone's soft edge no longer washes out the shadow where a foot touches. Biases: 10 mm along the normal and 1 mm of depth, so no card, backdrop or prop shades itself through the 4-texel blur (0.7 mm did: every lit sheet 4 to 24% darker and stippled, review-1); what lies flat on the open page takes no normal offset and casts nothing (SHADOW_NB 0.0 below), so a shadow starts where its prop or foot touches the ground (Eddie 2026-11-16, Kankak; tools/shadow_check.mjs)
       Object.assign(d.shadow.camera, { left: -1.4, right: 1.4, top: 1.4, bottom: -1.4, near: 0.1, far: 10 });
     }
   }
@@ -1566,6 +1575,7 @@ renderer.setAnimationLoop(now => {
     s.classList.toggle("below", below); s.style.translate = below ? "-50% 0" : ""; s.style.top = `${Math.min(innerHeight - h - 8, below ? ybot + 6 : ytop - 4)}px`;
   }
   showHint(now); dimReading(now);
+  for (const [o, flat, turn] of S.turning ?? []) if (o.castShadow === (mode === "open")) { o.castShadow = mode !== "open"; o.material = mode === "open" ? flat : turn; }
   renderer.shadowMap.needsUpdate = !(innerWidth < 600 && (frame_n++ & 1));  // the shadows are redrawn every frame on a big screen and every second frame on a phone (30 Hz is not seen under a drifting camera)
   composer.render();
   for (const [o, p, q, sc] of undo.splice(0).reverse()) { o.position.copy(p); o.quaternion.copy(q); o.scale.copy(sc); }
