@@ -652,7 +652,7 @@ export function makeGame(sp, env) {
       if (G.toss) env.toss(...G.toss);  // book.json "toss": ["kapi", "bobo"]: each one picked is thrown into Bobo's mouth
       if (G.thoughts) think(sp.byName[G.who ?? "bobo"], G.thoughts[(state.done.size - 1) % G.thoughts.length]);
       if (G.count) env.count(`${state.done.size}`);  // the numeral
-      if (state.complete) then ? then.then(() => setTimeout(c.win, env.gap ?? 400)) : G.count ? setTimeout(c.win, env.gap ?? 1300) : c.win(); else if (!G.count) env.count(`${state.done.size} of ${n}`);  // the last number (and its own line) is heard and seen before the win
+      if (state.complete) then ? then.then(() => setTimeout(c.win, env.gap ?? 400)) : G.count ? Promise.all([said, new Promise(r => setTimeout(r, env.gap ?? 1300))]).then(c.win) : Promise.resolve(said).then(c.win); else if (!G.count) env.count(`${state.done.size} of ${n}`);  // the last number (and its own line) is heard and seen before the win (the number's whole voice too: its sentence hold then reaches the praise)
     };
     c.hint = () => { const i = targets.findIndex((_, i) => !state.done.has(i)); if (i >= 0) { env.sparkle(at(targets[i])); env.wobble(targets[i], 4); } };
     c.auto = () => (state.complete ? null : { i: targets.findIndex((_, i) => !state.done.has(i)) });

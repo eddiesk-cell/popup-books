@@ -404,6 +404,7 @@ hooks.push(ambient);
 const sfxHook = (() => {
   const ONGOING = new Set(["rain", "haze", "embers", "halo", "sparkle", "notes", "breath", "sunrays", "rings"]);  // these stay until their line ends (or "secs")
   let fx = null, sp = null, on = [], fired = new Set(), seen = { line: null, t: 0, at: 0 }; const tex = {};
+  const pool = Array.from({ length: book?.lights ?? 0 }, () => { const l = new THREE.PointLight(0xffaa66, 0, 1, 2); scene.add(l); return l; });  // book.json "lights": the most warm lights any page of this book lights at once, made once with the book at intensity 0. Every page then has the same light count, so no page turn builds a lit material again (a page's own count did: 2.4 s frozen the first time a browser reached a fire page)
   const surf = (x, z) => new THREE.Raycaster(new THREE.Vector3(x, 1, z), new THREE.Vector3(0, -1, 0)).intersectObject(sp.root, true).find(h => h.object.isMesh && !/card|wave|grass|crest/.test(h.object.name))?.point.y ?? 0;  // the paper's real height
   const named = n => sp.cast.find(c => c.name === n)?.body ?? sp.root.getObjectByName(n);
   const flat = a => { const p = B(a); p.y = Math.max(p.y, surf(p.x, p.z)); return p; };
@@ -427,7 +428,7 @@ const sfxHook = (() => {
     get fx() { return fx; },
     tap(name) { if (fx) sp.m.storyfx.forEach((e, i) => e.line === `tap:${name}` && start(e, i)); },  // a tapped thing plays its storyfx entry whose "line" is "tap:<name>" (no reader line is ever called that)
     spread(s) { fx?.dispose(); fx = null; on = []; fired = new Set(); sp = s; seen = { line: null, t: 0, at: s.at ?? 0 };
-      if (s.m.storyfx?.length) fx = createStoryFx(scene, renderer, { phone: PHONE, sound: (n, g) => snd.play(n, { gain: g }), lights: s.m.storyfx.reduce((n, e) => n + (e.light ? [].concat(e.who ?? 0).length : 0), 0) }); },  // one idle warm light per "light": true entry (a "who" list plays one each), made with the spread: no light is ever made mid-read
+      if (s.m.storyfx?.length) fx = createStoryFx(scene, renderer, { phone: PHONE, sound: (n, g) => snd.play(n, { gain: g }), lights: pool.length ? pool : s.m.storyfx.reduce((n, e) => n + (e.light ? [].concat(e.who ?? 0).length : 0), 0) }); },  // one idle warm light per "light": true entry (a "who" list plays one each), made with the spread: no light is ever made mid-read
     frame(dt) {
       if (!fx) return; const r = reader, s = { line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused }, E = sp.m.storyfx;
       if (sp.at < seen.at) { fx.clear(); on = []; fired.clear(); }  // "Read again": everything starts over
@@ -435,7 +436,7 @@ const sfxHook = (() => {
       seen = { ...s, at: sp.at };
       E.forEach((e, i) => { const k = `${e.line}|${e.word ?? ""}|${i}`; if (fired.has(k)) return;
         if (e.line === "rest" ? mode === "open" : s.line === e.line && (s.speaking || s.t === Infinity) && s.t >= (e.word ? wordAt(e.line, e.word) : 0)) { fired.add(k); start(e, i); } });
-      on = on.filter(x => { const rest = x.e.line === "rest", gone = rest ? mode !== "open" : x.e.until === "line" || (ONGOING.has(x.e.type ?? x.e.kind) && x.e.secs == null && x.e.until == null) ? s.line !== x.line || s.t === Infinity : false;
+      on = on.filter(x => { const rest = x.e.line === "rest", away = mode === "duck" || mode === "turn", gone = away || (rest ? mode !== "open" : x.e.until === "line" || (ONGOING.has(x.e.type ?? x.e.kind) && x.e.secs == null && x.e.until == null) ? s.line !== x.line || s.t === Infinity : false);  // away: the page is being turned, so everything still playing fades out with it (a lit fire would stay on the next page's blank sheet and cut off when that page lands)
         if (gone) { x.h.stop(); if (rest) fired.delete(`rest|${x.e.word ?? ""}|${x.i}`); } return !gone && !x.h.done; });
       fx.update(dt, cam);
     } };
