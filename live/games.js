@@ -248,7 +248,7 @@ export function makeGame(sp, env) {
   // spoken words (book.json "voice": {react, again, listen, ...}, each an id in the book's words): `react` on a right tap (a string, or a list per target),
   // `again` on a wrong one, at most once in 4 s so a child tapping wildly is not talked over; neither plays unless the page names it
   let lastAgain = -1e9;
-  const react = i => { const v = [].concat(G.voice?.react ?? []); if (v.length) env.voice(v[i] ?? v[0]); };
+  const react = i => { const v = [].concat(G.voice?.react ?? []); return v.length ? env.voice(v[i] ?? v[0]) : null; };  // (its voice's promise: a match win waits for it)
   const again = () => { if (G.voice?.again && env.now() - lastAgain > 4000) { lastAgain = env.now(); env.voice(G.voice.again); } };
   const miss = () => (env.foley("game:miss", "tap"), again());
   // the games played anywhere on the page: a tap on a character while playing is the game's, not a hello
@@ -500,10 +500,10 @@ export function makeGame(sp, env) {
       if (r === "ignore") return;
       const t = thing(state.pairs[prev][0]); glow(t, 0);
       if (r === "miss") return env.wobble(t, 6), env.wobble(o, 4), miss();
-      env.foley(`game:${G.type}`, "pick"); react(i); glow(t, G.type === "match" ? 0 : 0.6); glow(o, G.type === "match" ? 0 : 0.6);  // joined: it goes to its spot and stays lit (a home that is a whole mound or rock pile is not lit)
+      env.foley(`game:${G.type}`, "pick"); const said = react(i); glow(t, G.type === "match" ? 0 : 0.6); glow(o, G.type === "match" ? 0 : 0.6);  // joined: it goes to its spot and stays lit (a home that is a whole mound or rock pile is not lit)
       if (G.type === "match" && sp.byName[t.name]) walks.push(home(t, o));  // a character walks (flies, hops) home
       else { const p = t.parent; if (p) moves.push({ t, from: t.position.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); }
-      if (r === "won") { if (walks.length) env.count(`${state.pairs.length} of ${state.pairs.length}`); Promise.all(walks).then(() => (targets.forEach(o => glow(o, 0)), c.win())); } else env.count(`${state.done.size} of ${state.pairs.length}`);  // won: the joined pairs stop glowing for the rest of the page
+      if (r === "won") { if (walks.length) env.count(`${state.pairs.length} of ${state.pairs.length}`); Promise.all([...walks, said]).then(() => (targets.forEach(o => glow(o, 0)), c.win())); } else env.count(`${state.done.size} of ${state.pairs.length}`);  // won: the joined pairs stop glowing for the rest of the page
     };
     const home = (t, o) => {  // each friend stands at the edge of its home, on the side it comes from; the friends of one home side by side
       const mates = state.pairs.filter(p => p[1] === o.name), k = mates.findIndex(p => p[0] === t.name), z = new THREE.Box3().setFromObject(o).getSize(new THREE.Vector3());

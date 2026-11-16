@@ -125,7 +125,7 @@ const bake = (group, skip) => {  // the book frozen in its current pose: one mes
 
 export async function mount(canvas, { reducedMotion = false, clock = () => performance.now() / 1000 } = {}) {  // clock: the idle clock in seconds (a test may freeze it)
   const phone = Math.min(innerWidth, innerHeight) < 600 || matchMedia("(pointer: coarse)").matches;
-  const heroNew = new URLSearchParams(location.search).get("hero") === "new";  // a PILOT switch: ?hero=new shows the new hero book (hero-book.glb, assets/brand/book/) in place of the shelf's; without it nothing below differs from before
+  const heroNew = new URLSearchParams(location.search).get("hero") !== "old";  // the new hero book (hero-book.glb, assets/brand/book/), live since Eddie's "Yes, put it live" (2026-11-17); ?hero=old shows the shelf's book as before
   try { [THREE, { GLTFLoader }, { MeshoptDecoder }, { RoomEnvironment }, { mergeGeometries }, { loadOpenBook }] = await Promise.all([import("three"), import("three/addons/loaders/GLTFLoader.js"), import("three/addons/meshopt_decoder.module.js"), import("three/addons/environments/RoomEnvironment.js"), import("three/addons/utils/BufferGeometryUtils.js"), import("../../../shelf/bookmodel.js")]); }
   catch (e) { console.warn("epic scene: a module failed to load, drawing the still instead:", e.message); return standIn(canvas); }
   { const t = document.createElement("canvas"), gl = t.getContext("webgl2") || t.getContext("webgl"); if (!gl) return standIn(canvas); gl.getExtension("WEBGL_lose_context")?.loseContext(); }  // no WebGL: the still, without three printing an error

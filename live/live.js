@@ -636,11 +636,11 @@ showSnd();
 const say = t => { $("msg").innerHTML = t ? `<p>${t}</p>` : ""; $("msg").classList.toggle("show", !!t); };
 const count = t => { $("count").textContent = t; $("count").hidden = !t; };  // a game's "2 of 5", in its own badge
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-let saidEnd = -1e9;  // when the Reader's last voice ended
+let saidEnd = -1e9, asked = 0;  // when the Reader's last voice ended; the lines asked for so far
 const sayLine = async id => {  // a missing line is skipped, never a stop; a voice after a voice waits for PACE.sentence of silence (its own lead-in counts), the owner's sentence-end rule between voices too
   if (!text[id]) return console.warn("no text for line", id), true;
-  const tk = reader.token, wait = saidEnd + PACE.sentence - performance.now() - (timing[id]?.words[0]?.[0] ?? 0) * 1000;
-  if (wait > 0 && (await sleep(wait), reader.token !== tk)) return false;  // stopped or overtaken while waiting
+  const me = ++asked, tk = reader.token, wait = saidEnd + PACE.sentence - performance.now() - (timing[id]?.words[0]?.[0] ?? 0) * 1000;
+  if (wait > 0 && (await sleep(wait), reader.token !== tk || me !== asked)) return false;  // stopped, or a newer line was asked for while this one waited: the newest is said, as when one voice cuts another
   const ok = await reader.say(id); if (ok) saidEnd = performance.now(); return ok;
 };
 async function readFrom(i) {  // the page's lines from line i; S.at keeps the place, so a page turned back to resumes there
@@ -1200,8 +1200,10 @@ function autoTick(now) {
     ready = sp.at >= n && !game && !au.hush && (reader.audio.paused || reader.audio.ended) && (speak.paused || speak.ended || !!speak.error);  // every line read, the game won, every voice done
   }
   if (!ready) return void (au.t = 0, $("next").classList.remove("autopress"));
-  if (!au.t || (sp.touchAt ?? 0) > au.t) au.t = now;  // a touch starts the turn's wait again
-  if (now - au.t >= PACE.turn - PACE.press && !$("next").hidden) $("next").classList.add("autopress");  // Next page, shown pressed
+  if (!au.t || (sp.touchAt ?? 0) > au.t || press) au.t = now;  // a touch starts the turn's wait again; a finger still down (a drag, a hand on the corner) holds it
+  const nb = $("next"), due = mode === "open" && now - au.t >= PACE.turn - PACE.press;
+  if (due && nb.hidden) cue.shown = true, nb.hidden = false;  // Auto's own press brings Next page up (a camera still gliding kept it away: every mali page, kapi s01 and s08 on a phone)
+  nb.classList.toggle("autopress", due);  // Next page, shown pressed for the turn's last PACE.press, and let go when a touch starts the wait again
   if (now - au.t >= PACE.turn) au.fired = key, au.n++, $("next").classList.remove("autopress"), turn(true, true);
 }
 function pause(now) {  // the voice waits at a sentence end whose own silence is under PACE.sentence, then goes on (Eddie 2026-11-16: all reading, Auto or not); the read-along and the word-cued acts wait with it (they follow the voice's own time)
@@ -1237,7 +1239,7 @@ const grabAt = (x, y) => (hint.past ?? [[0, hint.spots]]).map(([, ps]) => ps.fin
 
 canvas.addEventListener("pointerdown", e => {
   if (S) S.touchAt = performance.now();  // auto play: the reader is here, so they are waited for (a game: Auto helps again after PACE.back; a turn: its wait starts again)
-  if (!primed) { primed = true; unlock(reader.audio, speak); snd.ctx.resume().catch(() => {}); }  // iPad: unlock sound inside a touch
+  if (!primed) { primed = true; unlock(...[reader.audio, speak].filter(a => a.paused && !a.currentTime)); snd.ctx.resume().catch(() => {}); }  // iPad: unlock sound inside a touch (only a voice that has not sounded yet: a line playing or held at a sentence end is never cut)
   const [x, y] = at(e), p = grabAt(x, y), s = p?.s ?? 0; fingerX = x; press = [e.clientX, e.clientY, performance.now()]; trail = [[performance.now(), x]];
   if (pid !== null || !turnable(s)) return;  // not a page turn: OrbitControls has it
   e.stopImmediatePropagation(); pid = e.pointerId; canvas.setPointerCapture(pid); down = true; pend = { x, fwd: s > 0, at: p.at };
