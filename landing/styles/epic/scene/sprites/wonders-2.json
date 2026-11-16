@@ -1,0 +1,362 @@
+[
+{
+"name": "lighthouse",
+"kind": 1,
+"x": 0,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "windmill",
+"kind": 1,
+"x": 256,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "pagoda",
+"kind": 1,
+"x": 512,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "desert-tent",
+"kind": 1,
+"x": 768,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "igloo",
+"kind": 1,
+"x": 1024,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "tree-house",
+"kind": 1,
+"x": 1280,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "stone-bridge",
+"kind": 1,
+"x": 1536,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "temple-gate",
+"kind": 1,
+"x": 1792,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "market-stall",
+"kind": 1,
+"x": 2048,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "caravan-of-camels",
+"kind": 1,
+"x": 0,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "elephant-with-a-howdah",
+"kind": 1,
+"x": 256,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "canoe",
+"kind": 1,
+"x": 512,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "hot-spring-volcano",
+"kind": 1,
+"x": 768,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "waterfall-cliff",
+"kind": 1,
+"x": 1024,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "lantern-lit-street",
+"kind": 1,
+"x": 1280,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "stone-circle",
+"kind": 1,
+"x": 1536,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "sphinx-like-lion-statue",
+"kind": 1,
+"x": 1792,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "viking-longship",
+"kind": 1,
+"x": 2048,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "treasure-chest",
+"kind": 1,
+"x": 0,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "crown",
+"kind": 1,
+"x": 256,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "sword-in-a-stone",
+"kind": 1,
+"x": 512,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "shield",
+"kind": 1,
+"x": 768,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "hourglass",
+"kind": 1,
+"x": 1024,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "compass",
+"kind": 1,
+"x": 1280,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "old-key",
+"kind": 1,
+"x": 1536,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "telescope",
+"kind": 1,
+"x": 1792,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "spinning-wheel",
+"kind": 1,
+"x": 2048,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "phoenix-egg",
+"kind": 2,
+"x": 0,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "griffin",
+"kind": 2,
+"x": 256,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "friendly-ogre",
+"kind": 2,
+"x": 512,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "tiny-fairy",
+"kind": 2,
+"x": 768,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "gnome-with-a-mushroom",
+"kind": 2,
+"x": 1024,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "kraken-with-tentacles-around",
+"kind": 2,
+"x": 1280,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "friendly-yeti",
+"kind": 2,
+"x": 1536,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "centaur-archer",
+"kind": 2,
+"x": 1792,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "dragon-hatchling",
+"kind": 2,
+"x": 2048,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "nine-tailed-fox",
+"kind": 2,
+"x": 0,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "naga-serpent-with-a",
+"kind": 2,
+"x": 256,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "giant-turtle-carrying-an",
+"kind": 2,
+"x": 512,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "thunderbird",
+"kind": 2,
+"x": 768,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "jade-rabbit",
+"kind": 2,
+"x": 1024,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "lion-dog-guardian-statue",
+"kind": 2,
+"x": 1280,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "water-dragon",
+"kind": 2,
+"x": 1536,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "three-headed-friendly-beast",
+"kind": 2,
+"x": 1792,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "giant-beanstalk",
+"kind": 2,
+"x": 2048,
+"y": 1024,
+"w": 256,
+"h": 256
+}
+]

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Grand Library · Wonder of Saya Tales</title>
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:,">
+<script type="importmap">{ "imports": { "three": "../../vendor/three/three.module.js", "three/addons/": "../../vendor/three/addons/" } }</script>
+<link rel="stylesheet" href="../../fonts/cormorant-garamond/cormorant-garamond.css">
+<link rel="stylesheet" href="../../fonts/eb-garamond/eb-garamond.css">
+<link rel="stylesheet" href="../../fonts/noto-sans-lao/noto-sans-lao.css">
+<link rel="stylesheet" href="library.css">
+</head>
+<body>
+<canvas id="stage" tabindex="0" aria-label="The Grand Library: drag or move the mouse to look around, arrow keys turn, Enter walks on" role="application"></canvas>
+<div class="vig"></div>
+<header class="bar">
+  <a class="logo" href="../" aria-label="Wonder of Saya Tales, back to the first page"><img src="../logo.webp" alt="" width="878" height="581"></a>
+  <span class="right"><button class="home" id="home" type="button" hidden></button><button class="menu" id="menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="panel"><i></i><i></i><i></i></button></span>
+</header>
+<div class="panel" id="panel" hidden>
+  <h2 data-t="settings"></h2>
+  <label><span data-t="language"></span><select id="lang"></select></label>
+  <button type="button" id="replay" data-t="intro"></button>
+  <button type="button" id="snd"></button>
+  <h2 data-t="account"></h2>
+  <div class="row"><button type="button" class="acct" data-t="signin"></button><button type="button" class="acct" data-t="signup"></button></div>
+  <p class="note" id="note" role="status"></p>
+</div>
+<div id="shelf" class="sr"></div>
+<button class="sr" id="ringb" type="button" hidden></button>
+<button class="ringx" id="ringx" type="button" hidden>&times;</button>
+<button class="sr" id="ringp" type="button" hidden>&lsaquo;</button><button class="sr" id="ringn" type="button" hidden>&rsaquo;</button>
+<p class="sub" id="sub" aria-live="polite"><b></b><span></span></p>
+<p class="cap" id="cap" role="status" hidden></p>
+<div class="carry" id="carry"></div>
+<p class="hint" id="hint" role="status" hidden></p>
+<div class="veil" id="veil"><video id="film" muted playsinline preload="metadata"></video><button type="button" id="skip" class="skip" hidden></button></div>
+<p class="loading" id="loading" role="status"></p>
+<script>/* shortcut: the loading line's six words are repeated here (the words table in library.js owns them, and wins once it runs) so the note paints before the module graph arrives; drop when the words move to a tiny shared file */
+{ const L = { en: "Opening the library...", lo: "ກຳລັງເປີດຫໍສະໝຸດ...", th: "กำลังเปิดห้องสมุด...", zh: "正在打开图书馆…", ja: "としょかんを ひらいています…", ko: "도서관을 여는 중…" }; let g = new URLSearchParams(location.search).get("lang"); try { g = L[g] ? g : localStorage.getItem("wst-lang"); } catch {} if (!L[g]) g = (navigator.languages || ["en"]).map(c => Object.keys(L).find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en"; document.documentElement.lang = g; document.getElementById("loading").textContent = L[g]; }
+</script>
+<script type="module" src="library.js"></script>
+</body>
+</html>

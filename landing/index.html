@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="pre">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wonder of Saya Tales</title>
+<meta name="description" content="Pop-up books that wake when you touch them.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:,">
+<script type="importmap">{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }</script>
+<script>/* shortcut: the poster is chosen here by the same three aspect breaks as styles/epic.js; change both together */
+for (const [m, n] of [["(min-aspect-ratio: 21/20)", "wide"], ["(min-aspect-ratio: 29/50) and (max-aspect-ratio: 21/20)", "mid"], ["(max-aspect-ratio: 29/50)", "tall"]]) document.head.insertAdjacentHTML("beforeend", `<link rel="preload" as="image" href="styles/epic/poster-${n}.webp" media="${m}">`);</script>
+<link rel="preload" as="image" href="logo.webp" type="image/webp">
+<link rel="stylesheet" href="../fonts/cormorant-garamond/cormorant-garamond.css">
+<link rel="stylesheet" href="../fonts/eb-garamond/eb-garamond.css">
+<link rel="stylesheet" href="../fonts/marcellus/marcellus.css">
+<link rel="stylesheet" href="../fonts/cinzel/cinzel.css">
+<link rel="stylesheet" href="../fonts/noto-sans-lao/noto-sans-lao.css">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+<header class="bar">
+  <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="panel"><i></i><i></i><i></i></button>
+  <div class="panel" id="panel" hidden><label><span data-t="nav.lang"></span><select class="langpick" id="langpick"></select></label><button class="btn ghost" id="snd" type="button"></button></div>
+  <span class="acct"><button class="btn ghost" type="button" aria-disabled="true" data-t="nav.signin"></button><button class="btn" type="button" aria-disabled="true" data-t="nav.signup"></button></span>
+</header>
+
+<!-- the fixed world behind the page: the chosen style builds it -->
+<div id="world" role="img"></div>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="head">
+      <h1 class="logo" aria-label="Wonder of Saya's Tales"><img src="logo.webp" alt="" width="878" height="581"></h1>
+      <p data-t="hero.line"></p>
+    </div>
+  </section>
+
+  <section id="wake" class="track">
+    <div class="pin"><div class="plaque"><h2 data-t="wake.h"></h2>
+      <p class="line" style="--a:.18" data-t="wake.a"></p><p class="line" style="--a:.5" data-t="wake.b"></p></div></div>
+  </section>
+
+  <section id="fly" class="track">
+    <div class="pin"><div class="plaque"><h2 data-t="fly.h"></h2>
+      <p class="line" style="--a:.12" data-t="fly.a"></p><p class="line" style="--a:.45" data-t="fly.b"></p></div></div>
+  </section>
+
+  <section id="worlds" class="track">
+    <div class="pin"><div class="plaque"><h2 data-t="worlds.h"></h2>
+      <p class="line" style="--a:.1" data-t="worlds.a"></p><p class="line" style="--a:.55" data-t="worlds.b"></p></div></div>
+  </section>
+
+  <div class="rest">
+    <section id="doors" class="sec"><h2 data-t="doors.h"></h2><p class="sub" data-t="doors.sub"></p><div class="grid four" data-list="doors"></div></section>
+    <section id="lang" class="sec"><h2 data-t="lang.h"></h2><p class="sub" data-t="lang.a"></p><p class="sub" data-t="lang.b"></p><ul class="chips" data-list="langs"></ul></section>
+    <section id="parents" class="sec"><h2 data-t="parents.h"></h2><div class="grid three" data-list="parents"></div><p class="sub" data-t="parents.note"></p></section>
+    <section id="plans" class="sec"><h2 data-t="plans.h"></h2><div class="grid three" data-list="plans"></div><p class="sub keep" data-t="plans.keep"></p></section>
+  </div>
+
+  <section id="close" class="closing">
+    <div class="scene"></div>
+    <div class="plaque centre"><h2 data-t="close.h"></h2><p data-t="close.a"></p><a class="btn big" href="./library/" data-t="close.btn"></a></div>
+  </section>
+</main>
+
+
+<script type="module" src="landing.js"></script>
+</body>
+</html>

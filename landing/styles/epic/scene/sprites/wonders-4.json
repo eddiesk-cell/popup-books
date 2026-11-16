@@ -1,0 +1,362 @@
+[
+{
+"name": "guitar",
+"kind": 5,
+"x": 0,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "harp",
+"kind": 5,
+"x": 256,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "panpipes",
+"kind": 5,
+"x": 512,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "bamboo-mouth-organ",
+"kind": 5,
+"x": 768,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "tambourine",
+"kind": 5,
+"x": 1024,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "xylophone",
+"kind": 5,
+"x": 1280,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "pair-of-dancers",
+"kind": 5,
+"x": 1536,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "ribbon-dancer",
+"kind": 5,
+"x": 1792,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "puppet-on-strings",
+"kind": 5,
+"x": 2048,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "rocking-horse",
+"kind": 5,
+"x": 0,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "teddy-bear",
+"kind": 5,
+"x": 256,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "yo-yo",
+"kind": 5,
+"x": 512,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "toy-boat",
+"kind": 5,
+"x": 768,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "toy-train",
+"kind": 5,
+"x": 1024,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "building-blocks",
+"kind": 5,
+"x": 1280,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "jump-rope",
+"kind": 5,
+"x": 1536,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "pinwheel",
+"kind": 5,
+"x": 1792,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "handful-of-marbles",
+"kind": 5,
+"x": 2048,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "flying-car",
+"kind": 6,
+"x": 0,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "child-with-a-jetpack",
+"kind": 6,
+"x": 256,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "space-shuttle",
+"kind": 6,
+"x": 512,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "moon-base-dome",
+"kind": 6,
+"x": 768,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "friendly-alien",
+"kind": 6,
+"x": 1024,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "UFO-with-a-beam",
+"kind": 6,
+"x": 1280,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "robot-dog",
+"kind": 6,
+"x": 1536,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "hover-train",
+"kind": 6,
+"x": 1792,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "telescope-dish",
+"kind": 6,
+"x": 2048,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "submarine",
+"kind": 6,
+"x": 0,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "deep-sea-diver",
+"kind": 6,
+"x": 256,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "windmill-farm",
+"kind": 6,
+"x": 512,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "solar-sail-ship",
+"kind": 6,
+"x": 768,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "drone-carrying-a-parcel",
+"kind": 6,
+"x": 1024,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "giant-friendly-mech-robot",
+"kind": 6,
+"x": 1280,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "planet-with-rings-and",
+"kind": 6,
+"x": 1536,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "space-whale",
+"kind": 6,
+"x": 1792,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "portal-ring",
+"kind": 6,
+"x": 2048,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "rainbow-bridge",
+"kind": 7,
+"x": 0,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "cloud-castle",
+"kind": 7,
+"x": 256,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "shooting-stars",
+"kind": 7,
+"x": 512,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "northern-lights-as-ribbons",
+"kind": 7,
+"x": 768,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "ladder-to-the-moon",
+"kind": 7,
+"x": 1024,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "boat-sailing-the-sky",
+"kind": 7,
+"x": 1280,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "sun-and-moon-together",
+"kind": 7,
+"x": 1536,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "star-child",
+"kind": 7,
+"x": 1792,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "nest-of-stars",
+"kind": 7,
+"x": 2048,
+"y": 1024,
+"w": 256,
+"h": 256
+}
+]

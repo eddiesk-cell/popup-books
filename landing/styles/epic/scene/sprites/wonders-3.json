@@ -1,0 +1,362 @@
+[
+{
+"name": "wizard-hat",
+"kind": 2,
+"x": 0,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "magic-mirror",
+"kind": 2,
+"x": 256,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "enchanted-rose",
+"kind": 2,
+"x": 512,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "glass-slipper",
+"kind": 2,
+"x": 768,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "flying-carpet",
+"kind": 2,
+"x": 1024,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "genie-lamp-with-smoke",
+"kind": 2,
+"x": 1280,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "magic-beans",
+"kind": 2,
+"x": 1536,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "golden-goose",
+"kind": 2,
+"x": 1792,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "talking-tree-with-a",
+"kind": 2,
+"x": 2048,
+"y": 0,
+"w": 256,
+"h": 256
+},
+{
+"name": "cauldron",
+"kind": 3,
+"x": 0,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "broomstick",
+"kind": 3,
+"x": 256,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "sun-card-with-a",
+"kind": 3,
+"x": 512,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "floating-candles",
+"kind": 3,
+"x": 768,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "rune-stone-with-carved",
+"kind": 3,
+"x": 1024,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "fairy-ring-of-mushrooms",
+"kind": 3,
+"x": 1280,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "moon-phases-in-a",
+"kind": 3,
+"x": 1536,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "dream-catcher",
+"kind": 3,
+"x": 1792,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "crystal-ball",
+"kind": 3,
+"x": 2048,
+"y": 256,
+"w": 256,
+"h": 256
+},
+{
+"name": "river-spirit",
+"kind": 3,
+"x": 0,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "mountain-spirit",
+"kind": 3,
+"x": 256,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "house-spirit-under-a",
+"kind": 3,
+"x": 512,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "three-little-ghosts-holding",
+"kind": 3,
+"x": 768,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "shadow-puppet",
+"kind": 3,
+"x": 1024,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "smiling-pumpkin-lantern",
+"kind": 3,
+"x": 1280,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "paper-charm-with-swirls",
+"kind": 3,
+"x": 1536,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "cloud-spirit",
+"kind": 3,
+"x": 1792,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "fire-spirit",
+"kind": 3,
+"x": 2048,
+"y": 512,
+"w": 256,
+"h": 256
+},
+{
+"name": "elephant",
+"kind": 4,
+"x": 0,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "tiger",
+"kind": 4,
+"x": 256,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "crane-bird",
+"kind": 4,
+"x": 512,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "frog-on-a-lotus",
+"kind": 4,
+"x": 768,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "crocodile",
+"kind": 4,
+"x": 1024,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "peacock",
+"kind": 4,
+"x": 1280,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "rabbit",
+"kind": 4,
+"x": 1536,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "bear",
+"kind": 4,
+"x": 1792,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "snail",
+"kind": 4,
+"x": 2048,
+"y": 768,
+"w": 256,
+"h": 256
+},
+{
+"name": "seahorse",
+"kind": 4,
+"x": 0,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "octopus",
+"kind": 4,
+"x": 256,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "crab",
+"kind": 4,
+"x": 512,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "dolphin",
+"kind": 4,
+"x": 768,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "jellyfish",
+"kind": 4,
+"x": 1024,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "starfish",
+"kind": 4,
+"x": 1280,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "sea-turtle",
+"kind": 4,
+"x": 1536,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "penguin",
+"kind": 4,
+"x": 1792,
+"y": 1024,
+"w": 256,
+"h": 256
+},
+{
+"name": "parrot",
+"kind": 4,
+"x": 2048,
+"y": 1024,
+"w": 256,
+"h": 256
+}
+]
