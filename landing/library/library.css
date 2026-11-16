@@ -53,3 +53,4 @@ html, body { margin: 0; height: 100%; background: var(--ink); overflow: hidden; 
 #ringp:focus-visible { left: 14px; } #ringn:focus-visible { right: 14px; }
 #ringb:focus-visible { outline: none; }  /* the front-book control stays hidden: its focus shows on the caption under the book, which carries the title */
 body:has(#ringb:focus-visible) #cap { outline: 2px solid #fff; outline-offset: 3px; box-shadow: 0 0 18px rgba(240, 205, 124, .65); }
+.cap.go { pointer-events: auto; cursor: pointer; } .cap.go span { opacity: 1; justify-self: center; margin-top: 4px; padding: 6px 16px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #2a1a08; background: linear-gradient(#f6d77e, #d9a448); box-shadow: 0 2px 0 #8a6322; }  /* the shelf's gold Open the book button */  /* a ready book's caption opens it */

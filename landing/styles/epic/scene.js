@@ -125,21 +125,28 @@ const bake = (group, skip) => {  // the book frozen in its current pose: one mes
 
 export async function mount(canvas, { reducedMotion = false, clock = () => performance.now() / 1000 } = {}) {  // clock: the idle clock in seconds (a test may freeze it)
   const phone = Math.min(innerWidth, innerHeight) < 600 || matchMedia("(pointer: coarse)").matches;
+  const heroNew = new URLSearchParams(location.search).get("hero") === "new";  // a PILOT switch: ?hero=new shows the new hero book (hero-book.glb, assets/brand/book/) in place of the shelf's; without it nothing below differs from before
   try { [THREE, { GLTFLoader }, { MeshoptDecoder }, { RoomEnvironment }, { mergeGeometries }, { loadOpenBook }] = await Promise.all([import("three"), import("three/addons/loaders/GLTFLoader.js"), import("three/addons/meshopt_decoder.module.js"), import("three/addons/environments/RoomEnvironment.js"), import("three/addons/utils/BufferGeometryUtils.js"), import("../../../shelf/bookmodel.js")]); }
   catch (e) { console.warn("epic scene: a module failed to load, drawing the still instead:", e.message); return standIn(canvas); }
   { const t = document.createElement("canvas"), gl = t.getContext("webgl2") || t.getContext("webgl"); if (!gl) return standIn(canvas); gl.getExtension("WEBGL_lose_context")?.loseContext(); }  // no WebGL: the still, without three printing an error
-  let renderer; try { renderer = new THREE.WebGLRenderer({ canvas, antialias: !phone, powerPreference: "high-performance" }); } catch (e) { return standIn(canvas); }
+  let renderer; try { renderer = new THREE.WebGLRenderer({ canvas, antialias: heroNew || !phone, powerPreference: "high-performance" }); } catch (e) { return standIn(canvas); }
   try {
-    renderer.debug.checkShaderErrors = false; renderer.setPixelRatio(phone ? 1 : Math.min(devicePixelRatio || 1, 1.5)); renderer.setClearColor(0x09080e);
+    renderer.debug.checkShaderErrors = false; renderer.setPixelRatio(heroNew ? Math.min(devicePixelRatio || 1, phone ? 2 : 1.5) : phone ? 1 : Math.min(devicePixelRatio || 1, 1.5)); renderer.setClearColor(0x09080e);  // ?hero=new: the new book is sharp on a phone too (measured: renders/review/hero-book/round-2)
     renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = .86;
     const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(FOV, 1.6, 0.05, 60), rig = new THREE.Group(), env = new RoomEnvironment(), pm = new THREE.PMREMGenerator(renderer);
     env.traverse(o => o.material?.color?.multiply(new THREE.Color(1, .82, .62))); scene.environment = pm.fromScene(env, 0.04).texture; scene.environmentIntensity = 0.34; pm.dispose(); env.dispose?.();
+    let B, paper0, closedG, flatG, mixer = null;
+    if (heroNew) {  // one skinned book, two draws; its 1-second clip "Open" is the opening (time 0 closed .. 1 open flat), driven from the scroll in place()
+      const gl = await new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("./hero-book.glb", import.meta.url).href), book = gl.scene; let paperM; mixer = new THREE.AnimationMixer(book); mixer.clipAction(gl.animations[0]).play(); mixer.setTime(0);
+      book.traverse(o => { if (!o.isMesh) return; o.frustumCulled = false; for (const k of ["map", "normalMap", "roughnessMap", "aoMap"]) if (o.material[k]) o.material[k].anisotropy = 8; if (o.material.name === "paper") paperM = o.material; });  // a skinned mesh's bounds are its closed pose: never cull it
+      paperM.color.setScalar(.66); paper0 = paperM.color.clone(); B = { group: book, materials: { paper: paperM } }; closedG = flatG = book; rig.add(book); scene.add(rig); book.updateMatrixWorld(true);
+    } else {
     // The shelf's loader also fetches things this scene never shows; they are swapped for tiny stand-ins through a URL modifier (the title plate's picture, the closed book's glb, the leather's normal map: 300 KB saved). shortcut: re-point these if loadOpenBook's file names change
     const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder), PNG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==", FLAT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNoaPgPAAODAgAApfuJAAAAAElFTkSuQmCC";
     const js = new TextEncoder().encode('{"asset":{"version":"2.0"},"scenes":[{}],"scene":0}   '), glb = new Uint8Array(20 + js.length), dv = new DataView(glb.buffer); dv.setUint32(0, 0x46546c67, true); dv.setUint32(4, 2, true); dv.setUint32(8, glb.length, true); dv.setUint32(12, js.length, true); dv.setUint32(16, 0x4e4f534a, true); glb.set(js, 20);
     const EMPTY = URL.createObjectURL(new Blob([glb]));
     THREE.DefaultLoadingManager.setURLModifier(u => /books\/mali\/plate\.webp$/.test(u) ? PNG : /leather-normal\.webp$/.test(u) ? FLAT : /shelf\/book\.glb$/.test(u) ? EMPTY : u);
-    const B = await loadOpenBook(THREE, loader, "mali", SHELF).finally(() => { THREE.DefaultLoadingManager.setURLModifier(undefined); URL.revokeObjectURL(EMPTY); });  // the closed book needs no wonders: the sprite atlas is fetched after the first frame
+    B = await loadOpenBook(THREE, loader, "mali", SHELF).finally(() => { THREE.DefaultLoadingManager.setURLModifier(undefined); URL.revokeObjectURL(EMPTY); });  // the closed book needs no wonders: the sprite atlas is fetched after the first frame
     // shortcut: no cover art of its own yet. ONE emblem (an eight-pointed star in a double ring, gold on the leather) is the picture window's colour map and is tooled small into the title's place on the cover's three maps (colour, normal, metal mask), in place of the title; replace when the brand cover is made
     Object.assign(B.plate.m.material, { map: makeEmblemMap(THREE), color: new THREE.Color(0xffffff), roughness: .55, clearcoat: .15, emissiveIntensity: .35, needsUpdate: true });
     [B.materials.cover.map, B.materials.cover.normalMap, B.materials.cover.aoMap].forEach((t, ti) => { const im = t.image, cv = document.createElement("canvas"), x = cv.getContext("2d", { willReadFrequently: true }); cv.width = im.width; cv.height = im.height; x.drawImage(im, 0, 0);
@@ -147,12 +154,13 @@ export async function mount(canvas, { reducedMotion = false, clock = () => perfo
       const q = x.getImageData(172 * k, 592 * k, 334 * k, 122 * k), z = q.data; for (let i = 0; i < z.length; i += 4) { const n = (Math.random() - .5) * 4; z[i] = m[0] + n; z[i + 1] = m[1] + n; z[i + 2] = m[2] + n; z[i + 3] = m[3]; } x.putImageData(q, 172 * k, 592 * k);
       if (ti !== 1) { drawEmblem(x, 339 * k, 653 * k, 40 * k, ti ? "orm" : "map"); x.strokeStyle = ti ? "rgb(255,90,255)" : "#e0b45e"; x.lineWidth = 1.6 * k; x.beginPath(); x.moveTo(186 * k, 653 * k); x.lineTo(292 * k, 653 * k); x.moveTo(386 * k, 653 * k); x.lineTo(492 * k, 653 * k); x.stroke(); }
       t.image = cv; t.needsUpdate = true; });
-    B.materials.paper.color.set(0xf1efe5).multiplyScalar(.38); const paper0 = B.materials.paper.color.clone();  // the reader's paper, dimmed by the night
+    B.materials.paper.color.set(0xf1efe5).multiplyScalar(.38); paper0 = B.materials.paper.color.clone();  // the reader's paper, dimmed by the night
     { const g = B.materials.gilt; g.map = null; g.color.set(0xb88a3e); g.normalScale.set(.25, .25); g.roughness = .5; g.needsUpdate = true; }  // the page edges: smooth gilt, not the streaky texture
     B.materials.ribbon.color.set(0x7a1420); B.materials.band.color.set(0x7a1420);  // midnight and gold: a deep crimson ribbon, not pink
     B.group.traverse(o => { o.castShadow = o.receiveShadow = false; }); rig.add(B.group); scene.add(rig); const mc = B.group.getObjectByName("spine_mid_caps"); mc.visible = false;
-    B.left.rotation.z = B.closedAngle; B.strap.rotation.z = 0; const closedG = bake(B.group); B.left.rotation.z = 0; B.strap.rotation.z = B.strapOpen; const flatG = bake(B.group, B.plate.m.material); rig.add(closedG, flatG);  // the plate faces down when open flat: not drawn then  // the resting poses, one mesh per material
-    const cb = new THREE.Box3(); closedG.children.forEach(m => { m.geometry.computeBoundingBox(); cb.union(m.geometry.boundingBox); }); const c0 = cb.getCenter(new THREE.Vector3()), ctr = new THREE.Vector3();
+    B.left.rotation.z = B.closedAngle; B.strap.rotation.z = 0; closedG = bake(B.group); B.left.rotation.z = 0; B.strap.rotation.z = B.strapOpen; flatG = bake(B.group, B.plate.m.material); rig.add(closedG, flatG);  // the plate faces down when open flat: not drawn then  // the resting poses, one mesh per material
+    }
+    const cb = new THREE.Box3(); if (heroNew) closedG.traverse(m => { if (m.isSkinnedMesh) { m.skeleton.update(); m.computeBoundingBox(); cb.union(m.boundingBox); } }); else closedG.children.forEach(m => { m.geometry.computeBoundingBox(); cb.union(m.geometry.boundingBox); }); const c0 = cb.getCenter(new THREE.Vector3()), ctr = new THREE.Vector3();
     const key = new THREE.SpotLight(0xffbe88, 95, 0, 0.9, 0.8, 2), rim = new THREE.DirectionalLight(0xffc870, 0.6), pageL = new THREE.PointLight(0xffd9a0, 0, 0, 2), glint = new THREE.PointLight(0xfff0cc, .5, 3, 2), fill = new THREE.HemisphereLight(0x5f78b8, 0x20140c, 0.3);
     key.position.set(-2.2, 3.4, 2.6); rim.position.set(2, 1.4, -3); pageL.position.set(0, 1.2, .1); scene.add(key, key.target, rim, pageL, glint, fill);
 
@@ -240,9 +248,12 @@ export async function mount(canvas, { reducedMotion = false, clock = () => perfo
       if (p >= .2 && !pieces.length) { waitT ??= t; if ((sprites.settled && !sprites.ok) || t - waitT >= 8) { ownPieces(); BEATS.forEach((_, b) => refill(b)); writeD(); } } else if (pieces.length) waitT = null;  // the atlas is late: the book waits, breathing, and the burst fires the moment it is in (after 8 s the built-in shapes are drawn in full instead)
       const e1 = ease((p - .08) / .09), e2 = ease((p - COVER_AT) / .08), tt = cl((aspect - .7) / 1.2), x = cl((p - .2) / .03, 0, 9), settle = p > .2 ? .03 * Math.exp(-5 * x) * Math.abs(Math.sin(11 * x)) : 0, calm = reducedMotion ? 0 : 1, st = p < .09 ? 0 : p < .25 ? 1 : 2;
       const age0 = U.uB.value[0].x, k0 = calm * (age0 >= 0 && age0 < 9 && S[0].on ? Math.exp(-age0 * 2.6) * (1 - Math.exp(-age0 * 30)) : 0), waiting = p >= .2 && !pieces.length, breath = waiting ? (calm ? .7 + .17 * Math.sin(t * 2.4) + .13 * Math.sin(t * 3.7 + 1) : .8) : calm * (age0 < 0 && age0 > -.45 && S[0].on ? ease(1 + age0 / .45) : 0);  // the kick after the detonation; the held breath before it
-      const dC = Math.max(.65 / (lerp(.7, .5, tt) * tV * aspect), .675 / (.6 * tV)), dO = Math.max(1.15 / (lerp(.92, .58, tt) * tV * aspect), .45 / (.3 * tV)), D = lerp(dC, dO, e1) * (1 + .04 * k0 - .03 * breath), ele = lerp(60, 22, e1) * rad;
+      const dC = Math.max((heroNew ? .68 : .65) / (lerp(.7, .5, tt) * tV * aspect), .675 / (.6 * tV)), dO = Math.max((heroNew ? 1.33 : 1.15) / (lerp(.92, .58, tt) * tV * aspect), .45 / (.3 * tV)), D = lerp(dC, dO, e1) * (1 + .04 * k0 - .03 * breath), ele = lerp(60, 22, e1) * rad;
+      if (heroNew) { mixer.setTime(Math.min(.9999, p < COVER_AT ? .1 * cl((p - .095) / (COVER_AT - .095)) : .1 + .9 * cl((p - COVER_AT) / .08))); closedG.position.x = -c0.x * (1 - e2); }  // the clasp unlatches up to COVER_AT, then the cover opens over the same stretch of scroll as before
+      else {
       closedG.visible = st === 0; B.group.visible = st === 1; flatG.visible = st === 2; closedG.position.x = -.5; B.group.position.x = -.5 * (1 - e2);
       if (st === 1) { B.left.rotation.z = B.closedAngle * (1 - e2) - settle; B.strap.rotation.z = B.strapOpen * ease((p - .095) / .035); }
+      }
       rig.rotation.set(-pc[1] * .05, lerp(-.1, 0, e1) + pc[0] * .1 + Math.sin(t * .3) * .02 * calm, 0); rig.position.y = Math.sin(t * .9) * .006 * calm - .02 * breath * .3; rig.scale.setScalar(1 - .015 * calm * (age0 >= 0 && age0 < 2 && S[0].on ? Math.exp(-age0 * 5) * Math.cos(age0 * 9) : 0)); rig.updateMatrixWorld(true);  // the book dips as it breathes in, recoils and springs back
       cam.position.set(pc[0] * .12 * D / 4, Math.sin(ele) * D + pc[1] * .05, Math.cos(ele) * D); cam.lookAt(0, 0, 0); cam.updateProjectionMatrix(); cam.updateMatrixWorld();
       let cx = 0, cy = 0; if (e1 < 1) { cr.copy(c0); closedG.localToWorld(cr).project(cam); cx = cr.x; cy = cr.y - (aspect < 1 ? -.1 : 0); }  // the closed book is centred on the frame (a little low on a phone), wherever its box sits
@@ -253,7 +264,7 @@ export async function mount(canvas, { reducedMotion = false, clock = () => perfo
       GI.uF.value.set(flash, 4.5 * ex(fa / .35) * fs, 6 * ex(fa / .5) * fs + .01, fa < .6 ? .7 * fs * (1 - fa / .6) : 0);
       GI.uPil.value.set(lerp(.05, 1, ex(fa / .18)), lerp(1, .5, ease(fa / 1.6)) * (1 + .5 * fs * Math.exp(-fa * 5)), breath, 0);
       const pg = calm ? (S[0].on && age0 >= 0 ? ease(age0 / 1.5) : 0) : (S[0].on ? 1 : 0); B.materials.paper.color.setRGB(paper0.r * (1 - .42 * pg), paper0.g * (1 - .42 * pg) * (1 - .04 * pg), paper0.b * (1 - .42 * pg) * (1 - .12 * pg));  // after the burst the pages ease down, warm, so the wonders lead
-      GI.uPil.value.w = pg; pageL.intensity = 1.0 * gl * (1 + breath * .4) * (1 - .4 * pg); GI.uI.value.set(gl * (1 + .08 * Math.sin(t * .9) * calm) * (.7 + 1.3 * fs * Math.exp(-fa * 3.5)) * (1 - .5 * breath), (ease((p - .15) / .07) * .2 + .03 * Math.sin(t * 1.3) * calm * ease((p - .15) / .07)) * (1 - .4 * pg), .14 + .03 * Math.sin(t * .8) * calm + .3 * gl);
+      GI.uPil.value.w = heroNew ? 0 : pg; pageL.intensity = 1.0 * gl * (1 + breath * .4) * (1 - .4 * pg); GI.uI.value.set(gl * (1 + .08 * Math.sin(t * .9) * calm) * (.7 + 1.3 * fs * Math.exp(-fa * 3.5)) * (1 - .5 * breath), (ease((p - .15) / .07) * .2 + .03 * Math.sin(t * 1.3) * calm * ease((p - .15) / .07)) * (1 - .4 * pg), .14 + .03 * Math.sin(t * .8) * calm + .3 * gl);
       U.uDim.value = 1 - .33 * breath;
       key.position.x = -2.2 + pc[0] * .8; glint.position.set(lerp(-.2, .7, (t * .06) % 1) * (1 - e2) + (-1.6 + 3.2 * ((t * .05) % 1)) * e2, lerp(.9, .7, e2), lerp(.35, .55, e2));  // a glint travels along the tooling
       U.uP.value = p; U.uT.value = t; U.uD.value = D; U.uSz.value = cl(aspect / 1.3, .6, 1) ** .7; U.uPtr.value.set(pc[0], pc[1]); U.uAsp.value = aspect;

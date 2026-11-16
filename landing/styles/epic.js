@@ -84,7 +84,7 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
   heroFix = document.createElement("div"); heroFix.className = "blk hero-fix"; heroFix.append($("#hero .head")); $("#hero").append(heroFix);
   $$(".plaque").forEach(p => p.classList.add("blk"));
   $("#hero").classList.add("in", "now"); $$("#hero .foil").forEach(h => h.classList.add("in", "vis"));
-  $$("main section").forEach(s => { let k = 0; s.querySelectorAll(".line,.sub,.card,.chips,.keep,.foot,.head p").forEach(e => e.style.setProperty("--k", k++)); });
+  $$("main section").forEach(s => { let k = 0; s.querySelectorAll(".line,.sub,.card,.chips,.keep,.foot,.head p,.plaque > .btn").forEach(e => e.style.setProperty("--k", k++)); });
   // buttons that do nothing yet keep their plain name (owner: no "soon" on them) and look quieter; a tap shows a short note under them (.btn.soon in epic.css)
   $$(".btn[aria-disabled=true]").forEach(b => { b.dataset.soon = T.nav.soon; b.onclick = () => { b.classList.add("soon"); clearTimeout(b.__t); b.__t = setTimeout(() => b.classList.remove("soon"), 1800); }; });
   const anchors = ["#wake .plaque", "#worlds .plaque", "#doors .blk", "#fly .plaque", "#lang .blk", "#parents .blk", "#plans .blk", "#close .plaque"].map(q => $(q));

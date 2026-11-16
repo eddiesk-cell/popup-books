@@ -18,18 +18,18 @@ const store = { get: k => { try { return localStorage.getItem(k); } catch { retu
 // ---- words (menu only; Lao, Thai, Chinese, Japanese, Korean are drafts for a native read)
 const NAMES = [["en", "English"], ["lo", "ລາວ"], ["th", "ไทย"], ["zh", "中文"], ["ja", "日本語"], ["ko", "한국어"]], CODES = NAMES.map(n => n[0]);
 const TR = {
-  en: ["Menu", "Settings", "Language", "Account", "Sign in", "Sign up", "Opening soon", "Watch the intro", "Skip", "Home", "This tale is still being written", "Drag to look around", "Tap to open", "Close", "Drag to find the doors", "Coming soon", "Sound", "on", "off", "Opening the library...", "Previous book", "Next book", "Tales still being written", "The Grand Library: drag or move the mouse to look around, arrow keys turn, Enter walks on", "Wonder of Saya Tales, back to the first page"],
-  lo: ["ເມນູ", "ຕັ້ງຄ່າ", "ພາສາ", "ບັນຊີ", "ເຂົ້າສູ່ລະບົບ", "ສະໝັກ", "ເປີດໄວໆນີ້", "ເບິ່ງວິດີໂອນຳ", "ຂ້າມ", "ໜ້າຫຼັກ", "ນິທານເລື່ອງນີ້ກຳລັງຖືກຂຽນຢູ່", "ລາກເພື່ອເບິ່ງອ້ອມໆ", "ແຕະເພື່ອເປີດ", "ປິດ", "ລາກເພື່ອຊອກຫາປະຕູ", "ມາໄວໆນີ້", "ສຽງ", "ເປີດ", "ປິດ", "ກຳລັງເປີດຫໍສະໝຸດ...", "ປຶ້ມກ່ອນໜ້າ", "ປຶ້ມຖັດໄປ", "ນິທານທີ່ກຳລັງຖືກຂຽນ", "ຫໍສະໝຸດໃຫຍ່: ລາກ ຫຼື ຍ້າຍເມົ້າສ໌ເພື່ອເບິ່ງອ້ອມໆ, ປຸ່ມລູກສອນເພື່ອຫັນ, Enter ເພື່ອເດີນໄປ", "Wonder of Saya Tales, ກັບໄປໜ້າທຳອິດ"],
-  th: ["เมนู", "ตั้งค่า", "ภาษา", "บัญชี", "เข้าสู่ระบบ", "สมัคร", "เร็ว ๆ นี้", "ดูวิดีโอเปิด", "ข้าม", "หน้าแรก", "นิทานเรื่องนี้กำลังถูกเขียนอยู่", "ลากเพื่อมองไปรอบ ๆ", "แตะเพื่อเปิด", "ปิด", "ลากเพื่อหาประตู", "เร็ว ๆ นี้", "เสียง", "เปิด", "ปิด", "กำลังเปิดห้องสมุด...", "เล่มก่อนหน้า", "เล่มถัดไป", "นิทานที่กำลังเขียน", "ห้องสมุดใหญ่: ลากหรือเลื่อนเมาส์เพื่อมองรอบ ๆ ปุ่มลูกศรเพื่อหัน Enter เพื่อเดินต่อ", "Wonder of Saya Tales, กลับไปหน้าแรก"],
-  zh: ["菜单", "设置", "语言", "账户", "登录", "注册", "即将开放", "观看开场短片", "跳过", "回到书架", "这个故事还在写作中", "拖动四处看看", "点按打开", "关闭", "拖动寻找传送门", "即将推出", "声音", "开", "关", "正在打开图书馆…", "上一本", "下一本", "还在写作中的故事", "大图书馆：拖动或移动鼠标四处看，方向键转向，回车键前进", "Wonder of Saya Tales，回到首页"],
-  ja: ["メニュー", "設定", "言語", "アカウント", "ログイン", "新規登録", "もうすぐ公開", "イントロを見る", "スキップ", "ホーム", "このおはなしは まだ かきかけです", "ドラッグして見まわそう", "タップでひらく", "とじる", "ドラッグして とびらを さがそう", "もうすぐ会えるよ", "おと", "オン", "オフ", "としょかんを ひらいています…", "まえの ほん", "つぎの ほん", "かきかけの おはなし", "おおきな としょかん：ドラッグか マウスで 見まわす、矢印キーで むきを かえる、Enterで すすむ", "Wonder of Saya Tales、さいしょの ページへ もどる"],
-  ko: ["메뉴", "설정", "언어", "계정", "로그인", "가입", "곧 열려요", "인트로 보기", "건너뛰기", "홈", "이 이야기는 아직 쓰이고 있어요", "끌어서 둘러보세요", "눌러서 열기", "닫기", "끌어서 문을 찾아보세요", "곧 만나요", "소리", "켜짐", "꺼짐", "도서관을 여는 중…", "이전 책", "다음 책", "아직 쓰이는 이야기", "큰 도서관: 끌거나 마우스를 움직여 둘러보고, 방향키로 돌리고, Enter로 걸어가요", "Wonder of Saya Tales, 첫 페이지로 돌아가기"],
+  en: ["Menu", "Settings", "Language", "Account", "Sign in", "Sign up", "Opening soon", "Watch the intro", "Skip", "Home", "This tale is still being written", "Drag to look around", "Open the book", "Close", "Drag to find the doors", "Coming soon", "Sound", "on", "off", "Opening the library...", "Previous book", "Next book", "Tales still being written", "The Grand Library: drag or move the mouse to look around, arrow keys turn, Enter walks on", "Wonder of Saya Tales, back to the first page"],
+  lo: ["ເມນູ", "ຕັ້ງຄ່າ", "ພາສາ", "ບັນຊີ", "ເຂົ້າສູ່ລະບົບ", "ສະໝັກ", "ເປີດໄວໆນີ້", "ເບິ່ງວິດີໂອນຳ", "ຂ້າມ", "ໜ້າຫຼັກ", "ນິທານເລື່ອງນີ້ກຳລັງຖືກຂຽນຢູ່", "ລາກເພື່ອເບິ່ງອ້ອມໆ", "ເປີດປຶ້ມ", "ປິດ", "ລາກເພື່ອຊອກຫາປະຕູ", "ມາໄວໆນີ້", "ສຽງ", "ເປີດ", "ປິດ", "ກຳລັງເປີດຫໍສະໝຸດ...", "ປຶ້ມກ່ອນໜ້າ", "ປຶ້ມຖັດໄປ", "ນິທານທີ່ກຳລັງຖືກຂຽນ", "ຫໍສະໝຸດໃຫຍ່: ລາກ ຫຼື ຍ້າຍເມົ້າສ໌ເພື່ອເບິ່ງອ້ອມໆ, ປຸ່ມລູກສອນເພື່ອຫັນ, Enter ເພື່ອເດີນໄປ", "Wonder of Saya Tales, ກັບໄປໜ້າທຳອິດ"],
+  th: ["เมนู", "ตั้งค่า", "ภาษา", "บัญชี", "เข้าสู่ระบบ", "สมัคร", "เร็ว ๆ นี้", "ดูวิดีโอเปิด", "ข้าม", "หน้าแรก", "นิทานเรื่องนี้กำลังถูกเขียนอยู่", "ลากเพื่อมองไปรอบ ๆ", "เปิดหนังสือ", "ปิด", "ลากเพื่อหาประตู", "เร็ว ๆ นี้", "เสียง", "เปิด", "ปิด", "กำลังเปิดห้องสมุด...", "เล่มก่อนหน้า", "เล่มถัดไป", "นิทานที่กำลังเขียน", "ห้องสมุดใหญ่: ลากหรือเลื่อนเมาส์เพื่อมองรอบ ๆ ปุ่มลูกศรเพื่อหัน Enter เพื่อเดินต่อ", "Wonder of Saya Tales, กลับไปหน้าแรก"],
+  zh: ["菜单", "设置", "语言", "账户", "登录", "注册", "即将开放", "观看开场短片", "跳过", "回到书架", "这个故事还在写作中", "拖动四处看看", "打开这本书", "关闭", "拖动寻找传送门", "即将推出", "声音", "开", "关", "正在打开图书馆…", "上一本", "下一本", "还在写作中的故事", "大图书馆：拖动或移动鼠标四处看，方向键转向，回车键前进", "Wonder of Saya Tales，回到首页"],
+  ja: ["メニュー", "設定", "言語", "アカウント", "ログイン", "新規登録", "もうすぐ公開", "イントロを見る", "スキップ", "ホーム", "このおはなしは まだ かきかけです", "ドラッグして見まわそう", "ほんを ひらく", "とじる", "ドラッグして とびらを さがそう", "もうすぐ会えるよ", "おと", "オン", "オフ", "としょかんを ひらいています…", "まえの ほん", "つぎの ほん", "かきかけの おはなし", "おおきな としょかん：ドラッグか マウスで 見まわす、矢印キーで むきを かえる、Enterで すすむ", "Wonder of Saya Tales、さいしょの ページへ もどる"],
+  ko: ["메뉴", "설정", "언어", "계정", "로그인", "가입", "곧 열려요", "인트로 보기", "건너뛰기", "홈", "이 이야기는 아직 쓰이고 있어요", "끌어서 둘러보세요", "책 펴기", "닫기", "끌어서 문을 찾아보세요", "곧 만나요", "소리", "켜짐", "꺼짐", "도서관을 여는 중…", "이전 책", "다음 책", "아직 쓰이는 이야기", "큰 도서관: 끌거나 마우스를 움직여 둘러보고, 방향키로 돌리고, Enter로 걸어가요", "Wonder of Saya Tales, 첫 페이지로 돌아가기"],
 };
 const KEYS = ["menu", "settings", "language", "account", "signin", "signup", "soon", "intro", "skip", "home", "still", "hint", "tapopen", "close", "doors", "coming", "snd", "on", "off", "loading", "prev", "next", "stills", "stage", "logo"];
 let lang = qs.get("lang"); if (!CODES.includes(lang)) lang = store.get("wst-lang");  // the first page's key
 if (!CODES.includes(lang)) lang = (navigator.languages || ["en"]).map(c => CODES.find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en";
 const words = () => Object.fromEntries(KEYS.map((k, i) => [k, TR[lang][i]]));
-let W = words(), books = null, homeWalls = null; const shelfBtns = [], setShown = [], ZERO = new THREE.Vector3();
+let W = words(), books = null, homeWalls = null, behindDoor = null; const shelfBtns = [], setShown = [], ZERO = new THREE.Vector3();
 let sndOff = store.get("popup-sound") === "off";  // kept in memory too: with storage blocked, off still holds until the page closes
 const sndOn = () => !sndOff;
 const sndLabel = () => { const b = $("#snd"); b.textContent = `${W.snd}: ${sndOn() ? W.on : W.off}`; };
@@ -85,6 +85,7 @@ const fogAt = y => new THREE.Color(...((y > 25 ? FC.up : y < -10 ? FC.down : FC.
 const hash = str => [...str].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7), rnd = (a, b) => { const x = Math.sin(a * 127.1 + b * 311.7) * 43758.5; return x - Math.floor(x); };
 const vary = (id, k, c) => { const h = hash(id), r = j => rnd(h + j, k); c.r *= .95 + r(1) * .1; c.g *= .96 + r(2) * .08; c.b *= .95 + r(3) * .1; return { mirror: r(4) < .5, dy: r(5) - .5, w: .94 + r(6) * .12, yaw: (r(7) - .5) * .1 }; };
 // a layer is a card: tint multiplies, fog blends toward the well's colour by height (+ fogStep per copy away), repeatY n = n copies centred on p.y spaced spacingY, billboard "y" turns it to face the visitor
+room.layers = room.layers.filter(l => !/^bal_(left|right)$/.test(l.id));  // the home balcony's painted side railings were a torn cut-out (rails and balusters missing, white scraps): built in 3D below instead
 for (const L of room.layers) {
   const flat = Math.abs(Math.abs(L.rot?.[0] ?? 0) - Math.PI / 2) < .01, side = flat ? THREE.FrontSide : THREE.DoubleSide;  // floors and walkways: seen from below (looking up from a lower room) they vanish instead of hanging as dark slabs in the light
   const url = phoneArt && L.phoneImg ? L.phoneImg : L.img, n = L.repeatY ?? 1, half = n >> 1, e = tex(url), add = L.blend === "add", tint = new THREE.Color(...(L.tint ?? [1, 1, 1]));
@@ -143,6 +144,14 @@ scene.add(books.mesh);  // opaque: drawn first, the cards depth-test against it
 if (!c3) { const ledgeMesh = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial({ color: 0x5a3a20 }), room.ledges?.length ?? 1);
 (room.ledges ?? []).forEach((l, i) => ledgeMesh.setMatrixAt(i, new THREE.Matrix4().compose(new THREE.Vector3(...l.p), new THREE.Quaternion(), new THREE.Vector3(...l.size))));
 scene.add(ledgeMesh); }
+// the balcony's two side railings, built (owner 2026-11-16, "both sides have broken images"): turned balusters, a top and a foot rail and posts with gold finials along both open sides of the floor; opaque, so the cards behind stop at them
+{ const fl = room.layers.find(l => l.id === "floor"); if (fl) {
+  const x = fl.size[0] / 2, z0 = fl.p[2] - fl.size[1] / 2 + 1.1, z1 = fl.p[2] + fl.size[1] / 2 - .1, n = Math.round((z1 - z0) / .2), wood = new THREE.MeshLambertMaterial({ color: 0x4a2c16 }), gold = new THREE.MeshLambertMaterial({ color: 0xc9a046, emissive: 0x2a1c06 });  // z0: clear of the side doors
+  const lathe = new THREE.LatheGeometry([[.05, 0], [.05, .06], [.028, .1], [.046, .3], [.022, .5], [.036, .62], [.024, .72], [.04, .76], [.04, .8]].map(([r, y]) => new THREE.Vector2(r, y)), 10), bal = new THREE.InstancedMesh(lathe, wood, 2 * n), M = new THREE.Matrix4();
+  let i = 0; for (const sx of [-1, 1]) for (let k = 0; k < n; k++) bal.setMatrixAt(i++, M.makeTranslation(sx * x, fl.p[1], z0 + (k + .5) * (z1 - z0) / n));
+  bal.name = "rail"; scene.add(bal);
+  for (const sx of [-1, 1]) { for (const [y, h, w] of [[.83, .07, .12], [.03, .06, .1]]) { const r = new THREE.Mesh(new THREE.BoxGeometry(w, h, z1 - z0), wood); r.position.set(sx * x, fl.p[1] + y, (z0 + z1) / 2); r.name = "rail"; scene.add(r); }
+    for (const z of [z0, (z0 + z1) / 2, z1]) { const q = new THREE.Mesh(new THREE.BoxGeometry(.15, .92, .15), wood), f = new THREE.Mesh(new THREE.SphereGeometry(.075, 12, 8), gold); q.position.set(sx * x, fl.p[1] + .46, z); f.position.set(sx * x, fl.p[1] + 1, z); q.name = f.name = "rail"; scene.add(q, f); } } } }
 
 // faint gold motes lingering in the air (the sunray dust lives in the viewer's effects)
 const NM = phone ? 50 : 120, mp = new Float32Array(NM * 3), mv = Array.from({ length: NM }, () => Math.random() * 6.28);
@@ -189,7 +198,8 @@ dust.frustumCulled = false; dust.renderOrder = 29; scene.add(dust);
 const dimMesh = room.cases.map(c => { const bd = c.bounds, m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: shadowT, transparent: true, opacity: 0, depthWrite: false, fog: false })); if (bd) { m.position.set((bd.min[0] + bd.max[0]) / 2, (bd.min[1] + bd.max[1]) / 2, bd.max[2] + .5); m.scale.set((bd.max[0] - bd.min[0]) * 1.9, (bd.max[1] - bd.min[1]) * 1.5, 1); } m.renderOrder = 31; scene.add(m); return m; });
 const ringName = () => { const b = books.bookAt(ring.frontGlobal); $("#ringb").setAttribute("aria-label", b ? b.title.en + (lang !== "en" && b.title[lang] ? " — " + b.title[lang] : "") : W.still); };
 $("#ringb").__i = 0; $("#ringb").onclick = () => { if (!pick) startPick(); };  // __i set: the ring's Enter handler treats this button as the front book itself
-let capFor = -2; function capText(force) { if (!ring.isOpen || ring.busy) { if (!ring.isOpen) capFor = -2; return; } const g = ring.frontGlobal; if (g === capFor && !force) return; capFor = g; ringName(); const c = $("#cap"), b = books.bookAt(g); c.hidden = false; c.textContent = ""; const t = document.createElement("b"), n = document.createElement("span"); if (b) t.append(titleNodes(b.title.en, lang !== "en" ? b.title[lang] ?? "" : "", lang)); else t.textContent = W.still; n.textContent = b ? (b.status === "making" ? W.coming : W.tapopen) : ""; c.append(t, n); }
+let capFor = -2; function capText(force) { if (!ring.isOpen || ring.busy) { if (!ring.isOpen) capFor = -2; return; } const g = ring.frontGlobal; if (g === capFor && !force) return; capFor = g; ringName(); const c = $("#cap"), b = books.bookAt(g); c.hidden = false; c.textContent = ""; const t = document.createElement("b"), n = document.createElement("span"); if (b) t.append(titleNodes(b.title.en, lang !== "en" ? b.title[lang] ?? "" : "", lang)); else t.textContent = W.still; n.textContent = b ? (b.status === "making" ? W.coming : W.tapopen) : ""; c.append(t, n); c.classList.toggle("go", !!b && b.status !== "making"); }  /* a ready book: the caption is its Open the book button */
+$("#cap").onclick = () => { if ($("#cap").classList.contains("go") && ring.isOpen && !ring.busy && !pick) startPick(); };
 $("#ringp").onclick = () => ring.step(-1); $("#ringn").onclick = () => ring.step(1);
 const carryVeil = $("#carry"); let pick = null; $("#ringx").onclick = () => closeRing();
 function startPick() { const g = ring.pick(); if (g < 0) return; if (books.isReal(g)) books.dim(g); if (!books.isReal(g)) { ring.cancelPick?.(); capFor = -2; capText(true); return; } const b = books.bookAt(g); if (b.status === "making") { ring.cancelPick?.(); capFor = -2; capText(true); say(W.coming, b.title.en); return; }  // a book still being made: the ring wakes, a soft note, the reader never opens
@@ -204,7 +214,8 @@ const stCam = s => { const c = innerWidth / innerHeight < .85 && s.id === "home"
   const half = 2.3, dist = c.p[2] - .3, fov = Math.min(110, Math.max(40, 2 * Math.atan(half / (dist * (innerWidth / innerHeight))) * 180 / Math.PI)); return { ...c, fov, look: [c.look[0], c.p[1], c.look[2]] }; };
 const sP = s => new THREE.Vector3(...stCam(s).p), sFov = s => stCam(s).fov ?? 60, sYaw = s => { const c = stCam(s); return Math.atan2(c.look[0] - c.p[0], -(c.look[2] - c.p[2])); }, sPitch = s => { const c = stCam(s); return Math.atan2(c.look[1] - c.p[1], Math.hypot(c.look[0] - c.p[0], c.look[2] - c.p[2])); };
 const wrap = a => Math.atan2(Math.sin(a), Math.cos(a)), TAU = Math.PI * 2;
-const lim = () => st(cur).look ?? {}, cP = p => Math.max(lim().pitchMin ?? -1.4, Math.min(lim().pitchMax ?? 1.4, p)), cY = y => { const l = lim(); return l.yawMax - l.yawMin < 6.2 ? Math.max(l.yawMin, Math.min(l.yawMax, y)) : wrap(y); };
+const lim = () => { const l = st(cur).look ?? {}; return cur === home().id && innerWidth / innerHeight < .85 ? { ...l, yawMin: -1.75, yawMax: 1.75 } : l; },  // an upright phone at home stands close to the entrance: the turn stops before the door fills the screen
+  cP = p => Math.max(lim().pitchMin ?? -1.4, Math.min(lim().pitchMax ?? 1.4, p)), cY = y => { const l = lim(); return l.yawMax - l.yawMin < 6.2 ? Math.max(l.yawMin, Math.min(l.yawMax, y)) : wrap(y); };
 let cur = home().id, yaw = sYaw(home()), pitch = sPitch(home()), vI = [0, 0], yawOff = 0, pitchOff = 0, pe = [0, 0], walk = null, camPos = sP(home()), fov = sFov(home());
 const size = () => { renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); if (!walk) { camPos = sP(st(cur)); fov = sFov(st(cur)); } arrowsFor(); }; addEventListener("resize", size);
 
@@ -229,7 +240,8 @@ function onStation() { living?.setStation(cur);
   const near = id => id === cur || LINKS.some(l => l.from === cur && l.to === id && !l.portal);  // a platform's 3D cases show only where you stand or can walk to: from a lower room the others read as dark bars across the light
   if (c3) { c3.group.visible = near(grown.setStation[0]); c3.clones.forEach((c, j) => { c.visible = near(grown.setStation[j + 1]); }); }
   grown.setStation.forEach((sid, k) => { const on = near(sid); if (setShown[k] === on) return; setShown[k] = on; for (let i = k * 48; i < k * 48 + 48; i++) if (books.xf[i]) on ? books.home(i) : books.set(i, books.xf[i].p, books.xf[i].q, ZERO); });  // and so do its books (scaled to nothing), never floating without their cases
-  homeWalls ??= scene.children.filter(o => /^(wall_\d|doorwall_)/.test(o.name)); for (const o of homeWalls) o.visible = cur !== "wonder";  // the home walls' repeats end in the open well: from the Wonder Hall, 150 m below, their ends would hang in the light
+  homeWalls ??= scene.children.filter(o => /^(wall_\d|doorwall_)/.test(o.name)); for (const o of homeWalls) o.visible = cur !== "wonder";
+  behindDoor ??= scene.children.filter(o => /^(bridge|arm)_\d+$/.test(o.name) && o.position.z > (room.layers.find(l => l.id === "facade")?.p[2] ?? 9)); for (const o of behindDoor) o.visible = cur !== "home";  // the well's bridges and lamp arms beyond the entrance wall: from the balcony they were drawn over the door (no depth on the cards), hanging in the air  // the home walls' repeats end in the open well: from the Wonder Hall, 150 m below, their ends would hang in the light
   const k0 = grown.setStation.indexOf(cur); if (k0 >= 0) { const first = [...Array(48).keys()].map(i => k0 * 48 + i).find(i => books.isReal(i)); if (first != null) (window.requestIdleCallback ?? (f => setTimeout(f, 1500)))(() => !ring.isOpen && front.prewarm(first)); } for (const p of portals) p.group.visible = p.frame.userData.link.from === cur; rebuildShelf(); }
 const fade = document.createElement("div"); fade.className = "fade"; document.body.append(fade);
 let opening = false;
@@ -244,7 +256,8 @@ function goto(id) {
   if (reduced) { if (l?.portal) { walk = w; through(w); return; } fade.style.opacity = 1; setTimeout(() => { arrive(w); fade.style.opacity = 0; }, 260); return; }
   walk = w; vI = [0, 0]; arrowsFor();
 }
-function arrive(w) { cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
+function arrive(w) { if (w.jump && w.id === home().id) descend(SHORT);  // back from a room by a portal: the descent plays as the tunnel unwinds
+  cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
 // a portal: the click pulls the view into the vortex (the walk's last stretch), then a full-screen warp tunnel (stars, rings of light, the destination's constellation forming ahead), a gold bloom, and the tunnel unwinds on the other room; reduced motion: a short fade with the constellation shown
 const warpU = { uT: { value: 0 }, uTw: { value: 0 }, uR: { value: 0 }, uA: { value: 0 }, uBloom: { value: 0 }, uForm: { value: 0 }, uSt: { value: 0 }, uAsp: { value: 1 }, uHue: { value: 0 }, uC: { value: new THREE.Vector2(.5, .5) }, uPts: { value: Array.from({ length: 10 }, () => new THREE.Vector2()) }, uLn: { value: Array.from({ length: 12 }, () => new THREE.Vector4()) } };
 const warpMesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.ShaderMaterial({ uniforms: warpU, transparent: true, depthTest: false, depthWrite: false, vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }",
@@ -287,6 +300,12 @@ function routeTo(id) {  // breadth-first over the links, then walk each step (a 
   if (!(id in prev)) return false; const path = []; for (let a = id; a !== null; a = prev[a]) path.unshift(a); pending = path.slice(2); if (path.length > 1) goto(path[1]); return true; }
 function goHome() { if (cur !== home().id) routeTo(home().id); else { vI = [0, 0]; homing = true; } }
 let homing = false; $("#home").onclick = goHome;
+// ---- the arrival (owner 2026-11-16: "get to the Library and get down to the shelf, not just appear"): the camera comes down the well onto the home bookcase, as the intro film does. The film is the full move on a first
+// visit; a visit that skips the film gets the live move (FULL s), every later arrival in the same page (back through a portal, back from a book) the short one (SHORT s). A tap, a key or a drag ends it at the
+// bookcase at once; reduced motion: none.
+const FULL = 3.2, SHORT = 1.8; let desc = null;
+function descend(dur) { if (reduced) return; const h = home(), e = sP(h); desc = { t: 0, dur, from: new THREE.Vector3(e.x, e.y + 7.5, e.z + 3.2), p0: -.55, f0: sFov(h) + 8 }; homing = false; vI = [0, 0]; }
+const landed = () => { if (!desc) return false; desc.t = desc.dur; return true; };
 
 // ---- input: the mouse's offset from the centre sets the view and, near an edge, keeps turning it; a drag (mouse or finger) looks around with inertia; arrows look; Enter walks
 const cv = $("#stage"), P = { x: 0, y: 0, has: false, mouse: true, down: false, id: -1, sx: 0, sy: 0, lx: 0, ly: 0, lt: 0, t0: 0, moved: 0, ui: false, vx: 0, vy: 0 }, keys = new Set(), ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
@@ -296,7 +315,7 @@ let armed = true, anchor = [0, 0]; const disarm = () => { armed = false; anchor 
 document.documentElement.addEventListener("mouseleave", () => { P.has = false; }); addEventListener("blur", () => { P.has = false; keys.clear(); });
 addEventListener("pointerdown", () => { disarm(); document.body.classList.remove("kb"); }, true); addEventListener("keydown", e => { if (e.key === "Tab") document.body.classList.add("kb"); }, true);
 const kf = () => fov * Math.PI / 180 / innerHeight;  // radians per pixel
-cv.addEventListener("pointerdown", e => { if (!live() || walk) return; P.down = true; P.id = e.pointerId; P.sx = P.lx = e.clientX; P.sy = P.ly = e.clientY; P.lt = P.t0 = performance.now(); P.moved = 0; P.vx = P.vy = P.rvx = 0; vI = [0, 0]; homing = false; cv.setPointerCapture(e.pointerId); cv.classList.add("drag"); });
+cv.addEventListener("pointerdown", e => { if (!live() || walk) return; if (desc && !warp) { landed(); return; }  /* a tap during the arrival lands it, and is spent on that */ P.down = true; P.id = e.pointerId; P.sx = P.lx = e.clientX; P.sy = P.ly = e.clientY; P.lt = P.t0 = performance.now(); P.moved = 0; P.vx = P.vy = P.rvx = 0; vI = [0, 0]; homing = false; cv.setPointerCapture(e.pointerId); cv.classList.add("drag"); });
 cv.addEventListener("pointermove", e => { if (!P.down || e.pointerId !== P.id) return; const dx = e.clientX - P.lx, dy = e.clientY - P.ly, now = performance.now(), dt = Math.max(.008, (now - P.lt) / 1000);
   if (ring.isOpen) { if (!pick && !ring.busy) ring.drag(dx, ring.stepPx()); P.rvx += (dx / dt - P.rvx) * .4; P.moved += Math.abs(dx) + Math.abs(dy); P.lx = e.clientX; P.ly = e.clientY; P.lt = now; return; }
   yaw -= dx * kf(); pitch = cP(pitch + dy * kf()); P.vx += (-dx * kf() / dt - P.vx) * .4; P.vy += (dy * kf() / dt - P.vy) * .4; P.moved += Math.abs(dx) + Math.abs(dy); if (P.moved > 12) hideHint(); P.lx = e.clientX; P.ly = e.clientY; P.lt = now; });
@@ -307,7 +326,7 @@ addEventListener("keydown", e => { if (!ring.isOpen || /INPUT|SELECT|TEXTAREA/.t
   if (e.key === "ArrowRight" || e.key === "ArrowLeft") ring.step(e.key === "ArrowRight" ? 1 : -1); else if (e.key === "Enter" && door) { const to = door.frame.userData.link.to; closeRing(); let n = 0; const t = setInterval(() => { if (!ring.isOpen || ++n > 60) { clearInterval(t); if (!ring.isOpen) goto(to); } }, 120); }  // a door chosen with the ring open: put the books back, then go through
   else if (e.key === "Enter" && free) { if (!pick) startPick(); } else if (e.key === "Escape" && panel.hidden) closeRing(); else return; e.preventDefault(); e.stopImmediatePropagation(); }, true);
 addEventListener("keydown", e => { const a = document.activeElement; if (a && a !== document.body && a !== cv) return; if (e.key.startsWith("Arrow")) { keys.add(e.key); homing = false; e.preventDefault(); } else if (e.key === "Enter" && live() && !walk) { const l = LINKS.find(q => q.from === cur); if (l) goto(l.to); } });
-addEventListener("keyup", e => keys.delete(e.key));
+addEventListener("keyup", e => keys.delete(e.key)); addEventListener("keydown", () => { if (live()) landed(); }, true);
 // the phone's tilt, only where the browser gives it without asking (iOS asks, so there it stays a slow idle drift)
 let tilt = null; if (matchMedia("(pointer: coarse)").matches && typeof DeviceOrientationEvent !== "undefined" && typeof DeviceOrientationEvent.requestPermission !== "function") addEventListener("deviceorientation", e => { if (e.gamma != null) tilt = [Math.max(-1, Math.min(1, e.gamma / 20)), Math.max(-1, Math.min(1, (e.beta - 55) / 20))]; });
 let frameNo = 0, hitC = { f: -1, x: 0, y: 0, r: null };
@@ -349,12 +368,12 @@ function showHint() { if (grown.portals.length && innerWidth / innerHeight < .85
 function hideHint() { const h = $("#hint"); if (h.hidden) return; h.classList.remove("on"); store.set("wst-lib-hint", "1"); setTimeout(() => { h.hidden = true; }, 900); }
 // coming back from the reader (the browser restores this page from its back-forward cache): no veil, no ring, no half-made pick, the camera home
 addEventListener("pageshow", e => { if (!e.persisted) return; pick = null; carryVeil.style.opacity = 0; fade.style.opacity = 0; ring.cancelPick(); ring.reset(); front.disposeAll(); books.hover(-1); key.position.x = -1.5; key.color.set(0xffd9a0);
-  walk = null; pending = []; cur = home().id; camPos = sP(home()); yaw = sYaw(home()); pitch = sPitch(home()); fov = sFov(home()); vI = [0, 0]; P.down = false; keys.clear(); $("#ringx").hidden = true; $("#cap").hidden = true; say(null); arrowsFor(); onStation(); disarm(); });
+  walk = null; pending = []; cur = home().id; camPos = sP(home()); yaw = sYaw(home()); pitch = sPitch(home()); fov = sFov(home()); vI = [0, 0]; P.down = false; keys.clear(); descend(SHORT); $("#ringx").hidden = true; $("#cap").hidden = true; say(null); arrowsFor(); onStation(); disarm(); });
 // the door plaques are drawn before Cinzel Decorative arrives on a first visit: draw them again once it has
 fontsReady.then(() => portalLabels());
 // ---- run
 await Promise.race([Promise.all(core), new Promise(r => setTimeout(r, 5000))]);  // never wait on a slow or missing card: the room arrives with what has loaded
-const dbg = window.__lib = { renderer, camera, scene, books, frames: 0, firstFrame: 0, goto, routeTo, openRing, get living() { return living; }, get front() { return front; }, links: LINKS, hit, grown, portalMeshes, ring, pick: () => pick, mist, rays, state: () => ({ cur, yaw, pitch, walking: !!walk, arrows: arrows.length, homeVisible: !$("#home").hidden }), look: (y, p) => { yaw = y; pitch = p; }, get wake() { return !!wakeP; }, cueLog, get snd() { return snd; } };
+const dbg = window.__lib = { renderer, camera, scene, books, frames: 0, firstFrame: 0, goto, routeTo, openRing, get living() { return living; }, get front() { return front; }, links: LINKS, hit, grown, portalMeshes, ring, pick: () => pick, mist, rays, descending: () => !!desc, state: () => ({ cur, yaw, pitch, walking: !!walk, arrows: arrows.length, homeVisible: !$("#home").hidden }), look: (y, p) => { yaw = y; pitch = p; }, get wake() { return !!wakeP; }, cueLog, get snd() { return snd; } };
 
 let last = performance.now(), T = 0, hov = -1, lastFront = -1;
 const loop = now => {
@@ -376,6 +395,8 @@ const loop = now => {
   }
   if (wakeP && (wakeT -= dt) <= 0) wakeP = null;
   let bob = 0; warpStep(dt);
+  if (desc && live_ && !walk) { if (!warp || warp.t > 3) desc.t += dt;  /* back through a portal: it waits behind the tunnel until the tunnel opens */ const u = Math.min(1, desc.t / desc.dur), e = u < .5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2, h = home();
+    camPos = desc.from.clone().lerp(sP(h), e); yaw = sYaw(h); pitch = desc.p0 + (sPitch(h) - desc.p0) * e; fov = desc.f0 + (sFov(h) - desc.f0) * e; if (u >= 1) desc = null; }
   if (walk && !walk.frozen) { walk.t += dt / walk.dur; const u = Math.min(1, walk.t), e = ease(u); camPos = along(walk.pts, walk.len, e); bob = Math.sin(u * TAU * 3) * .03 * Math.sin(u * Math.PI);
     yaw = walk.y0 + (walk.y1 - walk.y0) * e; pitch = walk.p0 + ((walk.pw ?? walk.p1) - walk.p0) * e; fov = walk.f0 + (walk.f1 - walk.f0) * e * (walk.jump ? 0 : 1) + (walk.jump ? 40 * Math.pow(Math.max(0, (u - .55) / .45), 2) : 0); if (u >= 1) walk.jump ? through(walk) : arrive(walk); }
   const vy = yaw + yawOff, vp = cP(pitch + pitchOff); camera.rotation.set(vp, -vy, 0, "YXZ");
@@ -398,9 +419,9 @@ const loop = now => {
   for (const b of billboards) b.rotation.y = Math.atan2(camera.position.x - b.position.x, camera.position.z - b.position.z);
   mist.forEach((m, i) => { m.material.map.offset.x = still ? 0 : T * .004 * (i ? -1 : 1); });
   if (!still) { const p = motes.geometry.attributes.position; for (let i = 0; i < NM; i++) { p.array[i * 3 + 1] += Math.sin(T * .3 + mv[i]) * .0015; p.array[i * 3] += Math.cos(T * .2 + mv[i]) * .001; } p.needsUpdate = true; floater(dt); }
-  if (!(dbg.frames % 8)) $("#home").hidden = !(walk || cur !== home().id || Math.abs(wrap(yaw - sYaw(home()))) > .35 || pitch - sPitch(home()) > .4 || pitch - sPitch(home()) < -.4) || !live_;
+  if (!(dbg.frames % 8)) $("#home").hidden = !(walk || cur !== home().id || Math.abs(wrap(yaw - sYaw(home()))) > .35 || pitch - sPitch(home()) > .4 || pitch - sPitch(home()) < -.4) || !live_ || !!desc;
   rU.uT.value = still ? 0 : T; rU.uUp.value = Math.max(0, Math.min(1, (vp - .2) / .6)); living?.update(dt); sfx?.update(dt, camera); sky.update(camera); renderer.render(scene, camera);
-  if (!dbg.frames++) { dbg.firstFrame = Math.round(performance.now()); document.documentElement.dataset.first = dbg.firstFrame; roomReady = true; $("#loading").hidden = true; if (filmDone) hideVeil(); startFx(); setTimeout(showHint, 1800); }
+  if (!dbg.frames++) { dbg.firstFrame = Math.round(performance.now()); document.documentElement.dataset.first = dbg.firstFrame; roomReady = true; if (returning) descend(FULL); $("#loading").hidden = true; if (filmDone) hideVeil(); startFx(); setTimeout(showHint, 1800); }
   requestAnimationFrame(loop);
 };
 requestAnimationFrame(loop);

@@ -15,7 +15,7 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
   const V = THREE.Vector3, RX = new THREE.Quaternion().setFromAxisAngle(new V(1, 0, 0), Math.PI / 2), gltf = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder), zero = new V(0, 0, 0);
   const lantern = new THREE.PointLight(0xffc16b, 0, 0.32, 2), front = new THREE.SpotLight(0xffe2b8, 0, 0.9, 0.22, 0.8, 2); scene.add(lantern, front, front.target);  // the shared candle and soft front light, moved into the awake pop-up
   const models = new Map(), building = new Map(), ref = new Map(); let list = null, atlas = null, kapiColor = null, kapiSpine = null, kapiOrm = null, dims = null, queue = Promise.resolve();
-  const getList = async () => list ??= await fetch(new URL("index.html", SHELF)).then(r => r.text()).then(t => JSON.parse(/id="books">([\s\S]*?)<\/script>/.exec(t)[1])).catch(() => []);
+  const getList = async () => list ??= await fetch(new URL("popups.json", import.meta.url)).then(r => r.json()).catch(() => []);  // shortcut: popups.json is a copy of web/shelf/index.html's #books list, because the published shelf/index.html is only a redirect (no list: every book came out a show book, no pop-up); upgrade: let tools/books_json.mjs write it
   const img = u => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = u; });
   const cfgOf = e => ({ ...e, dir: new URL(e.dir, SHELF).href, voice: new URL(e.voice, SHELF).href, model: new URL(e.model, SHELF).href });
   const col = hex => new THREE.Color(hex);

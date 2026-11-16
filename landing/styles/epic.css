@@ -217,11 +217,11 @@ main .blk.panel { padding: 1.7rem 2.6rem; } @media (max-width: 520px) { main .bl
   main section.in .panel .sheet::after { animation: sheet-glow 2.4s ease-out both; }
   /* the sheet's sink is a script animation (sinkSheet in epic.js), from its current state */
   /* the words leave and return by script (fadeWords in epic.js), from their current opacity */
-  main section.in .panel :is(.line, .sub, .keep, .card, .chips) { --arr: 1; transform: none; transition: none; animation: sweep .9s ease-out both, heat 1.6s ease-out both; animation-delay: calc(2.2s + var(--k, 0) * .14s);
+  main section.in .panel :is(.line, .sub, .keep, .card, .chips), main section.in .panel > .btn { --arr: 1; transform: none; transition: none; animation: sweep .9s ease-out both, heat 1.6s ease-out both; animation-delay: calc(2.2s + var(--k, 0) * .14s);
     -webkit-mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); }
   main section.in .panel .foil { animation: heat 1.6s ease-out 2.2s both; }
   main section.in .panel .foil.plain { animation: sweep .9s ease-out 2.2s both, heat 1.6s ease-out 2.2s both; -webkit-mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); }
-  main section.now .panel .sheet, main section.now .panel :is(.line, .sub, .keep, .card, .chips, .foil) { animation: none; -webkit-mask-image: none; mask-image: none; }  /* a focused control: everything whole at once */
+  main section.now .panel .sheet, main section.now .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.now .panel > .btn { animation: none; -webkit-mask-image: none; mask-image: none; }  /* a focused control: everything whole at once */
 }
 
 @media (prefers-reduced-motion: reduce) {
