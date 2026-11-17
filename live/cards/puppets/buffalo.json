@@ -1,12 +1,8 @@
 {
  "puppet": "buffalo",
  "size": 0.2,
- "metres_per_pixel": 0.0001952865769270173,
- "rest": {
-  "head": 0,
-  "tail": 0,
-  "egret-neck": 0
- },
+ "metres_per_pixel": 0.0001953125,
+ "rest": {},
  "versions": [
   "day"
  ],
@@ -17,86 +13,17 @@
    "name": "body",
    "png": "cards/puppets/buffalo/body.png",
    "size": [
-    0.12088,
-    0.07772
+    0.2,
+    0.09355
    ],
    "pivot": [
     0.5,
-    0.0075
+    0.0063
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/buffalo/head.png",
-   "size": [
-    0.07577,
-    0.05038
-   ],
-   "pivot": [
-    0.2051,
-    0.3259
-   ],
-   "parent": "body",
-   "attach": [
-    0.9038,
-    0.5196
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -10,
-    "max": 15
-   }
-  },
-  {
-   "name": "tail",
-   "png": "cards/puppets/buffalo/tail.png",
-   "size": [
-    0.04687,
-    0.05019
-   ],
-   "pivot": [
-    0.8244,
-    0.8372
-   ],
-   "parent": "body",
-   "attach": [
-    0.0672,
-    0.6183
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": -30,
-    "max": 30
-   }
-  },
-  {
-   "name": "egret-neck",
-   "png": "cards/puppets/buffalo/egret-neck.png",
-   "size": [
-    0.02109,
-    0.02148
-   ],
-   "pivot": [
-    0.1271,
-    0.0693
-   ],
-   "parent": "body",
-   "attach": [
-    0.5774,
-    0.9458
-   ],
-   "z": 3,
-   "hinge": {
-    "axis": "z",
-    "min": -40,
-    "max": 20
-   }
   }
  ]
 }

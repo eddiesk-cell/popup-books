@@ -1,0 +1,1555 @@
+{
+ "title": "Khun Borom and the Great Gourd",
+ "credit": "From the old Lao story of Khun Borom, and of Pu Nyeu and Nya Nyeu, the grandfather and grandmother who are honoured every Lao New Year in Luang Prabang. Retold in our own words.",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "punyeu": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -4
+  },
+  "nyanyeu": {
+   "voice": "bm_george",
+   "speed": 0.88,
+   "pitch": 2
+  },
+  "lion": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 9
+  },
+  "khunborom": {
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": -1
+  },
+  "skyking": {
+   "voice": "bm_george",
+   "speed": 0.86,
+   "pitch": -5
+  },
+  "people": {
+   "voice": "bm_george",
+   "speed": 1.05,
+   "pitch": 3
+  },
+  "round": {
+   "voice": "bm_george",
+   "speed": 1.08,
+   "pitch": 4
+  },
+  "square": {
+   "voice": "bm_george",
+   "speed": 1.05,
+   "pitch": 1
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "both": {
+   "voice": "bm_george",
+   "speed": 0.89,
+   "pitch": -1
+  },
+  "child": {
+   "voice": "bm_george",
+   "speed": 1.1,
+   "pitch": 7
+  },
+  "punyeu_dance": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -4
+  },
+  "nyanyeu_dance": {
+   "voice": "bm_george",
+   "speed": 0.88,
+   "pitch": 2
+  }
+ },
+ "respell": {
+  "Pu": "Poo",
+  "Nyeu": "Ñer",
+  "Nya": "Ñah",
+  "Khun": "Koon"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "A Gift from the Sky",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long, long ago, the land was quiet. There were no villages, no songs and no children.",
+     "say": [
+      [
+       "narrator",
+       "Long, long ago, the land was quiet. There were no villages, no songs and no children."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Only two old people lived there, with their little lion. Their names were Pu Nyeu and Nya Nyeu.",
+     "say": [
+      [
+       "narrator",
+       "Only two old people lived there, with their little lion. Their names were Poo Ñer and Ñah Ñer."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "High above, the Sky King looked down. \"The land is too quiet,\" he said.",
+     "say": [
+      [
+       "narrator",
+       "High above, the Sky King looked down."
+      ],
+      [
+       "skyking",
+       "The land is too quiet,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "So he sent a gift down from the clouds: a big, strong buffalo.",
+     "say": [
+      [
+       "narrator",
+       "So he sent a gift down from the clouds: a big, strong buffalo."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "With the buffalo, Pu Nyeu and Nya Nyeu made the first rice field. \"Thank you, Sky King!\" they called.",
+     "say": [
+      [
+       "narrator",
+       "With the buffalo, Poo Ñer and Ñah Ñer made the first rice field."
+      ],
+      [
+       "both",
+       "Thank you, Sky King!"
+      ],
+      [
+       "narrator",
+       "they called."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "The Giant Gourd",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "The buffalo worked hard for many years. Then he was old and tired.",
+     "say": [
+      [
+       "narrator",
+       "The buffalo worked hard for many years. Then he was old and tired."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "One evening he lay down in the soft grass for his last, long sleep. \"Goodbye, old friend,\" said Pu Nyeu.",
+     "say": [
+      [
+       "narrator",
+       "One evening he lay down in the soft grass for his last, long sleep."
+      ],
+      [
+       "punyeu",
+       "Goodbye, old friend,"
+      ],
+      [
+       "narrator",
+       "said Poo Ñer."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "But where the buffalo slept, a little green vine began to grow.",
+     "say": [
+      [
+       "narrator",
+       "But where the buffalo slept, a little green vine began to grow."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "On the vine grew a gourd. It grew big. Then bigger. Then bigger than a house!",
+     "say": [
+      [
+       "narrator",
+       "On the vine grew a gourd. It grew big. Then bigger. Then bigger than a house!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "\"What a gourd!\" said Nya Nyeu. Little Lion sniffed it. Sniff, sniff!",
+     "say": [
+      [
+       "nyanyeu",
+       "What a gourd!"
+      ],
+      [
+       "narrator",
+       "said Ñah Ñer. Little Lion sniffed it. Sniff, sniff!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Voices in the Gourd",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "One morning, the gourd went knock, knock, knock!",
+     "say": [
+      [
+       "narrator",
+       "One morning, the gourd went knock, knock, knock!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Pu Nyeu put his ear on the gourd. Inside, somebody laughed.",
+     "say": [
+      [
+       "narrator",
+       "Poo Ñer put his ear on the gourd. Inside, somebody laughed."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Somebody sang a song. A baby cried. A rooster crowed!",
+     "say": [
+      [
+       "narrator",
+       "Somebody sang a song. A baby cried. A rooster crowed!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "\"Who is in there?\" asked Little Lion.",
+     "say": [
+      [
+       "lion",
+       "Who is in there?"
+      ],
+      [
+       "narrator",
+       "asked Little Lion."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "\"It is dark in there,\" said Nya Nyeu. \"Let's make a door.\"",
+     "say": [
+      [
+       "nyanyeu",
+       "It is dark in there,"
+      ],
+      [
+       "narrator",
+       "said Ñah Ñer."
+      ],
+      [
+       "nyanyeu",
+       "Let's make a door."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Two Doors",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Pu Nyeu made an iron stick hot in the fire. Sssss! He made two little holes in the gourd.",
+     "say": [
+      [
+       "narrator",
+       "Poo Ñer made an iron stick hot in the fire. Sssss! He made two little holes in the gourd."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Nya Nyeu cut the holes wider with her chisel. Tap, tap, tap! One was a round door. One was a square door.",
+     "say": [
+      [
+       "narrator",
+       "Ñah Ñer cut the holes wider with her chisel. Tap, tap, tap! One was a round door. One was a square door."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Then both doors opened, and out came people! One, two, three... more and more people!",
+     "say": [
+      [
+       "narrator",
+       "Then both doors opened, and out came people! One, two, three... more and more people!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "After them came pigs and chickens, ducks and dogs, and a little buffalo!",
+     "say": [
+      [
+       "narrator",
+       "After them came pigs and chickens, ducks and dogs, and a little buffalo!"
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "For three days and three nights, they came out of the great gourd. \"Welcome to the sun, children!\" said Nya Nyeu.",
+     "say": [
+      [
+       "narrator",
+       "For three days and three nights, they came out of the great gourd."
+      ],
+      [
+       "nyanyeu",
+       "Welcome to the sun, children!"
+      ],
+      [
+       "narrator",
+       "said Ñah Ñer."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Round Door, Square Door",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Soon there were people everywhere. The quiet land was full of houses, songs and children.",
+     "say": [
+      [
+       "narrator",
+       "Soon there were people everywhere. The quiet land was full of houses, songs and children."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "But they did not share. \"This is OUR mango tree!\" \"No! It is OUR mango tree!\"",
+     "say": [
+      [
+       "narrator",
+       "But they did not share."
+      ],
+      [
+       "round",
+       "This is OUR mango tree!"
+      ],
+      [
+       "square",
+       "No! It is OUR mango tree!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"We came out of the round door. We are the best!\" \"No! We came out of the square door. WE are the best!\"",
+     "say": [
+      [
+       "round",
+       "We came out of the round door. We are the best!"
+      ],
+      [
+       "square",
+       "No! We came out of the square door. WE are the best!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "They shouted all day long. Little Lion put his paws over his ears.",
+     "say": [
+      [
+       "narrator",
+       "They shouted all day long. Little Lion put his paws over his ears."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Pu Nyeu looked up at the sky. \"Sky King,\" he called, \"please help us!\"",
+     "say": [
+      [
+       "narrator",
+       "Poo Ñer looked up at the sky."
+      ],
+      [
+       "punyeu",
+       "Sky King,"
+      ],
+      [
+       "narrator",
+       "he called,"
+      ],
+      [
+       "punyeu",
+       "please help us!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Khun Borom",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "The Sky King heard. He sent his own son, Khun Borom, to help.",
+     "say": [
+      [
+       "narrator",
+       "The Sky King heard. He sent his own son, Koon Borom, to help."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Down from the sky came Khun Borom, riding a great white elephant.",
+     "say": [
+      [
+       "narrator",
+       "Down from the sky came Koon Borom, riding a great white elephant."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Khun Borom was wise and kind. He showed the people how to grow rice, build houses and weave cloth.",
+     "say": [
+      [
+       "narrator",
+       "Koon Borom was wise and kind. He showed the people how to grow rice, build houses and weave cloth."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"Remember,\" said Khun Borom. \"Round door, square door: you all came from one gourd. You are one family.\"",
+     "say": [
+      [
+       "khunborom",
+       "Remember,"
+      ],
+      [
+       "narrator",
+       "said Koon Borom."
+      ],
+      [
+       "khunborom",
+       "Round door, square door: you all came from one gourd. You are one family."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "The people nodded. But the round-door people still sat on one side. The square-door people sat on the other.",
+     "say": [
+      [
+       "narrator",
+       "The people nodded. But the round-door people still sat on one side. The square-door people sat on the other."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "The Dark Vine",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "All this time, the gourd's vine went on growing. Up and up it went, all the way to the sky.",
+     "say": [
+      [
+       "narrator",
+       "All this time, the gourd's vine went on growing. Up and up it went, all the way to the sky."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Its big leaves covered the sun. The land was dark and cold, and the rice stopped growing.",
+     "say": [
+      [
+       "narrator",
+       "Its big leaves covered the sun. The land was dark and cold, and the rice stopped growing."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"I can't see!\" \"I'm cold!\" People bumped into each other in the dark.",
+     "say": [
+      [
+       "people",
+       "I can't see!"
+      ],
+      [
+       "child",
+       "I'm cold!"
+      ],
+      [
+       "narrator",
+       "People bumped into each other in the dark."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Khun Borom lit a big fire. \"Come close, everyone,\" he said.",
+     "say": [
+      [
+       "narrator",
+       "Koon Borom lit a big fire."
+      ],
+      [
+       "khunborom",
+       "Come close, everyone,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "They held hands so they would not fall. Nobody asked, \"Which door are you from?\"",
+     "say": [
+      [
+       "narrator",
+       "They held hands so they would not fall. Nobody asked, Which door are you from?"
+      ]
+     ]
+    },
+    {
+     "id": "7.6",
+     "text": "\"I don't like the dark,\" said Little Lion. Nya Nyeu held him close.",
+     "say": [
+      [
+       "lion",
+       "I don't like the dark,"
+      ],
+      [
+       "narrator",
+       "said Little Lion. Ñah Ñer held him close."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Who Will Cut the Vine?",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "\"We must cut the vine,\" said Khun Borom. \"Who will do it?\"",
+     "say": [
+      [
+       "khunborom",
+       "We must cut the vine,"
+      ],
+      [
+       "narrator",
+       "said Koon Borom."
+      ],
+      [
+       "khunborom",
+       "Who will do it?"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "The vine was as tall as the sky. The strong men looked down at their feet. Nobody said a word.",
+     "say": [
+      [
+       "narrator",
+       "The vine was as tall as the sky. The strong men looked down at their feet. Nobody said a word."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Then two old voices said, \"We will.\" It was Pu Nyeu and Nya Nyeu.",
+     "say": [
+      [
+       "narrator",
+       "Then two old voices said,"
+      ],
+      [
+       "both",
+       "We will."
+      ],
+      [
+       "narrator",
+       "It was Poo Ñer and Ñah Ñer."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "\"But you are so old!\" said the people. \"Yes,\" said Nya Nyeu. \"We have seen the sun many, many times. The children must see it too.\"",
+     "say": [
+      [
+       "people",
+       "But you are so old!"
+      ],
+      [
+       "narrator",
+       "said the people."
+      ],
+      [
+       "nyanyeu",
+       "Yes,"
+      ],
+      [
+       "narrator",
+       "said Ñah Ñer."
+      ],
+      [
+       "nyanyeu",
+       "We have seen the sun many, many times. The children must see it too."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "\"We ask for only one thing,\" said Pu Nyeu. \"Remember us. When you sit down to eat, call our names.\"",
+     "say": [
+      [
+       "punyeu",
+       "We ask for only one thing,"
+      ],
+      [
+       "narrator",
+       "said Poo Ñer."
+      ],
+      [
+       "punyeu",
+       "Remember us. When you sit down to eat, call our names."
+      ]
+     ]
+    },
+    {
+     "id": "8.6",
+     "text": "\"Will you come back?\" asked Little Lion. \"Every New Year,\" said Nya Nyeu. \"That is a promise. Listen for the drums.\"",
+     "say": [
+      [
+       "lion",
+       "Will you come back?"
+      ],
+      [
+       "narrator",
+       "asked Little Lion."
+      ],
+      [
+       "nyanyeu",
+       "Every New Year,"
+      ],
+      [
+       "narrator",
+       "said Ñah Ñer."
+      ],
+      [
+       "nyanyeu",
+       "That is a promise. Listen for the drums."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Chop, Chop, Chop!",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Chop, chop, chop! Pu Nyeu and Nya Nyeu cut the great vine, day after day.",
+     "say": [
+      [
+       "narrator",
+       "Chop, chop, chop! Poo Ñer and Ñah Ñer cut the great vine, day after day."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Everybody helped. Some brought water. Some brought rice. Even Khun Borom carried water.",
+     "say": [
+      [
+       "narrator",
+       "Everybody helped. Some brought water. Some brought rice. Even Koon Borom carried water."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "For three long months they worked side by side, like one family. Nobody talked about doors any more.",
+     "say": [
+      [
+       "narrator",
+       "For three long months they worked side by side, like one family. Nobody talked about doors any more."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "\"Now stand back, children,\" said Pu Nyeu. \"The last cut is ours.\"",
+     "say": [
+      [
+       "punyeu",
+       "Now stand back, children,"
+      ],
+      [
+       "narrator",
+       "said Poo Ñer."
+      ],
+      [
+       "punyeu",
+       "The last cut is ours."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "CRACK! The great vine fell. The dark was gone. The sun came back!",
+     "say": [
+      [
+       "narrator",
+       "CRACK! The great vine fell. The dark was gone. The sun came back!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Come and Eat!",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "The land was warm again. But where were Pu Nyeu and Nya Nyeu?",
+     "say": [
+      [
+       "narrator",
+       "The land was warm again. But where were Poo Ñer and Ñah Ñer?"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "They were gone. They gave their lives to bring back the sun.",
+     "say": [
+      [
+       "narrator",
+       "They were gone. They gave their lives to bring back the sun."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "\"We will always remember them,\" said Khun Borom. \"Now they keep our land safe.\"",
+     "say": [
+      [
+       "khunborom",
+       "We will always remember them,"
+      ],
+      [
+       "narrator",
+       "said Koon Borom."
+      ],
+      [
+       "khunborom",
+       "Now they keep our land safe."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "That night, everybody ate together, one big family. Little Lion called first: \"Come and eat, Pu Nyeu! Come and eat, Nya Nyeu!\"",
+     "say": [
+      [
+       "narrator",
+       "That night, everybody ate together, one big family. Little Lion called first:"
+      ],
+      [
+       "lion",
+       "Come and eat, Poo Ñer! Come and eat, Ñah Ñer!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Today, many years later, people still remember. Every Lao New Year, the drums go boom, boom, boom!",
+     "say": [
+      [
+       "narrator",
+       "Today, many years later, people still remember. Every Lao New Year, the drums go boom, boom, boom!"
+      ]
+     ]
+    },
+    {
+     "id": "10.6",
+     "text": "Out come Pu Nyeu and Nya Nyeu to dance! They have big red faces and long, long hair. Little Lion dances too. They keep their promise every year.",
+     "say": [
+      [
+       "narrator",
+       "Out come Poo Ñer and Ñah Ñer to dance! They have big red faces and long, long hair. Little Lion dances too. They keep their promise every year."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "We are one family. Round door, square door: everyone came from one gourd.",
+   "say": [
+    [
+     "closing",
+     "We are one family. Round door, square door: everyone came from one gourd."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Old can be brave. The strong men were afraid. Two grandparents were not.",
+   "say": [
+    [
+     "closing",
+     "Old can be brave. The strong men were afraid. Two grandparents were not."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Remember the people who help you. Say their names. Every Lao New Year, people still do.",
+   "say": [
+    [
+     "closing",
+     "Remember the people who help you. Say their names. Every Lao New Year, people still do."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Word corner: two Lao words. Pu means grandfather. Nya means grandmother.",
+   "say": [
+    [
+     "closing",
+     "Word corner: two Lao words. Poo means grandfather. Ñah means grandmother."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Tap the wet mud to plant the rice. Count with me!",
+   "say": [
+    [
+     "narrator",
+     "Tap the wet mud to plant the rice. Count with me!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Five little rice plants!",
+   "say": [
+    [
+     "narrator",
+     "Five little rice plants!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Little Lion wants to see the top! Tap the glowing leaf.",
+   "say": [
+    [
+     "narrator",
+     "Little Lion wants to see the top! Tap the glowing leaf."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Up, up, up! What a big gourd!",
+   "say": [
+    [
+     "narrator",
+     "Up, up, up! What a big gourd!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Tap the gourd where it glows, and listen!",
+   "say": [
+    [
+     "narrator",
+     "Tap the gourd where it glows, and listen!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "So many voices! Somebody is in there!",
+   "say": [
+    [
+     "narrator",
+     "So many voices! Somebody is in there!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Who wants to come out? Tap them and count with me!",
+   "say": [
+    [
+     "narrator",
+     "Who wants to come out? Tap them and count with me!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Ten! And still they come!",
+   "say": [
+    [
+     "narrator",
+     "Ten! And still they come!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "It is too loud! Tap the shouting people so they stop and listen.",
+   "say": [
+    [
+     "narrator",
+     "It is too loud! Tap the shouting people so they stop and listen."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Now it is quiet. Listen!",
+   "say": [
+    [
+     "narrator",
+     "Now it is quiet. Listen!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Tap a thing, then tap where it goes!",
+   "say": [
+    [
+     "narrator",
+     "Tap a thing, then tap where it goes!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Now everybody knows how!",
+   "say": [
+    [
+     "narrator",
+     "Now everybody knows how!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Who is still out in the dark? Tap the shining eyes!",
+   "say": [
+    [
+     "narrator",
+     "Who is still out in the dark? Tap the shining eyes!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Everyone is by the fire!",
+   "say": [
+    [
+     "narrator",
+     "Everyone is by the fire!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Help them get ready! Find the axe, the rope, the water jar, the rice basket and the lamp.",
+   "say": [
+    [
+     "narrator",
+     "Help them get ready! Find the axe, the rope, the water jar, the rice basket and the lamp."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "They are ready!",
+   "say": [
+    [
+     "narrator",
+     "They are ready!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Chop with them! Tap when the ring closes on the axe.",
+   "say": [
+    [
+     "narrator",
+     "Chop with them! Tap when the ring closes on the axe."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Look! Light!",
+   "say": [
+    [
+     "narrator",
+     "Look! Light!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Play the drums to call them! Listen, then tap the same.",
+   "say": [
+    [
+     "narrator",
+     "Play the drums to call them! Listen, then tap the same."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Happy New Year! Here they are!",
+   "say": [
+    [
+     "narrator",
+     "Happy New Year! Here they are!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.6",
+   "text": "Six.",
+   "say": [
+    [
+     "narrator",
+     "Six."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.7",
+   "text": "Seven.",
+   "say": [
+    [
+     "narrator",
+     "Seven."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.8",
+   "text": "Eight.",
+   "say": [
+    [
+     "narrator",
+     "Eight."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.9",
+   "text": "Nine.",
+   "say": [
+    [
+     "narrator",
+     "Nine."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.count.10",
+   "text": "Ten.",
+   "say": [
+    [
+     "narrator",
+     "Ten."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.thing.axe",
+   "text": "An axe.",
+   "say": [
+    [
+     "narrator",
+     "An axe."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.thing.rope",
+   "text": "A rope.",
+   "say": [
+    [
+     "narrator",
+     "A rope."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.thing.jar",
+   "text": "A water jar.",
+   "say": [
+    [
+     "narrator",
+     "A water jar."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.thing.basket",
+   "text": "A rice basket.",
+   "say": [
+    [
+     "narrator",
+     "A rice basket."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.thing.lamp",
+   "text": "A lamp.",
+   "say": [
+    [
+     "narrator",
+     "A lamp."
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "punyeu": [
+   "I am Pu Nyeu. Pu means grandfather.",
+   "My head cloth is red and white.",
+   "My shirt is blue.",
+   "I have a white moustache.",
+   "My trousers are grey.",
+   "I tie a cloth round my waist.",
+   "I have white eyebrows.",
+   "I walk with bare feet."
+  ],
+  "nyanyeu": [
+   "I am Nya Nyeu. Nya means grandmother.",
+   "A white flower is in my hair.",
+   "I tie my hair in a bun.",
+   "My blouse is blue.",
+   "My pha biang is red.",
+   "My sinh is black.",
+   "My sinh has a woven hem.",
+   "My feet are bare.",
+   "My skirt is called a sinh.",
+   "My shoulder cloth is called a pha biang."
+  ],
+  "lion": [
+   "Rrrow! I am Little Lion!",
+   "I am a lion cub.",
+   "My mane is made of curls.",
+   "My collar is green.",
+   "I have a round gold tag.",
+   "My tail has a gold tuft.",
+   "I have big paws.",
+   "Sniff, sniff! What is that?"
+  ],
+  "khunborom": [
+   "I am Khun Borom. I came to help.",
+   "I wear a small gold crown.",
+   "My jacket is white.",
+   "My long cloth is red and gold.",
+   "I wear gold bracelets.",
+   "I have black hair.",
+   "I have gold earrings.",
+   "I teach people to grow rice."
+  ],
+  "skyking": [
+   "I am the Sky King.",
+   "I live in the sky.",
+   "I can see the land below.",
+   "My crown is gold.",
+   "I have a white beard.",
+   "I have a kind son.",
+   "I sit on a soft cloud.",
+   "I love this land."
+  ],
+  "punyeu_dance": [
+   "I am Pu Nyeu. I came back!",
+   "I have a big red face.",
+   "My hair is long and shaggy.",
+   "I dance to the drums.",
+   "I dance with bare feet.",
+   "I come every Lao New Year."
+  ],
+  "nyanyeu_dance": [
+   "I am Nya Nyeu. I came back!",
+   "My face is big and red.",
+   "I have long, long hair.",
+   "I love the sound of drums.",
+   "I dance with the children.",
+   "I keep my promise every year."
+  ],
+  "gecko": [
+   "A gecko. It climbs walls.",
+   "A gecko has sticky toes.",
+   "A gecko eats little bugs."
+  ],
+  "egret": [
+   "An egret. A white bird.",
+   "An egret has long legs.",
+   "An egret eats fish."
+  ],
+  "turtle": [
+   "A turtle. It is slow.",
+   "A turtle can hide in its shell.",
+   "A turtle can swim."
+  ],
+  "frog": [
+   "A frog. It hops.",
+   "Ribbit, ribbit!",
+   "A frog eats flies."
+  ],
+  "duck": [
+   "A duck. It floats.",
+   "A duck has a flat beak.",
+   "Quack, quack!"
+  ],
+  "fish": [
+   "A fish. It swims.",
+   "A fish has fins.",
+   "Splash!"
+  ],
+  "butterfly": [
+   "A butterfly. Big wings.",
+   "The butterfly can fly.",
+   "A butterfly drinks from flowers."
+  ],
+  "dragonfly": [
+   "A dragonfly. It hovers.",
+   "The dragonfly can fly fast.",
+   "A dragonfly likes the water."
+  ],
+  "squirrel": [
+   "A squirrel. It climbs trees.",
+   "A squirrel has a fluffy tail.",
+   "A squirrel eats nuts."
+  ],
+  "house": [
+   "A house on stilts. Stilts are posts.",
+   "A ladder. Up and down.",
+   "A water jar. It holds water."
+  ],
+  "fire": [
+   "A fire. Fire is hot.",
+   "Smoke goes up, up, up.",
+   "A clay pot sits by the fire."
+  ],
+  "plough": [
+   "A plough. It makes the soil soft.",
+   "A buffalo pulls a plough.",
+   "A plough is made of wood."
+  ],
+  "rice": [
+   "Rice. We eat rice.",
+   "A rice plant is green.",
+   "Rice grows in wet mud."
+  ],
+  "taro": [
+   "A taro leaf. Big as an ear.",
+   "A taro leaf is big and green.",
+   "Rain rolls off a taro leaf."
+  ],
+  "marigold": [
+   "Marigolds. Orange flowers.",
+   "Marigolds are bright.",
+   "Flowers open in the sun."
+  ],
+  "mango-tree": [
+   "A mango tree. Mangoes are sweet.",
+   "Mangoes are green, then yellow.",
+   "A mango tree gives shade."
+  ],
+  "termite-mound": [
+   "A termite mound. Tiny builders live inside.",
+   "Termites are very small.",
+   "A termite mound is made of mud."
+  ],
+  "log": [
+   "A log. An old tree.",
+   "A log is made of wood.",
+   "A frog can sit on a log."
+  ],
+  "rock": [
+   "A rock. It is hard.",
+   "Rocks do not move.",
+   "Frogs and turtles rest on rocks."
+  ],
+  "lotus": [
+   "A lotus. It grows in water.",
+   "A lotus can be pink.",
+   "Frogs sit on lily pads."
+  ],
+  "river": [
+   "A river. It is slow.",
+   "Fish live in a river.",
+   "A river runs to the sea."
+  ],
+  "palm": [
+   "A sugar palm. It is very tall.",
+   "A palm has big leaves.",
+   "Palm leaves sway in the wind."
+  ],
+  "hill": [
+   "Hills. Far away.",
+   "A hill is high ground.",
+   "Far hills look blue."
+  ],
+  "cloud": [
+   "A cloud. The Sky King lives far up.",
+   "A cloud. It floats.",
+   "A cloud is soft and white."
+  ],
+  "small-cloud": [
+   "A cloud. It floats.",
+   "Clouds float in the sky.",
+   "A little cloud can carry a buffalo!"
+  ],
+  "bird": [
+   "A bird. It flies.",
+   "A bird has wings.",
+   "Birds fly in a flock."
+  ],
+  "reeds": [
+   "Reeds. Reeds are tall grasses that grow by water.",
+   "Reeds bend in the wind.",
+   "Birds hide in the reeds."
+  ],
+  "grass": [
+   "Grass. Grass is a green plant that covers the ground.",
+   "Grass grows by the river.",
+   "Buffalo eat grass."
+  ],
+  "flowers": [
+   "Flowers. Flowers are the colourful part of a plant.",
+   "Flowers have petals.",
+   "Flowers smell sweet."
+  ],
+  "ferns": [
+   "Ferns. A fern is a plant with feathery leaves.",
+   "Ferns like the shade.",
+   "Ferns have many leaves."
+  ],
+  "plants": [
+   "Plants. They grow by the river.",
+   "A banana plant has big leaves.",
+   "Firewood is dry wood."
+  ],
+  "knoll": [
+   "A knoll. It is a small hill.",
+   "Grass grows on a knoll.",
+   "A knoll is soft and round."
+  ],
+  "mound": [
+   "A mound. It is a heap of earth.",
+   "Earth is soft and brown.",
+   "A mound is higher than the ground."
+  ],
+  "buffalo": [
+   "I am a buffalo. Moo.",
+   "I have two horns.",
+   "I like mud."
+  ]
+ },
+ "notes": {
+  "helper spellings (in `say` only, never in `text`; one word for one word, so the word timing holds)": {
+   "Pu": "Poo",
+   "Nyeu": "Ñer",
+   "Nya": "Ñah",
+   "Khun": "Koon"
+  },
+  "touch lines": "tools/voice.py builds a touch line's say from its raw text, so touch lines cannot carry helper spellings; the tap lines that name Pu Nyeu, Nya Nyeu or Khun Borom are read with plain spellings unless voice.py applies this map.",
+  "who speaks": "1.5 and 8.3: both grandparents speak together, voice `both`; 5.2 round then square; 7.3 people then `child` (no door voice in the dark); 7.5: the narrator reads the whole line, quoted question included, because nobody asked it.",
+  "the names' sound": "Eddie, 2026-11-14, by ear (sample 2 of renders/gourd/names/names-1-to-4.m4a): ປູ່ເຍີ is said \"Poo Nyer\" and ຫຍ່າເຍີ \"Nya Nyer\". The voice model reads \"Nyuh\" and \"Nyah\" as \"nigh-uh\"; \"Ñer\" and \"Ñah\" give the right sounds. The printed English stays \"Pu Nyeu\" and \"Nya Nyeu\"."
+ }
+}

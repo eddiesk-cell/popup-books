@@ -167,6 +167,14 @@ async function puppet(id, def, stage) {
   });
   if (!art) root.traverse(o => o.isMesh && stage === "night" && o.material.color.setScalar(0.55));
   if (dim) meshes.forEach(m => (m.material.color.multiplyScalar(0.45), m.material.emissiveIntensity *= 0.45));  // sRGB x0.7, about as dark as the night cards, colour kept
+  // a light cue's "stage" (gourd s09 9.5: the sun comes back on a night page) turns the puppet to that time's card, as it would have been built for it
+  root.userData.restage = async (to, into = root) => {  // into: a clone of this puppet (the cast's), whose materials a game's glow may have made its own
+    const dk = to === "night" && !(def.person ?? PERSON.test(id)), st = dk ? "day" : to, v = VER[st] && (def.versions || []).includes(st) ? VER[st] : "";
+    const tex = art ? await Promise.all(parts.map(n => picture(`puppets/${id}/${n}${v}.png`))) : [];
+    const own = into === root ? meshes : parts.map(n => into.getObjectByName(n)?.children.find(o => o.isMesh));  // each part's card hangs on the pin named after it (acts.js puppetModel)
+    own.forEach((m, i) => { if (!m) return; if (tex[i]) { m.material.map = m.material.emissiveMap = tex[i]; m.material.needsUpdate = true; }
+      m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.15 * 0.45 : 0.15; });
+  };
   return { root, pins, meshes, size, def, first: parts[1] };
 }
 async function cardPuppet(file, size) {  // a single die-cut card standing on its base (a ladybug on the trunk): a puppet with no hinges
@@ -439,7 +447,16 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const boneOf = (c, n) => { if (!c?.model) return null; const k = c.boneAt ??= {}; if (!k[n]) c.model.traverse(o => { if (!k[n] && o.name === n && o.matrixWorld.determinant()) k[n] = o; }); return k[n] ?? null; };  // the drawn skeleton's bone, never a spare mood head's (stored at scale 0, its bones gave toad s02's face shot a zero height: the camera on its look point, NaN)
   const faceRig = s => {  // "face": her head and shoulders from in front of her face, the camera level with her chin looking up a little, near enough
     const c = subjects(s)[0], head = boneOf(c, "head");  // that her face stands 100 px tall (75 on an upright phone); no fit, room or keep pushes it out
-    if (!head) return null;
+    if (!c) return null;  // nobody to frame yet (toad-king s09 9.1: the turn's first beat names skyking before he is shown)
+    if (!head) {  // a paper puppet has no skeleton: its face is the top of its card (a person's head, ~25% of the card; an animal's whole card)
+      const box = new THREE.Box3().setFromObject(c?.model || c?.body); if (!box || box.isEmpty()) return null;
+      const person = PERSON.test((c.c?.model || c.name || "").split(":").pop() || c.name || ""), H = box.max.y - box.min.y, faceH = person ? 0.25 * H : H, mid = box.max.y - faceH / 2;
+      const d = Math.max(faceH, box.max.x - box.min.x) * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 80 : 100) * (s.size ?? 1));
+      const chin = new THREE.Vector3((box.min.x + box.max.x) / 2, mid, (box.min.z + box.max.z) / 2);
+      const axis = HOME.clone().sub(LOOK).setY(0).normalize(), her = new THREE.Vector3(Math.sin(c.yaw ?? 0), 0, Math.cos(c.yaw ?? 0)), a = Math.atan2(axis.x, axis.z), b = Math.atan2(her.x, her.z);
+      const yaw = a + Math.max(-deg(30), Math.min(deg(30), Math.atan2(Math.sin(b - a), Math.cos(b - a))));
+      return { pos: chin.clone().add(new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw)).multiplyScalar(d)), look: chin, face: true };
+    }
     // her head as built, chin to crown: 0.24 of her height gave Mali's head 59 px on a phone, not 80
     const crown = boneOf(c, "HeadTop_End")?.getWorldPosition(new THREE.Vector3()), faceH = crown ? crown.y - head.getWorldPosition(new THREE.Vector3()).y : 0.24 * c.height, d = faceH * innerHeight / (2 * Math.tan(deg(cam.fov) / 2) * (phone() ? 80 : 100) * (s.size ?? 1)), chin = head.getWorldPosition(new THREE.Vector3());
     const axis = HOME.clone().sub(LOOK).setY(0).normalize(), her = new THREE.Vector3(Math.sin(c.yaw ?? 0), 0, Math.cos(c.yaw ?? 0)), a = Math.atan2(axis.x, axis.z), b = Math.atan2(her.x, her.z);
@@ -493,7 +510,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       for (const x of [corner.min.x, corner.max.x]) for (const y of [corner.min.y, corner.max.y]) for (const z of [corner.min.z, corner.max.z]) if (Math.abs(tmp.set(x, y, z).project(probe).x) > 0.98) return false; }
     return true;
   };
-  const subjects = s => cast.filter(c => c.body.visible && [s?.target].flat().includes(c.name));
+  const subjects = s => { const ns = [s?.target].flat(), out = cast.filter(c => c.body.visible && ns.includes(c.name)); for (const n of ns) if (n && !out.some(c => c.name === n)) { const x = pups.find(p => p.e.name === n); if (x?.p?.root?.visible) out.push({ name: n, body: x.p.root, height: x.p.size, model: null }); } return out; };  // an extra named in the target is a subject too (it has a root to box, a size and a position, but no model)
   const corners = who => {  // the corners of each body's box in the camera space of the last aim(): [x, y, depth], only those in front
     const P = [];
     for (const c of who) { corner.setFromObject(c.model || c.body);
@@ -605,7 +622,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (sp.out && cam.position.distanceToSquared(sp.out) > 1e-6) sp.s = par(cam.position, controls.target), sp.vL.copy(mv.vL), sp.vq = [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // someone else moved the camera (the reader, the viewer's glide): carry on from there, at the speed it had
     const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
     g.q[1] = C.q[1] + wrapA(g.q[1] - C.q[1]);
-    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // the story camera's opening flight off the phone 70% a second: at 27% a spread's first line was still on its way in from the book view, the room around the book in view (toad s02 2.1: 0.26 m, s01 1.1: 0.32 m)  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there
+    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // the story camera's opening flight off the phone 70% a second: at 27% a spread's first line was still on its way in from the book view, the room around the book in view (toad s02 2.1: 0.26 m, s01 1.1: 0.32 m)  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there  // a small subject's close/medium comes in faster than a face shot (a paper puppet's fill is 8x nearer than the reading view: at 22%/s it never lands)
     for (let i = 0; i < n; i++) {
       const dL = g.L.clone().sub(C.L), ml = Math.min(1, 0.35 * (SCAM && shot === "hold" && opts.mode?.() === "turn" ? 0.7 : 1) * h / Math.max(dL.length(), 1e-9)); C.L.addScaledVector(dL, ml);
       C.q[0] += Math.max(-dr * fly * h, Math.min(dr * fly * h, g.q[0] - C.q[0]));
@@ -785,12 +802,12 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const klass = () => { const lo = Math.min(innerWidth, innerHeight), hi = Math.max(innerWidth, innerHeight); return lo < 600 ? 3 : hi >= 1200 ? 0 : innerWidth > innerHeight ? 1 : 2; };
   const MOVERS = /^(walk|run|swim|jump|stepback|leap)$/, EMOTE = /^(Worry|Sad|Cry|Cheer|Laugh|Surprise|Scared|Jump|Wave)$/, GAP = 1.4;  // GAP: the pause a line's last beat runs into
   const hero = n => cast.find(c => c.name === n && c.body.visible);
-  const withPair = ns => { const out = new Set(ns); for (const n of ns) { const c = hero(n); if (c?.ride?.on) out.add(c.ride.on.name); for (const o of cast) if (o.ride?.on === c) out.add(o.name); } return [...out]; };  // a rider and its mount are one subject
+  const withPair = ns => { const out = new Set(ns); for (const n of ns) { const c = hero(n); if (c?.ride?.on) out.add(c.ride.on.name); for (const o of cast) if (c && o.ride?.on === c) out.add(o.name); } return [...out]; };  // a rider and its mount are one subject (a name with no character — an extra — has no mount: without `c &&`, every non-rider matched undefined and the shot framed the whole cast)
   const sb = new THREE.Box3(), sv = new THREE.Vector3();
   const boxOf = (ns, at, any) => {  // at: [[x0,y0,z0],[x1,y1,z1]] a box of the page (a painted thing: gourd-s01's Sky King on the sky card); a name no character has: that page piece's box  // the subjects' box from their bones (the skin's own box is the bind pose's, twice as wide as the body that is drawn) and a tenth of their height; null if none is on stage
     const u = new THREE.Box3();
     if (at?.length === 2) u.expandByPoint(B(at[0])).expandByPoint(B(at[1]));
-    for (const n of ns) { const c = any ? cast.find(c => c.name === n) : hero(n); if (!c) { const o = n && root.getObjectByName(n); if (o) u.union(new THREE.Box3().setFromObject(o)); continue; } const bones = c.bones ??= (() => { const l = []; (c.model || c.body).traverse(o => o.isBone && l.push(o)); return l; })(); sb.makeEmpty(); for (const o of bones) sb.expandByPoint(o.getWorldPosition(sv)); u.union(sb.expandByScalar(0.15 * c.height)); }  // bones and 15% of the height: a crocodile's snout and tail reach past its bones (the drawn pair touched the frame's edge at 10%)
+    for (const n of ns) { const c = any ? cast.find(c => c.name === n) : hero(n); if (!c) { const o = n && (root.getObjectByName(n) || group.getObjectByName(n)); if (o) u.union(new THREE.Box3().setFromObject(o)); continue; } const bones = c.bones ??= (() => { const l = []; (c.model || c.body).traverse(o => o.isBone && l.push(o)); return l; })(); sb.makeEmpty(); for (const o of bones) sb.expandByPoint(o.getWorldPosition(sv)); u.union(bones.length ? sb.expandByScalar(0.15 * c.height) : sb.setFromObject(c.model || c.body)); }  // a paper puppet has no bones: its card's own box (gourd s11)  // bones and 15% of the height: a crocodile's snout and tail reach past its bones (the drawn pair touched the frame's edge at 10%)
     return u.isEmpty() ? null : u;
   };
   let safeAt = -9, safeV = null;
@@ -868,6 +885,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const crowns = withPair(b.names).map(n => boneOf(hero(n), "HeadTop_End")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), underWords = r => (aim(r), crowns.every(p => sv.copy(p).project(probe).y <= safeNow().yt));  // R28: no face under the read-along words (gourd s01's desktop end put Pu Nyeu's head in them: the room-safe fit allowed the top to 96%)
     const heads = withPair(b.names).map(n => boneOf(hero(n), "head")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), pu = deg(Math.max(0, Math.min(40, b.pitch || 0))), lowEnough = r => heads.every(h => r.pos.y - h.y <= Math.sin(deg(29) + pu) * r.pos.distanceTo(h));  // pu: the page's pitch, the view raised that much over the beat's own (and allowed that much higher over the heads)  // the pitch rule where it shows, at the subjects' eyes: a close frame sits on the camera's floor and looks down more steeply the nearer it is (a phone's 8.2: 32 degrees above Bobo's head); a lower fill stands it farther back
     low = true;
+    const nearWas = near; near = 0.05;  // a paper puppet is small: its close/medium/wide fill sits nearer than the reader's orbit floor (the fill already fits it; fit() reads `near`, place() reads the let-out below)
     try {
       let q, fq, q0, fq0, loose, qn;
       // a phone whose room fit would cut its subjects at every fill (turtle s02 2.2: the pair by the backdrop's end, pushed off the right edge): the view turns instead (the smallest of 8, 15, 22 degrees either way that holds them, room-free) at the full fill, so the size the page asks for holds; not while the opening push flies in (its speed caps are tuned to the unturned beat: Kapi s08's phone push went 0.35 m/s)
@@ -895,7 +913,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       }
       if (klass() !== 3 && bd) return kept ?? fq;  // none this moment: the frame it is on while that still holds them, else the closest room-safe one; never the wide view into the room (8.5#2: the swim's stretch not yet framed went for a 4.6 m view and held it)
       return klass() === 3 ? loose ?? (b.kind === "end" ? null : qn) : q0;  // a phone keeps its subjects whole at the lowest fill (farthest back, least steep: the first rung's frame went 32 degrees above Bobo on 8.2); no backdrop: its own frame  // none keeps them whole with no room: their own frame, whole (room may show: Bobo swimming off in 8.5 was cut half a screen), else the room-safe one
-    } finally { low = false; }
+    } finally { low = false; near = nearWas; }
   };
   const deskOut = (r, ok) => {  // an upright phone's story frame slid up its own screen (the subjects sink toward the bottom, nothing grows) until its bottom edge lands on the page, as far as `ok` (the subjects in the safe frame, no face under the words) and the backdrop's top stays above the read-along panel allow: the book's board and the desk out of the picture (turtle s09's phone frames were 29-33% board at any pitch, the frame being centred on the subjects)
     if (deskOver(r) <= 0) return r;
@@ -944,7 +962,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (SC.beat) g = SC.beat.reading ? rigOf("reading") : beatRig(SC.beat, now);
     if (g) SC.goal = g;
     if (SC.goal?.face) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });  // the orbit let out for a face beat, as for a face shot (given back once the camera is inside it again)
-    else if (SC.goal) lift(SC.goal);
+    else if (SC.goal) { const d = SC.goal.pos.distanceTo(SC.goal.look); if (d < (faceLim?.minDistance ?? controls.minDistance) - 0.01) { SC.goal.near = SC.beat?.names.filter(Boolean).every(n => { const c = hero(n); return !c || (c.bones?.length ?? 0) === 0; }); faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }; controls.minDistance = Math.min(faceLim.minDistance, Math.max(0.05, d - 0.01)); } else lift(SC.goal); }  // a beat of a small subject: the orbit floor is let out to its own fill (any subject), and a paper puppet/extra's fill comes in faster (a 3D small body keeps its own rate, so s01 is untouched)
     const trail = SC.goal ? place({ pos: SC.goal.pos.clone(), look: SC.goal.look.clone() }, t) : 0;
     if (window.live) window.live.hint.landed = trail < 0.02 && SC.key === "end", window.live.hint.hold = SC.key === "end" ? SC.endHold : null;  // the Next page button: placed as the held close will show it, as soon as the close begins (it waited for the landing, 11-17 s on the toad pages)
   }
@@ -970,7 +988,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const ms = []; find(n).forEach(x => x.traverse(y => y.isMesh && y.material.emissive?.getHex() && ms.push({ m: y.material, i: y.material.emissiveIntensity, ph: rnd(0, 9) }))); return ms; });
   ticks.push(t => {
     (LI.cues || []).forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
-      && cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c));
+      && (cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c),
+        c.stage && [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage)))));  // "stage": "day": every paper puppet to its day card from this cue
     for (const [o] of tweens) { const s = lightNow(o); o.color.copy(s.c); o.intensity = s.i; o.position.copy(s.p); }
     for (const [o, w] of lit) if (w.k !== w.to) glow(o, (w.k = w.from + (w.to - w.from) * smooth((now - w.t0) / w.secs)));
     for (const f of flicker) {  // a flame: 0.85..1.0 with soft noise at 6-10 Hz
@@ -1315,7 +1334,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const x = { e, p, def, home, path, wp: 0, face: e.face || 1, fs: e.face || 1, hidden: false, step: null, ri: -1, queue: [], later: [], delay: o.delay || 0, still: o.still, pose: e.pose, id: pups.length, on: e.along ? find(e.at) : null };
       // face: -1 starts a puppet looking to -x (its art looks to +x); a "go" or "turn" then sets it as before
       p.root.position.copy(home); p.root.rotation.y = { back: Math.PI, left: -0.35, right: 0.35 }[e.seen_from] || 0;  // a flat card leans only 20° to its side: the reader orbits ±50°, so it is never seen edge-on
-      p.root.scale.setScalar(1e-3); group.add(p.root); pups.push(x);
+      p.root.scale.setScalar(1e-3); p.root.name ||= e.name ?? ""; group.add(p.root); pups.push(x);  // named, so a shot can name an extra
       p.x = x;  // a 3D extra plays the clip of the step its routine is on
       if ((x.sw = sway.find(s => s.b?.containsPoint(home)))) x.sw.carry = true;
       if (coarse) { x.cs = new THREE.Mesh(new THREE.PlaneGeometry(p.size, p.size * 0.4).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0, transparent: true, opacity: 0.3, depthWrite: false, alphaMap: dot }));

@@ -1,11 +1,8 @@
 {
  "puppet": "owl",
  "size": 0.06,
- "metres_per_pixel": 8.810184573366812e-05,
- "rest": {
-  "head": 0,
-  "eyelid": 0
- },
+ "metres_per_pixel": 6.550218340611354e-05,
+ "rest": {},
  "versions": [
   "day",
   "evening",
@@ -18,63 +15,17 @@
    "name": "body",
    "png": "cards/puppets/owl/body.png",
    "size": [
-    0.03251,
-    0.03788
+    0.04959,
+    0.06
    ],
    "pivot": [
     0.5,
-    0.007
+    0.0033
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/owl/head.png",
-   "size": [
-    0.03489,
-    0.0274
-   ],
-   "pivot": [
-    0.5,
-    0.07
-   ],
-   "parent": "body",
-   "attach": [
-    0.5,
-    0.8845
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -12,
-    "max": 12
-   }
-  },
-  {
-   "name": "eyelid",
-   "png": "cards/puppets/owl/eyelid.png",
-   "size": [
-    0.02608,
-    0.00969
-   ],
-   "pivot": [
-    0.5,
-    -0.0091
-   ],
-   "parent": "head",
-   "attach": [
-    0.5,
-    0.68
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": 0,
-    "max": 180
-   }
   }
  ]
 }

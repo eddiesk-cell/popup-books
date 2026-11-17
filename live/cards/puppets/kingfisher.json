@@ -1,11 +1,8 @@
 {
  "puppet": "kingfisher",
  "size": 0.04,
- "metres_per_pixel": 6.818614611960204e-05,
- "rest": {
-  "head": 0,
-  "wing": 0
- },
+ "metres_per_pixel": 5.167958656330749e-05,
+ "rest": {},
  "versions": [
   "day"
  ],
@@ -16,8 +13,8 @@
    "name": "body",
    "png": "cards/puppets/kingfisher/body.png",
    "size": [
-    0.03628,
-    0.03512
+    0.04439,
+    0.04
    ],
    "pivot": [
     0.5,
@@ -27,52 +24,6 @@
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/kingfisher/head.png",
-   "size": [
-    0.03723,
-    0.01473
-   ],
-   "pivot": [
-    0.1289,
-    0.4389
-   ],
-   "parent": "body",
-   "attach": [
-    0.8554,
-    0.9037
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -20,
-    "max": 20
-   }
-  },
-  {
-   "name": "wing",
-   "png": "cards/puppets/kingfisher/wing.png",
-   "size": [
-    0.03143,
-    0.01786
-   ],
-   "pivot": [
-    0.9078,
-    0.8361
-   ],
-   "parent": "body",
-   "attach": [
-    0.7378,
-    0.7186
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": -90,
-    "max": 0
-   }
   }
  ]
 }

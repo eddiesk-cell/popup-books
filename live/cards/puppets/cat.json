@@ -1,11 +1,8 @@
 {
  "puppet": "cat",
  "size": 0.05,
- "metres_per_pixel": 7.783161999351213e-05,
- "rest": {
-  "head": 0,
-  "tail": 0
- },
+ "metres_per_pixel": 5.995203836930456e-05,
+ "rest": {},
  "versions": [
   "night"
  ],
@@ -16,63 +13,17 @@
    "name": "body",
    "png": "cards/puppets/cat/body.png",
    "size": [
-    0.03059,
-    0.0351
+    0.05198,
+    0.05
    ],
    "pivot": [
     0.5,
-    -0.0553
+    0.0036
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/cat/head.png",
-   "size": [
-    0.02514,
-    0.02646
-   ],
-   "pivot": [
-    0.1931,
-    0.3575
-   ],
-   "parent": "body",
-   "attach": [
-    0.8309,
-    0.8227
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -15,
-    "max": 15
-   }
-  },
-  {
-   "name": "tail",
-   "png": "cards/puppets/cat/tail.png",
-   "size": [
-    0.01238,
-    0.03059
-   ],
-   "pivot": [
-    0.607,
-    0.1906
-   ],
-   "parent": "body",
-   "attach": [
-    0.0493,
-    0.0487
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": -40,
-    "max": 70
-   }
   }
  ]
 }

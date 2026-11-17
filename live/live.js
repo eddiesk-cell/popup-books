@@ -303,17 +303,25 @@ const modelOf = file => models[file] ??= loader.loadAsync(`chars/${file.split("/
   .catch(() => loader.loadAsync(`../${file}`))  // no slim copy (yet): the original, through web/assets
   .then(g => (g.animations.forEach(a => { const t0 = Math.min(...a.tracks.map(k => k.times[0])); if (t0 > 0 && t0 < Infinity) { new Set(a.tracks.map(k => k.times)).forEach(t => t.forEach((v, i) => (t[i] = v - t0))); a.resetDuration(); } }), g));  // every clip starts at 0: one whose first key is late (0.042 s in some exports) holds a frame at each loop's wrap. Tracks share their times arrays, so each array moves once
 async function character(c, sp) {
-  const g = c.model.startsWith("puppet:") ? puppetModel(THREE, await storyPuppet(c.model.slice(7), c.grade ?? sp.m.stage?.name))  // "puppet:tong": a paper puppet
+  const pp = c.model.startsWith("puppet:") && await storyPuppet(c.model.slice(7), c.grade ?? sp.m.stage?.name);
+  const g = pp ? puppetModel(THREE, pp)  // "puppet:tong": a paper puppet
     : await modelOf(c.model);
   const model = clone(g.scene), pivot = new THREE.Group(), body = new THREE.Group();
   if (/animal/.test(c.model)) gradeAnimal(model, c.grade ?? sp.m.stage?.name);  // any 3D animal (assets/animals/, a book's own lite animal-*.glb copies, as extras3d.js reads them) takes the night/eve grade of the paper cards; the story's own characters stay as lit
   body.name = c.name;  // a game reads a tapped one by name (the shadow game's spots)
+  if (pp) body.userData.restage = to => pp.root.userData.restage(to, model);  // a light cue's "stage" swaps the cards of this clone (ambient.js): its materials may be its own by then (a game's glow clones them)
   model.traverse(o => { if (o.isMesh) { o.visible = !o.name.startsWith("Icosphere"); o.castShadow = o.receiveShadow = true; o.frustumCulled = false; } });
   pivot.rotation.y = rad(c.face ?? -90); pivot.add(model); body.add(pivot);
   body.updateMatrixWorld(true);
   const box = new THREE.Box3(); model.traverse(o => o.isMesh && o.visible && o.matrixWorld.determinant() !== 0 && box.expandByObject(o));  // the hidden bone-shape sphere is not measured, nor a spare head stored at scale 0 (its skinned box is NaN and blanked the page: toad request 00:51)
   const size = box.getSize(new THREE.Vector3()), mid = box.getCenter(new THREE.Vector3());
-  pivot.position.set(-mid.x, -box.min.y, -mid.z);  // stand on the floor, centred, as popup.py does
+  let cx = mid.x, cz = mid.z;
+  if (c.model.includes("standee")) {  // a standee is its card plus a flat paper tab behind it: centre on the card (its upper half), not on the box, or the card
+    const v = new THREE.Vector3(); let n = 0, sx = 0, sz = 0;  // stands half the tab in front of its at (Kankak s06: 0.25 at the palace cards' scale)
+    model.traverse(o => { if (!o.isMesh || !o.visible) return; const p = o.geometry.attributes.position;
+      for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i).applyMatrix4(o.matrixWorld); if (v.y > box.min.y + size.y / 2) { sx += v.x; sz += v.z; n++; } } });
+    if (n) { cx = sx / n; cz = sz / n; } }
+  pivot.position.set(-cx, -box.min.y, -cz);  // stand on the floor, centred, as popup.py does
   const proxy = new THREE.Mesh(new THREE.BoxGeometry(size.x * 1.2, size.y * 1.1, size.z * 1.2), new THREE.MeshBasicMaterial({ visible: false }));
   proxy.position.y = size.y * 0.5; body.add(proxy);  // the hit box: a little larger than the body, easy for a small finger
   const mix = new THREE.AnimationMixer(model), clips = Object.fromEntries(g.animations.map(a => [a.name, a]));

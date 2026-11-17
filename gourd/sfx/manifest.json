@@ -1,0 +1,5 @@
+{
+ "beds": ["birds-morning", "river-slow", "leaves-breeze"],
+ "shots": ["buffalo-snort", "hush-swell"],
+ "pools": { "buffalo-moo": 3, "gecko-chirp": 3 }
+}

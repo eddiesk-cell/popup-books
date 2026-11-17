@@ -1,12 +1,8 @@
 {
  "puppet": "lapwing",
  "size": 0.06,
- "metres_per_pixel": 9.717716774767702e-05,
- "rest": {
-  "head": 0,
-  "leg-l": 0,
-  "leg-r": 0
- },
+ "metres_per_pixel": 6.622516556291391e-05,
+ "rest": {},
  "versions": [
   "evening",
   "night"
@@ -18,86 +14,17 @@
    "name": "body",
    "png": "cards/puppets/lapwing/body.png",
    "size": [
-    0.06239,
-    0.0275
+    0.06033,
+    0.06
    ],
    "pivot": [
     0.5,
-    -0.9787
+    0.0033
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/lapwing/head.png",
-   "size": [
-    0.02935,
-    0.02196
-   ],
-   "pivot": [
-    0.2008,
-    0.3913
-   ],
-   "parent": "body",
-   "attach": [
-    0.9247,
-    0.7027
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -15,
-    "max": 15
-   }
-  },
-  {
-   "name": "leg-l",
-   "png": "cards/puppets/lapwing/leg-l.png",
-   "size": [
-    0.0171,
-    0.03625
-   ],
-   "pivot": [
-    0.355,
-    0.9051
-   ],
-   "parent": "body",
-   "attach": [
-    0.45,
-    0.2
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": -30,
-    "max": 70
-   }
-  },
-  {
-   "name": "leg-r",
-   "png": "cards/puppets/lapwing/leg-r.png",
-   "size": [
-    0.02624,
-    0.03343
-   ],
-   "pivot": [
-    0.1849,
-    0.8972
-   ],
-   "parent": "body",
-   "attach": [
-    0.6,
-    0.1013
-   ],
-   "z": 3,
-   "hinge": {
-    "axis": "z",
-    "min": -30,
-    "max": 70
-   }
   }
  ]
 }

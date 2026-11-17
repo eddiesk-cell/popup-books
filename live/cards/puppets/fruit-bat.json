@@ -1,11 +1,8 @@
 {
  "puppet": "fruit-bat",
  "size": 0.08,
- "metres_per_pixel": 8.280030636113354e-05,
- "rest": {
-  "wing-l": 0,
-  "wing-r": 0
- },
+ "metres_per_pixel": 8.281573498964804e-05,
+ "rest": {},
  "versions": [
   "day",
   "evening",
@@ -18,63 +15,17 @@
    "name": "body",
    "png": "cards/puppets/fruit-bat/body.png",
    "size": [
-    0.01995,
-    0.03254
+    0.08,
+    0.03843
    ],
    "pivot": [
     0.5,
-    -0.1723
+    0.0065
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "wing-l",
-   "png": "cards/puppets/fruit-bat/wing-l.png",
-   "size": [
-    0.03453,
-    0.0255
-   ],
-   "pivot": [
-    0.94,
-    0.74
-   ],
-   "parent": "body",
-   "attach": [
-    0.12,
-    0.4
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -60,
-    "max": 60
-   }
-  },
-  {
-   "name": "wing-r",
-   "png": "cards/puppets/fruit-bat/wing-r.png",
-   "size": [
-    0.03444,
-    0.0255
-   ],
-   "pivot": [
-    0.06,
-    0.74
-   ],
-   "parent": "body",
-   "attach": [
-    0.88,
-    0.4
-   ],
-   "z": 2,
-   "hinge": {
-    "axis": "z",
-    "min": -60,
-    "max": 60
-   }
   }
  ]
 }

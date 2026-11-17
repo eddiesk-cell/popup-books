@@ -1,10 +1,8 @@
 {
  "puppet": "duck",
  "size": 0.06,
- "metres_per_pixel": 0.00012545326938354114,
- "rest": {
-  "head": 0
- },
+ "metres_per_pixel": 0.00010752688172043011,
+ "rest": {},
  "versions": [
   "day"
  ],
@@ -15,40 +13,17 @@
    "name": "body",
    "png": "cards/puppets/duck/body.png",
    "size": [
-    0.10337,
-    0.04479
+    0.09774,
+    0.06
    ],
    "pivot": [
     0.5,
-    0.0084
+    0.0054
    ],
    "parent": null,
    "attach": null,
    "z": 0,
    "hinge": null
-  },
-  {
-   "name": "head",
-   "png": "cards/puppets/duck/head.png",
-   "size": [
-    0.05821,
-    0.04102
-   ],
-   "pivot": [
-    0.163,
-    0.347
-   ],
-   "parent": "body",
-   "attach": [
-    0.8893,
-    0.7416
-   ],
-   "z": 1,
-   "hinge": {
-    "axis": "z",
-    "min": -30,
-    "max": 20
-   }
   }
  ]
 }

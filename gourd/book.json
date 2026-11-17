@@ -1,0 +1,299 @@
+{
+ "chars": "gourd-",
+ "title": "Khun Borom and the Great Gourd",
+  "released": true,
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "A Gift from the Sky",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 0,
+    "count": "game.1.count",
+    "before": "1.5",
+    "start": "Tap the wet mud to plant the rice. Count with me!",
+    "praise": "Five little rice plants!",
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    }
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "The Giant Gourd",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "order",
+    "who": "lion",
+    "before": "2.5",
+    "start": "Little Lion wants to see the top! Tap the glowing leaf.",
+    "praise": "Up, up, up! What a big gourd!",
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    }
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Voices in the Gourd",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "3.4",
+    "start": "Tap the gourd where it glows, and listen!",
+    "praise": "So many voices! Somebody is in there!",
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    }
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "Two Doors",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "count": "game.4.count",
+    "before": "4.5",
+    "start": "Who wants to come out? Tap them and count with me!",
+    "praise": "Ten! And still they come!",
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    }
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Round Door, Square Door",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "5.5",
+    "start": "It is too loud! Tap the shouting people so they stop and listen.",
+    "praise": "Now it is quiet. Listen!",
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Khun Borom",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "pair",
+    "pairs": [
+     [
+      "rice-bundle",
+      "rice-front"
+     ],
+     [
+      "bamboo-pole",
+      "house-frame"
+     ],
+     [
+      "thread-skein",
+      "loom"
+     ],
+     [
+      "fish-trap",
+      "water-jar"
+     ]
+    ],
+    "before": "6.4",
+    "start": "Tap a thing, then tap where it goes!",
+    "praise": "Now everybody knows how!",
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    }
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "The Dark Vine",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "7.6"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "7.5",
+    "start": "Who is still out in the dark? Tap the shining eyes!",
+    "praise": "Everyone is by the fire!",
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    }
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "Who Will Cut the Vine?",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5",
+    "8.6"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "8.5",
+    "start": "Help them get ready! Find the axe, the rope, the water jar, the rice basket and the lamp.",
+    "praise": "They are ready!",
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    }
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Chop, Chop, Chop!",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "9.4",
+    "start": "Chop with them! Tap when the ring closes on the axe.",
+    "praise": "Look! Light!",
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    }
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "Come and Eat!",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5",
+    "10.6"
+   ],
+   "game": {
+    "type": "echo",
+    "targets": [
+     "drum0",
+     "drum1",
+     "drum2"
+    ],
+    "sounds": [
+     "drum-small",
+     "drum-mid",
+     "drum-big"
+    ],
+    "rounds": [
+     [
+      "drum0",
+      "drum1"
+     ],
+     [
+      "drum1",
+      "drum2",
+      "drum0"
+     ],
+     [
+      "drum2",
+      "drum2",
+      "drum0",
+      "drum1"
+     ]
+    ],
+    "before": "10.6",
+    "start": "Play the drums to call them! Listen, then tap the same.",
+    "praise": "Happy New Year! Here they are!",
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    }
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What did we learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ],
+ "moral": {
+  "lines": [
+   "moral.1",
+   "moral.2",
+   "moral.3",
+   "moral.4",
+   "moral.5"
+  ]
+ }
+}
