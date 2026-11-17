@@ -3,230 +3,6 @@
  "note": "writes web/landing/library/art/*.webp (+ -p phone halves), web/landing/library/room.json, and the composite stills in renders/landing/L3/.",
  "layers": [
   {
-   "id": "bridge_0",
-   "plane": "back",
-   "img": "art/bridge1.webp",
-   "phoneImg": "art/bridge1-p.webp",
-   "p": [
-    4.172,
-    5.0,
-    23.081
-   ],
-   "size": [
-    18,
-    4.463
-   ],
-   "rot": [
-    0,
-    3.3416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 34
-  },
-  {
-   "id": "bridge_1",
-   "plane": "back",
-   "img": "art/bridge2.webp",
-   "phoneImg": "art/bridge2-p.webp",
-   "p": [
-    21.466,
-    13.0,
-    7.318
-   ],
-   "size": [
-    20,
-    3.062
-   ],
-   "rot": [
-    0,
-    4.4916
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 37
-  },
-  {
-   "id": "bridge_2",
-   "plane": "back",
-   "img": "art/bridge1.webp",
-   "phoneImg": "art/bridge1-p.webp",
-   "p": [
-    13.712,
-    -3.0,
-    -14.06
-   ],
-   "size": [
-    18,
-    4.463
-   ],
-   "rot": [
-    0,
-    5.5916
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 40
-  },
-  {
-   "id": "bridge_3",
-   "plane": "back",
-   "img": "art/bridge2.webp",
-   "phoneImg": "art/bridge2-p.webp",
-   "p": [
-    -9.735,
-    8.0,
-    -17.229
-   ],
-   "size": [
-    20,
-    3.062
-   ],
-   "rot": [
-    0,
-    6.7416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 34
-  },
-  {
-   "id": "bridge_4",
-   "plane": "back",
-   "img": "art/bridge1.webp",
-   "phoneImg": "art/bridge1-p.webp",
-   "p": [
-    -20.998,
-    -9.0,
-    2.24
-   ],
-   "size": [
-    18,
-    4.463
-   ],
-   "rot": [
-    0,
-    7.8416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 37
-  },
-  {
-   "id": "bridge_5",
-   "plane": "back",
-   "img": "art/bridge2.webp",
-   "phoneImg": "art/bridge2-p.webp",
-   "p": [
-    -12.39,
-    17.0,
-    21.281
-   ],
-   "size": [
-    19,
-    2.909
-   ],
-   "rot": [
-    0,
-    8.8416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 40
-  },
-  {
-   "id": "bridge_6",
-   "plane": "back",
-   "img": "art/bridge1.webp",
-   "phoneImg": "art/bridge1-p.webp",
-   "p": [
-    18.017,
-    -16.0,
-    16.797
-   ],
-   "size": [
-    20,
-    4.958
-   ],
-   "rot": [
-    0,
-    4.0416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 34
-  },
-  {
-   "id": "bridge_7",
-   "plane": "back",
-   "img": "art/bridge2.webp",
-   "phoneImg": "art/bridge2-p.webp",
-   "p": [
-    3.105,
-    22.0,
-    -19.28
-   ],
-   "size": [
-    18,
-    2.756
-   ],
-   "rot": [
-    0,
-    6.1416
-   ],
-   "tint": [
-    0.8,
-    0.82,
-    0.92
-   ],
-   "fog": 0.3,
-   "fogStep": 0.03,
-   "repeatY": 9,
-   "spacingY": 37
-  },
-  {
    "id": "spot",
    "plane": "mid",
    "img": "art/spot.webp",
@@ -245,66 +21,8 @@
     0
    ],
    "blend": "add",
-   "tier": 3
-  },
-  {
-   "id": "floor",
-   "plane": "fore",
-   "img": "art/floor.webp",
-   "phoneImg": "art/floor-p.webp",
-   "p": [
-    0.0,
-    0.0,
-    4.05
-   ],
-   "size": [
-    10.8,
-    9.9
-   ],
-   "rot": [
-    -1.5708,
-    0
-   ],
-   "tier": 2
-  },
-  {
-   "id": "bal_left",
-   "plane": "fore",
-   "img": "art/balustrade.webp",
-   "phoneImg": "art/balustrade-p.webp",
-   "p": [
-    -5.4,
-    0.75,
-    4.05
-   ],
-   "size": [
-    9.9,
-    1.5
-   ],
-   "rot": [
-    0,
-    1.5708
-   ]
-  },
-  {
-   "id": "bal_right",
-   "plane": "fore",
-   "img": "art/balustrade.webp",
-   "phoneImg": "art/balustrade-p.webp",
-   "p": [
-    5.4,
-    0.75,
-    4.05
-   ],
-   "size": [
-    9.9,
-    1.5
-   ],
-   "rot": [
-    0,
-    -1.5708
-   ],
-   "flip": "h"
+   "tier": 3,
+   "bend": "cases"
   },
   {
    "id": "facade",
@@ -3702,7 +3420,7 @@
    185
   ]
  },
- "wallNote": "every wall of books is the seamless shader in walls/walls.js (room.walls): the well, the home wall behind our 4 cases and the entrance wall. The painted tower, home_wall and doorwall cards it replaced are gone (2026-11-17)",
+ "wallNote": "every wall of books is the seamless shader in walls/walls.js on one round tower (room.walls.rotunda). Retired 2026-11-17 for it: the flat home and entrance walls, the open well, the painted bridge (balcony) cards, the home floor card and its balustrade cards",
  "stationTemplate": {
   "note": "positions relative to a station's floor centre; the page places one per generated station",
   "floor": {
@@ -3843,7 +3561,7 @@
  ],
  "note2": "slots: face-out books, cover 1:1.5, size [0.37, 0.56, 0.13] (the shelf book model is scaled x1.03 across, x1.4 up), tilt leans back 10 deg",
  "walls": {
-  "note": "walls/walls.js: every wall of books is one seamless shader (no cards): the well, the home wall behind our cases, the entrance wall. The flat walls' bay is `bay` m and shelf `row` m; the well is the same bookcase drawn bigger (well.bays round it, well.row high), as the old towers were; uprights, boards and a deep band every sixth shelf are drawn, the books are cells of the atlas (assets/landing/walls/make_bookcells.py). Edges of the flat walls land on uprights; a fluted pilaster stands on every `pilaster.every`th upright; the flat walls are solid up to `split` m and melt into the haze between `fade` m. fog: [haze starts (m), haze scale (m), far tint reached (m)], far: the far walls' tint",
+  "note": "walls/walls.js: every wall of books is one seamless shader (no cards) on ONE round tower, a rotunda (rotunda below): its facets are flat bays on one circle round the axis c, our 4 cases' facets in front (apothem a, each caseW wide), the door's facet (doorW) behind, plain bays of about bayW between; a fluted pilaster on every corner. Shelves are `row` m; uprights, boards and a deep band every sixth shelf are drawn, the books are cells of the atlas (assets/landing/walls/make_bookcells.py). fog: [haze starts (m), haze scale (m), far tint reached (m)], far: the far walls' tint",
   "atlas": "walls/books.webp",
   "atlasPhone": "walls/books-p.webp",
   "cells": [
@@ -3857,59 +3575,11 @@
    160,
    40
   ],
-  "well": {
-   "r": 26,
-   "bays": 56,
-   "y": [
-    -211,
-    211
-   ],
-   "row": 1.1
-  },
-  "home": {
-   "z": -0.25,
-   "x": [
-    -7.426,
-    7.426
-   ],
-   "y": [
-    -90,
-    32
-   ]
-  },
-  "door": {
-   "z": 8.98,
-   "upright": 1.36,
-   "x": [
-    -16.211,
-    16.211
-   ],
-   "y": [
-    -90,
-    30
-   ],
-   "hole": [
-    -1.1,
-    1.17,
-    -0.1,
-    3.75
-   ]
-  },
   "lamps": {
-   "note": "sconces: on the well's uprights every `step` m up, turning by `turn` uprights each time; two on every bookcase unit's outer sides; two flanking the door",
-   "step": 5,
-   "turn": 23,
-   "wellScale": 2.2,
-   "door": [
-    [
-     -1.36,
-     3.0
-    ],
-    [
-     1.36,
-     3.0
-    ]
-   ]
+   "note": "sconces on the pilasters: flanking our cases, every door and every arch at each level (y m above its floor), and up the galleries on every `every`th corner, `up` m above each balcony floor",
+   "y": 3.0,
+   "every": 3,
+   "up": 3.2
   },
   "far": [
    0.6,
@@ -3921,11 +3591,64 @@
    "d": 0.13,
    "every": 4
   },
-  "split": 7,
-  "fade": [
-   10,
-   30
-  ],
-  "bay": 1.8564
+  "rotunda": {
+   "note": "the library is one round tower (walls.js towerPlan, walls/rotunda.js): home's floor is y 0, each region room a level `level` m further down on the same axis, the Wonder Hall a wider ring at the foot. Owner 2026-11-17: the books are the star, so every level has only slim walkways at `tiers` m above its floor (`deep` m out from the wall, a thin slab, light iron brackets, a light railing with a brass handrail), rolling ladders on brass rails (`ladders`), and the wall rises past the last walkway to the open top at `top` m: the oculus. doorAt: the z the door cards were drawn for (grow.js sets them in the door's facet)",
+   "c": [
+    0,
+    5.965
+   ],
+   "a": 6.24,
+   "caseW": 1.9286,
+   "doorW": 2.9,
+   "bayW": 1.8,
+   "doorAt": 8.98,
+   "tiers": [
+    6.4,
+    13.6
+   ],
+   "level": 24,
+   "deep": 0.7,
+   "slab": 0.1,
+   "fascia": 0.12,
+   "top": 34,
+   "hall": {
+    "r": 10.3,
+    "n": 21,
+    "tiers": [
+     16.8
+    ],
+    "ceil": 21.6,
+    "note": "the Wonder Hall: a wider ring at the tower's foot; one walkway (open where the stair climbs) and a ceiling ring under the tower, with a hole the stair's light goes up through"
+   },
+   "rail": 3.4,
+   "ladders": {
+    "note": "rolling library ladders by facet index (walls.js towerPlan: 0-3 our cases, 12 the door, 4 and 20 the first portals): `up` from the floor to the first walkway's railing, `floor` and `walks` (one list per walkway) up to the brass rail `rail` m above their floor; `hall` on the Wonder Hall's floor",
+    "up": [
+     8,
+     16
+    ],
+    "floor": [
+     10,
+     14
+    ],
+    "walks": [
+     [
+      1,
+      7,
+      13,
+      18
+     ],
+     [
+      4,
+      10,
+      15
+     ]
+    ],
+    "hall": [
+     9,
+     12
+    ]
+   }
+  }
  }
 }

@@ -88,7 +88,8 @@ export function createRing(THREE, { scene, camera, books, reduced, onChange, chi
       const delay = st.rank[j] / (ids.length - 1 || 1) * C.stag, raw = clamp((st.t - delay) / C.fly), u = k > 0 ? raw : 1 - raw; if (raw < 1) done = false;
       const x = books.xf[ids[j]], t = target(j, T), e = inOut(u), turn = sine(clamp((u - .12) / .88));
       // a cubic arc: slide forward off the ledge, rise, float, then lay itself into the ring
-      const p0 = x.p, p3 = t.p, p1 = new V(p0.x, p0.y + .04, p0.z + .38), p2 = new V(p3.x + (p0.x - p3.x) * .15, p3.y + .75, p3.z + (st.back.z * .5)), tt = e, m = 1 - tt;
+      const p0 = x.p, p3 = t.p, yw = books.slots[ids[j]].yaw ?? 0, p1 = new V(p0.x + Math.sin(yw) * .38, p0.y + .04, p0.z + Math.cos(yw) * .38),  // straight out of its own shelf (the cases stand on the tower's curve)
+        p2 = new V(p3.x + (p0.x - p3.x) * .15, p3.y + .75, p3.z + (st.back.z * .5)), tt = e, m = 1 - tt;
       const pp = cur[j].p.set(m * m * m * p0.x + 3 * m * m * tt * p1.x + 3 * m * tt * tt * p2.x + tt ** 3 * p3.x, m * m * m * p0.y + 3 * m * m * tt * p1.y + 3 * m * tt * tt * p2.y + tt ** 3 * p3.y, m * m * m * p0.z + 3 * m * m * tt * p1.z + 3 * m * tt * tt * p2.z + tt ** 3 * p3.z);
       cur[j].q.copy(x.q).slerp(t.q, turn); cur[j].s.copy(x.s).lerp(t.s, sine(u)); books.set(ids[j], pp, cur[j].q, cur[j].s);
       const flying = raw > 0 && raw < 1; books.shim?.(ids[j], flying ? Math.sin(Math.PI * raw) ** 1.4 * .9 : 0);

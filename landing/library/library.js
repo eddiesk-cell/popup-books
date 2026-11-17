@@ -11,7 +11,8 @@ import { createSky } from "./sky.js";
 import { loadCases3d } from "./cases3d.js";
 import { wireLiving } from "./livingwire.js";
 import { createWonders } from "./wonders.js";
-import { createWalls, createLamps } from "./walls/walls.js";
+import { createWalls, createLamps, towerPlan, onFacet } from "./walls/walls.js";
+import { createRotunda } from "./walls/rotunda.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
 const $ = s => document.querySelector(s), qs = new URLSearchParams(location.search);
@@ -32,7 +33,7 @@ const KEYS = ["menu", "settings", "language", "account", "signin", "signup", "so
 let lang = qs.get("lang"); if (!CODES.includes(lang)) lang = store.get("wst-lang");  // the first page's key
 if (!CODES.includes(lang)) lang = (navigator.languages || ["en"]).map(c => CODES.find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en";
 const words = () => Object.fromEntries(KEYS.map((k, i) => [k, TR[lang][i]]));
-let W = words(), books = null, homeWalls = null, behindDoor = null; const shelfBtns = [], setShown = [], ZERO = new THREE.Vector3();
+let W = words(), books = null; const shelfBtns = [], setShown = [], ZERO = new THREE.Vector3();
 let sndOff = store.get("popup-sound") === "off";  // kept in memory too: with storage blocked, off still holds until the page closes
 const sndOn = () => !sndOff;
 const sndLabel = () => { const b = $("#snd"); b.textContent = `${W.snd}: ${sndOn() ? W.on : W.off}`; };
@@ -52,14 +53,15 @@ document.querySelectorAll(".acct").forEach(b => { b.onclick = () => { $("#note")
 
 // ---- sound (L6a): sound.js's soft pools served from web/landing/sfx/ (the "landing" library), loaded only after the visitor's first gesture, on/off kept the way sound.js keeps it
 let snd = null, sndP = null, gestured = false; const cueLog = [];
-const BED_GAIN = 1.0, BED_FADE = 4000; let bedOn = false;  // the hum: a low bed, faded in over 4 s on the first gesture
+const BED_GAIN = 1.0, BED_FADE = 4000; let bedOn = false;
+const landingSounds = m => { const f = m.manifestFor("landing", "../../"); f.sounds["magic-shimmer"] ??= ["../../landing/sfx/magic-shimmer.m4a"]; return f; };  // the quiet magic's soft shimmer (11 s), played when the cranes or the lanterns begin  // the hum: a low bed, faded in over 4 s on the first gesture
 const startBed = () => { if (bedOn || sndOff) return; bedOn = true;
-  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("landing", "../../")))).catch(() => null))
+  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(landingSounds(m)))).catch(() => null))
     .then(s => { if (!s) return; s.setBed([["library-hum", 0]]); const t0 = performance.now();
       const iv = setInterval(() => { const u = Math.min(1, (performance.now() - t0) / BED_FADE); s.setBed([["library-hum", u * BED_GAIN]]); if (u >= 1) clearInterval(iv); }, 40); }); };
 for (const ev of ["pointerdown", "keydown", "touchend"]) addEventListener(ev, () => { gestured = true; startBed(); }, { capture: true, passive: true });
 const cue = (name, gain = 1) => { const ok = gestured && sndOn(); cueLog.push({ name, ok, t: Math.round(performance.now()) }); if (!ok) return;
-  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("landing", "../../")))).catch(() => null)).then(s => s?.play(name, { gain, tag: "library" })); };
+  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(landingSounds(m)))).catch(() => null)).then(s => s?.play(name, { gain, tag: "library" })); };
 $("#snd").onclick = () => { sndOff = !sndOff; store.set("popup-sound", sndOff ? "off" : "on"); snd?.mute(sndOff); sndLabel(); if (sndOff) front?.hush(); else startBed(); };
 
 // ---- the room
@@ -73,17 +75,18 @@ const catalog = await fetch(new URL("../books.json", base)).then(r => r.json()).
 if (qs.has("makecover")) catalog.books.forEach(b => { if (b.status === "making" && !b.cover) b.cover = "../shelf/books/kapi/plate.webp"; });  // test only: pretend the covers of the books being made have landed
 if (qs.has("fake")) { const REG = [["sea", "Lao and Southeast Asia"], ["asia", "Asia"], ["africa", "Africa"], ["europe", "Europe"], ["americas", "The Americas"], ["oceania", "Oceania"]], pal = ["#1f4a31", "#5b1f26", "#1d3557", "#4a2a5c", "#6b4423", "#1c5a5a"], realOnes = catalog.books.filter(b => b.status === "ready");
   catalog.regions = REG.map(([id, name]) => ({ id, name })); catalog.books = [...realOnes]; for (let i = realOnes.length; i < Math.max(Math.min(+qs.get("fake") || 200, 400), realOnes.length); i++) catalog.books.push({ id: "fake-" + i, title: { en: "Tale " + (i + 1) }, cover: null, fake: true, spine: pal[i % 6], status: "ready", region: REG[i % 6][0], link: "../live/?book=kapi&s=s01" }); }
-const grown = grow(room, catalog);
+const plan = towerPlan(room), RT = plan.T, grown = grow(room, catalog, { plan, onFacet });  // one round tower (walls.js): our cases on its curve, every room a level of it
 const c3 = await loadCases3d(THREE, scene, room, base, { phone, offsets: grown.caseSets });  // our cases as real 3D (null without a cases.glb)
 const sky = createSky(THREE, room.sky); scene.add(sky.mesh);
-{ const wc = room.wellCentre ?? [0, 0, 2.5], back = new THREE.Mesh(new THREE.CylinderGeometry(95, 95, 1300, 24, 1, true), new THREE.MeshBasicMaterial({ color: 0x1b1109, side: THREE.BackSide, fog: false })); back.position.set(wc[0], 250, wc[2]); back.renderOrder = -5; scene.add(back); }  // a dark backing behind the tower cards: the seams between them no longer show the sky
-const walls = createWalls(THREE, room, { base, phone, anisotropy: renderer.capabilities.getMaxAnisotropy() }); scene.add(walls.well, walls.home, walls.homeHi);// every wall of books is one seamless wall (walls/walls.js)
-const lamps = createLamps(THREE, (() => { const L = room.walls.lamps, Wl = room.walls.well, out = [], away = id => id !== "wonder";  // sconces: up the well's uprights, on the two outer sides of every bookcase unit, flanking the door
-  for (let y = Wl.y[0] + 6, i = 0; y < Wl.y[1] - 6; y += L.step, i++) out.push({ ...walls.wellSpot((i * L.turn) % Wl.bays, y), s: L.wellScale });
-  if (c3) { const b = new THREE.Box3().setFromObject(c3.group), zc = (b.min.z + b.max.z) / 2 + .12, y = b.max.y - .55;
-    [[0, 0, 0], ...grown.caseSets].forEach((o, j) => { const sid = grown.setStation[j], when = id => id === sid || LINKS.some(l => l.from === id && l.to === sid && !l.portal);  // shown with its cases (onStation's near)
-      out.push({ p: [b.min.x + o[0], y + o[1], zc + o[2]], n: [-1, 0, 0], when }, { p: [b.max.x + o[0], y + o[1], zc + o[2]], n: [1, 0, 0], when }); }); }
-  for (const [x, y] of L.door) out.push({ p: [x, y, room.walls.door.z - walls.pd - .005], n: [0, 0, -1], when: away });  // on the pilasters that flank the arch
+const hallL = grown.levels.find(L => L.ceil), lowY = Math.min(...grown.levels.map(L => L.y)), levelOf = id => { const q = st(id); return q ? grown.levels.find(L => Math.abs(L.y - (q.cam.p[1] - 1.7)) < .5) : null; };
+const walls = createWalls(THREE, room, plan, { holes: grown.holes, spans: [{ P: plan, y0: hallL ? hallL.ceil.y : lowY - 1, y1: RT.top }, ...(hallL ? [{ P: plan.hall, y0: hallL.y - .5, y1: hallL.ceil.y, id: 100 }] : [])] },
+  { base, phone, anisotropy: renderer.capabilities.getMaxAnisotropy() }); scene.add(walls.wall);  // every wall of books is one seamless wall (walls/walls.js), the tower's built parts are walls/rotunda.js
+const tower = createRotunda(THREE, plan, grown.levels.map(L => ({ ...L, holes: grown.holes.filter(h => h.P === L.P && Math.abs(h.y - L.y) < .5) })), { phone }); scene.add(tower.group);
+const lamps = createLamps(THREE, (() => { const L = room.walls.lamps, out = [];  // sconces on the pilasters: flanking our cases and every door and arch, and up the galleries on every few corners
+  for (const Lv of grown.levels) { const R = Lv.P, when = id => (levelOf(id)?.y ?? -1e9) <= Lv.y + .5, n = R.th.length, at = new Set(Lv.id === "wonder" ? [] : [0, 4]);  // shown from its own level and the ones below
+    for (const h of grown.holes) if (h.P === R && Math.abs(h.y - Lv.y) < .5) { at.add(h.f); at.add((h.f + 1) % n); }
+    for (const k of at) out.push({ ...walls.lampAt(R, k, Lv.y + L.y), when });
+    Lv.tiers.forEach((dy, t) => { for (let k = t % L.every; k < n; k += L.every) out.push({ ...walls.lampAt(R, k, Lv.y + dy + L.up), when }); }); }
   return out; })(), { reduced }); scene.add(lamps.solid, lamps.light);
 { const wst = room.stations.find(s => s.id === "wonder"); if (wst) {  // the Wonder Hall's round stage and a warm pool of light
   const c = document.createElement("canvas"); c.width = c.height = 512; const x = c.getContext("2d"), g = x.createRadialGradient(256, 256, 0, 256, 256, 256); g.addColorStop(0, "#6a4222"); g.addColorStop(.8, "#3a2210"); g.addColorStop(1, "#24140a"); x.fillStyle = g; x.beginPath(); x.arc(256, 256, 254, 0, 7); x.fill();
@@ -102,7 +105,13 @@ const hash = str => [...str].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7)
 const vary = (id, k, c) => { const h = hash(id), r = j => rnd(h + j, k); c.r *= .95 + r(1) * .1; c.g *= .96 + r(2) * .08; c.b *= .95 + r(3) * .1; return { mirror: r(4) < .5, dy: r(5) - .5, w: .94 + r(6) * .12, yaw: (r(7) - .5) * .1 }; };
 // a layer is a card: tint multiplies, fog blends toward the well's colour by height (+ fogStep per copy away), repeatY n = n copies centred on p.y spaced spacingY, billboard "y" turns it to face the visitor
 room.layers = room.layers.filter(l => !/art\/(balustrade|arm1|bridge2)\.webp$/.test(l.img) && !/^g_arm\d/.test(l.id));  // the home balcony's painted side railings were a torn cut-out (rails and balusters missing, white scraps): built in 3D below instead
-for (const L of room.layers) {
+for (const L of room.layers.filter(l => l.bend)) {  // a card bent round the tower: the glow over our cases lies on the 4 case facets of the wall, just in front of the books (one draw)
+  const e = tex(phoneArt && L.phoneImg ? L.phoneImg : L.img), y0 = L.p[1] - L.size[1] / 2, y1 = L.p[1] + L.size[1] / 2, u = [0, 1, 2, 3, 4].map(k => k / 4), q = [];
+  for (let k = 0; k < 4; k++) { const F = plan.facets[k]; for (const [a, b] of [[0, y0], [1, y0], [1, y1], [0, y0], [1, y1], [0, y1]]) q.push(...onFacet(plan, k, a * F.w, b, .03).slice(0, 3)); }
+  const g = new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(q, 3)).setAttribute("uv", new THREE.Float32BufferAttribute([0, 1, 2, 3].flatMap(k => [[0, 0], [1, 0], [1, 1], [0, 0], [1, 1], [0, 1]].flatMap(([a, b]) => [u[k] + a / 4, b])), 2));
+  const m = new THREE.MeshBasicMaterial({ transparent: true, depthWrite: false, opacity: 0, visible: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }); e.p.then(() => { if (!e.t.image) return; m.map = e.t; m.visible = true; m.needsUpdate = true; fades.push(m); });
+  const mesh = new THREE.Mesh(g, m); mesh.name = L.id; mesh.renderOrder = (L.tier ?? 3) * 10; scene.add(mesh); core.push(e.p); }
+for (const L of room.layers.filter(l => !l.bend)) {
   const flat = Math.abs(Math.abs(L.rot?.[0] ?? 0) - Math.PI / 2) < .01, side = flat ? THREE.FrontSide : THREE.DoubleSide;  // floors and walkways: seen from below (looking up from a lower room) they vanish instead of hanging as dark slabs in the light
   const url = phoneArt && L.phoneImg ? L.phoneImg : L.img, n = L.repeatY ?? 1, half = n >> 1, e = tex(url), add = L.blend === "add", tint = new THREE.Color(...(L.tint ?? [1, 1, 1]));
   const grade = L.plane === "mid" ? .95 : L.plane === "fore" ? .9 : 1, order = L.tier ?? (L.plane === "back" ? 1 : 3), ro = /^glow/.test(L.id) ? 9 : L.plane === "back" ? 19 : order * 10;  // painter's order: far glows 9, the tower rings 10-18 (far ring first), other back cards 19, floors 20, rays 29, cases and fore 30+  // our 4 cases keep their own bright warm tint; the rest sit a little dimmer
@@ -143,7 +152,8 @@ const shadowT = soft(0, 0, 0), glowT = soft(255, 200, 110), wall = room.layers.f
 const floorY0 = room.cases[0].bounds?.min[1] ?? 0;
 room.cases.forEach(c => { const bd = c.bounds; if (!bd) return;  // a soft contact shadow under every case, from its own bounds
   const s = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: shadowT, transparent: true, opacity: .55, depthWrite: false })); s.rotation.x = -Math.PI / 2;
-  s.position.set((bd.min[0] + bd.max[0]) / 2, bd.min[1] - floorY0 + (room.cases[0].floorY ?? 0) + .012, bd.max[2] + .2); s.scale.set((bd.max[0] - bd.min[0]) * 1.2, .9, 1); s.renderOrder = 31; scene.add(s); });
+  const po = c.pose; if (po) { s.position.set(po.p[0] + Math.sin(-po.yaw) * .5, bd.min[1] - floorY0 + (room.cases[0].floorY ?? 0) + .012, po.p[2] + Math.cos(-po.yaw) * .5); s.rotation.z = po.yaw; s.scale.set(1.544 * 1.2, .9, 1); }  // the case's own footprint, turned with it
+  else { s.position.set((bd.min[0] + bd.max[0]) / 2, bd.min[1] - floorY0 + (room.cases[0].floorY ?? 0) + .012, bd.max[2] + .2); s.scale.set((bd.max[0] - bd.min[0]) * 1.2, .9, 1); } s.renderOrder = 31; scene.add(s); });
 const glows = (room.windows ?? []).map(wx => { const g = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: glowT, transparent: true, opacity: .5, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); g.position.set(wx, room.windowY ?? 4.95, (wall?.p[2] ?? -.8) + .05); g.scale.set(1.5, 2.4, 1); g.renderOrder = 19.5; scene.add(g); return g; });
 
 const cb = room.cases.map(c => c.bounds).filter(Boolean);  // a warm pool of light over our 4 cases
@@ -160,82 +170,70 @@ scene.add(books.mesh);  // opaque: drawn first, the cards depth-test against it
 if (!c3) { const ledgeMesh = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshLambertMaterial({ color: 0x5a3a20 }), room.ledges?.length ?? 1);
 (room.ledges ?? []).forEach((l, i) => ledgeMesh.setMatrixAt(i, new THREE.Matrix4().compose(new THREE.Vector3(...l.p), new THREE.Quaternion(), new THREE.Vector3(...l.size))));
 scene.add(ledgeMesh); }
-// the balcony's two side railings, built (owner 2026-11-16, "both sides have broken images"): turned balusters, a top and a foot rail and posts with gold finials along both open sides of the floor; opaque, so the cards behind stop at them
-for (const fl of room.layers.filter(l => l.id === "floor" || /^g_floor_r_/.test(l.id))) {
-  const cx = fl.p[0], x = fl.size[0] / 2, z0 = fl.p[2] - fl.size[1] / 2 + (fl.id === "floor" ? 1.1 : 2.6), z1 = fl.p[2] + fl.size[1] / 2 - .1, n = Math.round((z1 - z0) / .2), wood = new THREE.MeshLambertMaterial({ color: 0x4a2c16 }), gold = new THREE.MeshLambertMaterial({ color: 0xc9a046, emissive: 0x2a1c06 });  // z0: clear of the side doors
-  const lathe = new THREE.LatheGeometry([[.05, 0], [.05, .06], [.028, .1], [.046, .3], [.022, .5], [.036, .62], [.024, .72], [.04, .76], [.04, .8]].map(([r, y]) => new THREE.Vector2(r, y)), 10), bal = new THREE.InstancedMesh(lathe, wood, 2 * n), M = new THREE.Matrix4();
-  let i = 0; for (const sx of [-1, 1]) for (let k = 0; k < n; k++) bal.setMatrixAt(i++, M.makeTranslation(cx + sx * x, fl.p[1], z0 + (k + .5) * (z1 - z0) / n));
-  bal.name = "rail"; scene.add(bal);
-  for (const sx of [-1, 1]) { for (const [y, h, w] of [[.83, .07, .12], [.03, .06, .1]]) { const r = new THREE.Mesh(new THREE.BoxGeometry(w, h, z1 - z0), wood); r.position.set(cx + sx * x, fl.p[1] + y, (z0 + z1) / 2); r.name = "rail"; scene.add(r); }
-    for (const z of [z0, (z0 + z1) / 2, z1]) { const q = new THREE.Mesh(new THREE.BoxGeometry(.15, .92, .15), wood), f = new THREE.Mesh(new THREE.SphereGeometry(.075, 12, 8), gold); q.position.set(cx + sx * x, fl.p[1] + .46, z); f.position.set(cx + sx * x, fl.p[1] + 1, z); q.name = f.name = "rail"; scene.add(q, f); } } }
-
 // faint gold motes lingering in the air (the sunray dust lives in the viewer's effects)
 const NM = phone ? 50 : 120, mp = new Float32Array(NM * 3), mv = Array.from({ length: NM }, () => Math.random() * 6.28);
-for (let i = 0; i < NM; i++) mp.set([(Math.random() - .5) * 11, 1 + Math.random() * 5, -.5 + Math.random() * 7], i * 3);
+for (let i = 0; i < NM; i++) { const a = Math.random() * 6.28, r = Math.sqrt(Math.random()) * (plan.ri - .4); mp.set([plan.c[0] + Math.sin(a) * r, 1 + Math.random() * 5, plan.c[1] - Math.cos(a) * r], i * 3); }  // inside the ring of balconies
 const motes = new THREE.Points(new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(mp, 3)), new THREE.PointsMaterial({ map: soft(255, 215, 130), size: .09, transparent: true, opacity: .55, blending: THREE.AdditiveBlending, depthWrite: false, fog: false }));
 motes.frustumCulled = false; motes.renderOrder = 60; scene.add(motes);
 
 // a soft glow over the opening at the top of the well, so the tower tops melt into the sky (3 big warm additive discs)
 { const hz = document.createElement("canvas"); hz.width = hz.height = 256; const x = hz.getContext("2d"), g = x.createRadialGradient(128, 128, 0, 128, 128, 128); [[0, 1], [.25, .75], [.5, .35], [.75, .1], [1, 0]].forEach(([o, al]) => g.addColorStop(o, `rgba(255,214,150,${al})`)); x.fillStyle = g; x.fillRect(0, 0, 256, 256); const ht = new THREE.CanvasTexture(hz); ht.colorSpace = THREE.SRGBColorSpace;
-  [[135, 90, .05], [150, 150, .06], [198, 44, .5], [206, 24, .55]].forEach(([y, r, o]) =>  /* the last two: the oculus itself, a soft round glow at the top of the well */ { const h = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: ht, transparent: true, opacity: o, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); h.rotation.x = -Math.PI / 2; h.position.set((room.wellCentre ?? [0, 0, 2.5])[0], y, (room.wellCentre ?? [0, 0, 2.5])[2]); h.scale.set(r * 2, r * 2, 1); h.renderOrder = 19.2; scene.add(h); }); }
+  [[RT.top - 1, plan.r * 1.15, .3], [RT.top + 5, plan.r * .8, .3]].forEach(([y, r, o]) =>  /* the oculus itself, a soft round glow in the open top of the tower */ { const h = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: ht, transparent: true, opacity: o, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); h.rotation.x = -Math.PI / 2; h.position.set(plan.c[0], y, plan.c[1]); h.scale.set(r * 2, r * 2, 1); h.renderOrder = 19.2; scene.add(h); }); }
 // the mist (two slow drifting veils) and now and then a far book floating from one shelf to another
 const mistT = (() => { const c = document.createElement("canvas"); c.width = 256; c.height = 64; const x = c.getContext("2d"); for (let i = 0; i < 26; i++) { const px = (i * 97 % 256), py = 12 + (i * 53 % 40), r = 30 + (i * 31 % 30), g = x.createRadialGradient(px, py, 0, px, py, r); g.addColorStop(0, "rgba(255,225,180,.5)"); g.addColorStop(1, "rgba(255,225,180,0)"); x.fillStyle = g; for (const o of [-256, 0, 256]) { x.save(); x.translate(o, 0); x.fillRect(px - r, py - r, 2 * r, 2 * r); x.restore(); } }
   const f = x.createLinearGradient(0, 0, 0, 64); f.addColorStop(0, "rgba(0,0,0,0)"); f.addColorStop(.35, "#000"); f.addColorStop(.65, "#000"); f.addColorStop(1, "rgba(0,0,0,0)"); x.globalCompositeOperation = "destination-in"; x.fillStyle = f; x.fillRect(0, 0, 256, 64);  // fade to nothing at the top and bottom: the blobs were cut straight at the canvas edge, a hard line across the top shelf
   const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(2, 1); t.colorSpace = THREE.SRGBColorSpace; return t; })();
-const mist = [[-.3, 2.2, 36, 7, .1], [1.4, 1.0, 36, 4, .08]].map(([z, y, w, h, o], i) => { const t = mistT.clone(); t.needsUpdate = true; t.wrapS = THREE.RepeatWrapping; t.repeat.set(2, 1); const m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: t, transparent: true, opacity: o, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); m.position.set(0, y, z); m.scale.set(w, h, 1); m.renderOrder = 28; scene.add(m); return m; });
+const mist = [[plan.c[1] - 4.6, 2.2, 10, 7, .1], [plan.c[1] - 3.4, 1.0, 12, 4, .08]].map(([z, y, w, h, o], i) => { const t = mistT.clone(); t.needsUpdate = true; t.wrapS = THREE.RepeatWrapping; t.repeat.set(2, 1); const m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: t, transparent: true, opacity: o, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); m.position.set(0, y, z); m.scale.set(w, h, 1); m.renderOrder = 28; scene.add(m); return m; });  // two veils across the room in front of our cases
 const bookT = (() => { const c = document.createElement("canvas"); c.width = 64; c.height = 90; const x = c.getContext("2d"); x.fillStyle = "#5b1f26"; x.fillRect(2, 2, 60, 86); x.strokeStyle = "#e2b459"; x.lineWidth = 3; x.strokeRect(8, 8, 48, 74); x.fillStyle = "#e2b459"; x.fillRect(26, 38, 12, 14); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; })();
 const fb = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: bookT, transparent: true, opacity: 0, depthWrite: false, fog: false })); fb.scale.set(.9, 1.3, 1); fb.renderOrder = 19.5; scene.add(fb);
 let fT = 8, fA = [0, 0, 0], fB = [0, 0, 0]; const FD = 7;
 function floater(dt) { fT -= dt; if (fT < -FD) { fT = 12 + Math.random() * 14; } if (fT > 0) { fb.material.opacity = 0; return; }
-  if (fT > -dt * 1.01 || fb.userData.go !== 1) { if (fb.userData.go !== 1) { fb.userData.go = 1; const s = Math.random() < .5 ? -1 : 1; fA = [-9 * s, 5 + Math.random() * 4, -12]; fB = [9 * s, 4 + Math.random() * 6, -12]; } }
+  if (fT > -dt * 1.01 || fb.userData.go !== 1) { if (fb.userData.go !== 1) { fb.userData.go = 1; const s = Math.random() < .5 ? -1 : 1; fA = [plan.c[0] - 3.4 * s, 6 + Math.random() * 3, plan.c[1] - 2]; fB = [plan.c[0] + 3.4 * s, 6 + Math.random() * 3, plan.c[1] - 2]; } }
   const u = -fT / FD, e = ease(u); fb.position.set(fA[0] + (fB[0] - fA[0]) * e, fA[1] + (fB[1] - fA[1]) * e + Math.sin(u * Math.PI) * .6, fA[2]); fb.rotation.z = Math.sin(u * 6) * .25; fb.material.opacity = Math.sin(u * Math.PI) * .85; if (u > .99) fb.userData.go = 0; }
 // rays of warm light from the bright top of the well (Eddie 2026-11-17: "make the lights really come down ... like a real 3D"), laid out for the station you stand at (placeAir, on every arrival).
 // ONE instanced draw of soft open columns, all parallel (one sun through the oculus): each glows through its middle with soft edges and a noise drifting down it, and keeps its place in the
 // room as you turn and walk. Beams that land on the station's floor come all the way down and leave a warm pool where they land (the same draw: the geometry's floor disc); beams in the open
 // well fall past and fade; a few lean into the well's wall, and the wall shader lights the books they cross (walls.setBeams); one lights the Wonder Hall's stage. Dust drifts down only
 // inside the beams, thickest in the ones near you. Fainter looking level, full looking up, so the books at the cases are never washed out.
-const WC = room.wellCentre ?? [0, 0, 2.5], RW = room.walls, rU = { uT: { value: 0 }, uUp: { value: 0 }, uWl: { value: new THREE.Vector4(WC[0], WC[2], RW.well.r, 1) }, uHw: { value: new THREE.Vector4(RW.home.z, RW.home.x[1], RW.door.z, RW.door.x[1]) } }, RL = 104, TWO_PI = Math.PI * 2, rs = i => { const x = Math.sin(i * 91.7 + 3.1) * 43758.5; return x - Math.floor(x); };
+const rU = { uT: { value: 0 }, uUp: { value: 0 }, uWl: { value: new THREE.Vector4(plan.c[0], plan.c[1], plan.r, 1) } }, TWO_PI = Math.PI * 2, rs = i => { const x = Math.sin(i * 91.7 + 3.1) * 43758.5; return x - Math.floor(x); };
 const NOISE = "float h2(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); } float vn(vec2 p) { vec2 i = floor(p), f = fract(p); f *= f * (3. - 2. * f); return mix(mix(h2(i), h2(i + vec2(1., 0.)), f.x), mix(h2(i + vec2(0., 1.)), h2(i + vec2(1., 1.)), f.x), f.y); }";
 const rayMat = new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, fog: false,  // instanceColor: strength, the foot's fade (m), the pool's size (0: no pool)
   vertexShader: `attribute float aCap; varying vec3 vN, vV, vA, vI, vW; varying vec2 vQ; varying float vH, vD, vL, vCap, vBy; void main() { mat4 M = modelMatrix * instanceMatrix; vI = instanceColor; vCap = aCap; vL = length(M[1].xyz); vA = M[1].xyz / vL; vec3 foot = (M * vec4(0., -.5, 0., 1.)).xyz; vBy = foot.y; vec4 w;
     if (aCap > .5) { w = vec4(foot + vec3(position.x, 0., position.y) * length(M[0].xyz) * instanceColor.z + vec3(0., .02, 0.), 1.); vQ = position.xy; vH = 0.; } else { w = M * vec4(position, 1.); vQ = position.xz; vH = position.y + .5; }
     vN = normalize(mat3(M) * normal); vV = normalize(cameraPosition - w.xyz); vD = length(cameraPosition - w.xyz); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`,
-  fragmentShader: `uniform float uT, uUp; uniform vec4 uWl, uHw; varying vec3 vN, vV, vA, vI, vW; varying vec2 vQ; varying float vH, vD, vL, vCap, vBy; ${NOISE}
+  fragmentShader: `uniform float uT, uUp; uniform vec4 uWl; varying vec3 vN, vV, vA, vI, vW; varying vec2 vQ; varying float vH, vD, vL, vCap, vBy; ${NOISE}
   void main() { float a, s = vH * vL, lv = vI.z > 0. ? .5 : -vI.z, up = lv + (1. - lv) * uUp, fan = step(lv, .2);  // z: a landing beam's pool size, or minus its strength looking level; fan: home's rays from the oculus
-    float dw = min(uWl.z - length(vW.xz - uWl.xy), uWl.w > .5 ? min(abs(vW.x) < uHw.y ? abs(vW.z - uHw.x) : 9., abs(vW.x) < uHw.w ? abs(vW.z - uHw.z) : 9.) : 9.);  // metres to the nearest wall: a beam melts into the books it meets (they light up there), never a hard edge
+    float dw = uWl.z - length(vW.xz - uWl.xy);  // metres to the tower's wall: a beam melts into the books it meets (they light up there), never a hard edge
     if (vCap > .5) { if (vI.z <= 0.) discard; a = vI.x * .34 * smoothstep(1., .08, length(vQ)) * (.7 + .3 * vn(vQ * 2.5 + uT * .1)) * (.65 + .35 * up); }
     else { float e = abs(dot(normalize(vN), normalize(vV))), on = smoothstep(.5, .9, abs(dot(vA, vV))) * smoothstep(6., 30., vD), body = mix(pow(e, .9), mix(.55, .8, fan), on), core = mix(pow(e, 5.), mix(.6, .9, fan), on);  // end-on glow only far off (up the well), never a beam beside you
       float n = vn(vec2(vQ.x * 2.3 + s * .03, s * .09 + uT * .5)) * .6 + vn(vec2(vQ.y * 3.7 - s * .04, s * .25 + uT * 1.1)) * .4;  // the noise drifts down the beam
       a = mix(.85, 1., fan) * (body * .3 + core * .6) * vI.x * smoothstep(0., vI.y, s) * smoothstep(1., .72, vH) * (.62 + .38 * vH) * mix(.55 + .8 * n, .72 + .5 * n, fan) * up * smoothstep(.4, 2.5, vD) * smoothstep(-3., 3., cameraPosition.y - vBy) * smoothstep(0., 2.2, dw); }
     gl_FragColor = vec4(vec3(1., .82, .5) * a, a); }` });
-const rayAxis = new THREE.Vector3(-.16, 1, -.1).normalize(), rayQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), rayAxis), rayGeo = mergeGeometries([new THREE.CylinderGeometry(1, 1, 1, 16, 1, true), new THREE.CircleGeometry(1, 28)]);
+const rayAxis = new THREE.Vector3(-.012, 1, -.008).normalize(), rayQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), rayAxis), rayGeo = mergeGeometries([new THREE.CylinderGeometry(1, 1, 1, 16, 1, true), new THREE.CircleGeometry(1, 28)]);
 rayGeo.setAttribute("aCap", new THREE.BufferAttribute(new Float32Array(rayGeo.attributes.position.count).map((_, i) => +(i >= 17 * 2)), 1));  // the column's 34 vertices first, then the floor disc's
 const rays = [], NR = phone ? 16 : 28, rayMesh = new THREE.InstancedMesh(rayGeo, rayMat, NR), RM = new THREE.Matrix4(), RC = new THREE.Color();
-rayMesh.renderOrder = 29; rayMesh.frustumCulled = false; rayMesh.name = "rays"; scene.add(rayMesh);
+rayMesh.renderOrder = 50; rayMesh.frustumCulled = false; rayMesh.name = "rays"; scene.add(rayMesh);
 const DN = phone ? 900 : 3200, dP = new Float32Array(DN * 3), dAx = new Float32Array(DN * 3), dR = new Float32Array(DN * 4);
 for (let i = 0; i < DN; i++) dR.set([rs(i + 11), .002 + rs(i + 13) * .004, rs(i + 15), .6 + rs(i + 17) * 1.4], i * 4);
 const dg = new THREE.BufferGeometry(); dg.setAttribute("position", new THREE.BufferAttribute(dP, 3)); dg.setAttribute("aAx", new THREE.BufferAttribute(dAx, 3)); dg.setAttribute("aR", new THREE.BufferAttribute(dR, 4));
-function placeAir(id) {  // the beams, their dust, the motes and the mist for station id (the home layout moved and re-laid for each room); the lamps of hidden bookcases hidden
+function placeAir(id) {  // the beams, their dust, the motes and the mist for station id (each level of the tower lit the same way as home); the lamps of other levels shown or hidden
   const s = STATIONS.find(q => q.id === id) ?? home(), E = new THREE.Vector3(...s.cam.p), fy = E.y - 1.7, d = E.clone().sub(new THREE.Vector3(...home().cam.p)), seed = [...id].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 7);
-  const fl = room.layers.find(l => Math.abs(Math.abs(l.rot?.[0] ?? 0) - Math.PI / 2) < .01 && !l.rot?.[1] && Math.abs(l.p[1] - fy) < .3 && Math.abs(E.x - l.p[0]) < l.size[0] / 2 && Math.abs(E.z - l.p[2]) < l.size[1] / 2);  // the floor you stand on
-  const F = fl ? [fl.p[0] - fl.size[0] / 2 + .9, fl.p[0] + fl.size[0] / 2 - .9, fl.p[2] - fl.size[1] / 2 + .9, fl.p[2] + fl.size[1] / 2 - .9] : [E.x - 3, E.x + 3, E.z - 3, E.z + 3];
+  const Lv = levelOf(id), ri = (Lv?.P ?? plan).ri ?? plan.ri, RL = RT.top + 10 - (fy - 12), C = plan.c;  // the beams reach past the oculus from below your floor
   const cases = grown.setStation.includes(id), add = (B, r, I, fade, pool, near) => rays.push({ B, r, I, L: RL, fade, pool, w: near / (1 + Math.hypot(B.x - E.x, B.z - E.z) / 6) }); rays.length = 0;
   if (!cases) add(new THREE.Vector3(E.x, fy, E.z - 3.2), 1.5, 1.1, .6, 1.5, 2);  // a stage (the Wonder Hall): one beam straight onto its middle
-  for (let j = 0, n = 0; j < 300 && n < (phone ? 3 : 5); j++) { const x = F[0] + rs(seed + j) * (F[1] - F[0]), z = F[2] + rs(seed + j + 300) * (F[3] - F[2]);  // onto the floor: never between you and the books, never on you
-    if ((cases && Math.abs(x - E.x) < 3.1 && z > E.z - 6.4 && z < E.z + .8) || Math.hypot(x - E.x, z - E.z) < 1.4 || rays.some(q => Math.hypot(q.B.x - x, q.B.z - z) < 2.6)) continue;
+  for (let j = 0, n = 0; j < 300 && n < (phone ? 3 : 5); j++) { const a = rs(seed + j) * TWO_PI, rr = 1.6 + rs(seed + j + 300) * (ri - 2.6), x = C[0] + Math.sin(a) * rr, z = C[1] - Math.cos(a) * rr;  // onto the floor: never between you and the books, never on you
+    if ((cases && Math.abs(x - E.x) < 3.1 && z < E.z + .8) || Math.hypot(x - E.x, z - E.z) < 1.4 || rays.some(q => Math.hypot(q.B.x - x, q.B.z - z) < 2.6)) continue;
     add(new THREE.Vector3(x, fy, z), .45 + rs(seed + j + 600) * .4, .8 + rs(seed + j + 900) * .4, .6, 1.7, 2); n++; }
-  if (id === home().id) for (let i = 0; i < (phone ? 12 : 22); i++) { const grp = i % 3, ang = rs(i) * TWO_PI, rad = [2.5 + rs(i + 40) * 3, 6 + rs(i + 40) * 7, 14 + rs(i + 40) * 10][grp], r = [.7, 1.4, 2.8][grp] * (.7 + rs(i + 80) * .6);  // home: the fan of rays from the oculus Eddie
-    add(new THREE.Vector3(WC[0] + Math.cos(ang) * rad, fy - 12, WC[2] + Math.sin(ang) * rad), r, (grp ? 1 : .55) * (.6 + rs(i + 120) * .6), 23, -.12, 1); }  // loves (the old near, middle and far beams, rising from below the balcony; faint looking level)
-  else { const k = id === "wonder" ? .6 : 1, lean = Math.atan2(rayAxis.z, rayAxis.x);  // the rooms: beams down the open well past the floor, and a few that lean into the wall and cross the books higher up (fewer and softer in the Wonder Hall, where they all meet overhead)
-    for (let j = 0, n = 0; j < 600 && n < Math.round((phone ? 6 : 13) * k); j++) { const an = rs(seed + j + 1200) * TWO_PI, rad = 5 + rs(seed + j + 1500) * 17, B = new THREE.Vector3(WC[0] + Math.cos(an) * rad, fy - 28, WC[2] + Math.sin(an) * rad);
-      const at = B.clone().addScaledVector(rayAxis, 28 / rayAxis.y), top = B.clone().addScaledVector(rayAxis, RL); if ((at.x > F[0] - 1.6 && at.x < F[1] + 1.6 && at.z > F[2] - 1.6 && at.z < F[3] + 1.6) || Math.hypot(top.x - WC[0], top.z - WC[2]) > 24) continue;
-      add(B, (.8 + rad * .07) * (.75 + rs(seed + j + 1800) * .5), k * (.7 + rs(seed + j + 2100) * .5), 24, -.28, 1); n++; }
-    for (let j = 0; j < Math.round((phone ? 3 : 6) * k); j++) { const an = lean + (rs(seed + j + 2400) - .5) * 2.4, rad = 20 + rs(seed + j + 2700) * 3; add(new THREE.Vector3(WC[0] + Math.cos(an) * rad, fy - 10, WC[2] + Math.sin(an) * rad), 1.6 + rs(seed + j + 3000) * .8, k * (.8 + rs(seed + j + 3300) * .4), 10, -.28, 1); } }
+  const eyes = [E, ...(id === home().id && room.cams.roomPhone ? [new THREE.Vector3(...room.cams.roomPhone.p)] : [])];  // never a beam round the eye: a column you stand in fills the screen (and costs the whole frame)
+  for (let i = 0, n = 0, k = id === "wonder" ? .6 : 1; i < 80 && n < (phone ? 10 : 16); i++) { const grp = i % 3, ang = rs(i) * TWO_PI, r = [.3, .55, .85][grp] * (.75 + rs(i + 80) * .5), rad = 1.6 + rs(i + 40) * (plan.ri - 2.9);  // the fan of rays from the oculus Eddie loves:
+    const B = new THREE.Vector3(C[0] + Math.cos(ang) * rad, fy - 12, C[1] + Math.sin(ang) * rad); if (eyes.some(q => Math.hypot(B.x - q.x, B.z - q.z) < r + .9)) continue;
+    add(B, r, k * (grp ? 1 : .55) * (.6 + rs(i + 120) * .6), 23, -.12, 1); n++; }  // straight up the open middle of the tower, inside every ring of balconies (faint looking level)
   rays.forEach((q, i) => { rayMesh.setMatrixAt(i, RM.compose(q.B.clone().addScaledVector(rayAxis, q.L / 2), rayQ, new THREE.Vector3(q.r, q.L, q.r))); rayMesh.setColorAt(i, RC.setRGB(q.I, q.fade, q.pool)); });
-  rayMesh.count = rays.length; rayMesh.instanceMatrix.needsUpdate = true; rayMesh.instanceColor.needsUpdate = true; rU.uWl.value.w = +(id !== "wonder");
-  const meets = q => { const T = q.B.clone().addScaledVector(rayAxis, q.L), m = 1.3 * q.r, plane = (z0, hx) => { if (Math.min(q.B.z, T.z) - m > z0 || Math.max(q.B.z, T.z) + m < z0) return false; const t = Math.min(1, Math.max(0, (z0 - q.B.z) / (T.z - q.B.z))); return Math.abs(q.B.x + (T.x - q.B.x) * t) < hx + m; };
-    return Math.max(Math.hypot(q.B.x - WC[0], q.B.z - WC[2]), Math.hypot(T.x - WC[0], T.z - WC[2])) > RW.well.r - m - .5 || (id !== "wonder" && (plane(RW.home.z, RW.home.x[1]) || plane(RW.door.z, RW.door.x[1]))); };
-  walls.setBeams(rays.filter(meets), rayAxis);  // only the beams that reach a wall light the books (fewer to sum per pixel)
+  rayMesh.count = rays.length; rayMesh.instanceMatrix.needsUpdate = true; rayMesh.instanceColor.needsUpdate = true; rU.uWl.value.z = Lv?.P === plan.hall ? plan.hall.r : plan.r;
+  const meets = q => { const T = q.B.clone().addScaledVector(rayAxis, q.L), m = 1.3 * q.r; return Math.max(Math.hypot(q.B.x - plan.c[0], q.B.z - plan.c[1]), Math.hypot(T.x - plan.c[0], T.z - plan.c[1])) > plan.r - m - .5; };
+  const wash = Array.from({ length: phone ? 5 : 8 }, (_, j) => { const a = (j + rs(seed + j + 3600) * .6) / (phone ? 5 : 8) * TWO_PI, by = fy + 3 + rs(seed + j + 3900) * 6;  // the oculus's light washing down the upper walls in warm stripes (lights the books only, nothing drawn)
+    return { B: new THREE.Vector3(C[0] + Math.sin(a) * (plan.r - .3), by, C[1] - Math.cos(a) * (plan.r - .3)), r: 1.1 + rs(seed + j + 4200) * .8, I: .45 + rs(seed + j + 4500) * .35, L: RT.top + 6 - by }; });
+  walls.setBeams([...wash, ...rays.filter(meets)], rayAxis);  // only the beams that reach a wall light the books (fewer to sum per pixel)
   const wsum = rays.reduce((a, q) => a + q.w, 0); let di = 0;  // the dust: near the floor in a beam that lands, round your eye height in the rooms' others
   for (const q of rays) { const fan = q.pool === -.12, st0 = q.pool > 0 || fan ? 0 : Math.max(0, (E.y - 15 - q.B.y) / rayAxis.y), span = q.pool > 0 ? 16 : fan ? q.L : 40;  // home's fan: dust all the way up, as before
     for (let k = 0, n = Math.round(DN * q.w / wsum); k < n && di < DN; k++, di++) { const rr = Math.sqrt(rs(di + 7)) * q.r * .9, an = rs(di + 9) * TWO_PI;
@@ -245,10 +243,11 @@ function placeAir(id) {  // the beams, their dust, the motes and the mist for st
 const dust = new THREE.Points(dg, new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: false,
   vertexShader: "uniform float uT, uUp; attribute vec3 aAx; attribute vec4 aR; varying float vA; void main() { float t = fract(aR.x - uT * aR.y); vec3 p = position + aAx * t + vec3(sin(uT * .3 + aR.z * 6.), sin(uT * .22 + aR.x * 9.) * .4, cos(uT * .27 + aR.z * 5.)) * .25; vec4 mv = modelViewMatrix * vec4(p, 1.); gl_Position = projectionMatrix * mv; gl_PointSize = clamp(aR.w * 260. / -mv.z, 2., 16.); vA = smoothstep(0., .1, t) * smoothstep(1., .85, t) * (.4 + .6 * smoothstep(60., 3., -mv.z)) * (.7 + .3 * sin(uT * 1.3 + aR.z * 20.)) * (.5 + .5 * uUp); }",
   fragmentShader: "varying float vA; void main() { float d = length(gl_PointCoord - .5) * 2.; float a = smoothstep(1., .15, d) * vA * .95; gl_FragColor = vec4(vec3(1., .88, .58) * a, a); }" }));
-dust.frustumCulled = false; dust.renderOrder = 29; scene.add(dust);
+dust.frustumCulled = false; dust.renderOrder = 50; scene.add(dust);  // the light is drawn after every card and door (renderOrder 50, depth-tested): it lies in front of whatever it is in front of, and a solid thing in front of it hides it (owner 2026-11-17: "the light disappeared behind the image pasted on top")
 
 // ---- the ring (L4): the other cases dim, a caption under the front book, X, and the carry to the reader when a real book is picked
-const dimMesh = room.cases.map(c => { const bd = c.bounds, m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: shadowT, transparent: true, opacity: 0, depthWrite: false, fog: false })); if (bd) { m.position.set((bd.min[0] + bd.max[0]) / 2, (bd.min[1] + bd.max[1]) / 2, bd.max[2] + .5); m.scale.set((bd.max[0] - bd.min[0]) * 1.9, (bd.max[1] - bd.min[1]) * 1.5, 1); } m.renderOrder = 31; scene.add(m); return m; });
+const dimMesh = room.cases.map(c => { const bd = c.bounds, m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: shadowT, transparent: true, opacity: 0, depthWrite: false, fog: false })); const po = c.pose; if (bd && po) { m.position.set(po.p[0] - Math.sin(po.yaw) * 1.1, (bd.min[1] + bd.max[1]) / 2, po.p[2] + Math.cos(po.yaw) * 1.1); m.rotation.y = po.yaw; m.scale.set(1.544 * 1.9, (bd.max[1] - bd.min[1]) * 1.5, 1); }  // in front of the case, turned with it
+  else if (bd) { m.position.set((bd.min[0] + bd.max[0]) / 2, (bd.min[1] + bd.max[1]) / 2, bd.max[2] + .5); m.scale.set((bd.max[0] - bd.min[0]) * 1.9, (bd.max[1] - bd.min[1]) * 1.5, 1); } m.renderOrder = 31; scene.add(m); return m; });
 const ringName = () => { const b = books.bookAt(ring.frontGlobal); $("#ringb").setAttribute("aria-label", b ? b.title.en + (lang !== "en" && b.title[lang] ? " — " + b.title[lang] : "") : W.still); };
 $("#ringb").__i = 0; $("#ringb").onclick = () => { if (!pick) startPick(); };  // __i set: the ring's Enter handler treats this button as the front book itself
 let capFor = -2; function capText(force) { if (!ring.isOpen || ring.busy) { if (!ring.isOpen) capFor = -2; return; } const g = ring.frontGlobal; if (g === capFor && !force) return; capFor = g; ringName(); const c = $("#cap"), b = books.bookAt(g); c.hidden = false; c.textContent = ""; const t = document.createElement("b"), n = document.createElement("span"); if (b) t.append(titleNodes(b.title.en, lang !== "en" ? b.title[lang] ?? "" : "", lang)); else t.textContent = W.still; n.textContent = b?.status === "making" ? W.coming : ""; c.append(t, n); }  /* a ready book: its title only; the cover itself opens it, and the ring's tap hint shows how (owner 2026-11-17: no Open the book button) */
@@ -292,8 +291,7 @@ function onStation() { living?.setStation(cur); wonders.setStation(cur); placeAi
   const near = id => id === cur || LINKS.some(l => l.from === cur && l.to === id && !l.portal);  // a platform's 3D cases show only where you stand or can walk to: from a lower room the others read as dark bars across the light
   if (c3) { c3.group.visible = near(grown.setStation[0]); c3.clones.forEach((c, j) => { c.visible = near(grown.setStation[j + 1]); }); }
   grown.setStation.forEach((sid, k) => { const on = near(sid); if (setShown[k] === on) return; setShown[k] = on; for (let i = k * 48; i < k * 48 + 48; i++) if (books.xf[i]) on ? books.home(i) : books.set(i, books.xf[i].p, books.xf[i].q, ZERO); });  // and so do its books (scaled to nothing), never floating without their cases
-  homeWalls ??= scene.children.filter(o => /^(wall_\d|wall_home|doorwall_)/.test(o.name)); for (const o of homeWalls) o.visible = cur !== "wonder";
-  behindDoor ??= scene.children.filter(o => /^(bridge|arm)_\d+$/.test(o.name) && o.position.z > (room.layers.find(l => l.id === "facade")?.p[2] ?? 9)); for (const o of behindDoor) o.visible = cur !== "home";  // the well's bridges and lamp arms beyond the entrance wall: from the balcony they were drawn over the door (no depth on the cards), hanging in the air  // the home walls' repeats end in the open well: from the Wonder Hall, 150 m below, their ends would hang in the light
+  tower.show(levelOf(cur)?.y ?? 0);  // your level of the tower and every level above it (the floors hide the rest)
   const k0 = grown.setStation.indexOf(cur); if (k0 >= 0) { const first = [...Array(48).keys()].map(i => k0 * 48 + i).find(i => books.isReal(i)); if (first != null) (window.requestIdleCallback ?? (f => setTimeout(f, 1500)))(() => !ring.isOpen && front.prewarm(first)); } for (const p of portals) p.group.visible = p.frame.userData.link.from === cur; rebuildShelf(); }
 const fade = document.createElement("div"); fade.className = "fade"; document.body.append(fade);
 let opening = false;
@@ -429,7 +427,7 @@ function rebuildShelf() { shelfBtns.forEach(b => b.remove()); shelfBtns.length =
   const k = grown.setStation.indexOf(cur); if (k < 0) return;
   const stand = new Map();  // the stand-in books ("still being written") are one tab stop per shelf, not one each
   for (let i = k * 48; i < Math.min(books.slots.length, (k + 1) * 48); i++) { if (!books.isReal(i)) { const c = books.slots[i].case, e = stand.get(c); if (e) e.__n++; else { const b = document.createElement("button"); b.type = "button"; b.__i = i; b.__n = 1; b.onfocus = () => { flash = b.__i; flashT = 1e9; hideHint(); const c = $("#cap"); c.hidden = false; c.classList.add("kf"); c.textContent = b.getAttribute("aria-label"); }; b.onblur = () => { if (flash === b.__i) flash = -1; $("#cap").classList.remove("kf"); if (!ring.isOpen) $("#cap").hidden = true; }; b.onclick = () => { cue("book-touch", .7); fire(b.__i); openRing(b.__i); }; $("#shelf").append(b); shelfBtns.push(b); stand.set(c, b); } continue; } const b = document.createElement("button"); b.type = "button"; b.__i = i; b.onfocus = () => { flash = i; flashT = 1e9; if (!ring.isOpen) front.prewarm(i); }; b.onblur = () => { if (flash === i) flash = -1; }; b.onclick = () => { cue("book-touch", .7); fire(i); openRing(i); }; $("#shelf").append(b); shelfBtns.push(b); } labelBooks(); }
-const wonders = window.__wonders = createWonders(scene, camera, { renderer, room, reduced, phone, busy: () => !live() || ring.isOpen || !!pick || !!walk || !!warp || !!intro || !!desc });  // the big rare wonders (wonders.js): never over a book, a portal trip or the intro
+const wonders = window.__wonders = createWonders(scene, camera, { renderer, plan, reduced, phone, busy: () => !live() || ring.isOpen || !!pick || !!walk || !!warp || !!intro || !!desc, beams: () => ({ list: rays, axis: rayAxis }), chime: () => cue("magic-shimmer", .8) });  // the quiet magic (owner 2026-11-17): floating books, letters in the light, rare cranes and lanterns; never over a book, a portal trip or the intro
 { const ask = qs.get("wonder"); if (ask && !reduced) { const q = ask === "all" ? [...wonders.names] : [ask]; let miss = 0; const t = setInterval(() => { if (!live() || walk || warp || intro || desc || ring.isOpen || pick || wonders.stats().playing) return; if (!q.length) return clearInterval(t); const ok = wonders.fire(q[0]); miss = ok ? 0 : miss + 1; if (ok || miss > 4) { q.shift(); miss = 0; } }, 2500); } }  // ?wonder=<name>, or ?wonder=all: play it (them, one after another) as soon as you stand at home; for showing them without waiting for the director
 rebuildShelf(); onStation(); size();
 

@@ -196,6 +196,7 @@ const loadWell = (async () => { try { const [gl, tx] = await Promise.all([new GL
 await Promise.race([loadWell, new Promise(r => setTimeout(r, 5000))]);
 // a real hole in the floor card (a 1x1 plane in the library): the plane becomes a shape with a round hole, same UVs (u = x + .5, v = y + .5), so its material and its depth write are unchanged: no stencil.
 function holeInFloor(THREE, mesh, cx, cz, rad) {
+  if (mesh.userData.cut) return mesh.userData.cut(cx, cz, rad);  // the rotunda's round floor cuts its own (walls/rotunda.js)
   const s = mesh.scale, hx = (cx - mesh.position.x) / s.x, hy = -(cz - mesh.position.z) / s.y, shape = new THREE.Shape([[-.5, -.5], [.5, -.5], [.5, .5], [-.5, .5]].map(p => new THREE.Vector2(...p)));
   shape.holes.push(new THREE.Path(new THREE.EllipseCurve(hx, hy, rad / s.x, rad / s.y, 0, Math.PI * 2, true).getPoints(96)));
   const g = new THREE.ShapeGeometry(shape), p = g.attributes.position, uv = g.attributes.uv; for (let i = 0; i < p.count; i++) uv.setXY(i, p.getX(i) + .5, p.getY(i) + .5); mesh.geometry = g; }
@@ -224,14 +225,14 @@ export function createFloorPortal(THREE, link, label) {
   const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
   bp.position.set(0, .78, Z - .03); fin.position.set(0, 1.62, Z - .03); base.position.set(0, .04, Z - .03); col.position.set(0, 1.5, Z - .03); sign.add(bp, fin, base, col);
   for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, BY + dy, Z - .02); sign.add(br); }
-  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, depthWrite: false, fog: false })); board.position.set(0, BY, Z + .02); board.userData.link = link; board.renderOrder = 41; sign.add(board);
+  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, alphaTest: .5, fog: false })); board.position.set(0, BY, Z + .02); board.userData.link = link; board.renderOrder = 41; sign.add(board);
   g.add(sign); g.position.set(...link.at);
   let h = 0, tt = 0, wellMat = null, cut = false;
   loadWell.then(w => { if (!w) return; const d = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), new THREE.MeshBasicMaterial({ map: w.decal, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));  // the decal: over the floor card (20), under everything else
     d.rotation.x = -Math.PI / 2; d.position.y = .008 - y0; d.renderOrder = 21; w.well.position.y = -y0; w.well.traverse(o => { if (o.isMesh) { wellMat = o.material; if (wellMat.map) wellMat.map.anisotropy = 8; } });g.add(w.well, d); });  // anisotropy 8: the treads and wall are seen at a slant, close, on the way down; the well's origin is its centre on the floor (the floor card is at y 0, this group at the door's y)
   return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h;
       if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); if (wellMat) wellMat.color.setScalar(1 + .3 * h * (1 - surge) + .15 * surge);  // hover or focus brightens the baked well like the other doors; surge (0..1, the walk down the stairs) lets the gold from below grow a little (the hover's lift fades as it comes, so the glow never clips)
-      if (!cut && wellMat && g.parent) { cut = true; for (const m of g.parent.children) if (m.name === "floor") holeInFloor(THREE, m, link.at[0], link.at[2], 1.24); } },  // the hole (1.24 m, hidden under the 1.17-1.32 m coping ring) is cut the frame the well is in, in the floor card at the door
+      if (!cut && wellMat && g.parent) { cut = true; const m = g.parent.getObjectByName("floor"); if (m) holeInFloor(THREE, m, link.at[0], link.at[2], 1.24); } },  // the hole (1.24 m, hidden under the 1.17-1.32 m coping ring) is cut the frame the well is in, in the floor card at the door
     setLabel: p => { signT.image = signCanvas(p); signT.needsUpdate = true; } };
 }
 
@@ -255,7 +256,7 @@ export function createStairUp(THREE, link, label, renderer) {
   const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
   bp.position.y = .78; fin.position.y = 1.62; base.position.y = .04; col.position.y = 1.5; sign.add(bp, fin, base, col);
   for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, 1.18 + dy, .03); sign.add(br); }
-  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, depthWrite: false, fog: false })); board.position.set(0, 1.18, .06); board.userData.link = link; board.renderOrder = 41; sign.add(board);
+  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, alphaTest: .5, fog: false })); board.position.set(0, 1.18, .06); board.userData.link = link; board.renderOrder = 41; sign.add(board);
   const sx = 1.9 * Math.sin(1.19), sz = 1.9 * Math.cos(1.19); sign.position.set(sx, 0, sz); sign.rotation.y = Math.atan2(3.94 - sx, 7.415 - sz); g.add(sign); g.position.set(...link.at);
   let h = 0, tt = 0, mat = null;
   loadUp().then(m => { if (!m) return; m = m.clone(); m.traverse(o => { if (o.isMesh) { mat = o.material = o.material.clone(); } }); g.add(m); if (mat?.map) renderer?.initTexture?.(mat.map); });
@@ -266,10 +267,10 @@ export function createStairUp(THREE, link, label, renderer) {
 export function createPortal(THREE, plane, link, size, label) {
   const g = new THREE.Group(); let base = BASE?.tex; if (!base) { base = new THREE.CanvasTexture(baseFrame()); base.colorSpace = THREE.SRGBColorSpace; base.anisotropy = 4; BASE.tex = base; }  // one carved frame for all
   const tex = new THREE.CanvasTexture(badgeCanvas(label)); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
-  const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: base, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
-  const badge = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })); badge.scale.set(BW / W, BH / H, 1); badge.position.set((BX + BW / 2) / W - .5, .5 - (BY + BH / 2) / H, .002);
+  const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: base, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
+  const badge = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })); badge.scale.set(BW / W, BH / H, 1); badge.position.set((BX + BW / 2) / W - .5, .5 - (BY + BH / 2) / H, .002);  // frame and badge are solid (alphaTest, depth written): the library's light (drawn after them) lies over them where it is in front
   const inner = new THREE.Mesh(plane, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
-  frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = 33; inner.position.z = -.01; frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(size[0] * W / 256, size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;
+  frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = 33; inner.position.z = -(link.depth ?? .01); frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(size[0] * W / 256, size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;  // inner: at the back of the recess the wall's arch is cut into (grow.js depth)
   let h = 0, tt = 0;
   return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .3 * h); },
     setLabel: s => { tex.image = badgeCanvas(s); tex.needsUpdate = true; } };

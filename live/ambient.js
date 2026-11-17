@@ -602,6 +602,10 @@ export function addAmbient(scene, cam, m, opts = {}) {
   let shot = calm || !controls ? "off" : !phone() && cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";  // an upright phone waits at the reading view even on a fresh load: its opening view cannot show the whole book (the orbit limits stop it short), so it cropped the text page
   let yielded = shot === "off", last = null, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
   let lastShot = null;  // the shot last played: the director returns to it 4 s after the reader lets go
+  let took = false, down = null;  // took: the reader really moved the camera (a zoom, a pinch or a drag, not a tap on a character or a game target); the director leaves it to them for the rest of this page (owner 2026-11-17: "let the user watch manually ... next scene the camera rezoom, but don't fight with the user")
+  const el = controls?.domElement, onWheel = () => { took ||= isOpen(); }, onDown = e => { down = [e.clientX, e.clientY]; }, onMove = e => { if (down && Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 10) took ||= isOpen(); }, onUp = () => { down = null; };
+  el?.addEventListener("wheel", onWheel, { passive: true }); el?.addEventListener("pointerdown", onDown); addEventListener("pointermove", onMove); addEventListener("pointerup", onUp);
+  disposers.push(() => { el?.removeEventListener("wheel", onWheel); el?.removeEventListener("pointerdown", onDown); removeEventListener("pointermove", onMove); removeEventListener("pointerup", onUp); });
   const onStart = () => { held.on = held.tap = true; }, onEnd = () => { held.on = false; };  // tap: a start seen even when its end comes in the same event (a mouse wheel step: the orbit sends both at once)
   controls?.addEventListener("start", onStart); controls?.addEventListener("end", onEnd);
   disposers.push(() => { controls?.removeEventListener("start", onStart); controls?.removeEventListener("end", onEnd); });
@@ -688,7 +692,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   if (shot === "hold") snap = true, write(opening()), snap = false;  // a fresh book: the camera starts wide and high
   const play = s => {  // start a shot from where the camera is now
     if (!s || calm || !controls || held.on) return;
-    lastShot = s; if (yielded && now - SC.out < 4) return;  // the reader let go less than 4 s ago: this shot waits (the next one that begins after it, or the return at 4 s, brings the director back)
+    lastShot = s; if (yielded && (took || now - SC.out < 4)) return;  // the reader let go less than 4 s ago: this shot waits (the next one that begins after it, or the return at 4 s, brings the director back)
     s = s === "reading" ? { target: null, seconds: 3 } : [s].flat()[0];
     const base = rigOf(s); if (!base) return;
     if (base.lean) s = { ...s, target: base.lean };  // the subjects kept whole are the ones framed
@@ -717,7 +721,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (hand && !yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off";
     if (hand) SC.out = now;  // when the reader's hand (or the viewer's glide) last moved the camera
     last = null;
-    if (!SCAM && yielded && !held.on && shot === "done" && lastShot && now - SC.out >= 4 && isOpen()) play(lastShot);  // the reader let go 4 s ago: the director eases back to the shot it was on
+    if (!SCAM && !took && yielded && !held.on && shot === "done" && lastShot && now - SC.out >= 4 && isOpen()) play(lastShot);  // the reader let go 4 s ago: the director eases back to the shot it was on
     if (!controls || calm) return;
     if (shot === "wait") {  // a later spread: its text page waits still at the viewer's reading view, so a finger can find its corner; the reader's turn takes the camera out with the page, then the push-in
       const m = opts.mode?.();
@@ -954,7 +958,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       if (!hold) { if (!SC.key) opts.halt?.();  // the first beat takes the camera from the viewer's glide home
         if (SC.goal?.face) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
     }
-    if (yielded) { if (!held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; the director returns at the first beat that begins 4 s after they let go
+    if (yielded) { if (!took && !held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; after a tap the director returns at the first beat that begins 4 s after they let go, after a real zoom or turn only on the next page
     let g = null;
     // The game's view is the viewer's own (live.js gameView: every target on the screen) unless the page opts in with "own": true inside its shots.game: then that shot is the game's view,
     // read as any other shot (target, framing, size, pitch, at, lead and the phone / tablet overrides, "own" itself among them), room-safe, framed once as the game's view begins (and again when the
@@ -988,11 +992,11 @@ export function addAmbient(scene, cam, m, opts = {}) {
   };
   const flicker = (LI.flicker || []).flatMap(n => { const o = lightOf(n); if (o) return [{ o, i: o.intensity, ph: rnd(0, 9) }];
     const ms = []; find(n).forEach(x => x.traverse(y => y.isMesh && y.material.emissive?.getHex() && ms.push({ m: y.material, i: y.material.emissiveIntensity, ph: rnd(0, 9) }))); return ms; });
+  new Set((LI.cues || []).map(c => c.stage).filter(Boolean)).forEach(s => cast.forEach(ch => ch.body.userData.restage?.(s, null, true)));  // the cast's cards for each "stage" fetched as the page is made, so a cue never waits on the network (4.5's night cards came after its day cue on a slow line)
   ticks.push(t => {
     (LI.cues || []).forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
       && (cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c),
         c.stage && [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage)))));  // "stage": "day": every paper puppet to its day card from this cue
-  new Set((LI.cues || []).map(c => c.stage).filter(Boolean)).forEach(s => cast.forEach(ch => ch.body.userData.restage?.(s, null, true)));  // the cast's cards for each "stage" fetched as the page is made, so a cue never waits on the network (4.5's night cards came after its day cue on a slow line)
     for (const [o] of tweens) { const s = lightNow(o); o.color.copy(s.c); o.intensity = s.i; o.position.copy(s.p); }
     for (const [o, w] of lit) if (w.k !== w.to) glow(o, (w.k = w.from + (w.to - w.from) * smooth((now - w.t0) / w.secs)));
     for (const f of flicker) {  // a flame: 0.85..1.0 with soft noise at 6-10 Hz
@@ -1481,7 +1485,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
 
   return {
     get shot() { return shot; },
-    get state() { return { shot, yielded, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, story: SCAM, beat: SC.key, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
+    get state() { return { shot, yielded, took, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, story: SCAM, beat: SC.key, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
     get extras() { return pups; },  // the extras, the backdrop's top, and everything this layer added, for tests
     get backdrop() { return bd; },
     group,
