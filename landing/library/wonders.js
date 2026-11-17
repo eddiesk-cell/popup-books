@@ -48,7 +48,7 @@ const dirty = g => { for (const k in g.attributes) g.attributes[k].needsUpdate =
 const v3 = () => new THREE.Vector3();
 
 export function createWonders(scene, camera, { renderer = null, room = {}, reduced = false, phone = false, busy = () => false } = {}) {
-  const api = { names: NAMES, auto: true, log: [], fire, update, setStation, stats, dispose, group: null };
+  const api = { names: NAMES, auto: false, log: [], fire, update, setStation, stats, dispose, group: null };
   if (reduced) return { ...api, fire: () => null, update() {}, setStation() {}, stats: () => ({ playing: null, draws: 0, log: [] }), dispose() {} };  // reduced motion: no wonders at all, nothing built (stubs: the director's state below is never made)
   const root = new THREE.Group(); root.name = "wonders"; root.visible = false; scene.add(root); api.group = root;
   const FADE = { value: 1 }, PX = { value: 600 }, Q = phone ? .4 : 1;  // FADE: the busy fade-out shared by every material; PX: pixels per metre at 1 m (point sizes); Q: particle counts

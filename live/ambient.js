@@ -600,7 +600,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   let shot = calm || !controls ? "off" : !phone() && cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";  // an upright phone waits at the reading view even on a fresh load: its opening view cannot show the whole book (the orbit limits stop it short), so it cropped the text page
   let yielded = shot === "off", last = null, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
   let lastShot = null;  // the shot last played: the director returns to it 4 s after the reader lets go
-  const onStart = () => { held.on = true; }, onEnd = () => { held.on = false; };
+  const onStart = () => { held.on = held.tap = true; }, onEnd = () => { held.on = false; };  // tap: a start seen even when its end comes in the same event (a mouse wheel step: the orbit sends both at once)
   controls?.addEventListener("start", onStart); controls?.addEventListener("end", onEnd);
   disposers.push(() => { controls?.removeEventListener("start", onStart); controls?.removeEventListener("end", onEnd); });
   // One motion model for every move (the owner: "it should be more ease into"). The shots work out where the camera should be (pos, look) each frame (the goal).
@@ -646,10 +646,10 @@ export function addAmbient(scene, cam, m, opts = {}) {
     cam.position.copy(p.pos);
     if (SCAM && isOpen()) {  // the story camera may stand outside the reader's orbit on its way (in from the title view, 2.6 m out on a phone): the orbit is let out around it, not clamped (a clamp froze the push for 5 frames, 0.45 m/s), and given back once the camera is inside it again
       const v = tmp.copy(p.pos).sub(p.look), d = v.length(), phi = Math.acos(v.y / d);
-      if (d > controls.maxDistance || d < controls.minDistance || phi > controls.maxPolarAngle || phi < controls.minPolarAngle) {
+      if (d > controls.maxDistance || d < controls.minDistance || phi > controls.maxPolarAngle || phi < controls.minPolarAngle) {  // never past controls.ceil (live.js fit): a mouse wheel is not the reader's hand to the story camera, so it carried on from each wheel step and let the orbit out a step further, without end
         faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
         faceLim.maxDistance ??= controls.maxDistance; faceLim.minPolarAngle ??= controls.minPolarAngle;
-        Object.assign(controls, { minDistance: Math.min(controls.minDistance, d - 0.01), maxDistance: Math.max(controls.maxDistance, d + 0.01), minPolarAngle: Math.min(controls.minPolarAngle, phi - 0.01), maxPolarAngle: Math.max(controls.maxPolarAngle, phi + 0.01) });
+        Object.assign(controls, { minDistance: Math.min(controls.minDistance, d - 0.01), maxDistance: Math.min(Math.max(controls.maxDistance, d + 0.01), controls.ceil ?? Infinity), minPolarAngle: Math.min(controls.minPolarAngle, phi - 0.01), maxPolarAngle: Math.max(controls.maxPolarAngle, phi + 0.01) });
       }
     }
     if (t != null) { const b = smooth((t - calmFrom) / 2); cam.position.add(tmp.set(0.01 * b * Math.sin(TAU * t / 7), 0.006 * b * Math.sin(TAU * t / 5.6 + 1), 0)); }
@@ -711,7 +711,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (!calm && controls && !yielded && shot === "done" && (story.game === "next" || story.game === "wait")) opts.halt?.();  // the viewer's own 0.4 s glide to its game view (a phone's) would dash across the director's eased move: Kapi doubled in size in 0.3 s at the end of s01 1.4; the director takes that view itself
     const glide = !SCAM && moved && !held.on && isOpen() && !opts.titled?.() && (shot === "hold" || shot === "in");  // the viewer's own glide home as a spread opens (a phone's dive at 1.5 m/s): not the reader's hand; the opening push takes the camera over, at the speeds of CAMERA.md section 4
     if (glide || (SCAM && isOpen() && (shot === "in" || shot === "done"))) opts.halt?.();  // the story camera owns every view once the spread is open: the viewer's own glide home on an upright screen (home(900) at the first pull) stopped its push dead, 0.45 m/s in a frame
-    const hand = held.on || (moved && shot !== "wait" && !SCAM && !glide);  // the story camera: only a real touch is the reader's hand (the viewer's glide and the opening's end are not)
+    const hand = held.on || held.tap || (moved && shot !== "wait" && !SCAM && !glide); held.tap = false;  // the story camera: only a real touch is the reader's hand (the viewer's glide and the opening's end are not)
     if (hand && !yielded) yielded = true, run = null, shot = shot === "done" ? "done" : "off";
     if (hand) SC.out = now;  // when the reader's hand (or the viewer's glide) last moved the camera
     last = null;

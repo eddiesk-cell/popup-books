@@ -598,6 +598,7 @@ function moral() {  // after the last spread: a calm page, the moral read aloud 
   if (book?.learn) import("./learn.js").then(m => m.offer(bookId, () => lang, () => reader.stop())).catch(() => {});  // the gold "Play and learn" door: only a book whose book.json says "learn": true has a question bank (Mali's 404 for one it never had stopped a publish)
 }
 $("again").onclick = () => mode === "moral" && reader.read(book.moral?.lines || story.moral.map(l => l.id));
+$("lib").onclick = $("tolib").onclick = () => { location.href = "../landing/library/"; };  // the way back to the Grand Library, from any page and from the end card (owner 2026-11-17: "there should be a way to go back to the library after we read the book")
 $("back").onclick = () => {
   if (mode !== "moral") return;
   $("moral").hidden = true; $("replay").hidden = false; quiet(); snd.setBed(bedsOf(S));
@@ -1400,7 +1401,7 @@ function fit() {  // the manifest's camera on a wide screen; on a narrow one clo
     HOME = LOOK.clone().add(v.setFromSpherical(sph));
     cam.position.copy(keep[0]); cam.quaternion.copy(keep[1]); cam.updateMatrixWorld();
     const d = cam.position.distanceTo(controls.target);  // never past where the camera is now: the controls would snap it there in one frame
-    Object.assign(controls, { minDistance: Math.min(sph.radius / 3, d), maxDistance: Math.max(sph.radius / 0.6, d) });  // the director's close shots come in past 1/1.6
+    Object.assign(controls, { minDistance: Math.min(sph.radius / 3, d), maxDistance: Math.max(sph.radius / 0.6, d) }); controls.ceil = controls.maxDistance;  // the director's close shots come in past 1/1.6; ceil: no let-out goes past it (ambient.js: the reader's wheel once ratcheted it out without end, owner 2026-11-17)
   }
 }
 addEventListener("resize", () => { fit(); if (S) gameView(S.play.begun && !S.play.complete, true); }); fit();
@@ -1466,7 +1467,7 @@ function gameView(on, force) {  // every screen frames the game while it is on; 
     })();
     at = lifted;
     if (![at.x, at.y, at.z, back].every(Number.isFinite)) return home(on ? 1000 : 700, on);  // a degenerate target box (a mesh stored at scale 0) never becomes the view: the one before stays
-    LOOK = at; HOME = at.clone().addScaledVector(dir, back); Object.assign(controls, { minDistance: Math.min(controls.minDistance, back * 0.8), maxDistance: Math.max(controls.maxDistance, back * 1.25), minPolarAngle: Math.min(controls.minPolarAngle, Math.acos(dir.y) - 0.01), maxPolarAngle: Math.max(controls.maxPolarAngle, Math.acos(dir.y) + 0.01) });  // the controls never clamp the game view (its angle: a phone's can be steeper than the reader's 20 degree floor, and the orbit would snap the glide there in one frame)
+    LOOK = at; HOME = at.clone().addScaledVector(dir, back); Object.assign(controls, { minDistance: Math.min(controls.minDistance, back * 0.8), maxDistance: Math.max(controls.maxDistance, back * 1.25), minPolarAngle: Math.min(controls.minPolarAngle, Math.acos(dir.y) - 0.01), maxPolarAngle: Math.max(controls.maxPolarAngle, Math.acos(dir.y) + 0.01) }); controls.ceil = Math.max(controls.ceil ?? 0, controls.maxDistance);  // the controls never clamp the game view (its angle: a phone's can be steeper than the reader's 20 degree floor, and the orbit would snap the glide there in one frame)
   }
   return home(on ? 1000 : 700, on);  // a calm glide to the game's view, begun before the line before the game ends (the director, ambient.js, reads it as a reader's hand and keeps clear)
 }

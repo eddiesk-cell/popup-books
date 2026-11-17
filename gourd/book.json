@@ -201,7 +201,14 @@
     "praise": "They are ready!",
     "voice": {
      "start": "game.8.start",
-     "praise": "game.8.praise"
+     "praise": "game.8.praise",
+     "react": [
+      "game.8.react.axe",
+      "game.8.react.rope",
+      "game.8.react.water-jar",
+      "game.8.react.rice-basket",
+      "game.8.react.lamp"
+     ]
     }
    }
   },

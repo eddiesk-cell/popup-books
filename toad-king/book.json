@@ -1,0 +1,374 @@
+{
+ "chars": "toad-",
+ "title": "The Toad and the Sky King",
+ "released": true,
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Dry Land",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "collect",
+    "count": "count",
+    "before": "1.5",
+    "targets": [
+     "buffalo",
+     "dog",
+     "cat",
+     "duck",
+     "turtle"
+    ],
+    "start": "Who is thirsty? Tap them and count!",
+    "praise": "Five thirsty friends!",
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    }
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Too Small?",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "collect",
+    "targets": [
+     "buffalo",
+     "dog",
+     "cat",
+     "duck",
+     "kankak"
+    ],
+    "before": "2.4",
+    "start": "Tap the animals from the biggest to the smallest!",
+    "praise": "Biggest to smallest! Kankak is the smallest, and the bravest!",
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    }
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Friends Join In",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6"
+   ],
+   "game": {
+    "type": "match",
+    "before": "3.6",
+    "start": "Help each friend go home! Tap a friend, then tap its home.",
+    "praise": "You know all our friends!",
+    "voice": {
+     "start": "game.3.match",
+     "praise": "game.3.praise",
+     "listen": "game.3.listen",
+     "react": "game.3.right",
+     "again": "game.3.again"
+    },
+    "pairs": [
+     [
+      "tik",
+      "mound"
+     ],
+     [
+      "bizzy",
+      "bee-nest"
+     ],
+     [
+      "pinch",
+      "rock-pile"
+     ],
+     [
+      "frog4",
+      "puddle"
+     ],
+     [
+      "frog3",
+      "puddle"
+     ],
+     [
+      "frog2",
+      "puddle"
+     ],
+     [
+      "frog1",
+      "puddle"
+     ]
+    ],
+    "gait": {
+     "bizzy": "fly"
+    }
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "The Road to the Sky",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "order",
+    "before": "4.4",
+    "targets": [
+     "road0",
+     "road1",
+     "road2",
+     "road3",
+     "road4",
+     "road5",
+     "road6",
+     "road7",
+     "road8",
+     "road9"
+    ],
+    "start": "Tap the glowing mud block. Count with me!",
+    "praise": "Ten blocks! The road reaches the clouds!",
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise",
+     "react": [
+      "count.1",
+      "count.2",
+      "count.3",
+      "count.4",
+      "count.5",
+      "count.6",
+      "count.7",
+      "count.8",
+      "count.9",
+      "count.10"
+     ]
+    }
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "The Sky King",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "5.3",
+    "targets": [
+     "drop0",
+     "drop1",
+     "drop2",
+     "drop3",
+     "drop4"
+    ],
+    "start": "The Sky King hid five little raindrops. Can you find them?",
+    "praise": "You found all the hidden raindrops!",
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Buzz, Nibble, Pinch!",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "6.5",
+    "targets": [
+     "toes0",
+     "toes1",
+     "toes2",
+     "toes3",
+     "toes4"
+    ],
+    "start": "Can we make him change his mind? Tap his toes when they peek out!",
+    "praise": "He laughed... but still no rain!",
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise",
+     "react": "game.6.react"
+    }
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "Why So Cross?",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "7.5",
+    "targets": [
+     "face-sad"
+    ],
+    "start": "Look at the Sky King. How does he feel? Tap the face!",
+    "praise": "Yes. He is sad. Nobody said thank you.",
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise",
+     "again": "game.7.again"
+    }
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "One Big Thank You",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "8.4",
+    "targets": [
+     "kankak",
+     "frog1",
+     "bizzy",
+     "tik",
+     "pinch"
+    ],
+    "start": "Tap each friend to add their voice!",
+    "praise": "What a big thank-you song!",
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    }
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Rain!",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4"
+   ],
+   "game": {
+    "type": "collect",
+    "lit_glow": 0,
+    "before": "9.2",
+    "targets": [
+     "knot0",
+     "knot1",
+     "knot2",
+     "knot3",
+     "knot4"
+    ],
+    "start": "Slide your finger along the rope to untie each knot!",
+    "praise": "All the clouds are free!",
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    }
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "Rockets for the Sky",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "match",
+    "gait": {
+     "rocket0": "float",
+     "rocket1": "float",
+     "rocket2": "float",
+     "rocket3": "float",
+     "rocket4": "float"
+    },
+    "secs": 0.9,
+    "stop": 0.03,
+    "before": "10.5",
+    "pairs": [
+     [
+      "rocket0",
+      "cloud0"
+     ],
+     [
+      "rocket1",
+      "cloud1"
+     ],
+     [
+      "rocket2",
+      "cloud2"
+     ],
+     [
+      "rocket3",
+      "cloud3"
+     ],
+     [
+      "rocket4",
+      "cloud4"
+     ]
+    ],
+    "start": "Send each rocket to the cloud of the same colour!",
+    "praise": "The sky says: you're welcome!",
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    }
+   }
+  },
+  {
+   "dir": "moral",
+   "title": "What did we learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5",
+    "moral.6",
+    "moral.7"
+   ]
+  }
+ ]
+}

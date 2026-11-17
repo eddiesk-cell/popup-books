@@ -376,11 +376,11 @@
       ],
       [
        "round",
-       "This is OUR mango tree!"
+       "This is our mango tree!"
       ],
       [
        "square",
-       "No! It is OUR mango tree!"
+       "No! It is our mango tree!"
       ]
      ]
     },
@@ -394,7 +394,7 @@
       ],
       [
        "square",
-       "No! We came out of the square door. WE are the best!"
+       "No! We came out of the square door. We are the best!"
       ]
      ]
     },
@@ -762,7 +762,7 @@
      "say": [
       [
        "narrator",
-       "CRACK! The great vine fell. The dark was gone. The sun came back!"
+       "Crack! The great vine fell. The dark was gone. The sun came back!"
       ]
      ]
     }
@@ -1057,6 +1057,56 @@
     [
      "narrator",
      "They are ready!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.react.axe",
+   "text": "The axe, to cut the vine!",
+   "say": [
+    [
+     "narrator",
+     "The axe, to cut the vine!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.react.rope",
+   "text": "The rope, to pull it down!",
+   "say": [
+    [
+     "narrator",
+     "The rope, to pull it down!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.react.water-jar",
+   "text": "The water jar, so they can drink!",
+   "say": [
+    [
+     "narrator",
+     "The water jar, so they can drink!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.react.rice-basket",
+   "text": "The rice basket, so they can eat!",
+   "say": [
+    [
+     "narrator",
+     "The rice basket, so they can eat!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.react.lamp",
+   "text": "The lamp, to see in the dark!",
+   "say": [
+    [
+     "narrator",
+     "The lamp, to see in the dark!"
     ]
    ]
   },

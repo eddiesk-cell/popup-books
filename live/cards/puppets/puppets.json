@@ -2422,6 +2422,30 @@
 "Toad 4-moral"
 ],
 "cut": true
+},
+"gourd-leaf": {
+"look": "one big green leaf on a short stalk, a pale rim, a cream-gold midrib: a step up the gourd, a paper cut-out",
+"size": 0.062,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Gourd 2"
+],
+"cut": true
 }
 }
 }

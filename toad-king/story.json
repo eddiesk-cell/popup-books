@@ -1,0 +1,2391 @@
+{
+ "title": "The Toad and the Sky King",
+ "credit": "From the old Lao and Isan tale of Phaya Khankhak, the Toad King, the story behind the Boun Bang Fai rocket festival. Retold in our own words.",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "kankak": {
+   "voice": "bm_george",
+   "speed": 1.08,
+   "pitch": 6
+  },
+  "skyking": {
+   "voice": "bm_george",
+   "speed": 0.86,
+   "pitch": -5
+  },
+  "buffalo": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": -4
+  },
+  "tik": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 4
+  },
+  "bizzy": {
+   "voice": "bm_george",
+   "speed": 1.15,
+   "pitch": 9
+  },
+  "pinch": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": -2
+  },
+  "frogs": {
+   "voice": "bm_george",
+   "speed": 1.1,
+   "pitch": 3
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "dog": {
+   "voice": "bm_george",
+   "speed": 1.05,
+   "pitch": 2
+  },
+  "cat": {
+   "voice": "bm_george",
+   "speed": 1.1,
+   "pitch": 5
+  },
+  "duck": {
+   "voice": "bm_george",
+   "speed": 1.12,
+   "pitch": 6
+  },
+  "turtle": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": -3
+  },
+  "gecko": {
+   "voice": "bm_george",
+   "speed": 1.15,
+   "pitch": 2
+  },
+  "girl": {
+   "voice": "bm_george",
+   "speed": 1.06,
+   "pitch": 5
+  },
+  "boy": {
+   "voice": "bm_george",
+   "speed": 1.08,
+   "pitch": 4
+  },
+  "oldwoman": {
+   "voice": "bm_george",
+   "speed": 0.88,
+   "pitch": 2
+  },
+  "man": {
+   "voice": "bm_george",
+   "speed": 0.92,
+   "pitch": -3
+  },
+  "well": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "bucket": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "crack-tile": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dry-leaves": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hut": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dry-tree": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "stone-sit": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "butterfly": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "river-stones": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "squirrel": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rocks": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "far-hills": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "sun": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "mound": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rock-lift": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "flowers": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "ferns": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "path": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lapwing": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dragonfly": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "road-block": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "wind": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "boulder": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "top-cloud": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud-house-far": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "birds": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rope-clouds": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rain-cloud": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud-chair": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cup": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pot": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud-house": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "raindrop": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud-puff": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "toes": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloth": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "crown": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "sneeze-puff": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "kings-nose": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "window": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "face-happy": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "face-sad": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "face-sleepy": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "little-cloud": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "beard": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "window-light": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "song-bar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rain": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "knot": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "ride-cloud": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "window-green": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "tear": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pond": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lily-pad": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rocket": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rocket-frame": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud0-red": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud1-yellow": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud2-blue": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud3-green": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cloud4-purple": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "rainbow": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "green-grass": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "evening-flowers": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "heron": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fruit-bat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "star": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hut-window": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "termites": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "face-cross": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Dry Land",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Once, there was no rain. No rain for a long, long time.",
+     "say": [
+      [
+       "narrator",
+       "Once, there was no rain. No rain for a long, long time."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "The river was low. The fields were brown and dry.",
+     "say": [
+      [
+       "narrator",
+       "The river was low. The fields were brown and dry."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Old Buffalo walked slowly to the pond. \"I am so thirsty,\" he said.",
+     "say": [
+      [
+       "narrator",
+       "Old Buffalo walked slowly to the pond."
+      ],
+      [
+       "buffalo",
+       "I am so thirsty,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "But the pond was only mud. In the mud sat a little toad. His name was Kankak.",
+     "say": [
+      [
+       "narrator",
+       "But the pond was only mud. In the mud sat a little toad. His name was Kankak."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Kankak looked up at the empty sky. \"Where is the rain?\" he asked.",
+     "say": [
+      [
+       "narrator",
+       "Kankak looked up at the empty sky."
+      ],
+      [
+       "kankak",
+       "Where is the rain?"
+      ],
+      [
+       "narrator",
+       "he asked."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Too Small?",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "\"The rain lives up in the sky, with the Sky King,\" said Old Buffalo.",
+     "say": [
+      [
+       "buffalo",
+       "The rain lives up in the sky, with the Sky King,"
+      ],
+      [
+       "narrator",
+       "said Old Buffalo."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "\"Then let's go up and ask him!\" said Kankak.",
+     "say": [
+      [
+       "kankak",
+       "Then let's go up and ask him!"
+      ],
+      [
+       "narrator",
+       "said Kankak."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "The animals laughed. \"You? You are too small!\"",
+     "say": [
+      [
+       "narrator",
+       "The animals laughed."
+      ],
+      [
+       "dog",
+       "You?"
+      ],
+      [
+       "cat",
+       "You are too small!"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Kankak stood up tall, as tall as a little toad can. \"Small feet can walk a long way,\" he said.",
+     "say": [
+      [
+       "narrator",
+       "Kankak stood up tall, as tall as a little toad can."
+      ],
+      [
+       "kankak",
+       "Small feet can walk a long way,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "And off he went: hop, hop, hop, toward the hills.",
+     "say": [
+      [
+       "narrator",
+       "And off he went: hop, hop, hop, toward the hills."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Friends Join In",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "On the way, Kankak met Tik the termite. \"Where are you going?\" asked Tik.",
+     "say": [
+      [
+       "narrator",
+       "On the way, Kankak met Tik the termite."
+      ],
+      [
+       "tik",
+       "Where are you going?"
+      ],
+      [
+       "narrator",
+       "asked Tik."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "\"Up to the sky, to ask for rain!\" said Kankak. \"I will come too!\" said Tik.",
+     "say": [
+      [
+       "kankak",
+       "Up to the sky, to ask for rain!"
+      ],
+      [
+       "narrator",
+       "said Kankak."
+      ],
+      [
+       "tik",
+       "I will come too!"
+      ],
+      [
+       "narrator",
+       "said Tik."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Then came Bizzy the bee. Buzz, buzz! \"Me too!\"",
+     "say": [
+      [
+       "narrator",
+       "Then came Bizzy the bee."
+      ],
+      [
+       "bizzy",
+       "Buzz, buzz! Me too!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Then came Pinch the scorpion. Snip, snip! \"Me too!\"",
+     "say": [
+      [
+       "narrator",
+       "Then came Pinch the scorpion."
+      ],
+      [
+       "pinch",
+       "Snip, snip! Me too!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Then came the frogs, hop, hop, hop. \"Ribbit! Us too!\"",
+     "say": [
+      [
+       "narrator",
+       "Then came the frogs, hop, hop, hop."
+      ],
+      [
+       "frogs",
+       "Ribbit! Us too!"
+      ]
+     ]
+    },
+    {
+     "id": "3.6",
+     "text": "Now Kankak had an army. A very small army!",
+     "say": [
+      [
+       "narrator",
+       "Now Kankak had an army. A very small army!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Road to the Sky",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "They came to the end of the land. The sky was far, far above. \"How can we get up there?\" asked Bizzy.",
+     "say": [
+      [
+       "narrator",
+       "They came to the end of the land. The sky was far, far above."
+      ],
+      [
+       "bizzy",
+       "How can we get up there?"
+      ],
+      [
+       "narrator",
+       "asked Bizzy."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"Leave it to us!\" said Tik. A thousand termites came out of the ground.",
+     "say": [
+      [
+       "tik",
+       "Leave it to us!"
+      ],
+      [
+       "narrator",
+       "said Tik. A thousand termites came out of the ground."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "They built a road of mud, up and up, round and round, all the way to the clouds.",
+     "say": [
+      [
+       "narrator",
+       "They built a road of mud, up and up, round and round, all the way to the clouds."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Up, up, up went the little army. It was windy and cold, and the frogs held on tight.",
+     "say": [
+      [
+       "narrator",
+       "Up, up, up went the little army. It was windy and cold, and the frogs held on tight."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "At the top, on a big white cloud, was the Sky King's house.",
+     "say": [
+      [
+       "narrator",
+       "At the top, on a big white cloud, was the Sky King's house."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Sky King",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "The Sky King sat on his cloud chair. He had a long white beard, and he looked very cross.",
+     "say": [
+      [
+       "narrator",
+       "The Sky King sat on his cloud chair. He had a long white beard, and he looked very cross."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Behind him, all the rain clouds were tied up with a big rope.",
+     "say": [
+      [
+       "narrator",
+       "Behind him, all the rain clouds were tied up with a big rope."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"Please, Sky King,\" said Kankak. \"The land is so dry. Can we have some rain?\"",
+     "say": [
+      [
+       "kankak",
+       "Please, Sky King,"
+      ],
+      [
+       "narrator",
+       "said Kankak."
+      ],
+      [
+       "kankak",
+       "The land is so dry. Can we have some rain?"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "\"No!\" said the Sky King. He folded his arms. \"No, no, NO!\"",
+     "say": [
+      [
+       "skyking",
+       "No!"
+      ],
+      [
+       "narrator",
+       "said the Sky King. He folded his arms."
+      ],
+      [
+       "skyking",
+       "No, no, NO!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "\"Then we will make you!\" said Pinch.",
+     "say": [
+      [
+       "pinch",
+       "Then we will make you!"
+      ],
+      [
+       "narrator",
+       "said Pinch."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Buzz, Nibble, Pinch!",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Bizzy buzzed round and round the Sky King's nose. Buzz, buzz, buzz!",
+     "say": [
+      [
+       "narrator",
+       "Bizzy buzzed round and round the Sky King's nose. Buzz, buzz, buzz!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"Ah... ah... ACHOO!\" A big puff of cloud came out. But no rain.",
+     "say": [
+      [
+       "skyking",
+       "Ah... ah... ACHOO!"
+      ],
+      [
+       "narrator",
+       "A big puff of cloud came out. But no rain."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Tik and the termites nibbled his chair. Nibble, nibble! The chair wobbled. But no rain.",
+     "say": [
+      [
+       "narrator",
+       "Tik and the termites nibbled his chair. Nibble, nibble! The chair wobbled. But no rain."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Pinch pinched the Sky King's big toe. Snip! \"Ow!\" But still, no rain.",
+     "say": [
+      [
+       "narrator",
+       "Pinch pinched the Sky King's big toe. Snip!"
+      ],
+      [
+       "skyking",
+       "Ow!"
+      ],
+      [
+       "narrator",
+       "But still, no rain."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"Buzz, nibble, pinch, all you like,\" said the Sky King. \"I will NOT send the rain!\"",
+     "say": [
+      [
+       "skyking",
+       "Buzz, nibble, pinch, all you like,"
+      ],
+      [
+       "narrator",
+       "said the Sky King."
+      ],
+      [
+       "skyking",
+       "I will NOT send the rain!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Why So Cross?",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Kankak hopped close to the Sky King. He did not buzz. He did not pinch.",
+     "say": [
+      [
+       "narrator",
+       "Kankak hopped close to the Sky King. He did not buzz. He did not pinch."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"Sky King,\" he said softly, \"why are you so cross?\"",
+     "say": [
+      [
+       "kankak",
+       "Sky King,"
+      ],
+      [
+       "narrator",
+       "he said softly,"
+      ],
+      [
+       "kankak",
+       "why are you so cross?"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "The Sky King looked down at the little toad. His big eyes were sad.",
+     "say": [
+      [
+       "narrator",
+       "The Sky King looked down at the little toad. His big eyes were sad."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"Every year I send the rain,\" he said. \"The plants grow. The rivers fill. But nobody ever says thank you.\"",
+     "say": [
+      [
+       "skyking",
+       "Every year I send the rain,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ],
+      [
+       "skyking",
+       "The plants grow. The rivers fill. But nobody ever says thank you."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "\"Nobody?\" asked Kankak. \"Nobody,\" said the Sky King. \"So, no more rain.\"",
+     "say": [
+      [
+       "kankak",
+       "Nobody?"
+      ],
+      [
+       "narrator",
+       "asked Kankak."
+      ],
+      [
+       "skyking",
+       "Nobody,"
+      ],
+      [
+       "narrator",
+       "said the Sky King."
+      ],
+      [
+       "skyking",
+       "So, no more rain."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "One Big Thank You",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Kankak turned to his friends. \"We forgot to say thank you,\" he said. \"Let's say it now!\"",
+     "say": [
+      [
+       "narrator",
+       "Kankak turned to his friends."
+      ],
+      [
+       "kankak",
+       "We forgot to say thank you,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ],
+      [
+       "kankak",
+       "Let's say it now!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "The frogs sang, \"Ribbit, thank you!\" Bizzy hummed, \"Thank you!\"",
+     "say": [
+      [
+       "narrator",
+       "The frogs sang,"
+      ],
+      [
+       "frogs",
+       "Ribbit, thank you!"
+      ],
+      [
+       "narrator",
+       "Bizzy hummed,"
+      ],
+      [
+       "bizzy",
+       "Thank you!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "The termites tapped, \"Thank you!\" And Pinch said, \"Thank you... very much!\"",
+     "say": [
+      [
+       "narrator",
+       "The termites tapped,"
+      ],
+      [
+       "tik",
+       "Thank you!"
+      ],
+      [
+       "narrator",
+       "And Pinch said,"
+      ],
+      [
+       "pinch",
+       "Thank you... very much!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "It was the biggest thank-you song in the whole sky.",
+     "say": [
+      [
+       "narrator",
+       "It was the biggest thank-you song in the whole sky."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "The Sky King's mouth went wobbly. Then he smiled. Then he laughed a big, happy laugh!",
+     "say": [
+      [
+       "narrator",
+       "The Sky King's mouth went wobbly. Then he smiled. Then he laughed a big, happy laugh!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Rain!",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "A happy tear rolled down the Sky King's cheek. Plop! It was the first drop of rain.",
+     "say": [
+      [
+       "narrator",
+       "A happy tear rolled down the Sky King's cheek. Plop! It was the first drop of rain."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Then he untied the rope. \"Go, my clouds! Go down to the dry land!\"",
+     "say": [
+      [
+       "narrator",
+       "Then he untied the rope."
+      ],
+      [
+       "skyking",
+       "Go, my clouds! Go down to the dry land!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "The rain clouds rolled away, and the friends rode down on the softest one. \"Wheee!\"",
+     "say": [
+      [
+       "narrator",
+       "The rain clouds rolled away, and the friends rode down on the softest one."
+      ],
+      [
+       "kankak",
+       "Wheee!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Drip, drop, drip, drop... splash! The rain came down, down, down.",
+     "say": [
+      [
+       "narrator",
+       "Drip, drop, drip, drop... splash! The rain came down, down, down."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Rockets for the Sky",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Down on the land, the pond filled up. Old Buffalo drank and drank. \"Ahh!\"",
+     "say": [
+      [
+       "narrator",
+       "Down on the land, the pond filled up. Old Buffalo drank and drank."
+      ],
+      [
+       "buffalo",
+       "Ahh!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "The fields turned green again, and the frogs sang all night: \"Ribbit! Thank you!\"",
+     "say": [
+      [
+       "narrator",
+       "The fields turned green again, and the frogs sang all night:"
+      ],
+      [
+       "frogs",
+       "Ribbit! Thank you!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "\"You are our Toad King!\" everyone said to Kankak. Kankak just smiled.",
+     "say": [
+      [
+       "girl",
+       "You are our Toad King!"
+      ],
+      [
+       "narrator",
+       "everyone said to Kankak. Kankak just smiled."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Then he had an idea. \"Every year, let's send a big thank-you up to the sky!\"",
+     "say": [
+      [
+       "narrator",
+       "Then he had an idea."
+      ],
+      [
+       "kankak",
+       "Every year, let's send a big thank-you up to the sky!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "So the people made bamboo rockets with ribbons of every colour. Whoosh! Up they went, to say thank you.",
+     "say": [
+      [
+       "narrator",
+       "So the people made bamboo rockets with ribbons of every colour. Whoosh! Up they went, to say thank you."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Say thank you. Buzzing and pinching did not bring the rain. A thank-you did.",
+   "say": [
+    [
+     "closing",
+     "Say thank you. Buzzing and pinching did not bring the rain. A thank-you did."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Ask why. When someone is cross, ask them why. Kankak did.",
+   "say": [
+    [
+     "closing",
+     "Ask why. When someone is cross, ask them why. Kankak did."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Small can be brave. The smallest toad led the way.",
+   "say": [
+    [
+     "closing",
+     "Small can be brave. The smallest toad led the way."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "cross has two meanings.",
+   "say": [
+    [
+     "closing",
+     "cross has two meanings."
+    ]
+   ]
+  },
+  {
+   "id": "moral.6",
+   "text": "Angry: \"The Sky King was cross.\"",
+   "say": [
+    [
+     "closing",
+     "Angry: \"The Sky King was cross.\""
+    ]
+   ]
+  },
+  {
+   "id": "moral.7",
+   "text": "To go over: \"The friends cross the river.\"",
+   "say": [
+    [
+     "closing",
+     "To go over: \"The friends cross the river.\""
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Who is thirsty? Tap them and count!",
+   "say": [
+    [
+     "narrator",
+     "Who is thirsty? Tap them and count!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Five thirsty friends!",
+   "say": [
+    [
+     "narrator",
+     "Five thirsty friends!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Tap the animals from the biggest to the smallest!",
+   "say": [
+    [
+     "narrator",
+     "Tap the animals from the biggest to the smallest!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Biggest to smallest! Kankak is the smallest, and the bravest!",
+   "say": [
+    [
+     "narrator",
+     "Biggest to smallest! Kankak is the smallest, and the bravest!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Listen! Who makes this sound? Tap them!",
+   "say": [
+    [
+     "narrator",
+     "Listen! Who makes this sound? Tap them!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.match",
+   "text": "Help each friend go home! Tap a friend, then tap its home.",
+   "say": [
+    [
+     "narrator",
+     "Help each friend go home! Tap a friend, then tap its home."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.right",
+   "text": "Yes, home!",
+   "say": [
+    [
+     "narrator",
+     "Yes, home!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.again",
+   "text": "Try again!",
+   "say": [
+    [
+     "narrator",
+     "Try again!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "You know all our friends!",
+   "say": [
+    [
+     "narrator",
+     "You know all our friends!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Tap the glowing mud block. Count with me!",
+   "say": [
+    [
+     "narrator",
+     "Tap the glowing mud block. Count with me!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Ten blocks! The road reaches the clouds!",
+   "say": [
+    [
+     "narrator",
+     "Ten blocks! The road reaches the clouds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "The Sky King hid five little raindrops. Can you find them?",
+   "say": [
+    [
+     "narrator",
+     "The Sky King hid five little raindrops. Can you find them?"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "You found all the hidden raindrops!",
+   "say": [
+    [
+     "narrator",
+     "You found all the hidden raindrops!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Can we make him change his mind? Tap his toes when they peek out!",
+   "say": [
+    [
+     "narrator",
+     "Can we make him change his mind? Tap his toes when they peek out!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "He laughed... but still no rain!",
+   "say": [
+    [
+     "narrator",
+     "He laughed... but still no rain!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Look at the Sky King. How does he feel? Tap the face!",
+   "say": [
+    [
+     "narrator",
+     "Look at the Sky King. How does he feel? Tap the face!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Yes. He is sad. Nobody said thank you.",
+   "say": [
+    [
+     "narrator",
+     "Yes. He is sad. Nobody said thank you."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Tap each friend to add their voice!",
+   "say": [
+    [
+     "narrator",
+     "Tap each friend to add their voice!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "What a big thank-you song!",
+   "say": [
+    [
+     "narrator",
+     "What a big thank-you song!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Slide your finger along the rope to untie each knot!",
+   "say": [
+    [
+     "narrator",
+     "Slide your finger along the rope to untie each knot!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "All the clouds are free!",
+   "say": [
+    [
+     "narrator",
+     "All the clouds are free!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Send each rocket to the cloud of the same colour!",
+   "say": [
+    [
+     "narrator",
+     "Send each rocket to the cloud of the same colour!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "The sky says: you're welcome!",
+   "say": [
+    [
+     "narrator",
+     "The sky says: you're welcome!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.buffalo",
+   "text": "I'm thirsty!",
+   "say": [
+    [
+     "buffalo",
+     "I'm thirsty!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.dog",
+   "text": "I'm thirsty!",
+   "say": [
+    [
+     "dog",
+     "I'm thirsty!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.cat",
+   "text": "I'm thirsty!",
+   "say": [
+    [
+     "cat",
+     "I'm thirsty!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.duck",
+   "text": "I'm thirsty!",
+   "say": [
+    [
+     "duck",
+     "I'm thirsty!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.react.turtle",
+   "text": "I'm thirsty!",
+   "say": [
+    [
+     "turtle",
+     "I'm thirsty!"
+    ]
+   ]
+  },
+  {
+   "id": "count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "count.6",
+   "text": "Six.",
+   "say": [
+    [
+     "narrator",
+     "Six."
+    ]
+   ]
+  },
+  {
+   "id": "count.7",
+   "text": "Seven.",
+   "say": [
+    [
+     "narrator",
+     "Seven."
+    ]
+   ]
+  },
+  {
+   "id": "count.8",
+   "text": "Eight.",
+   "say": [
+    [
+     "narrator",
+     "Eight."
+    ]
+   ]
+  },
+  {
+   "id": "count.9",
+   "text": "Nine.",
+   "say": [
+    [
+     "narrator",
+     "Nine."
+    ]
+   ]
+  },
+  {
+   "id": "count.10",
+   "text": "Ten.",
+   "say": [
+    [
+     "narrator",
+     "Ten."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.listen",
+   "text": "Listen!",
+   "say": [
+    [
+     "narrator",
+     "Listen!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.react",
+   "text": "Hee hee! Still no!",
+   "say": [
+    [
+     "skyking",
+     "Hee hee! Still no!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.again",
+   "text": "Look again.",
+   "say": [
+    [
+     "narrator",
+     "Look again."
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "kankak": [
+   "Hi! I'm Kankak!",
+   "I am a toad.",
+   "I am small. I am brave!",
+   "Ribbit, ribbit!",
+   "Up we go!",
+   "I am green.",
+   "Hop, hop, hop!",
+   "Look! The sky is big.",
+   "I have two eyes.",
+   "Thank you!"
+  ],
+  "skyking": [
+   "Hmph!",
+   "I am big.",
+   "I live in the sky.",
+   "I have a white beard.",
+   "Rain is wet.",
+   "Hee hee!",
+   "Clouds are soft.",
+   "My chair is a cloud.",
+   "My crown is gold.",
+   "I can see the land below."
+  ],
+  "buffalo": [
+   "Moo.",
+   "I am big.",
+   "I have a long tail.",
+   "Water is good!",
+   "I have two horns.",
+   "Mud is cool.",
+   "Slow, slow, slow.",
+   "I like to swim.",
+   "I eat grass.",
+   "Hello, little friend."
+  ],
+  "tik": [
+   "Tap, tap!",
+   "I am Tik.",
+   "I build with mud.",
+   "One, two, three, build!",
+   "I have six legs.",
+   "We are many.",
+   "I am small and strong.",
+   "Up, up, up!",
+   "Mud is brown.",
+   "Thank you!"
+  ],
+  "bizzy": [
+   "Buzz, buzz!",
+   "I am Bizzy.",
+   "I am a bee.",
+   "I am yellow and black.",
+   "I have six legs.",
+   "Fly, fly, fly!",
+   "Flowers are sweet.",
+   "Faster, faster!",
+   "Look at me!",
+   "Hum, hum, hum."
+  ],
+  "pinch": [
+   "Snip, snip!",
+   "I am Pinch.",
+   "I have two claws.",
+   "My tail goes up.",
+   "Careful! Pinch!",
+   "I walk sideways.",
+   "I am a scorpion.",
+   "I am a little shy.",
+   "Claws are strong.",
+   "Thank you... very much."
+  ],
+  "frogs": [
+   "Ribbit!",
+   "We are four frogs.",
+   "One, two, three, four!",
+   "We are green.",
+   "Hop, hop, hop!",
+   "We sing at night.",
+   "We live near water.",
+   "We have big eyes.",
+   "Thank you!",
+   "Croak, croak."
+  ],
+  "dog": [
+   "Woof!",
+   "I am a dog.",
+   "I have a wet nose.",
+   "Wag, wag, wag.",
+   "I like water.",
+   "I have four legs.",
+   "I am brown.",
+   "Pant, pant, pant.",
+   "Hello, friend!",
+   "Good dog!"
+  ],
+  "cat": [
+   "Meow.",
+   "I am a cat.",
+   "I am soft.",
+   "I have a long tail.",
+   "I am orange.",
+   "Purr, purr.",
+   "I like the shade.",
+   "I wash my paws.",
+   "Hello!",
+   "Ha ha ha!"
+  ],
+  "duck": [
+   "Quack, quack!",
+   "I am a duck.",
+   "I am brown.",
+   "My feet are orange.",
+   "I swim in the pond.",
+   "Waddle, waddle.",
+   "I have two feet.",
+   "Splash!",
+   "Hello!",
+   "Ha ha ha!"
+  ],
+  "turtle": [
+   "Hello. I am slow.",
+   "I am a turtle.",
+   "I have a shell.",
+   "My shell is hard.",
+   "In goes my head!",
+   "Slow, slow turtle.",
+   "I like the water.",
+   "One, two, three steps.",
+   "Thank you!"
+  ],
+  "gecko": [
+   "Chirp!",
+   "I am a gecko.",
+   "I climb walls.",
+   "I have sticky toes.",
+   "I have a long tail.",
+   "I am small.",
+   "I am green.",
+   "Look, up the wall!",
+   "I like warm walls.",
+   "Chirp, chirp!"
+  ],
+  "girl": [
+   "Hello!",
+   "I am a girl.",
+   "I have a flower in my hair.",
+   "My skirt is called a sinh.",
+   "I like to run.",
+   "Wave hello!",
+   "One, two, three!",
+   "I have two feet.",
+   "Hello, little toad!",
+   "I am kind."
+  ],
+  "boy": [
+   "Hi!",
+   "I am a boy.",
+   "I have two arms.",
+   "My trousers are rolled up.",
+   "I have a white shirt.",
+   "Look at the sky!",
+   "I like to climb.",
+   "Run, run, run!",
+   "One, two, three!",
+   "I am small."
+  ],
+  "oldwoman": [
+   "Hello, dear.",
+   "I am old and slow.",
+   "I have a stick.",
+   "My sinh is dark blue.",
+   "Look up! The sky is big.",
+   "Be kind.",
+   "I have a grey bun.",
+   "One, two, three.",
+   "I like stories.",
+   "I have two hands."
+  ],
+  "man": [
+   "Hello!",
+   "I am a man.",
+   "I have a blue shirt.",
+   "I have a cloth on my head.",
+   "I am strong.",
+   "Look, a rocket!",
+   "Up, up, up!",
+   "One, two, three, go!",
+   "I have big hands.",
+   "I am tall."
+  ],
+  "well": [
+   "A well.",
+   "The well is deep.",
+   "No water in the well!",
+   "One bucket.",
+   "Hello-o-o!"
+  ],
+  "bucket": [
+   "A bucket.",
+   "The bucket is empty.",
+   "Clang, clang!",
+   "A bucket is for water.",
+   "Turn it over. Nothing!"
+  ],
+  "crack-tile": [
+   "Mud.",
+   "The mud is dry.",
+   "Crack, crack!",
+   "The mud is brown.",
+   "Flip! A tile."
+  ],
+  "dry-leaves": [
+   "A leaf.",
+   "The leaf is dry.",
+   "Leaves go up!",
+   "The wind is hot.",
+   "Brown leaves."
+  ],
+  "hut": [
+   "A hut.",
+   "The hut is small.",
+   "A door.",
+   "Knock, knock!",
+   "It is hot today."
+  ],
+  "dry-tree": [
+   "A tree.",
+   "The tree is dry.",
+   "No leaves.",
+   "A tall tree.",
+   "No leaves at all."
+  ],
+  "stone-sit": [
+   "A stone.",
+   "The stone is hard.",
+   "The stone is flat.",
+   "Sit on the stone.",
+   "A grey stone."
+  ],
+  "butterfly": [
+   "A butterfly.",
+   "Big wings.",
+   "Flutter, flutter.",
+   "It likes flowers.",
+   "Yellow wings."
+  ],
+  "river-stones": [
+   "The river is low.",
+   "Stones!",
+   "One, two, three stones.",
+   "A little water.",
+   "The river is thin."
+  ],
+  "squirrel": [
+   "A squirrel.",
+   "Up the tree!",
+   "A bushy tail.",
+   "Flick, flick!",
+   "The squirrel is quick."
+  ],
+  "rocks": [
+   "Rocks.",
+   "A big rock.",
+   "Rocks are hard.",
+   "One, two, three rocks.",
+   "Grey rocks."
+  ],
+  "far-hills": [
+   "Hills.",
+   "The hills are far.",
+   "Up, up the hill!",
+   "The hills are brown.",
+   "Over the hills!"
+  ],
+  "sun": [
+   "The sun.",
+   "It is hot.",
+   "The sun is big.",
+   "Too much sun!",
+   "Yellow sun."
+  ],
+  "mound": [
+   "A mound.",
+   "A mound of mud.",
+   "Termites live here.",
+   "A hole!",
+   "Tap, tap! Who's there?"
+  ],
+  "rock-lift": [
+   "A rock.",
+   "Peek-a-boo!",
+   "Under the rock.",
+   "Lift the rock.",
+   "Who is under?"
+  ],
+  "flowers": [
+   "Flowers.",
+   "A yellow flower.",
+   "Flowers nod.",
+   "Pretty flowers.",
+   "Dry flowers need rain."
+  ],
+  "ferns": [
+   "Ferns.",
+   "Green and thin.",
+   "Ferns sway.",
+   "Soft ferns.",
+   "A little fern."
+  ],
+  "path": [
+   "A path.",
+   "Walk on the path.",
+   "The path is long.",
+   "Left, right, left, right.",
+   "A brown path."
+  ],
+  "lapwing": [
+   "A bird.",
+   "It runs!",
+   "Run, run, run.",
+   "Quick feet.",
+   "The bird says peep."
+  ],
+  "dragonfly": [
+   "A dragonfly.",
+   "Four wings.",
+   "Zoom, zoom!",
+   "It is blue.",
+   "Hover, hover."
+  ],
+  "road-block": [
+   "A block.",
+   "A mud block.",
+   "Up we go!",
+   "The road is high.",
+   "Block, block, block."
+  ],
+  "wind": [
+   "Wind!",
+   "Whoo, whoo!",
+   "Hold on tight!",
+   "The wind is cold.",
+   "Up in the wind."
+  ],
+  "boulder": [
+   "A boulder.",
+   "A big stone.",
+   "It rolls away!",
+   "Hard and grey.",
+   "Big rocks are heavy."
+  ],
+  "top-cloud": [
+   "A cloud.",
+   "The cloud is soft.",
+   "White and fluffy.",
+   "Step on the cloud.",
+   "We are up high!"
+  ],
+  "cloud-house-far": [
+   "A house in the sky.",
+   "The house is white.",
+   "A little light.",
+   "It is far, far up.",
+   "Look up, up, up!"
+  ],
+  "birds": [
+   "Birds!",
+   "Flap, flap, flap.",
+   "Birds fly high.",
+   "White birds.",
+   "Fly, fly, fly!"
+  ],
+  "rope-clouds": [
+   "A rope.",
+   "Rain clouds!",
+   "Tied up tight.",
+   "Five clouds.",
+   "The rope creaks."
+  ],
+  "rain-cloud": [
+   "A rain cloud.",
+   "The cloud is grey.",
+   "Full of rain.",
+   "Bump, bump!",
+   "It wants to go."
+  ],
+  "cloud-chair": [
+   "A chair.",
+   "A soft chair.",
+   "A cloud chair.",
+   "Squish!",
+   "The chair is big."
+  ],
+  "cup": [
+   "A cup.",
+   "A little cup.",
+   "Drip, drip.",
+   "One, two, three drops.",
+   "A cup for drops."
+  ],
+  "pot": [
+   "A pot.",
+   "A round pot.",
+   "Roll, roll.",
+   "Something is behind it!",
+   "The pot is brown."
+  ],
+  "cloud-house": [
+   "A house.",
+   "A white house.",
+   "A round window.",
+   "A door.",
+   "The house is made of cloud."
+  ],
+  "raindrop": [
+   "A raindrop!",
+   "Blue and wet.",
+   "Hee hee!",
+   "One little drop.",
+   "Plop!"
+  ],
+  "cloud-puff": [
+   "A puff.",
+   "Soft, soft.",
+   "White and fluffy.",
+   "Squish!",
+   "A little cloud."
+  ],
+  "toes": [
+   "Toes!",
+   "Ten toes.",
+   "Big toes.",
+   "Wiggle, wiggle.",
+   "Hee hee, tickles!"
+  ],
+  "cloth": [
+   "A silk cloth.",
+   "The cloth is deep blue.",
+   "Soft and long.",
+   "Gold shines on it.",
+   "A big silk cloth."
+  ],
+  "crown": [
+   "A crown.",
+   "The crown is gold.",
+   "Tall and shiny.",
+   "A king wears a crown.",
+   "It has a pointed top."
+  ],
+  "sneeze-puff": [
+   "Achoo!",
+   "A cloud puff.",
+   "Bless you!",
+   "Puff, puff!",
+   "White and soft."
+  ],
+  "kings-nose": [
+   "A big nose.",
+   "Buzz on the nose!",
+   "Tickle, tickle.",
+   "Ah... ah...",
+   "A round nose."
+  ],
+  "window": [
+   "A window.",
+   "Look down!",
+   "The land is dry.",
+   "Brown and dry.",
+   "So far below."
+  ],
+  "face-happy": [
+   "Happy!",
+   "A happy face.",
+   "Smile!",
+   "Is he happy?",
+   "Big smile."
+  ],
+  "face-sad": [
+   "Sad.",
+   "A sad face.",
+   "He is sad.",
+   "No smile.",
+   "Poor Sky King."
+  ],
+  "face-sleepy": [
+   "Sleepy.",
+   "A sleepy face.",
+   "Yawn!",
+   "Eyes shut.",
+   "Is he sleepy?"
+  ],
+  "little-cloud": [
+   "A little cloud.",
+   "It is shy.",
+   "Peek-a-boo!",
+   "It hides.",
+   "Soft and small."
+  ],
+  "beard": [
+   "A beard.",
+   "White and long.",
+   "Soft as a cloud.",
+   "It wiggles!",
+   "Tickle, tickle."
+  ],
+  "window-light": [
+   "A light.",
+   "Warm and yellow.",
+   "The window is bright.",
+   "Glow, glow.",
+   "A happy light."
+  ],
+  "song-bar": [
+   "A song!",
+   "Thank you!",
+   "Sing together.",
+   "Many voices.",
+   "Louder and louder!"
+  ],
+  "rain": [
+   "Rain!",
+   "Drip, drop.",
+   "Wet, wet, wet.",
+   "Rain is good.",
+   "Splash!"
+  ],
+  "knot": [
+   "A knot.",
+   "Pull, pull!",
+   "Untie it.",
+   "One knot, two knots.",
+   "It is free!"
+  ],
+  "ride-cloud": [
+   "A soft cloud.",
+   "Hop on!",
+   "Wheee!",
+   "Down we go.",
+   "The softest cloud."
+  ],
+  "window-green": [
+   "Green!",
+   "The land is green.",
+   "Look, grass!",
+   "Green after rain.",
+   "Hooray, green!"
+  ],
+  "tear": [
+   "A tear.",
+   "A happy tear.",
+   "Plop!",
+   "The first drop.",
+   "Round and blue."
+  ],
+  "pond": [
+   "The pond is full!",
+   "Water!",
+   "A big pond.",
+   "Splash, splash.",
+   "Blue water."
+  ],
+  "lily-pad": [
+   "A lily pad.",
+   "Green and round.",
+   "Frogs sit here.",
+   "One, two, three, four pads.",
+   "Flat and green."
+  ],
+  "rocket": [
+   "A rocket!",
+   "Whoosh!",
+   "A bamboo rocket.",
+   "A ribbon.",
+   "Up, up, up!"
+  ],
+  "rocket-frame": [
+   "A frame.",
+   "The frame is tall.",
+   "Rockets stand here.",
+   "Made of bamboo.",
+   "Three, two, one, go!"
+  ],
+  "cloud0-red": [
+   "A red cloud.",
+   "Red like an apple.",
+   "Red, red, red!",
+   "One red cloud.",
+   "The red rocket comes here."
+  ],
+  "cloud1-yellow": [
+   "A yellow cloud.",
+   "Yellow like the sun.",
+   "Yellow, yellow, yellow!",
+   "One yellow cloud.",
+   "The yellow rocket comes here."
+  ],
+  "cloud2-blue": [
+   "A blue cloud.",
+   "Blue like the sky.",
+   "Blue, blue, blue!",
+   "One blue cloud.",
+   "The blue rocket comes here."
+  ],
+  "cloud3-green": [
+   "A green cloud.",
+   "Green like grass.",
+   "Green, green, green!",
+   "One green cloud.",
+   "The green rocket comes here."
+  ],
+  "cloud4-purple": [
+   "A purple cloud.",
+   "Purple like a plum.",
+   "Purple, purple, purple!",
+   "One purple cloud.",
+   "The purple rocket comes here."
+  ],
+  "rainbow": [
+   "A rainbow!",
+   "Red, yellow, blue.",
+   "Many colours.",
+   "After the rain.",
+   "So pretty!"
+  ],
+  "green-grass": [
+   "Grass.",
+   "Green grass.",
+   "Grass sways.",
+   "Soft and green.",
+   "Look, it is green again."
+  ],
+  "evening-flowers": [
+   "Flowers.",
+   "Pink flowers.",
+   "Flowers drink.",
+   "They smell nice.",
+   "Flowers open."
+  ],
+  "heron": [
+   "A big bird.",
+   "Long legs.",
+   "It stands still.",
+   "Look, a heron.",
+   "Shh! It is looking for fish."
+  ],
+  "fruit-bat": [
+   "A bat.",
+   "It flies at night.",
+   "Two big wings.",
+   "Flap, flap.",
+   "Bats fly in the evening."
+  ],
+  "star": [
+   "A star.",
+   "Twinkle, twinkle.",
+   "One, two, three stars.",
+   "Stars come out at night.",
+   "The sky is dark."
+  ],
+  "hut-window": [
+   "A window.",
+   "A little light.",
+   "It is yellow.",
+   "Someone is home.",
+   "Time for bed."
+  ],
+  "termites": [
+   "Termites!",
+   "So many termites.",
+   "Termites build.",
+   "Tap, tap, tap.",
+   "Tiny builders."
+  ],
+  "face-cross": [
+   "A cross face.",
+   "He is cross.",
+   "Frown.",
+   "Then a smile!",
+   "Cross means angry."
+  ]
+ }
+}

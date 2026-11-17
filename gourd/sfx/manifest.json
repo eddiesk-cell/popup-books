@@ -1,5 +1,35 @@
 {
- "beds": ["birds-morning", "river-slow", "leaves-breeze"],
- "shots": ["buffalo-snort", "hush-swell"],
- "pools": { "buffalo-moo": 3, "gecko-chirp": 3 }
+ "beds": [
+  "birds-morning",
+  "river-slow",
+  "leaves-breeze"
+ ],
+ "shots": [
+  "buffalo-snort",
+  "hush-swell"
+ ],
+ "pools": {
+  "buffalo-moo": 3,
+  "gecko-chirp": 3,
+  "drum-big": 3,
+  "drum-mid": 3,
+  "drum-small": 3,
+  "gd-baby": 3,
+  "gd-brrr": 3,
+  "gd-chop": 5,
+  "gd-crack": 2,
+  "gd-crowd": 5,
+  "gd-elephant": 3,
+  "gd-hen": 3,
+  "gd-i-fire": 5,
+  "gd-i-gourd": 5,
+  "gd-i-iron": 5,
+  "gd-i-rice": 5,
+  "gd-inside": 5,
+  "gd-lion": 4,
+  "gd-pig": 3,
+  "gd-sky-swell": 3,
+  "gd-steam": 3,
+  "tk-i-cloud": 5
+ }
 }
