@@ -60,11 +60,6 @@ const pick = $("#langpick"); pick.innerHTML = NAMES.map(([c, n]) => `<option val
 pick.onchange = () => { try { localStorage.setItem("wst-lang", pick.value); } catch {} const u = new URL(location.href); if (u.searchParams.has("lang")) { u.searchParams.set("lang", pick.value); location.href = u.href; } else location.reload(); };  // a new language rebuilds the page's words, letters and measures from scratch: a reload is the one safe way
 const get = (o, p) => p.split(".").reduce((a, k) => a[k], o);
 $$("[data-t]").forEach(e => { const v = get(L, e.dataset.t); e.textContent = v; if (!v) e.hidden = true; });
-const card = (c, inner) => `<article class="card"><h3>${c.n}</h3>${inner}</article>`;
-$("[data-list=doors]").innerHTML = L.doors.items.map(c => card(c, `<p>${c.d}</p><span class="tag${c.open ? " open" : ""}">${c.s}</span>`)).join("");
-$("[data-list=langs]").innerHTML = L.lang.names.map(([n, l]) => `<li lang="${l}">${n}</li>`).join("");
-$("[data-list=parents]").innerHTML = L.parents.items.map(c => card(c, `<p>${c.d}</p>`)).join("");
-$("[data-list=plans]").innerHTML = L.plans.items.map(c => `<article class="card${c.pick ? " pick" : ""}"><h3>${c.n}</h3><p>${c.d}</p><p class="price">${c.p || L.plans.price}</p><button class="btn" type="button" aria-disabled="true">${c.b}</button></article>`).join("");
 $("#world").setAttribute("aria-label", L.alt.world);
 // ---- sound toggle (one choice for both pages), names for the disabled buttons, and the swipe rows as named groups
 const snd = $("#snd"), sndLabel = () => { snd.textContent = `${L.nav.snd}: ${sfx.isOn() ? L.nav.on : L.nav.off}`; };
@@ -78,8 +73,6 @@ panel.addEventListener("focusout", away); menu.addEventListener("focusout", away
 addEventListener("keydown", e => { if (e.key === "Escape" && !panel.hidden) openMenu(false, true); });
 addEventListener("pointerdown", e => { if (!panel.hidden && !panel.contains(e.target) && !menu.contains(e.target)) openMenu(false); });
 $$(".btn[aria-disabled=true]").forEach(b => b.setAttribute("aria-label", `${b.textContent}, ${L.nav.soon}`));
-const rows = $$(".sec .grid"), narrow = matchMedia("(max-width: 700px)"), stops = () => rows.forEach(g => narrow.matches ? g.setAttribute("tabindex", "0") : g.removeAttribute("tabindex"));
-rows.forEach(g => { g.setAttribute("role", "group"); g.setAttribute("aria-label", g.closest("section").querySelector("h2").textContent); }); stops(); narrow.addEventListener("change", stops);  // the swipe rows scroll only at phone width, so only there are they a tab stop; a rotation moves it
 
 // ---- the style
 const style = await mod;

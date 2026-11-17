@@ -2,7 +2,7 @@
 // (a gold sparkle trail, a chime, a shimmer of light), the ripple running outward from the tapped book (about 2 s in all); flying back is the same, a little quicker.
 // The FRONT book comes close and fills most of the screen, tilted like the books on the shelf page (cover leaning back toward the visitor) so its pop-up can stand up in full view; the others curve away behind it.
 // Turning (drag, arrows) blends the next book into that stage pose and the leaving one back into the ring. Data-driven: a book's case is slots[i].case; nothing else is assumed.
-export function createRing(THREE, { scene, camera, books, reduced, onChange, chime = true }) {
+export function createRing(THREE, { scene, camera, books, reduced, onChange, chime = false }) {
   const N = 12, D = Math.PI * 2 / N, OPEN = { fly: 1.5, stag: .6 }, CLOSE = { fly: 1.0, stag: .35 }, DF = 2.2, TILT = .62;  // DF: how far in front of the eye the front book stands; TILT: the shelf's cover pitch (0.60 rad on the shelf)
   let R = 2.6, S = 1.3, SF = 3, model = { w: .36, d: .42 };  // model: the shelf book's whole footprint (spine included), set once the first model is built  // ring radius, ring book scale, front book scale: set at open from the screen shape
   const ids = [], cur = [], V = THREE.Vector3, Q = THREE.Quaternion, AX = new V(0, 1, 0), RX = new V(1, 0, 0);

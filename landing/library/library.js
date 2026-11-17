@@ -47,12 +47,17 @@ addEventListener("keydown", e => { if (e.key === "Escape" && !panel.hidden) { op
 addEventListener("pointerdown", e => { if (!panel.hidden && !panel.contains(e.target) && !menu.contains(e.target)) openMenu(false); });
 document.querySelectorAll(".acct").forEach(b => { b.onclick = () => { $("#note").textContent = W.soon; }; });
 
-// ---- sound (L6a): sound.js's soft recorded pools (mali's folder holds paper-rustle, page-turn, i-paper and wind-whoosh), loaded only after the visitor's first gesture, on/off kept the way sound.js keeps it
+// ---- sound (L6a): sound.js's soft pools served from web/landing/sfx/ (the "landing" library), loaded only after the visitor's first gesture, on/off kept the way sound.js keeps it
 let snd = null, sndP = null, gestured = false; const cueLog = [];
-for (const ev of ["pointerdown", "keydown", "touchend"]) addEventListener(ev, () => { gestured = true; }, { capture: true, passive: true });
+const BED_GAIN = 1.0, BED_FADE = 4000; let bedOn = false;  // the hum: a low bed, faded in over 4 s on the first gesture
+const startBed = () => { if (bedOn || sndOff) return; bedOn = true;
+  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("landing", "../../")))).catch(() => null))
+    .then(s => { if (!s) return; s.setBed([["library-hum", 0]]); const t0 = performance.now();
+      const iv = setInterval(() => { const u = Math.min(1, (performance.now() - t0) / BED_FADE); s.setBed([["library-hum", u * BED_GAIN]]); if (u >= 1) clearInterval(iv); }, 40); }); };
+for (const ev of ["pointerdown", "keydown", "touchend"]) addEventListener(ev, () => { gestured = true; startBed(); }, { capture: true, passive: true });
 const cue = (name, gain = 1) => { const ok = gestured && sndOn(); cueLog.push({ name, ok, t: Math.round(performance.now()) }); if (!ok) return;
-  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("mali", "../../")))).catch(() => null)).then(s => s?.play(name, { gain, tag: "library" })); };
-$("#snd").onclick = () => { sndOff = !sndOff; store.set("popup-sound", sndOff ? "off" : "on"); snd?.mute(sndOff); sndLabel(); if (sndOff) front?.hush(); };
+  (sndP ??= import("../../live/sound.js").then(m => (snd = m.addSound(m.manifestFor("landing", "../../")))).catch(() => null)).then(s => s?.play(name, { gain, tag: "library" })); };
+$("#snd").onclick = () => { sndOff = !sndOff; store.set("popup-sound", sndOff ? "off" : "on"); snd?.mute(sndOff); sndLabel(); if (sndOff) front?.hush(); else startBed(); };
 
 // ---- the room
 const phoneArt = innerWidth <= 820 || innerWidth < innerHeight, phone = phoneArt;
@@ -203,7 +208,7 @@ $("#cap").onclick = () => { if ($("#cap").classList.contains("go") && ring.isOpe
 $("#ringp").onclick = () => ring.step(-1); $("#ringn").onclick = () => ring.step(1);
 const carryVeil = $("#carry"); let pick = null; $("#ringx").onclick = () => closeRing();
 function startPick() { const g = ring.pick(); if (g < 0) return; if (books.isReal(g)) books.dim(g); if (!books.isReal(g)) { ring.cancelPick?.(); capFor = -2; capText(true); return; } const b = books.bookAt(g); if (b.status === "making") { ring.cancelPick?.(); capFor = -2; capText(true); say(W.coming, b.title.en); return; }  // a book still being made: the ring wakes, a soft note, the reader never opens
-  cue("page-turn", .9); pick = { t: 0, href: new URL(b.link, new URL("../", import.meta.url)).href + "&from=shelf" }; $("#ringx").hidden = true; $("#cap").hidden = true; }  // the same hand-off as the shelf: ../live/?book=<id>&s=s01&from=shelf
+  cue("book-open", .9); pick = { t: 0, href: new URL(b.link, new URL("../", import.meta.url)).href + "&from=shelf" }; $("#ringx").hidden = true; $("#cap").hidden = true; }  // the same hand-off as the shelf: ../live/?book=<id>&s=s01&from=shelf
 // ---- navigation: stations and links (room.stations / room.links), a look-around controller, arrows that walk
 // shortcut: only if room.json has no stations, two are faked (home = the balcony, near = three metres closer to the cases)
 const STATIONS = room.stations ?? [{ id: "home", cam: room.cams.room, links: [{ to: "near", path: [] }] }, { id: "near", cam: { p: [0, 1.9, 3.3], look: [0, 2.3, -2], fov: 50 }, links: [{ to: "home", path: [] }] }];
@@ -246,7 +251,7 @@ function onStation() { living?.setStation(cur);
 const fade = document.createElement("div"); fade.className = "fade"; document.body.append(fade);
 let opening = false;
 const swap = fn => { fade.style.opacity = .9; setTimeout(() => { fn(); fade.style.opacity = 0; }, 210); }, eyeOpts = () => ({ eye: camPos.clone(), yaw }),
-  openRing = i => { if (walk || opening || ring.isOpen) return; opening = true; Promise.race([front.prewarm(i), new Promise(r => setTimeout(r, 400))]).then(() => { opening = false; if (walk || ring.isOpen) return; const go = () => { ring.open(i, eyeOpts()); cue("paper-rustle", .8); }; if (reduced) swap(go); else go(); }); },  // the books fly only once their models are built, compiled and uploaded
+  openRing = i => { if (walk || opening || ring.isOpen) return; opening = true; Promise.race([front.prewarm(i), new Promise(r => setTimeout(r, 400))]).then(() => { opening = false; if (walk || ring.isOpen) return; const go = () => { ring.open(i, eyeOpts()); cue("ring-open", .8); }; if (reduced) swap(go); else go(); }); },  // the books fly only once their models are built, compiled and uploaded
   closeRing = () => reduced ? swap(() => ring.close()) : ring.close();
 function goto(id) {
   const A = st(cur), B = st(id), l = LINKS.find(q => q.from === cur && q.to === id); if (walk) return; if (l?.href) { location.assign(new URL(l.href, import.meta.url).href); return; } if (l?.soon) { const pl = regionPlaque(l, catalog.regions ?? [], lang); say(pl.name, pl.sub); return; } if (!B) return;
@@ -280,7 +285,7 @@ void main() {
 }` }));
 warpMesh.frustumCulled = false; warpMesh.renderOrder = 999; warpMesh.visible = false; scene.add(warpMesh);
 let warp = null; const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-function through(w) { cue("wind-whoosh", .6); const [pts, lns] = STARS[w.con ?? 0]; warpU.uPts.value.forEach((v, i) => pts[i] ? v.set(...pts[i]) : v.set(0, 0)); warpU.uLn.value.forEach((v, i) => lns[i] ? v.set(...pts[lns[i][0]], ...pts[lns[i][1]]) : v.set(0, 0, 0, 0)); warpU.uHue.value = (w.con ?? 0) * .13;
+function through(w) { cue("portal-through", .6); const [pts, lns] = STARS[w.con ?? 0]; warpU.uPts.value.forEach((v, i) => pts[i] ? v.set(...pts[i]) : v.set(0, 0)); warpU.uLn.value.forEach((v, i) => lns[i] ? v.set(...pts[lns[i][0]], ...pts[lns[i][1]]) : v.set(0, 0, 0, 0)); warpU.uHue.value = (w.con ?? 0) * .13;
   w.frozen = true; warp = { t: 0, w, arrived: false, dur: reduced ? 1.3 : 4.2 }; warpMesh.visible = true; }
 function warpStep(dt) {
   warpU.uAsp.value = innerWidth / innerHeight;
@@ -337,13 +342,13 @@ let flash = -1, flashT = 0;
 let wakeP = null, wakeT = 0;  // touch: the first tap wakes a portal, the second goes through; a few seconds untouched, or a tap elsewhere, and it falls back to black
 function tap(x, y, type) { const h = hit(x, y); if (!h?.portal) wakeP = null; if (!h?.portal && !ring.isOpen && living?.tap(x / innerWidth * 2 - 1, -(y / innerHeight * 2 - 1))) return;
   if (ring.isOpen) { if (pick) return; if (h?.book != null && ring.has(h.book)) { if (h.book === ring.frontGlobal) startPick(); else ring.turnTo(h.book); } else closeRing(); return; }
-  if (!h) return; if (h.book != null && !walk) { cue("i-paper", .7); fire(h.book); openRing(h.book); return; } if (h.portal) { cue("i-paper", .7); if (type !== "mouse" && wakeP !== h.portal) { wakeP = h.portal; wakeT = 4; return; } wakeP = null; goto(h.portal.userData.link.to); } else if (h.arrow != null) goto(arrows[h.arrow].userData.link.to); }
+  if (!h) return; if (h.book != null && !walk) { cue("book-touch", .7); fire(h.book); openRing(h.book); return; } if (h.portal) { cue("book-touch", .7); if (type !== "mouse" && wakeP !== h.portal) { wakeP = h.portal; wakeT = 4; return; } wakeP = null; goto(h.portal.userData.link.to); } else if (h.arrow != null) goto(arrows[h.arrow].userData.link.to); }
 // the book buttons: Tab reaches each book (it lifts and glows), Enter fires the same hook
 function rebuildShelf() { shelfBtns.forEach(b => b.remove()); shelfBtns.length = 0;
   for (const p of portals) if (p.frame.userData.link.from === cur) { const b = document.createElement("button"); b.type = "button"; b.__portal = p; b.onfocus = () => { focusPortal = p; }; b.onblur = () => { if (focusPortal === p) focusPortal = null; }; b.onclick = () => goto(p.frame.userData.link.to); b.setAttribute("aria-label", regionLabel(p.frame.userData.link, catalog.regions ?? [], lang)); $("#shelf").append(b); shelfBtns.push(b); }
   const k = grown.setStation.indexOf(cur); if (k < 0) return;
   const stand = new Map();  // the stand-in books ("still being written") are one tab stop per shelf, not one each
-  for (let i = k * 48; i < Math.min(books.slots.length, (k + 1) * 48); i++) { if (!books.isReal(i)) { const c = books.slots[i].case, e = stand.get(c); if (e) e.__n++; else { const b = document.createElement("button"); b.type = "button"; b.__i = i; b.__n = 1; b.onfocus = () => { flash = b.__i; flashT = 1e9; hideHint(); const c = $("#cap"); c.hidden = false; c.classList.add("kf"); c.textContent = b.getAttribute("aria-label"); }; b.onblur = () => { if (flash === b.__i) flash = -1; $("#cap").classList.remove("kf"); if (!ring.isOpen) $("#cap").hidden = true; }; b.onclick = () => { cue("i-paper", .7); fire(b.__i); openRing(b.__i); }; $("#shelf").append(b); shelfBtns.push(b); stand.set(c, b); } continue; } const b = document.createElement("button"); b.type = "button"; b.__i = i; b.onfocus = () => { flash = i; flashT = 1e9; if (!ring.isOpen) front.prewarm(i); }; b.onblur = () => { if (flash === i) flash = -1; }; b.onclick = () => { cue("i-paper", .7); fire(i); openRing(i); }; $("#shelf").append(b); shelfBtns.push(b); } labelBooks(); }
+  for (let i = k * 48; i < Math.min(books.slots.length, (k + 1) * 48); i++) { if (!books.isReal(i)) { const c = books.slots[i].case, e = stand.get(c); if (e) e.__n++; else { const b = document.createElement("button"); b.type = "button"; b.__i = i; b.__n = 1; b.onfocus = () => { flash = b.__i; flashT = 1e9; hideHint(); const c = $("#cap"); c.hidden = false; c.classList.add("kf"); c.textContent = b.getAttribute("aria-label"); }; b.onblur = () => { if (flash === b.__i) flash = -1; $("#cap").classList.remove("kf"); if (!ring.isOpen) $("#cap").hidden = true; }; b.onclick = () => { cue("book-touch", .7); fire(b.__i); openRing(b.__i); }; $("#shelf").append(b); shelfBtns.push(b); stand.set(c, b); } continue; } const b = document.createElement("button"); b.type = "button"; b.__i = i; b.onfocus = () => { flash = i; flashT = 1e9; if (!ring.isOpen) front.prewarm(i); }; b.onblur = () => { if (flash === i) flash = -1; }; b.onclick = () => { cue("book-touch", .7); fire(i); openRing(i); }; $("#shelf").append(b); shelfBtns.push(b); } labelBooks(); }
 rebuildShelf(); onStation(); size();
 
 // ---- the intro film: plays at once over the loading room; tap, Skip or Esc ends it; it dissolves into the live view. Any trouble (error, a stall of about 4 s) lands in the room by itself.
@@ -408,7 +413,7 @@ const loop = now => {
   for (const p of portals) if (p.group.visible) p.update(T, (hoverPortal === p.frame || focusPortal === p || wakeP === p.frame || (walk?.jump && walk.id === p.frame.userData.link.to)) ? 1 : 0, dt, still, camera, walk?.jump && walk.id === p.frame.userData.link.to ? (warp ? Math.max(0, 1 - warp.t * 3) : walk.t) : 0);
   ring.update(dt); front?.update(dt); capText(); dimMesh.forEach((m, i) => { const want = ring.isOpen && i !== books.slots[ring.ids[0]]?.case ? .6 : 0; m.material.opacity += (want - m.material.opacity) * (1 - Math.exp(-dt * 10)); });
   if (pick) { pick.t += dt; const look = new THREE.Vector3(); camera.getWorldDirection(look); look.y = 0; look.normalize(); if (!reduced) { ring.carry(pick.t, camera.position, look); const u = Math.min(1, Math.max(0, (pick.t - .4) / 1.2)); key.position.x = -1.5 + .5 * u; key.color.set(0xffd9a0).lerp(new THREE.Color(0xffa860), u); } const t = reduced ? pick.t / .3 : (pick.t - 1.25) / .35; carryVeil.style.opacity = Math.min(1, Math.max(0, t * t)); if (t >= 1 && !pick.go) { pick.go = true; location.href = pick.href; } }
-  if (ring.isOpen && !ring.busy) { const g = ring.frontGlobal; if (g !== lastFront) { if (lastFront >= 0) cue("paper-rustle", .6); lastFront = g; } } else if (!ring.isOpen) lastFront = -1;
+  if (ring.isOpen && !ring.busy) { const g = ring.frontGlobal; if (g !== lastFront) { if (lastFront >= 0) cue("book-slide", .6); lastFront = g; } } else if (!ring.isOpen) lastFront = -1;
   if (!ring.isOpen && ringWas) { ringWas = false; $("#shelf").inert = false; cv.tabIndex = 0; (opener?.isConnected ? opener : cv).focus({ preventScroll: true }); }
   books.update(T, dt);
   arrows.forEach((a, i) => { a.material.opacity = (still ? .75 : .6 + .22 * Math.sin(T * 2 + i)) + (i === hoverArrow ? .25 : 0); a.position.y = a.userData.base + (still ? 0 : Math.sin(T * 1.6 + i) * .02); });

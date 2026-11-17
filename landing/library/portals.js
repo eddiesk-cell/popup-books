@@ -1,6 +1,9 @@
-// portals.js (L5): a glowing arched doorway in the wall of shelves: a carved frame with the region's name in gold on a plaque above it, and inside a swirl of warm light with
-// drifting sparks that brightens on hover or focus. Region names come in the six languages; Lao is a DRAFT for the owner's check. books.json may carry its own `names: {en, lo, th, zh, ja, ko}` per region, which wins.
+// portals.js (L5): an arched doorway in the wall of shelves: a carved walnut frame (one baked relief texture shared by all) with the region's constellation on a medallion and its name on a brass plate,
+// and inside the dark-blue night turning slowly into a space-time swirl that brightens and quickens on hover or focus. Region names come in the six languages; Lao is a DRAFT for the owner's check. books.json may carry its own `names: {en, lo, th, zh, ja, ko}` per region, which wins.
 // the rooms are named for animal constellations (the regions stay internal data): in the order the rooms are made. Lao is a DRAFT for the owner's check.
+import { TextureLoader, SRGBColorSpace } from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from "three/addons/meshopt_decoder.module.js";
 export const CON = [
   { en: "Leo", lo: "ດາວສິງ", th: "ราศีสิงห์", zh: "狮子座", ja: "しし座", ko: "사자자리" },
   { en: "Pegasus", lo: "ເພກາຊັສ", th: "เพกาซัส", zh: "飞马座", ja: "ペガスス座", ko: "페가수스자리" },
@@ -60,102 +63,175 @@ export const regionPlaque = (link, regions, lang) => { if (link.game === "doors"
   const back = link.to === "home", id = (back ? link.from : link.to).replace(/^r:/, ""), r = regions.find(q => q.id === id), n = conIdx(id, regions);
   return { name: r?.names?.[lang] ?? CON[n][lang] ?? CON[n].en, sub: back ? BACK[lang] ?? BACK.en : "", con: n }; };
 export const regionLabel = (link, regions, lang) => link.to === "home" ? BACK[lang] ?? BACK.en : regionPlaque(link, regions, lang).name;
-const W = 256, H = 680, OFF = 110, FONT = '"Cormorant Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif', FONTB = '"EB Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif';
+const W = 300, H = 680, FONT = '"Cormorant Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif', FONTB = '"EB Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif';
 
-export function frameCanvas(p) {  // the plaque (name, then its constellation) and the arch; the doorway itself is left transparent for the swirl behind it
-  const c = document.createElement("canvas"); c.width = W; c.height = H; const x = c.getContext("2d");
-  const wood = x.createLinearGradient(0, 0, W, 0); wood.addColorStop(0, "#2a1608"); wood.addColorStop(.5, "#5a3417"); wood.addColorStop(1, "#2a1608");
-  x.fillStyle = wood; x.beginPath(); x.roundRect(10, 8, 236, 214, 12); x.fill(); x.strokeStyle = "#e2b459"; x.lineWidth = 4; x.stroke(); x.strokeStyle = "rgba(255,230,160,.45)"; x.lineWidth = 1.5; x.beginPath(); x.roundRect(17, 15, 222, 200, 8); x.stroke();
-  const sky = x.createLinearGradient(0, 84, 0, 208); sky.addColorStop(0, "rgba(10,12,40,.75)"); sky.addColorStop(1, "rgba(30,16,50,.55)"); x.fillStyle = sky; x.beginPath(); x.roundRect(26, 80, 204, 128, 8); x.fill();
-  let fs = 36; x.textAlign = "center"; x.textBaseline = "middle"; const label = p.name; const maxH = p.sub ? 36 : 54;
-  const lines = (() => { for (; fs >= 13; fs -= 2) { x.font = `500 ${fs}px ${FONT}`; const out = [""]; for (const ch of (/\s/.test(label) ? label.split(/(\s+)/) : [...label])) { const l = out.at(-1); if (x.measureText((l + ch).trim()).width > 200 && l) out.push(ch.trim()); else out[out.length - 1] = l + ch; } if (out.length * fs * 1.2 <= maxH) return out.map(s => s.trim()); } return [label]; })();
-  const cy = p.sub ? 38 : 46; lines.forEach((t, i) => { const y = cy + (i - (lines.length - 1) / 2) * fs * 1.2; x.fillStyle = "#1a0d04"; x.fillText(t, 129.5, y + 1.5); x.fillStyle = "#f0cd7c"; x.fillText(t, 128, y); x.fillStyle = "rgba(255,245,200,.5)"; x.fillText(t, 127.4, y - .6); });
-  if (p.sub) { x.font = `400 13px ${FONTB}`; x.fillStyle = "rgba(240,205,124,.85)"; x.fillText(p.sub, 128, 66, 200); }
-  const im = p.img && IMG.get(p.img), pict = im?.complete && im.naturalWidth;
-  if (pict) { x.save(); x.beginPath(); x.roundRect(26, 80, 204, 128, 8); x.clip(); const k = Math.max(204 / im.naturalWidth, 128 / im.naturalHeight); x.drawImage(im, 128 - im.naturalWidth * k / 2, 144 - im.naturalHeight * k / 2, im.naturalWidth * k, im.naturalHeight * k); x.restore(); x.strokeStyle = "rgba(240,205,124,.6)"; x.lineWidth = 1.5; x.beginPath(); x.roundRect(26, 80, 204, 128, 8); x.stroke(); }
-  // the constellation: a faint animal, thin lines, gold stars (over a picture: a small emblem in the corner)
-  x.save(); if (pict) { x.translate(168, 150); x.scale(.55, .55); } else { x.translate(38, 88); x.scale(1.8, 1.8); } x.lineWidth = .7; x.strokeStyle = "rgba(240,205,124,.28)"; x.beginPath(); if (!pict) ANIMAL[p.con](x); x.stroke();
-  const [st, ln] = STARS[p.con]; x.strokeStyle = "rgba(255,236,170,.75)"; x.lineWidth = .55; x.beginPath(); for (const [a, b] of ln) { x.moveTo(...st[a]); x.lineTo(...st[b]); } x.stroke();
-  for (const [px, py] of st) { const g = x.createRadialGradient(px, py, 0, px, py, 4); g.addColorStop(0, "rgba(255,246,200,1)"); g.addColorStop(.35, "rgba(255,220,130,.8)"); g.addColorStop(1, "rgba(255,200,90,0)"); x.fillStyle = g; x.beginPath(); x.arc(px, py, 4, 0, 7); x.fill(); } x.restore();
-  x.save(); x.translate(0, OFF);
-  // the arch: carved wood with a gold edge, then the doorway cut out of it
-  x.fillStyle = wood; x.beginPath(); x.moveTo(8, H); x.lineTo(8, 250); x.arc(128, 250, 120, Math.PI, 0); x.lineTo(248, H); x.closePath(); x.fill(); x.strokeStyle = "#e2b459"; x.lineWidth = 4; x.stroke();
-  x.strokeStyle = "rgba(226,180,89,.55)"; x.lineWidth = 2; x.beginPath(); x.moveTo(20, H); x.lineTo(20, 250); x.arc(128, 250, 108, Math.PI, 0); x.lineTo(236, H); x.stroke();
-  x.fillStyle = "#e2b459"; for (const [px, py] of [[128, 132], [24, 300], [232, 300], [24, 460], [232, 460]]) { x.beginPath(); x.arc(px, py, 5, 0, 7); x.fill(); }
-  x.globalCompositeOperation = "destination-out"; x.fillStyle = "#000"; x.beginPath(); x.moveTo(30, H); x.lineTo(30, 250); x.arc(128, 250, 98, Math.PI, 0); x.lineTo(226, H); x.closePath(); x.fill();
-  x.restore(); return c;
+// the wall doorway (design A): a wide carved walnut arch (44 px each side of a 196 px opening, 22%) with a raised gold-leaf moulding on its inner edge, a gilded vine carved in relief
+// along the field, a beaded outer moulding, a round navy medallion with the region's gold constellation crowning it, and a brass nameplate hung in the top of the opening.
+// The carving is a HEIGHT MAP lit once at load (a baked normal map: light from the upper left, gold gets a highlight), shared by every wall portal; each portal adds only a small badge (medallion + plate).
+const CX = W / 2, AY = 360, RO = 98, RF = 142, E = 24, FOOT = H - 40, LEG = FOOT - AY, S = 2, MY = 196, MR = 42;  // E: the crown is that much deeper than the posts
+const archOpen = (x, r, ry = r) => { x.beginPath(); x.moveTo(CX - r, H); x.lineTo(CX - r, AY); x.ellipse(CX, AY, r, ry, 0, Math.PI, 0); x.lineTo(CX + r, H); };
+const band = (x, r, w, st, ry = r) => { archOpen(x, r, ry); x.lineWidth = w; x.strokeStyle = st; x.stroke(); };
+// a point s along the arch at radius r from the left foot: [x, y, tangent angle, outward normal angle]
+const along = (s, r) => { if (s < LEG) return [CX - r, FOOT - s, -Math.PI / 2, Math.PI]; s -= LEG; if (s < Math.PI * r) { const A = Math.PI + s / r; return [CX + r * Math.cos(A), AY + r * Math.sin(A), A + Math.PI / 2, A]; } return [CX + r, AY + s - Math.PI * r, Math.PI / 2, 0]; };
+const leaf = (x, px, py, ang, len, wid, fill) => { x.save(); x.translate(px, py); x.rotate(ang); x.beginPath(); x.moveTo(0, 0); x.quadraticCurveTo(len * .5, -wid, len, 0); x.quadraticCurveTo(len * .5, wid, 0, 0); x.fillStyle = fill; x.fill(); x.restore(); };
+const hc = (h, g = 0) => `rgb(${h},${g ? 255 : 0},0)`;  // height in red, gilded where green
+let BASE = null;
+function baseFrame() {  // once per page: draw the height map, then light it pixel by pixel
+  if (BASE) return BASE;
+  const c = document.createElement("canvas"); c.width = W * S; c.height = H * S; const x = c.getContext("2d", { willReadFrequently: true }); x.scale(S, S); x.lineJoin = "round";
+  const bead = (r, w, h0, h1, g, ry = r) => { for (let k = 0; k * 2 < w; k++) band(x, r, w - 2 * k, hc(Math.round(h0 + (h1 - h0) * Math.sin(Math.min(1, 2 * k / w) * Math.PI / 2)), g), ry); };
+  x.fillStyle = hc(75); archOpen(x, RF, RF + E); x.closePath(); x.fill();  // the sunk field, deeper at the crown
+  band(x, RF - 1, 3, hc(70), RF + E - 1); bead(RF - 7, 10, 95, 200, 0, RF + E - 7); band(x, RF - 12.5, 2, hc(60), RF + E - 12.5);  // the outer beaded moulding (following the crown) and its step
+  for (const sg of [-1, 1]) for (let k = 0; k < 6; k++) { const A = -Math.PI / 2 + sg * (.42 + k * .17), rr = 134 + 8 * Math.cos(k * .6), px = CX + rr * Math.cos(A), py = AY + (rr + 10 * Math.max(0, 1 - k / 5)) * Math.sin(A); for (const [f, h] of [[1, 125], [.6, 180]]) leaf(x, px, py, A + sg * (Math.PI / 2 + .25), (15 - k) * f + 2, (5.5 - k * .5) * f + .8, hc(h, 1)); }  // gilt leaf sprays either side of the medallion
+  const TOT = 2 * LEG + Math.PI * 120, VR = 120;  // the gilded vine: a wavy stem, leaves alternating, fuller towards the crown, a curl every few leaves
+  for (const [lw, h] of [[3.6, 130], [2, 165]]) { x.strokeStyle = hc(h, 1); x.lineWidth = lw; x.beginPath(); for (let s = 0; s <= TOT; s += 2) { const [px, py, , nA] = along(s, VR), o = 3.6 * Math.sin(s / 8); x[s ? "lineTo" : "moveTo"](px + o * Math.cos(nA), py + o * Math.sin(nA)); } x.stroke(); }
+  for (let s = 8, i = 0; s < TOT - 6; s += 14, i++) { const [px, py, tA, nA] = along(s, VR), sg = i % 2 ? 1 : -1, big = 1.15 - Math.abs(s - TOT / 2) / (TOT / 2) * .35;
+    for (const [k, h] of [[1, 120], [.62, 175]]) { leaf(x, px, py, nA + sg * 1.05, 12 * big * k + 2 * (1 - k), 4.6 * big * k + 1, hc(h, 1)); leaf(x, px, py, tA + sg * .5 + (i % 4 < 2 ? 0 : Math.PI), 8 * big * k + 1, 3 * big * k + .6, hc(h, 1)); }
+    if (i % 3 === 1) { const ox = px + 6 * sg * Math.cos(nA), oy = py + 6 * sg * Math.sin(nA); x.strokeStyle = hc(150, 1); x.lineWidth = 1.6; x.beginPath(); x.arc(ox, oy, 2.6, 0, 5.2); x.stroke(); } }
+  band(x, 109.5, 3, hc(55)); bead(103.5, 10, 105, 215, 1); band(x, RO + .6, 1.6, hc(70, 1));  // the raised gold-leaf moulding on the inner edge, a shadowed step behind it
+  for (const sx of [-1, 1]) { const x0 = sx < 0 ? CX - RF - 4 : CX + RO - 4, w = RF - RO + 8; for (let k = 0; k < 6; k++) { x.fillStyle = hc(90 + k * 14, k === 1); x.fillRect(x0 + k, FOOT + k, w - 2 * k, H - FOOT - k); } }  // the plinths, a gilt edge
+  // the crown medallion: a carved wooden ring, a gilt bezel, a wreath of gilt leaves (the navy centre and its stars come with each portal's badge)
+  for (let k = 0; k < 6; k++) { x.fillStyle = hc(100 + k * 12); x.beginPath(); x.arc(CX, MY, MR + 17 - k, 0, 7); x.fill(); }
+  for (let k = 0; k < 16; k++) { const A = k * Math.PI / 8; for (const [s, h] of [[1, 150], [.6, 190]]) leaf(x, CX + (MR + 5) * Math.cos(A), MY + (MR + 5) * Math.sin(A), A + .55, 10 * s + 2, 3.8 * s + .6, hc(h, 1)); }
+  for (let k = 0; k < 4; k++) { x.strokeStyle = hc(130 + k * 30, 1); x.lineWidth = 6 - k * 1.4; x.beginPath(); x.arc(CX, MY, MR + 1, 0, 7); x.stroke(); }
+  x.globalCompositeOperation = "destination-out"; x.fillStyle = "#000"; archOpen(x, RO); x.closePath(); x.fill(); x.globalCompositeOperation = "source-over";
+  // light it: normal from the height gradient, lambert from the upper left, a hot spot on the gold, darker in the recesses and towards the foot; walnut grain follows the arch
+  const w = c.width, h = c.height, src = x.getImageData(0, 0, w, h).data, img = new ImageData(w, h), o = img.data, Lx = -.45, Ly = -.6, Lz = .66, Hn = Math.hypot(Lx, Ly, Lz + 1), Hx = Lx / Hn, Hy = Ly / Hn, Hz = (Lz + 1) / Hn, K = 1 / 26;
+  for (let py = 1; py < h - 1; py++) for (let px = 1; px < w - 1; px++) { const i = (py * w + px) * 4; if (!src[i + 3]) continue;
+    const nx = (src[i - 4] - src[i + 4]) * K, ny = (src[i - 4 * w] - src[i + 4 * w]) * K, inv = 1 / Math.sqrt(nx * nx + ny * ny + 1), dif = Math.max(0, (nx * Lx + ny * Ly + Lz) * inv), u = px / S, v = py / S;
+    const fall = 1.1 - .38 * Math.min(1, Math.max(0, (v - AY) / (H - AY))), ao = .72 + .28 * Math.min(1, src[i] / 190); let r, g, b;
+    if (src[i + 1] > 128) { const sp = Math.pow(Math.max(0, (nx * Hx + ny * Hy + Hz) * inv), 28) * 1.1, l = (.3 + .85 * dif) * ao * fall; r = 218 * l + 255 * sp; g = 164 * l + 236 * sp; b = 66 * l + 180 * sp; }
+    else { const rho = v >= AY ? Math.abs(u - CX) : Math.hypot(u - CX, v - AY), al = v >= AY ? v : (Math.atan2(v - AY, u - CX) + 4) * 90, gr = .5 + .5 * Math.sin(rho * 1.7 + 2.4 * Math.sin(al * .043 + rho * .19)), fine = .5 + .5 * Math.sin(rho * 9.1 + Math.sin(al * .21) * 1.3), m = .22 + .55 * gr + .12 * fine, l = (.4 + .9 * dif) * ao * fall;
+      r = (66 + 92 * m) * l; g = (38 + 60 * m) * l; b = (18 + 34 * m) * l; }
+    o[i] = r; o[i + 1] = g; o[i + 2] = b; o[i + 3] = src[i + 3]; }
+  x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, w, h); const t = document.createElement("canvas"); t.width = w; t.height = h; t.getContext("2d").putImageData(img, 0, 0);
+  x.shadowColor = "rgba(8,3,0,.7)"; x.shadowBlur = 9 * S; x.shadowOffsetY = 2 * S; x.drawImage(t, 0, 0);  // its shadow: on the wall outside, into the reveal inside
+  return BASE = c;
+}
+// each portal's badge: the medallion's navy centre with its constellation, and the brass nameplate (a 160 x 204 window of the frame, from BX, BY)
+const BX = CX - 80, BY = MY - 60, BW = 160, BH = 204;
+export function badgeCanvas(p) {
+  const c = document.createElement("canvas"); c.width = BW * S; c.height = BH * S; const x = c.getContext("2d"); x.scale(S, S); x.translate(-BX, -BY); const con = p.con ?? 0;
+  const navy = x.createRadialGradient(CX - 8, MY - 10, 3, CX, MY, MR); navy.addColorStop(0, "#22367a"); navy.addColorStop(1, "#060b22"); x.fillStyle = navy; x.beginPath(); x.arc(CX, MY, MR - 2, 0, 7); x.fill();
+  x.save(); x.beginPath(); x.arc(CX, MY, MR - 3, 0, 7); x.clip(); x.translate(CX, MY); const k = (MR - 6) / 52; x.scale(k, k); x.translate(-50, -30);
+  x.lineWidth = 1.2; x.strokeStyle = "rgba(240,205,124,.32)"; x.beginPath(); ANIMAL[con](x); x.stroke();
+  const [st, ln] = STARS[con]; x.strokeStyle = "rgba(255,226,150,.95)"; x.lineWidth = 2.6; x.lineCap = "round"; x.beginPath(); for (const [a, b] of ln) { x.moveTo(...st[a]); x.lineTo(...st[b]); } x.stroke();
+  for (const [px, py] of st) { const g = x.createRadialGradient(px, py, 0, px, py, 8); g.addColorStop(0, "rgba(255,250,220,1)"); g.addColorStop(.35, "rgba(255,222,130,.9)"); g.addColorStop(1, "rgba(255,200,90,0)"); x.fillStyle = g; x.beginPath(); x.arc(px, py, 8, 0, 7); x.fill(); }
+  x.restore(); const gl = x.createRadialGradient(CX - 14, MY - 18, 2, CX - 14, MY - 18, MR); gl.addColorStop(0, "rgba(255,255,255,.14)"); gl.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = gl; x.beginPath(); x.arc(CX, MY, MR - 2, 0, 7); x.fill();  // a glaze
+  // the brass nameplate with the region's name, hung in the top of the opening (and the way home on a back door)
+  const nh = p.sub ? 40 : 30, ny = p.sub ? 322 : 316, bw = p.sub ? 156 : 128;
+  const brass = x.createLinearGradient(0, ny - nh / 2, 0, ny + nh / 2); brass.addColorStop(0, "#f6dc96"); brass.addColorStop(.45, "#d9a53c"); brass.addColorStop(1, "#8a6218");
+  x.fillStyle = "rgba(0,0,0,.35)"; x.beginPath(); x.roundRect(CX - bw / 2 + 2, ny - nh / 2 + 4, bw, nh, 7); x.fill();
+  x.fillStyle = brass; x.beginPath(); x.roundRect(CX - bw / 2, ny - nh / 2, bw, nh, 7); x.fill(); x.strokeStyle = "rgba(90,58,10,.9)"; x.lineWidth = 2; x.stroke();
+  x.strokeStyle = "rgba(255,242,205,.55)"; x.lineWidth = 1; x.beginPath(); x.roundRect(CX - bw / 2 + 4, ny - nh / 2 + 3.5, bw - 8, nh - 7, 5); x.stroke();
+  x.fillStyle = "#6b4a10"; for (const sx of [CX - bw / 2 + 8, CX + bw / 2 - 8]) { x.beginPath(); x.arc(sx, ny, 2.2, 0, 7); x.fill(); }
+  let fs = p.sub ? 21 : 24; x.textAlign = "center"; x.textBaseline = "middle"; x.font = `700 ${fs}px ${FONT}`;
+  while (fs > 11 && x.measureText(p.name).width > bw - 26) { fs -= 2; x.font = `700 ${fs}px ${FONT}`; }
+  const nameY = p.sub ? ny - 8 : ny; x.fillStyle = "#fbefc4"; x.fillText(p.name, CX, nameY - .6); x.fillStyle = "#3a2406"; x.fillText(p.name, CX, nameY + .5);
+  if (p.sub) { x.font = `600 12px ${FONTB}`; x.fillStyle = "#3a2406"; x.fillText(p.sub, CX, ny + 11); }
+  return c;
 }
 
 const VS = "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }";
-// ONE quad per portal, larger than the doorway: inside the arch a deep vortex (tunnel arms turning toward a bright core, stars and nebula streaming in, shifting with the camera);
-// outside it a rippling light rim, a soft glow, a wash on the floor and motes drawn in. uT time, uHover brightens, uSurge flares as you walk in, uCam is the camera's offset for the parallax.
-const SX = 1.7, SY = 1.12;
+// ONE quad per portal, the same size as the frame: inside the arch the deep blue night turning slowly into a space-time swirl (Eddie 2026-11-17): stars and faint light drawn along a log spiral
+// toward a far centre (cells shrink toward it, so it reads as depth; the centre shifts more with the eye than the rim), a little brighter and faster on hover. Outside the arch: nothing (the frame covers it).
+// uT time (the turn), uHover brightens, uSurge flares, uCam parallax. The arch is 2 px wider than the frame's cut-out so no seam shows.
 const FS = `uniform float uT, uHover, uSurge; uniform vec2 uCam; varying vec2 vUv;
 float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+float stars(float u, float w, float n, float th, float sz, float r) { vec2 g = vec2(u, w * n / 6.2831853), id = floor(g), f = fract(g) - .5; id.y = mod(id.y, n); float h = hash(id + n);  // cells grow with r: keep the dots small at the rim
+  return step(th, h) * smoothstep(clamp(sz / r, sz, .42), 0., length((f + (vec2(hash(id + 3.1), hash(id + 7.7)) - .5) * .5) * vec2(1., .7))) * (.55 + .45 * sin(uT * (1.5 + h * 3.) + h * 40.)); }
 void main() {
-  vec2 q = (vUv - .5) * vec2(${SX.toFixed(2)}, ${SY.toFixed(2)}) + .5, px = vec2(q.x * ${W}., (1. - q.y) * ${H}.);
-  if (px.y > ${H}.) discard;
-  float d = px.y >= 360. ? abs(px.x - 128.) - 98. : length(px - vec2(128., 360.)) - 98.;
-  float breath = .5 + .5 * sin(uT * 1.1), lift = .8 + .45 * uHover + .15 * breath + 1.1 * uSurge;
-  if (d < 0.) {
-    vec2 p0 = (px - vec2(128., 480.)) / vec2(98., 200.); p0 *= 1. + .12 * pow(length(p0), 3.) * sin(uT * 1.7);
-    vec3 col = vec3(0.); float rr0 = length(p0);
-    for (int i = 0; i < 3; i++) { float dp = float(i) / 3.; vec2 p = p0 - uCam * (.05 + .13 * dp); float r = max(length(p), .02), a = atan(p.y, p.x);
-      float z = .32 / r + uT * (.32 + .22 * dp) * (1. + 1.4 * uSurge), a2 = a + z * .9 + uT * .22 * (1. - dp);
-      float arms = pow(.5 + .5 * sin(a2 * 3. + z * 1.6), 2.), neb = .5 + .5 * sin(a2 * 2. + z * .8 + 2. * sin(z * .5));
-      vec2 g = vec2(a2 * 4., z * 4.), id = floor(g); float h = hash(id + dp * 7.), star = step(.8, h) * smoothstep(.24, 0., length(fract(g) - .5)) * (.55 + .45 * sin(uT * 3. + h * 40.)) * smoothstep(.02, .35, r);
-      vec3 c = mix(vec3(.3, .12, .55), vec3(1., .62, .22), arms) + vec3(.08, .45, .6) * neb * .45; c *= .35 + .9 * smoothstep(.0, .9, r) * .6 + .2; col += (c * (.45 + .4 * arms) + vec3(1., .95, .75) * star * 1.3) * (1. - dp * .35) * .55; }
-    col += vec3(1., .86, .55) * (pow(max(0., 1. - rr0 * 1.35), 3.) * (1. + .6 * breath) + .035 / max(rr0, .05));
-    col += vec3(1., .78, .35) * exp(d / 5.) * (.55 + .35 * sin(uT * 2.2 + atan(p0.y, p0.x) * 5.));
-    float aw = clamp(uHover, 0., 1.); vec3 idle = vec3(dot(col, vec3(.3, .5, .2))) * .1 + vec3(.01, .01, .014); idle += vec3(.55, .6, .72) * exp(d / 3.5) * .45 * (.75 + .25 * sin(uT * 1.3 + atan(p0.y, p0.x) * 3.));
-    col = mix(idle, col * lift, aw); gl_FragColor = vec4(col, 1.); return;
-  }
-  float ang = atan(px.y - 430., px.x - 128.), rr = length(px - vec2(128., 430.)), rip = .5 + .5 * sin(d * .45 - uT * 3. + ang * 7.);
-  float glow = exp(-d / 12.) * (.55 + .45 * rip) * .85 + exp(-d / 60.) * .3;
-  glow += smoothstep(560., 680., px.y) * clamp(uHover, 0., 1.) * exp(-pow((px.x - 128.) / 170., 2.)) * .38;
-  float sec = ang * 9.55, sid = floor(sec), hh = hash(vec2(sid, 3.)), ph = fract(hh * 7. + uT * .16 * (.6 + hh)), rp = mix(200., 60., ph);
-  float spark = step(.5, hh) * smoothstep(3.2, 0., length(vec2(rr - rp, (fract(sec) - .5) * rr * .105))) * (1. - ph) * smoothstep(.0, .12, ph) * clamp(uHover, 0., 1.);
-  float aw2 = clamp(uHover, 0., 1.), al = clamp(glow * (.55 + .45 * breath) * (lift * .9) * (.3 + .7 * aw2) + spark, 0., .92);
-  gl_FragColor = vec4(mix(vec3(.62, .68, .82), mix(vec3(1., .6, .22), vec3(1., .93, .68), clamp(uHover * .6 + spark + uSurge * .5, 0., 1.)), aw2), al);
+  vec2 px = vec2(vUv.x * ${W}., (1. - vUv.y) * ${H}.);
+  float d = px.y >= ${AY}. ? abs(px.x - ${CX}.) - ${RO + 2}. : length(px - vec2(${CX}., ${AY}.)) - ${RO + 2}.;
+  if (d > 0.) discard;
+  vec2 q = (px - vec2(${CX}., 440.) + uCam * vec2(18., -14.)) / vec2(${RO}., 150.); float r = length(q) + .002, a = atan(q.y, q.x), L = log(r);
+  float w = a + 1.7 * L - uT * .32, u = L * 2.6 + uT * .16;  // w: along the spiral, turning; u: down the well, flowing in
+  vec3 col = mix(vec3(.01, .016, .06), vec3(.03, .055, .17), smoothstep(.0, 1.1, r));
+  float arm = pow(.5 + .5 * cos(2. * w), 3.) * smoothstep(.03, .3, r) * smoothstep(1.7, .5, r);
+  col += vec3(.05, .09, .26) * arm * .75 + vec3(.04, .03, .14) * pow(.5 + .5 * cos(2. * w + 1.9), 6.) * smoothstep(.06, .5, r) * smoothstep(1.4, .3, r);
+  float dim = smoothstep(.02, .35, r);
+  col += vec3(.8, .9, 1.) * (stars(u, w, 15., .72, .06, r) * .8 + stars(u * 1.7 + 4., w, 26., .74, .05, r) * .6 + stars(u * 2.6 + 2., w, 41., .8, .04, r) * .45) * dim;
+  col += vec3(1., .8, .45) * stars(u * .8 + 9., w, 11., .9, .07, r) * dim * 1.2;  // a few warm sparks among them
+  col += vec3(.45, .55, 1.) * exp(-r * r * 60.) * .45 + vec3(.2, .26, .6) * exp(-r * r * 9.) * .18;  // the far light at the centre
+  col *= .55 + .45 * smoothstep(0., 16., -d);  // deeper at the reveal
+  col *= 1. + .6 * uHover + 2.4 * uSurge; col = mix(col, col * vec3(1.1, 1., .9) + vec3(.03, .03, .05), uHover * .5);
+  gl_FragColor = vec4(col, 1.);
 }`;
 
-const FS_FLOOR = FS.replace(/vec2 q = [^;]*;/, "vec2 px = (vUv - .5) * 312. + 128.;").replace(/float d = px\.y >= 360\.[^;]*;/, "float d = length(px - vec2(128., 128.)) - 100.;").replace(/vec2 p0 = \(px - vec2\(128\., 480\.\)\) \/ vec2\(98\., 200\.\);/, "vec2 p0 = (px - vec2(128., 128.)) / 100.;").split("430.").join("128.").replace("mix(200., 60., ph)", "mix(150., 40., ph)").replace(/glow \+= smoothstep\(560[^;]*;/, "");
-function rimCanvas() {  // the gold rim, carved with music notes, a dancer and a game star
-  const c = document.createElement("canvas"); c.width = c.height = 512; const x = c.getContext("2d"), g = x.createRadialGradient(256, 256, 194, 256, 256, 246); g.addColorStop(0, "#6b4510"); g.addColorStop(.25, "#e2b459"); g.addColorStop(.6, "#f6d98c"); g.addColorStop(1, "#7a5014");
-  x.fillStyle = g; x.beginPath(); x.arc(256, 256, 246, 0, Math.PI * 2); x.moveTo(450, 256); x.arc(256, 256, 194, 0, Math.PI * 2, true); x.fill("evenodd"); x.strokeStyle = "rgba(60,32,6,.8)"; x.lineWidth = 3; x.beginPath(); x.arc(256, 256, 246, 0, 7); x.stroke(); x.beginPath(); x.arc(256, 256, 194, 0, 7); x.stroke();
-  x.strokeStyle = "rgba(255,240,190,.55)"; x.lineWidth = 2; x.beginPath(); x.arc(256, 256, 238, 0, 7); x.stroke();
-  for (let i = 0; i < 6; i++) { const a = i * Math.PI / 3 - Math.PI / 2; x.save(); x.translate(256 + Math.cos(a) * 220, 256 + Math.sin(a) * 220); x.rotate(a + Math.PI / 2); x.fillStyle = "#3a2208"; x.strokeStyle = "#3a2208"; x.lineWidth = 3.5; x.lineCap = "round";
-    if (i % 3 === 0) { x.beginPath(); x.ellipse(-6, 12, 9, 6.5, -.4, 0, 7); x.fill(); x.beginPath(); x.moveTo(2, 10); x.lineTo(2, -16); x.quadraticCurveTo(16, -12, 14, 2); x.stroke(); }
-    else if (i % 3 === 1) { x.beginPath(); x.arc(0, -17, 5, 0, 7); x.fill(); x.beginPath(); x.moveTo(0, -11); x.lineTo(0, 6); x.moveTo(0, -7); x.lineTo(-13, -14); x.moveTo(0, -7); x.lineTo(13, -1); x.moveTo(0, 6); x.lineTo(-9, 18); x.moveTo(0, 6); x.lineTo(10, 16); x.stroke(); }
-    else { x.beginPath(); for (let k = 0; k < 10; k++) { const r = k % 2 ? 7 : 17, b = k * Math.PI / 5 - Math.PI / 2; x.lineTo(Math.cos(b) * r, Math.sin(b) * r); } x.closePath(); x.fill(); } x.restore(); }
+function signCanvas(p) {  // a carved wooden board with scroll ends and gold trim: the name large, and a small badge for the plan
+  const c = document.createElement("canvas"); c.width = 768, c.height = 272; const x = c.getContext("2d"), GOLD = "#e2b459";
+  const body = () => { x.beginPath(); x.moveTo(60, 30); x.lineTo(708, 30); x.arc(708, 62, 32, -Math.PI / 2, 0); x.lineTo(740, 150); x.arc(708, 200, 50, 0, Math.PI / 2); x.lineTo(60, 250); x.arc(60, 200, 50, Math.PI / 2, Math.PI); x.lineTo(20, 62); x.arc(60, 62, 40, Math.PI, -Math.PI / 2); x.closePath(); };
+  body(); const wood = x.createLinearGradient(0, 30, 0, 250); wood.addColorStop(0, "#7a4a22"); wood.addColorStop(.5, "#5f3818"); wood.addColorStop(1, "#43250f"); x.fillStyle = wood; x.fill();
+  x.save(); x.clip(); for (let k = 0; k < 40; k++) { const y = 30 + k * 5.6 + Math.sin(k * 7.3) * 2; x.strokeStyle = `rgba(${k % 3 ? "25,10,2" : "210,150,80"},${.06 + (k % 5) * .02})`; x.lineWidth = 1 + (k % 3) * .6; x.beginPath(); x.moveTo(0, y); x.bezierCurveTo(250, y + Math.sin(k) * 6, 500, y - Math.cos(k) * 6, 768, y + 2); x.stroke(); } x.restore();
+  x.lineJoin = "round"; body(); x.strokeStyle = "#1a0b03"; x.lineWidth = 11; x.stroke(); x.strokeStyle = GOLD; x.lineWidth = 5; x.stroke();
+  x.save(); x.translate(384, 140); x.scale(.93, .85); x.translate(-384, -140); body(); x.strokeStyle = "rgba(255,225,150,.55)"; x.lineWidth = 2.4; x.stroke(); x.restore();
+  x.strokeStyle = GOLD; x.lineWidth = 4; for (const [cx, cy, sg] of [[70, 62, 1], [698, 62, -1], [70, 214, 1], [698, 214, -1]]) { x.beginPath(); x.arc(cx, cy, 11, 0, 4.7); x.stroke(); x.beginPath(); x.arc(cx + sg * 3, cy, 4, 0, 7); x.stroke(); }
+  let fs = 112; x.textAlign = "center"; x.textBaseline = "middle"; for (; fs > 36; fs -= 6) { x.font = `600 ${fs}px ${FONT}`; if (x.measureText(p.name).width < 560) break; }
+  x.fillStyle = "#1a0b03"; x.fillText(p.name, 386, 108); x.fillStyle = "#f8dc8e"; x.fillText(p.name, 384, 104);
+  x.font = `600 36px ${FONTB}`; const bw = Math.min(560, x.measureText(p.sub).width + 80); x.fillStyle = "rgba(0,0,0,.28)"; x.strokeStyle = GOLD; x.lineWidth = 3; x.beginPath(); x.roundRect(384 - bw / 2, 172, bw, 54, 27); x.fill(); x.stroke(); x.fillStyle = "#fbe7ab"; x.fillText(p.sub, 384, 200);
   return c; }
-function signCanvas(p) {  // the plaque standing at the portal's edge: the name, and a small badge for the plan
-  const c = document.createElement("canvas"); c.width = 512; c.height = 176; const x = c.getContext("2d"), wood = x.createLinearGradient(0, 0, 512, 0); wood.addColorStop(0, "#2a1608"); wood.addColorStop(.5, "#5a3417"); wood.addColorStop(1, "#2a1608");
-  x.fillStyle = wood; x.beginPath(); x.roundRect(6, 6, 500, 164, 20); x.fill(); x.strokeStyle = "#e2b459"; x.lineWidth = 6; x.stroke(); x.strokeStyle = "rgba(255,230,160,.45)"; x.lineWidth = 2; x.beginPath(); x.roundRect(16, 16, 480, 144, 14); x.stroke();
-  let fs = 72; x.textAlign = "center"; x.textBaseline = "middle"; for (; fs > 24; fs -= 4) { x.font = `500 ${fs}px ${FONT}`; if (x.measureText(p.name).width < 440) break; }
-  x.fillStyle = "#1a0d04"; x.fillText(p.name, 257, 70); x.fillStyle = "#f0cd7c"; x.fillText(p.name, 256, 68);
-  x.font = `400 26px ${FONTB}`; const bw = Math.min(400, x.measureText(p.sub).width + 74); x.fillStyle = "rgba(226,180,89,.2)"; x.strokeStyle = "#e2b459"; x.lineWidth = 2.5; x.beginPath(); x.roundRect(256 - bw / 2, 114, bw, 36, 18); x.fill(); x.stroke(); x.fillStyle = "#f6d98c"; x.fillText(p.sub, 256 + 14, 133);
-  x.beginPath(); for (let k = 0; k < 10; k++) { const r = k % 2 ? 5 : 11, b = k * Math.PI / 5 - Math.PI / 2; x.lineTo(256 - bw / 2 + 24 + Math.cos(b) * r, 132 + Math.sin(b) * r); } x.closePath(); x.fill(); return c; }
-// a round warp set into the floor: the same living vortex, a carved gold rim, and a plaque standing at its edge
+
+// the warm light rising out of the opening: a faint additive column with a few slow sparkles climbing it
+const GLOWFS = `uniform float uT, uHover; varying vec2 vUv;
+float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+void main() { float y = vUv.y; float a = smoothstep(0., .22, y) * pow(1. - y, 2.2) * (.3 + .2 * uHover) * (.75 + .25 * sin(uT * 1.3 + vUv.x * 18.));
+  vec2 g = vec2(vUv.x * 36., (y * 1.35 - uT * .07) * 9.), id = floor(g), f = fract(g) - .5; float h = hash(id);
+  float sp = step(.9, h) * smoothstep(.34, 0., length(f)) * (.5 + .5 * sin(uT * 2.4 + h * 50.)) * smoothstep(0., .1, y) * (1. - y);
+  gl_FragColor = vec4(vec3(1., .76, .46) * (a + sp * .9), 1.); }`;
+
+// the stairwell: baked in Blender (stairwell.glb: unlit, the light and shadows are in its texture; stairwell-floor.webp: the railing's shadows and the golden glow on the boards), loaded ONCE when this
+// module is imported and waited for (5 s at most, like the room's cards) so it arrives behind the loading cover. If it fails the floor stays whole and the sign, light shaft and door still work.
+const loadWell = (async () => { try { const [gl, tx] = await Promise.all([new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairwell.glb", import.meta.url).href), new TextureLoader().loadAsync(new URL("stairwell-floor.webp", import.meta.url).href)]); tx.colorSpace = SRGBColorSpace; tx.anisotropy = 8; return { well: gl.scene, decal: tx }; } catch (e) { console.warn("portals: stairwell.glb failed, no stairwell", e); return null; } })();
+await Promise.race([loadWell, new Promise(r => setTimeout(r, 5000))]);
+// a real hole in the floor card (a 1x1 plane in the library): the plane becomes a shape with a round hole, same UVs (u = x + .5, v = y + .5), so its material and its depth write are unchanged: no stencil.
+function holeInFloor(THREE, mesh, cx, cz, rad) {
+  const s = mesh.scale, hx = (cx - mesh.position.x) / s.x, hy = -(cz - mesh.position.z) / s.y, shape = new THREE.Shape([[-.5, -.5], [.5, -.5], [.5, .5], [-.5, .5]].map(p => new THREE.Vector2(...p)));
+  shape.holes.push(new THREE.Path(new THREE.EllipseCurve(hx, hy, rad / s.x, rad / s.y, 0, Math.PI * 2, true).getPoints(96)));
+  const g = new THREE.ShapeGeometry(shape), p = g.attributes.position, uv = g.attributes.uv; for (let i = 0; i < p.count; i++) uv.setXY(i, p.getX(i) + .5, p.getY(i) + .5); mesh.geometry = g; }
+// slow gold sparkles rising in the well: ONE additive Points draw, 72 points whose whole path (rise, sway, twinkle) is computed in the vertex shader from three numbers each and one time value; nothing is allocated per frame.
+const SPARKVS = `uniform float uT, uS, uHover; attribute vec3 aP; varying float vA;
+void main() { float k = fract(aP.y + uT * aP.z / 3.05); vec3 p = position; p.y = mix(-2.55, .45, k); p.x += .05 * sin(uT * .7 + aP.y * 30.); p.z += .05 * cos(uT * .6 + aP.y * 17.);
+  vec4 mv = modelViewMatrix * vec4(p, 1.); gl_Position = projectionMatrix * mv; gl_PointSize = clamp(uS * aP.x / -mv.z, 1.5, 12.);
+  vA = smoothstep(0., .1, k) * smoothstep(1., .8, k) * (.5 + .5 * sin(uT * 2.3 + aP.y * 61.)) * (1. + .7 * uHover); }`;
+const SPARKFS = "varying float vA; void main() { float d = length(gl_PointCoord - .5), a = smoothstep(.5, 0., d); a *= a; gl_FragColor = vec4(vec3(1., .78, .4) * a * vA * 2.2, 1.); }";
+
+// the floor portal (to the Wonder Hall): the baked spiral stairwell (walnut wall, 22 steps, turned post, balusters and gold handrail, lit by the golden glow from below) seen through a round hole in the floor,
+// the railing's shadows and the glow on the boards round it, slow gold sparkles rising in the well, a faint light shaft over the opening, and a carved wooden sign on its own short brass post OUTSIDE the
+// railing, behind the well, facing the arrival view. The invisible disc over the opening is the click/tap target.
 export function createFloorPortal(THREE, link, label) {
-  const g = new THREE.Group(), R = 1.25, U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
-  const disc = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS_FLOOR, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
-  disc.rotation.x = -Math.PI / 2; disc.scale.setScalar(312 * R / 100); disc.renderOrder = 36; disc.position.y = .004;
-  const rimT = new THREE.CanvasTexture(rimCanvas()); rimT.colorSpace = THREE.SRGBColorSpace; rimT.anisotropy = 4;
-  const rim = new THREE.Mesh(new THREE.CircleGeometry(.5, 64), new THREE.MeshBasicMaterial({ map: rimT, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })); rim.rotation.x = -Math.PI / 2; rim.scale.setScalar(512 / 194 * R); rim.renderOrder = 37; rim.position.y = .008; rim.userData.link = link;
-  const signT = new THREE.CanvasTexture(signCanvas(label)); signT.colorSpace = THREE.SRGBColorSpace;
-  const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.5, .516), new THREE.MeshBasicMaterial({ map: signT, transparent: true, depthWrite: false, fog: false })); sign.position.set(0, .42, -1.12); sign.renderOrder = 35; sign.userData.link = link;
-  g.add(disc, rim, sign); g.position.set(...link.at); let h = 0, tt = 0;
-  return { group: g, frame: rim, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) U.uCam.value.set((cam.position.x - g.position.x) / 12, (cam.position.z - g.position.z) / 12).clampLength(0, .5); },
+  const g = new THREE.Group(), R = 1.3, Rr = 1.34, U = { uT: { value: 0 }, uHover: { value: 0 }, uS: { value: 0 } }, y0 = link.at[1];
+  const frame = new THREE.Mesh(new THREE.CircleGeometry(R, 72), new THREE.MeshBasicMaterial({ visible: false }));  // the click/tap target
+  frame.rotation.x = -Math.PI / 2; frame.position.y = .014; frame.userData.link = link; frame.renderOrder = 22;
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(1.14, 1.14, 1.3, 28, 1, true), new THREE.ShaderMaterial({ uniforms: U, vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }", fragmentShader: GLOWFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide })); shaft.position.y = .66; shaft.renderOrder = 36;
+  const N = 72, pos = new Float32Array(N * 3), ap = new Float32Array(N * 3), hs = (i, k) => { const x = Math.sin(i * 127.1 + k * 311.7) * 43758.5; return x - Math.floor(x); };
+  for (let i = 0; i < N; i++) { const r = 1.05 * Math.sqrt(hs(i, 1)), a = hs(i, 2) * Math.PI * 2; pos.set([r * Math.cos(a), 0, r * Math.sin(a)], i * 3); ap.set([.07 + .1 * hs(i, 3) ** 2, hs(i, 4), .05 + .08 * hs(i, 5)], i * 3); }
+  const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.BufferAttribute(pos, 3)); sg.setAttribute("aP", new THREE.BufferAttribute(ap, 3));
+  const sparks = new THREE.Points(sg, new THREE.ShaderMaterial({ uniforms: U, vertexShader: SPARKVS, fragmentShader: SPARKFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); sparks.frustumCulled = false; sparks.renderOrder = 37;
+  g.add(frame, shaft, sparks);
+  // the sign: a brass post with a finial behind the well, the carved board hung on it
+  const gm = new THREE.MeshLambertMaterial({ color: 0xd2a84c, emissive: 0x3a2808 }), sign = new THREE.Group(), signT = new THREE.CanvasTexture(signCanvas(label)); signT.colorSpace = THREE.SRGBColorSpace; signT.anisotropy = 4; const Z = -(Rr + .55), BY = 1.18;
+  const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
+  bp.position.set(0, .78, Z - .03); fin.position.set(0, 1.62, Z - .03); base.position.set(0, .04, Z - .03); col.position.set(0, 1.5, Z - .03); sign.add(bp, fin, base, col);
+  for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, BY + dy, Z - .02); sign.add(br); }
+  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, depthWrite: false, fog: false })); board.position.set(0, BY, Z + .02); board.userData.link = link; board.renderOrder = 41; sign.add(board);
+  g.add(sign); g.position.set(...link.at);
+  let h = 0, tt = 0, wellMat = null, cut = false;
+  loadWell.then(w => { if (!w) return; const d = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), new THREE.MeshBasicMaterial({ map: w.decal, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));  // the decal: over the floor card (20), under everything else
+    d.rotation.x = -Math.PI / 2; d.position.y = .008 - y0; d.renderOrder = 21; w.well.position.y = -y0; w.well.traverse(o => { if (o.isMesh) wellMat = o.material; }); g.add(w.well, d); });  // the well's origin is its centre on the floor (the floor card is at y 0, this group at the door's y)
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h;
+      if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); if (wellMat) wellMat.color.setScalar(1 + .3 * h);  // hover or focus brightens the baked well like the other doors
+      if (!cut && wellMat && g.parent) { cut = true; for (const m of g.parent.children) if (m.name === "floor") holeInFloor(THREE, m, link.at[0], link.at[2], 1.24); } },  // the hole (1.24 m, hidden under the 1.17-1.32 m coping ring) is cut the frame the well is in, in the floor card at the door
     setLabel: p => { signT.image = signCanvas(p); signT.needsUpdate = true; } };
 }
 
 export function createPortal(THREE, plane, link, size, label) {
-  const g = new THREE.Group(), tex = new THREE.CanvasTexture(frameCanvas(label)); tex.colorSpace = THREE.SRGBColorSpace;
-  const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
+  const g = new THREE.Group(); let base = BASE?.tex; if (!base) { base = new THREE.CanvasTexture(baseFrame()); base.colorSpace = THREE.SRGBColorSpace; base.anisotropy = 4; BASE.tex = base; }  // one carved frame for all
+  const tex = new THREE.CanvasTexture(badgeCanvas(label)); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+  const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: base, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
+  const badge = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, fog: false, side: THREE.DoubleSide })); badge.scale.set(BW / W, BH / H, 1); badge.position.set((BX + BW / 2) / W - .5, .5 - (BY + BH / 2) / H, .002);
   const inner = new THREE.Mesh(plane, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
-  frame.renderOrder = 34; inner.renderOrder = 33; inner.position.z = -.01; inner.scale.set(SX, SY, 1); frame.userData.link = link; g.add(inner, frame); g.scale.set(size[0], size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;
+  frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = 33; inner.position.z = -.01; frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(size[0] * W / 256, size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;
   let h = 0, tt = 0;
-  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); },
-    setLabel: s => { tex.image = frameCanvas(s); tex.needsUpdate = true; } };
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .3 * h); },
+    setLabel: s => { tex.image = badgeCanvas(s); tex.needsUpdate = true; } };
 }

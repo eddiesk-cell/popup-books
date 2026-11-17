@@ -8,16 +8,10 @@ const VEIL_THIN = .15;  // how dim the veil goes while no words are on screen af
 // (a section is as tall as its ranges: K screens of scroll in all, see --K in epic.css); the scene's builder is given the same table.
 export const PROGRESS = [
   // name,      from, to,  section,  what the scene shows
-  ["book",      0.00, 0.08, "hero",    "closed book, dark; foreground: brand line and Scroll down"],
-  ["open",      0.08, 0.20, "hero",    "the book sinks to the bottom and opens; the title arrives"],
-  ["wake",      0.20, 0.30, "wake",    "A book that wakes when you touch it: the past and far lands"],
-  ["worlds",    0.30, 0.40, "worlds",  "A new world on every page: fantasy and friendly monsters"],
-  ["doors",     0.40, 0.50, "doors",   "Read. Sing. Dance. Play.: magic, spirits and ghosts, with notes, a dancer and a kite"],
-  ["fly",       0.50, 0.60, "fly",     "Things that crawl, float and fly: creatures"],
-  ["lang",      0.60, 0.70, "lang",    "Learn a language while you read: letters of many scripts"],
-  ["parents",   0.70, 0.80, "parents", "For parents: the future"],
-  ["plans",     0.80, 0.92, "plans",   "Plans: dreams and the celestial"],
-  ["enter",     0.92, 1.00, "close",   "Enter the library: the stream calms, the book glows"]
+  ["book",      0.00, 0.12, "hero",    "closed book, dark; foreground: brand line and Scroll down"],
+  ["open",      0.12, 0.26, "hero",    "the book sinks to the bottom and opens; the title arrives"],
+  ["wake",      0.26, 0.66, "wake",    "Be inside the book: the burst and the stream of pictures"],
+  ["enter",     0.66, 1.00, "close",   "Enter the library: the stream calms, the book glows"]
 ];
 
 let sfx = () => {}, crossed = [false, false], logo, LG = { x: 0, top: 0, w: 1, k: 1 }, cueReady = false, heroFix, docH = 1, RM = false, scene, cue, cueOn = true, veil, poster, put0, P = 0, vo = 1, lastT = 0, vh = 800, TOP0 = 56, TOP1 = 100, BT1 = 500, BT0 = 550, panels = [];
@@ -63,8 +57,6 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
   // the logo (the drawn gold artwork) is ONE fixed element at the top centre for the whole page (owner 2026-11-15): big on arrival, a compact size once the first scroll has begun, never under the scene, the veil or a panel
   logo = $("h1.logo"); document.body.append(logo);
 
-  // the order on the page follows the table: the story sections are moved to sit between the plain ones as the ranges say
-  $("#doors").before($("#worlds")); $("#lang").before($("#fly"));
   // layout: every section is as tall as its ranges
   const span = {}; PROGRESS.forEach(([, a, b, id]) => (span[id] = (span[id] || 0) + b - a));
   for (const id in span) $("#" + id).style.setProperty("--r", span[id].toFixed(2));
@@ -87,13 +79,13 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
   $$("main section").forEach(s => { let k = 0; s.querySelectorAll(".line,.sub,.card,.chips,.keep,.foot,.head p,.plaque > .btn").forEach(e => e.style.setProperty("--k", k++)); });
   // buttons that do nothing yet keep their plain name (owner: no "soon" on them) and look quieter; a tap shows a short note under them (.btn.soon in epic.css)
   $$(".btn[aria-disabled=true]").forEach(b => { b.dataset.soon = T.nav.soon; b.onclick = () => { b.classList.add("soon"); clearTimeout(b.__t); b.__t = setTimeout(() => b.classList.remove("soon"), 1800); }; });
-  const anchors = ["#wake .plaque", "#worlds .plaque", "#doors .blk", "#fly .plaque", "#lang .blk", "#parents .blk", "#plans .blk", "#close .plaque"].map(q => $(q));
+  const anchors = ["#wake .plaque", "#close .plaque"].map(q => $(q));
 
   // Each section's words are ONE panel (heading, words, cards or buttons together), fixed in the band between the logo and the open book and faded in and out as a whole across its own stretch of the page (the progress table).
   // Nothing inside a panel fades on its own. A panel taller than the band is scaled down to fit (the layout in epic.css is built so that it rarely has to be).
-  const ids = ["wake", "worlds", "doors", "fly", "lang", "parents", "plans", "close"], rng = {};
+  const ids = ["wake", "close"], rng = {};
   PROGRESS.forEach(([, a, b, id]) => { rng[id] = [Math.min(a, rng[id]?.[0] ?? 9), Math.max(b, rng[id]?.[1] ?? 0)]; });
-  panels = anchors.map((el, i) => { el.classList.add("panel"); const sheet = document.createElement("div"); sheet.className = "sheet"; sheet.setAttribute("aria-hidden", "true"); el.prepend(sheet); return { sheet, id: ids[i], el, sec: el.closest("section"), a: rng[ids[i]][0], b: rng[ids[i]][1], last: ids[i] === "close", seen: false }; });
+  panels = anchors.map((el, i) => { el.classList.add("panel"); const sheet = document.createElement("div"); sheet.className = "sheet"; sheet.setAttribute("aria-hidden", "true"); el.prepend(sheet); for (const c of "tb") { const r = document.createElement("i"); r.className = "roll " + c; r.setAttribute("aria-hidden", "true"); el.append(r); } return { sheet, id: ids[i], el, sec: el.closest("section"), a: rng[ids[i]][0], b: rng[ids[i]][1], last: ids[i] === "close", seen: false }; });
   const measure = () => {
     vh = innerHeight; docH = document.documentElement.scrollHeight; const asp = innerWidth / vh;
     const wd = innerWidth, ar = $(".acct").getBoundingClientRect(), big = Math.min(wd < 600 ? .84 * wd : .34 * wd, .46 * vh * 1.51), small = Math.min(Math.max(.13 * wd, wd < 600 ? .42 * wd : 150), 260);  // the logo's width on arrival, and once the first scroll has begun
@@ -102,9 +94,7 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
     const band = BT0 - TOP0, H = Math.max(docH - vh, 1);
     for (const k of panels) { k.el.style.scale = ""; const h = k.el.offsetHeight, s = Math.min(1, band / h); k.s = s; k.h = h;
       k.el.style.setProperty("--pt", (TOP0 + (band - h * s) / 2).toFixed(1) + "px"); if (s < 1) k.el.style.scale = s.toFixed(3);
-      k.sheet.dataset.v = k.h / k.el.clientWidth > .85 ? "c" : "ab"[ids.indexOf(k.id) % 2];  // which sheet (tall panels get the tall one), and how far below its place the open book is
-      k.cy = TOP0 + band / 2;
-      k.y0 = k.a * H + (k.last ? 0 : LEAD) * vh; k.y1 = k.b * H; }  // a panel comes in a beat after its stretch begins (the burst plays first) and leaves as the next stretch begins
+      k.y0 = k.a * H + LEAD * vh; k.y1 = k.b * H; }  // a panel comes in a beat after its stretch begins (the burst plays first) and leaves as the next stretch begins
     update(scrollY);
   };
   addEventListener("resize", measure); addEventListener("load", measure); document.fonts?.ready.then(measure); new ResizeObserver(measure).observe($("main")); measure();
@@ -125,32 +115,23 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
 }
 
 const ramp = (v, a, b) => clamp((v - a) / (b - a)), sm = t => t * t * (3 - 2 * t);
-// the words' leave and return: ONE path (script animations), always from the opacity they show this frame, so a re-cross mid-fade never snaps
-const WORDS = ".line, .sub, .keep, .card, .chips, .foil";
-function fadeWords(k, to, ms) { for (const w of k.el.querySelectorAll(WORDS)) { const cur = getComputedStyle(w).opacity; w.__fade?.cancel();
-  w.__fade = to == null ? w.animate([{ offset: 0, opacity: cur }], { duration: ms }) : w.animate([{ opacity: cur }, { opacity: to }], { duration: ms, easing: "ease-in", fill: "forwards" }); } }
-// the sink: from whatever the sheet shows this frame (a half-grown arrival included) back toward the book, by script, so nothing ever jumps to the settled sheet first
-function sinkSheet(k) { const cs = getComputedStyle(k.sheet), bx = cs.getPropertyValue("--bx").trim() || "0px", rise = cs.getPropertyValue("--rise").trim() || "280px"; k.sink?.cancel();
-  k.sink = k.sheet.animate([{ translate: cs.translate, scale: cs.scale, opacity: cs.opacity, transform: cs.transform }, { translate: `${bx} calc(${rise} * .8)`, scale: .3, opacity: 0, transform: "perspective(2600px) rotateX(50deg)" }], { duration: 600, easing: "cubic-bezier(.5, 0, .8, .4)", fill: "forwards" }); }
-function riseFrom(k) {  // the sheet is born at the open book's gutter: how far below and to the side of its place that is, on this screen, right now
-  const b = scene?.debug?.bookBox?.(), cx = b ? (b[0] + b[2]) / 2 * innerWidth : innerWidth / 2, cy = b ? (b[1] + b[3]) / 2 * innerHeight : BT0 + .08 * vh;
-  k.el.style.setProperty("--rise", Math.round(cy - k.cy) + "px"); k.el.style.setProperty("--bx", Math.round(cx - innerWidth / 2) + "px");
-}
+// the leave: from however far open the scroll is this frame (an arrival half done included), by script, so nothing ever jumps to the open scroll first: it rolls up (--u to 0, the bottom roller back to the top one), then sinks (down when left downward, up when left upward) and fades
+function rollUp(k, up) { const cs = getComputedStyle(k.el), u = parseFloat(cs.getPropertyValue("--u")) || 0, t = 150 + 750 * u, dur = t + 600, mt = cs.marginTop; k.sink?.cancel(); k.dur = dur;
+  k.sink = k.el.animate([{ "--u": u, marginTop: mt, opacity: cs.opacity, easing: "cubic-bezier(.5, 0, .2, 1)" }, { "--u": 0, marginTop: mt, opacity: cs.opacity, offset: t / dur, easing: "cubic-bezier(.5, 0, .8, .4)" }, { "--u": 0, marginTop: up ? "-60px" : "90px", opacity: 0 }], { duration: dur, fill: "forwards" }); }
 function update(y, t = lastT) {
   const put = put0; let words = false;
+  const busy = panels.find(q => q.sinking && performance.now() < q.until);  // a scroll still rolling up and sinking: the next one waits for it, so two parchments never stack
   for (const k of panels) {
-    const f = k.y1 === undefined ? 0 : sm(ramp(y, k.y0, k.y0 + FADE * vh)) * (k.last ? 1 : 1 - sm(ramp(y, k.y1 - FADE * vh, k.y1)));
-    const past = !k.last && y > k.y1 - FADE * vh, now = performance.now();  // scrolled past: the panel is held for .7 s while the sheet sinks back toward the book and the words fade
-    if (past && !k.past && k.seen && !RM) { k.sinking = true; k.until = now + 700; k.sinkT = now; fadeWords(k, 0, 300); sinkSheet(k); }  // only a panel that was showing and is left downward sinks (coming back up from below it simply rises); reduced motion: no hold, a plain fade
-    if (!past && k.sinking && k.seen && now - k.sinkT < 600) {  // a sink cancelled while the sheet is still there: it glides back from where it is and the words fade back in
-      const cs = getComputedStyle(k.sheet), at = { offset: 0, translate: cs.translate, scale: cs.scale, opacity: cs.opacity, transform: cs.transform };
-      k.el.classList.remove("leaving"); k.sink?.cancel(); k.sink = null;
-      k.sheet.animate([at], { duration: Math.max(280, now - k.sinkT), easing: "cubic-bezier(.2,.7,.3,1)" });
-      fadeWords(k, null, 420);
-    } else if (!past && k.sinking && k.seen) { k.sink?.cancel(); k.sink = null; k.sec.classList.remove("in"); k.el.querySelectorAll(".foil").forEach(h => h.classList.remove("in", "vis")); void k.sec.offsetWidth; k.seen = false; }  // a sink cancelled by scrolling back up: the whole arrival (sheet and words) restarts below, never bare words over a re-rising sheet
+    if (k.y1 === undefined) continue;
+    const now = performance.now(), down = !k.last && y > k.y1 - FADE * vh, arrived = y > k.y0 - (k.seen ? .06 * vh : 0) && !(busy && busy !== k && !k.seen), up = !RM && k.seen && !arrived, past = down || up;  // arrived has a little slack once shown, so the edge does not flicker
+    const f = RM ? sm(ramp(y, k.y0, k.y0 + FADE * vh)) * (k.last ? 1 : 1 - sm(ramp(y, k.y1 - FADE * vh, k.y1))) : arrived && !down ? 1 : 0;  // with motion the scroll itself is the arrival and the leave (rollUp); reduced motion: a plain fade
+    if (past && !k.past && k.seen && !RM) { k.sinking = true; k.sinkT = now; rollUp(k, up); k.until = now + k.dur + 100; }  // only a panel that was showing sinks; coming back from below or above it simply arrives again
+    if (!past && k.sinking && k.seen && now - k.sinkT < k.dur) {  // a leave undone while the scroll is still on its way out: it runs back from where it is
+      k.el.classList.remove("leaving"); const a = k.sink; a.onfinish = () => { if (a.playbackRate < 0) a.cancel(); }; a.reverse();
+    } else if (!past && k.sinking && k.seen) { k.sink?.cancel(); k.sink = null; k.sec.classList.remove("in"); k.el.querySelectorAll(".foil").forEach(h => h.classList.remove("in", "vis")); void k.sec.offsetWidth; k.seen = false; }  // a leave that already ended: the whole arrival (rise, unroll and words) starts again, never bare words
     if (!past) k.sinking = false; k.past = past; const hold = !!k.sinking && now < k.until;
     k.el.classList.toggle("leaving", !!k.sinking); put(k.el, "--pf", hold ? 1 : f); k.el.classList.toggle("on", f > .3 || hold); if (f > .3) words = true;
-    const seen = f > .02 || hold; if (seen !== k.seen) { k.seen = seen; if (seen) { k.sink?.cancel(); k.sink = null; for (const w of k.el.querySelectorAll(WORDS)) { w.__fade?.cancel(); w.__fade = null; } } if (!seen) k.sinking = false; k.sec.classList.toggle("in", seen); if (seen) sfx("paper-rustle", .8); if (seen && !RM) riseFrom(k);  k.el.querySelectorAll(".foil").forEach(h => { h.classList.toggle("in", seen); h.classList.toggle("vis", seen); if (seen && !RM) sparks(h); }); }  // the letters arrive each time the panel does
+    const seen = f > .02 || hold; if (seen !== k.seen) { k.seen = seen; if (seen) { k.sink?.cancel(); k.sink = null; } if (!seen) k.sinking = false; k.sec.classList.toggle("in", seen); if (seen) sfx("paper-rustle", .8); k.el.querySelectorAll(".foil").forEach(h => { h.classList.toggle("in", seen); h.classList.toggle("vis", seen); if (seen && !RM) sparks(h); }); }  // the letters arrive each time the panel does
   }
   const hf = sm(ramp(Q(P), COVER_AT, COVER_AT + .01)) * (1 - sm(ramp(Q(P), .19, .2))); put(heroFix, "--hf", hf); heroFix.classList.toggle("off", hf < .3); words ||= hf > .3;
   const r = sm(ramp(P, 0, .06)), sc = 1 + (LG.k - 1) * r;  // arrival size -> compact, as the first scroll begins; the top edge stays put

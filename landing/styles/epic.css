@@ -1,6 +1,6 @@
 /* Style "epic": midnight, warm gold, a little ivory. A fixed scene behind a veil; the page rides over it as a finely printed book.
    The page is K screens of scroll in all; each section is as tall as its stretch of the progress table (see PROGRESS in epic.js). */
-:root { --nr: 5 7 15; --gr: 217 180 106; --ink: #efe6d0; --gold: #d9b46a; --night: #05070f; --leather: #150f0a; --K: 16;
+:root { --nr: 5 7 15; --gr: 217 180 106; --ink: #efe6d0; --gold: #d9b46a; --night: #05070f; --leather: #150f0a; --K: 8;
   --head-font: "Cormorant Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* pairing A (live): a refined display serif for headings only ... */
   --body-font: "EB Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* ... and a graceful reading serif for body, cards and buttons */
   --title-font: var(--body-font); }
@@ -71,7 +71,7 @@ main .blk.panel::after { display: none; }
 @keyframes chev { 0%, 100% { transform: translate(0, -5px); opacity: .45; } 50% { transform: translate(0, 5px); opacity: 1; } }
 
 /* layout by ranges */
-.hero, #wake, #worlds, #fly, .closing { height: calc(var(--r) * var(--K) * 100svh); min-height: 0; }
+.hero, #wake, .closing { height: calc(var(--r) * var(--K) * 100svh); min-height: 0; }
 .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 20px; }
 .hero::before { content: ""; flex: none; height: calc(var(--r) * var(--K) * 100svh * .45); }  /* the title sits at the stretch where the book opens */
 .head { width: auto; max-width: 100%; padding: 0 2.5rem; }
@@ -115,7 +115,7 @@ main .blk.panel::after { display: none; }
 .foil .ch { display: inline-block; color: transparent; opacity: 0; transform: translateY(.5em) scale(.92); filter: blur(5px);
   background: linear-gradient(105deg,#a88436 0%,#e9cd86 18%,#fff3c6 30%,#d4a94d 44%,#b9923f 60%,#f0d489 78%,#c39b44 100%) 0 0 / 260% 100%;
   -webkit-background-clip: text; background-clip: text; -webkit-text-stroke: 0;
-  animation-name: sheen, arrive; animation-duration: 8s, .45s; animation-timing-function: linear, cubic-bezier(.2,.7,.2,1); animation-delay: calc(var(--i) * -.18s), calc(2.2s + var(--i) * min(70ms, 450ms / var(--n, 1)));
+  animation-name: sheen, arrive; animation-duration: 8s, .45s; animation-timing-function: linear, cubic-bezier(.2,.7,.2,1); animation-delay: calc(var(--i) * -.18s), calc(.6s + var(--i) * min(70ms, 450ms / var(--n, 1)));
   animation-iteration-count: infinite, 1; animation-fill-mode: none, both; animation-play-state: paused; }
 .foil.vis .ch { animation-play-state: running; }
 .foil:not(.in) .ch { animation-name: sheen; opacity: 0; }
@@ -191,37 +191,44 @@ body { font-weight: 400; font-size: 1.1rem; }
 .card .tag, .card .price, .keep { color: var(--label); text-shadow: 0 0 5px rgb(12 7 3 / .75), 0 1px 1px rgb(12 7 3 / .6); }
 .card h3 { background: none; -webkit-text-fill-color: var(--label); color: var(--label); text-shadow: none; filter: drop-shadow(0 0 4px rgb(12 7 3 / .8)) drop-shadow(0 1px 1px rgb(12 7 3 / .6)); }  /* a SOLID gold fill (landing.css gives h3 a see-through gradient): the halo sits behind the letters */
 .btn[aria-disabled="true"], .btn[aria-disabled="true"]:hover { color: #d2c49c; }
-/* PARCHMENT (owner 2026-11-15): each panel is an old, torn, scorched sheet (drawn locally, see renders/landing/L1/parchment/). It rises out of the open book, floats up softly, turns flat to face the reader, settles;
-   then the words are heated into it: each line glows ember-orange and cools to gold, left to right. The words are real text the whole time. */
-@property --sw { syntax: "<number>"; inherits: false; initial-value: 1; }
-.sheet { position: absolute; inset: -7% -5%; z-index: -1; pointer-events: none; background: center / 100% 100% no-repeat url("epic/parchment-a.webp"); transform-origin: 50% 60%;
-  filter: brightness(.42) sepia(.3) saturate(1.15) drop-shadow(0 16px 30px rgb(0 0 0 / .55)); }
-.sheet[data-v="b"] { background-image: url("epic/parchment-b.webp"); } .sheet[data-v="c"] { background-image: url("epic/parchment-c.webp"); }
+/* SCROLL (owner 2026-11-17: "a scroll that comes up, then unscrolls"): each panel is a rolled parchment scroll between two walnut rollers with gold end caps (scroll-roller.webp, scroll-sheet.webp, drawn locally with mflux).
+   It rises into place closed (.6 s), then the bottom roller travels down and the sheet and its words are uncovered from the top (.9 s). --u is how far it is open (0 closed, 1 open); the panel is clipped just under the bottom roller, so words only exist where the sheet does.
+   Leaving is the same backwards (epic.js rollUp), then it sinks. Reduced motion: --u stays 1, a plain unrolled scroll that fades. */
+@property --u { syntax: "<number>"; inherits: true; initial-value: 1; }
+main .blk.panel { --R: 58px; --r: 30px;  /* R: the closed roll's height between roller centres; r: a roller's thickness. The sheet spans -7% .. 107% of the panel. */
+  clip-path: inset(-70px -12% calc(107% - var(--R) - (114% - var(--R)) * var(--u) - var(--r) / 2 - clamp(0px, (var(--u) - .9) * 600px, 60px)) -12%); }  /* the last 10% of the opening lets the sheet's shadow show below the roller */
+.sheet { position: absolute; inset: -7% -5%; z-index: -1; pointer-events: none; filter: drop-shadow(0 16px 30px rgb(0 0 0 / .55)); }
+/* AGED PARCHMENT (owner 2026-11-17: "a scroll of parchment, looks used and old through time"): scroll-sheet.webp is a stained, foxed, creased tan sheet, drawn locally (mflux) and levelled and warmed in python (art/make_sheet.py in renders/review/landing-aged).
+   It is covered, never stretched; over it: wear that darkens toward the handled sides and the rolled ends. The sides are nicked and frayed by a mask (two small tileable strips and a solid middle) on ::before, so the drop-shadow on .sheet follows the ragged edge. */
+.sheet::before { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(rgb(36 18 5 / .7), #0000 22px, #0000 calc(100% - 22px), rgb(36 18 5 / .7)), linear-gradient(90deg, rgb(70 36 10 / .6), #0000 34px, #0000 calc(100% - 34px), rgb(70 36 10 / .6)), radial-gradient(ellipse at 50% 50%, #0000 52%, rgb(78 40 10 / .3)), center / cover url("epic/scroll-sheet.webp");
+  -webkit-mask: url("epic/scroll-fray-l.webp") 0 0 / 22px 256px repeat-y, url("epic/scroll-fray-r.webp") 100% 0 / 22px 256px repeat-y, linear-gradient(#000 0 0) 22px 0 / calc(100% - 44px) 100% no-repeat;
+  mask: url("epic/scroll-fray-l.webp") 0 0 / 22px 256px repeat-y, url("epic/scroll-fray-r.webp") 100% 0 / 22px 256px repeat-y, linear-gradient(#000 0 0) 22px 0 / calc(100% - 44px) 100% no-repeat; }
+/* the words on old paper are ink: dark sepia body, deep burnt-gold title, a dark walnut button with gold letters */
+main .blk.panel :is(.line, .sub, p, .chips li) { color: #1a0c04; text-shadow: 0 0 1px rgb(255 230 180 / .25); }
+main .blk.panel .foil { --ff: drop-shadow(0 1px 0 rgb(255 232 180 / .4)); }
+main .blk.panel .foil .ch, main .blk.panel .foil.plain { background-image: linear-gradient(105deg, #3a1d02 0%, #482404 22%, #4f2704 34%, #422103 50%, #482404 70%, #3a1d02 100%); background-size: 260% 100%; }
+:lang(lo) main .blk.panel h2, :lang(th) main .blk.panel h2, :lang(zh) main .blk.panel h2, :lang(ja) main .blk.panel h2, :lang(ko) main .blk.panel h2 { font-weight: 500; }  /* dark ink on light paper reads thinner than gold on dark: the script titles were at 300 */
+main .blk.panel .btn { background: linear-gradient(#4a2c12, #2a1707); border-color: #d9b46a; color: #f6e3a8; box-shadow: 0 2px 6px rgb(0 0 0 / .45), inset 0 0 0 1px rgb(255 226 150 / .18); -webkit-backdrop-filter: none; backdrop-filter: none; }
+main .blk.panel .btn:hover { background: linear-gradient(#5c3a18, #38200a); color: #fff3cf; }
+.sheet::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(var(--R) + (100% - var(--R)) * var(--u)); background: linear-gradient(#000e 14%, #0000 50%, #000e 86%); opacity: calc(1 - var(--u) * 5); }  /* the rolled-up paper reads as a cylinder: dark at its top and bottom, light between; flat as soon as it opens */
+.roll { position: absolute; left: -8%; right: -8%; height: var(--r); z-index: 2; pointer-events: none; box-sizing: border-box; border: solid transparent; border-width: 0 16px; border-image: url("epic/scroll-roller.webp") 0 52 fill / 0 16px stretch; overflow: visible; }  /* 52 source px of gold cap each end (the picture is 900x100; 16 px at this height) */
+.roll.t { top: calc(-7% - var(--r) / 2); filter: drop-shadow(0 5px 6px rgb(0 0 0 / .6)); }
+.roll.b { top: calc(-7% + var(--R) + (114% - var(--R)) * var(--u) - var(--r) / 2); filter: drop-shadow(0 -5px 6px rgb(0 0 0 / .6)); }
+.roll.b::after { content: ""; position: absolute; inset: 3px 0; border-radius: 9px; background: repeating-linear-gradient(0deg, rgb(255 226 170 / .26) 0 2px, transparent 2px 8px); background-position: 0 calc(var(--u) * 700px); mix-blend-mode: soft-light; }  /* the bottom roller turns as it travels: faint bands run round it */
+@media (max-width: 520px) { .sheet { inset: -7% -2%; } .roll { left: -1%; right: -1%; } }  /* the panel is nearly the screen's width: the roller caps must stay on screen */
 main .blk.panel::before { display: none; }
 main .blk.panel { padding: 1.7rem 2.6rem; } @media (max-width: 520px) { main .blk.panel { padding: 1.6rem 1.4rem; } }
-/* One gesture: born tiny and almost flat at the open book's gutter (--bx, --rise are measured per arrival), it floats up, grows and turns flat. Every quantity is ONE continuous curve on its own property (translate, scale, transform, rotate, opacity), so nothing ever stops mid-flight:
-   the rise (y), the sideways S (x, added on top), the growth (an ease-in-out whose curve overshoots once and returns: the settle), the tilt from 70deg to flat, and a leaf-like sway (rotate). Only transform-type properties and opacity move. */
-@keyframes sheet-y { from { translate: 0 var(--rise, 280px); } to { translate: 0 0; } }
-@keyframes sheet-x { 0% { translate: var(--bx, 0px) 0; } 40% { translate: calc(var(--bx, 0px) * .4 + 2.2%) 0; } 75% { translate: -1.2% 0; } 100% { translate: 0 0; } }
-@keyframes sheet-grow { from { scale: .08; } to { scale: 1; } }
-@keyframes sheet-tilt { from { transform: perspective(2600px) rotateX(70deg); } to { transform: perspective(2600px) rotateX(0deg); } }
-@keyframes sheet-sway { 0% { rotate: -2.2deg; } 50% { rotate: 1.6deg; } 100% { rotate: 0deg; } }
-@keyframes sheet-fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes sheet-glow { 0% { opacity: 0; } 15% { opacity: .7; } 70% { opacity: .22; } 100% { opacity: 0; } }
-.sheet { will-change: transform, opacity; }
-.sheet::after { content: ""; position: absolute; inset: -10%; background: radial-gradient(closest-side, rgb(255 150 60 / .5), transparent 72%); opacity: 0; }  /* a faint warm glow as it is born */
-@keyframes sweep { from { --sw: 0; } to { --sw: 1; } }
 @keyframes heat { from { filter: brightness(1.9) saturate(2.3) hue-rotate(-24deg) drop-shadow(0 0 14px #ff6a10); } to { filter: var(--ff, none); } }
+@keyframes ink-wet { from { filter: blur(1.2px) brightness(1.7); } to { filter: var(--ff, none); } }
+@keyframes scroll-rise { from { margin-top: min(16vh, 130px); opacity: 0; } }
+@keyframes scroll-open { from { --u: 0; } }
 @media (prefers-reduced-motion: no-preference) {
-  main section.in .panel .sheet { animation: sheet-y 2s cubic-bezier(.4, 0, .2, 1) both, sheet-x 2.4s ease-in-out both, sheet-grow 2.5s cubic-bezier(.5, 0, .4, 1.12) both, sheet-tilt 1.9s cubic-bezier(.4, 0, .2, 1) both, sheet-sway 1.8s ease-in-out both, sheet-fade .45s ease-out both; animation-composition: replace, add, replace, replace, replace, replace; }
-  main section.in .panel .sheet::after { animation: sheet-glow 2.4s ease-out both; }
-  /* the sheet's sink is a script animation (sinkSheet in epic.js), from its current state */
-  /* the words leave and return by script (fadeWords in epic.js), from their current opacity */
-  main section.in .panel :is(.line, .sub, .keep, .card, .chips), main section.in .panel > .btn { --arr: 1; transform: none; transition: none; animation: sweep .9s ease-out both, heat 1.6s ease-out both; animation-delay: calc(2.2s + var(--k, 0) * .14s);
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); }
-  main section.in .panel .foil { animation: heat 1.6s ease-out 2.2s both; }
-  main section.in .panel .foil.plain { animation: sweep .9s ease-out 2.2s both, heat 1.6s ease-out 2.2s both; -webkit-mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); mask-image: linear-gradient(90deg, #000 calc(var(--sw) * 140% - 40%), transparent calc(var(--sw) * 140%)); }
-  main section.now .panel .sheet, main section.now .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.now .panel > .btn { animation: none; -webkit-mask-image: none; mask-image: none; }  /* a focused control: everything whole at once */
+  main section.in .panel { animation: scroll-rise .6s cubic-bezier(.2, .7, .2, 1) both, scroll-open .9s cubic-bezier(.5, 0, .2, 1) .6s both; }
+  /* the words are uncovered by the clip; each only warms from ember to gold a moment as it appears, and is whole when the unrolling ends (1.5 s) */
+  main section.in .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.in .panel > .btn { --arr: 1; transform: none; transition: none; animation: heat .8s ease-out calc(.6s + var(--k, 0) * .08s) both; }
+  main section.in .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.in .panel > .btn { animation-name: ink-wet; }  /* dark ink, so no ember heat (it turned the brown letters red): the ink is just wet for a moment */
+  main section.now .panel, main section.now .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.now .panel > .btn { animation: none; }  /* a focused control: everything whole at once */
 }
 
 @media (prefers-reduced-motion: reduce) {

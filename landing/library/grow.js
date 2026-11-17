@@ -70,8 +70,8 @@ export function grow(room, catalog, { fake } = {}) {
     portals.push({ from: "home", to: ra.id, label: r.name, at }, { from: ra.id, to: "home", label: "Back to the Grand Library", at: bat });
   });
   // the Wonder Hall: a round warp in the floor at home leads to a theatre room far below every home sight line, with three arches (soon) and the way back
-  const fp = [HP[0], .03, 1.9], WP = [HP[0], -170, HP[2]], wy = WP[1] - EYE, wh = mk("wonder", WP, "the Wonder Hall");
-  home.links.push({ to: "wonder", portal: true, floor: true, at: fp, label: "Wonder Hall", path: [HP, [HP[0], HP[1], 3.6], [HP[0], .55, 2.3]] });
+  const fp = [HP[0], .03, 2.6], WP = [HP[0], -170, HP[2]], wy = WP[1] - EYE, wh = mk("wonder", WP, "the Wonder Hall");
+  home.links.push({ to: "wonder", portal: true, floor: true, at: fp, label: "Wonder Hall", path: [HP, [HP[0], HP[1], 4.3], [HP[0], .55, 3.0]] });
   card("g_wh_floor", floorTex, [WP[0], wy + .02, WP[2] - 3], [20, 20], [-Math.PI / 2, 0], { tier: 2 });
   [[-.9, { soon: true }], [0, { soon: true }], [.9, { soon: true, game: "doors" }], [1.8, { soon: true, game: "memory" }]].forEach(([ph, o], i) => { const R2 = 8.6, at = [WP[0] + R2 * Math.sin(ph), wy + 2.34 + .02, WP[2] - R2 * Math.cos(ph)]; wh.links.push({ to: "wonder:" + i, ...o, arch: i, portal: true, at, yaw: -ph, size: [2.1, 4.68], label: "", path: [] }); });
   { const ph = -2.3, at = [WP[0] + 8.6 * Math.sin(ph), wy + DH / 2 + .02, WP[2] - 8.6 * Math.cos(ph)], yaw = -ph, n = [Math.sin(yaw), 0, Math.cos(yaw)]; wh.links.push({ to: "home", portal: true, label: "Back to the Grand Library", at, yaw, size: [DW, DH], path: [WP, [at[0] + n[0] * 1.8, WP[1], at[2] + n[2] * 1.8]] }); }
