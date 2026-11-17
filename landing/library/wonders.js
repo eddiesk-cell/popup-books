@@ -1,9 +1,9 @@
 // wonders.js (Eddie 2026-11-17: "flowers grow out of the book ... the hologram of knights come out fighting with dragons, and a lot more when we look up ... random intervals, not repeated
 // or patterned"; then "the underwater world and a few more ... a total of 7 things"). Seven big, rare WONDERS in 3D over the Grand Library's home balcony, one at a time, 8-15 s each
 // (build-up, peak, settle). The living shelves (living.js) stay; these are the big ones.
-//   bloom          a vine grows out of a book on a shelf in view: leaves unfurl, blossoms open, a few petals drift down glowing, it folds back into the book
+//   bloom          a book at eye level opens (on its shelf, or in the air before our cases); long vines curl out with big pink and peach blossoms; petals drift down; it closes
 //   battle         look up: a blue-and-gold shadow-puppet hologram, a knight on a rearing horse against a swooping, fire-breathing dragon, in a projector's cone; it dissolves into motes
-//   constellation  look up: the top of the well dims to night, stars gather into a sky whale or a phoenix that swims across trailing stardust, then scatter
+//   constellation  look up: the top of the well dims to night, stars gather into a sky whale (a dense starfield in its shape, a faint blue body, soft glowing lines) that swims across, blowing stardust, then scatter
 //   airship        a folded-paper airship spirals up the well on a glowing trail into the light
 //   underwater     the well becomes the sea: caustics on the shelves and floor, aqua shafts, a school of glowing fish, a manta, kelp, bubbles; then it drains away as light
 //   cranes         a book flies out and opens, its pages fold into paper cranes that spiral up into the oculus as a flock
@@ -48,7 +48,7 @@ const dirty = g => { for (const k in g.attributes) g.attributes[k].needsUpdate =
 const v3 = () => new THREE.Vector3();
 
 export function createWonders(scene, camera, { renderer = null, room = {}, reduced = false, phone = false, busy = () => false } = {}) {
-  const api = { names: NAMES, auto: false, log: [], fire, update, setStation, stats, dispose, group: null };
+  const api = { names: NAMES, auto: true, log: [], fire, update, setStation, stats, dispose, group: null };
   if (reduced) return { ...api, fire: () => null, update() {}, setStation() {}, stats: () => ({ playing: null, draws: 0, log: [] }), dispose() {} };  // reduced motion: no wonders at all, nothing built (stubs: the director's state below is never made)
   const root = new THREE.Group(); root.name = "wonders"; root.visible = false; scene.add(root); api.group = root;
   const FADE = { value: 1 }, PX = { value: 600 }, Q = phone ? .4 : 1;  // FADE: the busy fade-out shared by every material; PX: pixels per metre at 1 m (point sizes); Q: particle counts
@@ -110,7 +110,7 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
   book.visible = false; root.add(book);
   function dressBook(color, bands, seed) { const x = bookCv.getContext("2d"), sp = spineTexture(color, bands, seed).image;
     x.drawImage(sp, 0, 0, 48, 192); x.fillStyle = "#" + color.toString(16).padStart(6, "0"); x.fillRect(48, 0, 64, 192); x.fillStyle = "rgba(0,0,0,.18)"; x.fillRect(48, 0, 64, 192); x.strokeStyle = "rgba(226,180,89,.85)"; x.lineWidth = 3; x.strokeRect(55, 8, 50, 176);
-    x.fillStyle = "#efe2c4"; x.fillRect(112, 0, 16, 192); x.fillStyle = "rgba(120,90,50,.25)"; for (let i = 0; i < 40; i++) x.fillRect(112, i * 4.8, 16, 1); bookTex.needsUpdate = true; }
+    x.fillStyle = "#e6d3ab"; x.fillRect(112, 0, 16, 192); x.fillStyle = "rgba(90,60,30,.4)"; for (let i = 0; i < 34; i++) x.fillRect(113, 10 + i * 5.2, 13 - (i % 5 === 4 ? 6 : 0), 1); x.fillStyle = "rgba(60,40,20,.35)"; x.fillRect(126, 0, 2, 192); bookTex.needsUpdate = true; }  // cream pages with lines of text
   const bookPose = { R: v3(), U: v3(), N: v3(), slot: v3(), q: new THREE.Quaternion(), qo: new THREE.Quaternion(), po: v3(), k: 1 };  // shelf pose; open pose (bloom)
   function bookAt(s, H, T, D) {  // the book stands on shelf spot s, spine out, flush with the painted wall (its body hidden behind the wall); book.position = its centre
     const P = bookPose; P.N.set(0, 0, s.n); P.U.set(0, 1, 0); P.R.crossVectors(P.U, P.N); P.slot.set(s.x, s.y + H / 2, s.z - s.n * (D / 2 - .02)); M4.makeBasis(P.R, P.U, P.N); P.q.setFromRotationMatrix(M4);
@@ -147,7 +147,7 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
          if (age > 0.) { p += vec3(0., -1., 0.) * age * (.3 + .12 * sd) * uSc + (uAR * sin(age * 2.1 + sd * 9.) * .35 + uAN * (.12 + .2 * sin(age * 1.7 + sd * 5.))) * min(age, 1.6) * uSc;  // released: it falls, flutters and glows
            vGl = smoothstep(0., .8, age); vA = 1. - smoothstep(2.6, 4., age); } }
        else if (k < 3.5 || k > 4.5) { float s = sz * (.8 + .2 * sin(uT * 3. + sd * 9.)); p = aP + (k < 4.5 ? sway(b) : vec3(0.)) + normalize(cameraPosition - aP) * (k < 4.5 ? .12 : 1.) + (camR() * position.x + camU() * position.y) * s;  // glows: light in the air, nearer the eye
-         vGl = k < 4.5 ? clamp((uOpen - b) / .3, 0., 1.) * g : max(uBook, uOpen * .3); }
+         vGl = k < 4.5 ? clamp((uOpen - b) / .3, 0., 1.) * g : max(uBook * .6, uOpen * .2); }
        else { p = aP + bx * position.x * sz + ax * vQ.y * sd; vA = uGap; }
        gl_Position = projectionMatrix * viewMatrix * vec4(p, 1.); }`,
     `uniform vec3 uC1, uC2, uC3, uC4, uLeaf; uniform float uF; varying vec2 vQ; varying float vK, vA, vGl, vSd; varying vec3 vNn;
@@ -157,12 +157,12 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
          o = vec4(c * a, a); }
        else if (vK < 2.5 || vK > 5.5) { float w = .5 * pow(sin(3.1416 * pow(y, .6)), .7), d = abs(q.x) - w; a = smoothstep(.015, -.015, d);  // a broad rounded petal
          vec3 tip = peach ? uC3 : uC1, heart = peach ? uC4 : uC2; c = mix(heart, tip, smoothstep(.05, .65, y)) * (.88 + .14 * sin(q.x * 40. + y * 7.)) * l * (vK > 5.5 ? .9 : 1.);
-         vec3 e = c * (.35 + .9 * (1. - y) * (1. - y) + 1.6 * vGl) + tip * smoothstep(-.06, 0., d) * .4; o = vec4(c * a + e * a, a * (1. - .55 * vGl)); }
+         vec3 e = c * (.35 + .9 * (1. - y) * (1. - y) + .5 * vGl) + tip * smoothstep(-.06, 0., d) * .4; o = vec4(c * a + e * a, a * (1. - .3 * vGl)); }  // a falling petal glows, and keeps its colour
        else if (vK < 4.5 && vK > 3.5) { a = smoothstep(.5, .25, abs(q.x)) * smoothstep(0., .12, q.y) * smoothstep(1., .85, q.y) * .85; o = vec4(0., 0., 0., a); }
        else { float r = length(q - vec2(0., .5)) * 2.; float e = exp(-r * r * 5.) * vGl; o = vec4((vK > 4.5 ? vec3(1., .82, .5) : mix(vec3(1., .9, .55), peach ? uC3 : uC1, .3)) * e * 1.2, 0.); }
        o *= vA * uF; if (o.a + o.r + o.g < .002) discard; gl_FragColor = o; }`, "pre")), 47);
   const bloomG = new THREE.Group(); bloomG.add(stems, leaves); root.add(bloomG);
-  const PINK = [[1, .5, .66], [1, .93, .66]], PEACH = [[1, .66, .46], [1, .95, .7]];  // tip, heart
+  const PINK = [[1, .5, .66], [1, .93, .7]], PEACH = [[1, .6, .48], [1, .88, .7]];  // tip, heart
   function growVine(O, Rx, Uy, Nz, sc) {  // the vines rise from O in the plane of Rx (right) and Uy (up), bulging toward Nz (the eye)
     const P = stemG.attributes.position.array, NN = stemG.attributes.normal.array, BR = stemG.attributes.aBR.array, I = stemG.index.array; let nr = 0, ni = 0, nl = 0;
     const W = (x, y, z, o) => o.set(O.x + Rx.x * x + Uy.x * y + Nz.x * z, O.y + Rx.y * x + Uy.y * y + Nz.y * z, O.z + Rx.z * x + Uy.z * y + Nz.z * z), D = (x, y, z, o) => o.set(0, 0, 0).addScaledVector(Rx, x).addScaledVector(Uy, y).addScaledVector(Nz, z);
@@ -188,7 +188,7 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
         if (s.ord < 2 && i >= 4 && i <= n - 5 && i - lastChild >= 4 && Math.random() < (s.ord ? .22 : .38)) { lastChild = i; cs = -cs; const a = cs * R(.6, 1.05), c = Math.cos(a), sn = Math.sin(a);  // a side shoot from inside the stem: no gap at the joint
           q.push({ x, y, z, dx: dx * c - dy * sn, dy: dx * sn + dy * c, dz: dz + R(.05, .25), r: rr * .62, len: Math.max(.3 * sc, (s.len - arc) * R(.45, .7)), ord: s.ord + 1, b0: b + .01, curl: -s.curl * R(.8, 1.3) }); r *= .8; }  // Leonardo: .62² + .8² ≈ 1
         if (i >= 2 && i < n && (s.ord === 0 || (i + s.ord) % 2 === 0)) { const a = lside * R(.9, 1.4), c = Math.cos(a), sn = Math.sin(a); lside = -lside;  // a leaf at the node, alternate sides
-          D(T.x * c - T.y * sn, T.x * sn + T.y * c, R(.2, .55), A).normalize(); B.crossVectors(A, Nz).normalize(); W(x, y, z, Pw); inst4(Pw, A, B, [R(.13, .2) * sc * (s.ord ? .8 : 1), b + .02, 0, Math.random()]); }
+          D(T.x * c - T.y * sn, T.x * sn + T.y * c, R(.2, .55), A).normalize(); B.crossVectors(A, Nz).normalize(); W(x, y, z, Pw); inst4(Pw, A, B, [R(.11, .17) * sc * (s.ord ? .8 : 1), b + .02, 0, Math.random()]); }
         const k = s.curl * (.12 + 2.6 * f ** 2.4) * (s.ord ? 1.4 : 1) / sc * step, c = Math.cos(k), sn = Math.sin(k); [dx, dy] = [dx * c - dy * sn, dx * sn + dy * c];  // curls tighter toward the tip
         if (!s.ord) dy += .05 * (1 - f); dz += ((.25 + .2 * Math.sin(f * 3 + s.curl)) * sc * .5 - z) * .4 - dz * .3;
         const l2 = Math.hypot(dx, dy, dz); dx /= l2; dy /= l2; dz /= l2; x += dx * step; y += dy * step; z = Math.max(.03, z + dz * step); arc += step;
@@ -209,20 +209,20 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
     start(p) { let s = eyeShelf(); const onShelf = !!s; if (!s) s = shelfInView(14) ?? spots.filter(q => q.y > .85 && q.y < 2.4).sort((a, b) => Math.hypot(a.x - C.x, a.z - C.z) - Math.hypot(b.x - C.x, b.z - C.z))[0];
       const H = R(.36, .42), T = R(.07, .1), D = .28, P = bookPose; bookAt(s, H, T, D); BD.set(T, H, D); p.spot = [s.x.toFixed(2), s.y.toFixed(2), s.z.toFixed(2)]; p.where = onShelf ? "shelf" : "air";
       if (onShelf) { BR3.copy(P.R); BN3.copy(P.N); P.k = Math.max(1.2, Math.min(1.7, P.slot.distanceTo(C) * .2)); P.po.set(s.x, s.y + .32 * H * P.k + .03, s.z + s.n * (.16 + .25 * P.k)); }  // open on its own shelf, tipped back
-      else { const d = Math.max(2.4, Math.min(3.6, free(view.fx, 0, view.fz) - 1.4)), sd = sgn() * R(.35, .8); BR3.set(-view.fz, 0, view.fx); BN3.set(-view.fx, 0, -view.fz);  // open in the air at eye level in front of the eye
+      else { const d = Math.max(2.4, Math.min(3.6, free(view.fx, 0, view.fz) - 1.4)), sd = sgn() * R(.1, .35) * halfW(d); BR3.set(-view.fz, 0, view.fx); BN3.set(-view.fx, 0, -view.fz);  // open in the air at eye level in front of the eye
         P.k = R(1.6, 1.85); P.po.set(C.x + view.fx * d + BR3.x * sd, C.y - .3, C.z + view.fz * d + BR3.z * sd); }
       M4.makeBasis(BR3, UPV, BN3); P.qo.setFromRotationMatrix(M4); Q1.setFromAxisAngle(BR3, -.95); Q2.setFromAxisAngle(UPV, Math.PI); P.qo.premultiply(Q2).premultiply(Q1);  // turned to face you, spine away, tipped back
       V2.set(0, 0, D * P.k * .5 - .01).applyQuaternion(P.qo).add(P.po); V3.set(0, 0, -1).applyQuaternion(P.qo); V2.addScaledVector(V3, .03);  // the gutter of the open book: the vines' root
-      const sc = Math.max(1.1, Math.min(3.2, V2.distanceTo(C) * .42)); bU.uSc.value = sc;
+      const sc = Math.max(1.1, Math.min(2.4, .5 + V2.distanceTo(C) * .3)); bU.uSc.value = sc;  // a quarter of the frame, near or far
       bU.uC1.value.setRGB(...PINK[0]); bU.uC2.value.setRGB(...PINK[1]); bU.uC3.value.setRGB(...PEACH[0]); bU.uC4.value.setRGB(...PEACH[1]); const hue = R(-.06, .06); for (const c of [bU.uC1, bU.uC3]) c.value.offsetHSL(hue, R(-.05, .05), 0);
       bU.uLeaf.value.setRGB(R(.22, .32), R(.5, .62), R(.12, .2)); bU.uStem.value.setRGB(R(.38, .48), R(.48, .56), R(.14, .2)); bU.uDur.value = p.dur; bU.uRel.value = R(.58, .64);
       bU.uAR.value.copy(BR3); bU.uAN.value.copy(BN3); let nl = growVine(V2, BR3, UPV, BN3, sc); V3.copy(P.slot).addScaledVector(P.N, D / 2 - .01);  // then the dark gap the book leaves in the painted shelf, and the glow from its pages
       set(leafG, "aP", nl, V3.x, V3.y - H / 2, V3.z); set(leafG, "aA", nl, 0, 1, 0); set(leafG, "aB", nl, P.R.x, P.R.y, P.R.z); set(leafG, "aS", nl, T * 1.6, 0, 4, H * 1.05); nl++;
-      set(leafG, "aP", nl, V2.x, V2.y, V2.z); set(leafG, "aA", nl, 0, 1, 0); set(leafG, "aS", nl, 1.4 * sc, 0, 5, .5); nl++;
+      set(leafG, "aP", nl, V2.x, V2.y, V2.z); set(leafG, "aA", nl, 0, 1, 0); set(leafG, "aS", nl, .6 * sc, 0, 5, .5); nl++;
       leafG.instanceCount = nl; dirty(leafG); p.size = +sc.toFixed(2); return true; },
     tick(p, u, t) { const P = bookPose, out = win(u, 0, .05, .94, .99), f = sm(win(u, .05, .15, .9, .96)), op = win(u, .13, .21, .86, .93); bU.uT.value = t;
       bU.uGrow.value = sm((u - .17) / .42) * (1 - sm((u - .8) / .13)) * 1.02; bU.uOpen.value = win(u, .34, .66, .74, .84) * 1.45; bU.uBook.value = win(u, .12, .2, .3, .5) + .3 * op; bU.uGap.value = out;
-      bookU.uA.value = Math.min(1, out * 6); bookU.uOpen.value = 1.35 * op; bookU.uGlow.value = bU.uBook.value; bookU.uSize.value.copy(BD).multiplyScalar(1 + (P.k - 1) * f);
+      bookU.uA.value = Math.min(1, out * 6); bookU.uOpen.value = 1.35 * op; bookU.uGlow.value = bU.uBook.value * .3; bookU.uSize.value.copy(BD).multiplyScalar(1 + (P.k - 1) * f);
       book.position.copy(P.slot).addScaledVector(P.N, .1 * out).lerp(P.po, f); Q1.setFromAxisAngle(P.R, .16 * out).multiply(P.q); book.quaternion.slerpQuaternions(Q1, P.qo, f); } };  // out of the shelf, turned, opened
   // ======== 2. battle: shadow-puppet silhouettes (holo.webp) in a hologram shader, a theatre plane facing the eye. The knight rears about his hind hooves and thrusts; the dragon's
   // body is a strip bent along its head's own trail (so it undulates as it swoops); its wings beat about the shoulder, edge-on through the stroke. Fire sparks, the lance's flash and the
@@ -287,7 +287,7 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
      void main() { float a = pow(vH, 1.6) * smoothstep(1., .82, vH) * .14 * (.75 + .25 * sin(vE * 9. + uT * .7)) * (.85 + .15 * sin(vH * 34. - uT * 5.)) * uCone * uF; gl_FragColor = vec4(mix(uCK, vec3(1.), .4), a); }`)), 43);
   battleG.add(cone, figures, sparks);
   const battle = { name: "battle", dur: [11, 13.5], group: battleG, need: "sky",
-    start(p) { const O = aim(.85, 8, 18, hU.uO.value, .04), d = O.distanceTo(C), S = Math.min(R(1.6, 1.9) * Math.min(1.3, Math.max(.8, d / 12)), halfW(d) * .95 / 3.8); hU.uS.value = S;  // centred on the look; the knight and the dive fill the width hU.uM.value = sgn();  // as big on screen near or far
+    start(p) { const O = aim(.85, 8, 18, hU.uO.value, .04), d = O.distanceTo(C), S = Math.min(R(1.6, 1.9) * Math.min(1.3, Math.max(.8, d / 12)), halfW(d) * .95 / 3.8); hU.uS.value = S; hU.uM.value = sgn();  // centred on the look; the knight and the dive fill the width
       const side = O.x > 0 ? 1 : O.x < 0 ? -1 : sgn(); hU.uApex.value.set(side * Math.max(8, Math.abs(O.x) + 8), O.y - 22, MID_Z + R(-1, 1));
       hU.uCK.value.setRGB(R(.25, .4), R(.62, .78), 1); hU.uCD.value.setRGB(1, R(.62, .78), R(.22, .36));
       const t0 = p.dur * R(.1, .14), t1 = p.dur * R(.72, .78); hU.uEa.value = R(.08, .16); hU.uEb.value = R(1.18, 1.3); hU.uEt.value.set(t0, t1 - t0); p.fireAt = p.dur * R(.2, .25); p.hitAt = p.dur * R(.36, .4);
@@ -299,30 +299,24 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
       hU.uIn.value = clamp01((u - .01) / .13); hU.uOut.value = clamp01((u - .8) / .13); hU.uCone.value = win(u, 0, .08, .86, 1);  // linear: the motes' own clock (uOutT) follows the same line
       useVeil(VEIL.holo, .42 * win(u, 0, .1, .85, 1), V1.copy(hU.uO.value).sub(C).normalize(), Math.cos(.75), Math.cos(.3)); } };
 
-  // ======== 3. constellation: the top of the well dims to night; stars there gather into a creature (a sky whale or a phoenix), its lines trace in, it swims across trailing stardust,
-  // the lines fade and the stars scatter. Templates are a few dozen hand-placed points (x -1..1 = tail..head); the body wave and wing beat are shader functions of the template.
-  const WHALE = { pts: [[1, 0], [.92, .1], [.75, .17], [.5, .24], [.15, .27], [-.12, .25], [-.22, .31], [-.3, .2], [-.55, .12], [-.74, .06, 2], [-.82, .08, 2], [-1.02, .36, 2], [-.94, .02, 2], [-1.04, -.3, 2], [-.82, -.04, 2],
-      [-.72, -.05, 2], [-.45, -.13], [-.05, -.24], [.35, -.27], [.7, -.2], [.92, -.09],  // a humpback, head right: outline 0-20 (the flukes are part 2)
-      [.45, -.17, 1], [.02, -.64, 1], [.3, -.22, 1], [.7, -.02], [.98, -.05], [.62, -.08], [.65, -.16], [.1, -.2]],  // 21-23 the long pectoral fin; the eye; the mouth; a throat groove
-    lines: [...Array.from({ length: 21 }, (_, i) => [i, (i + 1) % 21]), [21, 22], [22, 23], [25, 26], [27, 28]], fill: [Array.from({ length: 21 }, (_, i) => i), [21, 22, 23]] };
-  const PHOENIX = { pts: [[1.12, .2], [.95, .25], [.9, .42], [.8, .52], [.75, .1], [.55, -.08], [.25, -.12], [-.05, -.02], [.3, .12], [.45, .14, 1], [.3, .48, 1], [.05, .82, 1], [-.3, .98, 1], [-.56, .9, 1], [-.42, .62, 1], [-.12, .42, 1],
-      [-.4, .1, 2], [-.8, .26, 2], [-1.15, .46, 2], [-.45, -.05, 2], [-.85, -.06, 2], [-1.25, 0, 2], [-.4, -.16, 2], [-.8, -.3, 2], [-1.1, -.5, 2]],
-    lines: [[0, 1], [1, 2], [2, 3], [1, 4], [4, 5], [5, 6], [6, 7], [7, 8], [8, 9], [9, 4], [9, 10], [10, 11], [11, 12], [12, 13], [13, 14], [14, 15], [15, 9], [7, 16], [16, 17], [17, 18], [7, 19], [19, 20], [20, 21], [7, 22], [22, 23], [23, 24]],
-    fill: [[0, 1, 8, 7, 6, 5, 4], [9, 10, 11, 12, 13, 14, 15]] };
+  // ======== 3. constellation: the top of the well dims to night; stars there gather into a sky whale (a phoenix read as a scribble at a glance, so it is the whale every time), its lines trace in, it swims across trailing stardust,
+  // the lines fade and the stars scatter. The whale is a few dozen hand-placed points (x -1..1 = tail..head); its body wave, fluke beat and fin sweep are shader functions of them.
+  const WHALE = { pts: [[1, -.02], [.96, .12], [.82, .22], [.5, .29], [.15, .3], [-.15, .25], [-.25, .33], [-.33, .2], [-.6, .1], [-.78, .12, 2], [-1.02, .4, 2], [-.9, .17, 2], [-1.07, .03, 2], [-.78, .03, 2],
+      [-.6, -.03], [-.3, -.17], [.05, -.29], [.45, -.33], [.78, -.25], [.95, -.12],  // a humpback, head right, deep blunt head, tail flukes raised: outline 0-19 (the flukes are part 2)
+      [.42, -.22, 1], [0, -.72, 1], [.27, -.27, 1], [.74, .02], [.99, -.06], [.6, -.1], [.7, -.2], [.15, -.25], [.52, .28]],  // 20-22 the long pectoral fin; the eye; the mouth; a throat groove; the blowhole
+    lines: [...Array.from({ length: 20 }, (_, i) => [i, (i + 1) % 20]), [20, 21], [21, 22], [24, 25], [26, 27]], fill: [Array.from({ length: 20 }, (_, i) => i), [20, 21, 22]] };
   const inPoly = (x, y, P, pts) => { let c = false; for (let i = 0, j = P.length - 1; i < P.length; j = i++) { const a = pts[P[i]], b = pts[P[j]]; if ((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) c = !c; } return c; };
   const bodyGeo = T => { const pos = [], idx = []; for (const P of T.fill) { const o = pos.length / 3, ring = P.map(k => new THREE.Vector2(T.pts[k][0], T.pts[k][1]));  // the creature's silhouette, triangulated once, in template coordinates
       for (const k of P) pos.push(T.pts[k][0], T.pts[k][1], T.pts[k][2] ?? 0); for (const t of THREE.ShapeUtils.triangulateShape(ring, [])) idx.push(o + t[0], o + t[1], o + t[2]); }
     const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(new Float32Array(pos), 3)); g.setIndex(idx); return g; };
-  const BODY = [bodyGeo(WHALE), bodyGeo(PHOENIX)];
-  const sU = { uT: { value: 0 }, uKind: { value: 0 }, uA: { value: v3() }, uB: { value: v3() }, uSwim: { value: new THREE.Vector2(2, 9) }, uX: { value: v3() }, uY: { value: v3() }, uSc: { value: 9 },
+    const sU = { uT: { value: 0 }, uA: { value: v3() }, uB: { value: v3() }, uSwim: { value: new THREE.Vector2(2, 9) }, uX: { value: v3() }, uY: { value: v3() }, uSc: { value: 9 },
     uGat: { value: new THREE.Vector2(1, 2.5) }, uLin: { value: new THREE.Vector3(2, 2.5, 10) }, uScat: { value: 11 }, uCol: { value: new THREE.Color() }, uPx: PX, uF: FADE };
-  const SHAPE = `uniform float uT, uKind, uSc; uniform vec3 uA, uB, uX, uY; uniform vec2 uSwim;
+  const SHAPE = `uniform float uT, uSc; uniform vec3 uA, uB, uX, uY; uniform vec2 uSwim;
     vec3 centre(float t) { float s = clamp((t - uSwim.x) / uSwim.y, 0., 1.); s = s * s * (3. - 2. * s) * .45 + s * .55; return mix(uA, uB, s) + vec3(0., sin(t * .55) * .8, 0.); }
     vec2 shape(vec3 a, float t) { vec2 p = a.xy;
-      if (uKind < .5) { float ph = t * 1.4;
-        if (a.z > 1.5) { vec2 pv = vec2(-.8, .02); p = pv + vec2(0., sin(ph + 1.76) * .12) + rot(sin(ph - 1.2) * .38) * (p - pv); }  // the flukes beat about the tail stock
-        else { p.y += sin(ph - p.x * 2.2) * .13 * smoothstep(.15, -1., p.x); if (a.z > .5) { vec2 b = vec2(.38, -.19); p = b + rot(sin(ph + 1.) * .4) * (p - b); } } }  // the body swims, more toward the tail; the long fin sweeps
-      else { if (a.z > .5 && a.z < 1.5) { vec2 b = vec2(.45, .14), q = p - b; q.y *= cos(t * 2.3); p = b + rot(sin(t * 2.3) * .12) * q; } if (a.z > 1.5) p.y += sin(t * 1.9 - p.x * 2.6) * .1 * smoothstep(0., -1.2, p.x); }
+      float ph = t * 1.4;
+      if (a.z > 1.5) { vec2 pv = vec2(-.76, .08); p = pv + vec2(0., sin(ph + 1.67) * .12) + rot(sin(ph - 1.2) * .38) * (p - pv); }  // the flukes beat about the tail stock
+      else { p.y += sin(ph - p.x * 2.2) * .13 * smoothstep(.15, -1., p.x); if (a.z > .5) { vec2 b = vec2(.38, -.19); p = b + rot(sin(ph + 1.) * .4) * (p - b); } }  // the body swims, more toward the tail; the long fin sweeps
       return p; }
     vec3 at(vec3 a, float t) { vec2 p = shape(a, t); return centre(t) + (uX * p.x + uY * p.y) * uSc; }`;
   const NS = n(820), starG = pts(NS, { aT: 3, aS: 3, aE: 3, aK: 4 });  // aT template (x, y, part); aS start; aE end (or drift); aK: role (0 star of the creature, 1 sky star, 2 stardust), time, size, seed
@@ -332,6 +326,8 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
        if (r < .5) { float g = smoothstep(0., 1.7, uT - tk), sc = smoothstep(0., 2.4, uT - uScat - sd * .9); w = mix(mix(aS, at(aT, uT), g * g * (3. - 2. * g)), aE, sc);
          vA = smoothstep(0., .8, uT - uGat.x + 1.2 - sd) * (1. - smoothstep(.5, 1., sc)) * tw * (.7 + .3 * g); }
        else if (r < 1.5) { w = aS + aE * uT * .04; vA = smoothstep(tk, tk + 1.5, uT) * (1. - smoothstep(uScat + 1., uScat + 3.5, uT)) * tw * .7; }
+       else if (r > 2.5) { float age = uT - tk; w = at(vec3(.52, .3, 0.), tk) + (uY * (2.6 * age - 1.1 * age * age) * (.8 + .4 * fract(sd * 3.)) + uX * (fract(sd * 7.) - .5) * 1.6 * age) * uSc * .2;  // the whale's blow: a fountain of stardust
+         vA = step(0., age) * (1. - smoothstep(1.4, 2.6, age)) * tw; }
        else { float age = uT - tk; w = at(vec3(-.95 + fract(sd * 7.) * .2, (fract(sd * 13.) - .5) * .4, 2.), tk) + aE * age; vA = step(0., age) * smoothstep(0., .3, age) * (1. - smoothstep(1.5, 4.5, age)) * tw; }
        vec4 mv = viewMatrix * vec4(w, 1.); gl_Position = projectionMatrix * mv; gl_PointSize = clamp(aK.z * uPx / -mv.z, 1.5, 40.); }`,
     `uniform vec3 uCol; uniform float uF; varying float vA;
@@ -344,31 +340,32 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
        vec3 sd = normalize(cross(b - a, cameraPosition - m)) * max(.3, length(cameraPosition - m) * .012); vX = position.x * 2.;  // wide: a bright core in a soft glow
        vA = step(.001, pr) * (1. - smoothstep(uLin.z, uLin.z + 1.4, uT)) * (.8 + .2 * sin(uT * 3. + aL.y * 20.)); gl_Position = projectionMatrix * viewMatrix * vec4(m + sd * position.x * 2., 1.); }`,
     `uniform vec3 uCol; uniform float uF; varying float vA, vX; void main() { float a = (exp(-vX * vX * 60.) * .95 + exp(-vX * vX * 6.) * .3) * vA * uF; if (a < .004) discard; gl_FragColor = vec4(mix(uCol, vec3(1.), exp(-vX * vX * 60.) * .5), a); }`, "add", { depthTest: false })), 47);
-  const body = obj(new THREE.Mesh(BODY[0], mat(sU,
+  const body = obj(new THREE.Mesh(bodyGeo(WHALE), mat(sU,
     `uniform vec3 uLin; varying vec2 vT; varying float vA; ${SHAPE}
      void main() { vT = position.xy; vA = smoothstep(uLin.x + uLin.y * .5, uLin.x + uLin.y + 1., uT) * (1. - smoothstep(uLin.z, uLin.z + 1.4, uT)); gl_Position = projectionMatrix * viewMatrix * vec4(at(position, uT), 1.); }`,
     `uniform vec3 uCol; uniform float uT, uF; varying vec2 vT; varying float vA;
      void main() { float n = .7 + .3 * sin(vT.x * 9. + uT * .7) * sin(vT.y * 14. - uT * .5); float a = .2 * n * vA * uF; if (a < .003) discard; gl_FragColor = vec4(mix(vec3(.3, .55, 1.), uCol, .35), a); }`, "add", { depthTest: false })), 46);  // a faint blue glow fills the silhouette
   const starsG = new THREE.Group(); starsG.add(body, stars, lines); root.add(starsG);
   const constellation = { name: "constellation", dur: [12.5, 15], group: starsG, need: "sky",
-    start(p) { const kind = Math.random() < .75 ? 0 : 1, T = kind ? PHOENIX : WHALE, dir = sgn(), Tp = aim(.95, 22, 46, V2, .05), sc = Math.min(R(.9, 1.1) * Math.max(6, Math.min(10.5, Tp.distanceTo(C) * .38)), halfW(Tp.distanceTo(C)) * 1.05), A = sU.uA.value, B = sU.uB.value;
+    start(p) { const T = WHALE, dir = sgn(), Tp = aim(.95, 22, 46, V2, .05), sc = Math.min(R(.9, 1.1) * Math.max(6, Math.min(10.5, Tp.distanceTo(C) * .38)), halfW(Tp.distanceTo(C)) * 1.05), A = sU.uA.value, B = sU.uB.value;
       const wide = Math.abs(Tp.x) > Wl.home.x[1] + 2, sw = R(11, 15);  // in front of a wall it swims along the wall; out over the open well, across the view
       if (wide) { V1.set(-view.fz, 0, view.fx); A.copy(Tp).addScaledVector(V1, -dir * sw); B.copy(Tp).addScaledVector(V1, dir * sw); } else { A.set(Tp.x - dir * sw, Tp.y, Tp.z); B.set(Tp.x + dir * sw, Tp.y, Tp.z); }
       A.y += R(-2, 1); B.y += R(-1, 3); for (const P of [A, B]) { const r = Math.hypot(P.x - WC[0], P.z - WC[1]); if (r > 22) { P.x = WC[0] + (P.x - WC[0]) * 22 / r; P.z = WC[1] + (P.z - WC[1]) * 22 / r; } }
-      sU.uKind.value = kind; sU.uSc.value = sc; sU.uCol.value.setRGB(...pick([[.7, .82, 1], [.75, .9, 1], [.8, .78, 1], [.6, .95, 1]])); body.geometry = BODY[kind];
+      sU.uSc.value = sc; sU.uCol.value.setRGB(...pick([[.7, .82, 1], [.75, .9, 1], [.8, .78, 1], [.6, .95, 1]]));
       const d = p.dur, g0 = d * R(.04, .07); sU.uGat.value.set(g0, d * .12); sU.uSwim.value.set(g0 + d * .08, d * R(.66, .72)); sU.uLin.value.set(g0 + d * .1, d * .12, d * R(.74, .78)); sU.uScat.value = d * R(.8, .84);
       const nKey = T.pts.length, nFill = n(330), nSky = n(250), at = (i, x, y, part) => set(starG, "aT", i, x, y, part ?? 0);
       for (let i = 0; i < NS; i++) {
         if (i < nKey + nFill) { if (i < nKey) at(i, ...T.pts[i]); else if (i % 3) { let x = 0, y = 0, k = 0, part = 0; for (; k < 30; k++) { x = R(-1.05, 1.05); y = R(-.65, 1); part = T.fill.findIndex(P => inPoly(x, y, P, T.pts)); if (part >= 0) break; }  // a dense field inside the silhouette
-              at(i, x, y, kind ? (part === 1 ? 1 : part > 1 ? 2 : 0) : (part === 1 ? 1 : x < -.74 ? 2 : 0)); }
+              at(i, x, y, part === 1 ? 1 : x < -.76 ? 2 : 0); }
             else { const L = pick(T.lines), a = T.pts[L[0]], b = T.pts[L[1]], f = Math.random(); at(i, lerp(a[0], b[0], f) + R(-.02, .02), lerp(a[1], b[1], f) + R(-.02, .02), a[2] === b[2] ? a[2] : 0); }  // and along its lines
           set(starG, "aS", i, Tp.x + R(-22, 22), Tp.y + R(-10, 16), Tp.z + R(-6, 6)); set(starG, "aE", i, A.x + (B.x - A.x) * R(.6, 1.3) + R(-16, 16), Tp.y + R(-6, 26), Tp.z + R(-8, 8));
           set(starG, "aK", i, 0, g0 + Math.random() * d * .1, i < nKey ? R(1.1, 1.5) : R(.3, .62), Math.random()); }
         else if (i < nKey + nFill + nSky) { const a = R(0, TAU), r = Math.sqrt(Math.random()) * 23; set(starG, "aS", i, WC[0] + Math.cos(a) * r, Tp.y + R(-8, 30), WC[1] + Math.sin(a) * r); set(starG, "aE", i, R(-.3, .3), R(-.1, .2), R(-.3, .3)); set(starG, "aK", i, 1, Math.random() * d * .25, R(.25, .6), Math.random()); }
+        else if (i >= NS - n(80)) { const sw = sU.uSwim.value; set(starG, "aK", i, 3, sw.x + sw.y * (Math.random() < .5 ? R(.25, .32) : R(.6, .67)), R(.3, .55), Math.random()); }  // two blows during the swim
         else { set(starG, "aE", i, R(-.25, .25), R(-.6, -.15), R(-.25, .25)); set(starG, "aK", i, 2, sU.uSwim.value.x + Math.random() * sU.uSwim.value.y, R(.3, .6), Math.random()); } }
       dirty(starG); const L = T.lines.length;
-      for (let i = 0; i < NLN; i++) { const ln = T.lines[i % L], a = T.pts[ln[0]], b = T.pts[ln[1]]; set(lineG, "aP0", i, a[0], a[1], a[2] ?? 0); set(lineG, "aP1", i, b[0], b[1], b[2] ?? 0); set(lineG, "aL", i, kind ? (i % L) / L : i < 21 ? i / 21 * .7 : .7 + Math.random() * .3, Math.random()); }
-      lineG.instanceCount = L; dirty(lineG); p.creature = kind ? "phoenix" : "whale"; p.place = [Tp.x, Tp.y, Tp.z].map(v => +v.toFixed(1)); p.size = +sc.toFixed(1); p.dir = dir; return true; },
+      for (let i = 0; i < NLN; i++) { const ln = T.lines[i % L], a = T.pts[ln[0]], b = T.pts[ln[1]]; set(lineG, "aP0", i, a[0], a[1], a[2] ?? 0); set(lineG, "aP1", i, b[0], b[1], b[2] ?? 0); set(lineG, "aL", i, i < 20 ? i / 20 * .7 : .7 + Math.random() * .3, Math.random()); }
+      lineG.instanceCount = L; dirty(lineG); p.place = [Tp.x, Tp.y, Tp.z].map(v => +v.toFixed(1)); p.size = +sc.toFixed(1); p.dir = dir; return true; },
     tick(p, u, t) { sU.uT.value = t; const c = V1.copy(sU.uB.value).sub(sU.uA.value).normalize(), mid = V2.copy(sU.uA.value).lerp(sU.uB.value, .5), z = V3.copy(C).sub(mid).normalize();
       sU.uX.value.copy(c).addScaledVector(z, -c.dot(z)).normalize(); sU.uY.value.crossVectors(z, sU.uX.value).normalize(); V1.setFromMatrixColumn(camera.matrixWorld, 1); if (sU.uY.value.dot(V1) < 0) sU.uY.value.negate();  // the creature's back up on screen
       useVeil(VEIL.night, .72 * win(u, 0, .12, .86, 1), V2.copy(mid).sub(C).normalize().lerp(UPV, .4).normalize(), 0, .6); } };
@@ -536,7 +533,7 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
   // a few already high in the air in front of the home wall, most out over the open well, some rising from below the balcony. Each is a rounded paper body with ribs, a glowing
   // core and a warm rim, sways gently, flickers, lays a pool of warm light on the nearest wall of books, and high up becomes a star. The room dims to dusk round them.
   const lanG = (() => { const p = [[.3, 0], [.33, .08], [.38, .3], [.41, .55], [.4, .72], [.34, .86], [.22, .96], [0, 1]].map(([r, y]) => new THREE.Vector2(r, y)); return new THREE.LatheGeometry(p, 20); })();
-  const NL = n(40), lU = { uT: { value: 0 }, uIn: { value: 0 }, uEye: { value: new THREE.Vector2() }, uPx: PX, uF: FADE };
+  const NL = phone ? 26 : 40, lU = { uT: { value: 0 }, uIn: { value: 0 }, uEye: { value: new THREE.Vector2() }, uPx: PX, uF: FADE };
   const LAN = `uniform float uT; uniform vec2 uEye; vec3 lpos(vec4 L, vec4 M, float t) { float age = max(0., t - L.w), y = L.z + (.6 + .6 * fract(M.x * 5.)) * age + .03 * age * age; y = min(y, 92. + (y - 92.) * .06);
       vec2 xz = vec2(L.x + sin(t * .37 + M.x * 20.) * M.z, L.y + cos(t * .29 + M.x * 13.) * M.z), d = xz - uEye; float l = length(d); if (l < 5.) xz = uEye + d / max(l, .01) * 5.;  // a gentle rise and sway, never within 5 m of the eye
       return vec3(xz.x, y, xz.y); }
@@ -545,14 +542,14 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
   const lanIG = inst(lanG, NL, { aL: 4, aM: 4 }), glowIG = inst(new THREE.PlaneGeometry(1, 1), NL * 4, { aL: 4, aM: 4, aK: 1 });  // aL: x0, z0, y0, birth; aM: seed, size, sway, hue
   const lanterns = obj(new THREE.Mesh(lanIG, mat(lU,
     `attribute vec4 aL, aM; uniform float uIn; varying vec2 vUv; varying vec3 vN, vW; varying float vA, vS, vH; ${LAN}
-     void main() { vec3 c = lpos(aL, aM, uT); vUv = uv; vS = aM.x; vH = aM.w; vA = step(aL.w, uT) * smoothstep(0., 1.2, uT - aL.w) * uIn;
-       float tl = sin(uT * .5 + aM.x * 9.) * .06; mat2 r = rot(tl); vec3 p = position * aM.y * shrink(c.y), nn = normal; p.xy = r * p.xy; nn.xy = r * nn.xy; vN = nn; vW = c + p; gl_Position = projectionMatrix * viewMatrix * vec4(vW, 1.); }`,
+     void main() { vec3 c = lpos(aL, aM, uT); vUv = uv; vS = aM.x; vH = aM.w; float age = uT - aL.w; vA = step(0., age) * smoothstep(0., 1., age) * uIn;  // vA: how lit; it appears small and swells as it lights (no see-through fade: they write depth)
+       float tl = sin(uT * .5 + aM.x * 9.) * .06; mat2 r = rot(tl); vec3 p = position * aM.y * shrink(c.y) * step(0., age) * mix(.15, 1., smoothstep(0., 1.4, age)) * mix(.25, 1., uIn), nn = normal; p.xy = r * p.xy; nn.xy = r * nn.xy; vN = nn; vW = c + p; gl_Position = projectionMatrix * viewMatrix * vec4(vW, 1.); }`,
     `uniform float uF; varying vec2 vUv; varying vec3 vN, vW; varying float vA, vS, vH; ${LAN}
      void main() { vec3 n = normalize(vN), v = normalize(cameraPosition - vW); float f = flick(vS), y = vUv.y, rim = pow(1. - abs(dot(n, v)), 2.), core = exp(-pow((y - .28) / .32, 2.));
        float rib = 1. - .35 * smoothstep(.9, 1., abs(sin(vUv.x * 37.7))) - .2 * smoothstep(.96, 1., abs(sin(y * 15.7)));  // 12 ribs and two seams of the paper
        vec3 paper = vH < .5 ? vec3(1., .52, .18) : vH < .8 ? vec3(1., .6, .22) : vec3(1., .44, .26), hot = vec3(1., .86, .55);
        vec3 c = gl_FrontFacing ? (paper * (.42 + .55 * rim + .25 * (1. - y)) + hot * core * .55) * rib * f : hot * (1.3 + .5 * core) * f;  // a warm rim, the core glowing through; inside, the flame's light
-       float a = vA * uF * (gl_FrontFacing ? .97 : 1.); if (a < .004) discard; gl_FragColor = vec4(c * a, a); }`, "pre", { depthWrite: true })), 46);
+       c *= .15 + .85 * vA; float a = uF; gl_FragColor = vec4(c * a, a); }`, "pre", { depthWrite: true })), 46);
   const lglow = obj(new THREE.Mesh(glowIG, mat(lU,
     `attribute vec4 aL, aM; attribute float aK; uniform float uIn, uPx; varying vec2 vQ; varying float vA, vK; ${LAN}
      void main() { vec3 c = lpos(aL, aM, uT); float on = step(aL.w, uT) * smoothstep(0., 1.2, uT - aL.w) * uIn, sh = shrink(c.y), f = flick(aM.x); vQ = position.xy; vK = aK; vec3 p;
@@ -572,10 +569,11 @@ export function createWonders(scene, camera, { renderer = null, room = {}, reduc
     start(p) { const d = p.dur, A = lanIG.attributes.aL.array, M = lanIG.attributes.aM.array, k = Math.round(NL * R(.72, 1)), hue = R(0, 1); lU.uEye.value.set(C.x, C.z);
       for (let i = 0; i < NL; i++) { if (i >= k) { A.set([0, 0, -999, 1e4], i * 4); continue; } const r = Math.random(), s = sgn();
         let x, z, y0, b;
-        if (r < .3) { x = R(-7.4, 7.4); z = R(.7, 3.2); y0 = R(5, 34); b = d * R(0, .35); }  // in the air in front of the home wall, already up: they fade in where you look
-        else if (r < .85) { const a = s > 0 ? R(-1.1, 1.1) : Math.PI + R(-1.1, 1.1), rr = R(11, 22); x = WC[0] + Math.cos(a) * rr; z = WC[1] + Math.sin(a) * rr; if (Math.abs(x) < Wl.home.x[1] + .6) x = s * (Wl.home.x[1] + R(.6, 4)); y0 = R(-12, 46); b = d * R(0, .5); }  // out over the open well
+        if (r < .6) { const yaw = Math.atan2(view.fz, view.fx) + R(-.5, .5) * camera.fov * Math.PI / 180 * camera.aspect, pt = Math.max(.45, Math.min(1.35, view.pitch + R(-.2, .4))), dx = Math.cos(pt) * Math.cos(yaw), dy = Math.sin(pt), dz = Math.cos(pt) * Math.sin(yaw);  // in the view: along a ray inside it, short of the wall
+          const t = Math.max(6, Math.min(40, free(dx, dy, dz) * R(.45, .9))); x = C.x + dx * t; z = C.z + dz * t; y0 = Math.max(-6, C.y + dy * t - R(0, 2.5)); b = d * R(0, .5); }  // above our cases, rising
+        else if (r < .88) { const a = s > 0 ? R(-1.1, 1.1) : Math.PI + R(-1.1, 1.1), rr = R(11, 22); x = WC[0] + Math.cos(a) * rr; z = WC[1] + Math.sin(a) * rr; if (Math.abs(x) < Wl.home.x[1] + .6) x = s * (Wl.home.x[1] + R(.6, 4)); y0 = R(-12, 46); b = d * R(0, .5); }  // out over the open well
         else { x = s * R(6.2, 9.5); z = R(.6, 8.4); y0 = R(-12, -3); b = d * R(0, .45); }  // just past the railings, up from below
-        A.set([x, z, y0, b], i * 4); M.set([Math.random(), R(.55, 1.15) * (r < .3 ? .85 : 1), R(.12, .3), (hue + R(-.2, .2) + 1) % 1], i * 4); }
+        A.set([x, z, y0, b], i * 4); M.set([Math.random(), R(.5, 1.1), R(.12, .3), (hue + R(-.2, .2) + 1) % 1], i * 4); }
       for (const k2 of ["aL", "aM"]) { const src = lanIG.attributes[k2].array, dst = glowIG.attributes[k2].array; for (let j = 0; j < 4; j++) dst.set(src, j * NL * 4); }
       const K = glowIG.attributes.aK.array; for (let i = 0; i < NL * 4; i++) K[i] = Math.floor(i / NL); dirty(lanIG); dirty(glowIG); p.count = k; p.hue = +hue.toFixed(2); return true; },
     tick(p, u, t) { lU.uT.value = t; lU.uIn.value = 1 - sm((u - .9) / .1); useVeil(VEIL.dusk, .45 * win(u, 0, .12, .85, 1)); } };
