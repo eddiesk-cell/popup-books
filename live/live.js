@@ -309,7 +309,7 @@ async function character(c, sp) {
   const model = clone(g.scene), pivot = new THREE.Group(), body = new THREE.Group();
   if (/animal/.test(c.model)) gradeAnimal(model, c.grade ?? sp.m.stage?.name);  // any 3D animal (assets/animals/, a book's own lite animal-*.glb copies, as extras3d.js reads them) takes the night/eve grade of the paper cards; the story's own characters stay as lit
   body.name = c.name;  // a game reads a tapped one by name (the shadow game's spots)
-  if (pp) body.userData.restage = to => pp.root.userData.restage(to, model);  // a light cue's "stage" swaps the cards of this clone (ambient.js): its materials may be its own by then (a game's glow clones them)
+  if (pp) body.userData.restage = (to, _, warm) => pp.root.userData.restage(to, model, warm);  // a light cue's "stage" swaps the cards of this clone (ambient.js): its materials may be its own by then (a game's glow clones them)
   model.traverse(o => { if (o.isMesh) { o.visible = !o.name.startsWith("Icosphere"); o.castShadow = o.receiveShadow = true; o.frustumCulled = false; } });
   pivot.rotation.y = rad(c.face ?? -90); pivot.add(model); body.add(pivot);
   body.updateMatrixWorld(true);

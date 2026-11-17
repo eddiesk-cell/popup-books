@@ -491,18 +491,18 @@ export function makeGame(sp, env) {
     c.state = state; c.phase = () => k;  // how far into the beat (tests, the recorder)
   } else if (G.pairs && (G.type === "pair" || G.type === "match")) {  // a match game without "pairs" (the book.json one, "tap each friend") plays as collect
     const pairs = G.pairs.filter(p => p.every(n => targets.some(o => o.name === n)) || console.warn("game: a pair not on this page:", p)), state = new Pair(pairs), name = i => targets[i].name, moves = [], walks = [];
-    const thing = nm => targets.find(o => o.name === nm);
+    const thing = nm => targets.find(o => o.name === nm), place = k => thing(state.pairs[k][1]);  // place: where pair k's thing goes
     c.open = i => !state.pairs.some((p, k) => state.done.has(k) && p[0] === name(i));  // a joined thing catches no tap
     c.tap = i => {
       const o = targets[i], prev = state.sel, r = state.tap(o.name);
       env.sparkle(at(o)); c.last = env.now();
-      if (r === "pick") { if (prev != null) glow(thing(state.pairs[prev][0]), 0); glow(o, 0.9); return; }
+      if (r === "pick") { if (prev != null) glow(thing(state.pairs[prev][0]), 0), glow(place(prev), 0); glow(o, 0.9); glow(place(state.sel), 0.45); return; }  // the picked thing glows, and its place softly: where it goes (owner 2026-11-17: "confusing on what/where to tap")
       if (r === "ignore") return;
-      const t = thing(state.pairs[prev][0]); glow(t, 0);
+      const t = thing(state.pairs[prev][0]); glow(t, 0); glow(place(prev), 0);
       if (r === "miss") return env.wobble(t, 6), env.wobble(o, 4), miss();
       env.foley(`game:${G.type}`, "pick"); const said = react(i); glow(t, G.type === "match" ? 0 : 0.6); glow(o, G.type === "match" ? 0 : 0.6);  // joined: it goes to its spot and stays lit (a home that is a whole mound or rock pile is not lit)
       if (G.type === "match" && sp.byName[t.name]) walks.push(home(t, o));  // a character walks (flies, hops) home
-      else { const p = t.parent; if (p) moves.push({ t, from: t.position.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); }
+      else { const ch = sp.byName[t.name], v = ch ? ch.pos : t.position, p = ch ? ch.body.parent : t.parent; if (p) { if (ch) ch.moved = true; moves.push({ v, from: v.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); } }  // a cast prop moves by its place (ch.pos: the viewer puts its body there every frame, so moving the body itself left it where it was)
       if (r === "won") { if (walks.length) env.count(`${state.pairs.length} of ${state.pairs.length}`); Promise.all([...walks, said]).then(() => (targets.forEach(o => glow(o, 0)), c.win())); } else env.count(`${state.done.size} of ${state.pairs.length}`);  // won: the joined pairs stop glowing for the rest of the page
     };
     const home = (t, o) => {  // each friend stands at the edge of its home, on the side it comes from; the friends of one home side by side
@@ -510,7 +510,7 @@ export function makeGame(sp, env) {
       const c = at(o), p = c.clone().add(at(t).sub(c).setY(0).normalize().multiplyScalar(G.stop ?? Math.min(0.12, Math.max(z.x, z.z) / 2 + 0.02))).add(new THREE.Vector3((k - (mates.length - 1) / 2) * (G.spread ?? 0.05), 0, 0));
       return env.act({ do: G.gait?.[t.name] ?? "walk", who: t.name, to: [p.x, -p.z, p.y], stop: 0, ...(G.secs && { secs: G.secs }), ...(G.clip?.[t.name] && { clip: G.clip[t.name] }), ...(G.rate?.[t.name] && { rate: G.rate[t.name] }) }).then(() => env.sparkle(at(o)));
     };
-    c.tick = now => { for (const m of moves) { const k = Math.min(1, (now - m.t0) / 600); m.t.position.lerpVectors(m.from, m.to, k * k * (3 - 2 * k)); } };
+    c.tick = now => { for (const m of moves) { const k = Math.min(1, (now - m.t0) / 900); m.v.lerpVectors(m.from, m.to, k * k * (3 - 2 * k)); m.v.y += 0.08 * Math.sin(Math.PI * k); } };  // it flies: a short arc up and down into its place
     c.auto = () => { if (state.complete) return null; const k = state.sel ?? state.pairs.findIndex((_, i) => !state.done.has(i)); return { i: targets.findIndex(o => o.name === state.pairs[k][state.sel == null ? 0 : 1]) }; };  // the thing, then its spot
     c.hint = () => { const k = state.sel ?? state.pairs.findIndex((_, i) => !state.done.has(i)), p = state.pairs[k]; if (p) { env.sparkle(at(thing(state.sel == null ? p[0] : p[1]))); env.wobble(thing(state.sel == null ? p[0] : p[1]), 4); } };
     c.state = state;

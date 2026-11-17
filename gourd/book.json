@@ -144,10 +144,6 @@
      [
       "thread-skein",
       "loom"
-     ],
-     [
-      "fish-trap",
-      "water-jar"
      ]
     ],
     "before": "6.4",
@@ -171,15 +167,39 @@
     "7.6"
    ],
    "game": {
-    "type": "collect",
-    "tap": "light",
+    "type": "match",
     "before": "7.5",
+    "pairs": [
+     [
+      "p7-c10",
+      "fire"
+     ],
+     [
+      "posed-dog",
+      "fire"
+     ],
+     [
+      "posed-calf",
+      "fire"
+     ],
+     [
+      "posed-duck",
+      "fire"
+     ],
+     [
+      "little-lion",
+      "fire"
+     ]
+    ],
+    "halo": 11452671,
+    "spread": 0.05,
     "start": "Who is still out in the dark? Tap the shining eyes!",
     "praise": "Everyone is by the fire!",
     "voice": {
      "start": "game.7.start",
      "praise": "game.7.praise"
-    }
+    },
+    "stop": 0.15
    }
   },
   {

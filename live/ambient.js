@@ -168,9 +168,11 @@ async function puppet(id, def, stage) {
   if (!art) root.traverse(o => o.isMesh && stage === "night" && o.material.color.setScalar(0.55));
   if (dim) meshes.forEach(m => (m.material.color.multiplyScalar(0.45), m.material.emissiveIntensity *= 0.45));  // sRGB x0.7, about as dark as the night cards, colour kept
   // a light cue's "stage" (gourd s09 9.5: the sun comes back on a night page) turns the puppet to that time's card, as it would have been built for it
-  root.userData.restage = async (to, into = root) => {  // into: a clone of this puppet (the cast's), whose materials a game's glow may have made its own
+  root.userData.restage = async (to, into = root, warm) => {  // into: a clone of this puppet (the cast's), whose materials a game's glow may have made its own; warm: only fetch the cards
     const dk = to === "night" && !(def.person ?? PERSON.test(id)), st = dk ? "day" : to, v = VER[st] && (def.versions || []).includes(st) ? VER[st] : "";
+    const n0 = warm || (into.userData.staged = (into.userData.staged ?? 0) + 1);  // the latest cue wins: gourd 4.5 asks night then day 1.3 s later, and a night card still downloading landed after the cached day one, leaving its people blue-grey
     const tex = art ? await Promise.all(parts.map(n => picture(`puppets/${id}/${n}${v}.png`))) : [];
+    if (warm || n0 !== into.userData.staged) return;
     const own = into === root ? meshes : parts.map(n => into.getObjectByName(n)?.children.find(o => o.isMesh));  // each part's card hangs on the pin named after it (acts.js puppetModel)
     own.forEach((m, i) => { if (!m) return; if (tex[i]) { m.material.map = m.material.emissiveMap = tex[i]; m.material.needsUpdate = true; }
       m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.15 * 0.45 : 0.15; });
@@ -990,6 +992,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     (LI.cues || []).forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
       && (cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c),
         c.stage && [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage)))));  // "stage": "day": every paper puppet to its day card from this cue
+  new Set((LI.cues || []).map(c => c.stage).filter(Boolean)).forEach(s => cast.forEach(ch => ch.body.userData.restage?.(s, null, true)));  // the cast's cards for each "stage" fetched as the page is made, so a cue never waits on the network (4.5's night cards came after its day cue on a slow line)
     for (const [o] of tweens) { const s = lightNow(o); o.color.copy(s.c); o.intensity = s.i; o.position.copy(s.p); }
     for (const [o, w] of lit) if (w.k !== w.to) glow(o, (w.k = w.from + (w.to - w.from) * smooth((now - w.t0) / w.secs)));
     for (const f of flicker) {  // a flame: 0.85..1.0 with soft noise at 6-10 Hz
