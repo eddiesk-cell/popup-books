@@ -587,7 +587,7 @@ function ahead(sp) {  // what the next turn needs (the next spread, this one's e
 function moral() {  // after the last spread: a calm page, the moral read aloud (book.json's "moral" spread, its diorama, has just read it)
   mode = "moral"; quiet(); $("moral").hidden = false; notice.end($("moral")); $("replay").hidden = true; snd.setBed([["night-breeze", 0.15], ["leaves-breeze", 0.15]].filter(([n]) => sm.beds[n]).slice(0, 1));  // a calm page
   $("bar").classList.add("on"); const ml = book.moral?.lines || story.moral.map(l => l.id); if (!ml.every(id => S.page.lines.includes(id))) reader.read(ml);  // skipped when the last spread has just read the moral (Kapi's "moral", the turtle's "s11")
-  import("./learn.js").then(m => m.offer(bookId, () => lang, () => reader.stop())).catch(() => {});  // the gold "Play and learn" door, only for a book that has a question bank
+  if (book?.learn) import("./learn.js").then(m => m.offer(bookId, () => lang, () => reader.stop())).catch(() => {});  // the gold "Play and learn" door: only a book whose book.json says "learn": true has a question bank (Mali's 404 for one it never had stopped a publish)
 }
 $("again").onclick = () => mode === "moral" && reader.read(book.moral?.lines || story.moral.map(l => l.id));
 $("back").onclick = () => {
