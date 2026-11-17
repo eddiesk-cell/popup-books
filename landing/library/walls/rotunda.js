@@ -12,7 +12,7 @@
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import { archPts, onFacet } from "./walls.js";
 
-const FLOOR = `uniform vec2 uC; uniform float uA, uRose; varying vec3 vW;
+const FLOOR = `uniform vec2 uC; uniform float uA, uRose, uRugR; uniform sampler2D uRug; varying vec3 vW;
 float h1(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
 float vn(vec2 p) { vec2 i = floor(p), f = fract(p); f *= f * (3. - 2. * f); return mix(mix(h1(i), h1(i + vec2(1., 0.)), f.x), mix(h1(i + vec2(0., 1.)), h1(i + vec2(1., 1.)), f.x), f.y); }
 vec3 boards(vec2 p, float w, float L) {  // boards w wide along y, L long, joints staggered per column: walnut, each board its own shade, grain along it, dark grooves
@@ -26,10 +26,10 @@ void main() {
   vec3 col = boards(vW.xz, .19, 2.2);
   float band = smoothstep(uA - 1.02 - px, uA - 1.02 + px, rho);  // the border: boards running round the wall
   col = mix(col, boards(vec2(an * uA, rho), .23, 1.9) * .82, band);
-  float star = .9 * (.55 + .45 * pow(abs(cos(an * 4.)), 6.));  // the rosette under the axis: a paler eight-point star in rings of brass
-  col = mix(col, boards(vW.xz * vec2(1., -1.), .12, .9) * 1.45, smoothstep(star + px, star - px, rho) * .8 * uRose);
-  float brass = 0.; for (int i = 0; i < 4; i++) { float r = i == 0 ? .45 : i == 1 ? .95 : i == 2 ? 1.35 : uA - 1.06; brass = max(brass, smoothstep(.016 + px, .016, abs(rho - r)) * (i < 3 ? uRose : 1.)); }
-  col = mix(col, vec3(.42, .27, .08), brass * .85);
+  float rug = smoothstep(uRugR + px, uRugR - px, rho) * uRose;  // the antique round rug under the axis (owner 2026-11-17: "a beautiful old rug pattern that looks priceless from the ancient time", not gold rings)
+  col *= 1. - .45 * smoothstep(uRugR + .1, uRugR, rho) * (1. - rug) * uRose;  // its soft shadow on the boards round its edge
+  col = mix(col, texture2D(uRug, .5 + q / uRugR * vec2(.494, -.494)).rgb * .3 * mix(1., .78, smoothstep(.55, 1., rho / uRugR)), rug);  // in the room's light, a little darker toward its worn edge
+  col = mix(col, vec3(.42, .27, .08), smoothstep(.016 + px, .016, abs(rho - (uA - 1.06))) * .85);  // the brass line along the border
   col *= mix(.5, 1., smoothstep(uA - .05, uA - 1.6, rho));  // darker into the foot of the wall
   gl_FragColor = linearToOutputTexel(vec4(col, 1.));
 }`;
@@ -99,7 +99,8 @@ export function createRotunda(THREE, plan, levels, { phone = false } = {}) {
     for (const [x, z, rr, tube] of [[plan.c[0], plan.c[1], T.a - .03, .07], [hx, hz, hr + .02, .06], [L.P.c[0], L.P.c[1], L.P.ri + T.deep - .1, .07]]) add(new THREE.TorusGeometry(rr, tube, 6, 96).rotateX(Math.PI / 2), M.makeTranslation(x, L.ceil.y - .05, z), GOLD); }  // gilt rims: where the tower rises, round the stair's opening, along the hall's wall
   // the oculus: a shallow cornice at the top of the wall and a gilt rim round the opening
   slab(plan, plan.r - .55, T.top, { top: false }); add(new THREE.TorusGeometry(plan.r - .58, .07, 6, 120).rotateX(Math.PI / 2), M.makeTranslation(plan.c[0], T.top - T.slab - T.fascia, plan.c[1]), GOLD);
-  const floors = new Map(), fmat = new THREE.ShaderMaterial({ uniforms: { uC: { value: new THREE.Vector2(...plan.c) }, uA: { value: plan.T.a }, uRose: { value: 1 } }, fragmentShader: FLOOR,
+  const rugT = new THREE.TextureLoader().load(new URL("../art/rug.webp", import.meta.url).href); rugT.colorSpace = THREE.SRGBColorSpace; rugT.anisotropy = 8;
+  const floors = new Map(), fmat = new THREE.ShaderMaterial({ uniforms: { uC: { value: new THREE.Vector2(...plan.c) }, uA: { value: plan.T.a }, uRose: { value: 1 }, uRug: { value: rugT }, uRugR: { value: 1.9 } }, fragmentShader: FLOOR,  // uRugR: clear of home's stairwell (3.37 m from the axis, its coping 1.32 m)
     vertexShader: "varying vec3 vW; void main() { vec4 w = modelMatrix * vec4(position, 1.); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }" });
   const floorGeo = (R, y, holes = []) => { const sh = new THREE.Shape(R.corners.map(([x, z]) => new THREE.Vector2(x, -z))); for (const [x, z, r] of holes) sh.holes.push(new THREE.Path(new THREE.EllipseCurve(x, -z, r, r, 0, 2 * Math.PI, true).getPoints(96)));
     const g = new THREE.ShapeGeometry(sh, 1), p = g.attributes.position; for (let i = 0; i < p.count; i++) p.setXYZ(i, p.getX(i), y, -p.getY(i)); g.deleteAttribute("normal"); g.deleteAttribute("uv"); return g; };
