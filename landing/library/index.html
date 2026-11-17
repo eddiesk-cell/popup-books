@@ -36,8 +36,20 @@
 <p class="cap" id="cap" role="status" hidden></p>
 <div class="carry" id="carry"></div>
 <p class="hint" id="hint" role="status" hidden></p>
-<div class="veil" id="veil"><video id="film" muted playsinline preload="metadata"></video><button type="button" id="skip" class="skip" hidden></button></div>
+<div class="veil" id="veil"><div class="doors" id="doors"><div class="set"><div class="rig">
+  <img class="beyond" src="intro/beyond.webp" alt="" fetchpriority="high"><i class="haze"></i>
+  <picture class="leaf l"><source media="(orientation: portrait)" srcset="intro/leaf-l-p.webp"><img src="intro/leaf-l.webp" alt="" fetchpriority="high"></picture>
+  <picture class="leaf r"><source media="(orientation: portrait)" srcset="intro/leaf-r-p.webp"><img src="intro/leaf-r.webp" alt="" fetchpriority="high"></picture>
+  <picture class="wall"><source media="(orientation: portrait)" srcset="intro/wall-p.webp"><img src="intro/wall.webp" alt="" fetchpriority="high"></picture><i class="shine"></i>
+</div></div></div></div>
+<button type="button" id="skip" class="skip" hidden></button>
 <p class="loading" id="loading" role="status"></p>
+<script>/* the intro doors (library.css "the doors") start here, the moment their cards decode, long before the module graph; window.__intro resolves when the camera is at the threshold and library.js takes over (through the doorway, the fall). A return visit or ?intro=0: none. */
+{ const h = document.documentElement, d = document.getElementById("doors"); let seen = new URLSearchParams(location.search).get("intro") === "0"; try { seen ||= localStorage.getItem("wst-intro-seen") === "1"; } catch {}
+  const play = () => new Promise(ok => { d.classList.remove("go", "in"); void d.offsetWidth; h.dataset.intro = "go"; d.classList.add("go"); d.onanimationend = e => { if (e.animationName === "through") { h.dataset.intro = "through"; ok(); } }; });
+  window.__introPlay = () => Promise.all([...d.querySelectorAll("img")].map(i => i.decode())).then(play, play);  // a card that fails still opens the rest
+  d.hidden = seen; window.__intro = seen ? null : __introPlay(); }
+</script>
 <script>/* shortcut: the loading line's six words are repeated here (the words table in library.js owns them, and wins once it runs) so the note paints before the module graph arrives; drop when the words move to a tiny shared file */
 { const L = { en: "Opening the library...", lo: "ກຳລັງເປີດຫໍສະໝຸດ...", th: "กำลังเปิดห้องสมุด...", zh: "正在打开图书馆…", ja: "としょかんを ひらいています…", ko: "도서관을 여는 중…" }; let g = new URLSearchParams(location.search).get("lang"); try { g = L[g] ? g : localStorage.getItem("wst-lang"); } catch {} if (!L[g]) g = (navigator.languages || ["en"]).map(c => Object.keys(L).find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en"; document.documentElement.lang = g; document.getElementById("loading").textContent = L[g]; }
 </script>

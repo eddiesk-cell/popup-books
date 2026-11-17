@@ -1,4 +1,4 @@
-// The Grand Library page (L3b): painted layers + instanced books + the viewer's sunrays, behind a short intro film.
+// The Grand Library page (L3b): painted layers + instanced books + the viewer's sunrays, behind the intro doors (index.html, library.css) and the fall down the well.
 // room.json drives everything: layers (any number; optional repeatY {count, spacing, from}, per-layer fog 0..1), cams, shafts, windows, fog {color, near, far}.
 import * as THREE from "three";
 import { makeBooks } from "./books.js";
@@ -6,10 +6,13 @@ import { createRing } from "./ring.js";
 import { grow } from "./grow.js";
 import { createFront } from "./front.js";
 import { titleNodes, fontsReady } from "./titles.js";
-import { createPortal, createFloorPortal, regionLabel, regionPlaque, STARS, TUNNEL } from "./portals.js";
+import { createPortal, createFloorPortal, createStairUp, regionLabel, regionPlaque, STARS, TUNNEL } from "./portals.js";
 import { createSky } from "./sky.js";
 import { loadCases3d } from "./cases3d.js";
 import { wireLiving } from "./livingwire.js";
+import { createWonders } from "./wonders.js";
+import { createWalls, createLamps } from "./walls/walls.js";
+import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
 const $ = s => document.querySelector(s), qs = new URLSearchParams(location.search);
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -74,6 +77,14 @@ const grown = grow(room, catalog);
 const c3 = await loadCases3d(THREE, scene, room, base, { phone, offsets: grown.caseSets });  // our cases as real 3D (null without a cases.glb)
 const sky = createSky(THREE, room.sky); scene.add(sky.mesh);
 { const wc = room.wellCentre ?? [0, 0, 2.5], back = new THREE.Mesh(new THREE.CylinderGeometry(95, 95, 1300, 24, 1, true), new THREE.MeshBasicMaterial({ color: 0x1b1109, side: THREE.BackSide, fog: false })); back.position.set(wc[0], 250, wc[2]); back.renderOrder = -5; scene.add(back); }  // a dark backing behind the tower cards: the seams between them no longer show the sky
+const walls = createWalls(THREE, room, { base, phone, anisotropy: renderer.capabilities.getMaxAnisotropy() }); scene.add(walls.well, walls.home, walls.homeHi);// every wall of books is one seamless wall (walls/walls.js)
+const lamps = createLamps(THREE, (() => { const L = room.walls.lamps, Wl = room.walls.well, out = [], away = id => id !== "wonder";  // sconces: up the well's uprights, on the two outer sides of every bookcase unit, flanking the door
+  for (let y = Wl.y[0] + 6, i = 0; y < Wl.y[1] - 6; y += L.step, i++) out.push({ ...walls.wellSpot((i * L.turn) % Wl.bays, y), s: L.wellScale });
+  if (c3) { const b = new THREE.Box3().setFromObject(c3.group), zc = (b.min.z + b.max.z) / 2 + .12, y = b.max.y - .55;
+    [[0, 0, 0], ...grown.caseSets].forEach((o, j) => { const sid = grown.setStation[j], when = id => id === sid || LINKS.some(l => l.from === id && l.to === sid && !l.portal);  // shown with its cases (onStation's near)
+      out.push({ p: [b.min.x + o[0], y + o[1], zc + o[2]], n: [-1, 0, 0], when }, { p: [b.max.x + o[0], y + o[1], zc + o[2]], n: [1, 0, 0], when }); }); }
+  for (const [x, y] of L.door) out.push({ p: [x, y, room.walls.door.z - walls.pd - .005], n: [0, 0, -1], when: away });  // on the pilasters that flank the arch
+  return out; })(), { reduced }); scene.add(lamps.solid, lamps.light);
 { const wst = room.stations.find(s => s.id === "wonder"); if (wst) {  // the Wonder Hall's round stage and a warm pool of light
   const c = document.createElement("canvas"); c.width = c.height = 512; const x = c.getContext("2d"), g = x.createRadialGradient(256, 256, 0, 256, 256, 256); g.addColorStop(0, "#6a4222"); g.addColorStop(.8, "#3a2210"); g.addColorStop(1, "#24140a"); x.fillStyle = g; x.beginPath(); x.arc(256, 256, 254, 0, 7); x.fill();
   x.strokeStyle = "#e2b459"; for (const [r, w] of [[250, 8], [236, 2], [150, 3], [60, 2]]) { x.lineWidth = w; x.beginPath(); x.arc(256, 256, r, 0, 7); x.stroke(); }
@@ -166,7 +177,7 @@ motes.frustumCulled = false; motes.renderOrder = 60; scene.add(motes);
 
 // a soft glow over the opening at the top of the well, so the tower tops melt into the sky (3 big warm additive discs)
 { const hz = document.createElement("canvas"); hz.width = hz.height = 256; const x = hz.getContext("2d"), g = x.createRadialGradient(128, 128, 0, 128, 128, 128); [[0, 1], [.25, .75], [.5, .35], [.75, .1], [1, 0]].forEach(([o, al]) => g.addColorStop(o, `rgba(255,214,150,${al})`)); x.fillStyle = g; x.fillRect(0, 0, 256, 256); const ht = new THREE.CanvasTexture(hz); ht.colorSpace = THREE.SRGBColorSpace;
-  [[135, 90, .05], [150, 150, .06]].forEach(([y, r, o]) => { const h = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: ht, transparent: true, opacity: o, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); h.rotation.x = -Math.PI / 2; h.position.set((room.wellCentre ?? [0, 0, 2.5])[0], y, (room.wellCentre ?? [0, 0, 2.5])[2]); h.scale.set(r * 2, r * 2, 1); h.renderOrder = 19.2; scene.add(h); }); }
+  [[135, 90, .05], [150, 150, .06], [198, 44, .5], [206, 24, .55]].forEach(([y, r, o]) =>  /* the last two: the oculus itself, a soft round glow at the top of the well */ { const h = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: ht, transparent: true, opacity: o, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); h.rotation.x = -Math.PI / 2; h.position.set((room.wellCentre ?? [0, 0, 2.5])[0], y, (room.wellCentre ?? [0, 0, 2.5])[2]); h.scale.set(r * 2, r * 2, 1); h.renderOrder = 19.2; scene.add(h); }); }
 // the mist (two slow drifting veils) and now and then a far book floating from one shelf to another
 const mistT = (() => { const c = document.createElement("canvas"); c.width = 256; c.height = 64; const x = c.getContext("2d"); for (let i = 0; i < 26; i++) { const px = (i * 97 % 256), py = 12 + (i * 53 % 40), r = 30 + (i * 31 % 30), g = x.createRadialGradient(px, py, 0, px, py, r); g.addColorStop(0, "rgba(255,225,180,.5)"); g.addColorStop(1, "rgba(255,225,180,0)"); x.fillStyle = g; for (const o of [-256, 0, 256]) { x.save(); x.translate(o, 0); x.fillRect(px - r, py - r, 2 * r, 2 * r); x.restore(); } }
   const f = x.createLinearGradient(0, 0, 0, 64); f.addColorStop(0, "rgba(0,0,0,0)"); f.addColorStop(.35, "#000"); f.addColorStop(.65, "#000"); f.addColorStop(1, "rgba(0,0,0,0)"); x.globalCompositeOperation = "destination-in"; x.fillStyle = f; x.fillRect(0, 0, 256, 64);  // fade to nothing at the top and bottom: the blobs were cut straight at the canvas edge, a hard line across the top shelf
@@ -178,24 +189,61 @@ let fT = 8, fA = [0, 0, 0], fB = [0, 0, 0]; const FD = 7;
 function floater(dt) { fT -= dt; if (fT < -FD) { fT = 12 + Math.random() * 14; } if (fT > 0) { fb.material.opacity = 0; return; }
   if (fT > -dt * 1.01 || fb.userData.go !== 1) { if (fb.userData.go !== 1) { fb.userData.go = 1; const s = Math.random() < .5 ? -1 : 1; fA = [-9 * s, 5 + Math.random() * 4, -12]; fB = [9 * s, 4 + Math.random() * 6, -12]; } }
   const u = -fT / FD, e = ease(u); fb.position.set(fA[0] + (fB[0] - fA[0]) * e, fA[1] + (fB[1] - fA[1]) * e + Math.sin(u * Math.PI) * .6, fA[2]); fb.rotation.z = Math.sin(u * 6) * .25; fb.material.opacity = Math.sin(u * Math.PI) * .85; if (u > .99) fb.userData.go = 0; }
-// rays of warm light from the bright top of the well: ONE instanced draw of slanted open cylinders at three depths (near, middle, far), each with a bright core and soft edges (a glowing column from below, end-on, and from the side),
-// and a cloud of dust drifting down inside them, denser in the beams close to you. They fade out for a camera below their bottom (y -12, the lower rooms), where their open ends read as pale rings. They rise in strength as you look up, so the books at the cases are never washed out.
-const rU = { uT: { value: 0 }, uUp: { value: 0 } }, WC = room.wellCentre ?? [0, 0, 2.5], RB = -12, RT = 92, RS = [-.16, -.1], TWO_PI = Math.PI * 2, rs = i => { const x = Math.sin(i * 91.7 + 3.1) * 43758.5; return x - Math.floor(x); };
-const rayMat = new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, fog: false,
-  vertexShader: "varying vec3 vN, vV, vA; varying float vH, vI, vD; void main() { vH = position.y + .5; vI = instanceColor.r; mat4 M = modelMatrix * instanceMatrix; vec4 w = M * vec4(position, 1.); vN = normalize(mat3(M) * normal); vV = normalize(cameraPosition - w.xyz); vD = length(cameraPosition - w.xyz); vA = normalize(mat3(M) * vec3(0., 1., 0.)); gl_Position = projectionMatrix * viewMatrix * w; }",
-  fragmentShader: "uniform float uT, uUp; varying vec3 vN, vV, vA; varying float vH, vI, vD; void main() { float e = abs(dot(normalize(vN), normalize(vV))), on = smoothstep(.5, .9, abs(dot(vA, vV))); float body = mix(pow(e, .9), .8, on), core = mix(pow(e, 5.), .9, on); float a = (body * .3 + core * .6) * vI * smoothstep(.03, .22, vH) * smoothstep(1., .72, vH) * (.55 + .45 * vH) * (.85 + .15 * sin(uT * .5 + vH * 40.)) * (.12 + .88 * uUp) * smoothstep(1., 12., vD) * smoothstep(-16., -6., cameraPosition.y); gl_FragColor = vec4(vec3(1., .82, .5) * a, a); }" });
-const rayGeo = new THREE.CylinderGeometry(1, 1, 1, 12, 1, true), rayAxis = new THREE.Vector3(RS[0] * (RT - RB), RT - RB, RS[1] * (RT - RB)), rayQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), rayAxis.clone().normalize());
-const eye0 = new THREE.Vector3(...(room.stations?.[0]?.cam.p ?? room.cams.room.p)), rays = [], NR = phone ? 12 : 22, rayMesh = new THREE.InstancedMesh(rayGeo, rayMat, NR), RM = new THREE.Matrix4();
-for (let i = 0; i < NR; i++) { const grp = i % 3, ang = rs(i) * TWO_PI, rad = [2.5 + rs(i + 40) * 3, 6 + rs(i + 40) * 7, 14 + rs(i + 40) * 16][grp], r = [.7, 1.4, 2.8][grp] * (.7 + rs(i + 80) * .6);  // near, middle, far: the far ones are wider
-  const B = new THREE.Vector3(WC[0] + Math.cos(ang) * rad, RB, WC[2] + Math.sin(ang) * rad); rayMesh.setMatrixAt(i, RM.compose(B.clone().addScaledVector(rayAxis, .5), rayQ, new THREE.Vector3(r, rayAxis.length(), r)));
-  rayMesh.setColorAt(i, new THREE.Color((grp ? 1 : .55) * (.6 + rs(i + 120) * .6), 0, 0)); rays.push({ B, r, w: 1 / (1 + Math.hypot(B.x - eye0.x, B.z - eye0.z) / 6) }); }
-rayMesh.renderOrder = 29; rayMesh.frustumCulled = false; scene.add(rayMesh);
-const DN = phone ? 900 : 3200, wsum = rays.reduce((a, q) => a + q.w, 0), dP = new Float32Array(DN * 3), dAx = new Float32Array(DN * 3), dR = new Float32Array(DN * 4); let di = 0;
-for (const q of rays) for (let k = 0, n = Math.round(DN * q.w / wsum); k < n && di < DN; k++, di++) { const rr = Math.sqrt(rs(di + 7)) * q.r * .9, an = rs(di + 9) * TWO_PI;
-  dP.set([q.B.x + Math.cos(an) * rr, q.B.y, q.B.z + Math.sin(an) * rr], di * 3); dAx.set(rayAxis.toArray(), di * 3); dR.set([rs(di + 11), .002 + rs(di + 13) * .004, rs(di + 15), .6 + rs(di + 17) * 1.4], di * 4); }
-const dg = new THREE.BufferGeometry(); dg.setAttribute("position", new THREE.BufferAttribute(dP, 3)); dg.setAttribute("aAx", new THREE.BufferAttribute(dAx, 3)); dg.setAttribute("aR", new THREE.BufferAttribute(dR, 4)); dg.setDrawRange(0, di);
+// rays of warm light from the bright top of the well (Eddie 2026-11-17: "make the lights really come down ... like a real 3D"), laid out for the station you stand at (placeAir, on every arrival).
+// ONE instanced draw of soft open columns, all parallel (one sun through the oculus): each glows through its middle with soft edges and a noise drifting down it, and keeps its place in the
+// room as you turn and walk. Beams that land on the station's floor come all the way down and leave a warm pool where they land (the same draw: the geometry's floor disc); beams in the open
+// well fall past and fade; a few lean into the well's wall, and the wall shader lights the books they cross (walls.setBeams); one lights the Wonder Hall's stage. Dust drifts down only
+// inside the beams, thickest in the ones near you. Fainter looking level, full looking up, so the books at the cases are never washed out.
+const WC = room.wellCentre ?? [0, 0, 2.5], RW = room.walls, rU = { uT: { value: 0 }, uUp: { value: 0 }, uWl: { value: new THREE.Vector4(WC[0], WC[2], RW.well.r, 1) }, uHw: { value: new THREE.Vector4(RW.home.z, RW.home.x[1], RW.door.z, RW.door.x[1]) } }, RL = 104, TWO_PI = Math.PI * 2, rs = i => { const x = Math.sin(i * 91.7 + 3.1) * 43758.5; return x - Math.floor(x); };
+const NOISE = "float h2(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); } float vn(vec2 p) { vec2 i = floor(p), f = fract(p); f *= f * (3. - 2. * f); return mix(mix(h2(i), h2(i + vec2(1., 0.)), f.x), mix(h2(i + vec2(0., 1.)), h2(i + vec2(1., 1.)), f.x), f.y); }";
+const rayMat = new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending, fog: false,  // instanceColor: strength, the foot's fade (m), the pool's size (0: no pool)
+  vertexShader: `attribute float aCap; varying vec3 vN, vV, vA, vI, vW; varying vec2 vQ; varying float vH, vD, vL, vCap, vBy; void main() { mat4 M = modelMatrix * instanceMatrix; vI = instanceColor; vCap = aCap; vL = length(M[1].xyz); vA = M[1].xyz / vL; vec3 foot = (M * vec4(0., -.5, 0., 1.)).xyz; vBy = foot.y; vec4 w;
+    if (aCap > .5) { w = vec4(foot + vec3(position.x, 0., position.y) * length(M[0].xyz) * instanceColor.z + vec3(0., .02, 0.), 1.); vQ = position.xy; vH = 0.; } else { w = M * vec4(position, 1.); vQ = position.xz; vH = position.y + .5; }
+    vN = normalize(mat3(M) * normal); vV = normalize(cameraPosition - w.xyz); vD = length(cameraPosition - w.xyz); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`,
+  fragmentShader: `uniform float uT, uUp; uniform vec4 uWl, uHw; varying vec3 vN, vV, vA, vI, vW; varying vec2 vQ; varying float vH, vD, vL, vCap, vBy; ${NOISE}
+  void main() { float a, s = vH * vL, lv = vI.z > 0. ? .5 : -vI.z, up = lv + (1. - lv) * uUp, fan = step(lv, .2);  // z: a landing beam's pool size, or minus its strength looking level; fan: home's rays from the oculus
+    float dw = min(uWl.z - length(vW.xz - uWl.xy), uWl.w > .5 ? min(abs(vW.x) < uHw.y ? abs(vW.z - uHw.x) : 9., abs(vW.x) < uHw.w ? abs(vW.z - uHw.z) : 9.) : 9.);  // metres to the nearest wall: a beam melts into the books it meets (they light up there), never a hard edge
+    if (vCap > .5) { if (vI.z <= 0.) discard; a = vI.x * .34 * smoothstep(1., .08, length(vQ)) * (.7 + .3 * vn(vQ * 2.5 + uT * .1)) * (.65 + .35 * up); }
+    else { float e = abs(dot(normalize(vN), normalize(vV))), on = smoothstep(.5, .9, abs(dot(vA, vV))) * smoothstep(6., 30., vD), body = mix(pow(e, .9), mix(.55, .8, fan), on), core = mix(pow(e, 5.), mix(.6, .9, fan), on);  // end-on glow only far off (up the well), never a beam beside you
+      float n = vn(vec2(vQ.x * 2.3 + s * .03, s * .09 + uT * .5)) * .6 + vn(vec2(vQ.y * 3.7 - s * .04, s * .25 + uT * 1.1)) * .4;  // the noise drifts down the beam
+      a = mix(.85, 1., fan) * (body * .3 + core * .6) * vI.x * smoothstep(0., vI.y, s) * smoothstep(1., .72, vH) * (.62 + .38 * vH) * mix(.55 + .8 * n, .72 + .5 * n, fan) * up * smoothstep(.4, 2.5, vD) * smoothstep(-3., 3., cameraPosition.y - vBy) * smoothstep(0., 2.2, dw); }
+    gl_FragColor = vec4(vec3(1., .82, .5) * a, a); }` });
+const rayAxis = new THREE.Vector3(-.16, 1, -.1).normalize(), rayQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), rayAxis), rayGeo = mergeGeometries([new THREE.CylinderGeometry(1, 1, 1, 16, 1, true), new THREE.CircleGeometry(1, 28)]);
+rayGeo.setAttribute("aCap", new THREE.BufferAttribute(new Float32Array(rayGeo.attributes.position.count).map((_, i) => +(i >= 17 * 2)), 1));  // the column's 34 vertices first, then the floor disc's
+const rays = [], NR = phone ? 16 : 28, rayMesh = new THREE.InstancedMesh(rayGeo, rayMat, NR), RM = new THREE.Matrix4(), RC = new THREE.Color();
+rayMesh.renderOrder = 29; rayMesh.frustumCulled = false; rayMesh.name = "rays"; scene.add(rayMesh);
+const DN = phone ? 900 : 3200, dP = new Float32Array(DN * 3), dAx = new Float32Array(DN * 3), dR = new Float32Array(DN * 4);
+for (let i = 0; i < DN; i++) dR.set([rs(i + 11), .002 + rs(i + 13) * .004, rs(i + 15), .6 + rs(i + 17) * 1.4], i * 4);
+const dg = new THREE.BufferGeometry(); dg.setAttribute("position", new THREE.BufferAttribute(dP, 3)); dg.setAttribute("aAx", new THREE.BufferAttribute(dAx, 3)); dg.setAttribute("aR", new THREE.BufferAttribute(dR, 4));
+function placeAir(id) {  // the beams, their dust, the motes and the mist for station id (the home layout moved and re-laid for each room); the lamps of hidden bookcases hidden
+  const s = STATIONS.find(q => q.id === id) ?? home(), E = new THREE.Vector3(...s.cam.p), fy = E.y - 1.7, d = E.clone().sub(new THREE.Vector3(...home().cam.p)), seed = [...id].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 7);
+  const fl = room.layers.find(l => Math.abs(Math.abs(l.rot?.[0] ?? 0) - Math.PI / 2) < .01 && !l.rot?.[1] && Math.abs(l.p[1] - fy) < .3 && Math.abs(E.x - l.p[0]) < l.size[0] / 2 && Math.abs(E.z - l.p[2]) < l.size[1] / 2);  // the floor you stand on
+  const F = fl ? [fl.p[0] - fl.size[0] / 2 + .9, fl.p[0] + fl.size[0] / 2 - .9, fl.p[2] - fl.size[1] / 2 + .9, fl.p[2] + fl.size[1] / 2 - .9] : [E.x - 3, E.x + 3, E.z - 3, E.z + 3];
+  const cases = grown.setStation.includes(id), add = (B, r, I, fade, pool, near) => rays.push({ B, r, I, L: RL, fade, pool, w: near / (1 + Math.hypot(B.x - E.x, B.z - E.z) / 6) }); rays.length = 0;
+  if (!cases) add(new THREE.Vector3(E.x, fy, E.z - 3.2), 1.5, 1.1, .6, 1.5, 2);  // a stage (the Wonder Hall): one beam straight onto its middle
+  for (let j = 0, n = 0; j < 300 && n < (phone ? 3 : 5); j++) { const x = F[0] + rs(seed + j) * (F[1] - F[0]), z = F[2] + rs(seed + j + 300) * (F[3] - F[2]);  // onto the floor: never between you and the books, never on you
+    if ((cases && Math.abs(x - E.x) < 3.1 && z > E.z - 6.4 && z < E.z + .8) || Math.hypot(x - E.x, z - E.z) < 1.4 || rays.some(q => Math.hypot(q.B.x - x, q.B.z - z) < 2.6)) continue;
+    add(new THREE.Vector3(x, fy, z), .45 + rs(seed + j + 600) * .4, .8 + rs(seed + j + 900) * .4, .6, 1.7, 2); n++; }
+  if (id === home().id) for (let i = 0; i < (phone ? 12 : 22); i++) { const grp = i % 3, ang = rs(i) * TWO_PI, rad = [2.5 + rs(i + 40) * 3, 6 + rs(i + 40) * 7, 14 + rs(i + 40) * 10][grp], r = [.7, 1.4, 2.8][grp] * (.7 + rs(i + 80) * .6);  // home: the fan of rays from the oculus Eddie
+    add(new THREE.Vector3(WC[0] + Math.cos(ang) * rad, fy - 12, WC[2] + Math.sin(ang) * rad), r, (grp ? 1 : .55) * (.6 + rs(i + 120) * .6), 23, -.12, 1); }  // loves (the old near, middle and far beams, rising from below the balcony; faint looking level)
+  else { const k = id === "wonder" ? .6 : 1, lean = Math.atan2(rayAxis.z, rayAxis.x);  // the rooms: beams down the open well past the floor, and a few that lean into the wall and cross the books higher up (fewer and softer in the Wonder Hall, where they all meet overhead)
+    for (let j = 0, n = 0; j < 600 && n < Math.round((phone ? 6 : 13) * k); j++) { const an = rs(seed + j + 1200) * TWO_PI, rad = 5 + rs(seed + j + 1500) * 17, B = new THREE.Vector3(WC[0] + Math.cos(an) * rad, fy - 28, WC[2] + Math.sin(an) * rad);
+      const at = B.clone().addScaledVector(rayAxis, 28 / rayAxis.y), top = B.clone().addScaledVector(rayAxis, RL); if ((at.x > F[0] - 1.6 && at.x < F[1] + 1.6 && at.z > F[2] - 1.6 && at.z < F[3] + 1.6) || Math.hypot(top.x - WC[0], top.z - WC[2]) > 24) continue;
+      add(B, (.8 + rad * .07) * (.75 + rs(seed + j + 1800) * .5), k * (.7 + rs(seed + j + 2100) * .5), 24, -.28, 1); n++; }
+    for (let j = 0; j < Math.round((phone ? 3 : 6) * k); j++) { const an = lean + (rs(seed + j + 2400) - .5) * 2.4, rad = 20 + rs(seed + j + 2700) * 3; add(new THREE.Vector3(WC[0] + Math.cos(an) * rad, fy - 10, WC[2] + Math.sin(an) * rad), 1.6 + rs(seed + j + 3000) * .8, k * (.8 + rs(seed + j + 3300) * .4), 10, -.28, 1); } }
+  rays.forEach((q, i) => { rayMesh.setMatrixAt(i, RM.compose(q.B.clone().addScaledVector(rayAxis, q.L / 2), rayQ, new THREE.Vector3(q.r, q.L, q.r))); rayMesh.setColorAt(i, RC.setRGB(q.I, q.fade, q.pool)); });
+  rayMesh.count = rays.length; rayMesh.instanceMatrix.needsUpdate = true; rayMesh.instanceColor.needsUpdate = true; rU.uWl.value.w = +(id !== "wonder");
+  const meets = q => { const T = q.B.clone().addScaledVector(rayAxis, q.L), m = 1.3 * q.r, plane = (z0, hx) => { if (Math.min(q.B.z, T.z) - m > z0 || Math.max(q.B.z, T.z) + m < z0) return false; const t = Math.min(1, Math.max(0, (z0 - q.B.z) / (T.z - q.B.z))); return Math.abs(q.B.x + (T.x - q.B.x) * t) < hx + m; };
+    return Math.max(Math.hypot(q.B.x - WC[0], q.B.z - WC[2]), Math.hypot(T.x - WC[0], T.z - WC[2])) > RW.well.r - m - .5 || (id !== "wonder" && (plane(RW.home.z, RW.home.x[1]) || plane(RW.door.z, RW.door.x[1]))); };
+  walls.setBeams(rays.filter(meets), rayAxis);  // only the beams that reach a wall light the books (fewer to sum per pixel)
+  const wsum = rays.reduce((a, q) => a + q.w, 0); let di = 0;  // the dust: near the floor in a beam that lands, round your eye height in the rooms' others
+  for (const q of rays) { const fan = q.pool === -.12, st0 = q.pool > 0 || fan ? 0 : Math.max(0, (E.y - 15 - q.B.y) / rayAxis.y), span = q.pool > 0 ? 16 : fan ? q.L : 40;  // home's fan: dust all the way up, as before
+    for (let k = 0, n = Math.round(DN * q.w / wsum); k < n && di < DN; k++, di++) { const rr = Math.sqrt(rs(di + 7)) * q.r * .9, an = rs(di + 9) * TWO_PI;
+      dP.set([q.B.x + rayAxis.x * st0 + Math.cos(an) * rr, q.B.y + rayAxis.y * st0, q.B.z + rayAxis.z * st0 + Math.sin(an) * rr], di * 3); dAx.set([rayAxis.x * span, rayAxis.y * span, rayAxis.z * span], di * 3); } }
+  dg.setDrawRange(0, di); dg.attributes.position.needsUpdate = dg.attributes.aAx.needsUpdate = true;
+  motes.position.copy(d); mist.forEach(m => { m.userData.p0 ??= m.position.clone(); m.position.copy(m.userData.p0).add(d); }); lamps.show(id); }
 const dust = new THREE.Points(dg, new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, fog: false,
-  vertexShader: "uniform float uT, uUp; attribute vec3 aAx; attribute vec4 aR; varying float vA; void main() { float t = fract(aR.x - uT * aR.y); vec3 p = position + aAx * t + vec3(sin(uT * .3 + aR.z * 6.), sin(uT * .22 + aR.x * 9.) * .4, cos(uT * .27 + aR.z * 5.)) * .25; vec4 mv = modelViewMatrix * vec4(p, 1.); gl_Position = projectionMatrix * mv; gl_PointSize = clamp(aR.w * 260. / -mv.z, 2., 16.); vA = smoothstep(0., .1, t) * smoothstep(1., .85, t) * (.4 + .6 * smoothstep(60., 3., -mv.z)) * (.7 + .3 * sin(uT * 1.3 + aR.z * 20.)) * (.2 + .8 * uUp); }",
+  vertexShader: "uniform float uT, uUp; attribute vec3 aAx; attribute vec4 aR; varying float vA; void main() { float t = fract(aR.x - uT * aR.y); vec3 p = position + aAx * t + vec3(sin(uT * .3 + aR.z * 6.), sin(uT * .22 + aR.x * 9.) * .4, cos(uT * .27 + aR.z * 5.)) * .25; vec4 mv = modelViewMatrix * vec4(p, 1.); gl_Position = projectionMatrix * mv; gl_PointSize = clamp(aR.w * 260. / -mv.z, 2., 16.); vA = smoothstep(0., .1, t) * smoothstep(1., .85, t) * (.4 + .6 * smoothstep(60., 3., -mv.z)) * (.7 + .3 * sin(uT * 1.3 + aR.z * 20.)) * (.5 + .5 * uUp); }",
   fragmentShader: "varying float vA; void main() { float d = length(gl_PointCoord - .5) * 2.; float a = smoothstep(1., .15, d) * vA * .95; gl_FragColor = vec4(vec3(1., .88, .58) * a, a); }" }));
 dust.frustumCulled = false; dust.renderOrder = 29; scene.add(dust);
 
@@ -237,14 +285,14 @@ function arrowsFor() {
 }
 // portals (L5): an arched doorway in the wall for every link marked portal (portals.js); walking into one jumps to its room. Portals of the station you stand at are shown.
 const portalMeshes = [], portals = []; let hoverPortal = null, focusPortal = null;
-for (const lk of LINKS.filter(q => q.portal)) { const p = lk.floor ? createFloorPortal(THREE, lk, regionPlaque(lk, catalog.regions ?? [], lang)) : createPortal(THREE, plane, lk, lk.size ?? [1.17, 2.6], regionPlaque(lk, catalog.regions ?? [], lang)); p.group.visible = false; scene.add(p.group); portals.push(p); portalMeshes.push(p.frame); }
+for (const lk of LINKS.filter(q => q.portal)) { const p = lk.floor ? createFloorPortal(THREE, lk, regionPlaque(lk, catalog.regions ?? [], lang)) : lk.stairUp ? createStairUp(THREE, lk, regionPlaque(lk, catalog.regions ?? [], lang), renderer) : createPortal(THREE, plane, lk, lk.size ?? [1.17, 2.6], regionPlaque(lk, catalog.regions ?? [], lang)); p.group.visible = false; scene.add(p.group); portals.push(p); portalMeshes.push(p.frame); }
 addEventListener("library:plaque", () => portalLabels?.());
 const portalLabels = () => portals.forEach(p => p.setLabel(regionPlaque(p.frame.userData.link, catalog.regions ?? [], lang)));
-function onStation() { living?.setStation(cur);
+function onStation() { living?.setStation(cur); wonders.setStation(cur); placeAir(cur);
   const near = id => id === cur || LINKS.some(l => l.from === cur && l.to === id && !l.portal);  // a platform's 3D cases show only where you stand or can walk to: from a lower room the others read as dark bars across the light
   if (c3) { c3.group.visible = near(grown.setStation[0]); c3.clones.forEach((c, j) => { c.visible = near(grown.setStation[j + 1]); }); }
   grown.setStation.forEach((sid, k) => { const on = near(sid); if (setShown[k] === on) return; setShown[k] = on; for (let i = k * 48; i < k * 48 + 48; i++) if (books.xf[i]) on ? books.home(i) : books.set(i, books.xf[i].p, books.xf[i].q, ZERO); });  // and so do its books (scaled to nothing), never floating without their cases
-  homeWalls ??= scene.children.filter(o => /^(wall_\d|doorwall_)/.test(o.name)); for (const o of homeWalls) o.visible = cur !== "wonder";
+  homeWalls ??= scene.children.filter(o => /^(wall_\d|wall_home|doorwall_)/.test(o.name)); for (const o of homeWalls) o.visible = cur !== "wonder";
   behindDoor ??= scene.children.filter(o => /^(bridge|arm)_\d+$/.test(o.name) && o.position.z > (room.layers.find(l => l.id === "facade")?.p[2] ?? 9)); for (const o of behindDoor) o.visible = cur !== "home";  // the well's bridges and lamp arms beyond the entrance wall: from the balcony they were drawn over the door (no depth on the cards), hanging in the air  // the home walls' repeats end in the open well: from the Wonder Hall, 150 m below, their ends would hang in the light
   const k0 = grown.setStation.indexOf(cur); if (k0 >= 0) { const first = [...Array(48).keys()].map(i => k0 * 48 + i).find(i => books.isReal(i)); if (first != null) (window.requestIdleCallback ?? (f => setTimeout(f, 1500)))(() => !ring.isOpen && front.prewarm(first)); } for (const p of portals) p.group.visible = p.frame.userData.link.from === cur; rebuildShelf(); }
 const fade = document.createElement("div"); fade.className = "fade"; document.body.append(fade);
@@ -255,11 +303,11 @@ const swap = fn => { fade.style.opacity = .9; setTimeout(() => { fn(); fade.styl
 function goto(id) {
   const A = st(cur), B = st(id), l = LINKS.find(q => q.from === cur && q.to === id); if (walk) return; if (l?.href) { location.assign(new URL(l.href, import.meta.url).href); return; } if (l?.soon) { const pl = regionPlaque(l, catalog.regions ?? [], lang); say(pl.name, pl.sub); return; } if (!B) return;
   const pts = l?.portal ? (l.path ?? []).map(q => new THREE.Vector3(...q)) : [sP(A), ...(l?.path ?? []).map(q => new THREE.Vector3(...q)), sP(B)], len = pts.reduce((n, p, i) => n + (i ? p.distanceTo(pts[i - 1]) : 0), 0);
-  const w = { pts, len, t: 0, dur: l?.portal ? WALK_IN : Math.min(3, Math.max(2, 1.4 + len * .12)), y0: yaw, y1: yaw + wrap(sYaw(B) - yaw), p0: pitch, p1: sPitch(B), f0: fov, f1: sFov(B), id, jump: !!l?.portal && !l.floor };
+  const w = { pts, len, t: 0, dur: l?.portal ? WALK_IN : Math.min(3, Math.max(2, 1.4 + len * .12)), y0: yaw, y1: yaw + wrap(sYaw(B) - yaw), p0: pitch, p1: sPitch(B), f0: fov, f1: sFov(B), id, jump: !!l?.portal && !l.floor && !l.stairUp };
   if (l?.portal) w.con = regionPlaque(l, catalog.regions ?? [], lang).con;
-  if (reduced) { if (l?.portal && !l.floor) { w.jump = true; walk = w; through(w); return; } w.stairs = !!l?.floor; fade.style.opacity = 1;  // the floor has no warp, in reduced motion either: a plain fade to the hall
+  if (reduced) { if (l?.portal && !l.floor && !l.stairUp) { w.jump = true; walk = w; through(w); return; } w.stairs = !!(l?.floor || l?.stairUp); fade.style.opacity = 1;  // the floor has no warp, in reduced motion either: a plain fade to the hall
     setTimeout(() => { arrive(w); fade.style.opacity = 0; }, 260); return; }
-  landed(); if (l?.floor) { camPos = camPos.clone(); stairs(w, camPos, l); } walk = w; vI = [0, 0]; arrowsFor();
+  landed(); if (l?.floor) { camPos = camPos.clone(); stairs(w, camPos, l); } else if (l?.stairUp) { camPos = camPos.clone(); climbs(w, camPos, l); } walk = w; vI = [0, 0]; arrowsFor();
 }
 function arrive(w) { if (w.jump && w.id === home().id) descend(.8, .4);  // back from a room by a portal: a short, low descent plays as the tunnel opens on the home bookcase
   cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump || w.stairs ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
@@ -313,6 +361,18 @@ function stairStep(w, dt) { const R = STAIR.R, rem = w.D - w.d;
   else { const th = w.th0 + (w.d - w.La) / R, k = ss(w.th0, w.th0 + STAIR.turns * TAU, th); camPos.set(w.C.x + R * Math.sin(th), w.A.y + treadY(th) + (STAIR.eye - w.A.y) * ss(w.th0, w.th0 + 2, th) + (STAIR.low - STAIR.eye) * ss(w.th0 + 4.6, w.th0 + 5.8, th), w.C.z + R * Math.cos(th)); yaw = Math.PI / 2 - th - .55 * ss(w.th0, w.th0 + 2, th); pitch = -.55 - .15 * k; fov = w.fS; }
   fade.style.opacity = .92 * ss(w.D - .6, w.D - .05, w.d);  // the soft dim at the bottom (the fade's own .2 s transition smooths it)
   if (w.d >= w.D) { arrive(w); setTimeout(() => { fade.style.opacity = 0; }, 140); } }
+// the way back UP from the Wonder Hall (Eddie 2026-11-17: "use Blender to do the staircase that goes back up"): the walk crosses the hall to the foot of stairup.glb's spiral (make_stairup.py bakes its foot at CLIMB.rot + 40 treads, where this walk's
+// line from the arrival view meets it), climbs 2.4 of its 4 turns round the post looking ahead and up (the underside of the treads above, then the column of the library's light that swallows its top), the light growing (the stair's surge), a soft dim over the last 0.6 m, then home.
+// Treads rise 0.2 m, 10 to a turn (CLIMB.rise m a radian along the stair line, measured from the foot); the eye is 1.3 m up because a turn is 2.0 m (the tread above is 1.8 m over the tread). Same speeds as the descent: a walk across (the hall is 8 m wide), then the stair.
+const CLIMB = { R: .65, rot: 5.2796, treads: 40, rise: .2 / (TAU / 10), eye: 1.3, end: 15, vh: 4.5 };
+function climbs(w, A, l) { const C = new THREE.Vector3(...l.at), th = CLIMB.rot + CLIMB.treads * TAU / 10, E = new THREE.Vector3(C.x + CLIMB.R * Math.sin(th), C.y + CLIMB.eye + sp(.1), C.z + CLIMB.R * Math.cos(th)), La = Math.hypot(E.x - A.x, E.z - A.z);
+  Object.assign(w, { stairs: true, climb: true, C, A: A.clone(), E, th0: th, La, d: 0, s: 0, D: La + CLIMB.R * CLIMB.end, va: La / 1.35, fS: innerWidth / innerHeight < .85 ? 80 : 62 }); }
+function climbStep(w, dt) { const R = CLIMB.R, rem = w.D - w.d;
+  w.s += dt; w.d = Math.min(w.D, w.d + (w.va + (CLIMB.vh - w.va) * ss(w.La - 1.2, w.La, w.d)) * Math.min(1, .3 + w.s / .45) * Math.max(.3, Math.min(1, rem / .8)) * dt); w.t = w.d / w.D;
+  if (w.d <= w.La) { const f = w.d / w.La, head = Math.atan2(w.E.x - w.A.x, -(w.E.z - w.A.z)); camPos.lerpVectors(w.A, w.E, f); camPos.y = w.A.y + (w.E.y - w.A.y) * ss(0, 1, f); yaw = w.y0 + wrap(head - w.y0) * ss(0, .7, f); pitch = w.p0 + (.22 - w.p0) * ss(0, 1, f); fov = w.f0 + (w.fS - w.f0) * ss(0, 1, f); }
+  else { const ph = (w.d - w.La) / R, th = w.th0 - ph; camPos.set(w.C.x + R * Math.sin(th), w.E.y + sp(.1 + CLIMB.rise * ph) - sp(.1), w.C.z + R * Math.cos(th)); yaw = 1.5 * Math.PI - th + .4 * ss(0, 2, ph); pitch = .22 + .15 * ss(0, 3, ph) + .55 * ss(8, 15, ph); fov = w.fS; }
+  fade.style.opacity = .92 * ss(w.D - .6, w.D - .05, w.d);  // the soft dim at the top
+  if (w.d >= w.D) { arrive(w); setTimeout(() => { fade.style.opacity = 0; }, 140); } }
 const along = (pts, len, u) => { let d = u * len; for (let i = 1; i < pts.length; i++) { const sg = pts[i].distanceTo(pts[i - 1]); if (d <= sg || i === pts.length - 1) return pts[i - 1].clone().lerp(pts[i], Math.min(1, d / (sg || 1))); d -= sg; } return pts[pts.length - 1].clone(); };
 const ease = t => t * t * (3 - 2 * t);
 let pending = [];
@@ -321,12 +381,16 @@ function routeTo(id) {  // breadth-first over the links, then walk each step (a 
   if (!(id in prev)) return false; const path = []; for (let a = id; a !== null; a = prev[a]) path.unshift(a); pending = path.slice(2); if (path.length > 1) goto(path[1]); return true; }
 function goHome() { if (cur !== home().id) routeTo(home().id); else { vI = [0, 0]; homing = true; } }
 let homing = false; $("#home").onclick = goHome;
-// ---- the arrival (owner 2026-11-16: "get to the Library and get down to the shelf, not just appear"): the camera comes down the well onto the home bookcase, as the intro film does. The film is the full move on a first
-// visit; a visit that skips the film gets the live move (FULL s), every later arrival in the same page (back through a portal, back from a book) the short one (SHORT s). A tap, a key or a drag ends it at the
-// bookcase at once; reduced motion: none.
-const FULL = 3.2, SHORT = 1.8; let desc = null;
-function descend(dur, lift = 1) { if (reduced) return; const h = home(), e = sP(h); desc = { t: 0, dur, from: new THREE.Vector3(e.x, e.y + 7.5 * lift, e.z + 3.2 * lift), p0: -.55 * lift, f0: sFov(h) + 8 * lift }; homing = false; vI = [0, 0]; }  // lift < 1: a shorter, lower drop (back through a portal)
-const landed = () => { if (!desc) return false; const h = home(); camPos = sP(h); yaw = sYaw(h); pitch = sPitch(h); fov = sFov(h); desc = null; return true; };
+// ---- the arrival (owner 2026-11-16: "get to the Library and get down to the shelf, not just appear"): the camera comes down the well onto the home bookcase. A first visit's intro ends with the long fall (FALL s);
+// a return visit gets the live move (FULL s), every later arrival in the same page (back through a portal, back from a book) the short one (SHORT s). A tap, a key or a drag ends it at the bookcase at once; reduced motion: none.
+// The move is a smooth curve through way points [x, y, z, yaw, pitch, fov] ending on home's own pose; the fall's: through the doorway high on the entrance wall looking across the well, down the well looking down
+// through the rays at the balcony below (turning a little, as the film did), then swinging level onto the bookcase. It starts already moving (the doors' push hands over to it) and eases out.
+const FULL = 3.2, SHORT = 1.8, FALL = 4.4; let desc = null;
+const FALL_AT = (e, tall = innerWidth / innerHeight < .85) => [[0, 30, 7.6, tall ? -.5 : 0, -.3, 72], [0, 22, 6.6, tall ? -.3 : .25, -.85, 76], [0, 15, 6.2, tall ? .2 : .5, -.95, 76], [e.x, e.y + 4.5, e.z + .3, .3, -.6, 70]];  // an upright phone starts turned left, where a light shaft falls into its narrow view
+function descend(dur, lift = 1, fall = false) { if (reduced) return; const h = home(), e = sP(h), K = fall ? FALL_AT(e) : [[e.x, e.y + 7.5 * lift, e.z + 3.2 * lift, sYaw(h), -.55 * lift, sFov(h) + 8 * lift]];  // lift < 1: a shorter, lower drop (back through a portal)
+  K.push([e.x, e.y, e.z, sYaw(h), sPitch(h), sFov(h)]); const way = i => new THREE.CatmullRomCurve3(K.map(k => new THREE.Vector3(k[i], k[i + 1], k[i + 2])));
+  desc = { t: 0, dur, fall, e: 0, P: way(0), A: way(3) }; homing = false; vI = [0, 0]; }
+const landed = () => { skip.hidden = true; if (!desc) return false; const h = home(); camPos = sP(h); yaw = sYaw(h); pitch = sPitch(h); fov = sFov(h); desc = null; return true; };
 
 // ---- input: the mouse's offset from the centre sets the view and, near an edge, keeps turning it; a drag (mouse or finger) looks around with inertia; arrows look; Enter walks
 const cv = $("#stage"), P = { x: 0, y: 0, has: false, mouse: true, down: false, id: -1, sx: 0, sy: 0, lx: 0, ly: 0, lt: 0, t0: 0, moved: 0, ui: false, vx: 0, vy: 0 }, keys = new Set(), ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
@@ -365,27 +429,25 @@ function rebuildShelf() { shelfBtns.forEach(b => b.remove()); shelfBtns.length =
   const k = grown.setStation.indexOf(cur); if (k < 0) return;
   const stand = new Map();  // the stand-in books ("still being written") are one tab stop per shelf, not one each
   for (let i = k * 48; i < Math.min(books.slots.length, (k + 1) * 48); i++) { if (!books.isReal(i)) { const c = books.slots[i].case, e = stand.get(c); if (e) e.__n++; else { const b = document.createElement("button"); b.type = "button"; b.__i = i; b.__n = 1; b.onfocus = () => { flash = b.__i; flashT = 1e9; hideHint(); const c = $("#cap"); c.hidden = false; c.classList.add("kf"); c.textContent = b.getAttribute("aria-label"); }; b.onblur = () => { if (flash === b.__i) flash = -1; $("#cap").classList.remove("kf"); if (!ring.isOpen) $("#cap").hidden = true; }; b.onclick = () => { cue("book-touch", .7); fire(b.__i); openRing(b.__i); }; $("#shelf").append(b); shelfBtns.push(b); stand.set(c, b); } continue; } const b = document.createElement("button"); b.type = "button"; b.__i = i; b.onfocus = () => { flash = i; flashT = 1e9; if (!ring.isOpen) front.prewarm(i); }; b.onblur = () => { if (flash === i) flash = -1; }; b.onclick = () => { cue("book-touch", .7); fire(i); openRing(i); }; $("#shelf").append(b); shelfBtns.push(b); } labelBooks(); }
+const wonders = window.__wonders = createWonders(scene, camera, { renderer, room, reduced, phone, busy: () => !live() || ring.isOpen || !!pick || !!walk || !!warp || !!intro || !!desc });  // the big rare wonders (wonders.js): never over a book, a portal trip or the intro
 rebuildShelf(); onStation(); size();
 
-// ---- the intro film: plays at once over the loading room; tap, Skip or Esc ends it; it dissolves into the live view. Any trouble (error, a stall of about 4 s) lands in the room by itself.
-const veil = $("#veil"), film = $("#film"), skip = $("#skip");
-let sfx = null, roomReady = false, filmDone = false, wd = 0;
-const filmUrl = () => new URL(innerWidth < innerHeight ? "intro-phone.mp4" : "intro.mp4", base).href;
-const hideVeil = () => { filmDone = true; clearInterval(wd); if (roomReady) { veil.classList.add("out"); veil.inert = true; store.set("wst-intro-seen", "1"); film.pause(); } };
-const showVeil = () => {  // also for a return visit or reduced motion: the film's own src is set here, the Skip shown, Esc works
-  veil.inert = false; film.hidden = skip.hidden = false; if (!film.getAttribute("src")) { film.poster = filmUrl().replace(/\.mp4$/, "-poster.jpg"); film.src = filmUrl(); } veil.classList.remove("out"); film.currentTime = 0; film.play().catch(hideVeil);
-  let t0 = performance.now(), lt = -1; clearInterval(wd); wd = setInterval(() => { if (film.currentTime !== lt) { lt = film.currentTime; t0 = performance.now(); } else if (!film.ended && performance.now() - t0 > 4000) { console.warn("library: the intro film stalled, going to the room"); hideVeil(); } }, 500);
-};
-const returning = store.get("wst-intro-seen") === "1" || reduced || qs.get("intro") === "0";
-film.ontimeupdate = () => { if (roomReady && film.duration && film.currentTime > film.duration - 3.4 && !veil.classList.contains("out")) { filmDone = true; veil.classList.add("out"); veil.inert = true; store.set("wst-intro-seen", "1"); } };  // dissolve into the live page before the film's old door names can be read (the film is not re-cut)
-film.onended = film.onerror = hideVeil; film.onloadeddata = () => { $("#loading").hidden = true; }; skip.onclick = hideVeil; veil.addEventListener("pointerdown", e => { if (e.target === veil || e.target === film) hideVeil(); });
-addEventListener("keydown", e => { if (e.key === "Escape" && !veil.classList.contains("out")) hideVeil(); });
-$("#replay").onclick = () => { openMenu(false); filmDone = false; showVeil(); };
-setTimeout(() => { if (!roomReady) { roomReady = true; if (filmDone) hideVeil(); } }, 6000);  // if the room is very slow, the film's end or a skip still lands us there
-if (returning) { film.hidden = skip.hidden = true; filmDone = true; veil.inert = false; } else showVeil();
+// ---- the intro (owner 2026-11-17: "change the video to code ... so it just starts right away"): index.html's own script swings the doors open the moment their small cards decode, before this module arrives. When the camera is
+// at the threshold (window.__intro resolves) and the room has drawn its first frame, it goes through (doors .in) as the veil dissolves into the live fall down the well; a slow room holds it at the threshold, never skips it.
+// Tap, Skip or Esc ends it at once; "Watch the intro" plays it again; a return visit (or ?intro=0) gets the live move; reduced motion: the doors stand open, still, then the short dissolve.
+const veil = $("#veil"), doors = $("#doors"), skip = $("#skip");
+let sfx = null, roomReady = false, intro = window.__intro ? "doors" : "";  // doors -> fall (through the doorway) -> "" (in the room)
+const reveal = () => { if (!roomReady || intro === "doors") return; if (intro === "fall") { descend(FALL, 1, true); doors.classList.add("in"); intro = ""; } veil.classList.add("out"); veil.inert = true; store.set("wst-intro-seen", "1"); skip.hidden = !desc?.fall; };
+const doorsThrough = p => p.then(() => { if (intro !== "doors") return; intro = "fall"; reveal(); });
+const endIntro = () => { if (intro) { intro = ""; doors.hidden = true; delete document.documentElement.dataset.intro; } landed(); reveal(); };
+skip.onclick = endIntro; veil.addEventListener("pointerdown", endIntro);
+addEventListener("keydown", e => { if (e.key === "Escape" && !skip.hidden) endIntro(); });
+$("#replay").onclick = () => { openMenu(false); landed(); intro = "doors"; doors.hidden = false; veil.classList.remove("out"); veil.inert = false; skip.hidden = false; doorsThrough(window.__introPlay()); };
+setTimeout(() => { if (!roomReady) { roomReady = true; reveal(); } }, 6000);  // if the room is very slow, the doors' end or a skip still lands us there
+if (intro) { skip.hidden = false; doorsThrough(window.__intro); }
 
 // a one-line first-visit hint: shown once the room is live, gone after the first drag (remembered)
-function showHint() { if (grown.portals.length && innerWidth / innerHeight < .85) { $("#hint").textContent = "‹  " + W.doors + "  ›"; } if (store.get("wst-lib-hint") === "1" || ring.isOpen) return; const h = $("#hint"); h.hidden = false; requestAnimationFrame(() => h.classList.add("on")); }
+function showHint() { if (intro || desc?.fall) { setTimeout(showHint, 800); return; } if (grown.portals.length && innerWidth / innerHeight < .85) { $("#hint").textContent = "‹  " + W.doors + "  ›"; } if (store.get("wst-lib-hint") === "1" || ring.isOpen) return; const h = $("#hint"); h.hidden = false; requestAnimationFrame(() => h.classList.add("on")); }
 function hideHint() { const h = $("#hint"); if (h.hidden) return; h.classList.remove("on"); store.set("wst-lib-hint", "1"); setTimeout(() => { h.hidden = true; }, 900); }
 // coming back from the reader (the browser restores this page from its back-forward cache): no veil, no ring, no half-made pick, the camera home
 addEventListener("pageshow", e => { if (!e.persisted) return; pick = null; carryVeil.style.opacity = 0; fade.style.opacity = 0; ring.cancelPick(); ring.reset(); front.disposeAll(); books.hover(-1); key.position.x = -1.5; key.color.set(0xffd9a0);
@@ -394,7 +456,7 @@ addEventListener("pageshow", e => { if (!e.persisted) return; pick = null; carry
 fontsReady.then(() => portalLabels());
 // ---- run
 await Promise.race([Promise.all(core), new Promise(r => setTimeout(r, 5000))]);  // never wait on a slow or missing card: the room arrives with what has loaded
-const dbg = window.__lib = { renderer, camera, scene, books, frames: 0, firstFrame: 0, goto, routeTo, openRing, get living() { return living; }, get front() { return front; }, links: LINKS, hit, grown, portalMeshes, ring, pick: () => pick, mist, rays, descending: () => !!desc, state: () => ({ cur, yaw, pitch, walking: !!walk, arrows: arrows.length, homeVisible: !$("#home").hidden }), look: (y, p) => { yaw = y; pitch = p; }, get wake() { return !!wakeP; }, cueLog, get snd() { return snd; } };
+const dbg = window.__lib = { renderer, camera, scene, books, frames: 0, firstFrame: 0, goto, routeTo, openRing, get living() { return living; }, get front() { return front; }, links: LINKS, hit, grown, portalMeshes, ring, pick: () => pick, mist, rays, descending: () => !!desc, intro: () => intro || (desc?.fall ? "fall" : ""), state: () => ({ cur, yaw, pitch, walking: !!walk, arrows: arrows.length, homeVisible: !$("#home").hidden }), look: (y, p) => { yaw = y; pitch = p; }, get wake() { return !!wakeP; }, cueLog, get snd() { return snd; } };
 
 let last = performance.now(), T = 0, hov = -1, lastFront = -1;
 const loop = now => {
@@ -416,9 +478,9 @@ const loop = now => {
   }
   if (wakeP && (wakeT -= dt) <= 0) wakeP = null;
   let bob = 0; warpStep(dt);
-  if (desc && live_ && !walk) { if (!warp || warp.arrived) desc.t += dt;  /* back through a portal: it starts as the tunnel opens */ const u = Math.min(1, desc.t / desc.dur), e = u < .5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2, h = home();
-    camPos = desc.from.clone().lerp(sP(h), e); yaw = sYaw(h); pitch = desc.p0 + (sPitch(h) - desc.p0) * e; fov = desc.f0 + (sFov(h) - desc.f0) * e; if (u >= 1) desc = null; }
-  if (walk?.stairs) stairStep(walk, dt);
+  if (desc && live_ && !walk) { if (!warp || warp.arrived) desc.t += dt;  /* back through a portal: it starts as the tunnel opens */ const u = Math.min(1, desc.t / desc.dur), e = desc.e = desc.fall ? u * (1.2 + u * (.6 - .8 * u)) : u < .5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2, a = desc.A.getPoint(e);
+    camPos = desc.P.getPoint(e); yaw = a.x; pitch = a.y; fov = a.z; if (u >= 1) { desc = null; skip.hidden = true; } }
+  if (walk?.climb) climbStep(walk, dt); else if (walk?.stairs) stairStep(walk, dt);
   else if (walk && !walk.frozen) { walk.t += dt / walk.dur; const u = Math.min(1, walk.t), e = ease(u); camPos = along(walk.pts, walk.len, e); bob = Math.sin(u * TAU * 3) * .03 * Math.sin(u * Math.PI);
     yaw = walk.y0 + (walk.y1 - walk.y0) * e; pitch = walk.p0 + (walk.p1 - walk.p0) * e; fov = walk.f0 + (walk.f1 - walk.f0) * e * (walk.jump ? 0 : 1) + (walk.jump ? 40 * Math.pow(Math.max(0, (u - PULL) / (1 - PULL)), 2) : 0); if (u >= 1) walk.jump ? through(walk) : arrive(walk); }
   const vy = yaw + yawOff, vp = cP(pitch + pitchOff); camera.rotation.set(vp, -vy, 0, "YXZ");
@@ -435,15 +497,15 @@ const loop = now => {
   books.update(T, dt);
   arrows.forEach((a, i) => { a.material.opacity = (still ? .75 : .6 + .22 * Math.sin(T * 2 + i)) + (i === hoverArrow ? .25 : 0); a.position.y = a.userData.base + (still ? 0 : Math.sin(T * 1.6 + i) * .02); });
   // nothing is static: window glows breathe, the lamp flickers softly, the mist drifts, the dust and motes move
-  glows.forEach((g, i) => { g.material.opacity = still ? .5 : .45 + .08 * Math.sin(T * .8 + i * 1.7); });
+  glows.forEach((g, i) => { g.material.opacity = still ? .5 : .45 + .08 * Math.sin(T * .8 + i * 1.7); }); lamps.update(T);
   if (!still) { let i = 0; for (const m of flick) { const f = .9 + .07 * Math.sin(T * 9.1 + i) * Math.sin(T * 2.3 + i * 2) + .03 * Math.sin(T * 23 + i * 5); m.color.copy(m.userData.base).multiplyScalar(f); i++; } }
   for (let i = fades.length - 1; i >= 0; i--) { const m = fades[i]; m.opacity = Math.min(1, m.opacity + dt * 1.8); if (m.opacity >= 1) fades.splice(i, 1); }
   for (const b of billboards) b.rotation.y = Math.atan2(camera.position.x - b.position.x, camera.position.z - b.position.z);
   mist.forEach((m, i) => { m.material.map.offset.x = still ? 0 : T * .004 * (i ? -1 : 1); });
   if (!still) { const p = motes.geometry.attributes.position; for (let i = 0; i < NM; i++) { p.array[i * 3 + 1] += Math.sin(T * .3 + mv[i]) * .0015; p.array[i * 3] += Math.cos(T * .2 + mv[i]) * .001; } p.needsUpdate = true; floater(dt); }
   if (!(dbg.frames % 8)) $("#home").hidden = !(walk || cur !== home().id || Math.abs(wrap(yaw - sYaw(home()))) > .35 || pitch - sPitch(home()) > .4 || pitch - sPitch(home()) < -.4) || !live_ || !!desc;
-  rU.uT.value = still ? 0 : T; rU.uUp.value = Math.max(0, Math.min(1, (vp - .2) / .6)); living?.update(dt); sfx?.update(dt, camera); sky.update(camera); renderer.render(scene, camera);
-  if (!dbg.frames++) { dbg.firstFrame = Math.round(performance.now()); document.documentElement.dataset.first = dbg.firstFrame; roomReady = true; if (returning) descend(FULL); $("#loading").hidden = true; if (filmDone) hideVeil(); startFx(); setTimeout(showHint, 1800); }
+  rU.uT.value = still ? 0 : T; rU.uUp.value = Math.max(desc?.fall ? (1 - desc.e) * (.9 + 1.4 * Math.sin(Math.PI * Math.min(1, desc.e * 1.6))) : 0, Math.min(1, (vp - .2) / .6)); /* the fall goes down through the rays, brighter than any look up (the film's beams) */ living?.update(dt); wonders.update(dt); sfx?.update(dt, camera); sky.update(camera); renderer.render(scene, camera);
+  if (!dbg.frames++) { dbg.firstFrame = Math.round(performance.now()); document.documentElement.dataset.first = dbg.firstFrame; roomReady = true; if (!window.__intro) descend(FULL); $("#loading").hidden = true; reveal(); startFx(); setTimeout(showHint, 1800); }
   requestAnimationFrame(loop);
 };
 requestAnimationFrame(loop);

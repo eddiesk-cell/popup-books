@@ -235,6 +235,34 @@ export function createFloorPortal(THREE, link, label) {
     setLabel: p => { signT.image = signCanvas(p); signT.needsUpdate = true; } };
 }
 
+// the way back up from the Wonder Hall (Eddie 2026-11-17: "use Blender to do the staircase that goes back up"): the SAME spiral stair, baked in Blender (stairup.glb, make_stairup.py: unlit, light and shadow in its texture), standing on the hall floor and climbing 4 turns (8 m)
+// straight up out of every hall view: no ceiling, no disc, no visible top. A column of the home library's warm light (additive, soft-edged, brightest high up, fading out far above) swallows the top of the stair and spills down it. Loaded ONCE, the first time this portal is built,
+// not waited for (about 450 KB, and the hall is a click away); the invisible cylinder over it is the click/tap target; hover or focus brightens the baked wood like the other doors; a warm pool on the boards, and a carved sign on a brass post says where it goes.
+let upLoad = null; const loadUp = () => upLoad ??= new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairup.glb", import.meta.url).href).then(g => g.scene).catch(e => { console.warn("portals: stairup.glb failed, no stair up", e); return null; });
+const UPFS = `uniform float uT, uHover, uIn; varying vec3 vN, vV; varying float vY;
+void main() { float e = mix(pow(abs(dot(normalize(vN), normalize(vV))), 3.5), 1., uIn), a = smoothstep(2.5, 8.5, vY) * (1. - smoothstep(18., 70., vY)) * e * (mix(3.6, .75, uIn) + .15 * uHover) * (.94 + .06 * sin(uT * 1.1 + vY * .9)); gl_FragColor = vec4(mix(vec3(1., .66, .3), vec3(1., .9, .62), smoothstep(2., 14., vY)) * a, 1.); }`;  // uIn: the eye is inside the column (the climb): its far wall is lit all round, held to a warm gold (at full strength it washed the screen white for about a second)
+export function createStairUp(THREE, link, label, renderer) {
+  const g = new THREE.Group(), U = { uT: { value: 0 }, uHover: { value: 0 }, uIn: { value: 0 } };
+  const frame = new THREE.Mesh(new THREE.CylinderGeometry(1.45, 1.45, 8, 20), new THREE.MeshBasicMaterial({ visible: false })); frame.position.y = 4; frame.userData.link = link;  // the click/tap target
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 70, 28, 1, true).translate(0, 35, 0), new THREE.ShaderMaterial({ uniforms: U, vertexShader: "varying vec3 vN, vV; varying float vY; void main() { vY = position.y; vN = normalMatrix * normal; vec4 mv = modelViewMatrix * vec4(position, 1.); vV = -mv.xyz; gl_Position = projectionMatrix * mv; }", fragmentShader: UPFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide }));
+  shaft.renderOrder = 36;
+  const pc = document.createElement("canvas"); pc.width = pc.height = 128; { const x = pc.getContext("2d"), gr = x.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, "rgba(20,9,3,.5)"); gr.addColorStop(.34, "rgba(32,14,4,.32)"); gr.addColorStop(.46, "rgba(255,190,100,.2)"); gr.addColorStop(.75, "rgba(255,180,90,.07)"); gr.addColorStop(1, "rgba(255,180,90,0)"); x.fillStyle = gr; x.fillRect(0, 0, 128, 128); }
+  const pt = new THREE.CanvasTexture(pc); pt.colorSpace = THREE.SRGBColorSpace;
+  const pool = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 5.6), new THREE.MeshBasicMaterial({ map: pt, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 })); pool.rotation.x = -Math.PI / 2; pool.position.y = .012; pool.renderOrder = 21;  // over the floor card (20), under the rest, like the home decal
+  g.add(pool, shaft, frame);
+  // the sign: on a brass post by the foot, on the side away from the walk in, turned to face the arrival view (shortcut: built here, not shared with createFloorPortal's)
+  const gm = new THREE.MeshLambertMaterial({ color: 0xd2a84c, emissive: 0x3a2808 }), sign = new THREE.Group(), SP = p => ({ name: p.sub || p.name, sub: p.sub ? p.name : "" }), signT = new THREE.CanvasTexture(signCanvas(SP(label))); signT.colorSpace = THREE.SRGBColorSpace; signT.anisotropy = 4;
+  const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
+  bp.position.y = .78; fin.position.y = 1.62; base.position.y = .04; col.position.y = 1.5; sign.add(bp, fin, base, col);
+  for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, 1.18 + dy, .03); sign.add(br); }
+  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, depthWrite: false, fog: false })); board.position.set(0, 1.18, .06); board.userData.link = link; board.renderOrder = 41; sign.add(board);
+  const sx = 1.9 * Math.sin(1.19), sz = 1.9 * Math.cos(1.19); sign.position.set(sx, 0, sz); sign.rotation.y = Math.atan2(3.94 - sx, 7.415 - sz); g.add(sign); g.position.set(...link.at);
+  let h = 0, tt = 0, mat = null;
+  loadUp().then(m => { if (!m) return; m = m.clone(); m.traverse(o => { if (o.isMesh) { mat = o.material = o.material.clone(); } }); g.add(m); if (mat?.map) renderer?.initTexture?.(mat.map); });
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt; U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uIn.value = cam ? Math.min(1, Math.max(0, (1.7 - Math.hypot(cam.position.x - g.position.x, cam.position.z - g.position.z)) / .4)) : 0; if (mat) mat.color.setScalar(1 + .3 * h + .25 * surge); },  // hover or focus, and the climb (surge 0..1), brighten the baked wood
+    setLabel: p => { signT.image = signCanvas(SP(p)); signT.needsUpdate = true; } };
+}
+
 export function createPortal(THREE, plane, link, size, label) {
   const g = new THREE.Group(); let base = BASE?.tex; if (!base) { base = new THREE.CanvasTexture(baseFrame()); base.colorSpace = THREE.SRGBColorSpace; base.anisotropy = 4; BASE.tex = base; }  // one carved frame for all
   const tex = new THREE.CanvasTexture(badgeCanvas(label)); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;

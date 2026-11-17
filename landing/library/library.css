@@ -21,8 +21,7 @@ html, body { margin: 0; height: 100%; background: var(--ink); overflow: hidden; 
 .note { min-height: 1.2em; margin: 10px 0 0; font-size: 13px; opacity: .85; }
 .veil { position: fixed; inset: 0; z-index: 9; background: var(--ink); transition: opacity .9s ease; display: grid; place-items: center; }
 .veil.out { opacity: 0; pointer-events: none; }
-.veil video { width: 100%; height: 100%; object-fit: cover; }
-.skip { position: absolute; right: max(14px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); font: inherit; font-size: 14px; color: var(--gold); background: rgba(12, 6, 2, .55); border: 1px solid rgba(240, 205, 124, .55); border-radius: 999px; padding: 10px 18px; min-height: 44px; cursor: pointer; }
+.skip { position: fixed; z-index: 12; right: max(14px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); font: inherit; font-size: 14px; color: var(--gold); background: rgba(12, 6, 2, .55); border: 1px solid rgba(240, 205, 124, .55); border-radius: 999px; padding: 10px 18px; min-height: 44px; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .veil { transition-duration: .3s; } }
 .right { display: flex; gap: 8px; align-items: center; }
 .home { font: inherit; font-size: 14px; color: var(--gold); background: rgba(12, 6, 2, .5); border: 1px solid rgba(240, 205, 124, .5); border-radius: 999px; padding: 0 16px; min-height: 44px; cursor: pointer; }
@@ -63,3 +62,40 @@ body:has(#ringb:focus-visible) #cap { outline: 2px solid #fff; outline-offset: 3
 @keyframes tap { 0%, 30%, 100% { transform: translateY(0) scale(1); } 42% { transform: translateY(4px) scale(.9); } 56% { transform: translateY(0) scale(1); } }
 @keyframes tapring { 0%, 38% { opacity: 0; transform: scale(.4); } 44% { opacity: 1; } 80%, 100% { opacity: 0; transform: scale(2.2); } }
 @media (prefers-reduced-motion: reduce) { .taphint, .taphint::after { animation: none; } }
+/* the intro doors (owner 2026-11-17: the film became code): the stone wall and the two carved leaves cut from the film's first frame, the well beyond and a gold light (intro/, from assets/landing/intro/cut_intro.py).
+   index.html's script adds .go once the cards decode: the leaves swing in on their hinges, the light floods out and the camera pushes up to the threshold (perspective on the doorway's centre), and holds there
+   if the room is still coming. library.js adds .in once it is ready: the camera goes through the doorway as the veil dissolves into the live fall down the well.
+   The set is the film frame, cover-fitted; --p is the camera's distance, --pa the threshold, --pb the push's end. */
+.doors { position: absolute; inset: 0; overflow: hidden; opacity: 0; --w: max(100vw, 177.78vh); --h: max(56.25vw, 100vh); --p: calc(var(--w) * .9); --pa: .52; --pb: .95; --ox: 50.27%; --oy: 53.33%; }
+.doors.go { opacity: 1; transition: opacity .3s ease; }
+.doors .set { position: absolute; left: calc(50% - var(--w) / 2); top: calc(50% - var(--h) / 2); width: var(--w); height: var(--h); perspective: var(--p); perspective-origin: var(--ox) var(--oy); }
+.doors .rig, .doors .rig > * { position: absolute; transform-style: preserve-3d; }
+.doors .rig, .doors .wall, .doors .shine { inset: 0; }
+.doors img { display: block; width: 100%; height: 100%; }
+.doors .beyond { left: 20.04%; top: -11.4%; width: 60.5%; height: 129%; transform: translateZ(calc(var(--p) * -.45)); filter: contrast(1.25) brightness(1.05) saturate(1.15); }
+.doors .haze { left: 33%; top: 4%; width: 35%; height: 98%; transform: translateZ(calc(var(--p) * -.3)); background: radial-gradient(closest-side, rgba(255, 232, 176, .95), rgba(255, 204, 120, .55) 55%, rgba(255, 190, 90, 0)); mix-blend-mode: screen; opacity: 0; }
+.doors .leaf { top: 10.278%; height: 86.111%; transform: translateZ(-1px); }
+.doors .l { left: 37.344%; width: 12.734%; transform-origin: 0 50%; }
+.doors .r { left: 50.938%; width: 12.188%; transform-origin: 100% 50%; }
+.doors .shine { transform: translateZ(1px); background: radial-gradient(24% 26% at var(--ox) 95%, rgba(255, 206, 128, .5), rgba(255, 190, 100, .14) 55%, transparent 80%); mix-blend-mode: screen; opacity: 0; }
+@media (orientation: portrait) {
+  .doors { --w: max(100vw, 56.25vh); --h: max(177.78vw, 100vh); --p: calc(var(--w) * 2.45); --pa: .15; --pb: .4; --ox: 51.3%; --oy: 52.81%; }
+  .doors .beyond { left: -40.5%; top: -9.4%; width: 183.5%; height: 124%; }
+  .doors .haze { left: 10%; top: 6%; width: 84%; height: 94%; }
+  .doors .leaf { top: 11.562%; height: 82.5%; } .doors .l { left: 16.481%; width: 32.593%; } .doors .r { left: 57.593%; width: 28.519%; }
+}
+.doors.go .l { animation: swing-l 1.4s .15s cubic-bezier(.45, .05, .3, 1) forwards; } .doors.go .r { animation: swing-r 1.4s .15s cubic-bezier(.45, .05, .3, 1) forwards; }
+@keyframes swing-l { to { transform: translateZ(-1px) rotateY(64deg); filter: brightness(1.8) sepia(.4) saturate(1.3); } }
+@keyframes swing-r { to { transform: translateZ(-1px) rotateY(-64deg); filter: brightness(1.8) sepia(.4) saturate(1.3); } }
+.doors.go .rig { animation: push-a 1.4s .3s cubic-bezier(.3, 0, .5, 1) forwards; } .doors.go.in .rig { animation: push-b .9s cubic-bezier(.5, 0, .9, .7) forwards; }
+@keyframes push-a { to { transform: translateZ(calc(var(--p) * var(--pa))); } }
+@keyframes push-b { from { transform: translateZ(calc(var(--p) * var(--pa))); } to { transform: translateZ(calc(var(--p) * var(--pb))); } }
+.doors.go .set { animation: through 1.7s forwards; } @keyframes through { to { visibility: visible; } }  /* no look of its own: its end (at the threshold) is the hand-off to library.js (index.html) */
+.doors.go .haze { animation: haze 3s forwards, breathe 3s 3s ease-in-out infinite alternate; } @keyframes haze { 30% { opacity: .3; } 70% { opacity: .15; } 100% { opacity: .1; } }
+@keyframes breathe { from { opacity: .1; } to { opacity: .32; } }  /* a slow room: the light in the doorway breathes while it waits */
+.doors.go .shine { animation: shine 1.4s .15s forwards; } @keyframes shine { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {  /* no flight: the doors stand open on the light, still, then the short dissolve */
+  .doors.go .l, .doors.go .r { animation: none; filter: brightness(1.8) sepia(.4) saturate(1.3); } .doors.go .l { transform: translateZ(-1px) rotateY(64deg); } .doors.go .r { transform: translateZ(-1px) rotateY(-64deg); }
+  .doors.go .rig, .doors.go.in .rig { animation: none; } .doors.go .set { animation-duration: 1.2s; } .doors.go .haze, .doors.go .shine { animation: none; opacity: .6; }
+}
+[data-intro=go] .loading { visibility: hidden; }  /* the doors are the loading cover; if the room is still coming when they reach the threshold, the line shows again */
