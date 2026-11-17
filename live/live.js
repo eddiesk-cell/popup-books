@@ -286,13 +286,13 @@ function arm(sp) {  // the page's game, fresh (games.js: collect, order, shadow,
 }
 // the paper animals' night and eve cards, measured against their day cards (53 night and 28 eve cards, alpha-weighted mean sRGB): night = luma(day) x [0.645, 0.689, 0.804] (spread 0.01-0.03), eve = the day colour itself x [0.988, 0.911, 0.890] per channel (41 card parts, sd <= 0.007: hue kept; animal-grade-review-1)
 const GLOW = 0.15;  // the paper cards' own backlight (ambient.js card(): emissiveIntensity 0.15), so a 3D animal is lit the way a card is; calibrated on a flat 50% grey, see the commit
-const GRADE = { night: [0.645, 0.689, 0.804], evening: [0.988, 0.911, 0.89] };
+const GRADE = { night: [0.7, 0.7, 0.7], evening: [0.988, 0.911, 0.89] };  // night: dimmed, colour kept (owner 2026-11-17: animals "shouldn't be bluish-grey"; was luma x [0.645, 0.689, 0.804])
 function gradeAnimal(model, stage) {
   const k = GRADE[stage]; if (!k) return;
   const own = m => {  // its own copy: the loaded model is shared by every spread, day ones too
     m = m.clone(); m.customProgramCacheKey = () => `grade-${stage}`;
     m.onBeforeCompile = sh => (sh.fragmentShader = sh.fragmentShader.replace("#include <color_fragment>", `#include <color_fragment>
-      diffuseColor.rgb = ${stage === "night" ? `min(pow(vec3(dot(pow(diffuseColor.rgb, vec3(1.0 / 2.2)), vec3(0.2126, 0.7152, 0.0722))) * vec3(${k.join(", ")}), vec3(2.2)), vec3(1.0))` : `diffuseColor.rgb * pow(vec3(${k.join(", ")}), vec3(2.2))`};`)
+      diffuseColor.rgb = diffuseColor.rgb * pow(vec3(${k.join(", ")}), vec3(2.2));`)
       .replace("#include <emissivemap_fragment>", `#include <emissivemap_fragment>
       totalEmissiveRadiance += diffuseColor.rgb * ${GLOW};`));  // the paper cards' own light through thin paper (ambient.js card()), graded the same
     return m;
@@ -303,10 +303,10 @@ const modelOf = file => models[file] ??= loader.loadAsync(`chars/${file.split("/
   .catch(() => loader.loadAsync(`../${file}`))  // no slim copy (yet): the original, through web/assets
   .then(g => (g.animations.forEach(a => { const t0 = Math.min(...a.tracks.map(k => k.times[0])); if (t0 > 0 && t0 < Infinity) { new Set(a.tracks.map(k => k.times)).forEach(t => t.forEach((v, i) => (t[i] = v - t0))); a.resetDuration(); } }), g));  // every clip starts at 0: one whose first key is late (0.042 s in some exports) holds a frame at each loop's wrap. Tracks share their times arrays, so each array moves once
 async function character(c, sp) {
-  const g = c.model.startsWith("puppet:") ? puppetModel(THREE, await storyPuppet(c.model.slice(7), sp.m.stage?.name))  // "puppet:tong": a paper puppet
+  const g = c.model.startsWith("puppet:") ? puppetModel(THREE, await storyPuppet(c.model.slice(7), c.grade ?? sp.m.stage?.name))  // "puppet:tong": a paper puppet
     : await modelOf(c.model);
   const model = clone(g.scene), pivot = new THREE.Group(), body = new THREE.Group();
-  if (/animal/.test(c.model)) gradeAnimal(model, sp.m.stage?.name);  // any 3D animal (assets/animals/, a book's own lite animal-*.glb copies, as extras3d.js reads them) takes the night/eve grade of the paper cards; the story's own characters stay as lit
+  if (/animal/.test(c.model)) gradeAnimal(model, c.grade ?? sp.m.stage?.name);  // any 3D animal (assets/animals/, a book's own lite animal-*.glb copies, as extras3d.js reads them) takes the night/eve grade of the paper cards; the story's own characters stay as lit
   body.name = c.name;  // a game reads a tapped one by name (the shadow game's spots)
   model.traverse(o => { if (o.isMesh) { o.visible = !o.name.startsWith("Icosphere"); o.castShadow = o.receiveShadow = true; o.frustumCulled = false; } });
   pivot.rotation.y = rad(c.face ?? -90); pivot.add(model); body.add(pivot);

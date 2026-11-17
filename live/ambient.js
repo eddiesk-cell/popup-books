@@ -136,7 +136,12 @@ const LAYOUT = [[/^neck/, 0.12, 0.46, [0.35, 0.25], [0, 0.45]], [/^head/, 0.3, 0
   [/^arm/, 0.08, 0.4, [0.25, 0.25], [0, -0.45]], [/^hat/, 0.5, 0.14, [0, 0.5], [0, 0.4]], [/^claw/, 0.26, 0.18, [0.45, 0.1], [0.4, 0.1]],
   [/^(man|spirit|child|sleeper|egret$)/, 0.24, 0.7, [0.1, 0.45], [0, 0.5]], [/./, 0.18, 0.16, [0.3, 0.3], [0.2, 0.2]]];
 const hue = id => [...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
+// owner 2026-11-17: "At night people should turn blue-grey (paper cuts ones)" and "all other animals too, we dim the color but they shouldn't be
+// bluish-grey": at night a person wears its -night card, anything else its day card dimmed. shortcut: people known by their id; a def's
+// "person": true/false wins. Upgrade: puppet.py writes "person" from PUPPETS.md when a person's id fails this test
+const PERSON = /boy|girl|man|aunt|uncle|grand|mother|father|seller|player|carrier|sleeper|poler|outfit|khun-borom|nyeu|villager|tong$|^nok$|monk|\bking\b|queen|child|people|person/;
 async function puppet(id, def, stage) {
+  const dim = stage === "night" && !(def.person ?? PERSON.test(id)); if (dim) stage = "day";
   const size = def.size || 0.06, parts = def.parts?.length ? def.parts : ["body"], hinges = def.hinges || {};
   const art = def.cut && await Promise.all(parts.map(async n => {  // the art lane's cut parts, this stage's version first
     const f = `puppets/${id}/${n}`, v = VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : "";
@@ -161,6 +166,7 @@ async function puppet(id, def, stage) {
     pins[n] = pin; info[n] = { w, h, pivot, a }; meshes.push(m);
   });
   if (!art) root.traverse(o => o.isMesh && stage === "night" && o.material.color.setScalar(0.55));
+  if (dim) meshes.forEach(m => (m.material.color.multiplyScalar(0.45), m.material.emissiveIntensity *= 0.45));  // sRGB x0.7, about as dark as the night cards, colour kept
   return { root, pins, meshes, size, def, first: parts[1] };
 }
 async function cardPuppet(file, size) {  // a single die-cut card standing on its base (a ladybug on the trunk): a puppet with no hinges
@@ -1293,9 +1299,9 @@ export function addAmbient(scene, cam, m, opts = {}) {
     // extras: paper puppets with routines, taps and story cues (DIRECTION.md "extras"), then the surprises a child finds
     const defs = (m.extras?.length || A.surprises?.length) ? await puppetDefs() : {};
     const add = async (e, o) => {
-      const p = e.model && await extra3d(e, defs[e.puppet], { stage, cast, pups, still: o.still })  // a 3D model (extras3d.js), with a puppet's interface; null if it does not load
+      const p = e.model && await extra3d(e, defs[e.puppet], { stage: e.grade ?? stage, cast, pups, still: o.still })  // a 3D model (extras3d.js), with a puppet's interface; null if it does not load
         || (e.card && !e.puppet ? await cardPuppet(e.card.includes("/") ? `${e.card}.png` : `${A.cards}/${e.card}.png`, e.size ?? 0.03)  // a surprise that is a card
-        : await puppet(e.puppet || "extra", (d => ({ ...d, size: e.height ?? e.size ?? d.size }))(defs[e.puppet] || { size: 0.06, parts: ["body"], gait: "walk" }), stage)), def = p.def;  // the entry's height (or size) wins over the puppet's own, as a 3D model's does; tools/stage_check.mjs reads the same
+        : await puppet(e.puppet || "extra", (d => ({ ...d, size: e.height ?? e.size ?? d.size }))(defs[e.puppet] || { size: 0.06, parts: ["body"], gait: "walk" }), e.grade ?? stage)), def = p.def;  // the entry's height (or size) wins over the puppet's own, as a 3D model's does; tools/stage_check.mjs reads the same
       const home = spot(e.at); if (!home) return null;  // its anchor is not in this spread
       if (e.along) { home.x += (e.shift || 0) - e.along; home.z += 0.015; }  // along: a crawler on the top edge of the named piece `at`, to and fro 2 x along (m) across it, its middle `shift` m along x from the piece's middle; a little in front of it
       if (o.dx) home.add(o.dx);

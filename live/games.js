@@ -126,7 +126,7 @@ export function glow(o, k, soft) {
     if (!glows.has(m)) { m.material = m.material.clone(); glows.set(m, [m.material.emissive.clone(), m.material.emissiveIntensity, m.material.emissiveMap]); }
     const [c, i, map] = glows.get(m), g = Math.max(0, Math.min(1, k)), mat = m.material, own = soft && g > 0 ? mat.map : map;
     if (mat.emissiveMap !== own) { mat.emissiveMap = own; mat.needsUpdate = true; }
-    if (soft && g > 0) { mat.emissive.copy(mat.map ? new c.constructor(1, 1, 1) : mat.color).multiplyScalar(0.3 * g); mat.emissiveIntensity = 1; }
+    if (soft && g > 0) { (mat.map ? mat.emissive.setRGB(1, 1, 1) : mat.emissive.copy(mat.color)).multiplyScalar(0.3 * g); mat.emissiveIntensity = 1; }
     else { mat.emissive.copy(c).lerp(c.clone().setRGB(...GOLD), g); mat.emissiveIntensity = i + (Math.max(i, LIT) - i) * g; }
   });
 }
@@ -613,7 +613,7 @@ export function makeGame(sp, env) {
     // a friend (a cast character named as a target, not a light or a lantern) stays where it stands once counted: it shakes and
     // glows; counting aloud, its number word pops over it and then it says its own react line ("voice": {"react"}, else the
     // book's "<game>.react.<name>"); "clip": [name, secs] plays on it as it is counted; tapped again: the soft "again" and a wobble
-    const friend = i => sp.byName[targets[i].name]?.body === targets[i] && !light && !hover;
+    const body = i => sp.byName[targets[i].name]?.body === targets[i], friend = i => body(i) && !light && !hover;
     const own = (o, i) => { const id = G.voice?.react ? [].concat(G.voice.react)[i] ?? [].concat(G.voice.react)[0] : `${(G.voice?.start ?? "game").replace(/\.start$/, "")}.react.${o.name}`; return env.line?.(id) ? id : null; };
     let num = null;  // {o, el, until}: the number word over the friend just counted
     const pop = (o, t) => {
@@ -659,7 +659,7 @@ export function makeGame(sp, env) {
     // while the game waits on them, each unlit one wears a soft halo in the spread's light colour, at least 44 px across on the
     // screen however small it is drawn; the halo is its tap zone too, and a tap on any halo lights the unlit one nearest the
     // finger: never a lit one, never the character behind. It pulses unless the reader asked for less motion; lit, it fades.
-    let wonAt = null;
+    let wonAt = null, crowd = null;
     const off = () => {}, still = globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches, size = new Map(), warm = new THREE.Color(1, 0.45, 0.12);
     const halos = targets.map((o, i) => {
       const h = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTexture(THREE), color: G.halo ?? (friend(i) ? 0xffb347 : lightOf(o)), transparent: true, opacity: 0,
@@ -679,12 +679,18 @@ export function makeGame(sp, env) {
       halos.forEach((h, i) => {
         const o = targets[i], p = at(o), d = -p.clone().applyMatrix4(cam.matrixWorldInverse).z, on = !state.done.has(i) && !c.complete;
         if (!size.has(o)) size.set(o, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius * 2);
+        // a game whose character targets crowd (two stand nearer than one's height: Gourd s04's ten faces 0.025 apart, s05's rows of people) shows no
+        // disc on any of them: a disc, in front or behind, fogs the faces round it. Each pulses brighter in its own colours while it waits; its sprite
+        // stays an unseen tap zone
+        crowd ??= targets.some((a, k) => body(k) && targets.some((b, j) => j !== k && body(j) && at(a).distanceTo(at(b)) < sp.byName[a.name].height));
+        const quiet = crowd && body(i) && !friend(i);
+        if (quiet) on ? glow(o, still ? 0.7 : 0.55 + 0.4 * Math.sin(now / 230 + i), true) : state.done.has(i) || glow(o, 0);
         // lit (not picked away): the halo becomes a still, soft warm glow round the light, the size of its light, not of a fingertip
-        const glowing = !on && state.done.has(i) && (light || hover), want = on ? (still ? 0.85 : 0.7 + 0.25 * Math.sin(now / 230 + i)) : glowing ? 0.5 : 0;
+        const glowing = !quiet && !on && state.done.has(i) && (light || hover), want = quiet ? 0 : on ? (still ? 0.85 : 0.7 + 0.25 * Math.sin(now / 230 + i)) : glowing ? 0.5 : 0;
         if (glowing && G.lit_glow === 0 && c.complete) h.material.opacity = 0.5 * Math.max(0, 1 - (now - (wonAt ??= now)) / 1000);  // book.json "lit_glow": 0: a lit thing that is no light (a mud spot) lets its glow go over 1 s once the game is won
         else h.material.opacity += (want - h.material.opacity) * 0.12;  // in as the game begins; once lit, down to the glow (or out)
         if (glowing) h.material.color.lerp(warm, 0.1);
-        if (friend(i)) {  // a friend's glow: its own size (1.6 times its height on screen), just behind it, so it never hides the friend
+        if (friend(i)) {  // a friend's glow: its own size (1.5 times its height on screen), just behind it, so it never hides the friend
           const ch = sp.byName[o.name], r = new THREE.Box3().setFromObject(ch.model).getSize(new THREE.Vector3()), top = p.clone().setY(p.y + ch.height);
           const tall = Math.abs(top.project(cam).y - p.clone().project(cam).y) / 2 * innerHeight;  // its height on the screen, px
           h.material.depthTest = true; h.position.copy(p).setY(p.y + ch.height / 2).addScaledVector(p.clone().sub(cam.position).normalize(), Math.max(r.x, r.z) / 2);

@@ -1,1438 +1,2692 @@
 {
-"puppets": {
-"heron": {
-"look": "Indian pond heron: buff-brown streaked body, white wings that flash in flight, yellow bill",
-"size": 0.03451,
-"gait": "walk",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"body",
-"neck",
-"head",
-"leg-l",
-"leg-r",
-"wing"
-],
-"hinges": {
-"neck": [
-"body",
--55,
-20
-],
-"head": [
-"neck",
--30,
-25
-],
-"leg-l": [
-"body",
--30,
-30
-],
-"leg-r": [
-"body",
--30,
-30
-],
-"wing": [
-"body",
--80,
-0
-]
-},
-"moves": {
-"step": {
-"leg-l": 12,
-"leg-r": -12
-},
-"freeze": {
-"neck": 15,
-"head": -10
-},
-"strike": {
-"neck": -50,
-"head": -25
-},
-"swallow": {
-"neck": 10,
-"head": 25
-},
-"flap": {
-"wing": -75
-},
-"preen": {
-"neck": -35,
-"head": 25
-}
-},
-"cycles": {
-"step": 1.5,
-"flap": 4
-},
-"uses": [
-"Kapi 1",
-"Kapi 2",
-"Kapi 3",
-"Kapi 8",
-"Kapi 9",
-"Kapi moral",
-"Mali 2"
-],
-"cut": true
-},
-"frog": {
-"look": "small friendly green-gold frog with a pale throat",
-"size": 0.03,
-"gait": "hop",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"body",
-"throat"
-],
-"hinges": {
-"throat": [
-"body",
-0,
-40
-]
-},
-"moves": {
-"croak": {
-"throat": 35
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 1",
-"Kapi 2",
-"Kapi 3",
-"Kapi 4",
-"Kapi 5",
-"Kapi 6",
-"Kapi 7",
-"Kapi 8",
-"Kapi 10",
-"Kapi moral",
-"Mali 1",
-"Mali 2",
-"Mali 3",
-"Mali 4",
-"Mali 5",
-"Mali 6",
-"Mali closing"
-],
-"cut": true
-},
-"fish": {
-"look": "silver-blue river fish with a gold fin edge",
-"size": 0.0449,
-"gait": "swim",
-"versions": [
-"day",
-"night"
-],
-"parts": [
-"body",
-"tail"
-],
-"hinges": {
-"tail": [
-"body",
--30,
-30
-]
-},
-"moves": {
-"flick": {
-"tail": 25
-}
-},
-"cycles": {
-"flick": 3
-},
-"uses": [
-"Kapi 2",
-"Kapi 6",
-"Mali 1",
-"Mali 2",
-"Mali 4"
-],
-"cut": true
-},
-"turtle": {
-"look": "Indian pond turtle: olive shell with yellow spots, kind old face",
-"size": 0.06,
-"gait": "swim",
-"versions": [
-"day",
-"night"
-],
-"parts": [
-"shell",
-"head"
-],
-"hinges": {
-"head": [
-"shell",
--15,
-25
-]
-},
-"moves": {
-"stretch": {
-"head": 25
-},
-"tuck": {
-"head": -12
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 1",
-"Kapi 3",
-"Kapi 7",
-"Kapi 9",
-"Mali 2"
-],
-"cut": true
-},
-"shrine-turtle": {
-"look": "a big old mossy turtle carrying a tiny lit spirit house with three hanging bells",
-"size": 0.09,
-"gait": "swim",
-"versions": [
-"night"
-],
-"parts": [
-"shell",
-"head"
-],
-"hinges": {
-"head": [
-"shell",
--15,
-25
-]
-},
-"moves": {
-"stretch": {
-"head": 25
-},
-"tuck": {
-"head": -12
-}
-},
-"cycles": {},
-"uses": [
-"Mali 3",
-"Mali 5"
-],
-"cut": true
-},
-"kingfisher": {
-"look": "white-throated kingfisher: turquoise back, chestnut head, white bib, red bill",
-"size": 0.03512,
-"gait": "fly",
-"versions": [
-"day"
-],
-"parts": [
-"body",
-"head",
-"wing"
-],
-"hinges": {
-"head": [
-"body",
--20,
-20
-],
-"wing": [
-"body",
--90,
-0
-]
-},
-"moves": {
-"perch": {
-"head": -8
-},
-"dive": {
-"head": -20,
-"wing": -10,
-"_tilt": -50
-},
-"swallow": {
-"head": 15
-},
-"hover": {
-"wing": -80
-}
-},
-"cycles": {
-"hover": 8
-},
-"uses": [
-"Kapi 1",
-"Kapi 2",
-"Kapi 7",
-"Kapi 8"
-],
-"cut": true
-},
-"parakeet": {
-"look": "rose-ringed parakeet: bright green, red hooked beak, long tail",
-"size": 0.04152,
-"gait": "hop",
-"versions": [
-"day",
-"evening"
-],
-"parts": [
-"body",
-"head",
-"wing"
-],
-"hinges": {
-"head": [
-"body",
--20,
-15
-],
-"wing": [
-"body",
--90,
-0
-]
-},
-"moves": {
-"peck": {
-"head": -20
-},
-"flutter": {
-"wing": -80,
-"_lift": 0.3
-}
-},
-"cycles": {
-"flutter": 6
-},
-"uses": [
-"Kapi 1",
-"Kapi 2",
-"Kapi 9",
-"Kapi 10",
-"Kapi moral"
-],
-"cut": true
-},
-"squirrel": {
-"look": "Indian palm squirrel: grey-brown, three cream stripes, bushy tail",
-"size": 0.03525,
-"gait": "crawl",
-"versions": [
-"day",
-"evening"
-],
-"parts": [
-"body",
-"head",
-"tail"
-],
-"hinges": {
-"head": [
-"body",
--12,
-12
-],
-"tail": [
-"body",
--40,
-40
-]
-},
-"moves": {
-"flick": {
-"tail": 35
-},
-"nibble": {
-"head": -10
-}
-},
-"cycles": {
-"nibble": 5
-},
-"uses": [
-"Kapi 1",
-"Kapi 3",
-"Kapi 9",
-"Kapi moral"
-],
-"cut": true
-},
-"dragonfly": {
-"look": "blue-green dragonfly with clear veined wings",
-"size": 0.04,
-"gait": "fly",
-"versions": [
-"day"
-],
-"parts": [
-"body",
-"wing-front",
-"wing-back"
-],
-"hinges": {
-"wing-front": [
-"body",
--30,
-30
-],
-"wing-back": [
-"body",
--30,
-30
-]
-},
-"moves": {
-"hover": {
-"wing-front": 25,
-"wing-back": -25
-},
-"dip": {
-"wing-front": 15,
-"_lift": -0.8
-}
-},
-"cycles": {
-"hover": 20
-},
-"uses": [
-"Kapi 1",
-"Kapi 3",
-"Kapi 7",
-"Kapi 9"
-],
-"cut": true
-},
-"fisher-boat": {
-"look": "a man in a wide straw hat and a plain shirt poling a narrow wooden boat; evening and night versions carry a small lit lamp at the prow",
-"size": 0.18128,
-"gait": "glide",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"boat"
-],
-"hinges": {},
-"moves": {
-"pole": {
-"_tilt": 2
-},
-"wave": {
-"_lift": 0.02
-},
-"hat": {
-"_lift": 0.02
-}
-},
-"cycles": {
-"pole": 0.5
-},
-"uses": [
-"Kapi 2",
-"Kapi 4",
-"Kapi 7",
-"Kapi 8",
-"Kapi 10",
-"Kapi moral",
-"Mali 2"
-],
-"cut": true
-},
-"buffalo": {
-"look": "dark grey water buffalo wallowing up to its belly, swept-back horns, a white cattle egret on its back",
-"size": 0.07772,
-"gait": "walk",
-"versions": [
-"day"
-],
-"parts": [
-"body",
-"head",
-"tail",
-"egret-neck"
-],
-"hinges": {
-"head": [
-"body",
--10,
-15
-],
-"tail": [
-"body",
--30,
-30
-],
-"egret-neck": [
-"body",
--40,
-20
-]
-},
-"moves": {
-"chew": {
-"head": -4
-},
-"flick": {
-"tail": 30
-},
-"lift": {
-"head": 12
-},
-"egret-peck": {
-"egret-neck": -35
-}
-},
-"cycles": {
-"chew": 1.5
-},
-"uses": [
-"Kapi 3",
-"Kapi 10"
-],
-"cut": true
-},
-"duck": {
-"look": "spot-billed duck: brown scalloped feathers, yellow-tipped dark bill",
-"size": 0.04479,
-"gait": "swim",
-"versions": [
-"day"
-],
-"parts": [
-"body",
-"head"
-],
-"hinges": {
-"head": [
-"body",
--30,
-20
-]
-},
-"moves": {
-"dabble": {
-"head": -25,
-"_tilt": -35
-},
-"quack": {
-"head": 15
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 7",
-"Kapi 10"
-],
-"cut": true
-},
-"duckling": {
-"look": "fluffy yellow-brown duckling",
-"size": 0.025,
-"gait": "swim",
-"versions": [
-"day"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"tilt": {
-"_tilt": 15
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 7",
-"Kapi 10"
-],
-"cut": true
-},
-"otter": {
-"look": "smooth-coated otter: sleek brown, pale throat, whiskers",
-"size": 0.02403,
-"gait": "swim",
-"versions": [
-"day"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"roll": {
-"_tilt": 170
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 8"
-],
-"cut": true
-},
-"lapwing": {
-"look": "red-wattled lapwing: brown back, black head and breast, white cheek, red wattle, yellow legs",
-"size": 0.0275,
-"gait": "walk",
-"versions": [
-"evening",
-"night"
-],
-"parts": [
-"body",
-"head",
-"leg-l",
-"leg-r"
-],
-"hinges": {
-"head": [
-"body",
--15,
-15
-],
-"leg-l": [
-"body",
--30,
-70
-],
-"leg-r": [
-"body",
--30,
-70
-]
-},
-"moves": {
-"step": {
-"leg-l": 12,
-"leg-r": -12
-},
-"dip": {
-"head": -10,
-"_tilt": -25
-},
-"call": {
-"head": 15
-},
-"sit": {
-"leg-l": 60,
-"leg-r": 60,
-"_lift": -0.3
-}
-},
-"cycles": {
-"step": 3
-},
-"uses": [
-"Kapi 4",
-"Kapi 5",
-"Kapi 6"
-],
-"cut": true
-},
-"crab": {
-"look": "small orange-brown river crab, one claw bigger",
-"size": 0.02622,
-"gait": "crawl",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"body",
-"claw-l",
-"claw-r"
-],
-"hinges": {
-"claw-l": [
-"body",
--45,
-10
-],
-"claw-r": [
-"body",
--10,
-45
-]
-},
-"moves": {
-"wave": {
-"claw-l": -40,
-"claw-r": 40
-},
-"click": {
-"claw-l": -20,
-"claw-r": 20
-}
-},
-"cycles": {
-"wave": 2,
-"click": 6
-},
-"uses": [
-"Kapi 4",
-"Kapi 5",
-"Kapi 6",
-"Kapi 8",
-"Mali 2"
-],
-"cut": true
-},
-"owl": {
-"look": "spotted owlet: small, grey-brown with white spots, big yellow eyes",
-"size": 0.03788,
-"gait": "fly",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"body",
-"head",
-"eyelid"
-],
-"hinges": {
-"head": [
-"body",
--12,
-12
-],
-"eyelid": [
-"head",
-0,
-180
-]
-},
-"moves": {
-"blink": {
-"eyelid": 180
-},
-"sleep": {
-"eyelid": 180,
-"head": -6
-},
-"wake": {
-"eyelid": 0,
-"head": 8
-},
-"look": {
-"head": 10
-},
-"hoot": {
-"head": -6,
-"_lift": 0.05
-},
-"ruffle": {
-"head": -6
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 3",
-"Kapi 5",
-"Kapi 6",
-"Kapi 9",
-"Kapi 10",
-"Kapi moral",
-"Mali 1",
-"Mali 5",
-"Mali closing"
-],
-"cut": true
-},
-"fruit-bat": {
-"look": "Indian flying fox: russet head and shoulders, dark leathery wings",
-"size": 0.03254,
-"gait": "fly",
-"versions": [
-"day",
-"evening",
-"night"
-],
-"parts": [
-"body",
-"wing-l",
-"wing-r"
-],
-"hinges": {
-"wing-l": [
-"body",
--60,
-60
-],
-"wing-r": [
-"body",
--60,
-60
-]
-},
-"moves": {
-"flap": {
-"wing-l": 55,
-"wing-r": -55
-},
-"stretch": {
-"wing-l": 50
-},
-"hang": {
-"_tilt": 180
-}
-},
-"cycles": {
-"flap": 3
-},
-"uses": [
-"Kapi 1",
-"Kapi 2",
-"Kapi 4",
-"Kapi 5",
-"Kapi 6",
-"Kapi 9",
-"Kapi moral",
-"Mali 5"
-],
-"cut": true
-},
-"gecko": {
-"look": "pale house gecko with big dark eyes and a banded tail; it chirps and curls its tail and never catches anything",
-"size": 0.03342,
-"gait": "crawl",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"tail"
-],
-"hinges": {
-"tail": [
-"body",
--60,
-60
-]
-},
-"moves": {
-"curl": {
-"tail": -50
-}
-},
-"cycles": {},
-"uses": [
-"Mali 1",
-"Mali 3",
-"Mali 4",
-"Mali 5",
-"Mali 6",
-"Mali closing"
-],
-"cut": true
-},
-"pot-carrier": {
-"look": "a woman in a bright cotton sari at the river steps with a brass water pot",
-"size": 0.11,
-"gait": "walk",
-"versions": [
-"day"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"dip": {
-"_tilt": -25
-},
-"lift": {
-"_lift": 0.02
-},
-"look": {
-"_tilt": 5
-}
-},
-"cycles": {},
-"uses": [
-"Kapi 7",
-"Kapi 10"
-],
-"cut": true
-},
-"khaen-player": {
-"look": "an old man with a checked cloth sash, sitting cross-legged, playing a long bamboo khaen",
-"size": 0.1,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"play": {
-"_tilt": 3
-},
-"pause": {
-"_tilt": 4
-},
-"nod": {
-"_tilt": -4
-}
-},
-"cycles": {
-"play": 1.2
-},
-"uses": [
-"Mali 1",
-"Mali 6"
-],
-"cut": true
-},
-"dog": {
-"look": "a sandy village dog with a curled tail and a white chest",
-"size": 0.05863,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"head",
-"tail"
-],
-"hinges": {
-"head": [
-"body",
--15,
-15
-],
-"tail": [
-"body",
--40,
-60
-]
-},
-"moves": {
-"wag": {
-"tail": 40
-},
-"sniff": {
-"head": -15
-},
-"bark": {
-"head": 10
-}
-},
-"cycles": {
-"wag": 4
-},
-"uses": [
-"Mali 1",
-"Mali 6",
-"Mali closing"
-],
-"cut": true
-},
-"cat": {
-"look": "a small tabby cat with a kinked tail",
-"size": 0.0351,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"head",
-"tail"
-],
-"hinges": {
-"head": [
-"body",
--15,
-15
-],
-"tail": [
-"body",
--40,
-70
-]
-},
-"moves": {
-"swish": {
-"tail": 35
-},
-"startle": {
-"tail": 60,
-"head": 12,
-"_lift": 0.2
-},
-"groom": {
-"head": -15
-},
-"watch": {
-"head": 15
-}
-},
-"cycles": {
-"swish": 0.8
-},
-"uses": [
-"Mali 1",
-"Mali 6",
-"Mali closing"
-],
-"cut": true
-},
-"spirit-poler": {
-"look": "a squat, open-faced spirit woven like a bamboo fish trap, a friendly face painted on the weave, poling a small boat with a curled naga prow, fruit baskets aboard",
-"size": 0.08699,
-"gait": "glide",
-"versions": [
-"night"
-],
-"parts": [
-"boat"
-],
-"hinges": {},
-"moves": {
-"pole": {
-"_tilt": 2
-},
-"bow": {
-"_tilt": -8
-}
-},
-"cycles": {
-"pole": 0.5
-},
-"uses": [
-"Mali 5"
-],
-"cut": true
-},
-"flower-seller": {
-"look": "a slim spirit woven like a bamboo fish trap, a calm painted face, jasmine garlands over her arms",
-"size": 0.08,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"offer": {
-"_tilt": 4
-},
-"sway": {
-"_tilt": 6
-},
-"droop": {
-"_tilt": -8
-},
-"cheer": {
-"_lift": 0.08
-}
-},
-"cycles": {
-"sway": 0.5
-},
-"uses": [
-"Mali 3"
-],
-"cut": true
-},
-"fruit-seller": {
-"look": "a tall spirit of three stacked sticky-rice baskets with a carved-wood face, holding a little brass hand scale",
-"size": 0.08,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"weigh": {
-"_tilt": 4
-},
-"droop": {
-"_tilt": -6
-},
-"cheer": {
-"_lift": 0.1
-}
-},
-"cycles": {
-"weigh": 0.8
-},
-"uses": [
-"Mali 3"
-],
-"cut": true
-},
-"hammock-sleeper": {
-"look": "a long, thin spirit of rolled palm mat, asleep in a striped cloth hammock, one long arm dangling",
-"size": 0.08,
-"gait": "glide",
-"versions": [
-"night"
-],
-"parts": [
-"hammock"
-],
-"hinges": {},
-"moves": {
-"rock": {
-"_tilt": 8
-},
-"wake": {
-"_tilt": 12
-},
-"cheer": {
-"_tilt": -8
-}
-},
-"cycles": {
-"rock": 0.4
-},
-"uses": [
-"Mali 4"
-],
-"cut": true
-},
-"moth": {
-"look": "Mali's cream paper moth with soft gold wing spots",
-"size": 0.02297,
-"gait": "fly",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"wing-l",
-"wing-r"
-],
-"hinges": {
-"wing-l": [
-"body",
--10,
-60
-],
-"wing-r": [
-"body",
--60,
-10
-]
-},
-"moves": {
-"flutter": {
-"wing-l": 50,
-"wing-r": -50
-}
-},
-"cycles": {
-"flutter": 9
-},
-"uses": [
-"Mali 3",
-"Mali closing"
-],
-"cut": true
-},
-"aunt": {
-"look": "SCENES.md's aunt in a sinh skirt and white blouse, empty-handed with cupped hands (the builder's 3D leaf boat lbA sits in them)",
-"size": 0.21,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"thighs"
-],
-"hinges": {},
-"moves": {
-"kneel": {
-"_tilt": -6
-},
-"look": {
-"_tilt": 5
-},
-"nod": {
-"_tilt": -4
-},
-"point": {
-"_tilt": 6
-},
-"bounce": {
-"_lift": 0.15
-}
-},
-"cycles": {},
-"uses": [
-"Mali 1",
-"Mali 6"
-],
-"cut": true
-},
-"grandfather": {
-"look": "SCENES.md's grandfather with a walking stick, the other hand cupped for his leaf boat (lbB)",
-"size": 0.2,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"thighs"
-],
-"hinges": {},
-"moves": {
-"kneel": {
-"_tilt": -6
-},
-"look": {
-"_tilt": 5
-},
-"nod": {
-"_tilt": -4
-},
-"point": {
-"_tilt": 6
-},
-"bounce": {
-"_lift": 0.15
-}
-},
-"cycles": {},
-"uses": [
-"Mali 1"
-],
-"cut": true
-},
-"boy": {
-"look": "SCENES.md's small boy, empty-handed with cupped hands (lbC)",
-"size": 0.13,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"thighs"
-],
-"hinges": {},
-"moves": {
-"kneel": {
-"_tilt": -6
-},
-"look": {
-"_tilt": 5
-},
-"nod": {
-"_tilt": -4
-},
-"point": {
-"_tilt": 6
-},
-"bounce": {
-"_lift": 0.15
-}
-},
-"cycles": {
-"bounce": 2
-},
-"uses": [
-"Mali 1",
-"Mali 6"
-],
-"cut": true
-},
-"palm-sprite": {
-"look": "a tiny spirit woven from one strip of green palm leaf, like the woven grasshoppers sold at Lao markets: slim and angular, long leaf-tip feelers, ink-dot eyes, one thin arm",
-"size": 0.01725,
-"gait": "hop",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"head",
-"arm"
-],
-"hinges": {
-"head": [
-"body",
--40,
-40
-],
-"arm": [
-"body",
--30,
-120
-]
-},
-"moves": {
-"peek": {
-"head": -15,
-"arm": 40
-},
-"giggle": {
-"_tilt": 10
-},
-"cheer": {
-"arm": 110,
-"head": 15
-},
-"doze": {
-"head": 35
-}
-},
-"cycles": {
-"giggle": 4
-},
-"uses": [
-"Mali 3",
-"Mali 4",
-"Mali 5",
-"Mali 6"
-],
-"cut": true
-},
-"tong": {
-"look": "story character (acts, not an extra): SCENES.md's Tong, a banana-leaf spirit folded like a krathong, a candle on his head",
-"size": 0.03878,
-"gait": "hop",
-"versions": [
-"night"
-],
-"parts": [
-"body",
-"head",
-"flame",
-"arm-l",
-"arm-r"
-],
-"hinges": {
-"head": [
-"body",
--25,
-25
-],
-"flame": [
-"head",
--15,
-15
-],
-"arm-l": [
-"body",
--140,
-40
-],
-"arm-r": [
-"body",
--40,
-140
-]
-},
-"moves": {
-"idle": {
-"_tilt": 4
-},
-"cry": {
-"head": -20,
-"arm-l": 30,
-"arm-r": -30,
-"_tilt": 5
-},
-"talk": {
-"head": 8
-},
-"bounce": {
-"_lift": 0.25,
-"arm-l": -60,
-"arm-r": 60
-},
-"no": {
-"head": 15
-},
-"wave": {
-"arm-r": 120
-},
-"flame": {
-"flame": 10
-}
-},
-"cycles": {
-"idle": 0.5,
-"cry": 6,
-"talk": 3,
-"bounce": 2,
-"no": 3,
-"wave": 2,
-"flame": 8
-},
-"uses": [
-"Mali 4",
-"Mali 6"
-],
-"cut": true
-},
-"nok": {
-"look": "story character (acts, not an extra): SCENES.md's Grandma Nok, a seated woven-reed boat-singer in an indigo sinh",
-"size": 0.12,
-"gait": "walk",
-"versions": [
-"night"
-],
-"parts": [
-"body"
-],
-"hinges": {},
-"moves": {
-"sit-idle": {
-"_lift": 0.02
-},
-"talk": {
-"_tilt": 3
-},
-"sing": {
-"_tilt": 6
-}
-},
-"cycles": {
-"sit-idle": 0.25,
-"talk": 2.5,
-"sing": 0.4
-},
-"uses": [
-"Mali 5",
-"Mali 6"
-],
-"cut": true
-}
-}
+ "puppets": {
+  "heron": {
+   "look": "Indian pond heron: buff-brown streaked body, white wings that flash in flight, yellow bill",
+   "size": 0.03451,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "neck",
+    "head",
+    "leg-l",
+    "leg-r",
+    "wing"
+   ],
+   "hinges": {
+    "neck": [
+     "body",
+     -55,
+     20
+    ],
+    "head": [
+     "neck",
+     -30,
+     25
+    ],
+    "leg-l": [
+     "body",
+     -30,
+     30
+    ],
+    "leg-r": [
+     "body",
+     -30,
+     30
+    ],
+    "wing": [
+     "body",
+     -80,
+     0
+    ]
+   },
+   "moves": {
+    "step": {
+     "leg-l": 12,
+     "leg-r": -12
+    },
+    "freeze": {
+     "neck": 15,
+     "head": -10
+    },
+    "strike": {
+     "neck": -50,
+     "head": -25
+    },
+    "swallow": {
+     "neck": 10,
+     "head": 25
+    },
+    "flap": {
+     "wing": -75
+    },
+    "preen": {
+     "neck": -35,
+     "head": 25
+    }
+   },
+   "cycles": {
+    "step": 1.5,
+    "flap": 4
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 3",
+    "Kapi 8",
+    "Kapi 9",
+    "Kapi moral",
+    "Mali 2"
+   ],
+   "cut": true
+  },
+  "frog": {
+   "look": "small friendly green-gold frog with a pale throat",
+   "size": 0.03,
+   "gait": "hop",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "throat"
+   ],
+   "hinges": {
+    "throat": [
+     "body",
+     0,
+     40
+    ]
+   },
+   "moves": {
+    "croak": {
+     "throat": 35
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 3",
+    "Kapi 4",
+    "Kapi 5",
+    "Kapi 6",
+    "Kapi 7",
+    "Kapi 8",
+    "Kapi 10",
+    "Kapi moral",
+    "Mali 1",
+    "Mali 2",
+    "Mali 3",
+    "Mali 4",
+    "Mali 5",
+    "Mali 6",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "fish": {
+   "look": "silver-blue river fish with a gold fin edge",
+   "size": 0.0449,
+   "gait": "swim",
+   "versions": [
+    "day",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "tail"
+   ],
+   "hinges": {
+    "tail": [
+     "body",
+     -30,
+     30
+    ]
+   },
+   "moves": {
+    "flick": {
+     "tail": 25
+    }
+   },
+   "cycles": {
+    "flick": 3
+   },
+   "uses": [
+    "Kapi 2",
+    "Kapi 6",
+    "Mali 1",
+    "Mali 2",
+    "Mali 4"
+   ],
+   "cut": true
+  },
+  "turtle": {
+   "look": "Indian pond turtle: olive shell with yellow spots, kind old face",
+   "size": 0.06,
+   "gait": "swim",
+   "versions": [
+    "day",
+    "night"
+   ],
+   "parts": [
+    "shell",
+    "head"
+   ],
+   "hinges": {
+    "head": [
+     "shell",
+     -15,
+     25
+    ]
+   },
+   "moves": {
+    "stretch": {
+     "head": 25
+    },
+    "tuck": {
+     "head": -12
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 1",
+    "Kapi 3",
+    "Kapi 7",
+    "Kapi 9",
+    "Mali 2"
+   ],
+   "cut": true
+  },
+  "shrine-turtle": {
+   "look": "a big old mossy turtle carrying a tiny lit spirit house with three hanging bells",
+   "size": 0.09,
+   "gait": "swim",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "shell",
+    "head"
+   ],
+   "hinges": {
+    "head": [
+     "shell",
+     -15,
+     25
+    ]
+   },
+   "moves": {
+    "stretch": {
+     "head": 25
+    },
+    "tuck": {
+     "head": -12
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Mali 3",
+    "Mali 5"
+   ],
+   "cut": true
+  },
+  "kingfisher": {
+   "look": "white-throated kingfisher: turquoise back, chestnut head, white bib, red bill",
+   "size": 0.03512,
+   "gait": "fly",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "wing"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -20,
+     20
+    ],
+    "wing": [
+     "body",
+     -90,
+     0
+    ]
+   },
+   "moves": {
+    "perch": {
+     "head": -8
+    },
+    "dive": {
+     "head": -20,
+     "wing": -10,
+     "_tilt": -50
+    },
+    "swallow": {
+     "head": 15
+    },
+    "hover": {
+     "wing": -80
+    }
+   },
+   "cycles": {
+    "hover": 8
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 7",
+    "Kapi 8"
+   ],
+   "cut": true
+  },
+  "parakeet": {
+   "look": "rose-ringed parakeet: bright green, red hooked beak, long tail",
+   "size": 0.04152,
+   "gait": "hop",
+   "versions": [
+    "day",
+    "evening"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "wing"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -20,
+     15
+    ],
+    "wing": [
+     "body",
+     -90,
+     0
+    ]
+   },
+   "moves": {
+    "peck": {
+     "head": -20
+    },
+    "flutter": {
+     "wing": -80,
+     "_lift": 0.3
+    }
+   },
+   "cycles": {
+    "flutter": 6
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 9",
+    "Kapi 10",
+    "Kapi moral"
+   ],
+   "cut": true
+  },
+  "squirrel": {
+   "look": "Indian palm squirrel: grey-brown, three cream stripes, bushy tail",
+   "size": 0.03525,
+   "gait": "crawl",
+   "versions": [
+    "day",
+    "evening"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "tail"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -12,
+     12
+    ],
+    "tail": [
+     "body",
+     -40,
+     40
+    ]
+   },
+   "moves": {
+    "flick": {
+     "tail": 35
+    },
+    "nibble": {
+     "head": -10
+    }
+   },
+   "cycles": {
+    "nibble": 5
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 3",
+    "Kapi 9",
+    "Kapi moral"
+   ],
+   "cut": true
+  },
+  "dragonfly": {
+   "look": "blue-green dragonfly with clear veined wings",
+   "size": 0.04,
+   "gait": "fly",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body",
+    "wing-front",
+    "wing-back"
+   ],
+   "hinges": {
+    "wing-front": [
+     "body",
+     -30,
+     30
+    ],
+    "wing-back": [
+     "body",
+     -30,
+     30
+    ]
+   },
+   "moves": {
+    "hover": {
+     "wing-front": 25,
+     "wing-back": -25
+    },
+    "dip": {
+     "wing-front": 15,
+     "_lift": -0.8
+    }
+   },
+   "cycles": {
+    "hover": 20
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 3",
+    "Kapi 7",
+    "Kapi 9"
+   ],
+   "cut": true
+  },
+  "fisher-boat": {
+   "look": "a man in a wide straw hat and a plain shirt poling a narrow wooden boat; evening and night versions carry a small lit lamp at the prow",
+   "size": 0.18128,
+   "gait": "glide",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "boat"
+   ],
+   "hinges": {},
+   "moves": {
+    "pole": {
+     "_tilt": 2
+    },
+    "wave": {
+     "_lift": 0.02
+    },
+    "hat": {
+     "_lift": 0.02
+    }
+   },
+   "cycles": {
+    "pole": 0.5
+   },
+   "uses": [
+    "Kapi 2",
+    "Kapi 4",
+    "Kapi 7",
+    "Kapi 8",
+    "Kapi 10",
+    "Kapi moral",
+    "Mali 2"
+   ],
+   "cut": true
+  },
+  "buffalo": {
+   "look": "dark grey water buffalo wallowing up to its belly, swept-back horns, a white cattle egret on its back",
+   "size": 0.07772,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "tail",
+    "egret-neck"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -10,
+     15
+    ],
+    "tail": [
+     "body",
+     -30,
+     30
+    ],
+    "egret-neck": [
+     "body",
+     -40,
+     20
+    ]
+   },
+   "moves": {
+    "chew": {
+     "head": -4
+    },
+    "flick": {
+     "tail": 30
+    },
+    "lift": {
+     "head": 12
+    },
+    "egret-peck": {
+     "egret-neck": -35
+    }
+   },
+   "cycles": {
+    "chew": 1.5
+   },
+   "uses": [
+    "Kapi 3",
+    "Kapi 10"
+   ],
+   "cut": true
+  },
+  "duck": {
+   "look": "spot-billed duck: brown scalloped feathers, yellow-tipped dark bill",
+   "size": 0.04479,
+   "gait": "swim",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body",
+    "head"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -30,
+     20
+    ]
+   },
+   "moves": {
+    "dabble": {
+     "head": -25,
+     "_tilt": -35
+    },
+    "quack": {
+     "head": 15
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 7",
+    "Kapi 10"
+   ],
+   "cut": true
+  },
+  "duckling": {
+   "look": "fluffy yellow-brown duckling",
+   "size": 0.025,
+   "gait": "swim",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 15
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 7",
+    "Kapi 10"
+   ],
+   "cut": true
+  },
+  "otter": {
+   "look": "smooth-coated otter: sleek brown, pale throat, whiskers",
+   "size": 0.02403,
+   "gait": "swim",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "roll": {
+     "_tilt": 170
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 8"
+   ],
+   "cut": true
+  },
+  "lapwing": {
+   "look": "red-wattled lapwing: brown back, black head and breast, white cheek, red wattle, yellow legs",
+   "size": 0.0275,
+   "gait": "walk",
+   "versions": [
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "leg-l",
+    "leg-r"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -15,
+     15
+    ],
+    "leg-l": [
+     "body",
+     -30,
+     70
+    ],
+    "leg-r": [
+     "body",
+     -30,
+     70
+    ]
+   },
+   "moves": {
+    "step": {
+     "leg-l": 12,
+     "leg-r": -12
+    },
+    "dip": {
+     "head": -10,
+     "_tilt": -25
+    },
+    "call": {
+     "head": 15
+    },
+    "sit": {
+     "leg-l": 60,
+     "leg-r": 60,
+     "_lift": -0.3
+    }
+   },
+   "cycles": {
+    "step": 3
+   },
+   "uses": [
+    "Kapi 4",
+    "Kapi 5",
+    "Kapi 6"
+   ],
+   "cut": true
+  },
+  "crab": {
+   "look": "small orange-brown river crab, one claw bigger",
+   "size": 0.02622,
+   "gait": "crawl",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "claw-l",
+    "claw-r"
+   ],
+   "hinges": {
+    "claw-l": [
+     "body",
+     -45,
+     10
+    ],
+    "claw-r": [
+     "body",
+     -10,
+     45
+    ]
+   },
+   "moves": {
+    "wave": {
+     "claw-l": -40,
+     "claw-r": 40
+    },
+    "click": {
+     "claw-l": -20,
+     "claw-r": 20
+    }
+   },
+   "cycles": {
+    "wave": 2,
+    "click": 6
+   },
+   "uses": [
+    "Kapi 4",
+    "Kapi 5",
+    "Kapi 6",
+    "Kapi 8",
+    "Mali 2"
+   ],
+   "cut": true
+  },
+  "owl": {
+   "look": "spotted owlet: small, grey-brown with white spots, big yellow eyes",
+   "size": 0.03788,
+   "gait": "fly",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "eyelid"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -12,
+     12
+    ],
+    "eyelid": [
+     "head",
+     0,
+     180
+    ]
+   },
+   "moves": {
+    "blink": {
+     "eyelid": 180
+    },
+    "sleep": {
+     "eyelid": 180,
+     "head": -6
+    },
+    "wake": {
+     "eyelid": 0,
+     "head": 8
+    },
+    "look": {
+     "head": 10
+    },
+    "hoot": {
+     "head": -6,
+     "_lift": 0.05
+    },
+    "ruffle": {
+     "head": -6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 3",
+    "Kapi 5",
+    "Kapi 6",
+    "Kapi 9",
+    "Kapi 10",
+    "Kapi moral",
+    "Mali 1",
+    "Mali 5",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "fruit-bat": {
+   "look": "Indian flying fox: russet head and shoulders, dark leathery wings",
+   "size": 0.03254,
+   "gait": "fly",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body",
+    "wing-l",
+    "wing-r"
+   ],
+   "hinges": {
+    "wing-l": [
+     "body",
+     -60,
+     60
+    ],
+    "wing-r": [
+     "body",
+     -60,
+     60
+    ]
+   },
+   "moves": {
+    "flap": {
+     "wing-l": 55,
+     "wing-r": -55
+    },
+    "stretch": {
+     "wing-l": 50
+    },
+    "hang": {
+     "_tilt": 180
+    }
+   },
+   "cycles": {
+    "flap": 3
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 4",
+    "Kapi 5",
+    "Kapi 6",
+    "Kapi 9",
+    "Kapi moral",
+    "Mali 5"
+   ],
+   "cut": true
+  },
+  "gecko": {
+   "look": "pale house gecko with big dark eyes and a banded tail; it chirps and curls its tail and never catches anything",
+   "size": 0.03342,
+   "gait": "crawl",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "tail"
+   ],
+   "hinges": {
+    "tail": [
+     "body",
+     -60,
+     60
+    ]
+   },
+   "moves": {
+    "curl": {
+     "tail": -50
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Mali 1",
+    "Mali 3",
+    "Mali 4",
+    "Mali 5",
+    "Mali 6",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "pot-carrier": {
+   "look": "a woman in a bright cotton sari at the river steps with a brass water pot",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "dip": {
+     "_tilt": -25
+    },
+    "lift": {
+     "_lift": 0.02
+    },
+    "look": {
+     "_tilt": 5
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Kapi 7",
+    "Kapi 10"
+   ],
+   "cut": true
+  },
+  "khaen-player": {
+   "look": "an old man with a checked cloth sash, sitting cross-legged, playing a long bamboo khaen",
+   "size": 0.1,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "play": {
+     "_tilt": 3
+    },
+    "pause": {
+     "_tilt": 4
+    },
+    "nod": {
+     "_tilt": -4
+    }
+   },
+   "cycles": {
+    "play": 1.2
+   },
+   "uses": [
+    "Mali 1",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "dog": {
+   "look": "a sandy village dog with a curled tail and a white chest",
+   "size": 0.05863,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "tail"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -15,
+     15
+    ],
+    "tail": [
+     "body",
+     -40,
+     60
+    ]
+   },
+   "moves": {
+    "wag": {
+     "tail": 40
+    },
+    "sniff": {
+     "head": -15
+    },
+    "bark": {
+     "head": 10
+    }
+   },
+   "cycles": {
+    "wag": 4
+   },
+   "uses": [
+    "Mali 1",
+    "Mali 6",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "cat": {
+   "look": "a small tabby cat with a kinked tail",
+   "size": 0.0351,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "tail"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -15,
+     15
+    ],
+    "tail": [
+     "body",
+     -40,
+     70
+    ]
+   },
+   "moves": {
+    "swish": {
+     "tail": 35
+    },
+    "startle": {
+     "tail": 60,
+     "head": 12,
+     "_lift": 0.2
+    },
+    "groom": {
+     "head": -15
+    },
+    "watch": {
+     "head": 15
+    }
+   },
+   "cycles": {
+    "swish": 0.8
+   },
+   "uses": [
+    "Mali 1",
+    "Mali 6",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "spirit-poler": {
+   "look": "a squat, open-faced spirit woven like a bamboo fish trap, a friendly face painted on the weave, poling a small boat with a curled naga prow, fruit baskets aboard",
+   "size": 0.08699,
+   "gait": "glide",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "boat"
+   ],
+   "hinges": {},
+   "moves": {
+    "pole": {
+     "_tilt": 2
+    },
+    "bow": {
+     "_tilt": -8
+    }
+   },
+   "cycles": {
+    "pole": 0.5
+   },
+   "uses": [
+    "Mali 5"
+   ],
+   "cut": true
+  },
+  "flower-seller": {
+   "look": "a slim spirit woven like a bamboo fish trap, a calm painted face, jasmine garlands over her arms",
+   "size": 0.08,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "offer": {
+     "_tilt": 4
+    },
+    "sway": {
+     "_tilt": 6
+    },
+    "droop": {
+     "_tilt": -8
+    },
+    "cheer": {
+     "_lift": 0.08
+    }
+   },
+   "cycles": {
+    "sway": 0.5
+   },
+   "uses": [
+    "Mali 3"
+   ],
+   "cut": true
+  },
+  "fruit-seller": {
+   "look": "a tall spirit of three stacked sticky-rice baskets with a carved-wood face, holding a little brass hand scale",
+   "size": 0.08,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "weigh": {
+     "_tilt": 4
+    },
+    "droop": {
+     "_tilt": -6
+    },
+    "cheer": {
+     "_lift": 0.1
+    }
+   },
+   "cycles": {
+    "weigh": 0.8
+   },
+   "uses": [
+    "Mali 3"
+   ],
+   "cut": true
+  },
+  "hammock-sleeper": {
+   "look": "a long, thin spirit of rolled palm mat, asleep in a striped cloth hammock, one long arm dangling",
+   "size": 0.08,
+   "gait": "glide",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "hammock"
+   ],
+   "hinges": {},
+   "moves": {
+    "rock": {
+     "_tilt": 8
+    },
+    "wake": {
+     "_tilt": 12
+    },
+    "cheer": {
+     "_tilt": -8
+    }
+   },
+   "cycles": {
+    "rock": 0.4
+   },
+   "uses": [
+    "Mali 4"
+   ],
+   "cut": true
+  },
+  "moth": {
+   "look": "Mali's cream paper moth with soft gold wing spots",
+   "size": 0.02297,
+   "gait": "fly",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "wing-l",
+    "wing-r"
+   ],
+   "hinges": {
+    "wing-l": [
+     "body",
+     -10,
+     60
+    ],
+    "wing-r": [
+     "body",
+     -60,
+     10
+    ]
+   },
+   "moves": {
+    "flutter": {
+     "wing-l": 50,
+     "wing-r": -50
+    }
+   },
+   "cycles": {
+    "flutter": 9
+   },
+   "uses": [
+    "Mali 3",
+    "Mali closing"
+   ],
+   "cut": true
+  },
+  "aunt": {
+   "look": "SCENES.md's aunt in a sinh skirt and white blouse, empty-handed with cupped hands (the builder's 3D leaf boat lbA sits in them)",
+   "size": 0.21,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "thighs"
+   ],
+   "hinges": {},
+   "moves": {
+    "kneel": {
+     "_tilt": -6
+    },
+    "look": {
+     "_tilt": 5
+    },
+    "nod": {
+     "_tilt": -4
+    },
+    "point": {
+     "_tilt": 6
+    },
+    "bounce": {
+     "_lift": 0.15
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Mali 1",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "grandfather": {
+   "look": "SCENES.md's grandfather with a walking stick, the other hand cupped for his leaf boat (lbB)",
+   "size": 0.2,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "thighs"
+   ],
+   "hinges": {},
+   "moves": {
+    "kneel": {
+     "_tilt": -6
+    },
+    "look": {
+     "_tilt": 5
+    },
+    "nod": {
+     "_tilt": -4
+    },
+    "point": {
+     "_tilt": 6
+    },
+    "bounce": {
+     "_lift": 0.15
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Mali 1"
+   ],
+   "cut": true
+  },
+  "boy": {
+   "look": "SCENES.md's small boy, empty-handed with cupped hands (lbC)",
+   "size": 0.13,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "thighs"
+   ],
+   "hinges": {},
+   "moves": {
+    "kneel": {
+     "_tilt": -6
+    },
+    "look": {
+     "_tilt": 5
+    },
+    "nod": {
+     "_tilt": -4
+    },
+    "point": {
+     "_tilt": 6
+    },
+    "bounce": {
+     "_lift": 0.15
+    }
+   },
+   "cycles": {
+    "bounce": 2
+   },
+   "uses": [
+    "Mali 1",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "palm-sprite": {
+   "look": "a tiny spirit woven from one strip of green palm leaf, like the woven grasshoppers sold at Lao markets: slim and angular, long leaf-tip feelers, ink-dot eyes, one thin arm",
+   "size": 0.01725,
+   "gait": "hop",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "arm"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -40,
+     40
+    ],
+    "arm": [
+     "body",
+     -30,
+     120
+    ]
+   },
+   "moves": {
+    "peek": {
+     "head": -15,
+     "arm": 40
+    },
+    "giggle": {
+     "_tilt": 10
+    },
+    "cheer": {
+     "arm": 110,
+     "head": 15
+    },
+    "doze": {
+     "head": 35
+    }
+   },
+   "cycles": {
+    "giggle": 4
+   },
+   "uses": [
+    "Mali 3",
+    "Mali 4",
+    "Mali 5",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "tong": {
+   "look": "story character (acts, not an extra): SCENES.md's Tong, a banana-leaf spirit folded like a krathong, a candle on his head",
+   "size": 0.03878,
+   "gait": "hop",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body",
+    "head",
+    "flame",
+    "arm-l",
+    "arm-r"
+   ],
+   "hinges": {
+    "head": [
+     "body",
+     -25,
+     25
+    ],
+    "flame": [
+     "head",
+     -15,
+     15
+    ],
+    "arm-l": [
+     "body",
+     -140,
+     40
+    ],
+    "arm-r": [
+     "body",
+     -40,
+     140
+    ]
+   },
+   "moves": {
+    "idle": {
+     "_tilt": 4
+    },
+    "cry": {
+     "head": -20,
+     "arm-l": 30,
+     "arm-r": -30,
+     "_tilt": 5
+    },
+    "talk": {
+     "head": 8
+    },
+    "bounce": {
+     "_lift": 0.25,
+     "arm-l": -60,
+     "arm-r": 60
+    },
+    "no": {
+     "head": 15
+    },
+    "wave": {
+     "arm-r": 120
+    },
+    "flame": {
+     "flame": 10
+    }
+   },
+   "cycles": {
+    "idle": 0.5,
+    "cry": 6,
+    "talk": 3,
+    "bounce": 2,
+    "no": 3,
+    "wave": 2,
+    "flame": 8
+   },
+   "uses": [
+    "Mali 4",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "nok": {
+   "look": "story character (acts, not an extra): SCENES.md's Grandma Nok, a seated woven-reed boat-singer in an indigo sinh",
+   "size": 0.12,
+   "gait": "walk",
+   "versions": [
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "sit-idle": {
+     "_lift": 0.02
+    },
+    "talk": {
+     "_tilt": 3
+    },
+    "sing": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {
+    "sit-idle": 0.25,
+    "talk": 2.5,
+    "sing": 0.4
+   },
+   "uses": [
+    "Mali 5",
+    "Mali 6"
+   ],
+   "cut": true
+  },
+  "gourd-khun-borom": {
+   "look": "a slim young Lao king: a small tiered gold crown with a slender spire, a jewelled gold collar, a white jacket with gold trim, a jewelled gold belt, a long red wrap cloth with gold diamond patterns, gold bangles and anklets, bare feet",
+   "size": 0.185,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-white-elephant": {
+   "look": "the white elephant: a cream-white body on four legs, dark ears and a dark line along its back, tusks that curve and cross toward each other, a gold cloth on its head with red tassels, a kind calm face",
+   "size": 0.254,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 6",
+    "Gourd 7"
+   ],
+   "cut": true
+  },
+  "gourd-pu-nyeu-newyear": {
+   "look": "the New Year Pu Nyeu: a large round red wooden mask with a white moustache and a smiling carved face, long shaggy pale hair hanging over the whole body to the ground, bare feet",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-nya-nyeu-newyear": {
+   "look": "the New Year Nya Nyeu: a round red wooden mask, a smiling carved face, long shaggy pale hair over a black sinh with a red and gold hem, bare feet",
+   "size": 0.135,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-pig": {
+   "look": "a charcoal-grey village pig on four short legs, a bristly back, a curly tail and a pale snout",
+   "size": 0.05,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-lao-woman": {
+   "look": "the village woman in the lao dress: sinh with a woven hem, wrap blouse, pha biang, hair in a coil",
+   "size": 0.16,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-lao-man": {
+   "look": "the village man in the lao dress: shirt and wrap cloth",
+   "size": 0.17,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-lao-girl": {
+   "look": "the village girl in the lao dress: the Lao woman's sinh and blouse, child size",
+   "size": 0.105,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-lao-boy": {
+   "look": "the village boy in the lao dress: the Lao man's shirt and cloth, child size",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-khmu-woman": {
+   "look": "the village woman in the khmu dress: dark clothes and a striped Lao-Tai skirt",
+   "size": 0.16,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-khmu-man": {
+   "look": "the village man in the khmu dress: dark clothes",
+   "size": 0.17,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-khmu-girl": {
+   "look": "the village girl in the khmu dress: the Khmu woman's dark clothes, child size",
+   "size": 0.105,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-khmu-boy": {
+   "look": "the village boy in the khmu dress: the Khmu man's dark clothes, child size",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-hmong-woman": {
+   "look": "the village woman in the hmong dress: deep indigo with embroidered sleeves, a sash and an apron",
+   "size": 0.16,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-hmong-man": {
+   "look": "the village man in the hmong dress: deep indigo jacket with embroidered cuffs and a sash",
+   "size": 0.17,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-hmong-girl": {
+   "look": "the village girl in the hmong dress: the Hmong woman's indigo and sash, child size",
+   "size": 0.105,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-outfit-hmong-boy": {
+   "look": "the village boy in the hmong dress: the Hmong man's indigo and sash, child size",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-little-lion": {
+   "look": "a small golden lion cub standing on four paws: a thick round mane of curls, a kind face with big dark eyes, a green collar with a small gold bell, a tufted tail held up",
+   "size": 0.06,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 2",
+    "Gourd 3",
+    "Gourd 4",
+    "Gourd 5",
+    "Gourd 6",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 9",
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-little-lion-garland": {
+   "look": "the golden lion cub on four paws with a thick curly mane, a kind face, a green collar with a gold bell, and a ring of marigold flowers round his neck",
+   "size": 0.06,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 10",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-calf": {
+   "look": "the little buffalo calf: a dark grey-brown body on four short legs, big curved horns, kind heavy-lidded eyes, a darker muzzle and a tufted tail",
+   "size": 0.075,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4",
+    "Gourd 7",
+    "Gourd 8",
+    "Gourd 11"
+   ],
+   "cut": true
+  },
+  "gourd-hen-a": {
+   "look": "a brown hen with its head down pecking, a red comb and wattle, pale scaly legs, a lifted fan of tail feathers",
+   "size": 0.04,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4"
+   ],
+   "cut": true
+  },
+  "gourd-hen-b": {
+   "look": "a brown hen standing alert with its head up, a red comb and wattle, pale scaly legs, a fan of tail feathers",
+   "size": 0.04,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 4"
+   ],
+   "cut": true
+  },
+  "gourd-buffalo": {
+   "look": "a great grey-brown water buffalo standing on four hooves: big swept-back horns, big ears lined in pink, a gentle smiling face, a long tail ending in a tuft, split hooves",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 2"
+   ],
+   "cut": true
+  },
+  "gourd-buffalo-lying": {
+   "look": "the same old grey-brown water buffalo lying down at rest, its legs folded under its body, big swept-back horns, a gentle smiling face and a long tufted tail curled out behind",
+   "size": 0.119,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Gourd 2"
+   ],
+   "cut": true
+  },
+  "toad-bizzy": {
+   "look": "toad-king bizzy, cut from its built 3D body",
+   "size": 0.025,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "fly": {
+     "_lift": 0.1
+    },
+    "hover": {
+     "_lift": 0.1
+    },
+    "loop": {
+     "_tilt": 30
+    },
+    "hum": {
+     "_lift": 0.04
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-pinch": {
+   "look": "toad-king pinch, cut from its built 3D body",
+   "size": 0.035,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "snip": {
+     "_tilt": 8
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "shy": {
+     "_tilt": -5
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-termite": {
+   "look": "toad-king termite, cut from its built 3D body",
+   "size": 0.015,
+   "gait": "hop",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "nibble": {
+     "_tilt": 4
+    },
+    "tap": {
+     "_tilt": -6
+    },
+    "bounce": {
+     "_lift": 0.25
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-tik": {
+   "look": "toad-king tik, cut from its built 3D body",
+   "size": 0.03,
+   "gait": "hop",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "tap": {
+     "_tilt": -6
+    },
+    "nibble": {
+     "_tilt": 4
+    },
+    "bounce": {
+     "_lift": 0.25
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-boy": {
+   "look": "toad-king boy, cut from its built 3D body",
+   "size": 0.115,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "cheer": {
+     "_lift": 0.08
+    },
+    "point": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-girl": {
+   "look": "toad-king girl, cut from its built 3D body",
+   "size": 0.12,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "cheer": {
+     "_lift": 0.08
+    },
+    "look-in": {
+     "_tilt": -12
+    },
+    "point": {
+     "_tilt": 6
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "rock": {
+     "_tilt": 5
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-man": {
+   "look": "toad-king man, cut from its built 3D body",
+   "size": 0.165,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "cheer": {
+     "_lift": 0.08
+    },
+    "place": {
+     "_tilt": -10
+    },
+    "wave": {
+     "_tilt": 10
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-oldwoman": {
+   "look": "toad-king oldwoman, cut from its built 3D body",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "idle": {
+     "_lift": 0.01
+    },
+    "cheer": {
+     "_lift": 0.08
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "talk": {
+     "_tilt": 4
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-villager5": {
+   "look": "toad-king villager5, cut from its built 3D body",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "look-in": {
+     "_tilt": -12
+    },
+    "clap": {
+     "_tilt": 5
+    },
+    "dance": {
+     "_tilt": 8
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "rock": {
+     "_tilt": 5
+    },
+    "bob": {
+     "_lift": 0.03
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-villager6": {
+   "look": "toad-king villager6, cut from its built 3D body",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "look-in": {
+     "_tilt": -12
+    },
+    "clap": {
+     "_tilt": 5
+    },
+    "dance": {
+     "_tilt": 8
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "rock": {
+     "_tilt": 5
+    },
+    "bob": {
+     "_lift": 0.03
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-villager7": {
+   "look": "toad-king villager7, cut from its built 3D body",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "look-in": {
+     "_tilt": -12
+    },
+    "clap": {
+     "_tilt": 5
+    },
+    "dance": {
+     "_tilt": 8
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "rock": {
+     "_tilt": 5
+    },
+    "bob": {
+     "_lift": 0.03
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-villager8": {
+   "look": "toad-king villager8, cut from its built 3D body",
+   "size": 0.15,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "look-in": {
+     "_tilt": -12
+    },
+    "clap": {
+     "_tilt": 5
+    },
+    "dance": {
+     "_tilt": 8
+    },
+    "wave": {
+     "_tilt": 10
+    },
+    "rock": {
+     "_tilt": 5
+    },
+    "bob": {
+     "_lift": 0.03
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-cloud-sheep": {
+   "look": "toad-king cloud-sheep, cut from its built 3D body",
+   "size": 0.6,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-dung-beetle": {
+   "look": "toad-king dung-beetle, cut from its built 3D body",
+   "size": 0.0451,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-goat": {
+   "look": "toad-king goat, cut from its built 3D body",
+   "size": 0.6998,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-hawk": {
+   "look": "toad-king hawk, cut from its built 3D body",
+   "size": 0.449,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-hong": {
+   "look": "toad-king hong, cut from its built 3D body",
+   "size": 1.0229,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-kestrel": {
+   "look": "toad-king kestrel, cut from its built 3D body",
+   "size": 0.449,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-naga": {
+   "look": "toad-king naga, cut from its built 3D body",
+   "size": 0.4991,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  },
+  "toad-swallows": {
+   "look": "toad-king swallows, cut from its built 3D body",
+   "size": 0.1219,
+   "gait": "walk",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {},
+   "cycles": {},
+   "uses": [
+    "Toad 4-moral"
+   ],
+   "cut": true
+  }
+ }
 }
