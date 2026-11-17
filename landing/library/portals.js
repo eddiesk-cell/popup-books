@@ -133,29 +133,40 @@ export function badgeCanvas(p) {
 }
 
 const VS = "varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }";
-// ONE quad per portal, the same size as the frame: inside the arch the deep blue night turning slowly into a space-time swirl (Eddie 2026-11-17): stars and faint light drawn along a log spiral
-// toward a far centre (cells shrink toward it, so it reads as depth; the centre shifts more with the eye than the rim), a little brighter and faster on hover. Outside the arch: nothing (the frame covers it).
-// uT time (the turn), uHover brightens, uSurge flares, uCam parallax. The arch is 2 px wider than the frame's cut-out so no seam shows.
+// THE WARP TUNNEL (Eddie 2026-11-17: "dark blue ... the look of long tunnel like a real warp portal ... twisted and distorted"), shared by the arch interior here and the full-screen warp in library.js.
+// Classic tunnel mapping: angle a = atan(q), depth z = .5 / r. Everything lives on the tunnel wall in (angle, depth): it streams toward the far end (w = z - t), and the angle corkscrews with depth (b = a + .35 z + spin),
+// so streaks curve (plus a log-spiral wind, 1.3 ln z, so the arms coil like the reference's swirl). Sizes are kept in screen units (dr = 2 r^2 dz, ds = r da) against one pixel (px): a star streak fixed in depth is a long smear at the mouth and a point far away; rings at even depth steps crowd
+// toward the centre. Fog to black with depth, a faint pale-blue light at the far end. `far` shifts the far end only (bends the walls; with the eye it is parallax), and a slow wobble of the radius warps them.
+// `lens` > 0 (inside the warp): light near the centre is bent round it (source radius r - lens^2 / r), so stars smear into a ring there. Colours: deep navy to black, no gold (the reference: renders/review/landing-warp-ref).
+export const TUNNEL = `float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+float starL(float b, float w, float r, float N, float M, float th, float px, float sd) {
+  vec2 g = vec2(b * N / 6.2831853, w * M), id = floor(g), f = fract(g); id.x = mod(id.x, N); float h = hash(id + sd); if (h < th) return 0.;
+  vec2 c = .3 + .4 * vec2(hash(id + sd + 3.1), hash(id + sd + 7.7)); float dA = (f.x - c.x) * 6.2831853 / N * r, dZ = (f.y - c.y) / M * 2. * r * r, L = .13 / M * 2. * r * r;
+  return smoothstep(px * 1.6, 0., length(vec2(dA, max(0., abs(dZ) - L)))) * (.45 + .55 * (h - th) / (1. - th)) * smoothstep(px * 2., px * 7., 6.2831853 / N * r); }
+vec3 tunnel(vec2 q, float t, float spin, float px, float lens, vec2 far) {
+  float r0 = length(q); q -= far / (1. + 4. * r0); float rc = length(q), a = atan(q.y, q.x);
+  float r = rc * (1. + .05 * sin(a * 2. + t * .4) + .03 * sin(a * 3. - t * .27));
+  if (lens > 0.) { float s = r - lens * lens / max(r, 1e-3); a += s < 0. ? 3.14159 : 0.; r = abs(s); }
+  r = max(r, 1e-3); float z = .5 / r, w = z - t, b = a + .22 * z + 1.3 * log(z) + spin, fog = exp(-.075 * z);
+  float arms = pow(.5 + .5 * sin(3. * b + 1.2 * sin(w * .45 + b * 2.)), 1.6) * (.6 + .4 * sin(b * 13. + w * .7)) * (.7 + .3 * sin(b * 37. - w * .5));
+  float fN = 60., fg = b * fN / 6.2831853, fh = hash(vec2(floor(fg), 1.)), seg = fract(w * .22 + fh * 7.);
+  float fil = step(.5, fh) * smoothstep(0., .08, seg) * smoothstep(.62, .3, seg) * smoothstep(px * 1.7, 0., abs(fract(fg) - .5) * 6.2831853 / fN * r) * smoothstep(px * 3., px * 9., 6.2831853 / fN * r);
+  float rd = abs(w - 2.4 * floor(w / 2.4 + .5)) * 2. * r * r, ring = exp(-rd * rd / (px * px * 2.)) * smoothstep(px * 6., px * 20., 2.4 * 2. * r * r);
+  float st = starL(b, w, r, 34., 1.6, .62, px, 0.) + starL(b, w, r, 70., 3.1, .7, px, 9.) * .75 + starL(b, w, r, 130., 5.3, .78, px, 21.) * .55;
+  vec3 col = vec3(.003, .005, .014) + vec3(.085, .115, .23) * arms * fog + vec3(.36, .45, .66) * fil * fog * .7 + vec3(.20, .30, .55) * ring * fog * .3 + vec3(.80, .87, 1.) * st * (.35 + .65 * fog);
+  return col + vec3(.45, .6, 1.) * (exp(-rc * rc * 900.) * .55 + exp(-rc * rc * 60.) * .06); }`;
+// ONE quad per portal, the same size as the frame: inside the arch the tunnel above seen from its mouth, turning slowly; hover or focus quickens it (uT runs faster, see update). Outside the arch: nothing (the frame covers it).
+// uT time, uHover brightens a little, uSurge (the walk into it) brightens, uCam parallax (the far end shifts with the eye). The arch is 2 px wider than the frame's cut-out so no seam shows.
 const FS = `uniform float uT, uHover, uSurge; uniform vec2 uCam; varying vec2 vUv;
-float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
-float stars(float u, float w, float n, float th, float sz, float r) { vec2 g = vec2(u, w * n / 6.2831853), id = floor(g), f = fract(g) - .5; id.y = mod(id.y, n); float h = hash(id + n);  // cells grow with r: keep the dots small at the rim
-  return step(th, h) * smoothstep(clamp(sz / r, sz, .42), 0., length((f + (vec2(hash(id + 3.1), hash(id + 7.7)) - .5) * .5) * vec2(1., .7))) * (.55 + .45 * sin(uT * (1.5 + h * 3.) + h * 40.)); }
+${TUNNEL}
 void main() {
   vec2 px = vec2(vUv.x * ${W}., (1. - vUv.y) * ${H}.);
   float d = px.y >= ${AY}. ? abs(px.x - ${CX}.) - ${RO + 2}. : length(px - vec2(${CX}., ${AY}.)) - ${RO + 2}.;
   if (d > 0.) discard;
-  vec2 q = (px - vec2(${CX}., 440.) + uCam * vec2(18., -14.)) / vec2(${RO}., 150.); float r = length(q) + .002, a = atan(q.y, q.x), L = log(r);
-  float w = a + 1.7 * L - uT * .32, u = L * 2.6 + uT * .16;  // w: along the spiral, turning; u: down the well, flowing in
-  vec3 col = mix(vec3(.01, .016, .06), vec3(.03, .055, .17), smoothstep(.0, 1.1, r));
-  float arm = pow(.5 + .5 * cos(2. * w), 3.) * smoothstep(.03, .3, r) * smoothstep(1.7, .5, r);
-  col += vec3(.05, .09, .26) * arm * .75 + vec3(.04, .03, .14) * pow(.5 + .5 * cos(2. * w + 1.9), 6.) * smoothstep(.06, .5, r) * smoothstep(1.4, .3, r);
-  float dim = smoothstep(.02, .35, r);
-  col += vec3(.8, .9, 1.) * (stars(u, w, 15., .72, .06, r) * .8 + stars(u * 1.7 + 4., w, 26., .74, .05, r) * .6 + stars(u * 2.6 + 2., w, 41., .8, .04, r) * .45) * dim;
-  col += vec3(1., .8, .45) * stars(u * .8 + 9., w, 11., .9, .07, r) * dim * 1.2;  // a few warm sparks among them
-  col += vec3(.45, .55, 1.) * exp(-r * r * 60.) * .45 + vec3(.2, .26, .6) * exp(-r * r * 9.) * .18;  // the far light at the centre
+  vec2 q = (px - vec2(${CX}., 440.)) / 140. * vec2(1., -1.); float t = uT * .5;
+  vec3 col = tunnel(q, t, uT * .16, length(fwidth(q)), 0., uCam * vec2(-.22, -.17) + .07 * vec2(sin(t * .37), cos(t * .29)));
   col *= .55 + .45 * smoothstep(0., 16., -d);  // deeper at the reveal
-  col *= 1. + .6 * uHover + 2.4 * uSurge; col = mix(col, col * vec3(1.1, 1., .9) + vec3(.03, .03, .05), uHover * .5);
-  gl_FragColor = vec4(col, 1.);
+  gl_FragColor = vec4(col * (1. + .35 * uHover + .6 * uSurge), 1.);
 }`;
 
 function signCanvas(p) {  // a carved wooden board with scroll ends and gold trim: the name large, and a small badge for the plan
@@ -217,9 +228,9 @@ export function createFloorPortal(THREE, link, label) {
   g.add(sign); g.position.set(...link.at);
   let h = 0, tt = 0, wellMat = null, cut = false;
   loadWell.then(w => { if (!w) return; const d = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), new THREE.MeshBasicMaterial({ map: w.decal, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));  // the decal: over the floor card (20), under everything else
-    d.rotation.x = -Math.PI / 2; d.position.y = .008 - y0; d.renderOrder = 21; w.well.position.y = -y0; w.well.traverse(o => { if (o.isMesh) wellMat = o.material; }); g.add(w.well, d); });  // the well's origin is its centre on the floor (the floor card is at y 0, this group at the door's y)
+    d.rotation.x = -Math.PI / 2; d.position.y = .008 - y0; d.renderOrder = 21; w.well.position.y = -y0; w.well.traverse(o => { if (o.isMesh) { wellMat = o.material; if (wellMat.map) wellMat.map.anisotropy = 8; } });g.add(w.well, d); });  // anisotropy 8: the treads and wall are seen at a slant, close, on the way down; the well's origin is its centre on the floor (the floor card is at y 0, this group at the door's y)
   return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h;
-      if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); if (wellMat) wellMat.color.setScalar(1 + .3 * h);  // hover or focus brightens the baked well like the other doors
+      if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); if (wellMat) wellMat.color.setScalar(1 + .3 * h * (1 - surge) + .15 * surge);  // hover or focus brightens the baked well like the other doors; surge (0..1, the walk down the stairs) lets the gold from below grow a little (the hover's lift fades as it comes, so the glow never clips)
       if (!cut && wellMat && g.parent) { cut = true; for (const m of g.parent.children) if (m.name === "floor") holeInFloor(THREE, m, link.at[0], link.at[2], 1.24); } },  // the hole (1.24 m, hidden under the 1.17-1.32 m coping ring) is cut the frame the well is in, in the floor card at the door
     setLabel: p => { signT.image = signCanvas(p); signT.needsUpdate = true; } };
 }

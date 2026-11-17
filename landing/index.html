@@ -9,7 +9,7 @@
 <link rel="icon" href="data:,">
 <script type="importmap">{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }</script>
 <script>/* shortcut: the poster is chosen here by the same three aspect breaks as styles/epic.js; change both together */
-for (const [m, n] of [["(min-aspect-ratio: 21/20)", "wide"], ["(min-aspect-ratio: 29/50) and (max-aspect-ratio: 21/20)", "mid"], ["(max-aspect-ratio: 29/50)", "tall"]]) document.head.insertAdjacentHTML("beforeend", `<link rel="preload" as="image" href="styles/epic/poster-${n}.webp" media="${m}">`);</script>
+for (const [m, n] of [["(min-aspect-ratio: 21/20)", "wide"], ["(min-aspect-ratio: 29/50) and (max-aspect-ratio: 21/20)", "mid"], ["(max-aspect-ratio: 29/50)", "tall"]]) document.head.insertAdjacentHTML("beforeend", `<link rel="preload" as="image" href="styles/epic/poster-${n}.webp?v=hero2" media="${m}">`);</script>
 <link rel="preload" as="image" href="logo.webp" type="image/webp">
 <link rel="stylesheet" href="../fonts/cormorant-garamond/cormorant-garamond.css">
 <link rel="stylesheet" href="../fonts/eb-garamond/eb-garamond.css">

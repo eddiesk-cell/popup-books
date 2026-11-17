@@ -6,7 +6,7 @@ import { createRing } from "./ring.js";
 import { grow } from "./grow.js";
 import { createFront } from "./front.js";
 import { titleNodes, fontsReady } from "./titles.js";
-import { createPortal, createFloorPortal, regionLabel, regionPlaque, STARS } from "./portals.js";
+import { createPortal, createFloorPortal, regionLabel, regionPlaque, STARS, TUNNEL } from "./portals.js";
 import { createSky } from "./sky.js";
 import { loadCases3d } from "./cases3d.js";
 import { wireLiving } from "./livingwire.js";
@@ -203,8 +203,7 @@ dust.frustumCulled = false; dust.renderOrder = 29; scene.add(dust);
 const dimMesh = room.cases.map(c => { const bd = c.bounds, m = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: shadowT, transparent: true, opacity: 0, depthWrite: false, fog: false })); if (bd) { m.position.set((bd.min[0] + bd.max[0]) / 2, (bd.min[1] + bd.max[1]) / 2, bd.max[2] + .5); m.scale.set((bd.max[0] - bd.min[0]) * 1.9, (bd.max[1] - bd.min[1]) * 1.5, 1); } m.renderOrder = 31; scene.add(m); return m; });
 const ringName = () => { const b = books.bookAt(ring.frontGlobal); $("#ringb").setAttribute("aria-label", b ? b.title.en + (lang !== "en" && b.title[lang] ? " — " + b.title[lang] : "") : W.still); };
 $("#ringb").__i = 0; $("#ringb").onclick = () => { if (!pick) startPick(); };  // __i set: the ring's Enter handler treats this button as the front book itself
-let capFor = -2; function capText(force) { if (!ring.isOpen || ring.busy) { if (!ring.isOpen) capFor = -2; return; } const g = ring.frontGlobal; if (g === capFor && !force) return; capFor = g; ringName(); const c = $("#cap"), b = books.bookAt(g); c.hidden = false; c.textContent = ""; const t = document.createElement("b"), n = document.createElement("span"); if (b) t.append(titleNodes(b.title.en, lang !== "en" ? b.title[lang] ?? "" : "", lang)); else t.textContent = W.still; n.textContent = b ? (b.status === "making" ? W.coming : W.tapopen) : ""; c.append(t, n); c.classList.toggle("go", !!b && b.status !== "making"); }  /* a ready book: the caption is its Open the book button */
-$("#cap").onclick = () => { if ($("#cap").classList.contains("go") && ring.isOpen && !ring.busy && !pick) startPick(); };
+let capFor = -2; function capText(force) { if (!ring.isOpen || ring.busy) { if (!ring.isOpen) capFor = -2; return; } const g = ring.frontGlobal; if (g === capFor && !force) return; capFor = g; ringName(); const c = $("#cap"), b = books.bookAt(g); c.hidden = false; c.textContent = ""; const t = document.createElement("b"), n = document.createElement("span"); if (b) t.append(titleNodes(b.title.en, lang !== "en" ? b.title[lang] ?? "" : "", lang)); else t.textContent = W.still; n.textContent = b?.status === "making" ? W.coming : ""; c.append(t, n); }  /* a ready book: its title only; the cover itself opens it, and the ring's tap hint shows how (owner 2026-11-17: no Open the book button) */
 $("#ringp").onclick = () => ring.step(-1); $("#ringn").onclick = () => ring.step(1);
 const carryVeil = $("#carry"); let pick = null; $("#ringx").onclick = () => closeRing();
 function startPick() { const g = ring.pick(); if (g < 0) return; if (books.isReal(g)) books.dim(g); if (!books.isReal(g)) { ring.cancelPick?.(); capFor = -2; capText(true); return; } const b = books.bookAt(g); if (b.status === "making") { ring.cancelPick?.(); capFor = -2; capText(true); say(W.coming, b.title.en); return; }  // a book still being made: the ring wakes, a soft note, the reader never opens
@@ -256,47 +255,64 @@ const swap = fn => { fade.style.opacity = .9; setTimeout(() => { fn(); fade.styl
 function goto(id) {
   const A = st(cur), B = st(id), l = LINKS.find(q => q.from === cur && q.to === id); if (walk) return; if (l?.href) { location.assign(new URL(l.href, import.meta.url).href); return; } if (l?.soon) { const pl = regionPlaque(l, catalog.regions ?? [], lang); say(pl.name, pl.sub); return; } if (!B) return;
   const pts = l?.portal ? (l.path ?? []).map(q => new THREE.Vector3(...q)) : [sP(A), ...(l?.path ?? []).map(q => new THREE.Vector3(...q)), sP(B)], len = pts.reduce((n, p, i) => n + (i ? p.distanceTo(pts[i - 1]) : 0), 0);
-  const w = { pts, len, t: 0, dur: Math.min(3, Math.max(2, 1.4 + len * .12)), y0: yaw, y1: yaw + wrap(sYaw(B) - yaw), p0: pitch, p1: sPitch(B), f0: fov, f1: sFov(B), id, jump: !!l?.portal, pw: l?.floor ? -1.2 : undefined };
+  const w = { pts, len, t: 0, dur: l?.portal ? WALK_IN : Math.min(3, Math.max(2, 1.4 + len * .12)), y0: yaw, y1: yaw + wrap(sYaw(B) - yaw), p0: pitch, p1: sPitch(B), f0: fov, f1: sFov(B), id, jump: !!l?.portal && !l.floor };
   if (l?.portal) w.con = regionPlaque(l, catalog.regions ?? [], lang).con;
-  if (reduced) { if (l?.portal) { walk = w; through(w); return; } fade.style.opacity = 1; setTimeout(() => { arrive(w); fade.style.opacity = 0; }, 260); return; }
-  landed(); walk = w; vI = [0, 0]; arrowsFor();
+  if (reduced) { if (l?.portal && !l.floor) { w.jump = true; walk = w; through(w); return; } w.stairs = !!l?.floor; fade.style.opacity = 1;  // the floor has no warp, in reduced motion either: a plain fade to the hall
+    setTimeout(() => { arrive(w); fade.style.opacity = 0; }, 260); return; }
+  landed(); if (l?.floor) { camPos = camPos.clone(); stairs(w, camPos, l); } walk = w; vI = [0, 0]; arrowsFor();
 }
-function arrive(w) { if (w.jump && w.id === home().id) descend(SHORT);  // back from a room by a portal: the descent plays as the tunnel unwinds
-  cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
-// a portal: the click pulls the view into the vortex (the walk's last stretch), then a full-screen warp tunnel (stars, rings of light, the destination's constellation forming ahead), a gold bloom, and the tunnel unwinds on the other room; reduced motion: a short fade with the constellation shown
-const warpU = { uT: { value: 0 }, uTw: { value: 0 }, uR: { value: 0 }, uA: { value: 0 }, uBloom: { value: 0 }, uForm: { value: 0 }, uSt: { value: 0 }, uAsp: { value: 1 }, uHue: { value: 0 }, uC: { value: new THREE.Vector2(.5, .5) }, uPts: { value: Array.from({ length: 10 }, () => new THREE.Vector2()) }, uLn: { value: Array.from({ length: 12 }, () => new THREE.Vector4()) } };
+function arrive(w) { if (w.jump && w.id === home().id) descend(.8, .4);  // back from a room by a portal: a short, low descent plays as the tunnel opens on the home bookcase
+  cur = w.id; yaw = w.y1; pitch = w.p1; fov = w.f1; camPos = w.jump || w.stairs ? sP(st(w.id)) : w.pts[w.pts.length - 1].clone(); walk = null; arrowsFor(); onStation(); disarm(); if (!document.activeElement || document.activeElement === document.body) cv.focus({ preventScroll: true }); if (pending.length) setTimeout(() => goto(pending.shift()), 60); }
+// a WALL portal (Eddie 2026-11-17, asks 2 and 4): the click walks you to the arch (WALK_IN s) and its tunnel swallows the view over the walk's last stretch (from PULL), then the same tunnel from the inside:
+// dark blue, stars stretched and bent by the warp (TUNNEL with lens and stretch), the destination's constellation drawn silver-blue ahead, a brief pale blue-white glow at the tunnel's end as you arrive (ARR),
+// and the tunnel opens from its far end onto the new room (uOpen). No gold. Arch to standing about 1.8 s (2.1 s home, with its short drop onto the bookcase), click to arrival about 2.2 s. Reduced motion: a still tunnel faded in and out with the constellation.
+const WALK_IN = 1.55, PULL = .55, WARP = 1.15, ARR = .55;
+const warpU = { uT: { value: 0 }, uTw: { value: 0 }, uR: { value: 0 }, uA: { value: 0 }, uBloom: { value: 0 }, uForm: { value: 0 }, uSt: { value: 0 }, uAsp: { value: 1 }, uOpen: { value: 0 }, uLens: { value: 0 }, uStr: { value: 1 }, uC: { value: new THREE.Vector2(.5, .5) }, uPts: { value: Array.from({ length: 10 }, () => new THREE.Vector2()) }, uLn: { value: Array.from({ length: 12 }, () => new THREE.Vector4()) } };
 const warpMesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), new THREE.ShaderMaterial({ uniforms: warpU, transparent: true, depthTest: false, depthWrite: false, vertexShader: "varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }",
-  fragmentShader: `uniform float uT, uTw, uR, uA, uBloom, uForm, uSt, uAsp, uHue; uniform vec2 uC, uPts[10]; uniform vec4 uLn[12]; varying vec2 vUv;
-float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
+  fragmentShader: `uniform float uT, uTw, uR, uA, uBloom, uForm, uSt, uAsp, uOpen, uLens, uStr; uniform vec2 uC, uPts[10]; uniform vec4 uLn[12]; varying vec2 vUv;
+${TUNNEL}
 void main() {
   vec2 s = (vUv - uC) * vec2(uAsp, 1.); float cover = (1. - smoothstep(uR - .4, uR, length(s))) * uA;
-  vec2 c = mix(uC, vec2(.5), clamp(uR / 2.4, 0., 1.)), p = (vUv - c) * vec2(uAsp, 1.); float r = max(length(p), .012), a = atan(p.y, p.x);
-  float z = .32 / r + uT * 2.3, tw = a + z * .42 + uTw, rings = pow(.5 + .5 * sin(z * 5.2), 7.) * smoothstep(.02, .35, r);
-  vec2 g = vec2(tw * 5.1, z * 2.2), id = floor(g), f = fract(g) - .5; float h = hash(id), star = step(.76, h) * smoothstep(.14, 0., abs(f.x)) * smoothstep(.5, 0., abs(f.y)) * smoothstep(.03, .45, r) * (.6 + .4 * sin(uT * 4. + h * 40.));
-  float n = .5 + .5 * sin(tw * 2. + z * .6), n2 = .5 + .5 * sin(tw * 3. - z * .9);
-  vec3 pal = .5 + .5 * cos(6.2832 * (vec3(0., .33, .67) * .35 + uHue + n * .22));
-  vec3 col = pal * (.22 + .6 * n2) * (.15 + .85 * smoothstep(0., .8, r)) + vec3(1., .86, .5) * rings * .85 + vec3(.9, .95, 1.) * star * 1.5 + vec3(1., .9, .7) * (.05 / r);
-  float cons = 0.; if (uSt > .001) { float sc = .62 * mix(.15, 1., uForm); vec2 q[10];
-    for (int i = 0; i < 10; i++) { vec2 pt = (uPts[i] - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc; cons += exp(-length(p - pt) * 48.) * .9 * step(.01, uPts[i].x); }
-    for (int i = 0; i < 12; i++) { vec2 a0 = (uLn[i].xy - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc, b0 = (uLn[i].zw - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc, pa = p - a0, ba = b0 - a0; float t = clamp(dot(pa, ba) / max(dot(ba, ba), 1e-5), 0., 1.); cons += smoothstep(.006, 0., length(pa - ba * t)) * .4 * step(.01, uLn[i].x + uLn[i].z); }
-    cons *= uSt; col += vec3(1., .9, .6) * cons; }
-  float al = max(cover, clamp(cons, 0., 1.)); col = mix(col, vec3(1., .88, .5), uBloom); al = max(al, uBloom);
+  vec2 c = mix(uC, vec2(.5), clamp(uR / 2.4, 0., 1.)), p = (vUv - c) * vec2(uAsp, 1.); float r = length(p);
+  if (uOpen > 0.) cover *= smoothstep(uOpen * .6, uOpen, r);  // the way out opens at the far end
+  vec2 q = p * 1.6; vec3 col = tunnel(q, uT, uTw, length(fwidth(q)) / uStr, uLens, .12 * vec2(sin(uT * .3), cos(uT * .23)));
+  float cons = 0.; if (uSt > .001) { float sc = .62 * mix(.15, 1., uForm);
+    for (int i = 0; i < 10; i++) { vec2 pt = (uPts[i] - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc; cons += exp(-length(p - pt) * 80.) * .6 * step(.01, uPts[i].x); }
+    for (int i = 0; i < 12; i++) { vec2 a0 = (uLn[i].xy - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc, b0 = (uLn[i].zw - vec2(50., 30.)) / 60. * vec2(1., -1.) * sc, pa = p - a0, ba = b0 - a0; float t = clamp(dot(pa, ba) / max(dot(ba, ba), 1e-5), 0., 1.); cons += smoothstep(.004, 0., length(pa - ba * t)) * .22 * step(.01, uLn[i].x + uLn[i].z); }
+    cons *= uSt; col += vec3(.72, .82, 1.) * cons; }
+  col += vec3(.75, .86, 1.) * uBloom * (exp(-r * r * 70.) * .5 + .03);  // the light at the tunnel's end as you arrive
+  float al = max(cover, clamp(cons, 0., 1.) * uA);
   if (al < .002) discard; gl_FragColor = vec4(col, al);
 }` }));
-warpMesh.frustumCulled = false; warpMesh.renderOrder = 999; warpMesh.visible = false; scene.add(warpMesh);
+warpMesh.frustumCulled = false; warpMesh.renderOrder = 999; scene.add(warpMesh);  // visible (and fully discarded, uA 0) for the first frames, so its shader compiles behind the loading cover, not on the first click
 let warp = null; const ss = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-function through(w) { cue("portal-through", .6); const [pts, lns] = STARS[w.con ?? 0]; warpU.uPts.value.forEach((v, i) => pts[i] ? v.set(...pts[i]) : v.set(0, 0)); warpU.uLn.value.forEach((v, i) => lns[i] ? v.set(...pts[lns[i][0]], ...pts[lns[i][1]]) : v.set(0, 0, 0, 0)); warpU.uHue.value = (w.con ?? 0) * .13;
-  w.frozen = true; warp = { t: 0, w, arrived: false, dur: reduced ? 1.3 : 4.2 }; warpMesh.visible = true; }
+function through(w) { cue("portal-through", .6); const [pts, lns] = STARS[w.con ?? 0]; warpU.uPts.value.forEach((v, i) => pts[i] ? v.set(...pts[i]) : v.set(0, 0)); warpU.uLn.value.forEach((v, i) => lns[i] ? v.set(...pts[lns[i][0]], ...pts[lns[i][1]]) : v.set(0, 0, 0, 0));
+  w.frozen = true; warp = { t: 0, w, arrived: false, dur: reduced ? 1.3 : WARP }; warpMesh.visible = true; }
 function warpStep(dt) {
-  warpU.uAsp.value = innerWidth / innerHeight;
-  if (!warp) { if (walk?.jump && !walk.frozen && walk.t > .5) { const u = Math.min(1, (walk.t - .5) / .5), p = portals.find(q => q.frame.userData.link.to === walk.id && q.frame.userData.link.from === cur);  // the pull: the vortex swallows the view
-      if (p) { const v = p.group.position.clone().project(camera); warpU.uC.value.set((v.x + 1) / 2, (v.y + 1) / 2); } warpMesh.visible = true; warpU.uA.value = 1; warpU.uR.value = 3 * Math.pow(u, 1.5); warpU.uT.value = performance.now() / 1000; warpU.uTw.value = u * 3; warpU.uSt.value = 0; warpU.uBloom.value = 0; warpU.uForm.value = 0; }
-    else if (warpMesh.visible) warpMesh.visible = false; return; }
+  warpU.uAsp.value = innerWidth / innerHeight; const U = warpU;
+  if (!warp) { if (walk?.jump && !walk.frozen && walk.t > PULL) { const u = Math.min(1, (walk.t - PULL) / (1 - PULL)), p = portals.find(q => q.frame.userData.link.to === walk.id && q.frame.userData.link.from === cur);  // the pull: the arch's tunnel swallows the view
+      if (p) { const v = p.group.position.clone().project(camera); U.uC.value.set((v.x + 1) / 2, (v.y + 1) / 2); } warpMesh.visible = true; U.uA.value = 1; U.uR.value = 3 * Math.pow(u, 1.5); U.uT.value += dt * (.5 + 2.5 * u); U.uTw.value += dt * (.16 + .8 * u); U.uLens.value = 0; U.uStr.value = 1 + .5 * u; U.uOpen.value = 0; U.uSt.value = 0; U.uBloom.value = 0; U.uForm.value = 0; }
+    else if (warpMesh.visible && frameNo > 2) warpMesh.visible = false; return; }
   const t = warp.t += dt, k = warp.w;
-  if (reduced) { warpU.uT.value = 2; warpU.uTw.value = 0; warpU.uR.value = 3; warpU.uA.value = t < .35 ? t / .35 : Math.max(0, 1 - (t - .7) / .6); warpU.uForm.value = 1; warpU.uSt.value = ss(0, .35, t) * (1 - ss(.9, 1.3, t)); warpU.uBloom.value = 0; warpU.uC.value.set(.5, .5); if (!warp.arrived && t >= .45) { warp.arrived = true; arrive(k); } }
-  else { warpU.uC.value.set(.5, .5); warpU.uR.value = 3; warpU.uA.value = t < 3 ? 1 : Math.max(0, 1 - (t - 3) / 1.2); warpU.uT.value = t; warpU.uTw.value = t < 2.65 ? 3 + t * 1.2 : 3 + 2.65 * 1.2 - (t - 2.65) * 2.4;
-    warpU.uForm.value = ss(.9, 2.4, t); warpU.uSt.value = t < 3 ? 1 : 1 - ss(3, 4.2, t); warpU.uBloom.value = Math.max(0, 1 - Math.abs(t - 2.65) / .4); if (!warp.arrived && t >= 2.65) { warp.arrived = true; arrive(k); } }
+  if (reduced) { U.uT.value = 2; U.uTw.value = 0; U.uLens.value = 0; U.uStr.value = 1; U.uOpen.value = 0; U.uR.value = 3; U.uA.value = t < .35 ? t / .35 : Math.max(0, 1 - (t - .7) / .6); U.uForm.value = 1; U.uSt.value = ss(0, .35, t) * (1 - ss(.9, 1.3, t)); U.uBloom.value = 0; U.uC.value.set(.5, .5); if (!warp.arrived && t >= .45) { warp.arrived = true; arrive(k); } }
+  else { const ramp = t < ARR ? 1 : 1 - (t - ARR) / (WARP - ARR); U.uC.value.set(.5, .5); U.uR.value = 3; U.uA.value = 1; U.uT.value += dt * (1.5 + 4.5 * ramp); U.uTw.value += dt * (.3 + ramp); U.uLens.value = .07 * ss(0, .3, t) * ramp; U.uStr.value = 1.5 + ramp;
+    U.uOpen.value = t < ARR ? 0 : Math.pow((t - ARR) / (WARP - ARR), 1.3) * 2.2; U.uForm.value = ss(0, .45, t); U.uSt.value = ss(0, .15, t) * (1 - ss(ARR, WARP - .1, t)); U.uBloom.value = .9 * Math.max(0, 1 - Math.abs(t - ARR) / .2);
+    if (!warp.arrived && t >= ARR) { warp.arrived = true; arrive(k); } }
   if (t >= warp.dur) { warp = null; warpMesh.visible = false; } }
+// the FLOOR portal (Eddie 2026-11-17, ask 3: "just make the animation of going down stairs is enough, don't warp"): the walk runs straight through the gap in the railing and meets the stair's helix on its tangent
+// (so there is no corner), then goes down STAIR.turns of a turn round the post (stooping to STAIR.low once the turn above is overhead: the set has 1.2 m a turn), looking ahead and down the steps, the gold from below growing (the well's surge); a soft dim at the bottom, then the Wonder Hall.
+// The stair is stairwell.glb's (make_stairwell.py): first tread 0.10 m down at 0.9 rad, 10 treads a turn, 0.12 m rise, angle measured from +z toward +x. Speeds in m/s along the path (the approach takes about 1 s from wherever home's camera stands), eased in and out.
+const STAIR = { R: .65, turns: 1.05, rot: .9, rise: .12 / (TAU / 10), top: .1, eye: 1.25, low: .9, va: 3.2, vh: 2.1 };
+const sp = x => .5 * (x + Math.sqrt(x * x + .0025)), treadY = th => -sp(STAIR.top + STAIR.rise * (th - STAIR.rot));  // the tread under the eye, rounded off where the floor meets the first step
+function stairs(w, A, l) { const C = new THREE.Vector3(l.at[0], 0, l.at[2]), Dh = Math.hypot(A.x - C.x, A.z - C.z), th = Math.atan2(A.x - C.x, A.z - C.z) + Math.acos(Math.min(1, STAIR.R / Dh));
+  const E = new THREE.Vector3(C.x + STAIR.R * Math.sin(th), A.y + treadY(th), C.z + STAIR.R * Math.cos(th)), La = E.distanceTo(A);
+  Object.assign(w, { stairs: true, C, A: A.clone(), E, th0: th, La, d: 0, s: 0, D: La + STAIR.R * STAIR.turns * TAU, va: Math.max(STAIR.va, La / 1.05), fS: innerWidth / innerHeight < .85 ? 80 : 62 }); }
+function stairStep(w, dt) { const R = STAIR.R, rem = w.D - w.d;
+  w.s += dt; w.d = Math.min(w.D, w.d + (w.va + (STAIR.vh - w.va) * ss(w.La - 1.2, w.La, w.d)) * Math.min(1, .3 + w.s / .45) * Math.max(.3, Math.min(1, rem / .8)) * dt); w.t = w.d / w.D;
+  if (w.d <= w.La) { const f = w.d / w.La, head = Math.PI / 2 - w.th0; camPos.lerpVectors(w.A, w.E, f); camPos.y = w.A.y + (w.E.y - w.A.y) * f * f; yaw = w.y0 + wrap(head - w.y0) * ss(0, .7, f); pitch = w.p0 + (-.5 - w.p0) * ss(0, 1, f); fov = w.f0 + (w.fS - w.f0) * ss(0, 1, f); }
+  else { const th = w.th0 + (w.d - w.La) / R, k = ss(w.th0, w.th0 + STAIR.turns * TAU, th); camPos.set(w.C.x + R * Math.sin(th), w.A.y + treadY(th) + (STAIR.eye - w.A.y) * ss(w.th0, w.th0 + 2, th) + (STAIR.low - STAIR.eye) * ss(w.th0 + 4.6, w.th0 + 5.8, th), w.C.z + R * Math.cos(th)); yaw = Math.PI / 2 - th - .55 * ss(w.th0, w.th0 + 2, th); pitch = -.55 - .15 * k; fov = w.fS; }
+  fade.style.opacity = .92 * ss(w.D - .6, w.D - .05, w.d);  // the soft dim at the bottom (the fade's own .2 s transition smooths it)
+  if (w.d >= w.D) { arrive(w); setTimeout(() => { fade.style.opacity = 0; }, 140); } }
 const along = (pts, len, u) => { let d = u * len; for (let i = 1; i < pts.length; i++) { const sg = pts[i].distanceTo(pts[i - 1]); if (d <= sg || i === pts.length - 1) return pts[i - 1].clone().lerp(pts[i], Math.min(1, d / (sg || 1))); d -= sg; } return pts[pts.length - 1].clone(); };
 const ease = t => t * t * (3 - 2 * t);
 let pending = [];
@@ -309,7 +325,7 @@ let homing = false; $("#home").onclick = goHome;
 // visit; a visit that skips the film gets the live move (FULL s), every later arrival in the same page (back through a portal, back from a book) the short one (SHORT s). A tap, a key or a drag ends it at the
 // bookcase at once; reduced motion: none.
 const FULL = 3.2, SHORT = 1.8; let desc = null;
-function descend(dur) { if (reduced) return; const h = home(), e = sP(h); desc = { t: 0, dur, from: new THREE.Vector3(e.x, e.y + 7.5, e.z + 3.2), p0: -.55, f0: sFov(h) + 8 }; homing = false; vI = [0, 0]; }
+function descend(dur, lift = 1) { if (reduced) return; const h = home(), e = sP(h); desc = { t: 0, dur, from: new THREE.Vector3(e.x, e.y + 7.5 * lift, e.z + 3.2 * lift), p0: -.55 * lift, f0: sFov(h) + 8 * lift }; homing = false; vI = [0, 0]; }  // lift < 1: a shorter, lower drop (back through a portal)
 const landed = () => { if (!desc) return false; const h = home(); camPos = sP(h); yaw = sYaw(h); pitch = sPitch(h); fov = sFov(h); desc = null; return true; };
 
 // ---- input: the mouse's offset from the centre sets the view and, near an edge, keeps turning it; a drag (mouse or finger) looks around with inertia; arrows look; Enter walks
@@ -387,7 +403,7 @@ const loop = now => {
   const live_ = live(), still = reduced;
   // what the pointer and tilt do: a parallax offset of the eye (near things move most, far things least) and, for the mouse, the view's own offset
   const mouse = P.has && P.mouse, n = mouse ? [P.x, P.y] : tilt ?? [Math.sin(T * .17) * .5, Math.sin(T * .23) * .3];
-  const kk = 1 - Math.exp(-dt * 3); const calm = still || ring.isOpen; pe[0] += ((calm ? 0 : n[0]) - pe[0]) * kk; pe[1] += ((calm ? 0 : n[1]) - pe[1]) * kk;
+  const kk = 1 - Math.exp(-dt * 3); const calm = still || ring.isOpen || !!walk?.stairs; pe[0] += ((calm ? 0 : n[0]) - pe[0]) * kk; pe[1] += ((calm ? 0 : n[1]) - pe[1]) * kk;
   const wantY = mouse && !still && !walk && !ring.isOpen ? n[0] * .16 : 0, wantP = mouse && !still && !walk && !ring.isOpen ? -n[1] * .1 : 0; yawOff += (wantY - yawOff) * kk; pitchOff += (wantP - pitchOff) * kk;
   if (!walk && live_) {
     let ay = 0, ap = 0;  /* aiming at a door near the frame edge must not turn the view away */
@@ -400,17 +416,18 @@ const loop = now => {
   }
   if (wakeP && (wakeT -= dt) <= 0) wakeP = null;
   let bob = 0; warpStep(dt);
-  if (desc && live_ && !walk) { if (!warp || warp.t > 3) desc.t += dt;  /* back through a portal: it waits behind the tunnel until the tunnel opens */ const u = Math.min(1, desc.t / desc.dur), e = u < .5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2, h = home();
+  if (desc && live_ && !walk) { if (!warp || warp.arrived) desc.t += dt;  /* back through a portal: it starts as the tunnel opens */ const u = Math.min(1, desc.t / desc.dur), e = u < .5 ? 4 * u ** 3 : 1 - (-2 * u + 2) ** 3 / 2, h = home();
     camPos = desc.from.clone().lerp(sP(h), e); yaw = sYaw(h); pitch = desc.p0 + (sPitch(h) - desc.p0) * e; fov = desc.f0 + (sFov(h) - desc.f0) * e; if (u >= 1) desc = null; }
-  if (walk && !walk.frozen) { walk.t += dt / walk.dur; const u = Math.min(1, walk.t), e = ease(u); camPos = along(walk.pts, walk.len, e); bob = Math.sin(u * TAU * 3) * .03 * Math.sin(u * Math.PI);
-    yaw = walk.y0 + (walk.y1 - walk.y0) * e; pitch = walk.p0 + ((walk.pw ?? walk.p1) - walk.p0) * e; fov = walk.f0 + (walk.f1 - walk.f0) * e * (walk.jump ? 0 : 1) + (walk.jump ? 40 * Math.pow(Math.max(0, (u - .55) / .45), 2) : 0); if (u >= 1) walk.jump ? through(walk) : arrive(walk); }
+  if (walk?.stairs) stairStep(walk, dt);
+  else if (walk && !walk.frozen) { walk.t += dt / walk.dur; const u = Math.min(1, walk.t), e = ease(u); camPos = along(walk.pts, walk.len, e); bob = Math.sin(u * TAU * 3) * .03 * Math.sin(u * Math.PI);
+    yaw = walk.y0 + (walk.y1 - walk.y0) * e; pitch = walk.p0 + (walk.p1 - walk.p0) * e; fov = walk.f0 + (walk.f1 - walk.f0) * e * (walk.jump ? 0 : 1) + (walk.jump ? 40 * Math.pow(Math.max(0, (u - PULL) / (1 - PULL)), 2) : 0); if (u >= 1) walk.jump ? through(walk) : arrive(walk); }
   const vy = yaw + yawOff, vp = cP(pitch + pitchOff); camera.rotation.set(vp, -vy, 0, "YXZ");
   const rx = Math.cos(vy), rz = Math.sin(vy); camera.position.copy(camPos).add(new THREE.Vector3(rx * pe[0] * .3, pe[1] * -.15 + bob, rz * pe[0] * .3)); camera.fov = fov; camera.updateProjectionMatrix(); camera.updateMatrixWorld();
   // the hovered book: the mouse's, or the one a touch or the keyboard picked
   let h = -1; if (flash >= 0) { h = flash; flashT -= dt; if (flashT <= 0) flash = -1; } else if (ring.isOpen && !mouse) h = ring.frontGlobal; else if (mouse && live_ && !P.down && !P.ui && !walk) { const r = hit(P.x * innerWidth / 2 + innerWidth / 2, P.y * innerHeight / 2 + innerHeight / 2); h = r?.book ?? -1; const a = r?.arrow ?? -1; if (a !== hoverArrow) { hoverArrow = a; } cv.classList.toggle("pick", h >= 0 || a >= 0); }
   if (ring.isOpen && h < 0) h = ring.frontGlobal; if (pick) h = hov; if (h !== hov) { hov = h; books.hover(h); if (h >= 0 && !ring.isOpen) front.prewarm(h); }
   hoverPortal = null; if (mouse && live_ && !P.down && !P.ui && !walk && !ring.isOpen) { const r = hit(P.x * innerWidth / 2 + innerWidth / 2, P.y * innerHeight / 2 + innerHeight / 2); hoverPortal = r?.portal ?? null; cv.classList.toggle("pick", !!r); }
-  for (const p of portals) if (p.group.visible) p.update(T, (hoverPortal === p.frame || focusPortal === p || wakeP === p.frame || (walk?.jump && walk.id === p.frame.userData.link.to)) ? 1 : 0, dt, still, camera, walk?.jump && walk.id === p.frame.userData.link.to ? (warp ? Math.max(0, 1 - warp.t * 3) : walk.t) : 0);
+  for (const p of portals) if (p.group.visible) p.update(T, (hoverPortal === p.frame || focusPortal === p || wakeP === p.frame || ((walk?.jump || walk?.stairs) && walk.id === p.frame.userData.link.to)) ? 1 : 0, dt, still, camera, (walk?.jump || walk?.stairs) && walk.id === p.frame.userData.link.to ? (warp ? Math.max(0, 1 - warp.t * 3) : walk.t) : 0);
   ring.update(dt); front?.update(dt); capText(); dimMesh.forEach((m, i) => { const want = ring.isOpen && i !== books.slots[ring.ids[0]]?.case ? .6 : 0; m.material.opacity += (want - m.material.opacity) * (1 - Math.exp(-dt * 10)); });
   if (pick) { pick.t += dt; const look = new THREE.Vector3(); camera.getWorldDirection(look); look.y = 0; look.normalize(); if (!reduced) { ring.carry(pick.t, camera.position, look); const u = Math.min(1, Math.max(0, (pick.t - .4) / 1.2)); key.position.x = -1.5 + .5 * u; key.color.set(0xffd9a0).lerp(new THREE.Color(0xffa860), u); } const t = reduced ? pick.t / .3 : (pick.t - 1.25) / .35; carryVeil.style.opacity = Math.min(1, Math.max(0, t * t)); if (t >= 1 && !pick.go) { pick.go = true; location.href = pick.href; } }
   if (ring.isOpen && !ring.busy) { const g = ring.frontGlobal; if (g !== lastFront) { if (lastFront >= 0) cue("book-slide", .6); lastFront = g; } } else if (!ring.isOpen) lastFront = -1;

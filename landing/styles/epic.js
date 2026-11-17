@@ -42,7 +42,7 @@ export async function init({ world, T, reduce, qs, put, $, $$, cue: sfxCue = () 
   sfx = sfxCue;
   // the page first: a still of the closed book (poster) shows from the first paint, the live scene is started without waiting and fades in over it; if it never comes the page still works
   RM = reduce; put0 = put; veil = document.createElement("div"); veil.className = "veil"; document.body.append(veil);
-  poster = document.createElement("picture"); poster.id = "poster"; const u = n => new URL(`./epic/poster-${n}.webp`, import.meta.url).href;
+  poster = document.createElement("picture"); poster.id = "poster"; const u = n => new URL(`./epic/poster-${n}.webp?v=hero2`, import.meta.url).href  /* ?v: a cached old still must never show (owner 2026-11-17); bump with tools/landing_poster.mjs, here and in index.html */;
   poster.innerHTML = `<source media="(min-aspect-ratio: 21/20)" srcset="${u("wide")}"><source media="(min-aspect-ratio: 29/50)" srcset="${u("mid")}"><img alt="" src="${u("tall")}" decoding="async">`;  // wide / mid / tall by the viewport's aspect
   const canvas = document.createElement("canvas"); canvas.id = "scene"; world.append(poster, canvas);
   const decoded = poster.lastChild.decode?.().catch(() => {}) ?? Promise.resolve();
