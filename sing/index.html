@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sing Along</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../fonts/cinzel/cinzel.css">
+<link rel="stylesheet" href="../fonts/andika/andika.css">
+<link rel="stylesheet" href="../fonts/noto-sans-lao/noto-sans-lao.css">
+<style>
+  :root { --gold: #e2b459; --ink: #f4e3bd; --night: #0b0a14; --now: #ffd86b; }
+  html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink); overflow: hidden; font-family: Andika, "Noto Sans Lao", system-ui, sans-serif; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  .top { position: fixed; z-index: 2; inset: 0 0 auto 0; display: flex; align-items: center; gap: 12px; padding: max(10px, env(safe-area-inset-top)) 14px 24px;
+    background: linear-gradient(#0b0a14e6 40%, #0b0a1400); }
+  .top h1 { margin: 0; flex: 1; text-align: center; font: 700 clamp(18px, 3.4vw, 30px)/1.1 Cinzel, serif; letter-spacing: .05em; color: var(--gold); text-shadow: 0 2px 10px #000; }
+  .top .side { width: 112px; } .top .side:last-child { text-align: right; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4em; min-height: 46px; min-width: 46px; padding: 0 1.1rem; box-sizing: border-box;
+    font: 700 15px/1 Cinzel, serif; letter-spacing: .04em; text-decoration: none; cursor: pointer; border-radius: 999px; color: var(--ink);
+    background: #140d08d9; border: 1.5px solid #e2b459aa; box-shadow: 0 6px 18px #0009; }
+  .btn.gold { color: #2a1a08; border-color: #8a6322; background: linear-gradient(#f0cc7c, #d9a448); box-shadow: 0 2px 0 #8a6322, 0 8px 22px #0009, inset 0 0 0 2px #ffe6a8; }
+  .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .bottom { position: fixed; z-index: 2; inset: auto 0 0 0; padding: 40px 14px max(14px, env(safe-area-inset-bottom)); text-align: center;
+    background: linear-gradient(#0b0a1400, #0b0a14d9 40%); }
+  #line { min-height: 2.9em; margin: 0 auto .1em; max-width: 26em; font: 700 clamp(26px, 3.2vw + 1.4vh, 46px)/1.35 Andika, sans-serif; text-shadow: 0 2px 8px #000; }
+  #line span { display: inline-block; transition: color .1s, transform .1s, text-shadow .1s; }
+  #line .said { color: #f9e9b8; opacity: .8; }
+  #line .now { color: var(--now); transform: translateY(-.08em) scale(1.1); text-shadow: 0 0 .25em #ffd54a, 0 0 .8em #ffb300aa, 0 2px 6px #000; }
+  #next { min-height: 1.4em; margin: 0 auto 12px; max-width: 30em; font-size: clamp(15px, 1.4vw + .6vh, 22px); color: #f4e3bd99; }
+  .controls { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .switch { display: inline-flex; padding: 3px; border-radius: 999px; border: 1.5px solid #e2b459aa; background: #140d08d9; }
+  .switch button { min-height: 40px; padding: 0 1rem; border: 0; border-radius: 999px; cursor: pointer; font: 700 14px/1 Cinzel, serif; color: var(--ink); background: none; }
+  .switch button[aria-pressed="true"] { color: #2a1a08; background: linear-gradient(#f0cc7c, #d9a448); }
+  .switch button:focus-visible { outline: 3px solid var(--ink); }
+  @media (max-width: 560px) { .top .side { width: 54px; } .back-t { display: none; } }
+  @media (prefers-reduced-motion: reduce) { #line .now { transform: none; } }
+</style>
+<script type="importmap">
+{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }
+</script>
+</head>
+<body>
+<canvas id="view" aria-hidden="true"></canvas>
+<header class="top">
+  <div class="side"><a class="btn" href="../landing/library/" aria-label="Back to the library">&#8592;<span class="back-t"> Library</span></a></div>
+  <h1 id="title">Sing Along</h1>
+  <div class="side"></div>
+</header>
+<footer class="bottom">
+  <p id="line" aria-live="off"></p>
+  <p id="next"></p>
+  <div class="controls">
+    <button class="btn gold" id="play" aria-label="Play">&#9654; Play</button>
+    <div class="switch" role="group" aria-label="Who sings">
+      <button id="withKapi" aria-pressed="true">Sing with Kapi</button>
+      <button id="youSing" aria-pressed="false">You sing</button>
+    </div>
+  </div>
+</footer>
+<script type="module" src="sing.js"></script>
+</body>
+</html>

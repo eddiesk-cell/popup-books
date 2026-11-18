@@ -1,0 +1,84 @@
+{
+ "id": "mali",
+ "title": "Mali and the Lantern Market",
+ "bg": "img/mali/bg.webp",
+ "items": [
+  {
+   "id": "kite",
+   "img": "img/mali/kite.webp",
+   "w": {
+    "en": "kite"
+   }
+  },
+  {
+   "id": "petal",
+   "img": "img/mali/petal.webp",
+   "w": {
+    "en": "flower"
+   }
+  },
+  {
+   "id": "moth",
+   "img": "img/mali/moth.webp",
+   "w": {
+    "en": "moth"
+   }
+  },
+  {
+   "id": "houseboat",
+   "img": "img/mali/houseboat.webp",
+   "w": {
+    "en": "houseboat"
+   }
+  },
+  {
+   "id": "spirit-house",
+   "img": "img/mali/spirit-house.webp",
+   "w": {
+    "en": "spirit house"
+   }
+  },
+  {
+   "id": "home-door",
+   "img": "img/mali/home-door.webp",
+   "w": {
+    "en": "house"
+   }
+  },
+  {
+   "id": "islet",
+   "img": "img/mali/islet.webp",
+   "w": {
+    "en": "island"
+   }
+  },
+  {
+   "id": "basket-stall",
+   "img": "img/mali/basket-stall.webp",
+   "w": {
+    "en": "market stall"
+   }
+  },
+  {
+   "id": "moonstone",
+   "img": "img/mali/moonstone.webp",
+   "w": {
+    "en": "moon stone"
+   }
+  },
+  {
+   "id": "lantern-arch",
+   "img": "img/mali/lantern-arch.webp",
+   "w": {
+    "en": "lanterns"
+   }
+  },
+  {
+   "id": "village-centre",
+   "img": "img/mali/village-centre.webp",
+   "w": {
+    "en": "village"
+   }
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+Room textures (the Blender reference's own, shipped compressed where the code copy could not reach SAME; renders/review/games-rich/REPORT.md).
+All CC0 1.0 from Poly Haven (polyhaven.com/license), downloaded 2026-11-18, resized and saved as AVIF (-d colour, -n OpenGL normal):
+rubble = rustic_stone_wall (Dimitrios Savva), 1.52 m tile
+slates = castle_wall_slates (Rob Tuytel), 2.5 m tile
+ashlar = large_sandstone_blocks (Rob Tuytel), 3 m tile
+boards = wood_cabinet_worn_long (Dimitrios Savva, Rico Cilliers), 1 x 0.5 m tile
+brick  = castle_brick_01 (Rob Tuytel), 1.5 m tile
+door   = medieval_wood (Rob Tuytel), 2 m tile

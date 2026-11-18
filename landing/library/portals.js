@@ -51,12 +51,11 @@ const PLAN = { en: "Wonder plan", lo: "ແພັກເກັດ Wonder", th: "�
 const SOON = { en: "Opening soon", lo: "ເປີດໄວໆນີ້", th: "เร็ว ๆ นี้", zh: "即将开放", ja: "もうすぐ公開", ko: "곧 열려요" };
 const ARCH = [{ en: "Sing Along", lo: "ຮ້ອງເພງນຳກັນ", th: "ร้องเพลงด้วยกัน", zh: "一起唱", ja: "いっしょにうたおう", ko: "함께 노래해요" }, { en: "Dance Along", lo: "ເຕັ້ນລຳນຳກັນ", th: "เต้นด้วยกัน", zh: "一起跳", ja: "いっしょにおどろう", ko: "함께 춤춰요" }, { en: "Mini Games", lo: "ເກມນ້ອຍ", th: "มินิเกม", zh: "迷你游戏", ja: "ミニゲーム", ko: "미니 게임" }];
 const MORE = { en: "More games soon", lo: "ມີເກມອີກໄວໆນີ້", th: "เกมอื่นเร็ว ๆ นี้", zh: "更多游戏即将推出", ja: "ほかのゲームも もうすぐ", ko: "다른 게임도 곧 와요" };
-const MEMORY = { en: "Memory", lo: "ເກມຈື່ຈຳ", th: "จับคู่ความจำ", zh: "记忆配对", ja: "しんけいすいじゃく", ko: "기억력 게임" };
 const conIdx = (id, regions) => Math.max(0, regions.findIndex(q => q.id === id)) % CON.length;
 // the plaque for a door: its constellation, name and (on a back door) the way home
 // the hall's games arch is the Mini Games arch: it opens the Game Room (web/games, both games; coordinator 2026-11-17), so it says "Mini Games" and no "soon"; the visitor's language goes with it
 export const regionPlaque = (link, regions, lang) => { if (link.game === "doors") return { name: ARCH[2][lang] ?? ARCH[2].en, sub: "", con: 9 };
-  if (link.game === "memory") return { name: MEMORY[lang] ?? MEMORY.en, sub: MORE[lang] ?? MORE.en, con: 12 };
+  if (link.game === "memory") return { name: MORE[lang] ?? MORE.en, sub: "", con: 12 };  // Memory plays in the Game Room now: this door stays shut, marked "soon"
   if (link.arch != null) return { name: ARCH[link.arch][lang] ?? ARCH[link.arch].en, sub: SOON[lang] ?? SOON.en, con: 7 + link.arch };
   if (link.to === "wonder" || link.from === "wonder") return { name: HALL[lang] ?? HALL.en, sub: link.from === "wonder" ? BACK[lang] ?? BACK.en : PLAN[lang] ?? PLAN.en, con: 10 };
   const back = link.to === "home", id = (back ? link.from : link.to).replace(/^r:/, ""), r = regions.find(q => q.id === id), n = r?.con ?? conIdx(id, regions);
@@ -149,9 +148,10 @@ export function badgeCanvas(p) {
   x.restore(); const gl = x.createRadialGradient(CX - 14, MY - 18, 2, CX - 14, MY - 18, MR); gl.addColorStop(0, "rgba(255,255,255,.14)"); gl.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = gl; x.beginPath(); x.arc(CX, MY, MR - 2, 0, 7); x.fill();  // a glaze
   // the inscription: carved as a height map over the plain field, lit like the frame, only its gold kept, laid on with a small shadow (light from the upper left)
   const hm = document.createElement("canvas"); hm.width = BW * S; hm.height = BH * S; const y = hm.getContext("2d", { willReadFrequently: true }); y.scale(S, S); y.translate(-BX, -BY); y.fillStyle = hc(75); y.fillRect(BX, BY, BW, BH);
-  const name = arcFit(y, p.name, DECO, 38, p.sub ? 15 : 27, p.sub ? 132.5 : 127, PZ - .14, .04), sub = p.sub ? arcFit(y, p.sub.toLocaleUpperCase(), SMALL, 15, 10.5, 117, PZ - .14, .1) : null;
-  for (const L of [name, sub]) if (L) raise(y, f => arcDraw(y, L, g => f(g, 0, 0)), L === sub ? .55 : 1);
-  const gap = Math.max(name.half, sub?.half ?? 0) + .1; vine(y, SC - PZ * VR - 2, SC - gap * VR, 1); vine(y, SC + gap * VR, SC + PZ * VR + 2, -1);
+  if (p.name) { const name = arcFit(y, p.name, DECO, 38, p.sub ? 15 : 27, p.sub ? 132.5 : 127, PZ - .14, .04), sub = p.sub ? arcFit(y, p.sub.toLocaleUpperCase(), SMALL, 15, 10.5, 117, PZ - .14, .1) : null;
+    for (const L of [name, sub]) if (L) raise(y, f => arcDraw(y, L, g => f(g, 0, 0)), L === sub ? .55 : 1);
+    const gap = Math.max(name.half, sub?.half ?? 0) + .1; vine(y, SC - PZ * VR - 2, SC - gap * VR, 1); vine(y, SC + gap * VR, SC + PZ * VR + 2, -1); }
+  else vine(y, SC - PZ * VR - 2, SC + PZ * VR + 2);  // a game door carries its name on its gold plate: the vine runs on unbroken round the crown
   x.save(); x.shadowColor = "rgba(10,4,0,.75)"; x.shadowBlur = 2.5 * S; x.shadowOffsetX = 1.1 * S; x.shadowOffsetY = 1.6 * S; x.drawImage(shade(hm, { ox: BX * S, oy: BY * S, gilt: true }), BX, BY, BW, BH); x.restore();
   return c;
 }
@@ -244,7 +244,9 @@ void main() { float y = vUv.y; float a = smoothstep(0., .22, y) * pow(1. - y, 2.
 // the stairwell: baked in Blender (stairwell.glb: unlit, the light and shadows are in its texture; stairwell-floor.webp: the railing's shadows and the golden glow on the boards), loaded ONCE when this
 // module is imported and waited for (5 s at most, like the room's cards) so it arrives behind the loading cover. If it fails the floor stays whole and the sign, light shaft and door still work.
 const loadWell = (async () => { try { const [gl, tx] = await Promise.all([new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairwell.glb", import.meta.url).href), new TextureLoader().loadAsync(new URL("stairwell-floor.webp", import.meta.url).href)]); tx.colorSpace = SRGBColorSpace; tx.anisotropy = 8; return { well: gl.scene, decal: tx }; } catch (e) { console.warn("portals: stairwell.glb failed, no stairwell", e); return null; } })();
-await Promise.race([Promise.all([loadWell, decoReady]), new Promise(r => setTimeout(r, 5000))]);  // the names wait for their face too, inside the same 5 s
+const loadWood = new Promise(ok => { const im = new Image(); im.onload = () => ok(im); im.onerror = () => { console.warn("portals: the game door's wood failed, its leaf stays plain"); ok(null); }; im.src = new URL("../../games/tex/door-d.avif", import.meta.url).href; });  // 25 KB
+await Promise.race([Promise.all([loadWell, decoReady, loadWood]), new Promise(r => setTimeout(r, 5000))]);  // the names wait for their face too, and the game doors for their wood, inside the same 5 s
+const WOOD = await Promise.race([loadWood, null]);  // shortcut: wood later than 5 s is not waited for, the leaf stays plain until the page is opened again
 // a real hole in the floor card (a 1x1 plane in the library): the plane becomes a shape with a round hole, same UVs (u = x + .5, v = y + .5), so its material and its depth write are unchanged: no stencil.
 function holeInFloor(THREE, mesh, cx, cz, rad) {
   if (mesh.userData.cut) return mesh.userData.cut(cx, cz, rad);  // the rotunda's round floor cuts its own (walls/rotunda.js)
@@ -323,15 +325,100 @@ export function createStairUp(THREE, link, label, renderer) {
     setLabel: p => name.set(SP(p)) };
 }
 
+// THE GAME DOORS (Eddie 2026-11-18: "the game rooms should be just a regular door that opens to the game ... like walking through the door"): in a hall arch that leads to a game, the
+// carved frame keeps its crest but holds a real door instead of the warp. The leaf is the Doors of Mystery room's door (web/games/rooms.js leaf; its wood tex/door-d.avif, reference
+// renders/review/games-rich/ref/doors/d5-door.png): its own wood (the one small file, shared with that room: furrowed boards with rows of studs), iron straps with square bolts, a bronze ring on
+// its pull side, and the room's gold plate (web/games/art.js plate) with the game's name in the visitor's language; cut to the arch and lit ONCE in code as a height map (light from the upper left,
+// like the frame). A code-drawn wood twice failed a blind critic's SAME against the room's door, so the room's texture ships instead (copy-to-code's rule; renders/review/hall-doors/REPORT.md).
+// It is hinged on the left and swings OUT into the hall (the recess behind it is only half a metre deep). Behind it a passage drawn in one quad's shader (a box traced per pixel from the eye),
+// lit warm from its far end; hover or focus lets that light spill from the leaf's edges and under it onto the floor. A door with no game yet (no href) stays shut and dark, its plate saying "soon".
+const DS = 3, GAP = 1.5, LW = 2 * (RO - GAP), LH = H - .8 - (AY - RO + GAP), OPEN = 1.8;  // the leaf in frame units (DS device px each); OPEN: how far it swings (rad)
+let LEAF = null;
+function leafCanvas() {  // red: height; green over 128: bronze; blue over 128: iron. Heights in frame units from the floor: the straps at .55, 1.85, 2.95 m, the ring at 1.0 m (1 unit = 8.2 mm)
+  if (LEAF) return LEAF;
+  const R = RO - GAP, c = document.createElement("canvas"), wd = WOOD && (() => { const t = document.createElement("canvas"); t.width = WOOD.width; t.height = WOOD.height; const q = t.getContext("2d", { willReadFrequently: true }); q.drawImage(WOOD, 0, 0); return q.getImageData(0, 0, t.width, t.height); })(); c.width = Math.round(LW * DS); c.height = Math.round(LH * DS);
+  const x = c.getContext("2d", { willReadFrequently: true }), v = m => LH - m / .0082, dot = (px, py, r, ch, h0, h1) => { for (let k = 0; k < 4; k++) { x.fillStyle = ch(h0 + (h1 - h0) * k / 3); x.beginPath(); x.arc(px, py, r * (1 - k * .22), 0, 7); x.fill(); } };
+  const iron = h => `rgb(${Math.round(h)},0,255)`, bronze = h => `rgb(${Math.round(h)},255,0)`;
+  x.scale(DS, DS); x.lineCap = x.lineJoin = "round"; x.beginPath(); x.moveTo(0, LH); x.lineTo(0, R); x.arc(R, R, R, Math.PI, 0); x.lineTo(LW, LH); x.closePath(); x.clip();
+  x.fillStyle = "rgb(150,0,0)"; x.fillRect(0, 0, LW, LH);  // the boards (their grain, furrows and studs are the wood's own)
+  for (let k = 0; k < 4; k++) { x.lineWidth = 6 - k * 1.4; x.strokeStyle = `rgb(${60 + k * 14},0,0)`; x.beginPath(); x.moveTo(0, LH); x.lineTo(0, R); x.arc(R, R, R, Math.PI, 0); x.lineTo(LW, LH); x.stroke(); }  // the worn edge
+  for (const m of [.55, 1.85, 2.95]) { const y = v(m); for (let k = 0; k < 4; k++) { x.fillStyle = iron(140 + k * 12); x.beginPath(); x.roundRect(3 + k * .4, y - 6 + k * .4, LW - 6 - k * .8, 12 - k * .8, 1.5); x.fill(); }
+    for (let i = 0; i < 9; i++) for (let k = 0; k < 3; k++) { x.fillStyle = iron(170 + k * 18); const b = 2.2 - k * .5; x.fillRect(9 + i * (LW - 18) / 8 - b, y - b, 2 * b, 2 * b); } }  // the iron straps (10 cm), nine square bolts each
+  const rx = LW - 17, ry = v(1.0);  // the ring's back plate and the ring itself
+  for (let k = 0; k < 4; k++) { x.fillStyle = bronze(130 + k * 16); x.beginPath(); x.roundRect(rx - 5.5 + k * .5, ry - 9 + k * .5, 11 - k, 18 - k, 3); x.fill(); }
+  for (const [lw, hh] of [[3.6, 150], [2.4, 185], [1.2, 210]]) { x.lineWidth = lw; x.strokeStyle = bronze(hh); x.beginPath(); x.arc(rx, ry + 10, 8, 0, 7); x.stroke(); }
+  const src = x.getImageData(0, 0, c.width, c.height).data, w = c.width, img = new ImageData(c.width, c.height), o = img.data, Lx = -.45, Ly = -.6, Lz = .66, Hn = Math.hypot(Lx, Ly, Lz + 1), Hx = Lx / Hn, Hy = Ly / Hn, Hz = (Lz + 1) / Hn, K = 1 / 17;
+  for (let py = 1; py < c.height - 1; py++) for (let px = 1; px < w - 1; px++) { const i = (py * w + px) * 4; if (!src[i + 3]) continue;
+    const nx = (src[i - 4] - src[i + 4]) * K, ny = (src[i - 4 * w] - src[i + 4 * w]) * K, inv = 1 / Math.sqrt(nx * nx + ny * ny + 1), dif = Math.max(0, (nx * Lx + ny * Ly + Lz) * inv), hl = Math.max(0, (nx * Hx + ny * Hy + Hz) * inv), ao = .72 + .28 * Math.min(1, src[i] / 190);
+    let r, g, b; if (src[i + 1] > 128) { const sp = hl ** 28 * 1.1, l = (.3 + .85 * dif) * ao; r = 186 * l + 255 * sp; g = 128 * l + 220 * sp; b = 58 * l + 150 * sp; }
+    else if (src[i + 2] > 128) { const sp = hl ** 14 * .45, l = (.35 + .8 * dif) * ao; r = 34 * l + 110 * sp; g = 29 * l + 100 * sp; b = 25 * l + 90 * sp; }
+    else { let t = [114, 104, 92]; if (wd) { const j = ((wd.height - 1 - Math.floor((py / DS - LH) * -.0041 % 1 * wd.height)) * wd.width + Math.floor(px / DS * .0041 % 1 * wd.width)) * 4; t = [0, 1, 2].map(c => 105 + 1.7 * (wd.data[j + c] - 105)); }  // 2 m of wood a tile, as the room lays it; its contrast raised, as the room's normal map and firelight raise its studs and furrows
+      const l = (.42 + .85 * dif) * ao; r = t[0] * .55 * l; g = t[1] * .31 * l; b = t[2] * .08 * l; }  // tinted to the room door's wood under its firelight, measured (renders/review/hall-doors/REPORT.md)
+    o[i] = r; o[i + 1] = g; o[i + 2] = b; o[i + 3] = 255; }
+  x.setTransform(1, 0, 0, 1, 0, 0); x.putImageData(img, 0, 0); return LEAF = c;
+}
+function plateCanvas(p) {  // the game room's gold plate (web/games/art.js plate): a gold gradient, a dark rim and a pale inner line, the name in dark brown (Lao in Noto Sans Lao, through DECO)
+  const w = 560, h = 180, c = document.createElement("canvas"); c.width = w; c.height = h; const x = c.getContext("2d"), gr = x.createLinearGradient(0, 0, 0, h);
+  gr.addColorStop(0, "#f3d58a"); gr.addColorStop(1, "#c8923e"); x.fillStyle = gr; x.fillRect(0, 0, w, h); x.strokeStyle = "#7a5420"; x.lineWidth = 10; x.strokeRect(9, 9, w - 18, h - 18); x.strokeStyle = "#ffeab4"; x.lineWidth = 3; x.strokeRect(22, 22, w - 44, h - 44);
+  x.fillStyle = "#3a2410"; x.textAlign = "center"; x.textBaseline = "alphabetic";
+  for (let fs = 96; ; fs *= .94) { x.font = `${fs}px ${DECO}`; const m = x.measureText(p.name), a = m.actualBoundingBoxAscent, d = m.actualBoundingBoxDescent; if (fs < 10 || (m.width <= w - 100 && a + d <= 80)) { x.fillText(p.name, w / 2, h / 2 + (a - d) / 2); return c; } } }
+// the passage behind the door: a box (HW half wide, HC high, D deep) beyond the quad at the back of the recess, traced from the eye for each pixel: boards underfoot, dark panelling, and a doorway
+// of gold light at its end; the light falls off from there and a warm haze thickens with distance. uL: its level (brighter on hover and as the door opens). Everything in the door group's metres.
+const ROOMFS = `uniform vec3 uEye; uniform float uL, uF; varying vec3 vP;
+void main() {
+  const float HW = .96, HC = 3.63, D = 3.4; float Z0 = vP.z, F = uF;
+  vec3 d = normalize(vP - uEye); if (d.z > -.001) discard;
+  float tx = max(0., (sign(d.x) * HW - vP.x) / d.x), ty = max(0., ((d.y > 0. ? F + HC : F) - vP.y) / d.y), tz = (Z0 - D - vP.z) / d.z, t = min(min(tx, ty), tz); vec3 q = vP + d * t, L = vec3(0., F + 1.4, Z0 - D + .35);
+  vec3 base = vec3(.17, .1, .055); if (t == tz) { float ga = q.y < F + 2.1 ? abs(q.x) - .52 : length(vec2(q.x, q.y - F - 2.1)) - .52; if (ga < 0.) { gl_FragColor = vec4(mix(vec3(.93, .64, .3), vec3(1., .86, .58), clamp(-ga * 2.5, 0., 1.)) * min(1., uL * 1.1), 1.); return; } }
+  else if (t == ty && d.y < 0.) base = vec3(.22, .13, .07) * (.8 + .2 * step(.08, fract(q.x * 4.5 + .3)));
+  else base = vec3(.13, .08, .045) * (.85 + .15 * step(.06, fract((t == tx ? q.z : q.x) * 2.2)));
+  float a = 1. / (1. + .55 * dot(q - L, q - L)), haze = 1. - exp(-.22 * t);
+  vec3 col = base * (.12 + 2.4 * a) + vec3(1., .7, .4) * haze * .16;
+  gl_FragColor = vec4(col * uL, 1.);
+}`;
+// a warm line round the leaf and under it (canvas units of the frame), and the pool it throws on the boards in front (metres): both additive, both zero when the door is shut and unhovered
+const RIMFS = `uniform float uA; varying vec2 vUv;
+void main() { vec2 px = vec2(vUv.x * ${W}., (1. - vUv.y) * ${H}.); float d = px.y >= ${AY}. ? abs(px.x - ${CX}.) - ${(RO - GAP).toFixed(1)} : length(px - vec2(${CX}., ${AY}.)) - ${(RO - GAP).toFixed(1)};
+  float a = exp(-abs(d) / 3.) * .8 + exp(-max(d, 0.) / 12.) * .3 * step(-1., d) + exp(-(${H}. - px.y) / 4.) * step(abs(px.x - ${CX}.), ${RO}.) * 1.4; a *= uA;
+  if (a < .003) discard; gl_FragColor = vec4(vec3(1., .74, .44) * a, 1.); }`;
+const POOLFS = `uniform float uA, uOpen; varying vec3 vP;
+void main() { float z = vP.z, w = .78 + z * mix(.08, .5, uOpen), a = exp(-z * mix(6., 1.1, uOpen)) * smoothstep(w + .3, w - .2, abs(vP.x)) * uA;
+  if (a < .003) discard; gl_FragColor = vec4(vec3(1., .72, .42) * a, 1.); }`;
+const PVS = "varying vec3 vP; void main() { vP = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }";
+const warmed = new Set(), warm = href => { if (warmed.has(href) || navigator.connection?.saveData) return; warmed.add(href);  // the game's page fetched ahead (and, where the browser can, built: a prerender), so walking through never waits on it
+  if (HTMLScriptElement.supports?.("speculationrules")) { const s = document.createElement("script"); s.type = "speculationrules"; s.textContent = JSON.stringify({ prerender: [{ urls: [href], eagerness: "immediate" }] }); document.head.append(s); }
+  else document.head.append(Object.assign(document.createElement("link"), { rel: "prefetch", href })); };
+// the door's parts, in metres (the frame group is scaled to frame units, which would shear a turning leaf): the leaf on its hinge with its plate, the passage, the pool; sx, sy: the frame's size
+function gameDoor(THREE, plane, link, label, sx, sy) {
+  const dg = new THREE.Group(), KX = sx / W, KY = sy / H, floor = -sy / 2 - .02, lit = !!link.href, U = { uEye: { value: new THREE.Vector3() }, uL: { value: .6 }, uF: { value: floor }, uA: { value: 0 }, uOpen: { value: 0 } };
+  if (!LEAF?.tex) { const t = new THREE.CanvasTexture(leafCanvas()); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; LEAF.tex = t; }
+  const lw = LW * KX, lh = LH * KY, yb = (.8 / H - .5) * sy, hinge = new THREE.Group(); hinge.position.set((CX - RO + GAP - W / 2) * KX, 0, -.03);
+  const leaf = new THREE.Mesh(new THREE.PlaneGeometry(lw, lh).translate(lw / 2, yb + lh / 2, 0), new THREE.MeshBasicMaterial({ map: LEAF.tex, alphaTest: .5, fog: false, side: THREE.DoubleSide })); leaf.renderOrder = 32;
+  const { tex, set } = nameTex(THREE, plateCanvas, label), plate = new THREE.Mesh(new THREE.PlaneGeometry(1.06, .34), new THREE.MeshBasicMaterial({ map: tex, color: 0xd2a05a, fog: false })); plate.position.set(lw / 2, floor + 1.45, .006); plate.renderOrder = 32;
+  hinge.add(leaf, plate); dg.add(hinge);
+  let pool = null; const rim = new THREE.Mesh(plane, lit ? new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: RIMFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }) : new THREE.MeshBasicMaterial()); rim.visible = false;  // drawn only while it glows
+  if (lit) { const room = new THREE.Mesh(new THREE.PlaneGeometry(2.02, 3.75).translate(0, floor + 1.875, -(link.depth ?? .5) + .015), new THREE.ShaderMaterial({ uniforms: U, vertexShader: PVS, fragmentShader: ROOMFS })); room.renderOrder = 33;
+    pool = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3).rotateX(-Math.PI / 2).translate(0, floor + .012, 1.5), new THREE.ShaderMaterial({ uniforms: U, vertexShader: PVS, fragmentShader: POOLFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); pool.renderOrder = 21;
+    dg.add(room, pool); }
+  let ang = 0, shown = 0;
+  return { group: dg, rim, setLabel: set, shut: () => { ang = OPEN; },
+    update: (t, h, dt, cam, surge) => { ang += (surge * OPEN - ang) * (1 - Math.exp(-dt * (surge > 0 ? 12 : 2.5))); hinge.rotation.y = -ang; const op = ang / OPEN;  // it swings with the walk (surge: 0..1) and eases shut after
+      leaf.material.color.setScalar(1 + .12 * h); U.uOpen.value = op; U.uL.value = .6 + .25 * h + .4 * op; U.uA.value = (.6 * h) * (1 - op) + .55 * op; rim.visible = lit && (U.uA.value > .003 || shown++ < 3); if (pool) pool.visible = rim.visible;  // and for its first frames in view, so both shaders compile on the arrival, not on the first hover
+      if (cam && lit) { dg.updateWorldMatrix(true, false); dg.worldToLocal(U.uEye.value.copy(cam.position)); }
+      if (h > .5 && lit) warm(new URL(link.href, import.meta.url).href); } };
+}
 export function createPortal(THREE, plane, link, size, label) {
   if (link.game === "doors" && !link.href) Object.defineProperty(link, "href", { get: () => `../../games/?lang=${document.documentElement.lang || "en"}`, enumerable: true });  // shortcut: set on the shared link here because grow.js (which builds the hall's links) is another worker's file today; move it into grow.js's arch list as { href } when it is free. library.js goto() follows an href before it looks at soon, relative to library.js (so ../../games/ is web/games/)
   const g = new THREE.Group(); let base = BASE?.tex; if (!base) { base = new THREE.CanvasTexture(baseFrame()); base.colorSpace = THREE.SRGBColorSpace; base.anisotropy = 4; BASE.tex = base; }  // one carved frame for all
-  const { tex, set } = nameTex(THREE, badgeCanvas, label);
+  const crest = q => link.game ? { ...q, name: "", sub: "" } : q, { tex, set } = nameTex(THREE, badgeCanvas, crest(label));  // a game door's name is on its plate, not round the crown
   const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: base, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
   const badge = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })); badge.scale.set(BW / W, BH / H, 1); badge.position.set((BX + BW / 2) / W - .5, .5 - (BY + BH / 2) / H, .002);  // frame and badge are solid (alphaTest, depth written): the library's light (drawn after them) lies over them where it is in front
-  const inner = new THREE.Mesh(plane, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
-  frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = 33; inner.position.z = -(link.depth ?? .01); frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(size[0] * W / 256, size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;  // inner: at the back of the recess the wall's arch is cut into (grow.js depth)
+  const sx = size[0] * W / 256, sy = size[1] * H / 570, door = link.game ? gameDoor(THREE, plane, link, label, sx, sy) : null;
+  const inner = door ? door.rim : new THREE.Mesh(plane, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, side: THREE.DoubleSide }));  // a game door's rim light takes the warp's place, just in front of the leaf
+  frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = door ? 36 : 33; inner.position.z = door ? .01 : -(link.depth ?? .01); frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(sx, sy, 1);  // inner: at the back of the recess the wall's arch is cut into (grow.js depth)
+  const root = door ? new THREE.Group() : g; if (door) root.add(g, door.group); root.position.set(...link.at); root.position.y += size[1] * (H / 570 - 1) / 2; root.rotation.y = link.yaw ?? 0;
   let h = 0, tt = 0;
-  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .45 * h); },
-    setLabel: set };
+  return { group: root, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .45 * h); if (door) return door.update(t, h, dt, cam, surge);
+      tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } },
+    setLabel: q => { set(crest(q)); door?.setLabel(q); }, shut: () => door?.shut() };
 }

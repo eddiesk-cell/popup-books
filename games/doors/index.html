@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doors of Mystery</title>
+<link rel="icon" href="data:,">
+<script type="importmap">{ "imports": { "three": "../../vendor/three/three.module.js", "three/addons/": "../../vendor/three/addons/" } }</script>
+<link rel="stylesheet" href="../../fonts/cormorant-garamond/cormorant-garamond.css">
+<link rel="stylesheet" href="../../fonts/eb-garamond/eb-garamond.css">
+<link rel="stylesheet" href="../../fonts/marcellus/marcellus.css">
+<link rel="stylesheet" href="../../fonts/cinzel/cinzel.css">
+<link rel="stylesheet" href="../../fonts/noto-sans-lao/noto-sans-lao.css">
+<link rel="stylesheet" href="../../landing/landing.css">
+<link rel="stylesheet" href="../../landing/styles/epic.css">
+<link rel="stylesheet" href="doors.css">
+</head><body>
+<canvas id="dm-3d" aria-hidden="true"></canvas>
+<main id="dm" data-state="pick" data-streak="0">
+  <header class="dm-top"><a class="dm-back" href="../" aria-label="Back">&larr;</a><h1>Doors of Mystery</h1><span id="dm-total" data-v="0" aria-label="Gold stars">&#9733; 0</span></header>
+  <section id="dm-pick"><div class="dm-host"><img src="kankak.webp" alt="Kankak"><p id="dm-hello">Hello, I am Kankak! Help me climb the sky road. Pick the right gate, five times in a row, and the Sky King will send the rain.</p></div><p class="dm-q">Who climbs?</p><div id="dm-heroes" class="dm-row"></div>
+    <p class="dm-q">How hard?</p><div id="dm-levels" class="dm-row"></div></section>
+  <section id="dm-play" hidden>
+    <div id="dm-pips" aria-hidden="true"></div>
+    <div id="dm-sum" aria-live="polite"><span id="dm-pics"></span><span id="dm-eq"></span></div>
+    <div id="dm-doors"></div>
+    <div id="dm-stage"><div id="dm-hero"><img alt=""><img class="dm-puff" src="cloud.webp" alt=""><span class="dm-orbit"><i>&#9733;</i><i>&#9733;</i><i>&#9733;</i></span></div></div>
+    <p id="dm-say" aria-live="polite"><img src="kankak.webp" alt=""><span></span></p>
+  </section>
+  <section id="dm-win" hidden><div class="dm-rain" aria-hidden="true"></div><div class="dm-treasure"><img class="dm-king" src="skyking.webp" alt="The Sky King"><svg viewBox="-50 -50 100 100" class="dm-bigstar"><path d="M0-44 12-14 44-12 19 8 27 40 0 22-27 40-19 8-44-12-12-14Z" fill="url(#g)" stroke="#8a6322" stroke-width="2"/><defs><linearGradient id="g" x1="0" y1="-1" x2="0" y2="1"><stop offset="0" stop-color="#ffe6a8"/><stop offset="1" stop-color="#d9a448"/></linearGradient></defs></svg>
+    <img id="dm-winhero" alt=""></div><h2 id="dm-won"></h2>
+    <p id="dm-hint"></p><div class="dm-row"><button class="dm-btn" id="dm-again">Play again</button><button class="dm-btn ghost" id="dm-change">Change level</button></div></section>
+  <section id="dm-rest" hidden><div class="dm-nap"><img id="dm-resthero" src="kankak.webp" alt="Kankak asleep"><i>z</i><i>z</i><i>Z</i></div><h2>Kankak is resting.</h2><p>Come back tomorrow!</p></section>
+</main>
+<script type="module" src="doors.js"></script>
+</body></html>

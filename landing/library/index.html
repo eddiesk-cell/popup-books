@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../../fonts/noto-sans-lao/noto-sans-lao.css">
 <link rel="stylesheet" href="library.css">
 <!-- what the doors, the flight and the home view need, fetched at once (no module waterfall); the first page warms the same list (landing.js warm()), so a visitor from it waits on none of it. build_web.mjs swaps the modulepreloads for the bundle's -->
-<link rel="modulepreload" href="../../dist/library-TFZV5GM4.js">
+<link rel="modulepreload" href="../../dist/library-RPBGQFHM.js">
 <link rel="modulepreload" href="../../dist/c-ORVDGMSO.js">
 <link rel="modulepreload" href="../../dist/c-I2U6IUS5.js">
 <link rel="modulepreload" href="../../dist/c-TPVREXEX.js">
@@ -101,7 +101,7 @@
 <p class="loading" id="loading" role="status"></p>
 <script>/* the intro doors (library.css "the intro doors"): drawn by the SVG above, closed from the first paint, nothing to load. library.js opens them (window.__introPlay) once the room behind them has drawn
    and settled; its promise resolves at the threshold, where library.js takes over (through the doorway, the fall). A return visit or ?intro=0: none. A browser without view transitions gets .novt (the doors ease in). */
-{ const h = document.documentElement, d = document.getElementById("doors"); let seen = new URLSearchParams(location.search).get("intro") === "0"; try { const fromFront = sessionStorage.getItem("wst-intro-play") === "1"; sessionStorage.removeItem("wst-intro-play"); seen ||= localStorage.getItem("wst-intro-seen") === "1" && !fromFront; } catch {}
+{ const h = document.documentElement, d = document.getElementById("doors"); const q = new URLSearchParams(location.search); let seen = q.get("intro") === "0" || q.has("door"); try { const fromFront = sessionStorage.getItem("wst-intro-play") === "1"; sessionStorage.removeItem("wst-intro-play"); seen ||= localStorage.getItem("wst-intro-seen") === "1" && !fromFront; } catch {}
   if (!("CSSViewTransitionRule" in window)) h.classList.add("novt");
   window.__introPlay = () => new Promise(ok => { d.classList.remove("go", "in"); void d.offsetWidth; h.dataset.intro = "go"; d.classList.add("go"); d.onanimationend = e => { if (e.animationName === "through") { h.dataset.intro = "through"; ok(); } }; });
   d.hidden = seen; window.__intro = !seen; }
@@ -109,6 +109,6 @@
 <script>/* shortcut: the loading line's six words are repeated here (the words table in library.js owns them, and wins once it runs) so the note paints before the module graph arrives; drop when the words move to a tiny shared file */
 { const L = { en: "Opening the library...", lo: "ກຳລັງເປີດຫໍສະໝຸດ...", th: "กำลังเปิดห้องสมุด...", zh: "正在打开图书馆…", ja: "としょかんを ひらいています…", ko: "도서관을 여는 중…" }; let g = new URLSearchParams(location.search).get("lang"); try { g = L[g] ? g : localStorage.getItem("wst-lang"); } catch {} if (!L[g]) g = (navigator.languages || ["en"]).map(c => Object.keys(L).find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en"; document.documentElement.lang = g; document.getElementById("loading").textContent = L[g]; }
 </script>
-<script type="module" src="../../dist/library-TFZV5GM4.js"></script>
+<script type="module" src="../../dist/library-RPBGQFHM.js"></script>
 </body>
 </html>

@@ -1,0 +1,906 @@
+{
+ "title": "Always Be Kind",
+ "book": "kapi",
+ "bpm": 100,
+ "meter": "4/4",
+ "beat_s": 0.6,
+ "bar_s": 2.4,
+ "duration_s": 88.9,
+ "sections": [
+  {
+   "name": "intro",
+   "bar": 0,
+   "bars": 4,
+   "start": 0.0,
+   "end": 9.6
+  },
+  {
+   "name": "verse 1",
+   "bar": 4,
+   "bars": 8,
+   "start": 9.6,
+   "end": 28.8
+  },
+  {
+   "name": "chorus",
+   "bar": 12,
+   "bars": 4,
+   "start": 28.8,
+   "end": 38.4
+  },
+  {
+   "name": "verse 2",
+   "bar": 16,
+   "bars": 8,
+   "start": 38.4,
+   "end": 57.6
+  },
+  {
+   "name": "chorus",
+   "bar": 24,
+   "bars": 4,
+   "start": 57.6,
+   "end": 67.2
+  },
+  {
+   "name": "chorus",
+   "bar": 28,
+   "bars": 4,
+   "start": 67.2,
+   "end": 76.8
+  },
+  {
+   "name": "outro",
+   "bar": 32,
+   "bars": 4,
+   "start": 76.8,
+   "end": 86.4
+  }
+ ],
+ "chords": [
+  "C",
+  "G",
+  "Am",
+  "G",
+  "C",
+  "G",
+  "C",
+  "C",
+  "C",
+  "G",
+  "G",
+  "C",
+  "C",
+  "G",
+  "Am",
+  "G",
+  "C",
+  "G",
+  "C",
+  "C",
+  "C",
+  "G",
+  "G",
+  "C",
+  "C",
+  "G",
+  "Am",
+  "G",
+  "C",
+  "G",
+  "Am",
+  "G",
+  "C",
+  "G",
+  "F",
+  "C"
+ ],
+ "lines": [
+  {
+   "text": "Kapi in the jamun tree,",
+   "start": 9.6,
+   "section": "verse 1"
+  },
+  {
+   "text": "sweet fruit, one, two, three!",
+   "start": 14.4,
+   "section": "verse 1"
+  },
+  {
+   "text": "Bobo swimming, big and green,",
+   "start": 19.2,
+   "section": "verse 1"
+  },
+  {
+   "text": "best friends you have ever seen!",
+   "start": 24.0,
+   "section": "verse 1"
+  },
+  {
+   "text": "Listen with your ears,",
+   "start": 28.8,
+   "section": "chorus"
+  },
+  {
+   "text": "think fast with your mind,",
+   "start": 31.2,
+   "section": "chorus"
+  },
+  {
+   "text": "share the fruit you love,",
+   "start": 33.6,
+   "section": "chorus"
+  },
+  {
+   "text": "and always be kind!",
+   "start": 36.0,
+   "section": "chorus"
+  },
+  {
+   "text": "Bobo got the message wrong,",
+   "start": 38.4,
+   "section": "verse 2"
+  },
+  {
+   "text": "took his friend and swam along.",
+   "start": 43.2,
+   "section": "verse 2"
+  },
+  {
+   "text": "\"Oh, my heart is in the tree!\"",
+   "start": 48.0,
+   "section": "verse 2"
+  },
+  {
+   "text": "Kapi jumped up, safe and free!",
+   "start": 52.8,
+   "section": "verse 2"
+  },
+  {
+   "text": "Listen with your ears,",
+   "start": 57.6,
+   "section": "chorus"
+  },
+  {
+   "text": "think fast with your mind,",
+   "start": 60.0,
+   "section": "chorus"
+  },
+  {
+   "text": "share the fruit you love,",
+   "start": 62.4,
+   "section": "chorus"
+  },
+  {
+   "text": "and always be kind!",
+   "start": 64.8,
+   "section": "chorus"
+  },
+  {
+   "text": "Listen with your ears,",
+   "start": 67.2,
+   "section": "chorus"
+  },
+  {
+   "text": "think fast with your mind,",
+   "start": 69.6,
+   "section": "chorus"
+  },
+  {
+   "text": "share the fruit you love,",
+   "start": 72.0,
+   "section": "chorus"
+  },
+  {
+   "text": "and always be kind!",
+   "start": 74.4,
+   "section": "chorus"
+  },
+  {
+   "text": "Seed in the middle,",
+   "start": 76.8,
+   "section": "outro"
+  },
+  {
+   "text": "heart of the fruit!",
+   "start": 79.2,
+   "section": "outro"
+  },
+  {
+   "text": "Three good friends",
+   "start": 81.6,
+   "section": "outro"
+  },
+  {
+   "text": "side by side!",
+   "start": 84.0,
+   "section": "outro"
+  }
+ ],
+ "words": [
+  {
+   "w": "Kapi",
+   "t": 9.6,
+   "line": 0,
+   "end": 10.2
+  },
+  {
+   "w": "in",
+   "t": 10.2,
+   "line": 0,
+   "end": 10.5
+  },
+  {
+   "w": "the",
+   "t": 10.5,
+   "line": 0,
+   "end": 10.8
+  },
+  {
+   "w": "jamun",
+   "t": 10.8,
+   "line": 0,
+   "end": 12.0
+  },
+  {
+   "w": "tree,",
+   "t": 12.0,
+   "line": 0,
+   "end": 13.2
+  },
+  {
+   "w": "sweet",
+   "t": 14.4,
+   "line": 1,
+   "end": 15.0
+  },
+  {
+   "w": "fruit,",
+   "t": 15.0,
+   "line": 1,
+   "end": 15.6
+  },
+  {
+   "w": "one,",
+   "t": 15.6,
+   "line": 1,
+   "end": 16.2
+  },
+  {
+   "w": "two,",
+   "t": 16.2,
+   "line": 1,
+   "end": 16.8
+  },
+  {
+   "w": "three!",
+   "t": 16.8,
+   "line": 1,
+   "end": 18.0
+  },
+  {
+   "w": "Bobo",
+   "t": 19.2,
+   "line": 2,
+   "end": 19.8
+  },
+  {
+   "w": "swimming,",
+   "t": 19.8,
+   "line": 2,
+   "end": 20.4
+  },
+  {
+   "w": "big",
+   "t": 20.4,
+   "line": 2,
+   "end": 21.0
+  },
+  {
+   "w": "and",
+   "t": 21.0,
+   "line": 2,
+   "end": 21.6
+  },
+  {
+   "w": "green,",
+   "t": 21.6,
+   "line": 2,
+   "end": 22.8
+  },
+  {
+   "w": "best",
+   "t": 24.0,
+   "line": 3,
+   "end": 24.3
+  },
+  {
+   "w": "friends",
+   "t": 24.3,
+   "line": 3,
+   "end": 24.6
+  },
+  {
+   "w": "you",
+   "t": 24.6,
+   "line": 3,
+   "end": 24.9
+  },
+  {
+   "w": "have",
+   "t": 24.9,
+   "line": 3,
+   "end": 25.2
+  },
+  {
+   "w": "ever",
+   "t": 25.2,
+   "line": 3,
+   "end": 26.4
+  },
+  {
+   "w": "seen!",
+   "t": 26.4,
+   "line": 3,
+   "end": 27.6
+  },
+  {
+   "w": "Listen",
+   "t": 28.8,
+   "line": 4,
+   "end": 29.7
+  },
+  {
+   "w": "with",
+   "t": 29.7,
+   "line": 4,
+   "end": 30.0
+  },
+  {
+   "w": "your",
+   "t": 30.0,
+   "line": 4,
+   "end": 30.6
+  },
+  {
+   "w": "ears,",
+   "t": 30.6,
+   "line": 4,
+   "end": 31.2
+  },
+  {
+   "w": "think",
+   "t": 31.2,
+   "line": 5,
+   "end": 31.8
+  },
+  {
+   "w": "fast",
+   "t": 31.8,
+   "line": 5,
+   "end": 32.1
+  },
+  {
+   "w": "with",
+   "t": 32.1,
+   "line": 5,
+   "end": 32.4
+  },
+  {
+   "w": "your",
+   "t": 32.4,
+   "line": 5,
+   "end": 33.0
+  },
+  {
+   "w": "mind,",
+   "t": 33.0,
+   "line": 5,
+   "end": 33.6
+  },
+  {
+   "w": "share",
+   "t": 33.6,
+   "line": 6,
+   "end": 34.2
+  },
+  {
+   "w": "the",
+   "t": 34.2,
+   "line": 6,
+   "end": 34.5
+  },
+  {
+   "w": "fruit",
+   "t": 34.5,
+   "line": 6,
+   "end": 34.8
+  },
+  {
+   "w": "you",
+   "t": 34.8,
+   "line": 6,
+   "end": 35.4
+  },
+  {
+   "w": "love,",
+   "t": 35.4,
+   "line": 6,
+   "end": 36.0
+  },
+  {
+   "w": "and",
+   "t": 36.0,
+   "line": 7,
+   "end": 36.3
+  },
+  {
+   "w": "always",
+   "t": 36.3,
+   "line": 7,
+   "end": 37.2
+  },
+  {
+   "w": "be",
+   "t": 37.2,
+   "line": 7,
+   "end": 37.8
+  },
+  {
+   "w": "kind!",
+   "t": 37.8,
+   "line": 7,
+   "end": 38.4
+  },
+  {
+   "w": "Bobo",
+   "t": 38.4,
+   "line": 8,
+   "end": 39.0
+  },
+  {
+   "w": "got",
+   "t": 39.0,
+   "line": 8,
+   "end": 39.3
+  },
+  {
+   "w": "the",
+   "t": 39.3,
+   "line": 8,
+   "end": 39.6
+  },
+  {
+   "w": "message",
+   "t": 39.6,
+   "line": 8,
+   "end": 40.8
+  },
+  {
+   "w": "wrong,",
+   "t": 40.8,
+   "line": 8,
+   "end": 42.0
+  },
+  {
+   "w": "took",
+   "t": 43.2,
+   "line": 9,
+   "end": 43.5
+  },
+  {
+   "w": "his",
+   "t": 43.5,
+   "line": 9,
+   "end": 43.8
+  },
+  {
+   "w": "friend",
+   "t": 43.8,
+   "line": 9,
+   "end": 44.1
+  },
+  {
+   "w": "and",
+   "t": 44.1,
+   "line": 9,
+   "end": 44.4
+  },
+  {
+   "w": "swam",
+   "t": 44.4,
+   "line": 9,
+   "end": 45.0
+  },
+  {
+   "w": "along.",
+   "t": 45.0,
+   "line": 9,
+   "end": 46.8
+  },
+  {
+   "w": "\"Oh,",
+   "t": 48.0,
+   "line": 10,
+   "end": 48.3
+  },
+  {
+   "w": "my",
+   "t": 48.3,
+   "line": 10,
+   "end": 48.6
+  },
+  {
+   "w": "heart",
+   "t": 48.6,
+   "line": 10,
+   "end": 48.9
+  },
+  {
+   "w": "is",
+   "t": 48.9,
+   "line": 10,
+   "end": 49.2
+  },
+  {
+   "w": "in",
+   "t": 49.2,
+   "line": 10,
+   "end": 49.8
+  },
+  {
+   "w": "the",
+   "t": 49.8,
+   "line": 10,
+   "end": 50.4
+  },
+  {
+   "w": "tree!\"",
+   "t": 50.4,
+   "line": 10,
+   "end": 51.6
+  },
+  {
+   "w": "Kapi",
+   "t": 52.8,
+   "line": 11,
+   "end": 53.4
+  },
+  {
+   "w": "jumped",
+   "t": 53.4,
+   "line": 11,
+   "end": 53.7
+  },
+  {
+   "w": "up,",
+   "t": 53.7,
+   "line": 11,
+   "end": 54.0
+  },
+  {
+   "w": "safe",
+   "t": 54.0,
+   "line": 11,
+   "end": 54.6
+  },
+  {
+   "w": "and",
+   "t": 54.6,
+   "line": 11,
+   "end": 55.2
+  },
+  {
+   "w": "free!",
+   "t": 55.2,
+   "line": 11,
+   "end": 56.4
+  },
+  {
+   "w": "Listen",
+   "t": 57.6,
+   "line": 12,
+   "end": 58.5
+  },
+  {
+   "w": "with",
+   "t": 58.5,
+   "line": 12,
+   "end": 58.8
+  },
+  {
+   "w": "your",
+   "t": 58.8,
+   "line": 12,
+   "end": 59.4
+  },
+  {
+   "w": "ears,",
+   "t": 59.4,
+   "line": 12,
+   "end": 60.0
+  },
+  {
+   "w": "think",
+   "t": 60.0,
+   "line": 13,
+   "end": 60.6
+  },
+  {
+   "w": "fast",
+   "t": 60.6,
+   "line": 13,
+   "end": 60.9
+  },
+  {
+   "w": "with",
+   "t": 60.9,
+   "line": 13,
+   "end": 61.2
+  },
+  {
+   "w": "your",
+   "t": 61.2,
+   "line": 13,
+   "end": 61.8
+  },
+  {
+   "w": "mind,",
+   "t": 61.8,
+   "line": 13,
+   "end": 62.4
+  },
+  {
+   "w": "share",
+   "t": 62.4,
+   "line": 14,
+   "end": 63.0
+  },
+  {
+   "w": "the",
+   "t": 63.0,
+   "line": 14,
+   "end": 63.3
+  },
+  {
+   "w": "fruit",
+   "t": 63.3,
+   "line": 14,
+   "end": 63.6
+  },
+  {
+   "w": "you",
+   "t": 63.6,
+   "line": 14,
+   "end": 64.2
+  },
+  {
+   "w": "love,",
+   "t": 64.2,
+   "line": 14,
+   "end": 64.8
+  },
+  {
+   "w": "and",
+   "t": 64.8,
+   "line": 15,
+   "end": 65.1
+  },
+  {
+   "w": "always",
+   "t": 65.1,
+   "line": 15,
+   "end": 66.0
+  },
+  {
+   "w": "be",
+   "t": 66.0,
+   "line": 15,
+   "end": 66.6
+  },
+  {
+   "w": "kind!",
+   "t": 66.6,
+   "line": 15,
+   "end": 67.2
+  },
+  {
+   "w": "Listen",
+   "t": 67.2,
+   "line": 16,
+   "end": 68.1
+  },
+  {
+   "w": "with",
+   "t": 68.1,
+   "line": 16,
+   "end": 68.4
+  },
+  {
+   "w": "your",
+   "t": 68.4,
+   "line": 16,
+   "end": 69.0
+  },
+  {
+   "w": "ears,",
+   "t": 69.0,
+   "line": 16,
+   "end": 69.6
+  },
+  {
+   "w": "think",
+   "t": 69.6,
+   "line": 17,
+   "end": 70.2
+  },
+  {
+   "w": "fast",
+   "t": 70.2,
+   "line": 17,
+   "end": 70.5
+  },
+  {
+   "w": "with",
+   "t": 70.5,
+   "line": 17,
+   "end": 70.8
+  },
+  {
+   "w": "your",
+   "t": 70.8,
+   "line": 17,
+   "end": 71.4
+  },
+  {
+   "w": "mind,",
+   "t": 71.4,
+   "line": 17,
+   "end": 72.0
+  },
+  {
+   "w": "share",
+   "t": 72.0,
+   "line": 18,
+   "end": 72.6
+  },
+  {
+   "w": "the",
+   "t": 72.6,
+   "line": 18,
+   "end": 72.9
+  },
+  {
+   "w": "fruit",
+   "t": 72.9,
+   "line": 18,
+   "end": 73.2
+  },
+  {
+   "w": "you",
+   "t": 73.2,
+   "line": 18,
+   "end": 73.8
+  },
+  {
+   "w": "love,",
+   "t": 73.8,
+   "line": 18,
+   "end": 74.4
+  },
+  {
+   "w": "and",
+   "t": 74.4,
+   "line": 19,
+   "end": 74.7
+  },
+  {
+   "w": "always",
+   "t": 74.7,
+   "line": 19,
+   "end": 75.6
+  },
+  {
+   "w": "be",
+   "t": 75.6,
+   "line": 19,
+   "end": 76.2
+  },
+  {
+   "w": "kind!",
+   "t": 76.2,
+   "line": 19,
+   "end": 76.8
+  },
+  {
+   "w": "Seed",
+   "t": 76.8,
+   "line": 20,
+   "end": 77.4
+  },
+  {
+   "w": "in",
+   "t": 77.4,
+   "line": 20,
+   "end": 77.7
+  },
+  {
+   "w": "the",
+   "t": 77.7,
+   "line": 20,
+   "end": 78.0
+  },
+  {
+   "w": "middle,",
+   "t": 78.0,
+   "line": 20,
+   "end": 79.2
+  },
+  {
+   "w": "heart",
+   "t": 79.2,
+   "line": 21,
+   "end": 79.8
+  },
+  {
+   "w": "of",
+   "t": 79.8,
+   "line": 21,
+   "end": 80.1
+  },
+  {
+   "w": "the",
+   "t": 80.1,
+   "line": 21,
+   "end": 80.4
+  },
+  {
+   "w": "fruit!",
+   "t": 80.4,
+   "line": 21,
+   "end": 81.6
+  },
+  {
+   "w": "Three",
+   "t": 81.6,
+   "line": 22,
+   "end": 82.2
+  },
+  {
+   "w": "good",
+   "t": 82.2,
+   "line": 22,
+   "end": 82.8
+  },
+  {
+   "w": "friends",
+   "t": 82.8,
+   "line": 22,
+   "end": 84.0
+  },
+  {
+   "w": "side",
+   "t": 84.0,
+   "line": 23,
+   "end": 84.6
+  },
+  {
+   "w": "by",
+   "t": 84.6,
+   "line": 23,
+   "end": 85.2
+  },
+  {
+   "w": "side!",
+   "t": 85.2,
+   "line": 23,
+   "end": 86.4
+  }
+ ],
+ "audio": {
+  "vocal": null,
+  "guide": "guide.mp3",
+  "karaoke": "karaoke.mp3"
+ },
+ "note": "vocal is null until a local singing engine renders it: the page then plays it for 'sing with Kapi'; until then that switch plays the guide (the flute carries the tune). Word times come from the score, so a vocal must be rendered on this grid."
+}

@@ -1,0 +1,17 @@
+/* The Game Room: midnight and gold like the landing; one gold-framed door per game, its host in the frame. Fonts are self-hosted in web/fonts. */
+:root { --gold: #e2b459; --ink: #f4e3bd; --night: #0d0805; --leather: #241709; --title: "Cinzel Decorative", "Noto Sans Lao", Georgia, serif; --body: "EB Garamond", "Noto Sans Lao", Georgia, serif; }
+html[lang="lo"] { --title: "Noto Sans Lao", serif; --body: "Noto Sans Lao", sans-serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--night); color: var(--ink); font-family: var(--body); -webkit-tap-highlight-color: transparent; }
+#gr { min-height: 100svh; display: flex; flex-direction: column; align-items: center; gap: 1.2vh; padding: max(12px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+  background: radial-gradient(ellipse at 50% 0, #e2b45933, transparent 55%), radial-gradient(circle at 50% 100%, #3a2412, var(--night) 70%); }
+#gr header { width: min(1000px, 100%); } #gr-back { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.2em; border: 2px solid #e2b459aa; border-radius: 999px; color: var(--gold); text-decoration: none; background: #140d08d9; font-size: 18px; }
+h1 { margin: 1vh 0 0; font: 700 clamp(30px, 6vw, 56px)/1.15 var(--title); color: var(--gold); text-align: center; text-shadow: 0 0 22px #e2b45966; }
+#gr-sub { margin: 0 0 2vh; font-size: clamp(18px, 2.6vw, 24px); text-align: center; opacity: .9; }
+#gr-doors { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(18px, 4vw, 48px); width: 100%; }
+.gr-door { width: min(340px, 82vw); display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 18px 16px 20px; text-align: center; text-decoration: none; color: var(--ink); border-radius: 160px 160px 18px 18px; border: 3px solid var(--gold);
+  background: linear-gradient(#2f2010, var(--leather)); box-shadow: 0 0 0 5px var(--night), 0 0 0 7px #e2b45988, 0 18px 40px #000a; transition: transform .25s, box-shadow .25s; }
+.gr-door:hover, .gr-door:focus-visible { transform: translateY(-6px); box-shadow: 0 0 0 5px var(--night), 0 0 0 7px var(--gold), 0 0 34px #e2b45977, 0 22px 44px #000a; outline: none; }
+.gr-frame { width: 78%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 3px solid var(--gold); background: radial-gradient(circle, #5a3a1a, #1b1007); overflow: hidden; } .gr-frame img { width: 88%; height: 88%; object-fit: contain; }
+.gr-door b { font: 700 clamp(22px, 3.4vw, 30px)/1.2 var(--title); color: var(--gold); margin-top: 8px; } .gr-door small { font-size: 20px; line-height: 1.35; } .gr-door em { font-style: normal; color: var(--gold); font-size: 17px; opacity: .9; }
+@media (prefers-reduced-motion: reduce) { .gr-door { transition: none; } }

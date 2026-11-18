@@ -1,0 +1,183 @@
+{
+ "id": "kapi",
+ "title": "Kapi and the Crocodile",
+ "bg": "../../kapi/learn/scenes/s04.webp",
+ "items": [
+  {
+   "id": "kapi",
+   "img": "../../kapi/learn/img/kapi.webp",
+   "w": {
+    "en": "Kapi",
+    "lo": "ກາປີ",
+    "th": "กาปี",
+    "zh": "卡皮",
+    "ja": "カピ"
+   }
+  },
+  {
+   "id": "otter",
+   "img": "../../kapi/learn/img/otter.webp",
+   "w": {
+    "en": "otter",
+    "lo": "ນາກ",
+    "th": "นาก",
+    "zh": "水獭",
+    "ja": "カワウソ"
+   }
+  },
+  {
+   "id": "frog",
+   "img": "../../kapi/learn/img/frog.webp",
+   "w": {
+    "en": "frog",
+    "lo": "ກົບ",
+    "th": "กบ",
+    "zh": "青蛙",
+    "ja": "カエル"
+   }
+  },
+  {
+   "id": "turtle",
+   "img": "../../kapi/learn/img/turtle.webp",
+   "w": {
+    "en": "turtle",
+    "lo": "ເຕົ່າ",
+    "th": "เต่า",
+    "zh": "乌龟",
+    "ja": "カメ"
+   }
+  },
+  {
+   "id": "owl",
+   "img": "../../kapi/learn/img/owl.webp",
+   "w": {
+    "en": "owl",
+    "lo": "ນົກເຄົ້າ",
+    "th": "นกฮูก",
+    "zh": "猫头鹰",
+    "ja": "フクロウ"
+   }
+  },
+  {
+   "id": "heron",
+   "img": "../../kapi/learn/img/heron.webp",
+   "w": {
+    "en": "heron",
+    "lo": "ນົກຍາງ",
+    "th": "นกยาง",
+    "zh": "苍鹭",
+    "ja": "サギ"
+   }
+  },
+  {
+   "id": "duck",
+   "img": "../../kapi/learn/img/duck.webp",
+   "w": {
+    "en": "duck",
+    "lo": "ເປັດ",
+    "th": "เป็ด",
+    "zh": "鸭子",
+    "ja": "アヒル"
+   }
+  },
+  {
+   "id": "fish",
+   "img": "../../kapi/learn/img/fish.webp",
+   "w": {
+    "en": "fish",
+    "lo": "ປາ",
+    "th": "ปลา",
+    "zh": "鱼",
+    "ja": "さかな"
+   }
+  },
+  {
+   "id": "crab",
+   "img": "../../kapi/learn/img/crab.webp",
+   "w": {
+    "en": "crab",
+    "lo": "ປູ",
+    "th": "ปู",
+    "zh": "螃蟹",
+    "ja": "カニ"
+   }
+  },
+  {
+   "id": "butterfly",
+   "img": "../../kapi/learn/img/butterfly.webp",
+   "w": {
+    "en": "butterfly",
+    "lo": "ແມງກະເບື້ອ",
+    "th": "ผีเสื้อ",
+    "zh": "蝴蝶",
+    "ja": "ちょうちょ"
+   }
+  },
+  {
+   "id": "squirrel",
+   "img": "../../kapi/learn/img/squirrel.webp",
+   "w": {
+    "en": "squirrel",
+    "lo": "ກະຮອກ",
+    "th": "กระรอก",
+    "zh": "松鼠",
+    "ja": "リス"
+   }
+  },
+  {
+   "id": "gecko",
+   "img": "../../kapi/learn/img/gecko.webp",
+   "w": {
+    "en": "gecko",
+    "lo": "ຕຸ໊ກແກ",
+    "th": "ตุ๊กแก",
+    "zh": "壁虎",
+    "ja": "ヤモリ"
+   }
+  },
+  {
+   "id": "buffalo",
+   "img": "../../kapi/learn/img/buffalo.webp",
+   "w": {
+    "en": "buffalo",
+    "lo": "ຄວາຍ",
+    "th": "ควาย",
+    "zh": "水牛",
+    "ja": "すいぎゅう"
+   }
+  },
+  {
+   "id": "bat",
+   "img": "../../kapi/learn/img/bat.webp",
+   "w": {
+    "en": "bat",
+    "lo": "ເຈຍ",
+    "th": "ค้างคาว",
+    "zh": "蝙蝠",
+    "ja": "コウモリ"
+   }
+  },
+  {
+   "id": "dragonfly",
+   "img": "../../kapi/learn/img/dragonfly.webp",
+   "w": {
+    "en": "dragonfly",
+    "lo": "ແມງປໍ",
+    "th": "แมลงปอ",
+    "zh": "蜻蜓",
+    "ja": "トンボ"
+   }
+  },
+  {
+   "id": "kingfisher",
+   "img": "../../kapi/learn/img/kingfisher.webp",
+   "w": {
+    "en": "kingfisher",
+    "lo": "ນົກກະເຕັນ",
+    "th": "นกกระเต็น",
+    "zh": "翠鸟",
+    "ja": "カワセミ"
+   }
+  }
+ ]
+}

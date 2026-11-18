@@ -1,0 +1,55 @@
+/* Memory. The look: the landing's night, dark leather card backs with a gold rule and a gold star, parchment faces. Fonts come from web/fonts (not landing.css: its body rules would leak in). */
+:root { --gold: #e2b459; --ink: #f4e3bd; --night: #0d0805; --leather: #241709; --parch: #ecd9a8; --head-font: "Cormorant Garamond", "Noto Sans Lao", Georgia, serif; --body-font: "EB Garamond", "Noto Sans Lao", Georgia, serif; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink); font-family: var(--head-font); -webkit-tap-highlight-color: transparent; }
+#mm { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; padding: max(10px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); overflow: auto; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+#mm::before { content: ""; position: fixed; inset: -20px; z-index: -1; background: radial-gradient(circle, #0d080500 0, #0d0805e0 85%), var(--bg) center / cover; filter: blur(7px) brightness(.38) saturate(.8); }
+.top { width: min(1100px, 100%); display: flex; align-items: center; justify-content: space-between; gap: 10px; flex: none; font-size: 15px; }
+.back, .go { font: inherit; text-decoration: none; color: var(--gold); padding: .5em 1.1em; min-height: 44px; display: inline-flex; align-items: center; border: 2px solid var(--gold); border-radius: 999px; background: #0007; cursor: pointer; letter-spacing: .04em; }
+.total, .lname { color: var(--gold); letter-spacing: .05em; } .lname { font-weight: 700; } .total b { font-size: 1.2em; }
+h1 { margin: 2vh 0 0; font-size: clamp(34px, 7vw, 64px); color: var(--gold); text-shadow: 0 0 22px #e2b45955; } .sub { margin: .3em 0 0; font-family: var(--body-font); font-size: clamp(16px, 2.4vw, 22px); opacity: .9; }
+.themes { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin: 3vh 0 2vh; }
+.theme { font: inherit; color: var(--ink); display: flex; flex-direction: column; align-items: center; gap: 8px; width: min(300px, 44vw); padding: 12px; border: 2px solid #e2b45966; border-radius: 16px; background: linear-gradient(160deg, #2f2010, var(--leather)); cursor: pointer; }
+.theme.on { border-color: var(--gold); box-shadow: 0 0 24px #e2b45977; } .theme b { font-size: clamp(13px, 1.8vw, 17px); text-align: center; } .pics { display: flex; gap: 4px; height: clamp(48px, 9vh, 84px); } .pics img { height: 100%; width: auto; aspect-ratio: 1; object-fit: contain; }
+.levels { display: grid; grid-template-columns: repeat(5, minmax(0, 150px)); gap: 12px; justify-content: center; width: 100%; }
+.lvl { font: inherit; color: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 120px; padding: 10px 6px; border: 2px solid var(--gold); border-radius: 16px; background: linear-gradient(160deg, #3a2814, var(--leather)); cursor: pointer; text-align: center; }
+.lvl b { color: var(--gold); font-size: clamp(14px, 1.8vw, 18px); } .lvl small { font-family: var(--body-font); font-size: 13px; opacity: .85; }
+.stars { display: inline-flex; gap: 2px; } .star { width: 20px; height: 20px; display: inline-block; position: relative; } .star svg { width: 100%; height: 100%; display: block; } .star .o { fill: #3a2c14; stroke: #8a6a2c; stroke-width: 1; } .star .f { fill: var(--gold); filter: drop-shadow(0 0 3px #e2b459aa); }
+@media (max-width: 640px) { .levels { grid-template-columns: repeat(2, 1fr); } .levels .lvl:last-child { grid-column: 1 / -1; } .theme { width: 46vw; } }
+.board { flex: 1; min-height: 0; width: min(1100px, 100%); display: grid; grid-template-columns: repeat(var(--cols, 4), var(--cw, 90px)); grid-auto-rows: calc(var(--cw, 90px) * 4 / 3); gap: 12px; justify-content: center; align-content: center; margin-top: 8px; }
+.mc { position: relative; padding: 0; border: 0; background: none; cursor: pointer; perspective: 800px; font: inherit; }
+.mc .face, .mc .back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .45s; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.back { color: var(--gold); border: 2px solid #3a2a14; background: radial-gradient(circle at 30% 20%, #3b2a18, var(--leather) 70%); box-shadow: 0 5px 14px #000a, inset 0 0 0 5px #241709, inset 0 0 0 6.5px #e2b459aa; }
+.back i { width: 62%; display: block; } .back svg { width: 100%; display: block; filter: drop-shadow(0 0 4px #e2b45966); }
+.face { transform: rotateY(180deg); flex-direction: column; gap: 4%; padding: 8% 6% 6%; color: #3a2410; text-align: center; border-radius: 6% 9% 5% 8% / 8% 5% 9% 6%;
+  background: radial-gradient(ellipse at 50% 42%, #f3e3b6 0 52%, #e0c88f 80%, #b68c4c 100%); box-shadow: 0 5px 14px #000a, inset 0 0 16px 3px #7a45168c, inset 0 0 3px 1px #3a1e0a66; }
+.face img { width: 100%; min-height: 0; flex: 1; object-fit: contain; filter: drop-shadow(0 2px 2px #3a241044); }
+.w { font-family: var(--body-font); font-weight: 700; font-size: calc(var(--cw, 90px) * .15); line-height: 1.1; max-width: 100%; overflow-wrap: normal; } .w.lo { font-family: "Noto Sans Lao", sans-serif; }
+.board[data-cards="20"] .w, [data-state=play] .mc[data-kind=word] .w { } .mc[data-kind=word] .w { font-size: calc(var(--cw, 90px) * .17); }
+.mc.up .back, .mc.done .back { transform: rotateY(180deg); } .mc.up .face, .mc.done .face { transform: none; }
+.mc.done .face { box-shadow: 0 0 0 3px var(--gold), 0 0 22px 6px #e2b459aa, inset 0 0 16px 3px #7a45168c; animation: glow 2.4s ease-in-out infinite; }
+@keyframes glow { 50% { box-shadow: 0 0 0 3px var(--gold), 0 0 30px 9px #e2b459cc, inset 0 0 16px 3px #7a45168c; } }
+.win { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5vh; background: radial-gradient(circle at 50% 40%, #3a2a14ee, #0d0805f4 80%); text-align: center; padding: 20px; animation: pop .6s; }
+.win h2 { margin: 0; font-size: clamp(26px, 5vw, 48px); color: var(--gold); } .win .star { width: clamp(48px, 10vw, 90px); height: clamp(48px, 10vw, 90px); } .win .stars { gap: 8px; } .win p { margin: 0; font-family: var(--body-font); font-size: clamp(18px, 3vw, 26px); }
+.win .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; } .go { background: #e2b459; color: #241709; font-weight: 700; } .go.alt { background: #0007; color: var(--gold); }
+@keyframes pop { 0% { opacity: 0; scale: .9; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Kapi hosts the game */
+.host { position: relative; display: flex; flex-direction: column; align-items: center; } .host img { display: block; width: 100%; height: auto; filter: drop-shadow(0 4px 8px #000a); }
+.host .say { position: absolute; left: 100%; top: 0; margin-left: 8px; white-space: nowrap; padding: .35em .8em; border-radius: 14px; background: #f3e3b6; color: #3a2410; border: 2px solid var(--gold); font-family: var(--body-font); font-weight: 700; font-size: 15px; opacity: 0; pointer-events: none; } .host .say.on { animation: say 3.2s both; }
+@keyframes say { 0% { opacity: 0; translate: -6px; } 8%, 80% { opacity: 1; translate: 0; } 100% { opacity: 0; } }
+.host.big { width: clamp(84px, 16vh, 140px); margin-top: 2vh; } .host.big .say { left: 50%; top: -6px; translate: 0; transform: translate(-50%, -100%); margin: 0; }
+.host.small { width: 60px; } .host.small .say { top: 100%; left: 50%; margin: 4px 0 0; transform: translateX(-50%); z-index: 5; }
+.host.hop img { animation: hop .5s; } @keyframes hop { 40% { translate: 0 -10px; scale: 1.1; } }
+.host.cheer { width: clamp(90px, 18vh, 150px); } .host.cheer .say { display: none; } .host.cheer img { animation: hop 1s .3s 2; }
+.win small { font-family: var(--body-font); opacity: .8; }
+.rest { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2vh; text-align: center; padding: 20px; } .rest h2 { margin: 0; font-size: clamp(24px, 5vw, 44px); color: var(--gold); } .rest p { margin: 0; font-family: var(--body-font); font-size: clamp(16px, 2.6vw, 22px); }
+.host.sleep { width: clamp(110px, 24vh, 200px); } .host.sleep img { rotate: -14deg; filter: brightness(.6) saturate(.7) drop-shadow(0 4px 8px #000a); } .host.sleep .say { opacity: 1; left: 80%; top: -10px; background: none; border: 0; color: var(--gold); font-size: 26px; animation: z 3s ease-in-out infinite; } @keyframes z { 50% { translate: 0 -8px; opacity: .5; } }
+.theme small { font-family: var(--body-font); font-size: 12px; opacity: .85; }
+
+/* the stone hall (memory3d.js): the canvas fills the screen behind; menus sit on a dim veil; in play only the top bar takes taps, so drags and taps reach the wall */
+#mm-3d { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+.has3d #mm::before { display: none; } .has3d #mm { pointer-events: none; } .has3d #mm > * { pointer-events: auto; }
+.has3d #mm[data-state=menu], .has3d #mm[data-state=rest] { background: radial-gradient(circle at 50% 40%, #1a120ab0, #0d0805e6 80%); }
+.has3d .board { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
