@@ -136,12 +136,10 @@ const LAYOUT = [[/^neck/, 0.12, 0.46, [0.35, 0.25], [0, 0.45]], [/^head/, 0.3, 0
   [/^arm/, 0.08, 0.4, [0.25, 0.25], [0, -0.45]], [/^hat/, 0.5, 0.14, [0, 0.5], [0, 0.4]], [/^claw/, 0.26, 0.18, [0.45, 0.1], [0.4, 0.1]],
   [/^(man|spirit|child|sleeper|egret$)/, 0.24, 0.7, [0.1, 0.45], [0, 0.5]], [/./, 0.18, 0.16, [0.3, 0.3], [0.2, 0.2]]];
 const hue = id => [...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
-// owner 2026-11-17: "At night people should turn blue-grey (paper cuts ones)" and "all other animals too, we dim the color but they shouldn't be
-// bluish-grey": at night a person wears its -night card, anything else its day card dimmed. shortcut: people known by their id; a def's
-// "person": true/false wins. Upgrade: puppet.py writes "person" from PUPPETS.md when a person's id fails this test
-const PERSON = /boy|girl|man|aunt|uncle|grand|mother|father|seller|player|carrier|sleeper|poler|outfit|khun-borom|nyeu|villager|tong$|^nok$|monk|\bking\b|queen|child|people|person/;
+// owner 2026-11-18: "when night comes, please do not turn people and animal to blue": at night EVERY puppet wears its own day card, dimmed (x0.45 colour, about x0.7 sRGB), never a tinted card. A -night card is not read any more.
+const PERSON = /boy|girl|man|aunt|uncle|grand|mother|father|seller|player|carrier|sleeper|poler|outfit|khun-borom|nyeu|villager|tong$|^nok$|monk|\bking\b|queen|child|people|person/;  // the camera frames a person by its face (cameraman)
 async function puppet(id, def, stage) {
-  const dim = stage === "night" && !(def.person ?? PERSON.test(id)); if (dim) stage = "day";
+  const dim = stage === "night"; if (dim) stage = "day";
   const size = def.size || 0.06, parts = def.parts?.length ? def.parts : ["body"], hinges = def.hinges || {};
   const art = def.cut && await Promise.all(parts.map(async n => {  // the art lane's cut parts, this stage's version first
     const f = `puppets/${id}/${n}`, v = VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : "";
@@ -169,15 +167,16 @@ async function puppet(id, def, stage) {
   if (dim) meshes.forEach(m => (m.material.color.multiplyScalar(0.45), m.material.emissiveIntensity *= 0.45));  // sRGB x0.7, about as dark as the night cards, colour kept
   // a light cue's "stage" (gourd s09 9.5: the sun comes back on a night page) turns the puppet to that time's card, as it would have been built for it
   root.userData.restage = async (to, into = root, warm) => {  // into: a clone of this puppet (the cast's), whose materials a game's glow may have made its own; warm: only fetch the cards
-    const dk = to === "night" && !(def.person ?? PERSON.test(id)), st = dk ? "day" : to, v = VER[st] && (def.versions || []).includes(st) ? VER[st] : "";
-    const n0 = warm || (into.userData.staged = (into.userData.staged ?? 0) + 1);  // the latest cue wins: gourd 4.5 asks night then day 1.3 s later, and a night card still downloading landed after the cached day one, leaving its people blue-grey
+    const dk = to === "night", st = dk ? "day" : to, v = VER[st] && (def.versions || []).includes(st) ? VER[st] : "";
+    const n0 = warm || (into.userData.staged = (into.userData.staged ?? 0) + 1);  // the latest cue wins: gourd 4.5 asks night then day 1.3 s later, and a late card landed after the cached one
     const tex = art ? await Promise.all(parts.map(n => picture(`puppets/${id}/${n}${v}.png`))) : [];
     if (warm || n0 !== into.userData.staged) return;
     const own = into === root ? meshes : parts.map(n => into.getObjectByName(n)?.children.find(o => o.isMesh));  // each part's card hangs on the pin named after it (acts.js puppetModel)
     own.forEach((m, i) => { if (!m) return; if (tex[i]) { m.material.map = m.material.emissiveMap = tex[i]; m.material.needsUpdate = true; }
       m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.15 * 0.45 : 0.15; });
   };
-  return { root, pins, meshes, size, def, first: parts[1] };
+  const turned = def.turned && await picture(`puppets/${def.turned}/body${VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : ""}.png`);  // V13: puppets.json "turned": the id of a three-quarter card of the same puppet, drawn instead of the front card while it faces left or right
+  return { root, pins, meshes, size, def, first: parts[1], turned };
 }
 async function cardPuppet(file, size) {  // a single die-cut card standing on its base (a ladybug on the trunk): a puppet with no hinges
   const tex = await picture(file), root = new THREE.Group(), pin = new THREE.Group(), def = { size, parts: ["body"] };
@@ -210,6 +209,16 @@ export function standing(root) {  // standing cards: the group holding an art me
     cards.push({ g: o.parent, mesh: o, box: new THREE.Box3().setFromObject(o), name: `${o.parent.name} ${o.parent.parent?.name} ${o.material.name}` });
   });
   return cards;
+}
+// A card's picture in its texture, in uv [u0, v0, u1, v1]: glb_paper packs every card into an atlas, so its uvs cover only its own patch; both halves
+// of a split fold (one material name, ".001" on the second) together; the atlas's 8 px rim-colour patch at its corner left out. Null without a picture.
+// shortcut: a picture packed twice in one atlas reads as the box round both; upgrade if two pieces ever share a card and swap it
+export function cardRect(root, mesh) {
+  const key = mesh.material.name.replace(/\.\d+$/, ""), img = mesh.material.map?.image, r = [1, 1, 0, 0];
+  if (!img?.width) return null;
+  const pu = 9 / img.width, pv = 9 / img.height;
+  root.traverse(o => { const U = o.isMesh && o.material?.name?.replace(/\.\d+$/, "") === key && o.geometry.attributes.uv; if (U) for (let i = 0; i < U.count; i++) { const u = U.getX(i), v = U.getY(i); if (u >= pu || v >= pv) r[0] = Math.min(r[0], u), r[1] = Math.min(r[1], v), r[2] = Math.max(r[2], u), r[3] = Math.max(r[3], v); } });
+  return r[2] > r[0] && r[3] > r[1] ? r : null;
 }
 const pageOf = root => {
   const page = new THREE.Box3();
@@ -275,8 +284,8 @@ export const ambient = {
         backdrop: sp.sky, frame: () => L.frame,  // the viewer's measure as the spread loaded (standing); the named backdrop is measured again at build
         mode: () => L.mode, home: () => L.home, readHome: () => L.readHome?.(), halt: () => L.halt?.(), titled: () => L.titled,  // titled: before the first pull the viewer's title view stands (no story shot)  // the viewer's reading view (phone framing included), kept current on resize; halt stops its glide home
         story: () => ({ line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused,
-          // "next": the line before the game has been read (the pause before its prompt); "wait": its prompt and play; a read again starts over
-          game: game(sp) && (game(sp).targets?.length ?? sp.targets?.length) ? (game(sp).complete ? "won" : sp.at >= gate() ? "wait" : sp.at === gate() - 1 && r?.audio.ended ? "next" : null) : null,
+          // "next": the line before the game has been read (the pause before its prompt); "wait": its prompt and play; a read again starts over; a game Auto or Reading Mode skips is none until settled, then "won"
+          game: game(sp) && (game(sp).targets?.length ?? sp.targets?.length) && !(L.skipGames && !game(sp).complete) ? (game(sp).complete ? "won" : sp.at >= gate() ? "wait" : sp.at === gate() - 1 && r?.audio.ended ? "next" : null) : null,
           end: sp.at >= lines().length, at: sp.at }),
         info: id => { const T = r?.timing[id], ls = lines(); return T && { dur: T.duration, words: T.words, say: SAYS[id], prev: ls[ls.indexOf(id) - 1] }; },  // a line's timing and who says each word (stories/<book>/story.json)
         wordAt: (line, word) => { const i = r ? markWords(r.text[line] || "", word).indexOf(true) : -1; return i < 0 ? 0 : r.timing[line].words[i][0]; } });
@@ -436,14 +445,14 @@ export function addAmbient(scene, cam, m, opts = {}) {
   };
   const probe = cam.clone(), lim = controls || {}, lims = () => faceLim ?? lim;  // lims: the reader's own limits, also while a face shot has the orbit's let out
   const SC = { mem: {}, key: null, beat: null, since: 0, sign: null, half: null, c: null, v: null, out: -9, goal: null, endSince: -1 };
-  let low = false;  // a story beat: seen from at most 25° above its subjects, below the reader's own polar limit (lifted for it as for a face shot)
+  let low = false, flo = null;  // flo: a tall close's own camera floor (fit)  // a story beat: seen from at most 25° above its subjects, below the reader's own polar limit (lifted for it as for a face shot)
   const fit = (pos, look) => {  // inside the reader's orbit limits and the director's: above z 0.3, at most 25° off the reading axis
     const s = new THREE.Spherical().setFromVector3(tmp.copy(pos).sub(look)), e = 0.02, a0 = Math.atan2(HOME.x - LOOK.x, HOME.z - LOOK.z);  // margins wider than the breathing drift
     s.radius = Math.min(Math.max(s.radius, Math.min((lims().minDistance ?? 0) + 0.03, near)), (lim.maxDistance ?? Infinity) - 0.03);  // near: a close or medium shot of a small subject (nearShot)
     s.phi = Math.min(Math.max(s.phi, (lim.minPolarAngle ?? 0) + e), Math.max(lims().maxPolarAngle ?? Math.PI, low ? deg(82) : 0) - e);
     s.theta = Math.min(Math.max(s.theta, Math.max(lim.minAzimuthAngle ?? -Infinity, a0 - deg(25)) + e), Math.min(lim.maxAzimuthAngle ?? Infinity, a0 + deg(25)) - e);
     pos.setFromSpherical(s).add(look);
-    const fl = low ? 0.18 : 0.3; if (pos.y < fl) { pos.y = fl; if (look.y > fl - 0.01) look.y = fl - 0.01; }  // a story beat may stand lower (0.18): at 0.3 a phone's close shot of a swimmer looked down at him from 28-41 degrees
+    const fl = low ? flo ?? 0.18 : 0.3; if (pos.y < fl) { pos.y = fl; if (look.y > fl - 0.01) look.y = fl - 0.01; }  // a story beat may stand lower (0.18): at 0.3 a phone's close shot of a swimmer looked down at him from 28-41 degrees
     return { pos, look };
   };
   const boneOf = (c, n) => { if (!c?.model) return null; const k = c.boneAt ??= {}; if (!k[n]) c.model.traverse(o => { if (!k[n] && o.name === n && o.matrixWorld.determinant()) k[n] = o; }); return k[n] ?? null; };  // the drawn skeleton's bone, never a spare mood head's (stored at scale 0, its bones gave toad s02's face shot a zero height: the camera on its look point, NaN)
@@ -628,7 +637,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (sp.out && cam.position.distanceToSquared(sp.out) > 1e-6) sp.s = par(cam.position, controls.target), sp.vL.copy(mv.vL), sp.vq = [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // someone else moved the camera (the reader, the viewer's glide): carry on from there, at the speed it had
     const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
     g.q[1] = C.q[1] + wrapA(g.q[1] - C.q[1]);
-    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // the story camera's opening flight off the phone 70% a second: at 27% a spread's first line was still on its way in from the book view, the room around the book in view (toad s02 2.1: 0.26 m, s01 1.1: 0.32 m)  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there  // a small subject's close/medium comes in faster than a face shot (a paper puppet's fill is 8x nearer than the reading view: at 22%/s it never lands)
+    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && SC.cl ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // the story camera's opening flight off the phone 70% a second: at 27% a spread's first line was still on its way in from the book view, the room around the book in view (toad s02 2.1: 0.26 m, s01 1.1: 0.32 m)  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there  // a small subject's close/medium comes in faster than a face shot (a paper puppet's fill is 8x nearer than the reading view: at 22%/s it never lands)  // SC.cl (V33, provisional until Eddie passes CAMERA.md 4): into a close at the table's fill 80% a second, as into a face: at 22% (and at 50%) the turning line's close was still on its way in when the line ended (cowherd 8.5: 0.50 of the frame against 0.65)
     for (let i = 0; i < n; i++) {
       const dL = g.L.clone().sub(C.L), ml = Math.min(1, 0.35 * (SCAM && shot === "hold" && opts.mode?.() === "turn" ? 0.7 : 1) * h / Math.max(dL.length(), 1e-9)); C.L.addScaledVector(dL, ml);
       C.q[0] += Math.max(-dr * fly * h, Math.min(dr * fly * h, g.q[0] - C.q[0]));
@@ -804,17 +813,17 @@ export function addAmbient(scene, cam, m, opts = {}) {
   }
 
   // ---------- the story camera (stories/CAMERA.md): each line cut into beats, a shot per beat, every move through the motion model above; on with camera.story or ?story=1 ----------
-  const FILL = { wide: [0.35, 0.40, 0.50, 0.60], medium: [0.50, 0.55, 0.65, 0.75], close: [0.65, 0.70, 0.78, 0.85] };  // subjects' fill of the safe frame: desktop, tablet landscape, tablet portrait, phone (CAMERA.md section 3)
+  const FILL = { wide: [0.35, 0.40, 0.50, 0.60], medium: [0.50, 0.55, 0.65, 0.75], close: [0.65, 0.70, 0.78, 0.85] }, CLOSE = 0.65;  // CLOSE (V33): a close that is taller than wide stands 0.65 of the frame's HEIGHT on every screen, its body drawn tight; 0.65 of the safe frame read as a medium (0.35-0.45 of the frame)  // subjects' fill of the safe frame: desktop, tablet landscape, tablet portrait, phone (CAMERA.md section 3)
   const klass = () => { const lo = Math.min(innerWidth, innerHeight), hi = Math.max(innerWidth, innerHeight); return lo < 600 ? 3 : hi >= 1200 ? 0 : innerWidth > innerHeight ? 1 : 2; };
   const MOVERS = /^(walk|run|swim|jump|stepback|leap)$/, EMOTE = /^(Worry|Sad|Cry|Cheer|Laugh|Surprise|Scared|Jump|Wave)$/, GAP = 1.4;  // GAP: the pause a line's last beat runs into
   const hero = n => cast.find(c => c.name === n && c.body.visible);
   const withPair = ns => { const out = new Set(ns); for (const n of ns) { const c = hero(n); if (c?.ride?.on) out.add(c.ride.on.name); for (const o of cast) if (c && o.ride?.on === c) out.add(o.name); } return [...out]; };  // a rider and its mount are one subject (a name with no character — an extra — has no mount: without `c &&`, every non-rider matched undefined and the shot framed the whole cast)
   const sb = new THREE.Box3(), sv = new THREE.Vector3();
-  const boxOf = (ns, at, any) => {  // at: [[x0,y0,z0],[x1,y1,z1]] a box of the page (a painted thing: gourd-s01's Sky King on the sky card); a name no character has: that page piece's box  // the subjects' box from their bones (the skin's own box is the bind pose's, twice as wide as the body that is drawn) and a tenth of their height; null if none is on stage
+  const boxOf = (ns, at, any, tight) => {  // at: [[x0,y0,z0],[x1,y1,z1]] a box of the page (a painted thing: gourd-s01's Sky King on the sky card); a name no character has: that page piece's box  // the subjects' box from their bones (the skin's own box is the bind pose's, twice as wide as the body that is drawn) and a tenth of their height; null if none is on stage
     const u = new THREE.Box3();
     if (at?.length === 2) u.expandByPoint(B(at[0])).expandByPoint(B(at[1]));
-    for (const n of ns) { const c = any ? cast.find(c => c.name === n) : hero(n); if (!c) { const o = n && (root.getObjectByName(n) || group.getObjectByName(n)); if (o) u.union(new THREE.Box3().setFromObject(o)); continue; } const bones = c.bones ??= (() => { const l = []; (c.model || c.body).traverse(o => o.isBone && l.push(o)); return l; })(); sb.makeEmpty(); for (const o of bones) sb.expandByPoint(o.getWorldPosition(sv)); u.union(bones.length ? sb.expandByScalar(0.15 * c.height) : sb.setFromObject(c.model || c.body)); }  // a paper puppet has no bones: its card's own box (gourd s11)  // bones and 15% of the height: a crocodile's snout and tail reach past its bones (the drawn pair touched the frame's edge at 10%)
-    return u.isEmpty() ? null : u;
+    for (const n of ns) { const c = any ? cast.find(c => c.name === n) : hero(n); if (!c) { const o = n && (root.getObjectByName(n) || group.getObjectByName(n)); if (o) u.union(new THREE.Box3().setFromObject(o)); continue; } const bones = c.bones ??= (() => { const l = []; (c.model || c.body).traverse(o => o.isBone && l.push(o)); return l; })(), D = tight && bones.length && window.live?.drawn?.(c); if (D?.length) { u.union(sb.setFromPoints(D)); continue; } sb.makeEmpty(); for (const o of bones) sb.expandByPoint(o.getWorldPosition(sv)); u.union(bones.length ? sb.expandByScalar(0.15 * c.height) : sb.setFromObject(c.model || c.body)); }  // a paper puppet has no bones: its card's own box (gourd s11)  // bones and 15% of the height: a crocodile's snout and tail reach past its bones (the drawn pair touched the frame's edge at 10%)
+    return u.isEmpty() ? null : u;  // tight (a close, V33): a 3D body as drawn now, sleeves and skirt included (bones + 15% made a close's frame 30% taller and 60% wider than her: a phone's close of one person was always held by its width)
   };
   let safeAt = -9, safeV = null;
   const safeNow = () => {  // the safe frame in NDC: under the read-along page (+3%), above the bar (10%), 3% in at the sides; measured every quarter second
@@ -823,19 +832,19 @@ export function addAmbient(scene, cam, m, opts = {}) {
   };
   const extent = (P, r) => { aim(r); let x0 = 9, x1 = -9, y0 = 9, y1 = -9; for (const p of P) { sv.copy(p).project(probe); x0 = Math.min(x0, sv.x); x1 = Math.max(x1, sv.x); y0 = Math.min(y0, sv.y); y1 = Math.max(y1, sv.y); } return { x0, x1, y0, y1 }; };
   const lowDir = (v, up = 0) => { const EL = deg(klass() === 3 ? 12 : 22) + up, r = Math.hypot(v.x, v.z), e = Math.atan2(v.y, r); return e <= EL ? v.clone().normalize() : new THREE.Vector3(v.x / r * Math.cos(EL), Math.sin(EL), v.z / r * Math.cos(EL)); };  // the reading axis brought down to 25° at most: a pop-up is seen across its layers (review 3: the iPad and phone looked down on a flat map, 42-72° above the speakers)
-  const solveFrame = (P, f, sign, up = 0, S = safeNow(), yaw = 0) => {  // the frame in which P fills `f` of the safe frame, sits under its top (8% headroom) and off its middle away from `sign` (lead room), seen along the reading axis as the spread opened (the game view moves HOME under a running beat: a lurch)
+  const solveFrame = (P, f, sign, up = 0, S = safeNow(), yaw = 0) => {  // the frame in which P fills `f` of the safe frame, sits in the middle of the free band under the read-along page (V15: a tall one hung 8% under the caption, the lower half empty) and off its middle away from `sign` (lead room), seen along the reading axis as the spread opened (the game view moves HOME under a running beat: a lurch)
     const W = 2 * S.x, H = S.yt - S.yb, v0 = (SC.ax ?? HOME.clone().sub(LOOK)).clone().applyAxisAngle(UP, yaw), dir = lowDir(v0, up), L = new THREE.Box3().setFromPoints(P).getCenter(new THREE.Vector3()), [tx, ty] = halves(), lead = sign * (klass() === 3 ? 0.12 : 0.2);
     f = Math.min(f, 2 * (0.82 - Math.abs(lead)) / W);  // at least 9% of the screen between the subjects and its sides: this wins over the table
-    let D = v0.length();
+    let D = v0.length(), tall;
     for (let i = 0; i < 8; i++) {
-      const b = extent(P, { pos: L.clone().addScaledVector(dir, D), look: L }), w = b.x1 - b.x0, h = b.y1 - b.y0, tall = h / H >= w / W;
-      D *= Math.max(w / W, h / H) / f;
-      const gy = tall ? S.yt - 0.08 * H - h / 2 : (S.yb + S.yt) / 2, right = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 0), up = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 1);
+      const b = extent(P, { pos: L.clone().addScaledVector(dir, D), look: L }), w = b.x1 - b.x0, h = b.y1 - b.y0, sx = w / W / f, sy = S.close ? h / 2 / S.close : h / H / f;
+      tall = sy >= sx; D *= Math.max(sx, sy);
+      const mid = (S.yb + S.yt) / 2, gy = tall && S.close ? S.yt - 0.08 - h / 2 : tall ? S.yt - 0.08 * H - h / 2 + 0.35 * (mid - (S.yt - 0.08 * H - h / 2)) : mid, right = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 0), up = new THREE.Vector3().setFromMatrixColumn(probe.matrixWorld, 1);  // S.close (V33): a close's subjects stand S.close of the frame's height, 4% of it under the words, running on under the bar if they must
       L.addScaledVector(right, ((b.x0 + b.x1) / 2 + lead) * tx * D).addScaledVector(up, ((b.y0 + b.y1) / 2 - gy) * ty * D);
     }
-    return { pos: L.clone().addScaledVector(dir, D), look: L };
+    return { pos: L.clone().addScaledVector(dir, D), look: L, tall };
   };
-  const inSafe = (P, r) => { const S = safeNow(), b = extent(P, r), x = Math.min(S.x, 0.82); return b.x0 >= -x && b.x1 <= x && b.y1 <= S.yt && b.y0 >= S.yb; };  // inside the safe frame, 9% of the screen from its sides
+  const inSafe = (P, r, S = safeNow()) => { const b = extent(P, r), x = Math.min(S.x, 0.82); return b.x0 >= -x && b.x1 <= x && b.y1 <= S.yt && b.y0 >= S.yb; };  // inside the safe frame, 9% of the screen from its sides
   const sideOf = (to, P) => {  // +1: `to` (a character, or a point) lies to the screen's right of P, -1: left, 0: no such thing
     const w = Array.isArray(to) ? B(to) : typeof to === "string" ? frame(to, true)?.c : null; if (!w || !P.length) return 0;
     aim({ pos: cam.position, look: controls.target }); const d = sv.copy(w).project(probe).x - new THREE.Box3().setFromPoints(P).getCenter(new THREE.Vector3()).project(probe).x;
@@ -847,7 +856,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const planOf = line => plans[line] ??= (() => {  // the line's beats: authored (a list of shots), else cut from who speaks and who acts
     const I = opts.info?.(line) ?? {}, W = I.words ?? [], say = I.say ?? [], dur = I.dur ?? 4, acts = (m.acts || []).filter(a => a.line === line && a.who), at = w => (w ? opts.wordAt?.(line, w) ?? 0 : 0), S = SH[line]?.constructor === Object ? [SH[line]] : SH[line];  // a line's one shot written as an object (turtle s01 1.5) is a list of one: it was never read, so the director's own beats framed whoever walked last (Matsing) and left Pagong, the target, at the edge
     if (S === "reading") return [{ line, t0: 0, len: dur + GAP, kind: "reading", reading: true, names: [] }];  // a line authored as the reading view holds the viewer's reading view all through (gourd-s01 1.1, its establishing line: the default beat went to a tight medium on everyone)
-    if (Array.isArray(S)) return S.map(s => ({ ...beatOf(line, s), t0: at(s.word), to: acts.findLast(a => [s.target].flat().includes(a.who) && a.to)?.to }));
+    if (Array.isArray(S)) return S.map(s => ({ ...beatOf(line, s), t0: at(s.word), to: acts.findLast(a => [s.target].flat().includes(a.who) && a.to)?.to })).sort((a, b) => a.t0 - b.t0);  // in the order their words are said (V33: cowherd 8.5 listed "Zhinü" before "cried", which is said first, and her close never played)
     const trig = [{ t: 0 }];
     say.forEach((w, i) => i && w !== say[i - 1] && (w !== "narrator" || say[i - 1] !== "narrator") && trig.push({ t: W[i]?.[0] ?? 0 }));
     for (const a of acts) { const k = MOVERS.test(a.do) ? "go" : (a.do === "clip" && EMOTE.test(a.clip)) || a.do === "mood" ? "emote" : a.do === "face" && Array.isArray(a.face) ? "gaze" : null; if (k) trig.push({ t: at(a.word), k, who: a.who, to: a.to ?? a.face }); }
@@ -867,12 +876,16 @@ export function addAmbient(scene, cam, m, opts = {}) {
       return o;
     });
   })();
-  const beatRig = (b, tt, any) => {  // a beat's frame at this moment (its subjects move: it follows them); any: hidden characters count (the page turning, before they stand up)
+  const beatRig = (b, tt, any) => {  // V18: an authored wide is never closer than the reading view (the room-safe fit pulled a page-piece wide in to 1.2 m where the reading view stands at 1.3)
+    const r = beatRig0(b, tt, any), h = r && b.kind === "authored" && b.size === "wide" && !phone() ? rigOf("reading") : null;
+    return h && r.pos.distanceTo(r.look) < h.pos.distanceTo(h.look) ? h : r;
+  };
+  const beatRig0 = (b, tt, any) => {  // a beat's frame at this moment (its subjects move: it follows them); any: hidden characters count (the page turning, before they stand up)
     if (!opts.titled?.() && !SC.ax) SC.ax = HOME.clone().sub(LOOK);  // the reading axis as the spread opened (before the first pull HOME is the title view)
     const ov0 = klass() === 3 ? b.phone : klass() ? b.tablet : null;
     if (ov0) b = { ...b, ...ov0, names: ov0.target != null ? [ov0.target].flat() : b.names, size: ov0.framing ?? b.size, num: ov0.size ?? b.num };  // a screen's override is the beat's, every key of it (target, framing, size, pitch, at, lead, move, by, after): only target and pitch were read, so a phone's own 'at' (turtle s09 9.2-9.5), framing and lead (toad s01 1.3, s02 2.1) did nothing
     if ((ov0?.framing ?? b.size) === "face") { const r = faceRig({ target: [ov0?.target ?? b.names].flat()[0], size: ov0?.size ?? b.num }); if (r) return r; }  // a face beat is the face shot (T52: it fell back to the medium fill, Kankak's sad face 2.7-9.2 percent of a phone's height)
-    const u = boxOf(withPair(b.names.filter(Boolean)), b.at, any); if (!u) return null;
+    const cl = b.size === "close" && b.num == null, u = boxOf(withPair(b.names.filter(Boolean)), b.at, any, cl); if (!u) return null;  // cl: a close at the table's fill (an authored size keeps the safe frame's measure it was tuned on)
     const c = u.getCenter(new THREE.Vector3()), h = u.getSize(new THREE.Vector3()).multiplyScalar(0.5);
     const vel = SC.c ? c.clone().sub(SC.c).divideScalar(Math.max(step, 1e-3)) : new THREE.Vector3(); SC.c = c.clone(); SC.v = (SC.v ?? vel).lerp(vel, 1 - Math.exp(-step / 0.25)); c.addScaledVector(SC.v, SCAM && leavingFace() && SC.goal && cam.position.distanceTo(controls.target) < 0.7 * SC.goal.pos.distanceTo(SC.goal.look) ? 0.9 : 0.4);  // still nearer than its shot after a face (it pulls out at 50%/s): the look point leads by the spring's lag (2/omega, 0.9 s), else a walker leaves the narrow frame (toad s02 2.5 phone: Kankak cut at the edge)  // aimed 0.4 s ahead of where they are going: a swimmer is never caught at the frame's edge
     const key = withPair(b.names).sort().join(), hm = h.clone().setX(Math.max(h.x, h.z)).setZ(Math.max(h.x, h.z)), mem = (SC.mem[key] = (SC.mem[key] ?? hm.clone()).multiplyScalar(Math.exp(-step / 200)).max(hm));  // the biggest this subject has been lately, turned any way (a swim stretches Bobo to three times his resting width, and he turns round)
@@ -884,7 +897,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (b.move === "push") f *= 1 - by * (1 - smooth(p)); else if (b.move === "pull") f *= 1 + by * (1 - smooth(p));
     // One pitch rule on every screen: the view stays at most 25° above its subjects (lowDir) and is never tipped; the frame is fitted by moving in (fitIn) or by a lower fill (x 0.85, x 0.7).
     // Off the phone the room-safe frame wins; an upright phone may show the wall only above the read-along panel's bottom edge (its frame is taller than any backdrop).
-    const sign = SC.sign ??= sideOf(b.lead === "travel" ? b.to : b.lead, P), whole_ = (r, Q = P, x = 0.92) => { const e = extent(Q, r); return e.x0 >= -x && e.x1 <= x && e.y0 >= Math.min(safeNow().yb, -x) && e.y1 <= Math.max(0.96, x); };
+    const sign = SC.sign ??= sideOf(b.lead === "travel" ? b.to : b.lead, P), whole_ = (r, Q = P, x = 0.92, lo = Math.min(safeNow().yb, -x)) => { const e = extent(Q, r); return e.x0 >= -x && e.x1 <= x && e.y0 >= lo && e.y1 <= Math.max(0.96, x); };
     const R = [0, 1].flatMap(x => [0, 1].flatMap(y => [0, 1].map(z => new THREE.Vector3(x ? u.max.x : u.min.x, y ? u.max.y : u.min.y, z ? u.max.z : u.min.z))));  // the subjects as they are now (P is padded for a swim's stretch and aimed ahead)
     const ka = b.at?.length === 2 && new THREE.Box3().setFromPoints(b.at.map(B)), pa = ka && boxOf(withPair(b.names.filter(Boolean)), null, any);  // a painted thing and its people are two boxes, not one: their union's empty front-top corners asked for a frame three screens tall (R20)
     if (pa) { const cs = x => R.map((_, i) => new THREE.Vector3(i & 4 ? x.max.x : x.min.x, i & 2 ? x.max.y : x.min.y, i & 1 ? x.max.z : x.min.z)); P.splice(0, 8, ...cs(pa.clone().expandByVector(pa.getSize(new THREE.Vector3()).multiplyScalar((pad - 1) / 2))), ...cs(ka)); R.splice(0, 8, ...cs(pa), ...cs(ka)); }
@@ -896,10 +909,10 @@ export function addAmbient(scene, cam, m, opts = {}) {
       let q, fq, q0, fq0, loose, qn;
       // a phone whose room fit would cut its subjects at every fill (turtle s02 2.2: the pair by the backdrop's end, pushed off the right edge): the view turns instead (the smallest of 8, 15, 22 degrees either way that holds them, room-free) at the full fill, so the size the page asks for holds; not while the opening push flies in (its speed caps are tuned to the unturned beat: Kapi s08's phone push went 0.35 m/s)
       for (const [sg, up, m, sf, yaw] of [[sign, 0, 1], [sign, 0, 0.85], [sign, 0, 0.7], ...(klass() === 3 ? (shot === "in" ? [] : [8, -8, 15, -15, 22, -22].map(d => [sign, 0, 1, undefined, deg(d)]).concat(b.kind === "end" ? [[0, deg(10), 1], [0, deg(18), 1], [0, deg(18), 0.7], [0, deg(18), 0.5]] : [])) : [[0, 0, 1], [0, 0, 1.2], [0, deg(8), 1], [0, deg(8), 0.85]]), ...(b.at && klass() !== 3 ? [1.4, 1.6, 1.8, 1.2, 1].flatMap(m => [-8, -12].map(d => [0, deg(d), m, { ...safeNow(), yt: 0.94 }])) : [])]) {  // a painted thing high on the backdrop (R20: the Sky King, 0.13 m under the skyline): lower and from the backdrop's middle, and the text may cover the backdrop (CAMERA.md 3)  // off the phone, then no lead room (8.5: the lead toward the backdrop's end took the frame past it), closer, a little higher (still at most 30 degrees), before giving up the room (a phone's closer rung went 32 degrees above Bobo on 8.2)
-        const r = solveFrame(P, Math.min(0.92, f * m), sg, up + pu, sf, yaw); if (sf && bd) { const dx = (bd.x0 + bd.x1) / 2 - r.look.x; r.pos.x += dx; r.look.x += dx; } q = fit(r.pos.clone(), r.look.clone()); q0 ??= q; if (!yaw) qn = q; fq = fitIn({ pos: q.pos.clone(), look: q.look.clone() }, !phone()); fq0 ??= fq;
+        const r = solveFrame(P, Math.min(0.92, f * m), sg, up + pu, sf ?? (cl ? { ...safeNow(), close: CLOSE * m * f / FILL.close[k] } : undefined), yaw), lo = cl && r.tall ? -1.12 : undefined, SB = lo && { ...safeNow(), yb: lo }; flo = lo ? 0.1 : null; /* a tall close comes down to 0.1 m, near a 3D person's eyes (cameraman T23): from 0.18 a phone's close looked down on the top of Zhinü's head */ if (sf && bd) { const dx = (bd.x0 + bd.x1) / 2 - r.look.x; r.pos.x += dx; r.look.x += dx; } q = fit(r.pos.clone(), r.look.clone()); q0 ??= q; if (!yaw) qn = q; fq = fitIn({ pos: q.pos.clone(), look: q.look.clone() }, !phone()); fq0 ??= fq;
         if (phone() && bd) fq = underPanel(fq);
-        if (phone() && bd) fq = deskOut(fq, q => inSafe(P, q) && lowEnough(q) && underWords(q));
-        if ((klass() === 3 || !bd ? inSafe(P, fq) : whole_(fq)) && lowEnough(fq) && underWords(fq)) return fq;
+        if (phone() && bd) fq = deskOut(fq, q => inSafe(P, q, SB) && lowEnough(q) && underWords(q));
+        if ((klass() === 3 || !bd ? inSafe(P, fq, SB) : whole_(fq, P, 0.92, lo)) && lowEnough(fq) && underWords(fq)) return SC.cl = cl, fq;  // SC.cl: a close at the table's fill (the faster way in, spring below)  // a close may run on 6% under the frame's foot (its feet under the bar), never over its top
         if (b.kind === "end" && klass() === 3 && lowEnough(fq) && whole_(fq, P, 0.98)) loose ??= fq;  // a closing frame no rung holds inside the safe frame: the first that still holds the people whole
       }
       if (klass() !== 3 && bd) for (const m of [0.75, 0.85]) {  // closer on the subjects as they are: a narrower frame stays on the backdrop (8.5 ends with the pair 0.35 m from its end, where every wider frame showed the room or lost them)
@@ -919,7 +932,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       }
       if (klass() !== 3 && bd) return kept ?? fq;  // none this moment: the frame it is on while that still holds them, else the closest room-safe one; never the wide view into the room (8.5#2: the swim's stretch not yet framed went for a 4.6 m view and held it)
       return klass() === 3 ? loose ?? (b.kind === "end" ? null : qn) : q0;  // a phone keeps its subjects whole at the lowest fill (farthest back, least steep: the first rung's frame went 32 degrees above Bobo on 8.2); no backdrop: its own frame  // none keeps them whole with no room: their own frame, whole (room may show: Bobo swimming off in 8.5 was cut half a screen), else the room-safe one
-    } finally { low = false; near = nearWas; }
+    } finally { low = false; near = nearWas; flo = null; }
   };
   const deskOut = (r, ok) => {  // an upright phone's story frame slid up its own screen (the subjects sink toward the bottom, nothing grows) until its bottom edge lands on the page, as far as `ok` (the subjects in the safe frame, no face under the words) and the backdrop's top stays above the read-along panel allow: the book's board and the desk out of the picture (turtle s09's phone frames were 29-33% board at any pitch, the frame being centred on the subjects)
     if (deskOver(r) <= 0) return r;
@@ -956,7 +969,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (key !== SC.key && key) {  // a new beat: it waits out a speaker's 1.5 s hold
       const hold = SC.beat && /single|reply/.test(SC.beat.kind) && now - SC.since < 3;
       if (!hold) { if (!SC.key) opts.halt?.();  // the first beat takes the camera from the viewer's glide home
-        if (SC.goal?.face) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
+        if (SC.goal?.face) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.cl = false; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
     }
     if (yielded) { if (!took && !held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; after a tap the director returns at the first beat that begins 4 s after they let go, after a real zoom or turn only on the next page
     let g = null;
@@ -987,16 +1000,30 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (!o) return;
     if (!base.has(o)) base.set(o, { c: o.color.clone(), i: o.intensity, p: o.position.clone() });
     const b = base.get(o), from = lightNow(o) || { c: o.color.clone(), i: o.intensity, p: o.position.clone() };
-    const to = c.back ? b : { c: b.c.clone().multiply(new THREE.Color(...(c.tint || [1, 1, 1]))), i: b.i * (c.level ?? 1), p: c.at ? B(c.at) : b.p.clone() };
+    const tn = new THREE.Color(...(c.tint || [1, 1, 1])); if (tn.b > tn.r) tn.lerp(new THREE.Color(1, 1, 1), 0.85);  // owner 2026-11-18: no blue on people at night: a bluish cue tint is nearly white (the sky and backdrop cards carry the blue); shortcut: lights cannot tell people from scenery, so the scenery's own blue comes from its cards, upgrade with a per-layer light
+    const to = c.back ? b : { c: b.c.clone().multiply(tn), i: b.i * (c.level ?? 1), p: c.at ? B(c.at) : b.p.clone() };
     tweens.set(o, { from, to, t0: now, secs: Math.max(0.1, c.seconds ?? 1.5) });
   };
   const flicker = (LI.flicker || []).flatMap(n => { const o = lightOf(n); if (o) return [{ o, i: o.intensity, ph: rnd(0, 9) }];
     const ms = []; find(n).forEach(x => x.traverse(y => y.isMesh && y.material.emissive?.getHex() && ms.push({ m: y.material, i: y.material.emissiveIntensity, ph: rnd(0, 9) }))); return ms; });
   new Set((LI.cues || []).map(c => c.stage).filter(Boolean)).forEach(s => cast.forEach(ch => ch.body.userData.restage?.(s, null, true)));  // the cast's cards for each "stage" fetched as the page is made, so a cue never waits on the network (4.5's night cards came after its day cue on a slow line)
+  const pageCards = [];  // V26: the page's own cards that name a stage (art-<path>-day|eve|night|storm): a light cue's "stage" swaps them to their sibling, like a paper puppet's night card
+  root.traverse(o => { const mm = o.isMesh && /^art-(.+)-(day|eve|night|storm)(\.\d+)?$/.exec(o.material?.name ?? ""); if (mm && o.material.map) pageCards.push({ o, base: mm[1], own: o.material.map }); });
+  const pageStage = async st => {
+    const n = ++pageStage.n;
+    for (const c of pageCards) {
+      const t = st === "day" ? null : await picture(`${c.base}-${st}.png`);  // a missing sibling stays as it is (one 404 for a card without it)
+      if (n !== pageStage.n) return;
+      const r = c.rect === undefined ? (c.rect = cardRect(root, c.o)) : c.rect, map = t ? (c.tex ??= {})[st] ??= Object.assign(t.clone(), { flipY: false, needsUpdate: true }) : c.own;
+      if (t && r && map.offset.x === 0 && map.offset.y === 0) map.repeat.set(1 / (r[2] - r[0]), 1 / (r[3] - r[1])), map.offset.set(-r[0] / (r[2] - r[0]), -r[1] / (r[3] - r[1]));  // the sibling is a picture of its own; the card's uvs are its patch of the atlas: the patch is stretched over the whole sibling (unmapped, Cowherd s07's night sky showed a smeared strip of it)
+      if (c.o.material.map !== map) { c.o.material.map = map; c.o.material.needsUpdate = true; }
+    }
+  }; pageStage.n = 0;
+  new Set((LI.cues || []).map(c => c.stage).filter(st => st && st !== "day")).forEach(st => pageCards.forEach(c => picture(`${c.base}-${st}.png`)));  // fetched as the page is made
   ticks.push(t => {
     (LI.cues || []).forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
       && (cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c),
-        c.stage && [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage)))));  // "stage": "day": every paper puppet to its day card from this cue
+        c.stage && (pageStage(c.stage), root.userData.stage = c.stage, [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage))))));  // "stage": "day": every paper puppet to its day card from this cue
     for (const [o] of tweens) { const s = lightNow(o); o.color.copy(s.c); o.intensity = s.i; o.position.copy(s.p); }
     for (const [o, w] of lit) if (w.k !== w.to) glow(o, (w.k = w.from + (w.to - w.from) * smooth((now - w.t0) / w.secs)));
     for (const f of flicker) {  // a flame: 0.85..1.0 with soft noise at 6-10 Hz
@@ -1004,7 +1031,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       if (f.o) f.o.intensity = f.i * k; else f.m.emissiveIntensity = f.i * k;
     }
   });
-  disposers.push(() => { for (const [o, b] of base) { o.color.copy(b.c); o.intensity = b.i; o.position.copy(b.p); } for (const [o] of lit) glow(o, 0); flicker.forEach(f => (f.o ? (f.o.intensity = f.i) : (f.m.emissiveIntensity = f.i))); });
+  disposers.push(() => { delete root.userData.stage; pageCards.forEach(c => (c.o.material.map = c.own)); for (const [o, b] of base) { o.color.copy(b.c); o.intensity = b.i; o.position.copy(b.p); } for (const [o] of lit) glow(o, 0); flicker.forEach(f => (f.o ? (f.o.intensity = f.i) : (f.m.emissiveIntensity = f.i))); });
 
   // ---------- wind: gusts crossing the spread, swaying the pieces in turn (DIRECTION.md "wind") ----------
   const WD = { base: 0.2, gust: 0.5, gust_every: [8, 14], dir: -1, ...W }, sway = [], gusts = [];

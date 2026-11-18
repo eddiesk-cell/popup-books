@@ -6,7 +6,7 @@
 //            lights where it stands; "thoughts": [...]: each one found shows the next of `who`'s thoughts over them)
 //   order    only the next target glows; tap it and `who` jumps onto it; win when `who` stands on the last
 //   shadow   tap a spot: `who` carries the `lamp` there and sets it down; its light throws `caster`'s shadow onto
-//            `screen`; win when the lamp is on `answer` (two wrong spots, and the answer glows)
+//            `screen`; win when the lamp is on `answer` (two wrong spots, and the answer glows); `level` the lamp's light, 0.6 unless the page says (a caster near the lamp wants less)
 //   echo     each round the bells play a tune and the child taps it back; `replay` plays it again; after
 //            `help_after` misses on a note its bell glows; win when the last round is done; "sounds": [pool per bell]
 //            plays those pools instead of the bell notes
@@ -22,7 +22,8 @@
 //   collect  "count": "game.1.count": each right tap says `<count>.<n>` (the n-th picked) and shows the numeral; a friend (a cast
 //            character target) also pops its number word, then says "<game>.react.<name>"; "clip": [name, secs] plays on it; tapped again: "again" and a wobble
 //   collect  "deal": ["pagong", "matsing"]: each tap sends the tapped one to the next named character in turn (it flies to them), counted per character in game.dealt
-//   collect  "lit_glow": 0: a lit target that is no light (a mud spot) lets its glow go 1 s after the game is won (default: it stays, a lantern's)
+//   collect  a lit target's glow lets go 1 s after the game is won (default, V26: a lit glow left on washed the page); "lit_glow": 1 keeps it (a lantern that is a real light)
+//   every game: a won game's soft glows (a counted friend, a picked stone, the bells' chime) let go over 1 s too (letGo); "lit_glow": 1 keeps them
 // c.auto(): Auto Read's helping hand (live.js help()): the next right move, or null while the game is busy: {i} a target to tap (the viewer taps it the
 //   way a finger does), or {o, go} for a game played by gesture; `ready` false: not yet (a beat or a ring is not at its moment); `press`: a button to press
 // The state of each game is a small class (tested in games.test.mjs); makeGame() gives it hands in the scene.
@@ -123,12 +124,20 @@ export function glow(o, k, soft) {
   o?.traverse(m => {
     if (!m.isMesh || !m.material.emissive) return;
     for (let p = m; p && p !== o; p = p.parent) if (/-lit$/.test(p.name)) return;  // a decal's "-lit" card is its own picture of the light
-    if (!glows.has(m)) { m.material = m.material.clone(); glows.set(m, [m.material.emissive.clone(), m.material.emissiveIntensity, m.material.emissiveMap]); }
-    const [c, i, map] = glows.get(m), g = Math.max(0, Math.min(1, k)), mat = m.material, own = soft && g > 0 ? mat.map : map;
+    if (!glows.has(m)) { m.material = m.material.clone(); glows.set(m, [m.material.emissive.clone(), m.material.emissiveIntensity, m.material.emissiveMap, 0]); }
+    const e = glows.get(m), [c, i, map] = e, g = Math.max(0, Math.min(1, k)), mat = m.material, own = soft && g > 0 ? mat.map : map;
+    e[3] = soft ? g : 0;  // a soft glow now on it (letGo() fades those after a win)
     if (mat.emissiveMap !== own) { mat.emissiveMap = own; mat.needsUpdate = true; }
     if (soft && g > 0) { (mat.map ? mat.emissive.setRGB(1, 1, 1) : mat.emissive.copy(mat.color)).multiplyScalar(0.3 * g); mat.emissiveIntensity = 1; }
     else { mat.emissive.copy(c).lerp(c.clone().setRGB(...GOLD), g); mat.emissiveIntensity = i + (Math.max(i, LIT) - i) * g; }
   });
+}
+
+// once a game is won its soft glows (a counted friend, a picked stone, the bells' chime: marks of the game, not lights) let go over 1 s, in every
+// game and book (owner 2026-11-18: "the frogs they stayed lighted after the game"); a lit light (a lantern, a lamp: not soft) stays lit
+function letGo(targets, t0) {
+  const on = []; targets.forEach(o => o.traverse(m => glows.get(m)?.[3] > 0 && on.push([m, glows.get(m)[3]])));
+  return now => { const k = Math.max(0, 1 - (now - t0) / 1000); on.forEach(([m, g]) => glow(m, g * k, true)); return k > 0; };
 }
 
 // a thought over a character (ch from sp.byName): the page's speech bubble #sbub, which live.js keeps over `who`, made soft, a
@@ -238,12 +247,13 @@ export function inkOutline(env, caster, screen, from) {
 export function makeGame(sp, env) {
   const { THREE } = env, G = sp.G, obj = n => (sp.group ?? sp.root).getObjectByName(n) ?? sp.byName[n]?.body, at = o => o.getWorldPosition(new THREE.Vector3());  // group: a character's own pieces (a boat's flame) too
   const cast = { listen: [G.who ?? "lulu"], rally: ["bobo", "kapi"], waves: ["kapi", "bobo"], leap: ["kapi"] }[G.type];  // listen: the one who speaks; a beat: the pair
-  const targets = (G.targets ?? (G.pairs ? [...new Set(G.pairs.flat())] : cast) ?? sp.m.targets ?? []).map(obj).filter(Boolean);
-  const c = { targets, extra: new Map(), begun: false, last: 0, complete: false, open: () => true,
+  const names = G.targets ?? (G.pairs ? [...new Set(G.pairs.flat())] : cast) ?? sp.m.targets ?? [], targets = names.map(obj).filter(Boolean);
+  const c = { targets, missing: names.filter(n => !obj(n)), extra: new Map(), begun: false, last: 0, complete: false, open: () => true,  // missing: named things not on the page yet (an extra is built after the game: live.js arm() sets the game up again when they appear)
     begin() { c.begun = true; c.last = env.now(); return c.start?.(); },
     resume() { c.last = env.now(); return c.again?.(); },  // back on the page mid-game (the bells play their tune again)
-    update(now) { if (c.begun) c.tick?.(now); if (c.begun && !c.complete && now - c.last > HINT[G.type] * 1000) { c.last = now; c.hint?.(); } },
-    win() { c.complete = true; env.count(""); env.won(); } };
+    settle() { if (c.complete) return; c.win = () => {}; c.begun = true; const moves = c.quiet?.(); c.complete = true; return moves; },  // Auto and Reading Mode skip the game (Eddie 2026-11-18): its own quiet() sets what winning sets, with no prompt, praise, sound or count (a promise while what it moves is still on its way); a tap still in flight wins nothing
+    update(now) { if (c.begun) c.tick?.(now); if (c.fade && !c.fade(now)) c.fade = null; if (c.begun && !c.complete && now - c.last > HINT[G.type] * 1000) { c.last = now; c.hint?.(); } },
+    win() { c.complete = true; env.count(""); env.won(); if (G.lit_glow !== 1) c.fade = letGo(targets, env.now()); } };
   const n = targets.length;
   // spoken words (book.json "voice": {react, again, listen, ...}, each an id in the book's words): `react` on a right tap (a string, or a list per target),
   // `again` on a wrong one, at most once in 4 s so a child tapping wildly is not talked over; neither plays unless the page names it
@@ -270,6 +280,7 @@ export function makeGame(sp, env) {
     };
     c.hint = () => { const o = targets[state.next]; if (o) { env.sparkle(at(o)); env.lift(o.name, 0.03, 0.4); } };  // the glowing stone bounces
     c.auto = () => (busy || state.complete ? null : { i: state.next });
+    c.quiet = async () => { const rest = targets.slice(state.next); state.next = n; targets.forEach(o => glow(o, 0)); for (const o of rest) if (who && sp.play === c) await env.act({ do: "fly", who, to: o.name, secs: 0.6, clip: "Jump" }); };  // she hops across, stone by stone (a page Read again stops her)
     c.state = state;
   } else if (G.type === "shadow") {
     const state = new Shadow(G.answer), lamp = G.lamp, caster = obj(G.caster), screen = obj(G.screen), ch = sp.byName[G.who];
@@ -280,7 +291,7 @@ export function makeGame(sp, env) {
     const light = new THREE.SpotLight(new THREE.Color(1, 0.8, 0.5), 0, 2, THREE.MathUtils.degToRad(55), 0.4, 2);
     Object.assign(light.shadow.camera, { near: 0.02, far: 1 }); light.shadow.mapSize.set(1024, 1024); light.shadow.bias = -0.0005;
     light.castShadow = true; light.shadow.autoUpdate = false; sp.stage.add(light, light.target);
-    const lit = on => { light.intensity = on ? 0.6 : 0; light.shadow.autoUpdate = on; light.shadow.needsUpdate = true; };
+    const lit = on => { light.intensity = on ? G.level ?? 0.6 : 0; light.shadow.autoUpdate = on; light.shadow.needsUpdate = true; };
     const casts = [];
     let busy = false;
     c.start = () => {  // during the game only the caster throws a shadow, and only the lamp light makes one
@@ -305,12 +316,7 @@ export function makeGame(sp, env) {
       }
       await env.act({ do: "walk", who: ch.name, to: front(spot), stop: 0 });
       await env.act({ do: "face", who: ch.name, face: spot.name });
-      env.hold(ch, lamp, "right", false);
-      const fire = flame(spot);
-      env.place(lamp, fire.clone().sub(new THREE.Vector3(0, 0.03, 0)));  // set down on the spot
-      light.position.copy(fire);
-      light.target.position.copy(screen ? at(screen).add(new THREE.Vector3(0, 0.15, 0)) : new THREE.Vector3(0, 0.25, -0.1));
-      lit(true);
+      setDown(spot);
       const r = state.place(spot.name);
       busy = false; c.last = env.now();  // the hint clock starts at the set-down, so a hint never lands on the "wrong" pulse
       if (r === "fit") {
@@ -324,6 +330,15 @@ export function makeGame(sp, env) {
       pulse();
       if (r === "help") glow(obj(G.answer), 0.6);  // two wrong spots: the answer glows until it is tapped
     };
+    const setDown = spot => {  // the lamp let go and set down on a spot, lit, its light thrown at the screen
+      if (env.holding(lamp)) env.hold(ch, lamp, "right", false);
+      const fire = flame(spot);
+      env.place(lamp, fire.clone().sub(new THREE.Vector3(0, 0.03, 0)));
+      light.position.copy(fire);
+      light.target.position.copy(screen ? at(screen).add(new THREE.Vector3(0, 0.15, 0)) : new THREE.Vector3(0, 0.25, -0.1));
+      lit(true);
+    };
+    c.quiet = () => { const s = obj(G.answer); if (!s) return; if (!light.parent) sp.stage.add(light, light.target); state.place(s.name); setDown(s); glow(s, 0); glow(obj(`${G.caster}-flame`) ?? caster?.getObjectByName("flame"), 1); };  // the lamp on the answer, lit; Tong's flame back
     let fade = 0;
     const ink = (to, ms = 600) => {  // the outline's strength, eased to `to`
       if (!outline) return;
@@ -385,6 +400,7 @@ export function makeGame(sp, env) {
     };
     c.hint = () => { const o = obj(state.want); if (o) { env.sparkle(at(o)); glow(o, 0.5); setTimeout(() => glow(o, state.want === help ? 0.6 : 0), 700); } };
     c.auto = () => (busy || state.complete ? null : { i: names.indexOf(state.want) });
+    c.quiet = () => { state.round = state.rounds.length; targets.forEach(o => glow(o, 0)); };
     c.state = state;
   } else if (G.type === "timing") {  // the old player's game (book.js Timing): a ring closes on the next one; tap as it is nearly shut
     // "step": {"prop", "clip", "steps"} + "light": [names]: the one target is tapped `steps` times; each good tap plays one step of the prop's clip
@@ -416,6 +432,7 @@ export function makeGame(sp, env) {
     c.hint = () => { const o = targets[S ? 0 : state.cur]; if (o) env.wobble(o, 4); };
     c.auto = () => (state.complete ? null : { i: S ? 0 : state.cur, ready: state.phase(env.now() / 1000) >= 1 - 0.6 * state.win() });  // the ring well inside its green moment
     c.stop = () => ring.removeFromParent();
+    c.quiet = () => { state.cur = steps; c.start(); lamps.forEach(l => glow(l, 1)); if (act) return (stopAt = clip.duration, act.paused = false), sleep(clip.duration * 1000); };  // the prop's clip plays on to its end (the hole dug, the plant grown); every lamp lit
     c.state = state;
   } else if (G.type === "rally" || G.type === "waves" || G.type === "leap") {
     // rally (s03): every beat Kapi throws a seed to Bobo's tail; a tap as it lands, and Bobo flicks it back. waves (s08): every
@@ -488,6 +505,7 @@ export function makeGame(sp, env) {
     c.tap = () => {};  // a tap anywhere is the game's (gestures); one on a character neither pokes it nor counts twice
     c.stop = () => { off(); ring.removeFromParent(); seed.removeFromParent(); };
     c.auto = () => (state.complete || state.caught || ret ? null : { o: (rally ? bobo : kapi)?.body, ready: k >= 1 - 0.6 * state.win(), go: hit });  // the same hit a tap anywhere makes
+    c.quiet = () => { state.done = state.n; off(); ring.material.opacity = 0; seed.visible = false; if (leap && kapi) return env.act({ do: "clip", who: kapi.name, clip: "Jump", then: kapi.hold, ...G.leap }); };  // the leap still lands him in the branches
     c.state = state; c.phase = () => k;  // how far into the beat (tests, the recorder)
   } else if (G.pairs && (G.type === "pair" || G.type === "match")) {  // a match game without "pairs" (the book.json one, "tap each friend") plays as collect
     const pairs = G.pairs.filter(p => p.every(n => targets.some(o => o.name === n)) || console.warn("game: a pair not on this page:", p)), state = new Pair(pairs), name = i => targets[i].name, moves = [], walks = [];
@@ -501,8 +519,7 @@ export function makeGame(sp, env) {
       const t = thing(state.pairs[prev][0]); glow(t, 0); glow(place(prev), 0);
       if (r === "miss") return env.wobble(t, 6), env.wobble(o, 4), miss();
       env.foley(`game:${G.type}`, "pick"); const said = react(i); glow(t, G.type === "match" ? 0 : 0.6); glow(o, G.type === "match" ? 0 : 0.6);  // joined: it goes to its spot and stays lit (a home that is a whole mound or rock pile is not lit)
-      if (G.type === "match" && sp.byName[t.name]) walks.push(home(t, o));  // a character walks (flies, hops) home
-      else { const ch = sp.byName[t.name], v = ch ? ch.pos : t.position, p = ch ? ch.body.parent : t.parent; if (p) { if (ch) ch.moved = true; moves.push({ v, from: v.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); } }  // a cast prop moves by its place (ch.pos: the viewer puts its body there every frame, so moving the body itself left it where it was)
+      join(t, o);
       if (r === "won") { if (walks.length) env.count(`${state.pairs.length} of ${state.pairs.length}`); Promise.all([...walks, said]).then(() => (targets.forEach(o => glow(o, 0)), c.win())); } else env.count(`${state.done.size} of ${state.pairs.length}`);  // won: the joined pairs stop glowing for the rest of the page
     };
     const home = (t, o) => {  // each friend stands at the edge of its home, on the side it comes from; the friends of one home side by side
@@ -510,6 +527,11 @@ export function makeGame(sp, env) {
       const c = at(o), p = c.clone().add(at(t).sub(c).setY(0).normalize().multiplyScalar(G.stop ?? Math.min(0.12, Math.max(z.x, z.z) / 2 + 0.02))).add(new THREE.Vector3((k - (mates.length - 1) / 2) * (G.spread ?? 0.05), 0, 0));
       return env.act({ do: G.gait?.[t.name] ?? "walk", who: t.name, to: [p.x, -p.z, p.y], stop: 0, ...(G.secs && { secs: G.secs }), ...(G.clip?.[t.name] && { clip: G.clip[t.name] }), ...(G.rate?.[t.name] && { rate: G.rate[t.name] }) }).then(() => env.sparkle(at(o)));
     };
+    const join = (t, o) => {  // a match friend walks (flies, hops) home; a thing flies into its place
+      if (G.type === "match" && sp.byName[t.name]) return walks.push(home(t, o));
+      const ch = sp.byName[t.name], v = ch ? ch.pos : t.position, p = ch ? ch.body.parent : t.parent; if (p) { if (ch) ch.moved = true; moves.push({ v, from: v.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); }  // a cast prop moves by its place (ch.pos: the viewer puts its body there every frame, so moving the body itself left it where it was)
+    };
+    c.quiet = () => { state.pairs.forEach((p, k) => state.done.has(k) || (state.done.add(k), join(thing(p[0]), thing(p[1])))); state.sel = null; targets.forEach(o => glow(o, 0)); return Promise.all([...walks, sleep(moves.length ? 900 : 0)]); };
     c.tick = now => { for (const m of moves) { const k = Math.min(1, (now - m.t0) / 900); m.v.lerpVectors(m.from, m.to, k * k * (3 - 2 * k)); m.v.y += 0.08 * Math.sin(Math.PI * k); } };  // it flies: a short arc up and down into its place
     c.auto = () => { if (state.complete) return null; const k = state.sel ?? state.pairs.findIndex((_, i) => !state.done.has(i)); return { i: targets.findIndex(o => o.name === state.pairs[k][state.sel == null ? 0 : 1]) }; };  // the thing, then its spot
     c.hint = () => { const k = state.sel ?? state.pairs.findIndex((_, i) => !state.done.has(i)), p = state.pairs[k]; if (p) { env.sparkle(at(thing(state.sel == null ? p[0] : p[1]))); env.wobble(thing(state.sel == null ? p[0] : p[1]), 4); } };
@@ -522,7 +544,7 @@ export function makeGame(sp, env) {
     const state = new Steer(G.free ?? targets.map(() => (Math.random() < 0.5 ? -1 : 1)));
     const B = v => [v.x, -v.z, v.y];  // three.js -> the acts' Blender coordinates
     const right = () => new THREE.Vector3(1, 0, 0).applyQuaternion(camOf(env)?.quaternion ?? new THREE.Quaternion()).setY(0).normalize();
-    const swim = to => env.act({ do: "swim", who: bobo.name, to: B(to), stop: 0 });
+    const swim = to => env.act({ do: G.move ?? (/^puppet:/.test(bobo.c.model) && /fly/.test(bobo.name) ? "fly" : "swim"), who: bobo.name, to: B(to), stop: 0 });  // V21: a flying paper mount (G.move, or a puppet named *fly*) flies between its hazards
     const lights = [0, 1].map(() => {  // a flat gold ring with a soft glow inside, lying on the water; in the scene from the start (unseen)
       const g = new THREE.Group(), mat = o => new THREE.MeshBasicMaterial({ color: 0xffc94d, transparent: true, opacity: o, depthTest: false, depthWrite: false, side: THREE.DoubleSide, blending: THREE.AdditiveBlending });
       g.add(new THREE.Mesh(new THREE.RingGeometry(0.78, 1, 40), mat(0.95)), new THREE.Mesh(new THREE.CircleGeometry(0.78, 40), mat(0.35)));
@@ -579,6 +601,7 @@ export function makeGame(sp, env) {
     c.places = () => shown.map(s => ({ side: s.side, calm: s.side === state.free[state.i], p: s.p }));  // (tests, the recorder)
     c.stop = () => { off(); lights.forEach(l => l.removeFromParent()); targets.forEach(o => glow(o, 0)); };
     c.auto = () => (busy || !cur || state.complete ? null : { o: targets[state.i], go: () => choose(state.free[state.i]) });  // the calm place, as a tap on it chooses
+    c.quiet = () => { state.i = state.free.length; off(); show([]); targets.forEach(o => glow(o, 0)); };
     c.state = state; c.ready = () => !busy && !!cur;  // waiting at a hazard for a tap (tests, the recorder)
   } else if (G.type === "listen") {  // the old player's game: tap the speaker and the line is said again, the words Bobo missed lit; one listen wins
     const state = new Collect(1), who = G.who ?? "lulu", line = G.voice?.listen ?? G.line;  // "voice": {"listen": id} names the line when `line` is not set
@@ -595,6 +618,7 @@ export function makeGame(sp, env) {
     c.start = c.again = () => env.bubble(who, line, G.say ?? "");  // her words over her: tap them (or her) to hear them again
     c.hint = () => env.wobble(targets[0], 4);
     c.auto = () => (busy || state.complete ? null : { i: 0, press: "lbub" });  // her words' bubble is the button
+    c.quiet = () => { state.tap(0); env.bubble(null); };
     c.state = state;
   } else {  // collect; "tap": "hover" for lanterns that wake up and rise, "light" for things lit where they stand (fireflies, candles)
     const state = new Collect(n), hover = G.tap === "hover", light = G.tap === "light";
@@ -626,6 +650,16 @@ export function makeGame(sp, env) {
       const el = d.body.appendChild(Object.assign(d.createElement("div"), { id: "gnum", textContent: t.replace(/[.!]+$/, "") }));
       num = { o, el, until: env.now() + 1500 };
     };
+    const take = (o, i, quiet) => {  // what a pick does to the picked one (quiet: a skipped game, no shake or soft glow)
+      if (G.deal) { const to = G.deal[(state.done.size - 1) % G.deal.length]; c.dealt[to] = (c.dealt[to] ?? 0) + 1; return env.act({ do: "fly", ...(sp.byName[o.name] ? { who: o.name } : { what: o.name }), to, secs: 0.8, up: 0.05 }); }  // "deal": ["pagong", "matsing"]: each pick goes to the next one named, in turn, and is counted for them
+      else if (hover) { glow(o, 0.8); return env.act({ do: "rise", what: o.name, by: 0.06, secs: 0.8 }); }  // woken: up 0.06 to stay, as an act, so a story rise adds to it
+      else if (dark[i].length) dark[i].forEach(m => {  // a paper lantern lit: its paper's colour, a warm light inside, no white disc
+        m.material.color.copy(paper.color).multiplyScalar(0.9); m.material.emissive.set(0xff8c2a); m.material.emissiveIntensity = 0.85 * LIT; });
+      else if (light) { glow(o, 0.9); glow(obj(`${o.name}-flame`), 1); }
+      else if (sp.byName[o.name]?.body === o) { if (!quiet) env.wobble(o, 6), glow(o, 0.6, true); }  // a character named as a target (an animal, a friend) stays: it shakes and glows, never vanishes
+      else env.vanish(o);
+    };
+    c.quiet = () => Promise.all(targets.map((o, i) => state.tap(i) && take(o, i, true)));  // a deal's flights and a lantern's rise are waited for
     c.repeat = i => { if (!friend(i) || !state.done.has(i)) return; c.last = env.now(); env.foley("game:again", "tap"); env.wobble(targets[i], 6); };
     c.tap = i => {
       const o = targets[i];
@@ -636,13 +670,7 @@ export function makeGame(sp, env) {
       const v = G.count ? `${G.count}.${state.done.size}` : G.react?.[i] ?? G.react?.["*"];  // counting aloud: the n-th pick says the n-th number
       const mine = G.count && friend(i) && own(o, i), said = v ? env.voice(v) : react(i);
       const then = mine ? Promise.resolve(said).then(ok => ok !== false && env.voice(mine)) : null;  // its own line once the number is said (not if another tap cut the number short)
-      if (G.deal) { const to = G.deal[(state.done.size - 1) % G.deal.length]; c.dealt[to] = (c.dealt[to] ?? 0) + 1; env.act({ do: "fly", ...(sp.byName[o.name] ? { who: o.name } : { what: o.name }), to, secs: 0.8, up: 0.05 }); }  // "deal": ["pagong", "matsing"]: each pick goes to the next one named, in turn, and is counted for them
-      else if (hover) { env.act({ do: "rise", what: o.name, by: 0.06, secs: 0.8 }); glow(o, 0.8); }  // woken: up 0.06 to stay, as an act, so a story rise adds to it
-      else if (dark[i].length) dark[i].forEach(m => {  // a paper lantern lit: its paper's colour, a warm light inside, no white disc
-        m.material.color.copy(paper.color).multiplyScalar(0.9); m.material.emissive.set(0xff8c2a); m.material.emissiveIntensity = 0.85 * LIT; });
-      else if (light) { glow(o, 0.9); glow(obj(`${o.name}-flame`), 1); }
-      else if (sp.byName[o.name]?.body === o) { env.wobble(o, 6); glow(o, 0.6, true); }  // a character named as a target (an animal, a friend) stays: it shakes and glows, never vanishes
-      else env.vanish(o);
+      take(o, i);
       if (friend(i) && G.clip) {  // "clip": "Droop" or ["Droop", 1.8]: held that long, then back to what it was doing
         const [clip, secs] = [].concat(G.clip), was = sp.byName[o.name].hold;
         env.act({ do: "clip", who: o.name, clip, then: clip });
@@ -678,7 +706,7 @@ export function makeGame(sp, env) {
       const unit = 2 * Math.tan(THREE.MathUtils.degToRad(cam.fov) / 2) / innerHeight;  // world size of a pixel, one unit away
       halos.forEach((h, i) => {
         const o = targets[i], p = at(o), d = -p.clone().applyMatrix4(cam.matrixWorldInverse).z, on = !state.done.has(i) && !c.complete;
-        if (!size.has(o)) size.set(o, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius * 2);
+        if (!size.has(o)) size.set(o, Math.max(0, new THREE.Box3().setFromObject(o).getBoundingSphere(new THREE.Sphere()).radius * 2));  // V26: a target with nothing drawn (an empty spot) has an empty box, radius -1: its lit glow was a sprite of scale -3.6, a wash over the whole frame
         // a game whose character targets crowd (two stand nearer than one's height: Gourd s04's ten faces 0.025 apart, s05's rows of people) shows no
         // disc on any of them: a disc, in front or behind, fogs the faces round it. Each pulses brighter in its own colours while it waits; its sprite
         // stays an unseen tap zone
@@ -687,7 +715,8 @@ export function makeGame(sp, env) {
         if (quiet) on ? glow(o, still ? 0.7 : 0.55 + 0.4 * Math.sin(now / 230 + i), true) : state.done.has(i) || glow(o, 0);
         // lit (not picked away): the halo becomes a still, soft warm glow round the light, the size of its light, not of a fingertip
         const glowing = !quiet && !on && state.done.has(i) && (light || hover), want = quiet ? 0 : on ? (still ? 0.85 : 0.7 + 0.25 * Math.sin(now / 230 + i)) : glowing ? 0.5 : 0;
-        if (glowing && G.lit_glow === 0 && c.complete) h.material.opacity = 0.5 * Math.max(0, 1 - (now - (wonAt ??= now)) / 1000);  // book.json "lit_glow": 0: a lit thing that is no light (a mud spot) lets its glow go over 1 s once the game is won
+        // V26: a lit glow lets go over 1 s once the game is won, in every book (book.json "lit_glow": 1 keeps it, the old lit_glow 0 is now the default); a lit thing over 0.15 m (a thread, a silk) is capped below: its 1.8x warm sprite washed the whole frame
+        if (glowing && G.lit_glow !== 1 && c.complete) h.material.opacity = 0.5 * Math.max(0, 1 - (now - (wonAt ??= now)) / 1000);  // book.json "lit_glow": 0: a lit thing that is no light (a mud spot) lets its glow go over 1 s once the game is won
         else h.material.opacity += (want - h.material.opacity) * 0.12;  // in as the game begins; once lit, down to the glow (or out)
         if (glowing) h.material.color.lerp(warm, 0.1);
         if (friend(i)) {  // a friend's glow: its own size (1.5 times its height on screen), just behind it, so it never hides the friend
@@ -695,7 +724,7 @@ export function makeGame(sp, env) {
           const tall = Math.abs(top.project(cam).y - p.clone().project(cam).y) / 2 * innerHeight;  // its height on the screen, px
           h.material.depthTest = true; h.position.copy(p).setY(p.y + ch.height / 2).addScaledVector(p.clone().sub(cam.position).normalize(), Math.max(r.x, r.z) / 2);
           h.scale.setScalar(1.5 * tall * unit * -h.position.clone().applyMatrix4(cam.matrixWorldInverse).z);
-        } else h.position.copy(p), h.scale.setScalar((glowing ? 1.8 * size.get(o) : Math.max(HALO * unit * d, 1.4 * size.get(o))));
+        } else h.position.copy(p), h.scale.setScalar((glowing ? Math.min(Math.max(1.8 * size.get(o), 0.5 * HALO * unit * d), 0.27) : Math.max(HALO * unit * d, 1.4 * size.get(o))));
         h.raycast = on ? THREE.Sprite.prototype.raycast : off;
       });
     };

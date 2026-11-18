@@ -12,6 +12,50 @@
  ],
  "books": [
   {
+   "id": "chang-e",
+   "title": {
+    "en": "Chang'e and the Jade Rabbit",
+    "lo": "ສາງເອີ ກັບ ກະຕ່າຍຢົກ",
+    "th": "ฉางเอ๋อกับกระต่ายหยก",
+    "zh": "嫦娥与玉兔",
+    "ja": "じょうがと つきの うさぎ",
+    "ko": "항아와 옥토끼"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Chinese",
+   "region": "asia",
+   "spreads": [
+    4,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=chang-e&s=s01"
+  },
+  {
+   "id": "cowherd",
+   "title": {
+    "en": "The Cowherd and the Weaving Maiden",
+    "lo": "ຄົນລ້ຽງງົວ ກັບ ນາງຕ່ຳຫູກ",
+    "th": "คนเลี้ยงวัวกับสาวทอผ้า",
+    "zh": "牛郎织女",
+    "ja": "ひこぼしと おりひめ",
+    "ko": "견우와 직녀"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Chinese",
+   "region": "asia",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=cowherd&s=s01"
+  },
+  {
    "id": "gourd",
    "title": {
     "en": "Khun Borom and the Great Gourd",
@@ -120,6 +164,27 @@
    ],
    "status": "ready",
    "link": "../live/?book=toad-king&s=s01"
+  },
+  {
+   "id": "xieng-mieng",
+   "title": {
+    "en": "Xieng Mieng, the Clever Trickster",
+    "lo": "ຊຽງໝ້ຽງ ນັກຫຼອກຜູ້ສະຫຼາດ",
+    "th": "เชียงเมี่ยง จอมเจ้าปัญญา",
+    "zh": "香勉，聪明的机灵鬼",
+    "ja": "とんちの めいじん シエンミエン"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Lao",
+   "region": "sea",
+   "spreads": [
+    2,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=xieng-mieng&s=s01"
   }
  ]
 }

@@ -8,44 +8,44 @@
    "pitch": 0
   },
   "punyeu": {
-   "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": -4
-  },
-  "nyanyeu": {
-   "voice": "bm_george",
-   "speed": 0.88,
-   "pitch": 2
-  },
-  "lion": {
-   "voice": "bm_george",
-   "speed": 1.12,
-   "pitch": 9
-  },
-  "khunborom": {
-   "voice": "bm_george",
+   "voice": "bm_daniel",
    "speed": 0.95,
    "pitch": -1
   },
+  "nyanyeu": {
+   "voice": "bf_emma",
+   "speed": 0.97,
+   "pitch": 1
+  },
+  "lion": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "khunborom": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
   "skyking": {
    "voice": "bm_george",
-   "speed": 0.86,
-   "pitch": -5
+   "speed": 1.0,
+   "pitch": 0
   },
   "people": {
    "voice": "bm_george",
-   "speed": 1.05,
-   "pitch": 3
+   "speed": 1.0,
+   "pitch": 0
   },
   "round": {
    "voice": "bm_george",
-   "speed": 1.08,
-   "pitch": 4
+   "speed": 1.0,
+   "pitch": 0
   },
   "square": {
    "voice": "bm_george",
-   "speed": 1.05,
-   "pitch": 1
+   "speed": 1.0,
+   "pitch": 0
   },
   "closing": {
    "voice": "bm_george",
@@ -54,30 +54,31 @@
   },
   "both": {
    "voice": "bm_george",
-   "speed": 0.89,
-   "pitch": -1
+   "speed": 1.0,
+   "pitch": 0
   },
   "child": {
    "voice": "bm_george",
-   "speed": 1.1,
-   "pitch": 7
+   "speed": 1.0,
+   "pitch": 0
   },
   "punyeu_dance": {
    "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": -4
+   "speed": 1.0,
+   "pitch": 0
   },
   "nyanyeu_dance": {
    "voice": "bm_george",
-   "speed": 0.88,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   }
  },
  "respell": {
   "Pu": "Poo",
   "Nyeu": "Ñer",
   "Nya": "Ñah",
-  "Khun": "Koon"
+  "Khun": "Koon",
+  "Borom": "Baw-lom"
  },
  "spreads": [
   {
@@ -442,7 +443,7 @@
      "say": [
       [
        "narrator",
-       "The Sky King heard. He sent his own son, Koon Borom, to help."
+       "The Sky King heard. He sent his own son, Koon Baw-lom, to help."
       ]
      ]
     },
@@ -452,7 +453,7 @@
      "say": [
       [
        "narrator",
-       "Down from the sky came Koon Borom, riding a great white elephant."
+       "Down from the sky came Koon Baw-lom, riding a great white elephant."
       ]
      ]
     },
@@ -462,7 +463,7 @@
      "say": [
       [
        "narrator",
-       "Koon Borom was wise and kind. He showed the people how to grow rice, build houses and weave cloth."
+       "Koon Baw-lom was wise and kind. He showed the people how to grow rice, build houses and weave cloth."
       ]
      ]
     },
@@ -476,7 +477,7 @@
       ],
       [
        "narrator",
-       "said Koon Borom."
+       "said Koon Baw-lom."
       ],
       [
        "khunborom",
@@ -544,7 +545,7 @@
      "say": [
       [
        "narrator",
-       "Koon Borom lit a big fire."
+       "Koon Baw-lom lit a big fire."
       ],
       [
        "khunborom",
@@ -596,7 +597,7 @@
       ],
       [
        "narrator",
-       "said Koon Borom."
+       "said Koon Baw-lom."
       ],
       [
        "khunborom",
@@ -724,7 +725,7 @@
      "say": [
       [
        "narrator",
-       "Everybody helped. Some brought water. Some brought rice. Even Koon Borom carried water."
+       "Everybody helped. Some brought water. Some brought rice. Even Koon Baw-lom carried water."
       ]
      ]
     },
@@ -802,7 +803,7 @@
       ],
       [
        "narrator",
-       "said Koon Borom."
+       "said Koon Baw-lom."
       ],
       [
        "khunborom",

@@ -7,16 +7,17 @@
 <meta name="description" content="Pop-up books that wake when you touch them.">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="data:,">
-<script type="importmap">{ "imports": { "three": "../vendor/three/three.module.js", "three/addons/": "../vendor/three/addons/" } }</script>
 <script>/* shortcut: the poster is chosen here by the same three aspect breaks as styles/epic.js; change both together */
 for (const [m, n] of [["(min-aspect-ratio: 21/20)", "wide"], ["(min-aspect-ratio: 29/50) and (max-aspect-ratio: 21/20)", "mid"], ["(max-aspect-ratio: 29/50)", "tall"]]) document.head.insertAdjacentHTML("beforeend", `<link rel="preload" as="image" href="styles/epic/poster-${n}.webp?v=hero2" media="${m}">`);</script>
 <link rel="preload" as="image" href="logo.webp" type="image/webp">
+<link rel="stylesheet" href="../fonts/cinzel-decorative/cinzel.css">
 <link rel="stylesheet" href="../fonts/cormorant-garamond/cormorant-garamond.css">
 <link rel="stylesheet" href="../fonts/eb-garamond/eb-garamond.css">
 <link rel="stylesheet" href="../fonts/marcellus/marcellus.css">
 <link rel="stylesheet" href="../fonts/cinzel/cinzel.css">
 <link rel="stylesheet" href="../fonts/noto-sans-lao/noto-sans-lao.css">
 <link rel="stylesheet" href="landing.css">
+<link rel="modulepreload" href="../dist/c-VJTIOQ2J.js">
 </head>
 <body>
 <header class="bar">
@@ -48,6 +49,6 @@ for (const [m, n] of [["(min-aspect-ratio: 21/20)", "wide"], ["(min-aspect-ratio
 </main>
 
 
-<script type="module" src="landing.js"></script>
+<script type="module" src="../dist/landing-KJETTK7R.js"></script>
 </body>
 </html>

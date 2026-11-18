@@ -59,8 +59,17 @@
   #top button { font-size: 15px; padding: .3em .8em; background: #0008; color: var(--ink); border: 1px solid #f6e7c855; white-space: nowrap; }
   #langs [aria-pressed="true"] { background: var(--glow); color: var(--night); }
   #snd { min-width: 2.6em; }
-  #auto, #lib { display: inline-flex; align-items: center; gap: .35em; } #auto svg, #lib svg { width: 1em; height: 1em; fill: currentColor; }
-  #auto[aria-pressed="true"] { background: var(--glow); color: var(--night); }
+  #auto, #lib, #rmode { display: inline-flex; align-items: center; gap: .35em; } #auto svg, #lib svg, #rmode svg { width: 1em; height: 1em; fill: currentColor; }
+  #auto[aria-pressed="true"], #rmode[aria-pressed="true"] { background: var(--glow); color: var(--night); }
+  /* Reading Mode (readmode.js): Back and Next under the words, the dots between them; a tap on the words reads on */
+  #rnav { position: fixed; z-index: 52; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
+  #rnav button { pointer-events: auto; display: flex; align-items: center; gap: .35em; font-size: clamp(15px, 1.7vw, 19px); padding: .35em .95em;
+    color: #2a2230; background: #ffe9a8; box-shadow: 0 3px 12px #000a; }
+  #rnav button:disabled { opacity: .35; cursor: default; } #rback { padding: .35em .55em; }
+  #rnav svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  html.readmode.ra-on .ra-page, html.readmode:not(.ra-on) #read span { pointer-events: auto; cursor: pointer; }  /* the words, never the bar's width: the page corners stay pullable */
+  html.readmode .ra-en span { opacity: 1; }
+  #dots i.look { box-shadow: 0 0 0 3px #ffe9a8cc; }
   /* the reading bar: compact, at the very bottom, and it never takes a tap */
   #bar { position: fixed; left: 0; right: 0; bottom: 0; min-height: 9vh; padding: 0 3vw; display: flex; align-items: center; gap: 2vw;
     background: linear-gradient(#0000, #0005 70%); opacity: 0; transition: opacity .4s; pointer-events: none; }
@@ -119,7 +128,8 @@
     #top button { font-size: 13px; padding: .3em .6em; } #lib span { display: none; }  /* the house alone on a phone: the bar stays one row */
   }
 </style>
-<link rel="modulepreload" href="../dist/c-COYBHURO.js">
+<link rel="modulepreload" href="../dist/c-U4XTWGF6.js">
+<link rel="modulepreload" href="../dist/c-5OCFJGW3.js">
 <link rel="modulepreload" href="../dist/c-VHNSBD2M.js">
 </head>
 <body>
@@ -128,7 +138,7 @@
 <script>if (/[?&]from=shelf/.test(location.search)) { const a = document.getElementById("arrive"); a.hidden = false; a.classList.add("veil"); }  /* the veil from the first paint, before the module runs */</script>
 <div id="note">Opening the book…</div>
 <div id="top"><div id="langs" role="group" aria-label="Subtitle language"></div>
-  <button id="lib" aria-label="Back to the library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9.5l8-5.5 8 5.5V20h-5.5v-6h-5v6z"/></svg><span>Library</span></button><button id="auto" aria-label="Auto play: the story reads itself and turns the pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Auto</button><button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
+  <button id="lib" aria-label="Back to the library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9.5l8-5.5 8 5.5V20h-5.5v-6h-5v6z"/></svg><span>Library</span></button><button id="auto" aria-label="Auto play: the story reads itself and turns the pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Auto</button><button id="rmode" aria-label="Reading Mode: read each line yourself, then tap Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.2c3.6-.7 6.6-.1 8.7 1.4v13.2c-2.1-1.4-5.1-2-8.7-1.4zM21.5 5.2c-3.6-.7-6.6-.1-8.7 1.4v13.2c2.1-1.4 5.1-2 8.7-1.4z"/></svg><span>Read</span></button><button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
 <div id="title" hidden></div>
 <div id="msg" aria-live="polite"></div>
 <div id="count" aria-live="polite" hidden></div>
@@ -138,6 +148,7 @@
 <div id="sbub" hidden></div>
 <button id="lbub" hidden aria-label="Hear it again"></button>
 <div id="moral" hidden><h2>The End</h2><div class="row"><a id="start" role="button" href="./">Start from the beginning</a><button id="tolib">Back to the library</button><button id="again">Read it again</button><button id="back">Back</button></div></div>
+<div id="rnav" hidden><button id="rback" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button id="rnext"><span>Next</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg></button></div>
 <div id="bar"><div id="dots" hidden aria-hidden="true"></div><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
 <script src="../readalong.js" data-source="#read" data-theme="firefly" defer></script>
 <script>  /* each book's read-along theme; the deferred readalong.js above reads it once the page has loaded */
@@ -145,7 +156,7 @@
   document.getElementById("start").href = `?book=${book}&s=s01`;  // a plain link, so it works even when an old cached live.js has no handler for it
   Object.assign(ra.dataset, { theme: { mali: "lantern" }[book] || "firefly", story: `../${book}/story.json`, voice: `../${book}/voice/` });
 </script>
-<script type="module" src="../dist/live-ITDDAK3D.js"></script>
+<script type="module" src="../dist/live-YEPMVI2Q.js"></script>
 <script type="module" src="paperswap.js"></script>
 </body>
 </html>

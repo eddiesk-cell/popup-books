@@ -62,40 +62,47 @@ body:has(#ringb:focus-visible) #cap { outline: 2px solid #fff; outline-offset: 3
 @keyframes tap { 0%, 30%, 100% { transform: translateY(0) scale(1); } 42% { transform: translateY(4px) scale(.9); } 56% { transform: translateY(0) scale(1); } }
 @keyframes tapring { 0%, 38% { opacity: 0; transform: scale(.4); } 44% { opacity: 1; } 80%, 100% { opacity: 0; transform: scale(2.2); } }
 @media (prefers-reduced-motion: reduce) { .taphint, .taphint::after { animation: none; } }
-/* the intro doors (owner 2026-11-17: the film became code): the stone wall and the two carved leaves cut from the film's first frame, the well beyond and a gold light (intro/, from assets/landing/intro/cut_intro.py).
-   index.html's script adds .go once the cards decode: the leaves swing in on their hinges, the light floods out and the camera pushes up to the threshold (perspective on the doorway's centre), and holds there
-   if the room is still coming. library.js adds .in once it is ready: the camera goes through the doorway as the veil dissolves into the live fall down the well.
-   The set is the film frame, cover-fitted; --p is the camera's distance, --pa the threshold, --pb the push's end. */
-.doors { position: absolute; inset: 0; overflow: hidden; opacity: 0; --w: max(100vw, 177.78vh); --h: max(56.25vw, 100vh); --p: calc(var(--w) * .9); --pa: .52; --pb: .95; --ox: 50.27%; --oy: 53.33%; }
-.doors.go { opacity: 1; transition: opacity .3s ease; }
+/* the intro doors (owner 2026-11-18: "convert them to code so they just happen and don't require loading"): the stone wall, the carved arch and the two leaves are drawn by index.html's inline SVG
+   (no picture loads), and the doorway shows the REAL room: library.js holds its camera at the fall's first pose behind the closed doors, so the glimpse is the live tower itself.
+   The doors are the loading cover: they stand closed, the light in the seam breathing, until the room has drawn and settled; then library.js adds .go: the leaves swing in on their hinges, the light floods out and
+   the camera pushes up to the threshold (perspective on the doorway's centre), still moving when the fall takes over (.in): one push from the door into the well while the veil dissolves.
+   The set is a cover-fitted 16:9 frame (9:16 upright); .door is the doorway box in it (330 x 620 in the SVG's units); --p is the camera's distance, --pa the threshold, --pb the push's end.
+   Arriving from the first page, the browser's view transition carries its last frame onto the closed doors (index.html's head holds its opt-in and keyframes). */
+.novt .doors { animation: doors-in .5s ease-out both; } @keyframes doors-in { from { opacity: 0; } }  /* a browser without view transitions: the doors still ease in after the first page's fade */
+[data-intro=go] .veil, [data-intro=through] .veil { background: none; }  /* the doorway opens onto the live room */
+.doors { position: absolute; inset: 0; overflow: hidden; --w: max(100vw, 177.78vh); --h: max(56.25vw, 100vh); --p: calc(var(--w) * .9); --pa: .52; --pb: .95; --ox: 50.234%; --oy: 53.33%; }
 .doors .set { position: absolute; left: calc(50% - var(--w) / 2); top: calc(50% - var(--h) / 2); width: var(--w); height: var(--h); perspective: var(--p); perspective-origin: var(--ox) var(--oy); }
 .doors .rig, .doors .rig > * { position: absolute; transform-style: preserve-3d; }
-.doors .rig, .doors .wall, .doors .shine { inset: 0; }
-.doors img { display: block; width: 100%; height: 100%; }
-.doors .beyond { left: 20.04%; top: -11.4%; width: 60.5%; height: 129%; transform: translateZ(calc(var(--p) * -.45)); filter: contrast(1.25) brightness(1.05) saturate(1.15); }
-.doors .haze { left: 33%; top: 4%; width: 35%; height: 98%; transform: translateZ(calc(var(--p) * -.3)); background: radial-gradient(closest-side, rgba(255, 232, 176, .95), rgba(255, 204, 120, .55) 55%, rgba(255, 190, 90, 0)); mix-blend-mode: screen; opacity: 0; }
-.doors .leaf { top: 10.278%; height: 86.111%; transform: translateZ(-1px); }
-.doors .l { left: 37.344%; width: 12.734%; transform-origin: 0 50%; }
-.doors .r { left: 50.938%; width: 12.188%; transform-origin: 100% 50%; }
-.doors .shine { transform: translateZ(1px); background: radial-gradient(24% 26% at var(--ox) 95%, rgba(255, 206, 128, .5), rgba(255, 190, 100, .14) 55%, transparent 80%); mix-blend-mode: screen; opacity: 0; }
+.doors .rig, .doors .shine { inset: 0; }
+.doors svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.doors .door, .doors .haze { left: 37.344%; top: 10.278%; width: 25.78%; height: 86.111%; }
+.doors .haze { transform: translateZ(-2px); background: radial-gradient(closest-side, rgba(255, 232, 176, .95), rgba(255, 204, 120, .5) 45%, rgba(255, 190, 90, 0)); opacity: .5; animation: breathe 2.4s ease-in-out infinite alternate; }
+.doors .leaf { top: 10.278%; height: 86.111%; width: 12.89%; transform: translateZ(-1px); }
+.doors .l { left: 37.344%; transform-origin: 0 50%; } .doors .r { left: 50.234%; transform-origin: 100% 50%; } .doors .r svg { scale: -1 1; }
+.doors .shine { transform: translateZ(1px); background: radial-gradient(24% 26% at var(--ox) 95%, rgba(255, 206, 128, .5), rgba(255, 190, 100, .14) 55%, transparent 80%); opacity: .3; }
 @media (orientation: portrait) {
-  .doors { --w: max(100vw, 56.25vh); --h: max(177.78vw, 100vh); --p: calc(var(--w) * 2.45); --pa: .15; --pb: .4; --ox: 51.3%; --oy: 52.81%; }
-  .doors .beyond { left: -40.5%; top: -9.4%; width: 183.5%; height: 124%; }
-  .doors .haze { left: 10%; top: 6%; width: 84%; height: 94%; }
-  .doors .leaf { top: 11.562%; height: 82.5%; } .doors .l { left: 16.481%; width: 32.593%; } .doors .r { left: 57.593%; width: 28.519%; }
+  .doors { --w: max(100vw, 56.25vh); --h: max(177.78vw, 100vh); --p: calc(var(--w) * 2.45); --pa: .15; --pb: .4; --ox: 51.3%; --oy: 45.6%; }
+  .doors .door, .doors .haze { left: 23.3%; top: 16%; width: 56%; height: 59.18%; }  /* the doorway with its carved frame whole inside a phone's width */
+  .doors .leaf { top: 16%; height: 59.18%; width: 28%; } .doors .l { left: 23.3%; } .doors .r { left: 51.3%; }
+  .doors .shine { background: radial-gradient(40% 18% at var(--ox) 76%, rgba(255, 206, 128, .5), rgba(255, 190, 100, .14) 55%, transparent 80%); }
 }
+@keyframes breathe { from { opacity: .35; } to { opacity: .75; } }  /* closed: the light behind the door breathes in the seam while the room loads */
+.doors.go .haze { animation: haze 1.7s forwards; } @keyframes haze { from { opacity: .75; } 15% { opacity: 1; } to { opacity: .12; } }  /* the seam flares, then the light thins so the room shows clean */
 .doors.go .l { animation: swing-l 1.4s .15s cubic-bezier(.45, .05, .3, 1) forwards; } .doors.go .r { animation: swing-r 1.4s .15s cubic-bezier(.45, .05, .3, 1) forwards; }
 @keyframes swing-l { to { transform: translateZ(-1px) rotateY(64deg); filter: brightness(1.8) sepia(.4) saturate(1.3); } }
 @keyframes swing-r { to { transform: translateZ(-1px) rotateY(-64deg); filter: brightness(1.8) sepia(.4) saturate(1.3); } }
-.doors.go .rig { animation: push-a 1.4s .3s cubic-bezier(.3, 0, .5, 1) forwards; } .doors.go.in .rig { animation: push-b .9s cubic-bezier(.5, 0, .9, .7) forwards; }
+/* one push: it gathers speed to the threshold and is still moving when .in carries it through (the end speed of push-a is the start speed of push-b), so the move never stops at the hand-over */
+.doors.go .rig { animation: push-a 1.4s .3s cubic-bezier(.45, 0, .7, .6) forwards; } .doors.go.in .rig { animation: push-b .9s cubic-bezier(.35, .36, .9, .7) forwards; }
 @keyframes push-a { to { transform: translateZ(calc(var(--p) * var(--pa))); } }
 @keyframes push-b { from { transform: translateZ(calc(var(--p) * var(--pa))); } to { transform: translateZ(calc(var(--p) * var(--pb))); } }
 .doors.go .set { animation: through 1.7s forwards; } @keyframes through { to { visibility: visible; } }  /* no look of its own: its end (at the threshold) is the hand-off to library.js (index.html) */
-.doors.go .haze { animation: haze 3s forwards, breathe 3s 3s ease-in-out infinite alternate; } @keyframes haze { 30% { opacity: .3; } 70% { opacity: .15; } 100% { opacity: .1; } }
-@keyframes breathe { from { opacity: .1; } to { opacity: .32; } }  /* a slow room: the light in the doorway breathes while it waits */
 .doors.go .shine { animation: shine 1.4s .15s forwards; } @keyframes shine { to { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) {  /* no flight: the doors stand open on the light, still, then the short dissolve */
+@media (prefers-reduced-motion: reduce) {  /* no flight: the doors stand open on the room, still, then the short dissolve */
   .doors.go .l, .doors.go .r { animation: none; filter: brightness(1.8) sepia(.4) saturate(1.3); } .doors.go .l { transform: translateZ(-1px) rotateY(64deg); } .doors.go .r { transform: translateZ(-1px) rotateY(-64deg); }
-  .doors.go .rig, .doors.go.in .rig { animation: none; } .doors.go .set { animation-duration: 1.2s; } .doors.go .haze, .doors.go .shine { animation: none; opacity: .6; }
+  .doors.go .rig, .doors.go.in .rig { animation: none; } .doors.go .set { animation-duration: 1.2s; } .doors .haze, .doors.go .haze, .doors.go .shine { animation: none; opacity: .5; }
 }
-[data-intro=go] .loading { visibility: hidden; }  /* the doors are the loading cover; if the room is still coming when they reach the threshold, the line shows again */
+#veil:has(#doors:not([hidden])) ~ .loading { visibility: hidden; }  /* the closed doors, the light breathing in their seam, are the loading cover: no loading line over them */
+.skip:not([hidden]) { animation: skip-in .6s ease-out both; } @keyframes skip-in { from { opacity: 0; } }
+/* the Grand Library of Time (library.js flyStep): "you are here" over our tower while the flight circles it; library.js sets its place and opacity */
+.here { position: fixed; left: 0; top: 0; z-index: 4; margin: 0; pointer-events: none; opacity: 0; translate: -50% -100%; white-space: nowrap; text-align: center; font: 600 clamp(17px, 2.3vw, 27px)/1.1 var(--head-font); letter-spacing: .08em; color: #ffe2a0; text-shadow: 0 0 14px rgba(255, 196, 100, .85), 0 2px 5px #000; }
+.here::after { content: ""; display: block; width: 2px; height: 26px; margin: 6px auto 0; background: linear-gradient(#ffe2a0, rgba(255, 226, 160, 0)); }

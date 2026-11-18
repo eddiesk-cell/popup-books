@@ -15,7 +15,7 @@
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 
 const NB = 28;  // most beams the wall shader reads
-const FRAG = `uniform sampler2D uMap; uniform vec2 uCells, uTop; uniform float uGain, uNB, uPwr, uEvery; uniform vec3 uDown, uMid, uUp, uZen, uFog, uFar, uAx; uniform vec4 uBm[${NB}], uBi[${NB}];
+const FRAG = `uniform sampler2D uMap; uniform vec2 uCells, uTop; uniform float uGain, uNB, uPwr, uEvery; uniform vec3 uDown, uMid, uUp, uZen, uFog, uFar, uAx, uTint; uniform vec4 uBm[${NB}], uBi[${NB}];
 varying vec2 vUv; varying vec4 vM; varying vec3 vW;
 float h1(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
 float vn(vec2 p) { vec2 i = floor(p), f = fract(p); f *= f * (3. - 2. * f); return mix(mix(h1(i), h1(i + vec2(1., 0.)), f.x), mix(h1(i + vec2(0., 1.)), h1(i + vec2(1., 1.)), f.x), f.y); }
@@ -48,7 +48,7 @@ void main() {
   vec3 sky = p < 0. ? mix(uMid, uDown, smoothstep(0., -1.2, p)) : p < 1. ? mix(uMid, uUp, smoothstep(0., 1., p)) : mix(uUp, uZen, smoothstep(1., 1.5, p));  // sky.js's gradient: far walls melt into it
   col *= mix(vec3(1.), uFar, smoothstep(6., uFog.z, d)) * mix(1., .42, smoothstep(10., 140., v.y));  // far walls darker and cooler (the old ring's tint), and darker up the well
   vec3 c = mix(linearToOutputTexel(vec4(col, 1.)).rgb, sky, (1. - exp(-max(0., d - uFog.x) / uFog.y)) * .75) + vec3(.42, .3, .15) * .5 * smoothstep(uTop.x, uTop.y, vW.y);  // the sky's haze, and a warm haze round the oculus
-  gl_FragColor = vec4(c, 1.);
+  gl_FragColor = vec4(c * uTint, 1.);  // uTint: a theme room's own light on its walls of books (library.js theme(); white at home)
 }`;
 
 // a ring of flat facets round centre c: corners on the circle of radius r, facet i spanning half-angle halves[i], the first corner at angle `start` (angles from -z toward +x, as the visitor turns right)
@@ -73,7 +73,7 @@ export function createWalls(THREE, room, plan, { spans, holes = [] }, { base, ph
   t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = anisotropy; t.generateMipmaps = true; t.minFilter = THREE.LinearMipmapLinearFilter;
   const col = k => new THREE.Color(...(room.sky?.[k] ?? [18, 11, 6]).map(v => v / 255)), ax = new THREE.Vector3(0, 1, 0), top = C.rotunda.top;
   const U = { uMap: { value: t }, uCells: { value: new THREE.Vector2(...C.cells) }, uGain: { value: C.gain ?? .9 }, uFog: { value: new THREE.Vector3(...(C.fog ?? [20, 160, 40])) }, uFar: { value: new THREE.Vector3(...(C.far ?? [.55, .57, .68])) },
-    uDown: { value: col("down") }, uMid: { value: col("mid") }, uUp: { value: col("up") }, uZen: { value: col("zenith") }, uAx: { value: ax }, uNB: { value: 0 }, uPwr: { value: P.w / C.rotunda.bayW }, uEvery: { value: 1 }, uTop: { value: new THREE.Vector2(top - 26, top + 2) },
+    uDown: { value: col("down") }, uMid: { value: col("mid") }, uUp: { value: col("up") }, uZen: { value: col("zenith") }, uTint: { value: new THREE.Color(1, 1, 1) }, uAx: { value: ax }, uNB: { value: 0 }, uPwr: { value: P.w / C.rotunda.bayW }, uEvery: { value: 1 }, uTop: { value: new THREE.Vector2(top - 26, top + 2) },
     uBm: { value: Array.from({ length: NB }, () => new THREE.Vector4()) }, uBi: { value: Array.from({ length: NB }, () => new THREE.Vector4()) } };
   const VS = "attribute vec4 aMap; varying vec2 vUv; varying vec4 vM; varying vec3 vW; void main() { vUv = uv; vM = aMap; vec4 w = modelMatrix * vec4(position, 1.); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }";
   const mat = new THREE.ShaderMaterial({ uniforms: U, side: THREE.DoubleSide, fog: false, fragmentShader: FRAG, vertexShader: VS });

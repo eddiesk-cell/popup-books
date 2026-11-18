@@ -1,8 +1,8 @@
 /* Style "epic": midnight, warm gold, a little ivory. A fixed scene behind a veil; the page rides over it as a finely printed book.
    The page is K screens of scroll in all; each section is as tall as its stretch of the progress table (see PROGRESS in epic.js). */
 :root { --nr: 5 7 15; --gr: 217 180 106; --ink: #efe6d0; --gold: #d9b46a; --night: #05070f; --leather: #150f0a; --K: 8;
-  --head-font: "Cormorant Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* pairing A (live): a refined display serif for headings only ... */
-  --body-font: "EB Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* ... and a graceful reading serif for body, cards and buttons */
+  --head-font: "Cinzel Decorative", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* the logo's face (owner 2026-11-17: "using fonts similar to our logo"; "the fonts are so modern"): Cinzel Decorative for headings only ... */
+  --body-font: "EB Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif;  /* ... and an old-style book serif for body, cards and buttons */
   --title-font: var(--body-font); }
 html.fonts-b { --head-font: "Cinzel", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif; --body-font: "Cormorant Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif; }  /* ?fonts=b */
 html.fonts-c { --head-font: "Marcellus", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif; --body-font: "EB Garamond", "Noto Sans Lao", "Lao Sangam MN", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif; }  /* ?fonts=c */
@@ -105,22 +105,8 @@ main .blk.panel::after { display: none; }
 @media (min-width: 900px) { .plaque { max-width: min(60rem, 92vw); } .plaque h2, .sec h2 { font-size: clamp(1.5rem, 2.8vw, 2.3rem); } }  /* wide: a heading on one or two lines, so heading and words fit the band together */
 @media (max-width: 520px) { .blk { padding: 1.3rem 1rem; } }
 .plaque h2 { font-size: clamp(1.8rem, 4.6vw, 3.1rem); }
-.line { font: italic 400 clamp(1.05rem, 2vw, 1.3rem)/1.5 var(--title-font); }
+.line { font: 400 clamp(1.05rem, 2vw, 1.3rem)/1.5 var(--title-font); }  /* upright, like a printed old book */
 
-/* gold-foil lettering. The heading itself carries no gradient (landing.css gives h1/h2 one): only its letters do, or a ghost glyph shows at its corner */
-.foil { background: none; }
-.foil.plain { background: linear-gradient(105deg, #a88436 0%, #e9cd86 18%, #fff3c6 30%, #d4a94d 44%, #b9923f 60%, #f0d489 78%, #c39b44 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0; line-height: 1.35; }
-.foil { --ff: drop-shadow(0 1px 0 rgb(40 26 4 / .9)) drop-shadow(0 0 18px rgb(var(--gr) / .2)); display: block; position: relative; opacity: var(--f); color: transparent; letter-spacing: .02em; filter: var(--ff); }
-.foil .w { display: inline-block; white-space: nowrap; }
-.foil .ch { display: inline-block; color: transparent; opacity: 0; transform: translateY(.5em) scale(.92); filter: blur(5px);
-  background: linear-gradient(105deg,#a88436 0%,#e9cd86 18%,#fff3c6 30%,#d4a94d 44%,#b9923f 60%,#f0d489 78%,#c39b44 100%) 0 0 / 260% 100%;
-  -webkit-background-clip: text; background-clip: text; -webkit-text-stroke: 0;
-  animation-name: sheen, arrive; animation-duration: 8s, .45s; animation-timing-function: linear, cubic-bezier(.2,.7,.2,1); animation-delay: calc(var(--i) * -.18s), calc(.6s + var(--i) * min(70ms, 450ms / var(--n, 1)));
-  animation-iteration-count: infinite, 1; animation-fill-mode: none, both; animation-play-state: paused; }
-.foil.vis .ch { animation-play-state: running; }
-.foil:not(.in) .ch { animation-name: sheen; opacity: 0; }
-@keyframes sheen { to { background-position: 260% 0; } }
-@keyframes arrive { to { opacity: 1; transform: none; filter: blur(0); } }
 .sp { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff3c6; box-shadow: 0 0 8px 2px rgb(var(--gr) / .9); opacity: 0; pointer-events: none; animation: spark 1.1s ease-out forwards; }
 @keyframes spark { 0% { opacity: 0; transform: translate(0, 0) scale(.4); } 20% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); } }
 
@@ -153,7 +139,7 @@ main section.in .blk::after { --arr: 1; }
 .chips li + li::before { content: ""; display: inline-block; width: 5px; height: 5px; rotate: 45deg; background: var(--gold); margin-right: 1.3rem; vertical-align: middle; }
 .keep { font: italic 400 1.1rem var(--title-font); color: var(--gold); }
 
-h2, .foil { text-wrap: balance; }  /* a short last line ("す！", "요!") never hangs alone under a heading */
+h2 { text-wrap: balance; }  /* a short last line ("す！", "요!") never hangs alone under a heading */
 /* calm cards: thin gold hairlines, air, nothing heavy; still sized so a panel fits the band between the logo and the open book */
 .grid { margin-top: 1.1rem; } .chips { margin-top: 1rem; } .card { padding: .6rem 1.3rem; gap: .35rem; } .grid.four .card::before { font: 400 1.3rem/1 var(--head-font); opacity: .7; }
 .chips li { font-size: clamp(1.15rem, 2.2vw, 1.5rem); } .card .btn { margin-top: .5rem; }
@@ -167,8 +153,6 @@ h2, .foil { text-wrap: balance; }  /* a short last line ("す！", "요!") never
   .grid.four .card::before { font-size: 1.5rem; }
 }
 .sec .grid:focus-visible { outline: 2px solid #fff1b8; outline-offset: 2px; border-radius: 10px; }
-.foil.plain { padding: .32em 0 .12em; margin: -.32em 0 -.12em; }  /* room above and below the line for stacked vowel and tone marks: the gold text background is painted only inside the box */
-:lang(lo) .foil.plain, :lang(th) .foil.plain { line-height: 1.6; }
 :lang(ja) { --head-font: "Cormorant Garamond", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans Lao", "Thonburi", "Apple SD Gothic Neo", Georgia, serif; --body-font: "EB Garamond", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans Lao", "Thonburi", "Apple SD Gothic Neo", Georgia, serif; }  /* Japanese letters in a Japanese face, not PingFang SC */
 dialog { border-color: rgb(var(--gr) / .5); border-radius: 10px; }
 
@@ -206,8 +190,6 @@ main .blk.panel { --R: 58px; --r: 30px;  /* R: the closed roll's height between 
   mask: url("epic/scroll-fray-l.webp") 0 0 / 22px 256px repeat-y, url("epic/scroll-fray-r.webp") 100% 0 / 22px 256px repeat-y, linear-gradient(#000 0 0) 22px 0 / calc(100% - 44px) 100% no-repeat; }
 /* the words on old paper are ink: dark sepia body, deep burnt-gold title, a dark walnut button with gold letters */
 main .blk.panel :is(.line, .sub, p, .chips li) { color: #1a0c04; text-shadow: 0 0 1px rgb(255 230 180 / .25); }
-main .blk.panel .foil { --ff: drop-shadow(0 1px 0 rgb(255 232 180 / .4)); }
-main .blk.panel .foil .ch, main .blk.panel .foil.plain { background-image: linear-gradient(105deg, #3a1d02 0%, #482404 22%, #4f2704 34%, #422103 50%, #482404 70%, #3a1d02 100%); background-size: 260% 100%; }
 :lang(lo) main .blk.panel h2, :lang(th) main .blk.panel h2, :lang(zh) main .blk.panel h2, :lang(ja) main .blk.panel h2, :lang(ko) main .blk.panel h2 { font-weight: 500; }  /* dark ink on light paper reads thinner than gold on dark: the script titles were at 300 */
 main .blk.panel .btn { background: linear-gradient(#4a2c12, #2a1707); border-color: #d9b46a; color: #f6e3a8; box-shadow: 0 2px 6px rgb(0 0 0 / .45), inset 0 0 0 1px rgb(255 226 150 / .18); -webkit-backdrop-filter: none; backdrop-filter: none; }
 main .blk.panel .btn:hover { background: linear-gradient(#5c3a18, #38200a); color: #fff3cf; }
@@ -226,14 +208,39 @@ main .blk.panel { padding: 1.7rem 2.6rem; } @media (max-width: 520px) { main .bl
 @media (prefers-reduced-motion: no-preference) {
   main section.in .panel { animation: scroll-rise .6s cubic-bezier(.2, .7, .2, 1) both, scroll-open .9s cubic-bezier(.5, 0, .2, 1) .6s both; }
   /* the words are uncovered by the clip; each only warms from ember to gold a moment as it appears, and is whole when the unrolling ends (1.5 s) */
-  main section.in .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.in .panel > .btn { --arr: 1; transform: none; transition: none; animation: heat .8s ease-out calc(.6s + var(--k, 0) * .08s) both; }
-  main section.in .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.in .panel > .btn { animation-name: ink-wet; }  /* dark ink, so no ember heat (it turned the brown letters red): the ink is just wet for a moment */
-  main section.now .panel, main section.now .panel :is(.line, .sub, .keep, .card, .chips, .foil), main section.now .panel > .btn { animation: none; }  /* a focused control: everything whole at once */
+  main section.in .panel :is(.line, .sub, .keep, .card, .chips), main section.in .panel > .btn { --arr: 1; transform: none; transition: none; animation: heat .8s ease-out calc(.6s + var(--k, 0) * .08s) both; }
+  main section.in .panel :is(.line, .sub, .keep, .card, .chips), main section.in .panel > .btn { animation-name: ink-wet; }  /* dark ink, so no ember heat (it turned the brown letters red): the ink is just wet for a moment */
+  main section.now .panel, main section.now .panel :is(.line, .sub, .keep, .card, .chips), main section.now .panel > .btn { animation: none; }  /* a focused control: everything whole at once */
+}
+
+/* THE WRITING (owner 2026-11-17: "the words are supposed to be like Lord of the rings remember, where they appear slowly in gold. It's suppose to be magical, not just popup"): epic.js gives every
+   letter its moment (--d) and the panel the moment its last letter is written (--wend). Each letter arrives as a glowing white-gold mark, as if written by light, and cools in about a second to gold
+   with a fine dark edge, so it reads on the parchment: the title gilded like an illuminated letter, the lines a deeper gold ink. The title keeps a slow glint running along it now and then. A tap, a key or scrolling on
+   finishes the writing at once (.done); a focused control (.now) and reduced motion show it whole. Lao letters stay in Noto Sans Lao (the face stacks); one span is one grapheme, marks included. */
+.ink { --gink: #301c00; --gsh: 0 0 .6px rgb(36 16 0 / .95), 0 .6px 0 rgb(36 16 0 / .55), 0 0 6px rgb(255 214 120 / .35); background: none; filter: none; color: var(--gink); -webkit-text-fill-color: currentcolor; }
+main .blk.panel h2.ink { --gink: #a8761a; --gsh: 0 0 1px #2a1400, 0 0 1px #2a1400, 0 1px 0 rgb(42 20 0 / .8); position: relative; }
+.ink .g { color: var(--gink); -webkit-text-fill-color: currentcolor; text-shadow: var(--gsh); }
+.ink .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes quill {
+  0% { opacity: 0; color: #fffbe9; text-shadow: 0 0 2px #fff4c4, 0 0 9px rgb(255 214 110 / .95), 0 0 22px rgb(255 168 48 / .8); }
+  12% { opacity: 1; color: #fffdf2; text-shadow: 0 0 3px #fff6d0, 0 0 12px rgb(255 214 110), 0 0 28px rgb(255 160 40 / .85); }
+  45% { color: #d9a23a; text-shadow: 0 0 2px rgb(255 226 150 / .8), 0 0 9px rgb(255 190 80 / .5), 0 0 16px rgb(255 160 40 / 0); }
+  100% { opacity: 1; color: var(--gink); text-shadow: var(--gsh); } }
+@keyframes glint { 0%, 90%, 100% { color: var(--gink); } 95% { color: #e2b24a; } }
+@keyframes appear { from { opacity: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  main .blk.panel .ink .g { opacity: 0; }
+  main section.in .panel .ink { animation: none; }
+  main section.in .blk.panel .ink .g { animation: quill 1.4s cubic-bezier(.3, .6, .3, 1) var(--d) both; }
+  main section.in .blk.panel h2.ink .g { animation: quill 1.4s cubic-bezier(.3, .6, .3, 1) var(--d) both, glint 11s ease-in-out calc(var(--wend, 6s) + var(--d) * .3) infinite; }
+  main section.in .blk.panel.done .ink .g, main section.now .blk.panel .ink .g, main section.now .blk.panel h2.ink .g { animation: none; opacity: 1; }
+  main section.in .blk.panel.done h2.ink .g { animation: glint 11s ease-in-out calc(1.5s + var(--d) * .3) infinite; }
+  main section.in .panel > .btn { animation: appear .9s ease-out var(--wend, 1s) both; }
+  main section.in .panel.done > .btn, main section.now .panel > .btn { animation: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   /* the page keeps its full length here: the scroll positions of the title, the book's opening and each kind of wonder are the same as with motion on (a shorter page put the story panels under the fixed title panel); only what moves by itself is off */
-  .foil .ch { opacity: 1; transform: none; filter: none; animation: none; background-position: 40% 0; }
   main section :is(.line, .sub, .card, .chips, .keep, .foot, .head p) { --arr: 1; transform: none; transition: none; }
   .sec .blk::after { --arr: 1; transition: none; }
   #scene { transition: none; }
@@ -249,3 +256,9 @@ main .blk.panel { padding: 1.7rem 2.6rem; } @media (max-width: 520px) { main .bl
 .acct .btn.ghost[aria-disabled] { color: #fff1b8; border: 2px solid #e2b459; background: rgb(var(--nr) / .55); box-shadow: 0 0 14px rgb(var(--gr) / .25); }
 .acct .btn:not(.ghost)[aria-disabled] { color: #2a1a08; border: 2px solid #8a6322; background: linear-gradient(#f6d77e, #d9a448); box-shadow: 0 2px 0 #8a6322, 0 8px 22px #0009, inset 0 0 0 2px #ffe6a8; }
 @media (max-width: 520px) { .acct { gap: 8px; } .acct .btn { min-height: 46px; padding: 0 1em; font-size: 12.5px; letter-spacing: .06em; } }
+/* "Come inside" (landing.js): the world leans in and darkens toward the door for .38 s, then the view transition (library.css) carries the frame onto the library's doors; no view transitions: it fades to the library's dark */
+@view-transition { navigation: auto; }
+html.leaving #world { scale: 1.05; filter: brightness(.7); transition: scale .38s cubic-bezier(.5, 0, .75, 0), filter .38s ease-in; }
+html.leaving::after { content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; background: radial-gradient(ellipse 70% 65% at 50% 52%, transparent 35%, #0b0704 100%); animation: leave-dim .38s ease-in both; }
+html.leaving.novt::after { background: #0b0704; } @keyframes leave-dim { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { html.leaving #world { transition: none; scale: none; } html.leaving::after { animation: none; } }

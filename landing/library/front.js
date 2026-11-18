@@ -9,12 +9,12 @@ import { loadBook } from "../../shelf/bookmodel.js";
 import { createPopup } from "../../shelf/popup.js";
 
 const POOL = 5, SHELF = new URL("../../shelf/", import.meta.url), WONDERS = new URL("../styles/epic/scene/sprites/wonders", import.meta.url).href, tick = () => new Promise(r => setTimeout(r, 0));
-import { drawTitle } from "./titles.js";
+import { drawTitle, allFonts } from "./titles.js";
 export function createFront(THREE, { scene, camera, renderer, ring, books, reduced, getLang, getStill, say: say0, muted }) {
   let noted = false; const say = (t, s) => { noted = t != null; say0(t, s); }, clearNote = () => { if (noted) { noted = false; say0(null); } };  // only a note the ring itself set is cleared by the ring (the Wonder Hall's notes live outside it)
   const V = THREE.Vector3, RX = new THREE.Quaternion().setFromAxisAngle(new V(1, 0, 0), Math.PI / 2), gltf = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder), zero = new V(0, 0, 0);
   const lantern = new THREE.PointLight(0xffc16b, 0, 0.32, 2), front = new THREE.SpotLight(0xffe2b8, 0, 0.9, 0.22, 0.8, 2), key = new THREE.SpotLight(0xffd9a8, 0, 0, .7, .9, 2), KP = new V(-.2, .14, .5), KT = new V(0, .05, 0); scene.add(lantern, front, front.target, key, key.target);  // the shared candle and soft front light, moved into the awake pop-up
-  const models = new Map(), building = new Map(), ref = new Map(); let list = null, atlas = null, kapiColor = null, kapiSpine = null, kapiOrm = null, dims = null, queue = Promise.resolve();
+  const models = new Map(), building = new Map(), ref = new Map(), sheets = {}; let list = null, atlas = null, kapiColor = null, kapiSpine = null, kapiOrm = null, dims = null, queue = Promise.resolve();
   const getList = async () => list ??= await fetch(new URL("popups.json", import.meta.url)).then(r => r.json()).catch(() => []);  // shortcut: popups.json is a copy of web/shelf/index.html's #books list, because the published shelf/index.html is only a redirect (no list: every book came out a show book, no pop-up); upgrade: let tools/books_json.mjs write it
   const img = u => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = u; });
   const cfgOf = e => ({ ...e, dir: new URL(e.dir, SHELF).href, voice: new URL(e.voice, SHELF).href, model: new URL(e.model, SHELF).href });
@@ -27,13 +27,15 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
     for (let i = 0; i < px.length; i += 4) { const r = px[i], g = px[i + 1], b = px[i + 2]; if (g > r * 1.1 && g > b * 1.05) { const k = Math.min(2, (r * .3 + g * .59 + b * .11) / 62); px[i] = Math.min(255, L.r * k); px[i + 1] = Math.min(255, L.g * k); px[i + 2] = Math.min(255, L.b * k); } }
     x.putImageData(d, 0, 0); fn?.(x, L); return c; };
   async function showTextures(b, i) {
+    await allFonts();  // the title's italic and Lao faces, fetched now (the first time a book opens), so the canvas never bakes a fallback face
     kapiColor ??= await img(new URL("books/kapi/color.webp", SHELF).href); kapiSpine ??= await img(new URL("books/kapi/spine-color.webp", SHELF).href);
-    if (!atlas) atlas = await Promise.all([fetch(WONDERS + ".json").then(r => r.json()), img(WONDERS + ".webp")]).then(([j, im]) => ({ j: j.filter(s => s.kind < 4), im })).catch(() => ({ j: [], im: null }));
-    const hex = b.spine || "#1f4a31", s = atlas.j[(i * 7 + 3) % Math.max(1, atlas.j.length)];
+    const at = b.emblem && books.emblems?.at?.[b.emblem];  // a coming tale: its own emblem (books.taleAt), large, from the wonders sheet it was cut from (emblems.json); else one from the first sheet
+    if (!at && !atlas) atlas = await Promise.all([fetch(WONDERS + ".json").then(r => r.json()), img(WONDERS + ".webp")]).then(([j, im]) => ({ j: j.filter(s => s.kind < 4), im })).catch(() => ({ j: [], im: null }));
+    const hex = b.spine || "#1f4a31", s = at ? { im: await (sheets[at[2]] ??= img(WONDERS + (at[2] > 1 ? "-" + at[2] : "") + ".webp").catch(() => null)), x: at[3], y: at[4], w: at[5], h: at[5] } : atlas.im && { im: atlas.im, ...atlas.j[(i * 7 + 3) % Math.max(1, atlas.j.length)] };
     const cover = recolour(kapiColor, hex, 960, 1280, (x, L) => { const lc = `rgb(${L.r | 0},${L.g | 0},${L.b | 0})`, dark = `rgb(${L.r * .35 | 0},${L.g * .35 | 0},${L.b * .35 | 0})`;
-      x.fillStyle = dark; x.fillRect(160, 268, 646, 480); if (atlas.im && s) { x.save(); x.globalCompositeOperation = "lighter"; x.drawImage(atlas.im, s.x, s.y, s.w, s.h, 160 + (646 - 400) / 2, 268 + (480 - 400) / 2, 400, 400); x.restore(); }
+      x.fillStyle = dark; x.fillRect(160, 268, 646, 480); if (s?.im) { x.save(); x.globalCompositeOperation = "lighter"; x.drawImage(s.im, s.x, s.y, s.w, s.h, 160 + (646 - 400) / 2, 268 + (480 - 400) / 2, 400, 400); x.restore(); }
       x.fillStyle = lc; x.beginPath(); x.roundRect(200, 800, 560, 320, 34); x.fill(); x.strokeStyle = "#e2b459"; x.lineWidth = 6; x.stroke(); const t = b.title?.en || "", lg = getLang();
-      drawTitle(x, t || getStill(), t ? "en" : "x", 480, 818, 500, 284, { color: "#e9c273", maxBig: t ? 118 : 58, sub: t && lg !== "en" ? b.title[lg] ?? "" : "" });  // a show book: the cartouche says the tale is still being written, never an empty box
+      drawTitle(x, t || getStill(), t ? "en" : "x", 480, 818, 500, 284, { color: "#e9c273", maxBig: t ? 118 : 58, sub: b.vol ? `Book ${b.vol}` : t && lg !== "en" ? b.title[lg] ?? "" : "" });  // a series volume: the series name, and which book  // a show book: the cartouche says the tale is still being written, never an empty box
     });
     kapiOrm ??= await img(new URL("books/kapi/orm.webp", SHELF).href); const oc = document.createElement("canvas"); oc.width = kapiOrm.width; oc.height = kapiOrm.height; const ox = oc.getContext("2d"); ox.drawImage(kapiOrm, 0, 0); ox.fillStyle = "rgb(255,190,0)"; { const sx = oc.width / 960, sy = oc.height / 1280; ox.fillRect(200 * sx, 800 * sy, 560 * sx, 320 * sy); ox.fillRect(160 * sx, 268 * sy, 646 * sx, 480 * sy); }  // flat gloss where Kapi's title and picture window were
     const spine = recolour(kapiSpine, hex, 512, 1152);
@@ -44,7 +46,7 @@ export function createFront(THREE, { scene, camera, renderer, ring, books, reduc
   async function build(g) {
     const b = books.bookAt(g), list_ = await getList(), e = b && list_.find(q => q.id === b.id), baseId = e?.id ?? list_[0]?.id ?? "kapi";
     const B = await loadBook(THREE, gltf, baseId, "../../shelf/"), m = { g, B, group: B.group, panel: B.panel, ms: 1, pop: null, awake: false, depth: B.size.z, thick: B.size.y, width: B.size.x, show: !e };
-    if (!e) { const T = await showTextures(b ?? { title: { en: "" } }, g); B.materials.cover.map = T.cover; B.materials.cover.normalMap = null; B.materials.cover.aoMap = B.materials.cover.roughnessMap = B.materials.cover.metalnessMap = T.orm; B.materials.spine.map = T.spine; B.materials.spine.normalMap = null; B.materials.leather.color.set(T.hex); B.plate.m.visible = false; B.materials.cover.needsUpdate = B.materials.spine.needsUpdate = true; }
+    if (!e) { await books.talesReady; const T = await showTextures(b ?? books.taleAt?.(g) ?? { title: { en: "" } }, g); B.materials.cover.map = T.cover; B.materials.cover.normalMap = null; B.materials.cover.aoMap = B.materials.cover.roughnessMap = B.materials.cover.metalnessMap = T.orm; B.materials.spine.map = T.spine; B.materials.spine.normalMap = null; B.materials.leather.color.set(T.hex); B.plate.m.visible = false; B.materials.cover.needsUpdate = B.materials.spine.needsUpdate = true; }  // a coming tale: its own title and emblem on the big book (books.taleAt)
     const box = new THREE.Box3().setFromObject(B.group), c = box.getCenter(new V()), sz = box.getSize(new V()); Object.assign(m, { cx: c.x, cz: c.z, width: sz.x, depth: sz.z });  // the whole book, spine and boards included
     dims ??= { w: sz.x, d: sz.z }; ring.setModel?.(dims);
     m.own = owned(B.group); hold(m.own);

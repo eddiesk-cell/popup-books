@@ -6,11 +6,42 @@
 <title>The Grand Library · Wonder of Saya Tales</title>
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="data:,">
-<script type="importmap">{ "imports": { "three": "../../vendor/three/three.module.js", "three/addons/": "../../vendor/three/addons/" } }</script>
 <link rel="stylesheet" href="../../fonts/cormorant-garamond/cormorant-garamond.css">
 <link rel="stylesheet" href="../../fonts/eb-garamond/eb-garamond.css">
 <link rel="stylesheet" href="../../fonts/noto-sans-lao/noto-sans-lao.css">
 <link rel="stylesheet" href="library.css">
+<!-- what the doors, the flight and the home view need, fetched at once (no module waterfall); the first page warms the same list (landing.js warm()), so a visitor from it waits on none of it. build_web.mjs swaps the modulepreloads for the bundle's -->
+<link rel="modulepreload" href="../../dist/library-TFZV5GM4.js">
+<link rel="modulepreload" href="../../dist/c-ORVDGMSO.js">
+<link rel="modulepreload" href="../../dist/c-I2U6IUS5.js">
+<link rel="modulepreload" href="../../dist/c-TPVREXEX.js">
+<link rel="modulepreload" href="../../dist/c-VJTIOQ2J.js">
+<link rel="modulepreload" href="../../dist/c-55H3SLJO.js">
+<link rel="modulepreload" href="../../dist/c-Q3ZARSAH.js">
+<link rel="modulepreload" href="../../dist/c-LGODCXON.js">
+<link rel="modulepreload" href="../../dist/c-S5X4Q7FQ.js">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../fonts/cinzel-decorative/CinzelDecorative-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../../fonts/cormorant-garamond/cormorant-garamond.woff2">
+<link rel="preload" as="fetch" crossorigin href="room.json">
+<link rel="preload" as="fetch" crossorigin href="../books.json">
+<link rel="preload" as="fetch" crossorigin href="../catalog.json">
+<link rel="preload" as="fetch" crossorigin href="emblems.json"><link rel="preload" as="image" href="emblems.webp">
+<link rel="preload" as="image" href="covers/gourd.webp"><link rel="preload" as="image" href="covers/kapi.webp"><link rel="preload" as="image" href="covers/mali.webp"><link rel="preload" as="image" href="covers/monkey-turtle.webp"><link rel="preload" as="image" href="covers/toad-king.webp">
+<link rel="preload" as="image" crossorigin href="walls/books.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="walls/books-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="image" crossorigin href="art/spot.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="art/spot-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="image" crossorigin href="art/facade-arch.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="art/facade-arch-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="image" crossorigin href="art/door_l.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="art/door_l-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="image" crossorigin href="art/door_r.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="art/door_r-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="image" crossorigin href="art/bridge1.webp" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="image" crossorigin href="art/bridge1-p.webp" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="fetch" crossorigin href="cases.glb" media="(min-width: 821px) and (orientation: landscape)"><link rel="preload" as="fetch" crossorigin href="cases-phone.glb" media="(max-width: 820px), (orientation: portrait)">
+<link rel="preload" as="fetch" crossorigin href="stairwell.glb">
+<link rel="preload" as="image" crossorigin href="stairwell-floor.webp">
+<link rel="preload" as="image" crossorigin href="art/rug.webp"><link rel="prefetch" href="../sfx/library-hum.m4a">
+<link rel="preload" as="image" crossorigin href="leather.webp"><link rel="preload" as="image" crossorigin href="../../shelf/gilt-color.webp"><link rel="preload" as="image" crossorigin href="../../shelf/brass-color.webp">
+<style>/* the first page's last frame carries onto the closed doors (cross-document view transition). Here, not in library.css: in Chrome the opt-in from library.css was dropped once the module graph started loading ("opt-in disabled", 2026-11-18); an inline rule holds */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation: vt-out .8s cubic-bezier(.4, 0, .2, 1) both; } ::view-transition-new(root) { animation: vt-in .8s cubic-bezier(.4, 0, .2, 1) both; }
+@keyframes vt-out { to { opacity: 0; transform: scale(1.1); } } @keyframes vt-in { from { opacity: 0; transform: scale(.94); } }
+@media (prefers-reduced-motion: reduce) { ::view-transition-old(root), ::view-transition-new(root) { animation: none; } }</style>
 </head>
 <body>
 <canvas id="stage" tabindex="0" aria-label="The Grand Library: drag or move the mouse to look around, arrow keys turn, Enter walks on" role="application"></canvas>
@@ -36,23 +67,48 @@
 <p class="cap" id="cap" role="status" hidden></p>
 <div class="carry" id="carry"></div>
 <p class="hint" id="hint" role="status" hidden></p>
-<div class="veil" id="veil"><div class="doors" id="doors"><div class="set"><div class="rig">
-  <img class="beyond" src="intro/beyond.webp" alt="" fetchpriority="high"><i class="haze"></i>
-  <picture class="leaf l"><source media="(orientation: portrait)" srcset="intro/leaf-l-p.webp"><img src="intro/leaf-l.webp" alt="" fetchpriority="high"></picture>
-  <picture class="leaf r"><source media="(orientation: portrait)" srcset="intro/leaf-r-p.webp"><img src="intro/leaf-r.webp" alt="" fetchpriority="high"></picture>
-  <picture class="wall"><source media="(orientation: portrait)" srcset="intro/wall-p.webp"><img src="intro/wall.webp" alt="" fetchpriority="high"></picture><i class="shine"></i>
+<p class="here" id="here" aria-hidden="true"></p>
+<div class="veil" id="veil"><div class="doors" id="doors"><div class="set" aria-hidden="true"><div class="rig">
+  <i class="haze"></i>
+  <div class="leaf l"><svg viewBox="0 0 165 620"><use href="#d-leaf"/></svg></div><div class="leaf r"><svg viewBox="0 0 165 620"><use href="#d-leaf"/></svg></div>
+  <div class="door"><svg viewBox="0 0 330 620"><defs>
+    <pattern id="d-stone" width="360" height="160" x="-15" y="-40" patternUnits="userSpaceOnUse"><path fill="#3b3d40" d="M0 0h180v80H0z"/><path fill="#35373a" d="M180 0h180v80H180z"/><path fill="#3f4144" d="M0 80h90v80H0z"/><path fill="#37393c" d="M90 80h180v80H90z"/><path fill="#3a3c3f" d="M270 80h90v80h-90z"/><path d="M0 1H360M0 80H360M1 0V80M181 0V80M90 80V160M270 80V160" stroke="#1b1c1e" stroke-width="3"/><path d="M4 5H176M184 5H356M4 85H86M94 85H266M274 85H356" stroke="#5c5f63" opacity=".4"/></pattern>
+    <filter id="d-grit" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="3" seed="3"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0 0 0 -.42"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <filter id="d-grain" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency=".11 .005" numOctaves="2" seed="5"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -.6"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+    <radialGradient id="d-lit" cx="165" cy="600" r="760" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffcf8a" stop-opacity=".2"/><stop offset=".4" stop-color="#0b0704" stop-opacity="0"/><stop offset="1" stop-color="#0b0704" stop-opacity=".85"/></radialGradient>
+    <linearGradient id="d-wood"><stop offset="0" stop-color="#2e1b0b"/><stop offset=".45" stop-color="#583617"/><stop offset=".8" stop-color="#47290f"/><stop offset="1" stop-color="#2c1909"/></linearGradient>
+    <clipPath id="d-lc"><path d="M0 620V165A165 165 0 0 1 163.5 .01V620Z"/></clipPath>
+    <symbol id="d-leaf" viewBox="0 0 165 620"><g clip-path="url(#d-lc)"><rect width="165" height="620" fill="url(#d-wood)"/><rect width="165" height="620" filter="url(#d-grain)"/>
+      <g fill="#29170a" stroke="#120904" stroke-width="3"><rect x="26" y="150" width="112" height="182" rx="10"/><rect x="26" y="360" width="112" height="228" rx="8"/></g>
+      <g fill="none" stroke="#8a6534" stroke-width="1.4" opacity=".7"><path d="M29 329V160q0-7 7-7h92"/><path d="M29 585V368q0-5 5-5h94"/></g><path d="M8 346H158" stroke="#b8924e" stroke-width="2.5"/>
+      <g fill="#20140b" stroke="#6b5230" stroke-width="1"><path d="M0 104h50l6 6-6 6H0zM0 300h50l6 6-6 6H0zM0 540h50l6 6-6 6H0z"/></g><g fill="#d9b46a"><circle cx="14" cy="110" r="2.2"/><circle cx="34" cy="110" r="2.2"/><circle cx="14" cy="306" r="2.2"/><circle cx="34" cy="306" r="2.2"/><circle cx="14" cy="546" r="2.2"/><circle cx="34" cy="546" r="2.2"/></g>
+      <g fill="none" stroke="#c9a35a" stroke-width="1.6"><rect x="33" y="157" width="98" height="168" rx="6"/><rect x="33" y="367" width="98" height="214" rx="5"/><circle cx="108" cy="92" r="13"/></g>
+      <g fill="none" stroke="#d6af64" stroke-width="2.2" stroke-linecap="round"><path d="M82 178V304M82 240c-24-6-34-34-12-46M82 240c24-6 34-34 12-46M82 290c-16 0-22-18-8-24M82 290c16 0 22-18 8-24"/><path d="M82 386V562M82 470c-26-8-36-38-12-52M82 470c26-8 36-38 12-52M82 522c-20 4-30 22-14 30M82 522c20 4 30 22 14 30"/></g>
+      <g fill="#e8c47a"><circle cx="82" cy="240" r="5"/><circle cx="82" cy="470" r="5"/><circle cx="108" cy="92" r="4"/></g>
+      <rect x="143" y="356" width="12" height="46" rx="4" fill="#6e5022" stroke="#e2c27a" stroke-width="1.2"/><circle cx="149" cy="394" r="10" fill="none" stroke="#e2c27a" stroke-width="3"/>
+      <rect width="22" height="620" fill="#000" opacity=".35"/><path d="M162.6 0V620" stroke="#f0cd7c" stroke-width="1.2" opacity=".5"/></g></symbol>
+  </defs>
+    <path fill="url(#d-stone)" fill-rule="evenodd" d="M-520-420H850V1100H-520ZM0 620V165A165 165 0 0 1 330 165V620Z"/><path filter="url(#d-grit)" fill-rule="evenodd" d="M-520-420H850V620H-520ZM0 620V165A165 165 0 0 1 330 165V620Z"/>
+    <path fill="#17130f" d="M-520 620H850V1100H-520Z"/><rect x="-36" y="620" width="402" height="12" fill="#2b241e"/>
+    <path fill="#2a1d13" d="M-44 620V165A209 209 0 0 1 374 165V620H330V165A165 165 0 0 0 0 165V620Z"/>
+    <path fill="none" stroke="#c9a35a" stroke-width="2.5" d="M0 620V165A165 165 0 0 1 330 165V620"/><path fill="none" stroke="#8c6d36" stroke-width="2" d="M-44 620V165A209 209 0 0 1 374 165V620"/>
+    <path fill="none" stroke="#d9b46a" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 10" d="M-22 620V165A187 187 0 0 1 352 165V620"/>
+    <g fill="#3a2a1c" stroke="#b8924e" stroke-width="1.5"><path d="M148-54h34l6 60h-46z"/><path d="M-52 156h58v16h-58zM324 156h58v16h-58zM-50 588h54v32h-54zM326 588h54v32h-54z"/></g><path fill="#e8c47a" d="M165-40l7 12-7 12-7-12z"/>
+    <rect x="-520" y="-420" width="1370" height="1520" fill="url(#d-lit)"/>
+  </svg></div><i class="shine"></i>
 </div></div></div></div>
 <button type="button" id="skip" class="skip" hidden></button>
 <p class="loading" id="loading" role="status"></p>
-<script>/* the intro doors (library.css "the doors") start here, the moment their cards decode, long before the module graph; window.__intro resolves when the camera is at the threshold and library.js takes over (through the doorway, the fall). A return visit or ?intro=0: none. */
-{ const h = document.documentElement, d = document.getElementById("doors"); let seen = new URLSearchParams(location.search).get("intro") === "0"; try { seen ||= localStorage.getItem("wst-intro-seen") === "1"; } catch {}
-  const play = () => new Promise(ok => { d.classList.remove("go", "in"); void d.offsetWidth; h.dataset.intro = "go"; d.classList.add("go"); d.onanimationend = e => { if (e.animationName === "through") { h.dataset.intro = "through"; ok(); } }; });
-  window.__introPlay = () => Promise.all([...d.querySelectorAll("img")].map(i => i.decode())).then(play, play);  // a card that fails still opens the rest
-  d.hidden = seen; window.__intro = seen ? null : __introPlay(); }
+<script>/* the intro doors (library.css "the intro doors"): drawn by the SVG above, closed from the first paint, nothing to load. library.js opens them (window.__introPlay) once the room behind them has drawn
+   and settled; its promise resolves at the threshold, where library.js takes over (through the doorway, the fall). A return visit or ?intro=0: none. A browser without view transitions gets .novt (the doors ease in). */
+{ const h = document.documentElement, d = document.getElementById("doors"); let seen = new URLSearchParams(location.search).get("intro") === "0"; try { const fromFront = sessionStorage.getItem("wst-intro-play") === "1"; sessionStorage.removeItem("wst-intro-play"); seen ||= localStorage.getItem("wst-intro-seen") === "1" && !fromFront; } catch {}
+  if (!("CSSViewTransitionRule" in window)) h.classList.add("novt");
+  window.__introPlay = () => new Promise(ok => { d.classList.remove("go", "in"); void d.offsetWidth; h.dataset.intro = "go"; d.classList.add("go"); d.onanimationend = e => { if (e.animationName === "through") { h.dataset.intro = "through"; ok(); } }; });
+  d.hidden = seen; window.__intro = !seen; }
 </script>
 <script>/* shortcut: the loading line's six words are repeated here (the words table in library.js owns them, and wins once it runs) so the note paints before the module graph arrives; drop when the words move to a tiny shared file */
 { const L = { en: "Opening the library...", lo: "ກຳລັງເປີດຫໍສະໝຸດ...", th: "กำลังเปิดห้องสมุด...", zh: "正在打开图书馆…", ja: "としょかんを ひらいています…", ko: "도서관을 여는 중…" }; let g = new URLSearchParams(location.search).get("lang"); try { g = L[g] ? g : localStorage.getItem("wst-lang"); } catch {} if (!L[g]) g = (navigator.languages || ["en"]).map(c => Object.keys(L).find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en"; document.documentElement.lang = g; document.getElementById("loading").textContent = L[g]; }
 </script>
-<script type="module" src="library.js"></script>
+<script type="module" src="../../dist/library-TFZV5GM4.js"></script>
 </body>
 </html>

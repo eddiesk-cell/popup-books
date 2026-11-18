@@ -22,11 +22,13 @@ import { makeBody } from "./bookbody.js";
 import { makeArrival } from "./arrive.js";
 import { Acting, mount, carry, puppetModel, byRim, holdOf, seatHeld, dropOf } from "./acts.js";
 import { makeGame, glow } from "./games.js";
+import { makeReadMode } from "./readmode.js";
 import { addSound, manifestFor } from "./sound.js";
 import { createStoryFx } from "./storyfx.js";
 import { makeNotice } from "./notice.js";
-import { ambient, skyline, roomShown, storyPuppet, swingRig } from "./ambient.js";
+import { ambient, skyline, roomShown, storyPuppet, swingRig, cardRect } from "./ambient.js";
 import { extraModel } from "./extras3d.js";
+import { codeProp, layQ } from "./props3d.js";
 
 const $ = id => document.getElementById(id);
 const q = new URLSearchParams(location.search), FPS = 24, rad = THREE.MathUtils.degToRad;
@@ -34,6 +36,7 @@ const q = new URLSearchParams(location.search), FPS = 24, rad = THREE.MathUtils.
 // web/live/<book>-sNN/, except Kapi's, which the builder writes to web/live/sNN/. A spread id with a slash is a folder
 // under web/live/ as it stands (test/s02).
 const bookId = q.get("book") || "kapi", first = q.get("s") || "s01", lib = `../${bookId}/`;
+const FIRST5 = /^(kapi|mali|toad-king|gourd|monkey-turtle)$/.test(bookId);  // books made before the game-character controller (V32): its defaults stay off there
 const bare = id => id.split("/").pop().replace(`${bookId}-`, "");  // "mali-s01" or "s01": book.json's "s01"
 const dirOf = id => (bookId === "kapi" || id.includes("/") ? id : `${bookId}-${bare(id)}`);
 const B = ([x, y, z]) => new THREE.Vector3(x, z, -y);  // Blender (z up) -> three (y up)
@@ -141,6 +144,191 @@ function stubSpread() {  // a flat open book of blank paper, so the viewer can b
 }
 THREE.ShaderChunk.shadowmap_vertex = "#ifndef SHADOW_NB\n#define SHADOW_NB 1.0\n#endif\n" + THREE.ShaderChunk.shadowmap_vertex.replace("shadowWorldNormal * directionalLightShadows[ i ].shadowNormalBias", "shadowWorldNormal * directionalLightShadows[ i ].shadowNormalBias * SHADOW_NB");  // a thing that casts no shadow needs no normal offset: SHADOW_NB 0.0 on its material
 const shade = root => root.traverse(o => { if (o.isMesh) { o.receiveShadow = true; o.castShadow = !o.material.emissive?.getHex(); } });  // glowing bits cast none
+// V14: a split fold's card ends in a flat paper foot (LAYOUT-BRIEF, "Tall card on one page") that glues it down; seen from the reader it is a stack of coloured ledges.
+// Its rows = the bottom run of one flat colour; the material discards them (uv v runs down the image in glTF), so nothing of the foot shows.
+const feet = new WeakMap();
+const footOf = img => {
+  if (feet.has(img)) return feet.get(img);
+  const { width: w, height: h } = img, n = Math.min(h, Math.ceil(0.2 * h)), c = Object.assign(document.createElement("canvas"), { width: w, height: n }), x = c.getContext("2d", { willReadFrequently: true });
+  x.drawImage(img, 0, h - n, w, n, 0, 0, w, n);
+  const d = x.getImageData(0, 0, w, n).data, row = y => { const l = []; for (let i = y * w * 4; i < (y + 1) * w * 4; i += 16) d[i + 3] >= 200 && l.push(i); return l; };
+  const ref = (l => l.length ? [d[l[l.length >> 1]], d[l[l.length >> 1] + 1], d[l[l.length >> 1] + 2]] : null)(row(n - 1));  // the middle of the bottom row's paper, so a ragged end does not set the colour
+  let rows = 0; while (ref && rows < n) { const l = row(n - 1 - rows); if (!l.length || l.some(i => [0, 1, 2].some(k => Math.abs(d[i + k] - ref[k]) > 18))) break; rows++; }  // webp noise is under 18
+  feet.set(img, rows / h); return rows / h;
+};
+const tints = new WeakMap();
+const tintOf = img => {  // a card's mean colour (opaque pixels, an 8x8 shrink of it), for its rim
+  if (tints.has(img)) return tints.get(img);
+  const x = Object.assign(document.createElement("canvas"), { width: 8, height: 8 }).getContext("2d", { willReadFrequently: true }); x.drawImage(img, 0, 0, 8, 8);
+  const d = x.getImageData(0, 0, 8, 8).data; let r = 0, g = 0, b = 0, w = 0; for (let i = 0; i < d.length; i += 4) { w += d[i + 3]; r += d[i] * d[i + 3]; g += d[i + 1] * d[i + 3]; b += d[i + 2] * d[i + 3]; }
+  const c = new THREE.Color().setRGB(r / (w * 255 || 1), g / (w * 255 || 1), b / (w * 255 || 1), THREE.SRGBColorSpace); tints.set(img, c); return c;
+};
+const hideFoot = (root, footless) => root.traverse(g => {
+  const art = g.children.find(o => o.isMesh && /^art-.*-wing(\.\d+)?$/.test(o.material?.name)), img = art?.material.map?.image; if (!img) return;
+  const tint = tintOf(img); for (const o of g.children) if (o.isMesh && o.material?.name === "card-edge") (o.material = o.material.clone()).color.copy(tint);  // V23: the paper rim in the card's own colour, not cream: a row of them read as long pale stripes across a night floor
+  if (footless) return;  // a spread exported with card()'s foot fix: its foot faces sample a clear spot, nothing is drawn
+  const f = footOf(img); if (f < 0.005) return;
+  for (const o of g.children) if (o.isMesh && o.material.map && /^(art|back)-/.test(o.material.name)) {  // the card's back shows through where its front is cut
+    o.material = o.material.clone(); o.material.customProgramCacheKey = () => `foot${f.toFixed(4)}${img.height}`;
+    o.material.onBeforeCompile = sh => (sh.fragmentShader = sh.fragmentShader.replace("#include <alphatest_fragment>", `if (vMapUv.y > ${(1 - f - 3 / img.height).toFixed(4)}) discard;\n#include <alphatest_fragment>`));
+  }
+  // shortcut: the foot's rim is found by its flatness in the bottom quarter and 8 picture rows of margin, not by the outline's own foot run; upgrade if a card's own flat rims there (a plank's end) go missing
+  // the foot's own triangles, and its paper rim (the card-edge mesh beside it), go too: along the axis that the picture's v runs down, from the bottom vertex to the top one
+  const P = art.geometry.attributes.position, V = art.geometry.attributes.uv; if (!P || !V) return;
+  const mean = f => { let t = 0; for (let i = 0; i < V.count; i++) t += f(i); return t / V.count; }, mv = mean(i => V.getY(i));
+  const ax = [0, 1, 2].map(a => { const mp = mean(i => P.getComponent(i, a)); let c = 0, s1 = 0, s2 = 0, lo = 0, hi = 0; for (let i = 0; i < V.count; i++) { const dp = P.getComponent(i, a) - mp, dv = V.getY(i) - mv; c += dp * dv; s1 += dp * dp; s2 += dv * dv; V.getY(i) < V.getY(lo) && (lo = i); V.getY(i) > V.getY(hi) && (hi = i); } return { a, lo, hi, r: Math.abs(c) / Math.sqrt(s1 * s2 || 1) }; }).sort((x, y) => y.r - x.r)[0];  // the position axis the picture's v runs along (the card's height)
+  const pb = P.getComponent(ax.hi, ax.a), pt = P.getComponent(ax.lo, ax.a), vb = V.getY(ax.hi), vt = V.getY(ax.lo), T = pb + (pt - pb) * (vb - (1 - f - 8 / img.height)) / (vb - vt), eps = 0.03 * Math.abs(pb - pt) / (vb - vt), up = Math.sign(pt - pb);
+  for (const o of g.children) {
+    const q = o.isMesh && o.geometry.attributes.position, ix = o.geometry?.index; if (!q || !ix) continue;
+    const a = ix.array, keep = [], H = eps / 0.03, h = k => (q.getComponent(a[k], ax.a) - T) * up;  // h: a vertex's height over the foot's top
+    for (let i = 0; i < a.length; i += 3) {
+      const hs = [h(i), h(i + 1), h(i + 2)], c = (hs[0] + hs[1] + hs[2]) / 3, flat = Math.max(...hs) - Math.min(...hs) < 0.01 * H;
+      if (o === art ? Math.max(...hs) > eps : c > eps && !(flat && c < 0.25 * H)) keep.push(a[i], a[i + 1], a[i + 2]);  // paper rim: not what lies within a quarter of the card's height as a flat run (the foot's top and bottom rims, hairlines in a long row)
+    }
+    o.geometry.setIndex(keep); o.geometry.clearGroups();
+  }
+});
+
+// V32: three's ACESFilmicToneMapping (the output pass) undone, so a self-lit card shows its painted colour. Kept under the bloom pass's
+// threshold (luminance 1.2): a painted sky never glows (white paper reaches 214/255, a sky's 223 reaches 222)
+const UNACES = `vec3 unACES(vec3 c) {
+  c = clamp(mat3(0.64304, 0.05927, 0.00596, 0.31119, 0.93144, 0.06393, 0.04578, 0.00929, 0.93012) * c, 0.0, 0.999);
+  vec3 a = 0.983729 * c - 1.0, b = 0.432951 * c - 0.0245786, k = 0.238081 * c + 0.000090537;
+  c = max(mat3(1.76474, -0.14703, -0.03634, -0.67578, 1.16025, -0.16244, -0.08896, -0.01322, 1.19877) * ((-b - sqrt(b * b - 4.0 * a * k)) / (2.0 * a)), 0.0) * ${(0.6 / renderer.toneMappingExposure).toFixed(5)};
+  float l = dot(c, vec3(0.299, 0.587, 0.114));
+  return l > 1.19 ? c * (1.19 / l) : c;
+}
+`;
+// glb_paper merges a card's paper rim into its picture's mesh, where it reads the atlas's 8 px rim-colour patch: hiding the card-edge mesh (V16 "soft")
+// no longer hid it, and a soft or self-lit card kept a cream hairline round it (Cowherd's sky top, its floor decals). Those fragments go.
+function noRim(sp, o) {
+  const m = o.material, r = !m.userData.noRim && cardRect(sp.root, o), img = m.map?.image;
+  if (!r || (r[0] < 10 / img.width && r[1] < 10 / img.height)) return;  // a picture of its own, not an atlas: no patch
+  const was = m.onBeforeCompile, key = m.customProgramCacheKey(), pu = (9 / img.width).toFixed(5), pv = (9 / img.height).toFixed(5);
+  m.onBeforeCompile = (sh, rr) => { was.call(m, sh, rr); sh.vertexShader = sh.vertexShader.replace("#include <uv_vertex>", "#include <uv_vertex>\nvRim = uv;").replace("void main() {", "varying vec2 vRim;\nvoid main() {"); sh.fragmentShader = sh.fragmentShader.replace("#include <alphatest_fragment>", `if (vRim.x < ${pu} && vRim.y < ${pv}) discard;\n#include <alphatest_fragment>`).replace("void main() {", "varying vec2 vRim;\nvoid main() {"); };
+  m.customProgramCacheKey = () => `norim${pu}${pv}${key}`; m.userData.noRim = true;
+}
+function selfLit(m) {  // the card unshadowed, unfogged, at its painted colour times the light it gets (wallLight, each frame), its cut, blend and foot discard kept
+  const b = new THREE.MeshBasicMaterial({ name: m.name, map: m.map, color: m.color, transparent: m.transparent, opacity: m.opacity, alphaTest: m.alphaTest, side: m.side, depthWrite: m.depthWrite, fog: false });
+  const was = m.onBeforeCompile, key = m.customProgramCacheKey();
+  b.onBeforeCompile = (sh, r) => { was.call(b, sh, r); sh.fragmentShader = UNACES + sh.fragmentShader.replace("#include <opaque_fragment>", "#include <opaque_fragment>\ngl_FragColor.rgb = unACES(gl_FragColor.rgb);"); };
+  b.customProgramCacheKey = () => `selflit${key}`;
+  b.clone = function () { return Object.assign(THREE.MeshBasicMaterial.prototype.clone.call(this), { onBeforeCompile: this.onBeforeCompile, customProgramCacheKey: this.customProgramCacheKey, clone: this.clone }); };  // a fade (acts.js) draws a clone: it stays self-lit
+  return b;
+}
+function wallLight(sp, c) {  // the light in the page's world: every stage light's colour x intensity (a sky is lit by the time of day, not by how the lights meet a card: the sun stands behind most backdrops)
+  c.setRGB(0, 0, 0);
+  for (const l of sp.stage.children) if (l.isDirectionalLight) c.r += l.color.r * l.intensity, c.g += l.color.g * l.intensity, c.b += l.color.b * l.intensity;
+  return c;
+}
+const lightNow = new THREE.Color(), bands = new WeakMap(), BAND = 64;
+function bandOf(sp, mesh) {  // the colours along the top of a card's picture as it is drawn now (its current map, its atlas patch): BAND columns and their mean, sRGB 0-255
+  const map = mesh.material.map, img = map?.image; if (!img?.width) return null;
+  const key = mesh.material.name.replace(/\.\d+$/, ""), all = bands.get(map) ?? bands.set(map, {}).get(map);  // one atlas holds many cards: by card
+  if (key in all) return all[key];
+  const r = cardRect(sp.root, mesh); if (!r) return (all[key] = null);
+  const u0 = r[0] * map.repeat.x + map.offset.x, u1 = r[2] * map.repeat.x + map.offset.x, v0 = r[1] * map.repeat.y + map.offset.y, v1 = r[3] * map.repeat.y + map.offset.y;
+  const x = Object.assign(document.createElement("canvas"), { width: BAND, height: 2 }).getContext("2d", { willReadFrequently: true });
+  x.drawImage(img, u0 * img.width, v0 * img.height, (u1 - u0) * img.width, Math.max(2, 0.03 * (v1 - v0) * img.height), 0, 0, BAND, 2);  // the top 3 percent of the picture
+  const d = x.getImageData(0, 0, BAND, 2).data, b = new Float32Array(BAND * 3 + 3);
+  for (let i = 0; i < BAND; i++) for (let c = 0; c < 3; c++) {  // each column the mean of 9 round it: the sky's broad colour carries up, not its brush marks (stretched, they read as rays)
+    let t = 0, n = 0; for (let j = Math.max(0, i - 4); j <= Math.min(BAND - 1, i + 4); j++) t += d[j * 4 + c] + d[(BAND + j) * 4 + c], n += 2;
+    b[i * 3 + c] = t / n; b[BAND * 3 + c] += t / n / BAND;
+  }
+  return (all[key] = b);
+}
+const DARK = { day: 0, storm: 1, evening: 1, night: 2 };
+const share = (c, b, ch) => (b && b[ch] > 1e-6 ? Math.min(1, c[ch] / b[ch]) : 1);  // the light now as a share of the light then, per channel
+const showing = o => { for (let p = o; p; p = p.parent) if (!p.visible) return 0; return o.material.opacity; };  // how much of a card shows: hidden, or its opacity (a fade)
+function lightWall(sp, arriving) {  // each frame: the self-lit cards (and the surround) take a night card swapped in, the arrival's fade-in, and the lights once a cue turns the page darker (evening, night); a cue that only sets a mood (s01's warmer sun, s04's lower fill) leaves them as painted
+  const s = sp.surround;
+  if (s?.skies) {  // the surround continues the sky cards shown now (a night card swapped in, one sky faded out for another: blended by how much each shows)
+    let changed = false;
+    for (let i = 0; i < s.skies.length; i++) { const o = s.skies[i], k = showing(o); if (k !== s.w[i] || o.material.map !== s.m[i]) changed = true, s.w[i] = k, s.m[i] = o.material.map; }
+    if (changed) paintSurround(sp, s);
+  }
+  if (!sp.lit.length) return;
+  const st = sp.root.userData.stage ?? sp.m.stage.name;  // the time of day a light cue turned the page to (ambient.js)
+  if (st !== sp.wallStage && !arriving) sp.wallStage = st, wallLight(sp, sp.light0);  // from here the wall follows the lights as they ease
+  const b = arriving ? sp.lightFull : (DARK[st] ?? 0) > (DARK[sp.m.stage.name] ?? 0) ? sp.light0 : null, c = b && wallLight(sp, lightNow);
+  for (const o of sp.lit) o.material.color.setRGB(o.userData.c0.r * share(c, b, "r"), o.userData.c0.g * share(c, b, "g"), o.userData.c0.b * share(c, b, "b"));
+}
+function paintSurround(sp, s) {  // its picture: each column the colour along the top of the sky above it (at the bottom row), easing up into their mean (the top row)
+  const col = s.col.fill(0); let wt = 0;
+  s.skies.forEach((o, i) => { const b = s.w[i] > 0 && bandOf(sp, o); if (b) { for (let j = 0; j < col.length; j++) col[j] += b[j] * s.w[i]; wt += s.w[i]; } });
+  if (!wt) return;
+  const d = s.img.data;
+  for (let y = 0; y < 16; y++) for (let x = 0; x < BAND; x++) for (let c = 0; c < 3; c++) { const t = y / 15; d[(y * BAND + x) * 4 + c] = (col[BAND * 3 + c] * (1 - t) + col[x * 3 + c] * t) / wt; d[(y * BAND + x) * 4 + 3] = 255; }
+  s.cv.getContext("2d").putImageData(s.img, 0, 0); s.tex.needsUpdate = true;
+}
+function surround(sp) {  // V33, opt-in: spread.json "surround": true stands a wall behind the book that continues the sky: no frame shows the room past the backdrop (an upright phone's tall frame showed it over its top half, Cowherd s01-s03). It takes the colours along the top of the tallest backdrop cards shown now; [r, g, b] (0-1 sRGB): one colour
+  const walls = sp.sky?.walls ?? [], fixed = Array.isArray(sp.m.surround), high = Math.max(...walls.map(c => c.box.max.y)), skies = walls.filter(c => c.box.max.y > high - 0.02);  // the sky layer: both halves of a split fold, and a second sky a cue fades in
+  if (!skies.length && !fixed) return;
+  const top = skies.length ? high : sp.flat.max.y + 0.6;
+  const cv = Object.assign(document.createElement("canvas"), { width: BAND, height: 16 }), x = cv.getContext("2d"), tex = Object.assign(new THREE.CanvasTexture(cv), { colorSpace: THREE.SRGBColorSpace });
+  if (fixed) x.fillStyle = `#${new THREE.Color().setRGB(...sp.m.surround, THREE.SRGBColorSpace).getHexString()}`, x.fillRect(0, 0, BAND, 16);
+  const lit = skies.some(c => sp.lit.includes(c.mesh)), mat = lit ? selfLit(new THREE.MeshBasicMaterial({ map: tex })) : new THREE.MeshStandardMaterial({ map: tex, roughness: 0.8, metalness: 0 });  // shaded as the sky is: self-lit with it, else lit as a wall facing the reader
+  const X0 = skies.length ? Math.min(...skies.map(c => c.box.min.x)) : -1, X1 = skies.length ? Math.max(...skies.map(c => c.box.max.x)) : 1, z = Math.min(sp.flat.min.z - 0.06 * sp.pageW, ...walls.map(c => c.box.min.z - 0.005));  // behind the backdrop and the book's boards
+  const ys = [sp.bottom - 1, top - 0.02, top + 0.4, top + 6], P = [], U = [], ix = [];  // its colours hold up to the sky's top edge, then ease into their mean over 40 cm
+  ys.forEach((y, r) => [-6, 6].forEach(xx => (P.push(xx, y, z), U.push((xx - X0) / (X1 - X0 || 1), r < 2 ? 0 : 1))));
+  for (let r = 0; r < 3; r++) ix.push(2 * r, 2 * r + 1, 2 * r + 3, 2 * r, 2 * r + 3, 2 * r + 2);
+  const g = new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(P, 3)).setAttribute("uv", new THREE.Float32BufferAttribute(U, 2)).setIndex(ix); g.computeVertexNormals();
+  const mesh = Object.assign(new THREE.Mesh(g, mat), { name: "surround" }); mesh.userData.c0 = new THREE.Color(1, 1, 1);
+  sp.group.add(mesh); if (lit) sp.lit.push(mesh);
+  sp.surround = { mesh, cv, tex, img: x.createImageData(BAND, 16), col: new Float32Array(BAND * 3 + 3), skies: fixed ? null : skies.map(c => c.mesh), w: new Float32Array(skies.length).fill(-1), m: [] };
+}
+// The open leaf lies on the page under it (page-prev), its top 1.2 mm over the right page: from the right its paper rim along the spine showed as a cream
+// hairline, bright on a night page (Cowherd 8.3), and the right page read lighter by it. That rim's spine faces become a strip painted with the leaf's own
+// picture where it meets the spine and facing up, so it is shaded as the page is. Every book.
+function spineEdge(sp) {
+  const lp = sp.root.getObjectByName("leaf-page"), top = lp?.children.find(o => o.isMesh && o.material.map), rim = lp?.children.find(o => o.isMesh && o.material.name === "card-edge");
+  const P = rim?.geometry.attributes.position, ix = rim?.geometry.index, TP = top?.geometry.attributes.position, TU = top?.geometry.attributes.uv;
+  if (!P || !ix || !TP || !TU) return;
+  const w = new THREE.Vector3(), X = sp.flat.max.x, spine = i => w.fromBufferAttribute(P, i).applyMatrix4(rim.matrixWorld).x > X - 1e-4, a = ix.array, keep = [], edge = [];
+  for (let i = 0; i < a.length; i += 3) (spine(a[i]) && spine(a[i + 1]) && spine(a[i + 2]) ? edge : keep).push(a[i], a[i + 1], a[i + 2]);
+  if (!edge.length) return;
+  const M = new THREE.Matrix3().set(0, 0, 0, 0, 0, 0, 0, 0, 0), bu = new THREE.Vector3(), bv = new THREE.Vector3(), e = M.elements, row = new THREE.Vector3(), lo = [9, 9], hi = [-9, -9];  // the top's uv as a + b x + c z (least squares over its corners: a flat page, exact)
+  for (let i = 0; i < TP.count; i++) {
+    w.fromBufferAttribute(TP, i).applyMatrix4(top.matrixWorld); row.set(1, w.x, w.z); const u = TU.getX(i), v = TU.getY(i);
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) e[c * 3 + r] += row.getComponent(r) * row.getComponent(c);
+    bu.addScaledVector(row, u); bv.addScaledVector(row, v); lo[0] = Math.min(lo[0], u); lo[1] = Math.min(lo[1], v); hi[0] = Math.max(hi[0], u); hi[1] = Math.max(hi[1], v);
+  }
+  M.invert(); bu.applyMatrix3(M); bv.applyMatrix3(M);
+  const uv = new Float32Array(P.count * 2), up = new THREE.Vector3(0, 1, 0).applyMatrix3(new THREE.Matrix3().getNormalMatrix(rim.matrixWorld).invert()).normalize(), n = new Float32Array(P.count * 3);
+  for (let i = 0; i < P.count; i++) {
+    w.fromBufferAttribute(P, i).applyMatrix4(rim.matrixWorld); row.set(1, w.x, w.z);
+    uv[2 * i] = THREE.MathUtils.clamp(row.dot(bu), lo[0], hi[0]); uv[2 * i + 1] = THREE.MathUtils.clamp(row.dot(bv), lo[1], hi[1]); n.set([up.x, up.y, up.z], 3 * i);
+  }
+  const g = new THREE.BufferGeometry().setAttribute("position", P).setAttribute("normal", new THREE.BufferAttribute(n, 3)).setAttribute("uv", new THREE.BufferAttribute(uv, 2)).setIndex(edge);
+  const strip = Object.assign(new THREE.Mesh(g, top.material), { name: "leaf-spine", castShadow: true, receiveShadow: true });
+  strip.position.copy(rim.position); strip.quaternion.copy(rim.quaternion); strip.scale.copy(rim.scale);
+  rim.geometry.setIndex(keep); rim.parent.add(strip); strip.updateMatrixWorld();
+}
+// The same 1.2 mm puts the leaf's painted top at the height the exporter seats a page's floor cards, so a card on the LEFT page lay in the paper and
+// the two fought for depth: it flickered in and out whenever the camera moved (owner 2026-11-18, Kankak s02, Mali s02's stepping stones, "other
+// pages too"). Seen at the open page's rest (the loop's first frame, every pop-up in place), whatever lies on the left page sunk in the leaf (not the
+// leaf, the pages or the words) is lifted by the leaf's own height over the page below, so it lies on the leaf as a right-page card lies on its page:
+// a piece of its own whole (a flat thing from the page below up to the leaf's top), and in a merged mesh a card whose face lies in the leaf's top,
+// with its rim and back (the vertices straight under that face). A piece wholly under the leaf stays hidden as it was. Every book.
+function seatOnLeaf(sp) {
+  const under = sp.root.getObjectByName("page-prev"), lp = sp.root.getObjectByName("leaf-page"); if (!under || !lp) return;
+  sp.mixer.setTime(sp.L0 / FPS); sp.root.updateMatrixWorld(true);
+  const box = new THREE.Box3(), top = box.setFromObject(lp).max.y, X = box.max.x, up = top - box.setFromObject(under).max.y;
+  const w = new THREE.Vector3(), own = new Set(), done = new Set(), key = v => `${Math.round(v.x * 1e5)},${Math.round(v.z * 1e5)}`;
+  sp.leaf.traverse(o => own.add(o));
+  if (up > 0) sp.root.traverse(o => {
+    const P = o.isMesh && !own.has(o) && !/^(page|words)/.test(o.name) && !done.has(o.geometry) && o.geometry.attributes.position; if (!P) return;
+    done.add(o.geometry);
+    const at = i => w.fromBufferAttribute(P, i).applyMatrix4(o.matrixWorld), b = box.setFromObject(o), face = new Set();
+    const whole = b.max.x < X && b.min.y > top - up - 1e-4 && b.min.y < top - 2e-5 && b.max.y > top - 2e-5 && b.max.y < top + 8e-4;
+    if (!whole) for (let i = 0; i < P.count; i++) if (at(i).x < X && Math.abs(w.y - top) < 2e-5) face.add(key(w));
+    if (!whole && !face.size) return;
+    const back = o.matrixWorld.clone().invert();
+    for (let i = 0; i < P.count; i++) if (whole || (at(i).x < X && w.y > top - up - 5e-5 && w.y < top + 2e-5 && face.has(key(w)))) at(i).y += up, P.setXYZ(i, ...w.applyMatrix4(back).toArray()), sp.seated = (sp.seated ?? 0) + 1;  // seated: how many vertices moved (a probe reads it)
+    P.needsUpdate = true; o.geometry.computeBoundingBox(); o.geometry.computeBoundingSphere();
+  });
+  sp.mixer.setTime((sp.T1 - 1) / FPS); sp.root.updateMatrixWorld(true);
+}
 
 const propIn = (sp, what) => sp.root.getObjectByName(what) || sp.byName[what]?.body;  // a prop of the page: a node of the spread's glb, or a cast prop (a model of the page's characters, its body in sp.group); every act kind finds it here
 const breath = () => new Promise(r => setTimeout(r));
@@ -165,8 +353,8 @@ const load = id => spreads[id] ??= (async () => {
   sp.end = Math.max(...g.animations.map(c => c.duration)) - 1e-4;  // a looping action wraps at its very end: stop just short
   g.animations.forEach(c => sp.mixer.clipAction(c).play());
   sp.animated = new Set(g.animations.flatMap(c => c.tracks.map(t => t.name.split(".")[0])));
-  props(sp.root, m.props);
-  shade(sp.root); sp.group.add(sp.root);
+  await props(sp.root, m.props);
+  shade(sp.root); hideFoot(sp.root, m.footless); sp.group.add(sp.root);
   [sp.T0, sp.T1] = m.frames.turn; [sp.L0, sp.L1] = m.frames.loop; sp.N = sp.T1 - sp.T0; sp.P = sp.L1 - sp.L0 + 1;
 
   sp.leaf = sp.root.getObjectByName("leaf");  // the turned page lying flat on the left measures the page
@@ -175,7 +363,9 @@ const load = id => spreads[id] ??= (async () => {
   sp.corner = sp.leaf.worldToLocal(new THREE.Vector3(flat.min.x, flat.max.y, flat.max.z));  // its outer bottom corner, in the leaf's own space
   sp.pageW = -flat.min.x; sp.pageD = flat.max.z - flat.min.z;
   sp.bottom = new THREE.Box3().setFromObject(sp.root).min.y;
-  sp.turning = [];
+  spineEdge(sp);  // before the flat pieces get their own materials below: the edge strip is one of them
+  seatOnLeaf(sp);
+  sp.turning = []; const soft = m.soft ?? [];
   sp.root.traverse(o => {  // what lies flat on the open page (the pages, the floor cards, the words) casts nothing and is looked up where it is (SHADOW_NB 0.0): a shadow starts at the foot that casts it, and the paper cannot shade itself
     if (!o.isMesh || !o.castShadow || new THREE.Box3().setFromObject(o).getSize(new THREE.Vector3()).y >= 0.004) return;
     let leaf = false; for (let p = o; p && p !== sp.root; p = p.parent) { if (p === sp.leaf) leaf = true; else if (sp.animated.has(p.name)) return; }  // a butterfly at rest, a dry leaf that will blow away: they fly later and cast then
@@ -183,12 +373,14 @@ const load = id => spreads[id] ??= (async () => {
     if (leaf) sp.turning.push([o, m, o.material]);  // the turning page: ground while it lies open, a caster again (its shadow sweeps the scene) while it turns
     o.castShadow = false; o.material = m;
   });
+  for (const n of soft) sp.root.getObjectByName(n)?.traverse(o => { if (o.isMesh && o.material.name === "card-edge") o.visible = false; else if (o.isMesh && o.material.alphaTest && o.material.map) { const was = o.material; Object.assign(o.material = was.clone(), { alphaTest: 0, transparent: true, depthWrite: false, onBeforeCompile: was.onBeforeCompile, customProgramCacheKey: was.customProgramCacheKey }); noRim(sp, o); } });  // the card's solid paper rim drew the hard line round the outline even once the alpha blended (Cowherd s01 river): a soft card shows no rim  // V16, opt-in: spread.json "soft": ["river"] names the floor cards whose soft alpha edge blends (a cut at 0.5 made its rim a hard line); a card that is not named keeps its cut
+  sp.lit = []; for (const n of m.selflit ?? []) sp.root.getObjectByName(n)?.traverse(o => { if (o.isMesh && /^art-/.test(o.material.name)) noRim(sp, o), o.userData.c0 = o.material.color.clone(), o.material = selfLit(o.material), sp.lit.push(o); });  // V32, opt-in: spread.json "selflit": ["sky-farm"] names the back-wall cards drawn at their painted colour (lit, a standing wall faced the lights edge-on: Cowherd's skies came out 30% darker and browner than their cards)
   sp.sky = skyline(sp.root, undefined, m.backdrop);  // the standing backdrop's skyline and ends (the manifest names its cards)
 
   const key = m.stage.lights.reduce((a, b) => (b.watts > a.watts ? b : a));
   for (const l of m.stage.lights) {
     // shortcut: one watts->intensity ratio for every Blender area light, set by eye on spread 1; use RectAreaLight if pages look flat
-    const d = new THREE.DirectionalLight(new THREE.Color(...l.color), l.watts / 75);
+    const d = new THREE.DirectionalLight(new THREE.Color(...l.color), l.watts / 75); if (m.stage.name !== "day" && d.color.b > d.color.r) d.color.lerp(new THREE.Color(1, 1, 1), 0.85);  // owner 2026-11-18: no blue on people at night (a page can turn to night by a cue, so evening too): the bluish lights are near white so a character keeps its own colour (the sky and backdrops carry the blue)
     d.position.copy(B(l.at)); d.target.position.copy(B(l.look || [0, 0.1, 0.2])); sp.stage.add(d, d.target);  // the lights stay on while an exit turn stands in
     if (l === key) {
       sp.key = d;
@@ -196,6 +388,8 @@ const load = id => spreads[id] ??= (async () => {
       Object.assign(d.shadow.camera, { left: -1.4, right: 1.4, top: 1.4, bottom: -1.4, near: 0.1, far: 10 });
     }
   }
+  sp.lightFull = wallLight(sp, new THREE.Color()); sp.light0 = new THREE.Color();  // the page's full light (the arrival fades in to it), and its light when a cue last changed the time of day
+  if (m.surround) surround(sp);
 
   await breath();
   sp.cast = (await Promise.all(m.characters.map(c => character(c, sp).catch(e => console.warn("character did not load", c.name, e))))).filter(Boolean);
@@ -204,6 +398,7 @@ const load = id => spreads[id] ??= (async () => {
     const on = sp.byName[ch.c.on];
     if (on) { ch.pos = on.pos.clone().add(B(ch.c.at)); mount(ch, on, o => o.pos); ch.ride.gap = ch.c.at[2]; }  // the page's height: the gap a skinned rider keeps over a skinned mount's skin (acts.js carry)
   }
+  for (const ch of sp.cast) if (ch.c.swap) ch.alt = sp.byName[ch.c.swap];  // V20: the pose partner of a mount card (old-ox-fly swaps to old-ox): its riders follow whichever is shown
   sp.cast.forEach(ch => sp.group.add(ch.body));
   const tops = {};
   const where = sp.where = (to, top) => {  // a point of the page, a character (where it stands), a prop (or its top), a part of a character (the lamp's wick)
@@ -218,14 +413,15 @@ const load = id => spreads[id] ??= (async () => {
     spot: what => sp.placed[what]?.clone() ?? propIn(sp, what)?.getWorldPosition(new THREE.Vector3()) ?? null, put: (what, p) => sp.held.some(h => h.what === what) || (sp.falls = sp.falls.filter(f => f.what !== what), sp.placed[what] = p),  // a flight still running never pulls a prop out of a hand
     motion: Object.fromEntries(sp.cast.map(ch => [ch.name, motionAll[ch.c.model.split("/").pop()] ?? motionAll[ch.name]])),
     find: what => propIn(sp, what),  // hide / show / shape reach a prop or a cast body by name
-    ground: !!m.ground,  // "ground": true: go-to travel and the floor rule (acts.js)
+    ground: m.ground ?? !FIRST5, floors: m.floors ?? [], legacy: FIRST5,  // "ground": go-to travel and the floor rule (acts.js), on unless a page says false; the five first books keep theirs as written (V32). "floors": cards to stand on
     raise: (what, dy) => (sp.lifts[what] = dy),  // a prop rising: kept as an offset, laid on after the paper's own animation
     hold: (ch, what, hand, on, a = {}) => {  // a prop in a hand follows the hand bone until let go; a cast prop (a bowl, a lamp) is held by its rim; "grip" / "aim" (acts.js) seat and aim it
       const was = sp.held.find(h => h.what === what);
       sp.falls = sp.falls.filter(f => f.what !== what);  // a new hold or release ends a fall it began
       if (!on && was) {
+        if (a.lay) (was.o.userData.restQ ??= was.o.quaternion.clone(), was.o.quaternion.copy(layQ(a.lay)).premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), THREE.MathUtils.degToRad(a.rot || 0))));  // V25: set down lying (hold act "lay", "rot" about z): turned before it falls, so its box is the flat one
         sp.placed[what] = was.pose ? was.o.getWorldPosition(new THREE.Vector3()) : inHandAt(was, new THREE.Vector3());  // let go: it stays where the hand had it, for a fly on from there
-        if (a.fall ?? !!was.pose) { const dy = dropOf(was.o, sp.root); if (dy > 1e-4) sp.falls.push({ what, from: sp.placed[what].clone(), dy, t0: performance.now() }); }  // ...or falls to what is under it
+        if (a.fall ?? !!(was.pose || a.lay)) { const dy = dropOf(was.o, sp.root); if (dy > 1e-4) sp.falls.push({ what, from: sp.placed[what].clone(), dy, t0: performance.now() }); }  // ...or falls to what is under it
       }
       sp.held = sp.held.filter(h => h.what !== what);
       const o = propIn(sp, what), bone = ch.model.getObjectByName(`${hand || "right"}Hand`);
@@ -253,9 +449,13 @@ const load = id => spreads[id] ??= (async () => {
     const one = sp.group.getObjectByName(n), parts = one ? [one] : [`${n}-1`, `${n}1`].map(h => sp.root.getObjectByName(h)).filter(Boolean);
     if (!sp.byName[n]) parts.forEach(o => sp.props.set(o, () => wiggle(n, parts)));
   }
-  for (const o of sp.play.targets) if (!sp.byName[o.name] && !sp.props.has(o)) sp.props.set(o, () => wiggle(o.name, [o]));  // a game target that is only a page piece answers as a thing before its line and once won (pick() gives the game its own handler while it takes taps)
+  targetProps(sp);
   return sp;
 })();
+
+function targetProps(sp) {
+  for (const o of sp.play.targets) if (!sp.byName[o.name] && !sp.props.has(o)) sp.props.set(o, () => wiggle(o.name, [o]));  // a game target that is only a page piece answers as a thing before its line and once won (pick() gives the game its own handler while it takes taps)
+}
 
 function topOf(o) {  // the point on top of an object, straight above its middle: what a climber stands on
   if (!o) return null;
@@ -275,8 +475,12 @@ const exitOf = sp => sp.exit ??= sp.stub ? Promise.resolve(null) : glb(`${dirOf(
   return { root, show, leaf, n: (sp.m.exit_frames || 73) - 1, corner: leaf.worldToLocal(new THREE.Vector3(b.max.x, b.max.y, b.max.z)) };
 }).catch(e => (console.warn("no exit turn for", sp.id, e), null));
 
+function lateArm(sp, k) {  // V24: a game target that is an extra (a frog, a fish) is built after the game: look again until it is there, then set the game up again
+  sp.lazy = setTimeout(() => { if (sp.play.begun || !sp.play.missing.length || k > 80) return; if (sp.play.missing.some(n => !sp.group.getObjectByName(n))) return lateArm(sp, k + 1); arm(sp); targetProps(sp); }, 250);
+}
+
 function arm(sp) {  // the page's game, fresh (games.js: collect, order, shadow, echo)
-  sp.play = makeGame(sp, gameEnv(sp)); if (sp.G.type !== "listen") { const t0 = sp.play.tap; sp.play.tap = i => { const r = t0(i); S.acting.tap(sp.play.targets[i].name); return r; }; }  // a game tap also runs the page's "tap:<name>" acts (the shy plant folds in the game); not a listen game's: before and after it its tap is the speaker's own poke(), which has run them already (twice a tap, so an "nth" would count by two)
+  clearTimeout(sp.lazy); sp.play = makeGame(sp, gameEnv(sp)); if (sp.play.missing.length) lateArm(sp, 0); if (sp.G.type !== "listen") { const t0 = sp.play.tap; sp.play.tap = i => { const r = t0(i); S.acting.tap(sp.play.targets[i].name); return r; }; }  // a game tap also runs the page's "tap:<name>" acts (the shy plant folds in the game); not a listen game's: before and after it its tap is the speaker's own poke(), which has run them already (twice a tap, so an "nth" would count by two)
   if (sp.play.repeat) { const r0 = sp.play.repeat; sp.play.repeat = i => (r0(i), S.acting.tap(sp.play.targets[i].name)); }  // a counted thing tapped again still plays its own tap acts (the shy plant folds again); only where the game answers a second tap at all (collect)
   Object.assign(sp, { promptEnd: 0, skip: false });  // auto play: when the prompt ended, whether the story moved on past the game
   // what a tap reaches, in order: a target it hits exactly, a character, a target near the fingertip, then a touch thing,
@@ -333,6 +537,7 @@ async function character(c, sp) {
     a.traverse(o => o.isMesh && (o.castShadow = o.receiveShadow = true, o.frustumCulled = false));
     model.add(a); model.updateMatrixWorld(true); b.attach(a);
   }
+  if (c.cloth) ch.cloth = await (await import("./cloth3d.js")).dress(model, c.cloth);  // spread.json "cloth": [garments] (cloth3d.js): a robe in code on a fitted body; before the first mixer update, it lays out on the loaded T-pose
   if (ch.first) loop(ch, ch.hold);
   if (c.candle) {  // spread.json "candle": a flame on top, "dark": not lit yet (a collect game in "light" mode lights "<name>-flame")
     const flame = new THREE.Mesh(new THREE.SphereGeometry(size.y * 0.09, 16, 12).scale(1, 1.9, 1), new THREE.MeshStandardMaterial({
@@ -418,13 +623,13 @@ const sfxHook = (() => {
   const named = n => sp.cast.find(c => c.name === n)?.body ?? sp.root.getObjectByName(n);
   const flat = a => { const p = B(a); p.y = Math.max(p.y, surf(p.x, p.z)); return p; };
   const play = (e, who) => {
-    const o = { level: e.level, secs: e.secs, until: e.until, every: e.every, tint: e.tint, radius: e.radius, width: e.width, height: e.height, from: e.from, area: e.area, size: e.size, light: e.light };
+    const o = { level: e.level, secs: e.secs, until: e.until, every: e.every, tint: e.tint, radius: e.radius, width: e.width, height: e.height, from: e.from, area: e.area, size: e.size, light: e.light, hand: e.hand };
     const sub = who ?? named(e.what), type = e.type ?? e.kind;
     if (sub) { const w = sub.getWorldPosition(new THREE.Vector3()); o.follow = sub; o.at = w; o.waterY = surf(w.x, w.z); o.size ??= sp.cast.find(c => c.body === sub)?.height; }
     else if (e.at) { o.at = flat(e.at); o.waterY = surf(o.at.x, o.at.z); }
     if (type === "bubbles" && o.at) for (const c of sp.cast) { const b = new THREE.Box3().setFromObject(c.body).expandByScalar(.02);  // bubbles start clear of a body, never inside one
       if (o.at.x > b.min.x && o.at.x < b.max.x && o.at.z > b.min.z && o.at.z < b.max.z && o.at.y < b.max.y) o.at.x = o.at.x - b.min.x < b.max.x - o.at.x ? b.min.x - .03 : b.max.x + .03; }
-    if (e.dir) o.dir = B(e.dir); if (e.toward) o.toward = B(e.toward);
+    if (e.dir) o.dir = B(e.dir); if (e.toward) o.toward = B(e.toward); if (e.to && e.type === "trace") o.to = B(e.to);  // trace: its end is "to" or "toward"
     if (e.shed) o.shed = named(e.shed) ?? B(e.shed);
     if (e.spots) o.spots = e.spots.map(s => ({ at: flat(Array.isArray(s) ? s : s.at), level: s.level }));
     if (e.card) o.card = tex[e.card] ??= Object.assign(new THREE.TextureLoader().load(`./cards/${e.card}.webp`), { colorSpace: THREE.SRGBColorSpace });
@@ -498,7 +703,7 @@ function drop(sp) {
     for (const m of [].concat(o.material ?? [])) { Object.values(m).forEach(v => v?.isTexture && v.dispose()); m.dispose(); }
   });
   sp.exit?.then(ex => ex && gone(ex.root));
-  gone(sp.root); sp.stage.traverse(o => (o.shadow?.map?.depthTexture?.dispose(), o.shadow?.map?.dispose()));  // a shadow map's depth texture is its own: 22 MB a spread stayed on the GPU
+  gone(sp.root); sp.surround && gone(sp.surround.mesh); sp.stage.traverse(o => (o.shadow?.map?.depthTexture?.dispose(), o.shadow?.map?.dispose()));  // a shadow map's depth texture is its own: 22 MB a spread stayed on the GPU
   sp.mixer.stopAllAction(); sp.mixer.uncacheRoot(sp.root);
 }
 function showExit(ex) {  // the exit turn is its own scene: it stands in for the spread while a page turns away
@@ -659,7 +864,11 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
   $("bar").classList.add("on");
   for (; i < lines.length; i++) {
     sp.at = i;
-    if (lines[i] === sp.G.before && !sp.play.complete && !sp.skip) return prompt(sp, run);  // book.json "game": {"before": "1.4"}: read on once it is won
+    if (lines[i] === sp.G.before && !sp.play.complete && !sp.skip) {  // book.json "game": {"before": "1.4"}: read on once it is won
+      if (!skips()) return prompt(sp, run);
+      if ((await Promise.race([skip(sp), sleep(PACE.walk)]), run !== runs)) return;  // Auto and Reading Mode: its win set quietly where it would be played (Mali hops the stones), then the story reads on
+    }
+    if (rm.on && !(await rm.next(sp, i, () => run === runs && sp === S))) return;  // Reading Mode: the line's words wait for the reader's "next", then it is acted
     const t0 = performance.now();
     const next = lines[i + 1] ?? (sp.G.before ? null : sp.G.voice?.start);  // the next line's voice (after the last, the game's), in the cache first
     if (text[next]) fetch(`${voice}${next}.m4a`).catch(() => {});
@@ -669,7 +878,7 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
     if (rest > 0 && (await sleep(rest), run !== runs)) return;  // no voice (a missing or refused file): the line still takes its time
     while (sp.acting.busy(lines[i])) if ((await sleep(100), run !== runs)) return;  // an act with "wait" finishes first
     if (au.on) for (const t0 = performance.now(); sp.cast.some(c => c.goal) && performance.now() - t0 < PACE.walk;) if ((await sleep(100), run !== runs)) return;  // Auto: a character still walking arrives first, then the hold
-    const game = sp.play.targets.length && !sp.play.complete && (lines[i + 1] === sp.G.before || (!sp.G.before && i === lines.length - 1));
+    const game = !skips() && sp.play.targets.length && !sp.play.complete && (lines[i + 1] === sp.G.before || (!sp.G.before && i === lines.length - 1));
     const glide = game ? gameView(true) : 0;  // the game's view glides in during the pause, so the prompt starts on it
     if ((await sleep(Math.max(au.on && (game || i < lines.length - 1) ? PACE.hold : 450, glide)), run !== runs)) return;  // Auto: the calm hold between lines (the last line's wait is the turn's own)
     if (game && sp.m.camera?.story) for (let t0 = performance.now(), was = null, n = 0; n < 2 && performance.now() - t0 < 3000;) {  // a story-camera page: the director flies to the game's view after the line (its own shot played to the end, at the speed caps), and the prompt starts once the camera itself has landed (under 4 cm/s for 0.2 s), or after 3 s with the targets gliding into frame as it speaks (the orchestrator, turn 8: no 8 s silence; the corner glow's own slide kept it waiting 8 s)
@@ -678,7 +887,14 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
     }
   }
   sp.at = lines.length; hint.pulse = performance.now();  // read: the corners glow once to say "turn me"
-  if (!sp.play.complete && !sp.skip) prompt(sp, run);
+  if (!sp.play.complete && !sp.skip) skips() ? skip(sp) : prompt(sp, run);
+}
+const skips = () => au.on || rm.on;  // Auto and Reading Mode skip the games (Eddie 2026-11-18: "Sometimes the kids had been playing it once already")
+function skip(sp) { ahead(sp); return sp.play.settle(); }  // no prompt, no praise: games.js settle() sets what winning sets, quietly (a promise while what it moves is on its way)
+function skipNow() {  // Auto or Reading Mode switched on while a game is being played: it is left there, settled, and the story reads on
+  const sp = S; if (!sp?.play.begun || sp.play.complete || !skips()) return;
+  sp.play.stop?.(); skip(sp); gameView(false); say(""); count("");
+  if (sp.at < sp.page.lines.length) readFrom(sp.at);
 }
 // a game's prompt: spoken through the Reader, so it has subtitles and the read-along, when book.json names its voice
 // ("voice": {"start": "game.1.start", "praise": "game.1.praise"}); otherwise the English line on the page
@@ -692,6 +908,7 @@ async function prompt(sp, run) {
     ahead(sp);  // the game starts, its voice already asked for: the next spread may come now
     await said;
   } else { say(G.start ?? "Find them all! Tap each one to pick it."); ahead(sp); }
+  if (skips()) return void (skip(sp), sp === S && sp.at < sp.page.lines.length && readFrom(sp.at));  // Auto or Reading Mode came on while it was asked for
   if (sp === S) play.begun ? play.resume() : play.begin();  // then the game begins (the bells play their tune, the first stone glows); back again: it picks up
   sp.promptEnd = performance.now();
 }
@@ -742,7 +959,7 @@ function place(ch, dt, now) {  // ch.pos / ch.yaw: the manifest's place, then wh
     body.rotation.set(0.04 * Math.sin(2 * frame * tau + ch.ph) + ch.nod, ch.yaw + 0.05 * Math.sin(w), -0.05 * Math.sin(w + 1), "YZX");
   } else body.rotation.set(ch.nod, ch.yaw, 0, "YXZ");
   body.position.copy(p);
-  ch.mix.update(dt);
+  ch.mix.update(dt); ch.cloth?.update(dt);
 }
 
 // ---------- taps: characters react and speak, targets are picked, touch things wiggle ----------
@@ -1019,7 +1236,8 @@ const gameEnv = sp => ({ THREE, renderer, cam, now: () => performance.now(), say
   act: a => new Promise(done => {  // an act played now, outside the story's list: resolves when it is done
     const act = { ...a, state: "wait" };
     sp.acting.start(act);
-    const t = setInterval(() => act.state === "done" && (clearInterval(t), done()), 50);
+    const poll = () => act.state === "done" ? done() : setTimeout(poll, 50);  // setTimeout, not setInterval: the probes' fake clock drives timeouts only, so an interval ran on real time and a game flight read as seconds of nothing
+    poll();
   }),
   hold: (ch, what, hand, on) => sp.acting.hold(ch, what, hand, on), holding: what => sp.held.some(h => h.what === what),
   place: (what, at) => (at ? (sp.placed[what] = at.clone()) : delete sp.placed[what]), where: (to, top) => sp.where(to, top),
@@ -1027,8 +1245,10 @@ const gameEnv = sp => ({ THREE, renderer, cam, now: () => performance.now(), say
     speak.src = `${voice}${id}.m4a`; speak.play().catch(() => {}); },
   line: id => text[id], keyLight: sp.key, ctx: snd.ctx, muted: () => snd.muted });
 
-function props(root, list = []) {  // stand-in shapes for props not built yet (spread.json "props"): disc, box or ball
-  for (const p of list) {  // {name, shape, at: the bottom centre, size: number or [x, y, z], color, glow, rot}
+async function props(root, list = []) {  // spread.json "props": a row with a recipe is built in code (props3d.js); the rest are stand-in shapes for props not built yet: disc, box or ball
+  const code = p => p.recipe || p.parts;
+  const built = await Promise.all(list.filter(code).map(codeProp)); if (built.length) root.add(...built);  // their pictures load side by side; add() with nothing logs a three.js error on every page without code props
+  for (const p of list.filter(p => !code(p))) {  // {name, shape, at: the bottom centre, size: number or [x, y, z], color, glow, rot}
     const [w, d, h] = typeof p.size === "number" ? [p.size, p.size, p.size] : p.size ?? [0.1, 0.1, 0.1];
     const geo = p.shape === "ball" ? new THREE.SphereGeometry(w / 2, 24, 16).translate(0, w / 2, 0)
       : p.shape === "disc" ? new THREE.CylinderGeometry(w / 2, w / 2, h, 32).translate(0, h / 2, 0) : new THREE.BoxGeometry(w, h, d).translate(0, h / 2, 0);
@@ -1135,7 +1355,7 @@ const cue = { key: "", since: 0, still: 0, shown: false, lang: null, dy: 0 };
 $("title").textContent = book.title ?? "";
 function showCue(now) {
   $("title").hidden = !(PHONE && mode === "closed" && order(S) === 0 && book.title);  // an upright phone waits at the reading view, which shows one page: the book's title on the desk above it until the page turns
-  const sp = S, n = sp?.page.lines.length ?? 0, g = sp?.play.targets.length ? 1 : 0, open = mode === "open" && !exitOn && n > 0;
+  const sp = S, n = sp?.page.lines.length ?? 0, g = sp?.play.targets.length && !skips() ? 1 : 0, open = mode === "open" && !exitOn && n > 0;
   const done = open && sp.at >= n && (!g || sp.play.complete) && !(arrival3 && (arrival3.active || arrival3.locked));  // every line read, the game won: the end of the page
   const k = open ? `${sp.id}|${n + g}|${sp.at}|${g && sp.play.complete}|${done}` : "";
   if (k !== cue.key) {  // the dots: one a line (and one for the game), filled once read, the one being read breathing
@@ -1197,8 +1417,10 @@ const autoBtn = $("auto"), au = { on: false, t: 0, mode: "", fired: "", n: 0, hu
 document.head.insertAdjacentHTML("beforeend", "<style>.autopress { scale: .92 !important; filter: brightness(1.12); animation: none !important; }</style>");  // a button Auto presses looks pressed
 try { au.on = (q.get("auto") ?? localStorage.getItem("popup-auto")) === "1"; } catch { au.on = q.get("auto") === "1"; }
 const showAuto = () => autoBtn.setAttribute("aria-pressed", au.on);
-autoBtn.onclick = () => { au.on = !au.on; au.t = 0; $("next").classList.remove("autopress"); showAuto(); try { localStorage.setItem("popup-auto", au.on ? "1" : "0"); } catch { /* not remembered */ } };
+autoBtn.onclick = () => { au.on = !au.on; au.t = 0; $("next").classList.remove("autopress"); showAuto(); try { localStorage.setItem("popup-auto", au.on ? "1" : "0"); } catch { /* not remembered */ } if (au.on) rm.off(), skipNow(); };
 showAuto();
+const rm = makeReadMode({ reader, live: () => ({ sp: S, mode }), lang: () => lang, turn: () => turn(true, true),  // Reading Mode (readmode.js): Auto, Read or neither
+  changed: on => { if (on && au.on) autoBtn.click(); if (on) skipNow(); } });
 function autoTick(now) {
   const sp = S, n = sp.page.lines.length, key = `${sp.id}|${mode}`;
   if (mode !== au.mode) Object.assign(au, { mode, fired: "", t: 0 });  // a new mode (also a turn that fell back): the wait starts again
@@ -1277,7 +1499,7 @@ const up = e => {
   if (drag?.live && !drag.isAuto) fling();
 };
 canvas.addEventListener("pointerup", up); canvas.addEventListener("pointercancel", up);
-addEventListener("keydown", e => { if (e.key === "ArrowRight") turn(true, true); if (e.key === "ArrowLeft") turn(false, true); });
+addEventListener("keydown", e => { if (rm.key(e)) return; if (e.key === "ArrowRight") turn(true, true); if (e.key === "ArrowLeft") turn(false, true); });
 
 const controls = new OrbitControls(cam, canvas);
 Object.assign(controls, { enableDamping: true, dampingFactor: 0.08, enablePan: false, minPolarAngle: rad(20), maxPolarAngle: rad(80),
@@ -1521,7 +1743,7 @@ renderer.setAnimationLoop(now => {
   if (arrival3 && !arrival3.finished) {  // the arrival draws first (even before the spread has loaded), then hands over
     arrival3.frame(now); document.documentElement.classList.toggle("arriving", arrival3.active || arrival3.locked);  // the open body and the page's own marks wait for the hand-over
     if (arrival3.rendered && veil) { const v = veil; v.style.opacity = 0; setTimeout(() => v.remove(), 300); veil = null; }
-    if (arrival3.active) { drawArrival(!!S); return; }  // before the spread is up, the plain renderer (no bloom, no multisampled buffers): the arrival must not slow its loading
+    if (arrival3.active) { if (S) lightWall(S, true); drawArrival(!!S); return; }  // before the spread is up, the plain renderer (no bloom, no multisampled buffers): the arrival must not slow its loading
   }
   if (!S) return;
   autoTick(now);
@@ -1569,7 +1791,7 @@ renderer.setAnimationLoop(now => {
   const gp = S.play, gl = (S.G.before ? S.page.lines.indexOf(S.G.before) : S.page.lines.length) - 1;  // the game's view is set 2.4 s before the line before it ends (a glide of 1 s, so it is in place before the prompt; earlier and the director, which reads the glide as a reader's hand, returns to the line's shot 4 s later): the director takes its game shot from the viewer's view that same frame (ambient.js play()), so a view set later is one it never goes to
   if (mode === "open" && gp.targets.length && !gp.complete) for (const o of gp.targets) { const p = o.getWorldPosition(new THREE.Vector3()), r = (gp.reach ??= new Map()).get(o); r ? r.expandByPoint(p) : gp.reach.set(o, new THREE.Box3(p.clone(), p.clone())); }  // how far each target goes, for the frame
   if (gp.begun && !gp.complete && gp.gi != null && gp.state?.i !== gp.gi && gp.state.i < gp.targets.length && S.G.type === "steer" && innerWidth < 600 && innerWidth < innerHeight) gameView(true, true);  // the next hazard: its own view
-  if (gp.targets.length && !gp.begun && !gp.complete && !gp.gv && mode === "open" && gl >= 0 && reader.id === S.page.lines[gl] && (timing[reader.id]?.duration ?? 2) - reader.audio.currentTime <= 2.4) gameView(true), gp.gv = true;
+  if (gp.targets.length && !gp.begun && !gp.complete && !gp.gv && !skips() && mode === "open" && gl >= 0 && reader.id === S.page.lines[gl] && (timing[reader.id]?.duration ?? 2) - reader.audio.currentTime <= 2.4) gameView(true), gp.gv = true;
   hooks.forEach(h => h.frame?.(dt, now));
   if (homing && !homing(now)) homing = null;
   controls.update();
@@ -1589,6 +1811,7 @@ renderer.setAnimationLoop(now => {
   }
   showHint(now); dimReading(now);
   for (const [o, flat, turn] of S.turning ?? []) if (o.castShadow === (mode === "open")) { o.castShadow = mode !== "open"; o.material = mode === "open" ? flat : turn; }
+  lightWall(S);
   renderer.shadowMap.needsUpdate = !(innerWidth < 600 && (frame_n++ & 1));  // the shadows are redrawn every frame on a big screen and every second frame on a phone (30 Hz is not seen under a drifting camera)
   composer.render();
   for (const [o, p, q, sc] of undo.splice(0).reverse()) { o.position.copy(p); o.quaternion.copy(q); o.scale.copy(sc); }
@@ -1597,5 +1820,5 @@ enter(await load(first), "closed"); spreadReady = true; lift(); notice.open();
 canvas.focus();
 window.live = { get sfx() { return sfxHook.fx; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
   get auto() { return au; }, get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
-  get acting() { return S.acting; }, get game() { return S.play; }, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
+  get acting() { return S.acting; }, get game() { return S.play; }, get skipGames() { return skips(); }, readMode: rm, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
   halt: () => (homing = null, true) };  // the director takes the camera from the glide home (ambient.js, a spread turned to)

@@ -8,14 +8,14 @@
    "pitch": 0
   },
   "pagong": {
-   "voice": "bm_george",
-   "speed": 0.88,
-   "pitch": 2
+   "voice": "bm_lewis",
+   "speed": 0.86,
+   "pitch": -2
   },
   "matsing": {
-   "voice": "bm_george",
-   "speed": 1.14,
-   "pitch": 7
+   "voice": "bm_fable",
+   "speed": 1.1,
+   "pitch": 4
   },
   "closing": {
    "voice": "bm_george",
@@ -155,7 +155,7 @@
  },
  "respell": {
   "Pagong": "Pah-gong",
-  "Matsing": "Maht-sing"
+  "Matsing": "Mat-sing"
  },
  "spreads": [
   {
@@ -178,7 +178,7 @@
      "say": [
       [
        "narrator",
-       "Under the big narra tree sat two friends: Pah-gong the turtle and Maht-sing the monkey."
+       "Under the big narra tree sat two friends: Pah-gong the turtle and Mat-sing the monkey."
       ]
      ]
     },
@@ -188,7 +188,7 @@
      "say": [
       [
        "narrator",
-       "Then Maht-sing saw something in the water."
+       "Then Mat-sing saw something in the water."
       ],
       [
        "matsing",
@@ -206,7 +206,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing."
+       "said Mat-sing."
       ],
       [
        "matsing",
@@ -216,11 +216,11 @@
     },
     {
      "id": "1.5",
-     "text": "So Pagong swam out, splish, splash! She pulled the banana plant to the bank.",
+     "text": "So Pagong swam out, splish, splash! He pulled the banana plant to the bank.",
      "say": [
       [
        "narrator",
-       "So Pah-gong swam out, splish, splash! She pulled the banana plant to the bank."
+       "So Pah-gong swam out, splish, splash! He pulled the banana plant to the bank."
       ]
      ]
     }
@@ -240,7 +240,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing."
+       "said Mat-sing."
       ],
       [
        "matsing",
@@ -268,13 +268,13 @@
       ],
       [
        "narrator",
-       "said Maht-sing. And he grabbed it."
+       "said Mat-sing. And he grabbed it."
       ]
      ]
     },
     {
      "id": "2.4",
-     "text": "\"Then I will take the roots,\" said Pagong. She smiled. She knew a secret about roots.",
+     "text": "\"Then I will take the roots,\" said Pagong. He smiled. He knew a secret about roots.",
      "say": [
       [
        "pagong",
@@ -282,7 +282,7 @@
       ],
       [
        "narrator",
-       "said Pah-gong. She smiled. She knew a secret about roots."
+       "said Pah-gong. He smiled. He knew a secret about roots."
       ]
      ]
     },
@@ -292,7 +292,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing laughed."
+       "Mat-sing laughed."
       ],
       [
        "matsing",
@@ -312,7 +312,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing ran up a tall tree."
+       "Mat-sing ran up a tall tree."
       ],
       [
        "matsing",
@@ -332,31 +332,31 @@
     },
     {
      "id": "3.3",
-     "text": "Slowly, slowly, Pagong carried her roots to a sunny place in the woods.",
+     "text": "Slowly, slowly, Pagong carried his roots to a sunny place in the woods.",
      "say": [
       [
        "narrator",
-       "Slowly, slowly, Pah-gong carried her roots to a sunny place in the woods."
+       "Slowly, slowly, Pah-gong carried his roots to a sunny place in the woods."
       ]
      ]
     },
     {
      "id": "3.4",
-     "text": "She dug a hole in the soft brown earth. Dig, dig, dig!",
+     "text": "He dug a hole in the soft brown earth. Dig, dig, dig!",
      "say": [
       [
        "narrator",
-       "She dug a hole in the soft brown earth. Dig, dig, dig!"
+       "He dug a hole in the soft brown earth. Dig, dig, dig!"
       ]
      ]
     },
     {
      "id": "3.5",
-     "text": "She planted the roots, patted the soil, and gave them a drink of water.",
+     "text": "He planted the roots, patted the soil, and gave them a drink of water.",
      "say": [
       [
        "narrator",
-       "She planted the roots, patted the soil, and gave them a drink of water."
+       "He planted the roots, patted the soil, and gave them a drink of water."
       ]
      ]
     }
@@ -382,7 +382,7 @@
      "say": [
       [
        "narrator",
-       "Up in the tree, Maht-sing's top half turned yellow, then brown. It drooped and died."
+       "Up in the tree, Mat-sing's top half turned yellow, then brown. It drooped and died."
       ]
      ]
     },
@@ -446,7 +446,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing came swinging through the trees."
+       "Mat-sing came swinging through the trees."
       ],
       [
        "matsing",
@@ -478,13 +478,13 @@
      "say": [
       [
        "narrator",
-       "Up went Maht-sing. He ate one banana. Then another. And another!"
+       "Up went Mat-sing. He ate one banana. Then another. And another!"
       ]
      ]
     },
     {
      "id": "5.5",
-     "text": "\"Where are mine?\" called Pagong. Down came a banana peel. Flop! Right on her head.",
+     "text": "\"Where are mine?\" called Pagong. Down came a banana peel. Flop! Right on his head.",
      "say": [
       [
        "pagong",
@@ -492,7 +492,7 @@
       ],
       [
        "narrator",
-       "called Pah-gong. Down came a banana peel. Flop! Right on her head."
+       "called Pah-gong. Down came a banana peel. Flop! Right on his head."
       ]
      ]
     }
@@ -508,7 +508,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing ate every banana. He did not keep even one for his friend."
+       "Mat-sing ate every banana. He did not keep even one for his friend."
       ]
      ]
     },
@@ -524,27 +524,27 @@
     },
     {
      "id": "6.3",
-     "text": "Pagong was sad. Then she was cross. Then she had an idea.",
+     "text": "Pagong was sad. Then he was cross. Then he had an idea.",
      "say": [
       [
        "narrator",
-       "Pah-gong was sad. Then she was cross. Then she had an idea."
+       "Pah-gong was sad. Then he was cross. Then he had an idea."
       ]
      ]
     },
     {
      "id": "6.4",
-     "text": "All around the banana plant, she planted makahiya, the shy plant with prickly stems.",
+     "text": "All around the banana plant, he planted makahiya, the shy plant with prickly stems.",
      "say": [
       [
        "narrator",
-       "All around the banana plant, she planted makahiya, the shy plant with prickly stems."
+       "All around the banana plant, he planted makahiya, the shy plant with prickly stems."
       ]
      ]
     },
     {
      "id": "6.5",
-     "text": "\"Crocodile!\" she called. \"Crocodile is coming!\"",
+     "text": "\"Crocodile!\" he called. \"Crocodile is coming!\"",
      "say": [
       [
        "pagong",
@@ -552,7 +552,7 @@
       ],
       [
        "narrator",
-       "she called."
+       "he called."
       ],
       [
        "pagong",
@@ -566,7 +566,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing woke with a jump, slipped, and slid down into the prickles."
+       "Mat-sing woke with a jump, slipped, and slid down into the prickles."
       ],
       [
        "matsing",
@@ -590,17 +590,17 @@
      "say": [
       [
        "narrator",
-       "Maht-sing was angry. That night he looked everywhere for Pah-gong."
+       "Mat-sing was angry. That night he looked everywhere for Pah-gong."
       ]
      ]
     },
     {
      "id": "7.2",
-     "text": "He found her hiding by the farmer's fence, near a wild bush with tiny red fruits.",
+     "text": "He found him hiding by the farmer's fence, near a wild bush with tiny red fruits.",
      "say": [
       [
        "narrator",
-       "He found her hiding by the farmer's fence, near a wild bush with tiny red fruits."
+       "He found him hiding by the farmer's fence, near a wild bush with tiny red fruits."
       ]
      ]
     },
@@ -622,7 +622,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing."
+       "said Mat-sing."
       ]
      ]
     },
@@ -650,7 +650,7 @@
      "say": [
       [
        "narrator",
-       "Pah-gong walked away, slowly, slowly. Maht-sing waited and waited and waited."
+       "Pah-gong walked away, slowly, slowly. Mat-sing waited and waited and waited."
       ]
      ]
     },
@@ -680,11 +680,11 @@
    "lines": [
     {
      "id": "8.1",
-     "text": "In the morning, slow Pagong was only at the gate. Matsing caught her. \"Now I have got you!\"",
+     "text": "In the morning, slow Pagong was only at the gate. Matsing caught him. \"Now I have got you!\"",
      "say": [
       [
        "narrator",
-       "In the morning, slow Pah-gong was only at the gate. Maht-sing caught her."
+       "In the morning, slow Pah-gong was only at the gate. Mat-sing caught him."
       ],
       [
        "matsing",
@@ -702,7 +702,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing."
+       "said Mat-sing."
       ],
       [
        "pagong",
@@ -750,7 +750,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing."
+       "said Mat-sing."
       ]
      ]
     },
@@ -784,7 +784,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing ran to the river with Pah-gong."
+       "Mat-sing ran to the river with Pah-gong."
       ],
       [
        "matsing",
@@ -816,7 +816,7 @@
       ],
       [
        "narrator",
-       "said Maht-sing in a small voice."
+       "said Mat-sing in a small voice."
       ],
       [
        "matsing",
@@ -836,15 +836,15 @@
     },
     {
      "id": "9.5",
-     "text": "\"Thank you, Matsing! The river is my home!\" And away she swam.",
+     "text": "\"Thank you, Matsing! The river is my home!\" And away he swam.",
      "say": [
       [
        "pagong",
-       "Thank you, Maht-sing! The river is my home!"
+       "Thank you, Mat-sing! The river is my home!"
       ],
       [
        "narrator",
-       "And away she swam."
+       "And away he swam."
       ]
      ]
     }
@@ -860,17 +860,17 @@
      "say": [
       [
        "narrator",
-       "Maht-sing sat under the big tree. He was hungry, and he had nothing at all."
+       "Mat-sing sat under the big tree. He was hungry, and he had nothing at all."
       ]
      ]
     },
     {
      "id": "10.2",
-     "text": "Later, Pagong came back. In her mouth was a baby banana plant from her own plant, roots and all.",
+     "text": "Later, Pagong came back. In his mouth was a baby banana plant from his own plant, roots and all.",
      "say": [
       [
        "narrator",
-       "Later, Pah-gong came back. In her mouth was a baby banana plant from her own plant, roots and all."
+       "Later, Pah-gong came back. In his mouth was a baby banana plant from his own plant, roots and all."
       ]
      ]
     },
@@ -898,7 +898,7 @@
      "say": [
       [
        "narrator",
-       "Maht-sing looked at the little roots."
+       "Mat-sing looked at the little roots."
       ],
       [
        "matsing",
@@ -952,7 +952,7 @@
    "say": [
     [
      "closing",
-     "Maht-sing grabbed the pretty top, and it died. Pah-gong took the plain roots, and they grew."
+     "Mat-sing grabbed the pretty top, and it died. Pah-gong took the plain roots, and they grew."
     ]
    ]
   },
@@ -962,17 +962,17 @@
    "say": [
     [
      "closing",
-     "Maht-sing kept every banana for himself, and he ended up with nothing."
+     "Mat-sing kept every banana for himself, and he ended up with nothing."
     ]
    ]
   },
   {
    "id": "moral.4",
-   "text": "Pagong was slow, but she was clever. And in the end, she was kind.",
+   "text": "Pagong was slow, but he was clever. And in the end, he was kind.",
    "say": [
     [
      "closing",
-     "Pah-gong was slow, but she was clever. And in the end, she was kind."
+     "Pah-gong was slow, but he was clever. And in the end, he was kind."
     ]
    ]
   },
@@ -1144,7 +1144,7 @@
    "say": [
     [
      "narrator",
-     "A turtle lives in the water. Oh, Maht-sing!"
+     "A turtle lives in the water. Oh, Mat-sing!"
     ]
    ]
   },
@@ -1160,11 +1160,11 @@
   },
   {
    "id": "game.9.praise",
-   "text": "There she is! Pagong loves the water!",
+   "text": "There he is! Pagong loves the water!",
    "say": [
     [
      "narrator",
-     "There she is! Pah-gong loves the water!"
+     "There he is! Pah-gong loves the water!"
     ]
    ]
   },
@@ -1174,7 +1174,7 @@
    "say": [
     [
      "narrator",
-     "Help them share! Tap a banana to give it away: one for Pah-gong, one for Maht-sing."
+     "Help them share! Tap a banana to give it away: one for Pah-gong, one for Mat-sing."
     ]
    ]
   },
@@ -1184,7 +1184,7 @@
    "say": [
     [
      "narrator",
-     "Five for Pah-gong, five for Maht-sing. That's fair!"
+     "Five for Pah-gong, five for Mat-sing. That's fair!"
     ]
    ]
   },

@@ -110,9 +110,12 @@ export function createRotunda(THREE, plan, levels, { phone = false } = {}) {
     slab(R, ri, L.y - .02, { top: false });  // under the floor: one more ring from below
     for (const dy of L.tiers) { slab(R, ri, L.y + dy, { gap: L.gap }); rail(R, ri + .12, L.y + dy, L.gap); }
     const holeF = new Set((L.holes ?? []).map(h => h.f)), LD = T.ladders, tower = R === plan, wallAt = (f, y, o) => at(R, R.facets[f].phi, R.facets[f].a - o, y);  // the ladders and their rails
-    brass(R, L.y + T.rail, f => tower ? f < 4 || f === plan.door : holeF.has(f)); if (tower) L.tiers.forEach(dy => brass(R, L.y + dy + T.rail, () => false));
-    for (const f of tower ? LD.up : []) { const phi = R.facets[f].phi; ladder(0, at(R, phi, ri - .03 - 1.35, L.y), at(R, phi, ri - .03, L.y + T.tiers[0] + .93), phi); }  // up to the first walkway's railing
-    for (const [base, list] of [[L.y, tower ? LD.floor : LD.hall], ...(tower ? L.tiers.map((dy, t) => [L.y + dy, LD.walks[t] ?? []]) : [])]) for (const f of list) { const phi = R.facets[f].phi; ladder(1, wallAt(f, base, .44), wallAt(f, base + T.rail, .09), phi); }
+    // the bays holding cases (grow.js: a level's sets on its floor, its gallery on the first walkway) get no rail, and a ladder planned there moves to the nearest free bay
+    const busy = new Set((L.sets ?? []).flat()), busyW = new Set((L.gallery ?? []).flat()), N = R.facets.length, free = (f, B) => !B.has(f) && !holeF.has(f);
+    const move = (list, B) => list.reduce((out, f) => { for (let d = 0; d < N; d++) for (const c of d ? [f + d, f - d] : [f]) { const h = (c + N) % N; if (free(h, B) && !out.includes(h)) return [...out, h]; } return out; }, []);
+    brass(R, L.y + T.rail, f => tower ? busy.has(f) || holeF.has(f) || (!L.sets && f < 4) : holeF.has(f)); if (tower) L.tiers.forEach((dy, t) => brass(R, L.y + dy + T.rail, f => !t && busyW.has(f)));
+    for (const f of tower ? move(LD.up, busy) : []) { const phi = R.facets[f].phi; ladder(0, at(R, phi, ri - .03 - 1.35, L.y), at(R, phi, ri - .03, L.y + T.tiers[0] + .93), phi); }  // up to the first walkway's railing
+    for (const [base, list] of [[L.y, tower ? move(LD.floor, busy) : LD.hall], ...(tower ? L.tiers.map((dy, t) => [L.y + dy, t ? LD.walks[t] ?? [] : move(LD.walks[t] ?? [], busyW)]) : [])]) for (const f of list) { const phi = R.facets[f].phi; ladder(1, wallAt(f, base, .44), wallAt(f, base + T.rail, .09), phi); }
     if (L.ceil) ceiling(L);
     for (const h of L.holes ?? []) reveal(h);
     ends.push([P.length / 3, corbels.length, bals.length, lads[0].length, lads[1].length]);

@@ -1,0 +1,29 @@
+staff_overhead	60	101	a warrior raises a long staff high above his head with both hands, then brings it smashing straight down in front of him, and recovers to a ready stance
+staff_thrust	48	102	a warrior holding a long staff in both hands at his waist steps forward and thrusts it straight ahead hard, then pulls it back to guard
+staff_spin	72	103	a warrior twirls a long staff in a fast circle beside his body with one hand, then plants it and strikes a proud pose
+vault	60	104	a person runs two steps, leaps high into the air in a forward flip over an obstacle, and lands on both feet on the other side
+crouch_leap	42	105	a person crouches down low, then springs straight up high into the air with both arms swinging up
+air_strike	54	106	a person jumps up and, at the top of the jump, swings a staff down hard with both hands, then lands bent-kneed
+land_crouch	45	107	a person drops from a height and lands hard in a low crouch with one hand touching the ground, then rises to a ready stance
+charge	48	108	a big strong man lowers his head and charges forward like a bull, running hard with his head down and shoulders hunched
+headbutt	42	109	a big man lunges forward and rams his head forward hard in a headbutt, then pulls back
+hit_stagger	48	110	a person is struck hard in the face, his head snaps back and he staggers backwards two steps, then recovers his balance
+knocked_down	48	111	a person is struck hard and knocked off his feet, falling backwards and landing flat on his back on the ground
+fall	36	112	a person falls backwards through the air, arms and legs flailing, out of control
+get_up	72	113	a person lying flat on his back on the ground rolls to one side, pushes up to his knees and stands up, shaking his head
+dizzy	72	114	a person stands dazed and dizzy, wobbling, swaying in small circles and stumbling, about to fall over
+beckon	60	115	a fighter stands tall and beckons the enemy forward, curling the fingers of one raised hand toward himself, come on
+guard	90	116	a warrior stands in a low wide ready stance holding a staff across his body with both hands, shifting his weight, watching his enemy
+bull_guard	90	117	a big strong man stands in a wide low wrestler's stance with fists raised, swaying and stamping, ready to fight
+stomp	60	118	a big angry man stomps his right foot hard on the ground twice, snorting, ready to charge
+yield	72	119	a person stands up straight, lowers his arms and bows his head in defeat
+cheer	60	120	a person raises one fist high in triumph and cheers
+slump	60	121	a person with his back against a wall slides down it and slumps into a sitting position on the ground, dazed
+crouch_leap2	48	205	a person bends the knees deeply into a low squat, then jumps straight up as high as possible, and lands
+dizzy2	72	214	a dizzy person staggers in a small circle, swaying the upper body around and around, arms loose, nearly falling
+get_up2	90	213	a person lying on his back on the ground sits up, gets onto one knee, and stands up straight
+yield2	72	219	a defeated fighter lowers his head and bows deeply forward from the waist, arms hanging, then stays bowed
+stomp2	60	218	a person lifts the right knee high and stamps the foot down hard on the ground, then does it again
+charge2	48	208	a big man runs forward fast, bent forward at the waist with his head lowered like a charging bull
+headbutt2	42	209	a man bends forward at the waist and drives the top of his head forward hard like a ram butting, then straightens up
+headbutt3	42	309	a strong man lowers his head and lunges forward, ramming with his forehead, arms back, then steps back

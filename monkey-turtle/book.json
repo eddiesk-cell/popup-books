@@ -91,7 +91,7 @@
     "targets": ["bubble-1", "bubble-2", "bubble-3", "bubble-4", "bubble-5"],
     "count": "game.9.count",
     "start": "Where is Pagong? Pop the bubbles and count!",
-    "praise": "There she is! Pagong loves the water!",
+    "praise": "There he is! Pagong loves the water!",
     "react": ["One!", "Two!", "Three!", "Four!", "Five!"],
     "voice": {"start": "game.9.start", "praise": "game.9.praise"}
    }

@@ -1,6 +1,6 @@
 // portals.js (L5): an arched doorway in the wall of shelves: a carved walnut frame (one baked relief texture shared by all) with the region's constellation on a medallion and its name on a brass plate,
 // and inside the dark-blue night turning slowly into a space-time swirl that brightens and quickens on hover or focus. Region names come in the six languages; Lao is a DRAFT for the owner's check. books.json may carry its own `names: {en, lo, th, zh, ja, ko}` per region, which wins.
-// the rooms are named for animal constellations (the regions stay internal data): in the order the rooms are made. Lao is a DRAFT for the owner's check.
+// the rooms were named for animal constellations; since 2026-11-18 they are named by THEME (grow.js THEMES) and each keeps a constellation for its medallion and its warp. Lao is a DRAFT for the owner's check.
 import { TextureLoader, SRGBColorSpace } from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { MeshoptDecoder } from "three/addons/meshopt_decoder.module.js";
@@ -50,85 +50,109 @@ const HALL = { en: "Wonder Hall", lo: "ຫໍມະຫັດສະຈັນ", th
 const PLAN = { en: "Wonder plan", lo: "ແພັກເກັດ Wonder", th: "แพ็กเกจ Wonder", zh: "Wonder 方案", ja: "Wonder プラン", ko: "Wonder 요금제" };
 const SOON = { en: "Opening soon", lo: "ເປີດໄວໆນີ້", th: "เร็ว ๆ นี้", zh: "即将开放", ja: "もうすぐ公開", ko: "곧 열려요" };
 const ARCH = [{ en: "Sing Along", lo: "ຮ້ອງເພງນຳກັນ", th: "ร้องเพลงด้วยกัน", zh: "一起唱", ja: "いっしょにうたおう", ko: "함께 노래해요" }, { en: "Dance Along", lo: "ເຕັ້ນລຳນຳກັນ", th: "เต้นด้วยกัน", zh: "一起跳", ja: "いっしょにおどろう", ko: "함께 춤춰요" }, { en: "Mini Games", lo: "ເກມນ້ອຍ", th: "มินิเกม", zh: "迷你游戏", ja: "ミニゲーム", ko: "미니 게임" }];
-const DOORS = { en: "Doors of Mystery", lo: "ປະຕູປິດສະໜາ", th: "ประตูปริศนา", zh: "神秘之门", ja: "ミステリーのとびら", ko: "신비의 문" };
 const MORE = { en: "More games soon", lo: "ມີເກມອີກໄວໆນີ້", th: "เกมอื่นเร็ว ๆ นี้", zh: "更多游戏即将推出", ja: "ほかのゲームも もうすぐ", ko: "다른 게임도 곧 와요" };
 const MEMORY = { en: "Memory", lo: "ເກມຈື່ຈຳ", th: "จับคู่ความจำ", zh: "记忆配对", ja: "しんけいすいじゃく", ko: "기억력 게임" };
-const IMG = new Map(); const pic = url => { let e = IMG.get(url); if (!e) { e = new Image(); e.onload = () => dispatchEvent(new Event("library:plaque")); e.src = new URL(url, import.meta.url).href; IMG.set(url, e); } return e; };
 const conIdx = (id, regions) => Math.max(0, regions.findIndex(q => q.id === id)) % CON.length;
 // the plaque for a door: its constellation, name and (on a back door) the way home
-export const regionPlaque = (link, regions, lang) => { if (link.game === "doors") { pic("../../shelf/books/toad-king/plate.webp"); return { name: DOORS[lang] ?? DOORS.en, sub: MORE[lang] ?? MORE.en, con: 11, img: "../../shelf/books/toad-king/plate.webp" }; }
+// the hall's games arch is the Mini Games arch: it opens the Game Room (web/games, both games; coordinator 2026-11-17), so it says "Mini Games" and no "soon"; the visitor's language goes with it
+export const regionPlaque = (link, regions, lang) => { if (link.game === "doors") return { name: ARCH[2][lang] ?? ARCH[2].en, sub: "", con: 9 };
   if (link.game === "memory") return { name: MEMORY[lang] ?? MEMORY.en, sub: MORE[lang] ?? MORE.en, con: 12 };
   if (link.arch != null) return { name: ARCH[link.arch][lang] ?? ARCH[link.arch].en, sub: SOON[lang] ?? SOON.en, con: 7 + link.arch };
   if (link.to === "wonder" || link.from === "wonder") return { name: HALL[lang] ?? HALL.en, sub: link.from === "wonder" ? BACK[lang] ?? BACK.en : PLAN[lang] ?? PLAN.en, con: 10 };
-  const back = link.to === "home", id = (back ? link.from : link.to).replace(/^r:/, ""), r = regions.find(q => q.id === id), n = conIdx(id, regions);
+  const back = link.to === "home", id = (back ? link.from : link.to).replace(/^r:/, ""), r = regions.find(q => q.id === id), n = r?.con ?? conIdx(id, regions);
+  if (r?.names) return { name: r.name ?? r.names.en, sub: back ? BACK[lang] ?? BACK.en : lang !== "en" ? r.names[lang] ?? "" : "", con: n % STARS.length };  // a theme room (grow.js THEMES): its English name, the visitor's own language small under it (owner: titles stay English)
   return { name: r?.names?.[lang] ?? CON[n][lang] ?? CON[n].en, sub: back ? BACK[lang] ?? BACK.en : "", con: n }; };
 export const regionLabel = (link, regions, lang) => link.to === "home" ? BACK[lang] ?? BACK.en : regionPlaque(link, regions, lang).name;
-const W = 300, H = 680, FONT = '"Cormorant Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif', FONTB = '"EB Garamond", "Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif';
+// THE INSCRIPTIONS (Eddie 2026-11-17: "the word LEO or other words should be inscribe on the portal itself, gold plated ... using fonts similar to our logo"): names are raised gold letters in the logo's
+// face, Cinzel Decorative (self-hosted, loaded here so the library page needs no new link), the small second line in EB Garamond capitals; Lao in Noto Sans Lao, other scripts in their system faces.
+const SCRIPTS = '"Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif', DECO = `"Cinzel Decorative", ${SCRIPTS}`, SMALL = `"EB Garamond", ${SCRIPTS}`;
+const decoFace = new FontFace("Cinzel Decorative", `url("${new URL("../../fonts/cinzel-decorative/CinzelDecorative-Regular.woff2", import.meta.url).href}") format("woff2")`); document.fonts.add(decoFace);
+const decoReady = decoFace.load().then(() => dispatchEvent(new Event("library:plaque")), e => console.warn("portals: Cinzel Decorative failed, the names fall back", e));  // library.js redraws every name on library:plaque
+const W = 300, H = 680;
 
 // the wall doorway (design A): a wide carved walnut arch (44 px each side of a 196 px opening, 22%) with a raised gold-leaf moulding on its inner edge, a gilded vine carved in relief
-// along the field, a beaded outer moulding, a round navy medallion with the region's gold constellation crowning it, and a brass nameplate hung in the top of the opening.
-// The carving is a HEIGHT MAP lit once at load (a baked normal map: light from the upper left, gold gets a highlight), shared by every wall portal; each portal adds only a small badge (medallion + plate).
-const CX = W / 2, AY = 360, RO = 98, RF = 142, E = 24, FOOT = H - 40, LEG = FOOT - AY, S = 2, MY = 196, MR = 42;  // E: the crown is that much deeper than the posts
+// along the field, a beaded outer moulding, a round navy medallion with the region's gold constellation set on the crown, and the door's name inscribed in raised gold round the crown of the arch.
+// The carving is a HEIGHT MAP lit once at load (a baked normal map: light from the upper left, gold gets a highlight), shared by every wall portal; each portal adds only a badge (medallion and inscription).
+const CX = W / 2, AY = 360, RO = 98, RF = 142, E = 24, FOOT = H - 40, LEG = FOOT - AY, S = 2, MY = 148, MR = 42, VR = 120, PZ = .96;  // E: the crown is that much deeper than the posts; VR: the vine's radius; PZ: the inscription's half angle (rad) round the crown
 const archOpen = (x, r, ry = r) => { x.beginPath(); x.moveTo(CX - r, H); x.lineTo(CX - r, AY); x.ellipse(CX, AY, r, ry, 0, Math.PI, 0); x.lineTo(CX + r, H); };
 const band = (x, r, w, st, ry = r) => { archOpen(x, r, ry); x.lineWidth = w; x.strokeStyle = st; x.stroke(); };
 // a point s along the arch at radius r from the left foot: [x, y, tangent angle, outward normal angle]
 const along = (s, r) => { if (s < LEG) return [CX - r, FOOT - s, -Math.PI / 2, Math.PI]; s -= LEG; if (s < Math.PI * r) { const A = Math.PI + s / r; return [CX + r * Math.cos(A), AY + r * Math.sin(A), A + Math.PI / 2, A]; } return [CX + r, AY + s - Math.PI * r, Math.PI / 2, 0]; };
 const leaf = (x, px, py, ang, len, wid, fill) => { x.save(); x.translate(px, py); x.rotate(ang); x.beginPath(); x.moveTo(0, 0); x.quadraticCurveTo(len * .5, -wid, len, 0); x.quadraticCurveTo(len * .5, wid, 0, 0); x.fillStyle = fill; x.fill(); x.restore(); };
 const hc = (h, g = 0) => `rgb(${h},${g ? 255 : 0},0)`;  // height in red, gilded where green
+const TOT = 2 * LEG + Math.PI * VR, SC = LEG + Math.PI * VR / 2;  // the vine's length from the left foot, and the crown
+// the gilded vine between arc lengths a and b: a wavy stem, leaves alternating, fuller towards the crown, a curl every few leaves; `end` (-1 at a, 1 at b) finishes it in a scroll where it meets the inscription
+function vine(x, a, b, end = 0) {
+  if (a >= b) return;
+  for (const [lw, h] of [[3.6, 130], [2, 165]]) { x.strokeStyle = hc(h, 1); x.lineWidth = lw; x.beginPath(); for (let s = a; s <= b; s += 2) { const [px, py, , nA] = along(s, VR), o = 3.6 * Math.sin(s / 8); x[s > a ? "lineTo" : "moveTo"](px + o * Math.cos(nA), py + o * Math.sin(nA)); } x.stroke(); }
+  for (let s = 8, i = 0; s < TOT - 6; s += 14, i++) { if (s < a || s > b) continue; const [px, py, tA, nA] = along(s, VR), sg = i % 2 ? 1 : -1, big = 1.15 - Math.abs(s - TOT / 2) / (TOT / 2) * .35;
+    for (const [k, h] of [[1, 120], [.62, 175]]) { leaf(x, px, py, nA + sg * 1.05, 12 * big * k + 2 * (1 - k), 4.6 * big * k + 1, hc(h, 1)); leaf(x, px, py, tA + sg * .5 + (i % 4 < 2 ? 0 : Math.PI), 8 * big * k + 1, 3 * big * k + .6, hc(h, 1)); }
+    if (i % 3 === 1) { const ox = px + 6 * sg * Math.cos(nA), oy = py + 6 * sg * Math.sin(nA); x.strokeStyle = hc(150, 1); x.lineWidth = 1.6; x.beginPath(); x.arc(ox, oy, 2.6, 0, 5.2); x.stroke(); } }
+  if (end) { const s = end > 0 ? b : a, [px, py, tA, nA] = along(s, VR), o = 3.6 * Math.sin(s / 8), d = tA + (end > 0 ? 0 : Math.PI), sg = -end, R0 = 7, t0 = d - sg * Math.PI / 2;  // the scroll: the stem rolls up outward, the two ends mirrored
+    const cx = px + o * Math.cos(nA) + R0 * Math.cos(d + sg * Math.PI / 2), cy = py + o * Math.sin(nA) + R0 * Math.sin(d + sg * Math.PI / 2);
+    for (const [lw, h] of [[3.2, 135], [1.8, 170]]) { x.strokeStyle = hc(h, 1); x.lineWidth = lw; x.beginPath(); for (let t = 0; t <= 9; t += .2) { const rr = R0 * (1 - t / 11), A = t0 + sg * t; x[t ? "lineTo" : "moveTo"](cx + rr * Math.cos(A), cy + rr * Math.sin(A)); } x.stroke(); } } }
+// light a height map (red: height, green over 128: gilt) pixel by pixel: normal from the height gradient, lambert from the upper left, a hot spot on the gold, darker in the recesses (and on the arch towards the foot).
+// Walnut grain follows the arch, or runs level (flat). gilt: only the gold is kept, its green is its alpha (so letters keep soft edges). ox, oy: where this canvas sits in the frame, in device px.
+function shade(c, { ox = 0, oy = 0, gilt = false, flat = false } = {}) {
+  const w = c.width, h = c.height, src = c.getContext("2d", { willReadFrequently: true }).getImageData(0, 0, w, h).data, img = new ImageData(w, h), o = img.data, Lx = -.45, Ly = -.6, Lz = .66, Hn = Math.hypot(Lx, Ly, Lz + 1), Hx = Lx / Hn, Hy = Ly / Hn, Hz = (Lz + 1) / Hn, K = 1 / 26;
+  for (let py = 1; py < h - 1; py++) for (let px = 1; px < w - 1; px++) { const i = (py * w + px) * 4; if (!src[i + 3] || (gilt && !src[i + 1])) continue;
+    const nx = (src[i - 4] - src[i + 4]) * K, ny = (src[i - 4 * w] - src[i + 4 * w]) * K, inv = 1 / Math.sqrt(nx * nx + ny * ny + 1), dif = Math.max(0, (nx * Lx + ny * Ly + Lz) * inv), u = (px + ox) / S, v = (py + oy) / S;
+    const fall = flat ? 1 : 1.1 - .38 * Math.min(1, Math.max(0, (v - AY) / (H - AY))), ao = .72 + .28 * Math.min(1, src[i] / 190); let r, g, b;
+    if (gilt || src[i + 1] > 128) { const sp = Math.pow(Math.max(0, (nx * Hx + ny * Hy + Hz) * inv), 28) * 1.1, l = (.3 + .85 * dif) * ao * fall; r = 218 * l + 255 * sp; g = 164 * l + 236 * sp; b = 66 * l + 180 * sp; }
+    else { const rho = flat ? v : v >= AY ? Math.abs(u - CX) : Math.hypot(u - CX, v - AY), al = flat ? u * 2 : v >= AY ? v : (Math.atan2(v - AY, u - CX) + 4) * 90, gr = .5 + .5 * Math.sin(rho * 1.7 + 2.4 * Math.sin(al * .043 + rho * .19)), fine = .5 + .5 * Math.sin(rho * 9.1 + Math.sin(al * .21) * 1.3), m = .22 + .55 * gr + .12 * fine, l = (.4 + .9 * dif) * ao * fall;
+      r = (66 + 92 * m) * l; g = (38 + 60 * m) * l; b = (18 + 34 * m) * l; }
+    o[i] = r; o[i + 1] = g; o[i + 2] = b; o[i + 3] = gilt ? src[i + 1] : src[i + 3]; }
+  const t = document.createElement("canvas"); t.width = w; t.height = h; t.getContext("2d").putImageData(img, 0, 0); return t;
+}
 let BASE = null;
-function baseFrame() {  // once per page: draw the height map, then light it pixel by pixel
+function baseFrame() {  // once per page: draw the height map, then light it
   if (BASE) return BASE;
   const c = document.createElement("canvas"); c.width = W * S; c.height = H * S; const x = c.getContext("2d", { willReadFrequently: true }); x.scale(S, S); x.lineJoin = "round";
   const bead = (r, w, h0, h1, g, ry = r) => { for (let k = 0; k * 2 < w; k++) band(x, r, w - 2 * k, hc(Math.round(h0 + (h1 - h0) * Math.sin(Math.min(1, 2 * k / w) * Math.PI / 2)), g), ry); };
   x.fillStyle = hc(75); archOpen(x, RF, RF + E); x.closePath(); x.fill();  // the sunk field, deeper at the crown
   band(x, RF - 1, 3, hc(70), RF + E - 1); bead(RF - 7, 10, 95, 200, 0, RF + E - 7); band(x, RF - 12.5, 2, hc(60), RF + E - 12.5);  // the outer beaded moulding (following the crown) and its step
-  for (const sg of [-1, 1]) for (let k = 0; k < 6; k++) { const A = -Math.PI / 2 + sg * (.42 + k * .17), rr = 134 + 8 * Math.cos(k * .6), px = CX + rr * Math.cos(A), py = AY + (rr + 10 * Math.max(0, 1 - k / 5)) * Math.sin(A); for (const [f, h] of [[1, 125], [.6, 180]]) leaf(x, px, py, A + sg * (Math.PI / 2 + .25), (15 - k) * f + 2, (5.5 - k * .5) * f + .8, hc(h, 1)); }  // gilt leaf sprays either side of the medallion
-  const TOT = 2 * LEG + Math.PI * 120, VR = 120;  // the gilded vine: a wavy stem, leaves alternating, fuller towards the crown, a curl every few leaves
-  for (const [lw, h] of [[3.6, 130], [2, 165]]) { x.strokeStyle = hc(h, 1); x.lineWidth = lw; x.beginPath(); for (let s = 0; s <= TOT; s += 2) { const [px, py, , nA] = along(s, VR), o = 3.6 * Math.sin(s / 8); x[s ? "lineTo" : "moveTo"](px + o * Math.cos(nA), py + o * Math.sin(nA)); } x.stroke(); }
-  for (let s = 8, i = 0; s < TOT - 6; s += 14, i++) { const [px, py, tA, nA] = along(s, VR), sg = i % 2 ? 1 : -1, big = 1.15 - Math.abs(s - TOT / 2) / (TOT / 2) * .35;
-    for (const [k, h] of [[1, 120], [.62, 175]]) { leaf(x, px, py, nA + sg * 1.05, 12 * big * k + 2 * (1 - k), 4.6 * big * k + 1, hc(h, 1)); leaf(x, px, py, tA + sg * .5 + (i % 4 < 2 ? 0 : Math.PI), 8 * big * k + 1, 3 * big * k + .6, hc(h, 1)); }
-    if (i % 3 === 1) { const ox = px + 6 * sg * Math.cos(nA), oy = py + 6 * sg * Math.sin(nA); x.strokeStyle = hc(150, 1); x.lineWidth = 1.6; x.beginPath(); x.arc(ox, oy, 2.6, 0, 5.2); x.stroke(); } }
+  vine(x, 0, SC - PZ * VR); vine(x, SC + PZ * VR, TOT);  // round the crown the field is left plain: each portal's badge carves its name there and brings the vine up to it
   band(x, 109.5, 3, hc(55)); bead(103.5, 10, 105, 215, 1); band(x, RO + .6, 1.6, hc(70, 1));  // the raised gold-leaf moulding on the inner edge, a shadowed step behind it
   for (const sx of [-1, 1]) { const x0 = sx < 0 ? CX - RF - 4 : CX + RO - 4, w = RF - RO + 8; for (let k = 0; k < 6; k++) { x.fillStyle = hc(90 + k * 14, k === 1); x.fillRect(x0 + k, FOOT + k, w - 2 * k, H - FOOT - k); } }  // the plinths, a gilt edge
-  // the crown medallion: a carved wooden ring, a gilt bezel, a wreath of gilt leaves (the navy centre and its stars come with each portal's badge)
+  // the crown medallion, set on the top of the arch like a crest: a carved wooden ring, a gilt bezel, a wreath of gilt leaves (the navy centre and its stars come with each portal's badge)
   for (let k = 0; k < 6; k++) { x.fillStyle = hc(100 + k * 12); x.beginPath(); x.arc(CX, MY, MR + 17 - k, 0, 7); x.fill(); }
   for (let k = 0; k < 16; k++) { const A = k * Math.PI / 8; for (const [s, h] of [[1, 150], [.6, 190]]) leaf(x, CX + (MR + 5) * Math.cos(A), MY + (MR + 5) * Math.sin(A), A + .55, 10 * s + 2, 3.8 * s + .6, hc(h, 1)); }
   for (let k = 0; k < 4; k++) { x.strokeStyle = hc(130 + k * 30, 1); x.lineWidth = 6 - k * 1.4; x.beginPath(); x.arc(CX, MY, MR + 1, 0, 7); x.stroke(); }
   x.globalCompositeOperation = "destination-out"; x.fillStyle = "#000"; archOpen(x, RO); x.closePath(); x.fill(); x.globalCompositeOperation = "source-over";
-  // light it: normal from the height gradient, lambert from the upper left, a hot spot on the gold, darker in the recesses and towards the foot; walnut grain follows the arch
-  const w = c.width, h = c.height, src = x.getImageData(0, 0, w, h).data, img = new ImageData(w, h), o = img.data, Lx = -.45, Ly = -.6, Lz = .66, Hn = Math.hypot(Lx, Ly, Lz + 1), Hx = Lx / Hn, Hy = Ly / Hn, Hz = (Lz + 1) / Hn, K = 1 / 26;
-  for (let py = 1; py < h - 1; py++) for (let px = 1; px < w - 1; px++) { const i = (py * w + px) * 4; if (!src[i + 3]) continue;
-    const nx = (src[i - 4] - src[i + 4]) * K, ny = (src[i - 4 * w] - src[i + 4 * w]) * K, inv = 1 / Math.sqrt(nx * nx + ny * ny + 1), dif = Math.max(0, (nx * Lx + ny * Ly + Lz) * inv), u = px / S, v = py / S;
-    const fall = 1.1 - .38 * Math.min(1, Math.max(0, (v - AY) / (H - AY))), ao = .72 + .28 * Math.min(1, src[i] / 190); let r, g, b;
-    if (src[i + 1] > 128) { const sp = Math.pow(Math.max(0, (nx * Hx + ny * Hy + Hz) * inv), 28) * 1.1, l = (.3 + .85 * dif) * ao * fall; r = 218 * l + 255 * sp; g = 164 * l + 236 * sp; b = 66 * l + 180 * sp; }
-    else { const rho = v >= AY ? Math.abs(u - CX) : Math.hypot(u - CX, v - AY), al = v >= AY ? v : (Math.atan2(v - AY, u - CX) + 4) * 90, gr = .5 + .5 * Math.sin(rho * 1.7 + 2.4 * Math.sin(al * .043 + rho * .19)), fine = .5 + .5 * Math.sin(rho * 9.1 + Math.sin(al * .21) * 1.3), m = .22 + .55 * gr + .12 * fine, l = (.4 + .9 * dif) * ao * fall;
-      r = (66 + 92 * m) * l; g = (38 + 60 * m) * l; b = (18 + 34 * m) * l; }
-    o[i] = r; o[i + 1] = g; o[i + 2] = b; o[i + 3] = src[i + 3]; }
-  x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, w, h); const t = document.createElement("canvas"); t.width = w; t.height = h; t.getContext("2d").putImageData(img, 0, 0);
+  const t = shade(c); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, c.width, c.height);
   x.shadowColor = "rgba(8,3,0,.7)"; x.shadowBlur = 9 * S; x.shadowOffsetY = 2 * S; x.drawImage(t, 0, 0);  // its shadow: on the wall outside, into the reveal inside
   return BASE = c;
 }
-// each portal's badge: the medallion's navy centre with its constellation, and the brass nameplate (a 160 x 204 window of the frame, from BX, BY)
-const BX = CX - 80, BY = MY - 60, BW = 160, BH = 204;
+// raised gold letters: a bevel of strokes rising to the face (widths and heights), then the face; the lighting turns it into gold plate with lit and shaded edges
+const BEVEL = [[3.2, 118], [2.4, 148], [1.6, 172], [.8, 194]], FACE = 212;
+const graphemes = t => [...new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(t)].map(q => q.segment);  // a Lao or Thai letter keeps its vowel and tone marks
+// a line of text set round the crown at radius r: the largest size (from fs down) whose ink is at most hMax tall and whose length fits the arc 2 * phi
+function arcFit(x, t, face, fs, hMax, r, phi, track = 0) {
+  const gs = graphemes(t);
+  for (; ; fs *= .94) { x.font = `${fs}px ${face}`; const m = x.measureText(t), asc = m.actualBoundingBoxAscent, dsc = m.actualBoundingBoxDescent, tr = track * fs, ws = gs.map(g => x.measureText(g).width + tr), tot = ws.reduce((a, b) => a + b, 0) - tr;
+    if (fs < 6 || (asc + dsc <= hMax && tot <= 2 * phi * r)) return { gs, ws, tr, tot, fs, face, asc, dsc, r, half: tot / 2 / r }; } }
+function arcDraw(x, L, paint) {  // paint(g) draws one grapheme at the origin on its baseline, turned to the arch
+  x.font = `${L.fs}px ${L.face}`; x.textAlign = "center"; x.textBaseline = "alphabetic"; const rb = L.r - (L.asc - L.dsc) / 2; let s = -L.tot / 2;
+  L.gs.forEach((g, i) => { const a = (s + (L.ws[i] - L.tr) / 2) / L.r; x.save(); x.translate(CX, AY); x.rotate(a); x.translate(0, -rb); paint(g); x.restore(); s += L.ws[i]; }); }
+const raise = (x, draw, k = 1) => { x.lineJoin = "round"; for (const [w, h] of BEVEL) { x.lineWidth = w * k; x.strokeStyle = hc(h, 1); draw((g, a, b) => x.strokeText(g, a, b)); } x.fillStyle = hc(FACE, 1); draw((g, a, b) => x.fillText(g, a, b)); };
+// each portal's badge: a window of the frame (BX, BY, BW x BH) holding the medallion's navy centre with its constellation, and the door's name inscribed round the crown of the arch
+// (the name large in Cinzel Decorative, the second line, if any, smaller beneath it in EB Garamond capitals); the vine runs up to the words and ends in a scroll each side
+const BX = 30, BY = 86, BW = 240, BH = 224;
 export function badgeCanvas(p) {
   const c = document.createElement("canvas"); c.width = BW * S; c.height = BH * S; const x = c.getContext("2d"); x.scale(S, S); x.translate(-BX, -BY); const con = p.con ?? 0;
+  x.drawImage(baseFrame(), 0, 0, W, H);  // the frame under it, so the letters' shadows fall on the wood (the badge is alpha-tested)
   const navy = x.createRadialGradient(CX - 8, MY - 10, 3, CX, MY, MR); navy.addColorStop(0, "#22367a"); navy.addColorStop(1, "#060b22"); x.fillStyle = navy; x.beginPath(); x.arc(CX, MY, MR - 2, 0, 7); x.fill();
   x.save(); x.beginPath(); x.arc(CX, MY, MR - 3, 0, 7); x.clip(); x.translate(CX, MY); const k = (MR - 6) / 52; x.scale(k, k); x.translate(-50, -30);
   x.lineWidth = 1.2; x.strokeStyle = "rgba(240,205,124,.32)"; x.beginPath(); ANIMAL[con](x); x.stroke();
   const [st, ln] = STARS[con]; x.strokeStyle = "rgba(255,226,150,.95)"; x.lineWidth = 2.6; x.lineCap = "round"; x.beginPath(); for (const [a, b] of ln) { x.moveTo(...st[a]); x.lineTo(...st[b]); } x.stroke();
   for (const [px, py] of st) { const g = x.createRadialGradient(px, py, 0, px, py, 8); g.addColorStop(0, "rgba(255,250,220,1)"); g.addColorStop(.35, "rgba(255,222,130,.9)"); g.addColorStop(1, "rgba(255,200,90,0)"); x.fillStyle = g; x.beginPath(); x.arc(px, py, 8, 0, 7); x.fill(); }
   x.restore(); const gl = x.createRadialGradient(CX - 14, MY - 18, 2, CX - 14, MY - 18, MR); gl.addColorStop(0, "rgba(255,255,255,.14)"); gl.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = gl; x.beginPath(); x.arc(CX, MY, MR - 2, 0, 7); x.fill();  // a glaze
-  // the brass nameplate with the region's name, hung in the top of the opening (and the way home on a back door)
-  const nh = p.sub ? 40 : 30, ny = p.sub ? 322 : 316, bw = p.sub ? 156 : 128;
-  const brass = x.createLinearGradient(0, ny - nh / 2, 0, ny + nh / 2); brass.addColorStop(0, "#f6dc96"); brass.addColorStop(.45, "#d9a53c"); brass.addColorStop(1, "#8a6218");
-  x.fillStyle = "rgba(0,0,0,.35)"; x.beginPath(); x.roundRect(CX - bw / 2 + 2, ny - nh / 2 + 4, bw, nh, 7); x.fill();
-  x.fillStyle = brass; x.beginPath(); x.roundRect(CX - bw / 2, ny - nh / 2, bw, nh, 7); x.fill(); x.strokeStyle = "rgba(90,58,10,.9)"; x.lineWidth = 2; x.stroke();
-  x.strokeStyle = "rgba(255,242,205,.55)"; x.lineWidth = 1; x.beginPath(); x.roundRect(CX - bw / 2 + 4, ny - nh / 2 + 3.5, bw - 8, nh - 7, 5); x.stroke();
-  x.fillStyle = "#6b4a10"; for (const sx of [CX - bw / 2 + 8, CX + bw / 2 - 8]) { x.beginPath(); x.arc(sx, ny, 2.2, 0, 7); x.fill(); }
-  let fs = p.sub ? 21 : 24; x.textAlign = "center"; x.textBaseline = "middle"; x.font = `700 ${fs}px ${FONT}`;
-  while (fs > 11 && x.measureText(p.name).width > bw - 26) { fs -= 2; x.font = `700 ${fs}px ${FONT}`; }
-  const nameY = p.sub ? ny - 8 : ny; x.fillStyle = "#fbefc4"; x.fillText(p.name, CX, nameY - .6); x.fillStyle = "#3a2406"; x.fillText(p.name, CX, nameY + .5);
-  if (p.sub) { x.font = `600 12px ${FONTB}`; x.fillStyle = "#3a2406"; x.fillText(p.sub, CX, ny + 11); }
+  // the inscription: carved as a height map over the plain field, lit like the frame, only its gold kept, laid on with a small shadow (light from the upper left)
+  const hm = document.createElement("canvas"); hm.width = BW * S; hm.height = BH * S; const y = hm.getContext("2d", { willReadFrequently: true }); y.scale(S, S); y.translate(-BX, -BY); y.fillStyle = hc(75); y.fillRect(BX, BY, BW, BH);
+  const name = arcFit(y, p.name, DECO, 38, p.sub ? 15 : 27, p.sub ? 132.5 : 127, PZ - .14, .04), sub = p.sub ? arcFit(y, p.sub.toLocaleUpperCase(), SMALL, 15, 10.5, 117, PZ - .14, .1) : null;
+  for (const L of [name, sub]) if (L) raise(y, f => arcDraw(y, L, g => f(g, 0, 0)), L === sub ? .55 : 1);
+  const gap = Math.max(name.half, sub?.half ?? 0) + .1; vine(y, SC - PZ * VR - 2, SC - gap * VR, 1); vine(y, SC + gap * VR, SC + PZ * VR + 2, -1);
+  x.save(); x.shadowColor = "rgba(10,4,0,.75)"; x.shadowBlur = 2.5 * S; x.shadowOffsetX = 1.1 * S; x.shadowOffsetY = 1.6 * S; x.drawImage(shade(hm, { ox: BX * S, oy: BY * S, gilt: true }), BX, BY, BW, BH); x.restore();
   return c;
 }
 
@@ -169,18 +193,45 @@ void main() {
   gl_FragColor = vec4(col * (1. + .35 * uHover + .6 * uSurge), 1.);
 }`;
 
-function signCanvas(p) {  // a carved wooden board with scroll ends and gold trim: the name large, and a small badge for the plan
-  const c = document.createElement("canvas"); c.width = 768, c.height = 272; const x = c.getContext("2d"), GOLD = "#e2b459";
-  const body = () => { x.beginPath(); x.moveTo(60, 30); x.lineTo(708, 30); x.arc(708, 62, 32, -Math.PI / 2, 0); x.lineTo(740, 150); x.arc(708, 200, 50, 0, Math.PI / 2); x.lineTo(60, 250); x.arc(60, 200, 50, Math.PI / 2, Math.PI); x.lineTo(20, 62); x.arc(60, 62, 40, Math.PI, -Math.PI / 2); x.closePath(); };
-  body(); const wood = x.createLinearGradient(0, 30, 0, 250); wood.addColorStop(0, "#7a4a22"); wood.addColorStop(.5, "#5f3818"); wood.addColorStop(1, "#43250f"); x.fillStyle = wood; x.fill();
-  x.save(); x.clip(); for (let k = 0; k < 40; k++) { const y = 30 + k * 5.6 + Math.sin(k * 7.3) * 2; x.strokeStyle = `rgba(${k % 3 ? "25,10,2" : "210,150,80"},${.06 + (k % 5) * .02})`; x.lineWidth = 1 + (k % 3) * .6; x.beginPath(); x.moveTo(0, y); x.bezierCurveTo(250, y + Math.sin(k) * 6, 500, y - Math.cos(k) * 6, 768, y + 2); x.stroke(); } x.restore();
-  x.lineJoin = "round"; body(); x.strokeStyle = "#1a0b03"; x.lineWidth = 11; x.stroke(); x.strokeStyle = GOLD; x.lineWidth = 5; x.stroke();
-  x.save(); x.translate(384, 140); x.scale(.93, .85); x.translate(-384, -140); body(); x.strokeStyle = "rgba(255,225,150,.55)"; x.lineWidth = 2.4; x.stroke(); x.restore();
-  x.strokeStyle = GOLD; x.lineWidth = 4; for (const [cx, cy, sg] of [[70, 62, 1], [698, 62, -1], [70, 214, 1], [698, 214, -1]]) { x.beginPath(); x.arc(cx, cy, 11, 0, 4.7); x.stroke(); x.beginPath(); x.arc(cx + sg * 3, cy, 4, 0, 7); x.stroke(); }
-  let fs = 112; x.textAlign = "center"; x.textBaseline = "middle"; for (; fs > 36; fs -= 6) { x.font = `600 ${fs}px ${FONT}`; if (x.measureText(p.name).width < 560) break; }
-  x.fillStyle = "#1a0b03"; x.fillText(p.name, 386, 108); x.fillStyle = "#f8dc8e"; x.fillText(p.name, 384, 104);
-  x.font = `600 36px ${FONTB}`; const bw = Math.min(560, x.measureText(p.sub).width + 80); x.fillStyle = "rgba(0,0,0,.28)"; x.strokeStyle = GOLD; x.lineWidth = 3; x.beginPath(); x.roundRect(384 - bw / 2, 172, bw, 54, 27); x.fill(); x.stroke(); x.fillStyle = "#fbe7ab"; x.fillText(p.sub, 384, 200);
-  return c; }
+// a name's canvas texture, drawn again only when its words or the loaded faces change (library.js asks on every font that arrives and on a language change; each drawing is lit pixel by pixel)
+function nameTex(THREE, draw, p, an = 4) { const key = q => `${q.name}|${q.sub}|${q.con}|${[...document.fonts].filter(f => f.status === "loaded").length}`; let k = key(p); const tex = new THREE.CanvasTexture(draw(p)); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = an;
+  return { tex, set: q => { const n = key(q); if (n === k) return; k = n; tex.image = draw(q); tex.needsUpdate = true; } }; }
+// shared by the cartouche and the frieze: a C-scroll at each corner of a band from x l to r (rows yt and yb), rolling outward, up from the top row and down from the bottom one, raised in gilt;
+// and a straight line of raised gold text at the largest size (from fs down) that fits maxW wide and maxH tall, its ink centred on (cx, cy)
+function volutes(x, l, r, yt, yb) { for (const sg of [-1, 1]) for (const up of [-1, 1]) for (const [w, h] of [[6, 120], [4.5, 147], [3, 174], [1.5, 200]]) { const cx = (sg < 0 ? l : r) + sg * 15, cy = up < 0 ? yt : yb, a0 = sg < 0 ? 0 : Math.PI, dir = up * -sg;
+  x.lineWidth = w; x.strokeStyle = hc(h, 1); x.beginPath(); for (let t = 0; t <= 8.6; t += .15) { const rr = 15 * (1 - t / 10.5), A = a0 + dir * t; x[t ? "lineTo" : "moveTo"](cx + rr * Math.cos(A), cy + rr * Math.sin(A)); } x.stroke(); } }
+function straight(x, t, face, fs, maxW, maxH, cx, cy, k) { for (; ; fs *= .94) { x.font = `${fs}px ${face}`; const m = x.measureText(t), a = m.actualBoundingBoxAscent, d = m.actualBoundingBoxDescent;
+  if (fs < 8 || (m.width <= maxW && a + d <= maxH)) { x.textAlign = "center"; x.textBaseline = "alphabetic"; const by = cy + (a - d) / 2; raise(x, f => f(t, cx, by), k); return; } } }
+// THE CARTOUCHE for a stair's name (Eddie 2026-11-17: "Wonder Hall sign shouldn't be floating like this ... it should be place with the portal, again with nice design and gold plated"): a carved walnut
+// tablet with notched corners, a beaded gilt border, C-scrolls at its ends, a gilt palmette on top and a small pendant below; the name in raised gold Cinzel Decorative, the second line smaller beneath
+// in EB Garamond capitals. A height map lit like the arches (light from the upper left). KW x KH canvas units, S device px each.
+const KW = 560, KH = 200, KT = 40, KB = 166;  // KT, KB: the tablet's top and bottom
+function cartouche(p) {
+  const c = document.createElement("canvas"); c.width = KW * S; c.height = KH * S; const x = c.getContext("2d", { willReadFrequently: true }); x.scale(S, S); x.lineJoin = x.lineCap = "round";
+  const L = 50, R = KW - 50, tab = (k = 0) => { const l = L + k, r = R - k, t = KT + k, b = KB - k, n = Math.max(4, 20 - k); x.beginPath(); x.moveTo(l + n, t); x.quadraticCurveTo(KW / 2, t - 16, r - n, t); x.arc(r, t, n, Math.PI, Math.PI / 2, true);
+    x.lineTo(r, b - n); x.arc(r, b, n, -Math.PI / 2, -Math.PI, true); x.quadraticCurveTo(KW / 2, b + 10, l + n, b); x.arc(l, b, n, 0, -Math.PI / 2, true); x.lineTo(l, t + n); x.arc(l, t, n, Math.PI / 2, 0, true); x.closePath(); };
+  x.fillStyle = hc(80); tab(); x.fill();  // the walnut field
+  for (let k = 0; k < 6; k++) { x.lineWidth = 12 - 2 * k; x.strokeStyle = hc(Math.round(110 + 100 * Math.sin(k / 5 * Math.PI / 2)), 1); tab(); x.stroke(); }  // the beaded gilt border
+  x.lineWidth = 2; x.strokeStyle = hc(60); tab(8); x.stroke(); x.lineWidth = 1.6; x.strokeStyle = hc(165, 1); tab(13); x.stroke();  // a shadowed step inside it, and a gilt fillet
+  volutes(x, L, R, KT + 24, KB - 24);  // the C-scrolls: from the tablet's sides, rolling outward, up and down
+  for (const [k, h] of [[1, 125], [.6, 185]]) for (let j = -3; j <= 3; j++) leaf(x, KW / 2, KT - 4, -Math.PI / 2 + j * .36, (30 - Math.abs(j) * 4.5) * k + 2, (7 - Math.abs(j)) * k + 1, hc(h, 1));  // the palmette
+  for (const [k, h] of [[1, 125], [.6, 185]]) for (let j = -1; j <= 1; j++) leaf(x, KW / 2, KB + 3, Math.PI / 2 + j * .5, (16 - Math.abs(j) * 4) * k + 2, 5 * k + 1, hc(h, 1));  // the pendant
+  for (let k = 0; k < 4; k++) { x.fillStyle = hc(140 + k * 22, 1); x.beginPath(); x.arc(KW / 2, KT - 5, 6 - k * 1.3, 0, 7); x.fill(); }
+  straight(x, p.name, DECO, 90, 360, p.sub ? 52 : 68, KW / 2, p.sub ? 91 : 103, 1.5); if (p.sub) straight(x, p.sub.toLocaleUpperCase(), SMALL, 30, 300, 16, KW / 2, 141, .8);
+  const t = shade(c, { flat: true }); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, c.width, c.height);
+  x.shadowColor = "rgba(8,3,0,.7)"; x.shadowBlur = 5 * S; x.shadowOffsetY = 2 * S; x.drawImage(t, 0, 0); return c; }
+// a cartouche as a mesh: KM metres wide, bent round a circle of radius kr about the stair's axis (its middle at -z, facing the axis), its tablet's lower edge at ky; a dark back.
+// The stair's invisible click target (frame) also answers for it, so a hover or tap on the name works like one on the stair, and lights it.
+const KM = 1.55, KHM = KM * KH / KW;
+function railCartouche(THREE, frame, p, kr, ky) {
+  const geo = new THREE.PlaneGeometry(KM, KHM, 24, 1), q = geo.attributes.position, y0 = ky - (KH - KB) / KH * KHM + KHM / 2;
+  for (let i = 0; i < q.count; i++) { const a = q.getX(i) / kr; q.setXYZ(i, kr * Math.sin(a), q.getY(i) + y0, -kr * Math.cos(a)); }
+  const { tex, set } = nameTex(THREE, cartouche, p);
+  const k = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .5, fog: false })), back = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, color: 0x1a0d05, side: THREE.BackSide, alphaTest: .5, fog: false }));
+  k.renderOrder = 41; k.add(back);
+  frame.raycast = (r, out) => { const n = out.length; THREE.Mesh.prototype.raycast.call(frame, r, out); k.raycast(r, out); for (let i = n; i < out.length; i++) out[i].object = frame; };
+  return { mesh: k, set, glow: h => k.material.color.setScalar(1 + .3 * h) };
+}
 
 // the warm light rising out of the opening: a faint additive column with a few slow sparkles climbing it
 const GLOWFS = `uniform float uT, uHover; varying vec2 vUv;
@@ -193,7 +244,7 @@ void main() { float y = vUv.y; float a = smoothstep(0., .22, y) * pow(1. - y, 2.
 // the stairwell: baked in Blender (stairwell.glb: unlit, the light and shadows are in its texture; stairwell-floor.webp: the railing's shadows and the golden glow on the boards), loaded ONCE when this
 // module is imported and waited for (5 s at most, like the room's cards) so it arrives behind the loading cover. If it fails the floor stays whole and the sign, light shaft and door still work.
 const loadWell = (async () => { try { const [gl, tx] = await Promise.all([new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairwell.glb", import.meta.url).href), new TextureLoader().loadAsync(new URL("stairwell-floor.webp", import.meta.url).href)]); tx.colorSpace = SRGBColorSpace; tx.anisotropy = 8; return { well: gl.scene, decal: tx }; } catch (e) { console.warn("portals: stairwell.glb failed, no stairwell", e); return null; } })();
-await Promise.race([loadWell, new Promise(r => setTimeout(r, 5000))]);
+await Promise.race([Promise.all([loadWell, decoReady]), new Promise(r => setTimeout(r, 5000))]);  // the names wait for their face too, inside the same 5 s
 // a real hole in the floor card (a 1x1 plane in the library): the plane becomes a shape with a round hole, same UVs (u = x + .5, v = y + .5), so its material and its depth write are unchanged: no stencil.
 function holeInFloor(THREE, mesh, cx, cz, rad) {
   if (mesh.userData.cut) return mesh.userData.cut(cx, cz, rad);  // the rotunda's round floor cuts its own (walls/rotunda.js)
@@ -208,8 +259,8 @@ void main() { float k = fract(aP.y + uT * aP.z / 3.05); vec3 p = position; p.y =
 const SPARKFS = "varying float vA; void main() { float d = length(gl_PointCoord - .5), a = smoothstep(.5, 0., d); a *= a; gl_FragColor = vec4(vec3(1., .78, .4) * a * vA * 2.2, 1.); }";
 
 // the floor portal (to the Wonder Hall): the baked spiral stairwell (walnut wall, 22 steps, turned post, balusters and gold handrail, lit by the golden glow from below) seen through a round hole in the floor,
-// the railing's shadows and the glow on the boards round it, slow gold sparkles rising in the well, a faint light shaft over the opening, and a carved wooden sign on its own short brass post OUTSIDE the
-// railing, behind the well, facing the arrival view. The invisible disc over the opening is the click/tap target.
+// the railing's shadows and the glow on the boards round it, slow gold sparkles rising in the well, a faint light shaft over the opening, and the hall's name on a gilt cartouche fixed to the inner face of
+// the railing on its far side, bent to its curve and facing the walk in (no sign on a post any more). The invisible disc over the opening, and the cartouche, are the click/tap target.
 export function createFloorPortal(THREE, link, label) {
   const g = new THREE.Group(), R = 1.3, Rr = 1.34, U = { uT: { value: 0 }, uHover: { value: 0 }, uS: { value: 0 } }, y0 = link.at[1];
   const frame = new THREE.Mesh(new THREE.CircleGeometry(R, 72), new THREE.MeshBasicMaterial({ visible: false }));  // the click/tap target
@@ -220,28 +271,42 @@ export function createFloorPortal(THREE, link, label) {
   const sg = new THREE.BufferGeometry(); sg.setAttribute("position", new THREE.BufferAttribute(pos, 3)); sg.setAttribute("aP", new THREE.BufferAttribute(ap, 3));
   const sparks = new THREE.Points(sg, new THREE.ShaderMaterial({ uniforms: U, vertexShader: SPARKVS, fragmentShader: SPARKFS, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); sparks.frustumCulled = false; sparks.renderOrder = 37;
   g.add(frame, shaft, sparks);
-  // the sign: a brass post with a finial behind the well, the carved board hung on it
-  const gm = new THREE.MeshLambertMaterial({ color: 0xd2a84c, emissive: 0x3a2808 }), sign = new THREE.Group(), signT = new THREE.CanvasTexture(signCanvas(label)); signT.colorSpace = THREE.SRGBColorSpace; signT.anisotropy = 4; const Z = -(Rr + .55), BY = 1.18;
-  const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
-  bp.position.set(0, .78, Z - .03); fin.position.set(0, 1.62, Z - .03); base.position.set(0, .04, Z - .03); col.position.set(0, 1.5, Z - .03); sign.add(bp, fin, base, col);
-  for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, BY + dy, Z - .02); sign.add(br); }
-  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, alphaTest: .5, fog: false })); board.position.set(0, BY, Z + .02); board.userData.link = link; board.renderOrder = 41; sign.add(board);
-  g.add(sign); g.position.set(...link.at);
+  const name = railCartouche(THREE, frame, label, Rr - .06, .865); g.add(name.mesh); g.position.set(...link.at);  // just inside the handrail (its top at .87), so the pendant hangs over the rail
   let h = 0, tt = 0, wellMat = null, cut = false;
   loadWell.then(w => { if (!w) return; const d = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), new THREE.MeshBasicMaterial({ map: w.decal, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }));  // the decal: over the floor card (20), under everything else
     d.rotation.x = -Math.PI / 2; d.position.y = .008 - y0; d.renderOrder = 21; w.well.position.y = -y0; w.well.traverse(o => { if (o.isMesh) { wellMat = o.material; if (wellMat.map) wellMat.map.anisotropy = 8; } });g.add(w.well, d); });  // anisotropy 8: the treads and wall are seen at a slant, close, on the way down; the well's origin is its centre on the floor (the floor card is at y 0, this group at the door's y)
-  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h;
-      if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); if (wellMat) wellMat.color.setScalar(1 + .3 * h * (1 - surge) + .15 * surge);  // hover or focus brightens the baked well like the other doors; surge (0..1, the walk down the stairs) lets the gold from below grow a little (the hover's lift fades as it comes, so the glow never clips)
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { if (target > 0 || surge > 0) wakeUp(); h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (.25 + 1.75 * h); U.uT.value = still ? 2.4 : tt; U.uHover.value = h;
+      if (cam) U.uS.value = .5 * innerHeight * Math.min(devicePixelRatio, innerWidth > 820 ? 2 : 1.5) / Math.tan(cam.fov * Math.PI / 360); name.glow(h); if (wellMat) wellMat.color.setScalar(1 + .3 * h * (1 - surge) + .15 * surge);  // hover or focus brightens the baked well like the other doors; surge (0..1, the walk down the stairs) lets the gold from below grow a little (the hover's lift fades as it comes, so the glow never clips)
       if (!cut && wellMat && g.parent) { cut = true; const m = g.parent.getObjectByName("floor"); if (m) holeInFloor(THREE, m, link.at[0], link.at[2], 1.24); } },  // the hole (1.24 m, hidden under the 1.17-1.32 m coping ring) is cut the frame the well is in, in the floor card at the door
-    setLabel: p => { signT.image = signCanvas(p); signT.needsUpdate = true; } };
+    setLabel: name.set };
 }
 
 // the way back up from the Wonder Hall (Eddie 2026-11-17: "use Blender to do the staircase that goes back up"): the SAME spiral stair, baked in Blender (stairup.glb, make_stairup.py: unlit, light and shadow in its texture), standing on the hall floor and climbing 4 turns (8 m)
-// straight up out of every hall view: no ceiling, no disc, no visible top. A column of the home library's warm light (additive, soft-edged, brightest high up, fading out far above) swallows the top of the stair and spills down it. Loaded ONCE, the first time this portal is built,
-// not waited for (about 450 KB, and the hall is a click away); the invisible cylinder over it is the click/tap target; hover or focus brightens the baked wood like the other doors; a warm pool on the boards, and a carved sign on a brass post says where it goes.
-let upLoad = null; const loadUp = () => upLoad ??= new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairup.glb", import.meta.url).href).then(g => g.scene).catch(e => { console.warn("portals: stairup.glb failed, no stair up", e); return null; });
+// straight up out of every hall view: no ceiling, no disc, no visible top. A column of the home library's warm light (additive, soft-edged, brightest high up, fading out far above) swallows the top of the stair and spills down it. Loaded ONCE, when the visitor hovers the stairwell or starts down it (or stands in the hall),
+// never on the home view's bill (about 450 KB, owner 2026-11-18: load smoothly); the invisible cylinder over it is the click/tap target; hover or focus brightens the baked wood like the other doors; a warm pool on the boards, and the way home is carved in gold along the stair's balustrade.
+let upLoad = null; const upWant = [], wakeUp = () => { if (!upLoad) loadUp().then(m => upWant.splice(0).forEach(f => f(m))); }, loadUp = () => upLoad ??= new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).loadAsync(new URL("stairup.glb", import.meta.url).href).then(g => g.scene).catch(e => { console.warn("portals: stairup.glb failed, no stair up", e); return null; });
 const UPFS = `uniform float uT, uHover, uIn; varying vec3 vN, vV; varying float vY;
 void main() { float e = mix(pow(abs(dot(normalize(vN), normalize(vV))), 3.5), 1., uIn), a = smoothstep(2.5, 8.5, vY) * (1. - smoothstep(18., 70., vY)) * e * (mix(3.6, .75, uIn) + .15 * uHover) * (.94 + .06 * sin(uT * 1.1 + vY * .9)); gl_FragColor = vec4(mix(vec3(1., .66, .3), vec3(1., .9, .62), smoothstep(2., 14., vY)) * a, 1.); }`;  // uIn: the eye is inside the column (the climb): its far wall is lit all round, held to a warm gold (at full strength it washed the screen white for about a second)
+// the name, carved along the stair (no sign on a post): a gilt-edged walnut frieze just outside the balustrade, under the handrail, on the stretch that faces the hall's arrival view, following the
+// stair line up. From make_stairup.py (measured_up.json): the stair line falls 0.2 m a tread, 10 treads a turn, from the top (8 m) at ROT; the handrail's centre is 0.82 above it on radius 1.05.
+// a0..a1: the stretch, in rad from the foot newel (it faces the visitor there: probe.mjs in renders/review/landing-gold-text); read left to right it runs down the stair.
+const UP = { rot: 5.2796, top: 8, r: 1.115, a0: -6, a1: -3.45, drop: .08, hgt: .24 }, FH = 100, FW = Math.round((UP.a1 - UP.a0) * UP.r / UP.hgt * FH);
+const upRail = th => UP.top - .2 * ((th - UP.rot) / (Math.PI / 5) - .5) + .82;
+function frieze(p) {  // FW x FH canvas units: a walnut band with gilt beads along both edges, a C-scroll at each end, the name raised in gold between
+  const c = document.createElement("canvas"); c.width = FW * S; c.height = FH * S; const x = c.getContext("2d", { willReadFrequently: true }); x.scale(S, S); x.lineJoin = x.lineCap = "round";
+  const L = 46, R = FW - 46, T = 16, B = FH - 16;
+  x.fillStyle = hc(80); x.fillRect(L, T, R - L, B - T);
+  for (let k = 0; k < 5; k++) { x.lineWidth = 9 - 1.8 * k; x.strokeStyle = hc(Math.round(110 + 100 * Math.sin(k / 4 * Math.PI / 2)), 1); x.beginPath(); for (const y of [T, B]) { x.moveTo(L, y); x.lineTo(R, y); } x.stroke(); }
+  volutes(x, L, R, T + 18, B - 18);
+  straight(x, p.name, DECO, 80, R - L - 70, 52, FW / 2, FH / 2, 1.4);
+  const t = shade(c, { flat: true }); x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, c.width, c.height); x.shadowColor = "rgba(8,3,0,.7)"; x.shadowBlur = 4 * S; x.shadowOffsetY = 2 * S; x.drawImage(t, 0, 0); return c; }
+function upFrieze(THREE, p) {  // the frieze bent along the helix (the stair's own invisible cylinder, its click target, already covers it)
+  const geo = new THREE.PlaneGeometry(1, 1, 64, 1), q = geo.attributes.position, foot = UP.rot + 8 * Math.PI - .06;
+  for (let i = 0; i < q.count; i++) { const u = q.getX(i) + .5, v = q.getY(i) + .5, th = foot + UP.a0 + u * (UP.a1 - UP.a0); q.setXYZ(i, UP.r * Math.sin(th), upRail(th) - UP.drop - (1 - v) * UP.hgt, UP.r * Math.cos(th)); }
+  const { tex, set } = nameTex(THREE, frieze, p, 8);
+  const m = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .5, fog: false })); m.renderOrder = 41;
+  return { mesh: m, set, glow: h => m.material.color.setScalar(1 + .3 * h) };
+}
 export function createStairUp(THREE, link, label, renderer) {
   const g = new THREE.Group(), U = { uT: { value: 0 }, uHover: { value: 0 }, uIn: { value: 0 } };
   const frame = new THREE.Mesh(new THREE.CylinderGeometry(1.45, 1.45, 8, 20), new THREE.MeshBasicMaterial({ visible: false })); frame.position.y = 4; frame.userData.link = link;  // the click/tap target
@@ -251,27 +316,22 @@ export function createStairUp(THREE, link, label, renderer) {
   const pt = new THREE.CanvasTexture(pc); pt.colorSpace = THREE.SRGBColorSpace;
   const pool = new THREE.Mesh(new THREE.PlaneGeometry(5.6, 5.6), new THREE.MeshBasicMaterial({ map: pt, transparent: true, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 })); pool.rotation.x = -Math.PI / 2; pool.position.y = .012; pool.renderOrder = 21;  // over the floor card (20), under the rest, like the home decal
   g.add(pool, shaft, frame);
-  // the sign: on a brass post by the foot, on the side away from the walk in, turned to face the arrival view (shortcut: built here, not shared with createFloorPortal's)
-  const gm = new THREE.MeshLambertMaterial({ color: 0xd2a84c, emissive: 0x3a2808 }), sign = new THREE.Group(), SP = p => ({ name: p.sub || p.name, sub: p.sub ? p.name : "" }), signT = new THREE.CanvasTexture(signCanvas(SP(label))); signT.colorSpace = THREE.SRGBColorSpace; signT.anisotropy = 4;
-  const bp = new THREE.Mesh(new THREE.CylinderGeometry(.03, .045, 1.55, 12), gm), fin = new THREE.Mesh(new THREE.SphereGeometry(.07, 14, 10), gm), base = new THREE.Mesh(new THREE.CylinderGeometry(.13, .16, .08, 14), gm), col = new THREE.Mesh(new THREE.SphereGeometry(.055, 10, 8), gm);
-  bp.position.y = .78; fin.position.y = 1.62; base.position.y = .04; col.position.y = 1.5; sign.add(bp, fin, base, col);
-  for (const dy of [-.2, .2]) { const br = new THREE.Mesh(new THREE.CylinderGeometry(.014, .014, .1, 6), gm); br.rotation.x = Math.PI / 2; br.position.set(0, 1.18 + dy, .03); sign.add(br); }
-  const board = new THREE.Mesh(new THREE.PlaneGeometry(1.7, .6), new THREE.MeshBasicMaterial({ map: signT, transparent: true, alphaTest: .5, fog: false })); board.position.set(0, 1.18, .06); board.userData.link = link; board.renderOrder = 41; sign.add(board);
-  const sx = 1.9 * Math.sin(1.19), sz = 1.9 * Math.cos(1.19); sign.position.set(sx, 0, sz); sign.rotation.y = Math.atan2(3.94 - sx, 7.415 - sz); g.add(sign); g.position.set(...link.at);
+  const SP = p => ({ name: p.sub || p.name, sub: p.sub ? p.name : "" }), name = upFrieze(THREE, SP(label)); g.add(name.mesh); g.position.set(...link.at);  // the way home leads
   let h = 0, tt = 0, mat = null;
-  loadUp().then(m => { if (!m) return; m = m.clone(); m.traverse(o => { if (o.isMesh) { mat = o.material = o.material.clone(); } }); g.add(m); if (mat?.map) renderer?.initTexture?.(mat.map); });
-  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt; U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uIn.value = cam ? Math.min(1, Math.max(0, (1.7 - Math.hypot(cam.position.x - g.position.x, cam.position.z - g.position.z)) / .4)) : 0; if (mat) mat.color.setScalar(1 + .3 * h + .25 * surge); },  // hover or focus, and the climb (surge 0..1), brighten the baked wood
-    setLabel: p => { signT.image = signCanvas(SP(p)); signT.needsUpdate = true; } };
+  const attach = m => { if (!m) return; m = m.clone(); m.traverse(o => { if (o.isMesh) { mat = o.material = o.material.clone(); } }); g.add(m); if (mat?.map) renderer?.initTexture?.(mat.map); }; if (upLoad) upLoad.then(attach); else upWant.push(attach);
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { if (cam && Math.abs(cam.position.y - g.position.y) < 30) wakeUp(); h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt; U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uIn.value = cam ? Math.min(1, Math.max(0, (1.7 - Math.hypot(cam.position.x - g.position.x, cam.position.z - g.position.z)) / .4)) : 0; if (mat) mat.color.setScalar(1 + .3 * h + .25 * surge); name.glow(h); },  // hover or focus, and the climb (surge 0..1), brighten the baked wood
+    setLabel: p => name.set(SP(p)) };
 }
 
 export function createPortal(THREE, plane, link, size, label) {
+  if (link.game === "doors" && !link.href) Object.defineProperty(link, "href", { get: () => `../../games/?lang=${document.documentElement.lang || "en"}`, enumerable: true });  // shortcut: set on the shared link here because grow.js (which builds the hall's links) is another worker's file today; move it into grow.js's arch list as { href } when it is free. library.js goto() follows an href before it looks at soon, relative to library.js (so ../../games/ is web/games/)
   const g = new THREE.Group(); let base = BASE?.tex; if (!base) { base = new THREE.CanvasTexture(baseFrame()); base.colorSpace = THREE.SRGBColorSpace; base.anisotropy = 4; BASE.tex = base; }  // one carved frame for all
-  const tex = new THREE.CanvasTexture(badgeCanvas(label)); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+  const { tex, set } = nameTex(THREE, badgeCanvas, label);
   const frame = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: base, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })), U = { uT: { value: 0 }, uHover: { value: 0 }, uSurge: { value: 0 }, uCam: { value: new THREE.Vector2() } };
   const badge = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: .5, fog: false, side: THREE.DoubleSide })); badge.scale.set(BW / W, BH / H, 1); badge.position.set((BX + BW / 2) / W - .5, .5 - (BY + BH / 2) / H, .002);  // frame and badge are solid (alphaTest, depth written): the library's light (drawn after them) lies over them where it is in front
   const inner = new THREE.Mesh(plane, new THREE.ShaderMaterial({ uniforms: U, vertexShader: VS, fragmentShader: FS, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
   frame.renderOrder = 34; badge.renderOrder = 35; inner.renderOrder = 33; inner.position.z = -(link.depth ?? .01); frame.userData.link = link; g.add(inner, frame, badge); g.scale.set(size[0] * W / 256, size[1] * H / 570, 1); g.position.set(...link.at); g.position.y += size[1] * (H / 570 - 1) / 2; g.rotation.y = link.yaw ?? 0;  // inner: at the back of the recess the wall's arch is cut into (grow.js depth)
   let h = 0, tt = 0;
-  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .3 * h); },
-    setLabel: s => { tex.image = badgeCanvas(s); tex.needsUpdate = true; } };
+  return { group: g, frame, update: (t, target, dt, still, cam, surge = 0) => { h += (target - h) * (1 - Math.exp(-dt * 8)); tt += dt * (1 + 1.3 * h + 3 * surge); U.uT.value = still ? 2.4 : tt; U.uHover.value = h; U.uSurge.value = still ? 0 : surge; if (cam) { g.updateWorldMatrix(true, false); const l = cam.position.clone(); g.worldToLocal(l); U.uCam.value.set(l.x, l.y).multiplyScalar(1 / (1 + Math.abs(l.z))).clampLength(0, .6); } frame.material.color.setScalar(1 + .45 * h); badge.material.color.setScalar(1 + .45 * h); },
+    setLabel: set };
 }

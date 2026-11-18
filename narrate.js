@@ -15,27 +15,35 @@ export class Reader {
   setLang(lang) { this.lang = lang; this.showSub(); }
 
   showSub() {
-    const s = this.lang && this.subs[this.id]?.[this.lang];
+    const s = this.lang && this.subs[this.view]?.[this.lang];
     this.sub.textContent = s || ""; this.sub.lang = this.lang || "en";
   }
 
   // speak one line; resolves true when it has been read, false if something else took over
+  // a line's words, all of them lit at once (Reading Mode: the child reads it), and its subtitle; nothing is said
+  show(id, said = true) {
+    this.view = id;
+    this.en.innerHTML = this.text[id].split(" ").map(w => `<span${said ? ' class="said"' : ""}>${w}</span>`).join(" ");
+    this.showSub();
+    this.box.classList.add("show");
+  }
+
+  // `silent` (Reading Mode): the voice plays muted, so whatever follows its clock (acts, camera, lights) keeps time, and the words stay whole
   say(id) {
     this.audio.pause();
     const token = ++this.token, t = this.timing[id];
     this.id = id;
-    this.en.innerHTML = this.text[id].split(" ").map(w => `<span>${w}</span>`).join(" ");
-    this.showSub();
-    this.box.classList.add("show");
+    this.show(id, !!this.silent);
     const spans = [...this.en.children];
+    this.audio.muted = !!this.silent;
     this.audio.src = `${this.voice}${id}.m4a`;
     return new Promise(done => {
       const light = () => {
         if (token !== this.token) return done(false);
         const now = this.audio.currentTime;
         spans.forEach((s, i) => {
-          s.classList.toggle("said", now >= t.words[i][0]);
-          s.classList.toggle("now", now >= t.words[i][0] && now < t.words[i][1]);
+          s.classList.toggle("said", this.silent || now >= t.words[i][0]);
+          s.classList.toggle("now", !this.silent && now >= t.words[i][0] && now < t.words[i][1]);
         });
         if (this.audio.ended) { spans.forEach(s => s.classList.add("said")); return done(true); }
         requestAnimationFrame(light);

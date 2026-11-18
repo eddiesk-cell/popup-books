@@ -8,39 +8,39 @@
    "pitch": 0
   },
   "kankak": {
-   "voice": "bm_george",
-   "speed": 1.08,
-   "pitch": 6
+   "voice": "bm_fable",
+   "speed": 1.05,
+   "pitch": 3
   },
   "skyking": {
-   "voice": "bm_george",
-   "speed": 0.86,
-   "pitch": -5
+   "voice": "bm_lewis",
+   "speed": 0.88,
+   "pitch": -3
   },
   "buffalo": {
    "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": -4
+   "speed": 1.0,
+   "pitch": 0
   },
   "tik": {
    "voice": "bm_george",
-   "speed": 1.12,
-   "pitch": 4
+   "speed": 1.0,
+   "pitch": 0
   },
   "bizzy": {
    "voice": "bm_george",
-   "speed": 1.15,
-   "pitch": 9
+   "speed": 1.0,
+   "pitch": 0
   },
   "pinch": {
    "voice": "bm_george",
    "speed": 1.0,
-   "pitch": -2
+   "pitch": 0
   },
   "frogs": {
    "voice": "bm_george",
-   "speed": 1.1,
-   "pitch": 3
+   "speed": 1.0,
+   "pitch": 0
   },
   "closing": {
    "voice": "bm_george",
@@ -49,48 +49,48 @@
   },
   "dog": {
    "voice": "bm_george",
-   "speed": 1.05,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   },
   "cat": {
    "voice": "bm_george",
-   "speed": 1.1,
-   "pitch": 5
+   "speed": 1.0,
+   "pitch": 0
   },
   "duck": {
    "voice": "bm_george",
-   "speed": 1.12,
-   "pitch": 6
+   "speed": 1.0,
+   "pitch": 0
   },
   "turtle": {
    "voice": "bm_george",
-   "speed": 0.85,
-   "pitch": -3
+   "speed": 1.0,
+   "pitch": 0
   },
   "gecko": {
    "voice": "bm_george",
-   "speed": 1.15,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   },
   "girl": {
    "voice": "bm_george",
-   "speed": 1.06,
-   "pitch": 5
+   "speed": 1.0,
+   "pitch": 0
   },
   "boy": {
    "voice": "bm_george",
-   "speed": 1.08,
-   "pitch": 4
+   "speed": 1.0,
+   "pitch": 0
   },
   "oldwoman": {
    "voice": "bm_george",
-   "speed": 0.88,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   },
   "man": {
    "voice": "bm_george",
-   "speed": 0.92,
-   "pitch": -3
+   "speed": 1.0,
+   "pitch": 0
   },
   "well": {
    "voice": "bm_george",
@@ -492,7 +492,7 @@
      "say": [
       [
        "narrator",
-       "But the pond was only mud. In the mud sat a little toad. His name was Kankak."
+       "But the pond was only mud. In the mud sat a little toad. His name was Kan-kahk."
       ]
      ]
     },
@@ -502,7 +502,7 @@
      "say": [
       [
        "narrator",
-       "Kankak looked up at the empty sky."
+       "Kan-kahk looked up at the empty sky."
       ],
       [
        "kankak",
@@ -544,7 +544,7 @@
       ],
       [
        "narrator",
-       "said Kankak."
+       "said Kan-kahk."
       ]
      ]
     },
@@ -572,7 +572,7 @@
      "say": [
       [
        "narrator",
-       "Kankak stood up tall, as tall as a little toad can."
+       "Kan-kahk stood up tall, as tall as a little toad can."
       ],
       [
        "kankak",
@@ -606,7 +606,7 @@
      "say": [
       [
        "narrator",
-       "On the way, Kankak met Tik the termite."
+       "On the way, Kan-kahk met Tik the termite."
       ],
       [
        "tik",
@@ -628,7 +628,7 @@
       ],
       [
        "narrator",
-       "said Kankak."
+       "said Kan-kahk."
       ],
       [
        "tik",
@@ -688,7 +688,7 @@
      "say": [
       [
        "narrator",
-       "Now Kankak had an army. A very small army!"
+       "Now Kan-kahk had an army. A very small army!"
       ]
      ]
     }
@@ -796,7 +796,7 @@
       ],
       [
        "narrator",
-       "said Kankak."
+       "said Kan-kahk."
       ],
       [
        "kankak",
@@ -924,7 +924,7 @@
      "say": [
       [
        "narrator",
-       "Kankak hopped close to the Sky King. He did not buzz. He did not pinch."
+       "Kan-kahk hopped close to the Sky King. He did not buzz. He did not pinch."
       ]
      ]
     },
@@ -984,7 +984,7 @@
       ],
       [
        "narrator",
-       "asked Kankak."
+       "asked Kan-kahk."
       ],
       [
        "skyking",
@@ -1012,7 +1012,7 @@
      "say": [
       [
        "narrator",
-       "Kankak turned to his friends."
+       "Kan-kahk turned to his friends."
       ],
       [
        "kankak",
@@ -1190,7 +1190,7 @@
       ],
       [
        "narrator",
-       "everyone said to Kankak. Kankak just smiled."
+       "everyone said to Kan-kahk. Kan-kahk just smiled."
       ]
      ]
     },
@@ -1248,7 +1248,7 @@
    "say": [
     [
      "closing",
-     "Ask why. When someone is cross, ask them why. Kankak did."
+     "Ask why. When someone is cross, ask them why. Kan-kahk did."
     ]
    ]
   },
@@ -1330,7 +1330,7 @@
    "say": [
     [
      "narrator",
-     "Biggest to smallest! Kankak is the smallest, and the bravest!"
+     "Biggest to smallest! Kan-kahk is the smallest, and the bravest!"
     ]
    ]
   },
@@ -2387,5 +2387,8 @@
    "Then a smile!",
    "Cross means angry."
   ]
+ },
+ "respell": {
+  "Kankak": "Kan-kahk"
  }
 }

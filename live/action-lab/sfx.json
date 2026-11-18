@@ -1,0 +1,12 @@
+{
+ "whoosh": ["a fast sharp whoosh of a wooden staff swung through the air", 1.2, 3],
+ "swoosh-big": ["a big fast swoosh of something flying past through the air", 1.5, 2],
+ "hit": ["a single heavy punch impact thud, cartoon fight hit", 1.0, 3],
+ "clang": ["a metal staff strikes a bull horn, a sharp heavy clang impact", 1.2, 2],
+ "crash": ["a body slams into a wooden wall, heavy crash with wood cracking and debris falling", 2.5, 2],
+ "crumble": ["small rocks and plaster crumble and fall to the ground", 2.0, 2],
+ "land": ["a heavy animal lands hard on a wooden floor, a deep thud", 1.0, 2],
+ "boom": ["a deep booming shockwave impact with a rumble", 2.0, 2],
+ "leap": ["a quick jump whoosh upward, cloth fluttering", 1.0, 2],
+ "snort": ["an angry bull snorts loudly", 1.5, 2]
+}

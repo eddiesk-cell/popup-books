@@ -2446,6 +2446,2036 @@
 "Gourd 2"
 ],
 "cut": true
+},
+"cowherd-niulang": {
+"look": "the young cowherd Niulang standing, hemp jacket, blue sash, straw hat on his back, flute in the sash",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true,
+"turned": "cowherd-niulang-turned"
+},
+"cowherd-niulang-arms": {
+"look": "Niulang standing with both arms out wide",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-niulang-kneel": {
+"look": "Niulang kneeling, arms forward",
+"size": 0.1,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-niulang-flute": {
+"look": "Niulang playing the bamboo flute",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-niulang-ride": {
+"look": "Niulang seated astride, holding on",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-zhinu": {
+"look": "the weaving maiden Zhinu standing in pink-peach-gold robes with ribbons",
+"size": 0.155,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true,
+"turned": "cowherd-zhinu-turned"
+},
+"cowherd-zhinu-arms": {
+"look": "Zhinu standing with both arms out wide",
+"size": 0.155,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-zhinu-kneel": {
+"look": "Zhinu kneeling, reaching forward and down",
+"size": 0.1,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-zhinu-seated": {
+"look": "Zhinu seated at the loom, hands working",
+"size": 0.1,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-old-ox": {
+"look": "the old grey water buffalo standing, red Chinese knot at the neck, no bell",
+"size": 0.136,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-old-ox-graze": {
+"look": "the old ox with his head low, grazing",
+"size": 0.1,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-old-ox-lie": {
+"look": "the old ox lying down, head raised",
+"size": 0.075,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-old-ox-fly": {
+"look": "the old ox flying, legs tucked",
+"size": 0.1,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-queen": {
+"look": "the Queen Mother of the West standing in blue and gold robes, a peach in her hand",
+"size": 0.165,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true,
+"turned": "cowherd-queen-turned"
+},
+"cowherd-queen-armup": {
+"look": "the Queen Mother with her gold hairpin raised",
+"size": 0.165,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-queen-seated": {
+"look": "the Queen Mother seated on the throne",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-boy": {
+"look": "the little boy in a red jacket, standing",
+"size": 0.099,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true,
+"turned": "cowherd-boy-turned"
+},
+"cowherd-girl": {
+"look": "the little girl in a peach jacket with pink ribbons, standing",
+"size": 0.092,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true,
+"turned": "cowherd-girl-turned"
+},
+"cowherd-basket-boy": {
+"look": "the little boy sitting in a woven basket",
+"size": 0.07,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-basket-girl": {
+"look": "the little girl sitting in a woven basket",
+"size": 0.07,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-magpie": {
+"look": "a magpie standing, black and white with a blue-green sheen",
+"size": 0.041,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-magpie-fly": {
+"look": "a magpie flying, wings raised",
+"size": 0.041,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-magpie-wings": {
+"look": "a magpie seen from the front, wings spread wide",
+"size": 0.041,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-magpie-small": {
+"look": "a small far magpie flying",
+"size": 0.0205,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-crane": {
+"look": "a white red-crowned crane flying, wings open",
+"size": 0.132,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"cowherd-crane-grey": {
+"look": "the same white crane, greyed (spread 5: the sky without its colour)",
+"size": 0.132,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 5"
+],
+"cut": true
+},
+"cowherd-grey-cloud-big": {
+"look": "the Queen Mother's great grey storm cloud (stock toad cloud-low, greyed; spread 6)",
+"size": 0.12,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 6"
+],
+"cut": true
+},
+"cowherd-niulang-turned": {
+"look": "the young cowherd Niulang standing, hemp jacket, blue sash, straw hat on his back, flute in the sash, turned three-quarter to the right",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-zhinu-turned": {
+"look": "the weaving maiden Zhinu standing in pink-peach-gold robes with ribbons, turned three-quarter to the right",
+"size": 0.155,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-queen-turned": {
+"look": "the Queen Mother of the West standing in blue and gold robes, a peach in her hand, turned three-quarter to the right",
+"size": 0.165,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-boy-turned": {
+"look": "the little boy in a red jacket, standing, turned three-quarter to the right",
+"size": 0.099,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-girl-turned": {
+"look": "the little girl in a peach jacket with pink ribbons, standing, turned three-quarter to the right",
+"size": 0.092,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-sky-bridge": {
+"look": "the far magpie bridge, twelve magpies wing to wing in an arch",
+"size": 0.2,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true
+},
+"chang-e-chang-e": {
+"look": "Chang'e standing, calm, hands folded",
+"size": 0.152,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true,
+"turned": "chang-e-chang-e-turned"
+},
+"chang-e-chang-e-turned": {
+"look": "Chang'e walking, three-quarter left",
+"size": 0.1506,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-pour": {
+"look": "Chang'e kneeling, holding out a ladle of water",
+"size": 0.119,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-bottle": {
+"look": "Chang'e holding the jade bottle tight to her chest, worried",
+"size": 0.1527,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-drink": {
+"look": "Chang'e drinking from the jade bottle",
+"size": 0.1517,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-float": {
+"look": "Chang'e floating up, arms open, ribbons flowing",
+"size": 0.1638,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-sad": {
+"look": "Chang'e sad, head bowed, hand on her chest",
+"size": 0.1464,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-sit-rabbit": {
+"look": "Chang'e sitting on a step, cradling the rabbit",
+"size": 0.1111,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-throw": {
+"look": "Chang'e both arms up, tossing light",
+"size": 0.1562,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-chang-e-wave": {
+"look": "Chang'e waving, smiling",
+"size": 0.1565,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi": {
+"look": "Hou Yi standing, calm, red bow in hand",
+"size": 0.167,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true,
+"turned": "chang-e-hou-yi-turned"
+},
+"chang-e-hou-yi-turned": {
+"look": "Hou Yi walking, three-quarter left",
+"size": 0.1658,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-shoot": {
+"look": "Hou Yi drawing the red bow, side view",
+"size": 0.1872,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-call": {
+"look": "Hou Yi calling up, hands round his mouth",
+"size": 0.1641,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-run": {
+"look": "Hou Yi running left",
+"size": 0.1538,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-sad": {
+"look": "Hou Yi sad, looking up, bow hanging",
+"size": 0.167,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-lantern": {
+"look": "Hou Yi holding a red lantern up high",
+"size": 0.1979,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-kneel": {
+"look": "Hou Yi kneeling, setting down a plate",
+"size": 0.0942,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-bow": {
+"look": "Hou Yi bowing in thanks",
+"size": 0.159,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-hou-yi-cheer": {
+"look": "Hou Yi cheering, fist up",
+"size": 0.1885,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-jade-rabbit": {
+"look": "the Jade Rabbit sitting up, jade bead",
+"size": 0.06,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-jade-rabbit-hop": {
+"look": "the Jade Rabbit mid-hop",
+"size": 0.0538,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-jade-rabbit-cling": {
+"look": "the Jade Rabbit hanging from a ribbon end",
+"size": 0.0848,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-jade-rabbit-pestle": {
+"look": "the Jade Rabbit holding a pestle",
+"size": 0.0605,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-jade-rabbit-talk": {
+"look": "the Jade Rabbit waving a paw, talking",
+"size": 0.0607,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-jade-rabbit-tumble": {
+"look": "the Jade Rabbit tumbled on its back, laughing",
+"size": 0.0443,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-fengmeng-creep": {
+"look": "Feng Meng creeping on tiptoe, sneaky",
+"size": 0.1261,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-fengmeng-grab": {
+"look": "Feng Meng reaching to grab",
+"size": 0.128,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-fengmeng-run": {
+"look": "Feng Meng running away",
+"size": 0.1177,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-fengmeng-bump": {
+"look": "Feng Meng sat down hard, surprised",
+"size": 0.0984,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-sun": {
+"look": "a blazing sun disc ringed with flames, a small yellow sun-bird with spread wings inside, perched",
+"size": 0.075,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-sun-fly": {
+"look": "a blazing sun disc with a small yellow sun-bird inside, a tail of fire streaming behind, flying",
+"size": 0.075,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-sunbird-wet": {
+"look": "the small yellow sun-bird drenched and sad after its fire goes out, water drops falling",
+"size": 0.04,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": false
+},
+"chang-e-grandpa": {
+"look": "the old grandfather: white hair and long white beard, an olive-grey robe, leaning on a bamboo cane",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-grandma": {
+"look": "the old grandmother: grey hair in a bun, a dark blue jacket and long skirt, hands folded",
+"size": 0.141,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-child-3": {
+"look": "a small child in a pale tunic with a green sash, holding up a white rabbit lantern on a bamboo pole",
+"size": 0.15,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-child-4": {
+"look": "a small child in a brown tunic and grey skirt, holding up a red goldfish lantern on a bamboo pole",
+"size": 0.15,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-boy-lantern": {
+"look": "the little boy in a red jacket holding up a round red paper lantern on a bamboo pole",
+"size": 0.15,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-girl-lantern": {
+"look": "the little girl in a peach jacket with pink ribbons holding up a pink lotus lantern on a bamboo pole",
+"size": 0.14,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-queen-gives": {
+"look": "the Queen Mother of the West standing in blue and gold robes, one arm held out offering a tiny green jade bottle",
+"size": 0.165,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"chang-e-families": {
+"look": "a far-off festival crowd of five villagers of mixed ages, some holding paper lanterns",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-minister-1": {
+"look": "Old court minister kneeling, white hair and beard, palms together",
+"size": 0.105,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-minister-2": {
+"look": "Court minister kneeling, black moustache, palms together",
+"size": 0.105,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-minister-3": {
+"look": "Young court minister kneeling, smiling, palms together",
+"size": 0.105,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-drummer": {
+"look": "Boy drummer in a red jacket with a small drum, sticks raised",
+"size": 0.15,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-novice-1": {
+"look": "Temple novice, shaved head, orange robe, sweeping with a broom",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-novice-2": {
+"look": "Temple novice, shaved head, orange robe, holding a silver alms bowl",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-cat": {
+"look": "Fat white temple cat, green eyes, gold collar, sitting",
+"size": 0.035,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"cowherd-boy-cry": {
+"look": "the little boy in a red jacket, crying hard, tears running",
+"size": 0.099,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"cowherd-girl-cry": {
+"look": "the little girl in a peach jacket with pink ribbons, crying hard, tears running",
+"size": 0.092,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd"
+],
+"cut": true,
+"person": true
+},
+"chang-e-queen-cloud": {
+"look": "the Queen Mother's pearl cloud (stock toad cloud-low, tinted pearl)",
+"size": 0.075,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-jade-bottle": {
+"look": "the little green jade medicine bottle (prop card as a puppet)",
+"size": 0.014,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"chang-e-rabbit-lantern": {
+"look": "Chang'e's rabbit lantern (prop card as a puppet)",
+"size": 0.0376,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-rabbit-lantern": {
+"look": "Chang'e's rabbit lantern (prop card as a puppet)",
+"size": 0.0376,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
 }
 }
 }

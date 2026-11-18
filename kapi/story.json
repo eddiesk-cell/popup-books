@@ -7,19 +7,19 @@
    "pitch": 0
   },
   "kapi": {
-   "voice": "bm_george",
-   "speed": 1.12,
-   "pitch": 4
+   "voice": "bm_fable",
+   "speed": 1.1,
+   "pitch": 3
   },
   "bobo": {
-   "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": -3
+   "voice": "bm_lewis",
+   "speed": 0.88,
+   "pitch": -2
   },
   "lulu": {
    "voice": "bm_george",
-   "speed": 0.95,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   }
  },
  "spreads": [
@@ -860,5 +860,6 @@
     ]
    ]
   }
- ]
+ ],
+ "respell": {}
 }

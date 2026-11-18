@@ -20,7 +20,7 @@
 //     o.dir    Vector3, wind or travel direction (gust, wake, notes, breath, dust-whirl, splash level 3's spray)
 //     o.card   THREE.Texture for gust's leaves, petals, straw (one card at a time: the latest gust's)
 //     o.shed   gust only: an Object3D (or Vector3) that 2 to 5 leaves are shaken loose from
-//     o.toward Vector3: where shimmer's glint path points, where a shooting star goes
+//     o.toward Vector3: where shimmer's glint path points, where a shooting star goes; trace: o.to (or toward) is the end of the line it draws from `at` over secs
 //     o.tint   [r, g, b] 0..1 (puff grey, wash colour, shimmer gold ...)   o.radius wash's radius (4 x size)   o.every  rings, breath (s)
 //     o.region rings: { x0, x1, z0, z1, y } or a Box3     o.width rain and gust width (1.4)
 //     o.area   [w, d] metres, a rectangle on the ground centred at o.at: shimmer, rain, haze, wash, gust and rings spread over it
@@ -48,14 +48,18 @@ const TUCK = "a *= 1. - uTuck * smoothstep(.64, .73, gl_FragCoord.y / uH);";
 const TUCKP = "a *= 1. - uTuck * mix(smoothstep(.64, .73, gl_FragCoord.y / uH), smoothstep(.9, .93, gl_FragCoord.y / uH), vSky);";  // stars (vSky 1) are the sky: only the top 10% (the buttons) is kept clear  // the read-along words sit in the top quarter: nothing reaches it
 // Particle kinds: 0 dot (a crisp glint, ember) · 1 four-point star · 2 soft glow · 3 rain streak · 4 soft puff · 5 ring of light · 6 paper note · 7 reflection · 8 spot on the ground
 // · 9 dust strung on a funnel helix · 10 wind line (a dot of a ribbon) · 11 fire spark (stretched, orange with a dark rim) · 12 water drop (paper-white, blue edge) · 13 bubble (clear, bright rim, dark outline, a glint)
+// · 14 petal (tumbling, an ink rim) · 15 silk (a dot of a thread) · 16 tear (a clear drop with a glint); 14-16 move by their own rule (PVS): still, then a straight run with a sway that ends where they land, then they lie
 const PVS = `uniform float uT, uH, uMinPx; uniform vec4 uS[${NS}], uPage; ${PAGE}
 attribute vec3 aV; attribute vec4 aA, aC, aD, aE, aG; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
 void main() {
   float age = uT - aA.x, life = aA.y, k = aA.w; vec4 S = uS[int(aD.z + .5)];
   if (age < 0. || age > life || S.w <= 0.) { gl_Position = vec4(2., 2., 2., 1.); gl_PointSize = 0.; return; }
-  float u = age / life, sd = aD.w;
+  float u = age / life, sd = aD.w, turn = sd;
   vec3 p = position + aV * (aD.x < 1e-3 ? age : (1. - exp(-aD.x * age)) / aD.x); p.y -= .5 * aD.y * age * age;
-  if (k > 8.5 && k < 9.5) { float r = aE.z * (.25 + 2.2 * u), an = aG.y * age + step(.5, sd) * 3.1416; p += vec3(cos(an) * r, aE.z * 6. * u, sin(an) * r); }  // two strands: the angle follows the height, so the dust is strung on a helix
+  if (k > 13.5) { float tf = max(aG.y, 1e-3), tt = clamp(age - aD.x, 0., tf), uu = tt / tf; p = position + aV * tt;  // the tells (petal 14, silk 15, tear 16): still for aD.x s, then aV for aG.y s, then they lie where they came to
+    if (k < 14.5) { p.x += aE.z * sin(9.4248 * uu); p.z += aE.z * .5 * sin(9.4248 * uu); turn = sd * 6.2832 + aG.w * (tt - .5 * tt * uu); }  // a petal sways side to side and turns, slowing to rest exactly where it lands
+    else if (k < 15.5) p.y += aE.z * (1. - uu) * sin(6.2832 * (age * .8 + sd * 1.5)); }  // a wave runs along the silk while it falls, gone as it settles
+  else if (k > 8.5 && k < 9.5) { float r = aE.z * (.25 + 2.2 * u), an = aG.y * age + step(.5, sd) * 3.1416; p += vec3(cos(an) * r, aE.z * 6. * u, sin(an) * r); }  // two strands: the angle follows the height, so the dust is strung on a helix
   else if (aE.z > 0.) { float f = aG.y + sd * 2.; if ((k > 5.5 && k < 6.5) || (k > 9.5 && k < 12.5)) p.y += aE.z * sin(age * f + sd * 6.28); else { p.x += aE.z * sin(age * f + sd * 6.28); p.z += aE.z * cos(age * f * .8 + sd * 4.); } }
   p += S.xyz;
   float a = clamp(age / max(aE.x, 1e-3), 0., 1.) * clamp((life - age) / max(aE.y, 1e-3), 0., 1.) * aC.a * S.w;
@@ -64,7 +68,7 @@ void main() {
   float s = aA.z * (1. + aG.x * u); if (aG.w > 0. && k < 6.5) s *= 1. + .1 * sin(age * aG.w * 6.2832 + sd * 6.28);
   vec4 c = projectionMatrix * modelViewMatrix * vec4(p, 1.);
   gl_Position = c; ${BIAS} float px = s * uH * .5 * projectionMatrix[1][1] / c.w; gl_PointSize = clamp(px, k > 10.5 && k < 11.5 ? uMinPx * 2.5 : k < 1.5 || k > 9.5 ? uMinPx : k > 3.5 && k < 4.5 ? uMinPx * 2.5 : k > 2.5 && k < 3.5 ? uMinPx * 5. : 0., k > 2.5 && k < 3.5 ? 90. : k > 12.5 ? 40. : k > 11.5 ? 18. : aG.z > 2.5 ? 1024. : 256.);  // rain streaks at most 90 px long, drops at most 18 px, at any camera  // a phone keeps dots and stars at least uMinPx wide, puffs 2.5 times that, rain streaks 5 times that long
-  vC = vec4(aC.rgb, a); vK = k; vR = sd; vAge = age; vW = aG.w; vPx = gl_PointSize; vSky = step(1.5, aG.z) * step(aG.z, 2.5);
+  vC = vec4(aC.rgb, a); vK = k; vR = turn; vAge = age; vW = aG.w; vPx = gl_PointSize; vSky = step(1.5, aG.z) * step(aG.z, 2.5);
   if (aG.z > 2.5) { vec4 cn = projectionMatrix * modelViewMatrix * vec4(p + normalize(cameraPosition - p) * s * .5, 1.); gl_Position.z = cn.z / cn.w * c.w; }  // a flash ball: depth taken at its front, so the ground behind it never cuts it flat
 }`;
 const PFS = `uniform float uH, uTuck; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
@@ -84,6 +88,10 @@ void main() {
   else if (vK < 8.5) m = smoothstep(1., .45, length(q * vec2(1., 3.2)));
   else if (vK < 10.5) { float e = length(q * vec2(1., 2.6)); m = smoothstep(1., .7, e); col = mix(vec3(.2, .3, .38), vC.rgb, smoothstep(.8, .45, e)); }  // a dash along the wind: overlapping dashes draw one continuous line
   else if (vK < 11.5) { float e = length(q * vec2(2.8, 1.)); m = smoothstep(1., .7, e); col = mix(vec3(.5, .12, .02), vec3(1.5, .8, .25), smoothstep(.75, .1, e)); col = mix(col, vC.rgb, .35); }  // a spark: stretched along its rise, a dark red rim round a bright orange core
+  else if (vK > 13.5 && vK < 14.5) { float c = cos(vR), s = sin(vR); vec2 r = vec2(c * q.x - s * q.y, s * q.x + c * q.y); r.x /= .3 + .7 * abs(cos(vR * .7));  // a petal, turned and narrowed as it tumbles
+    float e = length(vec2(r.x / (.62 - .22 * r.y), r.y * 1.08 + .08 * r.x * r.x)); m = smoothstep(1., .84, e); col = mix(vC.rgb * vec3(.6, .42, .48), vC.rgb, smoothstep(.98, .72, e)) * (.93 + .07 * smoothstep(.12, 0., abs(r.x))); }  // an ink rim, a paler vein
+  else if (vK > 14.5 && vK < 15.5) { m = smoothstep(1., .45, d); col = vC.rgb * (.8 + .35 * smoothstep(.5, 0., abs(q.y + .35))); }  // silk: a fine strand with a sheen on its upper edge
+  else if (vK > 15.5) { m = smoothstep(1., .72, d); col = mix(vec3(.3, .5, .66), vC.rgb, smoothstep(.9, .35, d)) + .7 * smoothstep(.4, 0., length(q - vec2(-.3, .32))); }  // a tear: a clear drop, a blue-grey rim, a bright glint
   else if (vK > 12.5) { vec2 g = q - vec2(-.36, .36); m = smoothstep(1., .9, d) * (.22 + .78 * smoothstep(.45, .78, d)) + .9 * smoothstep(.3, .1, length(g * vec2(1., 1.6)));  // a bubble: a clear disc, a bright rim, a glint
     col = mix(vC.rgb, vec3(.06, .22, .34), smoothstep(.7, .88, d) * (1. - smoothstep(.1, .3, length(g)))); m = min(m, 1.); }
   else { m = smoothstep(1., .8, d); col = mix(vec3(.3, .52, .68), vC.rgb, smoothstep(.85, .45, d)); }  // a drop: paper-white with a blue edge
@@ -249,7 +257,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
   const local = (s, p) => s.proxyOf ? [p[0] - s.proxyOf.anchor.x, p[1] - s.proxyOf.anchor.y, p[2] - s.proxyOf.anchor.z] : p;
   const P = (e, s, o, pool = PA) => {
     const b = T + (o.d ?? 0), life = o.l, p = local(s, o.p ?? [0, 0, 0]);
-    if (e.follow && s === e.s && p[1] > .6 * e.size) p[1] = .6 * e.size;  // below the subject's shoulders
+    if (e.follow && !e.free && s === e.s && p[1] > .6 * e.size) p[1] = .6 * e.size;  // below the subject's shoulders (a tell rides a head or a hand on purpose: e.free)
     const c = o.c ?? [1, 1, 1];
     if (!put(pool, { position: p, aV: o.v ?? [0, 0, 0], aA: [b, life, o.s, o.k ?? 0], aC: [c[0], c[1], c[2], o.a ?? 1], aD: [o.dr ?? 0, o.g ?? 0, s.i, o.seed ?? rnd()],
       aE: [o.fi ?? .05, o.fo ?? .2, o.wob ?? 0, o.tw ?? 0], aG: [o.grow ?? 0, o.wf ?? 2, e.weather ? 1 : o.sky ? 2 : o.near ? 3 : 0, o.br ?? 0] }, b + life, e.weather)) return;
@@ -318,6 +326,10 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
   const area = (e, o) => o.area && { w: o.area[0], d: o.area[1] };  // a rectangle on the ground centred at the anchor
   const hook = (name, L) => name && sound?.(name, [.25, .32, .4][(L ?? 2) - 1]);
   const tint = (o, c) => o.tint ?? c;
+  const boneIn = (o, re) => { let b = null; o?.traverse?.(x => { if (!b && x.isBone && re.test(x.name) && x.matrixWorld.determinant()) b = x; }); return b; };  // the drawn skeleton's bone, never a spare mood head's (stored at scale 0)
+  const handRe = o => (o.hand === "left" ? /lefthand$/i : o.hand === "right" ? /righthand$/i : null);
+  const ride = (e, o, re) => {  // a tell rides a bone of its follower (a hand, the head), else the follower; its offsets stay in world axes: shortcut: where the head is, not its turn, which a tear's second is too short to show
+    if (!e.follow) return null; const b = re && boneIn(e.follow, re); if (b) e.follow = b; e.follow.getWorldPosition(e.s.anchor); e.free = true; return b; };
 
   // ---- the kinds ----
   const KINDS = {
@@ -531,6 +543,15 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
       for (let i = 1; i < 36; i++) P(e, e.s, { v, d: i * .007, l: 1.2, s: s * .08 * (1 - i / 40), k: 0, c, a: .9 * (1 - i / 36), fi: .1, fo: .05 });  // the tail: a line of sparks on the head's own path
       P(e, e.s, { p: d.toArray(), d: 1.2, l: 1.6, s: s * .24, k: 1, c, a: .95, fi: .15, fo: .7, tw: 8 });
     },
+    trace(e, o) {  // V22: a glowing line drawn from the anchor to o.to (or o.toward) over o.secs (2), sparkles along it; it holds, then fades
+      const s = e.size, to = v3(o.to ?? o.toward) ?? e.s.anchor.clone().add(new THREE.Vector3(.5, 0, 0)), d = to.clone().sub(e.s.anchor), T0 = o.secs ?? 2, c = tint(o, [3, 2.3, .9]), N = Math.min(160, Math.max(24, Math.round(d.length() / (s * .06))));
+      if (reduced) return P(e, e.s, { p: d.clone().multiplyScalar(.5).toArray(), l: 2, s: s * .2, k: 1, c, a: .8, fi: .2, fo: .6 });
+      hook("star-chime", 1);
+      for (let i = 0; i < N; i++) { const k = i / (N - 1), t = T0 * k, p = d.clone().multiplyScalar(k).toArray();
+        P(e, e.s, { p, d: t, l: T0 - t + 1.6, s: s * .22, k: 0, c, a: 1, fi: .08, fo: 1.2 });
+        if (i % 2 === 0) P(e, e.s, { p: [p[0] + r(-1, 1) * s * .08, p[1] + r(-1, 1) * s * .08, p[2] + r(-1, 1) * s * .08], d: t, l: 1.1, s: s * .3, k: 1, c, a: 1, fi: .1, fo: .6, tw: 8 }); }
+      P(e, e.s, { v: d.clone().divideScalar(T0).toArray(), l: T0, s: s * .24, k: 1, c, a: 1, fi: .1, fo: .05 });  // the pen: a bright star at the line's end as it grows
+    },
     "dust-whirl"(e, o) {
       if (reduced) return;
       const s = e.size, dir = flatDir(o.dir), W = o.width ?? .5, v = dir.clone().multiplyScalar(W / 4), c = tint(o, [.3, .2, .1]);
@@ -606,11 +627,45 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
       hook("splash-small", 1); e.die = Infinity; let acc = n * .3;
       e.tick = dt => { for (acc += dt * n; acc >= 1; acc--) one(r(0, dt)); };
     },
+    // V34, the tells (emotional-storytelling: small physical tells at a turn). Each lands on o.at, or rides o.follow: a hand with o.hand "left" | "right" (petal,
+    // thread; the character's own left or right), its head (tear), else the follower itself. No sound: a tell is seen, not heard. Particles only, from the pools.
+    petal(e, o) {  // one petal falls from o.height (0.14 m: about a person's head, so a close sees all of its fall) above where it lands, drifting along o.dir and turning slowly, and lies there 3 s (half its size above the ground: a sprite lying at the ground's height was half under it), then fades; level 1-2: one petal, 3: three (the first lands exactly)
+      ride(e, o, handRe(o));
+      const s = e.size, h = o.height ?? .14, c = tint(o, [1, .62, .72]), dir = flatDir(o.dir), f = front(e.s.anchor), ps = Math.max(.012, s * .12);  // peach-blossom pink, about 1.2-2 cm: read on green paper from a close
+      for (let i = 0; i < [1, 1, 3][e.L - 1]; i++) {
+        const land = [i ? r(-1, 1) * s * .3 : 0, ps * .5, i ? r(-1, 1) * s * .15 : 0], off = [-dir.x * h * .45 + f.x * h * .1, h, -dir.z * h * .45 + f.z * h * .1], tf = h / .05 * r(.9, 1.1), d = i * r(.7, 1.2);
+        if (reduced) { P(e, e.s, { p: land, l: 3.5, s: ps, k: 14, c, a: 1, fi: .1, fo: .8, seed: rnd() }, PN); continue; }  // reduced: lying there at once (still within 0.2 s)
+        P(e, e.s, { p: land.map((x, j) => x + off[j]), v: off.map(x => -x / tf), d, l: tf + 3, s: ps, k: 14, c, a: 1, fi: .4, fo: .8, wob: h * .12, wf: tf, br: r(1.6, 2.4) * (rnd() < .5 ? -1 : 1), seed: rnd() }, PN);
+      }
+    },
+    thread(e, o) {  // a fine silk thread (o.tint, red; o.width its length, 0.07 m) drifts down from o.height (0.12 m) above where it settles, a wave running along it, and lies across that place 4 s, then fades; a glint as it settles; level 3 falls slower
+      ride(e, o, handRe(o));
+      const L = o.width ?? .07, h = o.height ?? .12, c = tint(o, [.86, .16, .2]), f = front(e.s.anchor), rt = [f.z, 0, -f.x], dir = flatDir(o.dir), N = 48, tf = h / [.04, .033, .025][e.L - 1], ps = Math.max(.0015, L / N * 2.2);  // about 3 mm thick: a child sees it in a close
+      const off = [-dir.x * h * .4, h, -dir.z * h * .4], v = off.map(x => -x / tf), rest = reduced ? 0 : tf;
+      for (let i = 0; i < N; i++) { const x = i / (N - 1) * 2 - 1, land = [rt[0] * x * L / 2, .004 - .18 * L * x * x + .08 * L * x, rt[2] * x * L / 2];  // across the hand, sagging a little at its ends
+        P(e, e.s, { p: reduced ? land : land.map((y, j) => y + off[j]), v: reduced ? [0, 0, 0] : v, l: rest + 4, s: ps, k: 15, c, a: 1, fi: reduced ? .1 : .5, fo: 1, wob: reduced ? 0 : h * .05, wf: tf, seed: (i / (N - 1)) }, PN); }
+      if (!reduced) P(e, e.s, { p: [0, .006, 0], d: rest, l: .7, s: L * .3, k: 1, c: [1.6, 1.4, 1.1], a: .9, fi: .1, fo: .5, tw: 10 });  // it settles: one soft glint
+    },
+    tear(e, o) {  // a small bright glint that runs down a cheek from the eye, following the head: o.follow's head bone (the eye found from its head and crown bones), else the face of its card
+      // (o.height: the eye's height above its feet, else 0.86 of the card); level 1-3: 1, 2, 3 tears 0.8 s apart, cheeks in turn; reduced: the drop held under the eye
+      const head = ride(e, o, /head$/i), A = e.s.anchor, w = new THREE.Vector3();
+      let f = front(A), rt = [f.z, 0, -f.x], s0 = 1, hh = .2 * e.size, eye = [f.x * hh * .5, .4 * hh, f.z * hh * .5];
+      if (head) {  // a 3D face looks where its body faces (live.js turns the body by its yaw): the eye on that side of the head, the cheek the camera sees first
+        const crown = boneIn(o.follow, /headtop_end$/i), fw = o.follow.getWorldDirection(w).setY(0).normalize(), c = f; if (crown) hh = crown.getWorldPosition(new THREE.Vector3()).y - A.y;
+        if (fw.lengthSq() > .5) { f = fw.clone(); rt = [f.z, 0, -f.x]; s0 = rt[0] * c.x + rt[2] * c.z < 0 ? -1 : 1; } eye = [f.x * hh * .45, .42 * hh, f.z * hh * .45];  // in profile, Zhinü's tear sat on her ear: the eye had been taken toward the camera
+      }
+      else if (o.follow) { const b = new THREE.Box3().setFromObject(o.follow), H = b.max.y - b.min.y, dz = b.max.z - b.min.z; hh = .22 * H; eye = [f.x * (dz / 2 + .003), b.min.y - A.y + (o.height ?? .86 * H), f.z * (dz / 2 + .003)]; }  // shortcut: a card's eye is taken on its middle; a profile face drawn off-centre needs an x offset key
+      const tf = .9, hold = reduced ? 9 : .3, run = [0, -.45 * hh / tf, 0];
+      for (let i = 0; i < e.L; i++) { const sd = (i % 2 ? -1 : 1) * s0, d = i * .8, p = eye.map((x, j) => x + rt[j] * sd * .2 * hh), v = run.map((y, j) => y + rt[j] * sd * .05 * hh / tf);
+        P(e, e.s, { p, v, dr: hold, wf: tf, d, l: reduced ? 2.5 : hold + tf + .25, s: Math.max(.002, .12 * hh) * (phone ? 1.4 : 1), k: 16, c: [.92, .97, 1.05], a: 1, fi: reduced ? .1 : .25, fo: .35 }, PN);
+        if (!reduced) P(e, e.s, { p, d: d + .05, l: .6, s: .35 * hh * (phone ? 1.3 : 1), k: 1, c: [1.6, 1.5, 1.3], a: .85, fi: .1, fo: .4, tw: 9 });  // it wells up: a glint at the eye
+        if (!reduced) for (let j = 1; j < 5; j++) P(e, e.s, { p: p.map((x, n) => x + v[n] * tf * j / 5), d: d + hold + tf * j / 5, l: .7, s: .04 * hh, k: 0, c: [.95, .98, 1], a: .45, fi: .05, fo: .5 }, PN); }  // the wet path it leaves, fading
+    },
   };
   const ALIAS = { "heat-shimmer": ["haze"], "music-notes": ["notes", 2], "wind-streaks": ["gust"], "green-wash": ["wash"] };
-  const RIDE = { wake: 1, sparkle: 1, halo: 1, embers: 1, notes: 1, breath: 1, haze: 1 };  // kinds that ride with o.follow; the rest start where it is
+  const RIDE = { wake: 1, sparkle: 1, halo: 1, embers: 1, notes: 1, breath: 1, haze: 1, petal: 1, thread: 1, tear: 1 };  // kinds that ride with o.follow; the rest start where it is
   const REPEAT = { splash: 1, "dust-whirl": 1, "shooting-star": 1, puff: 1 };
-  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1, flash: 1 };  // these end on their own length
+  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, trace: 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1, flash: 1, petal: 1, thread: 1, tear: 1 };  // these end on their own length
   const own = e => (e.w.proxyOf ? [e.s] : [e.s, e.w]);
 
   function play(type, o = {}) {

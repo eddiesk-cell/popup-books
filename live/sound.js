@@ -100,11 +100,11 @@ export function addSound(manifest, { reader, voices = [], ctx } = {}) {
   // failed: no next line is coming to hold the duck for, so the beds come straight back up (well within a second)
   // guard: a voice that said "play" and then died without an event (a rejected play(), a missing file) must not leave the beds ducked:
   // 2.5 s after ducking starts, and every 2.5 s after, if no voice is really playing the duck lifts
-  let guard = 0; const all = [reader?.audio, ...voices].filter(Boolean), live = () => all.some(a => !a.paused && !a.ended && !a.error);
+  let guard = 0; const all = [reader?.audio, ...voices].filter(Boolean), live = () => all.some(a => !a.paused && !a.ended && !a.error && !a.muted);
   const check = () => { if (!ducked) return; if (live()) guard = setTimeout(check, 2500); else { speaking.clear(); duck(false, true); } };
   const duck = (on, failed) => { ducked = !!on; clearTimeout(hold); clearTimeout(guard); if (on) { ramp(duckG.gain, DUCK, 0.08); guard = setTimeout(check, 2500); } else hold = setTimeout(() => ramp(duckG.gain, 1, failed ? 0.15 : 0.35), failed ? 0 : HOLD_MS); };
   const watch = (a) => {
-    for (const ev of ["play", "playing"]) a.addEventListener(ev, () => { speaking.add(a); duck(true); });
+    for (const ev of ["play", "playing"]) a.addEventListener(ev, () => { if (a.muted) return; speaking.add(a); duck(true); });  // a muted voice (Reading Mode) leaves the beds up
     for (const ev of ["pause", "ended", "emptied", "error", "stalled", "abort"])  // a voice that fails or stalls mid-play lets the beds back up
       a.addEventListener(ev, () => { speaking.delete(a); if (!speaking.size) duck(false, /error|stalled|abort/.test(ev)); });
   };

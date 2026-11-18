@@ -73,12 +73,29 @@ panel.addEventListener("focusout", away); menu.addEventListener("focusout", away
 addEventListener("keydown", e => { if (e.key === "Escape" && !panel.hidden) openMenu(false, true); });
 addEventListener("pointerdown", e => { if (!panel.hidden && !panel.contains(e.target) && !menu.contains(e.target)) openMenu(false); });
 $$(".btn[aria-disabled=true]").forEach(b => b.setAttribute("aria-label", `${b.textContent}, ${L.nav.soon}`));
+// "Come inside" (owner 2026-11-18: "The animation from first page to Grand Library should be polish"): one move into the library. The world leans in and the hum fades (.leaving in the style's css), then the
+// browser's view transition (library.css) carries this frame onto the library's closed doors; a browser without one fades to the library's dark instead. A click that opens a new tab is left alone.
+const inside = $("#close a.btn");
+inside?.addEventListener("click", e => { if (e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); const h = document.documentElement;
+  h.classList.add("leaving"); h.classList.toggle("novt", !("CSSViewTransitionRule" in window)); window.__snd?.duck(true); window.__snd?.setBed([["library-hum", 0]]);
+  try { sessionStorage.setItem("wst-intro-play", "1"); } catch {}  // owner 2026-11-18: coming in from the first page always plays the intro, return visits too (a direct visit to the library still skips it)
+  setTimeout(() => location.assign(inside.href), reduce ? 0 : 380); });
+// the library downloads while the visitor is here (owner 2026-11-18: "the site should be very light ... it should not load"): once this page is idle, or the moment the pointer or focus reaches
+// "Come inside": every file the library's head lists (its modulepreload, preload and prefetch links, the one manifest: library/index.html) is fetched into the cache, then Chrome builds the whole
+// library page from it in the background (a prerender: the click then shows it at once, its doors already drawn). Saved data or a slow 2G line: nothing is fetched early.
+let warmed = false; const warm = () => { if (warmed || !inside || navigator.connection?.saveData || /2g/.test(navigator.connection?.effectiveType ?? "")) return; warmed = true;
+  const prerender = () => { if (!HTMLScriptElement.supports?.("speculationrules")) return; const s = document.createElement("script"); s.type = "speculationrules"; s.textContent = JSON.stringify({ prerender: [{ urls: [inside.href], eagerness: "immediate" }] }); document.head.append(s); };
+  fetch(inside.href).then(r => r.text()).then(t => { const d = new DOMParser().parseFromString(t, "text/html"), q = [...d.querySelectorAll('link[rel=modulepreload], link[rel=preload], link[rel=prefetch]')].filter(l => !l.media || matchMedia(l.media).matches).map(l => new URL(l.getAttribute("href"), inside.href).href);
+    let left = 3; const next = () => { const u = q.shift(); if (u) fetch(u, { priority: "low" }).catch(() => {}).finally(next); else if (!--left) prerender(); }; next(); next(); next(); }).catch(prerender); };  // three at a time, low priority (this page's own pictures come first); then, where the browser can, the page itself is built from that cache
+inside?.addEventListener("pointerenter", warm); inside?.addEventListener("focus", warm);
+addEventListener("pageshow", e => { if (!e.persisted) return; document.documentElement.classList.remove("leaving"); window.__snd?.setBed([["library-hum", 1]]); });  // back from the library: the page as it was, the hum again
 
 // ---- the style
 const style = await mod;
 await cssReady;
 await style.init({ world: $("#world"), close: $("#close .scene"), T: L, cue: sfx.cue, reduce, qs, put, clamp, sm, $, $$ });
 document.documentElement.classList.remove("pre");
+{ const t0 = performance.now(); (function wait() { if (document.querySelector("#scene.live") || performance.now() - t0 > 6000) (window.requestIdleCallback ?? (f => setTimeout(f, 500)))(warm, { timeout: 2000 }); else setTimeout(wait, 250); })(); }  // after this page's own book is live (6 s at most), so it never waits on the library
 
 // ---- the scroll engine: pointer and scroll in, one loop, the style's frame() out. State given to the style:
 // y scroll, vh, p whole-page progress 0..1, tr per-track progress [wake, fly, worlds], geo track geometry, cx/cy smoothed pointer -1..1, put()

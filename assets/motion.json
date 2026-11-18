@@ -34,6 +34,20 @@
    "loop": true,
    "height": 0.15,
    "back": true
+  },
+  "Sprint": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.4671,
+   "speed_h": 3.1138
+  },
+  "Dash": {
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.4336,
+   "speed_h": 2.8905
   }
  },
  "mali": {
@@ -71,6 +85,20 @@
    "loop": true,
    "height": 0.166,
    "back": true
+  },
+  "Sprint": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.166,
+   "speed": 0.5936,
+   "speed_h": 3.576
+  },
+  "Dash": {
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.166,
+   "speed": 0.5511,
+   "speed_h": 3.3196
   }
  },
  "bobo": {
@@ -319,6 +347,40 @@
    "cycle": 1.0,
    "loop": true,
    "height": 0.06
+  },
+  "Run": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.06,
+   "speed": 0.1506,
+   "speed_h": 2.5093
+  },
+  "Sprint": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.06,
+   "speed": 0.1506,
+   "speed_h": 2.5093
+  },
+  "Sneak": {
+   "cycle": 1.9,
+   "loop": true,
+   "height": 0.06,
+   "speed": 0.0161,
+   "speed_h": 0.2691
+  },
+  "Dash": {
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.06,
+   "speed": 0.1398,
+   "speed_h": 2.3294
+  },
+  "Climb Up": {
+   "cycle": 1.3667,
+   "loop": false,
+   "height": 0.06,
+   "rise": 0.0146
   }
  },
  "girl": {
@@ -328,6 +390,45 @@
    "height": 0.15,
    "speed": 0.0645,
    "speed_h": 0.43
+  },
+  "Run": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.4152,
+   "speed_h": 2.7678
+  },
+  "Sprint": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.4152,
+   "speed_h": 2.7678
+  },
+  "Sneak": {
+   "cycle": 1.9,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.0445,
+   "speed_h": 0.2968
+  },
+  "Jump": {
+   "cycle": 1.9333,
+   "loop": false,
+   "height": 0.15
+  },
+  "Dash": {
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.3854,
+   "speed_h": 2.5694
+  },
+  "Climb Up": {
+   "cycle": 1.3667,
+   "loop": false,
+   "height": 0.15,
+   "rise": 0.0403
   }
  },
  "toad-buffalo.glb": {
@@ -400,7 +501,13 @@
   "float": 0.33
  },
  "turtle-pagong.glb": {
-  "Walk": {"speed": 0.0078, "speed_h": 0.12, "cycle": 1.6667, "loop": true, "height": 0.065}
+  "Walk": {
+   "speed": 0.0078,
+   "speed_h": 0.12,
+   "cycle": 1.6667,
+   "loop": true,
+   "height": 0.065
+  }
  },
  "turtle-matsing.glb": {
   "Walk": {
@@ -429,6 +536,20 @@
    "cycle": 0.6,
    "loop": true,
    "height": 0.15
+  },
+  "Sprint": {
+   "cycle": 0.56,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.3673,
+   "speed_h": 2.4489
+  },
+  "Dash": {
+   "cycle": 0.5,
+   "loop": true,
+   "height": 0.15,
+   "speed": 0.341,
+   "speed_h": 2.2733
   }
  },
  "tik": {

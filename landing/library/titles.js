@@ -2,8 +2,12 @@
 // the small words (the, and, of, a ...) small and italic in the body font, the names large in the head font, every line sized to fill the width; in another language the visitor's own title sits beneath as one small upright subtitle.
 const CJK = '"Noto Sans Lao", "Thonburi", "Noto Sans Thai", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Georgia, serif';
 export const HEAD = `"Cormorant Garamond", ${CJK}`, BODY = `"EB Garamond", ${CJK}`;
-// every face the canvas text uses, Lao included (Lao only in Noto Sans Lao: the canvases redraw once these are in, so a late font is never left in a fallback face)
-export const fontsReady = document.fonts ? Promise.all(['500 16px "Cormorant Garamond"', '400 16px "EB Garamond"', 'italic 400 16px "EB Garamond"', '400 16px "Noto Sans Lao"'].map(f => document.fonts.load(f, "Aaລາວ").catch(() => {}))) : Promise.resolve();
+// the faces the room's canvases use (the canvases redraw once these are in, so a late font is never left in a fallback face); Lao (only in Noto Sans Lao) when the visitor reads Lao.
+// allFonts(): those and the rest the big book's title needs (EB Garamond italic, Lao), fetched only when a book is opened (owner 2026-11-18: "very light")
+const lao = (() => { try { return /^lo/.test(new URLSearchParams(location.search).get("lang") || localStorage.getItem("wst-lang") || navigator.language); } catch { return false; } })();
+const load = list => document.fonts ? Promise.all(list.map(f => document.fonts.load(f, "Aaລາວ").catch(() => {}))) : Promise.resolve();
+export const fontsReady = load(['500 16px "Cormorant Garamond"', '400 16px "EB Garamond"', ...(lao ? ['400 16px "Noto Sans Lao"'] : [])]);
+let all = null; export const allFonts = () => all ??= Promise.all([fontsReady, load(['italic 400 16px "EB Garamond"', '400 16px "Noto Sans Lao"'])]);
 const SMALL = new Set(["the", "and", "of", "a", "an", "in", "on", "to", "for", "with"]);
 export function titleLines(title, lang = "en") {
   const t = String(title).trim(), w = t.split(/\s+/); if (lang !== "en" || w.length < 2) return [{ t, big: true }];

@@ -8,24 +8,24 @@
    "pitch": 0
   },
   "mali": {
-   "voice": "bm_george",
-   "speed": 1.06,
-   "pitch": 5
+   "voice": "bf_alice",
+   "speed": 1.05,
+   "pitch": 1
   },
   "pip": {
-   "voice": "bm_george",
-   "speed": 1.12,
-   "pitch": 8
+   "voice": "bf_lily",
+   "speed": 1.1,
+   "pitch": 5
   },
   "nok": {
    "voice": "bm_george",
-   "speed": 0.88,
-   "pitch": 2
+   "speed": 1.0,
+   "pitch": 0
   },
   "tong": {
    "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": -3
+   "speed": 1.0,
+   "pitch": 0
   },
   "closing": {
    "voice": "bm_george",
@@ -44,7 +44,7 @@
      "say": [
       [
        "narrator",
-       "It was the night of the boat festival in Mali's village by the river."
+       "It was the night of the boat festival in Mah-lee's village by the river."
       ]
      ]
     },
@@ -64,7 +64,7 @@
      "say": [
       [
        "narrator",
-       "Mali walked down to the water with her red kite. It was her favourite thing in the world."
+       "Mah-lee walked down to the water with her red kite. It was her favourite thing in the world."
       ]
      ]
     },
@@ -88,7 +88,7 @@
       ],
       [
        "narrator",
-       "cried Mali. She ran after it, but it flew far away over the dark river."
+       "cried Mah-lee. She ran after it, but it flew far away over the dark river."
       ]
      ]
     }
@@ -104,7 +104,7 @@
      "say": [
       [
        "narrator",
-       "Mali stood at the edge of the river. The moon was big and bright."
+       "Mah-lee stood at the edge of the river. The moon was big and bright."
       ]
      ]
     },
@@ -142,7 +142,7 @@
       ],
       [
        "narrator",
-       "said Mali."
+       "said Mah-lee."
       ]
      ]
     },
@@ -152,7 +152,7 @@
      "say": [
       [
        "narrator",
-       "Hop, hop, hop! Mali jumped from stone to stone, all the way across."
+       "Hop, hop, hop! Mah-lee jumped from stone to stone, all the way across."
       ]
      ]
     },
@@ -162,7 +162,7 @@
      "say": [
       [
        "narrator",
-       "On the other side, everything glowed softly. Mali had stepped into the spirit world."
+       "On the other side, everything glowed softly. Mah-lee had stepped into the spirit world."
       ]
      ]
     }
@@ -178,7 +178,7 @@
      "say": [
       [
        "narrator",
-       "The kite came down on a high roof. Mali walked closer and gasped."
+       "The kite came down on a high roof. Mah-lee walked closer and gasped."
       ]
      ]
     },
@@ -208,7 +208,7 @@
      "say": [
       [
        "narrator",
-       "Behind a basket, something tiny was hiding. Mali crouched down to look. It was Pip, a little lantern-moth."
+       "Behind a basket, something tiny was hiding. Mah-lee crouched down to look. It was Pip, a little lantern-moth."
       ]
      ]
     },
@@ -236,7 +236,7 @@
      "say": [
       [
        "narrator",
-       "Mali left her kite on the roof and lit the lanterns, one by one. Pip glowed brighter and brighter!"
+       "Mah-lee left her kite on the roof and lit the lanterns, one by one. Pip glowed brighter and brighter!"
       ]
      ]
     }
@@ -252,7 +252,7 @@
      "say": [
       [
        "narrator",
-       "Pip flew up and sat on Mali's shoulder."
+       "Pip flew up and sat on Mah-lee's shoulder."
       ],
       [
        "pip",
@@ -266,7 +266,7 @@
      "say": [
       [
        "narrator",
-       "Mali followed Pip to a little leaf spirit called Tong. He was crying."
+       "Mah-lee followed Pip to a little leaf spirit called Tong. He was crying."
       ]
      ]
     },
@@ -294,7 +294,7 @@
      "say": [
       [
        "narrator",
-       "Mali picked up a lamp."
+       "Mah-lee picked up a lamp."
       ],
       [
        "mali",
@@ -332,7 +332,7 @@
      "say": [
       [
        "narrator",
-       "Grandma Nok sat in her boat. She was an old boat-singer. Mali sat down next to her."
+       "Grandma Nok sat in her boat. She was an old boat-singer. Mah-lee sat down next to her."
       ]
      ]
     },
@@ -360,7 +360,7 @@
      "say": [
       [
        "narrator",
-       "Mali listened. The lotus flowers rang softly: ding, dong, ding."
+       "Mah-lee listened. The lotus flowers rang softly: ding, dong, ding."
       ]
      ]
     },
@@ -374,7 +374,7 @@
       ],
       [
        "narrator",
-       "said Mali. She jumped up."
+       "said Mah-lee. She jumped up."
       ],
       [
        "mali",
@@ -388,7 +388,7 @@
      "say": [
       [
        "narrator",
-       "Mali played the song on the lotus bells, note by note. Then Grandma Nok began to sing again."
+       "Mah-lee played the song on the lotus bells, note by note. Then Grandma Nok began to sing again."
       ]
      ]
     }
@@ -414,7 +414,7 @@
      "say": [
       [
        "narrator",
-       "Then Pip flew in with the red kite! Mali held it tight."
+       "Then Pip flew in with the red kite! Mah-lee held it tight."
       ]
      ]
     },
@@ -424,7 +424,7 @@
      "say": [
       [
        "tong",
-       "Thank you, Mali,"
+       "Thank you, Mah-lee,"
       ],
       [
        "narrator",
@@ -462,7 +462,7 @@
      "say": [
       [
        "narrator",
-       "The spirits took Mali all the way home. She waved goodbye at her door, and Pip glowed goodnight."
+       "The spirits took Mah-lee all the way home. She waved goodbye at her door, and Pip glowed goodnight."
       ]
      ]
     }
@@ -486,7 +486,7 @@
    "say": [
     [
      "narrator",
-     "Help others, even when you are sad. Mali did."
+     "Help others, even when you are sad. Mah-lee did."
     ]
    ]
   },
@@ -506,7 +506,7 @@
    "say": [
     [
      "narrator",
-     "Listen carefully, and you can find what was lost. Mali heard the song."
+     "Listen carefully, and you can find what was lost. Mah-lee heard the song."
     ]
    ]
   },
@@ -548,7 +548,7 @@
    "say": [
     [
      "narrator",
-     "Tap the glowing stone. Help Mali hop!"
+     "Tap the glowing stone. Help Mah-lee hop!"
     ]
    ]
   },
@@ -558,7 +558,7 @@
    "say": [
     [
      "narrator",
-     "Mali crossed the river!"
+     "Mah-lee crossed the river!"
     ]
    ]
   },
@@ -588,7 +588,7 @@
    "say": [
     [
      "narrator",
-     "Where should Mali put the lamp? Tap a spot!"
+     "Where should Mah-lee put the lamp? Tap a spot!"
     ]
    ]
   },
@@ -664,5 +664,8 @@
    "Hello, little one.",
    "La la la!"
   ]
+ },
+ "respell": {
+  "Mali": "Mah-lee"
  }
 }
