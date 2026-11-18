@@ -167,9 +167,9 @@ const glows = (room.windows ?? []).map(wx => { const g = new THREE.Mesh(plane, n
 
 const cb = room.cases.map(c => c.bounds).filter(Boolean);  // a warm pool of light over our 4 cases
 if (cb.length && !room.layers.some(l => l.id === "spot")) { const x0 = Math.min(...cb.map(b => b.min[0])), x1 = Math.max(...cb.map(b => b.max[0])), y0 = Math.min(...cb.map(b => b.min[1])), y1 = Math.max(...cb.map(b => b.max[1]));
-  const sp = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: glowT, transparent: true, opacity: .2, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); sp.position.set((x0 + x1) / 2, (y0 + y1) / 2, .3); sp.scale.set((x1 - x0) * 1.35, (y1 - y0) * 1.5, 1); sp.renderOrder = 32; scene.add(sp); }
+  const sp = new THREE.Mesh(plane, new THREE.MeshBasicMaterial({ map: glowT, transparent: true, opacity: .05, blending: THREE.AdditiveBlending, depthWrite: false, fog: false })); sp.position.set((x0 + x1) / 2, (y0 + y1) / 2, .3); sp.scale.set((x1 - x0) * 1.35, (y1 - y0) * 1.5, 1); sp.renderOrder = 32; scene.add(sp); }
 // lights for the 3D bits (books, ledges): warm key from above, soft fill (each theme room tints both: theme())
-const hemi = new THREE.HemisphereLight(0xffe2b8, 0x3a2412, 1.5); scene.add(hemi); const key = new THREE.DirectionalLight(0xffd9a0, 2.2); key.position.set(-1.5, 6, 4); scene.add(key);
+const hemi = new THREE.HemisphereLight(0xfff0dc, 0x43301e, 1.7); scene.add(hemi); const key = new THREE.DirectionalLight(0xfff2e2, 1.6), fill = new THREE.DirectionalLight(0xfff6ea, 1.1); fill.position.set(.8, 2.5, 9); scene.add(fill);  // daylight from the dome, near white (natural): the lanterns carry the warm accents; fill: soft light from the room side, so the covers read (Eddie: "the books stand out") key.position.set(-1.5, 6, 4); scene.add(key);
 books = makeBooks(THREE, room, { phone, lang, sets: grown.sets, reduced, coming: () => W.coming, renderer, emblems, plan }); core.push(books.ready(0));  // home's covers painted before the first frame
 let front = null; const say = (t, s) => { const e = $("#sub"); if (t == null) { e.classList.remove("on"); return; } e.firstChild.textContent = t; e.lastChild.textContent = s || ""; e.classList.add("on"); clearTimeout(say.t); say.t = setTimeout(() => e.classList.remove("on"), 3600); };
 let ringWas = false, opener = null;  // the ring traps focus while open: the shelf behind it is inert, Esc gives focus back to what opened it
@@ -212,7 +212,7 @@ const rayMat = new THREE.ShaderMaterial({ uniforms: rU, transparent: true, depth
     else { float e = abs(dot(normalize(vN), normalize(vV))), on = smoothstep(.5, .9, abs(dot(vA, vV))) * smoothstep(6., 30., vD), body = mix(pow(e, .9), mix(.55, .8, fan), on), core = mix(pow(e, 5.), mix(.6, .9, fan), on);  // end-on glow only far off (up the well), never a beam beside you
       float n = vn(vec2(vQ.x * 2.3 + s * .03, s * .09 + uT * .5)) * .6 + vn(vec2(vQ.y * 3.7 - s * .04, s * .25 + uT * 1.1)) * .4;  // the noise drifts down the beam
       a = mix(.85, 1., fan) * (body * .3 + core * .6) * vI.x * smoothstep(0., vI.y, s) * smoothstep(1., .72, vH) * (.62 + .38 * vH) * mix(.55 + .8 * n, .72 + .5 * n, fan) * up * smoothstep(.4, 2.5, vD) * smoothstep(-3., 3., cameraPosition.y - vBy) * smoothstep(0., 2.2, dw); }
-    gl_FragColor = vec4(uTint * a, a); }` });
+    a *= .5; gl_FragColor = vec4(uTint * a, a); }` });  // the oculus beams at half strength (natural daylight, not stage beams)
 const rayAxis = new THREE.Vector3(-.012, 1, -.008).normalize(), rayQ = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), rayAxis), rayGeo = mergeGeometries([new THREE.CylinderGeometry(1, 1, 1, 16, 1, true), new THREE.CircleGeometry(1, 28)]);
 rayGeo.setAttribute("aCap", new THREE.BufferAttribute(new Float32Array(rayGeo.attributes.position.count).map((_, i) => +(i >= 17 * 2)), 1));  // the column's 34 vertices first, then the floor disc's
 const rays = [], NR = phone ? 16 : 28, rayMesh = new THREE.InstancedMesh(rayGeo, rayMat, NR), RM = new THREE.Matrix4(), RC = new THREE.Color();
@@ -280,7 +280,7 @@ function banner(R, st) {  // a cloth banner on a brass rod, hung over the room's
   rod.position.y = 1.02; grp.add(cl, rod); grp.position.set(P[0] + n.x * .32, P[1], P[2] + n.z * .32); grp.lookAt(grp.position.clone().add(n)); grp.visible = false; scene.add(grp); return grp; }
 let embImg = null; if (emblems) { embImg = new Image(); embImg.src = new URL("emblems.webp", base).href; }
 function theme(id) {
-  const R = themeOf(id), L = R?.theme.light, wt = walls.material.uniforms.uTint.value; key.color.set(0xffd9a0); hemi.color.set(0xffe2b8); wt.setRGB(1, 1, 1);
+  const R = themeOf(id), L = R?.theme.light, wt = walls.material.uniforms.uTint.value; key.color.set(0xfff2e2); hemi.color.set(0xfff0dc); wt.setRGB(1, 1, 1);
   if (L) { rU.uTint.value.setRGB(L[0], L[1], L[2]); rU.uDust.value.setRGB(L[0], L[1], L[2]).lerp(new THREE.Color(1, 1, 1), .2); key.color.lerp(new THREE.Color(...L), .7); hemi.color.lerp(new THREE.Color(...L), .6);
     wt.setRGB(L[0], L[1], L[2]).lerp(new THREE.Color(1, 1, 1), .55).multiplyScalar(1 / Math.max(wt.r, wt.g, wt.b));  // the books on its walls take the room's light (a wash, never a dye)
     Object.assign(motes.material, { map: mote(R.theme.mote), size: .065 }); motes.material.color.setRGB(L[0], L[1], L[2]).lerp(new THREE.Color(1, 1, 1), .3); }
@@ -623,5 +623,5 @@ async function startFx() {
   let createStoryFx; try { ({ createStoryFx } = await import("../../live/storyfx.js")); } catch (err) { console.warn("library: storyfx failed", err); return; }
   sfx = createStoryFx(scene, renderer, { phone, reduced, tuck: false, page: new THREE.Box3(new THREE.Vector3(-1e4, -50, -1e4), new THREE.Vector3(1e4, 0, 1e4)) });  // no one-page clip, no top-quarter fade
   for (const s of room.shafts ?? []) { const f = new THREE.Vector3(...s.from), to = new THREE.Vector3(...s.to), H = f.y - to.y;
-    sfx.play("sunrays", { at: to, width: s.r * (phone ? 1.6 : 1.8), height: H, from: [(f.x - to.x) / H, (f.z - to.z) / H], level: 2 }); }
+    sfx.play("sunrays", { at: to, width: s.r * (phone ? 2.4 : 2.7), height: H, from: [(f.x - to.x) / H, (f.z - to.z) / H], level: 0.55 }); }  // Eddie 2026-11-18 ("the light is too artificial, it should be natural"): soft daylight from the dome, wide and faint, not four bright columns
 }

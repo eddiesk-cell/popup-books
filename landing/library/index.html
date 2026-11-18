@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../../fonts/noto-sans-lao/noto-sans-lao.css">
 <link rel="stylesheet" href="library.css">
 <!-- what the doors, the flight and the home view need, fetched at once (no module waterfall); the first page warms the same list (landing.js warm()), so a visitor from it waits on none of it. build_web.mjs swaps the modulepreloads for the bundle's -->
-<link rel="modulepreload" href="../../dist/library-UIIWPTGE.js">
+<link rel="modulepreload" href="../../dist/library-JZWH2RIM.js">
 <link rel="modulepreload" href="../../dist/c-ORVDGMSO.js">
 <link rel="modulepreload" href="../../dist/c-I2U6IUS5.js">
 <link rel="modulepreload" href="../../dist/c-TPVREXEX.js">
@@ -109,6 +109,6 @@
 <script>/* shortcut: the loading line's six words are repeated here (the words table in library.js owns them, and wins once it runs) so the note paints before the module graph arrives; drop when the words move to a tiny shared file */
 { const L = { en: "Opening the library...", lo: "ກຳລັງເປີດຫໍສະໝຸດ...", th: "กำลังเปิดห้องสมุด...", zh: "正在打开图书馆…", ja: "としょかんを ひらいています…", ko: "도서관을 여는 중…" }; let g = new URLSearchParams(location.search).get("lang"); try { g = L[g] ? g : localStorage.getItem("wst-lang"); } catch {} if (!L[g]) g = (navigator.languages || ["en"]).map(c => Object.keys(L).find(x => String(c).toLowerCase().startsWith(x))).find(Boolean) || "en"; document.documentElement.lang = g; document.getElementById("loading").textContent = L[g]; }
 </script>
-<script type="module" src="../../dist/library-UIIWPTGE.js"></script>
+<script type="module" src="../../dist/library-JZWH2RIM.js"></script>
 </body>
 </html>
