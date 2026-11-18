@@ -480,9 +480,9 @@ function lateArm(sp, k) {  // V24: a game target that is an extra (a frog, a fis
 }
 
 function arm(sp) {  // the page's game, fresh (games.js: collect, order, shadow, echo)
-  clearTimeout(sp.lazy); sp.play = makeGame(sp, gameEnv(sp)); if (sp.play.missing.length) lateArm(sp, 0); if (sp.G.type !== "listen") { const t0 = sp.play.tap; sp.play.tap = i => { const r = t0(i); S.acting.tap(sp.play.targets[i].name); return r; }; }  // a game tap also runs the page's "tap:<name>" acts (the shy plant folds in the game); not a listen game's: before and after it its tap is the speaker's own poke(), which has run them already (twice a tap, so an "nth" would count by two)
+  clearTimeout(sp.lazy); sp.play = makeGame(sp, gameEnv(sp)); if (sp.play.missing.length) lateArm(sp, 0); if (sp.G.type !== "listen") { const t0 = sp.play.tap; sp.play.tap = i => { const r = t0(i); sp.tapped.add(sp.play.targets[i].name); S.acting.tap(sp.play.targets[i].name); return r; }; }  // a game tap also runs the page's "tap:<name>" acts (the shy plant folds in the game); not a listen game's: before and after it its tap is the speaker's own poke(), which has run them already (twice a tap, so an "nth" would count by two)
   if (sp.play.repeat) { const r0 = sp.play.repeat; sp.play.repeat = i => (r0(i), S.acting.tap(sp.play.targets[i].name)); }  // a counted thing tapped again still plays its own tap acts (the shy plant folds again); only where the game answers a second tap at all (collect)
-  Object.assign(sp, { promptEnd: 0, skip: false });  // auto play: when the prompt ended, whether the story moved on past the game
+  Object.assign(sp, { promptEnd: 0, skip: false, tapped: new Set() });  // auto play: when the prompt ended, whether the story moved on past the game
   // what a tap reaches, in order: a target it hits exactly, a character, a target near the fingertip, then a touch thing,
   // so neither a monkey's generous hit box nor the tree swallows the fruit beside it
   const early = () => sp.G.before && !sp.play.begun, kind = () => (early() ? "sparkle" : "game");
@@ -890,7 +890,11 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
   if (!sp.play.complete && !sp.skip) skips() ? skip(sp) : prompt(sp, run);
 }
 const skips = () => au.on || rm.on;  // Auto and Reading Mode skip the games (Eddie 2026-11-18: "Sometimes the kids had been playing it once already")
-function skip(sp) { ahead(sp); return sp.play.settle(); }  // no prompt, no praise: games.js settle() sets what winning sets, quietly (a promise while what it moves is on its way)
+function skip(sp) {  // V16: and a skipped game's targets still play their "tap:<name>" acts, as a won game would have (the suns fall): every target a win taps that was not
+  ahead(sp); const was = sp.play.complete, moves = sp.play.settle();  // tapped yet, or a shadow game's answer; none for the games won by beats or a tune (echo, rally, waves, leap, steer, listen)
+  if (!was && !/^(echo|rally|waves|leap|steer|listen)$/.test(sp.G.type ?? "")) for (const o of sp.play.targets) if ((!sp.G.answer || o.name === sp.G.answer) && !sp.tapped?.has(o.name)) S.acting.tap(o.name);
+  return moves;
+}  // no prompt, no praise: games.js settle() sets what winning sets, quietly (a promise while what it moves is on its way)
 function skipNow() {  // Auto or Reading Mode switched on while a game is being played: it is left there, settled, and the story reads on
   const sp = S; if (!sp?.play.begun || sp.play.complete || !skips()) return;
   sp.play.stop?.(); skip(sp); gameView(false); say(""); count("");

@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-tea-cup",
+ "size": 0.017,
+ "metres_per_pixel": 3.711790393013101e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "the tea cup card as a puppet (spread 8)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-tea-cup/body.png",
+   "size": [
+    0.0179,
+    0.017
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

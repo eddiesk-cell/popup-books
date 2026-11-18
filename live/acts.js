@@ -459,7 +459,7 @@ export function puppetModel(THREE, { root, pins, def, size, turned }) {
       const turn = this.parent?.getWorldQuaternion(new THREE.Quaternion()), front = this.parent?.parent && Z.clone().applyQuaternion(this.parent.parent.getWorldQuaternion(new THREE.Quaternion()));
       if (turn) { this.quaternion.copy(turn.invert()); if (Math.abs(front?.x) > 0.2) this.scale.x = Math.sign(front.x); }  // puppets face +x
       const card = turned && front && (this.cardMesh ??= this.getObjectByName(top)?.children.find(o => o.isMesh));  // V13: a three-quarter card (def.turned) stands in for the front card while it faces sideways
-      if (card) { this.flat ??= (card.material = card.material.clone()).map; const t = Math.abs(front.x) > 0.2 ? turned : this.flat; if (card.material.map !== t) card.material.map = card.material.emissiveMap = t, card.material.needsUpdate = true; }  // shortcut: a light cue's restage (night card) is overwritten by this swap; per-stage cards when a book needs both
+      if (card) { this.flat ??= (card.material = card.material.clone()).map; const t = Math.abs(front.x) > 0.2 && this.walking ? turned : this.flat; if (card.material.map !== t) card.material.map = card.material.emissiveMap = t, card.material.needsUpdate = true; }  // shortcut: a light cue's restage (night card) is overwritten by this swap; per-stage cards when a book needs both
       super.updateMatrixWorld(force);
     }
   })();
@@ -854,6 +854,7 @@ export class Acting {
 
   move(ch, dt) {
     const g = ch.goal, f = ch.facing, s = ch.slide;
+    if (ch.model) ch.model.walking = /^(Walk|Run|Sprint|Sneak|Dash|Step Back)/.test(g?.gait ?? "");  // V15: a puppet's turned card (a walking pose) only while a gait carries it; standing, its front card mirrored to its side
     if (g?.climb) {  // straight up the trunk, then a step onto the branch
       g.t += dt;
       const [a, b, c] = g.climb, [t1, t2] = g.legs;

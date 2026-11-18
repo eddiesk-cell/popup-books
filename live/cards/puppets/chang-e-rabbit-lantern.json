@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-rabbit-lantern",
+ "size": 0.0376,
+ "metres_per_pixel": 0.0004020100502512563,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "Chang'e's rabbit lantern: the prop card as a one-piece puppet, so it can be held and set down (spread 5 shadow game, 8, 10, 11)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-rabbit-lantern/body.png",
+   "size": [
+    0.0178,
+    0.0376
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

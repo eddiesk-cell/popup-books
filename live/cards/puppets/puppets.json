@@ -5570,7 +5570,8 @@
 "uses": [
 "Chang'e"
 ],
-"cut": true
+"cut": true,
+"selflit": true
 },
 "cowherd-star-vega": {
 "look": "the star Vega in the night sky (a card from the sky lane)",
@@ -5724,7 +5725,8 @@
 "uses": [
 "Chang'e"
 ],
-"cut": true
+"cut": true,
+"selflit": true
 },
 "chang-e-drum-big": {
 "look": "the big festival drum on its stand, so it stands on the ground like a cast member (spread 10)",
@@ -5769,6 +5771,29 @@
 "Chang'e"
 ],
 "cut": true
+},
+"chang-e-families-kids": {
+"look": "three village children holding paper lanterns, a goldfish lantern and a red one",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true,
+"person": true
 }
 }
 }

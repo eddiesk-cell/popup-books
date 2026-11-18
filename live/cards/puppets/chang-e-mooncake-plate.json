@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-mooncake-plate",
+ "size": 0.027,
+ "metres_per_pixel": 5.625e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "the mooncake plate card as a puppet, so it sits on the table top (spread 8)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-mooncake-plate/body.png",
+   "size": [
+    0.0497,
+    0.027
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

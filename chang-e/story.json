@@ -1,0 +1,1100 @@
+{
+ "title": "Chang'e and the Jade Rabbit",
+ "credit": "From the old Chinese story of Chang'e, the lady in the moon, and Hou Yi the archer, told at the Mid-Autumn Festival for more than two thousand years and written down in English by Richard Wilhelm (1921) and E. T. C. Werner (1922). Retold in our own words.",
+ "status": "Locked at STOP 1 (Eddie, 2026-11-17: \"A on all three\"), then PROVISIONAL storytelling-pull edits (BOOK-STANDARD \"Storytelling pull\", P1-P18) for Eddie's morning read: the changed lines and why are in renders/review/chang-e-stop1/STORY-PULL.md; the locked text is commit 71556cc4f.",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "change": {
+   "voice": "bf_isabella",
+   "speed": 0.97,
+   "pitch": 0
+  },
+  "houyi": {
+   "voice": "bm_daniel",
+   "speed": 0.98,
+   "pitch": 0
+  },
+  "rabbit": {
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 3
+  },
+  "queen": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fengmeng": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "suns": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "sunbird": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lastsun": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "osmanthus": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lantern": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "mooncake": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Chang'e": "Chahng-uh",
+  "Hou Yi": "Hoe Yee",
+  "Feng Meng": "Fung Mung"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Ten Suns",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in China, there were ten suns. They were ten little sun-birds, and they lived in a great tree by the Eastern Sea.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in China, there were ten suns. They were ten little sun-birds, and they lived in a great tree by the Eastern Sea."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Every morning, one sun-bird flew across the sky. The other nine waited for their turn.",
+     "say": [
+      [
+       "narrator",
+       "Every morning, one sun-bird flew across the sky. The other nine waited for their turn."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "But one morning, the ten suns said, \"Let's all fly together! It will be fun!\"",
+     "say": [
+      [
+       "narrator",
+       "But one morning, the ten suns said,"
+      ],
+      [
+       "suns",
+       "Let's all fly together! It will be fun!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Zoom! Up they flew, all ten at once. Ten suns in one sky!",
+     "say": [
+      [
+       "narrator",
+       "Zoom! Up they flew, all ten at once. Ten suns in one sky!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Far below, the whole earth grew hot, hot, hot.",
+     "say": [
+      [
+       "narrator",
+       "Far below, the whole earth grew hot, hot,... hot."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Too Hot!",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "The rivers dried up. The rice turned brown. Even the frogs hid in the mud.",
+     "say": [
+      [
+       "narrator",
+       "The rivers dried up. The rice turned brown. Even the frogs hid in the... mud."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "In a little village lived Hou Yi, the best archer in all the land, and his kind wife, Chang'e.",
+     "say": [
+      [
+       "narrator",
+       "In a little village lived Hoe Yee, the best archer in all the land, and his kind wife, Chahng-uh."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Chang'e gave cool water to everyone: to the children, to the old people, and to a little white rabbit with hot, sore feet.",
+     "say": [
+      [
+       "narrator",
+       "Chahng-uh gave cool water to everyone: to the children, to the old people, and to a little white rabbit with hot, sore feet."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Hou Yi called up to the sky. \"Suns! Please take turns! The earth is too hot!\"",
+     "say": [
+      [
+       "narrator",
+       "Hoe Yee called up to the sky."
+      ],
+      [
+       "houyi",
+       "Suns! Please take turns! The earth is too hot!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "But the ten suns were having too much fun to listen.",
+     "say": [
+      [
+       "narrator",
+       "But the ten suns were having too much fun to listen."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Nine Arrows",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "So Hou Yi and Chang'e walked all the way to the Eastern Sea. Hou Yi took his red bow and ten arrows.",
+     "say": [
+      [
+       "narrator",
+       "So Hoe Yee and Chahng-uh walked all the way to the Eastern Sea. Hoe Yee took his red bow and ten arrows."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Whoosh! His arrow hit a sun, and its fire went out. A little gold bird tumbled into the cool sea. Splash!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! His arrow hit a sun, and its fire went out. A little gold bird tumbled into the cool sea. Splash!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Whoosh! Whoosh! One by one, nine suns fell into the sea. They were not hurt. They were only cool and wet.",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Whoosh! One by one, nine suns fell into the... sea. They were not hurt. They were only cool and wet."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "\"Stop!\" called Chang'e. \"Leave one sun, to keep the world warm.\" So Hou Yi put away his last arrow.",
+     "say": [
+      [
+       "change",
+       "Stop!"
+      ],
+      [
+       "narrator",
+       "called Chahng-uh."
+      ],
+      [
+       "change",
+       "Leave one sun, to keep the world warm."
+      ],
+      [
+       "narrator",
+       "So Hoe Yee put away his last arrow."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "The nine wet sun-birds flew home to their tree, and the suns took turns again. Then something fell from the sky. Pitter-patter!",
+     "say": [
+      [
+       "narrator",
+       "The nine wet sun-birds flew home to their tree, and the suns took turns again. Then something fell from the sky. Pitter-patter!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Queen Mother's Gift",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "It was rain! The rice grew green, and everyone cheered for Hou Yi. Boom, boom went the drums!",
+     "say": [
+      [
+       "narrator",
+       "It was rain! The rice grew green, and everyone cheered for Hoe Yee. Boom, boom went the drums!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Then the Queen Mother of the West came down on a cloud. \"You saved the earth,\" she said. \"Here is a gift.\"",
+     "say": [
+      [
+       "narrator",
+       "Then the Queen Mother of the West came down on a cloud."
+      ],
+      [
+       "queen",
+       "You saved the earth,"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "queen",
+       "Here is a gift."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "She gave Hou Yi a little jade bottle. \"This is magic medicine. The one who drinks it will float up to the sky and live forever. But there is only enough for one.\"",
+     "say": [
+      [
+       "narrator",
+       "She gave Hoe Yee a little jade bottle."
+      ],
+      [
+       "queen",
+       "This is magic medicine. The one who drinks it will float up to the sky and live forever. But there is only enough for... one."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "\"I don't want to live forever without Chang'e,\" said Hou Yi. \"And I would never go without you,\" said Chang'e.",
+     "say": [
+      [
+       "houyi",
+       "I don't want to live forever without Chahng-uh,"
+      ],
+      [
+       "narrator",
+       "said Hoe Yee."
+      ],
+      [
+       "change",
+       "And I would never go without you,"
+      ],
+      [
+       "narrator",
+       "said Chahng-uh."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "So they put the little bottle high on a shelf, and they stayed together on the earth, with the little white rabbit. But someone was watching from behind the osmanthus tree.",
+     "say": [
+      [
+       "narrator",
+       "So they put the little bottle high on a shelf, and they stayed together on the earth, with the little white rabbit. But someone was watching from behind the osmanthus tree."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "A Shadow at the Window",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "It was Feng Meng, Hou Yi's student. Feng Meng was good with a bow, but he had a greedy heart.",
+     "say": [
+      [
+       "narrator",
+       "It was Fung Mung, Hoe Yee's student. Fung Mung was good with a bow, but he had a greedy heart."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "One night, when Hou Yi was away, Feng Meng crept up to the house. \"Give me the magic medicine!\" he said. \"I want to live forever!\"",
+     "say": [
+      [
+       "narrator",
+       "One night, when Hoe Yee was away, Fung Mung crept up to the house."
+      ],
+      [
+       "fengmeng",
+       "Give me the magic medicine!"
+      ],
+      [
+       "narrator",
+       "he said."
+      ],
+      [
+       "fengmeng",
+       "I want to live forever!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Chang'e took the little bottle from the shelf and held it tight. \"No,\" she said. \"Magic is not for a greedy heart.\"",
+     "say": [
+      [
+       "narrator",
+       "Chahng-uh took the little bottle from the shelf and held it tight."
+      ],
+      [
+       "change",
+       "No,"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "change",
+       "Magic is not for a greedy heart."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Feng Meng reached out to grab it. So, quick as a wink, Chang'e drank the medicine herself. Gulp!",
+     "say": [
+      [
+       "narrator",
+       "Fung Mung reached out to grab it. So, quick as a wink, Chahng-uh drank the medicine herself. Gulp!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "At once she felt as light as a feather. Her feet left the floor, and she began to float!",
+     "say": [
+      [
+       "narrator",
+       "At once she felt as light as a... feather. Her feet left the floor, and she began to float!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Up to the Moon",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Up, up she floated, over the roof and the osmanthus tree. Feng Meng slipped and sat down, bump! Then he ran away with empty hands.",
+     "say": [
+      [
+       "narrator",
+       "Up, up she floated, over the roof and the osmanthus tree. Fung Mung slipped and sat down, bump! Then he ran away with empty hands."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Just then, Hou Yi came running home, pat-pat-pat! \"Chang'e!\" he called. But she was too high to reach.",
+     "say": [
+      [
+       "narrator",
+       "Just then, Hoe Yee came running home, pat-pat-pat!"
+      ],
+      [
+       "houyi",
+       "Chahng-uh!"
+      ],
+      [
+       "narrator",
+       "he called. But she was too high to reach."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"Hou Yi!\" called Chang'e. \"I will stay where you can see me!\" But the magic carried her higher and higher, past the clouds.",
+     "say": [
+      [
+       "change",
+       "Hoe Yee!"
+      ],
+      [
+       "narrator",
+       "called Chahng-uh."
+      ],
+      [
+       "change",
+       "I will stay where you can see me!"
+      ],
+      [
+       "narrator",
+       "But the magic carried her higher and higher, past the clouds."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "The stars were far, far away. So Chang'e stopped at the moon, the place in the sky closest to home.",
+     "say": [
+      [
+       "narrator",
+       "The stars were far, far away. So Chahng-uh stopped at the... moon, the place in the sky closest to home."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Hou Yi looked up at the moon, bright and round, all night long. Up there, was Chang'e all alone?",
+     "say": [
+      [
+       "narrator",
+       "Hoe Yee looked up at the moon, bright and round, all night long. Up there, was Chahng-uh all alone?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "The Moon Palace",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "The moon was silver and cold and very, very quiet. There was a jade palace, an osmanthus tree, and nobody else.",
+     "say": [
+      [
+       "narrator",
+       "The moon was silver and cold and very, very quiet. There was a jade palace, an osmanthus tree, and nobody else."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"Am I all alone up here?\" said Chang'e softly, and a tear rolled down her cheek.",
+     "say": [
+      [
+       "change",
+       "Am I all alone up here?"
+      ],
+      [
+       "narrator",
+       "said Chahng-uh softly, and a tear rolled down her cheek."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Then something wriggled in her ribbon. Out popped the little white rabbit! He held on all the way up.",
+     "say": [
+      [
+       "narrator",
+       "Then something wriggled in her ribbon. Out popped the little white rabbit! He held on all the way up."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"You were my friend on the earth,\" said the rabbit. \"So I will be your friend on the moon.\" He filled a jade bowl with golden osmanthus flowers.",
+     "say": [
+      [
+       "rabbit",
+       "You were my friend on the earth,"
+      ],
+      [
+       "narrator",
+       "said the rabbit."
+      ],
+      [
+       "rabbit",
+       "So I will be your friend on the moon."
+      ],
+      [
+       "narrator",
+       "He filled a jade bowl with golden osmanthus flowers."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Thump, thump, thump! The rabbit pounded the flowers. \"What are you making?\" asked Chang'e. \"You will see!\" said the rabbit. And far below, someone was looking up.",
+     "say": [
+      [
+       "narrator",
+       "Thump, thump,... thump! The rabbit pounded the flowers."
+      ],
+      [
+       "change",
+       "What are you making?"
+      ],
+      [
+       "narrator",
+       "asked Chahng-uh."
+      ],
+      [
+       "rabbit",
+       "You will see!"
+      ],
+      [
+       "narrator",
+       "said the rabbit. And far below, someone was looking up."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Lanterns for the Moon",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "It was Hou Yi. Down on the earth, he missed Chang'e every day.",
+     "say": [
+      [
+       "narrator",
+       "It was Hoe Yee. Down on the earth, he missed Chahng-uh every day."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "On the night of the full moon, he put her favourite things in the garden: round cakes, sweet fruit and a cup of tea.",
+     "say": [
+      [
+       "narrator",
+       "On the night of the full moon, he put her favourite things in the garden: round cakes, sweet fruit and a cup of tea."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Tip-tap, tip-tap! The village children came running with lanterns: rabbit lanterns, fish lanterns and lotus lanterns.",
+     "say": [
+      [
+       "narrator",
+       "Tip-tap, tip-tap! The village children came running with lanterns: rabbit lanterns, fish lanterns and lotus lanterns."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "\"Look up at the moon!\" said Hou Yi. \"Let's make the brightest lights, so Chang'e can see us!\"",
+     "say": [
+      [
+       "houyi",
+       "Look up at the moon!"
+      ],
+      [
+       "narrator",
+       "said Hoe Yee."
+      ],
+      [
+       "houyi",
+       "Let's make the brightest lights, so Chahng-uh can see us!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "One by one, the lanterns glowed, like little moons all over the garden. Would Chang'e see them?",
+     "say": [
+      [
+       "narrator",
+       "One by one, the lanterns glowed, like little... moons all over the garden. Would Chahng-uh see them?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Moonlight",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Up on the moon, Chang'e looked down. Far below, tiny lights were twinkling in a garden.",
+     "say": [
+      [
+       "narrator",
+       "Up on the moon, Chahng-uh looked down. Far below, tiny lights were twinkling in a garden."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "\"Lanterns!\" said Chang'e. \"Hou Yi has lit lanterns for me! But how can he see me?\"",
+     "say": [
+      [
+       "change",
+       "Lanterns!"
+      ],
+      [
+       "narrator",
+       "said Chahng-uh."
+      ],
+      [
+       "change",
+       "Hoe Yee has lit lanterns for me! But how can he see me?"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "\"Now I can show you,\" said the rabbit. He tipped his jade bowl, and out poured silver moonlight!",
+     "say": [
+      [
+       "rabbit",
+       "Now I can show you,"
+      ],
+      [
+       "narrator",
+       "said the rabbit. He tipped his jade bowl, and out poured silver moonlight!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Whoosh! Together they threw the moonlight up high, and the moon shone round and bright, brighter than ever before.",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Together they threw the moonlight up high, and the moon shone round and... bright, brighter than ever before."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Far below, Hou Yi saw Chang'e and the little rabbit in the shining moon. He waved, and Chang'e waved back. Could they do it again?",
+     "say": [
+      [
+       "narrator",
+       "Far below, Hoe Yee saw Chahng-uh and the little rabbit in the shining moon. He waved, and Chahng-uh waved back. Could they do it again?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "The Brightest Moon",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Yes! Every year, on the night of the full moon in autumn, Hou Yi lit lanterns, and Chang'e and the rabbit made the moon shine its brightest.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Every year, on the night of the full moon in autumn, Hoe Yee lit lanterns, and Chahng-uh and the rabbit made the moon shine its brightest."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Soon all the families came out to look at the moon, and they lit lanterns too.",
+     "say": [
+      [
+       "narrator",
+       "Soon all the families came out to look at the moon, and they lit lanterns too."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "They shared round mooncakes, because a round moon and a round cake mean the whole family is together.",
+     "say": [
+      [
+       "narrator",
+       "They shared round mooncakes, because a round moon and a round cake mean the whole family is together."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Boom-ba-boom! This is the Mid-Autumn Festival, the night of the brightest moon.",
+     "say": [
+      [
+       "narrator",
+       "Boom-ba-boom! This is the Mid-Autumn Festival, the night of the brightest moon."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Look up at the moon! Can you see the rabbit? Wave to Chang'e! Someone you love is looking at the same moon.",
+     "say": [
+      [
+       "narrator",
+       "Look up at the... moon! Can you see the rabbit? Wave to Chahng-uh! Someone you love is looking at the same moon."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Chang'e was up on the moon, and Hou Yi was down on the earth. They were far apart.",
+   "say": [
+    [
+     "closing",
+     "Chahng-uh was up on the moon, and Hoe Yee was down on the earth. They were far apart."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "But they still shared the same moon. He lit lanterns for her, and she made the moon shine for him.",
+   "say": [
+    [
+     "closing",
+     "But they still shared the same moon. He lit lanterns for her, and she made the moon shine for him."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "When you miss someone, look up at the moon. The people you love can see it too.",
+   "say": [
+    [
+     "closing",
+     "When you miss someone, look up at the moon. The people you love can see it too."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Far or near, love shines like the moon.",
+   "say": [
+    [
+     "closing",
+     "Far or near, love shines like the... moon."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "The suns want to play! Tap each sun to wake it up, and count them.",
+   "say": [
+    [
+     "narrator",
+     "The suns want to play! Tap each sun to wake it up, and count them."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Ten suns, ready to fly!",
+   "say": [
+    [
+     "narrator",
+     "Ten suns, ready to fly!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Chang'e! Tap everyone who needs water.",
+   "say": [
+    [
+     "narrator",
+     "Help Chahng-uh! Tap everyone who needs water."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Cool water for everyone. Ahh!",
+   "say": [
+    [
+     "narrator",
+     "Cool water for everyone. Ahh!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Help Hou Yi cool the suns! Tap the suns, one by one.",
+   "say": [
+    [
+     "narrator",
+     "Help Hoe Yee cool the suns! Tap the suns, one by one."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Splash, splash! The suns are cool and wet.",
+   "say": [
+    [
+     "narrator",
+     "Splash, splash! The suns are cool and wet."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Everyone is cheering! The drums play a song. Can you play it back?",
+   "say": [
+    [
+     "narrator",
+     "Everyone is cheering! The drums play a song. Can you play it back?"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Boom, boom, clang! What a happy song!",
+   "say": [
+    [
+     "narrator",
+     "Boom, boom, clang! What a happy song!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Someone came to the window! Move the lantern to see his shadow.",
+   "say": [
+    [
+     "narrator",
+     "Someone came to the window! Move the lantern to see his shadow."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "It is Feng Meng! What does he want?",
+   "say": [
+    [
+     "narrator",
+     "It is Fung Mung! What does he want?"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Look closely! Who is holding on to Chang'e's ribbon? Tap him!",
+   "say": [
+    [
+     "narrator",
+     "Look closely! Who is holding on to Chahng-uh's ribbon? Tap him!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "The little white rabbit! Shh, Chang'e does not know yet.",
+   "say": [
+    [
+     "narrator",
+     "The little white rabbit! Shh, Chahng-uh does not know yet."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Help the rabbit pound! Tap when the stick comes down. Thump!",
+   "say": [
+    [
+     "narrator",
+     "Help the rabbit pound! Tap when the stick comes down. Thump!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Thump, thump, thump! Good pounding!",
+   "say": [
+    [
+     "narrator",
+     "Thump, thump, thump! Good pounding!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Light the lanterns! Tap each one.",
+   "say": [
+    [
+     "narrator",
+     "Light the lanterns! Tap each one."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "So many little moons! Can Chang'e see them?",
+   "say": [
+    [
+     "narrator",
+     "So many little moons! Can Chahng-uh see them?"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "The bowl needs more! Tap the golden flowers to toss them in.",
+   "say": [
+    [
+     "narrator",
+     "The bowl needs more! Tap the golden flowers to toss them in."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Full to the top! Now watch!",
+   "say": [
+    [
+     "narrator",
+     "Full to the top! Now watch!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the mooncake! Give a piece to everyone.",
+   "say": [
+    [
+     "narrator",
+     "Share the mooncake! Give a piece to everyone."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Everyone has a piece. A family together!",
+   "say": [
+    [
+     "narrator",
+     "Everyone has a piece. A family together!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "change": [
+   "I am Chang'e. I live on the moon.",
+   "I gave cool water to everyone when it was hot.",
+   "The little rabbit is my best friend.",
+   "Wave to me at Mid-Autumn!"
+  ],
+  "houyi": [
+   "I am Hou Yi, the archer.",
+   "My bow is red.",
+   "I asked the suns to take turns.",
+   "I light lanterns for Chang'e."
+  ],
+  "rabbit": [
+   "I am the Jade Rabbit.",
+   "My necklace is a jade bead.",
+   "My jade bowl and pounding stick are called a mortar and pestle.",
+   "Look for me in the full moon!",
+   "Some people say I make magic medicine. I make moonlight too!"
+  ],
+  "queen": [
+   "I am the Queen Mother of the West.",
+   "I am the queen of the sky.",
+   "I gave Hou Yi the magic medicine."
+  ],
+  "fengmeng": [
+   "I am Feng Meng.",
+   "I wanted all the magic for me.",
+   "A greedy heart gets nothing!"
+  ],
+  "sunbird": [
+   "I am a sun-bird. I shine in the sky.",
+   "We take turns, one each day.",
+   "Splash! The sea is nice and cool."
+  ],
+  "lastsun": [
+   "Leave me! I will keep the world warm.",
+   "I am the last sun in the sky."
+  ],
+  "osmanthus": [
+   "An osmanthus tree. Its little gold flowers smell sweet.",
+   "It flowers at Mid-Autumn."
+  ],
+  "lantern": [
+   "A paper lantern. It glows like a little moon."
+  ],
+  "mooncake": [
+   "A mooncake! It is round, like the full moon.",
+   "We share it with our family."
+  ]
+ },
+ "notes": {
+  "twist": "Old story: Hou Yi shoots nine suns dead; Chang'e takes the medicine (in some tellings to live forever herself, in others to keep it from a thief) and is left alone in a cold palace, sometimes turned into a toad, sorry for ever. Ours: no sun is hurt (nine fall into the sea, cool and wet, and the suns take turns again), and it is Chang'e who says \"leave one\"; she drinks the medicine bravely so a greedy heart cannot have it, and she keeps her promise to Hou Yi as best she can: \"I will stay where you can see me!\" (6.3), stopping at the moon, the place in the sky closest to home; she is not alone, because the little rabbit she gave water to held on to her ribbon all the way up (the reader spots him in spread 6 before she does); and the Jade Rabbit is not pounding forever-medicine but moonlight, so the Mid-Autumn moon shines bright enough to answer Hou Yi's lanterns (7.5 plants it, 9.3 pays it off). The reader cools the suns, lights the lanterns and fills the rabbit's bowl.",
+  "moral": "Far or near, love shines like the moon.",
+  "changes": "1 the ten suns are sun-birds (the golden crows of Chinese art) and none is hurt. 2 the Queen Mother of the West gives the medicine (as in the Huainanzi tellings): the same Queen Mother as book 5. 3 Feng Meng is greedy and silly, never armed; he runs off with empty hands. 4 left out: Emperor Yao, any punishment, Chang'e as a toad, Wu Gang and his axe, Hou Yi's death. 5 the rabbit in the moon is real: the dark patches of the full moon, seen as a rabbit with a pounding stick across China, Korea and Japan. 6 the Mid-Autumn Festival is the 15th day of the 8th lunar month; lanterns and mooncakes as families keep it today.",
+  "level": "A1-A2, past simple, short sentences. Words repeated on purpose: sun, moon, lantern, rabbit, water, bow, magic, float, bright, round.",
+  "who speaks": "change (Chang'e), houyi, rabbit, queen, fengmeng (Feng Meng), and the suns once (1.3). The narrator reads every tag.",
+  "respell": "Kokoro reads the pinyin badly: say carries Chahng-uh, Hoe Yee, Fung Mung; text keeps the real names. Lao/Thai/Chinese/Japanese subtitles come after STOP 1 (WORDS phase).",
+  "review": "Narratologist (Opus, independent): round 1 FAIL (3 must-fixes, 6 should-fixes, all applied); round 2 PASS 2026-11-17 (0 say/text mismatches over 75 lines); its two last small notes (game.9 wording, 10.1 'that night') applied. Round 3 on the storytelling-pull edits: PASS (2026-11-18); its note on 4.5 applied (the rabbit kept in the text).",
+  "pull": "P1 hooks at every turn (3.5, 4.5, 6.5, 7.5, 8.5, 9.5 new; paid by 4.1, 5.1, 7.1, 8.1, 9.1, 10.1); P2 refrain 'Look up at the moon' (6.5, 8.4, 10.5, third with a pause before 'moon'); P3 one '...' predict pause a spread in say; P6 sound words on E2/E3 lines (Zoom, Whoosh/Splash, Pitter-patter, Boom, Gulp, bump, pat-pat-pat, Thump, Tip-tap, Whoosh, Boom-ba-boom), never the same on two spreads in a row; P8 slapstick: a sun-bird shakes water over Hou Yi (3.5), Feng Meng sits down bump (6.1), the rabbit tumbles over after the throw (9.4); P11 energy E2 E1 E3 E2 E2 E2 E1 E2 E3 E2 E1.",
+  "voices": "Only the mains have their own voices (BOOK-STANDARD 2026-11-18): Chang'e bf_isabella, Hou Yi bm_daniel, the Jade Rabbit bf_lily +3. The narrator (bm_george) reads everyone else, the Queen, Feng Meng and the suns included, in his own voice."
+ },
+ "words": false
+}

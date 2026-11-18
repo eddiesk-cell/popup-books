@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-moon-face",
+ "size": 0.115,
+ "metres_per_pixel": 0.0001289237668161435,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "Chang'e and the jade rabbit as soft silhouettes, a decal card glowing on the moon (spread 10)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-moon-face/body.png",
+   "size": [
+    0.0768,
+    0.115
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

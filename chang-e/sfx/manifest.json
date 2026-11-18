@@ -1,0 +1,40 @@
+{
+ "beds": [
+  "birds-day",
+  "birds-far",
+  "crickets",
+  "insects-day",
+  "leaves-breeze",
+  "moonlight-shimmer",
+  "owl-hoot",
+  "river-slow",
+  "water-lap"
+ ],
+ "shots": [
+  "bow-twang",
+  "children",
+  "children-giggle",
+  "drum-big",
+  "drum-small",
+  "festival-tune",
+  "float-up",
+  "gong-soft",
+  "lantern-glow",
+  "motif-change",
+  "motif-fengmeng",
+  "motif-houyi",
+  "motif-rabbit",
+  "motif-suns",
+  "pound",
+  "rise-chord",
+  "rise-swell",
+  "seeds-patter",
+  "splash-small",
+  "sun-hiss",
+  "suns-giggle",
+  "whoosh"
+ ],
+ "pools": {
+  "owl-hoot": 3
+ }
+}

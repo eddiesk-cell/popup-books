@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-chang-e-bottle",
+ "size": 0.1527,
+ "metres_per_pixel": 0.0003470319634703196,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece pose card cut from the Higgsfield pose sheet assets/chang-e/look/poses/CE1.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-chang-e-bottle/body.png",
+   "size": [
+    0.05205,
+    0.1527
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

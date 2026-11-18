@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-grandpa",
+ "size": 0.149,
+ "metres_per_pixel": 0.00015313463514902363,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-grandpa/body.png",
+   "size": [
+    0.06753,
+    0.149
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

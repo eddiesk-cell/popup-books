@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-drum-big",
+ "size": 0.059,
+ "metres_per_pixel": 0.00010068259385665528,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "the big festival drum on its stand, so it stands on the ground like a cast member (spread 10)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-drum-big/body.png",
+   "size": [
+    0.0501,
+    0.059
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

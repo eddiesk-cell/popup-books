@@ -21,16 +21,16 @@
     "ja": "じょうがと つきの うさぎ",
     "ko": "항아와 옥토끼"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/chang-e/plate.webp",
+   "spine": "#3d1f4f",
+   "gold": "#e8c36a",
    "culture": "Chinese",
    "region": "asia",
    "spreads": [
-    10,
+    11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=chang-e&s=s01"
   },
   {

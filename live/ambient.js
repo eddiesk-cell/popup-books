@@ -138,8 +138,10 @@ const LAYOUT = [[/^neck/, 0.12, 0.46, [0.35, 0.25], [0, 0.45]], [/^head/, 0.3, 0
 const hue = id => [...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 // owner 2026-11-18: "when night comes, please do not turn people and animal to blue": at night EVERY puppet wears its own day card, dimmed (x0.45 colour, about x0.7 sRGB), never a tinted card. A -night card is not read any more.
 const PERSON = /boy|girl|man|aunt|uncle|grand|mother|father|seller|player|carrier|sleeper|poler|outfit|khun-borom|nyeu|villager|tong$|^nok$|monk|\bking\b|queen|child|people|person/;  // the camera frames a person by its face (cameraman)
+// V14, puppets.json "selflit": true (a moon, a lit lantern): drawn at its painted colour whatever the light, never dimmed at night, casting no shadow
+const selfLit = m => { m.material.color.setScalar(0); m.material.emissiveIntensity = 1; m.material.toneMapped = false; m.castShadow = false; };
 async function puppet(id, def, stage) {
-  const dim = stage === "night"; if (dim) stage = "day";
+  const night = stage === "night", dim = night && !def.selflit; if (night) stage = "day";
   const size = def.size || 0.06, parts = def.parts?.length ? def.parts : ["body"], hinges = def.hinges || {};
   const art = def.cut && await Promise.all(parts.map(async n => {  // the art lane's cut parts, this stage's version first
     const f = `puppets/${id}/${n}`, v = VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : "";
@@ -165,6 +167,7 @@ async function puppet(id, def, stage) {
   });
   if (!art) root.traverse(o => o.isMesh && stage === "night" && o.material.color.setScalar(0.55));
   if (dim) meshes.forEach(m => (m.material.color.multiplyScalar(0.45), m.material.emissiveIntensity *= 0.45));  // sRGB x0.7, about as dark as the night cards, colour kept
+  if (def.selflit) meshes.forEach(selfLit);
   // a light cue's "stage" (gourd s09 9.5: the sun comes back on a night page) turns the puppet to that time's card, as it would have been built for it
   root.userData.restage = async (to, into = root, warm) => {  // into: a clone of this puppet (the cast's), whose materials a game's glow may have made its own; warm: only fetch the cards
     const dk = to === "night", st = dk ? "day" : to, v = VER[st] && (def.versions || []).includes(st) ? VER[st] : "";
@@ -173,6 +176,7 @@ async function puppet(id, def, stage) {
     if (warm || n0 !== into.userData.staged) return;
     const own = into === root ? meshes : parts.map(n => into.getObjectByName(n)?.children.find(o => o.isMesh));  // each part's card hangs on the pin named after it (acts.js puppetModel)
     own.forEach((m, i) => { if (!m) return; if (tex[i]) { m.material.map = m.material.emissiveMap = tex[i]; m.material.needsUpdate = true; }
+      if (def.selflit) return selfLit(m);
       m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.15 * 0.45 : 0.15; });
   };
   const turned = def.turned && await picture(`puppets/${def.turned}/body${VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : ""}.png`);  // V13: puppets.json "turned": the id of a three-quarter card of the same puppet, drawn instead of the front card while it faces left or right

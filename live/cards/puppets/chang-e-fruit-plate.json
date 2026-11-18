@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-fruit-plate",
+ "size": 0.026,
+ "metres_per_pixel": 5.5674518201284796e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "the fruit plate card as a puppet (spread 8)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-fruit-plate/body.png",
+   "size": [
+    0.0399,
+    0.026
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

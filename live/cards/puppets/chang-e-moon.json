@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-moon",
+ "size": 0.163,
+ "metres_per_pixel": 0.0003046728971962617,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "a round full moon (Flux, local), replaced the crescent-on-stilts stock card (Mid-Autumn is a full moon)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-moon/body.png",
+   "size": [
+    0.163,
+    0.163
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -65,7 +65,7 @@ export function createPopup(THREE, scene, cfg, o = {}) {
     for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2, r = 1 + 0.09 * Math.sin(3 * a + 0.7) + 0.06 * Math.sin(5 * a + 2.1) + (rr() - 0.5) * 0.12, x = Math.cos(a) * 0.04 * r, y = Math.sin(a) * 0.031 * r; i ? sh.lineTo(x, y) : sh.moveTo(x, y); }
     const g = new THREE.ExtrudeGeometry(sh, { depth: 0.012, bevelEnabled: false, curveSegments: 1 }); g.rotateX(-Math.PI / 2); g.translate(0, -0.006, 0);
     const t = grassCanvas(); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(20, 20);
-    return new THREE.Mesh(g, [new THREE.MeshStandardMaterial({ map: t, roughness: 0.95 }), new THREE.MeshStandardMaterial({ color: 0xe9dcbc, roughness: 0.95 })]);
+    return new THREE.Mesh(g, [new THREE.MeshStandardMaterial(st.moundColor ? { color: st.moundColor, roughness: 0.95 } : { map: t, roughness: 0.95 }), new THREE.MeshStandardMaterial({ color: 0xe9dcbc, roughness: 0.95 })]);
   };
 
   async function build() {

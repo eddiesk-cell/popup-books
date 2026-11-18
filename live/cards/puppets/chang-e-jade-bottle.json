@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-jade-bottle",
+ "size": 0.014,
+ "metres_per_pixel": 2.5225225225225226e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "the jade medicine bottle: the prop card as a one-piece puppet, so it can be held and floated (spread 4, 5)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-jade-bottle/body.png",
+   "size": [
+    0.0099,
+    0.014
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

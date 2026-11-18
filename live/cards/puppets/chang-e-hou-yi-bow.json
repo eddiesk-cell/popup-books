@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-hou-yi-bow",
+ "size": 0.159,
+ "metres_per_pixel": 0.00033534136546184743,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece pose card cut from the Higgsfield pose sheet assets/chang-e/look/poses/HY2.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-hou-yi-bow/body.png",
+   "size": [
+    0.04963,
+    0.159
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

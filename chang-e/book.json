@@ -1,0 +1,339 @@
+{
+ "released": true,
+ "chars": "chang-e-",
+ "title": "Chang'e and the Jade Rabbit",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "note": "DRAFT, generated from stories/chang-e/story.json and the GAME line of each stories/chang-e/scenes/sNN.md: change those, then regenerate; never hand-edit.",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Ten Suns",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "collect",
+    "count": "game.1.count",
+    "before": "1.5",
+    "targets": [
+     "sun-1",
+     "sun-2",
+     "sun-3",
+     "sun-4",
+     "sun-5",
+     "sun-6",
+     "sun-7",
+     "sun-8",
+     "sun-9",
+     "sun-10"
+    ],
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    },
+    "start": "Count the suns! Tap each sun.",
+    "praise": "Ten suns! That is too many suns!"
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Too Hot!",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "2.4",
+    "targets": [
+     "grandpa",
+     "grandma",
+     "boy",
+     "girl"
+    ],
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    },
+    "start": "Help Chang'e! Tap everyone who needs water.",
+    "praise": "Cool water for everyone. Ahh!"
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Nine Arrows",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "3.3",
+    "targets": [
+     "sun-2",
+     "sun-3",
+     "sun-4",
+     "sun-5",
+     "sun-6",
+     "sun-7",
+     "sun-8",
+     "sun-9"
+    ],
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    },
+    "start": "Help Hou Yi cool the suns! Tap the suns, one by one.",
+    "praise": "Splash, splash! The suns are cool and wet."
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "The Queen Mother's Gift",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "echo",
+    "before": "4.2",
+    "targets": [
+     "drum-big",
+     "drum-small",
+     "gong"
+    ],
+    "sounds": [
+     "drum-big",
+     "drum-small",
+     "gong-soft"
+    ],
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    },
+    "start": "Everyone is cheering! The drums play a song. Can you play it back?",
+    "praise": "Boom, boom, clang! What a happy song!"
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "A Shadow at the Window",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "shadow",
+    "before": "5.2",
+    "who": "chang-e",
+    "lamp": "rabbit-lantern",
+    "caster": "fengmeng",
+    "screen": "paper-window",
+    "spots": [
+     [
+      -0.2,
+      -0.1
+     ],
+     [
+      0.05,
+      -0.24
+     ],
+     [
+      -0.44,
+      -0.2
+     ]
+    ],
+    "answer": 2,
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    },
+    "start": "Someone came to the window! Move the lantern to see his shadow.",
+    "praise": "It is Feng Meng! What does he want?"
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Up to the Moon",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "6.2",
+    "targets": [
+     "jade-rabbit"
+    ],
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    },
+    "start": "Look closely! Who is holding on to Chang'e's ribbon? Tap him!",
+    "praise": "The little white rabbit! Shh, Chang'e does not know yet."
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "The Moon Palace",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "7.5",
+    "step": {
+     "prop": "jade-rabbit",
+     "clip": "Pound",
+     "steps": 5
+    },
+    "targets": [
+     "mortar-pestle"
+    ],
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    },
+    "start": "Help the rabbit pound! Tap when the stick comes down. Thump!",
+    "praise": "Thump, thump, thump! Good pounding!"
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "Lanterns for the Moon",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "before": "8.5",
+    "targets": [
+     "lantern-1",
+     "lantern-2",
+     "lantern-3",
+     "lantern-4",
+     "lantern-5",
+     "lantern-6"
+    ],
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    },
+    "start": "Light the lanterns! Tap each one.",
+    "praise": "So many little moons! Can Chang'e see them?"
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Moonlight",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "9.3",
+    "deal": [
+     "jade-rabbit"
+    ],
+    "targets": [
+     "flower-1",
+     "flower-2",
+     "flower-3",
+     "flower-4",
+     "flower-5"
+    ],
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    },
+    "start": "The bowl needs more! Tap the golden flowers to fill it to the top.",
+    "praise": "Full to the top! Now watch!"
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "The Brightest Moon",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "10.3",
+    "pairs": [
+     [
+      "mooncake-piece-1",
+      "grandpa"
+     ],
+     [
+      "mooncake-piece-2",
+      "grandma"
+     ],
+     [
+      "mooncake-piece-3",
+      "boy"
+     ],
+     [
+      "mooncake-piece-4",
+      "girl"
+     ]
+    ],
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    },
+    "start": "Share the mooncake! Give a piece to everyone.",
+    "praise": "Everyone has a piece. A family together!"
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What did we learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ]
+}

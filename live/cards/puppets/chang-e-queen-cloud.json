@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-queen-cloud",
+ "size": 0.075,
+ "metres_per_pixel": 0.00027272727272727274,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "the Queen Mother's pearl cloud: stock toad cloud-low tinted pearl (spread 4)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-queen-cloud/body.png",
+   "size": [
+    0.2247,
+    0.075
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

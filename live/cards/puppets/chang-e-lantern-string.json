@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-lantern-string",
+ "size": 0.14,
+ "metres_per_pixel": 0.0003373493975903615,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "the string of paper lanterns hung across the yard (spread 10)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-lantern-string/body.png",
+   "size": [
+    0.6045,
+    0.14
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

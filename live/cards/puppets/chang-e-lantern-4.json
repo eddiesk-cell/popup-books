@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-lantern-4",
+ "size": 0.045,
+ "metres_per_pixel": 7.705479452054794e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-lantern-4/body.png",
+   "size": [
+    0.0444,
+    0.045
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

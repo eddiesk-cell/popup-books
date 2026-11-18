@@ -1,0 +1,28 @@
+{
+ "puppet": "chang-e-mooncake-piece",
+ "size": 0.022,
+ "metres_per_pixel": 5.2132701421800946e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "note": "one mooncake piece, so it sits on the table top (spread 10)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-mooncake-piece/body.png",
+   "size": [
+    0.0256,
+    0.022
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

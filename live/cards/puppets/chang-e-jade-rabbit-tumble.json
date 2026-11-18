@@ -1,0 +1,29 @@
+{
+ "puppet": "chang-e-jade-rabbit-tumble",
+ "size": 0.0443,
+ "metres_per_pixel": 0.0002380952380952381,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece pose card cut from the Higgsfield pose sheet assets/chang-e/look/poses/JR1.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/chang-e-jade-rabbit-tumble/body.png",
+   "size": [
+    0.04381,
+    0.0443
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}
