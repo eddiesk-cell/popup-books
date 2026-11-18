@@ -27,7 +27,7 @@
    "culture": "Chinese",
    "region": "asia",
    "spreads": [
-    4,
+    10,
     11
    ],
    "status": "making",
@@ -43,16 +43,16 @@
     "ja": "ひこぼしと おりひめ",
     "ko": "견우와 직녀"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/cowherd/plate.webp",
+   "spine": "#1f2547",
+   "gold": "#e3b95e",
    "culture": "Chinese",
    "region": "asia",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=cowherd&s=s01"
   },
   {
@@ -180,7 +180,7 @@
    "culture": "Lao",
    "region": "sea",
    "spreads": [
-    2,
+    11,
     11
    ],
    "status": "making",

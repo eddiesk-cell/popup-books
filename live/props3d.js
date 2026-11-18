@@ -63,7 +63,7 @@ function shape(r) {  // one recipe in its own axes (three: y up), its uv 0-1 bef
   return g.index ? g.toNonIndexed() : g;
 }
 
-const picture = url => texs.get(url) ?? texs.set(url, loader.loadAsync(url.replace(/^assets\//, "../assets/"))  // page-relative: the viewer's page is web/live/index.html
+const picture = url => texs.get(url) ?? texs.set(url, loader.loadAsync(url.replace(/^\/?web\/live\//, "").replace(/^assets\//, "../assets/"))  // page-relative: the viewer's page is web/live/index.html
   .then(t => Object.assign(t, { colorSpace: THREE.SRGBColorSpace, anisotropy: 4 })).catch(e => (console.warn("props3d: no picture", url, e?.message ?? e), null))).get(url);
 
 export async function codeProp(p) {  // -> a Mesh named p.name, its texture loaded (the spread waits for it behind its loading cover)

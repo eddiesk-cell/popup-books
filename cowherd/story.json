@@ -1,0 +1,1083 @@
+{
+ "title": "The Cowherd and the Weaving Maiden",
+ "credit": "From the old Chinese story of the Cowherd and the Weaving Maiden (Niulang and Zhinü), told at the Qixi festival for about two thousand years and written down in English by Richard Wilhelm in 1921. Retold in our own words.",
+ "status": "LOCKED at STOP 1 (Eddie, 2026-11-17: \"Yes, we could start on Cowherd\").",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "niulang": {
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "zhinu": {
+   "voice": "bf_emma",
+   "speed": 0.97,
+   "pitch": 1
+  },
+  "ox": {
+   "voice": "bm_lewis",
+   "speed": 0.86,
+   "pitch": -2
+  },
+  "queen": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "children": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "boy": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "girl": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "magpie": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Niulang": "New-lahng",
+  "Zhinü": "Jer-new",
+  "Qixi": "Chee-shee"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Cowherd and the Old Ox",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in China, a young cowherd lived by a river. His name was Niulang.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in China, a young cowherd lived by a river. His name was New-lahng."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "He had no family. He had only an old ox, and the old ox was his best friend.",
+     "say": [
+      [
+       "narrator",
+       "He had no family. He had only an old ox, and the old ox was his best... friend."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Every morning, Niulang shared his rice with the old ox. Then he threw seeds for the magpies. \"Chack-chack!\" sang the magpies.",
+     "say": [
+      [
+       "narrator",
+       "Every morning, New-lahng shared his rice with the old ox. Then he threw seeds for the magpies. \"Chack-chack!\" sang the magpies."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "The old ox had a secret: he could talk! But only Niulang knew.",
+     "say": [
+      [
+       "narrator",
+       "The old ox had a secret: he could talk! But only New-lahng knew."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "\"You are kind to small things,\" said the old ox. \"Kindness always comes back.\"",
+     "say": [
+      [
+       "ox",
+       "You are kind to small things,"
+      ],
+      [
+       "narrator",
+       "said the old ox."
+      ],
+      [
+       "ox",
+       "Kindness always comes back."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "The Weaver in the Sky",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "High above the clouds lived Zhinü, the weaving maiden.",
+     "say": [
+      [
+       "narrator",
+       "High above the clouds lived Jer-new, the weaving maiden."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Every day she sat at her loom and wove the sky: pink clouds for the morning, white clouds for the day, and gold clouds for the evening.",
+     "say": [
+      [
+       "narrator",
+       "Every day she sat at her loom and wove the sky: pink clouds for the morning, white clouds for the day, and gold clouds for the... evening."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Her grandmother was the Queen Mother of the West, the queen of the sky. \"Weave, Zhinü!\" she said. \"The world needs colour.\"",
+     "say": [
+      [
+       "narrator",
+       "Her grandmother was the Queen Mother of the West, the queen of the sky."
+      ],
+      [
+       "queen",
+       "Weave, Jer-new!"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "queen",
+       "The world needs colour."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Zhinü wove and wove. But sometimes she looked down at the green earth, far, far below.",
+     "say": [
+      [
+       "narrator",
+       "Jer-new wove and wove. But sometimes she looked down at the green earth, far, far below."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "\"I make the sky for them,\" she said softly. \"But I have never seen the earth up close.\"",
+     "say": [
+      [
+       "zhinu",
+       "I make the sky for them,"
+      ],
+      [
+       "narrator",
+       "she said softly."
+      ],
+      [
+       "zhinu",
+       "But I have never seen the earth up close."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "A Visitor by the River",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "One evening, Zhinü rode a little cloud all the way down to the river. Whoosh!",
+     "say": [
+      [
+       "narrator",
+       "One evening, Jer-new rode a little cloud all the way down to the river. Whoosh!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "She touched the cool water. She smelled the flowers. \"The earth is so beautiful!\" she said.",
+     "say": [
+      [
+       "narrator",
+       "She touched the cool water. She smelled the flowers."
+      ],
+      [
+       "zhinu",
+       "The earth is so beautiful!"
+      ],
+      [
+       "narrator",
+       "she said."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Just then, Niulang came by with the old ox. He saw Zhinü, and his flute fell into the grass. Plop!",
+     "say": [
+      [
+       "narrator",
+       "Just then, New-lahng came by with the old ox. He saw Jer-new, and his flute fell into the grass. Plop!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "\"She comes from the sky,\" whispered the old ox. \"Be kind to her, as you are kind to everyone.\"",
+     "say": [
+      [
+       "ox",
+       "She comes from the sky,"
+      ],
+      [
+       "narrator",
+       "whispered the old ox."
+      ],
+      [
+       "ox",
+       "Be kind to her, as you are kind to everyone."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "So Niulang showed Zhinü the frogs, the fish and the fireflies. They laughed together until the stars came out. But would she ever go home?",
+     "say": [
+      [
+       "narrator",
+       "So New-lahng showed Jer-new the frogs, the fish and the... fireflies. They laughed together until the stars came out. But would she ever go home?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "A Happy Home",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Zhinü stayed on the earth, and she married Niulang.",
+     "say": [
+      [
+       "narrator",
+       "Jer-new stayed on the earth, and she married New-lahng."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Soon they had two children, a little boy and a little girl.",
+     "say": [
+      [
+       "narrator",
+       "Soon they had two children, a little boy and a little... girl."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Niulang worked in the fields with the old ox. Zhinü wove cloth so fine that it shone like the sky.",
+     "say": [
+      [
+       "narrator",
+       "New-lahng worked in the fields with the old ox. Jer-new wove cloth so fine that it shone like the sky."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "And every morning, the whole family threw seeds for the magpies. More and more magpies came. \"Chack-chack!\"",
+     "say": [
+      [
+       "narrator",
+       "And every morning, the whole family threw seeds for the magpies. More and more magpies came. \"Chack-chack!\""
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "It was the happiest home by the river. Kindness always came back.",
+     "say": [
+      [
+       "narrator",
+       "It was the happiest home by the river. Kindness always came back."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Grey Sky",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "But up in the sky, nobody was weaving.",
+     "say": [
+      [
+       "narrator",
+       "But up in the sky, nobody was weaving."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Every morning was grey. Every evening was grey. Even the sun looked sad.",
+     "say": [
+      [
+       "narrator",
+       "Every morning was grey. Every evening was grey. Even the sun looked... sad."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "The Queen Mother looked at the empty loom. \"Where is my Zhinü?\" she said.",
+     "say": [
+      [
+       "narrator",
+       "The Queen Mother looked at the empty loom."
+      ],
+      [
+       "queen",
+       "Where is my Jer-new?"
+      ],
+      [
+       "narrator",
+       "she said."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "She looked down through a gap in the clouds. There was Zhinü, far below, with Niulang and two children.",
+     "say": [
+      [
+       "narrator",
+       "She looked down through a gap in the clouds. There was Jer-new, far below, with New-lahng and two children."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "\"The sky needs its weaver,\" said the Queen Mother. \"She must come home!\"",
+     "say": [
+      [
+       "queen",
+       "The sky needs its weaver,"
+      ],
+      [
+       "narrator",
+       "said the Queen Mother."
+      ],
+      [
+       "queen",
+       "She must come home!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Wind from the Sky",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "One day, dark clouds rolled over the river, and the wind began to blow. Whoosh!",
+     "say": [
+      [
+       "narrator",
+       "One day, dark clouds rolled over the river, and the wind began to blow. Whoosh!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "The Queen Mother came down on a great grey cloud. \"Zhinü,\" she said, \"the sky needs you. Come home!\"",
+     "say": [
+      [
+       "narrator",
+       "The Queen Mother came down on a great grey cloud."
+      ],
+      [
+       "queen",
+       "Jer-new,"
+      ],
+      [
+       "narrator",
+       "she said,"
+      ],
+      [
+       "queen",
+       "the sky needs you. Come home!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Swish! The wind lifted Zhinü up, up, up into the sky.",
+     "say": [
+      [
+       "narrator",
+       "Swish! The wind lifted Jer-new up, up, up into the... sky."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"Mama! Mama!\" cried the children. Zhinü reached down to them, but the wind was too strong.",
+     "say": [
+      [
+       "children",
+       "Mah-mah! Mah-mah!"
+      ],
+      [
+       "narrator",
+       "cried the children. Jer-new reached down to them, but the wind was too strong."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Then she was gone. Niulang held the children close and looked up at the empty sky.",
+     "say": [
+      [
+       "narrator",
+       "Then she was gone. New-lahng held the children close and looked up at the empty sky."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "The Old Ox's Gift",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "That night, the old ox spoke softly. \"Niulang, do not cry. I can help you.\"",
+     "say": [
+      [
+       "narrator",
+       "That night, the old ox spoke softly."
+      ],
+      [
+       "ox",
+       "New-lahng, do not cry. I can help you."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"Long ago, I was a star in the sky,\" said the old ox. \"I still remember how to fly.\"",
+     "say": [
+      [
+       "ox",
+       "Long ago, I was a star in the sky,"
+      ],
+      [
+       "narrator",
+       "said the old ox."
+      ],
+      [
+       "ox",
+       "I still remember how to fly."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Niulang put the boy in one basket and the girl in the other. He hung the baskets on his carrying pole.",
+     "say": [
+      [
+       "narrator",
+       "New-lahng put the boy in one basket and the girl in the... other. He hung the baskets on his carrying pole."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "He climbed onto the old ox's back and held on tight.",
+     "say": [
+      [
+       "narrator",
+       "He climbed onto the old ox's back and held on tight."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Thump! The old ox jumped, and up they flew: past the willow, past the clouds, up toward the stars!",
+     "say": [
+      [
+       "narrator",
+       "Thump! The old ox jumped, and up they flew: past the willow, past the clouds, up toward the stars!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The River of Stars",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "The old ox flew higher and higher. Soon Niulang saw Zhinü on a cloud ahead.",
+     "say": [
+      [
+       "narrator",
+       "The old ox flew higher and higher. Soon New-lahng saw Jer-new on a cloud ahead."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "\"Zhinü!\" he called. \"Mama!\" called the children. Zhinü turned and held out her arms.",
+     "say": [
+      [
+       "niulang",
+       "Jer-new!"
+      ],
+      [
+       "narrator",
+       "he called."
+      ],
+      [
+       "children",
+       "Mah-mah!"
+      ],
+      [
+       "narrator",
+       "called the children. Jer-new turned and held out her arms."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "But the Queen Mother pulled the gold pin from her hair, and she drew a long line across the sky.",
+     "say": [
+      [
+       "narrator",
+       "But the Queen Mother pulled the gold pin from her hair, and she drew a long line across the sky."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Whoosh! The line became a wide, wide river of stars. Zhinü was on one side. Niulang was on the other.",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! The line became a wide, wide river of stars. Jer-new was on one side. New-lahng was on the... other."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "The river was too wide to fly over. The old ox could not cross it. The children cried, and Zhinü cried too.",
+     "say": [
+      [
+       "narrator",
+       "The river was too wide to fly over. The old ox could not cross it. The children cried, and Jer-new cried too."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "The Magpie Bridge",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Far below, the magpies heard the children crying.",
+     "say": [
+      [
+       "narrator",
+       "Far below, the magpies heard the children crying."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "The magpies remembered the kind family who fed them every morning. Kindness always comes back.",
+     "say": [
+      [
+       "narrator",
+       "The magpies remembered the kind family who fed them every morning. Kindness always comes... back."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "So all the magpies in the world flew up, flap-flap, into the sky: hundreds and hundreds and hundreds of them!",
+     "say": [
+      [
+       "narrator",
+       "So all the magpies in the world flew up, flap-flap, into the sky: hundreds and hundreds and hundreds of them!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "They spread their wings, wing to wing, and made a bridge across the river of stars.",
+     "say": [
+      [
+       "narrator",
+       "They spread their wings, wing to wing, and made a bridge across the river of stars."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Pitter-pat! Niulang and the children ran across the bridge, and the whole family hugged in the middle.",
+     "say": [
+      [
+       "narrator",
+       "Pitter-pat! New-lahng and the children ran across the bridge, and the whole family hugged in the middle."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Once a Year",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "The Queen Mother saw the magpie bridge, and her heart grew soft.",
+     "say": [
+      [
+       "narrator",
+       "The Queen Mother saw the magpie bridge, and her heart grew soft."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "\"So many small birds, all being kind!\" she said. \"Kindness has built a bridge.\"",
+     "say": [
+      [
+       "queen",
+       "So many small birds, all being kind!"
+      ],
+      [
+       "narrator",
+       "she said."
+      ],
+      [
+       "queen",
+       "Kindness has built a bridge."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "\"Zhinü, the sky needs its weaver. But once every year, you may meet your family on this bridge.\"",
+     "say": [
+      [
+       "queen",
+       "Jer-new, the sky needs its weaver. But once every year, you may meet your family on this bridge."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "So on the seventh night of the seventh month, the magpies make their bridge, and the family meets again. People call this night Qixi.",
+     "say": [
+      [
+       "narrator",
+       "So on the seventh night of the seventh... month, the magpies make their bridge, and the family meets again. People call this night Chee-shee."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Look up on a summer night. The bright star Vega is Zhinü. Across the river of stars is Altair, Niulang, with two little stars beside him.",
+     "say": [
+      [
+       "narrator",
+       "Look up on a summer night. The bright star Vega is Jer-new. Across the river of stars is Altair, New-lahng, with two little stars beside him."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Niulang was kind to an old ox and to small birds, every single day.",
+   "say": [
+    [
+     "closing",
+     "New-lahng was kind to an old ox and to small birds, every single day."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "When he needed help, the old ox and the magpies helped him.",
+   "say": [
+    [
+     "closing",
+     "When he needed help, the old ox and the magpies helped him."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "One magpie cannot make a bridge. But many magpies, together, can!",
+   "say": [
+    [
+     "closing",
+     "One magpie cannot make a bridge. But many magpies, together, can!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Be kind, even to the smallest friend. Many small kindnesses make one big bridge.",
+   "say": [
+    [
+     "closing",
+     "Be kind, even to the smallest friend. Many small kindnesses make one big... bridge."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Help Niulang feed the magpies! Tap each magpie.",
+   "say": [
+    [
+     "narrator",
+     "Help New-lahng feed the magpies! Tap each magpie."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Five happy magpies! Chack-chack!",
+   "say": [
+    [
+     "narrator",
+     "Five happy magpies! Chack-chack!"
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Zhinü weave! Tap when the shuttle flies across the loom.",
+   "say": [
+    [
+     "narrator",
+     "Help Jer-new weave! Tap when the shuttle flies across the loom."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Pink, white and gold! What a beautiful sky!",
+   "say": [
+    [
+     "narrator",
+     "Pink, white and gold! What a beautiful sky!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Show Zhinü the earth! Tap the things she has never seen.",
+   "say": [
+    [
+     "narrator",
+     "Show Jer-new the earth! Tap the things she has never seen."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Frogs, fish and fireflies! The earth is full of wonders.",
+   "say": [
+    [
+     "narrator",
+     "Frogs, fish and fireflies! The earth is full of wonders."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "The magpies sing a song. Can you sing it back? Tap the magpies in the same order.",
+   "say": [
+    [
+     "narrator",
+     "The magpies sing a song. Can you sing it back? Tap the magpies in the same order."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "You sing like a magpie! Chack-chack!",
+   "say": [
+    [
+     "narrator",
+     "You sing like a magpie! Chack-chack!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "The sky is grey. Can you find the last little bits of colour?",
+   "say": [
+    [
+     "narrator",
+     "The sky is grey. Can you find the last little bits of colour?"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "You found every colour. The sky misses its weaver.",
+   "say": [
+    [
+     "narrator",
+     "You found every colour. The sky misses its weaver."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "The wind is coming! Help the magpies hide in the willow tree. Tap a magpie, then the tree.",
+   "say": [
+    [
+     "narrator",
+     "The wind is coming! Help the magpies hide in the willow tree. Tap a magpie, then the tree."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "All the magpies are safe. Thank you!",
+   "say": [
+    [
+     "narrator",
+     "All the magpies are safe. Thank you!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Help Niulang get ready! Tap the things he needs for the journey.",
+   "say": [
+    [
+     "narrator",
+     "Help New-lahng get ready! Tap the things he needs for the journey."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Ready! Hold on tight!",
+   "say": [
+    [
+     "narrator",
+     "Ready! Hold on tight!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Fly the old ox to Zhinü! Steer around the clouds.",
+   "say": [
+    [
+     "narrator",
+     "Fly the old ox to Jer-new! Steer around the clouds."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "You flew so well!",
+   "say": [
+    [
+     "narrator",
+     "You flew so well!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Call the magpies! Tap a magpie, then its place on the bridge.",
+   "say": [
+    [
+     "narrator",
+     "Call the magpies! Tap a magpie, then its place on the bridge."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "The bridge is whole! Thank you, magpies!",
+   "say": [
+    [
+     "narrator",
+     "The bridge is whole! Thank you, magpies!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Find the family in the sky! Tap Zhinü's star, Niulang's star and the two little stars.",
+   "say": [
+    [
+     "narrator",
+     "Find the family in the sky! Tap Jer-new's star, New-lahng's star and the two little stars."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "You found the whole family in the sky!",
+   "say": [
+    [
+     "narrator",
+     "You found the whole family in the sky!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "niulang": [
+   "I am Niulang. My name means cowherd.",
+   "I look after the old ox.",
+   "I play my bamboo flute.",
+   "I feed the magpies every morning."
+  ],
+  "zhinu": [
+   "I am Zhinü. My name means weaving girl.",
+   "I weave the clouds of the sky.",
+   "Pink, white and gold!",
+   "I love the green earth."
+  ],
+  "ox": [
+   "I am the old ox.",
+   "Long ago, I was a star.",
+   "I can talk, but it is a secret!",
+   "My red knot means good luck."
+  ],
+  "queen": [
+   "I am the Queen Mother of the West.",
+   "I am the queen of the sky.",
+   "My gold hairpin can draw a river."
+  ],
+  "magpie": [
+   "A magpie. It is black and white, with a long tail.",
+   "Magpies say chack-chack!",
+   "In China, the magpie is the bird of joy."
+  ],
+  "boy": [
+   "I am Niulang's son.",
+   "I like to ride in the basket!"
+  ],
+  "girl": [
+   "I am Niulang's daughter.",
+   "I feed the magpies with Mama."
+  ]
+ },
+ "notes": {
+  "twist": "Old story: the cowherd hides the maiden's clothes so she cannot fly home, and the old ox dies and gives its hide so he can fly. Ours: nobody takes anything (she rides a cloud down to see the earth she colours, and they become friends); the old ox does not die (he was a star once and flies them up); and the magpies make the bridge because this family fed them every morning (spreads 1 and 4 plant it, 9 pays it off). The reader calls the magpies onto the bridge.",
+  "moral": "Many small kindnesses make one big bridge.",
+  "changes": "1 no taking of clothes, no bathing scene. 2 the old ox lives. 3 the Queen Mother is Zhinü's grandmother, stern but not cruel: she wants the sky's colour back, and the bridge softens her. 4 the magpies come out of kindness repaid (old tellings: pity, or the Jade Emperor's order). 5 the stars are real: Vega (Zhinu), Altair (Niulang) with Tarazed and Alshain beside it (the two children), the Milky Way between. 6 left out: the cruel brother and sister-in-law, the magpies' bald heads, the ladle.",
+  "level": "A1-A2, past simple, short sentences. Words repeated on purpose: kind, magpie, seeds, weave, clouds, sky, river, stars, bridge.",
+  "who speaks": "niulang, zhinu, ox, queen and the children (one word, Mama). The narrator reads every tag. Magpies do not speak: their sound is chack-chack.",
+  "respell": "Kokoro reads the pinyin badly: say carries New-lahng, Jer-new, Chee-shee; text keeps the real names (Zhinü with the u-umlaut). Lao/Thai/Chinese/Japanese subtitles come after STOP 1."
+ },
+ "words": false
+}

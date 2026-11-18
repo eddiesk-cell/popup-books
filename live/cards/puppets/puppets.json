@@ -4427,6 +4427,12 @@
 "_tilt": 6
 }
 },
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
 "chang-e-rabbit-lantern": {
 "look": "Chang'e's rabbit lantern (prop card as a puppet)",
 "size": 0.0376,
@@ -4449,16 +4455,1303 @@
 ],
 "cut": true
 },
+"xieng-mieng-kham-stand": {
+"look": "Kham standing calm, smiling, the khaen under his arm",
+"size": 0.132,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-walk": {
+"look": "Kham walking, three-quarter left, the khaen under his arm",
+"size": 0.1314,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-think": {
+"look": "Kham tapping his head with a finger, eyes up, grinning",
+"size": 0.1317,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-sorry": {
+"look": "Kham shaking his head, hands open, mock-sorry",
+"size": 0.1314,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-nop": {
+"look": "Kham doing the Lao greeting (nop), palms together, a small bow",
+"size": 0.1309,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-yawn": {
+"look": "Kham sitting, arms stretched up, a big yawn",
+"size": 0.0971,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-one-eye": {
+"look": "Kham sitting, one eye open, a finger up, sly",
+"size": 0.0898,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-khaen": {
+"look": "Kham playing the khaen, eyes closed, swaying",
+"size": 0.135,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-point-down": {
+"look": "Kham standing, pointing down, smiling",
+"size": 0.132,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-proud": {
+"look": "Kham proud, hands on hips, chin up, no crown",
+"size": 0.1311,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-run": {
+"look": "Kham running right",
+"size": 0.1212,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-leap": {
+"look": "Kham jumping right, knees tucked",
+"size": 0.1046,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-puff": {
+"look": "Kham bent over, hands on knees, puffing",
+"size": 0.1086,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-shock": {
+"look": "Kham shocked, eyes wide, hands up",
+"size": 0.132,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-blush-laugh": {
+"look": "Kham sitting, laughing, red cheeks",
+"size": 0.0897,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-worried": {
+"look": "Kham kneeling, palms together, worried",
+"size": 0.0904,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-take-hand": {
+"look": "Kham kneeling up, reaching a hand, shy smile",
+"size": 0.1013,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-mieng": {
+"look": "Kham holding a tray of mieng parcels, smiling",
+"size": 0.132,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-novice": {
+"look": "Kham two years younger as a novice, shaved head, saffron robe, sweeping (memory card)",
+"size": 0.1182,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-wave": {
+"look": "Kham waving, happy",
+"size": 0.1349,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-throne": {
+"look": "The king seated, admiring himself in the golden mirror",
+"size": 0.1483,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-shout": {
+"look": "The king standing, one arm out, announcing",
+"size": 0.1612,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-sit-bank": {
+"look": "The king sitting cross-legged, arms folded, smug",
+"size": 0.1292,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-step": {
+"look": "The king stepping down, one foot raised",
+"size": 0.1596,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-stand": {
+"look": "The king standing calm, the mirror in one hand",
+"size": 0.16,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-in-water": {
+"look": "The king standing, arms folded, cross",
+"size": 0.16,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-gasp": {
+"look": "The king, hands on his cheeks, mouth open, shocked",
+"size": 0.1607,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-laugh-sit": {
+"look": "The king sitting, laughing hard, hands thrown up",
+"size": 0.1218,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-mango": {
+"look": "The king eating a big yellow mango, happy",
+"size": 0.1596,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-dance": {
+"look": "The king dancing the lam vong, hands curled",
+"size": 0.1607,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-point-up": {
+"look": "The king pointing at the sky, a sly grin",
+"size": 0.16,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-look-down": {
+"look": "The king bending to look down, amazed",
+"size": 0.1315,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-laugh": {
+"look": "The king standing, holding his belly, laughing",
+"size": 0.1587,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-soft": {
+"look": "The king seated, the mirror lowered in his lap, soft sad eyes",
+"size": 0.1407,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-hand": {
+"look": "The king seated, leaning forward, a hand held out, a warm smile",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-king-tap-head": {
+"look": "The king tapping the side of his head, grinning",
+"size": 0.1591,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-stand-empty": {
+"look": "Kham standing calm, hands empty (no khaen)",
+"size": 0.132,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-walk-empty": {
+"look": "Kham walking, hands empty (no khaen)",
+"size": 0.1314,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"xieng-mieng-kham-think-empty": {
+"look": "Kham tapping his head, hand empty (no khaen)",
+"size": 0.1317,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true,
+"person": true
+},
+"chang-e-lantern-1": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
 "cycles": {},
 "uses": [
 "Chang'e"
 ],
 "cut": true
 },
-"chang-e-rabbit-lantern": {
-"look": "Chang'e's rabbit lantern (prop card as a puppet)",
-"size": 0.0376,
+"chang-e-lantern-2": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
 "gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-lantern-3": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-lantern-4": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-lantern-5": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-lantern-6": {
+"look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
+"size": 0.045,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-mooncake-plate": {
+"look": "the mooncake plate card as a puppet, so it sits on the table top (spread 8)",
+"size": 0.027,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-fruit-plate": {
+"look": "the fruit plate card as a puppet (spread 8)",
+"size": 0.026,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-tea-cup": {
+"look": "the tea cup card as a puppet (spread 8)",
+"size": 0.017,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-moon": {
+"look": "the stock moon card as a puppet, so it can hang in the sky at a height (spread 8)",
+"size": 0.163,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"cowherd-star-vega": {
+"look": "the star Vega in the night sky (a card from the sky lane)",
+"size": 0.11,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 10"
+],
+"cut": true
+},
+"cowherd-star-altair": {
+"look": "the star Altair in the night sky (a card from the sky lane)",
+"size": 0.11,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 10"
+],
+"cut": true
+},
+"cowherd-star-tarazed": {
+"look": "the star Tarazed in the night sky (a card from the sky lane)",
+"size": 0.06,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 10"
+],
+"cut": true
+},
+"cowherd-star-alshain": {
+"look": "the star Alshain in the night sky (a card from the sky lane)",
+"size": 0.055,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Cowherd 10"
+],
+"cut": true
+},
+"chang-e-moon-face": {
+"look": "Chang'e and the jade rabbit as soft silhouettes, a decal card glowing on the moon (spread 10)",
+"size": 0.115,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-mooncake-piece": {
+"look": "one mooncake piece, so it sits on the table top (spread 10)",
+"size": 0.022,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-lantern-string": {
+"look": "the string of paper lanterns hung across the yard (spread 10)",
+"size": 0.14,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-drum-big": {
+"look": "the big festival drum on its stand, so it stands on the ground like a cast member (spread 10)",
+"size": 0.059,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Chang'e"
+],
+"cut": true
+},
+"chang-e-drum-small": {
+"look": "the small festival drum (spread 10)",
+"size": 0.039,
+"gait": "walk",
 "versions": [
 "day"
 ],

@@ -1,0 +1,29 @@
+{
+ "puppet": "cowherd-boy-cry",
+ "size": 0.099,
+ "metres_per_pixel": 7.231555880204529e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/cowherd-boy-cry/body.png",
+   "size": [
+    0.0457,
+    0.099
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

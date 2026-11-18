@@ -1,0 +1,29 @@
+{
+ "puppet": "cowherd-magpie-small",
+ "size": 0.0205,
+ "metres_per_pixel": 5.176767676767677e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/cowherd-magpie-small/body.png",
+   "size": [
+    0.02391,
+    0.0205
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

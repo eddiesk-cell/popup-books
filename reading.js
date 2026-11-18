@@ -13,7 +13,8 @@ const json = u => fetch(u).then(r => { if (!r.ok) throw new Error(`${u}: ${r.sta
 
 export async function loadWords(base, { story, translations, timing }) {
   const opt = u => json(u).catch(() => null);  // tap-to-learn words are optional: web/<book>/words.json and voice/words/timing.json
-  const [s, tr, t, w, wt] = await Promise.all([...[story, translations, timing].map(f => json(base + f)), opt(base + "words.json"), opt(base + timing.replace(/timing\.json$/, "words/timing.json"))]);
+  const [s, tr, t] = await Promise.all([story, translations, timing].map(f => json(base + f)));
+  const [w, wt] = s.words === false ? [null, null] : await Promise.all([opt(base + "words.json"), opt(base + timing.replace(/timing\.json$/, "words/timing.json"))]);  // story.json "words": false: the book has no tap-to-learn words, so ask for none (a 404 is a failed request on the published site)
   const text = {}, subs = { ...tr.lines };
   for (const l of [...s.spreads.flatMap(sp => sp.lines), ...s.moral, ...(s.game || [])]) text[l.id] = l.text;  // game: voiced prompts (game.N.start/praise)
   for (const [who, a] of Object.entries(s.touch)) a.forEach((w, i) => { text[`touch.${who}.${i}`] = w; subs[`touch.${who}.${i}`] = tr.touch?.[who]?.[i]; });

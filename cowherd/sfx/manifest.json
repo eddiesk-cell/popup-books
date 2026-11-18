@@ -1,0 +1,41 @@
+{
+ "beds": [
+  "birds-morning",
+  "crickets",
+  "river-slow",
+  "wind-high",
+  "star-river-hum"
+ ],
+ "shots": [
+  "baskets-creak",
+  "child-giggle",
+  "children-giggle",
+  "crane-call",
+  "flute-motif",
+  "hens",
+  "hoe",
+  "loom-clack",
+  "magpie-chack-a",
+  "magpie-chack-b",
+  "magpie-chack-c",
+  "magpie-chorus",
+  "moon-shimmer",
+  "ox-breath",
+  "ox-motif",
+  "peck-taps",
+  "plop",
+  "queen-motif",
+  "rise-chord",
+  "rooster-far",
+  "seeds-patter",
+  "silk-shimmer",
+  "star-shimmer",
+  "thunder-far",
+  "whoosh"
+ ],
+ "pools": {
+  "chack-chack": 3,
+  "moon-shimmer": 4,
+  "child-giggle": 3
+ }
+}
