@@ -1115,7 +1115,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const h = box.max.y - box.min.y, xw = new THREE.Vector3(1, 0, 0).transformDirection(g.matrixWorld), riders = [];
       if (h > 0.3) {  // fruit and characters inside a tall card's picture ride its sway
         const b = box.clone().expandByScalar(0.04);
-        root.children.forEach(o => o.isMesh && !cardOf(o) && b.containsPoint(o.position) && riders.push({ o, p: o.position.clone() }));
+        root.children.forEach(o => o.isMesh && !cardOf(o) && !/^(page|words)/.test(o.name) && b.containsPoint(o.position) && riders.push({ o, p: o.position.clone() }));  // never the page or the previous page's print under the leaf: a sway lifted it through (Xieng Mieng s03)
         cast.forEach(ch => b.containsPoint(ch.body.position) && riders.push({ o: ch.body, p: ch.body.position.clone() }));
       }
       sway.push({ o: g, base: g.quaternion.clone(), q: new THREE.Quaternion(), e: new THREE.Euler(), last: null, deg: dg, x: box.getCenter(tmp).x,

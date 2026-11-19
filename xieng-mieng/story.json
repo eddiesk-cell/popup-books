@@ -1,0 +1,1337 @@
+{
+ "title": "Xieng Mieng, the Clever Trickster",
+ "credit": "From the Lao folk tales of Xieng Mieng, the trickster who tricks the king, told in Laos for hundreds of years — and a snail race that, people say, he ran too. Retold in our own words. Book one of the Xieng Mieng tales. Say it: Xieng Mieng (SEE-ung MEE-ung), khaen (kan), mieng (MEE-ung).",
+ "words": false,
+ "status": "DRAFT for STOP 1. Story reviews: r1 FAIL (10 must-fix, folded in), r2 FAIL on the credit only (folded in): story review closed.",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "kham": {
+   "voice": "am_puck",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "king": {
+   "voice": "am_onyx",
+   "speed": 0.95,
+   "pitch": -1
+  },
+  "ministers": {
+   "voice": "bm_george",
+   "speed": 0.95,
+   "pitch": -2
+  },
+  "snail": {
+   "voice": "bm_george",
+   "speed": 0.9,
+   "pitch": 4
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "drummer": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 1
+  },
+  "cat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 3
+  }
+ },
+ "respell": {
+  "Xieng Mieng": "Seeung Meeung",
+  "Xieng": "Seeung",
+  "Mieng": "Meeung",
+  "khaen": "kan"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Proud King",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in Laos, there lived a king who was very, very proud.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in Laos, there lived a king who was very, very proud."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Every morning, he looked into his golden mirror and said, \"I am the cleverest king in the world. Nobody can trick the King!\"",
+     "say": [
+      [
+       "narrator",
+       "Every morning, he looked into his golden mirror and said,"
+      ],
+      [
+       "king",
+       "I am the cleverest king in the world. Nobody can trick the King!"
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "\"Nobody can trick the King,\" said his ministers, and they bowed very low.",
+     "say": [
+      [
+       "ministers",
+       "Nobody can trick the... King,"
+      ],
+      [
+       "narrator",
+       "said his ministers, and they bowed very low."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "One day, the king called his drummer. Boom! Boom! Boom! \"Hear this! Anyone who can trick the King will win a basket of my sweetest mangoes!\"",
+     "say": [
+      [
+       "narrator",
+       "One day, the king called his drummer. Boom! Boom! Boom!"
+      ],
+      [
+       "king",
+       "Hear this! Anyone who can trick the King will win a basket of my sweetest mangoes!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Everybody shook their heads. Who would dare to trick the King?",
+     "say": [
+      [
+       "narrator",
+       "Everybody shook their heads. Who would dare to trick the King?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Kham, the Clever One",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Far away, by the great river, a boy heard the drum. His name was Kham.",
+     "say": [
+      [
+       "narrator",
+       "Far away, by the great river, a boy heard the drum. His name was Kham."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Kham used to live at the temple as a novice. A novice is a boy who learns from the monks.",
+     "say": [
+      [
+       "narrator",
+       "Kham used to live at the temple as a novice. A novice is a boy who learns from the monks."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Kham was not big, and he was not strong. But he was very, very clever.",
+     "say": [
+      [
+       "narrator",
+       "Kham was not big, and he was not strong. But he was very, very clever."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "When Kham had an idea, he tapped his head three times. Tap, tap, tap!",
+     "say": [
+      [
+       "narrator",
+       "When Kham had an idea, he tapped his head three times. Tap, tap... tap!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "\"Nobody can trick the King?\" said Kham. \"Hmm, let's see!\" He took his khaen, packed his sticky rice and his scarf, and off he went to the palace.",
+     "say": [
+      [
+       "kham",
+       "Nobody can trick the King?"
+      ],
+      [
+       "narrator",
+       "said Kham."
+      ],
+      [
+       "kham",
+       "Hmm, let's see!"
+      ],
+      [
+       "narrator",
+       "He took his kan, packed his sticky rice and his scarf, and off he went to the palace."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Into the Pond?",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "At the palace, the king sat by his lotus pond. \"So, you want to trick me? Ha! Nobody can trick the King!\"",
+     "say": [
+      [
+       "narrator",
+       "At the palace, the king sat by his lotus pond."
+      ],
+      [
+       "king",
+       "So, you want to trick me? Ha! Nobody can trick the... King!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "\"Trick me into this pond,\" said the king, \"and the mangoes are yours.\"",
+     "say": [
+      [
+       "king",
+       "Trick me into this pond,"
+      ],
+      [
+       "narrator",
+       "said the king,"
+      ],
+      [
+       "king",
+       "and the mangoes are yours."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Kham tapped his head, one, two, three. Then he shook it sadly. \"Into the pond? Oh no, Your Majesty. That is much too hard.\"",
+     "say": [
+      [
+       "narrator",
+       "Kham tapped his head, one, two, three. Then he shook it sadly."
+      ],
+      [
+       "kham",
+       "Into the pond? Oh no, Your Majesty. That is much too hard."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "\"But if you were in the pond,\" said Kham, \"I could trick you out. Easy!\"",
+     "say": [
+      [
+       "kham",
+       "But if you were in the pond,"
+      ],
+      [
+       "narrator",
+       "said Kham,"
+      ],
+      [
+       "kham",
+       "I could trick you out. Easy!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "\"Out? Ha! Never!\" said the king. And he stepped right into the water. Splash!",
+     "say": [
+      [
+       "king",
+       "Out? Ha! Never!"
+      ],
+      [
+       "narrator",
+       "said the king. And he stepped right into the water. Splash!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Tricked!",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "There stood the king, in the pond, with water up to his knees. A frog hopped onto his crown. Ribbit!",
+     "say": [
+      [
+       "narrator",
+       "There stood the king, in the pond, with water up to his knees. A frog hopped onto his crown. Ribbit!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"Well?\" said the king. \"Trick me out!\" But Kham sat down under the mango tree, and yawned.",
+     "say": [
+      [
+       "king",
+       "Well?"
+      ],
+      [
+       "narrator",
+       "said the king."
+      ],
+      [
+       "king",
+       "Trick me out!"
+      ],
+      [
+       "narrator",
+       "But Kham sat down under the mango tree, and yawned."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "The king waited, and waited, and waited. A little fish tickled his toes. \"Hurry up, Kham!\"",
+     "say": [
+      [
+       "narrator",
+       "The king waited, and waited, and... waited. A little fish tickled his toes."
+      ],
+      [
+       "king",
+       "Hurry up, Kham!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Kham opened one eye. \"Your Majesty, where are you now?\" \"In the pond, of course!\" said the king. Then his mouth fell open.",
+     "say": [
+      [
+       "narrator",
+       "Kham opened one eye."
+      ],
+      [
+       "kham",
+       "Your Majesty, where are you now?"
+      ],
+      [
+       "king",
+       "In the pond, of course!"
+      ],
+      [
+       "narrator",
+       "said the king. Then his mouth fell open."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "\"You tricked me into the pond!\" The king laughed so hard that he sat down in the water. Sploosh! \"Next time,\" he said, \"I will trick you!\"",
+     "say": [
+      [
+       "king",
+       "You tricked me into the pond!"
+      ],
+      [
+       "narrator",
+       "The king laughed so hard that he sat down in the water. Sploosh!"
+      ],
+      [
+       "king",
+       "Next time,"
+      ],
+      [
+       "narrator",
+       "he said,"
+      ],
+      [
+       "king",
+       "I will trick you!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The King's Turn",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Kham shared the mangoes with everyone, and gave the king the biggest one. But the king still wanted to win.",
+     "say": [
+      [
+       "narrator",
+       "Kham shared the mangoes with everyone, and gave the king the biggest one. But the king still wanted to win."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Kham's khaen was made of many bamboo pipes, and it could sing. When he played it, everyone danced, even the king.",
+     "say": [
+      [
+       "narrator",
+       "Kham's kan was made of many bamboo pipes, and it could sing. When he played it, everyone danced, even the... king."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"Lend me your khaen,\" said the king, \"and I will give it back in two moons.\" In Lao, one word means both moon and month.",
+     "say": [
+      [
+       "king",
+       "Lend me your kan,"
+      ],
+      [
+       "narrator",
+       "said the king,"
+      ],
+      [
+       "king",
+       "and I will give it back in two moons."
+      ],
+      [
+       "narrator",
+       "In Lao, one word means both moon and month."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Two months went by, and Kham came back. \"Your Majesty, two moons have passed. May I have my khaen?\"",
+     "say": [
+      [
+       "narrator",
+       "Two months went by, and Kham came back."
+      ],
+      [
+       "kham",
+       "Your Majesty, two moons have passed. May I have my kan?"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "The king pointed up at the night sky. \"Two moons? I see only one moon! Ha! Now I tricked you!\"",
+     "say": [
+      [
+       "narrator",
+       "The king pointed up at the night sky."
+      ],
+      [
+       "king",
+       "Two moons? I see only one moon! Ha! Now I tricked you!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Two Moons",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Kham tapped his head. Tap, tap, tap! \"Your Majesty, please come with me to the lotus pond.\"",
+     "say": [
+      [
+       "narrator",
+       "Kham tapped his head. Tap, tap, tap!"
+      ],
+      [
+       "kham",
+       "Your Majesty, please come with me to the lotus pond."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"Look up,\" said Kham. \"How many moons can you see?\" \"One,\" said the king.",
+     "say": [
+      [
+       "kham",
+       "Look up,"
+      ],
+      [
+       "narrator",
+       "said Kham."
+      ],
+      [
+       "kham",
+       "How many moons can you see?"
+      ],
+      [
+       "king",
+       "One,"
+      ],
+      [
+       "narrator",
+       "said the king."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"Now look down.\" And there, in the still, dark water, was another moon!",
+     "say": [
+      [
+       "kham",
+       "Now look down."
+      ],
+      [
+       "narrator",
+       "And there, in the still, dark water, was another... moon!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"One moon up in the sky, and one moon down in the pond. Two moons!\" said Kham.",
+     "say": [
+      [
+       "kham",
+       "One moon up in the sky, and one moon down in the pond. Two moons!"
+      ],
+      [
+       "narrator",
+       "said Kham."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "The king laughed and gave back the khaen. \"Nobody can trick the King, except Kham!\" And Kham puffed out his chest. \"Nobody can trick Kham!\"",
+     "say": [
+      [
+       "narrator",
+       "The king laughed and gave back the kan."
+      ],
+      [
+       "king",
+       "Nobody can trick the King... except Kham!"
+      ],
+      [
+       "narrator",
+       "And Kham puffed out his chest."
+      ],
+      [
+       "kham",
+       "Nobody can trick Kham!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "The Snail Race",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Now everyone said that Kham was the cleverest boy in all of Laos. And Kham felt very, very proud.",
+     "say": [
+      [
+       "narrator",
+       "Now everyone said that Kham was the cleverest boy in all of Laos. And Kham felt very, very... proud."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "One day, he saw a little snail on the path. \"Slow little snail! I could beat you in a race with my eyes shut!\"",
+     "say": [
+      [
+       "narrator",
+       "One day, he saw a little snail on the path."
+      ],
+      [
+       "kham",
+       "Slow little snail! I could beat you in a race with my eyes shut!"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"Then let us race,\" said the snail, \"to the big tree by the river.\"",
+     "say": [
+      [
+       "snail",
+       "Then let us race,"
+      ],
+      [
+       "narrator",
+       "said the snail,"
+      ],
+      [
+       "snail",
+       "to the big tree by the river."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"Ready, steady, go!\" Kham ran and jumped over the puddles. Swish, swish! He looked back. No snail!",
+     "say": [
+      [
+       "kham",
+       "Ready, steady, go!"
+      ],
+      [
+       "narrator",
+       "Kham ran and jumped over the puddles. Swish, swish! He looked back. No snail!"
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "\"Snail, where are you?\" he called. \"Here!\" said a little voice, in front of him!",
+     "say": [
+      [
+       "kham",
+       "Snail, where are you?"
+      ],
+      [
+       "narrator",
+       "he called."
+      ],
+      [
+       "snail",
+       "Here!"
+      ],
+      [
+       "narrator",
+       "said a little voice, in front of him!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Snails Everywhere",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Kham ran faster. Zoom! \"Snail, where are you?\" \"Here!\" said the little voice, in front of him again!",
+     "say": [
+      [
+       "narrator",
+       "Kham ran faster. Zoom!"
+      ],
+      [
+       "kham",
+       "Snail, where are you?"
+      ],
+      [
+       "snail",
+       "Here!"
+      ],
+      [
+       "narrator",
+       "said the little voice, in front of him again!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Kham tapped his head. Tap, tap, tap! But no idea came. So he ran his very fastest, all the way to the big tree. Puff, puff, puff!",
+     "say": [
+      [
+       "narrator",
+       "Kham tapped his head. Tap, tap, tap! But no idea came. So he ran his very fastest, all the way to the big tree. Puff, puff, puff!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "And there on the root of the tree sat the snail. \"You are late,\" it said.",
+     "say": [
+      [
+       "narrator",
+       "And there on the root of the tree sat the... snail."
+      ],
+      [
+       "snail",
+       "You are late,"
+      ],
+      [
+       "narrator",
+       "it said."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Kham looked back at the path. On every stone sat a little snail, all exactly alike. The snails had worked together!",
+     "say": [
+      [
+       "narrator",
+       "Kham looked back at the path. On every stone sat a little snail, all exactly alike. The snails had worked together!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Kham's cheeks went red. Then he laughed, and bowed to the snails. \"Kham the trickster, tricked by snails!\" But someone was watching: the king's drummer!",
+     "say": [
+      [
+       "narrator",
+       "Kham's cheeks went red. Then he laughed, and bowed to the snails."
+      ],
+      [
+       "kham",
+       "Kham the trickster, tricked by snails!"
+      ],
+      [
+       "narrator",
+       "But someone was watching: the king's drummer!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "The Lonely King",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "The drummer told the king about the snail race. \"Bring Kham to me!\" said the king.",
+     "say": [
+      [
+       "narrator",
+       "The drummer told the king about the snail race."
+      ],
+      [
+       "king",
+       "Bring Kham to me!"
+      ],
+      [
+       "narrator",
+       "said the king."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Kham walked into the great hall. It was dark and quiet. His knees shook. \"Now the king will laugh at me,\" he thought.",
+     "say": [
+      [
+       "narrator",
+       "Kham walked into the great hall. It was dark and quiet. His knees shook."
+      ],
+      [
+       "kham",
+       "Now the king will laugh at me,"
+      ],
+      [
+       "narrator",
+       "he thought."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "But the king spoke softly. \"Kham, before you came, I was a lonely king. Everyone bowed to me, but nobody laughed with me.\"",
+     "say": [
+      [
+       "narrator",
+       "But the king spoke softly."
+      ],
+      [
+       "king",
+       "Kham, before you came, I was a lonely king. Everyone bowed to me, but nobody laughed with me."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "\"You tricked me, and I laughed. The snails tricked you, and you laughed too. Now I know. Even a king can get it wrong, and laugh.\"",
+     "say": [
+      [
+       "king",
+       "You tricked me, and I laughed. The snails tricked you, and you laughed too. Now I know. Even a king can get it wrong, and laugh."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "The king held out his hand. \"Stay with me, Kham. Be my friend.\" And Kham took the king's hand.",
+     "say": [
+      [
+       "narrator",
+       "The king held out his hand."
+      ],
+      [
+       "king",
+       "Stay with me, Kham. Be my friend."
+      ],
+      [
+       "narrator",
+       "And Kham took the king's... hand."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Xieng Mieng!",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "The king gave Kham a special job. He kept the king's mieng, the tea-leaf snack the king loved best.",
+     "say": [
+      [
+       "narrator",
+       "The king gave Kham a special job. He kept the king's meeung, the tea-leaf snack the king loved best."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "So everyone called him Xieng Mieng. Xieng, because he had been a novice. And Mieng, people say, for the tea leaves he kept.",
+     "say": [
+      [
+       "narrator",
+       "So everyone called him Seeung Meeung. Seeung, because he had been a novice. And Meeung, people say, for the tea leaves he kept."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "Every day, the king and Xieng Mieng shared mieng, played the khaen, and laughed together. Sometimes the king even tapped his own head. Tap, tap, tap!",
+     "say": [
+      [
+       "narrator",
+       "Every day, the king and Seeung Meeung shared meeung, played the kan, and laughed together. Sometimes the king even tapped his own head. Tap, tap, tap!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "And every morning, the king still looked in his golden mirror and said, \"Nobody can trick the King!\" And everyone shouted, \"Except Xieng Mieng!\"",
+     "say": [
+      [
+       "narrator",
+       "And every morning, the king still looked in his golden mirror and said,"
+      ],
+      [
+       "king",
+       "Nobody can trick the King!"
+      ],
+      [
+       "narrator",
+       "And everyone shouted,"
+      ],
+      [
+       "ministers",
+       "Except... Seeung Meeung!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "\"And nobody can trick Xieng Mieng!\" said Xieng Mieng. And everyone shouted, \"Except the snails!\"",
+     "say": [
+      [
+       "kham",
+       "And nobody can trick Seeung Meeung!"
+      ],
+      [
+       "narrator",
+       "said Seeung Meeung. And everyone shouted,"
+      ],
+      [
+       "ministers",
+       "Except the snails!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "The king said nobody could trick him. Kham said he could beat a snail. They were both tricked!",
+   "say": [
+    [
+     "closing",
+     "The king said nobody could trick him. Kham said he could beat a snail. They were both tricked!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Nobody is the best at everything, so it is silly to boast.",
+   "say": [
+    [
+     "closing",
+     "Nobody is the best at everything, so it is silly to boast."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "When you get it wrong, laugh, and learn, like the king and Xieng Mieng.",
+   "say": [
+    [
+     "closing",
+     "When you get it wrong, laugh, and learn, like the king and Seeung Meeung."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Being clever is fun. Being clever and kind is best!",
+   "say": [
+    [
+     "closing",
+     "Being clever is fun. Being clever and kind is... best!"
+    ]
+   ]
+  }
+ ],
+ "continued": [
+  {
+   "id": "next.1",
+   "text": "To be continued...",
+   "say": [
+    [
+     "closing",
+     "To be continued..."
+    ]
+   ]
+  },
+  {
+   "id": "next.2",
+   "text": "Next time: Xieng Mieng and the King's Cat.",
+   "say": [
+    [
+     "closing",
+     "Next time: Seeung Meeung and the King's Cat."
+    ]
+   ]
+  },
+  {
+   "id": "next.3",
+   "text": "The king's cat eats fish from a golden dish. And Xieng Mieng is tapping his head. Tap, tap, tap! What is he planning?",
+   "say": [
+    [
+     "closing",
+     "The king's cat eats fish from a golden dish. And Seeung Meeung is tapping his head. Tap, tap, tap! What is he planning?"
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Help the drummer! Play the drums just like him.",
+   "say": [
+    [
+     "narrator",
+     "Help the drummer! Play the drums just like him."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Boom, boom, boom! The whole land heard you!",
+   "say": [
+    [
+     "narrator",
+     "Boom, boom, boom! The whole land heard you!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Kham pack! Tap a thing, then tap his bag.",
+   "say": [
+    [
+     "narrator",
+     "Help Kham pack! Tap a thing, then tap his bag."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "All packed! Kham is ready.",
+   "say": [
+    [
+     "narrator",
+     "All packed! Kham is ready."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Lead the king to the water! Tap the stepping stones: one, two, three.",
+   "say": [
+    [
+     "narrator",
+     "Lead the king to the water! Tap the stepping stones: one, two, three."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Step, step, step, and in he goes!",
+   "say": [
+    [
+     "narrator",
+     "Step, step, step, and in he goes!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Tickle the king's toes! Tap each little fish.",
+   "say": [
+    [
+     "narrator",
+     "Tickle the king's toes! Tap each little fish."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Hee hee! That tickles!",
+   "say": [
+    [
+     "king",
+     "Hee hee! That tickles!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Play the khaen like Kham! Tap the pipes he plays.",
+   "say": [
+    [
+     "narrator",
+     "Play the kan like Kham! Tap the pipes he plays."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "What lovely music! Everyone is dancing.",
+   "say": [
+    [
+     "narrator",
+     "What lovely music! Everyone is dancing."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Find the moons! Tap every moon you can see.",
+   "say": [
+    [
+     "narrator",
+     "Find the moons! Tap every moon you can see."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Two moons! One up, and one down!",
+   "say": [
+    [
+     "narrator",
+     "Two moons! One up, and one down!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Help Kham jump the puddles! Tap as he gets to each one.",
+   "say": [
+    [
+     "narrator",
+     "Help Kham jump the puddles! Tap as he gets to each one."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Swish, swish! Over the puddles he goes!",
+   "say": [
+    [
+     "narrator",
+     "Swish, swish! Over the puddles he goes!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Find all the snails! Tap each one.",
+   "say": [
+    [
+     "narrator",
+     "Find all the snails! Tap each one."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Five snails, all alike! They worked together.",
+   "say": [
+    [
+     "narrator",
+     "Five snails, all alike! They worked together."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "It is getting dark. Light the lamps in the great hall!",
+   "say": [
+    [
+     "narrator",
+     "It is getting dark. Light the lamps in the great hall!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Now the hall is warm and bright.",
+   "say": [
+    [
+     "narrator",
+     "Now the hall is warm and bright."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the mieng! Give one to each friend.",
+   "say": [
+    [
+     "narrator",
+     "Share the meeung! Give one to each friend."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Everyone has mieng. Yum!",
+   "say": [
+    [
+     "narrator",
+     "Everyone has meeung. Yum!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "kham": [
+   "I am Kham. One day everyone will call me Xieng Mieng!",
+   "When I have an idea, I tap my head. Tap, tap, tap!",
+   "I play the khaen.",
+   "My khaen has many bamboo pipes. It sings when I blow.",
+   "I am not big, but I am clever.",
+   "I used to live at the temple as a novice.",
+   "I love sticky rice!",
+   "Being clever is fun. Being kind is even better!"
+  ],
+  "king": [
+   "I am the king of this land.",
+   "I wear a golden crown.",
+   "I love sweet mangoes and mieng.",
+   "Nobody can trick me! Well, nearly nobody.",
+   "I look in my golden mirror every morning.",
+   "My crown is tall and pointed, like a temple roof.",
+   "I like a good joke.",
+   "My palace has a lotus pond."
+  ],
+  "snail": [
+   "I am a little snail.",
+   "I carry my house on my back.",
+   "I am slow, but my friends and I are clever.",
+   "I have two little eyes on stalks.",
+   "I leave a shiny trail behind me.",
+   "I like cool, wet places.",
+   "My friends and I all look the same!",
+   "Shh! Don't tell Kham our secret."
+  ],
+  "ministers": [
+   "We are the king's ministers.",
+   "We help the king rule the land.",
+   "We always bow very low.",
+   "We kneel when the king speaks.",
+   "We wear white jackets.",
+   "We say, \"Yes, Your Majesty!\" a lot.",
+   "We put our hands together to greet the king.",
+   "We like a good joke too."
+  ],
+  "drummer": [
+   "I am the king's drummer.",
+   "When I play my drum, everyone listens. Boom!",
+   "My drum hangs at my belly.",
+   "I play with two sticks.",
+   "Boom, boom, boom! That means, \"Listen!\"",
+   "I wear a red jacket.",
+   "I see everything that happens!",
+   "I can play fast, and I can play slow."
+  ],
+  "cat": [
+   "I am the king's cat. Meow!",
+   "My fur is white and fluffy.",
+   "I wear a little gold collar.",
+   "I eat from a golden dish.",
+   "I love a nap in the sun.",
+   "My eyes are green.",
+   "I purr when I am happy.",
+   "I only eat fish. Fish, fish, fish!"
+  ]
+ },
+ "notes": {
+  "series": "Book one of a Xieng Mieng series (Eddie 2026-11-12: told chapter by chapter). Lead's ruling (story review r1, SF12): a series of Little Tales for ages 4-8 (the orchestrator's brief), not an Epic (7-11). Each book stands alone (its moral answered); the series rules that bind are the To be continued page with a soft cliffhanger (next.3) and the next volume on the shelf as coming soon. Book two: the king's cat (softened: a trick, never a theft).",
+  "episodes": "Three Lao episodes: the king in the pond (discoverlaos.today, myfreshplans, reginagbeach), the two moons (myfreshplans), the snail race (its title 'Xiangmiang and the Snail' is on Lao lists; the plot is the widespread snail-race tale). Framed by how he got his name: Kham the ex-novice (xieng) made keeper of the king's mieng (one blog source, UNSURE: Eddie to confirm). Research: renders/review/xieng-mieng-stop1/research.md. The snail race: its Lao telling is UNSURE (research item C); confirm in Tossa and Kongdeuane 1990 before the credit's 'Lao folk tales' covers it.",
+  "twist": "Old tales: Xieng Mieng tricks the king again and again, sometimes rudely, and keeps what he wins. Ours: every trick is gentle and fair; Kham shares the mangoes he wins, the king tries a trick of his own (the one moon) and Kham answers it fairly (two moons); then the trickster is tricked by small snails working together, and the proud king turns out to be lonely. Both proud ones learn to laugh at themselves, and the tricks make them friends.",
+  "moral": "Nobody is the best at everything: don't boast, laugh and learn. Clever is fun; clever and kind is best.",
+  "changes": "1 the two moons is told between the king and Kham (the old tale: Kham and a friend who borrowed money); the thing lent is Kham's khaen, not money. 2 in the pond, Kham sits under the mango tree and yawns (the old tale: he eats the king's mangoes, naps and rides off on the king's horse); here he wins the mangoes and shares them. 3 the snails work together on their own (no one set them up). 4 left out: the rude and cruel episodes (the betel bag, the bamboo tube, the bird eaten, the cat beaten).",
+  "level": "A1-A2, past simple, short sentences. Words repeated on purpose: trick, king, pond, moon, snail, clever, laugh, tap.",
+  "who speaks": "kham (am_puck) and the king (am_onyx) in their own voices; the narrator (bm_george) reads everything else and gives the minor voices, pitched: the ministers and everyone (a chorus) and the snail. The drummer only drums.",
+  "refrain": "\"Nobody can trick the King!\": 1.2, 1.3, 2.5 (a question), 3.1 (predict pause before King), 6.5 (\"...except Kham!\", then Kham's own boast \"Nobody can trick Kham!\": the jinx), 10.4 (the child shouts \"Except... Xieng Mieng!\"), 10.5 (\"Except the snails!\"). Tell ladder, Kham's head-tap: 2.4 seeds (Tap, tap, tap), 3.3 and 6.1 it works, 8.2 it fails (no idea came), 10.3 the king taps HIS head. The king's ladder, the golden mirror: 1.2 he admires himself, 9.3 it lies in his lap (staging), 10.4 he still looks in it, laughing.",
+  "energy": "E1 s1 (the drum, E2 beat), E1 s2, E2 s3, E3 s4 (the sit-down sploosh), E1 s5, E2 s6, E2 s7, E3 s8, E1 s9 (the quiet turn), E2 s10.",
+  "respell": "Kokoro says 'Xieng Mieng' as zing ming: say carries Seeung Meeung (names.json); 'khaen' as karen: say carries kan. The text keeps the real spellings.",
+  "waits": "P4, ask then wait: 1.5 s after 1.5 (\"Who would dare...?\"), 4.4 (\"where are you now?\", then a planned silence before \"his mouth fell open\"), 6.2 (\"How many moons...?\"), moral.1, next.3. Needs the per-line pause (REQUESTS V7)."
+ }
+}

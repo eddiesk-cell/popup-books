@@ -1,0 +1,29 @@
+{
+ "puppet": "xieng-mieng-king-step",
+ "size": 0.1596,
+ "metres_per_pixel": 0.00038929440389294404,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece pose card cut from the Higgsfield pose sheet assets/xieng-mieng/look/poses/KG1.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/xieng-mieng-king-step/body.png",
+   "size": [
+    0.07747,
+    0.1596
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

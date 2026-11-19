@@ -1,0 +1,29 @@
+{
+ "puppet": "xieng-mieng-minister-3",
+ "size": 0.105,
+ "metres_per_pixel": 0.00015933232169954475,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece card cut from assets/xieng-mieng/look/minor/court.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/xieng-mieng-minister-3/body.png",
+   "size": [
+    0.05274,
+    0.105
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "puppet": "xieng-mieng-novice-1",
+ "size": 0.12,
+ "metres_per_pixel": 0.00015873015873015873,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "one-piece card cut from assets/xieng-mieng/look/minor/novices.png (v1 2D, night = the day card dimmed)",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/xieng-mieng-novice-1/body.png",
+   "size": [
+    0.07937,
+    0.12
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -6992,6 +6992,2026 @@
 "Gourd 10"
 ],
 "cut": true
+},
+"momotaro-stand": {
+"look": "Momotaro standing kindly in white peach headband, indigo jinbei, hakama, straw sandals, and pink peach banner",
+"size": 0.133,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-baby": {
+"look": "Rosy baby Momotaro jumping joyfully with arms raised",
+"size": 0.075,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-walk": {
+"look": "Momotaro walking cheerfully along the road",
+"size": 0.133,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-offer": {
+"look": "Momotaro smiling warmly holding out a golden millet dumpling",
+"size": 0.133,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-brave": {
+"look": "Momotaro in brave stance raising his pink peach banner pole high",
+"size": 0.148,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-dog-stand": {
+"look": "Spotted Japanese Shiba dog wearing a blue spotted kerchief",
+"size": 0.068,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-dog-happy": {
+"look": "Spotted Dog in blue kerchief wagging his tail with raised paw",
+"size": 0.068,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-dog-sneeze": {
+"look": "Spotted Dog in blue kerchief sneezing a cute sea-spray sneeze",
+"size": 0.068,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-dog-lantern": {
+"look": "Spotted Dog in blue kerchief balancing a glowing red paper lantern on the tip of his nose",
+"size": 0.076,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-monkey-stand": {
+"look": "Mountain macaque monkey wearing a bright persimmon-orange vest",
+"size": 0.058,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-monkey-bonk": {
+"look": "Mountain Monkey in orange vest sitting plopped on his bottom",
+"size": 0.058,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-monkey-climb": {
+"look": "Mountain Monkey in orange vest reaching up in climbing pose",
+"size": 0.058,
+"gait": "hop",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-pheasant-perch": {
+"look": "Emerald-green Japanese pheasant wearing a braided gold neck ring",
+"size": 0.047,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-pheasant-fly": {
+"look": "Green Pheasant in braided gold neck ring gliding with wings spread",
+"size": 0.047,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-goro-stomp": {
+"look": "Chief Goro, round coral-red storybook oni in tiger-stripe sash holding wooden club",
+"size": 0.202,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-goro-dizzy": {
+"look": "Chief Goro sitting plopped flat on the ground rubbing his dizzy head with one club beside him",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-goro-tear": {
+"look": "Chief Goro sitting cross-legged humbly with a single tear on his red cheek",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-goro-smile": {
+"look": "Chief Goro standing full giant height smiling warmly while holding a golden millet dumpling",
+"size": 0.202,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-grandpa": {
+"look": "Kind elderly Japanese Grandfather in brown cotton vest and straw sandals",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-grandma": {
+"look": "Kind elderly Japanese Grandmother in indigo kimono and white apron",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-blue-ogre": {
+"look": "Sleepy chubby little sky-blue storybook oni guard",
+"size": 0.118,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true,
+"person": true
+},
+"momotaro-flying-fish": {
+"look": "Shimmering silver-blue flying fish",
+"size": 0.035,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-peach-giant": {
+"look": "Giant rosy pink-and-gold peach from the mountain stream",
+"size": 0.077,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-peach-open": {
+"look": "Giant pink peach split open in warm golden light",
+"size": 0.077,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-glow-dot": {
+"look": "Golden peach-blossom light emblem",
+"size": 0.03,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-dumpling": {
+"look": "Warm golden millet dumpling (kibi-dango)",
+"size": 0.034,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-sailboat": {
+"look": "Traditional wooden Japanese sailboat with white sail",
+"size": 0.226,
+"gait": "glide",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-wooden-oar": {
+"look": "Single carved wooden Japanese boat oar",
+"size": 0.052,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-white-sail": {
+"look": "Bundled cream-white cotton sail",
+"size": 0.052,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-sea-rock": {
+"look": "Craggy coastal sea rock hazard",
+"size": 0.08,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-taiko-big": {
+"look": "Large wooden taiko festival drum on stand",
+"size": 0.068,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-taiko-small": {
+"look": "Medium shime-daiko festival drum",
+"size": 0.053,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-drum-ka": {
+"look": "Small lacquer festival drum",
+"size": 0.049,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-fest-lantern": {
+"look": "Warm red-and-gold paper festival lantern",
+"size": 0.043,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-rice-chest": {
+"look": "Wooden village rice chest",
+"size": 0.066,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"bamboo-cutter-kaguya-baby": {
+"look": "Tiny smiling baby Kaguya wrapped in peach-gold silk",
+"size": 0.055,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-kaguya-stand": {
+"look": "Kaguya standing smiling in peach-blossom kimono with bamboo leaf motifs",
+"size": 0.13,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-kaguya-dance": {
+"look": "Kaguya twirling joyfully with peach kimono sleeves fluttering",
+"size": 0.13,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-kaguya-harp": {
+"look": "Kaguya kneeling gracefully playing a wooden koto harp",
+"size": 0.088,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-kaguya-sad": {
+"look": "Kaguya looking wistfully upward with gentle sorrow",
+"size": 0.13,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-kaguya-brave": {
+"look": "Kaguya standing tall and resolute with warm brave smile",
+"size": 0.13,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-taketori-stand": {
+"look": "Old bamboo cutter Taketori standing kindly in russet samue",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-taketori-cup": {
+"look": "Taketori leaning warmly cupping both hands in delight",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-taketori-hat-frog": {
+"look": "Taketori laughing in a woven straw hat with a plump green frog on top",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-taketori-kneel": {
+"look": "Taketori kneeling gently with comforting outstretched hands",
+"size": 0.102,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-taketori-lantern": {
+"look": "Taketori standing smiling holding up a glowing carved bamboo lantern",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-grandmother-stand": {
+"look": "Grandmother standing warmly in plum-violet kimono and cream apron",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-grandmother-cradle": {
+"look": "Grandmother leaning tenderly over a woven bamboo cradle",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-grandmother-ladle": {
+"look": "Grandmother cheerfully holding a long wooden bamboo water ladle",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-grandmother-hug": {
+"look": "Grandmother holding a soft folded cream cotton quilt",
+"size": 0.139,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-moonqueen-robe": {
+"look": "Serene Moon Queen in pearl-white Heian robes and silver crescent crown",
+"size": 0.16,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-moonqueen-warm": {
+"look": "Moon Queen smiling warmly with gentle golden blessing",
+"size": 0.16,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-mikado-flute": {
+"look": "Young Mikado in plain slate-blue court robe holding a bamboo flute",
+"size": 0.156,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-mikado-bow": {
+"look": "Young Mikado bowing kindly with bamboo flute",
+"size": 0.13,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-lord-1": {
+"look": "Boastful Lord One in slate-grey Heian robes and tall black eboshi cap",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-lord-2": {
+"look": "Boastful Lord Two in crimson-gold Heian robes and tall black eboshi cap",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-lord-3": {
+"look": "Boastful Lord Three in emerald-gold Heian robes and tall black eboshi cap",
+"size": 0.162,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-lord-basket": {
+"look": "Surprised Lord Three sitting ker-plop inside a woven bamboo basket",
+"size": 0.099,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-moon-musician": {
+"look": "Celestial Moon Musician playing silver star-pipes",
+"size": 0.145,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-village-boy": {
+"look": "Smiling village boy in warm cream kimono",
+"size": 0.124,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-village-girl": {
+"look": "Smiling village girl in pale ivory kimono",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-stalk-glow": {
+"look": "Tall green bamboo stalk glowing with warm golden light",
+"size": 0.174,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-stalk-open": {
+"look": "Parted glowing green bamboo stalk revealing warm golden interior",
+"size": 0.174,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-glow-ring": {
+"look": "Luminous golden circular bamboo glow ring",
+"size": 0.03,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-cradle": {
+"look": "Woven bamboo baby cradle lined with warm white cotton",
+"size": 0.052,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-warm-quilt": {
+"look": "Folded soft peach-and-cream quilted cotton baby blanket",
+"size": 0.03,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-milk-cup": {
+"look": "Carved green bamboo cup filled with warm milk",
+"size": 0.024,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-bamboo-rattle": {
+"look": "Traditional woven Japanese bamboo baby rattle toy",
+"size": 0.026,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-gold-coin": {
+"look": "Gleaming Japanese gold coins",
+"size": 0.026,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-lord-fan": {
+"look": "Ornate painted Japanese folding fan",
+"size": 0.028,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-fake-branch": {
+"look": "Crooked twig with colourful painted beads glued on",
+"size": 0.036,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-fake-bowl": {
+"look": "Glossy oiled black lacquer-like bowl",
+"size": 0.03,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-soup-pot": {
+"look": "Plain soot-smudged earthenware soup pot",
+"size": 0.03,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-star-fan": {
+"look": "Dark indigo silk folding fan glowing with tiny fireflies",
+"size": 0.03,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-koto-low": {
+"look": "Wooden Japanese koto harp with silk strings",
+"size": 0.034,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-koto-high": {
+"look": "Wooden koto harp singing with golden music notes",
+"size": 0.032,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-flute-note": {
+"look": "Golden bamboo flute resting on a small wooden stand",
+"size": 0.034,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-porch-lantern": {
+"look": "Warm glowing Japanese stone garden lantern",
+"size": 0.052,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-star-lantern": {
+"look": "Delicate glowing pearl-silver star hanging lantern",
+"size": 0.032,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-cloud-carriage": {
+"look": "Silver cloud carriage with golden wheels",
+"size": 0.155,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-feather-robe": {
+"look": "Luminous flowing white celestial feather robe hagoromo",
+"size": 0.052,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-keepsake-lantern": {
+"look": "Carved green bamboo lantern glowing with golden star windows",
+"size": 0.045,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-star-beam": {
+"look": "Warm golden eight-pointed starlight orb",
+"size": 0.024,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-dumpling-tray": {
+"look": "Wooden tray of white Tsukimi rice dumplings",
+"size": 0.039,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-fuji-cloud": {
+"look": "Soft peaceful curling white cloud above Mount Fuji",
+"size": 0.052,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-bamboo-lantern": {
+"look": "Carved green bamboo lantern for Moon-Viewing night",
+"size": 0.043,
+"gait": "idle",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true
+},
+"bamboo-cutter-taketori-hat": {
+"look": "Taketori laughing in a woven straw hat with a plump green frog on top",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"bamboo-cutter-lord-tumble": {
+"look": "Surprised Lord Three sitting ker-plop inside a woven bamboo basket",
+"size": 0.099,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Bamboo Cutter"
+],
+"cut": true,
+"person": true
+},
+"momotaro-fort-gate-closed": {
+"look": "Heavy wooden Japanese yagura-mon fortress gate bolted shut between stone walls",
+"size": 0.461,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 2
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
+},
+"momotaro-fort-gate-open": {
+"look": "Heavy wooden Japanese yagura-mon fortress gate swung wide open between stone walls",
+"size": 0.461,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 2
+}
+},
+"cycles": {},
+"uses": [
+"Momotaro"
+],
+"cut": true
 }
 }
 }

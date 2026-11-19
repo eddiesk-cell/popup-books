@@ -122,6 +122,27 @@
    "link": "../live/?book=mali&s=s01"
   },
   {
+   "id": "momotaro",
+   "title": {
+    "en": "Momotarō, the Peach Boy",
+    "lo": "ໂມໂມທາໂຣ ເດັກຊາຍໝາກຄາຍ",
+    "th": "โมโมทาโร่ เด็กชายลูกท้อ",
+    "zh": "桃太郎",
+    "ja": "ももたろう"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Japanese",
+   "region": "asia",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=momotaro&s=s01"
+  },
+  {
    "id": "monkey-turtle",
    "title": {
     "en": "The Monkey and the Turtle",
@@ -195,16 +216,16 @@
     "zh": "香勉，聪明的机灵鬼",
     "ja": "とんちの めいじん シエンミエン"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/xieng-mieng/plate.webp",
+   "spine": "#803014",
+   "gold": "#efd074",
    "culture": "Lao",
    "region": "sea",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=xieng-mieng&s=s01"
   }
  ]
