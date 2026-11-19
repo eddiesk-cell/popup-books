@@ -1,6 +1,5 @@
 {
  "title": "Mali and the Lantern Market",
- "origin": "original",
  "voices": {
   "narrator": {
    "voice": "bm_george",
@@ -18,14 +17,14 @@
    "pitch": 5
   },
   "nok": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_emma",
+   "speed": 0.9,
+   "pitch": -1
   },
   "tong": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.06,
+   "pitch": 3
   },
   "closing": {
    "voice": "bm_george",

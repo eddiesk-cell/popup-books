@@ -413,7 +413,7 @@ export function makeGame(sp, env) {
     c.tick = now => {
       if (act && !act.paused && act.time >= stopAt) (act.time = stopAt, act.paused = true);  // one step done: hold
       const o = targets[S ? 0 : state.cur];
-      ring.material.opacity = o && !state.complete ? 0.9 : 0;
+      ring.material.opacity = o && !c.complete && !state.complete ? 0.9 : 0;  // c.complete too: a won game (g.win(), as the capture tools do) leaves no ring
       if (!o) return;
       const p = state.phase(now / 1000);
       ring.position.copy(at(o)); ring.scale.setScalar(size[S ? 0 : state.cur] * (1.1 + 2.4 * (1 - p)));

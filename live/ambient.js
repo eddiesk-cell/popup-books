@@ -18,6 +18,7 @@ import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { markWords } from "../book.js";
 import { glow } from "./games.js";
 import { extra3d } from "./extras3d.js";
+import { matchSpeakers } from "./acts.js";
 
 const B = ([x, y, z]) => new THREE.Vector3(x, z, -y);  // Blender (z up) -> three (y up)
 const rnd = (a, b) => a + Math.random() * (b - a), jit = s => s * rnd(0.75, 1.25);  // waits jitter ±25%: loops never line up
@@ -192,7 +193,7 @@ function pose(p, amounts) {  // hinge angles for the moves in `amounts` (move ->
   const moves = p.def.moves || {}, hinges = p.def.hinges || {}, a = {}, top = (p.def.parts || ["body"])[0];
   let tilt = 0;
   for (const [mv, k] of Object.entries(amounts)) {
-    if (mv === "_breathe") { if (p.first) a[p.first] = (a[p.first] || 0) + 2 * k; continue; }  // the rest pose breathes ±2° on the first hinge
+    if (mv === "_breathe") { if (p.first) a[p.first] = (a[p.first] || 0) + 0.4 * k; continue; }  // calm slow breath ±0.4° on the first hinge
     const [name, only] = mv.split("#");  // "hang#tilt": only that move's whole-puppet tilt
     for (const [h, v] of Object.entries(moves[name] || {})) h === "_tilt" ? (tilt += v * k) : h !== "_lift" && !only && (a[h] = (a[h] || 0) + v * k);
   }
@@ -284,14 +285,15 @@ export const ambient = {
     if (pending && L) {  // window.live exists from the first frame on, so the viewer's own objects are reached through it
       const [sp, scene, cam] = pending; pending = null;
       const r = L.reader, lines = () => sp.page?.lines || [], gate = () => (sp.G?.before ? lines().indexOf(sp.G.before) : lines().length);  // the game comes before its line, or after the last
-      current = addAmbient(scene, cam, sp.m, { root: sp.root, parent: sp.group, lights: sp.stage, controls: L.controls, composer: L.composer, cast: sp.cast,
+      const bk = new URLSearchParams(location.search).get("book") || "kapi", sayOf = id => SAYS[id] ?? L.speakers?.[id];
+      current = addAmbient(scene, cam, sp.m, { book: bk, root: sp.root, parent: sp.group, lights: sp.stage, controls: L.controls, composer: L.composer, cast: sp.cast,
         backdrop: sp.sky, frame: () => L.frame,  // the viewer's measure as the spread loaded (standing); the named backdrop is measured again at build
         mode: () => L.mode, home: () => L.home, readHome: () => L.readHome?.(), halt: () => L.halt?.(), titled: () => L.titled,  // titled: before the first pull the viewer's title view stands (no story shot)  // the viewer's reading view (phone framing included), kept current on resize; halt stops its glide home
         story: () => ({ line: r?.id ?? null, t: !r || r.audio.ended ? Infinity : r.audio.currentTime, speaking: !!r && !r.audio.paused,
           // "next": the line before the game has been read (the pause before its prompt); "wait": its prompt and play; a read again starts over; a game Auto or Reading Mode skips is none until settled, then "won"
           game: game(sp) && (game(sp).targets?.length ?? sp.targets?.length) && !(L.skipGames && !game(sp).complete) ? (game(sp).complete ? "won" : sp.at >= gate() ? "wait" : sp.at === gate() - 1 && r?.audio.ended ? "next" : null) : null,
           end: sp.at >= lines().length, at: sp.at }),
-        info: id => { const T = r?.timing[id], ls = lines(); return T && { dur: T.duration, words: T.words, say: SAYS[id], prev: ls[ls.indexOf(id) - 1], speakers: [...new Set(ls.filter(l => l.split(".")[0] === id.split(".")[0]).flatMap(l => SAYS[l] ?? []))].filter(v => v !== "narrator") }; },  // a line's timing and who says each word (stories/<book>/story.json)
+        info: id => { const T = r?.timing[id], ls = lines(); return T && { dur: T.duration, words: T.words, say: sayOf(id), prev: ls[ls.indexOf(id) - 1], speakers: [...new Set(ls.filter(l => l.split(".")[0] === id.split(".")[0]).flatMap(l => sayOf(l) ?? []))].filter(v => v !== "narrator" && v !== "closing") }; },  // a line's timing and who says each word (stories/<book>/story.json)
         wordAt: (line, word) => { const i = r ? markWords(r.text[line] || "", word).indexOf(true) : -1; return i < 0 ? 0 : r.timing[line].words[i][0]; } });
     }
     current?.update(now / 1000, dt);
@@ -310,6 +312,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const stage = m.stage?.name || "day", per = v => (typeof v === "object" && v ? v[stage] ?? 0 : v);
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const controls = opts.controls, canvas = opts.canvas || controls?.domElement, cast = opts.cast || [];
+  const bookId = opts.book || new URLSearchParams(location.search).get("book") || "kapi";
+  const shownCast = c => !!c?.body?.visible && !window.live?.acting?.was?.has(c.body);
   const isOpen = () => !opts.mode || opts.mode() === "open";
   const SCAM = (m.camera?.story === true || new URLSearchParams(location.search).get("story") === "1") && !!controls && !calm;  // the story camera: the page's camera.story, or ?story=1
   const SH = m.shots || {}, W = m.wind || {}, LI = m.light || {};
@@ -444,7 +448,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   let faceLim = null, near = Infinity;  // the reader's orbit limits while a face shot (or a near shot of a small subject) runs; near: that shot's own nearest distance
   const nearShot = s => {  // a close or medium shot comes as near as its subject needs to stand 12 percent of the screen's height (never under 0.05 m), not only to 0.6 m and the reader's orbit floor: the Toad King's 6 cm hero; Kapi and Mali need more than 0.6 m for that, so theirs is unchanged
     if (s?.framing !== "close" && s?.framing !== "medium") return 0.6;
-    const h = Math.max(0, ...cast.filter(c => c.body.visible && [s.target].flat().includes(c.name)).map(c => c.height || 0));
+    const h = Math.max(0, ...cast.filter(c => shownCast(c) && [s.target].flat().includes(c.name)).map(c => c.height || 0));
     return h ? Math.min(0.6, Math.max(0.05, h / (0.12 * 2 * Math.tan(deg(cam.fov) / 2)))) : 0.6;
   };
   const probe = cam.clone(), lim = controls || {}, lims = () => faceLim ?? lim;  // lims: the reader's own limits, also while a face shot has the orbit's let out
@@ -487,14 +491,14 @@ export function addAmbient(scene, cam, m, opts = {}) {
   };
   const rigOf = s => { const was = near, nr = nearShot(s); try { const r = rig(s); if (r && nr < 0.6 && !r.face) r.near = nr; return r; } finally { near = was; } };  // near reaches fit() only inside this shot's own rig
   const rig = s => {  // a shot's camera: its distance along the reading axis swung by yaw, the target's top no higher than 60% up
-    if (!s || s === "reading" || s.target == null) { const h = { pos: HOME.clone(), look: LOOK.clone() }; if (!s?.room) return h; const f = fitIn(h); return whole(f, cast.filter(c => c.body.visible && (!s.keep || s.keep.includes(c.name)))) ? f : h; }  // exactly the viewer's own framing, so Reset never jumps (a closing shot off the phone: that view with no room past the backdrop)
+    if (!s || s === "reading" || s.target == null) { const h = { pos: HOME.clone(), look: LOOK.clone() }; if (!s?.room) return h; const f = fitIn(h); return whole(f, cast.filter(c => shownCast(c) && (!s.keep || s.keep.includes(c.name)))) ? f : h; }  // exactly the viewer's own framing, so Reset never jumps (a closing shot off the phone: that view with no room past the backdrop)
     if (s.framing === "face") return faceRig(s);
     const f = frame(s.target, true); if (!f) return null;  // whole bodies (a crocodile is long)
     const half = Math.min(deg(cam.fov) / 2, Math.atan(Math.tan(deg(cam.fov) / 2) * cam.aspect));  // the narrower half-angle: a phone's width
     const allow = phone() ? (s.move === "push" ? 1 / 0.85 : 1) : 1, rr = f.r + (phone() && s.move === "drift" ? 0.04 : 0);  // a phone's subjects stay whole as the move ends: a push ends 15% closer, a drift slides 0.04
     const nr = nearShot(s), dist = Math.max(nr, (FRAMING[s.framing] ?? FRAMING.medium) * (phone() ? Math.tan(deg(15)) / Math.tan(deg(cam.fov) / 2) : 1), rr / Math.tan(half) * (phone() ? 1.3 : 1.15) * allow);
     if (phone() && Array.isArray(s.target) && !s.lean && dist > 0.7) {  // a phone is too narrow for a river's width of stones and a turtle: past 0.7 m it frames the focus (else the characters), as the shots of one character do
-      const cs = [s.focus, ...s.target].filter(n => cast.some(c => c.name === n && c.body.visible)), one = cs.length ? (cast.some(c => c.name === s.focus && c.body.visible) ? [s.focus] : [...new Set(cs)]) : null;
+      const cs = [s.focus, ...s.target].filter(n => cast.some(c => c.name === n && shownCast(c))), one = cs.length ? (cast.some(c => c.name === s.focus && shownCast(c)) ? [s.focus] : [...new Set(cs)]) : null;
       const r = one && rigOf({ ...s, target: one.length === 1 ? one[0] : one, lean: true }); if (r) return { ...r, lean: one.length === 1 ? one[0] : one };
     }
     const dir = HOME.clone().sub(LOOK).normalize().applyAxisAngle(UP, deg(Math.max(-25, Math.min(25, s.yaw || 0))));
@@ -525,7 +529,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       for (const x of [corner.min.x, corner.max.x]) for (const y of [corner.min.y, corner.max.y]) for (const z of [corner.min.z, corner.max.z]) if (Math.abs(tmp.set(x, y, z).project(probe).x) > 0.98) return false; }
     return true;
   };
-  const subjects = s => { const ns = [s?.target].flat(), out = cast.filter(c => c.body.visible && ns.includes(c.name)); for (const n of ns) if (n && !out.some(c => c.name === n)) { const x = pups.find(p => p.e.name === n); if (x?.p?.root?.visible) out.push({ name: n, body: x.p.root, height: x.p.size, model: null }); } return out; };  // an extra named in the target is a subject too (it has a root to box, a size and a position, but no model)
+  const subjects = s => { const ns = [s?.target].flat(), out = cast.filter(c => shownCast(c) && ns.includes(c.name)); for (const n of ns) if (n && !out.some(c => c.name === n)) { const x = pups.find(p => p.e.name === n); if (x?.p?.root?.visible) out.push({ name: n, body: x.p.root, height: x.p.size, model: null }); } return out; };  // an extra named in the target is a subject too (it has a root to box, a size and a position, but no model)
   const corners = who => {  // the corners of each body's box in the camera space of the last aim(): [x, y, depth], only those in front
     const P = [];
     for (const c of who) { corner.setFromObject(c.model || c.body);
@@ -641,7 +645,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (sp.out && cam.position.distanceToSquared(sp.out) > 1e-6) sp.s = par(cam.position, controls.target), sp.vL.copy(mv.vL), sp.vq = [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // someone else moved the camera (the reader, the viewer's glide): carry on from there, at the speed it had
     const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
     g.q[1] = C.q[1] + wrapA(g.q[1] - C.q[1]);
-    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && SC.cl ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && SC.key === "game" && story.game === "next" ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // the story camera's opening flight off the phone 70% a second: at 27% a spread's first line was still on its way in from the book view, the room around the book in view (toad s02 2.1: 0.26 m, s01 1.1: 0.32 m)  // 29% on the flight to a game's view in the hush before its prompt (inside the director's 30%/s)  // the distance may change 22% a second (27% on the way in from the opening, 3% in 0.1 s at most); into a face shot 50%: a line's closing words are seen from the face, not from the way there  // a small subject's close/medium comes in faster than a face shot (a paper puppet's fill is 8x nearer than the reading view: at 22%/s it never lands)  // SC.cl (V33, provisional until Eddie passes CAMERA.md 4): into a close at the table's fill 80% a second, as into a face: at 22% (and at 50%) the turning line's close was still on its way in when the line ended (cowherd 8.5: 0.50 of the frame against 0.65)
+    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && SC.cl ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && (SC.beat?.speaker || (SC.key === "game" && story.game === "next")) ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // speaker beats and game transitions use 29%/s (inside CAMERA.md's 30%/s cap) so wide-to-speaker moves arrive on time
     for (let i = 0; i < n; i++) {
       const dL = g.L.clone().sub(C.L), ml = Math.min(1, 0.35 * (SCAM && shot === "hold" && opts.mode?.() === "turn" ? 0.7 : 1) * h / Math.max(dL.length(), 1e-9)); C.L.addScaledVector(dL, ml);
       C.q[0] += Math.max(-dr * fly * h, Math.min(dr * fly * h, g.q[0] - C.q[0]));
@@ -680,7 +684,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const p = { pos: r.pos.clone(), look: r.look.clone() };
     if (controls && !run?.base?.face) {  // the shot's subjects kept whole (and no one else half in frame); an upright phone also tilts over the look point and slides back into the book as far as they allow, so the desk stays out (`desk` of the way)
       if (run !== keptRun) keptRun = run, keptFrom.copy(kept), keptT = now;  // a new shot: its keep blends in from the last over 1 s, so nothing steps
-      const others = story.game !== "wait" && (phone() || run?.s?.target != null) ? cast.filter(c => c.body.visible && !who.includes(c)) : [], w = shot === "in" ? 1 : smooth((now - keptT) / (run?.over ? run.secs : 1));  // a desktop's reading view is the viewer's own, and so is the game view on every screen (live.js gameView keeps each character wholly in or out; a slide here pushed mali-s04's lampspot0 to x -8 percent on a phone); a take-over's keep comes in with its move
+      const others = story.game !== "wait" && (phone() || run?.s?.target != null) ? cast.filter(c => shownCast(c) && !who.includes(c)) : [], w = shot === "in" ? 1 : smooth((now - keptT) / (run?.over ? run.secs : 1));  // a desktop's reading view is the viewer's own, and so is the game view on every screen (live.js gameView keeps each character wholly in or out; a slide here pushed mali-s04's lampspot0 to x -8 percent on a phone); a take-over's keep comes in with its move
       const at = a => {  // the frame for a tilt a (up over the look point; below 0, down), inside the orbit's limits, with the subjects kept whole: exact within a shot
         const v = p.pos.clone().sub(p.look), pol = Math.acos(v.y / v.length()), b = Math.max(-Math.max(0, (lims().maxPolarAngle ?? Math.PI) - pol - 0.02), Math.min(a, Math.max(0, pol - (lim.minPolarAngle ?? 0) - 0.02)));
         const q = { pos: v.applyAxisAngle(new THREE.Vector3(v.z, 0, -v.x).normalize(), -b).add(p.look), look: p.look.clone() }, n = need(q, who, others, desk), x = n.x + od;
@@ -782,7 +786,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     near = run.base.near ?? Infinity; const q = mixRig(r, fit(r.pos.clone(), r.look.clone()), smooth((t - run.t0) / 2)); near = Infinity; const w = eased(run, q, phone() && subjects(s).length ? 0 : run.from.ease ? smooth((t - run.t0) / 2) : 1, dt);  // a phone shot of someone keeps its base framing (no per-frame room fit that would cut them)
     write(w, t, story.game === "wait" ? 0 : 1, subjects(s));  // never a jump; the game view is the viewer's on every screen: no slide off the desk (it slid mali-s01's phone game view 0.5 m into the book and lb4's flame to x 103 percent)
   }
-    const actors = () => [...new Set((m.acts || []).map(a => a.who))].filter(n => cast.some(c => c.name === n && c.body.visible));
+    const actors = () => [...new Set((m.acts || []).map(a => a.who))].filter(n => cast.some(c => c.name === n && shownCast(c)));
     const closing = (s, who) => {  // the closing shot of a page whose cast is on stage keeps the WHOLE cast in frame (every one of them can be tapped as long as the page is up), whatever the shot is aimed at: a close-up on a branch took them all off screen
       if (!who.length || (s === "reading" ? whole(rigOf("reading"), who) : s && who.every(c => [s.target].flat().includes(c.name)))) return s?.target && [s.target].flat().length > who.length ? { ...s, target: who.map(c => c.name) } : s;  // already all in (the reading view, or a shot of everyone): as authored, held on these bodies only
       const all = { target: who.map(c => c.name), framing: "wide", move: "hold", seconds: 3 }, r = rigOf(all);
@@ -796,7 +800,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const shotOf = who => { const s = closing(SH.end, who); return s !== "reading" ? s : phone() ? { target: actors(), framing: "medium", move: "hold", seconds: 3 } : { target: null, seconds: 3, room: true, keep: who.map(c => c.name) }; };
     const drawn = window.live?.drawn, held = (r, who) => (aim(r), who.every(c => (drawn ? drawn(c) : []).every(p => (tmp.copy(p).project(probe), tmp.z < 1 && Math.abs(tmp.x) <= 0.98 && Math.abs(tmp.y) <= 0.98))));  // every body as drawn now, inside 98 percent of the frame
     const E = SH.end, authored = E === "reading" || (E && typeof E === "object" && !Array.isArray(E) && (E.target == null || !Array.isArray(E.target) || E.target.length < 2));
-    if (authored) return shotOf(cast.filter(c => c.body.visible));  // an end the author set as the reading view or on one subject is a passed look (every Kapi and Mali page): as it always was, everyone, untouched
+    if (authored) return shotOf(cast.filter(shownCast));  // an end the author set as the reading view or on one subject is a passed look (every Kapi and Mali page): as it always was, everyone, untouched
     let last;
     for (const keep of [() => true, skinned, c => people.includes(c)]) {
       const who = shown(keep), s = last = shotOf(who), r0 = rigOf(s);
@@ -808,19 +812,58 @@ export function addAmbient(scene, cam, m, opts = {}) {
     }
     return phone() ? { target: people.map(c => c.name), framing: "medium", move: "hold", seconds: 3 } : last;  // none does: the story's people (never everyone: gourd-s01's 36 bodies took the view 0.64 m into the room); a phone frames them as its closing medium
   };
+  const castForSpk = (sp, pool = cast.filter(shownCast)) => {
+    if (!sp || sp === "narrator" || sp === "closing") return [];
+    const hit = matchSpeakers(sp, pool, bookId);
+    if (hit.length) return hit;
+    const x = pups.filter(p => p.p?.root?.visible && p.e?.name === sp);
+    if (x.length) return x.map(p => ({ name: p.e.name, body: p.p.root, height: p.p.size }));
+    return matchSpeakers(sp, cast, bookId);
+  };
   function shots() {
     for (const k of ["end", "game", "game:won"]) if ((SH[k] || k === "end") && when(k, "", "shot")) {  // a page with no authored end still closes on its people (gourd-s01 R17c)  // the game's shot wins; on an upright phone "reading" is the viewer's game framing, so small targets are tappable
       play(k === "end" ? endShot() : k === "game" ? "reading" : SH[k]);  // the game: the viewer's own game view (HOME while the game is on), on every screen  // a phone's reading view is narrow: it ends on the story's actors where they are, not where they began
     }
     if (story.game === "wait") return;  // the game view holds on every screen: a line said again (a tap on Lulu) must not pull it off the targets
-    for (const [k, v] of Object.entries(SH)) if (!["open", "end", "game", "game:won"].includes(k)) for (const s of [v].flat()) if (when(k, s.word, "shot")) play(s);
+    for (const [k, v] of Object.entries(SH)) if (!["open", "end", "game", "game:won"].includes(k)) for (const s0 of [v].flat()) if (when(k, s0.word, "shot")) {
+      let s = s0;
+      const I = opts.info?.(k), W = I?.words ?? [], say = I?.say ?? [];
+      if (say.some(w => w && w !== "narrator" && w !== "closing")) {
+        const t0 = s0?.word ? opts.wordAt?.(k, s0.word) ?? 0 : 0, wi = W.findLastIndex(x => x[0] <= t0 + 0.05);
+        const sp = (say[Math.max(0, wi)] && say[Math.max(0, wi)] !== "narrator" ? say[Math.max(0, wi)] : say.find(w => w && w !== "narrator" && w !== "closing")) ?? null;
+        const spNames = castForSpk(sp).map(c => c.name);
+        if (spNames.length && (s === "reading" || s?.framing === "wide" || !subjects(s).some(c => spNames.includes(c.name)))) {
+          const curSub = s && s !== "reading" ? subjects(s).map(c => c.name) : [];
+          const tgt = [...new Set([...spNames, ...curSub])];
+          s = { ...(s && typeof s === "object" ? s : {}), target: tgt.length === 1 ? tgt[0] : tgt, framing: !s?.framing || s.framing === "wide" ? "medium" : s.framing, move: s?.move ?? "hold", focus: spNames[0], seconds: s?.seconds ?? 3.5 };
+        } else if (spNames.length && s && typeof s === "object" && !spNames.includes(s.focus)) s = { ...s, focus: spNames[0] };
+      }
+      play(s);
+    }
+    if (story.line && !SH[story.line]) {  // spoken line with no authored shot entry: frame the speaker
+      const I = opts.info?.(story.line), sp = (I?.say ?? []).find(w => w && w !== "narrator" && w !== "closing");
+      const spNames = castForSpk(sp).map(c => c.name);
+      if (spNames.length && when(story.line, "", "shot:spk")) play({ target: spNames.length === 1 ? spNames[0] : spNames, framing: "medium", move: "hold", focus: spNames[0], seconds: 3.5 });
+    }
   }
 
   // ---------- the story camera (stories/CAMERA.md): each line cut into beats, a shot per beat, every move through the motion model above; on with camera.story or ?story=1 ----------
   const FILL = { wide: [0.35, 0.40, 0.50, 0.60], medium: [0.50, 0.55, 0.65, 0.75], close: [0.65, 0.70, 0.78, 0.85] }, CLOSE = 0.65;  // CLOSE (V33): a close that is taller than wide stands 0.65 of the frame's HEIGHT on every screen, its body drawn tight; 0.65 of the safe frame read as a medium (0.35-0.45 of the frame)  // subjects' fill of the safe frame: desktop, tablet landscape, tablet portrait, phone (CAMERA.md section 3)
   const klass = () => { const lo = Math.min(innerWidth, innerHeight), hi = Math.max(innerWidth, innerHeight); return lo < 600 ? 3 : hi >= 1200 ? 0 : innerWidth > innerHeight ? 1 : 2; };
   const MOVERS = /^(walk|run|swim|jump|stepback|leap)$/, EMOTE = /^(Worry|Sad|Cry|Cheer|Laugh|Surprise|Scared|Jump|Wave)$/, GAP = 1.4;  // GAP: the pause a line's last beat runs into
-  const hero = n => cast.find(c => c.name === n && c.body.visible);
+  const BG_CAST = /^(sun|crane|fish|frog|snail|season|sea-drum|shell-chime|mist-puff|floating-|banana-float|mud\d|shoot\d|leaf\d)/;
+  const GENERIC_STEM = /^(village|sea|card|posed|little|old|moon|sky|far|sun|crane|fish|frog|lord|minister|novice)$/;
+  const isPersonCast = c => !!c && !BG_CAST.test(c.name) && (!window.live?.acting?.people || window.live.acting.people.has(c.name) || !!c.c?.model?.startsWith("puppet:"));
+  const hero = n => cast.find(c => c.name === n && shownCast(c));
+  const poseStem = n => { const ps = String(n || "").split("-"); return ps.length > 1 && GENERIC_STEM.test(ps[0]) ? `${ps[0]}-${ps[1]}` : ps[0]; };
+  const shownTwin = n => {
+    const orig = cast.find(c => c.name === n);
+    if (!orig) return null;
+    if (shownCast(orig)) return orig;
+    if (/-\d+$/.test(n) && !/-pour-\d+$/.test(n)) return null;
+    const stem = poseStem(n);
+    return cast.find(c => shownCast(c) && (c.name === stem || c.name.startsWith(`${stem}-`))) ?? null;
+  };
   const withPair = ns => { const out = new Set(ns); for (const n of ns) { const c = hero(n); if (c?.ride?.on) out.add(c.ride.on.name); for (const o of cast) if (c && o.ride?.on === c) out.add(o.name); } return [...out]; };  // a rider and its mount are one subject (a name with no character — an extra — has no mount: without `c &&`, every non-rider matched undefined and the shot framed the whole cast)
   const sb = new THREE.Box3(), sv = new THREE.Vector3();
   const boxOf = (ns, at, any, tight) => {  // at: [[x0,y0,z0],[x1,y1,z1]] a box of the page (a painted thing: gourd-s01's Sky King on the sky card); a name no character has: that page piece's box  // the subjects' box from their bones (the skin's own box is the bind pose's, twice as wide as the body that is drawn) and a tenth of their height; null if none is on stage
@@ -857,10 +900,77 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const plans = {};
   const ownGame = () => { const G = SH.game; return SCAM && G?.constructor === Object && ({ ...G, ...(klass() === 3 ? G.phone : klass() ? G.tablet : null) }).own === true; };  // the page's own game shot, opted in ("own": true inside shots.game; a screen's override may set it too, so "phone": {"own": false} keeps the viewer's own view on phones)
   const beatOf = (line, s) => ({ line, t0: 0, names: [s.target].flat().filter(Boolean), at: s.at, size: s.framing ?? "medium", num: s.size, pitch: s.pitch, tablet: s.tablet, phone: s.phone, move: s.move ?? "hold", lead: s.lead, by: s.by, after: s.after, len: 3, kind: "authored" });  // a page's shot as a beat
-  const planOf = line => plans[line] ??= (() => {  // the line's beats: authored (a list of shots), else cut from who speaks and who acts
-    const I = opts.info?.(line) ?? {}, W = I.words ?? [], say = I.say ?? [], dur = I.dur ?? 4, acts = (m.acts || []).filter(a => a.line === line && a.who), at = w => (w ? opts.wordAt?.(line, w) ?? 0 : 0), S = SH[line]?.constructor === Object ? [SH[line]] : SH[line];  // a line's one shot written as an object (turtle s01 1.5) is a list of one: it was never read, so the director's own beats framed whoever walked last (Matsing) and left Pagong, the target, at the edge
-    if (S === "reading") return [{ line, t0: 0, len: dur + GAP, kind: "reading", reading: true, names: [] }];  // a line authored as the reading view holds the viewer's reading view all through (gourd-s01 1.1, its establishing line: the default beat went to a tight medium on everyone)
-    if (Array.isArray(S)) return S.map(s => ({ ...beatOf(line, s), t0: at(s.word), to: acts.findLast(a => [s.target].flat().includes(a.who) && a.to)?.to })).sort((a, b) => a.t0 - b.t0);  // in the order their words are said (V33: cowherd 8.5 listed "Zhinü" before "cried", which is said first, and her close never played)
+  const speechTurnsOf = (W, say) => {
+    const out = [];
+    for (let i = 0; i < Math.min(W.length, say.length); i++) {
+      const sp = say[i];
+      if (!sp || sp === "narrator" || sp === "closing") continue;
+      const last = out.at(-1), w0 = W[i][0] ?? 0, w1 = W[i][1] ?? w0 + 0.35;
+      if (last && last.sp === sp && (i === last.i1 + 1 || (w0 - last.t1 <= 1.8 && i - last.i1 <= 6))) { last.i1 = i; last.t1 = w1; }
+      else out.push({ sp, i0: i, i1: i, t0: w0, t1: w1 });
+    }
+    return out;
+  };
+  const liveSpeakerFrame = sp => {  // live speaker + nearby listener two-shot (or single with lead room toward listener)
+    const spCast = castForSpk(sp);
+    if (!spCast.length) return null;
+    const spNames = spCast.map(c => c.name), paired = withPair(spNames);
+    const others = cast.filter(c => shownCast(c) && !spCast.includes(c) && isPersonCast(c) && !paired.includes(c.name));
+    const p0 = spCast[0].body.position;
+    const near = others.sort((a, b) => a.body.position.distanceTo(p0) - b.body.position.distanceTo(p0))[0] ?? null;
+    const dy = near ? Math.abs(near.body.position.y - p0.y) : Infinity;
+    const dist = near ? Math.hypot(near.body.position.x - p0.x, near.body.position.z - p0.z) : Infinity;
+    const twoShot = near && spCast.length === 1 && dy <= 0.22 && dist <= (klass() === 3 ? 0.16 : 0.38);
+    return { names: twoShot ? [spNames[0], near.name] : spNames, lead: twoShot ? null : near?.name ?? null };
+  };
+  const planOf = line => plans[line] ??= (() => {  // narrator lines keep their planned shots; spoken lines always frame the speaker
+    const I = opts.info?.(line) ?? {}, W = I.words ?? [], say = I.say ?? [], dur = I.dur ?? 4, allActs = (m.acts || []).filter(a => a.line === line && a.who);
+    const hasPersons = cast.some(isPersonCast), acts = hasPersons ? allActs.filter(a => !BG_CAST.test(a.who)) : allActs;
+    const at = w => (w ? opts.wordAt?.(line, w) ?? 0 : 0), S = SH[line]?.constructor === Object ? [SH[line]] : SH[line];
+    const speechTurns = speechTurnsOf(W, say);
+    const leadStart = (tr, k, minT = 0) => (tr.t0 >= 2.2 ? Math.max(k > 0 ? speechTurns[k - 1].t1 + 0.4 : 0, minT, tr.t0 - 1.1) : tr.t0);
+    const mkSpkBeat = (turn, t0, prevSp, extra = {}) => {
+      const sf = liveSpeakerFrame(turn.sp), spAll = matchSpeakers(turn.sp, cast, bookId).map(c => c.name);
+      return { line, t0, len: 3, kind: prevSp && prevSp !== "narrator" && prevSp !== turn.sp ? "reply" : "single", speaker: turn.sp,
+        names: sf?.names ?? (spAll.length ? [spAll[0]] : []), lead: sf?.lead ?? null, size: "medium", move: "hold", ...extra };
+    };
+    if (S === "reading") {
+      if (!speechTurns.length) return [{ line, t0: 0, len: dur + GAP, kind: "reading", reading: true, names: [] }];
+      const tFirst = leadStart(speechTurns[0], 0, 1.6);
+      const out = tFirst >= 1.5 ? [{ line, t0: 0, len: tFirst, kind: "reading", reading: true, names: [] }] : [];
+      speechTurns.forEach((tr, k) => out.push(mkSpkBeat(tr, !k && !out.length ? 0 : leadStart(tr, k, (out.at(-1)?.t0 ?? 0) + 1.6), speechTurns[k - 1]?.sp)));
+      out.forEach((b, k) => { b.len = (out[k + 1]?.t0 ?? dur + GAP) - b.t0; });
+      return out;
+    }
+    if (Array.isArray(S)) {
+      const A = S.map((s, idx) => ({ ...beatOf(line, s), hasWord: !!s.word, t0: s.word ? at(s.word) : idx === 0 ? 0 : leadStart(speechTurns[idx - 1] ?? { t0: (dur * idx) / S.length }, idx - 1, 1.6), to: acts.findLast(a => [s.target].flat().includes(a.who) && a.to)?.to })).sort((a, b) => a.t0 - b.t0);
+      if (!speechTurns.length) return A;
+      const matchesSpk = (ns, spAll) => ns.some(n => spAll.some(c => c.name === n || poseStem(c.name) === poseStem(n)));
+      const framesSpk = (ab, spAll) => ab && !ab.reading && ab.size !== "wide" && matchesSpk(ab.names, spAll);
+      const multiDialogue = new Set(speechTurns.map(t => t.sp)).size >= 2;
+      if (multiDialogue && A[0] && !A[0].hasWord && A[0].size === "close") A[0].size = "medium";
+      for (let k = 0; k < speechTurns.length; k++) {
+        const tr = speechTurns[k], spAll = matchSpeakers(tr.sp, cast, bookId);
+        if (!spAll.length) continue;  // off-stage or painted speaker (e.g. Sky King on sky card): keep authored shot
+        const tMid = tr.t0 + 0.2 * (tr.t1 - tr.t0);
+        let idx = 0; A.forEach((b, j) => { if (b.t0 <= tMid + 0.05) idx = j; });
+        const ab = A[idx];
+        const cleanPhone = ph => (ph && ph.framing !== "wide" && (!ph.target || matchesSpk([ph.target].flat(), spAll)) ? ph : undefined);
+        const whipClose = ab && !ab.hasWord && ab.size === "close" && (multiDialogue || tr.t1 - tr.t0 < 2.8);
+        if (framesSpk(ab, spAll) && !whipClose) {
+          ab.speaker ??= tr.sp;
+          if (ab.phone && !cleanPhone(ab.phone)) delete ab.phone;
+        } else {
+          const ph = cleanPhone(ab?.phone);
+          const replaceInPlace = ab && (Math.abs(tr.t0 - ab.t0) < 1.5 || (A.length === 1 && ab.t0 === 0 && ab.move !== "follow"));
+          const bt0 = replaceInPlace ? ab.t0 : leadStart(tr, k, (ab?.t0 ?? 0) + 1.6);
+          const nb = mkSpkBeat(tr, bt0, speechTurns[k - 1]?.sp, ph ? { phone: ph } : {});
+          if (replaceInPlace) A[idx] = nb; else A.push(nb), A.sort((x, y) => x.t0 - y.t0);
+        }
+      }
+      A.forEach((b, k) => { b.len = Math.max(1.2, (A[k + 1]?.t0 ?? dur + GAP) - b.t0); });
+      return A;
+    }
     const trig = [{ t: 0 }];
     say.forEach((w, i) => i && w !== say[i - 1] && (w !== "narrator" || say[i - 1] !== "narrator") && trig.push({ t: W[i]?.[0] ?? 0 }));
     for (const a of acts) { const k = MOVERS.test(a.do) ? "go" : (a.do === "clip" && EMOTE.test(a.clip)) || a.do === "mood" ? "emote" : a.do === "face" && Array.isArray(a.face) ? "gaze" : null; if (k) trig.push({ t: at(a.word), k, who: a.who, to: a.to ?? a.face }); }
@@ -868,13 +978,22 @@ export function addAmbient(scene, cam, m, opts = {}) {
     for (const x of trig.sort((a, b) => a.t - b.t)) { const p = bs.at(-1); if (p && x.t - p.t < 0.4) p.k ??= x.k, p.who ??= x.who, p.to ??= x.to; else bs.push({ ...x }); }  // triggers at one moment are one beat
     const len = i => { const n = bs[i + 1]?.t, ws = W.filter(w => w[0] >= bs[i].t && (n == null || w[0] < n)); return n == null ? dur + GAP - bs[i].t : (ws.at(-1)?.[1] ?? n) - bs[i].t; };  // the speech's length (the last beat runs on into the pause)
     for (let i = bs.length - 1; i >= 0; i--) if (bs.length > 1 && len(i) < 1.5) { const j = i ? i - 1 : 1; if (!i) bs[1].t = 0; else bs[j].k ??= bs[i].k, bs[j].who ??= bs[i].who, bs[j].to ??= bs[i].to; bs.splice(i, 1); }  // a beat shorter than 1.5 s joins the one before (the first: the one after)
-    const pl = opts.info?.(I.prev), prevSay = pl?.say?.at(-1), everyone = cast.filter(c => c.body.visible).map(c => c.name);
+    const pl = opts.info?.(I.prev), prevSay = pl?.say?.at(-1), everyone = cast.filter(c => shownCast(c) && (!hasPersons || isPersonCast(c))).map(c => c.name);
     bs.forEach((b, i) => { if (b.k === "go" && i) b.t = Math.max(bs[i - 1].t + 1.5, b.t - 1.2); });  // a camera leads the action: the swim's frame is there before the swim
     return bs.slice(0, 3).map((b, i) => {
-      const w = W.findLastIndex(x => x[0] <= b.t + 0.01), sp = say[Math.max(0, w)], voiced = (n, v) => n.replace(/-/g, "").startsWith(v), talker = sp && sp !== "narrator" ? (hero(sp) ? sp : everyone.find(n => voiced(n, sp)) ?? null) : null, o = { line, t0: b.t, len: len(i), kind: "two", names: [...new Set(acts.map(a => a.who))].filter(hero), size: "medium", move: "hold" };  // a voice speaks for its cast member by name, dashes aside ("queen" for "queen-seated", "houyi" for "hou-yi")
-      if (!o.names.length) { const ppl = everyone.filter(n => (I.speakers ?? []).some(v => voiced(n, v))); o.names = ppl.length ? ppl : everyone; }  // a line nobody acts on frames the page's speaking characters (Eddie 2026-11-18: not the whole stage, its cranes and sky, with the people small under the words)
-      if (b.k === "go") Object.assign(o, { kind: "travel", names: [b.who], size: "wide", move: "follow", lead: b.to });
-      else if (talker) Object.assign(o, { kind: prevSay && prevSay !== "narrator" && prevSay !== talker ? "reply" : "single", names: [talker], lead: everyone.find(n => n !== talker && !withPair([talker]).includes(n)) });
+      const bEnd = bs[i + 1]?.t ?? dur + 0.01;
+      const turnInBeat = speechTurns.find(tr => tr.t0 <= bEnd - 0.1 && tr.t1 >= b.t + 0.05);
+      const w = W.findLastIndex(x => x[0] <= b.t + 0.05), sp0 = say[Math.max(0, w)];
+      const sp = sp0 && sp0 !== "narrator" && sp0 !== "closing" ? sp0 : turnInBeat?.sp ?? null;
+      const o = { line, t0: b.t, len: len(i), kind: "two", names: [...new Set(acts.map(a => a.who))].map(n => hero(n)?.name ?? shownTwin(n)?.name).filter(Boolean), size: "medium", move: "hold" };
+      if (!o.names.length) {
+        const spkCast = [...new Set((I.speakers ?? []).flatMap(v => castForSpk(v).map(c => c.name)))];
+        o.names = spkCast.length ? spkCast : everyone.length ? everyone : cast.filter(shownCast).map(c => c.name);
+      }
+      if (sp) {
+        const sf = liveSpeakerFrame(sp);
+        if (sf) Object.assign(o, { kind: prevSay && prevSay !== "narrator" && prevSay !== sp ? "reply" : "single", speaker: sp, names: sf.names, lead: sf.lead, size: "medium", move: b.k === "go" ? "follow" : "hold" });
+      } else if (b.k === "go") Object.assign(o, { kind: "travel", names: [b.who], size: "wide", move: "follow", lead: b.to });
       else if (b.k === "emote") Object.assign(o, { kind: "push", names: [b.who], size: "close", move: "push" });
       else if (b.k === "gaze") Object.assign(o, { kind: "gaze", names: [b.who], lead: b.to });
       return o;
@@ -884,12 +1003,32 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const r = beatRig0(b, tt, any), h = r && b.kind === "authored" && b.size === "wide" && !phone() ? rigOf("reading") : null;
     return h && r.pos.distanceTo(r.look) < h.pos.distanceTo(h.look) ? h : r;
   };
+  const resolveLiveNames = (b, any) => {  // keep mid-beat pose-card swaps (hou-yi -> hou-yi-call, king-sit -> king, kham -> kham-nop) framed live
+    if (b.speaker && b.kind !== "authored" && !b.phone && !b.tablet) {
+      const sf = liveSpeakerFrame(b.speaker);
+      if (sf?.names.length) return { names: sf.names, lead: sf.lead };
+    }
+    const out = [];
+    for (const n of b.names.filter(Boolean)) {
+      if (any ? cast.some(c => c.name === n) : hero(n)) out.push(n);
+      else if (cast.some(c => c.name === n)) { const tw = shownTwin(n); if (tw && !out.includes(tw.name)) out.push(tw.name); }
+      else out.push(n);
+    }
+    if (b.speaker && !any) {
+      const spShown = castForSpk(b.speaker);
+      if (spShown.length && !out.some(n => spShown.some(c => c.name === n))) out.unshift(spShown[0].name);
+    }
+    const lead = typeof b.lead === "string" && b.lead !== "travel" && !hero(b.lead) ? shownTwin(b.lead)?.name ?? b.lead : b.lead;
+    return { names: out.length ? out : b.names.filter(Boolean), lead };
+  };
   const beatRig0 = (b, tt, any) => {  // a beat's frame at this moment (its subjects move: it follows them); any: hidden characters count (the page turning, before they stand up)
     if (!opts.titled?.() && !SC.ax) SC.ax = HOME.clone().sub(LOOK);  // the reading axis as the spread opened (before the first pull HOME is the title view)
     const ov0 = klass() === 3 ? b.phone : klass() ? b.tablet : null;
-    if (ov0) b = { ...b, ...ov0, names: ov0.target != null ? [ov0.target].flat() : b.names, size: ov0.framing ?? b.size, num: ov0.size ?? b.num };  // a screen's override is the beat's, every key of it (target, framing, size, pitch, at, lead, move, by, after): only target and pitch were read, so a phone's own 'at' (turtle s09 9.2-9.5), framing and lead (toad s01 1.3, s02 2.1) did nothing
-    if ((ov0?.framing ?? b.size) === "face") { const r = faceRig({ target: [ov0?.target ?? b.names].flat()[0], size: ov0?.size ?? b.num }); if (r) return r; }  // a face beat is the face shot (T52: it fell back to the medium fill, Kankak's sad face 2.7-9.2 percent of a phone's height)
-    const cl = b.size === "close" && b.num == null, ns = b.names.filter(Boolean), who = b.size === "wide" ? [] : ns.filter(n => any ? cast.some(c => c.name === n) : hero(n)), u = boxOf(withPair(who.length ? who : ns), b.at, any, cl); if (!u) return null;  // Eddie 2026-11-18 ("it didn't focus on character at all"): a medium or close frames its characters; a page piece named beside them (a loom, a palace) is no longer measured into the fill, so it no longer shrinks them under the words  // cl: a close at the table's fill (an authored size keeps the safe frame's measure it was tuned on)
+    if (ov0) b = { ...b, ...ov0, names: ov0.target != null ? [ov0.target].flat() : b.names, size: ov0.framing ?? b.size, num: ov0.size ?? b.num };  // a screen's override is the beat's, every key of it
+    const live = resolveLiveNames(b, any);
+    b = { ...b, names: live.names, lead: live.lead };
+    if ((ov0?.framing ?? b.size) === "face") { const r = faceRig({ target: [ov0?.target ? live.names : b.names].flat()[0], size: ov0?.size ?? b.num }); if (r) return r; }  // a face beat is the face shot
+    const cl = b.size === "close" && b.num == null, ns = b.names.filter(Boolean), who = b.size === "wide" ? [] : ns.filter(n => any ? cast.some(c => c.name === n) : hero(n)), u = boxOf(withPair(who.length ? who : ns), b.at, any, cl); if (!u) return null;
     const c = u.getCenter(new THREE.Vector3()), h = u.getSize(new THREE.Vector3()).multiplyScalar(0.5);
     const vel = SC.c ? c.clone().sub(SC.c).divideScalar(Math.max(step, 1e-3)) : new THREE.Vector3(); SC.c = c.clone(); SC.v = (SC.v ?? vel).lerp(vel, 1 - Math.exp(-step / 0.25)); c.addScaledVector(SC.v, SCAM && leavingFace() && SC.goal && cam.position.distanceTo(controls.target) < 0.7 * SC.goal.pos.distanceTo(SC.goal.look) ? 0.9 : 0.4);  // still nearer than its shot after a face (it pulls out at 50%/s): the look point leads by the spring's lag (2/omega, 0.9 s), else a walker leaves the narrow frame (toad s02 2.5 phone: Kankak cut at the edge)  // aimed 0.4 s ahead of where they are going: a swimmer is never caught at the frame's edge
     const key = withPair(b.names).sort().join(), hm = h.clone().setX(Math.max(h.x, h.z)).setZ(Math.max(h.x, h.z)), mem = (SC.mem[key] = (SC.mem[key] ?? hm.clone()).multiplyScalar(Math.exp(-step / 200)).max(hm));  // the biggest this subject has been lately, turned any way (a swim stretches Bobo to three times his resting width, and he turns round)
@@ -905,14 +1044,17 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const R = [0, 1].flatMap(x => [0, 1].flatMap(y => [0, 1].map(z => new THREE.Vector3(x ? u.max.x : u.min.x, y ? u.max.y : u.min.y, z ? u.max.z : u.min.z))));  // the subjects as they are now (P is padded for a swim's stretch and aimed ahead)
     const ka = b.at?.length === 2 && new THREE.Box3().setFromPoints(b.at.map(B)), pa = ka && boxOf(withPair(b.names.filter(Boolean)), null, any);  // a painted thing and its people are two boxes, not one: their union's empty front-top corners asked for a frame three screens tall (R20)
     if (pa) { const cs = x => R.map((_, i) => new THREE.Vector3(i & 4 ? x.max.x : x.min.x, i & 2 ? x.max.y : x.min.y, i & 1 ? x.max.z : x.min.z)); P.splice(0, 8, ...cs(pa.clone().expandByVector(pa.getSize(new THREE.Vector3()).multiplyScalar((pad - 1) / 2))), ...cs(ka)); R.splice(0, 8, ...cs(pa), ...cs(ka)); }
-    const crowns = withPair(b.names).map(n => boneOf(hero(n), "HeadTop_End")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), underWords = r => (aim(r), crowns.every(p => sv.copy(p).project(probe).y <= safeNow().yt));  // R28: no face under the read-along words (gourd s01's desktop end put Pu Nyeu's head in them: the room-safe fit allowed the top to 96%)
-    const heads = withPair(b.names).map(n => boneOf(hero(n), "head")?.getWorldPosition(new THREE.Vector3())).filter(Boolean), pu = deg(Math.max(0, Math.min(40, b.pitch || 0))), lowEnough = r => heads.every(h => r.pos.y - h.y <= Math.sin(deg(29) + pu) * r.pos.distanceTo(h));  // pu: the page's pitch, the view raised that much over the beat's own (and allowed that much higher over the heads)  // the pitch rule where it shows, at the subjects' eyes: a close frame sits on the camera's floor and looks down more steeply the nearer it is (a phone's 8.2: 32 degrees above Bobo's head); a lower fill stands it farther back
+    const crownOf = c => boneOf(c, "HeadTop_End")?.getWorldPosition(new THREE.Vector3()) ?? (c ? (sb.setFromObject(c.model || c.body), new THREE.Vector3((sb.min.x + sb.max.x) / 2, sb.max.y - 0.02 * c.height, (sb.min.z + sb.max.z) / 2)) : null);
+    const headPosOf = c => boneOf(c, "head")?.getWorldPosition(new THREE.Vector3()) ?? (c ? (sb.setFromObject(c.model || c.body), new THREE.Vector3((sb.min.x + sb.max.x) / 2, sb.max.y - 0.12 * c.height, (sb.min.z + sb.max.z) / 2)) : null);
+    const crowns = withPair(b.names).map(n => crownOf(hero(n))).filter(Boolean), underWords = r => (aim(r), crowns.every(p => sv.copy(p).project(probe).y <= safeNow().yt));  // R28: no face under the read-along words (3D bones and 2D paper puppets alike)
+    const hiSub = !!(bd && u.max.y > bd.top - 0.12);
+    const heads = withPair(b.names).map(n => headPosOf(hero(n))).filter(Boolean), pu = deg(Math.max(0, Math.min(40, b.pitch || 0))), lowEnough = r => heads.every(h => r.pos.y - h.y <= Math.sin(deg(hiSub ? 38 : 29) + pu) * r.pos.distanceTo(h));  // pu: the page's pitch, the view raised that much over the beat's own (and allowed that much higher over the heads)
     low = true;
     const nearWas = near; near = 0.05;  // a paper puppet is small: its close/medium/wide fill sits nearer than the reader's orbit floor (the fill already fits it; fit() reads `near`, place() reads the let-out below)
     try {
       let q, fq, q0, fq0, loose, qn;
       // a phone whose room fit would cut its subjects at every fill (turtle s02 2.2: the pair by the backdrop's end, pushed off the right edge): the view turns instead (the smallest of 8, 15, 22 degrees either way that holds them, room-free) at the full fill, so the size the page asks for holds; not while the opening push flies in (its speed caps are tuned to the unturned beat: Kapi s08's phone push went 0.35 m/s)
-      for (const [sg, up, m, sf, yaw] of [[sign, 0, 1], [sign, 0, 0.85], [sign, 0, 0.7], ...(klass() === 3 ? (shot === "in" ? [] : [8, -8, 15, -15, 22, -22].map(d => [sign, 0, 1, undefined, deg(d)]).concat(b.kind === "end" ? [[0, deg(10), 1], [0, deg(18), 1], [0, deg(18), 0.7], [0, deg(18), 0.5]] : [])) : [[0, 0, 1], [0, 0, 1.2], [0, deg(8), 1], [0, deg(8), 0.85]]), ...(b.at && klass() !== 3 ? [1.4, 1.6, 1.8, 1.2, 1].flatMap(m => [-8, -12].map(d => [0, deg(d), m, { ...safeNow(), yt: 0.94 }])) : [])]) {  // a painted thing high on the backdrop (R20: the Sky King, 0.13 m under the skyline): lower and from the backdrop's middle, and the text may cover the backdrop (CAMERA.md 3)  // off the phone, then no lead room (8.5: the lead toward the backdrop's end took the frame past it), closer, a little higher (still at most 30 degrees), before giving up the room (a phone's closer rung went 32 degrees above Bobo on 8.2)
+      for (const [sg, up, m, sf, yaw] of [[sign, 0, 1], [sign, 0, 0.85], [sign, 0, 0.7], ...(klass() === 3 ? (shot === "in" ? [] : [8, -8, 15, -15, 22, -22].map(d => [sign, 0, 1, undefined, deg(d)]).concat(b.kind === "end" ? [[0, deg(10), 1], [0, deg(18), 1], [0, deg(18), 0.7], [0, deg(18), 0.5]] : [])) : [[0, 0, 1], [0, 0, 1.2], [0, deg(8), 1], [0, deg(8), 0.85], ...(hiSub ? [[0, deg(14), 1.15], [0, deg(18), 1], [0, deg(18), 0.85]] : [])]), ...(b.at && klass() !== 3 ? [1.4, 1.6, 1.8, 1.2, 1].flatMap(m => [-8, -12].map(d => [0, deg(d), m, { ...safeNow(), yt: 0.94 }])) : [])]) {  // a painted thing high on the backdrop (R20: the Sky King, 0.13 m under the skyline): lower and from the backdrop's middle, and the text may cover the backdrop (CAMERA.md 3)  // off the phone, then no lead room (8.5: the lead toward the backdrop's end took the frame past it), closer, a little higher (still at most 30 degrees), before giving up the room (a phone's closer rung went 32 degrees above Bobo on 8.2)
         const r = solveFrame(P, Math.min(0.92, f * m), sg, up + pu, sf ?? (cl ? { ...safeNow(), close: CLOSE * m * f / FILL.close[k] } : undefined), yaw), lo = cl && r.tall ? -1.12 : undefined, SB = lo && { ...safeNow(), yb: lo }; flo = lo ? 0.1 : null; /* a tall close comes down to 0.1 m, near a 3D person's eyes (cameraman T23): from 0.18 a phone's close looked down on the top of Zhinü's head */ if (sf && bd) { const dx = (bd.x0 + bd.x1) / 2 - r.look.x; r.pos.x += dx; r.look.x += dx; } q = fit(r.pos.clone(), r.look.clone()); q0 ??= q; if (!yaw) qn = q; fq = fitIn({ pos: q.pos.clone(), look: q.look.clone() }, !phone()); fq0 ??= fq;
         if (phone() && bd) fq = underPanel(fq);
         if (phone() && bd) fq = deskOut(fq, q => inSafe(P, q, SB) && lowEnough(q) && underWords(q));
@@ -970,10 +1112,11 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (/^game\./.test(s.line ?? "") && s.game === "won") key = "won";
     else if (s.end && now - SC.endSince >= 1.05) key = "end";
     else if (pl?.length) { let i = 0; pl.forEach((b, j) => { if (b.t0 <= s.t) i = j; }); key = `${s.line}#${i}`, beat = pl[i]; }
-    if (key !== SC.key && key) {  // a new beat: it waits out a speaker's 1.5 s hold
-      const hold = SC.beat && /single|reply/.test(SC.beat.kind) && now - SC.since < 3;
+    if (key !== SC.key && key) {  // a new beat: it waits out a speaker's 1.5 s minimum hold (CAMERA.md section 4), unless a new speaker begins
+      const sameSpk = !beat?.speaker || beat.speaker === SC.beat?.speaker;
+      const hold = sameSpk && SC.beat && /single|reply/.test(SC.beat.kind) && now - SC.since < 1.5;
       if (!hold) { if (!SC.key) opts.halt?.();  // the first beat takes the camera from the viewer's glide home
-        if (SC.goal?.face) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.cl = false; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
+        if (SC.goal?.face || SC.cl || (SC.goal && SC.goal.pos.distanceTo(SC.goal.look) < 0.42)) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.cl = false; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
     }
     if (yielded) { if (!took && !held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; after a tap the director returns at the first beat that begins 4 s after they let go, after a real zoom or turn only on the next page
     let g = null;
@@ -985,7 +1128,11 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (SC.beat) g = SC.beat.reading ? rigOf("reading") : beatRig(SC.beat, now);
     if (g) SC.goal = g;
     if (SC.goal?.face) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });  // the orbit let out for a face beat, as for a face shot (given back once the camera is inside it again)
-    else if (SC.goal) { const d = SC.goal.pos.distanceTo(SC.goal.look); if (d < (faceLim?.minDistance ?? controls.minDistance) - 0.01) { SC.goal.near = SC.beat?.names.filter(Boolean).every(n => { const c = hero(n); return !c || (c.bones?.length ?? 0) === 0; }); faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }; controls.minDistance = Math.min(faceLim.minDistance, Math.max(0.05, d - 0.01)); } else lift(SC.goal); }  // a beat of a small subject: the orbit floor is let out to its own fill (any subject), and a paper puppet/extra's fill comes in faster (a 3D small body keeps its own rate, so s01 is untouched)
+    else if (SC.goal) {
+      const d = SC.goal.pos.distanceTo(SC.goal.look), isPaperBeat = SC.beat && SC.beat.size !== "wide" && SC.beat.names.filter(Boolean).length > 0 && SC.beat.names.filter(Boolean).every(n => { const c = hero(n) ?? shownTwin(n); return !c || !!c.c?.model?.startsWith("puppet:") || (c.bones?.length ?? 0) === 0; });
+      if (isPaperBeat && d < 1.0) SC.goal.near = true;
+      if (d < (faceLim?.minDistance ?? controls.minDistance) - 0.01) { SC.goal.near ||= SC.beat?.names.filter(Boolean).every(n => { const c = hero(n); return !c || (c.bones?.length ?? 0) === 0; }); faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }; controls.minDistance = Math.min(faceLim.minDistance, Math.max(0.05, d - 0.01)); } else lift(SC.goal);
+    }
     const trail = SC.goal ? place({ pos: SC.goal.pos.clone(), look: SC.goal.look.clone() }, t) : 0;
     if (window.live) window.live.hint.landed = trail < 0.02 && SC.key === "end", window.live.hint.hold = SC.key === "end" ? SC.endHold : null;  // the Next page button: placed as the held close will show it, as soon as the close begins (it waited for the landing, 11-17 s on the toad pages)
   }
@@ -1113,10 +1260,9 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const g = foldOf(c), box = g === c.g ? c.box : new THREE.Box3().setFromObject(g);
       if (sway.some(s => s.o === g)) continue;
       const h = box.max.y - box.min.y, xw = new THREE.Vector3(1, 0, 0).transformDirection(g.matrixWorld), riders = [];
-      if (h > 0.3) {  // fruit and characters inside a tall card's picture ride its sway
+      if (h > 0.3) {  // fruit inside a tall card's picture rides its sway; cast characters stand on their own
         const b = box.clone().expandByScalar(0.04);
         root.children.forEach(o => o.isMesh && !cardOf(o) && !/^(page|words)/.test(o.name) && b.containsPoint(o.position) && riders.push({ o, p: o.position.clone() }));  // never the page or the previous page's print under the leaf: a sway lifted it through (Xieng Mieng s03)
-        cast.forEach(ch => b.containsPoint(ch.body.position) && riders.push({ o: ch.body, p: ch.body.position.clone() }));
       }
       sway.push({ o: g, base: g.quaternion.clone(), q: new THREE.Quaternion(), e: new THREE.Euler(), last: null, deg: dg, x: box.getCenter(tmp).x,
         lean: -Math.sign(xw.x * WD.dir) || 1, f: THREE.MathUtils.clamp(0.9 / Math.sqrt(h / 0.2), 0.3, 1.3), ph: rnd(0, TAU),
@@ -1496,7 +1642,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
         ang = { [a]: cyc[a] ? beat(cyc[a], t - s.t0) : swing(k) };
         if (moves[a]._lift) pos.y += moves[a]._lift * p.size * swing(k);
         if (cyc[a] && s.tap && gait !== "crawl" && gait !== "swim") pos.y += 0.4 * p.size * Math.sin(Math.PI * k);  // a tapped flap lifts off and lands back (the same move in its routine stays down)
-      } else ang = { _breathe: Math.sin(TAU * (t - s.t0) / 3) };  // wait, turn, show, rest
+      } else ang = { _breathe: Math.sin(TAU * (t - s.t0) / 5.5 + (x.ri ?? 0) * 1.7) };  // wait, turn, show, rest
       if (x.pose && !a.startsWith("go")) {  // a surprise's rest pose (hanging, asleep): a move eases its hinges, never its whole-puppet tilt
         const s = moves[a] && a !== x.pose ? swing(k) : 0;
         ang[x.pose] = 1 - s; ang[`${x.pose}#tilt`] = s;

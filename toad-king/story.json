@@ -18,29 +18,29 @@
    "pitch": -3
   },
   "buffalo": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bm_daniel",
+   "speed": 0.88,
+   "pitch": -2
   },
   "tik": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.08,
+   "pitch": 3
   },
   "bizzy": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.08,
+   "pitch": 4
   },
   "pinch": {
-   "voice": "bm_george",
+   "voice": "am_onyx",
    "speed": 1.0,
-   "pitch": 0
+   "pitch": 1
   },
   "frogs": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.03,
+   "pitch": 1
   },
   "closing": {
    "voice": "bm_george",
@@ -48,48 +48,48 @@
    "pitch": 0
   },
   "dog": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_onyx",
+   "speed": 0.98,
+   "pitch": -1
   },
   "cat": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_isabella",
+   "speed": 1.02,
+   "pitch": 2
   },
   "duck": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_alice",
+   "speed": 1.05,
+   "pitch": 2
   },
   "turtle": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bm_daniel",
+   "speed": 0.85,
+   "pitch": -1
   },
   "gecko": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.1,
+   "pitch": 5
   },
   "girl": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.04,
+   "pitch": 3
   },
   "boy": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 4
   },
   "oldwoman": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_emma",
+   "speed": 0.88,
+   "pitch": -2
   },
   "man": {
-   "voice": "bm_george",
-   "speed": 1.0,
+   "voice": "bm_daniel",
+   "speed": 0.98,
    "pitch": 0
   },
   "well": {

@@ -182,14 +182,15 @@ export async function dress(model, garments) {
       cur[p] = cur[j] + (ux * s.cb + px / lp * s.sb) * lb; cur[p + 1] = cur[j + 1] + (uy * s.cb + py / lp * s.sb) * lb; cur[p + 2] = cur[j + 2] + (uz * s.cb + pz / lp * s.sb) * lb;
     }
   };
+  let settling = false;
   const step = f => {
-    tSim += STEP; if (skirts.length) rings();
+    if (!settling) tSim += STEP; if (skirts.length) rings();
     for (const s of sheets) {
       for (let c = 0; c < s.n; c++) for (let n = 0; n <= (s.ends ? s.S : 0); n += s.S) { const a = (s.p0 + c * (s.S + 1) + n) * 3; for (let d = 0; d < 3; d++) old[a + d] = cur[a + d] = A0[a + d] + (A1[a + d] - A0[a + d]) * f; }
       if (s.rigid) { rest(s); continue; }
       const { stiff, drag, grav, float: fl = 0 } = s.P, gy = -G * grav * H * k * STEP * STEP, fb = fl * G * H * k * STEP * STEP, last = s.S - (s.ends ? 1 : 0), vm = (s.P.vmax ?? Infinity) * H * k * STEP;
       for (let c = 0; c < s.n; c++) { M.copy(s.bs[c].matrixWorld); for (let i = 1; i <= last; i++) {
-        const q = (c * (s.S + 1) + i) * 3, p = s.p0 * 3 + q, j = p - 3, x = s.seg[q], y = s.seg[q + 1], z = s.seg[q + 2], b = fb * (0.55 + 0.45 * Math.sin(tSim * 1.7 + c * 0.6 + i * 0.15));  // b: the breeze from her front, in slow gusts that roll down the strip
+        const q = (c * (s.S + 1) + i) * 3, p = s.p0 * 3 + q, j = p - 3, x = s.seg[q], y = s.seg[q + 1], z = s.seg[q + 2], b = fb * (settling ? 0.7 : 0.7 + 0.02 * Math.sin(tSim * 1.1 + c * 0.6 + i * 0.15));  // b: steady gentle lift from her front, calm when she stands still
         const tx = cur[j] + e[0] * x + e[4] * y + e[8] * z, ty = cur[j + 1] + e[1] * x + e[5] * y + e[9] * z, tz = cur[j + 2] + e[2] * x + e[6] * y + e[10] * z;
         let vx = (cur[p] - old[p]) * (1 - drag), vy = (cur[p + 1] - old[p + 1]) * (1 - drag), vz = (cur[p + 2] - old[p + 2]) * (1 - drag); const v = Math.hypot(vx, vy, vz);
         if (v > vm) { vx *= vm / v; vy *= vm / v; vz *= vm / v; }  // no faster than vmax: silk drifts
@@ -219,6 +220,7 @@ export async function dress(model, garments) {
     }
     geo.attributes.position.needsUpdate = geo.attributes.normal.needsUpdate = true;
   };
+  let still = 0;
   const cloth = {
     mesh, caps, H, sheets, cur, steps: 0,
     update(dt) {
@@ -226,11 +228,21 @@ export async function dress(model, garments) {
       fwdW.copy(fwdL).transformDirection(model.matrixWorld).setY(0).normalize(); sideW.set(fwdW.z, 0, -fwdW.x);  // her front and left now, level
       frame(A1, C1); model.getWorldPosition(root1); face1.setFromMatrixColumn(model.matrixWorld, 2).normalize();
       if (!ready || dt > 0.5 || root1.distanceTo(root0) > 0.5 * H * k || face1.dot(face0) < 0.5) {  // first frame, a long pause, a jump across the page or a snap round by over 60 degrees: start from rest
-        A0.set(A1); C0.set(C1); cur.set(A1); for (const s of sheets) rest(s); old.set(cur); acc = 0; ready = true;
+        A0.set(A1); C0.set(C1); cur.set(A1); for (const s of sheets) rest(s); old.set(cur); acc = 0; still = 1; ready = true;
         for (let j = 0; j < SETTLE; j++) step(1); old.set(cur);  // let it hang before it is first drawn: never seen falling from its T-pose shape
       }
+      let mv = 0;
+      for (let i = 0; i < A1.length; i += 3) mv = Math.max(mv, Math.hypot(A1[i] - A0[i], A1[i + 1] - A0[i + 1], A1[i + 2] - A0[i + 2]));
+      still = mv < 0.004 * H * k ? still + Math.max(0, dt) : 0;
       acc = Math.min(acc + Math.max(0, dt), MAXSTEPS * STEP); const n = Math.floor(acc / STEP + 1e-6); acc -= n * STEP;
-      for (let j = 1; j <= n; j++) step(j / n);
+      if (still < 0.16) {
+        settling = still > 0.02;
+        for (let j = 1; j <= n; j++) {
+          step(j / n);
+          if (settling) for (let s = 0; s < 4; s++) step(1);  // smooth damped settle to rest before 0.45 s with full drag and vmax intact
+        }
+        settling = false;
+      } else old.set(cur);
       cloth.steps += n; A0.set(A1); C0.set(C1); root0.copy(root1); face0.copy(face1); write();
     },
     dispose() { model.remove(mesh); geo.dispose(); mat.map?.dispose(); mat.dispose(); },

@@ -52,7 +52,7 @@
     "type": "timing",
     "before": "2.3",
     "targets": [
-     "great-loom"
+     "prop-shuttle"
     ],
     "light": [
      "silk-pink",

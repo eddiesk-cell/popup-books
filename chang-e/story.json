@@ -24,19 +24,19 @@
    "pitch": 3
   },
   "queen": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_emma",
+   "speed": 0.92,
+   "pitch": -1
   },
   "fengmeng": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bm_fable",
+   "speed": 1.02,
+   "pitch": 1
   },
   "suns": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.06,
+   "pitch": 3
   },
   "closing": {
    "voice": "bm_george",
@@ -44,14 +44,14 @@
    "pitch": 0
   },
   "sunbird": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.06,
+   "pitch": 4
   },
   "lastsun": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_alice",
+   "speed": 1.02,
+   "pitch": 2
   },
   "osmanthus": {
    "voice": "bm_george",

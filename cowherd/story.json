@@ -24,14 +24,14 @@
    "pitch": -2
   },
   "queen": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_isabella",
+   "speed": 0.91,
+   "pitch": -1
   },
   "children": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.06,
+   "pitch": 4
   },
   "closing": {
    "voice": "bm_george",
@@ -39,14 +39,14 @@
    "pitch": 0
   },
   "boy": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.06,
+   "pitch": 4
   },
   "girl": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.05,
+   "pitch": 3
   },
   "magpie": {
    "voice": "bm_george",

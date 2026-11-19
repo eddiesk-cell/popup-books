@@ -17,8 +17,8 @@
    "pitch": -2
   },
   "lulu": {
-   "voice": "bm_george",
-   "speed": 1.0,
+   "voice": "bf_emma",
+   "speed": 0.95,
    "pitch": 0
   }
  },
@@ -751,12 +751,12 @@
    ]
   },
   {
-   "id": "game.7.go",
-   "text": "Tap the golden light! Bobo swims there.",
+   "id": "game.7.start",
+   "text": "Swipe left or right! Steer Bobo past the rocks!",
    "say": [
     [
      "narrator",
-     "Tap the golden light! Bobo swims there."
+     "Swipe left or right! Steer Bobo past the rocks!"
     ]
    ]
   },
@@ -771,12 +771,12 @@
    ]
   },
   {
-   "id": "game.7.light",
-   "text": "Tap the golden light!",
+   "id": "game.7.hint",
+   "text": "The fish are splashing there. Go round the other side!",
    "say": [
     [
      "narrator",
-     "Tap the golden light!"
+     "The fish are splashing there. Go round the other side!"
     ]
    ]
   },

@@ -376,7 +376,7 @@ export const besidePoint = (ch, on, pp, p, eye) => {  // exported for the checks
     if (Math.abs(A) < R && Math.abs(B) > 0.05) b = Math.min(0.15, b + Math.max(0, (R - A * Math.sign(B)) / Math.abs(B)));
   }
   return head.clone().setY(p.y).addScaledVector(side, s).addScaledVector(back, b).add(rel.clone().sub(side.clone().multiplyScalar(rel.dot(side))))
-    .setY(p.y + 0.01 + 0.004 * Math.sin(performance.now() / 600));
+    .setY(p.y + 0.01 + 0.0005 * Math.sin(performance.now() / 950 + (ch.ph ?? 0)));
 };
 const halfWidth = ch => {  // his half-width across his body and his half-depth, his own size (he faces where she faces): any turn
   ch.body.updateMatrixWorld(true);
@@ -450,9 +450,9 @@ export function puppetModel(THREE, { root, pins, def, size, turned }) {
     return new THREE.AnimationClip(name, T, tracks);
   };
   const title = s => s.split(/[-_ ]/).map(w => w[0].toUpperCase() + w.slice(1)).join(" "), moves = def.moves ?? {}, hz = k => def.cycles?.[k] ?? 1;
-  const rest = Object.keys(moves).find(k => /idle/.test(k)), walk = moves.walk ? "walk" : def.gait === "hop" && moves.bounce ? "bounce" : null;
-  const animations = [...Object.entries(moves).filter(([k]) => !k.includes("#")).map(([k, m]) => bake(title(k), m, hz(k))),
-    ...(rest && rest !== "idle" ? [bake("Idle", moves[rest], hz(rest))] : []),
+  const walk = moves.walk ? "walk" : def.gait === "hop" && moves.bounce ? "bounce" : null;
+  const animations = [bake("Idle", { _tilt: 0.2 }, 1 / 5.5),
+    ...Object.entries(moves).filter(([k]) => !k.includes("#") && !/(^|[-_])idle$|^talk$/i.test(k)).map(([k, m]) => bake(title(k), m, hz(k))),
     ...(moves.walk ? [] : [bake("Walk", walk ? moves[walk] : { _tilt: 5 }, walk ? hz(walk) : 2)])];
   const scene = new (class extends THREE.Group {
     updateMatrixWorld(force) {  // undo whatever the body and its pivot turn, keep their left or right
@@ -463,8 +463,33 @@ export function puppetModel(THREE, { root, pins, def, size, turned }) {
       super.updateMatrixWorld(force);
     }
   })();
+  scene.userData.topName = top;
   scene.add(root);
   return { scene, animations };
+}
+
+const spkNorm = s => String(s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+export function matchSpeakers(spk, list, book = "") {  // resolve a story.json speaker tag ("houyi", "queen", "rabbit", "suns") against cast entries
+  if (!spk || spk === "narrator" || spk === "closing" || !list?.length) return [];
+  const ns = spkNorm(spk), stem = ns.endsWith("s") && ns.length > 3 ? ns.slice(0, -1) : null;
+  if (ns === "children") return list.filter(c => /^(village-)?(boy|girl|child)/.test(c.name));
+  if (ns === "both") return list.filter(c => /^(pu|nya)-?nyeu/.test(c.name));
+  const exact = list.filter(c => c.name === spk);
+  if (exact.length) return exact;
+  const pref = list.filter(c => spkNorm(c.name).startsWith(ns) || (stem && spkNorm(c.name).startsWith(stem)));
+  if (pref.length) return pref;
+  const tok = list.filter(c => c.name.toLowerCase().split(/[-_]/).some(w => spkNorm(w) === ns || (stem && spkNorm(w) === stem)) || spkNorm(c.name).includes(ns));
+  if (tok.length) return tok;
+  const modOf = c => {
+    let m = (c.c?.model ?? c.model ?? "").split("/").pop().replace(/^puppet:/, "").replace(/\.glb$/, "");
+    if (book && m.startsWith(`${book}-`)) m = m.slice(book.length + 1);
+    return m;
+  };
+  const mPref = list.filter(c => spkNorm(modOf(c)).startsWith(ns) || (stem && spkNorm(modOf(c)).startsWith(stem)));
+  if (mPref.length) return mPref;
+  const mHead = list.filter(c => modOf(c).split("-").slice(0, 2).some(w => spkNorm(w) === ns || (stem && spkNorm(w) === stem)));
+  if (mHead.length) return mHead;
+  return list.filter(c => spkNorm(modOf(c)).includes(ns));
 }
 const turn = (a, b, max) => { const d = Math.atan2(Math.sin(b - a), Math.cos(b - a)); return a + Math.max(-max, Math.min(max, d)); };
 const ease = k => k * k * (3 - 2 * k);
@@ -597,8 +622,8 @@ export class Acting {
   // spot(what) / put(what, p): where a prop of the spread is now (world) / set it there (it stays): for a prop flying (fly with "what")
   // people: the names that are characters (who speak, or can): only they turn to talk; null, everyone in the cast
   // floors: the page's "floors" (cards to stand on); legacy: one of the five first books (no stand-in clips: they play as they always did)
-  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null, ground = false, floors = [], legacy = false }) {
-    Object.assign(this, { ground, find, legacy, floorNames: floors, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
+  constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null, ground = false, floors = [], legacy = false, book = "" }) {
+    Object.assign(this, { book, ground, find, legacy, floorNames: floors, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
     this.hold = (ch, what, hand, on, a) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on, a));  // who holds what, the games' holds too
     for (const ch of cast) (this.by[ch.name] = ch), mood(ch, "natural");
     for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); if (ch.lean) ch.body.rotation.x += ch.lean; hang(ch); blendGround(ch); ch.solid?.(dt); return r; }; }  // R36; a dash's lean (live.js place() sets the rotation afresh each frame) and a jump's hanging feet, after the clip's pose
@@ -632,7 +657,9 @@ export class Acting {
         return k < 1 || void f.done();
       });
     }
-    this.talk(this.thinks.get(line) === speaker ? null : this.by[speaker]);  // a thought: nobody talks or turns
+    const shown = this.cast.filter(c => c.body?.visible !== false && !this.was.has(c.body));
+    const who = speaker ? matchSpeakers(speaker, shown, this.book) : [];
+    this.talk(who, !!speaker && this.thinks.get(line) === speaker);
   }
 
   // hide / show an object: layer 1 and `visible` false on every node (the layer survives live.js setting a body's own `visible` each frame, and
@@ -923,30 +950,30 @@ export class Acting {
     }
     if (ch.want != null) {
       ch.yaw = turn(ch.yaw, ch.want, (g?.go ? GO_TURN : TURN) * dt);
-      if (Math.abs(Math.sin((ch.want - ch.yaw) / 2)) < 1e-4 && !ch.goal && !ch.talking) ch.want = null;  // turned: a rider then turns with its mount
+      if (Math.abs(Math.sin((ch.want - ch.yaw) / 2)) < 1e-4 && !ch.goal) ch.want = null;  // turned: a rider then turns with its mount
     }
     if (ch.ride) ch.want != null ? (ch.ride.dyaw = ch.yaw - ch.ride.on.yaw) : (ch.yaw = ch.ride.on.yaw + ch.ride.dyaw);
   }
 
-  // the speaker turns to the nearest other character, who turns back; both only while standing, never its own mount or rider, and
-  // neither once the page has said where it looks on this line (a face act, or an act's "face"): the page's direction wins
-  talk(who) {
+  // Only the active speaker makes a small eased gesture on their turn (under 3 deg lean for paper, calm clip or head nod/turn for 3D);
+  // silent listeners stand calm and never flip or spin.
+  talk(speakers, think = false) {
+    const list = Array.isArray(speakers) ? speakers : speakers ? [speakers] : [];
+    const active = new Set(list), shown = this.cast.filter(c => c.body?.visible !== false && !this.was.has(c.body));
+    const person = c => (!this.people || this.people.has(c.name)) && !/^(sun|crane|fish|frog|snail|season|sea-drum|shell-chime)/.test(c.name);
     for (const ch of this.cast) {
-      const on = ch === who, talk = ch.clips?.[`${ch.hold} Talk`] ? `${ch.hold} Talk` : "Talk";  // in a mood (Worry): that mood's talk
-      if (on !== !!ch.talking && ch.clips?.[talk] && !ch.goal) this.loop(ch, on ? talk : ch.hold);
+      const on = active.has(ch), was = !!ch.talking, paper = !!ch.c?.model?.startsWith("puppet:");
+      const talkClip = !think && !paper ? (ch.clips?.[`${ch.hold} Talk`] ? `${ch.hold} Talk` : ch.hold === "Idle" && ch.clips?.Talk ? "Talk" : null) : null;
+      if (on !== was && talkClip && !ch.goal) this.loop(ch, on ? talkClip : ch.hold);
       ch.talking = on;
+      ch.thinking = on && think;
+      if (!on) continue;
+      const mine = c => c === ch.ride?.on || c.ride?.on === ch || this.holds.get(c.name) === ch || (c.ride && this.holds.get(c.ride.on.name) === ch);
+      const near = shown.filter(c => c !== ch && !active.has(c) && person(c) && !mine(c) && Math.hypot(c.pos.x - ch.pos.x, c.pos.z - ch.pos.z) >= (ch.height ?? 0.1) * 0.25)
+        .sort((a, b) => a.pos.distanceTo(ch.pos) - b.pos.distanceTo(ch.pos))[0];
+      if (!was || ch.talkDir == null) ch.talkDir = near ? Math.sign(near.pos.x - ch.pos.x) || 1 : (ch.pos.x > 0 ? -1 : 1);
+      ch.talkNear = !think && near && ch.faced !== this.line ? near : null;
     }
-    if (!who) return;
-    const person = c => !this.people || this.people.has(c.name);  // boats and props neither turn to talk nor are turned to
-    if (!person(who)) return;
-    // not the one it rides, nor one riding it: under a centimetre apart, their turn to each other points anywhere (Kapi's back)
-    // nor one she holds or one riding what she holds (Pip perched on the lamp in her hand), nor one too close to point anywhere
-    const mine = c => c === who.ride?.on || c.ride?.on === who || this.holds.get(c.name) === who || (c.ride && this.holds.get(c.ride.on.name) === who);
-    const near = this.cast.filter(c => c !== who && person(c) && !mine(c) && Math.hypot(c.pos.x - who.pos.x, c.pos.z - who.pos.z) >= who.height * 0.25)
-      .sort((a, b) => a.pos.distanceTo(who.pos) - b.pos.distanceTo(who.pos))[0];
-    if (!near) return;
-    if (!who.goal && who.faced !== this.line) look(who, near.pos);
-    if (!near.goal && near.faced !== this.line) look(near, who.pos);
   }
 
   get poses() { return Object.fromEntries(this.cast.map(c => [c.name, { pos: c.pos.toArray(), yaw: c.yaw, hold: c.hold }])); }

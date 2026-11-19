@@ -20,14 +20,14 @@
    "pitch": -1
   },
   "ministers": {
-   "voice": "bm_george",
+   "voice": "bm_daniel",
    "speed": 0.95,
-   "pitch": -2
+   "pitch": -1
   },
   "snail": {
-   "voice": "bm_george",
-   "speed": 0.9,
-   "pitch": 4
+   "voice": "bf_lily",
+   "speed": 0.95,
+   "pitch": 3
   },
   "closing": {
    "voice": "bm_george",
@@ -35,14 +35,14 @@
    "pitch": 0
   },
   "drummer": {
-   "voice": "bm_george",
+   "voice": "bm_fable",
    "speed": 1.0,
-   "pitch": 1
+   "pitch": 0
   },
   "cat": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 3
+   "voice": "bf_isabella",
+   "speed": 1.02,
+   "pitch": 2
   }
  },
  "respell": {

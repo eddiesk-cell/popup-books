@@ -18,34 +18,34 @@
    "pitch": 1
   },
   "lion": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.06,
+   "pitch": 4
   },
   "khunborom": {
-   "voice": "bm_george",
-   "speed": 1.0,
+   "voice": "bm_fable",
+   "speed": 0.96,
    "pitch": 0
   },
   "skyking": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bm_lewis",
+   "speed": 0.88,
+   "pitch": -3
   },
   "people": {
-   "voice": "bm_george",
+   "voice": "bf_alice",
    "speed": 1.0,
    "pitch": 0
   },
   "round": {
-   "voice": "bm_george",
+   "voice": "am_onyx",
    "speed": 1.0,
-   "pitch": 0
+   "pitch": 1
   },
   "square": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_isabella",
+   "speed": 1.02,
+   "pitch": 1
   },
   "closing": {
    "voice": "bm_george",
@@ -53,24 +53,24 @@
    "pitch": 0
   },
   "both": {
-   "voice": "bm_george",
-   "speed": 1.0,
+   "voice": "bf_isabella",
+   "speed": 0.95,
    "pitch": 0
   },
   "child": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.05,
+   "pitch": 4
   },
   "punyeu_dance": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bm_daniel",
+   "speed": 0.95,
+   "pitch": -1
   },
   "nyanyeu_dance": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_emma",
+   "speed": 0.97,
+   "pitch": 1
   }
  },
  "respell": {

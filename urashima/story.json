@@ -35,19 +35,19 @@
    "pitch": 0
   },
   "boys": {
-   "voice": "bm_george",
-   "speed": 1.02,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.05,
+   "pitch": 3
   },
   "villager": {
-   "voice": "bm_george",
-   "speed": 0.94,
-   "pitch": 0
+   "voice": "bm_daniel",
+   "speed": 0.91,
+   "pitch": -2
   },
   "children": {
-   "voice": "bm_george",
-   "speed": 1.02,
-   "pitch": 0
+   "voice": "bf_lily",
+   "speed": 1.05,
+   "pitch": 3
   },
   "box": {
    "voice": "bm_george",
@@ -55,19 +55,19 @@
    "pitch": 0
   },
   "fish": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "bf_isabella",
+   "speed": 1.03,
+   "pitch": 2
   },
   "octopus": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.03,
+   "pitch": 1
   },
   "crab": {
-   "voice": "bm_george",
-   "speed": 1.0,
-   "pitch": 0
+   "voice": "am_puck",
+   "speed": 1.08,
+   "pitch": 4
   },
   "boat": {
    "voice": "bm_george",

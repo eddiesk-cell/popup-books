@@ -20,7 +20,7 @@ import { markWords } from "../book.js";
 import { loadWords, languages, touchLine, unlock } from "../reading.js";
 import { makeBody } from "./bookbody.js";
 import { makeArrival } from "./arrive.js";
-import { Acting, mount, carry, puppetModel, byRim, holdOf, seatHeld, dropOf } from "./acts.js";
+import { Acting, mount, carry, puppetModel, matchSpeakers, byRim, holdOf, seatHeld, dropOf } from "./acts.js";
 import { makeGame, glow } from "./games.js";
 import { makeReadMode } from "./readmode.js";
 import { addSound, manifestFor } from "./sound.js";
@@ -408,8 +408,10 @@ const load = id => spreads[id] ??= (async () => {
     return top ? (part || sp.held.some(h => h.what === to) ? topOf(it) : (tops[to] ??= topOf(it)))?.clone() ?? null : it.getWorldPosition(new THREE.Vector3());
   };
   sp.lifts = {}; sp.held = []; sp.placed = {}; sp.falls = [];
-  sp.acting = new Acting(m.acts || [], sp.cast, { cam, where, wordAt, loop, once, started: a => foley(`act:${[].concat(a.who ?? a.what)[0]?.replace(/\d+$/, "")}:${a.do}`, null),
-    people: new Set([...Object.values(speakers).flat(), ...sp.cast.filter(c => c.clips.Talk).map(c => c.name)]),  // who speaks, or can: not boats
+  const rawSpks = [...new Set(Object.values(speakers).flat())].filter(s => s && s !== "narrator" && s !== "closing");
+  const matchedPpl = rawSpks.flatMap(s => matchSpeakers(s, sp.cast, bookId).map(c => c.name));
+  sp.acting = new Acting(m.acts || [], sp.cast, { cam, where, wordAt, loop, once, book: bookId, started: a => foley(`act:${[].concat(a.who ?? a.what)[0]?.replace(/\d+$/, "")}:${a.do}`, null),
+    people: new Set([...rawSpks, ...matchedPpl, ...sp.cast.filter(c => c.clips.Talk).map(c => c.name)]),  // who speaks, or can (pose twins included): not boats
     spot: what => sp.placed[what]?.clone() ?? propIn(sp, what)?.getWorldPosition(new THREE.Vector3()) ?? null, put: (what, p) => sp.held.some(h => h.what === what) || (sp.falls = sp.falls.filter(f => f.what !== what), sp.placed[what] = p),  // a flight still running never pulls a prop out of a hand
     motion: Object.fromEntries(sp.cast.map(ch => [ch.name, motionAll[ch.c.model.split("/").pop()] ?? motionAll[ch.name]])),
     find: what => propIn(sp, what),  // hide / show / shape reach a prop or a cast body by name
@@ -503,9 +505,61 @@ function gradeAnimal(model, stage) {
   };
   model.traverse(o => o.isMesh && (o.material = Array.isArray(o.material) ? o.material.map(own) : own(o.material)));
 }
+const ACTIVE_LOOP = /^(Walk|Run|Jog|Sprint|Sneak|Dash|Step Back|Backstep|Crawl|Crouch Walk|Swim|Fly|Hover|Loop|Hum|Climb|Jump|Hop|Ouch Hop|Leap|Bounce|Pounce|Ride Trot|.*Weave|.*Play.*|Plough|Plant|Pull|Hoe|Dig|Cut|Carry|Swing.*|Hang.*|Dance|Cheer|Clap|Wave|Cry|Laugh|Shake|Wag|Swish|Burn|.*Open|Light|Grow\d)/i;
+function calmClip(clip, modelH, maxDeg, maxPosFrac) {  // attenuate bone excursions so resting clips stay < 1 deg / < 2 mm and Talk clips gesture calmly
+  const T = Math.max(clip.duration, 0);
+  if (!T || !clip.tracks.length) return clip;
+  const q0 = new THREE.Quaternion(), qe = new THREE.Quaternion();
+  let maxEndDeg = 0;
+  for (const tr of clip.tracks) if (tr instanceof THREE.QuaternionKeyframeTrack) {
+    const ip = tr.createInterpolant();
+    q0.fromArray(ip.evaluate(0)).normalize(); qe.fromArray(ip.evaluate(T)).normalize();
+    maxEndDeg = Math.max(maxEndDeg, 2 * Math.acos(Math.min(1, Math.abs(q0.dot(qe)))) * 180 / Math.PI);
+  }
+  const refT = maxEndDeg > 5 ? T : 0;  // transition-to-pose clips (e.g. Look Down) hold their end pose; closed loops anchor at keyframe 0
+  const tracks = clip.tracks.map(tr => {
+    const M = Math.max(9, Math.min(33, tr.times.length)), outT = Float32Array.from({ length: M }, (_, i) => (T * i) / (M - 1));
+    if (tr instanceof THREE.QuaternionKeyframeTrack) {
+      const ip = tr.createInterpolant(), qRef = new THREE.Quaternion().fromArray(ip.evaluate(refT)).normalize();
+      const qs = Array.from(outT, t => new THREE.Quaternion().fromArray(ip.evaluate(t)).normalize());
+      let mx = 0; for (const q of qs) mx = Math.max(mx, 2 * Math.acos(Math.min(1, Math.abs(qRef.dot(q)))) * 180 / Math.PI);
+      const a = mx > maxDeg ? maxDeg / mx : 1, outV = new Float32Array(M * 4), qt = new THREE.Quaternion();
+      for (let i = 0; i < M; i++) { const w = i === 0 || i === M - 1 ? 0 : refT > 0 ? a * Math.sin(Math.PI * i / (M - 1)) : a; qt.copy(qRef).slerp(qs[i], w).normalize().toArray(outV, i * 4); }
+      return new THREE.QuaternionKeyframeTrack(tr.name, outT, outV);
+    }
+    if (tr instanceof THREE.VectorKeyframeTrack && /\.position$/.test(tr.name)) {
+      const ip = tr.createInterpolant(), r0 = Float32Array.from(ip.evaluate(refT)), vs = Array.from(outT, t => Float32Array.from(ip.evaluate(t)));
+      let mx = 0; for (const v of vs) mx = Math.max(mx, Math.hypot(v[0] - r0[0], v[1] - r0[1], v[2] - r0[2]));
+      const cap = maxPosFrac * modelH, a = mx > cap ? cap / mx : 1, outV = new Float32Array(M * 3);
+      for (let i = 0; i < M; i++) { const w = i === 0 || i === M - 1 ? 0 : refT > 0 ? a * Math.sin(Math.PI * i / (M - 1)) : a; for (let k = 0; k < 3; k++) outV[3 * i + k] = r0[k] + (vs[i][k] - r0[k]) * w; }
+      return new THREE.VectorKeyframeTrack(tr.name, outT, outV);
+    }
+    if (tr instanceof THREE.NumberKeyframeTrack && maxDeg < 1) {
+      const ip = tr.createInterpolant(), sz = tr.getValueSize(), r0 = Float32Array.from(ip.evaluate(refT)), outV = new Float32Array(M * sz);
+      for (let i = 0; i < M; i++) { const v = ip.evaluate(outT[i]), w = i === 0 || i === M - 1 ? 0 : 0.05; for (let k = 0; k < sz; k++) outV[i * sz + k] = r0[k] + (v[k] - r0[k]) * w; }
+      return new THREE.NumberKeyframeTrack(tr.name, outT, outV);
+    }
+    return tr;
+  });
+  const out = new THREE.AnimationClip(clip.name, T, tracks);
+  out.userData = { ...clip.userData };
+  return out;
+}
 const modelOf = file => models[file] ??= loader.loadAsync(`chars/${file.split("/").pop()}`)  // "assets/kapi.glb": its slim copy, web/live/chars
   .catch(() => loader.loadAsync(`../${file}`))  // no slim copy (yet): the original, through web/assets
-  .then(g => (g.animations.forEach(a => { const t0 = Math.min(...a.tracks.map(k => k.times[0])); if (t0 > 0 && t0 < Infinity) { new Set(a.tracks.map(k => k.times)).forEach(t => t.forEach((v, i) => (t[i] = v - t0))); a.resetDuration(); } }), g));  // every clip starts at 0: one whose first key is late (0.042 s in some exports) holds a frame at each loop's wrap. Tracks share their times arrays, so each array moves once
+  .then(g => {
+    g.animations.forEach(a => { const t0 = Math.min(...a.tracks.map(k => k.times[0])); if (t0 > 0 && t0 < Infinity) { new Set(a.tracks.map(k => k.times)).forEach(t => t.forEach((v, i) => (t[i] = v - t0))); a.resetDuration(); } });  // every clip starts at 0: one whose first key is late (0.042 s in some exports) holds a frame at each loop's wrap. Tracks share their times arrays, so each array moves once
+    g.scene.updateMatrixWorld(true);
+    const mb = new THREE.Box3(); g.scene.traverse(o => o.isMesh && !o.name.startsWith("Icosphere") && o.matrixWorld.determinant() !== 0 && mb.expandByObject(o));
+    const modelH = !mb.isEmpty() && mb.max.y > mb.min.y ? mb.max.y - mb.min.y : 1;
+    g.calmClips = {};
+    g.animations = g.animations.map(a => {
+      if (/(^|\s)Talk$/i.test(a.name)) return calmClip(a, modelH, 1.8, 0.006);
+      if (!ACTIVE_LOOP.test(a.name)) g.calmClips[a.name] = calmClip(a, modelH, 0.08, 0.0012);
+      return a;
+    });
+    return g;
+  });
 async function character(c, sp) {
   const pp = c.model.startsWith("puppet:") && await storyPuppet(c.model.slice(7), c.grade ?? sp.m.stage?.name);
   const g = pp ? puppetModel(THREE, pp)  // "puppet:tong": a paper puppet
@@ -529,8 +583,9 @@ async function character(c, sp) {
   const proxy = new THREE.Mesh(new THREE.BoxGeometry(size.x * 1.2, size.y * 1.1, size.z * 1.2), new THREE.MeshBasicMaterial({ visible: false }));
   proxy.position.y = size.y * 0.5; body.add(proxy);  // the hit box: a little larger than the body, easy for a small finger
   const mix = new THREE.AnimationMixer(model), clips = Object.fromEntries(g.animations.map(a => [a.name, a]));
-  const ch = { c, body, model, mix, clips, proxy, box: box.clone().translate(pivot.position), who: c.name, name: c.name, height: c.height, s0: c.height / size.y, first: g.animations[0],
-    start: sp.m.frames.alive + (c.delay || 0), ph: Math.random() * 6.28, pos: B(c.at), yaw: rad(c.rot || 0), hold: c.clip, nod: 0 };
+  const idx = sp.castIdx = (sp.castIdx ?? 0) + 1;
+  const ch = { c, body, model, mix, clips, calmClips: g.calmClips ?? {}, proxy, box: box.clone().translate(pivot.position), who: c.name, name: c.name, height: c.height, s0: c.height / size.y, first: g.animations[0],
+    start: sp.m.frames.alive + (c.delay || 0), ph: (idx * 2.39996) % (2 * Math.PI), breathRate: 0.82 + 0.36 * ((idx * 0.618034) % 1), pos: B(c.at), yaw: rad(c.rot || 0), hold: c.clip, nod: 0, talkK: 0, talkDir: 1 };
   for (const w of c.wear ?? []) {  // "wear": [{"model", "bone"}]: an accessory made rigid in the character's own rest space (popup.py), so it rides its bone with no offset; a bone or file not there leaves the character as it is
     const b = model.getObjectByName(w.bone), a = b && await modelOf(w.model).then(g => clone(g.scene), () => null);
     if (!a) { console.warn("cannot wear", w.model, "on", c.name, w.bone); continue; }
@@ -576,19 +631,30 @@ function inHand(ch, done) {  // an Eat clip holds a jamun in the right hand whil
   const f = jamun.clone(); scene.add(f); bone.getWorldPosition(f.position); bone.attach(f);
   return () => { f.removeFromParent(); done(); };
 }
-function loop(ch, name) {  // cross-fade into a looping clip (Idle stands in for one the model lacks: it slides)
+function loop(ch, name) {  // cross-fade into a looping clip (Idle stands in for one the model lacks; resting clips breathe slowly out of step)
   if (ch.done) return void (ch.pending = name);  // never cut a clip that is playing once
-  const clip = ch.clips[name] || ch.clips.Idle || ch.first;
-  if (!clip) return;
+  const paper = ch.c.model.startsWith("puppet:");
+  const raw = ch.clips[name] || ch.clips.Idle || (!paper ? ch.first : null);
+  if (!raw) return;
+  const resting = paper ? raw.name === "Idle" : !ACTIVE_LOOP.test(raw.name) && !/(^|\s)Talk$/i.test(raw.name);
+  const clip = !paper && resting ? (ch.calmClips[raw.name] ?? raw) : raw;
   const a = ch.mix.clipAction(clip);
-  if (a === ch.cur) return;
-  a.reset().setLoop(THREE.LoopRepeat, Infinity).play(); a.timeScale = 1;  // an act's "rate" lasts only that act
-  if (ch.cur) a.crossFadeFrom(ch.cur, 0.3, false);
+  if (a === ch.cur && a.loop === THREE.LoopRepeat && a.isRunning()) return;
+  const firstStart = !ch.cur;
+  a.reset().setLoop(THREE.LoopRepeat, Infinity).play();
+  a.timeScale = resting ? (clip.duration > 0.1 ? clip.duration / 5.5 : 1) * (ch.breathRate ?? 1) : 1;  // resting breath >= 4.5 s, unique per character
+  if (resting && firstStart && clip.duration > 0) a.time = ((ch.ph ?? 0) / (2 * Math.PI)) * clip.duration;
+  if (ch.cur && ch.cur !== a) a.crossFadeFrom(ch.cur, 0.3, false);
   ch.cur = a;
 }
 function once(ch, name, done) {  // play a clip once and hold its last pose until `done` moves on; its length, 0 if missing
   const clip = ch.clips[name];
   if (!clip) return done(), 0;
+  if (name === "Talk" && ch.hold && ch.hold !== "Idle" && !ch.c.model.startsWith("puppet:")) {  // in a non-Idle pose (Look Down, Sit): gentle head gesture without snapping out of the pose
+    const was = ch.done, fin = () => { if (ch.done === fin) { ch.done = null; const p = ch.pending; ch.pending = null; done?.(); if (p) loop(ch, p); } };
+    ch.done = fin; ch.pending = null; ch.talkPulse = performance.now() + 1000; was?.(); setTimeout(fin, 1000);
+    return 1;
+  }
   if (book.fruit && /^Eat/.test(name)) done = inHand(ch, done);  // book.json "fruit" is a flag (any value: the Kapi book's jamun); a book without "fruit" in book.json tosses and eats nothing (turtle s09: Matsing's Throw is Pagong)
   const to = book.fruit && /^Throw/.test(name) && (ch.catcher ?? S.cast.filter(c => c !== ch).sort((a, b) => a.pos.distanceTo(ch.pos) - b.pos.distanceTo(ch.pos))[0]);
   if (to) setTimeout(() => toss(ch, to), clip.duration * 450);  // a Throw lets a jamun go at about its middle, to its named catcher (acts.js), else the nearest one
@@ -933,7 +999,7 @@ function replay(sp) {  // "Read again": everyone back where the page began, the 
   sp.lifts = {}; sp.held = []; sp.placed = {}; sp.falls = [];
   sp.root.traverse(o => o.userData.rest && (o.position.copy(o.userData.rest), o.userData.restQ && o.quaternion.copy(o.userData.restQ)));
   sp.acting.reset();
-  for (const ch of sp.cast) Object.assign(ch, { pos: ch.begin.pos.clone(), yaw: ch.begin.yaw, hold: ch.begin.hold, ride: null, want: null, moved: false, done: null, pending: null });
+  for (const ch of sp.cast) Object.assign(ch, { pos: ch.begin.pos.clone(), yaw: ch.begin.yaw, hold: ch.begin.hold, ride: null, want: null, moved: false, done: null, pending: null, talking: false, talkK: 0 });
   for (const ch of sp.cast) { if (ch.begin.on) mount(ch, ch.begin.on, o => o.pos), ch.ride.gap = ch.c.at[2]; loop(ch, ch.hold); }
   arm(sp); gameView(false);
   readFrom(0);  // ambient.js sees the line go back: its moments fire again and the lights return to the stage
@@ -947,6 +1013,7 @@ const along = (keys, f) => {  // "enter": a path of [frame, [x,y,z]] keys, walke
   const [fa, a] = keys[i - 1], [fb, b] = keys[i];
   return B(a).lerp(B(b), (f - fa) / (fb - fa));
 };
+const _qTalkA = new THREE.Quaternion(), _qTalkB = new THREE.Quaternion(), _vPlace = new THREE.Vector3(), _zAxis = new THREE.Vector3(0, 0, 1);
 function place(ch, dt, now) {  // ch.pos / ch.yaw: the manifest's place, then wherever the acts take it
   const { c, body } = ch, tau = 2 * Math.PI / S.P, w = frame * tau + ch.ph, k = bloom(age, ch.start, c.bob ? 18 : 12);
   body.visible = k > 0; body.scale.setScalar(ch.s0 * Math.max(k, 1e-4));
@@ -955,15 +1022,48 @@ function place(ch, dt, now) {  // ch.pos / ch.yaw: the manifest's place, then wh
     carry(ch, o => o.body.position, cam.position);
     if (ch.want == null) ch.yaw = ch.ride.on.yaw + ch.ride.dyaw;
   }
-  ch.nod = ch.talking ? 0.07 * Math.sin(now / 70) : ch.nod * 0.85;  // the small nod of someone talking
+  const paper = c.model.startsWith("puppet:"), pulseOn = (ch.talkPulse ?? 0) > now, speakOn = (!!ch.talking && !ch.goal && !ch.done) || pulseOn;
+  ch.talkK = Math.max(0, Math.min(1, (ch.talkK ?? 0) + (speakOn ? dt : -dt) / 0.38));
+  const u = ch.talkK, tk = u * u * u * (u * (6 * u - 15) + 10);
+  ch.nod = 0;
   const p = ch.pos.clone();
-  if (c.bob) {  // surface from the river, then rock and turn on a slow eddy (popup.py's boat motion)
+  if (c.bob) {  // unmanned props keep their river eddy; characters and ridden boats surface then rest calmly
+    const calmBob = skin(ch) || paper || /posed-(duck|fish)|^fish/.test(c.name) || S.cast.some(o => o.ride?.on === ch);
     const dr = c.drift || 0;
-    p.add(new THREE.Vector3(dr * Math.sin(w), 0.006 * Math.sin(w) - 0.06 * (1 - Math.min(k, 1)), -0.6 * dr * Math.cos(w)));
-    body.rotation.set(0.04 * Math.sin(2 * frame * tau + ch.ph) + ch.nod, ch.yaw + 0.05 * Math.sin(w), -0.05 * Math.sin(w + 1), "YZX");
-  } else body.rotation.set(ch.nod, ch.yaw, 0, "YXZ");
+    if (calmBob) {
+      const wb = (now / 1000) * (2 * Math.PI / 5.8) + ch.ph, cdr = Math.min(dr, 0.00035);
+      p.add(_vPlace.set(cdr * Math.sin(wb), 0.00035 * Math.sin(wb) - 0.06 * (1 - Math.min(k, 1)), -0.6 * cdr * Math.cos(wb)));
+      body.rotation.set(0.002 * Math.sin(wb), ch.yaw + 0.002 * Math.sin(wb + 1), -0.002 * Math.sin(wb + 2), "YZX");
+    } else {
+      p.add(_vPlace.set(dr * Math.sin(w), 0.006 * Math.sin(w) - 0.06 * (1 - Math.min(k, 1)), -0.6 * dr * Math.cos(w)));
+      body.rotation.set(0.04 * Math.sin(2 * frame * tau + ch.ph), ch.yaw + 0.05 * Math.sin(w), -0.05 * Math.sin(w + 1), "YZX");
+    }
+  } else body.rotation.set(0, ch.yaw, 0, "YXZ");
   body.position.copy(p);
-  ch.mix.update(dt); ch.cloth?.update(dt);
+  ch.mix.update(dt);
+  if (tk > 1e-4) {
+    if (paper) {
+      const pin = ch.topPin ??= ch.model.getObjectByName(ch.model.userData.topName || "body");
+      if (pin) pin.quaternion.multiply(_qTalkA.setFromAxisAngle(_zAxis, -rad(1.8) * (ch.talkDir || 1) * Math.sign(ch.model.scale.x || 1) * tk));
+    } else {
+      const hb = ch.headBone === undefined ? (ch.headBone = ch.model.getObjectByName("head") || ch.model.getObjectByName("neck") || ch.model.getObjectByName("spine") || null) : ch.headBone;
+      if (hb?.parent) {
+        const hasTalk = ch.cur && /(^|\s)Talk$/i.test(ch.cur.getClip().name), pitch = rad(hasTalk ? 1.0 : 2.2) * tk;
+        let dyaw = 0;
+        if (ch.talkNear) {
+          const want = Math.atan2(ch.talkNear.pos.x - ch.pos.x, ch.talkNear.pos.z - ch.pos.z);
+          const diff = Math.atan2(Math.sin(want - ch.yaw), Math.cos(want - ch.yaw));
+          dyaw = Math.max(-rad(3.5), Math.min(rad(3.5), diff * 0.35)) * tk;
+        }
+        hb.parent.updateWorldMatrix(true, false);
+        const rightW = _vPlace.set(1, 0, 0).applyQuaternion(body.getWorldQuaternion(_qTalkB));
+        _qTalkA.setFromAxisAngle(up3, dyaw).multiply(_qTalkB.setFromAxisAngle(rightW, pitch));
+        hb.parent.getWorldQuaternion(_qTalkB);
+        hb.quaternion.premultiply(_qTalkB).premultiply(_qTalkA).premultiply(_qTalkB.invert());
+      }
+    }
+  }
+  ch.cloth?.update(dt);
 }
 
 // ---------- taps: characters react and speak, targets are picked, touch things wiggle ----------
@@ -1824,5 +1924,5 @@ enter(await load(first), "closed"); spreadReady = true; lift(); notice.open();
 canvas.focus();
 window.live = { get sfx() { return sfxHook.fx; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
   get auto() { return au; }, get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
-  get acting() { return S.acting; }, get game() { return S.play; }, get skipGames() { return skips(); }, readMode: rm, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
+  get acting() { return S.acting; }, get game() { return S.play; }, get skipGames() { return skips(); }, readMode: rm, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, speakers, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
   halt: () => (homing = null, true) };  // the director takes the camera from the glide home (ambient.js, a spread turned to)
