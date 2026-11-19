@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-dog-sneeze",
+ "size": 0.068,
+ "metres_per_pixel": 0.000127,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Spotted Dog in blue kerchief sneezing a cute sea-spray sneeze.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-dog-sneeze/body.png",
+   "size": [
+    0.045,
+    0.068
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

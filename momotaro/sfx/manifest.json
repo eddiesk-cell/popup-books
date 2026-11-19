@@ -1,0 +1,30 @@
+{
+ "beds": [
+  "stream-babble",
+  "sea-waves",
+  "fort-hearth"
+ ],
+ "shots": [],
+ "pools": {
+  "motif-momotaro": 1,
+  "motif-friends": 1,
+  "motif-goro": 1,
+  "koto-warm": 1,
+  "taiko-don": 1,
+  "taiko-mid": 1,
+  "drum-ka": 1,
+  "peach-pop": 1,
+  "splash-soft": 1,
+  "pat-dumpling": 1,
+  "dog-woof": 1,
+  "monkey-bonk": 1,
+  "wing-swoosh": 1,
+  "sail-whoosh": 1,
+  "sneeze-spray": 1,
+  "bolt-clack": 1,
+  "gate-creak": 1,
+  "ker-plunk": 1,
+  "tummy-rumble": 1,
+  "pitter-pat": 1
+ }
+}

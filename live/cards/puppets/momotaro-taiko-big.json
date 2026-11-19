@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-taiko-big",
+ "size": 0.068,
+ "metres_per_pixel": 0.00016,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Large wooden taiko festival drum on stand.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-taiko-big/body.png",
+   "size": [
+    0.0538,
+    0.068
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

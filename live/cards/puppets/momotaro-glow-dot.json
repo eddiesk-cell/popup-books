@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-glow-dot",
+ "size": 0.03,
+ "metres_per_pixel": 7.2e-05,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Golden peach-blossom light emblem.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-glow-dot/body.png",
+   "size": [
+    0.0311,
+    0.03
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

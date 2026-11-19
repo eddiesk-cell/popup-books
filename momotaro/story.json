@@ -1,0 +1,1093 @@
+{
+ "words": false,
+ "title": "Momotarō, the Peach Boy",
+ "credit": "From the old Japanese folk tale of Momotarō, the Peach Boy, told to children across Japan for hundreds of years and retold in English by A. B. Mitford in Tales of Old Japan (1871) and Yei Theodora Ozaki in Japanese Fairy Tales (1908). Retold in our own words.",
+ "status": "Locked at STOP 1 (Orchestrator with Eddie's authority, 2026-11-19: \"STOP 1 PASSED. The story is approved as written\").",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "momotaro": {
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "dog": {
+   "voice": "bm_daniel",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "monkey": {
+   "voice": "am_puck",
+   "speed": 1.04,
+   "pitch": 3
+  },
+  "pheasant": {
+   "voice": "bf_alice",
+   "speed": 0.98,
+   "pitch": 1
+  },
+  "goro": {
+   "voice": "bm_lewis",
+   "speed": 0.91,
+   "pitch": -2
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "grandma": {
+   "voice": "bm_george",
+   "speed": 0.96,
+   "pitch": 0
+  },
+  "grandpa": {
+   "voice": "bm_george",
+   "speed": 0.94,
+   "pitch": 0
+  },
+  "peach": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dumpling": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "boat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "drum": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Momotarō": "Momo-tahro",
+  "Momotaro": "Momo-tahro",
+  "Gorō": "Gohro",
+  "Goro": "Gohro",
+  "kibi-dango": "keebee-dahngo"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Giant Peach",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in Japan, beside a clear mountain stream, lived a kind old Grandfather and Grandmother.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in Japan, beside a clear mountain stream, lived a kind old Grandfather and Grandmother."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Every morning Grandfather gathered firewood in the green hills, and Grandmother washed clothes on the smooth river stones.",
+     "say": [
+      [
+       "narrator",
+       "Every morning Grandfather gathered firewood in the green hills, and Grandmother washed clothes on the smooth river stones."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "One sunny day, bob, bob, splash! Down the sparkling stream floated a giant pink peach, bigger than a wash tub!",
+     "say": [
+      [
+       "narrator",
+       "One sunny day, bob, bob, splash! Down the sparkling stream floated a giant pink peach, bigger than a wash tub!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Together they carried the heavy peach home. Before they could slice it, pop! The peach split wide open in golden light, and out jumped a rosy baby boy!",
+     "say": [
+      [
+       "narrator",
+       "Together they carried the heavy peach home. Before they could slice it, pop! The peach split wide open in golden light, and out jumped a rosy baby... boy!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "They hugged him close and named him Momotarō, the Peach Boy. He grew strong and kind, until one windy evening troubling news blew in from the sea. What had happened?",
+     "say": [
+      [
+       "narrator",
+       "They hugged him close and named him Momo-tahro, the Peach Boy. He grew strong and kind, until one windy evening troubling news blew in from the sea. What had happened?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Warm Millet Dumplings",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Far across the waves on Ogre Island lived grumpy ogres, and they had taken the villages' festival drums, paper lanterns, and rice chests!",
+     "say": [
+      [
+       "narrator",
+       "Far across the waves on Ogre Island lived grumpy ogres, and they had taken the villages' festival drums, paper lanterns, and rice chests!"
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "\"Please do not worry!\" said Momotarō, tying a peach headband round his forehead. \"I will sail to Ogre Island and ask them to give everything back!\"",
+     "say": [
+      [
+       "momotaro",
+       "Please do not worry!"
+      ],
+      [
+       "narrator",
+       "said Momo-tahro, tying a peach headband round his forehead."
+      ],
+      [
+       "momotaro",
+       "I will sail to Ogre Island and ask them to give everything back!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Pat, pat, pat! Grandmother rolled sweet golden millet dumplings over the warm hearth, while Grandfather sewed a little peach banner for Momotarō's back.",
+     "say": [
+      [
+       "narrator",
+       "Pat, pat, pat! Grandmother rolled sweet golden millet dumplings over the warm hearth, while Grandfather sewed a little peach banner for Momo-tahro's back."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Grandmother tied four warm dumplings in a cloth bag. \"Take enough to share,\" she smiled, \"so you never walk alone.\"",
+     "say": [
+      [
+       "narrator",
+       "Grandmother tied four warm dumplings in a cloth bag."
+      ],
+      [
+       "grandma",
+       "Take enough to share,"
+      ],
+      [
+       "narrator",
+       "she smiled,"
+      ],
+      [
+       "grandma",
+       "so you never walk... alone."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Momotarō bowed to Grandfather and Grandmother and set off along the pine road. Suddenly, the bushes beside the gate began to wiggle! Who was hiding there?",
+     "say": [
+      [
+       "narrator",
+       "Momo-tahro bowed to Grandfather and Grandmother and set off along the pine road. Suddenly, the bushes beside the gate began to wiggle! Who was hiding there?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Dog and Monkey",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Out bounded a friendly Spotted Dog wearing a blue kerchief! \"Woof! Something in your bag smells warm and sweet, Momotarō!\"",
+     "say": [
+      [
+       "narrator",
+       "Out bounded a friendly Spotted Dog wearing a blue kerchief!"
+      ],
+      [
+       "dog",
+       "Woof! Something in your bag smells warm and sweet, Momo-tahro!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Right above them, a cheeky Mountain Monkey in an orange vest leaned out from a pine branch to sniff too. Whoops, bonk! Down he tumbled onto his round bottom!",
+     "say": [
+      [
+       "narrator",
+       "Right above them, a cheeky Mountain Monkey in an orange vest leaned out from a pine branch to sniff too. Whoops, bonk! Down he tumbled onto his round bottom!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "\"I smelled it first!\" barked Dog. \"No, me!\" chattered Monkey, hopping up. Momotarō laughed and held out two golden millet dumplings.",
+     "say": [
+      [
+       "dog",
+       "I smelled it first!"
+      ],
+      [
+       "narrator",
+       "barked Dog."
+      ],
+      [
+       "monkey",
+       "No, me!"
+      ],
+      [
+       "narrator",
+       "chattered Monkey, hopping up. Momo-tahro laughed and held out two golden millet dumplings."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "\"Share one, and walk together!\" said Momotarō happily. Dog wagged his curled tail, Monkey did a happy flip, and the two shook paws like old friends.",
+     "say": [
+      [
+       "momotaro",
+       "Share one, and walk together!"
+      ],
+      [
+       "narrator",
+       "said Momo-tahro happily. Dog wagged his curled tail, Monkey did a happy flip, and the two shook paws like old... friends."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Off marched Momotarō, Dog, and Monkey down toward the sea shore, when a bright green shadow swooped down from the clouds! Who was flying above them?",
+     "say": [
+      [
+       "narrator",
+       "Off marched Momo-tahro, Dog, and Monkey down toward the sea shore, when a bright green shadow swooped down from the clouds! Who was flying above them?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Pheasant by the Boat",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Swoosh! Down glided a proud Green Pheasant wearing a braided gold neck ring, landing neatly on the mast of a little wooden sailboat!",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Down glided a proud Green Pheasant wearing a braided gold neck ring, landing neatly on the mast of a little wooden sailboat!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"I saw you share on the mountain road,\" called Pheasant brightly. \"My sharp eyes can see far across the waves to Ogre Island! May I come too?\"",
+     "say": [
+      [
+       "pheasant",
+       "I saw you share on the mountain road,"
+      ],
+      [
+       "narrator",
+       "called Pheasant brightly."
+      ],
+      [
+       "pheasant",
+       "My sharp eyes can see far across the waves to Ogre Island! May I come too?"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Momotarō smiled and held up the third warm dumpling. \"Share one, and sail together!\" he called, and Pheasant caught it neatly in her beak.",
+     "say": [
+      [
+       "narrator",
+       "Momo-tahro smiled and held up the third warm dumpling."
+      ],
+      [
+       "momotaro",
+       "Share one, and sail together!"
+      ],
+      [
+       "narrator",
+       "he called, and Pheasant caught it neatly in her beak."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "All four climbed aboard: Momotarō stood at the prow, Dog watched the bow, Monkey gripped the wooden oar, and Pheasant perched high on the mast!",
+     "say": [
+      [
+       "narrator",
+       "All four climbed aboard: Momo-tahro stood at the prow, Dog watched the bough, Monkey gripped the wooden oar, and Pheasant perched high on the mast!"
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Whoosh! A fresh sea breeze filled the white sail and pushed their boat out onto the wide blue sea. Could one little boat cross those rolling waves?",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! A fresh sea breeze filled the white sail and pushed their boat out onto the wide blue... sea. Could one little boat cross those rolling waves?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Across the Rolling Waves",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Yes! Out across the sparkling waves sped the little boat, leaving the gentle waters of home and crossing into the wild sea of Ogre Island.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Out across the sparkling waves sped the little boat, leaving the gentle waters of home and crossing into the wild sea of Ogre Island."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Heave, ho! Monkey rowed so fast that a silver flying fish leaped aboard and tickled Dog's nose, splish! Achoo! Dog sneezed a big sea-spray sneeze, and everyone giggled!",
+     "say": [
+      [
+       "narrator",
+       "Heave, ho! Monkey rowed so fast that a silver flying fish leaped aboard and tickled Dog's nose, splish! Achoo! Dog sneezed a big sea-spray sneeze, and everyone giggled!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "High on the swaying mast, Pheasant shaded her eyes with one green wing and pointed straight into the silver sea mist.",
+     "say": [
+      [
+       "narrator",
+       "High on the swaying mast, Pheasant shaded her eyes with one green wing and pointed straight into the silver sea mist."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Rising out of the mist stood craggy Ogre Island, a tall rocky cliff with a giant wooden gate shut tight!",
+     "say": [
+      [
+       "narrator",
+       "Rising out of the mist stood craggy Ogre Island, a tall rocky cliff with a giant wooden gate shut... tight!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Their boat glided onto the pebbled beach, and loud drumbeats echoed from inside the stone fort. How could four small friends open that giant gate?",
+     "say": [
+      [
+       "narrator",
+       "Their boat glided onto the pebbled beach, and loud drumbeats echoed from inside the stone fort. How could four small friends open that giant gate?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Teamwork at the Gate",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Up close on the rocky shore, the stone wall towered high overhead, and its heavy oak gate was barred from the inside!",
+     "say": [
+      [
+       "narrator",
+       "Up close on the rocky shore, the stone wall towered high overhead, and its heavy oak gate was barred from the inside!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Peeking through a crack, Momotarō saw all the villages' festival drums, paper lanterns, and rice chests stacked in the yard beside sleepy little blue ogres.",
+     "say": [
+      [
+       "narrator",
+       "Peeking through a crack, Momo-tahro saw all the villages' festival drums, paper lanterns, and rice chests stacked in the yard beside sleepy little blue ogres."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Momotarō huddled close with his friends and whispered a plan: \"Pheasant has swift wings, Monkey has climbing hands, and Dog has strong paws!\"",
+     "say": [
+      [
+       "narrator",
+       "Momo-tahro huddled close with his friends and whispered a plan:"
+      ],
+      [
+       "momotaro",
+       "Pheasant has swift wings, Monkey has climbing hands, and Dog has strong paws!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Pheasant fluttered over the roof to call the sleepy guards away, Monkey scrambled up the wall and slid back the heavy wooden bolt, clack, and Dog pulled the rope!",
+     "say": [
+      [
+       "narrator",
+       "Pheasant fluttered over the roof to call the sleepy guards away, Monkey scrambled up the wall and slid back the heavy wooden... bolt, clack, and Dog pulled the rope!"
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Creak! The great gate swung wide open, and right inside the torchlit yard the ground began to shake: thud, thud, thud! Who was coming out of the hall?",
+     "say": [
+      [
+       "narrator",
+       "Creak! The great gate swung wide open, and right inside the torchlit yard the ground began to shake: thud, thud, thud! Who was coming out of the hall?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Grumpy Chief Gorō",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Out stomped big Red Ogre Chief Gorō, round as a rain barrel and waving a huge wooden club! \"Who dares open my gate?\" he boomed.",
+     "say": [
+      [
+       "narrator",
+       "Out stomped big Red Ogre Chief Gohro, round as a rain barrel and waving a huge wooden club!"
+      ],
+      [
+       "goro",
+       "Who dares open my gate?"
+      ],
+      [
+       "narrator",
+       "he boomed."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Dog tucked his tail for a moment and Monkey peeked from behind a stone lantern, until Momotarō stepped forward and held his little peach banner high.",
+     "say": [
+      [
+       "narrator",
+       "Dog tucked his tail for a moment and Monkey peeked from behind a stone lantern, until Momo-tahro stepped forward and held his little peach banner high."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"I am Momotarō!\" he called clearly. \"Those drums and rice chests belong to the villages across the sea. Please give them back!\"",
+     "say": [
+      [
+       "momotaro",
+       "I am Momo-tahro!"
+      ],
+      [
+       "narrator",
+       "he called clearly."
+      ],
+      [
+       "momotaro",
+       "Those drums and rice chests belong to the villages across the sea. Please give them back!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Chief Gorō swung his club, swish! Pheasant fanned wind past his nose, Monkey tickled his ear with a pine twig, and Dog tugged the corner of his striped sash!",
+     "say": [
+      [
+       "narrator",
+       "Chief Gohro swung his club, swish! Pheasant fanned wind past his nose, Monkey tickled his ear with a pine twig, and Dog tugged the corner of his striped sash!"
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Round and round spun Chief Gorō until his big feet tangled together, ker-plunk! Down he sat right in the dust! What would the big ogre do now?",
+     "say": [
+      [
+       "narrator",
+       "Round and round spun Chief Gohro until his big feet tangled together, ker-plunk! Down he sat right in the... dust! What would the big ogre do now?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Last Warm Dumpling",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "The whole courtyard grew very quiet. Chief Gorō rubbed his dizzy head, looked up at the four brave friends, and bowed low on the stones.",
+     "say": [
+      [
+       "narrator",
+       "The whole courtyard grew very quiet. Chief Gohro rubbed his dizzy head, looked up at the four brave friends, and bowed low on the stones."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "\"You win, little Peach Boy,\" sighed Chief Gorō softly. \"Take every drum and chest.\" Just then, in the stillness, Chief Gorō's big tummy went grumble-rumble!",
+     "say": [
+      [
+       "goro",
+       "You win, little Peach Boy,"
+      ],
+      [
+       "narrator",
+       "sighed Chief Gohro softly."
+      ],
+      [
+       "goro",
+       "Take every drum and chest."
+      ],
+      [
+       "narrator",
+       "Just then, in the stillness, Chief Gohro's big tummy went grumble-rumble!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "A big tear rolled down his red cheek. \"Across the water, we heard your happy drums and smelled sweet cakes,\" he whispered, \"but nobody ever invited an ogre.\"",
+     "say": [
+      [
+       "narrator",
+       "A big tear rolled down his red cheek."
+      ],
+      [
+       "goro",
+       "Across the water, we heard your happy drums and smelled sweet cakes,"
+      ],
+      [
+       "narrator",
+       "he whispered,"
+      ],
+      [
+       "goro",
+       "but nobody ever invited an ogre."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Momotarō opened his cloth bag and smiled. Inside lay Grandmother's fourth golden millet dumpling, still warm! He walked close and held it out with both hands.",
+     "say": [
+      [
+       "narrator",
+       "Momo-tahro opened his cloth bag and smiled. Inside lay Grandmother's fourth golden millet dumpling, still warm! He walked close and held it out with both hands."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "\"Share one, and laugh together!\" said Momotarō gently. Chief Gorō took one sweet bite, and his grumpy frown melted into a shy grin! Would the ogres really help them now?",
+     "say": [
+      [
+       "momotaro",
+       "Share one, and laugh... together!"
+      ],
+      [
+       "narrator",
+       "said Momo-tahro gently. Chief Gohro took one sweet bite, and his grumpy frown melted into a shy grin! Would the ogres really help them now?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Sailing Home Together",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Yes! Chief Gorō and his little blue ogres cheered and helped carry every festival drum, lantern, and rice chest right down to the boat!",
+     "say": [
+      [
+       "narrator",
+       "Yes! Chief Gohro and his little blue ogres cheered and helped carry every festival drum, lantern, and rice chest right down to the boat!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Don, don, ka! Chief Gorō tapped a cheerful goodbye rhythm on the biggest drum. \"Come visit in peace at the next festival!\" called Momotarō, waving from the prow.",
+     "say": [
+      [
+       "narrator",
+       "Don, don, ka! Chief Gohro tapped a cheerful goodbye rhythm on the biggest drum."
+      ],
+      [
+       "momotaro",
+       "Come visit in peace at the next festival!"
+      ],
+      [
+       "narrator",
+       "called Momo-tahro, waving from the prow."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "With the white sail full of morning wind, the four friends glided out of the wild island sea and back into the sunny home waters of Japan.",
+     "say": [
+      [
+       "narrator",
+       "With the white sail full of morning wind, the four friends glided out of the wild island sea and back into the sunny home waters of Japan."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Monkey tried to balance three paper lanterns on his head at once, wobble, plop! Dog caught the top lantern right on his nose, and Pheasant laughed from the mast!",
+     "say": [
+      [
+       "narrator",
+       "Monkey tried to balance three paper lanterns on his head at once, wobble, plop! Dog caught the top lantern right on his... nose, and Pheasant laughed from the mast!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Far ahead by the sparkling mountain stream, two figures stood shading their eyes along the path. Could Grandfather and Grandmother see their boy coming home?",
+     "say": [
+      [
+       "narrator",
+       "Far ahead by the sparkling mountain stream, two figures stood shading their eyes along the path. Could Grandfather and Grandmother see their boy coming home?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Lanterns at the Peach Cottage",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "\"Momotarō!\" cried Grandmother and Grandfather joyfully. Pitter-pat, pitter-pat, down the path they hurried and wrapped him in the biggest, warmest hug!",
+     "say": [
+      [
+       "grandma",
+       "Momo-tahro!"
+      ],
+      [
+       "narrator",
+       "cried Grandmother and Grandfather joyfully. Pitter-pat, pitter-pat, down the path they hurried and wrapped him in the biggest, warmest hug!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Momotarō, Dog, Monkey, and Pheasant gave back every festival drum, paper lantern, and chest of rice to the cheering neighbours.",
+     "say": [
+      [
+       "narrator",
+       "Momo-tahro, Dog, Monkey, and Pheasant gave back every festival drum, paper lantern, and chest of rice to the cheering neighbours."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "Warm lantern light glowed all around the thatched cottage, and Grandmother carried out a giant tray of fresh golden millet dumplings for everyone!",
+     "say": [
+      [
+       "narrator",
+       "Warm lantern light glowed all around the thatched cottage, and Grandmother carried out a giant tray of fresh golden millet... dumplings for everyone!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Boom, boom! Happy festival drums echoed across the hills while Dog wagged his tail, Monkey danced a jig, and Pheasant sang in the peach tree.",
+     "say": [
+      [
+       "narrator",
+       "Boom, boom! Happy festival drums echoed across the hills while Dog wagged his tail, Monkey danced a jig, and Pheasant sang in the peach tree."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Sitting between Grandfather and Grandmother, Momotarō smiled at his three faithful friends. \"When we share and work together,\" he beamed, \"every heart feels at home!\"",
+     "say": [
+      [
+       "narrator",
+       "Sitting between Grandfather and Grandmother, Momo-tahro smiled at his three faithful friends."
+      ],
+      [
+       "momotaro",
+       "When we share and work together,"
+      ],
+      [
+       "narrator",
+       "he beamed,"
+      ],
+      [
+       "momotaro",
+       "every heart feels at home!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Momotarō shared his warm millet dumplings on the road, and three strangers became his loyal friends.",
+   "say": [
+    [
+     "closing",
+     "Momo-tahro shared his warm millet dumplings on the road, and three strangers became his loyal friends."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "At Ogre Island, Pheasant's wings, Monkey's hands, and Dog's paws opened a gate nobody could open alone.",
+   "say": [
+    [
+     "closing",
+     "At Ogre Island, Pheasant's wings, Monkey's hands, and Dog's paws opened a gate nobody could open alone."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "And when grumpy Chief Gorō was lonely and hungry, one shared dumpling turned a foe into a friend.",
+   "say": [
+    [
+     "closing",
+     "And when grumpy Chief Gohro was lonely and hungry, one shared dumpling turned a foe into a friend."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Share what you have and work together, for kindness turns strangers into friends.",
+   "say": [
+    [
+     "closing",
+     "Share what you have and work together, for kindness turns strangers into... friends."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "The giant peach is glowing! Tap when the ring turns green to help it pop open.",
+   "say": [
+    [
+     "narrator",
+     "The giant peach is glowing! Tap when the ring turns green to help it pop open."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Pop! Out jumps rosy little Momotarō!",
+   "say": [
+    [
+     "narrator",
+     "Pop! Out jumps rosy little Momo-tahro!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Grandmother pack for the road! Tap all four warm millet dumplings to put them in Momotarō's bag.",
+   "say": [
+    [
+     "narrator",
+     "Help Grandmother pack for the road! Tap all four warm millet dumplings to put them in Momo-tahro's bag."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Four warm golden dumplings, ready to share!",
+   "say": [
+    [
+     "narrator",
+     "Four warm golden dumplings, ready to share!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Share the millet dumplings! Tap a warm dumpling, then tap Dog or Monkey.",
+   "say": [
+    [
+     "narrator",
+     "Share the millet dumplings! Tap a warm dumpling, then tap Dog or Monkey."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Yum! One for Dog and one for Monkey. Now they are teammates!",
+   "say": [
+    [
+     "narrator",
+     "Yum! One for Dog and one for Monkey. Now they are teammates!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Get ready to sail! Tap the dumpling for Pheasant, the wooden oar, and the white sail.",
+   "say": [
+    [
+     "narrator",
+     "Get ready to sail! Tap the dumpling for Pheasant, the wooden oar, and the white sail."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Pheasant is fed and the sail is up! Off we go!",
+   "say": [
+    [
+     "narrator",
+     "Pheasant is fed and the sail is up! Off we go!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Steer the boat through the rolling waves! Tap the glowing spot to glide past the sea rocks.",
+   "say": [
+    [
+     "narrator",
+     "Steer the boat through the rolling waves! Tap the glowing spot to glide past the sea rocks."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Great steering! Look ahead in the mist: Ogre Island!",
+   "say": [
+    [
+     "narrator",
+     "Great steering! Look ahead in the mist: Ogre Island!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Time for teamwork! Tap Pheasant, Monkey, and Dog to unbar the giant wooden gate.",
+   "say": [
+    [
+     "narrator",
+     "Time for teamwork! Tap Pheasant, Monkey, and Dog to unbar the giant wooden gate."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Flap, climb, pull! The heavy gate swings open!",
+   "say": [
+    [
+     "narrator",
+     "Flap, climb, pull! The heavy gate swings open!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Help the three friends dizzy Chief Gorō! Tap Pheasant, Monkey, and Dog to make him spin.",
+   "say": [
+    [
+     "narrator",
+     "Help the three friends dizzy Chief Gohro! Tap Pheasant, Monkey, and Dog to make him spin."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Round and round spins Chief Gorō! Ker-plunk!",
+   "say": [
+    [
+     "narrator",
+     "Round and round spins Chief Gohro! Ker-plunk!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "One warm dumpling is left! Tap the last golden dumpling, then tap Chief Gorō to share it.",
+   "say": [
+    [
+     "narrator",
+     "One warm dumpling is left! Tap the last golden dumpling, then tap Chief Gohro to share it."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Mmm! Look at Chief Gorō's big warm smile!",
+   "say": [
+    [
+     "narrator",
+     "Mmm! Look at Chief Gohro's big warm smile!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Chief Gorō taps a happy goodbye beat on the drums! Listen closely, then tap the song back.",
+   "say": [
+    [
+     "narrator",
+     "Chief Gohro taps a happy goodbye beat on the drums! Listen closely, then tap the song back."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Don, don, ka! Safe voyage home, friends!",
+   "say": [
+    [
+     "narrator",
+     "Don, don, ka! Safe voyage home, friends!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Welcome Momotarō home! Tap each festival lantern around the cottage to light it up.",
+   "say": [
+    [
+     "narrator",
+     "Welcome Momo-tahro home! Tap each festival lantern around the cottage to light it up."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Every lantern is shining bright! Welcome home, Peach Boy!",
+   "say": [
+    [
+     "narrator",
+     "Every lantern is shining bright! Welcome home, Peach Boy!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "momotaro": [
+   "I am Momotarō, the Peach Boy! I popped out of a giant pink peach.",
+   "Grandmother packed four warm golden millet dumplings in my bag.",
+   "See my peach headband and my little banner? Grandfather and Grandmother made them for me!",
+   "Share one, and walk together! Friends make every journey brave.",
+   "Kindness and teamwork can open even the biggest gate!"
+  ],
+  "dog": [
+   "Woof! I am Spotted Dog! Do you like my blue spotted kerchief?",
+   "My nose smelled Grandmother's warm millet dumplings right through the bushes!",
+   "Monkey and I used to argue, until Momotarō shared with us both.",
+   "I have strong paws for tugging ropes and helping my friends!",
+   "Oops! A paper lantern landed right on my nose!"
+  ],
+  "monkey": [
+   "Ooh-ooh! I am Mountain Monkey, wearing my bright orange vest!",
+   "Whoops! I leaned out too far on the pine branch and tumbled down, bonk!",
+   "No wall is too tall for my quick climbing hands!",
+   "A little pine-twig tickle made big Chief Gorō spin right around!",
+   "Watch me dance to the festival drums!"
+  ],
+  "pheasant": [
+   "Coo-roo! I am Green Pheasant! See my braided gold neck ring?",
+   "From high on the boat's mast, my sharp eyes spotted Ogre Island through the mist.",
+   "My swift green wings carried me right over the tall stone fort wall!",
+   "Grandmother's millet dumplings are the sweetest treat in all Japan.",
+   "When each friend uses their own gift, we can help everyone!"
+  ],
+  "goro": [
+   "Ho, ho! I am Chief Gorō of Ogre Island!",
+   "I acted big and grumpy because nobody ever invited an ogre to a festival.",
+   "Those three quick animal friends made me spin until I sat down, ker-plunk!",
+   "Momotarō shared his very last warm millet dumpling with me!",
+   "Next festival, my little blue ogres and I will come in peace and play the drums!"
+  ],
+  "grandma": [
+   "I am Grandmother! A giant peach floated right to me in the mountain stream.",
+   "In Japan, sweet millet dumplings are called kibi-dango.",
+   "Always carry enough kindness to share along the road!"
+  ],
+  "grandpa": [
+   "I am Grandfather! I gather firewood in the green hills.",
+   "I sewed the bright pink peach onto Momotarō's banner myself!",
+   "How proud we are of our kind Peach Boy and his friends!"
+  ],
+  "peach": [
+   "A giant pink-and-gold peach from the mountain river! Pop! Inside was baby Momotarō.",
+   "It smells sweet as spring sunshine."
+  ],
+  "dumpling": [
+   "Warm golden millet dumplings, rolled by Grandmother over the hearth.",
+   "Sharing one turns a stranger into a friend!"
+  ],
+  "boat": [
+   "A sturdy wooden sailboat with a tall white sail that carries all four friends across the sea."
+  ],
+  "drum": [
+   "Don, don, ka! A big wooden taiko festival drum, back home where it belongs!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Mitford 1871; Ozaki 1908): Momotarō and his animals storm Onigashima with sword, claws, teeth and beak, beat the ogres until they weep and snap off their horns in surrender, and cart off the ogres' riches. Ours (gentle for ages 4-8, keeping the folk-tale adventure and adding a heartfelt twist): no blades and zero harm — the giant peach pops open by itself in golden light; grumpy Chief Gorō and his silly blue ogres only took the villages' festival drums, lanterns, and rice chests because nobody ever invited them to a festival; Pheasant, Monkey, and Dog outwit Chief Gorō with harmless teamwork slapstick (fanning wind, tickling his ear with a twig, tugging his sash until he spins and sits down ker-plunk!); then in the quiet courtyard Chief Gorō's hungry tummy rumbles, and Momotarō shares Grandmother's fourth and last warm millet dumpling with him. One shared dumpling melts Chief Gorō's frown into a shy grin: the ogres cheer, help carry every village drum and chest back to the boat, play a goodbye drum beat, and are invited to visit in peace.",
+  "moral": "Share what you have and work together, for kindness turns strangers into friends.",
+  "changes": "1 The giant peach splits open by itself in golden light (no knife near the baby). 2 Each of the three animal companions wears one culture-true Japanese accessory (EDDIE-TASTE 2026-11-15): Dog wears an indigo mame-shibori kerchief, Monkey wears a persimmon-orange vest, Pheasant wears a braided gold neck ring. 3 Ogres are round, silly mukashibanashi storybook oni, never scary or foreign (folk-tales-asia-europe care note); the showdown is pure teamwork comedy with zero strikes or broken horns (emotional-storytelling children's rules). 4 Four warm millet dumplings instead of three: three win Dog, Monkey, and Pheasant, and the fourth pays off the emotional turn on spread 8 by befriending Chief Gorō.",
+  "level": "A1-A2, past simple, short vivid sentences for ages 4-8. Repeated core words: peach, warm, dumpling, share, together, friend, boat, waves, gate, drum, lantern.",
+  "who speaks": "Mains in their own Kokoro voices (BOOK-STANDARD 2026-11-18): momotaro (bm_fable +2), dog (bm_daniel), monkey (am_puck +3), pheasant (bf_alice +1), goro (bm_lewis -2). Narrator (bm_george) reads narration and minor roles (grandma, grandpa, touch props).",
+  "pull": "P1 hooks at all nine turns 1.5-9.5 (paid immediately on 2.1-10.1); P2 5-word refrain 'Share one, and <verb> together!' on spreads 3 ('walk'), 4 ('sail'), and 8 ('laugh... together!', pausing before the final word 'together!'); P3 one '...' predict pause per spread in say (1.4 boy, 2.4 alone, 3.4 friends, 4.5 sea, 5.4 tight, 6.4 bolt, 7.5 dust, 8.5 together, 9.4 nose, 10.3 dumplings, moral.5 friends); P5 rule of threes (three animal companions: ground, tree, sky; three-part gate unlock; three-part dizzy spin); P6 spoken sound words on every E2/E3 spread, never repeated on adjacent spreads (1 Bob/splash/Pop, 2 Pat, 3 Woof/Whoops/bonk, 4 Swoosh/Whoosh, 5 Heave-ho/splish/Achoo, 6 clack/Creak/thud, 7 swish/ker-plunk, 8 grumble-rumble, 9 Don-don-ka/wobble/plop, 10 Pitter-pat/Boom); P8 slapstick in all three thirds (3.2 Monkey tumbles from pine branch bonk, 5.2 flying fish tickles Dog's nose into a sea-spray sneeze + 7.5 Chief Gorō tangles feet ker-plunk, 9.4 Monkey's stacked lanterns plop onto Dog's nose); P11 energy curve E2 E1 E2 E2 E3 E2 E3 E1 E2 E2 E1; P16 all 10 games let the child perform the spread's action (pop peach, pack dumplings, share dumplings with Dog & Monkey, feed Pheasant & raise sail, steer past sea rocks, unbar gate, dizzy Chief Gorō, share last dumpling with Chief Gorō, echo festival drum beat, light cottage lanterns). Item 16 world-crossing explicitly named going out (5.1) and returning home (9.3)."
+ }
+}

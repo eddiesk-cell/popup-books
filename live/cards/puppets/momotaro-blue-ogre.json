@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-blue-ogre",
+ "size": 0.118,
+ "metres_per_pixel": 0.000278,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Sleepy chubby little sky-blue storybook oni guard.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-blue-ogre/body.png",
+   "size": [
+    0.0916,
+    0.118
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

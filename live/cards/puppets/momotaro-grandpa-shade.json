@@ -1,0 +1,37 @@
+{
+ "id": "momotaro-grandpa-shade",
+ "cut": true,
+ "size": 0.149,
+ "parts": [
+  {
+   "name": "body",
+   "parent": null,
+   "pivot": [
+    0.5,
+    0.01
+   ],
+   "pin": [
+    0.0,
+    0.0
+   ],
+   "size": [
+    0.0769,
+    0.149
+   ]
+  }
+ ],
+ "hinges": {},
+ "moves": {
+  "idle": {
+   "_tilt": 1.2
+  },
+  "tilt": {
+   "_tilt": 5.0
+  }
+ },
+ "cycles": {
+  "idle": 0.45,
+  "tilt": 1.0
+ },
+ "metres_per_pixel": 0.000196
+}

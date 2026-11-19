@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-baby",
+ "size": 0.075,
+ "metres_per_pixel": 0.000142,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Rosy baby Momotaro jumping joyfully with arms raised.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-baby/body.png",
+   "size": [
+    0.0467,
+    0.075
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

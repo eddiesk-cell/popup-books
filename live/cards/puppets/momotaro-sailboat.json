@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-sailboat",
+ "size": 0.226,
+ "metres_per_pixel": 0.000486,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Traditional wooden Japanese sailboat with white sail.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-sailboat/body.png",
+   "size": [
+    0.2046,
+    0.226
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

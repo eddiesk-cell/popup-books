@@ -1,0 +1,167 @@
+{
+ "released": true,
+ "words": false,
+ "chars": "momotaro-",
+ "title": "Momotarō, the Peach Boy",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Giant Peach",
+   "lines": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+   "game": {
+    "type": "timing",
+    "before": "1.4",
+    "targets": ["peach-giant"],
+    "light": ["glow-1", "glow-2", "glow-3"],
+    "step": {"steps": 3},
+    "start": "The giant peach is glowing! Tap when the ring turns green to help it pop open.",
+    "praise": "Pop! Out jumps rosy little Momotarō!",
+    "voice": {"start": "game.1.start", "praise": "game.1.praise"}
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Warm Millet Dumplings",
+   "lines": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+   "game": {
+    "type": "collect",
+    "before": "2.4",
+    "targets": ["dumpling-1", "dumpling-2", "dumpling-3", "dumpling-4"],
+    "start": "Help Grandmother pack for the road! Tap all four warm millet dumplings to put them in Momotarō's bag.",
+    "praise": "Four warm golden dumplings, ready to share!",
+    "voice": {"start": "game.2.start", "praise": "game.2.praise"}
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Dog and Monkey",
+   "lines": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+   "game": {
+    "type": "pair",
+    "before": "3.4",
+    "pairs": [
+     ["dumpling-a", "dog"],
+     ["dumpling-b", "monkey"]
+    ],
+    "start": "Share the millet dumplings! Tap a warm dumpling, then tap Dog or Monkey.",
+    "praise": "Yum! One for Dog and one for Monkey. Now they are teammates!",
+    "voice": {"start": "game.3.start", "praise": "game.3.praise"}
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "Pheasant by the Boat",
+   "lines": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+   "game": {
+    "type": "collect",
+    "before": "4.4",
+    "targets": ["dumpling-c", "wooden-oar", "white-sail"],
+    "start": "Get ready to sail! Tap the dumpling for Pheasant, the wooden oar, and the white sail.",
+    "praise": "Pheasant is fed and the sail is up! Off we go!",
+    "voice": {"start": "game.4.start", "praise": "game.4.praise"}
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Across the Rolling Waves",
+   "lines": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+   "game": {
+    "type": "steer",
+    "before": "5.4",
+    "who": "sailboat",
+    "rider": "momotaro-aboard",
+    "move": "fly",
+    "targets": ["sea-rock-1", "sea-rock-2", "sea-rock-3"],
+    "start": "Steer the boat through the rolling waves! Tap the glowing spot to glide past the sea rocks.",
+    "praise": "Great steering! Look ahead in the mist: Ogre Island!",
+    "voice": {"start": "game.5.start", "praise": "game.5.praise"}
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Teamwork at the Gate",
+   "lines": ["6.1", "6.2", "6.3", "6.4", "6.5"],
+   "game": {
+    "type": "collect",
+    "before": "6.4",
+    "targets": ["pheasant", "monkey", "dog"],
+    "start": "Time for teamwork! Tap Pheasant, Monkey, and Dog to unbar the giant wooden gate.",
+    "praise": "Flap, climb, pull! The heavy gate swings open!",
+    "voice": {"start": "game.6.start", "praise": "game.6.praise"}
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "Grumpy Chief Gorō",
+   "lines": ["7.1", "7.2", "7.3", "7.4", "7.5"],
+   "game": {
+    "type": "collect",
+    "before": "7.5",
+    "targets": ["pheasant", "monkey", "dog"],
+    "start": "Help the three friends dizzy Chief Gorō! Tap Pheasant, Monkey, and Dog to make him spin.",
+    "praise": "Round and round spins Chief Gorō! Ker-plunk!",
+    "voice": {"start": "game.7.start", "praise": "game.7.praise"}
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "The Last Warm Dumpling",
+   "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
+   "game": {
+    "type": "pair",
+    "before": "8.5",
+    "pairs": [
+     ["dumpling-last", "goro-tear"]
+    ],
+    "start": "One warm dumpling is left! Tap the last golden dumpling, then tap Chief Gorō to share it.",
+    "praise": "Mmm! Look at Chief Gorō's big warm smile!",
+    "voice": {"start": "game.8.start", "praise": "game.8.praise"}
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Sailing Home Together",
+   "lines": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+   "game": {
+    "type": "echo",
+    "before": "9.3",
+    "targets": ["taiko-big", "taiko-small", "drum-ka"],
+    "sounds": ["taiko-don", "taiko-mid", "drum-ka"],
+    "rounds": [
+     ["taiko-big", "taiko-small"],
+     ["taiko-big", "taiko-small", "drum-ka"]
+    ],
+    "start": "Chief Gorō taps a happy goodbye beat on the drums! Listen closely, then tap the song back.",
+    "praise": "Don, don, ka! Safe voyage home, friends!",
+    "voice": {"start": "game.9.start", "praise": "game.9.praise"}
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "Lanterns at the Peach Cottage",
+   "lines": ["10.1", "10.2", "10.3", "10.4", "10.5"],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "10.3",
+    "targets": ["fest-lantern-1", "fest-lantern-2", "fest-lantern-3", "fest-lantern-4"],
+    "start": "Welcome Momotarō home! Tap each festival lantern around the cottage to light it up.",
+    "praise": "Every lantern is shining bright! Welcome home, Peach Boy!",
+    "voice": {"start": "game.10.start", "praise": "game.10.praise"}
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What did we learn?",
+   "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+  }
+ ],
+ "moral": {
+  "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+ }
+}

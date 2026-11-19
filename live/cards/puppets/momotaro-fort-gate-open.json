@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-fort-gate-open",
+ "size": 0.461,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro puppet momotaro-fort-gate-open",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-fort-gate-open/body.png",
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null,
+   "size": [
+    0.6481,
+    0.461
+   ]
+  }
+ ],
+ "metres_per_pixel": 0.000904
+}

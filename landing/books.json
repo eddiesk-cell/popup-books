@@ -12,6 +12,27 @@
  ],
  "books": [
   {
+   "id": "bamboo-cutter",
+   "title": {
+    "en": "The Bamboo Cutter's Moon Child",
+    "lo": "ລູກສາວດວງຈັນຂອງຊ່າງຕັດໄມ້ໄຜ່",
+    "th": "ธิดาจันทราของคนตัดไผ่",
+    "zh": "竹取爷爷的月亮女儿",
+    "ja": "たけとり おじいさんと つきの こ かぐや"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Japanese",
+   "region": "asia",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=bamboo-cutter&s=s01"
+  },
+  {
    "id": "chang-e",
    "title": {
     "en": "Chang'e and the Jade Rabbit",
@@ -130,16 +151,16 @@
     "zh": "桃太郎",
     "ja": "ももたろう"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/momotaro/plate.webp",
+   "spine": "#913255",
+   "gold": "#f2d680",
    "culture": "Japanese",
    "region": "asia",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=momotaro&s=s01"
   },
   {

@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-fest-lantern",
+ "size": 0.043,
+ "metres_per_pixel": 0.000108,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Warm red-and-gold paper festival lantern.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-fest-lantern/body.png",
+   "size": [
+    0.0427,
+    0.043
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

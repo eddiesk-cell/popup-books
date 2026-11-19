@@ -1,0 +1,29 @@
+{
+ "puppet": "momotaro-dog-stand",
+ "size": 0.068,
+ "metres_per_pixel": 0.000124,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Momotaro book 8 paper puppet: Spotted Japanese Shiba dog wearing a blue spotted kerchief.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/momotaro-dog-stand/body.png",
+   "size": [
+    0.0434,
+    0.068
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

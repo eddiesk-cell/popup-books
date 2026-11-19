@@ -8835,7 +8835,8 @@
    "uses": [
     "Bamboo Cutter"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "bamboo-cutter-fuji-cloud": {
    "look": "Soft peaceful curling white cloud above Mount Fuji",
