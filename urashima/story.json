@@ -1,0 +1,1118 @@
+{
+ "words": false,
+ "title": "Urashima Tarō and the Sea Palace",
+ "credit": "From the old Japanese folk tale of Urashima Tarō, told in Japan for more than a thousand years and retold in English by Yei Theodora Ozaki in Japanese Fairy Tales (1908). Retold in our own words.",
+ "status": "Locked at STOP 1 (Eddie, 2026-11-18: \"Ok, lets go with this\").",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "taro": {
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": 1
+  },
+  "oldtaro": {
+   "voice": "bm_fable",
+   "speed": 0.89,
+   "pitch": -2
+  },
+  "otohime": {
+   "voice": "bf_alice",
+   "speed": 0.96,
+   "pitch": 0
+  },
+  "turtle": {
+   "voice": "bm_lewis",
+   "speed": 0.93,
+   "pitch": -1
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "boys": {
+   "voice": "bm_george",
+   "speed": 1.02,
+   "pitch": 0
+  },
+  "villager": {
+   "voice": "bm_george",
+   "speed": 0.94,
+   "pitch": 0
+  },
+  "children": {
+   "voice": "bm_george",
+   "speed": 1.02,
+   "pitch": 0
+  },
+  "box": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fish": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "octopus": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "crab": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "boat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pine": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Urashima": "Oo-rashima",
+  "Tarō": "Tahro",
+  "Taro": "Tahro",
+  "Otohime": "Oto-heemeh"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Turtle on the Shore",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in Japan, by the blue sea, lived a kind young fisherman named Urashima Tarō.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in Japan, by the blue sea, lived a kind young fisherman named Oo-rashima Tahro."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Tarō lived in a little cottage with his mother and father, and he was gentle to every living thing.",
+     "say": [
+      [
+       "narrator",
+       "Tahro lived in a little cottage with his mother and father, and he was gentle to every living thing."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "One evening on the sandy beach, some noisy boys piled driftwood sticks around a sea turtle so he could not reach the water.",
+     "say": [
+      [
+       "narrator",
+       "One evening on the sandy beach, some noisy boys piled driftwood sticks around a sea turtle so he could not reach the water."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "\"Please let him go!\" said Tarō kindly. \"The sea is his home, just like our village is ours.\" The boys nodded and ran home for supper.",
+     "say": [
+      [
+       "taro",
+       "Please let him go!"
+      ],
+      [
+       "narrator",
+       "said Tahro kindly."
+      ],
+      [
+       "taro",
+       "The sea is his home, just like our village is ours."
+      ],
+      [
+       "narrator",
+       "The boys nodded and ran home for supper."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Tarō guided the turtle down to the waves. Splash! Out swam the turtle into the sunset sea, and he looked back once at Tarō. Would Tarō ever see him again?",
+     "say": [
+      [
+       "narrator",
+       "Tahro guided the turtle down to the waves. Splash! Out swam the turtle into the sunset... sea, and he looked back once at Tahro. Would Tahro ever see him again?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "A Voice from the Waves",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Next morning, the sun shone warm and gold. Dip, pull! Tarō rowed his little wooden boat out onto the calm blue sea.",
+     "say": [
+      [
+       "narrator",
+       "Next morning, the sun shone warm and gold. Dip, pull! Tahro rowed his little wooden boat out onto the calm blue sea."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "All at once, silver bubbles rose around the boat. \"Urashima! Urashima Tarō!\" called a deep, friendly voice from the water.",
+     "say": [
+      [
+       "narrator",
+       "All at once, silver bubbles rose around the boat."
+      ],
+      [
+       "turtle",
+       "Oo-rashima! Oo-rashima Tahro!"
+      ],
+      [
+       "narrator",
+       "called a deep, friendly voice from the water."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Up from the waves popped the sea turtle, wearing a red coral charm! \"You saved me yesterday,\" he said.",
+     "say": [
+      [
+       "narrator",
+       "Up from the waves popped the sea... turtle, wearing a red coral charm!"
+      ],
+      [
+       "turtle",
+       "You saved me yesterday,"
+      ],
+      [
+       "narrator",
+       "he said."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "\"I serve Princess Otohime in the Sea Palace,\" said the turtle. \"Climb onto my shell, and I will carry you down to thank you!\"",
+     "say": [
+      [
+       "turtle",
+       "I serve Princess Oto-heemeh in the Sea Palace,"
+      ],
+      [
+       "narrator",
+       "said the turtle."
+      ],
+      [
+       "turtle",
+       "Climb onto my shell, and I will carry you down to thank you!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Tarō stepped onto the wide, smooth shell. \"Hold on!\" said the turtle. \"Wait,\" cried Tarō, \"how can I breathe under the sea?\"",
+     "say": [
+      [
+       "narrator",
+       "Tahro stepped onto the wide, smooth shell."
+      ],
+      [
+       "turtle",
+       "Hold on!"
+      ],
+      [
+       "narrator",
+       "said the turtle."
+      ],
+      [
+       "taro",
+       "Wait,"
+      ],
+      [
+       "narrator",
+       "cried Tahro,"
+      ],
+      [
+       "taro",
+       "how can I breathe under the sea?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Down the Sea Road",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Whoosh! Down they dived, out of the air world and into the magic world under the sea. Under the waves, Tarō could breathe and see just like a fish!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Down they dived, out of the air world and into the magic world under the sea. Under the waves, Tahro could breathe and see just like a... fish!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Down, down, down the bright Sea Road they glided, past tall green kelp that swayed like trees in the wind.",
+     "say": [
+      [
+       "narrator",
+       "Down, down, down the bright Sea Road they glided, past tall green kelp that swayed like trees in the wind."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Schools of silver fish swam beside them, and pink coral arches glowed along the sandy floor.",
+     "say": [
+      [
+       "narrator",
+       "Schools of silver fish swam beside them, and pink coral arches glowed along the sandy floor."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "A little round pufferfish swam too close and puffed up like a ball, poof! He bounced right off the turtle's shell, and Tarō laughed out loud.",
+     "say": [
+      [
+       "narrator",
+       "A little round pufferfish swam too close and puffed up like a ball, poof! He bounced right off the turtle's shell, and Tahro laughed out loud."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Then, far ahead in the deep blue water, a warm golden light began to shine. What was glowing at the bottom of the sea?",
+     "say": [
+      [
+       "narrator",
+       "Then, far ahead in the deep blue water, a warm golden light began to shine. What was glowing at the bottom of the sea?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Palace Under the Sea",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "It was the Sea Palace! Its walls were pink coral, its gates were white pearl, and its roofs shone green and gold.",
+     "say": [
+      [
+       "narrator",
+       "It was the Sea... Palace! Its walls were pink coral, its gates were white pearl, and its roofs shone green and gold."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Out through the pearl gate stepped Princess Otohime, dressed in flowing robes like sunlit waves.",
+     "say": [
+      [
+       "narrator",
+       "Out through the pearl gate stepped Princess Oto-heemeh, dressed in flowing robes like sunlit waves."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "\"Welcome, kind Urashima Tarō,\" said Princess Otohime with a warm smile. \"You helped my dear turtle, so our whole sea welcomes you.\"",
+     "say": [
+      [
+       "otohime",
+       "Welcome, kind Oo-rashima Tahro,"
+      ],
+      [
+       "narrator",
+       "said Princess Oto-heemeh with a warm smile."
+      ],
+      [
+       "otohime",
+       "You helped my dear turtle, so our whole sea welcomes you."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Swish, swish! Red sea bream and silver flounder danced in a ring, and glowing jellyfish lit pearl lanterns all along the gate.",
+     "say": [
+      [
+       "narrator",
+       "Swish, swish! Red sea bream and silver flounder danced in a ring, and glowing jellyfish lit pearl lanterns all along the gate."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "\"Come inside,\" said Princess Otohime, taking Tarō's hand. \"Let me show you the wonder of our garden!\" What could grow under the sea?",
+     "say": [
+      [
+       "otohime",
+       "Come inside,"
+      ],
+      [
+       "narrator",
+       "said Princess Oto-heemeh, taking Tahro's hand."
+      ],
+      [
+       "otohime",
+       "Let me show you the wonder of our garden!"
+      ],
+      [
+       "narrator",
+       "What could grow under the sea?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Four Seasons in One Day",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Inside the palace courtyard, four magic windows looked out on all four seasons at once!",
+     "say": [
+      [
+       "narrator",
+       "Inside the palace courtyard, four magic windows looked out on all four seasons at once!"
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "To the east bloomed pink spring cherry blossoms, and to the south shone green summer lotus ponds.",
+     "say": [
+      [
+       "narrator",
+       "To the east bloomed pink spring cherry blossoms, and to the south shone green summer lotus ponds."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "To the west glowed red autumn maple leaves, and to the north sparkled soft white snow!",
+     "say": [
+      [
+       "narrator",
+       "To the west glowed red autumn maple leaves, and to the north sparkled soft white... snow!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Pon, pon! A cheerful red octopus beat four sea-drums at once and tangled his arms in a knot, bonk! Still he bowed with a big grin.",
+     "say": [
+      [
+       "narrator",
+       "Pon, pon! A cheerful red octopus beat four sea-drums at once and tangled his arms in a knot, bonk! Still he bowed with a big grin."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Tarō clapped and laughed, thinking only three short days had gone by. Then, right in the middle of the song, Tarō stopped still. What had he remembered?",
+     "say": [
+      [
+       "narrator",
+       "Tahro clapped and laughed, thinking only three short days had gone by. Then, right in the middle of the song, Tahro stopped still. What had he remembered?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Promise Box",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Tarō thought of his mother and father waiting in their little cottage by the shore, and his heart ached for home.",
+     "say": [
+      [
+       "narrator",
+       "Tahro thought of his mother and father waiting in their little cottage by the shore, and his heart ached for home."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"You have been so kind to me,\" said Tarō softly, \"but I must go home now, so my mother and father do not worry.\"",
+     "say": [
+      [
+       "taro",
+       "You have been so kind to me,"
+      ],
+      [
+       "narrator",
+       "said Tahro softly,"
+      ],
+      [
+       "taro",
+       "but I must go home now, so my mother and father do not worry."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Princess Otohime looked down sadly, then brought out a small jewelled box tied with a red silk cord.",
+     "say": [
+      [
+       "narrator",
+       "Princess Oto-heemeh looked down sadly, then brought out a small jewelled box tied with a red silk... cord."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"Take this keepsake, Tarō,\" said Princess Otohime gently. \"Hold it close, and promise me one thing: never open the box.\"",
+     "say": [
+      [
+       "otohime",
+       "Take this keepsake, Tahro,"
+      ],
+      [
+       "narrator",
+       "said Princess Oto-heemeh gently."
+      ],
+      [
+       "otohime",
+       "Hold it close, and promise me one thing: never open the box."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"I promise!\" said Tarō, holding the box with both hands. \"Never open the box!\" Would Tarō keep his promise?",
+     "say": [
+      [
+       "taro",
+       "I promise!"
+      ],
+      [
+       "narrator",
+       "said Tahro, holding the box with both hands."
+      ],
+      [
+       "taro",
+       "Never open the box!"
+      ],
+      [
+       "narrator",
+       "Would Tahro keep his promise?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Up Through the Bubbles",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Princess Otohime waved goodbye from the coral gate as Tarō climbed onto the sea turtle's back once more.",
+     "say": [
+      [
+       "narrator",
+       "Princess Oto-heemeh waved goodbye from the coral gate as Tahro climbed onto the sea turtle's back once more."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Swoosh! Up they swam through streams of silver bubbles. Tarō hugged the box tight and whispered, \"Remember: never open the box.\"",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Up they swam through streams of silver bubbles. Tahro hugged the box tight and whispered,"
+      ],
+      [
+       "taro",
+       "Remember: never open the box."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Little lantern-jellyfish floated beside them, lighting the deep water until the waves overhead shone with warm golden sun.",
+     "say": [
+      [
+       "narrator",
+       "Little lantern-jellyfish floated beside them, lighting the deep water until the waves overhead shone with warm golden... sun."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Up they rose, out of the magic sea world and back onto the sandy shore of home. \"Goodbye, kind friend!\" said the turtle, and he slipped beneath the waves.",
+     "say": [
+      [
+       "narrator",
+       "Up they rose, out of the magic sea world and back onto the sandy shore of home."
+      ],
+      [
+       "turtle",
+       "Goodbye, kind friend!"
+      ],
+      [
+       "narrator",
+       "said the turtle, and he slipped beneath the waves."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Tarō turned happily toward his village, ready to call his mother and father. Wait, where was his little house?",
+     "say": [
+      [
+       "narrator",
+       "Tahro turned happily toward his village, ready to call his mother and father. Wait, where was his little house?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Three Hundred Years",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "The pine tree by the beach had grown huge and crooked, and where Tarō's cottage once stood, tall grass swayed in the breeze.",
+     "say": [
+      [
+       "narrator",
+       "The pine tree by the beach had grown huge and crooked, and where Tahro's cottage once stood, tall grass swayed in the breeze."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "New houses stood along the shore, and people he had never met were mending nets on the sand.",
+     "say": [
+      [
+       "narrator",
+       "New houses stood along the shore, and people he had never met were mending nets on the sand."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "\"Excuse me,\" called Tarō to an old fisherman. \"Do you know where Urashima Tarō's family went? I only left three days ago!\"",
+     "say": [
+      [
+       "taro",
+       "Excuse me,"
+      ],
+      [
+       "narrator",
+       "called Tahro to an old fisherman."
+      ],
+      [
+       "taro",
+       "Do you know where Oo-rashima Tahro's family went? I only left three days ago!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "The old fisherman opened his eyes wide. \"Urashima Tarō? That is an old story from my grandfather's grandfather! He went into the sea three hundred years ago!\"",
+     "say": [
+      [
+       "narrator",
+       "The old fisherman opened his eyes wide."
+      ],
+      [
+       "villager",
+       "Oo-rashima Tahro? That is an old story from my grandfather's grandfather! He went into the sea three hundred... years ago!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Three days under the sea had been three hundred years on land! Alone beneath the great pine tree, Tarō looked down at the red cord on the box. Would he remember his promise?",
+     "say": [
+      [
+       "narrator",
+       "Three days under the sea had been three hundred years on land! Alone beneath the great pine tree, Tahro looked down at the red cord on the box. Would he remember his promise?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "The White Cloud",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Tarō missed his home so much that his fingers trembled on the cord. Princess Otohime had said, \"Never open the box.\"",
+     "say": [
+      [
+       "narrator",
+       "Tahro missed his home so much that his fingers trembled on the cord. Princess Oto-heemeh had said,"
+      ],
+      [
+       "otohime",
+       "Never open the... box."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "\"Maybe the box holds a magic way back,\" whispered Tarō, and he forgot his promise. Snap! He untied the red silk cord and lifted the lid.",
+     "say": [
+      [
+       "taro",
+       "Maybe the box holds a magic way back,"
+      ],
+      [
+       "narrator",
+       "whispered Tahro, and he forgot his promise. Snap! He untied the red silk cord and lifted the lid."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Whoosh! Out curled a soft, shining cloud of white mist, swirling gently around Tarō and floating away across the sea.",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Out curled a soft, shining cloud of white mist, swirling gently around Tahro and floating away across the sea."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "All three hundred years had been kept safe inside that box! In one soft breath, Tarō's dark hair turned snowy white, a long white beard grew down, and his knees went wobbly.",
+     "say": [
+      [
+       "narrator",
+       "All three hundred years had been kept safe inside that box! In one soft breath, Tahro's dark hair turned snowy white, a long white beard grew down, and his knees went wobbly."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Tarō was now a gentle old grandfather! Inside the empty box lay one pink sea-shell, singing softly like the waves. Was Grandfather Tarō all alone now?",
+     "say": [
+      [
+       "narrator",
+       "Tahro was now a gentle old grandfather! Inside the empty box lay one pink sea-shell, singing softly like the waves. Was Grandfather Tahro all alone now?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Grandfather by the Sea",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "No! Warm morning sun spread across the beach, and pitter-pat, pitter-pat, the village children came running down the sand.",
+     "say": [
+      [
+       "narrator",
+       "No! Warm morning sun spread across the beach, and pitter-pat, pitter-pat, the village children came running down the sand."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "\"Good morning, Grandfather!\" they called kindly. One boy brought him a smooth walking stick, and a little girl shared a basket of warm rice cakes.",
+     "say": [
+      [
+       "children",
+       "Good morning, Grandfather!"
+      ],
+      [
+       "narrator",
+       "they called kindly. One boy brought him a smooth walking stick, and a little girl shared a basket of warm rice cakes."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "A cheeky little orange crab tiptoed up, lifted a crumb over his head like a prize, and scuttled sideways into a shell! Everyone giggled.",
+     "say": [
+      [
+       "narrator",
+       "A cheeky little orange crab tiptoed up, lifted a crumb over his head like a prize, and scuttled sideways into a shell! Everyone giggled."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Out in the sparkling waves, splash! Up popped his old friend, the sea turtle! Grandfather Tarō smiled and waved back across the water.",
+     "say": [
+      [
+       "narrator",
+       "Out in the sparkling waves, splash! Up popped his old friend, the sea... turtle! Grandfather Tahro smiled and waved back across the water."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Beneath the tall pine tree, Grandfather Tarō told the children all about the Sea Palace. \"Be kind, treasure your family today,\" he smiled, \"and always keep your promise!\"",
+     "say": [
+      [
+       "narrator",
+       "Beneath the tall pine tree, Grandfather Tahro told the children all about the Sea Palace."
+      ],
+      [
+       "oldtaro",
+       "Be kind, treasure your family today,"
+      ],
+      [
+       "narrator",
+       "he smiled,"
+      ],
+      [
+       "oldtaro",
+       "and always keep your promise!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Urashima Tarō was kind to a sea turtle, and kindness opened a whole shining world under the sea.",
+   "say": [
+    [
+     "closing",
+     "Oo-rashima Tahro was kind to a sea turtle, and kindness opened a whole shining world under the sea."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Princess Otohime asked him to keep one promise, and when he opened the box, the years flew away like mist.",
+   "say": [
+    [
+     "closing",
+     "Princess Oto-heemeh asked him to keep one promise, and when he opened the box, the years flew away like mist."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "When you give your word, keep your promise, even when you feel curious or sad.",
+   "say": [
+    [
+     "closing",
+     "When you give your word, keep your promise, even when you feel curious or sad."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Keep your promises, and treasure the people you love today, right while you are together.",
+   "say": [
+    [
+     "closing",
+     "Keep your promises, and treasure the people you love today, right while you are... together."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Help Tarō clear the beach! Tap each driftwood stick so the turtle can reach the sea.",
+   "say": [
+    [
+     "narrator",
+     "Help Tahro clear the beach! Tap each driftwood stick so the turtle can reach the sea."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "The path is clear! Swim home, little friend!",
+   "say": [
+    [
+     "narrator",
+     "The path is clear! Swim home, little friend!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Something is bubbling around the boat! Tap the three bubble rings to see who is calling.",
+   "say": [
+    [
+     "narrator",
+     "Something is bubbling around the boat! Tap the three bubble rings to see who is calling."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Hello again! It is the sea turtle!",
+   "say": [
+    [
+     "narrator",
+     "Hello again! It is the sea turtle!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Ride the turtle down the Sea Road! Tap the glowing spot to steer past the coral reefs.",
+   "say": [
+    [
+     "narrator",
+     "Ride the turtle down the Sea Road! Tap the glowing spot to steer past the coral reefs."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Way to steer! Look at the golden glow ahead!",
+   "say": [
+    [
+     "narrator",
+     "Way to steer! Look at the golden glow ahead!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Welcome Tarō to the Sea Palace! Tap each pearl lantern by the gate to make it shine.",
+   "say": [
+    [
+     "narrator",
+     "Welcome Tahro to the Sea Palace! Tap each pearl lantern by the gate to make it shine."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Every pearl lantern is glowing! Welcome to the palace!",
+   "say": [
+    [
+     "narrator",
+     "Every pearl lantern is glowing! Welcome to the palace!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "The sea band is playing! Listen to the drums and shell chime, then tap the song back.",
+   "say": [
+    [
+     "narrator",
+     "The sea band is playing! Listen to the drums and shell chime, then tap the song back."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Pon, pon, chime! What a wonderful sea song!",
+   "say": [
+    [
+     "narrator",
+     "Pon, pon, chime! What a wonderful sea song!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Help Princess Otohime tie the red silk cord! Tap when the ring turns green to tie each knot tight.",
+   "say": [
+    [
+     "narrator",
+     "Help Princess Oto-heemeh tie the red silk cord! Tap when the ring turns green to tie each knot tight."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Three tight knots! Remember the promise: never open the box.",
+   "say": [
+    [
+     "narrator",
+     "Three tight knots! Remember the promise: never open the box."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "The deep water is dim! Tap the five lantern-jellyfish to light the road back up to the sun.",
+   "say": [
+    [
+     "narrator",
+     "The deep water is dim! Tap the five lantern-jellyfish to light the road back up to the sun."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "So bright! Up into the sunshine we go!",
+   "say": [
+    [
+     "narrator",
+     "So bright! Up into the sunshine we go!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Everything looks different! Tap the tall pine tree, the new cottage, and the old fisherman to look for Tarō's home.",
+   "say": [
+    [
+     "narrator",
+     "Everything looks different! Tap the tall pine tree, the new cottage, and the old fisherman to look for Tahro's home."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three hundred years have passed while Tarō was under the sea!",
+   "say": [
+    [
+     "narrator",
+     "Three hundred years have passed while Tahro was under the sea!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "White mist fills the shore! Tap the three soft cloud puffs to gently clear the air.",
+   "say": [
+    [
+     "narrator",
+     "White mist fills the shore! Tap the three soft cloud puffs to gently clear the air."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "The mist has cleared! Look at Grandfather Tarō's snowy white beard!",
+   "say": [
+    [
+     "narrator",
+     "The mist has cleared! Look at Grandfather Tahro's snowy white beard!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share warm rice cakes under the pine tree! Tap each rice cake, then tap who it is for.",
+   "say": [
+    [
+     "narrator",
+     "Share warm rice cakes under the pine tree! Tap each rice cake, then tap who it is for."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Warm cakes and kind friends! Everyone is smiling by the sea.",
+   "say": [
+    [
+     "narrator",
+     "Warm cakes and kind friends! Everyone is smiling by the sea."
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "taro": [
+   "I am Urashima Tarō, a fisherman by the blue sea.",
+   "I love the ocean and every creature that lives in it.",
+   "Riding on the sea turtle's shell feels like flying through blue sky!",
+   "I promised Princess Otohime: never open the box.",
+   "Always keep your promises, and hug your family today!"
+  ],
+  "oldtaro": [
+   "I am Grandfather Tarō! Three hundred years flew out of the little box.",
+   "My hair turned white as sea foam in one soft breath.",
+   "Come sit under the pine tree, and I will tell you about the Sea Palace!",
+   "Keep the promises you make, and treasure every day with the people you love."
+  ],
+  "otohime": [
+   "I am Princess Otohime, daughter of the Sea King.",
+   "Welcome to our Sea Palace of pink coral and white pearl!",
+   "In our magic courtyard, spring, summer, autumn, and winter shine together.",
+   "Tarō was kind to my sea turtle, so we will always remember him.",
+   "A promise is a precious thing to hold close."
+  ],
+  "turtle": [
+   "I am the great sea turtle! See my red coral charm?",
+   "Tarō helped me reach the waves, so I carried him down the Sea Road.",
+   "Hold on to my smooth shell! I know every current in the deep blue sea.",
+   "Sea turtles can live for a very, very long time!",
+   "Whenever Grandfather Tarō looks at the waves, I pop up to wave hello!"
+  ],
+  "box": [
+   "A little jewelled box called a tamatebako, tied with a red silk cord.",
+   "Princess Otohime kept all of Tarō's years safe inside it.",
+   "Inside rests one pink sea-shell that sounds like gentle waves."
+  ],
+  "fish": [
+   "We are red sea bream and silver flounder of the Sea Palace!",
+   "Swish, swish! We dance to welcome kind visitors."
+  ],
+  "octopus": [
+   "Pon, pon! I can play four sea-drums at once with my eight arms!",
+   "Oops! Sometimes my arms tie themselves in a bow!"
+  ],
+  "crab": [
+   "Scuttle, scuttle! I am a little orange shore crab.",
+   "Mmm, warm rice cake crumbs are my favourite treat!"
+  ],
+  "boat": [
+   "Tarō's wooden fishing boat. It rocks gently on the morning waves."
+  ],
+  "pine": [
+   "An old coastal pine tree shaped by the sea breeze for hundreds of years."
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Ozaki, 1908): Urashima buys the turtle from cruel boys, weds Otohime, stays what feels like three days, returns after three hundred years, opens the tamatebako, turns into a withered ancient man, and collapses dead on the beach. Ours (gentle for ages 4-8, keeping the true lesson): no cruelty or money — boys piled driftwood sticks in the turtle's path and run home for supper when Tarō speaks kindly; the same beloved sea turtle (wearing a red coral charm, Eddie's animal-main accessory rule) carries Tarō down and up; no marriage (Tarō is a young fisher boy who misses his mother and father); when he forgets his promise and unties the red cord on spread 9, the soft white cloud turns him into a gentle snow-haired, white-bearded old grandfather (wobbly knees, zero fright, zero death), with a pink sea-shell left inside the box; and on spread 10 warm morning sun brings the village children running with a walking stick and warm rice cakes while his old friend the sea turtle pops up from the waves to wave hello, so Grandfather Tarō becomes the village storyteller under the pine tree.",
+  "moral": "Keep your promises, and treasure the people you love today, right while you are together.",
+  "changes": "1 One beloved sea turtle main character (with a red coral charm on a braided cord) from spread 1 to 11 so ages 4-8 follow one clear animal friend. 2 Tarō is a young fisher lad visiting as an honoured guest, not wedded, and leaves out of love for his mother and father. 3 Opening the box ages him gently into Grandfather Tarō — the consequence of breaking the promise stays real and permanent (so the lesson holds), with no shrivelling horror and no death. 4 Spread 10 answers spread 9's sadness with warmth, dignity, new young listeners (echoing and healing spread 1's beach children), and the turtle's wave from the surf (emotional-storytelling ES10, ES12).",
+  "level": "A1-A2, past simple, short vivid sentences for ages 4-8. Repeated core words: sea, turtle, waves, shell, palace, box, cord, promise, home, kind.",
+  "who speaks": "Mains in their own Kokoro voices (BOOK-STANDARD 2026-11-18): taro (bm_fable +1), oldtaro (bm_fable -2, 0.89x — same voice aged), otohime (bf_alice), turtle (bm_lewis -1). Narrator (bm_george) reads narration and minor lines (villager, children).",
+  "pull": "P1 hooks at turns 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5 (paid by 2.1-2.3, 3.1, 4.1, 5.1, 6.1, 7.1-7.2, 8.1, 9.1-9.2, 10.1); P2 refrain 'Never open the box' on spreads 6, 7, 9 (third return pauses before 'box': 'Never open the... box'); P3 one '...' predict pause per spread in say; P6 spoken sound words on every E2/E3 spread, never repeated on adjacent spreads (1 Splash, 2 Dip/pull, 3 Whoosh/Poof, 4 Swish, 5 Pon/Bonk, 7 Swoosh, 9 Snap/Whoosh, 10 Pitter-pat/Splash); P8 slapstick in all three thirds (3.4 pufferfish Poof bounce, 5.4 octopus drummer tangles arms Bonk, 10.3 shore crab tiptoes off with a rice-cake crumb); P11 energy curve E2 E1 E3 E2 E2 E1 E2 E1 E3 E2 E1; P16 every game lets the child do the spread's own action (clear sticks, pop bubbles, steer turtle down Sea Road, light pearl lanterns, echo sea-band drums/chime, tie red silk knots, light lantern-jellyfish up, search changed village, clear white mist puffs, share warm rice cakes). Item 16 world-crossing explicitly named going in (3.1) and coming back (7.4)."
+ },
+ "words": false
+}

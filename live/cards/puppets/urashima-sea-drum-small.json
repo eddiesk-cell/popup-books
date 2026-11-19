@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-sea-drum-small",
+ "size": 0.046,
+ "metres_per_pixel": 0.000225,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Small red shime sea drum on coral stand.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-sea-drum-small/body.png",
+   "size": [
+    0.046,
+    0.046
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

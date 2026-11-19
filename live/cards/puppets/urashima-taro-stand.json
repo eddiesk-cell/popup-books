@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-taro-stand",
+ "size": 0.149,
+ "metres_per_pixel": 0.000167,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Urashima Taro standing kindly in indigo fisherman hanten and straw sandals.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-taro-stand/body.png",
+   "size": [
+    0.0629,
+    0.149
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

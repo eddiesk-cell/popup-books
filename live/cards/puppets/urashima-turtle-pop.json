@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-turtle-pop",
+ "size": 0.085,
+ "metres_per_pixel": 0.000189,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Sea turtle popping out of waves wearing red coral charm.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-turtle-pop/body.png",
+   "size": [
+    0.0992,
+    0.085
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

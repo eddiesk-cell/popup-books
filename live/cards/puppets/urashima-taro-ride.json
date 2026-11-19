@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-taro-ride",
+ "size": 0.136,
+ "metres_per_pixel": 0.000346,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Urashima Taro crouching astride riding the sea turtle.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-taro-ride/body.png",
+   "size": [
+    0.0844,
+    0.136
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

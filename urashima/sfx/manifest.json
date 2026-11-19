@@ -1,0 +1,29 @@
+{
+ "beds": [
+  "shore-surf",
+  "deep-sea",
+  "palace-calm"
+ ],
+ "shots": [],
+ "pools": {
+  "taiko-big": 1,
+  "taiko-small": 1,
+  "shell-chime": 1,
+  "motif-taro": 1,
+  "motif-otohime": 1,
+  "motif-turtle": 1,
+  "oar-dip": 1,
+  "bubble-pop": 1,
+  "splash-soft": 1,
+  "puffer-poof": 1,
+  "cord-snap": 1,
+  "mist-whoosh": 1,
+  "crab-click": 1,
+  "children-giggle": 1,
+  "koto-swell": 1,
+  "shell-song": 1,
+  "wind-breeze": 1,
+  "pitter-pat": 1,
+  "wood-tap": 1
+ }
+}

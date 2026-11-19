@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-taro-box",
+ "size": 0.145,
+ "metres_per_pixel": 0.000253,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Urashima Taro holding the lacquer promise box close to chest.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-taro-box/body.png",
+   "size": [
+    0.0529,
+    0.145
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

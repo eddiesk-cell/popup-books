@@ -1146,13 +1146,12 @@
 "cut": true
 },
 "gourd-khun-borom": {
-"look": "a slim young Lao king: a small tiered gold crown with a slender spire, a jewelled gold collar, a white jacket with gold trim, a jewelled gold belt, a long red wrap cloth with gold diamond patterns, gold bangles and anklets, bare feet",
+"look": "a slim young Lao king standing with arms relaxed naturally at his sides: a small tiered gold crown with a slender spire, a jewelled gold collar, a white jacket with gold trim, a jewelled gold belt, a long red wrap cloth with gold diamond patterns, gold bangles and anklets, bare feet",
 "size": 0.185,
 "gait": "walk",
 "versions": [
 "day",
-"evening",
-"night"
+"evening"
 ],
 "parts": [
 "body"
@@ -5794,6 +5793,1205 @@
 ],
 "cut": true,
 "person": true
+},
+"urashima-taro-stand": {
+"look": "Urashima Taro standing kindly in indigo fisherman hanten and straw sandals",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-walk": {
+"look": "Urashima Taro walking briskly in indigo hanten",
+"size": 0.149,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-row": {
+"look": "Urashima Taro seated rowing wooden boat with oar",
+"size": 0.14,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-ride": {
+"look": "Urashima Taro crouching astride riding the sea turtle",
+"size": 0.136,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-happy": {
+"look": "Urashima Taro laughing astride with arms thrown wide",
+"size": 0.136,
+"gait": "fly",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-sad": {
+"look": "Urashima Taro standing sadly missing home",
+"size": 0.145,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-box": {
+"look": "Urashima Taro holding the lacquer promise box close to chest",
+"size": 0.145,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-taro-open-box": {
+"look": "Urashima Taro gently lifting the lid of the lacquer box",
+"size": 0.145,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-oldtaro-wobbly": {
+"look": "Grandfather Taro astonished after the white mist with snowy beard",
+"size": 0.145,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-oldtaro-sit": {
+"look": "Grandfather Taro smiling gently with walking stick and snowy beard",
+"size": 0.145,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-otohime-stand": {
+"look": "Princess Otohime standing serenely in seafoam and coral silk robes",
+"size": 0.152,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-otohime-welcome": {
+"look": "Princess Otohime bowing with welcoming hands extended",
+"size": 0.152,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-otohime-sad-box": {
+"look": "Princess Otohime offering the lacquer box bound in red silk cord",
+"size": 0.149,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-otohime-wave": {
+"look": "Princess Otohime waving goodbye gently from her sleeve",
+"size": 0.152,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-turtle-beach": {
+"look": "Sea turtle Kame on sandy beach wearing red coral charm on braided cord",
+"size": 0.085,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-turtle-pop": {
+"look": "Sea turtle popping out of waves wearing red coral charm",
+"size": 0.085,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-turtle-swim": {
+"look": "Sea turtle swimming gracefully wearing red coral charm",
+"size": 0.09,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-boys": {
+"look": "Two cheerful Japanese beach boys",
+"size": 0.105,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-old-fisherman": {
+"look": "Elder Japanese coastal fisherman in straw hat and woven coat",
+"size": 0.15,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-village-boy": {
+"look": "Friendly village boy carrying a wooden walking stick",
+"size": 0.12,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-village-girl": {
+"look": "Friendly village girl carrying a basket of warm rice cakes",
+"size": 0.118,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true,
+"person": true
+},
+"urashima-puffer": {
+"look": "Calm little spiky sea pufferfish",
+"size": 0.045,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-puffer-poof": {
+"look": "Puffed round balloon-like pufferfish",
+"size": 0.065,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-bream": {
+"look": "Red Japanese sea bream tai dancer",
+"size": 0.055,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-flounder": {
+"look": "Silver-pearl flounder sea dancer",
+"size": 0.055,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-jellyfish": {
+"look": "Lantern jellyfish in dim deep water",
+"size": 0.055,
+"gait": "float",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-jellyfish-lit": {
+"look": "Glowing golden lantern jellyfish lighting the way up",
+"size": 0.055,
+"gait": "float",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-octopus-drum": {
+"look": "Cheerful red octopus holding drumsticks for four sea-drums",
+"size": 0.095,
+"gait": "walk",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-octopus-knot": {
+"look": "Goofy red octopus with eight tentacles tangled in a knot",
+"size": 0.095,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-season-spring": {
+"look": "Circular moon window with blooming spring cherry blossoms",
+"size": 0.103,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-season-summer": {
+"look": "Circular moon window with summer pink lotus pond",
+"size": 0.103,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-season-autumn": {
+"look": "Circular moon window with crimson autumn maple leaves",
+"size": 0.103,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-season-winter": {
+"look": "Circular moon window with snow-laden winter pine",
+"size": 0.103,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-wooden-boat": {
+"look": "Traditional wooden Japanese coastal skiff with oar",
+"size": 0.06,
+"gait": "swim",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-driftwood": {
+"look": "Weathered coastal driftwood stick",
+"size": 0.032,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-bubble-ring": {
+"look": "Translucent glowing silver ocean bubble ring",
+"size": 0.045,
+"gait": "float",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-coral-reef": {
+"look": "Colorful branching pink sea coral hazard cluster",
+"size": 0.085,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-pearl-lantern": {
+"look": "Hanging pearl lattice paper lantern",
+"size": 0.055,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-pearl-lantern-lit": {
+"look": "Warmly glowing pearl lattice lantern",
+"size": 0.055,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-sea-drum-big": {
+"look": "Big red taiko sea drum on coral stand",
+"size": 0.06,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-sea-drum-small": {
+"look": "Small red shime sea drum on coral stand",
+"size": 0.046,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-shell-chime": {
+"look": "Pink spiral sea-shell marimba chime stand",
+"size": 0.055,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-promise-box": {
+"look": "Black-and-gold lacquer tamatebako box tied with red silk cord",
+"size": 0.045,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-promise-box-open": {
+"look": "Open lacquer box showing glowing pink sea-shell inside",
+"size": 0.05,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-knot": {
+"look": "Crimson silk cord knot glint",
+"size": 0.03,
+"gait": "float",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-pine-sign": {
+"look": "Golden inspection charm marker by the ancient pine",
+"size": 0.048,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-cottage-spot": {
+"look": "Golden inspection charm marker by the new cottages",
+"size": 0.048,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-mist-puff": {
+"look": "Soft billowy white mist cloud puff from the promise box",
+"size": 0.07,
+"gait": "float",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"urashima-rice-cake": {
+"look": "Plate of warm soft white rice cakes",
+"size": 0.036,
+"gait": "still",
+"versions": [
+"day"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Urashima"
+],
+"cut": true
+},
+"xieng-mieng-snail": {
+"look": "Little golden-brown garden snail with spiral shell and raised eye stalks",
+"size": 0.022,
+"gait": "walk",
+"versions": [
+"day",
+"evening",
+"night"
+],
+"parts": [
+"body",
+"shell"
+],
+"hinges": {
+"shell": [
+"body",
+-8,
+8
+]
+},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Xieng Mieng"
+],
+"cut": true
+},
+"gourd-little-lion-sad": {
+"look": "the little golden lion cub sitting sadly with downcast eyes and a frown, green collar with gold bell",
+"size": 0.06,
+"gait": "walk",
+"versions": [
+"day",
+"evening"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Gourd 2",
+"Gourd 7",
+"Gourd 8",
+"Gourd 10"
+],
+"cut": true
+},
+"gourd-little-lion-ears": {
+"look": "the little golden lion cub holding both front paws up over his ears against the loud shouting, worried sad eyes",
+"size": 0.06,
+"gait": "walk",
+"versions": [
+"day",
+"evening"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Gourd 5"
+],
+"cut": true
+},
+"gourd-little-lion-happy": {
+"look": "the little golden lion cub dancing joyfully on his hind paws with a big happy smile, green collar with gold bell",
+"size": 0.068,
+"gait": "walk",
+"versions": [
+"day",
+"evening"
+],
+"parts": [
+"body"
+],
+"hinges": {},
+"moves": {
+"tilt": {
+"_tilt": 6
+}
+},
+"cycles": {},
+"uses": [
+"Gourd 10"
+],
+"cut": true
 }
 }
 }

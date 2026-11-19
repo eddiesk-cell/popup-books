@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-jellyfish-lit",
+ "size": 0.055,
+ "metres_per_pixel": 0.000154,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Glowing golden lantern jellyfish lighting the way up.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-jellyfish-lit/body.png",
+   "size": [
+    0.0468,
+    0.055
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

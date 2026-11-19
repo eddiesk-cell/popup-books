@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-sea-drum-big",
+ "size": 0.06,
+ "metres_per_pixel": 0.000231,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Big red taiko sea drum on coral stand.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-sea-drum-big/body.png",
+   "size": [
+    0.06,
+    0.06
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

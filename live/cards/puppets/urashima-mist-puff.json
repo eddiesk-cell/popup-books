@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-mist-puff",
+ "size": 0.07,
+ "metres_per_pixel": 0.000326,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Soft billowy white mist cloud puff from the promise box.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-mist-puff/body.png",
+   "size": [
+    0.128,
+    0.07
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

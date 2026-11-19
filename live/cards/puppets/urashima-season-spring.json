@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-season-spring",
+ "size": 0.103,
+ "metres_per_pixel": 0.00022,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Circular moon window with blooming spring cherry blossoms.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-season-spring/body.png",
+   "size": [
+    0.1004,
+    0.103
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

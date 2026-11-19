@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-puffer-poof",
+ "size": 0.065,
+ "metres_per_pixel": 0.000214,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Puffed round balloon-like pufferfish.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-puffer-poof/body.png",
+   "size": [
+    0.0686,
+    0.065
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

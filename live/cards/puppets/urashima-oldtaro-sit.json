@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-oldtaro-sit",
+ "size": 0.145,
+ "metres_per_pixel": 0.000164,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Grandfather Taro smiling gently with walking stick and snowy beard.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-oldtaro-sit/body.png",
+   "size": [
+    0.0678,
+    0.145
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "puppet": "gourd-little-lion-sad",
+ "size": 0.06,
+ "metres_per_pixel": 7.8125e-05,
+ "rest": {},
+ "versions": [
+  "day",
+  "evening"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/gourd-little-lion-sad/body.png",
+   "size": [
+    0.04195,
+    0.06
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

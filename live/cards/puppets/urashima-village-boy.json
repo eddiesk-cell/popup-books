@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-village-boy",
+ "size": 0.12,
+ "metres_per_pixel": 0.000278,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Friendly village boy carrying a wooden walking stick.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-village-boy/body.png",
+   "size": [
+    0.059,
+    0.12
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}

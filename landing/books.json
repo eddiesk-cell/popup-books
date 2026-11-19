@@ -166,6 +166,27 @@
    "link": "../live/?book=toad-king&s=s01"
   },
   {
+   "id": "urashima",
+   "title": {
+    "en": "Urashima Tarō and the Sea Palace",
+    "lo": "ອຸຣະຊິມະ ທາໂຣ ແລະ ວັງໃຕ້ທະເລ",
+    "th": "อุระชิมะ ทาโร่ กับวังใต้ทะเล",
+    "zh": "浦岛太郎与海底龙宫",
+    "ja": "うらしま たろうと うみの ごてん"
+   },
+   "cover": "../shelf/books/urashima/plate.webp",
+   "spine": "#0e6056",
+   "gold": "#ebd07a",
+   "culture": "Japanese",
+   "region": "asia",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "ready",
+   "link": "../live/?book=urashima&s=s01"
+  },
+  {
    "id": "xieng-mieng",
    "title": {
     "en": "Xieng Mieng, the Clever Trickster",

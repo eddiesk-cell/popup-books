@@ -1,0 +1,29 @@
+{
+ "puppet": "urashima-boys",
+ "size": 0.105,
+ "metres_per_pixel": 0.000234,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
+ "note": "Urashima Taro book 8 paper puppet: Two cheerful Japanese beach boys.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/urashima-boys/body.png",
+   "size": [
+    0.0739,
+    0.105
+   ],
+   "pivot": [
+    0.5,
+    0.005
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}
