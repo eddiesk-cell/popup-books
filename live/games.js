@@ -529,7 +529,9 @@ export function makeGame(sp, env) {
     };
     const join = (t, o) => {  // a match friend walks (flies, hops) home; a thing flies into its place
       if (G.type === "match" && sp.byName[t.name]) return walks.push(home(t, o));
-      const ch = sp.byName[t.name], v = ch ? ch.pos : t.position, p = ch ? ch.body.parent : t.parent; if (p) { if (ch) ch.moved = true; moves.push({ v, from: v.clone(), to: p.worldToLocal(at(o).add(new THREE.Vector3(0, 0.03, 0))), t0: env.now() }); }  // a cast prop moves by its place (ch.pos: the viewer puts its body there every frame, so moving the body itself left it where it was)
+      const ch = sp.byName[t.name], v = ch ? ch.pos : t.position, p = ch ? ch.body.parent : t.parent, q = at(o).add(new THREE.Vector3(0, 0.03, 0)), cam = camOf(env);
+      if (cam) q.add(cam.position.clone().sub(q).setY(0).normalize().multiplyScalar(0.015));  // 1.5 cm in front of the one it joins: in its plane the two cards fought for the same pixels and flickered (Eddie, Urashima s10 rice cakes)
+      if (p) { if (ch) ch.moved = true; moves.push({ v, from: v.clone(), to: p.worldToLocal(q), t0: env.now() }); }  // a cast prop moves by its place (ch.pos: the viewer puts its body there every frame, so moving the body itself left it where it was)
     };
     c.quiet = () => { state.pairs.forEach((p, k) => state.done.has(k) || (state.done.add(k), join(thing(p[0]), thing(p[1])))); state.sel = null; targets.forEach(o => glow(o, 0)); return Promise.all([...walks, sleep(moves.length ? 900 : 0)]); };
     c.tick = now => { for (const m of moves) { const k = Math.min(1, (now - m.t0) / 900); m.v.lerpVectors(m.from, m.to, k * k * (3 - 2 * k)); m.v.y += 0.08 * Math.sin(Math.PI * k); } };  // it flies: a short arc up and down into its place
