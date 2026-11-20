@@ -9449,6 +9449,1328 @@
    ],
    "cut": true,
    "person": true
+  },
+  "bamboo-cutter-kaguya-embrace": {
+   "look": "Grandmother, Kaguya in warm quilt, and Taketori kneeling closely together holding hands in a loving embrace",
+   "size": 0.118,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "person": true
+  },
+  "bamboo-cutter-kaguya-hug": {
+   "look": "Grandmother, Kaguya, and Taketori standing closely together holding hands in a brave farewell embrace",
+   "size": 0.149,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "person": true
+  },
+  "bamboo-cutter-kaguya-gaze": {
+   "look": "Kaguya standing gracefully looking upward toward the rising evening moon",
+   "size": 0.13,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "person": true
+  },
+  "bamboo-cutter-kaguya-robe": {
+   "look": "Kaguya standing peacefully with the golden-blessed feather robe draped over her kimono",
+   "size": 0.13,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "person": true
+  },
+  "bamboo-cutter-mikado-letter": {
+   "look": "Young Mikado stepping upward carrying Kaguya's crimson-tied letter scroll in both hands",
+   "size": 0.048,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "person": true
+  },
+  "bamboo-cutter-silk-banner": {
+   "look": "Graceful floating pearl-white and gold Heian celestial silk banner ribbon",
+   "size": 0.068,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "bamboo-cutter-letter-scroll": {
+   "look": "Rolled cream Japanese washi letter scroll tied with a crimson silk bow",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-neighbour-gifts": {
+   "look": "Woven bamboo villager gift basket holding a rice bale, quilted winter coat, and roof thatch bundle",
+   "size": 0.052,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-firefly-swarm": {
+   "look": "Six tiny glowing golden-amber fireflies zooming upward in flight",
+   "size": 0.055,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "bamboo-cutter-bamboo-shoot": {
+   "look": "Springy young green bamboo shoot cluster sprouting from mossy ground",
+   "size": 0.042,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-golden-grass": {
+   "look": "Tall golden Japanese autumn susuki pampas grass plumes",
+   "size": 0.078,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-maple-leaf": {
+   "look": "Crisp crimson-and-gold Japanese autumn momiji maple leaf",
+   "size": 0.025,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-feather-robe-gold": {
+   "look": "Radiant warm golden-blessed celestial feather robe",
+   "size": 0.075,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "bamboo-cutter-moonbeam": {
+   "look": "Warm golden diagonal moonbeam ray ending in a gentle starlight gleam",
+   "size": 0.16,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-sasa-stand": {
+   "look": "Gentle Indian hare Sasa standing upright wearing orange marigold garland",
+   "size": 0.049,
+   "gait": "hop",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sasa-droop": {
+   "look": "Gentle Indian hare Sasa sitting wistfully with drooping ears and marigold garland",
+   "size": 0.049,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sasa-crouch": {
+   "look": "Gentle Indian hare Sasa crouching low shaking coat with marigold garland",
+   "size": 0.036,
+   "gait": "hop",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sasa-safe": {
+   "look": "Gentle Indian hare Sasa sitting safely in wonder with marigold garland",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-otter-stand": {
+   "look": "Cheerful brown river otter wearing pink lotus reed collar",
+   "size": 0.04,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-otter-roots": {
+   "look": "Cheerful brown river otter holding crisp white lotus roots",
+   "size": 0.04,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-otter-gasp": {
+   "look": "River otter covering eyes with paws in gentle gasp",
+   "size": 0.04,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-jackal-stand": {
+   "look": "Helpful tawny Indian jackal wearing saffron-red neck kerchief",
+   "size": 0.061,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-jackal-gasp": {
+   "look": "Indian jackal covering eyes with paws in gentle gasp",
+   "size": 0.061,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-monkey-stand": {
+   "look": "Bouncy Indian rhesus monkey wearing teal embroidered vest",
+   "size": 0.058,
+   "gait": "hop",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-monkey-hang": {
+   "look": "Playful monkey swinging with leafy branch and golden mango",
+   "size": 0.058,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-monkey-tumble": {
+   "look": "Monkey playfully tumbled on tail holding golden mangoes safe overhead",
+   "size": 0.045,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-monkey-gasp": {
+   "look": "Monkey covering eyes with hands in gentle gasp",
+   "size": 0.058,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-monkey-lean": {
+   "look": "Monkey leaning forward offering a ripe golden mango",
+   "size": 0.049,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-traveller-stand": {
+   "look": "Disguised old bearded Indian pilgrim with wooden staff and empty bowl",
+   "size": 0.152,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-traveller-kneel": {
+   "look": "Old Indian pilgrim bending gently with empty wooden begging bowl",
+   "size": 0.105,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sakka-stand": {
+   "look": "Radiant Sky King Sakka in tall golden mukuta crown, cream dhoti and sapphire sash",
+   "size": 0.174,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sakka-hold": {
+   "look": "King Sakka gently cradling tiny brown hare Sasa in both palms",
+   "size": 0.174,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-sakka-paint": {
+   "look": "King Sakka raising long glowing golden starlight paintbrush upward",
+   "size": 0.18,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-grandmother-stand": {
+   "look": "Silver-haired Indian grandmother in terracotta sari holding unlit clay lamp",
+   "size": 0.141,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-meera-stand": {
+   "look": "8-year-old Indian girl Meera in yellow-green lehenga choli with empty basket",
+   "size": 0.12,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-meera-pet": {
+   "look": "Little Meera kneeling gently reaching out to stroke Sasa soft ears",
+   "size": 0.083,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-lotus-roots": {
+   "look": "Bundle of crisp pale white lotus roots with green leaf",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-berry-basket": {
+   "look": "Woven green leaf basket filled with sweet red forest berries",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-red-berries": {
+   "look": "Cluster of sweet glossy red forest berries on green leaves",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-mango-bunch": {
+   "look": "Cluster of three ripe golden Indian mangoes on leafy stem",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-mango-one": {
+   "look": "Single ripe plump golden Indian mango with green leaf",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-wood-bundle": {
+   "look": "Neat tied bundle of dry brown forest firewood twigs",
+   "size": 0.033,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-ladybug": {
+   "look": "Tiny spotted red Indian ladybug",
+   "size": 0.02,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-rising-moon": {
+   "look": "Glowing pale silver full moon rising cleanly over hills",
+   "size": 0.085,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-firefly-glow": {
+   "look": "Warm golden glowing firefly orb with delicate wings",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-sunbeam-orb": {
+   "look": "Warm radiant golden sunbeam spark orb",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-sakka-throne": {
+   "look": "Ornate golden Indian stone throne resting on warm luminous cloud",
+   "size": 0.113,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-gold-flame": {
+   "look": "Bright warm golden-amber test-fire flame rising cleanly",
+   "size": 0.04,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-lotus-bed": {
+   "look": "Wide blooming cool white sacred Indian lotus flower bed",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-lotus-petal": {
+   "look": "Single luminous cool white lotus flower petal",
+   "size": 0.03,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-moon-blank": {
+   "look": "Huge luminous blank silver full moon with soft craters",
+   "size": 0.16,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-moon-hare": {
+   "look": "Bright full moon painted with the silver Hare in the Moon",
+   "size": 0.16,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-star-ray": {
+   "look": "Warm golden radiant starlight ray burst",
+   "size": 0.038,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-star-ink": {
+   "look": "Luminous swirling drop of silver star-ink with golden sparkles",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-star-dot": {
+   "look": "Bright glowing golden-silver five-pointed star dot",
+   "size": 0.026,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-star-clover": {
+   "look": "Lush patch of green meadow clover with glowing pale silver star blossoms",
+   "size": 0.026,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-water-hare": {
+   "look": "Shimmering turquoise river reflection of the silver Hare Moon in ripples",
+   "size": 0.056,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-clay-lamp": {
+   "look": "Warm glowing Indian terracotta clay diya oil lamp with golden flame",
+   "size": 0.025,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "hare-in-the-moon-grandmother-diya": {
+   "look": "Indian grandmother kneeling gently with lit golden clay diya lamp",
+   "size": 0.1,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
   }
  }
 }
