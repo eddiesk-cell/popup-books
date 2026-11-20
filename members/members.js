@@ -193,6 +193,7 @@ function injectStyles() {
 
 async function loadConfig() {
   const defaults = {
+    gate: false,
     supabaseUrl: "",
     supabaseAnonKey: "",
     workerUrl: "",
@@ -283,6 +284,7 @@ const notify = () => {
 function getPublicState() {
   return {
     demo: state.demo,
+    gate: config.gate === true,
     user: state.user ? { ...state.user } : null,
     membership: { ...state.membership },
     isMember: isActiveMembership(state.membership),
