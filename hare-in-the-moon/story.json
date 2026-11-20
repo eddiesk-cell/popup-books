@@ -1,0 +1,1084 @@
+{
+ "words": false,
+ "title": "The Hare in the Moon",
+ "credit": "From the ancient Indian tale Sasa-Jātaka (Jātaka No. 316, The Hare in the Moon), told across South and Southeast Asia for more than two thousand years and translated into English in E. B. Cowell's The Jātaka, Vol. III (trans. H. T. Francis and R. A. Neil, 1897). Retold in our own words.",
+ "status": "Locked at STOP 1 (Orchestrator with Eddie's authority, 2026-11-20: \"STOP 1 PASSED as written\").",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "sasa": {
+   "voice": "bm_fable",
+   "speed": 0.98,
+   "pitch": 2
+  },
+  "sakka": {
+   "voice": "bm_lewis",
+   "speed": 0.92,
+   "pitch": -1
+  },
+  "otter": {
+   "voice": "bf_alice",
+   "speed": 1.0,
+   "pitch": 1
+  },
+  "jackal": {
+   "voice": "bm_daniel",
+   "speed": 0.98,
+   "pitch": 0
+  },
+  "monkey": {
+   "voice": "am_puck",
+   "speed": 1.04,
+   "pitch": 3
+  },
+  "meera": {
+   "voice": "bf_lily",
+   "speed": 1.02,
+   "pitch": 3
+  },
+  "grandmother": {
+   "voice": "bf_emma",
+   "speed": 0.93,
+   "pitch": -1
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "banyan": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lotus": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lamp": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "moon": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "ladybug": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Sasa": "Sussa",
+  "Sakka": "Sukka",
+  "Meera": "Mee-ra",
+  "diya": "dee-yah"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "Four Friends by the Banyan Tree",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in India, under a shady banyan tree by a lotus river, lived a gentle hare named Sasa.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in India, under a shady banyan tree by a lotus river, lived a gentle hare named Sussa."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Every evening Sasa welcomed his three dear friends on the green grass: cheerful Otter, helpful Jackal, and bouncy Monkey.",
+     "say": [
+      [
+       "narrator",
+       "Every evening Sussa welcomed his three dear friends on the green grass: cheerful Otter, helpful Jackal, and bouncy Monkey."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Golden fireflies blinked above the river reeds as a bright silver moon rose behind the misty hills.",
+     "say": [
+      [
+       "narrator",
+       "Golden fireflies blinked above the river reeds as a bright silver moon rose behind the misty hills."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Sasa lifted his long ears and smiled. \"Tomorrow is Full Moon Giving Day! Give kindly, with a glad heart!\"",
+     "say": [
+      [
+       "narrator",
+       "Sussa lifted his long ears and smiled."
+      ],
+      [
+       "sasa",
+       "Tomorrow is Full Moon Giving Day! Give kindly, with a glad heart!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "\"Hungry travellers walk the forest road on the full moon,\" said Sasa. What gift would each friend find?",
+     "say": [
+      [
+       "sasa",
+       "Hungry travellers walk the forest road on the full... moon,"
+      ],
+      [
+       "narrator",
+       "said Sussa. What gift would each friend find?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Three Gifts from the Forest",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Next morning, splash! Otter dived into the sparkling river and brought up crisp white lotus roots. \"Cool roots to share!\"",
+     "say": [
+      [
+       "narrator",
+       "Next morning, splash! Otter dived into the sparkling river and brought up crisp white lotus roots."
+      ],
+      [
+       "otter",
+       "Cool roots to share!"
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Jackal trotted by the sunny bushes and filled a leaf basket with red berries. \"Sweet berries for our guest!\"",
+     "say": [
+      [
+       "narrator",
+       "Jackal trotted by the sunny bushes and filled a leaf basket with red berries."
+      ],
+      [
+       "jackal",
+       "Sweet berries for our guest!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Boing! Monkey swung up a mango tree, and plop! One ripe golden mango bounced off Jackal's nose into his basket!",
+     "say": [
+      [
+       "narrator",
+       "Boing! Monkey swung up a mango tree, and plop! One ripe golden mango bounced off Jackal's nose into his... basket!"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Both friends giggled! \"And juicy golden mangoes from me!\" cheered Monkey, piling them beside Otter's crisp white roots.",
+     "say": [
+      [
+       "narrator",
+       "Both friends giggled!"
+      ],
+      [
+       "monkey",
+       "And juicy golden mangoes from me!"
+      ],
+      [
+       "narrator",
+       "cheered Monkey, piling them beside Otter's crisp white roots."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Only little Sasa sat quiet in his patch of plain green grass, ears drooping. What could Sasa give?",
+     "say": [
+      [
+       "narrator",
+       "Only little Sussa sat quiet in his patch of plain green grass, ears drooping. What could Sussa give?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "A Wish That Warmed the Sky",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Under warm noon sunbeams, Sasa looked at his meadow patch and sighed. A hungry traveller could not eat green grass!",
+     "say": [
+      [
+       "narrator",
+       "Under warm noon sunbeams, Sussa looked at his meadow patch and sighed. A hungry traveller could not eat green... grass!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "\"I have no crisp roots, red berries, or mangoes,\" whispered Sasa, \"only my own small paws and warm heart.\"",
+     "say": [
+      [
+       "sasa",
+       "I have no crisp roots, red berries, or mangoes,"
+      ],
+      [
+       "narrator",
+       "whispered Sussa,"
+      ],
+      [
+       "sasa",
+       "only my own small paws and warm heart."
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Sitting still in a golden sunbeam, Sasa promised quietly, \"If a hungry guest asks me, I will offer even myself!\"",
+     "say": [
+      [
+       "narrator",
+       "Sitting still in a golden sunbeam, Sussa promised quietly,"
+      ],
+      [
+       "sasa",
+       "If a hungry guest asks me, I will offer even myself!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "High above the clouds, King Sakka felt his golden stone seat grow warm whenever great kindness shone below.",
+     "say": [
+      [
+       "narrator",
+       "High above the clouds, King Sukka felt his golden stone seat grow warm whenever great kindness shone below."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "\"Can one small hare be so kind?\" wondered Sakka, floating out of the sky world to earth. Who would he meet?",
+     "say": [
+      [
+       "sakka",
+       "Can one small hare be so kind?"
+      ],
+      [
+       "narrator",
+       "wondered Sukka, floating out of the sky world to earth. Who would he meet?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Three Kind Offers",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Tap, tap! Along the sunny river path walked Sakka, dressed as a tired old traveller with an empty bowl.",
+     "say": [
+      [
+       "narrator",
+       "Tap, tap! Along the sunny river path walked Sukka, dressed as a tired old traveller with an empty bowl."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"Dear friends, I am weary and hungry,\" sighed the traveller. Otter offered lotus roots, and Jackal offered red berries.",
+     "say": [
+      [
+       "sakka",
+       "Dear friends, I am weary and hungry,"
+      ],
+      [
+       "narrator",
+       "sighed the traveller. Otter offered lotus roots, and Jackal offered red berries."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Monkey ran up with mangoes, tripped on his long tail, whoops, thump, and popped up holding every mango safe!",
+     "say": [
+      [
+       "narrator",
+       "Monkey ran up with mangoes, tripped on his long tail, whoops, thump, and popped up holding every mango... safe!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "\"Please eat our roots, berries, and sweet mangoes!\" called Monkey cheerfully, brushing dust off his knees with a grin.",
+     "say": [
+      [
+       "monkey",
+       "Please eat our roots, berries, and sweet mangoes!"
+      ],
+      [
+       "narrator",
+       "called Monkey cheerfully, brushing dust off his knees with a grin."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "The traveller bowed kindly. \"Wait here, good friends. Today I must ask little Sasa.\" Why did he seek Sasa?",
+     "say": [
+      [
+       "narrator",
+       "The traveller bowed kindly."
+      ],
+      [
+       "sakka",
+       "Wait here, good friends. Today I must ask little Sussa."
+      ],
+      [
+       "narrator",
+       "Why did he seek Sussa?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "A Brave and Glad Heart",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "The old traveller stepped into the shady banyan glade and knelt beside Sasa with his empty wooden bowl.",
+     "say": [
+      [
+       "narrator",
+       "The old traveller stepped into the shady banyan glade and knelt beside Sussa with his empty wooden bowl."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "\"Little hare, have you food for a hungry guest?\" Sasa's ears lifted tall! \"Give bravely, with a glad heart!\"",
+     "say": [
+      [
+       "sakka",
+       "Little hare, have you food for a hungry guest?"
+      ],
+      [
+       "narrator",
+       "Sussa's ears lifted tall!"
+      ],
+      [
+       "sasa",
+       "Give bravely, with a glad heart!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"I eat only green grass,\" said Sasa gently. \"Kindle a warm fire, dear guest, and I will offer myself.\"",
+     "say": [
+      [
+       "sasa",
+       "I eat only green grass,"
+      ],
+      [
+       "narrator",
+       "said Sussa gently."
+      ],
+      [
+       "sasa",
+       "Kindle a warm fire, dear guest, and I will offer myself."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "The traveller touched his wooden staff to the stones, whoosh! Up rose a bright ring of golden flames.",
+     "say": [
+      [
+       "narrator",
+       "The traveller touched his wooden staff to the stones, whoosh! Up rose a bright ring of golden flames."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Sasa stepped near the golden glow, then paused and looked at his soft brown coat. Who hid inside?",
+     "say": [
+      [
+       "narrator",
+       "Sussa stepped near the golden glow, then paused and looked at his soft brown... coat. Who hid inside?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Fire That Did Not Burn",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Three tiny red ladybugs hid in Sasa's fur! Shake, shake, flutter! Sasa shook three times until they landed on a leaf.",
+     "say": [
+      [
+       "narrator",
+       "Three tiny red ladybugs hid in Sussa's fur! Shake, shake, flutter! Sussa shook three times until they landed on a leaf."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"Stay safe in the grass, little bugs!\" whispered Sasa. His three friends gasped and covered their eyes as Sasa crouched.",
+     "say": [
+      [
+       "sasa",
+       "Stay safe in the grass, little bugs!"
+      ],
+      [
+       "narrator",
+       "whispered Sussa. His three friends gasped and covered their eyes as Sussa crouched."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Hop! Sasa leaped bravely into the golden ring, and hush! Every flame bloomed into cool white lotus petals and mist!",
+     "say": [
+      [
+       "narrator",
+       "Hop! Sussa leaped bravely into the golden ring, and hush! Every flame bloomed into cool white lotus petals and mist!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Not one spark felt hot, and not one brown hair was singed! Sasa rested safe upon a cool lotus bed!",
+     "say": [
+      [
+       "narrator",
+       "Not one spark felt hot, and not one brown hair was singed! Sussa rested safe upon a cool lotus... bed!"
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"How is this bright fire as cool as morning dew?\" gasped Sasa. Who could this gentle old traveller be?",
+     "say": [
+      [
+       "sasa",
+       "How is this bright fire as cool as morning dew?"
+      ],
+      [
+       "narrator",
+       "gasped Sussa. Who could this gentle old traveller be?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "The King of the Sky",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Ting-a-ling! Off drifted the patched cloak in golden sparkles, revealing radiant King Sakka in his shining crown of starlight!",
+     "say": [
+      [
+       "narrator",
+       "Ting-a-ling! Off drifted the patched cloak in golden sparkles, revealing radiant King Sukka in his shining crown of starlight!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Gently Sakka lifted little Sasa into his warm hands, while Otter, Jackal, and Monkey hurried up and bowed in joy.",
+     "say": [
+      [
+       "narrator",
+       "Gently Sukka lifted little Sussa into his warm hands, while Otter, Jackal, and Monkey hurried up and bowed in joy."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "\"Dear Sasa,\" said Sakka warmly, \"that fire was only a test of light, and could never harm a pure heart!\"",
+     "say": [
+      [
+       "sakka",
+       "Dear Sussa,"
+      ],
+      [
+       "narrator",
+       "said Sukka warmly,"
+      ],
+      [
+       "sakka",
+       "that fire was only a test of light, and could never harm a pure heart!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"With empty paws, you saved tiny bugs and offered your whole self to a stranger,\" praised King Sakka.",
+     "say": [
+      [
+       "sakka",
+       "With empty paws, you saved tiny bugs and offered your whole self to a stranger,"
+      ],
+      [
+       "narrator",
+       "praised King Sukka."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Above the misty peak rose the huge, blank silver moon. How would Sakka share Sasa's story with the world?",
+     "say": [
+      [
+       "narrator",
+       "Above the misty peak rose the huge, blank silver... moon. How would Sukka share Sussa's story with the world?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Painting the Hare on the Moon",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "King Sakka touched the misty mountain peak, drawing glowing silver star-ink onto a long brush of golden light.",
+     "say": [
+      [
+       "narrator",
+       "King Sukka touched the misty mountain peak, drawing glowing silver star-ink onto a long brush of golden light."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Swish, sweep! Reaching high into the night sky, Sakka painted Sasa's long ears and soft paws across the full moon!",
+     "say": [
+      [
+       "narrator",
+       "Swish, sweep! Reaching high into the night sky, Sukka painted Sussa's long ears and soft paws across the full... moon!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "At once the silver Hare on the Moon shone bright, lighting every hill, lotus river, and shady forest path!",
+     "say": [
+      [
+       "narrator",
+       "At once the silver Hare on the Moon shone bright, lighting every hill, lotus river, and shady forest path!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "\"As long as the moon shines,\" promised Sakka, \"everyone who looks up will remember little Sasa's generous heart.\"",
+     "say": [
+      [
+       "sakka",
+       "As long as the moon shines,"
+      ],
+      [
+       "narrator",
+       "promised Sukka,"
+      ],
+      [
+       "sakka",
+       "everyone who looks up will remember little Sussa's generous heart."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Sakka set Sasa on sweet star-clover, then floated out of the earth world home to the sky. Who walked near?",
+     "say": [
+      [
+       "narrator",
+       "Sukka set Sussa on sweet star-clover, then floated out of the earth world home to the sky. Who walked near?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "A Feast Under the Hare Moon",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Pitter-pat! Into the moonlit glade walked village Grandmother and little Meera, carrying an unlit clay lamp and empty basket.",
+     "say": [
+      [
+       "narrator",
+       "Pitter-pat! Into the moonlit glade walked village Grandmother and little Mee-ra, carrying an unlit clay lamp and empty basket."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "\"The wind blew out our lamp,\" said Meera, \"until that shining hare on the moon lit our river path!\"",
+     "say": [
+      [
+       "meera",
+       "The wind blew out our lamp,"
+      ],
+      [
+       "narrator",
+       "said Mee-ra,"
+      ],
+      [
+       "meera",
+       "until that shining hare on the moon lit our river path!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Happy to feed real hungry guests, Otter brought lotus roots, Jackal brought red berries, and Monkey brought golden mangoes!",
+     "say": [
+      [
+       "narrator",
+       "Happy to feed real hungry guests, Otter brought lotus roots, Jackal brought red berries, and Monkey brought golden mangoes!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Grandmother thanked all four friends, and Meera stroked Sasa's soft ears as Sasa cheered, \"Give always, with a glad heart!\"",
+     "say": [
+      [
+       "narrator",
+       "Grandmother thanked all four friends, and Mee-ra stroked Sussa's soft ears as Sussa cheered,"
+      ],
+      [
+       "sasa",
+       "Give always, with a glad... heart!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Grandmother lit her little clay lamp, warm and gold, and pointed to the calm river. Who shone in the water?",
+     "say": [
+      [
+       "narrator",
+       "Grandmother lit her little clay lamp, warm and gold, and pointed to the calm river. Who shone in the water?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Shining on River and Sky",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Down in the calm lotus river glowed a second silver moon, with Sasa's long-eared picture shining inside the ripples!",
+     "say": [
+      [
+       "narrator",
+       "Down in the calm lotus river glowed a second silver moon, with Sussa's long-eared picture shining inside the ripples!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Silly Monkey leaned out to hand the water-hare a mango, ker-plop! Ripples made the moon-hare wiggle, and everyone laughed!",
+     "say": [
+      [
+       "narrator",
+       "Silly Monkey leaned out to hand the water-hare a mango, ker-plop! Ripples made the moon-hare wiggle, and everyone laughed!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "\"Thank you for lighting our road, little hare,\" smiled Grandmother, floating five warm clay lamps among the pink lotus flowers.",
+     "say": [
+      [
+       "grandmother",
+       "Thank you for lighting our road, little hare,"
+      ],
+      [
+       "narrator",
+       "smiled Grandmother, floating five warm clay lamps among the pink lotus flowers."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Otter, Jackal, and Monkey curled up beside Sasa, while the three tiny red ladybugs slept upon a lotus leaf.",
+     "say": [
+      [
+       "narrator",
+       "Otter, Jackal, and Monkey curled up beside Sussa, while the three tiny red ladybugs slept upon a lotus leaf."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Step outside tonight and look up at the bright full moon! Gentle little Sasa is still shining down on you.",
+     "say": [
+      [
+       "narrator",
+       "Step outside tonight and look up at the bright full... moon! Gentle little Sussa is still shining down on you."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Otter, Jackal, and Monkey gladly shared their best forest gifts to help hungry travellers.",
+   "say": [
+    [
+     "closing",
+     "Otter, Jackal, and Monkey gladly shared their best forest gifts to help hungry travellers."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Little Sasa had empty paws, yet he protected tiny bugs and offered his whole self in kindness.",
+   "say": [
+    [
+     "closing",
+     "Little Sussa had empty paws, yet he protected tiny bugs and offered his whole self in kindness."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "King Sakka painted Sasa upon the moon so the whole world would remember such a generous heart.",
+   "say": [
+    [
+     "closing",
+     "King Sukka painted Sussa upon the moon so the whole world would remember such a generous heart."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Even the smallest friend can light the wide night sky when you give with a glad heart.",
+   "say": [
+    [
+     "closing",
+     "Even the smallest friend can light the wide night sky when you give with a glad... heart."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Evening has come to the banyan glade! Tap the four glowing fireflies to light the circle for Sasa.",
+   "say": [
+    [
+     "narrator",
+     "Evening has come to the banyan glade! Tap the four glowing fireflies to light the circle for Sussa."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Warm golden light! All four friends are ready for Full Moon Giving Day!",
+   "say": [
+    [
+     "narrator",
+     "Warm golden light! All four friends are ready for Full Moon Giving Day!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Sasa's friends pack their forest gifts! Tap the lotus roots, red berries, and golden mangoes, then tap each friend.",
+   "say": [
+    [
+     "narrator",
+     "Help Sussa's friends pack their forest gifts! Tap the lotus roots, red berries, and golden mangoes, then tap each friend."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Crisp roots, sweet berries, and ripe mangoes, all ready to share!",
+   "say": [
+    [
+     "narrator",
+     "Crisp roots, sweet berries, and ripe mangoes, all ready to share!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Sasa's kind wish rises to the sky! Tap the three golden sunbeams to warm King Sakka's cloud seat.",
+   "say": [
+    [
+     "narrator",
+     "Sussa's kind wish rises to the sky! Tap the three golden sunbeams to warm King Sukka's cloud seat."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Golden light! King Sakka felt Sasa's brave wish all the way above the clouds!",
+   "say": [
+    [
+     "narrator",
+     "Golden light! King Sukka felt Sussa's brave wish all the way above the clouds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Three kind friends offer their food! Tap Otter's roots, Jackal's berries, and Monkey's mangoes in order.",
+   "say": [
+    [
+     "narrator",
+     "Three kind friends offer their food! Tap Otter's roots, Jackal's berries, and Monkey's mangoes in order."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Three generous offers! Now the old traveller walks straight to little Sasa.",
+   "say": [
+    [
+     "narrator",
+     "Three generous offers! Now the old traveller walks straight to little Sussa."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "The traveller asks for a warm fire! Tap the three bundles of dry wood to kindle the golden light.",
+   "say": [
+    [
+     "narrator",
+     "The traveller asks for a warm fire! Tap the three bundles of dry wood to kindle the golden light."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Whoosh! Bright golden flames rise up beside the banyan tree!",
+   "say": [
+    [
+     "narrator",
+     "Whoosh! Bright golden flames rise up beside the banyan tree!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Sasa leaps into the test-fire! Tap the four golden flames to bloom them into cool white lotus flowers!",
+   "say": [
+    [
+     "narrator",
+     "Sussa leaps into the test-fire! Tap the four golden flames to bloom them into cool white lotus flowers!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Hush, shimmer! Cool white lotus petals cradle little Sasa, safe and unharmed!",
+   "say": [
+    [
+     "narrator",
+     "Hush, shimmer! Cool white lotus petals cradle little Sussa, safe and unharmed!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "The patched cloak falls away! Tap the three starlight rays around King Sakka to shine across the hill.",
+   "say": [
+    [
+     "narrator",
+     "The patched cloak falls away! Tap the three starlight rays around King Sukka to shine across the hill."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Ting-a-ling! King Sakka shines in gold and starlight beside little Sasa!",
+   "say": [
+    [
+     "narrator",
+     "Ting-a-ling! King Sukka shines in gold and starlight beside little Sussa!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Help King Sakka paint Sasa on the full moon! Tap the five shining star-dots in order across the moon.",
+   "say": [
+    [
+     "narrator",
+     "Help King Sukka paint Sussa on the full moon! Tap the five shining star-dots in order across the moon."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Swish, sweep! Look up: the silver Hare shines bright upon the full moon!",
+   "say": [
+    [
+     "narrator",
+     "Swish, sweep! Look up: the silver Hare shines bright upon the full moon!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Grandmother and Meera are hungry! Tap the lotus roots, red berries, and golden mangoes to share the feast.",
+   "say": [
+    [
+     "narrator",
+     "Grandmother and Mee-ra are hungry! Tap the lotus roots, red berries, and golden mangoes to share the feast."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Yum! Every morning gift fed a hungry guest under the bright Hare Moon!",
+   "say": [
+    [
+     "narrator",
+     "Yum! Every morning gift fed a hungry guest under the bright Hare Moon!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Float warm lights on the lotus river! Tap the five clay lamps so they glow beneath the Hare Moon.",
+   "say": [
+    [
+     "narrator",
+     "Float warm lights on the lotus river! Tap the five clay lamps so they glow beneath the Hare Moon."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Every clay lamp shines on the water, glowing right back at gentle Sasa!",
+   "say": [
+    [
+     "narrator",
+     "Every clay lamp shines on the water, glowing right back at gentle Sussa!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "sasa": [
+   "I am Sasa, a little brown hare who lives beneath the great banyan tree!",
+   "My name means Hare in the old Indian storytelling language, and I wear a small marigold garland.",
+   "Even though I eat only soft green grass, I wanted to share everything I had!",
+   "Before I leaped, I shook my coat three times so three tiny ladybugs stayed safe.",
+   "Look up at the full moon tonight, and wave hello to my silver picture!"
+  ],
+  "sakka": [
+   "I am Sakka, King of the Sky! My golden stone seat grows warm whenever great kindness shines on earth.",
+   "I walked down the forest road disguised as a tired old traveller with an empty wooden bowl.",
+   "My golden test-fire turned into cool white lotus petals that could never burn gentle Sasa!",
+   "With silver star-ink from the mountain peak, I painted Sasa across the bright full moon.",
+   "Kindness is the brightest light in sky and earth alike."
+  ],
+  "otter": [
+   "Splash! I am Otter! I love diving into the clear lotus river.",
+   "I gathered three crisp white lotus roots to refresh a tired traveller!",
+   "Seeing Sasa safe upon that cool lotus bed made me clap my wet paws with joy!",
+   "Sharing my lotus roots with Grandmother and Meera felt wonderful!"
+  ],
+  "jackal": [
+   "Hello! I am Jackal! I know every sunny berry bush along the forest path.",
+   "I filled a woven green leaf basket with sweet red berries to share!",
+   "Hehe, Monkey's ripe golden mango bounced right off my nose into the basket!",
+   "A good friend always saves a share for a hungry guest."
+  ],
+  "monkey": [
+   "Boing, hop! I am Monkey! The tallest mango branches have the sweetest golden fruit!",
+   "Whoops! My own long curly tail tripped me right on the riverside path!",
+   "When I dropped a mango to the moon-hare in the water, his silver ears wiggled!",
+   "Sharing sweet mangoes with friends tastes twice as good!"
+  ],
+  "meera": [
+   "I am Meera! The night wind blew out our lamp on the dark forest road.",
+   "Then the bright new hare on the moon shone down and showed us the river!",
+   "Little Sasa has the softest ears, and his friends shared the sweetest berries and mangoes!"
+  ],
+  "grandmother": [
+   "I am Grandmother! In India, a small clay oil lamp is called a diya.",
+   "We floated five glowing clay lamps among the pink lotus flowers to say thank you.",
+   "Whenever we see the hare on the moon, we remember to give with a glad heart."
+  ],
+  "banyan": [
+   "A great Indian banyan tree! Its hanging roots grow down into new trunks, making a cool shady hall.",
+   "Four gentle friends gather beneath its wide green branches every evening."
+  ],
+  "lotus": [
+   "Pink lotus flowers float serene and clean on the sparkling river water."
+  ],
+  "lamp": [
+   "A little Indian clay lamp called a diya, holding a warm golden cotton flame."
+  ],
+  "moon": [
+   "The bright full moon! Across its silver face shines King Sakka's painting of gentle little Sasa."
+  ],
+  "ladybug": [
+   "Three tiny spotted red ladybugs! Kind Sasa shook his fur gently so they flew safely to a green leaf."
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Sasa-Jātaka, Jātaka No. 316, Cowell Vol. III, 1897): four animal friends — a hare, an otter, a jackal, and a monkey — vow to give alms on the full-moon fast day; the otter brings seven fish, the jackal a lizard and a pot of curds, and the monkey ripe mangoes, while the grass-eating hare resolves to offer his own body; Sakka (King of the Gods) descends disguised as a hungry Brahmin, declines the first three gifts to test the hare, kindles a miraculous fire into which the hare leaps after shaking three times to spare any insects in his fur; the fire feels as cool as snow/lotus without burning a hair, and Sakka squeezes the mountain to paint the hare's sign on the moon before returning to heaven. Ours (gentle for ages 4-8, respectful to the sacred Jataka tradition): 1) Pure, gentle forest gifts — Otter dives for crisp white lotus roots, Jackal gathers sweet red berries in a leaf basket, and Monkey picks ripe golden mangoes (no dead animals or stolen food on stage). 2) Gentle wording and visible miracle ('The fire does not burn'): Sasa shakes three tiny red ladybugs safely onto a leaf, then leaps into Sakka's golden test-ring, which immediately blooms into cool white lotus petals and soft mist without singing a single hair. 3) New heartfelt payoff twist (Spreads 9-10): after Sakka blesses Sasa with sweet star-clover and paints the Hare on the Moon, village Grandmother and little Meera — whose clay diya lamp blew out in the wind — follow the bright new Hare Moon safely to the river, so Otter, Jackal, and Monkey finally get to share their morning gifts with real hungry guests, float clay lamps on the lotus river, and laugh as Monkey tries to feed a mango to the moon-hare's river reflection.",
+  "moral": "Even the smallest friend can light the wide night sky when you give with a glad heart.",
+  "changes": "1 Respects folk-tales.md rule 6 (Jataka tales are sacred past lives of the Buddha: Sasa's sacrifice and Sakka's blessing are kept dignified and sincere; all three P8 comedy beats belong to playful Monkey). 2 Every speaking character (sasa, sakka, otter, jackal, monkey, meera, grandmother) has a distinct gender-matched Kokoro voice (EDDIE-NOTES-2026-11-19 #3). 3 Distinct from Book 6 (Chang'e, Chinese Mid-Autumn Jade Rabbit) and Book 9 (Bamboo Cutter, Japanese Tsukimi): ancient Indian banyan glade, lotus river, mango tree, clay diya lamps, Pali names Sasa & Sakka, and King Sakka painting Sasa's silhouette onto the moon with starry mountain-ink.",
+  "level": "A1-A2, past simple, tightened for ages 4-8 (50 story lines, mean ~19.1 words/line, max 21). Repeated core words: hare, moon, river, lotus, roots, berries, mangoes, grass, fire, light, kind, heart.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: sasa (bm_fable +2), sakka (bm_lewis -1), otter (bf_alice +1), jackal (bm_daniel), monkey (am_puck +3), meera (bf_lily +3), grandmother (bf_emma -1). Narrator (bm_george) reads narration and 3rd-person inanimate/background touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain 'Give <kindly/bravely/always>, with a glad heart!' on spreads 1 (1.4), 5 (5.2), and 9 (9.4, pausing before 'heart!' on the 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say (1.5, 2.3, 3.1, 4.3, 5.5, 6.4, 7.5, 8.2, 9.4, 10.5, moral.5); P5 Law of Three (three forest gifts on Spread 2, three offers on Spread 4 before Sasa's fourth, three shakes for three tiny ladybugs on Spread 6); P6 unique spoken sound words on every E2/E3 spread with zero repeats anywhere in the book (2 Splash/Boing/Plop, 4 Tap-tap/Whoops-thump, 5 Whoosh, 6 Shake-shake-flutter/Hop-hush, 7 Ting-a-ling, 8 Swish-sweep, 9 Pitter-pat, 10 Ker-plop); P8 harmless slapstick in all three thirds on Monkey (2.3 mango bounces off Jackal's nose into basket, 4.3 Monkey trips on his own tail holding mangoes safe, 10.2 Monkey drops mango to water-hare reflection making its ears wiggle); P11 energy curve E1 E2 E1 E2 E2 E3 E2 E3 E2 E2 E1; P16 all 10 games perform the spread's action. Item 16 world-crossing explicitly named floating out of the sky world to earth (3.5) and floating out of the earth world home to the sky (8.5)."
+ }
+}

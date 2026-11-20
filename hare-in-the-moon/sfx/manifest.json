@@ -1,0 +1,27 @@
+{
+ "beds": [
+  "glade-dusk",
+  "lotus-river",
+  "peak-night"
+ ],
+ "shots": [],
+ "pools": {
+  "motif-sasa": 1,
+  "motif-sakka": 1,
+  "motif-friends": 1,
+  "river-splash": 1,
+  "berry-rustle": 1,
+  "mango-boing": 1,
+  "sunbeam-warm": 1,
+  "staff-tap": 1,
+  "tail-thump": 1,
+  "fire-whoosh": 1,
+  "fur-shake": 1,
+  "lotus-bloom": 1,
+  "cloak-sparkle": 1,
+  "brush-swish": 1,
+  "pitter-pat": 1,
+  "diya-glow": 1,
+  "frog-boing": 1
+ }
+}
