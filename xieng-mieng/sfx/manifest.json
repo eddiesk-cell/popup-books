@@ -1,11 +1,13 @@
 {
  "beds": [
-  "birds-morning",
   "birds-day",
+  "birds-morning",
   "crickets",
+  "crowd-murmur",
   "frogs-chorus",
   "night-breeze",
-  "river-slow"
+  "river-slow",
+  "wind-breeze"
  ],
  "shots": [
   "gong-soft",

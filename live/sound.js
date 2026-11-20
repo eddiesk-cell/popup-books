@@ -21,18 +21,18 @@
 const LIB = {
  "kapi": {
   "beds": "river-slow birds-day birds-morning birds-afternoon birds-dusk birds-far leaves-breeze insects-day water-lap cowbells-far river-evening crickets village-evening village-day frogs-chorus night-frogs night-breeze river-night river-flowing wind-breezy river-deep wind-gusty",
-  "shots": "bark-scramble bobo-yawn laugh-trio sand-shift hush-swell wade gulp parakeet-chatter buffalo-snort pot-fill i-paper i-wood i-bamboo i-water i-splash i-leaf i-cloth i-creak i-wing i-stone i-fruit i-glow paper-rustle moon-shimmer ok won again frog-croak heron-croak owl-hoot squirrel-chirp parakeet-squawk kingfisher-call lapwing-call duck-quack duckling-peep otter-squeak buffalo-moo crab-click wing-buzz kapi-giggle jamun-chomp kapi-land page-turn"
+  "shots": "bark-scramble bobo-yawn laugh-trio sand-shift hush-swell wade gulp parakeet-chatter buffalo-snort pot-fill wind-whoosh rain-light rain-heavy fire-crackle thunder-far steps-grass steps-stone steps-wood gate-creak wood-bolt boat-oar hop-land i-paper i-wood i-bamboo i-water i-splash i-leaf i-cloth i-creak i-wing i-stone i-fruit i-glow paper-rustle moon-shimmer ok won again frog-croak heron-croak owl-hoot squirrel-chirp parakeet-squawk kingfisher-call lapwing-call duck-quack duckling-peep otter-squeak buffalo-moo crab-click wing-buzz kapi-giggle jamun-chomp kapi-land page-turn"
  },
  "mali": {
   "beds": "crickets frogs-chorus river-night festival-murmur khaen-music river-night-still festival-far market-murmur water-lap-boats market-breeze rope-creak spirit-hum",
-  "shots": "wade gulp wind-whoosh string-snap lanterns-dim tong-sniffle nok-song rise-swell i-paper i-wood i-bamboo i-water i-splash i-leaf i-cloth i-creak i-wing i-stone i-fruit i-glow paper-rustle moon-shimmer ok won again frog-croak heron-croak owl-hoot cat-mew dog-woof gecko-chirp pip-chirp crab-click child-giggle sprite-giggle snore khaen-run boatman-hum boat-release hop-land page-turn"
+  "shots": "wade gulp wind-whoosh rain-light rain-heavy fire-crackle thunder-far steps-grass steps-stone steps-wood gate-creak wood-bolt boat-oar kapi-land string-snap lanterns-dim tong-sniffle nok-song rise-swell i-paper i-wood i-bamboo i-water i-splash i-leaf i-cloth i-creak i-wing i-stone i-fruit i-glow paper-rustle moon-shimmer ok won again frog-croak heron-croak owl-hoot cat-mew dog-woof gecko-chirp pip-chirp crab-click child-giggle sprite-giggle snore khaen-run boatman-hum boat-release hop-land page-turn"
  },
  "landing": {
   "beds": "library-hum",
   "shots": "book-touch book-slide book-open ring-open portal-through page-soft"
  }
 };
-const POOLS = {"i-paper": 5, "i-wood": 5, "i-bamboo": 4, "i-water": 5, "i-splash": 4, "i-leaf": 5, "i-cloth": 4, "i-creak": 3, "i-wing": 3, "i-stone": 4, "i-fruit": 4, "i-glow": 4, "paper-rustle": 4, "moon-shimmer": 4, "ok": 4, "won": 3, "again": 4, "frog-croak": 3, "heron-croak": 3, "owl-hoot": 3, "cat-mew": 3, "dog-woof": 3, "gecko-chirp": 3, "pip-chirp": 3, "squirrel-chirp": 3, "parakeet-squawk": 3, "kingfisher-call": 3, "lapwing-call": 3, "duck-quack": 3, "duckling-peep": 3, "otter-squeak": 3, "buffalo-moo": 3, "crab-click": 3, "wing-buzz": 3, "kapi-giggle": 3, "child-giggle": 3, "sprite-giggle": 3, "snore": 3, "khaen-run": 3, "boatman-hum": 3, "boat-release": 3, "jamun-chomp": 3, "hop-land": 3, "kapi-land": 3, "page-turn": 4, "book-touch": 3, "book-slide": 3, "book-open": 2, "page-soft": 2};  // pool name -> recorded variants (<name>.m4a, <name>-2.m4a, ...)
+const POOLS = {"i-paper": 5, "i-wood": 5, "i-bamboo": 4, "i-water": 5, "i-splash": 4, "i-leaf": 5, "i-cloth": 4, "i-creak": 3, "i-wing": 3, "i-stone": 4, "i-fruit": 4, "i-glow": 4, "paper-rustle": 4, "moon-shimmer": 4, "ok": 4, "won": 3, "again": 4, "frog-croak": 3, "heron-croak": 3, "owl-hoot": 3, "cat-mew": 3, "dog-woof": 3, "gecko-chirp": 3, "pip-chirp": 3, "squirrel-chirp": 3, "parakeet-squawk": 3, "kingfisher-call": 3, "lapwing-call": 3, "duck-quack": 3, "duckling-peep": 3, "otter-squeak": 3, "buffalo-moo": 3, "crab-click": 3, "wing-buzz": 3, "kapi-giggle": 3, "child-giggle": 3, "sprite-giggle": 3, "snore": 3, "khaen-run": 3, "boatman-hum": 3, "boat-release": 3, "jamun-chomp": 3, "hop-land": 3, "kapi-land": 3, "page-turn": 4, "steps-grass": 2, "steps-stone": 2, "steps-wood": 2, "gate-creak": 2, "wood-bolt": 2, "boat-oar": 2, "book-touch": 3, "book-slide": 3, "book-open": 2, "page-soft": 2};  // pool name -> recorded variants (<name>.m4a, <name>-2.m4a, ...)
 const ALIAS = {"paper-pat": "i-paper", "paper-grip": "i-paper", "wood-knock": "i-wood", "lantern-tap": "i-wood", "lotus-bell-2": "i-wood", "wood-steps": "i-wood", "lamp-clink": "i-bamboo", "scale-clink": "i-bamboo", "bell-tinkle": "i-bamboo", "shrine-tinkle": "i-bamboo", "wind-chime": "i-bamboo", "lotus-bell-4": "i-bamboo", "splash-small": "i-water", "fish-rise": "i-water", "tail-splash": "i-splash", "water-swish": "i-splash", "water-swish-big": "i-splash", "oar-splash": "i-splash", "wave-slap": "i-splash", "frog-plop": "i-fruit", "plop": "i-fruit", "seed-plop": "i-fruit", "leaves-shake": "i-leaf", "leaf-rustle": "i-leaf", "straw-rustle": "i-leaf", "leaves-rustle-big": "i-leaf", "kite-flap": "i-cloth", "cloth-rustle": "i-cloth", "basket-creak": "i-creak", "door-creak": "i-creak", "stone-rise": "i-stone", "candle-light": "i-glow", "lantern-relight": "i-glow", "lantern-up": "i-glow", "flame-catch": "i-glow", "moth-flutter": "i-wing", "bat-flutter": "i-wing", "firefly-chime": "ok", "star-chime": "ok", "relief-chime": "ok", "seed-glow": "ok", "gold-shimmer": "ok", "bridge-shimmer": "ok", "pip-glow": "ok", "idea-pling": "ok", "music-box": "ok", "jamun-pluck": "ok", "seed-flick": "ok", "cheer-chime": "won", "chime-soft": "won", "shadow-chime": "won", "market-cheer": "won", "turtle-blink": "i-bamboo"};  // an authored sound name -> the pool that voices it now
 // POOLS-END
 const DUCK = 0.4, HOLD_MS = 1500, BED = 0.28, FOLEY = 0.9, LOOP_PAD = 1;
@@ -48,16 +48,16 @@ export function manifestFor(book, root = "") {
   const L = known ? LIB[book] : { beds: "", shots: LIB.kapi.shots.split(" ").filter(n => LIB.mali.shots.split(" ").includes(n)).join(" ") };
   for (const n of L.beds.split(" ").filter(Boolean)) beds[n] = url(dir, n);
   const pool = (d, n, c = POOLS[n] || 1) => [url(d, n), ...Array.from({ length: c - 1 }, (_, i) => url(d, `${n}-${i + 2}`))];
-  const alias = () => { for (const [n, p] of Object.entries(ALIAS)) if (sounds[p]) sounds[n] = sounds[p]; };  // an authored name plays its pool
+  const alias = (ow = true) => { for (const [n, p] of Object.entries(ALIAS)) if (sounds[p] && (ow || !sounds[n])) sounds[n] = sounds[p]; };  // an authored name plays its pool
   for (const n of L.shots.split(" ")) sounds[n] = pool(dir, n);
-  alias();
+  alias(true);
   const m = { beds, sounds };
   if (!known) m.ready = fetch(`${root}${book}/sfx/manifest.json`).then(r => r.ok ? r.json() : null).then(j => {
     if (!j) return;
     for (const n of j.beds ?? []) beds[n] = url(book, n);
     for (const n of j.shots ?? []) sounds[n] = pool(book, n, j.pools?.[n]);
     for (const [n, c] of Object.entries(j.pools ?? {})) sounds[n] = pool(book, n, c);
-    alias();
+    alias(false);
   }).catch(() => {});  // no manifest: the book keeps the shared foley, as before
   return m;
 }
@@ -69,6 +69,8 @@ const KIND = [[/kite|sail|cloth|flag/, "i-cloth"], [/lantern|lamp|candle|flame|^
   [/reed|grass|fern|flower|hyacinth|petal|lotus|palm|leaf|leaves|nest|straw/, "i-leaf"]];
 const SCALE = [1, 9 / 8, 5 / 4, 3 / 2, 5 / 3, 2, 9 / 4, 5 / 2];  // CORRECT: a pentatonic step up per right tap, so a game builds
 const GAIN = { interact: 0.5, correct: 0.6, again: 0.45 };  // one level for every tap/game sound, whatever a page's foley table says
+// Purely visual sparkle/chime tells stay silent during narration (Eddie: no bells or bright chimes; fewer is better)
+const QUIET_FX = new Set(["moon-shimmer", "gold-shimmer", "bridge-shimmer", "star-chime", "firefly-chime", "relief-chime", "idea-pling", "seed-glow", "pip-glow"]);
 const semis = x => 2 ** (x / 12);
 
 export function addSound(manifest, { reader, voices = [], ctx } = {}) {
@@ -76,7 +78,7 @@ export function addSound(manifest, { reader, voices = [], ctx } = {}) {
   if (!ctx) { try { ctx = new AC({ sampleRate: 22050 }); } catch { ctx = new AC(); } }  // 22 kHz halves the decoded memory
   const master = ctx.createGain(), duckG = ctx.createGain();
   duckG.connect(master); master.connect(ctx.destination);
-  let step = 0, stepAt = 0, lastAt = 0; const lastOf = new Map(), queue = new Map();
+  let step = 0, stepAt = 0, lastAt = 0; const lastOf = new Map(), queue = new Map(), cool = new Map();
   const buffers = {}, loading = {}, beds = {}, want = new Map(), warned = new Set(), bedUrls = new Set(Object.values(manifest.beds)); let lastBed = null;
   let muted = false;
   try { muted = localStorage.getItem("popup-sound") === "off"; } catch { /* private window: default on */ }
@@ -123,10 +125,13 @@ export function addSound(manifest, { reader, voices = [], ctx } = {}) {
     log: [],
     play(name, { gain = 1, pitch = 1, exact = false, tag } = {}) {
       const urls = manifest.sounds[name]; if (!urls || muted || theEnd()) return Promise.resolve();
+      if (QUIET_FX.has(name) && !tag?.startsWith("game:")) return Promise.resolve();
+      const now = performance.now();
+      if (!tag && now - (cool.get(name) ?? -1e9) < 2000) return Promise.resolve();
+      if (!tag) cool.set(name, now);
       wake();
       // a pool's plays are queued, so "not the one just heard" holds even for taps faster than a first-use fetch
-      // the sparkle that rides every tap and game hit (moon-shimmer, asked for by the viewer) is dropped when a voice has just answered: one sound per touch, not two
-      if (name === "moon-shimmer" && performance.now() - lastAt < 250) return Promise.resolve();
+      if (name === "moon-shimmer" && now - lastAt < 250) return Promise.resolve();
       const run = (queue.get(urls[0]) ?? Promise.resolve()).then(async () => {
         const last = lastOf.get(urls[0]), ready = urls.filter(u => buffers[u] && u !== last), fresh = urls.filter(u => u !== last);
         const pick = ready.length ? ready : fresh.length ? fresh : urls, url = pick[Math.floor(Math.random() * pick.length)];

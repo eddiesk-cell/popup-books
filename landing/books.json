@@ -8,6 +8,10 @@
   {
    "id": "asia",
    "name": "Asia"
+  },
+  {
+   "id": "middle-east",
+   "name": "The Middle East"
   }
  ],
  "books": [
@@ -75,6 +79,27 @@
    ],
    "status": "ready",
    "link": "../live/?book=cowherd&s=s01"
+  },
+  {
+   "id": "ebony-horse",
+   "title": {
+    "en": "The Enchanted Ebony Horse",
+    "lo": "ມ້າໄມ້ດຳວິເສດ",
+    "th": "ม้าไม้ดำวิเศษ",
+    "zh": "神奇的乌木马",
+    "ja": "ふしぎな こくたんの うま"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Persian",
+   "region": "middle-east",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=ebony-horse&s=s01"
   },
   {
    "id": "gourd",

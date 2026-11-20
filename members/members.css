@@ -1,0 +1,478 @@
+/* Wonder of Saya Tales — Membership UI (gold-and-leather house style, Noto Sans Lao) */
+
+:root {
+  --wst-leather-1: #23160c;
+  --wst-leather-2: #120b06;
+  --wst-night: #07080f;
+  --wst-gold: #e2b459;
+  --wst-gold-hi: #fff1b8;
+  --wst-gold-lo: #9c6f22;
+  --wst-ink: #f4e6c6;
+  --wst-muted: #c8b692;
+  --wst-head-font: "Cinzel Decorative", "Noto Sans Lao", Georgia, serif;
+  --wst-body-font: "EB Garamond", "Noto Sans Lao", Georgia, serif;
+}
+
+/* Unhide and enable the landing page's top-right account buttons when members.js is loaded */
+header.bar .acct {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+header.bar .acct .btn {
+  cursor: pointer;
+}
+
+header.bar .acct .btn.wst-member-pill {
+  color: #261606;
+  border: 1.5px solid #9c6f22;
+  background: linear-gradient(180deg, #f7d983, #d8a243);
+  box-shadow: 0 2px 0 #7b5316, 0 6px 18px rgba(0, 0, 0, 0.55), inset 0 0 0 1px #ffebb6;
+}
+
+/* Landing footer links to /membership, /terms, /privacy, /refunds, /contact */
+footer.imprint .imprint-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-bottom: 12px;
+}
+
+footer.imprint .imprint-links a {
+  color: var(--wst-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+footer.imprint .imprint-links a:hover {
+  color: var(--wst-gold-hi);
+}
+
+/* Compact account trigger inside viewer #top */
+#top button#wst-acct-btn {
+  border-color: rgba(226, 180, 89, 0.72);
+  background: rgba(24, 15, 9, 0.88);
+  color: #f6e7c8;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#top button#wst-acct-btn.is-member {
+  background: linear-gradient(180deg, #f6d77e, #d7a041);
+  color: #211306;
+  border-color: #9c6f22;
+  font-weight: 700;
+}
+
+/* Shared leather & gold surface */
+.wst-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9800;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: radial-gradient(ellipse at 50% 42%, rgba(28, 17, 9, 0.78), rgba(5, 7, 15, 0.92));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-family: var(--wst-body-font);
+  color: var(--wst-ink);
+  box-sizing: border-box;
+  overflow-y: auto;
+  touch-action: auto;
+  user-select: text;
+}
+
+.wst-overlay[hidden] {
+  display: none !important;
+}
+
+.wst-overlay *,
+.wst-overlay *::before,
+.wst-overlay *::after {
+  box-sizing: border-box;
+}
+
+.wst-overlay:lang(lo),
+.wst-overlay :lang(lo) {
+  font-family: "Noto Sans Lao", Georgia, serif !important;
+  letter-spacing: 0 !important;
+  font-style: normal !important;
+  line-height: 1.65;
+}
+
+.wst-card {
+  position: relative;
+  width: min(440px, 100%);
+  max-height: calc(100svh - 32px);
+  overflow-y: auto;
+  padding: 24px 22px 20px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(226, 180, 89, 0.14), transparent 55%),
+    linear-gradient(165deg, var(--wst-leather-1) 0%, var(--wst-leather-2) 100%);
+  border: 1.5px solid rgba(226, 180, 89, 0.75);
+  box-shadow:
+    inset 0 0 0 4px #160e08,
+    inset 0 0 0 5px rgba(226, 180, 89, 0.28),
+    0 24px 64px rgba(0, 0, 0, 0.8);
+  color: var(--wst-ink);
+}
+
+.wst-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.wst-head-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.wst-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+}
+
+.wst-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wst-gold-hi);
+  background: rgba(226, 180, 89, 0.14);
+  border: 1px solid rgba(226, 180, 89, 0.45);
+}
+
+.wst-badge.active {
+  color: #211306;
+  background: linear-gradient(180deg, #f6d77e, #d9a448);
+  border-color: #9c6f22;
+  font-weight: 700;
+}
+
+.wst-title {
+  margin: 0;
+  font-family: var(--wst-head-font);
+  font-size: clamp(1.25rem, 4.2vw, 1.55rem);
+  font-weight: 700;
+  line-height: 1.25;
+  background: linear-gradient(180deg, #fff4c8 0%, #f5d57c 35%, #c8942d 62%, #efd07a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.wst-overlay:lang(lo) .wst-title {
+  font-family: "Noto Sans Lao", Georgia, serif;
+}
+
+.wst-sub {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wst-muted);
+}
+
+.wst-icon-btn {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 180, 89, 0.45);
+  background: rgba(10, 7, 5, 0.55);
+  color: var(--wst-gold-hi);
+  font: 600 13px/1 var(--wst-body-font);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wst-icon-btn:hover {
+  background: rgba(226, 180, 89, 0.18);
+  border-color: var(--wst-gold);
+}
+
+.wst-icon-btn:focus-visible,
+.wst-btn:focus-visible,
+.wst-input:focus-visible,
+.wst-link:focus-visible {
+  outline: 2px solid #fff1b8;
+  outline-offset: 2px;
+}
+
+/* Gold-and-leather buttons */
+.wst-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wst-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.wst-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(226, 180, 89, 0.65);
+  background: rgba(14, 9, 6, 0.72);
+  color: var(--wst-ink);
+  font: 600 16px/1.2 var(--wst-body-font);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.12s;
+}
+
+.wst-btn:hover {
+  background: rgba(226, 180, 89, 0.16);
+  border-color: var(--wst-gold-hi);
+}
+
+.wst-btn.primary {
+  color: #241405;
+  border-color: #8f651f;
+  background: linear-gradient(180deg, #f8db89 0%, #d8a244 100%);
+  box-shadow: 0 2px 0 #7b5316, 0 6px 18px rgba(0, 0, 0, 0.45), inset 0 0 0 1px #ffecb8;
+}
+
+.wst-btn.primary:hover {
+  filter: brightness(1.06);
+}
+
+.wst-btn.subtle {
+  border-color: rgba(226, 180, 89, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 15px;
+  min-height: 42px;
+}
+
+.wst-btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+/* Hold-to-unlock parent gate button */
+.wst-hold {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.wst-hold-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(246, 215, 126, 0.32), rgba(246, 215, 126, 0.62));
+  pointer-events: none;
+  transition: width 0.05s linear;
+}
+
+.wst-hold span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Inputs & dividers */
+.wst-box {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(8, 5, 3, 0.55);
+  border: 1px solid rgba(226, 180, 89, 0.3);
+}
+
+.wst-box-dashed {
+  border-style: dashed;
+  border-color: rgba(226, 180, 89, 0.5);
+  background: rgba(226, 180, 89, 0.06);
+}
+
+.wst-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: var(--wst-gold-hi);
+}
+
+.wst-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.wst-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 180, 89, 0.5);
+  background: rgba(6, 4, 3, 0.85);
+  color: var(--wst-ink);
+  font: 500 16px/1.2 var(--wst-body-font);
+}
+
+.wst-input-row .wst-btn {
+  width: auto;
+  flex: none;
+  padding: 8px 16px;
+}
+
+.wst-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: var(--wst-muted);
+}
+
+.wst-divider::before,
+.wst-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(226, 180, 89, 0.25);
+}
+
+.wst-status {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #ffd98a;
+}
+
+.wst-status.err {
+  color: #ff9d8a;
+}
+
+.wst-note {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--wst-muted);
+  text-align: center;
+}
+
+.wst-plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.wst-plan-chip {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(226, 180, 89, 0.35);
+  background: rgba(12, 8, 5, 0.65);
+}
+
+.wst-plan-chip strong {
+  display: block;
+  color: var(--wst-gold-hi);
+  font-size: 15px;
+}
+
+.wst-plan-chip span {
+  font-size: 13.5px;
+  color: var(--wst-muted);
+}
+
+.wst-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 12px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(226, 180, 89, 0.2);
+  font-size: 13px;
+}
+
+.wst-link {
+  color: var(--wst-gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.wst-link:hover {
+  color: var(--wst-gold-hi);
+}
+
+/* Locked-book screen (sits cleanly over web/live/index.html for locked books) */
+#wst-lock {
+  z-index: 9500;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 45%, rgba(36, 23, 12, 0.92), rgba(7, 8, 15, 0.98));
+}
+
+#wst-lock .wst-card {
+  text-align: center;
+}
+
+#wst-lock .wst-head {
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.wst-lock-seal {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--wst-gold-hi);
+  border: 1.5px solid rgba(226, 180, 89, 0.7);
+  background: radial-gradient(circle, rgba(226, 180, 89, 0.22), rgba(14, 9, 5, 0.85));
+  box-shadow: 0 0 24px rgba(226, 180, 89, 0.22);
+}
+
+.wst-lock-seal svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 480px) {
+  .wst-card {
+    padding: 18px 16px 16px;
+  }
+  .wst-plan-grid {
+    grid-template-columns: 1fr;
+  }
+  .wst-input-row {
+    flex-direction: column;
+  }
+  .wst-input-row .wst-btn {
+    width: 100%;
+  }
+}

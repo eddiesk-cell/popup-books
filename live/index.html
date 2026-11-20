@@ -86,6 +86,8 @@
     background: radial-gradient(circle at 50% 50%, #1c1a2cd0 0%, #07080ff0 75%); }
   #moral h2 { margin: 0; font-weight: normal; font-style: italic; font-size: clamp(28px, 5vw, 56px); opacity: .85; }
   #moral .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0 16px; font-size: clamp(16px, 2vw, 22px); }
+  #moral .imprint { display: grid; justify-items: center; gap: 4px; margin-top: 2vh; opacity: .85; font-size: clamp(13px, 1.5vw, 16px); letter-spacing: .04em; }
+  #moral .imprint img { width: clamp(120px, 18vw, 180px); height: auto; } #moral .imprint p { margin: 0; } #moral .imprint .c { opacity: .65; font-size: .85em; }
   #bar { z-index: 5; }
   /* more to read: a quiet row of dots above the reading bar; at the page's end a labelled Next button beside the forward corner */
   #dots { position: fixed; left: 50%; top: 0; translate: -50%; display: flex; gap: 7px; pointer-events: none; z-index: 51; }  /* under the read-along page's text (live.js sets top), never over the stage */
@@ -147,7 +149,7 @@
 <div id="curlL" class="curl" hidden></div><div id="curlR" class="curl" hidden></div>
 <div id="sbub" hidden></div>
 <button id="lbub" hidden aria-label="Hear it again"></button>
-<div id="moral" hidden><h2>The End</h2><div class="row"><a id="start" role="button" href="./">Start from the beginning</a><button id="tolib">Back to the library</button><button id="again">Read it again</button><button id="back">Back</button></div></div>
+<div id="moral" hidden><h2>The End</h2><div class="row"><a id="start" role="button" href="./">Start from the beginning</a><button id="tolib">Back to the library</button><button id="again">Read it again</button><button id="back">Back</button></div><div class="imprint"><img src="imprint-logo.webp" alt="Wonder of Saya's Tales" width="180" height="119"><p>Published by Saya</p><p class="c">&copy; 2026 Saya. All rights reserved.</p></div></div>
 <div id="rnav" hidden><button id="rback" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button id="rnext"><span>Next</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg></button></div>
 <div id="bar"><div id="dots" hidden aria-hidden="true"></div><div id="read" class="rd"></div><button id="replay" aria-label="Read this page again">&#8635; Read again</button></div>
 <script src="../readalong.js" data-source="#read" data-theme="firefly" defer></script>
@@ -156,7 +158,8 @@
   document.getElementById("start").href = `?book=${book}&s=s01`;  // a plain link, so it works even when an old cached live.js has no handler for it
   Object.assign(ra.dataset, { theme: { mali: "lantern" }[book] || "firefly", story: `../${book}/story.json`, voice: `../${book}/voice/` });
 </script>
-<script type="module" src="../dist/live-CO7YPBRP.js"></script>
+<script type="module" src="../dist/live-XF5QI7NH.js"></script>
 <script type="module" src="paperswap.js"></script>
+<script type="module" src="../members/members.js"></script>
 </body>
 </html>

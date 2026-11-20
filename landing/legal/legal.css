@@ -1,0 +1,232 @@
+/* Wonder of Saya Tales — Legal & Membership info pages (gold-and-leather house style, Noto Sans Lao) */
+:root {
+  --night: #07080f;
+  --leather-1: #22150b;
+  --leather-2: #120b06;
+  --gold: #e2b459;
+  --gold-hi: #fff1b8;
+  --gold-lo: #8f651f;
+  --ink: #f4e6c6;
+  --muted: #cbb894;
+  --head-font: "Cinzel Decorative", "Noto Sans Lao", Georgia, serif;
+  --body-font: "EB Garamond", "Noto Sans Lao", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, #1d120a 0%, var(--night) 65%);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+:lang(lo), :lang(lo) * {
+  font-family: "Noto Sans Lao", Georgia, serif !important;
+  letter-spacing: 0 !important;
+  font-style: normal !important;
+  line-height: 1.75;
+}
+
+[data-lang] { display: none; }
+html[lang="en"] [data-lang="en"] { display: block; }
+html[lang="lo"] [data-lang="lo"] { display: block; }
+span[data-lang], a[data-lang] { display: none; }
+html[lang="en"] span[data-lang="en"], html[lang="en"] a[data-lang="en"] { display: inline; }
+html[lang="lo"] span[data-lang="lo"], html[lang="lo"] a[data-lang="lo"] { display: inline; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(7, 8, 15, 0.9);
+  border-bottom: 1px solid rgba(226, 180, 89, 0.25);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  color: var(--gold-hi);
+  text-decoration: none;
+  font-family: var(--head-font);
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 180, 89, 0.55);
+  background: rgba(24, 15, 9, 0.8);
+  color: var(--gold-hi);
+  font: 600 14px/1.2 var(--body-font);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pill:hover {
+  background: rgba(226, 180, 89, 0.18);
+  border-color: var(--gold-hi);
+}
+
+.pill.primary {
+  color: #241405;
+  border-color: var(--gold-lo);
+  background: linear-gradient(180deg, #f8db89, #d8a244);
+}
+
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 18px 48px;
+}
+
+.sheet {
+  padding: clamp(22px, 4vw, 40px);
+  border-radius: 16px;
+  background: linear-gradient(165deg, var(--leather-1) 0%, var(--leather-2) 100%);
+  border: 1.5px solid rgba(226, 180, 89, 0.65);
+  box-shadow:
+    inset 0 0 0 4px #150d07,
+    inset 0 0 0 5px rgba(226, 180, 89, 0.22),
+    0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-family: var(--head-font);
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  line-height: 1.2;
+  background: linear-gradient(180deg, #fff4c8 0%, #f5d57c 35%, #c8942d 62%, #efd07a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lead {
+  margin: 0 0 24px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+h2 {
+  margin: 26px 0 8px;
+  font-family: var(--head-font);
+  font-size: 1.2rem;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+}
+
+p { margin: 0 0 12px; }
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 22px;
+}
+
+li { margin-bottom: 6px; }
+
+a {
+  color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--gold-hi); }
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 20px 0 24px;
+}
+
+@media (max-width: 720px) {
+  .plans { grid-template-columns: 1fr; }
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 16px;
+  border-radius: 12px;
+  background: rgba(8, 5, 3, 0.62);
+  border: 1px solid rgba(226, 180, 89, 0.38);
+}
+
+.plan-card.featured {
+  border-color: var(--gold);
+  box-shadow: 0 0 24px rgba(226, 180, 89, 0.16);
+}
+
+.plan-name {
+  margin: 0;
+  font-family: var(--head-font);
+  font-size: 1.15rem;
+  color: var(--gold-hi);
+}
+
+.plan-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.plan-meta {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.callout {
+  margin: 18px 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(226, 180, 89, 0.08);
+  border: 1px solid rgba(226, 180, 89, 0.42);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.foot {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 18px 40px;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.foot-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}

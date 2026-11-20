@@ -1,5 +1,25 @@
 {
- "beds": ["mt-bed-riverbank-noon", "mt-bed-patch-morning", "mt-bed-garden-night", "rain-light"],
+ "beds": [
+  "mt-bed-riverbank-noon",
+  "mt-bed-patch-morning",
+  "mt-bed-garden-night",
+  "rain-light",
+  "wind-breeze"
+ ],
  "shots": [],
- "pools": { "mt-rumble": 3, "mt-chop": 3, "mt-dig": 3, "mt-peel-flop": 3, "mt-snore": 3, "mt-ouch": 3, "mt-sizzle": 3, "bubbles-pop": 3, "mt-splash-big": 3, "mt-fold": 3, "mt-creak": 3, "buffalo-moo": 3, "gecko-chirp": 3 }
+ "pools": {
+  "mt-rumble": 3,
+  "mt-chop": 3,
+  "mt-dig": 3,
+  "mt-peel-flop": 3,
+  "mt-snore": 3,
+  "mt-ouch": 3,
+  "mt-sizzle": 3,
+  "bubbles-pop": 3,
+  "mt-splash-big": 3,
+  "mt-fold": 3,
+  "mt-creak": 3,
+  "buffalo-moo": 3,
+  "gecko-chirp": 3
+ }
 }

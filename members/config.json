@@ -1,0 +1,24 @@
+{
+  "supabaseUrl": "",
+  "supabaseAnonKey": "",
+  "workerUrl": "",
+  "freeBooks": ["kapi"],
+  "payments": "off",
+  "paymentProvider": "gumroad",
+  "membership": {
+    "productUrl": ""
+  },
+  "supportEmail": "support@tales.gurulao.com",
+  "plans": {
+    "monthly": {
+      "price": "",
+      "period": "month",
+      "currency": "USD"
+    },
+    "yearly": {
+      "price": "",
+      "period": "year",
+      "currency": "USD"
+    }
+  }
+}

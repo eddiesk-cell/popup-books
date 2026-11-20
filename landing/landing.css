@@ -83,3 +83,6 @@ dialog .btn { margin-top: .8rem; }
 /* the logo (owner 2026-11-15, FINAL): the drawn gold artwork, an image, never a font; epic.css floats it on the closed book */
 h1.logo { margin: 0; background: none; filter: none; line-height: 0; }
 h1.logo img { display: block; width: 100%; height: auto; filter: drop-shadow(0 6px 20px rgb(0 0 0 / .6)); }
+
+.imprint { text-align: center; padding: 28px 16px 36px; color: var(--ink); opacity: .75; font-size: .9rem; letter-spacing: .05em; background: var(--night); }
+.imprint p { margin: 2px 0; } .imprint .c { opacity: .7; font-size: .85em; }

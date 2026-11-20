@@ -1,8 +1,12 @@
 {
  "beds": [
   "birds-morning",
-  "river-slow",
-  "leaves-breeze"
+  "crickets",
+  "crowd-murmur",
+  "fire-hearth",
+  "leaves-breeze",
+  "night-wind",
+  "river-slow"
  ],
  "shots": [
   "buffalo-snort",
@@ -11,6 +15,9 @@
  "pools": {
   "buffalo-moo": 3,
   "gecko-chirp": 3,
+  "dog-woof": 3,
+  "duck-quack": 3,
+  "child-giggle": 3,
   "drum-big": 3,
   "drum-mid": 3,
   "drum-small": 3,

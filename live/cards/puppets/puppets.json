@@ -3947,7 +3947,8 @@
     "Chang'e"
    ],
    "cut": true,
-   "person": false
+   "person": false,
+   "selflit": true
   },
   "chang-e-sun-fly": {
    "look": "a blazing sun disc with a small yellow sun-bird inside, a tail of fire streaming behind, flying",
@@ -3970,7 +3971,8 @@
     "Chang'e"
    ],
    "cut": true,
-   "person": false
+   "person": false,
+   "selflit": true
   },
   "chang-e-sunbird-wet": {
    "look": "the small yellow sun-bird drenched and sad after its fire goes out, water drops falling",
@@ -4450,7 +4452,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "xieng-mieng-kham-stand": {
    "look": "Kham standing calm, smiling, the khaen under his arm",
@@ -5369,7 +5372,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-lantern-2": {
    "look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
@@ -5391,7 +5395,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-lantern-3": {
    "look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
@@ -5413,7 +5418,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-lantern-4": {
    "look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
@@ -5435,7 +5441,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-lantern-5": {
    "look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
@@ -5457,7 +5464,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-lantern-6": {
    "look": "a hung paper lantern, the prop card as a one-piece puppet, so it can hang at a height and be lit (spread 8)",
@@ -5479,7 +5487,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-mooncake-plate": {
    "look": "the mooncake plate card as a puppet, so it sits on the table top (spread 8)",
@@ -10726,7 +10735,8 @@
     "The Hare in the Moon"
    ],
    "cut": true,
-   "selflit": true
+   "selflit": true,
+   "aspect": 2.3448
   },
   "hare-in-the-moon-clay-lamp": {
    "look": "Warm glowing Indian terracotta clay diya oil lamp with golden flame",
@@ -10792,6 +10802,1377 @@
    "cycles": {},
    "uses": [
     "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "ebony-horse-ebony-horse": {
+   "look": "Polished dark ebony mechanical horse with golden brass gears and sun/moon shoulder pegs",
+   "size": 0.162,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-horse-firuz": {
+   "look": "Prince Firuz riding the Enchanted Ebony Horse",
+   "size": 0.186,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-horse-firuz-worry": {
+   "look": "Prince Firuz hugging the Enchanted Ebony Horse neck in breathless worry",
+   "size": 0.175,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-horse-pair": {
+   "look": "Prince Firuz and Princess Yasmin riding the Ebony Horse with crested hoopoe on saddlebow",
+   "size": 0.188,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-horse-pair-aim": {
+   "look": "Firuz and Yasmin riding the Ebony Horse as Yasmin aims her brass astrolabe at the Evening Star",
+   "size": 0.192,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-horse-compass": {
+   "look": "Ebony Horse fitted with shining brass star-compass and sun/moon signs",
+   "size": 0.164,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-firuz-stand": {
+   "look": "Young Prince Firuz of Shiraz in turquoise gold-trimmed Persian tunic",
+   "size": 0.145,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-firuz-clap": {
+   "look": "Prince Firuz clapping his hands eagerly",
+   "size": 0.145,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-firuz-bow": {
+   "look": "Prince Firuz bowing respectfully",
+   "size": 0.126,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-firuz-kneel": {
+   "look": "Prince Firuz kneeling with a golden brass gear",
+   "size": 0.105,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-yasmin-stand": {
+   "look": "Princess Yasmin in lapis-blue star-embroidered dress welcoming warmly",
+   "size": 0.143,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-yasmin-astrolabe": {
+   "look": "Princess Yasmin lifting her shining brass astrolabe toward the stars",
+   "size": 0.146,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-yasmin-kneel": {
+   "look": "Princess Yasmin kneeling to fit a golden brass gear",
+   "size": 0.103,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-sabur-stand": {
+   "look": "Kind King Sabur of Shiraz in burgundy-gold robe and Persian crown",
+   "size": 0.167,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-sabur-hug": {
+   "look": "King Sabur warmly hugging Prince Firuz",
+   "size": 0.167,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-hakim-stand": {
+   "look": "Old clockwork master Hakim in ochre coat and cream turban",
+   "size": 0.16,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-hakim-bow": {
+   "look": "Master Hakim bowing low respectfully",
+   "size": 0.13,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-hakim-sorry": {
+   "look": "Master Hakim wiping a teardrop from his white beard",
+   "size": 0.158,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-peacock": {
+   "look": "Silver clockwork peacock with folded tail",
+   "size": 0.073,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-peacock-fan": {
+   "look": "Silver clockwork peacock spreading its shining fan tail",
+   "size": 0.086,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-cat": {
+   "look": "Plump ginger-striped palace cat",
+   "size": 0.034,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-cat-tumble": {
+   "look": "Plump striped palace cat tumbled paws-up in a basket of pink rose petals",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-hoopoe": {
+   "look": "Little orange-and-striped crested hoopoe bird",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-hoopoe-hat": {
+   "look": "Crested hoopoe bird wearing a white jasmine flower hat",
+   "size": 0.03,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-cushion-pair": {
+   "look": "Striped palace cat and crested hoopoe bouncing nose to beak on red silk cushion",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-crane": {
+   "look": "Graceful snowy-white Persian crane flying in side profile",
+   "size": 0.08,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-spring-lantern": {
+   "look": "Glowing Persian Nowruz spring blossom lantern",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-sun-peg": {
+   "look": "Gleaming golden sun turning peg",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-moon-peg": {
+   "look": "Gleaming cool silver moon turning peg",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-petal-basket": {
+   "look": "Woven basket overflowing with pink rose petals",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-wind-puff": {
+   "look": "Puffy white mountain cloud",
+   "size": 0.047,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-guide-star": {
+   "look": "Bright 8-pointed golden twilight guide-star",
+   "size": 0.026,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-crescent-moon": {
+   "look": "Luminous silver crescent moon",
+   "size": 0.094,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-distant-tower": {
+   "look": "Glowing distant white marble Persian observatory tower",
+   "size": 0.085,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-astrolabe-stand": {
+   "look": "Shining Persian brass astrolabe on pedestal stand",
+   "size": 0.075,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-star-lantern": {
+   "look": "Glowing brass rooftop star-lantern",
+   "size": 0.038,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-star-gear": {
+   "look": "Gleaming golden brass star-shaped clockwork gear",
+   "size": 0.026,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-gear-chest": {
+   "look": "Open carved Persian wooden chest of gleaming brass gears",
+   "size": 0.042,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-gear-small": {
+   "look": "Small gleaming golden brass clockwork gear",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-gear-mid": {
+   "look": "Medium ornate gleaming golden brass clockwork gear",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-pin-small": {
+   "look": "Small carved ebony brass gear axle socket pin",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-pin-mid": {
+   "look": "Medium carved ebony brass gear axle socket pin",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-pin-star": {
+   "look": "Star-shaped carved ebony brass gear axle socket pin",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-storm-cloud": {
+   "look": "Swirling chilly grey mountain wind-cloud",
+   "size": 0.056,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-evening-star": {
+   "look": "Radiant golden 8-pointed Evening Star",
+   "size": 0.034,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-torch-glow": {
+   "look": "Bright golden flaming Persian brass courtyard torch",
+   "size": 0.036,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-brazier-dark": {
+   "look": "Unlit ornate Persian brass courtyard brazier",
+   "size": 0.058,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-brazier-lit": {
+   "look": "Blazing ornate Persian brass courtyard brazier with golden flames",
+   "size": 0.068,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-landing-stone": {
+   "look": "Glowing turquoise-and-gold Persian mosaic courtyard landing stone",
+   "size": 0.026,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-sun-sign": {
+   "look": "Golden sun medallion sign pointing up to rise",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-moon-sign": {
+   "look": "Silver moon medallion sign pointing down to land",
+   "size": 0.028,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-star-compass": {
+   "look": "Shining Persian brass star-compass",
+   "size": 0.032,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true,
+   "selflit": true
+  },
+  "ebony-horse-mount-sun": {
+   "look": "Carved ebony-and-brass right shoulder sun peg mount",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-mount-center": {
+   "look": "Carved ebony-and-brass center star-compass saddle mount",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-mount-moon": {
+   "look": "Carved ebony-and-brass left shoulder moon peg mount",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-silk-cushion": {
+   "look": "Embroidered crimson Persian silk palace cushion",
+   "size": 0.024,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "ebony-horse-feast-tray": {
+   "look": "Brass tray of golden saffron cakes and sweet red pomegranates",
+   "size": 0.034,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Enchanted Ebony Horse"
+   ],
+   "cut": true
+  },
+  "chang-e-shelf": {
+   "look": "the high wooden veranda shelf (prop card as a puppet, stands flush on veranda post)",
+   "size": 0.165,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Chang'e"
+   ],
+   "cut": true
+  },
+  "chang-e-shelf-night": {
+   "look": "the high wooden veranda shelf at night (prop card as a puppet)",
+   "size": 0.165,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Chang'e"
+   ],
+   "cut": true
+  },
+  "chang-e-paper-window": {
+   "look": "the lattice paper window on the courtyard house wall (prop card as a puppet)",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Chang'e"
+   ],
+   "cut": true
+  },
+  "chang-e-paper-window-night": {
+   "look": "the lattice paper window at night (prop card as a puppet)",
+   "size": 0.11,
+   "gait": "walk",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Chang'e"
+   ],
+   "cut": true
+  },
+  "chang-e-paper-window-lit": {
+   "look": "the warm glowing lattice paper window for the shadow game (spread 5)",
+   "size": 0.131,
+   "gait": "fly",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Chang'e"
    ],
    "cut": true
   }
