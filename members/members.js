@@ -302,6 +302,7 @@ function isFreeBook(bookId) {
 
 function isBookUnlocked(bookId = getCurrentBook()) {
   if (!bookId) return true;
+  if (config.gate !== true) return true;  // Eddie 2026-11-20: every book stays open until he turns the gate on (planned at about 20 books); sign-in is only an extra
   if (isFreeBook(bookId)) return true;
   return isActiveMembership(state.membership);
 }

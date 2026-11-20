@@ -1,8 +1,11 @@
 {
+  "gate": false,
   "supabaseUrl": "",
   "supabaseAnonKey": "",
   "workerUrl": "",
-  "freeBooks": ["kapi"],
+  "freeBooks": [
+    "kapi"
+  ],
   "payments": "off",
   "paymentProvider": "gumroad",
   "membership": {
