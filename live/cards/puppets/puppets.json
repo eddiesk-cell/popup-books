@@ -11486,7 +11486,8 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "ebony-horse-guide-star": {
       "look": "Bright 8-pointed golden twilight guide-star",
@@ -11508,7 +11509,8 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "ebony-horse-crescent-moon": {
       "look": "Luminous silver crescent moon",
@@ -11603,7 +11605,7 @@
     },
     "ebony-horse-star-gear": {
       "look": "Gleaming golden brass star-shaped clockwork gear",
-      "size": 0.026,
+      "size": 0.034,
       "gait": "idle",
       "versions": [
         "day"
@@ -11647,7 +11649,7 @@
     },
     "ebony-horse-gear-small": {
       "look": "Small gleaming golden brass clockwork gear",
-      "size": 0.024,
+      "size": 0.02,
       "gait": "idle",
       "versions": [
         "day"
@@ -11669,7 +11671,7 @@
     },
     "ebony-horse-gear-mid": {
       "look": "Medium ornate gleaming golden brass clockwork gear",
-      "size": 0.024,
+      "size": 0.036,
       "gait": "idle",
       "versions": [
         "day"
@@ -11775,7 +11777,8 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "ebony-horse-evening-star": {
       "look": "Radiant golden 8-pointed Evening Star",
@@ -11797,7 +11800,8 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "ebony-horse-torch-glow": {
       "look": "Bright golden flaming Persian brass courtyard torch",
