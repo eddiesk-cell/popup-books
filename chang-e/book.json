@@ -20,8 +20,9 @@
    ],
    "game": {
     "type": "collect",
+    "tap": "light",
     "count": "game.1.count",
-    "before": "1.5",
+    "before": "1.4",
     "targets": [
      "sun-1",
      "sun-2",
@@ -81,6 +82,7 @@
    ],
    "game": {
     "type": "collect",
+    "tap": "light",
     "before": "3.3",
     "targets": [
      "sun-2",
@@ -123,6 +125,17 @@
      "drum-small",
      "gong-soft"
     ],
+    "rounds": [
+     [
+      "drum-big",
+      "drum-small"
+     ],
+     [
+      "drum-big",
+      "gong",
+      "drum-small"
+     ]
+    ],
     "voice": {
      "start": "game.4.start",
      "praise": "game.4.praise"
@@ -144,25 +157,17 @@
    "game": {
     "type": "shadow",
     "before": "5.2",
-    "who": "chang-e",
+    "who": "rabbit",
     "lamp": "rabbit-lantern",
     "caster": "fengmeng",
     "screen": "paper-window",
-    "spots": [
-     [
-      -0.2,
-      -0.1
-     ],
-     [
-      0.05,
-      -0.24
-     ],
-     [
-      -0.44,
-      -0.2
-     ]
+    "targets": [
+     "spot-a",
+     "spot-b",
+     "spot-c"
     ],
-    "answer": 2,
+    "answer": "spot-c",
+    "level": 0.32,
     "voice": {
      "start": "game.5.start",
      "praise": "game.5.praise"
@@ -185,7 +190,7 @@
     "type": "collect",
     "before": "6.2",
     "targets": [
-     "jade-rabbit"
+     "rabbit-cling"
     ],
     "voice": {
      "start": "game.6.start",
@@ -208,17 +213,15 @@
    "game": {
     "type": "timing",
     "before": "7.5",
-    "step": {
-     "prop": "jade-rabbit",
-     "clip": "Pound",
-     "steps": 5
-    },
     "targets": [
      "mortar-pestle"
     ],
     "voice": {
      "start": "game.7.start",
      "praise": "game.7.praise"
+    },
+    "step": {
+     "steps": 5
     },
     "start": "Help the rabbit pound! Tap when the stick comes down. Thump!",
     "praise": "Thump, thump, thump! Good pounding!"
@@ -237,6 +240,7 @@
    "game": {
     "type": "collect",
     "tap": "light",
+    "lit_glow": 1,
     "before": "8.5",
     "targets": [
      "lantern-1",
@@ -268,7 +272,7 @@
     "type": "collect",
     "before": "9.3",
     "deal": [
-     "jade-rabbit"
+     "jr-pestle"
     ],
     "targets": [
      "flower-1",

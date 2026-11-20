@@ -20,16 +20,16 @@
     "zh": "竹取爷爷的月亮女儿",
     "ja": "たけとり おじいさんと つきの こ かぐや"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/bamboo-cutter/plate.webp",
+   "spine": "#42541c",
+   "gold": "#f2da84",
    "culture": "Japanese",
    "region": "asia",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=bamboo-cutter&s=s01"
   },
   {
@@ -97,6 +97,27 @@
    ],
    "status": "ready",
    "link": "../live/?book=gourd&s=s01"
+  },
+  {
+   "id": "hare-in-the-moon",
+   "title": {
+    "en": "The Hare in the Moon",
+    "lo": "ກະຕ່າຍໃນດວງຈັນ",
+    "th": "กระต่ายในดวงจันทร์",
+    "zh": "月亮里的野兔",
+    "ja": "つきの なかの うさぎ"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Indian",
+   "region": "asia",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=hare-in-the-moon&s=s01"
   },
   {
    "id": "kapi",

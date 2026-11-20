@@ -5678,7 +5678,8 @@
    "uses": [
     "Chang'e"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "chang-e-mooncake-piece": {
    "look": "one mooncake piece, so it sits on the table top (spread 10)",
@@ -10475,8 +10476,8 @@
    "selflit": true
   },
   "hare-in-the-moon-sakka-throne": {
-   "look": "Ornate golden Indian stone throne resting on warm luminous cloud",
-   "size": 0.113,
+   "look": "King Sakka seated serenely upon his ornate golden Indian stone throne on a warm luminous cloud",
+   "size": 0.16,
    "gait": "idle",
    "versions": [
     "day"
@@ -10753,6 +10754,28 @@
   "hare-in-the-moon-grandmother-diya": {
    "look": "Indian grandmother kneeling gently with lit golden clay diya lamp",
    "size": 0.1,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "The Hare in the Moon"
+   ],
+   "cut": true
+  },
+  "hare-in-the-moon-green-leaf": {
+   "look": "Fresh curved green Indian lotus/banyan leaf pad for tiny ladybugs",
+   "size": 0.036,
    "gait": "idle",
    "versions": [
     "day"

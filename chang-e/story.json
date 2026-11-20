@@ -854,6 +854,106 @@
    ]
   },
   {
+   "id": "game.1.count.1",
+   "text": "One.",
+   "say": [
+    [
+     "narrator",
+     "One."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.2",
+   "text": "Two.",
+   "say": [
+    [
+     "narrator",
+     "Two."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.3",
+   "text": "Three.",
+   "say": [
+    [
+     "narrator",
+     "Three."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.4",
+   "text": "Four.",
+   "say": [
+    [
+     "narrator",
+     "Four."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.5",
+   "text": "Five.",
+   "say": [
+    [
+     "narrator",
+     "Five."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.6",
+   "text": "Six.",
+   "say": [
+    [
+     "narrator",
+     "Six."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.7",
+   "text": "Seven.",
+   "say": [
+    [
+     "narrator",
+     "Seven."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.8",
+   "text": "Eight.",
+   "say": [
+    [
+     "narrator",
+     "Eight."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.9",
+   "text": "Nine.",
+   "say": [
+    [
+     "narrator",
+     "Nine."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.count.10",
+   "text": "Ten.",
+   "say": [
+    [
+     "narrator",
+     "Ten."
+    ]
+   ]
+  },
+  {
    "id": "game.2.start",
    "text": "Help Chang'e! Tap everyone who needs water.",
    "say": [

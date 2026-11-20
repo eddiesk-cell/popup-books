@@ -1,0 +1,1095 @@
+{
+ "words": false,
+ "title": "The Bamboo Cutter's Moon Child",
+ "credit": "From the ancient Japanese tale Taketori Monogatari (The Tale of the Bamboo Cutter, tenth century), Japan's oldest storybook tale, retold in English by F. Victor Dickins (1888) and Yei Theodora Ozaki in Japanese Fairy Tales (1908). Retold in our own words.",
+ "status": "Locked at STOP 1 (Orchestrator with Eddie's authority, 2026-11-19: \"STOP 1 PASSED\" with tightened 4-8 line lengths and Mikado voice).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "kaguya": {
+   "voice": "bf_lily",
+   "speed": 0.98,
+   "pitch": 1
+  },
+  "taketori": {
+   "voice": "bm_lewis",
+   "speed": 0.93,
+   "pitch": -1
+  },
+  "grandmother": {
+   "voice": "bf_emma",
+   "speed": 0.95,
+   "pitch": 0
+  },
+  "moonqueen": {
+   "voice": "bf_isabella",
+   "speed": 0.94,
+   "pitch": 0
+  },
+  "mikado": {
+   "voice": "bm_daniel",
+   "speed": 0.98,
+   "pitch": 1
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "lords": {
+   "voice": "bm_george",
+   "speed": 1.03,
+   "pitch": 0
+  },
+  "children": {
+   "voice": "bm_george",
+   "speed": 1.02,
+   "pitch": 0
+  },
+  "frog": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "bamboo": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "koto": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lantern": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fuji": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Kaguya": "Kagooya",
+  "Taketori": "Tah-ketori",
+  "hagoromo": "hahgo-romo"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Shining Bamboo",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in Japan, near a green bamboo grove, lived old Taketori the bamboo cutter and his kind wife, Grandmother.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in Japan, near a green bamboo grove, lived old Tah-ketori the bamboo cutter and his kind wife, Grandmother."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Every morning Taketori cut smooth green bamboo to weave baskets, cups, and garden fences.",
+     "say": [
+      [
+       "narrator",
+       "Every morning Tah-ketori cut smooth green bamboo to weave baskets, cups, and garden fences."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "One misty morning, rustle, rustle! One tall bamboo stalk shone from its root like the full moon!",
+     "say": [
+      [
+       "narrator",
+       "One misty morning, rustle, rustle! One tall bamboo stalk shone from its root like the full moon!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Tap, tap! Taketori parted the glowing stalk. Inside sat a smiling baby girl, no bigger than his thumb!",
+     "say": [
+      [
+       "narrator",
+       "Tap, tap! Tah-ketori parted the glowing stalk. Inside sat a smiling baby girl, no bigger than his... thumb!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "\"Oh, little treasure!\" whispered Taketori, cupping her in warm hands as he hurried home. What would Grandmother say?",
+     "say": [
+      [
+       "taketori",
+       "Oh, little treasure!"
+      ],
+      [
+       "narrator",
+       "whispered Tah-ketori, cupping her in warm hands as he hurried home. What would Grandmother say?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Little Light of Home",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Grandmother gasped with joy! She tucked the tiny child into a soft bamboo basket lined with warm cotton.",
+     "say": [
+      [
+       "narrator",
+       "Grandmother gasped with joy! She tucked the tiny child into a soft bamboo basket lined with warm cotton."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "\"We wished for a child for so long,\" said Grandmother softly, \"and the grove sent us a little star.\"",
+     "say": [
+      [
+       "grandmother",
+       "We wished for a child for so long,"
+      ],
+      [
+       "narrator",
+       "said Grandmother softly,"
+      ],
+      [
+       "grandmother",
+       "and the grove sent us a little star."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Through spring blossoms, summer rain, and autumn leaves, she grew fast into a bright, joyful young girl!",
+     "say": [
+      [
+       "narrator",
+       "Through spring blossoms, summer rain, and autumn leaves, she grew fast into a bright, joyful young girl!"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "At dusk, her warm smile lit the whole cottage. \"Shine bright, little light of home!\" cheered Taketori.",
+     "say": [
+      [
+       "narrator",
+       "At dusk, her warm smile lit the whole cottage."
+      ],
+      [
+       "taketori",
+       "Shine bright, little light of home!"
+      ],
+      [
+       "narrator",
+       "cheered Tah-ketori."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "They named her Kaguya, which means Shining Light. Next morning, she skipped into the grove. What wonder waited there?",
+     "say": [
+      [
+       "narrator",
+       "They named her Kagooya, which means Shining... Light. Next morning, she skipped into the grove. What wonder waited there?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Gifts of the Grove",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Every bamboo stalk near Kaguya shimmered! Clink, clink! Inside the cut bamboo gleamed bright gold coins.",
+     "say": [
+      [
+       "narrator",
+       "Every bamboo stalk near Kagooya shimmered! Clink, clink! Inside the cut bamboo gleamed bright gold coins."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Taketori and Grandmother shared the gold, giving warm rice, winter coats, and new roofs to every neighbour!",
+     "say": [
+      [
+       "narrator",
+       "Tah-ketori and Grandmother shared the gold, giving warm rice, winter coats, and new roofs to every neighbour!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "\"Helping our neighbours feels warmer than gold!\" laughed Kaguya, twirling beneath the tall green leaves.",
+     "say": [
+      [
+       "kaguya",
+       "Helping our neighbours feels warmer than gold!"
+      ],
+      [
+       "narrator",
+       "laughed Kagooya, twirling beneath the tall green leaves."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "A plump green frog hopped on a bamboo shoot, boing! He bounced onto Taketori's woven hat, and Kaguya giggled.",
+     "say": [
+      [
+       "narrator",
+       "A plump green frog hopped on a bamboo shoot, boing! He bounced onto Tah-ketori's woven... hat, and Kagooya giggled."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Stories of the shining girl spread far. One afternoon, loud footsteps marched to their gate. Who had come calling?",
+     "say": [
+      [
+       "narrator",
+       "Stories of the shining girl spread far. One afternoon, loud footsteps marched to their gate. Who had come calling?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Three Boastful Lords",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Rap-tap-tap! Outside the gate stood three boastful lords in tall black hats, waving painted fans.",
+     "say": [
+      [
+       "narrator",
+       "Rap-tap-tap! Outside the gate stood three boastful lords in tall black hats, waving painted fans."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"Leave this plain hut!\" boasted the lords. \"Come live in our grand castles! We own every treasure!\"",
+     "say": [
+      [
+       "lords",
+       "Leave this plain hut!"
+      ],
+      [
+       "narrator",
+       "boasted the lords."
+      ],
+      [
+       "lords",
+       "Come live in our grand castles! We own every treasure!"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Kaguya stood beside Taketori and Grandmother and smiled. \"Thank you, my lords, but I love my bamboo home!\"",
+     "say": [
+      [
+       "narrator",
+       "Kagooya stood beside Tah-ketori and Grandmother and smiled."
+      ],
+      [
+       "kaguya",
+       "Thank you, my lords, but I love my bamboo... home!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "\"If your hearts are honest,\" said Kaguya, \"bring a wonder gold cannot buy: a jewelled branch, a shining bowl, and a star fan.\"",
+     "say": [
+      [
+       "kaguya",
+       "If your hearts are honest,"
+      ],
+      [
+       "narrator",
+       "said Kagooya,"
+      ],
+      [
+       "kaguya",
+       "bring a wonder gold cannot buy: a jewelled branch, a shining bowl, and a star fan."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "\"Easy!\" puffed the three lords, marching off with proud noses high. Would they bring real wonders, or try a trick?",
+     "say": [
+      [
+       "lords",
+       "Easy!"
+      ],
+      [
+       "narrator",
+       "puffed the three lords, marching off with proud noses high. Would they bring real wonders, or try a trick?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Silly Tricks!",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Three days later, all three lords marched back, grinning behind their wide silk sleeves.",
+     "say": [
+      [
+       "narrator",
+       "Three days later, all three lords marched back, grinning behind their wide silk sleeves."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Lord One held up his jewelled branch, until warm sun melted the glue! Plink, plonk! Painted beads rolled everywhere.",
+     "say": [
+      [
+       "narrator",
+       "Lord One held up his jewelled branch, until warm sun melted the glue! Plink, plonk! Painted beads rolled everywhere."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Lord Two lifted his shining bowl, until Grandmother poured clear water in, splash! Off washed the oil from a soup pot!",
+     "say": [
+      [
+       "narrator",
+       "Lord Two lifted his shining bowl, until Grandmother poured clear water in, splash! Off washed the oil from a soup pot!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Lord Three waved his star fan, and six fireflies zoomed out! He tripped and sat down, ker-plop, in a bamboo basket!",
+     "say": [
+      [
+       "narrator",
+       "Lord Three waved his star fan, and six fireflies zoomed out! He tripped and sat down, ker-plop, in a bamboo... basket!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Red-faced, the lords bowed and hurried away. \"Shine true, little light of home!\" laughed Taketori. Soon the young Mikado came too. Would he boast?",
+     "say": [
+      [
+       "narrator",
+       "Red-faced, the lords bowed and hurried away."
+      ],
+      [
+       "taketori",
+       "Shine true, little light of home!"
+      ],
+      [
+       "narrator",
+       "laughed Tah-ketori. Soon the young Mikado came too. Would he boast?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "A Song Across the Garden",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "No! The young Mikado came quietly to the gate in a plain cloak, carrying only a bamboo flute.",
+     "say": [
+      [
+       "narrator",
+       "No! The young Mikado came quietly to the gate in a plain cloak, carrying only a bamboo flute."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"I did not come to boast,\" said the Mikado kindly. \"I only wished to share a gentle song.\"",
+     "say": [
+      [
+       "mikado",
+       "I did not come to boast,"
+      ],
+      [
+       "narrator",
+       "said the Mikado kindly."
+      ],
+      [
+       "mikado",
+       "I only wished to share a gentle song."
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Too-roo, too-roo! He played a sweet tune by the plum tree, and Kaguya answered on her wooden harp.",
+     "say": [
+      [
+       "narrator",
+       "Too-roo, too-roo! He played a sweet tune by the plum tree, and Kagooya answered on her wooden... harp."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"Thank you for your kind heart,\" smiled Kaguya, bowing low. The Mikado bowed back, happy to be her friend.",
+     "say": [
+      [
+       "kaguya",
+       "Thank you for your kind heart,"
+      ],
+      [
+       "narrator",
+       "smiled Kagooya, bowing low. The Mikado bowed back, happy to be her friend."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "That evening, as the pale moon rose, Kaguya looked up and her smile faded. Why did the moon make her sad?",
+     "say": [
+      [
+       "narrator",
+       "That evening, as the pale moon rose, Kagooya looked up and her smile faded. Why did the moon make her sad?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "A Secret Under the Moon",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Night after night, as the autumn moon grew rounder, Kaguya sat still on the porch and hid a quiet tear.",
+     "say": [
+      [
+       "narrator",
+       "Night after night, as the autumn moon grew rounder, Kagooya sat still on the porch and hid a quiet tear."
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Grandmother wrapped a warm quilt round her shoulders, and Taketori asked gently, \"What troubles your heart, little one?\"",
+     "say": [
+      [
+       "narrator",
+       "Grandmother wrapped a warm quilt round her shoulders, and Tah-ketori asked gently,"
+      ],
+      [
+       "taketori",
+       "What troubles your heart, little one?"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Kaguya held their hands tight. \"Dear Grandfather and Grandmother,\" she whispered, \"long ago, I came down from the moon.\"",
+     "say": [
+      [
+       "narrator",
+       "Kagooya held their hands tight."
+      ],
+      [
+       "kaguya",
+       "Dear Grandfather and Grandmother,"
+      ],
+      [
+       "narrator",
+       "she whispered,"
+      ],
+      [
+       "kaguya",
+       "long ago, I came down from the... moon."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "\"I wished to know a warm family,\" said Kaguya softly. \"On the Harvest Full Moon, my people will come for me.\"",
+     "say": [
+      [
+       "kaguya",
+       "I wished to know a warm family,"
+      ],
+      [
+       "narrator",
+       "said Kagooya softly."
+      ],
+      [
+       "kaguya",
+       "On the Harvest Full Moon, my people will come for me."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "They hugged her close under the stars. Soon the Harvest Full Moon shone bright above the hill. What glided down from the moon?",
+     "say": [
+      [
+       "narrator",
+       "They hugged her close under the stars. Soon the Harvest Full Moon shone bright above the hill. What glided down from the moon?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Silver Cloud Procession",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Ting-a-ling! Out of the moon world and down to the earth unrolled a shining bridge of silver clouds!",
+     "say": [
+      [
+       "narrator",
+       "Ting-a-ling! Out of the moon world and down to the earth unrolled a shining bridge of silver... clouds!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Moon musicians drifted down playing soft star-pipes, silk banners floated, and a silver cloud carriage rested above the hill.",
+     "say": [
+      [
+       "narrator",
+       "Moon musicians drifted down playing soft star-pipes, silk banners floated, and a silver cloud carriage rested above the hill."
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Down stepped the serene Moon Queen. \"Come home, dear Kaguya,\" she called gently. \"The Moon Capital is dim without you.\"",
+     "say": [
+      [
+       "narrator",
+       "Down stepped the serene Moon Queen."
+      ],
+      [
+       "moonqueen",
+       "Come home, dear Kagooya,"
+      ],
+      [
+       "narrator",
+       "she called gently."
+      ],
+      [
+       "moonqueen",
+       "The Moon Capital is dim without you."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "She held out a white feather robe. \"Wear this robe, child, and forget every memory of earth, so your heart never aches.\"",
+     "say": [
+      [
+       "narrator",
+       "She held out a white feather robe."
+      ],
+      [
+       "moonqueen",
+       "Wear this robe, child, and forget every memory of earth, so your heart never aches."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Kaguya looked from the sparkling robe to Grandfather and Grandmother's loving faces. Would she put it on and forget them?",
+     "say": [
+      [
+       "narrator",
+       "Kagooya looked from the sparkling robe to Grandfather and Grandmother's loving faces. Would she put it on and forget them?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "A Memory Kept Forever",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "\"No, please!\" said Kaguya bravely, holding their hands. \"Even if missing them hurts, I never want to forget my family!\"",
+     "say": [
+      [
+       "kaguya",
+       "No, please!"
+      ],
+      [
+       "narrator",
+       "said Kagooya bravely, holding their hands."
+      ],
+      [
+       "kaguya",
+       "Even if missing them hurts, I never want to forget my family!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "The Moon Queen saw them hug close, and her silver eyes grew warm. She touched the robe, melting its cold spell into gold.",
+     "say": [
+      [
+       "narrator",
+       "The Moon Queen saw them hug close, and her silver eyes grew warm. She touched the robe, melting its cold spell into gold."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "\"True love is a treasure,\" said the Moon Queen softly. \"Wear the robe in peace, Kaguya, and keep every memory in your heart.\"",
+     "say": [
+      [
+       "moonqueen",
+       "True love is a treasure,"
+      ],
+      [
+       "narrator",
+       "said the Moon Queen softly."
+      ],
+      [
+       "moonqueen",
+       "Wear the robe in peace, Kagooya, and keep every memory in your heart."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Kaguya gave Taketori a letter and her light inside a carved bamboo lantern. \"On full moon nights, light it, and I will shine back!\"",
+     "say": [
+      [
+       "narrator",
+       "Kagooya gave Tah-ketori a letter and her light inside a carved bamboo lantern."
+      ],
+      [
+       "kaguya",
+       "On full moon nights, light it, and I will shine back!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "\"Shine always, little light of home!\" whispered Grandmother. Whoosh! Up glided the carriage, out of earth and home to the moon. Could love still reach her?",
+     "say": [
+      [
+       "grandmother",
+       "Shine always, little light of... home!"
+      ],
+      [
+       "narrator",
+       "whispered Grandmother. Whoosh! Up glided the carriage, out of earth and home to the moon. Could love still reach her?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Lanterns Under Mount Fuji",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Yes! Under the autumn full moon, the Mikado carried Kaguya's letter up snow-white Mount Fuji, where a soft white cloud curled toward the sky.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Under the autumn full moon, the Mikado carried Kagooya's letter up snow-white Mount Fuji, where a soft white cloud curled toward the sky."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Down in the bamboo grove, pitter-pat, pitter-pat! Village children brought sweet white rice dumplings and tall golden autumn grass.",
+     "say": [
+      [
+       "narrator",
+       "Down in the bamboo grove, pitter-pat, pitter-pat! Village children brought sweet white rice dumplings and tall golden autumn grass."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "The plump green frog balanced a rice dumpling on his nose, wobble, plop! It landed in Taketori's cup, and everyone laughed.",
+     "say": [
+      [
+       "narrator",
+       "The plump green frog balanced a rice dumpling on his nose, wobble, plop! It landed in Tah-ketori's cup, and everyone laughed."
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Taketori and Grandmother lit carved bamboo lanterns along the path, until the whole grove glowed like that first morning.",
+     "say": [
+      [
+       "narrator",
+       "Tah-ketori and Grandmother lit carved bamboo lanterns along the path, until the whole grove glowed like that first morning."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Down from the full moon fell one warm golden moonbeam onto their hands! Look up tonight, Kaguya is smiling down at home.",
+     "say": [
+      [
+       "narrator",
+       "Down from the full moon fell one warm golden moonbeam onto their hands! Look up tonight, Kagooya is smiling down at... home."
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "The three boastful lords brought shiny tricks, and every false treasure fell apart.",
+   "say": [
+    [
+     "closing",
+     "The three boastful lords brought shiny tricks, and every false treasure fell apart."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Taketori and Grandmother had a simple cottage, yet their kindness was the greatest treasure of all.",
+   "say": [
+    [
+     "closing",
+     "Tah-ketori and Grandmother had a simple cottage, yet their kindness was the greatest treasure of all."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Even when Kaguya returned to the moon, she kept every loving memory safe in her heart.",
+   "say": [
+    [
+     "closing",
+     "Even when Kagooya returned to the moon, she kept every loving memory safe in her heart."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Honest love shines brighter than gold, and the people who care for us stay in our hearts forever.",
+   "say": [
+    [
+     "closing",
+     "Honest love shines brighter than gold, and the people who care for us stay in our hearts... forever."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "One bamboo stalk is glowing! Tap the three shining rings on the stalk to open it.",
+   "say": [
+    [
+     "narrator",
+     "One bamboo stalk is glowing! Tap the three shining rings on the stalk to open it."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Tap, tap! Look inside the shining bamboo: a tiny Moon Child!",
+   "say": [
+    [
+     "narrator",
+     "Tap, tap! Look inside the shining bamboo: a tiny Moon Child!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Help Grandmother care for little Kaguya! Tap the quilt, cup, and rattle, then tap her cradle.",
+   "say": [
+    [
+     "narrator",
+     "Help Grandmother care for little Kagooya! Tap the quilt, cup, and rattle, then tap her cradle."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Warm, cosy, and happy! Look how fast little Kaguya grows!",
+   "say": [
+    [
+     "narrator",
+     "Warm, cosy, and happy! Look how fast little Kagooya grows!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Golden gifts gleam in the grove! Tap the five gold coins to share them with the neighbours.",
+   "say": [
+    [
+     "narrator",
+     "Golden gifts gleam in the grove! Tap the five gold coins to share them with the neighbours."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Clink, clink! Enough gold to help every family in the village!",
+   "say": [
+    [
+     "narrator",
+     "Clink, clink! Enough gold to help every family in the village!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Three boastful lords wait at the gate! Tap each lord's fan to give him Kaguya's test.",
+   "say": [
+    [
+     "narrator",
+     "Three boastful lords wait at the gate! Tap each lord's fan to give him Kagooya's test."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "A branch, a bowl, and a fan! Let us see if their hearts are true.",
+   "say": [
+    [
+     "narrator",
+     "A branch, a bowl, and a fan! Let us see if their hearts are true."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Look closely at the treasures! Tap the branch, the bowl, and the fan to test them.",
+   "say": [
+    [
+     "narrator",
+     "Look closely at the treasures! Tap the branch, the bowl, and the fan to test them."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Plink, splash, ker-plop! Every single one was a silly trick!",
+   "say": [
+    [
+     "narrator",
+     "Plink, splash, ker-plop! Every single one was a silly trick!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "The Mikado plays a gentle tune! Listen to the flute and harp, then tap the song back.",
+   "say": [
+    [
+     "narrator",
+     "The Mikado plays a gentle tune! Listen to the flute and harp, then tap the song back."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Sweet and clear! Music makes two true friends.",
+   "say": [
+    [
+     "narrator",
+     "Sweet and clear! Music makes two true friends."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "The evening air is cool! Tap the three garden lanterns to warm the porch around Kaguya.",
+   "say": [
+    [
+     "narrator",
+     "The evening air is cool! Tap the three garden lanterns to warm the porch around Kagooya."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Soft warm glow! Now Kaguya feels brave enough to tell her secret.",
+   "say": [
+    [
+     "narrator",
+     "Soft warm glow! Now Kagooya feels brave enough to tell her secret."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "The silver cloud bridge is here! Tap the five star-lanterns to light the Moon Queen's path.",
+   "say": [
+    [
+     "narrator",
+     "The silver cloud bridge is here! Tap the five star-lanterns to light the Moon Queen's path."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Ting-a-ling! The whole cloud bridge shines like pearl!",
+   "say": [
+    [
+     "narrator",
+     "Ting-a-ling! The whole cloud bridge shines like pearl!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Help Kaguya fill her bamboo keepsake with golden light! Tap when the ring glows.",
+   "say": [
+    [
+     "narrator",
+     "Help Kagooya fill her bamboo keepsake with golden light! Tap when the ring glows."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Warm golden light inside green bamboo: a promise that never fades!",
+   "say": [
+    [
+     "narrator",
+     "Warm golden light inside green bamboo: a promise that never fades!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "It is Moon-Viewing night! Tap the five carved bamboo lanterns so Kaguya can see them.",
+   "say": [
+    [
+     "narrator",
+     "It is Moon-Viewing night! Tap the five carved bamboo lanterns so Kagooya can see them."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Every bamboo lantern glows! Look, a golden moonbeam shines right back down!",
+   "say": [
+    [
+     "narrator",
+     "Every bamboo lantern glows! Look, a golden moonbeam shines right back down!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "kaguya": [
+   "I am Kaguya! Grandfather Taketori found me inside a glowing bamboo stalk.",
+   "My name means Shining Light, and I love our cosy thatched cottage.",
+   "Gold and castles do not matter as much as an honest, kind heart.",
+   "Even up in the Moon Capital, I remember every hug from Grandfather and Grandmother!",
+   "Look up on a full moon night, and I will send a warm moonbeam down to you!"
+  ],
+  "taketori": [
+   "I am Taketori, the old bamboo cutter of the green hills.",
+   "I weave smooth bamboo into baskets, cups, and glowing lanterns.",
+   "Finding tiny Kaguya inside that shining stalk was the happiest day of my life!",
+   "When the grove gave us gold coins, we shared them with every neighbour.",
+   "Shine bright, little light of home!"
+  ],
+  "grandmother": [
+   "I am Grandmother! I tucked baby Kaguya into a soft woven bamboo cradle.",
+   "Our cottage needed no oil lamp at dusk because little Kaguya lit the whole room!",
+   "A splash of clear spring water showed that boastful lord's bowl was a soup pot!",
+   "Whenever we miss Kaguya, we light our carved bamboo lanterns under the moon.",
+   "Love keeps a family close, even across the wide night sky."
+  ],
+  "moonqueen": [
+   "I am the Moon Queen from the shining Moon Capital.",
+   "We came down on a bridge of silver clouds on the night of the Harvest Full Moon.",
+   "Our feather robe is called a hagoromo, woven from starlight and mist.",
+   "Kaguya loved her earthly family so deeply that I blessed her robe to keep every memory.",
+   "True kindness on earth shines all the way up to the moon!"
+  ],
+  "mikado": [
+   "I am the young Mikado! I came quietly with my bamboo flute to share a song.",
+   "Music and friendship are worth more than any boast.",
+   "I carried the letter from Kaguya up tall Mount Fuji, closest to the sky."
+  ],
+  "lords": [
+   "Oh dear! Painted beads, an oily soup pot, and sleepy fireflies were silly tricks!",
+   "Next time we will tell the truth instead of boasting!"
+  ],
+  "frog": [
+   "Ribbit, boing! Springy green bamboo shoots make the best trampolines!",
+   "Oops! How did a round white rice dumpling land in the teacup?"
+  ],
+  "bamboo": [
+   "Tall green bamboo sways and whispers in the mountain breeze.",
+   "Once, a tiny Moon Child slept inside a golden stalk right here!"
+  ],
+  "koto": [
+   "A long wooden Japanese harp called a koto, with silk strings that sing like clear water."
+  ],
+  "lantern": [
+   "A carved green bamboo lantern! Little star windows let warm golden light shine through."
+  ],
+  "fuji": [
+   "Snow-capped Mount Fuji, the tallest mountain in Japan, reaching toward the moon."
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Taketori Monogatari, 10th c. / Ozaki, 1908): five noble suitors compete to wed Kaguya-hime with impossible tasks, soldiers try to fight the Moon Embassy with bows and arrows, the celestial feather robe (hagoromo) wipes away all of Kaguya's earthly memories against her will, and the Emperor burns the elixir on Mount Fuji in grief. Ours (gentle for ages 4-8, zero Ghibli elements): no marriage — three boastful lords demand that a shining child live in their grand castles instead of a plain bamboo hut, and their three comical fake wonders (painted beads on glue, an oily soup pot, and sleepy fireflies in a silk fan) fall apart harmlessly; the young Mikado comes quietly in a plain cloak with a bamboo flute and becomes a true musical friend; no soldiers or weapons when the Moon Procession glides down on silver clouds; Kaguya bravely refuses to forget Taketori and Grandmother, moving the Moon Queen to bless the robe so Kaguya keeps every memory warm in her heart; she leaves a carved glowing bamboo lantern and letter, the Mikado carries her greeting up snow-white Mount Fuji where a white cloud curls to the sky, and on Moon-Viewing night Taketori, Grandmother, and the village children light carved bamboo lanterns in the grove as a golden moonbeam shines back down.",
+  "moral": "Honest love shines brighter than gold, and the people who care for us stay in our hearts forever.",
+  "changes": "1 Three boastful lords (Law of Three, P5) replace the five marriage suitors, adapting the real 10th-century fake-branch and soot-pot episodes as harmless child-friendly slapstick with zero romance or injury. 2 The young Mikado visits humbly with a bamboo flute (speaking in his own male voice bm_daniel) to duet with Kaguya's koto harp. 3 Zero military confrontation at the Moon Procession, and the memory-wiping hagoromo is transformed into Kaguya keeping her memories forever. 4 Distinct from Book 6 (Chang'e): carved green bamboo lanterns (echoing Spread 1's glowing bamboo stalk), koto and bamboo flute music, Tsukimi white rice dumplings and autumn grass, and Mount Fuji's white cloud.",
+  "level": "A1-A2, past simple, tightened for ages 4-8 (mean ~19 words/line, max <=26). Repeated core words: bamboo, grove, shine, light, home, gold, heart, moon, cloud, lantern.",
+  "who speaks": "Speaking characters in their own Kokoro voices (BOOK-STANDARD 2026-11-18): kaguya (bf_lily +1), taketori (bm_lewis -1), grandmother (bf_emma), moonqueen (bf_isabella), mikado (bm_daniel +1). Narrator (bm_george) reads narration and minor group lines (lords).",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1, 3.1, 4.1, 5.1, 6.1, 7.1, 8.1, 9.1, 10.1); P2 6-word refrain 'Shine <bright/true/always>, little light of home!' on spreads 2 (2.4), 5 (5.5), and 9 (9.5, pausing before 'home' on the 3rd return); P3 one '...' predict pause per spread in say; P6 spoken sound words on every E2/E3 spread, zero repeats on adjacent spreads (1 Rustle/Tap, 3 Clink/Boing, 4 Rap-tap-tap, 5 Plink-plonk/Splash/Ker-plop, 6 Too-roo, 8 Ting-a-ling, 9 Whoosh, 10 Pitter-pat/Wobble-plop); P8 harmless slapstick in all three thirds (3.4 green frog Boing onto Taketori's hat, 5.2-5.4 fake branch/pot/fan ending Ker-plop in a bamboo basket, 10.3 frog balances rice dumpling Plop into cup); P11 energy curve E2 E1 E2 E2 E3 E1 E1 E3 E2 E2 E1; P16 all 10 games let the child perform the spread's action. Item 16 world-crossing explicitly named arriving from the moon world (8.1) and returning out of earth to the moon (9.5)."
+ }
+}

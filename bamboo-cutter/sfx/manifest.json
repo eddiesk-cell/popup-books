@@ -1,0 +1,30 @@
+{
+ "beds": [
+  "grove-stream",
+  "cottage-garden",
+  "moon-night"
+ ],
+ "shots": [],
+ "pools": {
+  "motif-kaguya": 1,
+  "motif-family": 1,
+  "motif-moon": 1,
+  "flute-low": 1,
+  "koto-low": 1,
+  "koto-high": 1,
+  "bamboo-rustle": 1,
+  "bamboo-tap": 1,
+  "coin-clink": 1,
+  "frog-boing": 1,
+  "gate-knock": 1,
+  "fan-snap": 1,
+  "beads-plink": 1,
+  "water-splash": 1,
+  "basket-plop": 1,
+  "cloud-whoosh": 1,
+  "star-pipes": 1,
+  "lantern-glow": 1,
+  "pitter-pat": 1,
+  "dumpling-plop": 1
+ }
+}
