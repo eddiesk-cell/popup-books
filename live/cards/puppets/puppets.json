@@ -13632,6 +13632,1461 @@
         "The Simurgh and Zal"
       ],
       "cut": true
+    },
+    "anansi-anansi-stand": {
+      "look": "Clever mahogany-brown 8-legged Ashanti spider hero Anansi wearing bright gold-and-green kente cap",
+      "size": 0.073,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-anansi-climb": {
+      "look": "Anansi climbing/sliding along shimmering silver spider-web strand in kente cap",
+      "size": 0.075,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-anansi-bow": {
+      "look": "Anansi bowing politely tipping his gold-and-green Ashanti kente cap",
+      "size": 0.062,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-anansi-leaf": {
+      "look": "Anansi holding a broad green plantain leaf overhead and river shell",
+      "size": 0.086,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-anansi-carve": {
+      "look": "Anansi holding a small smiling carved wooden Ashanti Akua'ba doll",
+      "size": 0.07,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-aso-stand": {
+      "look": "Wise chestnut-brown 8-legged spider heroine Aso wearing shining crimson Ashanti beads",
+      "size": 0.071,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-aso-pestle": {
+      "look": "Wise Aso holding a smooth wooden pestle to mash sweet golden yams",
+      "size": 0.075,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-nyame-stool": {
+      "look": "Regal kindly Ashanti Sky God Nyame seated on carved golden royal stool in kente robes",
+      "size": 0.152,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-nyame-stand": {
+      "look": "Sky God Nyame standing clapping joyfully in royal kente robes and golden crown",
+      "size": 0.183,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-nyame-box": {
+      "look": "Sky God Nyame holding out the gleaming carved Golden Story Box",
+      "size": 0.18,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-onini-coil": {
+      "look": "Proud emerald-green and saffron-gold diamond-patterned python Onini coiled",
+      "size": 0.089,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-onini-straight": {
+      "look": "Python Onini stretched straight beside golden bamboo pole with green vine loops",
+      "size": 0.04,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-hornet": {
+      "look": "Friendly golden-amber striped Mmoboro forest hornet hovering with translucent wings",
+      "size": 0.021,
+      "gait": "fly",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-osebo-stand": {
+      "look": "Friendly golden-ochre spotted leopard Osebo standing warmly",
+      "size": 0.081,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-osebo-leap": {
+      "look": "Swift spotted leopard Osebo bounding joyfully mid-leap",
+      "size": 0.086,
+      "gait": "run",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-osebo-pit": {
+      "look": "Spotted leopard Osebo peering hopefully over mossy fern-lined hollow rim",
+      "size": 0.064,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-osebo-hammock": {
+      "look": "Leopard Osebo curled up purring snugly inside silver spider-silk hammock",
+      "size": 0.073,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-mmoatia-dance": {
+      "look": "Joyful knee-high Ashanti forest fairy Mmoatia dancing in bright green leaf crown",
+      "size": 0.058,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-mmoatia-stuck": {
+      "look": "Fairy Mmoatia with both tiny palms stuck to smiling carved wooden Ashanti doll",
+      "size": 0.058,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-frog-hop": {
+      "look": "Tiny emerald-green rainforest tree frog bouncing mid-leap",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-boy-sit": {
+      "look": "Young Ashanti village boy seated thoughtfully on carved stool in kente wrap",
+      "size": 0.085,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-girl-sit": {
+      "look": "Young Ashanti village girl seated on carved stool in crimson-and-gold kente dress",
+      "size": 0.083,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-boy": {
+      "look": "Cheerful Ashanti village boy standing and clapping in gold-and-green kente wrap",
+      "size": 0.128,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-girl": {
+      "look": "Cheerful Ashanti village girl standing and clapping in crimson-and-gold kente dress",
+      "size": 0.126,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "anansi-tortoise": {
+      "look": "Plump brown courtyard tortoise walking cheerfully",
+      "size": 0.028,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-tortoise-plop": {
+      "look": "Plump brown tortoise rolled happily paws-up inside soft green leaf basket",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-weaver-bird": {
+      "look": "Small bright-yellow African village weaver-bird perched",
+      "size": 0.023,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-ribbon-tumble": {
+      "look": "Tortoise and yellow weaver-bird tumbled happily on woven mat with golden ribbon",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-web-rung": {
+      "look": "Shimmering silver spider-web ladder rung",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-golden-banner-1": {
+      "look": "Unrolled golden sky-court banner showing green python emblem",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-golden-banner-2": {
+      "look": "Unrolled golden sky-court banner showing golden hornet emblem",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-golden-banner-3": {
+      "look": "Unrolled golden sky-court banner showing spotted leopard emblem",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-golden-banner-4": {
+      "look": "Unrolled golden sky-court banner showing forest fairy emblem",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-story-box": {
+      "look": "Closed gleaming carved Ashanti Golden Story Box with spiral reliefs",
+      "size": 0.048,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-star-seal": {
+      "look": "Glowing eight-pointed golden Ashanti star-seal",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-story-box-open": {
+      "look": "Open gleaming Golden Story Box spilling warm golden light",
+      "size": 0.054,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-ripe-plantain": {
+      "look": "Ripe yellow plantains on low wooden dish",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-leaf-basket": {
+      "look": "Empty soft woven green leaf basket",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-woven-bag": {
+      "look": "Colourful woven kente shoulder bag",
+      "size": 0.036,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-bamboo-pole": {
+      "look": "Long straight golden bamboo measuring pole",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-vine-cord": {
+      "look": "Neat coil of soft green forest vine cord",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-calabash-gourd": {
+      "look": "Open hollow tan calabash gourd",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-calabash-closed": {
+      "look": "Tan calabash gourd plugged neatly with rolled green leaf stopper",
+      "size": 0.036,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-vine-loop": {
+      "look": "Single soft green forest vine loop ring",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-water-shell": {
+      "look": "Smooth pearly river shell filled with clear stream water",
+      "size": 0.022,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-fern-hollow": {
+      "look": "Cosy mossy trail hollow rimmed with soft emerald ferns",
+      "size": 0.04,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-spring-branch": {
+      "look": "Curved bent green sapling branch tied with silver silk thread",
+      "size": 0.068,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-silk-strand": {
+      "look": "Glowing silver spider-silk weave strand",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-silver-hammock": {
+      "look": "Empty shimmering woven silver spider-silk hammock cradle",
+      "size": 0.048,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-wooden-mortar": {
+      "look": "Carved wooden Ashanti yam mortar",
+      "size": 0.046,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-sweet-yams": {
+      "look": "Mound of sweet golden mashed yams on green leaf",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-wooden-bowl": {
+      "look": "Empty carved wooden Ashanti serving bowl",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-wooden-doll": {
+      "look": "Smiling carved wooden Ashanti Akua'ba doll gleaming with golden tree-sap",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-woven-basket": {
+      "look": "Woven reed Ashanti gift basket",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-little-drum": {
+      "look": "Cheerful little carved Ashanti talking drum",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-yam-bowl-full": {
+      "look": "Carved wooden bowl heaped full of sweet golden mashed yams",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-wiggle-fern": {
+      "look": "Lush emerald forest fern clump that wiggles before Mmoatia appears",
+      "size": 0.045,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-drum-spark": {
+      "look": "Glowing golden musical note-spark from talking drum",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-courtyard-lantern": {
+      "look": "Warm glowing carved brass Ashanti courtyard lantern",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-story-flutter": {
+      "look": "Sparkling golden story-butterfly made of warm light",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-box-ribbon": {
+      "look": "Curling golden silk Story Box ribbon",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-soft-mat": {
+      "look": "Flat colourful woven Ashanti kente courtyard mat",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true
+    },
+    "anansi-python-scroll": {
+      "look": "Glowing golden story-scroll depicting Onini the python",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-leopard-scroll": {
+      "look": "Glowing golden story-scroll depicting Osebo the leopard",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "anansi-fairy-scroll": {
+      "look": "Glowing golden story-scroll depicting fairy Mmoatia",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Anansi and the Sky God's Stories"
+      ],
+      "cut": true,
+      "selflit": true
     }
   }
 }
