@@ -1,0 +1,29 @@
+{
+ "beds": [
+  "courtyard-day",
+  "courtyard-night",
+  "trail-wind",
+  "nest-day",
+  "fire-hearth"
+ ],
+ "shots": [],
+ "pools": {
+  "motif-zabul": 1,
+  "motif-simurgh": 1,
+  "motif-zal": 1,
+  "wing-swoosh": 1,
+  "wind-gust": 1,
+  "chick-chirp": 1,
+  "goat-sneeze": 1,
+  "berry-plop": 1,
+  "boulder-thud": 1,
+  "brazier-whoomp": 1,
+  "fire-crackle": 1,
+  "thunder-far": 1,
+  "feather-glow": 1,
+  "petal-sproing": 1,
+  "frog-croak": 1,
+  "stone-step": 1,
+  "leaves-rustle": 1
+ }
+}

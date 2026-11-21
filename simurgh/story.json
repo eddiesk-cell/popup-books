@@ -1,0 +1,1015 @@
+{
+ "words": false,
+ "title": "The Simurgh and Zal",
+ "credit": "From the classic Persian epic Shahnameh (The Book of Kings) by Abolqasem Ferdowsi (c. 1010 CE), published in public-domain English translations by Helen Zimmern in The Epic of Kings: Stories Retold from Firdusi (1882) and Arthur George Warner and Edmond Warner (1905). Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all 8 STORY-REVIEW.md notes applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "zal": {
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "simurgh": {
+   "voice": "bf_emma",
+   "speed": 0.93,
+   "pitch": -1
+  },
+  "sam": {
+   "voice": "bm_daniel",
+   "speed": 0.94,
+   "pitch": -1
+  },
+  "rudaba": {
+   "voice": "bf_alice",
+   "speed": 1.02,
+   "pitch": 2
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "nest": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "feather": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "chicks": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "goat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "brazier": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cradle": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Simurgh": "See-murgh",
+  "Simurgh's": "See-murgh's",
+  "Zal": "Zahl",
+  "Zal's": "Zahl's",
+  "Sam": "Sahm",
+  "Sam's": "Sahm's",
+  "Alborz": "Al-borz",
+  "Zabul": "Zah-bull",
+  "Zabul's": "Zah-bull's"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "A Boy With Snowy Hair",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in sunny Zabul in Persia, sweet red pomegranates glowed beneath the snowy peaks of Mount Alborz.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in sunny Zah-bull in Persia, sweet red pomegranates glowed beneath the snowy peaks of Mount Al-borz."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "In the tiled courtyard, Lord Sam welcomed baby Zal in a crimson silk cradle, with snowy white hair!",
+     "say": [
+      [
+       "narrator",
+       "In the tiled courtyard, Lord Sahm welcomed baby Zahl in a crimson silk cradle, with snowy white hair!"
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Baby Zal smiled brightly, yet proud Lord Sam frowned with worry. \"What if people tease his snowy white hair?\"",
+     "say": [
+      [
+       "narrator",
+       "Baby Zahl smiled brightly, yet proud Lord Sahm frowned with worry."
+      ],
+      [
+       "sam",
+       "What if people tease his snowy white hair?"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Sam let foolish pride hide his love. Gently he wrapped Zal's warm cradle to leave on Mount Alborz.",
+     "say": [
+      [
+       "narrator",
+       "Sahm let foolish pride hide his love. Gently he wrapped Zahl's warm cradle to leave on Mount Al-borz."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "At dawn, Sam carried the warm cradle toward snowy Mount Alborz. Who lived high above the white clouds?",
+     "say": [
+      [
+       "narrator",
+       "At dawn, Sahm carried the warm cradle toward snowy Mount... Al-borz. Who lived high above the white clouds?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Wings Above Mount Alborz",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Up on the mossy pine trail of Mount Alborz, Sam set the cradle down gently and walked back sadly.",
+     "say": [
+      [
+       "narrator",
+       "Up on the mossy pine trail of Mount Al-borz, Sahm set the cradle down gently and walked back sadly."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "A curious white mountain goat sniffed a yellow dandelion beside the cradle. Ah-choo! Back it hopped onto a stone!",
+     "say": [
+      [
+       "narrator",
+       "A curious white mountain goat sniffed a yellow dandelion beside the cradle. Ah-choo! Back it hopped onto a stone!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Baby Zal giggled and waved his tiny hands as cool mountain breezes rustled the tall green pines.",
+     "say": [
+      [
+       "narrator",
+       "Baby Zahl giggled and waved his tiny hands as cool mountain breezes rustled the tall green pines."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "High above the clouds, the wise Simurgh wore a shining turquoise necklace and spread her wide golden wings!",
+     "say": [
+      [
+       "narrator",
+       "High above the clouds, the wise See-murgh wore a shining turquoise necklace and spread her wide golden wings!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Swoosh! Down glided the kind Simurgh, lifting Zal's cradle gently in her claws! Where was she taking Zal?",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Down glided the kind See-murgh, lifting Zahl's cradle gently in her... claws! Where was she taking Zahl?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Home in the Mountain Nest",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "High on the sunlit crags of Mount Alborz, the Simurgh set Zal inside her giant woven sandalwood nest!",
+     "say": [
+      [
+       "narrator",
+       "High on the sunlit crags of Mount Al-borz, the See-murgh set Zahl inside her giant woven sandalwood nest!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Chirp-chirp! Two fluffy little Simurgh chicks hopped close and tucked sweet red berries right beside baby Zal!",
+     "say": [
+      [
+       "narrator",
+       "Chirp-chirp! Two fluffy little See-murgh chicks hopped close and tucked sweet red berries right beside baby Zahl!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "\"Welcome home, little snow-haired prince,\" sang the Simurgh softly. \"Your snowy hair gleams like bright mountain starlight!\"",
+     "say": [
+      [
+       "simurgh",
+       "Welcome home, little snow-haired prince,"
+      ],
+      [
+       "narrator",
+       "sang the See-murgh softly."
+      ],
+      [
+       "simurgh",
+       "Your snowy hair gleams like bright mountain starlight!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "She nuzzled Zal with her feathered crest and sang gently. \"Stand tall, kind heart, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "She nuzzled Zahl with her feathered crest and sang gently."
+      ],
+      [
+       "simurgh",
+       "Stand tall, kind heart, shine bright!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Warm and safe, little Zal fell asleep beneath her golden wing. How would he grow up above the clouds?",
+     "say": [
+      [
+       "narrator",
+       "Warm and safe, little Zahl fell asleep beneath her golden... wing. How would he grow up above the clouds?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Leaping Across the Crags",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Seasons turned above the white clouds, and little Zal grew into a swift, joyful boy with shining snowy hair!",
+     "say": [
+      [
+       "narrator",
+       "Seasons turned above the white clouds, and little Zahl grew into a swift, joyful boy with shining snowy hair!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Whoosh! Young Zal bounded across the sunlit crags beside the two growing chicks, racing the cool golden breeze!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Young Zahl bounded across the sunlit crags beside the two growing chicks, racing the cool golden breeze!"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "The wise Simurgh taught Zal about fragrant mountain herbs, drifting white clouds, and gentle kindness toward every living creature.",
+     "say": [
+      [
+       "narrator",
+       "The wise See-murgh taught Zahl about fragrant mountain herbs, drifting white clouds, and gentle kindness toward every living creature."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "One playful chick balanced three red berries on its beak. Wobble-plop! All three bounced onto Zal's snowy hair!",
+     "say": [
+      [
+       "narrator",
+       "One playful chick balanced three red berries on its beak. Wobble-plop! All three bounced onto Zahl's snowy hair!"
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Zal laughed, then gazed past the rosy evening clouds toward Zabul. Did someone miss him far below?",
+     "say": [
+      [
+       "narrator",
+       "Zahl laughed, then gazed past the rosy evening clouds toward... Zah-bull. Did someone miss him far below?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "A Golden Feather in the Night",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Yes! Down in the starry Zabul courtyard, Lord Sam sat beside the quiet pool, gazing at moonlit Mount Alborz.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Down in the starry Zah-bull courtyard, Lord Sahm sat beside the quiet pool, gazing at moonlit Mount Al-borz."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "A bright teardrop rolled down Sam's cheek. \"I listened to foolish pride instead of loving my snow-haired son!\"",
+     "say": [
+      [
+       "narrator",
+       "A bright teardrop rolled down Sahm's cheek."
+      ],
+      [
+       "sam",
+       "I listened to foolish pride instead of loving my snow-haired son!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Softly on the night breeze, one glowing golden feather drifted down from the stars beside the brass brazier!",
+     "say": [
+      [
+       "narrator",
+       "Softly on the night breeze, one glowing golden feather drifted down from the stars beside the brass brazier!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Sam lifted the warm feather to his heart in wonder. \"The great Simurgh kept my dear boy safe!\"",
+     "say": [
+      [
+       "narrator",
+       "Sahm lifted the warm feather to his heart in wonder."
+      ],
+      [
+       "sam",
+       "The great See-murgh kept my dear boy safe!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "At first dawn light, Sam set out toward steep Mount Alborz to bring Zal home! Would Zal forgive him?",
+     "say": [
+      [
+       "narrator",
+       "At first dawn light, Sahm set out toward steep Mount Al-borz to bring Zahl... home! Would Zahl forgive him?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Three Feathers of Promise",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "At sunrise, Lord Sam climbed onto the rocky ledge below the giant nest and knelt humbly on the stone.",
+     "say": [
+      [
+       "narrator",
+       "At sunrise, Lord Sahm climbed onto the rocky ledge below the giant nest and knelt humbly on the stone."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "\"Forgive my foolish pride, dear Zal!\" called Sam softly. \"Your snowy hair shines brighter than any royal crown!\"",
+     "say": [
+      [
+       "sam",
+       "Forgive my foolish pride, dear Zahl!"
+      ],
+      [
+       "narrator",
+       "called Sahm softly."
+      ],
+      [
+       "sam",
+       "Your snowy hair shines brighter than any royal crown!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Zal hugged the Simurgh's warm golden neck as a teardrop shone on his cheek. \"I will miss you always!\"",
+     "say": [
+      [
+       "narrator",
+       "Zahl hugged the See-murgh's warm golden neck as a teardrop shone on his cheek."
+      ],
+      [
+       "zal",
+       "I will miss you always!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Swish! Gently the Simurgh held out three glowing golden feathers to Zal. \"Hold fast, kind heart, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Swish! Gently the See-murgh held out three glowing golden feathers to Zahl."
+      ],
+      [
+       "simurgh",
+       "Hold fast, kind heart, shine bright!"
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"Burn one feather to call me!\" sang the Simurgh, gliding Zal down to Sam. Who awaited them in Zabul?",
+     "say": [
+      [
+       "simurgh",
+       "Burn one feather to call me!"
+      ],
+      [
+       "narrator",
+       "sang the See-murgh, gliding Zahl down to... Sahm. Who awaited them in Zah-bull?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "A Friend in Sunny Zabul",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "In the sunny Zabul courtyard, brave young Princess Rudaba cheered warmly as proud Sam and Zal stepped home!",
+     "say": [
+      [
+       "narrator",
+       "In the sunny Zah-bull courtyard, brave young Princess Rudaba cheered warmly as proud Sahm and Zahl stepped home!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"Welcome home, Prince Zal!\" smiled Rudaba, wearing a pink rose circlet. \"Your snowy hair shines like winter starlight!\"",
+     "say": [
+      [
+       "rudaba",
+       "Welcome home, Prince Zahl!"
+      ],
+      [
+       "narrator",
+       "smiled Rudaba, wearing a pink rose circlet."
+      ],
+      [
+       "rudaba",
+       "Your snowy hair shines like winter starlight!"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Zal beamed happily, showed Rudaba his three golden feathers, and told her the Simurgh's shining fire promise!",
+     "say": [
+      [
+       "narrator",
+       "Zahl beamed happily, showed Rudaba his three golden feathers, and told her the See-murgh's shining fire promise!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Together they shared sweet red pomegranates and golden saffron cakes beside the sparkling turquoise courtyard fountain.",
+     "say": [
+      [
+       "narrator",
+       "Together they shared sweet red pomegranates and golden saffron cakes beside the sparkling turquoise courtyard fountain."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Suddenly, rumble-roll! Dark grey storm clouds swirled round Mount Alborz, echoing down to Zabul! Who needed help?",
+     "say": [
+      [
+       "narrator",
+       "Suddenly, rumble-roll! Dark grey storm clouds swirled round Mount... Al-borz, echoing down to Zah-bull! Who needed help?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Burning Golden Feather",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Crash-thud! At dusk on the rocky mountain trail, three heavy grey boulders trapped the little white goat!",
+     "say": [
+      [
+       "narrator",
+       "Crash-thud! At dusk on the rocky mountain trail, three heavy grey boulders trapped the little white goat!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "First Sam pushed hard. Then Zal and Rudaba pushed together, yet the heavy grey boulders would not budge!",
+     "say": [
+      [
+       "narrator",
+       "First Sahm pushed hard. Then Zahl and Rudaba pushed together, yet the heavy grey boulders would not budge!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "\"Remember the Simurgh's promise!\" called Rudaba, pointing to the warm bronze brazier glowing beside the pine trail.",
+     "say": [
+      [
+       "rudaba",
+       "Remember the See-murgh's promise!"
+      ],
+      [
+       "narrator",
+       "called Rudaba, pointing to the warm bronze brazier glowing beside the pine trail."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Whoomp! Zal touched one golden feather to the warm flame and called out. \"Fly down, kind heart, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Whoomp! Zahl touched one golden feather to the warm flame and called out."
+      ],
+      [
+       "zal",
+       "Fly down, kind heart, shine... bright!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Ribbons of golden starlight swirled high into the twilight clouds! Would the great Simurgh see Zal's shining call?",
+     "say": [
+      [
+       "narrator",
+       "Ribbons of golden starlight swirled high into the twilight clouds! Would the great See-murgh see Zahl's shining call?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Golden Wings to the Rescue",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Flap-whoosh! Down through the starry night clouds soared the radiant Simurgh, lighting the dark mountain trail like dawn!",
+     "say": [
+      [
+       "narrator",
+       "Flap-whoosh! Down through the starry night clouds soared the radiant See-murgh, lighting the dark mountain trail like dawn!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "With three strong sweeps of her golden claws, she lifted the heavy grey boulders easily off the rocky path!",
+     "say": [
+      [
+       "narrator",
+       "With three strong sweeps of her golden claws, she lifted the heavy grey boulders easily off the rocky path!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Gently her warm turquoise wing scooped the shivering white goat down onto soft green moss beside Rudaba!",
+     "say": [
+      [
+       "narrator",
+       "Gently her warm turquoise wing scooped the shivering white goat down onto soft green moss beside Rudaba!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "\"Whenever kindness calls, love remembers the way,\" sang the Simurgh, resting her feathered crest against Zal's snowy head.",
+     "say": [
+      [
+       "simurgh",
+       "Whenever kindness calls, love remembers the way,"
+      ],
+      [
+       "narrator",
+       "sang the See-murgh, resting her feathered crest against Zahl's snowy head."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Lord Sam bowed low beside Zal and Rudaba in joyful thanks. How would Zabul honour the wise Simurgh?",
+     "say": [
+      [
+       "narrator",
+       "Lord Sahm bowed low beside Zahl and Rudaba in joyful... thanks. How would Zah-bull honour the wise See-murgh?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Two Homes, One Bright Heart",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Next morning, tink-chime! Zal, Rudaba, and Sam prepared a shining brass stand for Zal's two golden feathers!",
+     "say": [
+      [
+       "narrator",
+       "Next morning, tink-chime! Zahl, Rudaba, and Sahm prepared a shining brass stand for Zahl's two golden feathers!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "The Simurgh and her two chicks glided onto the turquoise palace arch! Behind them, the white goat trotted in!",
+     "say": [
+      [
+       "narrator",
+       "The See-murgh and her two chicks glided onto the turquoise palace arch! Behind them, the white goat trotted in!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "The two fluffy chicks and little white goat tugged one red silk ribbon. Sproing! They tumbled into pink petals!",
+     "say": [
+      [
+       "narrator",
+       "The two fluffy chicks and little white goat tugged one red silk ribbon. Sproing! They tumbled into pink petals!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Everyone laughed and shared sweet red pomegranates and saffron cakes beneath the sunny cypress trees of Zabul!",
+     "say": [
+      [
+       "narrator",
+       "Everyone laughed and shared sweet red pomegranates and saffron cakes beneath the sunny cypress trees of Zah-bull!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Snow-haired Zal grew wise and brave between two loving homes. What makes us different helps us shine together!",
+     "say": [
+      [
+       "narrator",
+       "Snow-haired Zahl grew wise and brave between two loving... homes. What makes us different helps us shine together!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "At first, Lord Sam let foolish pride worry him. Then love taught him to cherish Zal!",
+   "say": [
+    [
+     "closing",
+     "At first, Lord Sahm let foolish pride worry him. Then love taught him to cherish Zahl!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "High on Mount Alborz, the kind Simurgh showed Zal that what makes us different makes us shine.",
+   "say": [
+    [
+     "closing",
+     "High on Mount Al-borz, the kind See-murgh showed Zahl that what makes us different makes us shine."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "When heavy boulders blocked the trail, Rudaba and Zal trusted the glowing feather and called for help together.",
+   "say": [
+    [
+     "closing",
+     "When heavy boulders blocked the trail, Rudaba and Zahl trusted the glowing feather and called for help together."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Love never forgets the way. Be proud of who you are, and keep kindness shining bright.",
+   "say": [
+    [
+     "closing",
+     "Love never forgets the way. Be proud of who you are, and keep kindness shining bright."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Keep baby Zal cosy in Zabul! Tap the four brass courtyard lanterns to warm the morning garden.",
+   "say": [
+    [
+     "narrator",
+     "Keep baby Zahl cosy in Zah-bull! Tap the four brass courtyard lanterns to warm the morning garden."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Warm golden light! Little Zal smiles inside his crimson silk cradle!",
+   "say": [
+    [
+     "narrator",
+     "Warm golden light! Little Zahl smiles inside his crimson silk cradle!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Guide the wise Simurgh down to baby Zal! Tap the three sunlit cloud-rings in order from top to bottom.",
+   "say": [
+    [
+     "narrator",
+     "Guide the wise See-murgh down to baby Zahl! Tap the three sunlit cloud-rings in order from top to bottom."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Gentle golden wings! The Simurgh reaches baby Zal's warm cradle safely!",
+   "say": [
+    [
+     "narrator",
+     "Gentle golden wings! The See-murgh reaches baby Zahl's warm cradle safely!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Make the giant sandalwood nest cosy! Match the soft moss pillow, crimson blanket, and sweet berries to their spots.",
+   "say": [
+    [
+     "narrator",
+     "Make the giant sandalwood nest cosy! Match the soft moss pillow, crimson blanket, and sweet berries to their spots."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Snug and sweet! Baby Zal and the two fluffy chicks are happy in their mountain nest!",
+   "say": [
+    [
+     "narrator",
+     "Snug and sweet! Baby Zahl and the two fluffy chicks are happy in their mountain nest!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Help young Zal leap across the mountain crags! Tap when the ring glows green!",
+   "say": [
+    [
+     "narrator",
+     "Help young Zahl leap across the mountain crags! Tap when the ring glows green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Three swift mountain leaps! Zal bounds across the crags like the cool breeze!",
+   "say": [
+    [
+     "narrator",
+     "Three swift mountain leaps! Zahl bounds across the crags like the cool breeze!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Show Lord Sam the starry path toward Mount Alborz! Tap the four bright night stars above the peak.",
+   "say": [
+    [
+     "narrator",
+     "Show Lord Sahm the starry path toward Mount Al-borz! Tap the four bright night stars above the peak."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Shining starlight! Now Lord Sam sees the mountain path to ask Zal's forgiveness!",
+   "say": [
+    [
+     "narrator",
+     "Shining starlight! Now Lord Sahm sees the mountain path to ask Zahl's forgiveness!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Gather the Simurgh's parting gift with Zal! Tap the three glowing golden feathers in order from left to right.",
+   "say": [
+    [
+     "narrator",
+     "Gather the See-murgh's parting gift with Zahl! Tap the three glowing golden feathers in order from left to right."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Three warm golden feathers! Zal tucks the Simurgh's shining gift safely close!",
+   "say": [
+    [
+     "narrator",
+     "Three warm golden feathers! Zahl tucks the See-murgh's shining gift safely close!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Prepare Prince Zal's welcome table with Rudaba! Match the pomegranates, saffron cakes, and rose vase to their places.",
+   "say": [
+    [
+     "narrator",
+     "Prepare Prince Zahl's welcome table with Rudaba! Match the pomegranates, saffron cakes, and rose vase to their places."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "A joyful Zabul welcome! Snow-haired Prince Zal is right at home!",
+   "say": [
+    [
+     "narrator",
+     "A joyful Zah-bull welcome! Snow-haired Prince Zahl is right at home!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Burn one golden feather in the bronze brazier to call the Simurgh! Tap when the ring glows green!",
+   "say": [
+    [
+     "narrator",
+     "Burn one golden feather in the bronze brazier to call the See-murgh! Tap when the ring glows green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three bright golden sparks! Shining starlight curls high toward the twilight clouds!",
+   "say": [
+    [
+     "narrator",
+     "Three bright golden sparks! Shining starlight curls high toward the twilight clouds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Help the Simurgh clear the blocked mountain trail! Tap all three heavy grey boulders to lift them aside.",
+   "say": [
+    [
+     "narrator",
+     "Help the See-murgh clear the blocked mountain trail! Tap all three heavy grey boulders to lift them aside."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Way to help! All three heavy grey boulders roll clear of the rocky mountain path!",
+   "say": [
+    [
+     "narrator",
+     "Way to help! All three heavy grey boulders roll clear of the rocky mountain path!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Honour the wise Simurgh in Zabul! Match the paired golden feathers, rose garland, and silk cushion to their places.",
+   "say": [
+    [
+     "narrator",
+     "Honour the wise See-murgh in Zah-bull! Match the paired golden feathers, rose garland, and silk cushion to their places."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Shining bright! Now the mountain nest and sunny Zabul share one loving heart!",
+   "say": [
+    [
+     "narrator",
+     "Shining bright! Now the mountain nest and sunny Zah-bull share one loving heart!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "zal": [
+   "I am Prince Zal! My hair has shone as white as mountain snow ever since the day I was born!",
+   "The wise Simurgh raised me high above the clouds in her giant sandalwood nest on Mount Alborz!",
+   "I love leaping across sunlit crags and racing the two fluffy Simurgh chicks above the clouds!",
+   "When heavy grey boulders blocked the mountain trail, I burned one golden feather to call the Simurgh!",
+   "Now I have two loving homes, and I know what makes us different makes us shine!"
+  ],
+  "simurgh": [
+   "I am the Simurgh of Mount Alborz! My golden and turquoise wings soar high above the white clouds.",
+   "When I found baby Zal on the mossy trail, I carried him gently home to my sandalwood nest.",
+   "I wear my shining turquoise necklace and teach my chicks and Zal the songs of stars and kindness.",
+   "I gave Zal three glowing golden feathers so a single warm spark could call me from afar.",
+   "Stand tall, kind heart, shine bright! Whenever kindness calls, love remembers the way."
+  ],
+  "sam": [
+   "I am Lord Sam of sunny Zabul in Persia, right beneath the snowy peaks of Mount Alborz.",
+   "At first I worried too much about proud opinions instead of listening to my loving heart.",
+   "Climbing Mount Alborz to ask Zal's forgiveness was the wisest step of my life!",
+   "My snow-haired son Zal is the brightest joy in all of Zabul!"
+  ],
+  "rudaba": [
+   "I am Princess Rudaba! I love rose gardens, mountain trails, and welcoming kind friends to Zabul!",
+   "The moment I saw Prince Zal's snowy white hair, I thought it gleamed just like winter starlight!",
+   "When giant boulders blocked the dusk trail, we used wisdom instead of force and lit the golden feather!",
+   "Sharing sweet red pomegranates and saffron cakes tastes best when every friend is safe!"
+  ],
+  "nest": [
+   "The Simurgh's giant mountain nest! Woven from fragrant sandalwood branches, it rests high above the clouds on Mount Alborz.",
+   "Lined with soft green moss and warm feathers, it kept baby Zal and the two fluffy chicks snug."
+  ],
+  "feather": [
+   "A glowing golden-and-turquoise feather from the wise Simurgh's wing!",
+   "Touching one feather to warm fire sends golden starlight into the sky to call the Simurgh."
+  ],
+  "chicks": [
+   "Two fluffy little Simurgh chicks who share sweet red berries, hop on crags, and tumble into pink rose petals!"
+  ],
+  "goat": [
+   "A curious white mountain goat of Mount Alborz who sneezes at yellow dandelions and loves sweet red ribbons!"
+  ],
+  "brazier": [
+   "A carved Persian fire-brazier whose warm golden flame kindled Zal's feather into rising starlight sparks!"
+  ],
+  "cradle": [
+   "Baby Zal's woven wooden cradle, lined with a warm crimson silk blanket!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Ferdowsi's Shahnameh, c. 1010 CE; Zimmern 1882 & Warner 1905): Lord Sam of Zabulistan is horrified by newborn Zal's albino snow-white hair, fears courtiers will call him demon-touched, and abandons him to die on Mount Alborz; the Simurgh raises Zal in her nest, Sam repents after a dream, and the Simurgh gives Zal feathers to burn in dire peril (used later during Rudaba's adult surgical childbirth of Rostam). Ours (gentle, empowering, and adventurous for ages 4-8): 1) Zero demon curses, cruelty, or adult medical peril: Sam worries foolishly whether people will tease Zal's snowy hair and sets his warm crimson-lined cradle on mossy pine ground, where a sneezing mountain goat makes baby Zal giggle moments before the Simurgh swoops down to raise him lovingly alongside her two fluffy chicks ('Your snowy hair gleams like bright mountain starlight!'). 2) Young Princess Rudaba greets Zal as a warm childhood friend in sunny Zabul who immediately celebrates his snowy hair. 3) Child-friendly feather-burning rescue climax (Spreads 8-9): when dusk rockfall boulders trap the little white mountain goat on the Alborz trail and brute pushing fails, Rudaba spots the trail brazier and Zal burns one of his three golden feathers, sending golden starlight ribbons skyward to summon the Simurgh to clear the boulders and save the goat; the remaining two feathers are honoured on a shining brass stand in Zabul.",
+  "moral": "Love never forgets the way. Be proud of who you are, and keep kindness shining bright.",
+  "changes": "1 Culture-true Persian Shahnameh miniature aesthetic (turquoise and lapis kashi tilework, cypress and pomegranate trees, saffron cakes, brass & bronze fire-braziers, craggy gold-and-turquoise Mount Alborz, fragrant sandalwood nest, and the traditional peacock-turquoise/gold/ruby Simurgh wearing a small turquoise pendant necklace per Eddie's animal main accessory rule — zero Western phoenix or Disney tropes). 2 Every speaking character (zal, simurgh, sam, rudaba) has its own distinct gender-matched Kokoro voice (EDDIE-NOTES-2026-11-19 #3). 3 Every named creature, object, weather, and light across all 50 story lines is concrete and stageable across 3 reusable places (courtyard, trail, nest) per Eddie's 2026-11-20 'Say it, show it' and journey rules.",
+  "level": "A1-A2, past simple, clear British English sentences for ages 4-8 (50 story lines, 15-20 words/line, max 20 words so phone .ra-page stays compact). Repeated core words: snowy, hair, cradle, mountain, clouds, nest, wings, golden, feather, fire, heart, shine, bright, home.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: zal (bm_fable +2), simurgh (bf_emma -1), sam (bm_daniel -1), rudaba (bf_alice +2). Narrator (bm_george) reads narration, game prompts, and 3rd-person inanimate/animal touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain '<Stand tall / Hold fast / Fly down>, kind heart, shine bright!' on spreads 3 (3.4), 6 (6.4), and 8 (8.4, pausing 'shine... bright!' before the last word on its 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a child-guessable word, never before the narrator's last word (1.5 Al-borz, 2.5 claws, 3.5 wing, 4.5 Zah-bull, 5.5 home, 6.5 Sahm, 7.5 Al-borz, 8.4 bright, 9.5 thanks, 10.5 homes); P5 threes (three golden feathers, three refrain calls, three rescue tries on Spread 8); P6 unique spoken sound words verified in British Kokoro with zero repeats across the book (2 Ah-choo/Swoosh, 3 Chirp-chirp, 4 Whoosh/Wobble-plop, 6 Swish, 7 rumble-roll, 8 Crash-thud/Whoomp, 9 Flap-whoosh, 10 tink-chime/Sproing); P8 harmless physical comedy in all three thirds (2.2 goat sniffs dandelion and hops back Ah-choo!, 4.4 chick balances three berries that wobble-plop onto Zal's snowy hair, 10.3 chicks and goat tug silk ribbon and sproing into pink petals); P11 energy curve E1 E2 E2 E3 E1 E2 E2 E3 E3 E2 + Moral E1; P16 non-repeating 10-game sequence (collect, order, pair, timing, collect, order, pair, timing, collect, pair)."
+ }
+}

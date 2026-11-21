@@ -240,16 +240,16 @@
     "zh": "西摩格神鸟与扎尔",
     "ja": "シームルグと ザール"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/simurgh/plate.webp",
+   "spine": "#168d9b",
+   "gold": "#f6dc84",
    "culture": "Persian",
    "region": "middle-east",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=simurgh&s=s01"
   },
   {

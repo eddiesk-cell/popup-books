@@ -108,7 +108,8 @@
      "lampspot1",
      "lampspot2"
     ],
-    "answer": "lampspot0",
+    "answer": "lampspot1",
+    "level": 0.3,
     "lamp": "lamp",
     "caster": "tong",
     "screen": "screen",
