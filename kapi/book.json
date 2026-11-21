@@ -90,6 +90,7 @@
    "game": {
     "type": "collect",
     "tap": "light",
+    "lit_glow": 1,
     "praise": "Look how they glow! Lovely!",
     "voice": {
      "start": "game.4.start",
@@ -131,6 +132,7 @@
    "game": {
     "type": "collect",
     "tap": "light",
+    "lit_glow": 1,
     "who": "bobo",
     "thoughts": [
      "Whose heart does Lulu want?",

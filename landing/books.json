@@ -232,6 +232,27 @@
    "link": "../live/?book=monkey-turtle&s=s01"
   },
   {
+   "id": "simurgh",
+   "title": {
+    "en": "The Simurgh and Zal",
+    "lo": "ນົກ ຊີມູຣກ ແລະ ຊາລ",
+    "th": "นกซีมูร์กและซาล",
+    "zh": "西摩格神鸟与扎尔",
+    "ja": "シームルグと ザール"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Persian",
+   "region": "middle-east",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=simurgh&s=s01"
+  },
+  {
    "id": "toad-king",
    "title": {
     "en": "The Toad and the Sky King",

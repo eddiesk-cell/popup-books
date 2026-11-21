@@ -36,7 +36,7 @@ export class Reader {
     this.show(id, !!this.silent);
     const spans = [...this.en.children];
     this.audio.muted = !!this.silent;
-    this.audio.src = `${this.voice}${id}.m4a`;
+    this.audio.src = typeof this.voice === "function" ? this.voice(id) : `${this.voice}${id}.m4a`;  // voice: a folder, or id -> file (live.js: Lao or English per line)
     return new Promise(done => {
       const light = () => {
         if (token !== this.token) return done(false);

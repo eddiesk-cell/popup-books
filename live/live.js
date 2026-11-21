@@ -879,8 +879,29 @@ $("back").onclick = () => {
 
 // ---------- reading: the Reader, languages, the bar ----------
 let lang = "", runs = 0;
-const reader = new Reader($("read"), { voice, timing, text, subs });
-languages($("langs"), `${bookId}.lang`, l => { lang = l; reader.setLang(l); });
+// Lao narration (Eddie 2026-11-21): web/<book>/voice/lo/<id>.m4a and voice/lo/timing.json, the same shape as the English (word pairs
+// per English word), asked for once, the first time Lao is picked; a 404 means this book has none and stays English in Lao. A line the
+// Lao timing lacks (a tap-to-learn word card, words/<id>) stays English, so nothing goes silent.
+const timingEn = { ...timing };
+let loT, heard = "";  // loT: the Lao timing (undefined: not asked yet, null: none); heard: "lo" while the Lao voice is on
+const src = id => `${voice}${heard && loT[id] ? "lo/" : ""}${id}.m4a`;
+function relang() {  // the voice follows the language: timing's contents swapped in place (the Reader, acts and ambient hold this object)
+  const was = heard; heard = lang === "lo" && loT ? "lo" : "";
+  if (heard === was) return;
+  for (const k in timing) delete timing[k];
+  Object.assign(timing, timingEn, heard ? loT : {});
+  if (!S || reader.audio.muted || !(au.hush || !reader.audio.paused && !reader.audio.ended)) return;  // nothing audible (Reading Mode's voice is silent): the next line is in the new voice
+  // a line being said stops and starts again in the new voice; a game prompt or praise ends in the old one (cutting won()'s praise would stop the story)
+  const ml = book.moral?.lines || story.moral.map(l => l.id), i = S.page.lines.indexOf(reader.id);
+  if (mode === "open" && i >= 0 && i === S.at) reader.stop(), readFrom(i);
+  else if (mode === "moral" && ml.includes(reader.id)) reader.read(ml.slice(ml.indexOf(reader.id)));
+}
+const reader = new Reader($("read"), { voice: src, timing, text, subs });
+languages($("langs"), `${bookId}.lang`, l => {
+  lang = l; reader.setLang(l);
+  if (l === "lo" && loT === undefined) loT = null, json(`${voice}lo/timing.json`).then(t => (loT = t, relang()), () => {});
+  relang();
+});
 const notice = makeNotice({ bookId, lib, story, getLang: () => lang });  // the legal card on the title page and the end card (notice.js)
 
 // ---------- sound (sound.js): a bed for each spread, foley for what happens, all ducked under the narration ----------
@@ -937,7 +958,7 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
     if (rm.on && !(await rm.next(sp, i, () => run === runs && sp === S))) return;  // Reading Mode: the line's words wait for the reader's "next", then it is acted
     const t0 = performance.now();
     const next = lines[i + 1] ?? (sp.G.before ? null : sp.G.voice?.start);  // the next line's voice (after the last, the game's), in the cache first
-    if (text[next]) fetch(`${voice}${next}.m4a`).catch(() => {});
+    if (text[next]) fetch(src(next)).catch(() => {});
     if (i === lines.length - 1) ahead(sp);  // the last line: now the next spread (a voice always comes before a spread)
     if (!(await sayLine(lines[i])) || run !== runs) return;
     const rest = reader.audio.ended ? 0 : (timing[lines[i]]?.duration ?? 2) * 1000 - (performance.now() - t0);
@@ -1292,7 +1313,8 @@ const cutWord = () => {  // a story or game line starts: a word card's voice fad
 reader.audio.addEventListener("play", cutWord);
 function learn(name, o) {  // a tapped thing says a word of its own (words.json: a pool of true things to say, a new one each tap), in a bubble beside it, with the chosen language's subtitle; one voice at a time (the same Audio), only that one file is fetched
   if (talking()) return;
-  const said = touchLine(words, name, lang, S.id), at = o ?? S.root.getObjectByName(name) ?? S.cast[0]?.body;
+  const own = heard && loT[`touch.${name}.0`];  // in the Lao voice a character says its own recorded Lao lines (story.json "touch"); the word cards (English to learn) have no Lao voice
+  const said = touchLine(own ? { ...words, w: null } : words, name, lang, S.id), at = o ?? S.root.getObjectByName(name) ?? S.cast[0]?.body;
   if (!said || !at) return;
   if (tapped) tapped.card = said.text;
   const s = $("sbub");
@@ -1300,8 +1322,8 @@ function learn(name, o) {  // a tapped thing says a word of its own (words.json:
   if (said.word) { s.firstChild.firstChild.textContent = said.word.text; s.firstChild.lastChild.textContent = said.word.sub || ""; s.dataset.kind = said.tag ?? ""; }  // words.json: word[key] {en, lo, th, zh, ja}, and the line's tag (what, does, looks, fact, sound, count, culture, say, who)
   s.querySelector("b").textContent = said.text; Object.assign(s.querySelector("i"), { textContent: said.sub, lang: lang || "en" });  // lang: Lao, Thai, Chinese and Japanese stand upright (no faux italic)
   s.classList.toggle("card", !!said.word); s.hidden = false; s.who = { body: at, c: { height: 0.12 }, box: true }; clearTimeout(s.t);
-  s.t = setTimeout(() => (s.hidden = true), Math.min(6000, Math.max(said.word ? 3000 : 2300, (said.duration ?? 0) * 1000 + 500)));  // about 3 s, or until the voice has ended
-  speak.src = `${voice}${said.id}.m4a`; speak.play().catch(() => {});
+  s.t = setTimeout(() => (s.hidden = true), Math.min(6000, Math.max(said.word ? 3000 : 2300, (said.duration ?? timing[said.id]?.duration ?? 0) * 1000 + 500)));  // about 3 s, or until the voice has ended
+  speak.src = src(said.id); speak.play().catch(() => {});
 }
 function poke(ch) {  // a reaction played once, then back to what it was doing; and a touch line said
   rec(ch.name, "reaction");
@@ -1346,7 +1368,7 @@ const gameEnv = sp => ({ THREE, renderer, cam, now: () => performance.now(), say
   hold: (ch, what, hand, on) => sp.acting.hold(ch, what, hand, on), holding: what => sp.held.some(h => h.what === what),
   place: (what, at) => (at ? (sp.placed[what] = at.clone()) : delete sp.placed[what]), where: (to, top) => sp.where(to, top),
   play: sfx, foley, voice: id => { if (text[id]) return $("bar").classList.add("on"), sayLine(id);  // a scripted line (a game hint) goes through the Reader: read-along and subtitles
-    speak.src = `${voice}${id}.m4a`; speak.play().catch(() => {}); },
+    speak.src = src(id); speak.play().catch(() => {}); },
   line: id => text[id], keyLight: sp.key, ctx: snd.ctx, muted: () => snd.muted });
 
 async function props(root, list = []) {  // spread.json "props": a row with a recipe is built in code (props3d.js); the rest are stand-in shapes for props not built yet: disc, box or ball

@@ -12247,6 +12247,1391 @@
       ],
       "cut": true,
       "person": true
+    },
+    "simurgh-simurgh-stand": {
+      "look": "Benevolent mythical Simurgh perched in Persian peacock-turquoise, saffron-gold, and ruby plumage wearing her turquoise pendant necklace.",
+      "size": 0.221,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-simurgh-glide": {
+      "look": "Mythical Simurgh soaring gracefully with wide peacock-turquoise and golden wings spread.",
+      "size": 0.221,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-simurgh-wing": {
+      "look": "Mythical Simurgh bowing tenderly and curving her warm golden wing forward like a shelter.",
+      "size": 0.207,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-simurgh-carry-zal": {
+      "look": "Mythical Simurgh gliding gently downward carrying young snow-haired Prince Zal on her back.",
+      "size": 0.226,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-cradle-zal": {
+      "look": "Carved walnut Persian baby cradle lined with crimson silk holding smiling snow-haired baby Zal.",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-baby-zal": {
+      "look": "Happy snow-haired baby Prince Zal sitting joyfully on a folded crimson silk blanket.",
+      "size": 0.047,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-stand": {
+      "look": "Young snow-haired Prince Zal standing warmly in crimson-and-gold Persian tunic and brown boots.",
+      "size": 0.135,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-leap": {
+      "look": "Young snow-haired Prince Zal bounding joyfully mid-leap across sunlit mountain crags.",
+      "size": 0.139,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-berry": {
+      "look": "Young snow-haired Prince Zal laughing delightedly with three sweet red berries perched on his hair.",
+      "size": 0.137,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-hug": {
+      "look": "Young snow-haired Prince Zal reaching up in a loving farewell embrace with a bright teardrop.",
+      "size": 0.133,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-push": {
+      "look": "Young snow-haired Prince Zal leaning forward pushing hard with both palms braced ahead.",
+      "size": 0.122,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-feather": {
+      "look": "Young snow-haired Prince Zal holding out a radiant glowing golden Simurgh feather.",
+      "size": 0.137,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-stand": {
+      "look": "Noble bearded Lord Sam of Zabul standing in turquoise-and-gold Persian brocade coat and low cap.",
+      "size": 0.167,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-cradle": {
+      "look": "Bearded Lord Sam gently carrying baby Zal's warm wooden cradle wrapped in crimson silk.",
+      "size": 0.167,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-sad": {
+      "look": "Remorseful Lord Sam gazing upward with a teardrop while holding a glowing golden feather to his heart.",
+      "size": 0.165,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-kneel": {
+      "look": "Humble bearded Lord Sam kneeling on both knees opening his hands in forgiveness.",
+      "size": 0.124,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-push": {
+      "look": "Lord Sam leaning forward pushing hard against a heavy mountain boulder.",
+      "size": 0.147,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-bow": {
+      "look": "Grateful Lord Sam bowing his head respectfully with right hand over his heart.",
+      "size": 0.155,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-rudaba-stand": {
+      "look": "Brave young Princess Rudaba with dark braids, pink rose circlet, and lapis-and-rose Persian dress.",
+      "size": 0.133,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-rudaba-push": {
+      "look": "Princess Rudaba leaning forward pushing bravely beside Zal.",
+      "size": 0.12,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-rudaba-point": {
+      "look": "Princess Rudaba pointing brightly toward the warm bronze fire-brazier.",
+      "size": 0.133,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-chick": {
+      "look": "Fluffy baby Simurgh nestling chick with saffron-gold and turquoise down.",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-chick-grow": {
+      "look": "Playful half-grown Simurgh fledgling chick with golden, turquoise, and ruby feathers.",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-chick-berry": {
+      "look": "Playful Simurgh chick balancing three sweet red berries on the tip of its beak.",
+      "size": 0.041,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-goat": {
+      "look": "Curious fluffy white Persian mountain kid-goat with two small curved horns.",
+      "size": 0.045,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-goat-hop": {
+      "look": "Fluffy white mountain kid-goat hopping back with a funny happy sneeze.",
+      "size": 0.047,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-petal-tumble": {
+      "look": "Two fluffy Simurgh chicks and the white mountain goat tumbled playfully in pink rose petals with red ribbon.",
+      "size": 0.046,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-brass-lantern": {
+      "look": "Pierced Persian brass garden lantern glowing with warm amber light.",
+      "size": 0.036,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-night-star": {
+      "look": "Radiant eight-pointed golden Persian night star.",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-storm-cloud": {
+      "look": "Swirling dark slate-grey mountain storm cloud.",
+      "size": 0.056,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-dandelion": {
+      "look": "Fuzzy yellow mountain dandelion flower.",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-sun-ring": {
+      "look": "Glowing sunlit golden cloud-ring wreath.",
+      "size": 0.042,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-grey-boulder": {
+      "look": "Heavy craggy grey mountain boulder with moss patch.",
+      "size": 0.068,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-trail-brazier": {
+      "look": "Carved Persian bronze tripod fire-brazier with warm golden flames.",
+      "size": 0.06,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-spark": {
+      "look": "Bright golden feather star-spark.",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-starlight-ribbon": {
+      "look": "Graceful rising spiral ribbon of golden-and-turquoise starlight.",
+      "size": 0.075,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-moss-pillow": {
+      "look": "Soft emerald-green mountain moss pillow.",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-crimson-blanket": {
+      "look": "Neatly folded crimson silk blanket with gold border.",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-sweet-berries": {
+      "look": "Cluster of sweet red mountain berries with green leaves.",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-nest-spot": {
+      "look": "Woven sandalwood twig nest ring marker.",
+      "size": 0.022,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-leap-stone": {
+      "look": "Flat sunlit golden mountain crag stepping stone.",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-golden-feather": {
+      "look": "Luminous saffron-gold and peacock-turquoise Simurgh plume feather.",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-feast-table": {
+      "look": "Low carved walnut Persian welcome table.",
+      "size": 0.048,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-pomegranate-bowl": {
+      "look": "Turquoise Persian bowl of ripe ruby pomegranates.",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-saffron-cakes": {
+      "look": "Brass plate of golden Persian saffron cakes.",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-rose-vase": {
+      "look": "Turquoise glazed Persian vase of pink roses.",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-petal-pile": {
+      "look": "Soft pile of pink Persian rose petals with a curling red silk ribbon.",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-brass-stand": {
+      "look": "Carved Persian shining brass feather stand.",
+      "size": 0.058,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-paired-feathers": {
+      "look": "Pair of crossed glowing golden-turquoise Simurgh feathers.",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-rose-garland": {
+      "look": "Fragrant pink Persian rose garland.",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-silk-cushion": {
+      "look": "Embroidered crimson silk cushion with gold tassels.",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-brass-stand-full": {
+      "look": "Shining brass honour stand crowned with Zal's two golden feathers and pink rose garland.",
+      "size": 0.072,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-table-spot": {
+      "look": "Turquoise-gold Persian placement medallion for the welcome table.",
+      "size": 0.022,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-stand-spot": {
+      "look": "Turquoise cloud placement medallion for the honour stand (R1: solid, the same turquoise as the feast table spots).",
+      "size": 0.022,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-sam-worry": {
+      "look": "Lord Sam frowning with anxious worry, hand near beard.",
+      "size": 0.167,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-sit": {
+      "look": "Lord Sam seated quietly on sandstone garden bench gazing upward.",
+      "size": 0.14,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-sam-feather": {
+      "look": "Lord Sam cradling one glowing Simurgh plume feather tenderly to his heart.",
+      "size": 0.165,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-simurgh-zal-hug": {
+      "look": "Tender farewell embrace: Prince Zal hugging the Simurgh's warm feathered neck.",
+      "size": 0.221,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-simurgh-carry-cradle": {
+      "look": "Mythical Simurgh soaring gracefully carrying baby Zal's warm crimson cradle in her golden claws.",
+      "size": 0.235,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
+    },
+    "simurgh-baby-zal-sleep": {
+      "look": "Peaceful snow-haired baby Zal curled up fast asleep on his crimson silk blanket.",
+      "size": 0.047,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-zal-three-feathers": {
+      "look": "Prince Zal smiling warmly holding out three glowing pointed Simurgh plume feathers.",
+      "size": 0.137,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "simurgh-simurgh-stand-l": {
+      "look": "Mythical Simurgh facing left toward Zal with gentle wise eyes and turquoise necklace.",
+      "size": 0.221,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
+      ],
+      "cut": true
     }
   }
 }
