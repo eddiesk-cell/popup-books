@@ -6,7 +6,9 @@
   "rain-light",
   "wind-breeze"
  ],
- "shots": [],
+ "shots": [
+  "rain-light"
+ ],
  "pools": {
   "mt-rumble": 3,
   "mt-chop": 3,

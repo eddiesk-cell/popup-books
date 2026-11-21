@@ -55,7 +55,7 @@
    "ja": "まいにち ボボは きの ところへ やってきて、まいにち カピは くだものを わけて あげました。"
   },
   "3.2": {
-   "lo": "ພວກເຂົາເລົ່ານິທານໃຫ້ກັນຟັງ. ນັ່ງເບິ່ງນົກບິນ. ແລ້ວກໍຫົວເລາະ ຫົວເລາະກັນບໍ່ຢຸດ.",
+   "lo": "ທັງສອງເລົ່ານິທານໃຫ້ກັນຟັງ. ນັ່ງເບິ່ງນົກບິນ. ແລ້ວກໍຫົວເລາະ ຫົວເລາະກັນບໍ່ຢຸດ.",
    "th": "พวกเขาเล่านิทานให้กันฟัง ดูนกบิน แล้วก็หัวเราะ หัวเราะกันไม่หยุด",
    "zh": "他们一起讲故事，一起看小鸟，笑啊笑啊，笑个不停。",
    "ja": "いっしょに おはなしを したり、とりを ながめたり。そして、わらって わらって、わらいました。"
@@ -91,7 +91,7 @@
    "ja": "ルルは くだものを たべて、すこしだけ にっこり しました。"
   },
   "5.1": {
-   "lo": "“ໂບໂບ,” ລູລູເວົ້າຄ່ອຍໆ, “ຊ່ວຍເອົາຫົວໃຈຂອງໝາກຫວ້າມາໃຫ້ຂ້ອຍແດ່. ຫົວໃຈນັ້ນຈະເຮັດໃຫ້ຂ້ອຍຫາຍດີ.”",
+   "lo": "“ໂບໂບ,” ລູລູເວົ້າຄ່ອຍໆ, “ຊ່ວຍເອົາຫົວໃຈຂອງໝາກຫວ້າມາໃຫ້ຂ້ອຍແດ່. ຫົວໃຈນັ້ນຈະເຮັດໃຫ້ຂ້ອຍເຊົາດີ.”",
    "th": "“โบโบ” ลูลูพูดเบาๆ “ช่วยเอาหัวใจของลูกหว้ามาให้ฉันหน่อยนะ หัวใจนั้นจะทำให้ฉันหายป่วย”",
    "zh": "“波波，”露露轻轻地说，“请把蒲桃的心带给我吧。那颗心能让我的病好起来。”",
    "ja": "「ボボ」と、ルルは ちいさな こえで いいました。「ジャムンの ハートを もってきて ちょうだい。その ハートが あれば、わたし げんきに なれるの」"
@@ -121,7 +121,7 @@
    "ja": "「ルルは、だれの ハートが ほしいんだろう？」と、ボボは かんがえました。"
   },
   "6.3": {
-   "lo": "“ຫົວໃຈຂອງຜູ້ທີ່ເອົາໝາກໄມ້ຫວານໆມາໃຫ້ຫຼື? ຫົວໃຈຂອງກາປີຫຼື? ໂອ້ຍ ບໍ່ດີແລ້ວ!”",
+   "lo": "“ຫົວໃຈຂອງຜູ້ທີ່ເອົາໝາກໄມ້ຫວານໆມາໃຫ້ບໍ? ຫົວໃຈຂອງກາປີຫວາ? ໂອ້ຍ ບໍ່ດີແລ້ວ!”",
    "th": "“หัวใจของคนที่ให้ผลไม้หวานๆ เหรอ? หัวใจของกาปีเหรอ? โอ๊ย ไม่นะ!”",
    "zh": "“是送甜果子的那个朋友的心吗？是卡皮的心吗？哎呀，不好了！”",
    "ja": "「あまい くだものを くれる だれかの ハート？ カピの ハート？ たいへんだ！」"
@@ -145,13 +145,13 @@
    "ja": "「でも ぼく、およげないよ」と、カピは いいました。"
   },
   "7.3": {
-   "lo": "“ນັ່ງເທິງຫຼັງຂ້ອຍສິ,” ໂບໂບເວົ້າ. “ຂ້ອຍຈະແບກເຈົ້າໄປເອງ.”",
+   "lo": "“ນັ່ງເທິງຫຼັງຂ້ອຍແມ,” ໂບໂບເວົ້າ. “ຂ້ອຍຈະແບກເຈົ້າໄປເອງ.”",
    "th": "“นั่งบนหลังฉันสิ” โบโบบอก “ฉันจะพาเธอไปเอง”",
    "zh": "“坐到我背上来，”波波说，“我驮你过去。”",
    "ja": "「ぼくの せなかに のって」と、ボボは いいました。「ぼくが つれて いって あげる」"
   },
   "7.4": {
-   "lo": "ກາປີຈຶ່ງໂດດຂຶ້ນຫຼັງໂບໂບ ແລ້ວພວກເຂົາກໍລອຍຂ້າມແມ່ນ້ຳໄປ.",
+   "lo": "ກາປີຈຶ່ງໂດດຂຶ້ນຫຼັງໂບໂບ ແລ້ວທັງສອງກໍລອຍຂ້າມແມ່ນ້ຳໄປ.",
    "th": "กาปีจึงกระโดดขึ้นหลังโบโบ แล้วทั้งสองก็ว่ายข้ามแม่น้ำไป",
    "zh": "于是，卡皮跳上了波波的背，他们一起出发，游过大河。",
    "ja": "そこで カピは ボボの せなかに ぴょんと とびのり、ふたりは かわを わたって いきました。"
@@ -223,13 +223,13 @@
    "ja": "ボボは カピを みました。カピは ボボを みました。それから、みんなで わらいだしました。"
   },
   "10.4": {
-   "lo": "ກາປີໂຍນເມັດໝາກຫວ້າ, ຫົວໃຈນ້ອຍໆຂອງໝາກໄມ້, ລົງໄປໃຫ້ລູລູ.",
+   "lo": "ກາປີຖິ້ມເມັດໝາກຫວ້າ, ຫົວໃຈນ້ອຍໆຂອງໝາກໄມ້, ລົງໄປໃຫ້ລູລູ.",
    "th": "กาปีโยนเมล็ดหว้า หัวใจดวงน้อยๆ ของผลไม้ ลงไปให้ลูลู",
    "zh": "卡皮把一颗颗种子——果子小小的心——丢下去给露露。",
    "ja": "カピは たねを、そう、くだものの ちいさな ハートを、ルルの ところへ ぽとん ぽとんと おとして あげました。"
   },
   "10.5": {
-   "lo": "ບໍ່ດົນ ລູລູກໍຫາຍດີ, ແລະ ທັງສາມກໍເປັນໝູ່ກັນຕະຫຼອດໄປ.",
+   "lo": "ບໍ່ດົນ ລູລູກໍເຊົາດີ, ແລະ ທັງສາມກໍເປັນໝູ່ກັນຕະຫຼອດໄປ.",
    "th": "ไม่นานลูลูก็หายป่วย แล้วทั้งสามก็เป็นเพื่อนกันตลอดไป",
    "zh": "没过多久，露露的病就好了。他们三个永远都是好朋友。",
    "ja": "まもなく ルルは すっかり げんきに なりました。そして みんなは、いつまでも なかよしでした。"
@@ -265,7 +265,7 @@
    "ja": "えいごの 「heart（ハート）」には、ふたつの いみが あるよ。ひとつは、からだの なかの ハート（しんぞう）。もう ひとつは、くだものの ハート。まんなかに ある たねの ことだよ。"
   },
   "game.1.start": {
-   "lo": "ຊອກຫາໝາກຍ້າງສີມ່ວງໄດ້ບໍ? ແຕະເລີຍ!",
+   "lo": "ຊອກຫາໝາກຫວ້າສີມ່ວງໄດ້ບໍ? ແຕະເລີຍ!",
    "th": "หาลูกหว้าสีม่วงเจอไหม? แตะเลย!",
    "zh": "你能找到紫色的蒲桃吗？点一点它们！",
    "ja": "むらさきの ジャムンを さがせるかな？ タッチしてね！"
@@ -277,7 +277,7 @@
    "ja": "ぜんぶ みつけたね！おいしい！"
   },
   "game.2.start": {
-   "lo": "ໂບໂບຫິວແລ້ວ! ຖິ້ມໝາກຍ້າງໃສ່ປາກລາວເລີຍ!",
+   "lo": "ໂບໂບຫິວແລ້ວ! ຖິ້ມໝາກຫວ້າໃສ່ປາກລາວເລີຍ!",
    "th": "โบโบหิวแล้ว! โยนลูกหว้าใส่ปากเขาเลย!",
    "zh": "波波饿了！把蒲桃丢进他的嘴里！",
    "ja": "ボボは おなかが ぺこぺこ！ジャムンを くちに いれてあげよう！"
@@ -307,7 +307,7 @@
    "ja": "たねが ボボの しっぽに とどいた ときに タッチしてね！"
   },
   "game.4.start": {
-   "lo": "ມືດແລ້ວ. ເຈົ້າຈູດແມງໄຫຼໄດ້ບໍ? ແຕະເລີຍ!",
+   "lo": "ມືດແລ້ວ. ເຈົ້າເຮັດໃຫ້ແມງຫິ່ງຫ້ອຍສ່ອງແສງໄດ້ບໍ? ແຕະເລີຍ!",
    "th": "มืดแล้ว. เธอทำให้หิ่งห้อยสว่างได้ไหม? แตะเลย!",
    "zh": "天黑了。你能点亮萤火虫吗？点一点它们！",
    "ja": "くらいよ。ほたるを ひからせられるかな？ タッチしてね！"
@@ -343,10 +343,10 @@
    "ja": "ぜんぶ みつけたね。よく みているね！"
   },
   "game.7.go": {
-   "lo": "Tap the golden light! Bobo swims there.",
-   "th": "Tap the golden light! Bobo swims there.",
-   "zh": "Tap the golden light! Bobo swims there.",
-   "ja": "Tap the golden light! Bobo swims there."
+   "lo": "ແຕະແສງສີທອງ! ໂບໂບຈະລອຍໄປທາງນັ້ນ.",
+   "th": "แตะแสงสีทอง! โบโบจะว่ายไปทางนั้น",
+   "zh": "点一下金光！波波就会游过去。",
+   "ja": "きいろい ひかりを タップして！ボボが そっちへ およぐよ。"
   },
   "game.7.praise": {
    "lo": "ຊູ່ຊ່າ! ເຈົ້າພາລາວຜ່ານໄປໄດ້ຢ່າງປອດໄພ!",
@@ -355,25 +355,25 @@
    "ja": "ばしゃばしゃ！あんぜんに すすめたね！"
   },
   "game.7.light": {
-   "lo": "Tap the golden light!",
-   "th": "Tap the golden light!",
-   "zh": "Tap the golden light!",
-   "ja": "Tap the golden light!"
+   "lo": "ແຕະແສງສີທອງ!",
+   "th": "แตะแสงสีทอง!",
+   "zh": "点一下金光！",
+   "ja": "きいろい ひかりを タップして！"
   },
   "game.8.start": {
-   "lo": "ຄື້ນກຳລັງໂຍກ! ແຕະເພື່ອຊ່ວຍກາປີໃຫ້ຈັບແໜ້ນ!",
+   "lo": "ຟອງນ້ຳກຳລັງໂຍກ! ແຕະເພື່ອຊ່ວຍກາປີໃຫ້ຈັບແໜ້ນ!",
    "th": "คลื่นโยกแล้ว! แตะเพื่อช่วยกาปีให้จับแน่น ๆ!",
    "zh": "海浪在摇晃！点一点，帮卡皮抓紧！",
    "ja": "なみが ゆれてる！タッチして、カピが しっかり つかまるのを たすけよう！"
   },
   "game.8.praise": {
-   "lo": "ໂອຍ! ກາປີຈັບໄວ້ໄດ້. ເກັ່ງຫຼາຍ!",
+   "lo": "ໂລ່ງໃຈ! ກາປີຈັບໄວ້ໄດ້. ເກັ່ງຫຼາຍ!",
    "th": "โอ้โฮ! กาปีจับไว้ได้. เก่งมาก!",
    "zh": "呼！卡皮抓住了。你真棒！",
    "ja": "ふぅ！カピは つかまれたよ。すごいね！"
   },
   "game.8.hint": {
-   "lo": "ແຕະຕອນທີ່ຄື້ນຍົກໂບໂບຂຶ້ນພໍດີ!",
+   "lo": "ແຕະຕອນທີ່ຟອງນ້ຳຍົກໂບໂບຂຶ້ນພໍດີ!",
    "th": "แตะตอนที่คลื่นยกโบโบขึ้นพอดี!",
    "zh": "海浪把波波托起来的时候，点一下！",
    "ja": "なみが ボボを もちあげた ときに タッチしてね！"
@@ -385,7 +385,7 @@
    "ja": "まって… まって… いま タッチ！カピを ジャンプさせよう！"
   },
   "game.9.praise": {
-   "lo": "ໂອ້ ໂດດໄດ້ເລີດແທ້! ສົມບູນແບບ!",
+   "lo": "ໂອ້ ໂດດໄດ້ເລີດແທ້! ດີເລີດ!",
    "th": "ว้าว กระโดดเยี่ยมเลย! สุดยอด!",
    "zh": "哇，跳得真棒！太完美了！",
    "ja": "わあ、すごい ジャンプ！かんぺき！"
@@ -397,13 +397,13 @@
    "ja": "わが カピに ぴったり とじた ときに タッチしてね！"
   },
   "game.10.start": {
-   "lo": "ແຕະໝາກຍ້າງເພື່ອໃຫ້ເມັດຕົກລົງຫາລູລູ!",
+   "lo": "ແຕະໝາກຫວ້າເພື່ອໃຫ້ເມັດຕົກລົງຫາລູລູ!",
    "th": "แตะลูกหว้าเพื่อทิ้งเมล็ดให้ลูลู!",
    "zh": "点一点蒲桃，把种子丢给露露！",
    "ja": "ジャムンを タッチして、たねを ルルに おとそう！"
   },
   "game.10.praise": {
-   "lo": "ລູລູສະບາຍດີແລ້ວ! ທຸກຄົນດີໃຈ! ຮູເຣ!",
+   "lo": "ລູລູເຊົາດີແລ້ວ! ທັງສາມພາກັນດີໃຈ! ຮູເຣ!",
    "th": "ลูลูหายดีแล้ว! ทุกคนดีใจ! เย้!",
    "zh": "露露好起来了！大家欢呼！万岁！",
    "ja": "ルルは げんきに なったよ！みんなで ばんざい！"
@@ -549,5 +549,5 @@
   "ja": "カピと ワニ",
   "ko": "카피와 악어"
  },
- "notes": "Names: Lao ກາປີ/ໂບໂບ/ລູລູ, Thai กาปี/โบโบ/ลูลู, Chinese 卡皮/波波/露露, Japanese カピ/ボボ/ルル. Jamun: Lao ໝາກຫວ້າ, Thai ลูกหว้า (tree ต้นหว้า), Chinese 蒲桃, Japanese ジャムン (glossed in 1.1 as ジャムンと いう くだもの). Heart: Lao ຫົວໃຈ, Thai หัวใจ, Chinese 心, Japanese ハート. In every language 5.3 is cut from the exact words of 5.1 with only 'of the jamun' missing, so the child can see what Bobo missed. moral.5 quotes the English word \"heart\" in all four languages, since the child is learning it. Japanese: written in hiragana/katakana with spaces between words (picture-book style) so 5-year-olds can read it; can switch to kanji for older readers. ハート was chosen over 心 because it echoes the English word; ハート alone can sound romantic, so 8.2 says きみの むねの なかの ハート (the heart in your chest) to make the danger clear, and moral.5 glosses it as しんぞう. Chinese: 蒲桃 chosen as friendlier for children; botanically Syzygium cumini is 乌墨 / 海南蒲桃. Read aloud, 蒲桃 (pútáo) sounds like 葡萄 (grape), so a native speaker should confirm this is OK. NATIVE CHECK, Lao (least sure first): game.8.start, game.8.praise, game.9.start (Kapi's name corrected 2026-11-12 from ກະປິ to ກາປີ; Thai likewise from กะปิ, which is shrimp paste, to กาปี); game.3.hint, game.7.hint, game.8.hint (added 2026-11-12, no one has read them yet); 6.3 (ຫຼື? as the surprised question; ໂອ້ຍ ບໍ່ດີແລ້ວ! for 'Oh no!'); 10.2 (ຕ່າງຫາກ for the stressed JAMUN); 9.2 (ຫັນກັບ for 'turned around'); 2.4 (ຍິ້ມກວ້າງ for 'big smile'); 7.1 (ໄປຫຼິ້ນທີ່ເຮືອນຂ້ອຍແດ່ / ພົບ); 10.1 (ພໍດີຕອນນັ້ນ for 'just then'); 3.3 (ໝູ່ສະໜິດທີ່ສຸດ); moral.4 wording; touch sounds ວີ້!, ຄິກໆ!, ຕູມ!, ຫືມ? and Lulu calling the child ລູກ / ຄົນເກັ່ງ. Also check overall: ໝູ່ vs ເພື່ອນ for 'friend', the full stops (.), and any Thai-sounding wording. NATIVE CHECK, other: Thai touch sounds วี้! and ตูม!, and ภรรยา for 'wife' (4.1, 6.4); Chinese 哇呼！ for 'Whee!'; Japanese なあんだ in 9.1 (Kapi pretending to be calm) and the touch line おちびちゃん. Not included: the book title 'Kapi and the Crocodile', since the file has no slot for it."
+ "notes": "Names: Lao ກາປີ/ໂບໂບ/ລູລູ, Thai กาปี/โบโบ/ลูลู, Chinese 卡皮/波波/露露, Japanese カピ/ボボ/ルル. Jamun: Lao ໝາກຫວ້າ, Thai ลูกหว้า (tree ต้นหว้า), Chinese 蒲桃, Japanese ジャムン (glossed in 1.1 as ジャムンと いう くだもの). Heart: Lao ຫົວໃຈ, Thai หัวใจ, Chinese 心, Japanese ハート. In every language 5.3 is cut from the exact words of 5.1 with only 'of the jamun' missing, so the child can see what Bobo missed. moral.5 quotes the English word \"heart\" in all four languages, since the child is learning it. Japanese: written in hiragana/katakana with spaces between words (picture-book style) so 5-year-olds can read it; can switch to kanji for older readers. ハート was chosen over 心 because it echoes the English word; ハート alone can sound romantic, so 8.2 says きみの むねの なかの ハート (the heart in your chest) to make the danger clear, and moral.5 glosses it as しんぞう. Chinese: 蒲桃 chosen as friendlier for children; botanically Syzygium cumini is 乌墨 / 海南蒲桃. Read aloud, 蒲桃 (pútáo) sounds like 葡萄 (grape), so a native speaker should confirm this is OK. NATIVE CHECK, Lao (least sure first): game.8.start, game.8.praise, game.9.start (Kapi's name corrected 2026-11-12 from ກະປິ to ກາປີ; Thai likewise from กะปิ, which is shrimp paste, to กาปี); game.3.hint, game.7.hint, game.8.hint (added 2026-11-12, no one has read them yet); 6.3 (ໂອ້ຍ ບໍ່ດີແລ້ວ! for 'Oh no!'); 10.2 (ຕ່າງຫາກ for the stressed JAMUN); 9.2 (ຫັນກັບ for 'turned around'); 2.4 (ຍິ້ມກວ້າງ for 'big smile'); 7.1 (ໄປຫຼິ້ນທີ່ເຮືອນຂ້ອຍແດ່ / ພົບ); 10.1 (ພໍດີຕອນນັ້ນ for 'just then'); 3.3 (ໝູ່ສະໜິດທີ່ສຸດ); moral.4 wording; touch sounds ວີ້!, ຄິກໆ!, ຕູມ!, ຫືມ? and Lulu calling the child ລູກ / ຄົນເກັ່ງ. Also check overall: the full stops (.), and any Thai-sounding wording. NATIVE CHECK, other: Thai touch sounds วี้! and ตูม!, and ภรรยา for 'wife' (4.1, 6.4); Chinese 哇呼！ for 'Whee!'; Japanese なあんだ in 9.1 (Kapi pretending to be calm) and the touch line おちびちゃん. Not included: the book title 'Kapi and the Crocodile', since the file has no slot for it."
 }

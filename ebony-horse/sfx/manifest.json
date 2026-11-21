@@ -1,0 +1,29 @@
+{
+ "beds": [
+  "courtyard-day",
+  "courtyard-night",
+  "skyway-wind",
+  "terrace-night"
+ ],
+ "shots": [],
+ "pools": {
+  "motif-shiraz": 1,
+  "motif-yasmin": 1,
+  "motif-horse": 1,
+  "clockwork-click": 1,
+  "gear-hum": 1,
+  "gear-snug": 1,
+  "peacock-fan": 1,
+  "cat-boing": 1,
+  "hoopoe-sproing": 1,
+  "cushion-plop": 1,
+  "sky-whoosh": 1,
+  "crane-flap": 1,
+  "wind-whirl": 1,
+  "star-glow": 1,
+  "peg-turn": 1,
+  "brazier-whoomp": 1,
+  "hoof-touch": 1,
+  "frog-boing": 1
+ }
+}

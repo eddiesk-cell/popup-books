@@ -751,12 +751,12 @@
    ]
   },
   {
-   "id": "game.7.start",
-   "text": "Swipe left or right! Steer Bobo past the rocks!",
+   "id": "game.7.go",
+   "text": "Tap the golden light! Bobo swims there.",
    "say": [
     [
      "narrator",
-     "Swipe left or right! Steer Bobo past the rocks!"
+     "Tap the golden light! Bobo swims there."
     ]
    ]
   },
@@ -771,12 +771,12 @@
    ]
   },
   {
-   "id": "game.7.hint",
-   "text": "The fish are splashing there. Go round the other side!",
+   "id": "game.7.light",
+   "text": "Tap the golden light!",
    "say": [
     [
      "narrator",
-     "The fish are splashing there. Go round the other side!"
+     "Tap the golden light!"
     ]
    ]
   },

@@ -1,0 +1,1047 @@
+{
+ "words": false,
+ "title": "The Enchanted Ebony Horse",
+ "credit": "From the classic Persian and Middle Eastern folk tale The Enchanted Horse (ATU 575), told in One Thousand and One Nights and published in English by Edward William Lane (1840) and Andrew Lang in The Arabian Nights' Entertainments (1898). Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all 10 STORY-REVIEW.md notes applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "firuz": {
+   "voice": "bm_fable",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "yasmin": {
+   "voice": "bf_alice",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "sabur": {
+   "voice": "bm_daniel",
+   "speed": 0.94,
+   "pitch": -1
+  },
+  "hakim": {
+   "voice": "bm_lewis",
+   "speed": 0.91,
+   "pitch": -2
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "horse": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "astrolabe": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "peacock": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hoopoe": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "compass": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Firuz": "Fee-rooz",
+  "Firuz's": "Fee-rooz's",
+  "Yasmin": "Yahss-meen",
+  "Yasmin's": "Yahss-meen's",
+  "Sabur": "Sah-buhr",
+  "Sabur's": "Sah-buhr's",
+  "Hakim": "Hah-keem",
+  "Hakim's": "Hah-keem's",
+  "Shiraz": "Shee-rahz",
+  "Nowruz": "Noh-rooz"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Marvel of Shiraz",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in sunny Shiraz in Persia, pink blossoms danced in the courtyard for the Nowruz spring festival.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in sunny Shee-rahz in Persia, pink blossoms danced in the courtyard for the Noh-rooz spring festival."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Kind King Sabur and eager young Prince Firuz watched a silver clockwork peacock spread its shining fan tail.",
+     "say": [
+      [
+       "narrator",
+       "Kind King Sah-buhr and eager young Prince Fee-rooz watched a silver clockwork peacock spread its shining fan tail."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Then old Master Hakim led in a horse of polished dark ebony wood, gleaming with golden brass gears.",
+     "say": [
+      [
+       "narrator",
+       "Then old Master Hah-keem led in a horse of polished dark ebony wood, gleaming with golden brass gears."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Firuz clapped his hands! \"May I ride it?\" Hakim smiled proudly. \"Listen first, then turn the peg!\"",
+     "say": [
+      [
+       "narrator",
+       "Fee-rooz clapped his hands!"
+      ],
+      [
+       "firuz",
+       "May I ride it?"
+      ],
+      [
+       "narrator",
+       "Hah-keem smiled proudly."
+      ],
+      [
+       "hakim",
+       "Listen first, then turn the peg!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "On its shoulders shone two pegs: a golden sun peg and a silver moon peg. What could they do?",
+     "say": [
+      [
+       "narrator",
+       "On its shoulders shone two pegs: a golden sun peg and a silver moon... peg. What could they do?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Up Into the Sky!",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "\"The sun peg lifts it, but the moon peg is my secret!\" boasted Hakim. Click-clack! Brass gears hummed!",
+     "say": [
+      [
+       "hakim",
+       "The sun peg lifts it, but the moon peg is my secret!"
+      ],
+      [
+       "narrator",
+       "boasted Hah-keem. Click-clack! Brass gears hummed!"
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "A plump striped cat copied Master Hakim's proud bow. Boing! It tumbled paws-up into a basket of pink petals!",
+     "say": [
+      [
+       "narrator",
+       "A plump striped cat copied Master Hah-keem's proud bough. Boing! It tumbled paws-up into a basket of pink petals!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Everyone laughed! While Hakim bowed to King Sabur, eager Firuz hopped onto the saddle without waiting to listen.",
+     "say": [
+      [
+       "narrator",
+       "Everyone laughed! While Hah-keem bowed to King Sah-buhr, eager Fee-rooz hopped onto the saddle without waiting to listen."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "\"Watch me fly!\" cheered Firuz, twisting the golden sun peg all the way round! Wind swirled under its hooves!",
+     "say": [
+      [
+       "firuz",
+       "Watch me fly!"
+      ],
+      [
+       "narrator",
+       "cheered Fee-rooz, twisting the golden sun peg all the way round! Wind swirled under its hooves!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Whoosh! Up soared Firuz and the Ebony Horse above the cypress trees into the blue sky! How would he land?",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Up soared Fee-rooz and the Ebony Horse above the cypress trees into the blue... sky! How would he land?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Above the White Clouds",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Firuz did not know! Higher and higher climbed the Ebony Horse, soaring into a sea of fluffy white clouds.",
+     "say": [
+      [
+       "narrator",
+       "Fee-rooz did not know! Higher and higher climbed the Ebony Horse, soaring into a sea of fluffy white clouds."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Flap-flap! Three white cranes flew beside him as cool wind whistled past, and snowy peaks shone far below!",
+     "say": [
+      [
+       "narrator",
+       "Flap-flap! Three white cranes flew beside him as cool wind whistled past, and snowy peaks shone far below!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "\"Slow down, horse!\" gasped Firuz, hugging its smooth dark neck as his heart beat fast. Why hadn't he listened?",
+     "say": [
+      [
+       "firuz",
+       "Slow down, horse!"
+      ],
+      [
+       "narrator",
+       "gasped Fee-rooz, hugging its smooth dark neck as his heart beat fast. Why hadn't he listened?"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Firuz took a slow breath and looked carefully. Beside the golden sun peg gleamed the cool silver moon peg!",
+     "say": [
+      [
+       "narrator",
+       "Fee-rooz took a slow breath and looked carefully. Beside the golden sun peg gleamed the cool silver moon peg!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Gently he turned the silver moon peg back one click, and the horse glided down! Where could they land?",
+     "say": [
+      [
+       "narrator",
+       "Gently he turned the silver moon peg back one click, and the horse glided... down! Where could they land?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Following the Evening Stars",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Sunset painted the clouds rose-gold. Ahead, four bright twilight stars blinked awake above a distant marble tower.",
+     "say": [
+      [
+       "narrator",
+       "Sunset painted the clouds rose-gold. Ahead, four bright twilight stars blinked awake above a distant marble tower."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Tick-tick-hum! Inside the Ebony Horse's chest, golden brass gears hummed softly as it glided across the rosy clouds.",
+     "say": [
+      [
+       "narrator",
+       "Tick-tick-hum! Inside the Ebony Horse's chest, golden brass gears hummed softly as it glided across the rosy clouds."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "\"One small turn makes you rise or glide,\" murmured Firuz, patting its polished dark neck with gentle hands.",
+     "say": [
+      [
+       "firuz",
+       "One small turn makes you rise or glide,"
+      ],
+      [
+       "narrator",
+       "murmured Fee-rooz, patting its polished dark neck with gentle hands."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "A crescent silver moon rose over the purple peaks, casting a shining path across the quiet twilight clouds.",
+     "say": [
+      [
+       "narrator",
+       "A crescent silver moon rose over the purple peaks, casting a shining path across the quiet twilight clouds."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Following the four bright stars, the Ebony Horse glided toward the glowing marble tower. Who lived up there?",
+     "say": [
+      [
+       "narrator",
+       "Following the four bright stars, the Ebony Horse glided toward the glowing marble... tower. Who lived up there?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "The Stargazer on the Roof",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Up on the marble rooftop garden stood Princess Yasmin, mapping the night stars with a shining brass astrolabe!",
+     "say": [
+      [
+       "narrator",
+       "Up on the marble rooftop garden stood Princess Yahss-meen, mapping the night stars with a shining brass astrolabe!"
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "Beside her perched a little crested hoopoe bird, tilting its striped head as the Ebony Horse stepped down.",
+     "say": [
+      [
+       "narrator",
+       "Beside her perched a little crested hoopoe bird, tilting its striped head as the Ebony Horse stepped down."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"Welcome, sky traveller!\" smiled Yasmin, not frightened at all. \"Did you fly down from the evening stars?\"",
+     "say": [
+      [
+       "yasmin",
+       "Welcome, sky traveller!"
+      ],
+      [
+       "narrator",
+       "smiled Yahss-meen, not frightened at all."
+      ],
+      [
+       "yasmin",
+       "Did you fly down from the evening stars?"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Firuz bowed shyly. \"I turned the sun peg without listening!\" Yasmin laughed kindly. \"Look closely, then turn the peg!\"" ,
+     "say": [
+      [
+       "narrator",
+       "Fee-rooz bowed shyly."
+      ],
+      [
+       "firuz",
+       "I turned the sun peg without listening!"
+      ],
+      [
+       "narrator",
+       "Yahss-meen laughed kindly."
+      ],
+      [
+       "yasmin",
+       "Look closely, then turn the peg!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Suddenly, plink-roll! One golden star-gear slipped from under the saddle onto the marble floor! Could they fix it?",
+     "say": [
+      [
+       "narrator",
+       "Suddenly, plink-roll! One golden star-gear slipped from under the saddle onto the marble... floor! Could they fix it?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "A Gear and a Friend",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Next morning, warm sunshine filled the jasmine garden as Yasmin opened her wooden chest of gleaming brass gears.",
+     "say": [
+      [
+       "narrator",
+       "Next morning, warm sunshine filled the jasmine garden as Yahss-meen opened her wooden chest of gleaming brass gears."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Her curious hoopoe bird pecked the golden star-gear. Sproing! Back it hopped wearing a white jasmine flower hat!",
+     "say": [
+      [
+       "narrator",
+       "Her curious hoopoe bird pecked the golden star-gear. Sproing! Back it hopped wearing a white jasmine flower hat!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Firuz and Yasmin giggled! Together they fitted three brass gears neatly inside, until every wheel clicked snug and tight.",
+     "say": [
+      [
+       "narrator",
+       "Fee-rooz and Yahss-meen giggled! Together they fitted three brass gears neatly inside, until every wheel clicked snug and tight."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"King Sabur will worry in Shiraz,\" said Firuz softly. Yasmin lifted her brass astrolabe, and her hoopoe hopped aboard!",
+     "say": [
+      [
+       "firuz",
+       "King Sah-buhr will worry in Shee-rahz,"
+      ],
+      [
+       "narrator",
+       "said Fee-rooz softly. Yahss-meen lifted her brass astrolabe, and her hoopoe hopped aboard!"
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "\"I will steer by the stars and guide you home!\" promised Yasmin. Ahead, grey wind-clouds gathered over the peaks!",
+     "say": [
+      [
+       "yasmin",
+       "I will steer by the stars and guide you... home!"
+      ],
+      [
+       "narrator",
+       "promised Yahss-meen. Ahead, grey wind-clouds gathered over the peaks!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Through the Mountain Wind",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Rumble-whirl! At dusk, chilly grey wind-clouds swirled across the mountain pass, swaying the Ebony Horse above snowy crags!",
+     "say": [
+      [
+       "narrator",
+       "Rumble-whirl! At dusk, chilly grey wind-clouds swirled across the mountain pass, swaying the Ebony Horse above snowy crags!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "\"The wind is too strong to climb over!\" called Firuz, holding steady while cool mist brushed their cheeks.",
+     "say": [
+      [
+       "firuz",
+       "The wind is too strong to climb over!"
+      ],
+      [
+       "narrator",
+       "called Fee-rooz, holding steady while cool mist brushed their cheeks."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Yasmin aimed her brass astrolabe at the bright Evening Star. \"Breathe steady, then turn the peg!\" she called.",
+     "say": [
+      [
+       "narrator",
+       "Yahss-meen aimed her brass astrolabe at the bright Evening Star."
+      ],
+      [
+       "yasmin",
+       "Breathe steady, then turn the... peg!"
+      ],
+      [
+       "narrator",
+       "she called."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Turning the silver moon peg together, they swooped smoothly under the grey clouds along a calm valley breeze!",
+     "say": [
+      [
+       "narrator",
+       "Turning the silver moon peg together, they swooped smoothly under the grey clouds along a calm valley breeze!"
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Out into clear starlight they glided toward distant Shiraz! Down at the palace, was someone waiting in the night?",
+     "say": [
+      [
+       "narrator",
+       "Out into clear starlight they glided toward distant Shee-rahz! Down at the palace, was someone waiting in the night?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Five Golden Beacons",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Yes! Down in the Shiraz courtyard, King Sabur watched the starry sky. He wished his son was safe.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Down in the Shee-rahz courtyard, King Sah-buhr watched the starry sky. He wished his son was safe."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Old Master Hakim wiped a teardrop from his white beard. \"I was too proud to share the landing secret!\"",
+     "say": [
+      [
+       "narrator",
+       "Old Master Hah-keem wiped a teardrop from his white beard."
+      ],
+      [
+       "hakim",
+       "I was too proud to share the landing secret!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "King Sabur rested a kind hand on Hakim's shoulder. \"Help me light five brass braziers to guide Firuz home!\"",
+     "say": [
+      [
+       "narrator",
+       "King Sah-buhr rested a kind hand on Hah-keem's shoulder."
+      ],
+      [
+       "sabur",
+       "Help me light five brass braziers to guide Fee-rooz home!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Whoomp! Together they touched a bright torch to five brass braziers, sending warm golden flames curling upward!",
+     "say": [
+      [
+       "narrator",
+       "Whoomp! Together they touched a bright torch to five brass braziers, sending warm golden flames curling upward!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Five warm beacons shone like golden stars across the dark night! Up high, would Firuz see their bright glow?",
+     "say": [
+      [
+       "narrator",
+       "Five warm beacons shone like golden stars across the dark... night! Up high, would Fee-rooz see their bright glow?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Safe Home at Last",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "\"Look, five golden beacons in Shiraz!\" cheered Firuz as Yasmin steered the Ebony Horse down through the starlight.",
+     "say": [
+      [
+       "firuz",
+       "Look, five golden beacons in Shee-rahz!"
+      ],
+      [
+       "narrator",
+       "cheered Fee-rooz as Yahss-meen steered the Ebony Horse down through the starlight."
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Swoosh-tap! Gently they turned the silver moon peg, and all four ebony hooves touched the courtyard tiles softly!",
+     "say": [
+      [
+       "narrator",
+       "Swoosh-tap! Gently they turned the silver moon peg, and all four ebony hooves touched the courtyard tiles softly!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "King Sabur hugged Firuz and welcomed Princess Yasmin warmly! \"Her stars and clever hands brought us home!\" beamed Firuz.",
+     "say": [
+      [
+       "narrator",
+       "King Sah-buhr hugged Fee-rooz and welcomed Princess Yahss-meen warmly!"
+      ],
+      [
+       "firuz",
+       "Her stars and clever hands brought us home!"
+      ],
+      [
+       "narrator",
+       "beamed Fee-rooz."
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "\"Forgive my rushing, Father and Master Hakim,\" said Firuz. Hakim bowed low. \"Forgive my proud secret too!\"",
+     "say": [
+      [
+       "firuz",
+       "Forgive my rushing, Father and Master Hah-keem,"
+      ],
+      [
+       "narrator",
+       "said Fee-rooz. Hah-keem bowed low."
+      ],
+      [
+       "hakim",
+       "Forgive my proud secret too!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Yasmin smiled at the Ebony Horse's sun and moon pegs. How could they make flying safe for everyone?",
+     "say": [
+      [
+       "narrator",
+       "Yahss-meen smiled at the Ebony Horse's sun and moon... pegs. How could they make flying safe for everyone?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "The Sun, Moon, and Star Compass",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Next morning, tink-tink! Hakim, Yasmin, and Firuz fastened a shining brass star-compass right between the two shoulder pegs!",
+     "say": [
+      [
+       "narrator",
+       "Next morning, tink-tink! Hah-keem, Yahss-meen, and Fee-rooz fastened a shining brass star-compass right between the two shoulder pegs!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "A golden sun sign pointed up to rise. A silver moon sign pointed down to land!",
+     "say": [
+      [
+       "narrator",
+       "A golden sun sign pointed up to rise. A silver moon sign pointed down to land!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "The striped cat and little hoopoe hopped onto a red silk cushion. Wobble-plop! They bounced nose to beak!",
+     "say": [
+      [
+       "narrator",
+       "The striped cat and little hoopoe hopped onto a red silk cushion. Wobble-plop! They bounced nose to beak!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Everyone laughed and shared golden saffron cakes and sweet red pomegranates beneath the dancing pink Nowruz blossoms!",
+     "say": [
+      [
+       "narrator",
+       "Everyone laughed and shared golden saffron cakes and sweet red pomegranates beneath the dancing pink Noh-rooz blossoms!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Whenever Firuz and Yasmin flew across the sky, they listened first, checked the stars, and soared home together!",
+     "say": [
+      [
+       "narrator",
+       "Whenever Fee-rooz and Yahss-meen flew across the sky, they listened first, checked the stars, and soared home... together!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Prince Firuz hopped on before listening, and flew high into the clouds without knowing how to land.",
+   "say": [
+    [
+     "closing",
+     "Prince Fee-rooz hopped on before listening, and flew high into the clouds without knowing how to land."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Master Hakim learned not to hide a helpful secret. Sharing what we know keeps everyone safe.",
+   "say": [
+    [
+     "closing",
+     "Master Hah-keem learned not to hide a helpful secret. Sharing what we know keeps everyone safe."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Princess Yasmin used patience, starlight, and teamwork to mend the brass gears and guide the Ebony Horse home.",
+   "say": [
+    [
+     "closing",
+     "Princess Yahss-meen used patience, starlight, and teamwork to mend the brass gears and guide the Ebony Horse home."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Wonder needs wisdom: listen first, share what you know, and turn every peg with care.",
+   "say": [
+    [
+     "closing",
+     "Wonder needs wisdom: listen first, share what you know, and turn every peg with... care."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Welcome to Nowruz in Shiraz! Tap the four spring lanterns to light the courtyard.",
+   "say": [
+    [
+     "narrator",
+     "Welcome to Noh-rooz in Shee-rahz! Tap the four spring lanterns to light the courtyard."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Warm golden light! Now Shiraz is ready for Master Hakim's wonder!",
+   "say": [
+    [
+     "narrator",
+     "Warm golden light! Now Shee-rahz is ready for Master Hah-keem's wonder!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Firuz turns the golden sun peg! Tap when the ring glows green to spin the gears!",
+   "say": [
+    [
+     "narrator",
+     "Fee-rooz turns the golden sun peg! Tap when the ring glows green to spin the gears!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Three bright turns! Hold on tight, Prince Firuz, up into the sky!",
+   "say": [
+    [
+     "narrator",
+     "Three bright turns! Hold on tight, Prince Fee-rooz, up into the sky!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Puffy clouds hide the horse's shoulder! Tap the three white clouds to clear the view.",
+   "say": [
+    [
+     "narrator",
+     "Puffy clouds hide the horse's shoulder! Tap the three white clouds to clear the view."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "All clear! Look, there shines the cool silver moon peg beside the sun peg!",
+   "say": [
+    [
+     "narrator",
+     "All clear! Look, there shines the cool silver moon peg beside the sun peg!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Light the sky path! Tap the four twilight stars in order, from left to right.",
+   "say": [
+    [
+     "narrator",
+     "Light the sky path! Tap the four twilight stars in order, from left to right."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Twinkle, shine! The star path leads straight to the glowing marble tower!",
+   "say": [
+    [
+     "narrator",
+     "Twinkle, shine! The star path leads straight to the glowing marble tower!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "It is dark on the rooftop! Tap the four brass star-lanterns to light the garden.",
+   "say": [
+    [
+     "narrator",
+     "It is dark on the rooftop! Tap the four brass star-lanterns to light the garden."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Warm starlight glows all around! Now Yasmin can see the Ebony Horse clearly.",
+   "say": [
+    [
+     "narrator",
+     "Warm starlight glows all around! Now Yahss-meen can see the Ebony Horse clearly."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Help Yasmin and Firuz mend the horse! Tap each brass gear, then tap its matching pin.",
+   "say": [
+    [
+     "narrator",
+     "Help Yahss-meen and Fee-rooz mend the horse! Tap each brass gear, then tap its matching pin."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Snug and bright! Every golden gear spins smoothly inside the Ebony Horse!",
+   "say": [
+    [
+     "narrator",
+     "Snug and bright! Every golden gear spins smoothly inside the Ebony Horse!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Sight the Evening Star with Yasmin's astrolabe! Tap when the ring turns green!",
+   "say": [
+    [
+     "narrator",
+     "Sight the Evening Star with Yahss-meen's astrolabe! Tap when the ring turns green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Locked on the Evening Star! Now glide smoothly beneath the grey wind-clouds!",
+   "say": [
+    [
+     "narrator",
+     "Locked on the Evening Star! Now glide smoothly beneath the grey wind-clouds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Help King Sabur and Hakim guide Firuz home! Tap all five brass braziers to light them.",
+   "say": [
+    [
+     "narrator",
+     "Help King Sah-buhr and Hah-keem guide Fee-rooz home! Tap all five brass braziers to light them."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Five bright golden beacons shine high into the night sky above Shiraz!",
+   "say": [
+    [
+     "narrator",
+     "Five bright golden beacons shine high into the night sky above Shee-rahz!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Guide the Ebony Horse down! Tap the three glowing courtyard stones in order to land.",
+   "say": [
+    [
+     "narrator",
+     "Guide the Ebony Horse down! Tap the three glowing courtyard stones in order to land."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Soft and steady! Welcome home to Shiraz, Firuz and Yasmin!",
+   "say": [
+    [
+     "narrator",
+     "Soft and steady! Welcome home to Shee-rahz, Fee-rooz and Yahss-meen!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Finish the safe sky-saddle! Match the sun sign, moon sign, and star-compass to their places.",
+   "say": [
+    [
+     "narrator",
+     "Finish the safe sky-saddle! Match the sun sign, moon sign, and star-compass to their places."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Shining bright! Now every rider knows how to rise, steer, and land safely!",
+   "say": [
+    [
+     "narrator",
+     "Shining bright! Now every rider knows how to rise, steer, and land safely!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "firuz": [
+   "I am Prince Firuz of Shiraz! I love springtime festivals and marvellous inventions!",
+   "I was so eager to fly that I twisted the golden sun peg before listening to Master Hakim!",
+   "High in the clouds, taking a slow breath helped me spot the cool silver moon peg.",
+   "Princess Yasmin taught me to check the stars and check every brass gear before takeoff!",
+   "Now I always listen first, then turn the peg with care!"
+  ],
+  "yasmin": [
+   "I am Princess Yasmin! Every clear night I map the stars from my marble rooftop garden.",
+   "My shining brass astrolabe measures how high a bright star sits above the horizon!",
+   "Even when mountain wind-clouds swirl, the Evening Star shows a calm valley path below.",
+   "Mending brass gears is fun when two friends work together!",
+   "With our new star-compass and sun and moon signs, flying is safe for everyone!"
+  ],
+  "sabur": [
+   "I am King Sabur, ruler of sunny Shiraz in Persia!",
+   "At our Nowruz spring festival, craftsmen share wonderful gifts in the tiled palace courtyard.",
+   "When night fell, Master Hakim and I lit five golden braziers so Firuz could see home from the sky!",
+   "Nothing makes a father happier than welcoming his child home safe and wise."
+  ],
+  "hakim": [
+   "I am Master Hakim! I carved the Ebony Horse from dark wood and fitted its brass clockwork gears.",
+   "Turn the golden sun peg to rise, and turn the silver moon peg to glide gently down!",
+   "At first I was too proud to share the landing secret, and I am glad I said sorry.",
+   "Sharing knowledge and adding clear signs made my invention twice as wonderful!"
+  ],
+  "horse": [
+   "The Enchanted Ebony Horse! Carved from dark ebony wood, it flies smoothly on whirring brass gears.",
+   "Its golden sun peg lifts it skyward, and its silver moon peg brings it softly down."
+  ],
+  "astrolabe": [
+   "A Persian brass astrolabe! Stargazers long ago used its spinning rings to find stars and steer safely."
+  ],
+  "peacock": [
+   "A silver clockwork peacock that spreads its shining fan tail for the Nowruz spring festival!"
+  ],
+  "hoopoe": [
+   "A little crested hoopoe bird with striped wings and a crown of feathers that opens like a fan!"
+  ],
+  "cat": [
+   "A plump striped palace cat who loves chasing pink rose petals and napping on red silk cushions!"
+  ],
+  "compass": [
+   "A shining brass star-compass mounted between the golden sun sign and the silver moon sign!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (ATU 575, Lane 1840 & Lang 1898): at the Persian Nowruz festival, an old craftsman presents a flying ebony horse and demands to marry the king's weeping daughter; Prince Firuz angrily leaps onto the horse and turns the ascent peg before learning how to descend, lands on a foreign princess's roof, sneaks into her chamber, abducts her, faces imprisonment, rescues her from the vengeful craftsman's kidnapping, and at the end the king smashes the horse to pieces. Ours (gentle, joyful, and constructive for ages 4-8): 1) Zero forced marriage, abduction, violence, or destruction: Hakim boasts on Spread 2 that the silver moon peg is his secret, while eager Firuz hops on without waiting to listen; both learn humility and apologise with mutual dignity on Spread 9. 2) Co-heroine stargazer-inventor: Princess Yasmin is wide awake on her marble rooftop observatory mapping stars with a Persian brass astrolabe; she welcomes Firuz kindly, mends a loose golden star-gear with him on Spread 6 (bringing her crested hoopoe aboard), and steers safely beneath dusk mountain wind-clouds by sighting the Evening Star on Spread 7. 3) Constructive ending (Spread 10): instead of smashing the Ebony Horse, Hakim, Yasmin, and Firuz fasten a shining brass star-compass and clear golden sun (up to rise) and silver moon (down to land) signs between the two pegs so wonder and wisdom work together safely.",
+  "moral": "Wonder needs wisdom: listen first, share what you know, and turn every peg with care.",
+  "changes": "1 Culture-true Persian miniature & Golden Age astronomy/clockwork aesthetic (Shiraz tiled arches, cypresses, pink almond blossoms, Nowruz festival, saffron cakes, pomegranates, hoopoe bird, brass astrolabe, clockwork peacock — zero Disney Aladdin tropes, genies, or flying carpets). 2 Every speaking character (firuz, yasmin, sabur, hakim) has a distinct gender-matched Kokoro voice (EDDIE-NOTES-2026-11-19 #3). 3 Every single named creature, object, weather, and light across all 50 story lines is concrete and stageable across 3 reusable places (courtyard, skyway, terrace) per Eddie's 2026-11-20 'Say it, show it' rule.",
+  "level": "A1-A2, past simple, compact sentences for ages 4-8 (50 story lines, 16-20 words/line, max 20 words so phone .ra-page stays compact). Repeated core words: horse, ebony, brass, peg, sun, moon, star, sky, clouds, wind, garden, light, listen, home.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: firuz (bm_fable +2), yasmin (bf_alice +2), sabur (bm_daniel -1), hakim (bm_lewis -2). Narrator (bm_george) reads narration, game prompts, and 3rd-person inanimate/animal touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain '<Listen first / Look closely / Breathe steady>, then turn the peg!' on spreads 1 (1.4), 5 (5.4), and 7 (7.3, pausing before 'peg!' on the 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a child-guessable word (1.5 peg, 2.5 sky, 3.5 down, 4.5 tower, 5.5 floor, 6.5 home, 7.3 peg, 8.5 night, 9.5 pegs, 10.5 together, moral.5 care); P6 unique spoken sound words on every action spread with zero repeats across the book (2 Click-clack/Boing/Whoosh, 3 Flap-flap, 4 Tick-tick-hum, 5 plink-roll, 6 Sproing, 7 Rumble-whirl, 8 Whoomp, 9 Swoosh-tap, 10 tink-tink/Wobble-plop); P8 harmless physical comedy in all three thirds on the companion animals (2.2 cat copies Hakim's proud bow and tumbles paws-up into pink petals, 6.2 hoopoe pecks star-gear and hops back with a white jasmine flower hat, 10.3 cat and hoopoe hop onto silk cushion bouncing nose to beak); P11 energy curve E1 E3 E2 E2 E1 E2 E3 E2 E3 E2 + Moral E1; P16 non-repeating 10-game sequence (collect, timing, collect, order, collect, pair, timing, collect, order, pair)."
+ }
+}

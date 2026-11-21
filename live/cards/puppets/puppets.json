@@ -11605,7 +11605,7 @@
     },
     "ebony-horse-star-gear": {
       "look": "Gleaming golden brass star-shaped clockwork gear",
-      "size": 0.034,
+      "size": 0.031,
       "gait": "idle",
       "versions": [
         "day"
@@ -11671,7 +11671,7 @@
     },
     "ebony-horse-gear-mid": {
       "look": "Medium ornate gleaming golden brass clockwork gear",
-      "size": 0.036,
+      "size": 0.03,
       "gait": "idle",
       "versions": [
         "day"
