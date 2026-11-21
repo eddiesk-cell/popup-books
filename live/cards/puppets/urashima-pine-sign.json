@@ -1,20 +1,20 @@
 {
  "puppet": "urashima-pine-sign",
- "size": 0.048,
- "metres_per_pixel": 0.00015,
+ "size": 0.062,
+ "metres_per_pixel": 0.000142,
  "rest": {},
  "versions": [
   "day"
  ],
  "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
- "note": "Urashima Taro book 8 paper puppet: Golden inspection charm marker by the ancient pine.",
+ "note": "Urashima Taro book 8 paper puppet: Weathered wooden Japanese coastal signpost beside coastal grass.",
  "parts": [
   {
    "name": "body",
    "png": "cards/puppets/urashima-pine-sign/body.png",
    "size": [
-    0.0327,
-    0.048
+    0.0356,
+    0.062
    ],
    "pivot": [
     0.5,

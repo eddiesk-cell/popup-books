@@ -1,20 +1,20 @@
 {
  "puppet": "urashima-cottage-spot",
- "size": 0.048,
- "metres_per_pixel": 0.00015,
+ "size": 0.068,
+ "metres_per_pixel": 0.000183,
  "rest": {},
  "versions": [
   "day"
  ],
  "hinge_sign_note": "no internal hinges: one-piece cut-out paper puppet.",
- "note": "Urashima Taro book 8 paper puppet: Golden inspection charm marker by the new cottages.",
+ "note": "Urashima Taro book 8 paper puppet: Tall swaying coastal grass and weathered mossy stepping stones where Taro cottage once stood.",
  "parts": [
   {
    "name": "body",
    "png": "cards/puppets/urashima-cottage-spot/body.png",
    "size": [
-    0.0327,
-    0.048
+    0.0869,
+    0.068
    ],
    "pivot": [
     0.5,
