@@ -1611,9 +1611,12 @@ function help(sp, now) {  // Auto plays the game with the reader: the next right
 $("next").onclick = () => mode === "open" && turn(true, true);
 const grabAt = (x, y) => (hint.past ?? [[0, hint.spots]]).map(([, ps]) => ps.find(p => Math.hypot((p.x - x) * innerWidth, (p.y - y) * innerHeight) < Math.max(48, innerWidth * 0.08))).find(Boolean);  // the glow under the finger, now or a moment ago
 
+// iPhone and iPad: WebKit lets a voice play only after it has played inside a touchend or click, never a pointerdown (sound.js learned the same). Any tap anywhere
+// counts, Auto's button too, and it is tried again until it takes (Eddie 2026-11-22: on the phone the book went on with no narration: the unlock sat on the canvas's pointerdown)
+const prime = () => primed || Promise.resolve(unlock(...[reader.audio, speak].filter(a => a.paused && !a.currentTime))).then(ok => { primed ||= !ok || ok.every(Boolean); });  // an older cached reading.js returns nothing: then once is all
+for (const ev of ["touchend", "click", "keydown"]) addEventListener(ev, prime, { capture: true, passive: true });
 canvas.addEventListener("pointerdown", e => {
   if (S) S.touchAt = performance.now();  // auto play: the reader is here, so they are waited for (a game: Auto helps again after PACE.back; a turn: its wait starts again)
-  if (!primed) { primed = true; unlock(...[reader.audio, speak].filter(a => a.paused && !a.currentTime)); snd.ctx.resume().catch(() => {}); }  // iPad: unlock sound inside a touch (only a voice that has not sounded yet: a line playing or held at a sentence end is never cut)
   const [x, y] = at(e), p = grabAt(x, y), s = p?.s ?? 0; fingerX = x; press = [e.clientX, e.clientY, performance.now()]; trail = [[performance.now(), x]];
   if (pid !== null || !turnable(s)) return;  // not a page turn: OrbitControls has it
   e.stopImmediatePropagation(); pid = e.pointerId; canvas.setPointerCapture(pid); down = true; pend = { x, fwd: s > 0, at: p.at };

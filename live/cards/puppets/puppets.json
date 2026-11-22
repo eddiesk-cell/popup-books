@@ -16269,6 +16269,1292 @@
         "Why the Sun and the Moon Live in the Sky"
       ],
       "cut": true
+    },
+    "baba-yaga-hut-back": {
+      "look": "Back of Baba Yaga's carved pine-log hut on two giant yellow chicken legs",
+      "size": 0.32,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-hut-front": {
+      "look": "Welcoming front of Baba Yaga's carved pine-log hut on two giant yellow chicken legs with glowing amber windows",
+      "size": 0.32,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-hut-bow": {
+      "look": "Baba Yaga's chicken-legged hut bending its knees in a polite farewell curtsy-bow",
+      "size": 0.282,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-vasilissa-stand": {
+      "look": "Brave kind Vasilissa in crimson embroidered Russian sarafan, fur-trimmed vest, and red winter boots",
+      "size": 0.133,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "walk",
+      "person": true
+    },
+    "baba-yaga-vasilissa-sweep": {
+      "look": "Vasilissa cheerfully sweeping snow with a leafy birch broom",
+      "size": 0.132,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "baba-yaga-vasilissa-lantern": {
+      "look": "Vasilissa carrying her glowing golden sun-ember lantern and woven honey-cake basket",
+      "size": 0.135,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "walk",
+      "person": true
+    },
+    "baba-yaga-kukolka-stand": {
+      "look": "Tiny carved birch-wood folk doll Kukolka in scarlet floral headscarf and blue apron dress",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "baba-yaga-kukolka-glow": {
+      "look": "Tiny wooden doll Kukolka raising her arms with shimmering golden helping magic",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true,
+      "selflit": true
+    },
+    "baba-yaga-baba-mortar": {
+      "look": "Funny-grumpy grandmother Baba Yaga zooming inside her carved wooden mortar with pestle and birch broom",
+      "size": 0.147,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "baba-yaga-baba-stand": {
+      "look": "Baba Yaga standing with folded arms in patterned Pavlovsky headscarf, shawl, and felt valenki boots",
+      "size": 0.156,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "walk",
+      "person": true
+    },
+    "baba-yaga-baba-soft": {
+      "look": "Baba Yaga with grumpy scowl melted into a warm tender grandmotherly smile",
+      "size": 0.154,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "baba-yaga-ivan-stand": {
+      "look": "Papa Ivan standing warmly in belted sheepskin coat and felt valenki boots",
+      "size": 0.165,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "walk",
+      "person": true
+    },
+    "baba-yaga-ivan-hug": {
+      "look": "Papa Ivan leaning forward with open arms in a joyful welcoming hug",
+      "size": 0.158,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "baba-yaga-grey-hare": {
+      "look": "Gentle silver-grey Russian woodland hare sitting upright",
+      "size": 0.034,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "hop"
+    },
+    "baba-yaga-red-squirrel": {
+      "look": "Plump Eurasian red birch-forest squirrel with fluffy tail",
+      "size": 0.02,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "hop"
+    },
+    "baba-yaga-squirrel-plop": {
+      "look": "Plump red squirrel tumbled backwards playfully into soft green moss",
+      "size": 0.02,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-black-cat": {
+      "look": "Baba Yaga's sleek friendly black cat sitting and purring",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "gait": "walk"
+    },
+    "baba-yaga-cat-boing": {
+      "look": "Sleek black cat mid-bounce hopping playfully into soft golden hay",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-tumble-pair": {
+      "look": "Grey woodland hare and red squirrel tumbled nose to nose on a crimson embroidered cushion",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-brass-lantern": {
+      "look": "Unlit brass cottage hand-lantern",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-bread-crust": {
+      "look": "Crusty loaf-end of Russian rye bread",
+      "size": 0.023,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-warm-shawl": {
+      "look": "Folded patterned cream-and-russet woollen shawl",
+      "size": 0.034,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-snowy-cone": {
+      "look": "Snow-dusted brown pine cone",
+      "size": 0.021,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-trail-lantern": {
+      "look": "Carved wooden woodland trail-lantern glowing softly with warm amber light",
+      "size": 0.04,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-wiggle-rowan": {
+      "look": "Snow-dusted red-berried rowan bush",
+      "size": 0.118,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-brook-stone": {
+      "look": "Flat grey woodland brook stepping-stone topped with green moss",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-squeaky-gate": {
+      "look": "Rustic carved pine-wood clearing gate door with iron hinges",
+      "size": 0.094,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-oil-jar": {
+      "look": "Small painted terracotta pine-oil jar with wooden brush",
+      "size": 0.024,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-mossy-perch": {
+      "look": "Low flat mossy tree-stump perch for Kukolka",
+      "size": 0.036,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-turn-spark": {
+      "look": "Crisp golden magic turning starburst spark",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-wooden-mortar": {
+      "look": "Empty carved honey-wood mortar with wooden pestle resting inside",
+      "size": 0.073,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-golden-wheat": {
+      "look": "Neat sheaf-heap of ripe golden wheat ears and grains",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-poppy-seeds": {
+      "look": "Neat mound of dark blue-black poppy seeds on leaves",
+      "size": 0.023,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-grey-pebbles": {
+      "look": "Small pile of smooth grey river pebbles",
+      "size": 0.021,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-woven-sack": {
+      "look": "Open-mouthed woven linen grain sack tied with red cord",
+      "size": 0.036,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-painted-bowl": {
+      "look": "Painted crimson-and-gold Khokhloma wooden seed bowl",
+      "size": 0.025,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-wooden-bucket": {
+      "look": "Iron-banded wooden pebble bucket",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-birch-broom": {
+      "look": "Long-handled leafy birch-twig yard broom",
+      "size": 0.089,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-hay-cushion": {
+      "look": "Soft golden hay cushion nest",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-snow-heap": {
+      "look": "Messy fluffy white snow-heap mound",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-dry-logs": {
+      "look": "Tied bundle of dry white-barked birch firewood logs",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-stove-cones": {
+      "look": "Cluster of dry brown pine cones for kindling",
+      "size": 0.023,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-sweet-berries": {
+      "look": "Leafy sprig of sweet red forest tea-berries",
+      "size": 0.023,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-stove-firebox": {
+      "look": "Arched red-brick outdoor stove firebox opening",
+      "size": 0.036,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-iron-grate": {
+      "look": "Black wrought-iron stove kindling grate",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-tea-samovar": {
+      "look": "Tall gleaming golden Russian brass samovar with teapot",
+      "size": 0.045,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-stove-flames": {
+      "look": "Cheerful dancing golden-orange stove flames",
+      "size": 0.04,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-sun-ember": {
+      "look": "Radiant faceted golden sun-ember coal glowing warm gold",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-ember-ray": {
+      "look": "Slender golden sunbeam spark-ray",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-lit-lantern": {
+      "look": "Brightly lit golden brass cottage lantern shining warm amber light",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-frost-star": {
+      "look": "Twinkling golden-white winter frost-star",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-cake-basket": {
+      "look": "Woven willow basket heaped with golden honey cakes and red silk ribbon",
+      "size": 0.03,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-hearth-flames": {
+      "look": "Crackling golden cottage hearth flames on birch logs",
+      "size": 0.038,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "baba-yaga-feast-cushion": {
+      "look": "Plump crimson embroidered Russian cushion",
+      "size": 0.028,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-honey-cakes": {
+      "look": "Glazed golden Russian honey cakes",
+      "size": 0.025,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-berry-teapot": {
+      "look": "Painted floral Russian porcelain berry teapot",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-pine-nuts": {
+      "look": "Heap of roasted golden pine nuts",
+      "size": 0.023,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-painted-platter": {
+      "look": "Painted crimson-and-gold Khokhloma wooden cake platter",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-painted-cup": {
+      "look": "Painted floral Russian teacup with saucer",
+      "size": 0.021,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "baba-yaga-wooden-bowl": {
+      "look": "Carved honey-wood nut bowl",
+      "size": 0.025,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
     }
   }
 }
