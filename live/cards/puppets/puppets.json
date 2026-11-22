@@ -5579,6 +5579,50 @@
       "cut": true,
       "selflit": true
     },
+    "chang-e-owl-night": {
+      "look": "spotted owlet night-graded in cool slate blue to match the dark night osmanthus canopy (Chang'e s05/s06/s08/s10)",
+      "size": 0.06,
+      "gait": "fly",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "blink": {
+          "_lift": 0.05
+        },
+        "sleep": {
+          "_tilt": -2.4
+        },
+        "wake": {
+          "_tilt": 3.2
+        },
+        "look": {
+          "_tilt": 4.0
+        },
+        "hoot": {
+          "_lift": 0.05,
+          "_tilt": -2.4
+        },
+        "ruffle": {
+          "_tilt": -2.4
+        },
+        "wiggle": {
+          "_tilt": 4.0
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Chang'e 5",
+        "Chang'e 6",
+        "Chang'e 8",
+        "Chang'e 10"
+      ],
+      "cut": true
+    },
     "cowherd-star-vega": {
       "look": "the star Vega in the night sky (a card from the sky lane)",
       "size": 0.11,
@@ -16790,7 +16834,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-wiggle-rowan": {
       "look": "Snow-dusted red-berried rowan bush",
@@ -17274,7 +17319,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-sun-ember": {
       "look": "Radiant faceted golden sun-ember coal glowing warm gold",
@@ -17295,7 +17341,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-ember-ray": {
       "look": "Slender golden sunbeam spark-ray",
@@ -17338,7 +17385,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-frost-star": {
       "look": "Twinkling golden-white winter frost-star",
@@ -17359,7 +17407,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-cake-basket": {
       "look": "Woven willow basket heaped with golden honey cakes and red silk ribbon",
@@ -17401,7 +17450,8 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true
+      "cut": true,
+      "selflit": true
     },
     "baba-yaga-feast-cushion": {
       "look": "Plump crimson embroidered Russian cushion",
@@ -17547,6 +17597,50 @@
       "cycles": {},
       "uses": [
         "Baba Yaga and Vasilissa"
+      ],
+      "cut": true
+    },
+    "chang-e-well": {
+      "look": "wooden well bucket at the veranda corner (Chang'e day village)",
+      "size": 0.08,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 4
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Chang'e"
+      ],
+      "cut": true
+    },
+    "chang-e-well-night": {
+      "look": "wooden well bucket night-graded at the veranda corner (Chang'e night village)",
+      "size": 0.08,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 4
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Chang'e"
       ],
       "cut": true
     }

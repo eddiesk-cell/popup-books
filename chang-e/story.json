@@ -1195,6 +1195,5 @@
   "review": "Narratologist (Opus, independent): round 1 FAIL (3 must-fixes, 6 should-fixes, all applied); round 2 PASS 2026-11-17 (0 say/text mismatches over 75 lines); its two last small notes (game.9 wording, 10.1 'that night') applied. Round 3 on the storytelling-pull edits: PASS (2026-11-18); its note on 4.5 applied (the rabbit kept in the text).",
   "pull": "P1 hooks at every turn (3.5, 4.5, 6.5, 7.5, 8.5, 9.5 new; paid by 4.1, 5.1, 7.1, 8.1, 9.1, 10.1); P2 refrain 'Look up at the moon' (6.5, 8.4, 10.5, third with a pause before 'moon'); P3 one '...' predict pause a spread in say; P6 sound words on E2/E3 lines (Zoom, Whoosh/Splash, Pitter-patter, Boom, Gulp, bump, pat-pat-pat, Thump, Tip-tap, Whoosh, Boom-ba-boom), never the same on two spreads in a row; P8 slapstick: a sun-bird shakes water over Hou Yi (3.5), Feng Meng sits down bump (6.1), the rabbit tumbles over after the throw (9.4); P11 energy E2 E1 E3 E2 E2 E2 E1 E2 E3 E2 E1.",
   "voices": "Only the mains have their own voices (BOOK-STANDARD 2026-11-18): Chang'e bf_isabella, Hou Yi bm_daniel, the Jade Rabbit bf_lily +3. The narrator (bm_george) reads everyone else, the Queen, Feng Meng and the suns included, in his own voice."
- },
- "words": false
+ }
 }
