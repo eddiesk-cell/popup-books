@@ -15107,6 +15107,1103 @@
       ],
       "cut": true,
       "person": true
+    },
+    "sun-and-moon-utin-stand": {
+      "look": "Utin the Sun standing warmly in saffron-gold Efik wrapper and golden sun-ray crown",
+      "size": 0.171,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-utin-climb": {
+      "look": "Utin the Sun climbing upward cheerfully in saffron-gold Efik wrapper",
+      "size": 0.169,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-utin-drum": {
+      "look": "Utin the Sun holding wooden drumsticks ready to play his slit-drum",
+      "size": 0.166,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-utin-leap": {
+      "look": "Utin the Sun leaping joyfully upward into the sky",
+      "size": 0.167,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-ofiong-stand": {
+      "look": "Ofiong the Moon standing gracefully in silver-indigo Efik wrapper and pearl crescent crown",
+      "size": 0.162,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-ofiong-work": {
+      "look": "Ofiong the Moon painting wall patterns and setting welcome gifts",
+      "size": 0.158,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-ofiong-climb": {
+      "look": "Ofiong the Moon climbing upward gracefully in silver-indigo Efik wrapper",
+      "size": 0.16,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-ofiong-leap": {
+      "look": "Ofiong the Moon leaping gracefully upward into the sky",
+      "size": 0.158,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-mmong-stand": {
+      "look": "Polite Mmong the Water standing in flowing sea-blue cowrie robes and wave circlet",
+      "size": 0.177,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-mmong-worry": {
+      "look": "Gentle Mmong gazing up with caring worried eyes and clasped hands",
+      "size": 0.173,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "person": true
+    },
+    "sun-and-moon-turtle-green": {
+      "look": "Friendly plain coastal green sea turtle swimming",
+      "size": 0.032,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-dolphin-blue": {
+      "look": "Cheerful plain curved coastal blue dolphin",
+      "size": 0.058,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-dolphin-leap": {
+      "look": "Joyful plain curved blue dolphin leaping upward",
+      "size": 0.064,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-bump-pair": {
+      "look": "Plain green sea turtle and blue dolphin bumping nose to nose above moonbeam ripple",
+      "size": 0.055,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-red-crab": {
+      "look": "Cheerful plain coral-red coastal shore crab",
+      "size": 0.021,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-crab-boing": {
+      "look": "Playful red shore crab bouncing off floating coconut-husk bowl",
+      "size": 0.021,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-silver-fish": {
+      "look": "Sparkling plain silver-and-pearlescent-blue lagoon fish",
+      "size": 0.022,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-pelican-white": {
+      "look": "Plump friendly plain white coastal pelican",
+      "size": 0.049,
+      "gait": "walk",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-pelican-plop": {
+      "look": "Plump white pelican tumbled happily inside a woven raffia basket",
+      "size": 0.045,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-carved-pillar": {
+      "look": "Tall carved mahogany wooden Efik courtyard pillar",
+      "size": 0.16,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-thatch-roof": {
+      "look": "Wide golden woven raffia-palm thatch roof canopy",
+      "size": 0.132,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-courtyard-lantern": {
+      "look": "Warm glowing hammered brass Calabar courtyard lantern",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-ankle-ripples": {
+      "look": "Cool ankle-deep sparkling blue cut-paper water ripple strip",
+      "size": 0.022,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-knee-swells": {
+      "look": "Knee-deep swirling turquoise cut-paper wave layer",
+      "size": 0.052,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-waist-swells": {
+      "look": "Waist-deep foaming blue cut-paper ocean swell layer",
+      "size": 0.092,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-eaves-swells": {
+      "look": "Sunset-tinted eaves-high foaming cut-paper wave wall",
+      "size": 0.197,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-stray-leaf": {
+      "look": "Stray green raffia-palm frond leaf",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-raffia-basket": {
+      "look": "Soft woven golden raffia courtyard basket",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-sweet-plantains": {
+      "look": "Bunch of sweet yellow plantains",
+      "size": 0.025,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-rosy-shells": {
+      "look": "Cluster of rosy spiral coastal seashells",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-cool-coconuts": {
+      "look": "Cluster of cool husked coastal coconuts",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-brass-tray": {
+      "look": "Hammered golden Calabar brass tray",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-raffia-mat": {
+      "look": "Colourful woven Efik raffia welcome mat",
+      "size": 0.024,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-wooden-bowl": {
+      "look": "Carved dark-wood Calabar bowl",
+      "size": 0.026,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-wooden-drum": {
+      "look": "Carved wooden Efik slit-drum",
+      "size": 0.042,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-wiggle-reeds": {
+      "look": "Tall lush green coastal lagoon reeds",
+      "size": 0.141,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-drum-spark": {
+      "look": "Glowing golden musical note-sparkle",
+      "size": 0.028,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-husk-bowl": {
+      "look": "Small floating brown coconut-husk bowl",
+      "size": 0.023,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-dry-shelf": {
+      "look": "Compact carved wooden dry courtyard shelf",
+      "size": 0.038,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-dry-bench": {
+      "look": "Compact carved wooden dry veranda bench",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-dry-step": {
+      "look": "Compact stone-and-timber dry step block",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true
+    },
+    "sun-and-moon-rooftop-crowns": {
+      "look": "Paired glowing golden sun-ray and silver crescent pearl crowns",
+      "size": 0.036,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-crown-burst": {
+      "look": "Radiant golden-and-silver rooftop starburst",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-shining-beams": {
+      "look": "Paired arching golden sunbeam and silver moonbeam ribbons",
+      "size": 0.14,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-twilight-star": {
+      "look": "Warm five-pointed golden-white twilight star",
+      "size": 0.03,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-golden-sunbeam": {
+      "look": "Glowing golden sunbeam star spark",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-silver-moonbeam": {
+      "look": "Glowing silver crescent moonbeam",
+      "size": 0.034,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-bright-starlight": {
+      "look": "Twinkling silver-white diamond starlight drop",
+      "size": 0.032,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
+    },
+    "sun-and-moon-sea-mirror": {
+      "look": "Wide shimmering gold-and-silver ocean wave mirror strip",
+      "size": 0.036,
+      "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Why the Sun and the Moon Live in the Sky"
+      ],
+      "cut": true,
+      "selflit": true
     }
   }
 }

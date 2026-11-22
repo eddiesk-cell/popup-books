@@ -84,9 +84,9 @@
     "targets": [
      "frog",
      "fish",
-     "lotus",
+     "lotus-flower",
      "dragonfly",
-     "firefly-1"
+     "firefly-spot"
     ],
     "voice": {
      "start": "game.3.start",
@@ -146,7 +146,7 @@
      "thread-pink",
      "thread-gold",
      "silk-pink",
-     "crane-1",
+     "prop-shuttle",
      "peach-branch"
     ],
     "voice": {
@@ -225,8 +225,7 @@
      "carry-pole",
      "blanket",
      "rice-bundle",
-     "lantern",
-     "flute"
+     "lantern"
     ],
     "voice": {
      "start": "game.7.start",

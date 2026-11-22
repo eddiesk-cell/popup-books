@@ -14,6 +14,10 @@
    "name": "Africa"
   },
   {
+   "id": "europe",
+   "name": "Europe"
+  },
+  {
    "id": "middle-east",
    "name": "The Middle East"
   }
@@ -276,6 +280,27 @@
    ],
    "status": "ready",
    "link": "../live/?book=simurgh&s=s01"
+  },
+  {
+   "id": "sun-and-moon",
+   "title": {
+    "en": "Why the Sun and the Moon Live in the Sky",
+    "lo": "ເປັນຫຍັງພະອາທິດ ແລະ ພະຈັນຈຶ່ງຢູ່ເທິງທ້ອງຟ້າ",
+    "th": "ทำไมพระอาทิตย์และพระจันทร์จึงอยู่บนท้องฟ้า",
+    "zh": "为什么太阳和月亮住在天上",
+    "ja": "たいようと つきが おそらに すむ わけ"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "English",
+   "region": "europe",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=sun-and-moon&s=s01"
   },
   {
    "id": "toad-king",
