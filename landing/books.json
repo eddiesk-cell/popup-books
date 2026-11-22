@@ -14,6 +14,10 @@
    "name": "Africa"
   },
   {
+   "id": "europe",
+   "name": "Europe"
+  },
+  {
    "id": "middle-east",
    "name": "The Middle East"
   }
@@ -39,6 +43,27 @@
    ],
    "status": "ready",
    "link": "../live/?book=anansi&s=s01"
+  },
+  {
+   "id": "baba-yaga",
+   "title": {
+    "en": "Baba Yaga and Vasilissa",
+    "lo": "ບາບາ ຢາກາ ແລະ ວາຊີລີຊາ",
+    "th": "ยายบาบายากากับวาซิลิสซา",
+    "zh": "芭芭雅嘎与瓦西丽莎",
+    "ja": "バーバ・ヤガーと ワシリッサ"
+   },
+   "cover": null,
+   "spine": null,
+   "gold": null,
+   "culture": "Russian",
+   "region": "europe",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "making",
+   "link": "../live/?book=baba-yaga&s=s01"
   },
   {
    "id": "bamboo-cutter",

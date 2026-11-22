@@ -9,7 +9,7 @@
 <style>
   :root { --ink: #f6e7c8; --glow: #ffb45a; --night: #07080f; }
   /* readalong.js places its page and book button by these; on a phone the button goes under the language row */
-  @media (max-width: 560px) { :root { --ra-btn-top: 58px; --ra-top: 112px; } }
+  @media (max-width: 560px) { :root { --ra-top: 64px; } }  /* the read-along page starts under the one-row bar */
   html, body { margin: 0; height: 100%; background: var(--night); color: var(--ink);
     font-family: "Noto Sans Lao", Georgia, "Times New Roman", serif; overflow: hidden; touch-action: none; user-select: none; }
   #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
@@ -53,14 +53,14 @@
   /* listen: the words Bobo missed, lit as the line is said again */
   .miss { color: #ffb86b !important; opacity: 1 !important; text-decoration: underline 2px #ffb86b99; text-underline-offset: .2em; }
   /* top right: languages, then sound and Reset (on a phone those two wrap under the languages, clear of the turn corners) */
-  #top { position: fixed; top: 12px; right: 12px; left: 64px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; z-index: 6; pointer-events: none; }
+  /* the reader's bar: small round icons, the words in each label and tooltip (Eddie 2026-11-22: "make them into small buttons with symbols instead of words");
+     above the read-along page (50-52), so a menu opens over the words */
+  #top { position: fixed; top: 12px; right: 12px; left: 64px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; z-index: 60; pointer-events: none; }
   #top > * { pointer-events: auto; }
-  #langs { display: flex; gap: 6px; }
-  #top button { font-size: 15px; padding: .3em .8em; background: #0008; color: var(--ink); border: 1px solid #f6e7c855; white-space: nowrap; }
-  #langs [aria-pressed="true"] { background: var(--glow); color: var(--night); }
-  #snd { min-width: 2.6em; }
-  #auto, #lib, #rmode { display: inline-flex; align-items: center; gap: .35em; } #auto svg, #lib svg, #rmode svg { width: 1em; height: 1em; fill: currentColor; }
-  #auto[aria-pressed="true"], #rmode[aria-pressed="true"] { background: var(--glow); color: var(--night); }
+  #top > button, #top .sub { width: 40px; height: 40px; padding: 0; border-radius: 50%; display: grid; place-items: center; background: #0008; color: var(--ink); border: 1px solid #f6e7c855; }
+  #top > button svg, #top .sub svg { width: 22px; height: 22px; }
+  #top .sublist button { padding: .45em 1em; border-radius: 10px; background: #0008; color: var(--ink); border: 1px solid #f6e7c833; white-space: nowrap; text-align: left; font-size: 15px; }
+  #top [aria-pressed="true"]:not(#snd) { background: var(--glow); color: var(--night); }  /* lit: a mode that is on (Auto, Reading Mode, a voice or subtitles chosen); sound on is the plain state */
   /* Reading Mode (readmode.js): Back and Next under the words, the dots between them; a tap on the words reads on */
   #rnav { position: fixed; z-index: 52; display: flex; justify-content: space-between; align-items: center; pointer-events: none; }
   #rnav button { pointer-events: auto; display: flex; align-items: center; gap: .35em; font-size: clamp(15px, 1.7vw, 19px); padding: .35em .95em;
@@ -125,12 +125,11 @@
   #lbub::after { content: ""; position: absolute; left: 50%; bottom: -12px; translate: -50%; border: 11px solid transparent; border-top-color: var(--glow); border-bottom: 0; }
   #lbub { width: max-content; } #lbub .miss { background: #ffd34d; color: #2a2230 !important; text-decoration: none; border-radius: 6px; padding: 0 4px; font-weight: bold; }
   /* a phone: the languages keep to one row (it scrolls if it must), sound and Reset take the row under it, above the read-along page */
-  @media (max-width: 560px) {
-    #langs { flex: 1 1 100%; justify-content: flex-end; overflow-x: auto; scrollbar-width: none; }
-    #top button { font-size: 13px; padding: .3em .6em; } #lib span { display: none; }  /* the house alone on a phone: the bar stays one row */
+  @media (max-width: 560px) {  /* a phone: eight icons in one row */
+    #top { gap: 4px; } #top > button, #top .sub { width: 32px; height: 32px; } #top > button svg, #top .sub svg { width: 18px; height: 18px; }
   }
 </style>
-<link rel="modulepreload" href="../dist/c-FSBUOJ7C.js">
+<link rel="modulepreload" href="../dist/c-NP2PNBX3.js">
 <link rel="modulepreload" href="../dist/c-5OCFJGW3.js">
 <link rel="modulepreload" href="../dist/c-VHNSBD2M.js">
 </head>
@@ -139,8 +138,8 @@
 <div id="arrive" hidden><div class="sh"></div><div class="bk"><i class="pg"></i><i class="pg"></i><div class="cv"></div></div></div>
 <script>if (/[?&]from=shelf/.test(location.search)) { const a = document.getElementById("arrive"); a.hidden = false; a.classList.add("veil"); }  /* the veil from the first paint, before the module runs */</script>
 <div id="note">Opening the book…</div>
-<div id="top"><div id="langs" role="group" aria-label="Subtitle language"></div><button id="accent" hidden>UK</button>
-  <button id="lib" aria-label="Back to the library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9.5l8-5.5 8 5.5V20h-5.5v-6h-5v6z"/></svg><span>Library</span></button><button id="auto" aria-label="Auto play: the story reads itself and turns the pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>Auto</button><button id="rmode" aria-label="Reading Mode: read each line yourself, then tap Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.2c3.6-.7 6.6-.1 8.7 1.4v13.2c-2.1-1.4-5.1-2-8.7-1.4zM21.5 5.2c-3.6-.7-6.6-.1-8.7 1.4v13.2c2.1-1.4 5.1-2 8.7-1.4z"/></svg><span>Read</span></button><button id="snd" aria-label="Sound"></button><button id="reset" aria-label="Back to the reading view">&#8634; Reset view</button></div>
+<div id="top"><div id="voices" role="group" aria-label="Narrator voice"></div><div id="langs" role="group" aria-label="Subtitle language"></div>
+  <button id="auto" aria-label="Auto play: the story reads itself and turns the pages" title="Auto play"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button><button id="rmode" aria-label="Reading Mode: read each line yourself, then tap Next" title="Reading Mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2.5 5.2c3.6-.7 6.6-.1 8.7 1.4v13.2c-2.1-1.4-5.1-2-8.7-1.4zM21.5 5.2c-3.6-.7-6.6-.1-8.7 1.4v13.2c2.1-1.4 5.1-2 8.7-1.4z"/></svg></button><button id="snd" aria-label="Sound" title="Sound"></button><button id="reset" aria-label="Back to the reading view" title="Back to the reading view"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5.2 9.2A7.5 7.5 0 1 1 4.6 14M4.6 4.6v4.8h4.8"/></svg></button><button id="lib" aria-label="Back to the library" title="Library"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 20V9.5l8-5.5 8 5.5V20h-5.5v-6h-5v6z"/></svg></button></div>
 <div id="title" hidden></div>
 <div id="msg" aria-live="polite"></div>
 <div id="count" aria-live="polite" hidden></div>
@@ -158,7 +157,7 @@
   document.getElementById("start").href = `?book=${book}&s=s01`;  // a plain link, so it works even when an old cached live.js has no handler for it
   Object.assign(ra.dataset, { theme: { mali: "lantern" }[book] || "firefly", story: `../${book}/story.json`, voice: `../${book}/voice/` });
 </script>
-<script type="module" src="../dist/live-W7DASZAF.js"></script>
+<script type="module" src="../dist/live-R77VZIAR.js"></script>
 <script type="module" src="paperswap.js"></script>
 <script type="module" src="../members/members.js"></script>
 </body>

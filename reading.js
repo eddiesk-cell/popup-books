@@ -21,23 +21,26 @@ export async function loadWords(base, { story, translations, timing }) {
   return { story: s, tr, timing: t, text, subs, w, wt };
 }
 
-export function languages(el, key, onSet) {  // one "Sub" button that opens the list of subtitle languages (owner: one button, then pick); the choice is remembered per book
-  el.style.cssText += ";position:relative;overflow:visible;flex:0 0 auto";  // the list hangs under the button, whatever row the page gave the old buttons
-  el.innerHTML = `<button class="sub" aria-haspopup="true" aria-expanded="false">Sub</button><div class="sublist" style="display:none;position:absolute;top:100%;right:0;margin-top:6px;gap:4px;padding:6px;border-radius:14px;background:#17100cf5;box-shadow:0 6px 18px #0009">${LANGS.map(([k, n]) => `<button data-l="${k}" lang="${k || "en"}">${n}</button>`).join("")}</div>`;
-  const [sub, list] = el.children, open = on => { list.style.display = on ? "grid" : "none"; sub.setAttribute("aria-expanded", on); };
+export const SUB_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M7 11.2h4M13.4 11.2h3.6M7 15h6.6M16 15h1"/></svg>';
+export function picker(el, items, key, onSet, { icon, label, lit = v => !!v, fallback = "" }) {  // a small round button that opens its list (owner: one button, then pick); items [[value, name, lang]], the choice kept under key
+  el.style.cssText += ";position:relative;overflow:visible;flex:0 0 auto";  // the list hangs under the button
+  el.innerHTML = `<button class="sub" aria-haspopup="true" aria-expanded="false" aria-label="${label}" title="${label}">${icon}</button><div class="sublist" style="display:none;position:absolute;top:100%;right:0;margin-top:6px;gap:4px;padding:6px;border-radius:14px;background:#17100cf5;box-shadow:0 6px 18px #0009">${items.map(([k, n, l]) => `<button data-l="${k}" lang="${l}">${n}</button>`).join("")}</div>`;
+  const [sub, list] = el.children, open = on => { list.style.display = on ? "grid" : "none"; sub.setAttribute("aria-expanded", on);
+    if (on) { list.style.left = "auto"; list.style.right = "0"; if (list.getBoundingClientRect().left < 8) list.style.left = "0", list.style.right = "auto"; } };  // a list that would leave the screen hangs the other way
   const set = l => {
     [...list.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.l === l));
-    sub.setAttribute("aria-pressed", !!l);  // lit while a subtitle language is on
+    sub.setAttribute("aria-pressed", !!lit(l));  // lit while it is not the default
     try { localStorage.setItem(key, l); } catch {}
     onSet(l);
   };
-  el.onclick = e => e.target.dataset.l != null ? (set(e.target.dataset.l), open(false)) : e.target === sub && open(list.style.display === "none");
+  el.onclick = e => { const b = e.target.closest("button"); if (b?.dataset.l != null) set(b.dataset.l), open(false); else if (b === sub) open(list.style.display === "none"); };  // the button holds an icon: its svg is the target
   el.onkeydown = e => e.key === "Escape" && (open(false), sub.focus());
   addEventListener("pointerdown", e => el.contains(e.target) || open(false), true);  // a tap anywhere else closes the list
-  let l = ""; try { l = localStorage.getItem(key) || ""; } catch {}
-  set(l);
+  let l = fallback; try { l = localStorage.getItem(key) ?? fallback; } catch {}
+  set(items.some(([k]) => k === l) ? l : fallback);
   return set;
 }
+export const languages = (el, key, onSet) => picker(el, LANGS.map(([k, n]) => [k, k ? n : "No subtitles", k || "en"]), key, onSet, { icon: SUB_ICON, label: "Subtitles" });  // the subtitle language, remembered per book
 
 const last = {}, bags = {};
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };

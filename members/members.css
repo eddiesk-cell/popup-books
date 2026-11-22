@@ -51,13 +51,10 @@ footer.imprint .imprint-links a:hover {
 }
 
 /* Compact account trigger inside viewer #top */
-#top button#wst-acct-btn {
+#top button#wst-acct-btn {  /* a round icon like the rest of the bar (web/live/index.html sizes it) */
   border-color: rgba(226, 180, 89, 0.72);
   background: rgba(24, 15, 9, 0.88);
   color: #f6e7c8;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
 }
 
 #top button#wst-acct-btn.is-member {

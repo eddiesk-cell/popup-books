@@ -8,7 +8,7 @@ const T = { land: 0.9, rest: 2.1, lead: 0.35, swing: 2.2, settle: 0.6, control: 
 export function makeArrival({ THREE, scene, cam, renderer, ctl, body, desk, play, reader, show, calm }) {
   const A = { active: true, locked: true, rendered: false, failed: false, finished: false, mix: 0 };
   const V = new THREE.Vector3(), rig = new THREE.Group(), ease = k => (k = Math.min(1, Math.max(0, k)), k * k * (3 - 2 * k)), out = k => 1 - (1 - Math.min(1, Math.max(0, k))) ** 3;
-  let kids = [], room = [], roomAt = 0, warm = 0, ready = false, clock = 0, tsw = 0, skipped = !!calm, lights = null, pts = null, base = null, fog = null, plain = null, old = null, proj = null, lens = null, seat = null;
+  let hid = [], warmAt = 0, kids = [], room = [], roomAt = 0, warm = 0, ready = false, clock = 0, tsw = 0, skipped = !!calm, lights = null, pts = null, base = null, fog = null, plain = null, old = null, proj = null, lens = null, seat = null;
   const PRE = { pageW: 1, flat: { min: { y: -0.0015 } }, bottom: 0 };  // the spread's own page width and paper height, until its spread is up (the same for every book)
   body.dress().then(() => {
     if (!body.left) throw new Error("the open book has no hinged left half");
@@ -35,7 +35,13 @@ export function makeArrival({ THREE, scene, cam, renderer, ctl, body, desk, play
       seat = [desk.position.y, new THREE.Box3().setFromObject(body.group).min.y - 0.002]; rig.position.copy(at[0]); rig.rotation.copy(at[1]); rig.scale.copy(at[2]); if (body.strap) body.strap.rotation.z = z; rig.updateMatrixWorld(true); }
     kids.forEach(([o]) => body.left.attach(o)); A.kids = kids.map(k => k[0]); base = R.lights.map(l => [l, l.intensity]);
   };
-  const leave = R => { body.left.rotation.z = 0; kids.forEach(([o, p]) => p.attach(o)); scene.updateMatrixWorld(true); A.diff = Math.max(0, ...kids.flatMap(([o, , m]) => o.matrixWorld.elements.map((v, i) => Math.abs(v - m.elements[i])))); base?.forEach(([l, v]) => (l.intensity = v)); };  // back where they were: the reader's own page-turn finds its hierarchy untouched
+  // what stands up off the pages (cards, props, extras) right of the fold would poke through the shut cover (Eddie 2026-11-22: "some of the popups came out over the
+  // book, when the book is closed"): hidden while the book is shut (after the shader warm-up has seen them), back once the cover is past upright
+  const tuck = R => { const b = new THREE.Box3(), g = R.root.parent, ks = new Set(kids.map(k => k[0]));
+    hid = [...R.root.children.filter(o => !ks.has(o)), ...(g ? g.children.filter(o => o !== R.root) : [])].filter(o => o.visible && !b.setFromObject(o).isEmpty() && b.max.y - b.min.y > 0.01);
+    hid.forEach(o => (o.visible = false)); };
+  const untuck = () => { hid.forEach(o => (o.visible = true)); hid = []; };
+  const leave = R => { untuck(); body.left.rotation.z = 0; kids.forEach(([o, p]) => p.attach(o)); scene.updateMatrixWorld(true); A.diff = Math.max(0, ...kids.flatMap(([o, , m]) => o.matrixWorld.elements.map((v, i) => Math.abs(v - m.elements[i])))); base?.forEach(([l, v]) => (l.intensity = v)); };  // back where they were: the reader's own page-turn finds its hierarchy untouched
   const fade = () => {  // shortcut: a still of the closed book over the page, 0.4 s; a reduced-motion reader only
     renderer.render(scene, cam); const im = Object.assign(new Image(), { src: renderer.domElement.toDataURL("image/jpeg", 0.85) });
     im.style.cssText = "position:fixed;inset:0;width:100%;height:100%;z-index:80;pointer-events:none;transition:opacity .4s"; document.body.append(im);
@@ -56,9 +62,11 @@ export function makeArrival({ THREE, scene, cam, renderer, ctl, body, desk, play
       if (proj && A.rendered && (proj[0] !== cam.fov || proj[1] !== off())) lens = [proj, [cam.fov, off()], cam.aspect];
       if (plain && A.rendered) { old = new THREE.Mesh(desk.geometry, Object.assign(plain, { transparent: true, depthWrite: false, fog: false })); old.position.y = 0.0003; old.renderOrder = -1; desk.add(old); }
     }
-    if (A.active && !tsw && !warm && R && (skipped || t >= T.rest)) { warm = 1; join(R); show(); Promise.resolve(R.warm()).then(() => (warm = 2)); }  // the spread's materials (and its cast's) are all linked while the book still rests shut: no stall at touch-down
-    if (A.active && !tsw && warm === 2) { if (calm) fade(); tsw = skipped ? t - T.swing - T.settle - T.lead : t + T.lead; A.sw = t; if (skipped) pts.material.opacity = 0; }  // the cover only opens onto a ready spread
+    if (A.active && !tsw && !warm && R && (skipped || t >= T.rest)) { warm = 1; warmAt = now; join(R); show(); const p = R.warm(); tuck(R); Promise.resolve(p).then(() => (warm = 2)); }  // the spread's materials (and its cast's) are all linked while the book still rests shut: no stall at touch-down
+    // a phone slow to warm the spread opens after 3 s anyway, the rest compiling as it shows (Eddie 2026-11-22: Mali sat shut)
+    if (A.active && !tsw && (warm === 2 || warm === 1 && now - warmAt > 3000)) { if (calm) fade(); tsw = skipped ? t - T.swing - T.settle - T.lead : t + T.lead; A.sw = t; if (skipped) pts.material.opacity = 0; }  // the cover only opens onto a ready spread
     const u = tsw ? t - tsw : -1, k = ease(u / T.swing), done = u >= T.swing + T.settle;
+    if (hid.length && (k >= 0.5 || done || skipped)) untuck();
     if (room.length || fog || old || lens) {  // at the hand-over (a skip, reduced motion) whatever is left of the fade completes at once: the room is never left dark
       const f = done || !A.active ? 1 : ease((clock - roomAt) / 1), s = Math.max(f, 1e-3);
       room.forEach(([m, o]) => (m.opacity = o * f)); if (fog) fog[0].near = fog[1] / s, fog[0].far = fog[2] / s; if (old) old.material.opacity = 1 - f;

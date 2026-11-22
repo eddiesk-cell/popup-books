@@ -33,7 +33,7 @@ export function makeReadMode({ reader, live, lang, turn, changed }) {
 
   (function frame() {  // the controls: under the words (the read-along page, else the bar's own), their labels, and where the reader is
     requestAnimationFrame(frame);
-    const L = lang(); if (L !== said) { said = L; btn.lastChild.textContent = (WORDS[L] ?? WORDS[""])[0]; back.setAttribute("aria-label", (WORDS[L] ?? WORDS[""])[2]); }
+    const L = lang(); if (L !== said) { said = L; btn.title = (WORDS[L] ?? WORDS[""])[0];  /* the bar is icons now: its word is the tooltip */ back.setAttribute("aria-label", (WORDS[L] ?? WORDS[""])[2]); }
     const { sp, mode } = live(), shown = on && mode === "open" && !!sp && $("bar").classList.contains("on");
     nav.hidden = !shown; if (!shown) return;
     const c = cur(), W = WORDS[L] ?? WORDS[""], label = W[c != null && !wait && view >= c ? 3 : 1];

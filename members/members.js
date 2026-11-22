@@ -1121,15 +1121,12 @@ function wireViewerBar() {
   const t = COPY[lang];
   const memberActive = isActiveMembership(state.membership);
   btn.classList.toggle("is-member", memberActive);
-  if (state.user) {
-    btn.textContent = memberActive ? `★ ${t.memberBadge}` : t.membership;
-    btn.setAttribute("aria-label", t.membership);
-    btn.onclick = openMembership;
-  } else {
-    btn.textContent = t.signIn;
-    btn.setAttribute("aria-label", t.signIn);
-    btn.onclick = openSignIn;
-  }
+  // a small round icon like the rest of the reader's bar (Eddie 2026-11-22: "small buttons with symbols instead of words"); the words are its label and tooltip
+  const label = state.user ? (memberActive ? `★ ${t.memberBadge}` : t.membership) : t.signIn;
+  btn.innerHTML = memberActive ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z"/></svg>'
+    : '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.2" r="4" fill="currentColor"/><path fill="currentColor" d="M4.2 20.5c.4-4.3 3.6-6.8 7.8-6.8s7.4 2.5 7.8 6.8z"/></svg>';
+  btn.setAttribute("aria-label", label); btn.title = label;
+  btn.onclick = state.user ? openMembership : openSignIn;
 }
 
 function syncUI() {

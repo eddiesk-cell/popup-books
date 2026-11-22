@@ -17,7 +17,7 @@ import { MeshoptDecoder } from "three/addons/meshopt_decoder.module.js";
 import { PageDrag } from "../flip.js";
 import { Reader } from "../narrate.js";
 import { markWords } from "../book.js";
-import { loadWords, languages, touchLine, unlock } from "../reading.js";
+import { loadWords, languages, picker, touchLine, unlock } from "../reading.js";
 import { makeBody } from "./bookbody.js";
 import { makeArrival } from "./arrive.js";
 import { Acting, mount, carry, puppetModel, matchSpeakers, byRim, holdOf, seatHeld, dropOf } from "./acts.js";
@@ -879,21 +879,17 @@ $("back").onclick = () => {
 
 // ---------- reading: the Reader, languages, the bar ----------
 let lang = "", runs = 0;
-// Lao narration (Eddie 2026-11-21): web/<book>/voice/lo/<id>.m4a and voice/lo/timing.json, the same shape as the English (word pairs
-// per English word), asked for once, the first time Lao is picked; a 404 means this book has none and stays English in Lao. A line the
-// Lao timing lacks (a tap-to-learn word card, words/<id>) stays English, so nothing goes silent.
+// The narrator's voice is its own choice, apart from the subtitles (Eddie 2026-11-22: "how do I turn on the Lao voice?"), one choice for every book:
+// English British (voice/), English American (voice/us/, its word cards in us/words/) or Lao (voice/lo/, word pairs per English word). Each folder
+// is asked for only once its voice is picked (a book without it would be a 404 in every visit's log and in tools/publish.sh's check); a book with
+// no recording for the voice picked reads in British English and says so. A line a folder lacks (a word card has no Lao) stays British.
 const timingEn = { ...timing };
-// The English narrator is British (voice/) or American (voice/us/, its word cards in us/words/), one choice for every book (Eddie 2026-11-22);
-// voice/us/ is asked for only once American is picked (a book without it would be a 404 in every visit's log and in tools/publish.sh's check);
-// the button shows while the voice heard is English, and goes when the book turns out to have no American recording.
-let loT, usT, heard = "", accent = "";  // loT: the Lao timing (undefined: not asked yet, null: none); usT the same, null while asking, false: none; heard: "lo" or "us" while on
-try { accent = localStorage.getItem("narrator.accent") || ""; } catch {}
+let loT, usT, heard = "", narr = "uk";  // loT, usT: undefined not asked yet, null while asking, false none, else the timing; heard: "lo" or "us" while on
+try { if (!localStorage.getItem("narrator.voice") && localStorage.getItem("narrator.accent") === "us") localStorage.setItem("narrator.voice", "us"); } catch {}  // the UK/US button's choice carries over
 const alt = () => (heard === "lo" ? loT : usT);
 const src = id => `${voice}${heard && alt()[id] ? heard + "/" : ""}${id}.m4a`;
-function relang() {  // the voice follows the language: timing's contents swapped in place (the Reader, acts and ambient hold this object)
-  const was = heard; heard = lang === "lo" && loT ? "lo" : accent === "us" && usT ? "us" : "";
-  Object.assign($("accent"), { hidden: heard === "lo" || usT === false, textContent: accent === "us" ? "US" : "UK" });
-  $("accent").setAttribute("aria-label", `Narrator voice: ${accent === "us" ? "American" : "British"}. Press for ${accent === "us" ? "British" : "American"}`);
+function relang() {  // timing's contents swapped in place (the Reader, acts and ambient hold this object)
+  const was = heard; heard = narr === "lo" && loT ? "lo" : narr === "us" && usT ? "us" : "";
   if (heard === was) return;
   for (const k in timing) delete timing[k];
   Object.assign(timing, timingEn, heard ? alt() : {});
@@ -904,19 +900,16 @@ function relang() {  // the voice follows the language: timing's contents swappe
   else if (mode === "moral" && ml.includes(reader.id)) reader.read(ml.slice(ml.indexOf(reader.id)));
 }
 const reader = new Reader($("read"), { voice: src, timing, text, subs });
-languages($("langs"), `${bookId}.lang`, l => {
-  lang = l; reader.setLang(l);
-  if (l === "lo" && loT === undefined) loT = null, json(`${voice}lo/timing.json`).then(t => (loT = t, relang()), () => {});
+languages($("langs"), `${bookId}.lang`, l => { lang = l; reader.setLang(l); });
+const none = n => { say(`This book has no ${n} voice yet`); setTimeout(() => say(""), 3500); return false; };
+const want = () => {
+  if (narr === "lo" && loT === undefined) { loT = null; json(`${voice}lo/timing.json`).then(t => (loT = t), () => (loT = none("Lao"))).then(relang); }
+  if (narr === "us" && usT === undefined) { usT = null; Promise.all([json(`${voice}us/timing.json`), words.wt ? json(`${voice}us/words/timing.json`) : {}])
+    .then(([t, w]) => { for (const k in w) t[`words/${k}`] = w[k]; usT = t; }, () => (usT = none("American"))).then(relang); }
   relang();
-});
-const wantUs = () => {
-  if (accent !== "us" || usT !== undefined) return relang();
-  usT = null; relang();
-  Promise.all([json(`${voice}us/timing.json`), words.wt ? json(`${voice}us/words/timing.json`) : {}])
-    .then(([t, w]) => { for (const k in w) t[`words/${k}`] = w[k]; usT = t; }, () => (usT = false)).then(relang);
 };
-wantUs();
-$("accent").onclick = () => { accent = accent === "us" ? "" : "us"; try { localStorage.setItem("narrator.accent", accent); } catch {} wantUs(); };
+picker($("voices"), [["uk", "English (UK)", "en-GB"], ["us", "English (US)", "en-US"], ["lo", "ລາວ", "lo"]], "narrator.voice", v => { narr = v || "uk"; want(); },
+  { label: "Narrator voice", fallback: "uk", lit: v => v && v !== "uk", icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 3a6 6 0 0 0-6 6c0 2.2 1.2 3.5 2 4.6V21h7v-2.5h2.5a1.5 1.5 0 0 0 1.5-1.5v-3l1.6-.6-1.6-3.4C15.6 5.5 12.8 3 9 3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18.2 8.6a5 5 0 0 1 0 6.8M20.6 6.2a8.4 8.4 0 0 1 0 11.6"/></svg>' });
 const notice = makeNotice({ bookId, lib, story, getLang: () => lang });  // the legal card on the title page and the end card (notice.js)
 
 // ---------- sound (sound.js): a bed for each spread, foley for what happens, all ducked under the narration ----------
@@ -948,7 +941,7 @@ function foley(event, fallback) {
   }
   snd.cue(event, own, fallback) || (own ? snd.play(own[0], { gain: own[1] ?? 0.5 }) : sfx(fallback, { gain: 0.5 }));  // cue() answers taps and game events; a line or an act cue it leaves alone, so the page's own sound plays here
 }
-const sndBtn = $("snd"), showSnd = () => { sndBtn.textContent = snd.muted ? "🔇" : "🔊"; sndBtn.setAttribute("aria-pressed", !snd.muted); };
+const sndBtn = $("snd"), showSnd = () => { sndBtn.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.5 9h4l5-4v14l-5-4h-4z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="${snd.muted ? "M16 9.2l5 5.6M21 9.2l-5 5.6" : "M16 8.8a4.4 4.4 0 0 1 0 6.4M18.6 6.4a7.8 7.8 0 0 1 0 11.2"}"/></svg>`; sndBtn.setAttribute("aria-pressed", !snd.muted); };
 sndBtn.onclick = () => { snd.mute(!snd.muted); showSnd(); };
 showSnd();
 const say = t => { $("msg").innerHTML = t ? `<p>${t}</p>` : ""; $("msg").classList.toggle("show", !!t); };
