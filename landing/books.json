@@ -28,16 +28,16 @@
     "zh": "阿南西与天空之神的故事",
     "ja": "アナンシと そらの かみの おはなし"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/anansi/plate.webp",
+   "spine": "#985e0e",
+   "gold": "#fff0a4",
    "culture": "Ashanti",
    "region": "africa",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=anansi&s=s01"
   },
   {

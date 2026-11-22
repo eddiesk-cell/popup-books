@@ -1,0 +1,1072 @@
+{
+ "words": false,
+ "title": "Anansi and the Sky God's Stories",
+ "credit": "From the classic Ashanti (Akan) folk tale of Ghana, published in public-domain English collections by W. H. Barker and Cecilia Sinclair in West African Folk-Tales (1917) and R. S. Rattray in Akan-Ashanti Folk-Tales (1930). Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all 7 STORY-REVIEW.md notes applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "anansi": {
+   "voice": "bm_fable",
+   "speed": 1.03,
+   "pitch": 2
+  },
+  "aso": {
+   "voice": "bf_alice",
+   "speed": 0.98,
+   "pitch": 1
+  },
+  "nyame": {
+   "voice": "bm_daniel",
+   "speed": 0.92,
+   "pitch": -2
+  },
+  "onini": {
+   "voice": "bm_lewis",
+   "speed": 0.91,
+   "pitch": -1
+  },
+  "mmoboro": {
+   "voice": "bf_isabella",
+   "speed": 1.06,
+   "pitch": 3
+  },
+  "osebo": {
+   "voice": "am_onyx",
+   "speed": 0.96,
+   "pitch": -1
+  },
+  "mmoatia": {
+   "voice": "bf_lily",
+   "speed": 1.05,
+   "pitch": 3
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "box": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pole": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "gourd": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "doll": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "drum": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "tortoise": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Anansi": "Ah-nan-see",
+  "Anansi's": "Ah-nan-see's",
+  "Nyame": "Ñah-meh",
+  "Nyame's": "Ñah-meh's",
+  "Aso": "Ahsoh",
+  "Aso's": "Ahsoh's",
+  "Onini": "Oh-nee-nee",
+  "Onini's": "Oh-nee-nee's",
+  "Mmoboro": "Moh-boh-roh",
+  "Mmoboro's": "Moh-boh-roh's",
+  "Osebo": "Aw-seb-aw",
+  "Osebo's": "Aw-seb-aw's",
+  "Mmoatia": "Mwah-tee-ah",
+  "Mmoatia's": "Mwah-tee-ah's"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "A Village Without Stories",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in sunny Ashanti in Ghana, the village had no stories. Children sat beside quiet talking drums.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in sunny Ashanti in Ghana, the village had no stories. Children sat beside quiet talking drums."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Clever spider Anansi wore a bright gold kente cap. Beside him, wise Aso wore shining crimson beads.",
+     "say": [
+      [
+       "narrator",
+       "Clever spider Ah-nan-see wore a bright gold kente cap. Beside him, wise Ahsoh wore shining crimson beads."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Anansi gazed at the white clouds. \"Sky God Nyame keeps every tale! I will buy them for everyone!\"",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see gazed at the white clouds."
+      ],
+      [
+       "anansi",
+       "Sky God Ñah-meh keeps every tale! I will buy them for everyone!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Swish! Anansi spun three silver web-rungs up the tall tree! Aso cheered. \"Small hands, clever mind, spin bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Swish! Ah-nan-see spun three silver web-rungs up the tall tree! Ahsoh cheered."
+      ],
+      [
+       "aso",
+       "Small hands, clever mind, spin bright!"
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Higher and higher climbed little Anansi into the morning clouds! What price would great Sky God Nyame ask?",
+     "say": [
+      [
+       "narrator",
+       "Higher and higher climbed little Ah-nan-see into the morning... clouds! What price would great Sky God Ñah-meh ask?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "The Sky God's Four Wonders",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "High in the radiant cloud court, Sky God Nyame sat on a golden stool beside his Golden Story Box.",
+     "say": [
+      [
+       "narrator",
+       "High in the radiant cloud court, Sky God Ñah-meh sat on a golden stool beside his Golden Story Box."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Anansi bowed beneath colourful kente umbrellas. \"Great Nyame, please let me buy stories for every child!\"",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see bowed beneath colourful kente umbrellas."
+      ],
+      [
+       "anansi",
+       "Great Ñah-meh, please let me buy stories for every child!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Boom-boom! Nyame tapped his royal sky-drum and chuckled warmly. \"Even mighty elephants could not pay my price!\"",
+     "say": [
+      [
+       "narrator",
+       "Boom-boom! Ñah-meh tapped his royal sky-drum and chuckled warmly."
+      ],
+      [
+       "nyame",
+       "Even mighty elephants could not pay my price!"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Four golden banners rolled down! \"Bring Onini the python, Mmoboro the hornets, Osebo the leopard, and fairy Mmoatia!\"",
+     "say": [
+      [
+       "narrator",
+       "Four golden banners rolled down!"
+      ],
+      [
+       "nyame",
+       "Bring Oh-nee-nee the python, Moh-boh-roh the hornets, Aw-seb-aw the leopard, and fairy Mwah-tee-ah!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Anansi tipped his kente cap and slid down his silver web to earth! How could he catch giant Onini?",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see tipped his kente cap and slid down his silver web to... earth! How could he catch giant Oh-nee-nee?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Aso's Clever Bamboo Plan",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Back in the sunny Ashanti courtyard, Anansi scratched his head beside wise Aso's colourful kente loom.",
+     "say": [
+      [
+       "narrator",
+       "Back in the sunny Ashanti courtyard, Ah-nan-see scratched his head beside wise Ahsoh's colourful kente loom."
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "A plump brown tortoise reached for a ripe yellow plantain. Plop! Into a soft leaf basket he rolled!",
+     "say": [
+      [
+       "narrator",
+       "A plump brown tortoise reached for a ripe yellow plantain. Plop! Into a soft leaf basket he rolled!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Anansi laughed, and wise Aso smiled. \"Ask proud Onini to stretch straight beside a long bamboo pole!\"",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see laughed, and wise Ahsoh smiled."
+      ],
+      [
+       "aso",
+       "Ask proud Oh-nee-nee to stretch straight beside a long bamboo pole!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Beside a woven bag lay a long bamboo pole, a soft vine cord, and a hollow calabash gourd.",
+     "say": [
+      [
+       "narrator",
+       "Beside a woven bag lay a long bamboo pole, a soft vine cord, and a hollow calabash gourd."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Side by side, Anansi and Aso walked toward the sunny bamboo stream! Would proud Onini fall for their plan?",
+     "say": [
+      [
+       "narrator",
+       "Side by side, Ah-nan-see and Ahsoh walked toward the sunny bamboo... stream! Would proud Oh-nee-nee fall for their plan?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Measuring Onini the Python",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Down by the sparkling bamboo stream, giant green-and-gold Onini the python rested proudly on a mossy bank.",
+     "say": [
+      [
+       "narrator",
+       "Down by the sparkling bamboo stream, giant green-and-gold Oh-nee-nee the python rested proudly on a mossy bank."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"This golden bamboo pole is longer than Onini!\" called Aso loudly, while Anansi shook his head beside the stream.",
+     "say": [
+      [
+       "aso",
+       "This golden bamboo pole is longer than Oh-nee-nee!"
+      ],
+      [
+       "narrator",
+       "called Ahsoh loudly, while Ah-nan-see shook his head beside the stream."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Swoosh! Proud Onini slithered straight beside the bamboo pole. \"Measure me from tail to nose and see!\"",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Proud Oh-nee-nee slithered straight beside the bamboo pole."
+      ],
+      [
+       "onini",
+       "Measure me from tail to nose and see!"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Anansi set three soft green vine loops ready along the pole so proud Onini would not slip.",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see set three soft green vine loops ready along the pole so proud Oh-nee-nee would not slip."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Aso cheered beside surprised Onini on the golden bamboo pole! How would Anansi catch the Mmoboro hornets next?",
+     "say": [
+      [
+       "narrator",
+       "Ahsoh cheered beside surprised Oh-nee-nee on the golden bamboo... pole! How would Ah-nan-see catch the Moh-boh-roh hornets next?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "A Dry Gourd for the Hornets",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Nearby under cool grey clouds, Anansi scooped stream water in a shell and held a green plantain leaf overhead.",
+     "say": [
+      [
+       "narrator",
+       "Nearby under cool grey clouds, Ah-nan-see scooped stream water in a shell and held a green plantain leaf overhead."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "A tiny green frog hopped onto Anansi's broad plantain leaf. Boing! Right into the sparkling stream it splashed!",
+     "say": [
+      [
+       "narrator",
+       "A tiny green frog hopped onto Ah-nan-see's broad plantain leaf. Boing! Right into the sparkling stream it splashed!"
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Pitter-patter! Anansi sprinkled water drops and held out his dry calabash gourd. \"Quick, Mmoboro, shelter from the rain!\"",
+     "say": [
+      [
+       "narrator",
+       "Pitter-patter! Ah-nan-see sprinkled water drops and held out his dry calabash gourd."
+      ],
+      [
+       "anansi",
+       "Quick, Moh-boh-roh, shelter from the rain!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "\"Thank you, kind Anansi!\" buzzed four golden Mmoboro hornets, hovering right beside the dry calabash gourd.",
+     "say": [
+      [
+       "mmoboro",
+       "Thank you, kind Ah-nan-see!"
+      ],
+      [
+       "narrator",
+       "buzzed four golden Moh-boh-roh hornets, hovering right beside the dry calabash gourd."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Gently Anansi tucked a soft leaf stopper onto the cosy calabash gourd! How could he catch swift Osebo?",
+     "say": [
+      [
+       "narrator",
+       "Gently Ah-nan-see tucked a soft leaf stopper onto the cosy calabash... gourd! How could he catch swift Aw-seb-aw?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "A Silk Hammock for Osebo",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Golden afternoon light warmed the forest trail where Anansi spread soft green ferns across a deep hollow.",
+     "say": [
+      [
+       "narrator",
+       "Golden afternoon light warmed the forest trail where Ah-nan-see spread soft green ferns across a deep hollow."
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Whoosh! Swift spotted Osebo the leopard bounded down the trail! Poof! Down he slipped into the fern-lined hollow!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Swift spotted Aw-seb-aw the leopard bounded down the trail! Poof! Down he slipped into the fern-lined hollow!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"Help me up, little friend!\" called Osebo, peering out of the mossy hollow with wide golden eyes.",
+     "say": [
+      [
+       "osebo",
+       "Help me up, little friend!"
+      ],
+      [
+       "narrator",
+       "called Aw-seb-aw, peering out of the mossy hollow with wide golden eyes."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Anansi bent a springy branch and spun silver web threads. \"Hold fast, clever mind, spin bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see bent a springy branch and spun silver web threads."
+      ],
+      [
+       "anansi",
+       "Hold fast, clever mind, spin bright!"
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Up swung Osebo inside the soft silver hammock, purring happily! Next, how could Anansi catch shy Mmoatia?",
+     "say": [
+      [
+       "narrator",
+       "Up swung Aw-seb-aw inside the soft silver... hammock, purring happily! Next, how could Ah-nan-see catch shy Mwah-tee-ah?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Gifts in the Sunset Courtyard",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Back in the rosy sunset courtyard, Anansi sighed softly. \"Shy fairy Mmoatia dances faster than the evening breeze!\"",
+     "say": [
+      [
+       "narrator",
+       "Back in the rosy sunset courtyard, Ah-nan-see sighed softly."
+      ],
+      [
+       "anansi",
+       "Shy fairy Mwah-tee-ah dances faster than the evening breeze!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Wise Aso smiled warmly beside her wooden mortar. \"Kind gifts welcome shy friends better than any chase!\"",
+     "say": [
+      [
+       "narrator",
+       "Wise Ahsoh smiled warmly beside her wooden mortar."
+      ],
+      [
+       "aso",
+       "Kind gifts welcome shy friends better than any chase!"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Tap-tap! Aso mashed sweet golden yams while Anansi carved a smiling wooden doll brushed with sticky tree-sap.",
+     "say": [
+      [
+       "narrator",
+       "Tap-tap! Ahsoh mashed sweet golden yams while Ah-nan-see carved a smiling wooden doll brushed with sticky tree-sap."
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "Aso brought a little talking drum, a wooden bowl, and a woven basket for their twilight gifts.",
+     "say": [
+      [
+       "narrator",
+       "Ahsoh brought a little talking drum, a wooden bowl, and a woven basket for their twilight gifts."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "At dusk, Anansi carried his gifts into the starry twilight forest! Would shy Mmoatia come out tonight?",
+     "say": [
+      [
+       "narrator",
+       "At dusk, Ah-nan-see carried his gifts into the starry twilight... forest! Would shy Mwah-tee-ah come out tonight?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Dancing Fairy Mmoatia",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Under the starry arch, Anansi set out the yam bowl and sticky doll. Rat-a-tat! He tapped the drum and hid.",
+     "say": [
+      [
+       "narrator",
+       "Under the starry arch, Ah-nan-see set out the yam bowl and sticky doll. Rat-a-tat! He tapped the drum and hid."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Suddenly a green fern wiggled and swayed in the starlight! Who was hiding inside?",
+     "say": [
+      [
+       "narrator",
+       "Suddenly a green fern wiggled and swayed in the starlight! Who was hiding inside?"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Out danced Mmoatia in her leaf crown! She tasted the yams. \"Thank you!\" She patted the doll and stuck fast!",
+     "say": [
+      [
+       "narrator",
+       "Out danced Mwah-tee-ah in her leaf crown! She tasted the yams."
+      ],
+      [
+       "mmoatia",
+       "Thank you!"
+      ],
+      [
+       "narrator",
+       "She patted the doll and stuck fast!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Gently Anansi stepped out and bowed low. \"Step soft, clever mind, spin bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Gently Ah-nan-see stepped out and bowed low."
+      ],
+      [
+       "anansi",
+       "Step soft, clever mind, spin... bright!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "\"Come ride my silver web as an honoured sky guest!\" smiled Anansi. What would great Nyame say above?",
+     "say": [
+      [
+       "anansi",
+       "Come ride my silver web as an honoured sky guest!"
+      ],
+      [
+       "narrator",
+       "smiled Ah-nan-see. What would great Ñah-meh say above?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Winning the Golden Story Box",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "At golden sunrise, Anansi climbed into the cloud court bringing Onini, Mmoboro, Osebo, and Mmoatia safe and well!",
+     "say": [
+      [
+       "narrator",
+       "At golden sunrise, Ah-nan-see climbed into the cloud court bringing Oh-nee-nee, Moh-boh-roh, Aw-seb-aw, and Mwah-tee-ah safe and well!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Clap-clap! Great Sky God Nyame clapped in joyful wonder and rose! \"Little Anansi kept his brave promise!\"",
+     "say": [
+      [
+       "narrator",
+       "Clap-clap! Great Sky God Ñah-meh clapped in joyful wonder and rose!"
+      ],
+      [
+       "nyame",
+       "Little Ah-nan-see kept his brave promise!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Warmly Nyame blessed all four forest friends and sent them happily home past the fluffy white clouds!",
+     "say": [
+      [
+       "narrator",
+       "Warmly Ñah-meh blessed all four forest friends and sent them happily home past the fluffy white clouds!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Nyame held out the gleaming Golden Story Box! Four golden star-seals rested round its lid for Anansi.",
+     "say": [
+      [
+       "narrator",
+       "Ñah-meh held out the gleaming Golden Story... Box! Four golden star-seals rested round its lid for Ah-nan-see."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "\"From now on, all tales are Anansi Stories!\" cheered Nyame. Down slid Anansi with the box! What waited inside?",
+     "say": [
+      [
+       "nyame",
+       "From now on, all tales are Ah-nan-see Stories!"
+      ],
+      [
+       "narrator",
+       "cheered Ñah-meh. Down slid Ah-nan-see with the box! What waited inside?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Stories for Every Child",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Back in the lantern-lit Ashanti courtyard, Anansi and wise Aso lifted the lid of the Golden Story Box!",
+     "say": [
+      [
+       "narrator",
+       "Back in the lantern-lit Ashanti courtyard, Ah-nan-see and wise Ahsoh lifted the lid of the Golden Story Box!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Whoomp! Sparkling golden story-butterflies swirled above the talking drums as village children clapped with joy!",
+     "say": [
+      [
+       "narrator",
+       "Whoomp! Sparkling golden story-butterflies swirled above the talking drums as village children clapped with joy!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "The plump tortoise and a yellow weaver-bird tugged a golden box-ribbon. Sproing! Both tumbled onto a soft mat!",
+     "say": [
+      [
+       "narrator",
+       "The plump tortoise and a yellow weaver-bird tugged a golden box-ribbon. Sproing! Both tumbled onto a soft mat!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Everyone laughed as three glowing story-scrolls hovered above wise Aso, a village boy, and a village girl!",
+     "say": [
+      [
+       "narrator",
+       "Everyone laughed as three glowing story-scrolls hovered above wise Ahsoh, a village boy, and a village girl!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Anansi and wise Aso won the Sky God's stories! Now every child shares their joyful tales together!",
+     "say": [
+      [
+       "narrator",
+       "Ah-nan-see and wise Ahsoh won the Sky God's... stories! Now every child shares their joyful tales together!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Little Anansi was much smaller than giant Onini and swift Osebo, yet he never gave up!",
+   "say": [
+    [
+     "closing",
+     "Little Ah-nan-see was much smaller than giant Oh-nee-nee and swift Aw-seb-aw, yet he never gave up!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "With wise Aso's help, Anansi used calm thinking and gentle kindness instead of force.",
+   "say": [
+    [
+     "closing",
+     "With wise Ahsoh's help, Ah-nan-see used calm thinking and gentle kindness instead of force."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Great Sky God Nyame saw that a small hero with a clever heart can finish the biggest task.",
+   "say": [
+    [
+     "closing",
+     "Great Sky God Ñah-meh saw that a small hero with a clever heart can finish the biggest task."
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Small hands, clever mind, spin bright! Stories shine brightest when we share them with everyone.",
+   "say": [
+    [
+     "closing",
+     "Small hands, clever mind, spin bright! Stories shine brightest when we share them with everyone."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Help Anansi climb his shimmering silver web to the clouds! Tap the three silver web-rungs from bottom to top.",
+   "say": [
+    [
+     "narrator",
+     "Help Ah-nan-see climb his shimmering silver web to the clouds! Tap the three silver web-rungs from bottom to top."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Up and up! Clever Anansi climbs high toward the fluffy morning clouds!",
+   "say": [
+    [
+     "narrator",
+     "Up and up! Clever Ah-nan-see climbs high toward the fluffy morning clouds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Accept Sky God Nyame's task with Anansi! Tap all four golden banners around the cloud court.",
+   "say": [
+    [
+     "narrator",
+     "Accept Sky God Ñah-meh's task with Ah-nan-see! Tap all four golden banners around the cloud court."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Four bright golden banners! Brave little Anansi is ready for his big quest!",
+   "say": [
+    [
+     "narrator",
+     "Four bright golden banners! Brave little Ah-nan-see is ready for his big quest!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Help pack! Match the bamboo pole to Anansi, the vine cord to Aso, and the gourd to the woven bag.",
+   "say": [
+    [
+     "narrator",
+     "Help pack! Match the bamboo pole to Ah-nan-see, the vine cord to Ahsoh, and the gourd to the woven bag."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "All packed and ready! Wise Aso and clever Anansi make a marvellous team!",
+   "say": [
+    [
+     "narrator",
+     "All packed and ready! Wise Ahsoh and clever Ah-nan-see make a marvellous team!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Help Anansi tie proud Onini snugly to the bamboo pole! Tap the three soft vine loops from tail to nose.",
+   "say": [
+    [
+     "narrator",
+     "Help Ah-nan-see tie proud Oh-nee-nee snugly to the bamboo pole! Tap the three soft vine loops from tail to nose."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Snug and gentle! Three soft vine loops hold proud Onini safely on the bamboo pole!",
+   "say": [
+    [
+     "narrator",
+     "Snug and gentle! Three soft vine loops hold proud Oh-nee-nee safely on the bamboo pole!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Guide the buzzing Mmoboro hornets out of the rain! Tap all four hornets to send them into the dry gourd.",
+   "say": [
+    [
+     "narrator",
+     "Guide the buzzing Moh-boh-roh hornets out of the rain! Tap all four hornets to send them into the dry gourd."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Safe and dry! Every buzzing hornet hums happily inside the cosy calabash gourd!",
+   "say": [
+    [
+     "narrator",
+     "Safe and dry! Every buzzing hornet hums happily inside the cosy calabash gourd!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Weave a strong silver web hammock to lift Osebo gently up! Tap when the ring glows green!",
+   "say": [
+    [
+     "narrator",
+     "Weave a strong silver web hammock to lift Aw-seb-aw gently up! Tap when the ring glows green!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Three strong silver weaves! The shimmering silk hammock glows bright and ready to lift Osebo!",
+   "say": [
+    [
+     "narrator",
+     "Three strong silver weaves! The shimmering silk hammock glows bright and ready to lift Aw-seb-aw!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Pack the gifts! Match sweet yams to the bowl, the doll to the basket, and the drum to Anansi.",
+   "say": [
+    [
+     "narrator",
+     "Pack the gifts! Match sweet yams to the bowl, the doll to the basket, and the drum to Ah-nan-see."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Everything is ready! Sweet golden yams, a smiling doll, and a joyful little drum!",
+   "say": [
+    [
+     "narrator",
+     "Everything is ready! Sweet golden yams, a smiling doll, and a joyful little drum!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Play a gentle welcome beat on the little drum! Tap three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Play a gentle welcome beat on the little drum! Tap three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three sweet drumbeats! Warm golden music sparkles beside the wiggling green fern!",
+   "say": [
+    [
+     "narrator",
+     "Three sweet drumbeats! Warm golden music sparkles beside the wiggling green fern!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Wake the Golden Story Box with Sky God Nyame's blessing! Tap all four golden star-seals to light them.",
+   "say": [
+    [
+     "narrator",
+     "Wake the Golden Story Box with Sky God Ñah-meh's blessing! Tap all four golden star-seals to light them."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Shining gold! All four star-seals sparkle around the gleaming Golden Story Box!",
+   "say": [
+    [
+     "narrator",
+     "Shining gold! All four star-seals sparkle around the gleaming Golden Story Box!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the tales! Match the python scroll to Aso, leopard scroll to the boy, and fairy scroll to the girl.",
+   "say": [
+    [
+     "narrator",
+     "Share the tales! Match the python scroll to Ahsoh, leopard scroll to the boy, and fairy scroll to the girl."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Wonderful sharing! Laughter and warm magic fill the lantern-lit Ashanti courtyard!",
+   "say": [
+    [
+     "narrator",
+     "Wonderful sharing! Laughter and warm magic fill the lantern-lit Ashanti courtyard!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "anansi": [
+   "I am Anansi the spider! Do you like my bright woven gold-and-green Ashanti kente cap?",
+   "Even though I am small, my wise wife Aso and I solve big puzzles by thinking calmly together!",
+   "I spun shimmering silver web-rungs all the way up through the clouds to visit Sky God Nyame!",
+   "Instead of fighting giant creatures, I used a bamboo pole, a dry gourd, a silk hammock, and sweet yams!",
+   "Small hands, clever mind, spin bright! Now every story in the world is an Anansi Story to share!"
+  ],
+  "aso": [
+   "I am Aso, Anansi's wise wife! I wear my crimson beads and weave colourful gold kente cloth.",
+   "Whenever a puzzle looks impossible, pause, smile, and look for a gentle, clever way!",
+   "Measuring proud Onini beside a long golden bamboo pole worked without hurting a single scale!",
+   "Kind gifts like sweet golden mashed yams welcome shy forest friends much better than chasing them!",
+   "Sharing the Golden Story Box with all the village children is the happiest treasure of all!"
+  ],
+  "nyame": [
+   "I am Nyame, the Sky God! High above the white clouds, I sit upon my carved golden Ashanti stool.",
+   "For many years I kept all the world's tales safe inside my gleaming Golden Story Box.",
+   "Mighty lions and elephants could not pay my price, yet tiny Anansi succeeded with wisdom and care!",
+   "I blessed Onini, Mmoboro, Osebo, and Mmoatia and sent them safely back to their green forest home.",
+   "From now on, every tale shared under the stars is called an Anansi Story!"
+  ],
+  "onini": [
+   "I am Onini, the long green-and-gold python of the sunny Ashanti bamboo stream!",
+   "When Aso said that bamboo pole was longer than me, I stretched out straight to prove my length!",
+   "Anansi's soft green vine loops held me snug and cosy all the way up to Sky God Nyame's clouds!",
+   "Now I have my very own scroll inside the Golden Story Box!"
+  ],
+  "mmoboro": [
+   "We are Mmoboro, the buzzing golden forest hornets!",
+   "When water drops pattered on Anansi's plantain leaf, we thought a big rainstorm had arrived!",
+   "Anansi's hollow calabash gourd was the cosiest, driest little shelter in the whole forest!",
+   "After visiting Sky God Nyame's sunny clouds, we buzzed happily home to the flowering trees!"
+  ],
+  "osebo": [
+   "I am Osebo, the swift spotted leopard of the deep Ashanti rainforest!",
+   "Bounding down the mossy trail, I slipped softly into Anansi's fern-lined hollow!",
+   "Anansi wove a springy silver silk hammock that lifted me gently out of the deep hollow!",
+   "Riding up to Sky God Nyame's cloud court was a marvellous adventure!"
+  ],
+  "mmoatia": [
+   "I am Mmoatia, the dancing little fairy of the starry Ashanti forest!",
+   "I wear my bright green leaf crown and love joyful talking drums and sweet mashed yams!",
+   "When that smiling wooden doll stayed quiet, I patted its cheek and stuck fast to sweet tree-sap!",
+   "Kind Anansi invited me up his silver web as an honoured guest at Sky God Nyame's court!"
+  ],
+  "box": [
+   "Sky God Nyame's carved Golden Story Box, patterned with gleaming Ashanti gold spirals!",
+   "Opening its golden lid sets sparkling story-butterflies and glowing scrolls swirling into the night!"
+  ],
+  "pole": [
+   "A long golden bamboo pole from the Ashanti courtyard, used to measure proud Onini from tail to nose!",
+   "Three soft green vine loops kept Onini snug and safe on the ride to the clouds."
+  ],
+  "gourd": [
+   "A smooth hollow calabash gourd with a soft green leaf stopper, warm and dry inside for the Mmoboro hornets!",
+   "Calabash gourds grow on forest vines in Ghana and make wonderful bowls, rattles, and cosy shelters."
+  ],
+  "doll": [
+   "A smiling carved wooden Ashanti doll brushed with sweet sticky tree-sap beside a bowl of mashed yams!",
+   "Traditional Ashanti wooden dolls have round disc heads and warm, friendly smiles."
+  ],
+  "drum": [
+   "A carved wooden Ashanti talking drum whose cheerful rat-a-tat rhythm calls everyone to dance and listen!"
+  ],
+  "tortoise": [
+   "A plump brown courtyard tortoise who loves ripe yellow plantains and tumbling onto soft mats!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Barker & Sinclair, West African Folk-Tales, 1917; Rattray, Akan-Ashanti Folk-Tales, 1930): Anansi buys Sky God Nyame's stories by capturing Onini the python, Mmoboro the hornets, Osebo the leopard, and Mmoatia the fairy using tricks (tying Onini to a pole, plugging hornets in a gourd, trapping Osebo in a pit/noose, gluing Mmoatia when she angrily slaps and kicks a gummed doll) and hands them over to Nyame. Ours (gentle, collaborative, and joyful for ages 4-8): 1) Anansi wants the Golden Story Box not for pride, but so every village child can hear stories; he teams up openly with his wise wife Aso (celebrating Akan partnership). 2) Every capture is 100% harmless, dignified, and cosy: soft vine loops on the bamboo pole for proud Onini, a cosy dry calabash gourd shelter for Mmoboro, a soft fern-cushioned hollow and purring silver silk hammock for Osebo, and a cheerful drumbeat + sweet mashed yams where fairy Mmoatia gently pats the smiling doll's cheek ('Thank you!') and is invited up the silver web as an honoured sky guest. 3) At sunrise in the cloud court, amazed Nyame blesses and frees all four forest wonders unharmed before gifting Anansi and Aso the Golden Story Box, releasing sparkling golden story-butterflies and scrolls for every child in the lantern-lit Ashanti courtyard.",
+  "moral": "Small hands, clever mind, spin bright! Clever thinking, wise teamwork, and gentle kindness can solve even the biggest task — and stories shine brightest when shared with everyone.",
+  "changes": "1 Culture-true Ashanti / Akan (Ghana) look: warm terracotta-ochre courtyard houses with Adinkra geometric relief patterns, woven gold-and-green kente cloth and royal umbrellas, carved wooden stools (sika dwa / asesedwa), talking drums, plantains, calabash gourds, golden mashed yams (eto), carved wooden Akua'ba doll, lush bamboo stream and buttressed silk-cotton/odum rainforest. Two spider mains wear distinct cultural accessories per BOOK-STANDARD item 15: Anansi wears a woven gold-and-green kente cap; Aso wears shining crimson beads; all other animals stay plain. 2 Every speaking character (anansi, aso, nyame, onini, mmoboro, osebo, mmoatia) has a distinct gender-matched Kokoro voice (zero collision with bm_george narrator). 3 Every named creature, object, weather, and light across all 50 story lines is concrete and stageable across 3 reusable places (village, sky-court, forest), including 2.4's four golden banners and 8.2's wiggling green fern before Mmoatia dances out (EDDIE-TASTE.md lines 74-77).",
+  "level": "A1-A2, past simple, crisp British English sentences for ages 4-8 (50 story lines, 12-19 words/line, max 20 words across all story, moral, and game lines so phone .ra-page stays compact). Consistent British spelling (colourful, cosy, honoured, marvellous, grey). Core vocabulary: spider, clouds, stories, golden, bamboo, pole, gourd, rain, leopard, hammock, yams, doll, drum, fairy, share.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: anansi (bm_fable +2), aso (bf_alice +1), nyame (bm_daniel -2), onini (bm_lewis -1), mmoboro (bf_isabella +3), osebo (am_onyx -1), mmoatia (bf_lily +3). Narrator (bm_george) reads narration, game prompts, and 3rd-person prop/animal touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain '<Small hands / Hold fast / Step soft>, clever mind, spin bright!' across spreads 1 (1.4), 6 (6.4), and 8 (8.4, pausing 'spin... bright!' before the last word on its 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a clause-final child-guessable word, never before the narrator's last word (1.5 clouds, 2.5 earth, 3.5 stream, 4.5 pole, 5.5 gourd, 6.5 hammock, 7.5 forest, 8.4 bright, 9.4 Box, 10.5 stories); P4 8.2 ends on 'Who was hiding inside?' followed by game.8 (>= 1.5 s wait before 8.3 reveals Mmoatia); P5 threes (three silver web-rungs, three soft vine loops, three silver hammock weaves, three sweet drumbeats, three refrain calls, three story-scrolls); P6 unique natural English sound words verified in British Kokoro, <=2 per spread, zero repeats and zero bell sounds across the book (1 Swish, 2 Boom-boom, 3 Plop, 4 Swoosh, 5 Boing/Pitter-patter, 6 Whoosh/Poof, 7 Tap-tap, 8 Rat-a-tat, 9 Clap-clap, 10 Whoomp/Sproing); P8 harmless animal slapstick in all three thirds as standalone !-ended sentences (3.2 tortoise rolls into soft leaf basket Plop!, 5.2 frog bounces off plantain leaf Boing!, 10.3 tortoise and weaver-bird tug box-ribbon Sproing! onto soft mat); P11 energy curve E1 E2 E2 E2 E2 E3 E1 E3 E3 E2 + Moral E1; P16 non-repeating 10-game sequence (order, collect, pair, order, collect, timing, pair, timing, collect, pair)."
+ }
+}
