@@ -16790,8 +16790,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-wiggle-rowan": {
       "look": "Snow-dusted red-berried rowan bush",
@@ -17275,8 +17274,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-sun-ember": {
       "look": "Radiant faceted golden sun-ember coal glowing warm gold",
@@ -17297,8 +17295,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-ember-ray": {
       "look": "Slender golden sunbeam spark-ray",
@@ -17341,8 +17338,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-frost-star": {
       "look": "Twinkling golden-white winter frost-star",
@@ -17363,8 +17359,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-cake-basket": {
       "look": "Woven willow basket heaped with golden honey cakes and red silk ribbon",
@@ -17406,8 +17401,7 @@
       "uses": [
         "Baba Yaga and Vasilissa"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "baba-yaga-feast-cushion": {
       "look": "Plump crimson embroidered Russian cushion",
