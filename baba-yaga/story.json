@@ -1,0 +1,1039 @@
+{
+ "words": false,
+ "title": "Baba Yaga and Vasilissa",
+ "credit": "From the classic Russian folk tale of Baba Yaga and Vasilissa, published in public-domain English by Arthur Ransome in Old Peter's Russian Tales (1916) and collected in Russian by Alexander Afanasyev (1855-1863; English translations by W. R. S. Ralston, 1873, and Post Wheeler, 1912). Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all 6 STORY-REVIEW.md notes applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "vasilissa": {
+   "voice": "bf_alice",
+   "speed": 1.0,
+   "pitch": 2
+  },
+  "kukolka": {
+   "voice": "bf_lily",
+   "speed": 1.05,
+   "pitch": 4
+  },
+  "baba": {
+   "voice": "bf_emma",
+   "speed": 0.92,
+   "pitch": -2
+  },
+  "ivan": {
+   "voice": "bm_daniel",
+   "speed": 0.94,
+   "pitch": -1
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "hare": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "squirrel": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cat": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hut": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "mortar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "lantern": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "samovar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Vasilissa": "Vasi-leesa",
+  "Vasilissa's": "Vasi-leesa's",
+  "Kukolka": "Kookulka",
+  "Kukolka's": "Kookulka's",
+  "Baba": "Bahba",
+  "Yaga": "Yi-gah",
+  "Yaga's": "Yi-gah's",
+  "Ivan": "Iv-ahn",
+  "Ivan's": "Iv-ahn's"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Cold Hearth and the Pocket Doll",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in snowy Russia, kind Vasilissa lived with Papa Ivan in a carved pine-log cottage.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in snowy Russia, kind Vasi-leesa lived with Papa Iv-ahn in a carved pine-log cottage."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Whoosh! A winter gust puffed out their hearth! \"Only Baba Yaga keeps ever-bright fire!\" sighed Papa Ivan.",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! A winter gust puffed out their hearth!"
+      ],
+      [
+       "ivan",
+       "Only Bahba Yi-gah keeps ever-bright fire!"
+      ],
+      [
+       "narrator",
+       "sighed Papa Iv-ahn."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Tiny wooden doll Kukolka hopped onto the porch table! \"I will help you fetch warm fire!\" cheered Kukolka.",
+     "say": [
+      [
+       "narrator",
+       "Tiny wooden doll Kookulka hopped onto the porch table!"
+      ],
+      [
+       "kukolka",
+       "I will help you fetch warm fire!"
+      ],
+      [
+       "narrator",
+       "cheered Kookulka."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Beside the porch table lay an unlit brass lantern, a rye bread crust, and Papa's woollen shawl.",
+     "say": [
+      [
+       "narrator",
+       "Beside the porch table lay an unlit brass lantern, a rye bread crust, and Papa's woollen shawl."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Taking her lantern and bread, Vasilissa stepped toward the snowy birch woods! What waited along the misty trail?",
+     "say": [
+      [
+       "narrator",
+       "Taking her lantern and bread, Vasi-leesa stepped toward the snowy birch... woods! What waited along the misty trail?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Friends Along the Silver-Birch Trail",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "As dusk fell along the snowy silver-birch trail, Vasilissa walked on with tiny Kukolka peeking from her pocket.",
+     "say": [
+      [
+       "narrator",
+       "As dusk fell along the snowy silver-birch trail, Vasi-leesa walked on with tiny Kookulka peeking from her pocket."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Overhead, a plump red squirrel tugged a snowy pine cone. Plop! Backwards he tumbled into soft moss!",
+     "say": [
+      [
+       "narrator",
+       "Overhead, a plump red squirrel tugged a snowy pine cone. Plop! Backwards he tumbled into soft moss!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Beside four dim wooden trail-lanterns, a red-berried rowan bush wiggled and shook! Who was hiding behind it?",
+     "say": [
+      [
+       "narrator",
+       "Beside four dim wooden trail-lanterns, a red-berried rowan bush wiggled and shook! Who was hiding behind it?"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Out from the rowan bush hopped a shivering grey hare! Kindly Vasilissa shared a crumb of rye bread.",
+     "say": [
+      [
+       "narrator",
+       "Out from the rowan bush hopped a shivering grey hare! Kindly Vasi-leesa shared a crumb of rye bread."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Swoosh! Overhead, something whirled across the starry night sky! Who was flying in a giant wooden mortar?",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Overhead, something whirled across the starry night... sky! Who was flying in a giant wooden mortar?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "The Flying Wooden Mortar",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "It was grumpy Baba Yaga, zooming inside a carved wooden mortar! Tap-tap! She steered with a wooden pestle!",
+     "say": [
+      [
+       "narrator",
+       "It was grumpy Bahba Yi-gah, zooming inside a carved wooden mortar! Tap-tap! She steered with a wooden pestle!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Behind her mortar, Baba Yaga swept swirling silver snow-sparkles across the treetops with her leafy birch broom!",
+     "say": [
+      [
+       "narrator",
+       "Behind her mortar, Bahba Yi-gah swept swirling silver snow-sparkles across the treetops with her leafy birch broom!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "\"Aha! Who tiptoes through my quiet birch woods?\" grumbled Baba Yaga, zooming onward past the starry treetops!",
+     "say": [
+      [
+       "baba",
+       "Aha! Who tiptoes through my quiet birch woods?"
+      ],
+      [
+       "narrator",
+       "grumbled Bahba Yi-gah, zooming onward past the starry treetops!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "By an icy brook with three mossy stones, Vasilissa fed Kukolka. \"Help me, little doll, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "By an icy brook with three mossy stones, Vasi-leesa fed Kookulka."
+      ],
+      [
+       "vasilissa",
+       "Help me, little doll, shine bright!"
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Stepping onto the far snowy bank, Vasilissa saw amber lanterns ahead! What strange house waited in the clearing?",
+     "say": [
+      [
+       "narrator",
+       "Stepping onto the far snowy... bank, Vasi-leesa saw amber lanterns ahead! What strange house waited in the clearing?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Hut on Chicken Legs",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Inside the mossy clearing stood Baba Yaga's carved log hut, perched high upon two giant yellow chicken legs!",
+     "say": [
+      [
+       "narrator",
+       "Inside the mossy clearing stood Bahba Yi-gah's carved log hut, perched high upon two giant yellow chicken legs!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "Creak! Beside the rusty wooden gate sat a little oil-pot. Kindly Vasilissa oiled the squeaky gate hinge!",
+     "say": [
+      [
+       "narrator",
+       "Creak! Beside the rusty wooden gate sat a little oil-pot. Kindly Vasi-leesa oiled the squeaky gate hinge!"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "High above, the hut faced the dark pines! Tiny Kukolka hopped onto a mossy stump with a secret rhyme.",
+     "say": [
+      [
+       "narrator",
+       "High above, the hut faced the dark pines! Tiny Kookulka hopped onto a mossy stump with a secret rhyme."
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "\"Little hut, turn your front to me!\" called Vasilissa. Clack-clack! Giant chicken legs spun the hut right round!",
+     "say": [
+      [
+       "vasilissa",
+       "Little hut, turn your front to me!"
+      ],
+      [
+       "narrator",
+       "called Vasi-leesa. Clack-clack! Giant chicken legs spun the hut right round!"
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "Warm golden light shone from its carved front porch! Suddenly, who came landing beside the wooden steps?",
+     "say": [
+      [
+       "narrator",
+       "Warm golden light shone from its carved front... porch! Suddenly, who came landing beside the wooden steps?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Sorting the Mixed Grain Heap",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Thump! Down landed Baba Yaga in her wooden mortar right beside the chicken-legged hut's carved porch steps!",
+     "say": [
+      [
+       "narrator",
+       "Thump! Down landed Bahba Yi-gah in her wooden mortar right beside the chicken-legged hut's carved porch steps!"
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "\"Good evening, Grandmother! May I please borrow warm fire for Papa Ivan's cold hearth?\" asked Vasilissa politely.",
+     "say": [
+      [
+       "vasilissa",
+       "Good evening, Grandmother! May I please borrow warm fire for Papa Iv-ahn's cold hearth?"
+      ],
+      [
+       "narrator",
+       "asked Vasi-leesa politely."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Baba Yaga folded her arms. \"Bah! Earn it with three chores! First, sort my mixed grain heap!\"",
+     "say": [
+      [
+       "narrator",
+       "Bahba Yi-gah folded her arms."
+      ],
+      [
+       "baba",
+       "Bah! Earn it with three chores! First, sort my mixed grain heap!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Beside the steps lay golden wheat, dark poppy seeds, and grey pebbles near a sack, bowl, and bucket.",
+     "say": [
+      [
+       "narrator",
+       "Beside the steps lay golden wheat, dark poppy seeds, and grey pebbles near a sack, bowl, and bucket."
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Vasilissa and Kukolka beamed beside the neat sack, bowl, and bucket! What second chore would Baba Yaga set?",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa and Kookulka beamed beside the neat sack, bowl, and... bucket! What second chore would Bahba Yi-gah set?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Sweeping the Starry Forest Yard",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Baba Yaga blinked in surprise! \"Second chore! Take this birch broom and sweep four messy snow-heaps away!\"",
+     "say": [
+      [
+       "narrator",
+       "Bahba Yi-gah blinked in surprise!"
+      ],
+      [
+       "baba",
+       "Second chore! Take this birch broom and sweep four messy snow-heaps away!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "Baba Yaga's sleek black cat pounced at the birch broom. Boing! Off the bristles he bounced into soft hay!",
+     "say": [
+      [
+       "narrator",
+       "Bahba Yi-gah's sleek black cat pounced at the birch broom. Boing! Off the bristles he bounced into soft hay!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Vasilissa gently stroked the dizzy black cat and fed Kukolka. \"Come help, little doll, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa gently stroked the dizzy black cat and fed Kookulka."
+      ],
+      [
+       "vasilissa",
+       "Come help, little doll, shine bright!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "Purring warmly, the black cat curled beside the hay while four messy snow-heaps dotted the mossy yard.",
+     "say": [
+      [
+       "narrator",
+       "Purring warmly, the black cat curled beside the hay while four messy snow-heaps dotted the mossy yard."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Vasilissa brushed the mossy forest yard neat and clean! What final midnight chore would Baba Yaga demand?",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa brushed the mossy forest yard neat and... clean! What final midnight chore would Bahba Yi-gah demand?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Waking the Cold Brick Stove",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Midnight snow drifted softly down. \"Third chore!\" rasped Baba Yaga. \"Wake my yard stove and brew berry tea!\"",
+     "say": [
+      [
+       "narrator",
+       "Midnight snow drifted softly down."
+      ],
+      [
+       "baba",
+       "Third chore!"
+      ],
+      [
+       "narrator",
+       "rasped Bahba Yi-gah."
+      ],
+      [
+       "baba",
+       "Wake my yard stove and brew berry tea!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Vasilissa rubbed her chilly hands and thought of dear Papa Ivan waiting home inside their cold cottage.",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa rubbed her chilly hands and thought of dear Papa Iv-ahn waiting home inside their cold cottage."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Sharing her last bread crumb, Vasilissa whispered softly, \"Stay close, little doll, shine bright!\"",
+     "say": [
+      [
+       "narrator",
+       "Sharing her last bread crumb, Vasi-leesa whispered softly,"
+      ],
+      [
+       "vasilissa",
+       "Stay close, little doll, shine... bright!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "By the outdoor brick stove lay dry logs, pine cones, and berries near the firebox, grate, and samovar.",
+     "say": [
+      [
+       "narrator",
+       "By the outdoor brick stove lay dry logs, pine cones, and berries near the firebox, grate, and samovar."
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Whoomp! Tiny Kukolka sparked cheerful golden flames beneath the steaming brass samovar! What would Baba Yaga say now?",
+     "say": [
+      [
+       "narrator",
+       "Whoomp! Tiny Kookulka sparked cheerful golden flames beneath the steaming brass samovar! What would Bahba Yi-gah say now?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Baba Yaga's Golden Sun-Ember",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Baba Yaga stepped closer, sniffing sweet berry tea while her oiled gate swung gently and her cat purred.",
+     "say": [
+      [
+       "narrator",
+       "Bahba Yi-gah stepped closer, sniffing sweet berry tea while her oiled gate swung gently and her cat purred."
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Quietly Baba Yaga lowered her pestle, her grumpy scowl melting away. \"Nobody ever treated my clearing so kindly!\"",
+     "say": [
+      [
+       "narrator",
+       "Quietly Bahba Yi-gah lowered her pestle, her grumpy scowl melting away."
+      ],
+      [
+       "baba",
+       "Nobody ever treated my clearing so kindly!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Crackle! Smiling warmly, Baba Yaga lifted a bright golden sun-ember from her stove. \"A kind heart helped you!\"",
+     "say": [
+      [
+       "narrator",
+       "Crackle! Smiling warmly, Bahba Yi-gah lifted a bright golden sun-ember from her stove."
+      ],
+      [
+       "baba",
+       "A kind heart helped you!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Vasilissa held up her unlit brass lantern right beside Baba Yaga's glowing golden sun-ember, ready for its flame!",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa held up her unlit brass lantern right beside Bahba Yi-gah's glowing golden sun-ember, ready for its flame!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Baba Yaga gave her a honey-cake basket as the chicken-legged hut bowed low! Could Vasilissa reach home before dawn?",
+     "say": [
+      [
+       "narrator",
+       "Bahba Yi-gah gave her a honey-cake basket as the chicken-legged hut bowed... low! Could Vasi-leesa reach home before dawn?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Lantern Light Through Rosy Birches",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Crunch! Before dawn, Vasilissa hurried along the snowy birch trail, carrying her glowing lantern and honey-cake basket!",
+     "say": [
+      [
+       "narrator",
+       "Crunch! Before dawn, Vasi-leesa hurried along the snowy birch trail, carrying her glowing lantern and honey-cake basket!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Warm golden lantern-beams melted the shadows, revealing four sleepy frost-stars resting along the white silver-birch branches!",
+     "say": [
+      [
+       "narrator",
+       "Warm golden lantern-beams melted the shadows, revealing four sleepy frost-stars resting along the white silver-birch branches!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Beside the rowan bush, the grey hare and red squirrel hopped out and followed Vasilissa joyfully homeward!",
+     "say": [
+      [
+       "narrator",
+       "Beside the rowan bush, the grey hare and red squirrel hopped out and followed Vasi-leesa joyfully homeward!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "\"Almost home, brave Vasilissa!\" cheered tiny Kukolka from her basket as rosy winter dawn painted the sky.",
+     "say": [
+      [
+       "kukolka",
+       "Almost home, brave Vasi-leesa!"
+      ],
+      [
+       "narrator",
+       "cheered tiny Kookulka from her basket as rosy winter dawn painted the sky."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Ahead through rosy birches shone the carved roof of Papa Ivan's cottage! Was Papa watching from the porch?",
+     "say": [
+      [
+       "narrator",
+       "Ahead through rosy birches shone the carved roof of Papa Iv-ahn's... cottage! Was Papa watching from the porch?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Warm Fire and Honey Cakes",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Yes! \"Vasilissa, you are home!\" cried Papa Ivan joyfully, hugging her tight upon their carved wooden porch!",
+     "say": [
+      [
+       "narrator",
+       "Yes!"
+      ],
+      [
+       "ivan",
+       "Vasi-leesa, you are home!"
+      ],
+      [
+       "narrator",
+       "cried Papa Iv-ahn joyfully, hugging her tight upon their carved wooden porch!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Whoosh! Vasilissa touched her golden sun-ember lantern to the cold hearth, waking a cheerful crackling cottage fire!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Vasi-leesa touched her golden sun-ember lantern to the cold hearth, waking a cheerful crackling cottage fire!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "The grey hare and red squirrel tugged a basket ribbon. Sproing! Nose to nose they tumbled onto a cushion!",
+     "say": [
+      [
+       "narrator",
+       "The grey hare and red squirrel tugged a basket ribbon. Sproing! Nose to nose they tumbled onto a cushion!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Beside Vasilissa's honey cakes, Papa Ivan set a berry teapot and pine nuts near a platter, cup, and bowl.",
+     "say": [
+      [
+       "narrator",
+       "Beside Vasi-leesa's honey cakes, Papa Iv-ahn set a berry teapot and pine nuts near a platter, cup, and bowl."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Vasilissa, tiny Kukolka, and Papa Ivan beamed beside their glowing hearth! Gentle kindness warms even the coldest winter night!",
+     "say": [
+      [
+       "narrator",
+       "Vasi-leesa, tiny Kookulka, and Papa Iv-ahn beamed beside their glowing... hearth! Gentle kindness warms even the coldest winter night!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Brave Vasilissa walked into the snowy birch woods to bring warm fire home to Papa Ivan.",
+   "say": [
+    [
+     "closing",
+     "Brave Vasi-leesa walked into the snowy birch woods to bring warm fire home to Papa Iv-ahn."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Whenever chores looked hard, she stayed polite, shared with tiny Kukolka, and worked step by step.",
+   "say": [
+    [
+     "closing",
+     "Whenever chores looked hard, she stayed polite, shared with tiny Kookulka, and worked step by step."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Even grumpy Baba Yaga smiled when gentle kindness cared for her gate, her cat, and her hearth!",
+   "say": [
+    [
+     "closing",
+     "Even grumpy Bahba Yi-gah smiled when gentle kindness cared for her gate, her cat, and her hearth!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Stay close, little doll, shine bright! A kind and polite heart brings warmth everywhere it goes.",
+   "say": [
+    [
+     "closing",
+     "Stay close, little doll, shine bright! A kind and polite heart brings warmth everywhere it goes."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Help get ready! Match the brass lantern to Vasilissa, bread crust to Kukolka, and warm shawl to Papa Ivan.",
+   "say": [
+    [
+     "narrator",
+     "Help get ready! Match the brass lantern to Vasi-leesa, bread crust to Kookulka, and warm shawl to Papa Iv-ahn."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "All ready for winter! Brass lantern, rye bread crust, and warm woollen shawl sit ready for each friend!",
+   "say": [
+    [
+     "narrator",
+     "All ready for winter! Brass lantern, rye bread crust, and warm woollen shawl sit ready for each friend!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Light the dusky birch trail with Kukolka! Tap all four wooden trail-lanterns to wake their amber glow.",
+   "say": [
+    [
+     "narrator",
+     "Light the dusky birch trail with Kookulka! Tap all four wooden trail-lanterns to wake their amber glow."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Warm amber glow! All four wooden trail-lanterns shine beside the wiggling rowan bush!",
+   "say": [
+    [
+     "narrator",
+     "Warm amber glow! All four wooden trail-lanterns shine beside the wiggling rowan bush!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Cross the icy woodland brook with Vasilissa! Tap the three mossy stones in order from left to right.",
+   "say": [
+    [
+     "narrator",
+     "Cross the icy woodland brook with Vasi-leesa! Tap the three mossy stones in order from left to right."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Hop, hop, hop! Vasilissa leaps safely across all three mossy brook-stones!",
+   "say": [
+    [
+     "narrator",
+     "Hop, hop, hop! Vasi-leesa leaps safely across all three mossy brook-stones!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Wake Kukolka's golden turning magic! Tap tiny Kukolka three times when the ring turns green.",
+   "say": [
+    [
+     "narrator",
+     "Wake Kookulka's golden turning magic! Tap tiny Kookulka three times when the ring turns green."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Three bright golden sparks! Tiny Kukolka shines with warm golden magic upon the mossy stump!",
+   "say": [
+    [
+     "narrator",
+     "Three bright golden sparks! Tiny Kookulka shines with warm golden magic upon the mossy stump!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "First chore! Match golden wheat to the sack, dark poppy seeds to the bowl, and pebbles to the bucket.",
+   "say": [
+    [
+     "narrator",
+     "First chore! Match golden wheat to the sack, dark poppy seeds to the bowl, and pebbles to the bucket."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Every grain sorted! Woven sack, painted bowl, and wooden bucket stand neat and full!",
+   "say": [
+    [
+     "narrator",
+     "Every grain sorted! Woven sack, painted bowl, and wooden bucket stand neat and full!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Sweep the snowy yard with Vasilissa! Tap all four messy snow-heaps to brush the mossy yard clean.",
+   "say": [
+    [
+     "narrator",
+     "Sweep the snowy yard with Vasi-leesa! Tap all four messy snow-heaps to brush the mossy yard clean."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Clean and tidy! Every messy snow-heap vanishes from the mossy forest yard!",
+   "say": [
+    [
+     "narrator",
+     "Clean and tidy! Every messy snow-heap vanishes from the mossy forest yard!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Wake the stove! Match logs to the firebox, pine cones to the grate, and berries to the samovar.",
+   "say": [
+    [
+     "narrator",
+     "Wake the stove! Match logs to the firebox, pine cones to the grate, and berries to the samovar."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "All set to kindle! Dry birch logs, pine cones, and sweet berries fill the stove and samovar!",
+   "say": [
+    [
+     "narrator",
+     "All set to kindle! Dry birch logs, pine cones, and sweet berries fill the stove and samovar!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Light Vasilissa's brass lantern with Baba Yaga's sun-ember! Tap three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Light Vasi-leesa's brass lantern with Bahba Yi-gah's sun-ember! Tap three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three golden bursts! Vasilissa's brass lantern shines like a warm little sun!",
+   "say": [
+    [
+     "narrator",
+     "Three golden bursts! Vasi-leesa's brass lantern shines like a warm little sun!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Share the lantern's warm golden light! Tap all four frost-stars along the silver-birch branches to wake them.",
+   "say": [
+    [
+     "narrator",
+     "Share the lantern's warm golden light! Tap all four frost-stars along the silver-birch branches to wake them."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Twinkle and shine! Four golden frost-stars light the snowy path right toward home!",
+   "say": [
+    [
+     "narrator",
+     "Twinkle and shine! Four golden frost-stars light the snowy path right toward home!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the feast! Match cakes to the platter, the teapot to the cup, and pine nuts to the bowl.",
+   "say": [
+    [
+     "narrator",
+     "Share the feast! Match cakes to the platter, the teapot to the cup, and pine nuts to the bowl."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Warmth for all! Honey cakes, hot berry tea, and laughter fill the cosy Russian cottage!",
+   "say": [
+    [
+     "narrator",
+     "Warmth for all! Honey cakes, hot berry tea, and laughter fill the cosy Russian cottage!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "vasilissa": [
+   "I am Vasilissa! I wear my warm crimson Russian sarafan dress and red winter boots!",
+   "When the winter wind puffed out our hearth, I walked bravely through the silver-birch woods!",
+   "Whenever a chore looked too big, I stayed polite and shared a bread crumb with Kukolka!",
+   "Oiling the squeaky wooden gate and comforting Baba Yaga's black cat made new friends!",
+   "Now Baba Yaga's golden sun-ember lantern keeps Papa Ivan and our pine-log cottage warm!"
+  ],
+  "kukolka": [
+   "I am Kukolka, Vasilissa's tiny painted wooden pocket-doll! Papa Ivan carved me from birch wood!",
+   "Whenever Vasilissa shares a tiny bread crumb, my painted eyes twinkle with warm helping magic!",
+   "I whispered the old forest rhyme so the hut on chicken legs spun right round!",
+   "Sorting wheat and poppy seeds, sweeping snow-heaps, and waking the cold stove is fun together!",
+   "Stay close, little doll, shine bright! Even the smallest helper can bring big warmth!"
+  ],
+  "baba": [
+   "I am Baba Yaga of the deep Russian silver-birch forest! Do you like my patterned woollen shawl?",
+   "I zoom across the starry treetops inside my carved wooden mortar, steering with my pestle!",
+   "My cosy log hut stands high on two giant yellow chicken legs and turns round when called!",
+   "At first I grumbled, until polite Vasilissa oiled my gate, petted my cat, and brewed sweet berry tea!",
+   "Gentle kindness melted my grumpy frown, so I shared my golden sun-ember and warm honey cakes!"
+  ],
+  "ivan": [
+   "I am Papa Ivan, Vasilissa's woodcarver father! We live in our carved Russian pine-log cottage.",
+   "When the winter wind blew out our hearth-fire, my brave daughter set off with her brass lantern!",
+   "I carved tiny wooden Kukolka to keep Vasilissa company wherever she goes!",
+   "Sharing Baba Yaga's sweet honey cakes and hot samovar berry tea warms the whole morning!"
+  ],
+  "hut": [
+   "Baba Yaga's famous carved wooden log hut, perched high upon two giant yellow chicken legs!",
+   "Say the friendly forest rhyme, and clack-clack, the hut spins right round to face you!"
+  ],
+  "mortar": [
+   "Baba Yaga's carved wooden flying mortar, steered with a wooden pestle and swept behind with a birch broom!"
+  ],
+  "lantern": [
+   "Vasilissa's brass cottage lantern, lit forever with Baba Yaga's glowing golden sun-ember!"
+  ],
+  "samovar": [
+   "A tall polished Russian brass samovar that brews fragrant hot berry tea over warm hearth-coals!"
+  ],
+  "cat": [
+   "Baba Yaga's sleek black cat, who bounced off a birch broom into soft hay and purred at Vasilissa's touch!"
+  ],
+  "hare": [
+   "A gentle grey Russian woodland hare who shared Vasilissa's bread crumb beside the red-berried rowan bush!"
+  ],
+  "squirrel": [
+   "A plump red birch-forest squirrel who tumbled into soft moss and loves sweet pine nuts and honey cakes!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Arthur Ransome, Old Peter's Russian Tales, 1916, 'Baba Yaga', and Alexander Afanasyev's classic 'Vasilisa Prekrasnaya', trans. Ralston 1873 & Wheeler 1912): a cruel stepmother sends Vasilissa into the dark woods to man-eating Baba Yaga's bone-fenced hut on chicken legs; aided by a pocket doll (and in Ransome by kindness to animals, a rusty gate, and hungry creatures), she completes impossible chores and carries home a blazing skull-lantern that burns the wicked stepfamily to ashes. Ours (gentle, warm, and wondrous for ages 4-8 per research/folk-tales.md entry 16 'soften the fright for little children'): 1) Zero cruelty, zero bone/skull fence, zero cannibal threats, and zero destructive fire: a winter gust puffs out Papa Ivan's cottage hearth, so brave Vasilissa sets out with an unlit brass lantern, rye bread, and her painted wooden doll Kukolka to ask grumpy forest grandmother Baba Yaga for ever-bright fire. 2) Keeps every beloved Slavic fairy-tale marvel: snowy silver-birch woods, Baba Yaga zooming in her wooden mortar with pestle and birch broom, oiling the squeaky wooden gate, chanting the turning rhyme so the hut on two giant yellow chicken legs spins round ('Clack-clack!'), and Kukolka helping solve three classic chores (sorting wheat/poppy seeds/pebbles, sweeping snow-heaps while comforting Baba Yaga's bouncing black cat, and loading logs/cones/berries to kindle the outdoor brick stove under the brass samovar). 3) Heartfelt emotional twist (Spread 8): moved because nobody had ever oiled her gate, comforted her cat, or brewed warm berry tea for her before, Baba Yaga's grumpy frown melts into a warm smile, and she gifts Vasilissa a glowing golden sun-ember for her brass lantern plus a honey-cake basket!",
+  "moral": "Stay close, little doll, shine bright! Staying polite, working step by step, and showing gentle kindness can warm even the grumpiest heart.",
+  "changes": "1 Culture-true Russian fairy-tale folk-art look (traditional carved pine-log izba cottages with painted nalichniki window-shutters and Khokhloma red-gold-berry motifs, crimson embroidered sarafan, fur-trimmed winter vest, and warm red winter boots on Vasilissa; patterned Pavlovsky-style woollen shawl and warm felt valenki winter boots on Baba Yaga; painted wooden pocket-doll Kukolka, tall brass samovar, silver-birch and red-rowan winter woods — zero modern studio/film designs and zero frightening skulls). All woodland/yard animals (grey hare, red squirrel, black cat) are non-speaking and stay plain per EDDIE-TASTE.md line 19. 2 Every speaking character (vasilissa, kukolka, baba, ivan) has its own distinct gender-matched Kokoro voice. 3 Every named creature, object, weather, and light across all 50 story lines is concrete and stageable across 3 reusable places (cottage, birch-path, hut-clearing).",
+  "level": "A1-A2, past simple, crisp British English sentences for ages 4-8 (50 story lines, 14-19 words/line, max 19 words across all story, moral, and game lines so phone .ra-page stays compact). Consistent British spelling (woollen, cosy, grey, patterned). Core vocabulary: cottage, hearth, fire, lantern, doll, birch, snow, mortar, pestle, broom, hut, chicken legs, gate, wheat, seeds, cat, stove, samovar, teapot, cakes.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: vasilissa (bf_alice +2), kukolka (bf_lily +4), baba (bf_emma -2), ivan (bm_daniel -1). Narrator (bm_george) reads narration, game prompts, and 3rd-person animal/prop touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain '<Help me / Come help / Stay close>, little doll, shine bright!' across spreads 3 (3.4), 6 (6.3), and 7 (7.3, pausing 'shine... bright!' before the last word on its 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a clause-final guessable word, never before the narrator's last word (1.5 woods, 2.5 sky, 3.5 bank, 4.5 porch, 5.5 bucket, 6.5 clean, 7.3 bright, 8.5 low, 9.5 cottage, 10.5 hearth); P4 2.3 ends on 'Who was hiding behind it?' with a wiggling red-berried rowan bush followed by game.2 (>= 1.5 s wait before 2.4 brings the grey hare out from behind that very bush); P5 threes (three mossy brook-stones, three chores from Baba Yaga, three stove items, three refrain calls, three lantern bursts); P6 natural English sound words verified in British Kokoro, <=2 per spread, zero adjacent repeats and zero bell sounds across the book (1 Whoosh, 2 Plop/Swoosh, 3 Tap-tap, 4 Creak/Clack-clack, 5 Thump, 6 Boing, 7 Whoomp, 8 Crackle, 9 Crunch, 10 Whoosh/Sproing); P8 harmless animal slapstick in all three thirds as standalone !-ended sentences (2.2 red squirrel tumbles into soft moss Plop!, 6.2 black cat bounces off broom bristles into soft hay Boing!, 10.3 grey hare and red squirrel tug basket ribbon and tumble onto cushion Sproing!); P11 energy curve E1 E2 E2 E3 E2 E2 E2 E3 E2 E2 + Moral E1; P16 non-repeating 10-game sequence (pair, collect, order, timing, pair, collect, pair, timing, collect, pair)."
+ }
+}

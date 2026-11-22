@@ -53,16 +53,16 @@
     "zh": "芭芭雅嘎与瓦西丽莎",
     "ja": "バーバ・ヤガーと ワシリッサ"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
+   "cover": "../shelf/books/baba-yaga/plate.webp",
+   "spine": "#247e3c",
+   "gold": "#f8df88",
    "culture": "Russian",
    "region": "europe",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=baba-yaga&s=s01"
   },
   {

@@ -1,0 +1,31 @@
+{
+ "beds": [
+  "winter-cottage",
+  "snowy-birches",
+  "icy-brook-night",
+  "forest-clearing",
+  "warm-hearth",
+  "morning-birds"
+ ],
+ "shots": [],
+ "pools": {
+  "wind-gust": 1,
+  "puff-breath": 2,
+  "gate-creak": 2,
+  "chicken-clack": 2,
+  "broom-sweep": 2,
+  "cat-mew": 2,
+  "fire-crackle": 1,
+  "steam-hiss": 2,
+  "seeds-patter": 2,
+  "soft-plop": 2,
+  "leaves-rustle": 2,
+  "snow-crunch": 2,
+  "steps-stone": 2,
+  "steps-wood": 2,
+  "wood-tap": 2,
+  "cloth-rustle": 2,
+  "child-giggle": 2,
+  "wing-buzz": 2
+ }
+}

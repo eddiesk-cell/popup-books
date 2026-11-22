@@ -5627,6 +5627,7 @@
       "look": "the star Vega in the night sky (a card from the sky lane)",
       "size": 0.11,
       "gait": "fly",
+      "selflit": true,
       "versions": [
         "day"
       ],
@@ -5649,6 +5650,7 @@
       "look": "the star Altair in the night sky (a card from the sky lane)",
       "size": 0.11,
       "gait": "fly",
+      "selflit": true,
       "versions": [
         "day"
       ],
@@ -5671,6 +5673,7 @@
       "look": "the star Tarazed in the night sky (a card from the sky lane)",
       "size": 0.06,
       "gait": "fly",
+      "selflit": true,
       "versions": [
         "day"
       ],
@@ -5693,6 +5696,7 @@
       "look": "the star Alshain in the night sky (a card from the sky lane)",
       "size": 0.055,
       "gait": "fly",
+      "selflit": true,
       "versions": [
         "day"
       ],
@@ -7696,6 +7700,50 @@
     "momotaro-sea-rock": {
       "look": "Momotaro book 8 paper puppet: Craggy coastal sea rock hazard.",
       "size": 0.08,
+      "gait": "still",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 5
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Momotaro"
+      ],
+      "cut": true
+    },
+    "momotaro-sea-rock-2": {
+      "look": "Momotaro book 8 paper puppet: Wide twin-ridged dark coastal sea reef with white spray.",
+      "size": 0.072,
+      "gait": "still",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 5
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Momotaro"
+      ],
+      "cut": true
+    },
+    "momotaro-sea-rock-3": {
+      "look": "Momotaro book 8 paper puppet: Tall leaning coastal basalt sea stack with mossy ridges.",
+      "size": 0.086,
       "gait": "still",
       "versions": [
         "day"

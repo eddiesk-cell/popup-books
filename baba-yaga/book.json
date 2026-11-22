@@ -1,0 +1,334 @@
+{
+ "id": "baba-yaga",
+ "released": true,
+ "words": false,
+ "chars": "baba-yaga-",
+ "title": "Baba Yaga and Vasilissa",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Cold Hearth and the Pocket Doll",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "1.5",
+    "pairs": [
+     [
+      "brass-lantern",
+      "vasilissa"
+     ],
+     [
+      "bread-crust",
+      "kukolka"
+     ],
+     [
+      "warm-shawl",
+      "ivan"
+     ]
+    ],
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    },
+    "start": "Help get ready! Match the brass lantern to Vasilissa, bread crust to Kukolka, and warm shawl to Papa Ivan.",
+    "praise": "All ready for winter! Brass lantern, rye bread crust, and warm woollen shawl sit ready for each friend!"
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Friends Along the Silver-Birch Trail",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "2.4",
+    "targets": [
+     "trail-lantern-1",
+     "trail-lantern-2",
+     "trail-lantern-3",
+     "trail-lantern-4"
+    ],
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    },
+    "start": "Light the dusky birch trail with Kukolka! Tap all four wooden trail-lanterns to wake their amber glow.",
+    "praise": "Warm amber glow! All four wooden trail-lanterns shine beside the wiggling rowan bush!"
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "The Flying Wooden Mortar",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "game": {
+    "type": "order",
+    "who": "vasilissa",
+    "before": "3.5",
+    "targets": [
+     "brook-stone-1",
+     "brook-stone-2",
+     "brook-stone-3"
+    ],
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    },
+    "start": "Cross the icy woodland brook with Vasilissa! Tap the three mossy stones in order from left to right.",
+    "praise": "Hop, hop, hop! Vasilissa leaps safely across all three mossy brook-stones!"
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "The Hut on Chicken Legs",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "4.4",
+    "targets": [
+     "kukolka"
+    ],
+    "light": [
+     "turn-spark-1",
+     "turn-spark-2",
+     "turn-spark-3"
+    ],
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    },
+    "start": "Wake Kukolka's golden turning magic! Tap tiny Kukolka three times when the ring turns green.",
+    "praise": "Three bright golden sparks! Tiny Kukolka shines with warm golden magic upon the mossy stump!"
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Sorting the Mixed Grain Heap",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "5.5",
+    "pairs": [
+     [
+      "golden-wheat",
+      "woven-sack"
+     ],
+     [
+      "poppy-seeds",
+      "painted-bowl"
+     ],
+     [
+      "grey-pebbles",
+      "wooden-bucket"
+     ]
+    ],
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    },
+    "start": "First chore! Match golden wheat to the sack, dark poppy seeds to the bowl, and pebbles to the bucket.",
+    "praise": "Every grain sorted! Woven sack, painted bowl, and wooden bucket stand neat and full!"
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Sweeping the Starry Forest Yard",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "6.5",
+    "targets": [
+     "snow-heap-1",
+     "snow-heap-2",
+     "snow-heap-3",
+     "snow-heap-4"
+    ],
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    },
+    "start": "Sweep the snowy yard with Vasilissa! Tap all four messy snow-heaps to brush the mossy yard clean.",
+    "praise": "Clean and tidy! Every messy snow-heap vanishes from the mossy forest yard!"
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "Waking the Cold Brick Stove",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "7.5",
+    "pairs": [
+     [
+      "dry-logs",
+      "stove-firebox"
+     ],
+     [
+      "stove-cones",
+      "iron-grate"
+     ],
+     [
+      "sweet-berries",
+      "tea-samovar"
+     ]
+    ],
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    },
+    "start": "Wake the stove! Match logs to the firebox, pine cones to the grate, and berries to the samovar.",
+    "praise": "All set to kindle! Dry birch logs, pine cones, and sweet berries fill the stove and samovar!"
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "Baba Yaga's Golden Sun-Ember",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "8.5",
+    "targets": [
+     "brass-lantern"
+    ],
+    "light": [
+     "ember-ray-1",
+     "ember-ray-2",
+     "ember-ray-3"
+    ],
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    },
+    "start": "Light Vasilissa's brass lantern with Baba Yaga's sun-ember! Tap three times when the ring glows green.",
+    "praise": "Three golden bursts! Vasilissa's brass lantern shines like a warm little sun!"
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Lantern Light Through Rosy Birches",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "9.5",
+    "targets": [
+     "frost-star-1",
+     "frost-star-2",
+     "frost-star-3",
+     "frost-star-4"
+    ],
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    },
+    "start": "Share the lantern's warm golden light! Tap all four frost-stars along the silver-birch branches to wake them.",
+    "praise": "Twinkle and shine! Four golden frost-stars light the snowy path right toward home!"
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "Warm Fire and Honey Cakes",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "10.5",
+    "pairs": [
+     [
+      "honey-cakes",
+      "painted-platter"
+     ],
+     [
+      "berry-teapot",
+      "painted-cup"
+     ],
+     [
+      "pine-nuts",
+      "wooden-bowl"
+     ]
+    ],
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    },
+    "start": "Share the feast! Match cakes to the platter, the teapot to the cup, and pine nuts to the bowl.",
+    "praise": "Warmth for all! Honey cakes, hot berry tea, and laughter fill the cosy Russian cottage!"
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What Did We Learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ]
+}
