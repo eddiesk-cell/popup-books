@@ -10735,7 +10735,7 @@
       ],
       "cut": true,
       "selflit": true,
-      "aspect": 2.3448
+      "aspect": 2.1434
     },
     "hare-in-the-moon-clay-lamp": {
       "look": "Warm glowing Indian terracotta clay diya oil lamp with golden flame",
@@ -11850,6 +11850,28 @@
       "look": "Blazing ornate Persian brass courtyard brazier with golden flames",
       "size": 0.068,
       "gait": "idle",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Enchanted Ebony Horse"
+      ],
+      "cut": true
+    },
+    "ebony-horse-butterfly": {
+      "look": "Persian gold-and-turquoise swallowtail butterfly with ornate wings",
+      "size": 0.02,
+      "gait": "fly",
       "versions": [
         "day"
       ],

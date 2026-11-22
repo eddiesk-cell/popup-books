@@ -14,10 +14,6 @@
    "name": "Africa"
   },
   {
-   "id": "europe",
-   "name": "Europe"
-  },
-  {
    "id": "middle-east",
    "name": "The Middle East"
   }
@@ -290,16 +286,16 @@
     "zh": "为什么太阳和月亮住在天上",
     "ja": "たいようと つきが おそらに すむ わけ"
    },
-   "cover": null,
-   "spine": null,
-   "gold": null,
-   "culture": "English",
-   "region": "europe",
+   "cover": "../shelf/books/sun-and-moon/plate.webp",
+   "spine": "#be3422",
+   "gold": "#fce592",
+   "culture": "African",
+   "region": "africa",
    "spreads": [
     11,
     11
    ],
-   "status": "making",
+   "status": "ready",
    "link": "../live/?book=sun-and-moon&s=s01"
   },
   {

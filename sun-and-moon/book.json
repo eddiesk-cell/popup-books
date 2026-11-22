@@ -1,0 +1,324 @@
+{
+ "id": "sun-and-moon",
+ "released": true,
+ "words": false,
+ "chars": "sun-and-moon-",
+ "title": "Why the Sun and the Moon Live in the Sky",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "Friends by the Sparkling Lagoon",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "1.5",
+    "targets": [
+     "turtle-green",
+     "red-crab",
+     "silver-fish-1",
+     "dolphin-blue"
+    ],
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    },
+    "start": "Meet Mmong's sea family with Utin! Tap the green turtle, red crab, silver fish, and blue dolphin.",
+    "praise": "What a big, cheerful family! Every sea friend splashes happily in the lagoon!"
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Raising the Wide Courtyard",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "order",
+    "who": "utin",
+    "before": "2.4",
+    "targets": [
+     "carved-pillar-1",
+     "carved-pillar-2",
+     "carved-pillar-3"
+    ],
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    },
+    "start": "Test the three carved wooden pillars with Utin! Tap each tall pillar in order from left to right.",
+    "praise": "Strong and steady! All three carved wooden pillars stand proud in the golden sunshine!"
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Weaving the Golden Thatch Roof",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "3.5",
+    "pairs": [
+     [
+      "sweet-plantains",
+      "brass-tray"
+     ],
+     [
+      "rosy-shells",
+      "raffia-mat"
+     ],
+     [
+      "cool-coconuts",
+      "wooden-bowl"
+     ]
+    ],
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    },
+    "start": "Set out welcome gifts! Match plantains to the brass tray, shells to the mat, and coconuts to the bowl.",
+    "praise": "Everything looks welcoming! The grand Calabar courtyard is ready for Mmong's big visit!"
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "The Call at the Lagoon",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "4.4",
+    "targets": [
+     "wooden-drum"
+    ],
+    "light": [
+     "drum-spark-1",
+     "drum-spark-2",
+     "drum-spark-3"
+    ],
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    },
+    "start": "Play Utin's cheerful welcome call on the wooden drum! Tap three times when the ring glows green.",
+    "praise": "Three warm drumbeats! Golden music sparkles right past the wiggling green reeds!"
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Ankle-Deep Sparkling Ripples",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "5.5",
+    "targets": [
+     "silver-fish-1",
+     "silver-fish-2",
+     "silver-fish-3",
+     "silver-fish-4"
+    ],
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    },
+    "start": "Welcome the first sea guests inside! Tap all four sparkling silver fish in the water.",
+    "praise": "Shimmer and dart! All four silver fish sparkle happily in the cool courtyard ripples!"
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "Knee-Deep Waves and Red Crabs",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "6.5",
+    "pairs": [
+     [
+      "brass-tray",
+      "dry-shelf"
+     ],
+     [
+      "raffia-basket",
+      "dry-bench"
+     ],
+     [
+      "wooden-drum",
+      "dry-step"
+     ]
+    ],
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    },
+    "start": "Keep things dry! Match the brass tray to the shelf, basket to the bench, and drum to the step.",
+    "praise": "High and dry! Every courtyard treasure rests safely above the knee-deep turquoise waves!"
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "Swimming Turtles and Dolphins",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
+   "game": {
+    "type": "order",
+    "who": "utin",
+    "before": "7.4",
+    "targets": [
+     "red-crab",
+     "turtle-green",
+     "dolphin-blue"
+    ],
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    },
+    "start": "Greet Mmong's sea friends at the gate! Tap the red crab, green turtle, and blue dolphin in order.",
+    "praise": "Ready to enter! Red crab, green turtle, and blue dolphin splash happily at the open gate!"
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "Up on the Thatch Rooftop",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "8.5",
+    "targets": [
+     "rooftop-crowns"
+    ],
+    "light": [
+     "crown-burst-1",
+     "crown-burst-2",
+     "crown-burst-3"
+    ],
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    },
+    "start": "Brighten Utin and Ofiong's glowing crowns on the rooftop! Tap three times when the ring glows green.",
+    "praise": "Three radiant bursts! Golden sunlight and silver moonlight shimmer bright upon the thatch rooftop!"
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Leaping into the Wide Sky",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "9.5",
+    "targets": [
+     "twilight-star-1",
+     "twilight-star-2",
+     "twilight-star-3",
+     "twilight-star-4"
+    ],
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    },
+    "start": "Light up Utin and Ofiong's new sky home! Tap all four twilight stars in the clouds.",
+    "praise": "Twinkle and shine! Four bright twilight stars glow across the wide velvet sky!"
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "A Sparkling Mirror on the Sea",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "10.5",
+    "pairs": [
+     [
+      "golden-sunbeam",
+      "mmong"
+     ],
+     [
+      "silver-moonbeam",
+      "turtle-green"
+     ],
+     [
+      "bright-starlight",
+      "dolphin-blue"
+     ]
+    ],
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    },
+    "start": "Share the sky-glow! Match the golden sunbeam to Mmong, silver moonbeam to the turtle, and starlight to the dolphin.",
+    "praise": "Shining together! Sunbeams, moonbeams, and starlight dance joyfully across Mmong's sparkling waves!"
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What Did We Learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ]
+}

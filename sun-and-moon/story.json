@@ -1,0 +1,1027 @@
+{
+ "words": false,
+ "title": "Why the Sun and the Moon Live in the Sky",
+ "credit": "From the classic West African Efik and Ibibio folk tale of Calabar in Southern Nigeria, published in public-domain English by Elphinstone Dayrell in Folk Stories from Southern Nigeria (1910), with an introduction by Andrew Lang. Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all 6 STORY-REVIEW.md notes applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "utin": {
+   "voice": "bm_fable",
+   "speed": 1.01,
+   "pitch": 1
+  },
+  "ofiong": {
+   "voice": "bf_alice",
+   "speed": 0.98,
+   "pitch": 1
+  },
+  "mmong": {
+   "voice": "bm_daniel",
+   "speed": 0.93,
+   "pitch": -2
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "turtle": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "dolphin": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "crab": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "fish": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "pelican": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "drum": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "tray": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "roof": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Utin": "Ootin",
+  "Utin's": "Ootin's",
+  "Ofiong": "Ofyawng",
+  "Ofiong's": "Ofyawng's",
+  "Mmong": "Muh-mawng",
+  "Mmong's": "Muh-mawng's",
+  "Ibibio": "Ee-bib-ee-oh"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "Friends by the Sparkling Lagoon",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "Long ago in sunny Calabar in Nigeria, Utin the Sun lived on earth and visited the sparkling lagoon.",
+     "say": [
+      [
+       "narrator",
+       "Long ago in sunny Calabar in Nigeria, Ootin the Sun lived on earth and visited the sparkling lagoon."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Splash! Out of the turquoise waves rose Utin's best friend, polite Mmong the Water, in sea-blue cowrie robes.",
+     "say": [
+      [
+       "narrator",
+       "Splash! Out of the turquoise waves rose Ootin's best friend, polite Muh-mawng the Water, in sea-blue cowrie robes."
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "\"Dear Mmong, why do you never visit my home?\" asked Utin. Gently Mmong pointed across the waves.",
+     "say": [
+      [
+       "utin",
+       "Dear Muh-mawng, why do you never visit my home?"
+      ],
+      [
+       "narrator",
+       "asked Ootin. Gently Muh-mawng pointed across the waves."
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "\"My sea family is huge, so a small house cannot hold us!\" said Mmong as four creatures surfaced.",
+     "say": [
+      [
+       "mmong",
+       "My sea family is huge, so a small house cannot hold us!"
+      ],
+      [
+       "narrator",
+       "said Muh-mawng as four creatures surfaced."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Utin smiled warmly and promised to build a giant new home! How big would that courtyard be?",
+     "say": [
+      [
+       "narrator",
+       "Ootin smiled warmly and promised to build a giant new... home! How big would that courtyard be?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Raising the Wide Courtyard",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Very big! Back home, Utin's wise wife Ofiong the Moon wore silver cloth and a bright pearl crown.",
+     "say": [
+      [
+       "narrator",
+       "Very big! Back home, Ootin's wise wife Ofyawng the Moon wore silver cloth and a bright pearl crown."
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "\"Let us build a grand courtyard so Mmong and all his sea friends can visit!\" cheered Utin.",
+     "say": [
+      [
+       "utin",
+       "Let us build a grand courtyard so Muh-mawng and all his sea friends can visit!"
+      ],
+      [
+       "narrator",
+       "cheered Ootin."
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Thump! Together they shaped warm red-earth walls and raised three tall carved wooden pillars upright.",
+     "say": [
+      [
+       "narrator",
+       "Thump! Together they shaped warm red-earth walls and raised three tall carved wooden pillars upright."
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Ofiong painted cheerful cream patterns along the walls. \"Open wide, warm home, welcome all!\"",
+     "say": [
+      [
+       "narrator",
+       "Ofyawng painted cheerful cream patterns along the walls."
+      ],
+      [
+       "ofiong",
+       "Open wide, warm home, welcome all!"
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Strong walls and pillars framed the wide sunny courtyard! How would they roof their giant home?",
+     "say": [
+      [
+       "narrator",
+       "Strong walls and pillars framed the wide sunny... courtyard! How would they roof their giant home?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Weaving the Golden Thatch Roof",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "Climbing sturdy wooden ladders, Utin and Ofiong wove golden raffia-palm thatch across the wide courtyard roof!",
+     "say": [
+      [
+       "narrator",
+       "Climbing sturdy wooden ladders, Ootin and Ofyawng wove golden raffia-palm thatch across the wide courtyard roof!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Below, a plump white pelican tugged a stray palm frond. Plop! Backwards he tumbled into a soft basket!",
+     "say": [
+      [
+       "narrator",
+       "Below, a plump white pelican tugged a stray palm frond. Plop! Backwards he tumbled into a soft basket!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Climbing down, Utin and Ofiong chuckled kindly and hung warm lanterns beside the wide carved wooden gate.",
+     "say": [
+      [
+       "narrator",
+       "Climbing down, Ootin and Ofyawng chuckled kindly and hung warm lanterns beside the wide carved wooden gate."
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Ofiong set out sweet yellow plantains, rosy shells, and cool coconuts beside a brass tray, mat, and bowl.",
+     "say": [
+      [
+       "narrator",
+       "Ofyawng set out sweet yellow plantains, rosy shells, and cool coconuts beside a brass tray, mat, and bowl."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Warm lanterns shone beside the wide open courtyard gate! Was Mmong waiting down by the lagoon?",
+     "say": [
+      [
+       "narrator",
+       "Warm lanterns shone beside the wide open courtyard... gate! Was Muh-mawng waiting down by the lagoon?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Call at the Lagoon",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Yes! Down at the sunlit lagoon shore, Mmong rippled happily through the turquoise shallows to greet Utin.",
+     "say": [
+      [
+       "narrator",
+       "Yes! Down at the sunlit lagoon shore, Muh-mawng rippled happily through the turquoise shallows to greet Ootin."
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "\"Our wide new courtyard is ready!\" cheered Utin. Rat-a-tat! He tapped his carved wooden drum.",
+     "say": [
+      [
+       "utin",
+       "Our wide new courtyard is ready!"
+      ],
+      [
+       "narrator",
+       "cheered Ootin. Rat-a-tat! He tapped his carved wooden drum."
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Suddenly tall green reeds wiggled and splashed in the shallows! Who was hiding behind them?",
+     "say": [
+      [
+       "narrator",
+       "Suddenly tall green reeds wiggled and splashed in the shallows! Who was hiding behind them?"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Out swam the green turtle, red crab, silver fish, and blue dolphin! \"May all my family come?\" asked Mmong.",
+     "say": [
+      [
+       "narrator",
+       "Out swam the green turtle, red crab, silver fish, and blue dolphin!"
+      ],
+      [
+       "mmong",
+       "May all my family come?"
+      ],
+      [
+       "narrator",
+       "asked Muh-mawng."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "\"Come visit!\" beamed Utin, hurrying home up the sandy shore! Would they all fit inside?",
+     "say": [
+      [
+       "utin",
+       "Come visit!"
+      ],
+      [
+       "narrator",
+       "beamed Ootin, hurrying home up the sandy... shore! Would they all fit inside?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Ankle-Deep Sparkling Ripples",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Knock-knock! Polite Mmong arrived at the open courtyard gate while Utin and Ofiong smiled warmly.",
+     "say": [
+      [
+       "narrator",
+       "Knock-knock! Polite Muh-mawng arrived at the open courtyard gate while Ootin and Ofyawng smiled warmly."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "\"Friends, may I come inside with my little silver fish?\" asked Mmong at the doorway.",
+     "say": [
+      [
+       "mmong",
+       "Friends, may I come inside with my little silver fish?"
+      ],
+      [
+       "narrator",
+       "asked Muh-mawng at the doorway."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "\"Come right in!\" welcomed Ofiong. Pitter-patter! Cool ankle-deep water rippled gently across the sunny courtyard floor.",
+     "say": [
+      [
+       "ofiong",
+       "Come right in!"
+      ],
+      [
+       "narrator",
+       "welcomed Ofyawng. Pitter-patter! Cool ankle-deep water rippled gently across the sunny courtyard floor."
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Four darting silver fish glinted near the carved pillars, eager to explore the cheerful courtyard!",
+     "say": [
+      [
+       "narrator",
+       "Four darting silver fish glinted near the carved pillars, eager to explore the cheerful courtyard!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Utin laughed as cool blue ripples tickled their toes! Who was splashing toward the gate next?",
+     "say": [
+      [
+       "narrator",
+       "Ootin laughed as cool blue ripples tickled their... toes! Who was splashing toward the gate next?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Knee-Deep Waves and Red Crabs",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Slosh! Knee-deep turquoise waves swirled through the gate, carrying red shore crabs and rosy spiral shells!",
+     "say": [
+      [
+       "narrator",
+       "Slosh! Knee-deep turquoise waves swirled through the gate, carrying red shore crabs and rosy spiral shells!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "A curious red crab hopped onto a floating coconut bowl. Boing! Off it bounced into soft seafoam!",
+     "say": [
+      [
+       "narrator",
+       "A curious red crab hopped onto a floating coconut bowl. Boing! Off it bounced into soft seafoam!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "\"Friend Utin, the water is knee-deep! May more sea friends enter?\" called Mmong politely.",
+     "say": [
+      [
+       "mmong",
+       "Friend Ootin, the water is knee-deep! May more sea friends enter?"
+      ],
+      [
+       "narrator",
+       "called Muh-mawng politely."
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "\"Splash in, warm home, welcome all!\" cheered Utin. Near a dry shelf, bench, and step sat their treasures.",
+     "say": [
+      [
+       "utin",
+       "Splash in, warm home, welcome all!"
+      ],
+      [
+       "narrator",
+       "cheered Ootin. Near a dry shelf, bench, and step sat their treasures."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Still deeper blue swells gathered outside the carved wooden gate! How high would Mmong rise?",
+     "say": [
+      [
+       "narrator",
+       "Still deeper blue swells gathered outside the carved wooden... gate! How high would Muh-mawng rise?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Swimming Turtles and Dolphins",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "Swoosh! Waist-deep ocean waves rolled across the courtyard, lifting floating raffia mats in gentle foamy swirls!",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! Waist-deep ocean waves rolled across the courtyard, lifting floating raffia mats in gentle foamy swirls!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Utin and Ofiong stepped onto the high veranda ledge while three sea friends waited by the gate.",
+     "say": [
+      [
+       "narrator",
+       "Ootin and Ofyawng stepped onto the high veranda ledge while three sea friends waited by the gate."
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "A red crab, a green sea turtle, and a curved blue dolphin peeked eagerly inside!",
+     "say": [
+      [
+       "narrator",
+       "A red crab, a green sea turtle, and a curved blue dolphin peeked eagerly inside!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "In they came! The crab scuttled, the green turtle paddled past lanterns, and the blue dolphin leaped!",
+     "say": [
+      [
+       "narrator",
+       "In they came! The crab scuttled, the green turtle paddled past lanterns, and the blue dolphin leaped!"
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Foaming blue swells lapped right up toward the veranda roof! Where could Utin and Ofiong climb?",
+     "say": [
+      [
+       "narrator",
+       "Foaming blue swells lapped right up toward the veranda... roof! Where could Ootin and Ofyawng climb?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Up on the Thatch Rooftop",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Quickly Utin and Ofiong climbed the sturdy wooden ladder right up onto the golden palm-thatch rooftop!",
+     "say": [
+      [
+       "narrator",
+       "Quickly Ootin and Ofyawng climbed the sturdy wooden ladder right up onto the golden palm-thatch rooftop!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Gurgle! Sparkling sunset-tinted waves swelled past the carved pillars right up to the thatch eaves!",
+     "say": [
+      [
+       "narrator",
+       "Gurgle! Sparkling sunset-tinted waves swelled past the carved pillars right up to the thatch eaves!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "\"Dear friends, my deep ocean waves are still rising! Shall we stop now, or come in?\" boomed Mmong.",
+     "say": [
+      [
+       "mmong",
+       "Dear friends, my deep ocean waves are still rising! Shall we stop now, or come in?"
+      ],
+      [
+       "narrator",
+       "boomed Muh-mawng."
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Ofiong held Utin's hand as their crowns shone bright. \"Rise high, warm home, welcome all!\"",
+     "say": [
+      [
+       "narrator",
+       "Ofyawng held Ootin's hand as their crowns shone bright."
+      ],
+      [
+       "ofiong",
+       "Rise high, warm home, welcome... all!"
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Foaming waves splashed right onto the thatch roof-peak! Where would Utin and Ofiong leap now?",
+     "say": [
+      [
+       "narrator",
+       "Foaming waves splashed right onto the thatch roof-peak! Where would Ootin and Ofyawng leap now?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Leaping into the Wide Sky",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Whoosh! Hand in hand, Utin and Ofiong leaped along their shining beams into the wide velvet sky!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Hand in hand, Ootin and Ofyawng leaped along their shining beams into the wide velvet sky!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Down below, sparkling blue waves covered the thatch rooftop! The green turtle and blue dolphin bobbed happily together.",
+     "say": [
+      [
+       "narrator",
+       "Down below, sparkling blue waves covered the thatch... rooftop! The green turtle and blue dolphin bobbed happily together."
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Gentle Mmong gazed up with worried eyes. \"Oh dear! My big sea family crowded out your home!\"",
+     "say": [
+      [
+       "narrator",
+       "Gentle Muh-mawng gazed up with worried eyes."
+      ],
+      [
+       "mmong",
+       "Oh dear! My big sea family crowded out your home!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "Warmly Utin and Ofiong smiled from the soft clouds, where four quiet twilight stars rested round them.",
+     "say": [
+      [
+       "narrator",
+       "Warmly Ootin and Ofyawng smiled from the soft clouds, where four quiet twilight stars rested round them."
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "\"Do not worry, dear Mmong!\" called Ofiong softly. \"Look what our shining light does upon your waves!\"",
+     "say": [
+      [
+       "ofiong",
+       "Do not worry, dear Muh-mawng!"
+      ],
+      [
+       "narrator",
+       "called Ofyawng softly."
+      ],
+      [
+       "ofiong",
+       "Look what our shining light does upon your waves!"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "A Sparkling Mirror on the Sea",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "Whoomp! Golden sunbeams and silver moonbeams danced across Mmong's blue waves like a giant sparkling mirror!",
+     "say": [
+      [
+       "narrator",
+       "Whoomp! Golden sunbeams and silver moonbeams danced across Muh-mawng's blue waves like a giant sparkling mirror!"
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "\"From up here we shine on everyone, and your waves shine right back!\" cheered Utin joyfully.",
+     "say": [
+      [
+       "utin",
+       "From up here we shine on everyone, and your waves shine right back!"
+      ],
+      [
+       "narrator",
+       "cheered Ootin joyfully."
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "Down below, the green turtle and blue dolphin chased a moonbeam ripple. Sproing! They bumped nose to nose!",
+     "say": [
+      [
+       "narrator",
+       "Down below, the green turtle and blue dolphin chased a moonbeam ripple. Sproing! They bumped nose to nose!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "Mmong laughed happily as a golden sunbeam, a silver moonbeam, and bright starlight hovered above the waves!",
+     "say": [
+      [
+       "narrator",
+       "Muh-mawng laughed happily as a golden sunbeam, a silver moonbeam, and bright starlight hovered above the waves!"
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Now Utin and Ofiong shine high in the wide sky! Every day and night, they greet Mmong's sparkling waves!",
+     "say": [
+      [
+       "narrator",
+       "Now Ootin and Ofyawng shine high in the wide... sky! Every day and night, they greet Muh-mawng's sparkling waves!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Warm Utin and gentle Ofiong opened their courtyard wide to welcome their friend Mmong.",
+   "say": [
+    [
+     "closing",
+     "Warm Ootin and gentle Ofyawng opened their courtyard wide to welcome their friend Muh-mawng."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "Polite Mmong spoke honestly and asked kindly at every step. Good friends care for one another!",
+   "say": [
+    [
+     "closing",
+     "Polite Muh-mawng spoke honestly and asked kindly at every step. Good friends care for one another!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "When the waves rose high, nobody grew angry. True friendship found a bright sky home!",
+   "say": [
+    [
+     "closing",
+     "When the waves rose high, nobody grew angry. True friendship found a bright sky home!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Open wide, warm home, welcome all! Kind hearts keep shining across any distance.",
+   "say": [
+    [
+     "closing",
+     "Open wide, warm home, welcome all! Kind hearts keep shining across any distance."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Meet Mmong's sea family with Utin! Tap the green turtle, red crab, silver fish, and blue dolphin.",
+   "say": [
+    [
+     "narrator",
+     "Meet Muh-mawng's sea family with Ootin! Tap the green turtle, red crab, silver fish, and blue dolphin."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "What a big, cheerful family! Every sea friend splashes happily in the lagoon!",
+   "say": [
+    [
+     "narrator",
+     "What a big, cheerful family! Every sea friend splashes happily in the lagoon!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Test the three carved wooden pillars with Utin! Tap each tall pillar in order from left to right.",
+   "say": [
+    [
+     "narrator",
+     "Test the three carved wooden pillars with Ootin! Tap each tall pillar in order from left to right."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "Strong and steady! All three carved wooden pillars stand proud in the golden sunshine!",
+   "say": [
+    [
+     "narrator",
+     "Strong and steady! All three carved wooden pillars stand proud in the golden sunshine!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Set out welcome gifts! Match plantains to the brass tray, shells to the mat, and coconuts to the bowl.",
+   "say": [
+    [
+     "narrator",
+     "Set out welcome gifts! Match plantains to the brass tray, shells to the mat, and coconuts to the bowl."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Everything looks welcoming! The grand Calabar courtyard is ready for Mmong's big visit!",
+   "say": [
+    [
+     "narrator",
+     "Everything looks welcoming! The grand Calabar courtyard is ready for Muh-mawng's big visit!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Play Utin's cheerful welcome call on the wooden drum! Tap three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Play Ootin's cheerful welcome call on the wooden drum! Tap three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Three warm drumbeats! Golden music sparkles right past the wiggling green reeds!",
+   "say": [
+    [
+     "narrator",
+     "Three warm drumbeats! Golden music sparkles right past the wiggling green reeds!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Welcome the first sea guests inside! Tap all four sparkling silver fish in the water.",
+   "say": [
+    [
+     "narrator",
+     "Welcome the first sea guests inside! Tap all four sparkling silver fish in the water."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Shimmer and dart! All four silver fish sparkle happily in the cool courtyard ripples!",
+   "say": [
+    [
+     "narrator",
+     "Shimmer and dart! All four silver fish sparkle happily in the cool courtyard ripples!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Keep things dry! Match the brass tray to the shelf, basket to the bench, and drum to the step.",
+   "say": [
+    [
+     "narrator",
+     "Keep things dry! Match the brass tray to the shelf, basket to the bench, and drum to the step."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "High and dry! Every courtyard treasure rests safely above the knee-deep turquoise waves!",
+   "say": [
+    [
+     "narrator",
+     "High and dry! Every courtyard treasure rests safely above the knee-deep turquoise waves!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Greet Mmong's sea friends at the gate! Tap the red crab, green turtle, and blue dolphin in order.",
+   "say": [
+    [
+     "narrator",
+     "Greet Muh-mawng's sea friends at the gate! Tap the red crab, green turtle, and blue dolphin in order."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Ready to enter! Red crab, green turtle, and blue dolphin splash happily at the open gate!",
+   "say": [
+    [
+     "narrator",
+     "Ready to enter! Red crab, green turtle, and blue dolphin splash happily at the open gate!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Brighten Utin and Ofiong's glowing crowns on the rooftop! Tap three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Brighten Ootin and Ofyawng's glowing crowns on the rooftop! Tap three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three radiant bursts! Golden sunlight and silver moonlight shimmer bright upon the thatch rooftop!",
+   "say": [
+    [
+     "narrator",
+     "Three radiant bursts! Golden sunlight and silver moonlight shimmer bright upon the thatch rooftop!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Light up Utin and Ofiong's new sky home! Tap all four twilight stars in the clouds.",
+   "say": [
+    [
+     "narrator",
+     "Light up Ootin and Ofyawng's new sky home! Tap all four twilight stars in the clouds."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Twinkle and shine! Four bright twilight stars glow across the wide velvet sky!",
+   "say": [
+    [
+     "narrator",
+     "Twinkle and shine! Four bright twilight stars glow across the wide velvet sky!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the sky-glow! Match the golden sunbeam to Mmong, silver moonbeam to the turtle, and starlight to the dolphin.",
+   "say": [
+    [
+     "narrator",
+     "Share the sky-glow! Match the golden sunbeam to Muh-mawng, silver moonbeam to the turtle, and starlight to the dolphin."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Shining together! Sunbeams, moonbeams, and starlight dance joyfully across Mmong's sparkling waves!",
+   "say": [
+    [
+     "narrator",
+     "Shining together! Sunbeams, moonbeams, and starlight dance joyfully across Muh-mawng's sparkling waves!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "utin": [
+   "I am Utin, the warm golden Sun! In Efik and Ibibio, my name means bright daylight!",
+   "I wear my woven gold Calabar wrapper cloth and my shining golden sun-ray crown!",
+   "Ofiong and I built a grand courtyard with carved wooden pillars to welcome our friend Mmong!",
+   "Even when the sea filled our courtyard to the roof, we kept our joyful welcome promise!",
+   "From high in the wide sky, my golden sunbeams dance upon Mmong's waves every single day!"
+  ],
+  "ofiong": [
+   "I am Ofiong, the gentle glowing Moon! I wear silver-and-indigo cloth and a bright pearl crown!",
+   "Utin and I painted cheerful patterns on our courtyard walls and wove a golden raffia-palm roof!",
+   "Open wide, warm home, welcome all! Welcoming guests with kindness fills any home with joy.",
+   "Climbing onto our thatch roof and leaping into the velvet sky was a marvellous adventure!",
+   "Every night my cool silver moonbeams shimmer across Mmong's peaceful ocean waves!"
+  ],
+  "mmong": [
+   "I am Mmong, the sparkling coastal Water of Calabar, trimmed with white cowrie shells and seafoam!",
+   "Before visiting Utin and Ofiong, I politely warned them how huge my joyful sea family is!",
+   "Three times I asked permission at the gate before my fish, crabs, turtles, and dolphins swam inside!",
+   "At first I worried when my rising waves crowded my dear friends out onto their rooftop!",
+   "Now my wide blue ocean mirrors Utin's golden sunlight by day and Ofiong's silver moonlight by night!"
+  ],
+  "turtle": [
+   "A smooth green coastal sea turtle who paddles happily from the lagoon into the courtyard waves!",
+   "Down on the shimmering ocean, this green turtle loves chasing moonbeam ripples nose to nose with the dolphin!"
+  ],
+  "dolphin": [
+   "A playful curved blue dolphin leaping joyfully through Mmong's sparkling ocean swells!",
+   "Twinkling starlight and silver moonbeams make the sea sparkle for every swimming dolphin!"
+  ],
+  "crab": [
+   "A cheerful red shore crab who loves bouncing off floating coconut bowls into soft seafoam!"
+  ],
+  "fish": [
+   "Sparkling silver lagoon fish who dart happily around the carved wooden courtyard pillars!"
+  ],
+  "pelican": [
+   "A plump white coastal pelican who tumbled right into a soft woven raffia basket!"
+  ],
+  "drum": [
+   "A carved wooden Efik slit-drum whose warm rat-a-tat rhythm calls sea friends across the lagoon!"
+  ],
+  "tray": [
+   "A hammered Calabar brass tray piled with sweet yellow plantains to welcome honoured guests!"
+  ],
+  "roof": [
+   "A wide golden raffia-palm thatch roof where Utin and Ofiong stood before leaping into the sky!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Elphinstone Dayrell, Folk Stories from Southern Nigeria, 1910, Efik-Ibibio tale of Calabar): Sun invites his friend Water to visit; Water warns that his people are too numerous for a small house, so Sun and his wife Moon build a huge compound. Water enters with fish and water animals, politely asking at knee-deep and head-deep whether more should come, until Sun and Moon climb onto the roof and are forced into the sky forever. Ours (warm, joyful, and wondrous for ages 4-8): 1) Uses authentic Efik-Ibibio names (Utin = Sun, Ofiong = Moon, Mmong = Water) in coastal Calabar regalia rather than any modern illustrated book's mask designs. 2) Mmong asks permission politely three times (ankle-deep fish, knee-deep crabs, roof-high swells with turtles and dolphins), and Utin and Ofiong gladly keep their warm hospitality promise while lifting courtyard treasures to dry ledges and climbing onto the thatch roof. 3) When Utin and Ofiong leap into the wide sky and caring Mmong worries he crowded them out (9.3 emotional turn), Ofiong and Utin reveal the magical sky-mirror twist: from high above, their daylight and moonlight reach the whole world at once, and Mmong's ocean waves reflect golden sunbeams by day and silver moonbeams by night so the three friends still dance together every day and night!",
+  "moral": "Open wide, warm home, welcome all! Generous hearts welcome friends warmly, good friends speak honestly and care for one another, and true friendship keeps shining across any distance.",
+  "changes": "1 Culture-true Efik and Ibibio look of Old Calabar / Cross River, Southern Nigeria (zero modern picture-book mask tropes): warm red-earth courtyard compound with cream-and-indigo geometric wall patterns, carved wooden veranda pillars and gate, woven raffia-palm thatch roof with sturdy wooden roof-ladder, hammered Calabar brass tray with yellow plantains, woven raffia mats and baskets, carved wooden obodom slit-drum, mangrove-and-palm turquoise lagoon, Utin in woven gold wrapper and sun-ray crown, Ofiong in silver-and-indigo cloth and pearl crown, Mmong in flowing sea-blue cowrie robes. All animals (turtle, dolphin, crab, silver fish, pelican) are non-speaking sea/coastal creatures and stay plain per EDDIE-TASTE.md line 19. 2 Every speaking character (utin, ofiong, mmong) has a distinct gender-matched Kokoro voice. 3 Every named creature, object, water level, and light is concrete and stageable across 3 reusable places (lagoon, compound, sky-over-sea), with layered paper water rising step by step across Spreads 5, 6, 7, and 8.",
+  "level": "A1-A2, past simple, crisp British English sentences for ages 4-8 (50 story lines, 14-19 words/line, max 19 words across all story, moral, and game lines so phone .ra-page stays compact). Consistent British spelling (marvellous, honoured). Core vocabulary: sun, moon, water, lagoon, courtyard, pillars, roof, drum, fish, crab, turtle, dolphin, waves, sky, sunbeams, moonbeams, mirror.",
+  "who speaks": "Every speaking character has its own gender-matched Kokoro voice: utin (bm_fable +1), ofiong (bf_alice +1), mmong (bm_daniel -2). Narrator (bm_george) reads narration, game prompts, and 3rd-person animal/prop touch lines; closing (bm_george 0.85x) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain '<Open wide / Splash in / Rise high>, warm home, welcome all!' across spreads 2 (2.4), 6 (6.4), and 8 (8.4, pausing 'welcome... all!' before the last word on its 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a clause-final guessable word, never before the narrator's last word (1.5 home, 2.5 courtyard, 3.5 gate, 4.5 shore, 5.5 toes, 6.5 gate, 7.5 roof, 8.4 all, 9.2 rooftop, 10.5 sky); P4 4.3 ends on 'Who was hiding behind them?' with wiggling green reeds followed by game.4 (>= 1.5 s wait before 4.4 brings the sea family out from behind the reeds); P5 threes (three carved wooden pillars, Mmong's three polite permission questions at ankle/knee/roof height, three drumbeats, three rooftop crown bursts, three refrain calls); P6 unique natural English sound words verified in British Kokoro, <=2 per spread, zero repeats and zero bell sounds across the book (1 Splash, 2 Thump, 3 Plop, 4 Rat-a-tat, 5 Knock-knock/Pitter-patter, 6 Slosh/Boing, 7 Swoosh, 8 Gurgle, 9 Whoosh, 10 Whoomp/Sproing); P8 harmless animal slapstick in all three thirds as standalone !-ended sentences (3.2 pelican tumbles into soft basket Plop!, 6.2 red crab bounces off coconut bowl Boing!, 10.3 turtle and dolphin bump nose to nose Sproing!); P11 energy curve E1 E2 E2 E2 E2 E2 E2 E3 E3 E2 + Moral E1; P16 non-repeating 10-game sequence (collect, order, pair, timing, collect, pair, order, timing, collect, pair)."
+ }
+}

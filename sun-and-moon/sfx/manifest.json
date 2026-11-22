@@ -1,0 +1,25 @@
+{
+ "beds": [
+  "lagoon-waves",
+  "courtyard-day",
+  "courtyard-swells",
+  "twilight-sea"
+ ],
+ "shots": [],
+ "pools": {
+  "drum-big": 2,
+  "drum-mid": 2,
+  "drum-small": 2,
+  "splash-small": 2,
+  "splash-big": 1,
+  "wood-tap": 2,
+  "gourd-knock": 2,
+  "fruit-plop": 2,
+  "leaves-rustle": 2,
+  "crab-click": 1,
+  "wind-gust": 1,
+  "wing-buzz": 2,
+  "steps-grass": 2,
+  "child-giggle": 2
+ }
+}
