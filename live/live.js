@@ -883,13 +883,20 @@ let lang = "", runs = 0;
 // per English word), asked for once, the first time Lao is picked; a 404 means this book has none and stays English in Lao. A line the
 // Lao timing lacks (a tap-to-learn word card, words/<id>) stays English, so nothing goes silent.
 const timingEn = { ...timing };
-let loT, heard = "";  // loT: the Lao timing (undefined: not asked yet, null: none); heard: "lo" while the Lao voice is on
-const src = id => `${voice}${heard && loT[id] ? "lo/" : ""}${id}.m4a`;
+// The English narrator is British (voice/) or American (voice/us/, its word cards in us/words/), one choice for every book (Eddie 2026-11-22);
+// voice/us/ is asked for only once American is picked (a book without it would be a 404 in every visit's log and in tools/publish.sh's check);
+// the button shows while the voice heard is English, and goes when the book turns out to have no American recording.
+let loT, usT, heard = "", accent = "";  // loT: the Lao timing (undefined: not asked yet, null: none); usT the same, null while asking, false: none; heard: "lo" or "us" while on
+try { accent = localStorage.getItem("narrator.accent") || ""; } catch {}
+const alt = () => (heard === "lo" ? loT : usT);
+const src = id => `${voice}${heard && alt()[id] ? heard + "/" : ""}${id}.m4a`;
 function relang() {  // the voice follows the language: timing's contents swapped in place (the Reader, acts and ambient hold this object)
-  const was = heard; heard = lang === "lo" && loT ? "lo" : "";
+  const was = heard; heard = lang === "lo" && loT ? "lo" : accent === "us" && usT ? "us" : "";
+  Object.assign($("accent"), { hidden: heard === "lo" || usT === false, textContent: accent === "us" ? "US" : "UK" });
+  $("accent").setAttribute("aria-label", `Narrator voice: ${accent === "us" ? "American" : "British"}. Press for ${accent === "us" ? "British" : "American"}`);
   if (heard === was) return;
   for (const k in timing) delete timing[k];
-  Object.assign(timing, timingEn, heard ? loT : {});
+  Object.assign(timing, timingEn, heard ? alt() : {});
   if (!S || reader.audio.muted || !(au.hush || !reader.audio.paused && !reader.audio.ended)) return;  // nothing audible (Reading Mode's voice is silent): the next line is in the new voice
   // a line being said stops and starts again in the new voice; a game prompt or praise ends in the old one (cutting won()'s praise would stop the story)
   const ml = book.moral?.lines || story.moral.map(l => l.id), i = S.page.lines.indexOf(reader.id);
@@ -902,6 +909,14 @@ languages($("langs"), `${bookId}.lang`, l => {
   if (l === "lo" && loT === undefined) loT = null, json(`${voice}lo/timing.json`).then(t => (loT = t, relang()), () => {});
   relang();
 });
+const wantUs = () => {
+  if (accent !== "us" || usT !== undefined) return relang();
+  usT = null; relang();
+  Promise.all([json(`${voice}us/timing.json`), words.wt ? json(`${voice}us/words/timing.json`) : {}])
+    .then(([t, w]) => { for (const k in w) t[`words/${k}`] = w[k]; usT = t; }, () => (usT = false)).then(relang);
+};
+wantUs();
+$("accent").onclick = () => { accent = accent === "us" ? "" : "us"; try { localStorage.setItem("narrator.accent", accent); } catch {} wantUs(); };
 const notice = makeNotice({ bookId, lib, story, getLang: () => lang });  // the legal card on the title page and the end card (notice.js)
 
 // ---------- sound (sound.js): a bed for each spread, foley for what happens, all ducked under the narration ----------
@@ -1313,7 +1328,7 @@ const cutWord = () => {  // a story or game line starts: a word card's voice fad
 reader.audio.addEventListener("play", cutWord);
 function learn(name, o) {  // a tapped thing says a word of its own (words.json: a pool of true things to say, a new one each tap), in a bubble beside it, with the chosen language's subtitle; one voice at a time (the same Audio), only that one file is fetched
   if (talking()) return;
-  const own = heard && loT[`touch.${name}.0`];  // in the Lao voice a character says its own recorded Lao lines (story.json "touch"); the word cards (English to learn) have no Lao voice
+  const own = heard === "lo" && loT[`touch.${name}.0`];  // in the Lao voice a character says its own recorded Lao lines (story.json "touch"); the word cards (English to learn) have no Lao voice
   const said = touchLine(own ? { ...words, w: null } : words, name, lang, S.id), at = o ?? S.root.getObjectByName(name) ?? S.cast[0]?.body;
   if (!said || !at) return;
   if (tapped) tapped.card = said.text;
