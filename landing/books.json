@@ -152,6 +152,27 @@
    "link": "../live/?book=ebony-horse&s=s01"
   },
   {
+   "id": "firebird",
+   "title": {
+    "en": "The Firebird and the Golden Feather",
+    "lo": "ນົກໄຟ ແລະ ຂົນນົກສີຄຳ",
+    "th": "นกไฟกับขนนกสีทอง",
+    "zh": "火鸟与金羽毛",
+    "ja": "ひのとりと きんの はね"
+   },
+   "cover": "../shelf/books/firebird/plate.webp",
+   "spine": "#412e8e",
+   "gold": "#fce48c",
+   "culture": "Russian",
+   "region": "europe",
+   "spreads": [
+    11,
+    11
+   ],
+   "status": "ready",
+   "link": "../live/?book=firebird&s=s01"
+  },
+  {
    "id": "gourd",
    "title": {
     "en": "Khun Borom and the Great Gourd",

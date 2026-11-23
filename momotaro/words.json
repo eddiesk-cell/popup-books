@@ -1,0 +1,4095 @@
+{
+"lines": {
+"momo_grandpa.0": {
+"en": "Grandfather. Grandfather is kind and gathers firewood in the hills.",
+"lo": "ພໍ່ຕູ້. ພໍ່ຕູ້ໃຈດີ ແລະ ໄປເກັບຟືນຢູ່ເທິງພູ.",
+"th": "คุณตา คุณตาใจดีและไปเก็บฟืนบนภูเขา",
+"zh": "老爷爷。老爷爷很和蔼，常去山里捡柴火。",
+"ja": "おじいさん。おじいさんは やさしくて やまへ しばかりに いくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_grandpa.1": {
+"en": "Hello, Grandfather!",
+"lo": "ສະບາຍດີ ພໍ່ຕູ້!",
+"th": "สวัสดีคุณตา!",
+"zh": "你好，老爷爷！",
+"ja": "こんにちは、おじいさん！",
+"who": "grandpa",
+"tag": "greet"
+},
+"momo_grandpa.2": {
+"en": "Hello, little reader!",
+"lo": "ສະບາຍດີ ຫຼານນ້ອຍ!",
+"th": "สวัสดีจ้ะ หลานน้อย!",
+"zh": "你好呀，小读者！",
+"ja": "こんにちは、ちいさな おともだち！",
+"who": "grandpa",
+"tag": "say"
+},
+"momo_grandpa.3": {
+"en": "I gather dry firewood in the green hills every morning.",
+"lo": "ພໍ່ຕູ້ໄປເກັບຟືນແຫ້ງຢູ່ພູຂຽວທຸກເຊົ້າ.",
+"th": "คุณตาไปเก็บฟืนแห้งบนภูเขาเขียวทุกเช้า",
+"zh": "我每天早上都去青山里捡干柴。",
+"ja": "まいあさ やまへ しばかりに いくんだよ。",
+"who": "grandpa",
+"tag": "does"
+},
+"momo_grandpa.4": {
+"en": "I painted a pink peach banner for Momotarō!",
+"lo": "ພໍ່ຕູ້ແຕ້ມທຸງຮູບໝາກຄາຍສີບົວໃຫ້ໂມໂມທາໂຣ!",
+"th": "คุณตาวาดธงรูปลูกท้อสีชมพูให้โมโมทาโร่!",
+"zh": "我给桃太郎画了一面粉红桃子旗！",
+"ja": "ももたろうの ために ももの はたを かいたよ！",
+"who": "grandpa",
+"sp": [
+"s02",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"momo_grandpa.5": {
+"en": "I am so proud of our kind, brave boy!",
+"lo": "ພໍ່ຕູ້ພູມໃຈໃນຫຼານຊາຍທີ່ໃຈດີ ແລະ ກ້າຫານ!",
+"th": "คุณตาภูมิใจในหลานชายที่ใจดีและกล้าหาญ!",
+"zh": "我真为善良勇敢的桃太郎感到骄傲！",
+"ja": "やさしくて ゆうかんな ももたろうが じまんだよ！",
+"who": "grandpa",
+"tag": "does"
+},
+"momo_grandma.0": {
+"en": "Grandmother. Grandmother bakes warm sweet millet dumplings.",
+"lo": "ແມ່ຕູ້. ແມ່ຕູ້ເຮັດເຂົ້າໜົມເຂົ້າຟ່າງອຸ່ນໆຫວານໆ.",
+"th": "คุณยาย คุณยายทำขนมข้าวฟ่างอุ่นๆ แสนหวาน",
+"zh": "老奶奶。老奶奶会做香甜暖和的小米团子。",
+"ja": "おばあさん。おばあさんは あたたかい きびだんごを つくるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_grandma.1": {
+"en": "Hello, Grandmother!",
+"lo": "ສະບາຍດີ ແມ່ຕູ້!",
+"th": "สวัสดีคุณยาย!",
+"zh": "你好，老奶奶！",
+"ja": "こんにちは、おばあさん！",
+"who": "grandma",
+"tag": "greet"
+},
+"momo_grandma.2": {
+"en": "Hello, sweet child!",
+"lo": "ສະບາຍດີ ຫຼານຮັກ!",
+"th": "สวัสดีจ้ะ หลานรัก!",
+"zh": "你好呀，乖孩子！",
+"ja": "こんにちは、いい こね！",
+"who": "grandma",
+"tag": "say"
+},
+"momo_grandma.3": {
+"en": "I wash clothes on the smooth river stones.",
+"lo": "ແມ່ຕູ້ຊັກເຄື່ອງຢູ່ເທິງກ້ອນຫີນລຽບແຄມນ້ຳ.",
+"th": "คุณยายซักผ้าบนก้อนหินเรียบริมน้ำ",
+"zh": "我在光滑的溪石上洗衣服。",
+"ja": "かわの いしで せんたくを するんだよ。",
+"who": "grandma",
+"sp": [
+"s01"
+],
+"tag": "does"
+},
+"momo_grandma.4": {
+"en": "I pat and roll warm golden millet dumplings!",
+"lo": "ແມ່ຕູ້ປັ້ນເຂົ້າໜົມເຂົ້າຟ່າງສີຄຳອຸ່ນໆ!",
+"th": "คุณยายปั้นขนมข้าวฟ่างสีทองอุ่นๆ!",
+"zh": "我拍一拍、揉一揉，做出暖暖的小米团子！",
+"ja": "あたたかい きびだんごを ころころ まるめるよ！",
+"who": "grandma",
+"tag": "does"
+},
+"momo_grandma.5": {
+"en": "Share a dumpling and you will never walk alone.",
+"lo": "ແບ່ງເຂົ້າໜົມໃຫ້ກັນ ແລ້ວຫຼານຈະບໍ່ຍ່າງຄົນດຽວ.",
+"th": "แบ่งขนมให้กัน แล้วหลานจะไม่เดินคนเดียว",
+"zh": "分享团子，你就永远不会孤单前行。",
+"ja": "わけあえば ひとりぼっちには ならないよ。",
+"who": "grandma",
+"tag": "does"
+},
+"giant_peach.0": {
+"en": "A giant peach. The giant pink peach floated right down the stream!",
+"lo": "ໝາກຄາຍຍັກ. ໝາກຄາຍຍັກສີບົວລອຍລົງມາຕາມສາຍນ້ຳ!",
+"th": "ลูกท้อยักษ์ ลูกท้อยักษ์สีชมพูลอยลงมาตามลำธาร!",
+"zh": "大桃子。粉红色的大桃子顺着小溪漂了下来！",
+"ja": "おおきな もも。おおきな ももが かわを どんぶらこ と ながれて きたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"giant_peach.1": {
+"en": "This pink peach is bigger than a wash tub!",
+"lo": "ໝາກຄາຍສີບົວໜ່ວຍນີ້ໃຫຍ່ກວ່າອ່າງຊັກເຄື່ອງ!",
+"th": "ลูกท้อสีชมพูลูกนี้ใหญ่กว่ากะละมังซักผ้า!",
+"zh": "这颗粉红的大桃子比洗衣盆还要大！",
+"ja": "せんたくおけより おおきな ピンクの ももだよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"giant_peach.2": {
+"en": "It bobbed gently down the sparkling mountain stream.",
+"lo": "ມັນລອຍກິ້ງຄ່ອຍໆລົງມາຕາມສາຍນ້ຳພູ.",
+"th": "มันลอยตุ๊บป่องลงมาตามลำธารภูเขา",
+"zh": "它晃晃悠悠顺着山溪漂了下来。",
+"ja": "かわを どんぶらこ どんぶらこ と ながれて きたよ。",
+"who": "narrator",
+"tag": "does"
+},
+"giant_peach.3": {
+"en": "Tap the glowing peach to help it pop open!",
+"lo": "ແຕະໝາກຄາຍທີ່ເຫຼື້ອມເພື່ອຊ່ວຍໃຫ້ມັນແຕກອອກ!",
+"th": "แตะลูกท้อที่เรืองแสงเพื่อช่วยให้มันผ่าออก!",
+"zh": "点一点发光的大桃子，帮它打开吧！",
+"ja": "ひかる ももを タッチして あけて みよう！",
+"who": "narrator",
+"tag": "does"
+},
+"giant_peach.4": {
+"en": "Bob, bob, splash!",
+"lo": "ປ໋ອກ, ປ໋ອກ, ຕູມ!",
+"th": "ป๋อม แป๋ม ตูม!",
+"zh": "咕咚，咕咚，哗啦！",
+"ja": "どんぶらこ、ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"open_peach.0": {
+"en": "An open peach. The giant peach split open in warm golden light!",
+"lo": "ໝາກຄາຍຜ່າ. ໝາກຄາຍຍັກແຕກອອກໃນແສງສີຄຳອຸ່ນ!",
+"th": "ลูกท้อผ่า ลูกท้อยักษ์ผ่าออกในแสงสีทองอบอุ่น!",
+"zh": "裂开的桃子。大桃子在暖暖的金光中裂开了！",
+"ja": "われた もも。きんいろの ひかりで ももが パカッと われたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"open_peach.1": {
+"en": "Two giant pink peach halves lie open on the floor.",
+"lo": "ໝາກຄາຍຍັກສີບົວສອງປ່ຽງແຍກອອກຢູ່ເທິງພື້ນ.",
+"th": "ลูกท้อยักษ์สีชมพูสองซีกแยกออกบนพื้น",
+"zh": "两半粉红的大桃子向两边敞开着。",
+"ja": "おおきな ももが ふたつに パカッと われているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"open_peach.2": {
+"en": "Rosy baby Momotarō jumped right out from inside!",
+"lo": "ເດັກນ້ອຍໂມໂມທາໂຣແກ້ມແດງໂດດອອກມາຈາກຂ້າງໃນ!",
+"th": "ทารกโมโมทาโร่แก้มแดงกระโดดออกมาจากข้างใน!",
+"zh": "粉嫩的桃太郎宝宝就是从里面跳出来的！",
+"ja": "なかから げんきな あかちゃんが とびだしたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"open_peach.3": {
+"en": "Sweet peach perfume fills the whole cottage.",
+"lo": "ກິ່ນຫອມຫວານຂອງໝາກຄາຍອົບອວນໄປທົ່ວເຮືອນ.",
+"th": "กลิ่นหอมหวานของลูกท้ออบอวลไปทั่วบ้าน",
+"zh": "甜甜的桃子香味飘满了整间小屋。",
+"ja": "あまい ももの かおりが おうちに いっぱい だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"open_peach.4": {
+"en": "Pop!",
+"lo": "ປ໊ອບ!",
+"th": "ป๊อป!",
+"zh": "啪！",
+"ja": "パカッ！",
+"who": "narrator",
+"tag": "sound"
+},
+"peach_glow.0": {
+"en": "Golden light. Golden light shines softly around the magic peach.",
+"lo": "ແສງສີຄຳ. ແສງສີຄຳສ່ອງອ່ອນໆອ້ອມໝາກຄາຍວິເສດ.",
+"th": "แสงสีทอง แสงสีทองส่องอ่อนๆ รอบลูกท้อวิเศษ",
+"zh": "金色的光。金色的光芒在神奇的大桃子周围闪耀。",
+"ja": "きんいろの ひかり。ふしぎな ももの まわりで ひかりが きらきら ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"peach_glow.1": {
+"en": "Warm golden sparkles float around the giant peach.",
+"lo": "ປະກາຍສີຄຳອຸ່ນລອຍຢູ່ອ້ອມໝາກຄາຍຍັກ.",
+"th": "ประกายสีทองอุ่นลอยอยู่รอบลูกท้อยักษ์",
+"zh": "暖暖的金色星光在大桃子周围闪烁。",
+"ja": "あたたかい きんいろの ひかりが ふわふわ しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"peach_glow.2": {
+"en": "Something wonderful is about to pop out!",
+"lo": "ສິ່ງມະຫັດສະຈັນກຳລັງຈະໂດດອອກມາ!",
+"th": "สิ่งมหัศจรรย์กำลังจะกระโดดออกมา!",
+"zh": "奇妙的事情马上就要发生啦！",
+"ja": "すてきな ことが おこりそうだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"peach_glow.3": {
+"en": "The golden light feels gentle and cozy.",
+"lo": "ແສງສີຄຳໃຫ້ຄວາມຮູ້ສຶກອ່ອນໂຍນ ແລະ ອົບອຸ່ນ.",
+"th": "แสงสีทองให้ความรู้สึกอ่อนโยนและอบอุ่น",
+"zh": "金色的光柔柔暖暖的。",
+"ja": "きんいろの ひかりは やさしくて あたたかいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"peach_glow.4": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"baby_momotaro.0": {
+"en": "Baby Momotarō. Baby Momotarō jumped right out of the giant peach!",
+"lo": "ເດັກນ້ອຍໂມໂມທາໂຣ. ເດັກນ້ອຍໂມໂມທາໂຣໂດດອອກມາຈາກໝາກຄາຍຍັກ!",
+"th": "ทารกโมโมทาโร่ ทารกโมโมทาโร่กระโดดออกมาจากลูกท้อยักษ์!",
+"zh": "桃太郎宝宝。桃太郎宝宝从大桃子里跳了出来！",
+"ja": "あかちゃん ももたろう。おおきな ももから あかちゃんが とびだしたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"baby_momotaro.1": {
+"en": "Hello, baby Momotarō!",
+"lo": "ສະບາຍດີ ເດັກນ້ອຍໂມໂມທາໂຣ!",
+"th": "สวัสดีทารกโมโมทาโร่!",
+"zh": "你好，桃太郎宝宝！",
+"ja": "こんにちは、あかちゃん ももたろう！",
+"who": "momotaro",
+"tag": "greet"
+},
+"baby_momotaro.2": {
+"en": "Goo-goo! Hee hee!",
+"lo": "ແອ້ໆ! ຄິກໆ!",
+"th": "แอ้ๆ! คิกๆ!",
+"zh": "咿呀！嘻嘻！",
+"ja": "ばぶばぶ！ えへへ！",
+"who": "momotaro",
+"tag": "say"
+},
+"baby_momotaro.3": {
+"en": "The baby boy has rosy pink cheeks.",
+"lo": "ເດັກຊາຍນ້ອຍມີແກ້ມສີບົວສົດໃສ.",
+"th": "เด็กชายตัวน้อยมีแก้มสีชมพูสดใส",
+"zh": "小宝宝有粉扑扑的脸蛋。",
+"ja": "ほっぺが ももいろで かわいいよ。",
+"who": "momotaro",
+"tag": "looks"
+},
+"baby_momotaro.4": {
+"en": "He popped right out of the giant pink peach!",
+"lo": "ລາວໂດດອອກມາຈາກໝາກຄາຍຍັກສີບົວ!",
+"th": "เขากระโดดออกมาจากลูกท้อยักษ์สีชมพู!",
+"zh": "他从粉红色的大桃子里蹦了出来！",
+"ja": "おおきな ももから ぽんと うまれたよ！",
+"who": "momotaro",
+"tag": "does"
+},
+"baby_momotaro.5": {
+"en": "Grandfather and Grandmother named him Peach Boy.",
+"lo": "ພໍ່ຕູ້ ແລະ ແມ່ຕູ້ຕັ້ງຊື່ລາວວ່າ ເດັກຊາຍໝາກຄາຍ.",
+"th": "คุณตาและคุณยายตั้งชื่อเขาว่าเด็กชายลูกท้อ",
+"zh": "老爷爷和老奶奶给他起名叫桃太郎。",
+"ja": "おじいさんと おばあさんが ももたろうと なづけたよ。",
+"who": "momotaro",
+"tag": "does"
+},
+"momotaro_boy.0": {
+"en": "Momotarō. Momotarō is the brave, kind Peach Boy.",
+"lo": "ໂມໂມທາໂຣ. ໂມໂມທາໂຣແມ່ນເດັກຊາຍໝາກຄາຍທີ່ກ້າຫານ ແລະ ໃຈດີ.",
+"th": "โมโมทาโร่ โมโมทาโร่คือเด็กชายลูกท้อที่กล้าหาญและใจดี",
+"zh": "桃太郎。桃太郎是勇敢又善良的桃子男孩。",
+"ja": "ももたろう。ももたろうは やさしくて ゆうかんな おとこのこだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momotaro_boy.1": {
+"en": "Hello, Momotarō!",
+"lo": "ສະບາຍດີ ໂມໂມທາໂຣ!",
+"th": "สวัสดีโมโมทาโร่!",
+"zh": "你好，桃太郎！",
+"ja": "こんにちは、ももたろう！",
+"who": "momotaro",
+"tag": "greet"
+},
+"momotaro_boy.2": {
+"en": "Hi! I'm Momotarō, the Peach Boy!",
+"lo": "ສະບາຍດີ! ຂ້ອຍຊື່ ໂມໂມທາໂຣ, ເດັກຊາຍໝາກຄາຍ!",
+"th": "สวัสดี! ฉันชื่อโมโมทาโร่ เด็กชายลูกท้อ!",
+"zh": "你好！我是桃太郎，桃子男孩！",
+"ja": "やあ！ ぼくは ももたろうだよ！",
+"who": "momotaro",
+"tag": "say"
+},
+"momotaro_boy.3": {
+"en": "I love my Grandfather and Grandmother.",
+"lo": "ຂ້ອຍຮັກພໍ່ຕູ້ ແລະ ແມ່ຕູ້ຂອງຂ້ອຍ.",
+"th": "ฉันรักคุณตาและคุณยายของฉัน",
+"zh": "我最爱我的老爷爷和老奶奶。",
+"ja": "おじいさんと おばあさんが だいすきだよ。",
+"who": "momotaro",
+"tag": "does"
+},
+"momotaro_boy.4": {
+"en": "I carry Grandmother's warm millet dumplings.",
+"lo": "ຂ້ອຍເອົາເຂົ້າໜົມເຂົ້າຟ່າງອຸ່ນໆຂອງແມ່ຕູ້ຕິດໂຕໄປ.",
+"th": "ฉันพกขนมข้าวฟ่างอุ่นๆ ของคุณยายไปด้วย",
+"zh": "我带着老奶奶做的暖暖小米团子。",
+"ja": "おばあさんの きびだんごを もっているよ。",
+"who": "momotaro",
+"sp": [
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s08"
+],
+"tag": "does"
+},
+"momotaro_boy.5": {
+"en": "Sharing turns strangers into great friends.",
+"lo": "ການແບ່ງປັນປ່ຽນຄົນແປກໜ້າໃຫ້ເປັນໝູ່ທີ່ດີ.",
+"th": "การแบ่งปันเปลี่ยนคนแปลกหน้าให้เป็นเพื่อนที่ดี",
+"zh": "分享能把陌生人变成好朋友。",
+"ja": "わけあうと みんな なかよしに なれるんだ。",
+"who": "momotaro",
+"tag": "does"
+},
+"momotaro_boy.6": {
+"en": "Dog, Monkey and Pheasant are my teammates!",
+"lo": "ໝານ້ອຍ, ລີງ ແລະ ໄກ່ຟ້າແມ່ນໝູ່ຮ່ວມທາງຂອງຂ້ອຍ!",
+"th": "หมา ลิง และไก่ฟ้าเป็นเพื่อนร่วมทีมของฉัน!",
+"zh": "斑点狗、山猴和绿雉是我的好伙伴！",
+"ja": "いぬと さると きじは ぼくの なかまだよ！",
+"who": "momotaro",
+"sp": [
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"momotaro_boy.7": {
+"en": "Kindness is stronger than being loud.",
+"lo": "ຄວາມໃຈດີແຂງແຮງກວ່າການຮ້ອງດັງ.",
+"th": "ความใจดีแข็งแกร่งกว่าการตะโกนเสียงดัง",
+"zh": "善良比大声吼叫更有力量。",
+"ja": "やさしさは おおきな こえより つよいんだよ。",
+"who": "momotaro",
+"tag": "does"
+},
+"momotaro_boy.8": {
+"en": "We work together as a team!",
+"lo": "ພວກເຮົາຊ່ວຍກັນເຮັດວຽກເປັນທີມ!",
+"th": "พวกเราช่วยกันทำงานเป็นทีม!",
+"zh": "我们齐心协力一起合作！",
+"ja": "みんなで ちからを あわせて がんばるよ！",
+"who": "momotaro",
+"tag": "does"
+},
+"momotaro_boy.9": {
+"en": "Would you like to share a dumpling?",
+"lo": "ເຈົ້າຢາກແບ່ງເຂົ້າໜົມກິນນຳກັນບໍ່?",
+"th": "เธออยากแบ่งขนมกินด้วยกันไหม?",
+"zh": "你想一起分一个小米团子吗？",
+"ja": "きびだんごを いっしょに たべようよ！",
+"who": "momotaro",
+"tag": "say"
+},
+"stream_fish.0": {
+"en": "A river fish. A shiny fish swims in the clear mountain stream.",
+"lo": "ປາແມ່ນ້ຳ. ປາເຫຼື້ອມລອຍຢູ່ໃນສາຍນ້ຳພູທີ່ໃສ.",
+"th": "ปลาแม่น้ำ ปลาเงาวับว่ายอยู่ในลำธารภูเขาใส",
+"zh": "河鱼。闪亮的小鱼在清澈的山溪里游来游去。",
+"ja": "かわの さかな。きれいな かわで さかなが およいでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stream_fish.1": {
+"en": "Hello, river fish!",
+"lo": "ສະບາຍດີ ປາແມ່ນ້ຳ!",
+"th": "สวัสดีปลาแม่น้ำ!",
+"zh": "你好，河鱼！",
+"ja": "こんにちは、かわの さかな！",
+"who": "narrator",
+"tag": "greet"
+},
+"stream_fish.2": {
+"en": "River fish breathe underwater using gills.",
+"lo": "ປາແມ່ນ້ຳຫາຍໃຈໃຕ້ນ້ຳດ້ວຍຟັນຟືມ.",
+"th": "ปลาแม่น้ำหายใจใต้น้ำด้วยเหงือก",
+"zh": "河鱼用鳃在水下呼吸。",
+"ja": "さかなは えらで みずの なかで こきゅう するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"stream_fish.3": {
+"en": "The little fish darts between the smooth stones.",
+"lo": "ປານ້ອຍລອຍລົບໄປມາລະຫວ່າງກ້ອນຫີນລຽບ.",
+"th": "ปลาน้อยว่ายหลบไปมาระหว่างก้อนหินเรียบ",
+"zh": "小鱼在光滑的石头间灵活穿梭。",
+"ja": "ちいさな さかなが いしの あいだを すいすい およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stream_fish.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"momo_dragonfly.0": {
+"en": "A dragonfly. A dragonfly zips through the air on four thin wings.",
+"lo": "ແມງປໍ. ແມງປໍບິນໄວຜ່ານອາກາດດ້ວຍປີກບາງສີ່ປີກ.",
+"th": "แมลงปอ แมลงปอบินเร็วผ่านอากาศด้วยปีกบางสี่ปีก",
+"zh": "蜻蜓。蜻蜓扇动四只薄翅膀在空中飞来飞去。",
+"ja": "とんぼ。とんぼは よんまいの はねで すいすい とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_dragonfly.1": {
+"en": "Hello, dragonfly!",
+"lo": "ສະບາຍດີ ແມງປໍ!",
+"th": "สวัสดีแมลงปอ!",
+"zh": "你好，蜻蜓！",
+"ja": "こんにちは、とんぼ！",
+"who": "narrator",
+"tag": "greet"
+},
+"momo_dragonfly.2": {
+"en": "Dragonflies hover like tiny helicopters over water.",
+"lo": "ແມງປໍບິນລອຍຢູ່ກັບທີ່ເທິງນ້ຳໄດ້.",
+"th": "แมลงปอบินลอยอยู่กับที่เหนือน้ำได้",
+"zh": "蜻蜓能像小直升机一样停在水面上空。",
+"ja": "とんぼは みずの うえで ぴたっと とまって とべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"momo_dragonfly.3": {
+"en": "Its shiny wings shimmer in the warm sun.",
+"lo": "ປີກເຫຼື້ອມຂອງມັນເປັນປະກາຍໃນແສງແດດອຸ່ນ.",
+"th": "ปีกเงาของมันเป็นประกายในแสงแดดอุ่น",
+"zh": "它亮亮的翅膀在阳光下闪闪发光。",
+"ja": "きらきらした はねが おひさまに ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"momo_dragonfly.4": {
+"en": "Flutter, flutter!",
+"lo": "ກະພືບ, ກະພືບ!",
+"th": "พั่บๆ พั่บๆ!",
+"zh": "扑扑，扑扑！",
+"ja": "パタパタ！",
+"who": "narrator",
+"tag": "sound"
+},
+"wood_shed.0": {
+"en": "A woodshed. Grandfather stacks dry firewood under the woodshed.",
+"lo": "ຕູບເກັບຟືນ. ພໍ່ຕູ້ລຽງຟືນແຫ້ງໄວ້ກ້ອງຕູບເກັບຟືນ.",
+"th": "โรงเก็บฟืน คุณตาเรียงฟืนแห้งไว้ใต้โรงเก็บฟืน",
+"zh": "柴房。老爷爷把干柴整齐地码在柴房里。",
+"ja": "まきごや。おじいさんが まきを しまっておく こやだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"wood_shed.1": {
+"en": "Neat bundles of chopped logs rest under the small roof.",
+"lo": "ມັດຟືນທີ່ຜ່າລຽງໄວ້ຢ່າງເປັນລະບຽບກ້ອງຫຼັງຄານ້ອຍ.",
+"th": "มัดฟืนที่ผ่าเรียงไว้อย่างเรียบร้อยใต้หลังคาเล็ก",
+"zh": "一捆捆整齐的木柴码在小棚子下面。",
+"ja": "まきが やねの したに きれいに つんであるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"wood_shed.2": {
+"en": "Dry firewood keeps the cottage stove warm for baking.",
+"lo": "ຟືນແຫ້ງເຮັດໃຫ້ເຕົາໄຟອຸ່ນສຳລັບເຮັດເຂົ້າໜົມ.",
+"th": "ฟืนแห้งทำให้เตาไฟอุ่นสำหรับทำขนม",
+"zh": "干柴让炉灶暖烘烘的，正好用来做团子。",
+"ja": "かわいた まきで ほかほかの ごはんを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"wood_shed.3": {
+"en": "Grandfather gathers twigs and logs every morning.",
+"lo": "ພໍ່ຕູ້ເກັບງ່າໄມ້ ແລະ ຟືນທຸກເຊົ້າ.",
+"th": "คุณตาเก็บกิ่งไม้และฟืนทุกเช้า",
+"zh": "老爷爷每天早上都会去捡柴火。",
+"ja": "おじいさんが まいあさ やまから はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"wood_shed.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"woven_baskets.0": {
+"en": "Woven baskets. Hand-woven bamboo baskets carry laundry and fruit.",
+"lo": "ກະຕ່າສານ. ກະຕ່າໄມ້ໄຜ່ສານໃຊ້ໃສ່ເຄື່ອງນຸ່ງ ແລະ ໝາກໄມ້.",
+"th": "ตะกร้าสาน ตะกร้าไม้ไผ่สานใช้ใส่ผ้าและผลไม้",
+"zh": "竹编篮子。竹编篮子用来装衣服和水果。",
+"ja": "たけかご。たけかごには せんたくものや くだものを いれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"woven_baskets.1": {
+"en": "The baskets are woven tightly from golden bamboo strips.",
+"lo": "ກະຕ່າຖືກສານແໜ້ນຈາກຕອກໄມ້ໄຜ່ສີຄຳ.",
+"th": "ตะกร้าถูกสานแน่นจากตอกไม้ไผ่สีทอง",
+"zh": "篮子是用金黄的竹篾细细编成的。",
+"ja": "たけで しっかり あんだ かごだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"woven_baskets.2": {
+"en": "Grandmother carries clean washing home in a basket.",
+"lo": "ແມ່ຕູ້ໃສ່ເຄື່ອງນຸ່ງສະອາດກັບບ້ານໃນກະຕ່າ.",
+"th": "คุณยายใส่ผ้าสะอาดกลับบ้านในตะกร้า",
+"zh": "老奶奶用竹篮把洗干净的衣服拎回家。",
+"ja": "あらった ようふくを かごに いれて はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"woven_baskets.3": {
+"en": "Woven baskets are light, strong and handy every day.",
+"lo": "ກະຕ່າສານເບົາ, ແຂງແຮງ ແລະ ໃຊ້ງານສະດວກທຸກມື້.",
+"th": "ตะกร้าสานเบา แข็งแรง และใช้งานสะดวกทุกวัน",
+"zh": "竹编篮子又轻又结实，每天都很实用。",
+"ja": "かるくて じょうぶで まいにち つかえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"woven_baskets.4": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"azalea_bush.0": {
+"en": "An azalea bush. Pink azalea blossoms brighten the cottage garden.",
+"lo": "ພຸ່ມດອກກຸຫຼາບພູ. ດອກກຸຫຼາບພູສີບົວເຮັດໃຫ້ສວນໜ້າເຮືອນສົດໃສ.",
+"th": "พุ่มดอกอาซาเลีย ดอกอาซาเลียสีชมพูทำให้สวนหน้าบ้านสดใส",
+"zh": "杜鹃花丛。粉红的杜鹃花把院子装点得明亮漂亮。",
+"ja": "つつじ。ピンクの つつじが にわを あかるく するよ。",
+"who": "narrator",
+"tag": "what"
+},
+"azalea_bush.1": {
+"en": "Hello, azalea bush!",
+"lo": "ສະບາຍດີ ພຸ່ມດອກກຸຫຼາບພູ!",
+"th": "สวัสดีพุ่มดอกอาซาเลีย!",
+"zh": "你好，杜鹃花丛！",
+"ja": "こんにちは、つつじ！",
+"who": "narrator",
+"tag": "greet"
+},
+"azalea_bush.2": {
+"en": "Bright pink azalea blooms dot the green leaves.",
+"lo": "ດອກກຸຫຼາບພູສີບົວສົດປະດັບຢູ່ເທິງໃບຂຽວ.",
+"th": "ดอกอาซาเลียสีชมพูสดประดับบนใบเขียว",
+"zh": "翠绿的叶子间点缀着亮粉色的杜鹃花。",
+"ja": "みどりの はに ピンクの はなが たくさん さくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"azalea_bush.3": {
+"en": "The bush sways softly in the garden breeze.",
+"lo": "ພຸ່ມໄມ້ແກວ່ງຄ່ອຍໆໃນສາຍລົມສວນ.",
+"th": "พุ่มไม้ไหวเบาๆ ในสายลมสวน",
+"zh": "花丛在院子的微风里轻轻摆动。",
+"ja": "にわの かぜに そっと ゆれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"azalea_bush.4": {
+"en": "Butterflies and bees visit the sweet blossoms.",
+"lo": "ແມງກະເບື້ອ ແລະ ເຜິ້ງບິນມາຕອມດອກໄມ້ຫວານ.",
+"th": "ผีเสื้อและผึ้งบินมาตอมดอกไม้หวาน",
+"zh": "蝴蝶和蜜蜂喜欢来拜访香甜的花朵。",
+"ja": "ちょうや はちが あまい はなに くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"azalea_bush.5": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"purple_iris.0": {
+"en": "Iris flowers. Purple iris flowers grow near the cool water.",
+"lo": "ດອກໄອຣິສ. ດອກໄອຣິສສີມ່ວງເກີດຢູ່ໃກ້ນ້ຳເຢັນ.",
+"th": "ดอกไอริส ดอกไอริสสีม่วงขึ้นอยู่ใกล้น้ำเย็น",
+"zh": "鸢尾花。紫色的鸢尾花长在清凉的水边。",
+"ja": "あやめ。むらさきの あやめが みずべに さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"purple_iris.1": {
+"en": "Tall violet petals stand above sword-shaped green leaves.",
+"lo": "ກີບດອກສີມ່ວງສູງຊູຂຶ້ນເໜືອໃບສີຂຽວແຫຼມ.",
+"th": "กลีบดอกสีม่วงสูงชูขึ้นเหนือใบสีเขียวแหลม",
+"zh": "紫色的花瓣挺立在细长的绿叶上方。",
+"ja": "むらさきの はなが すっと のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"purple_iris.2": {
+"en": "Irises bloom by streams in springtime in Japan.",
+"lo": "ດອກໄອຣິສບານແຄມນ້ຳໃນລະດູໃບໄມ້ປົ່ງຂອງຍີ່ປຸ່ນ.",
+"th": "ดอกไอริสบานริมน้ำในฤดูใบไม้ผลิของญี่ปุ่น",
+"zh": "春天时，鸢尾花会在日本的小溪边开放。",
+"ja": "はるに みずべで きれいに さく はなだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"purple_iris.3": {
+"en": "They nod gently beside the garden fence.",
+"lo": "ມັນງ່ຽງດອກຄ່ອຍໆຢູ່ຂ້າງຮົ້ວສວນ.",
+"th": "มันโน้มดอกเบาๆ อยู่ข้างรั้วสวน",
+"zh": "它们在篱笆旁边轻轻点头。",
+"ja": "たけがきの そばで ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"purple_iris.4": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"bamboo_fence.0": {
+"en": "A bamboo fence. A neat bamboo fence borders the cottage yard.",
+"lo": "ຮົ້ວໄມ້ໄຜ່. ຮົ້ວໄມ້ໄຜ່ສວຍງາມລ້ອມອ້ອມເດີ່ນເຮືອນ.",
+"th": "รั้วไม้ไผ่ รั้วไม้ไผ่เรียบร้อยล้อมรอบลานบ้าน",
+"zh": "竹篱笆。整齐的竹篱笆围着茅屋的小院子。",
+"ja": "たけがき。きれいな たけがきが にわを かこんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bamboo_fence.1": {
+"en": "Smooth yellow bamboo poles are tied with neat cord.",
+"lo": "ລຳໄມ້ໄຜ່ສີເຫຼືອງລຽບຖືກມັດດ້ວຍເຊືອກຢ່າງງາມ.",
+"th": "ลำไม้ไผ่สีเหลืองเรียบถูกมัดด้วยเชือกอย่างสวยงาม",
+"zh": "光滑的竹竿用绳子整齐地扎在一起。",
+"ja": "たけを ひもで きれいに むすんだ かきねだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bamboo_fence.2": {
+"en": "A bamboo fence keeps the little garden cosy.",
+"lo": "ຮົ້ວໄມ້ໄຜ່ເຮັດໃຫ້ສວນນ້ອຍອົບອຸ່ນໜ້າຢູ່.",
+"th": "รั้วไม้ไผ่ทำให้สวนน้อยอบอุ่นน่าอยู่",
+"zh": "竹篱笆把小小的院子围得温馨舒适。",
+"ja": "ちいさな にわを やさしく かこんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bamboo_fence.3": {
+"en": "Wildflowers grow right along its mossy rails.",
+"lo": "ດອກໄມ້ປ່າເກີດລຽບຕາມຮົ້ວໄມ້ໄຜ່.",
+"th": "ดอกไม้ป่าขึ้นเลียบตามรั้วไม้ไผ่",
+"zh": "野花沿着竹篱笆一路开放。",
+"ja": "かきねの そばに かわいい はなが さくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bamboo_fence.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"garden_lantern.0": {
+"en": "A stone lantern. A mossy stone lantern stands beside the cottage stream.",
+"lo": "ໂຄມຫີນ. ໂຄມຫີນມີໄຄນ້ຳຕັ້ງຢູ່ແຄມສາຍນ້ຳໜ້າເຮືອນ.",
+"th": "โคมหิน โคมหินมีมอสตั้งอยู่ริมลำธารหน้าบ้าน",
+"zh": "石灯笼。长满青苔的石灯笼立在小溪边。",
+"ja": "いしどうろう。こけの ついた いしどうろうが かわの そばに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"garden_lantern.1": {
+"en": "Green moss grows softly across the carved stone roof.",
+"lo": "ໄຄນ້ຳສີຂຽວເກີດອ່ອນໆເທິງຫຼັງຄາຫີນແກະສະຫຼັກ.",
+"th": "มอสสีเขียวขึ้นอ่อนๆ บนหลังคาหินแกะสลัก",
+"zh": "青青的苔藓长在石灯笼弯弯的屋顶上。",
+"ja": "いしの やねに みどりの こけが はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"garden_lantern.2": {
+"en": "A stone lantern marks the quiet path by the stream.",
+"lo": "ໂຄມຫີນຕັ້ງຢູ່ແຄມທາງງຽບໆຂ້າງສາຍນ້ຳ.",
+"th": "โคมหินตั้งอยู่ริมทางเงียบๆ ข้างลำธาร",
+"zh": "石灯笼静静照看着溪边的小路。",
+"ja": "かわの そばの みちを しずかに みまもっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"garden_lantern.3": {
+"en": "At dusk, a small candle glows inside its window.",
+"lo": "ຍາມແລງ, ທຽນນ້ອຍສ່ອງແສງຢູ່ໃນຊ່ອງປ່ອງຢ້ຽມ.",
+"th": "ยามเย็น เทียนน้อยส่องแสงอยู่ในช่องหน้าต่าง",
+"zh": "傍晚时，里面小小的烛火会暖暖亮起来。",
+"ja": "ゆうがたに なると なかの あかりが ともるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"garden_lantern.4": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"stream_boulder.0": {
+"en": "A river boulder. Smooth river boulders line the sparkling stream.",
+"lo": "ກ້ອນຫີນແຄມນ້ຳ. ກ້ອນຫີນລຽບນຽນລຽງຢູ່ແຄມສາຍນ້ຳໃສ.",
+"th": "ก้อนหินริมน้ำ ก้อนหินเรียบเรียงอยู่ริมลำธารใส",
+"zh": "河边大石。光滑的河石排在亮晶晶的小溪边。",
+"ja": "かわの おおいわ。まるい いわが かわべに ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stream_boulder.1": {
+"en": "Mossy grey boulders sit along the stream bank.",
+"lo": "ກ້ອນຫີນສີເທົາມີໄຄນ້ຳຢູ່ລຽບແຄມສາຍນ້ຳ.",
+"th": "ก้อนหินสีเทามีมอสอยู่เลียบริมลำธาร",
+"zh": "长满青苔的大石头蹲在溪水边。",
+"ja": "こけの ついた いわが かわべに どっしり あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stream_boulder.2": {
+"en": "Cool water splashes gently around each stone.",
+"lo": "ນ້ຳເຢັນຊັດຄ່ອຍໆອ້ອມກ້ອນຫີນແຕ່ລະກ້ອນ.",
+"th": "น้ำเย็นซัดเบาๆ รอบก้อนหินแต่ละก้อน",
+"zh": "清凉的溪水绕着石头轻轻拍打。",
+"ja": "つめたい みずが いわの まわりを ながれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stream_boulder.3": {
+"en": "Grandmother washes clothes beside these smooth stones.",
+"lo": "ແມ່ຕູ້ຊັກເຄື່ອງຢູ່ຂ້າງກ້ອນຫີນລຽບເຫຼົ່ານີ້.",
+"th": "คุณยายซักผ้าอยู่ข้างก้อนหินเรียบเหล่านี้",
+"zh": "老奶奶就在这些光滑的石头旁洗衣服。",
+"ja": "おばあさんが この いわの そばで せんたく するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stream_boulder.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"stepping_stones.0": {
+"en": "Stepping stones. Flat stepping stones cross the shallow stream.",
+"lo": "ຫີນຂ້າມນ້ຳ. ຫີນແບນຂ້າມສາຍນ້ຳຕື້ນໄດ້ຢ່າງສະບາຍ.",
+"th": "หินข้ามน้ำ หินแบนข้ามลำธารตื้นได้อย่างสบาย",
+"zh": "汀步石。平平的汀步石可以踩着过浅浅的小溪。",
+"ja": "とびいし。あさい かわを わたる とびいしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stepping_stones.1": {
+"en": "Round flat stones make a path across the water.",
+"lo": "ກ້ອນຫີນແບນມົນເປັນທາງຍ່າງຂ້າມນ້ຳ.",
+"th": "ก้อนหินแบนกลมเป็นทางเดินข้ามน้ำ",
+"zh": "圆圆平平的石头在水里排成一条小路。",
+"ja": "まるい いしが かわを わたる みちに なっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stepping_stones.2": {
+"en": "Hop from stone to stone to keep your feet dry!",
+"lo": "ໂດດຈາກຫີນກ້ອນໜຶ່ງໄປອີກກ້ອນໜຶ່ງເພື່ອບໍ່ໃຫ້ຕີນປຽກ!",
+"th": "กระโดดจากหินก้อนหนึ่งไปอีกก้อนเพื่อไม่ให้เท้าเปียก!",
+"zh": "一块一块踩着跳过去，脚丫就不会湿啦！",
+"ja": "いしから いしへ ぴょんぴょん わたろう！",
+"who": "narrator",
+"tag": "does"
+},
+"stepping_stones.3": {
+"en": "Sparkling stream water flows right between them.",
+"lo": "ນ້ຳໃສໄຫຼຜ່ານຊ່ອງຫວ່າງລະຫວ່າງກ້ອນຫີນ.",
+"th": "น้ำใสไหลผ่านช่องว่างระหว่างก้อนหิน",
+"zh": "亮晶晶的溪水从石头缝里欢快流过。",
+"ja": "いしの あいだを きれいな みずが ながれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stepping_stones.4": {
+"en": "Hop, hop, hop!",
+"lo": "ໂດດໆໆ!",
+"th": "กระโดด ๆ ๆ!",
+"zh": "蹦，蹦，蹦！",
+"ja": "ぴょん ぴょん ぴょん！",
+"who": "narrator",
+"tag": "sound"
+},
+"stream_foam.0": {
+"en": "Stream foam. White stream foam dances over the river stones.",
+"lo": "ຟອງນ້ຳ. ຟອງນ້ຳສີຂາວໄຫຼຜ່ານກ້ອນຫີນໃນສາຍນ້ຳ.",
+"th": "ฟองน้ำ ฟองน้ำสีขาวไหลผ่านก้อนหินในลำธาร",
+"zh": "水花。白色的水花在溪石间欢快跳动。",
+"ja": "みずの あわ。しろい あわが いしの あいだを ながれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stream_foam.1": {
+"en": "Bubbly white foam sparkles in the bright sun.",
+"lo": "ຟອງນ້ຳສີຂາວເຫຼື້ອມປະກາຍໃນແສງແດດແຈ້ງ.",
+"th": "ฟองน้ำสีขาวเป็นประกายในแสงแดดจ้า",
+"zh": "白白的水花在阳光下闪闪发亮。",
+"ja": "しろい あわが おひさまに きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stream_foam.2": {
+"en": "The fast stream swirls white bubbles past the rocks.",
+"lo": "ສາຍນ້ຳໄຫຼໄວພັດຟອງສີຂາວຜ່ານກ້ອນຫີນ.",
+"th": "ลำธารไหลเร็วพัดฟองสีขาวผ่านก้อนหิน",
+"zh": "欢快的溪水绕过石头卷起白泡泡。",
+"ja": "はやい ながれが いわに あたって あわが でるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stream_foam.3": {
+"en": "Listen to the calm babble of the mountain water.",
+"lo": "ຟັງສຽງສາຍນ້ຳພູໄຫຼຢ່າງສະຫງົບ.",
+"th": "ฟังเสียงลำธารภูเขาไหลอย่างสงบ",
+"zh": "听一听山溪轻柔潺潺的流水声吧。",
+"ja": "かわの やさしい おとを きいて みよう。",
+"who": "narrator",
+"tag": "does"
+},
+"stream_foam.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"river_reeds.0": {
+"en": "River reeds. Tall green reeds sway gently in the breeze.",
+"lo": "ຕົ້ນອໍ້ແຄມນ້ຳ. ຕົ້ນອໍ້ສີຂຽວສູງແກວ່ງຄ່ອຍໆຕາມສາຍລົມ.",
+"th": "ต้นอ้อริมน้ำ ต้นอ้อสีเขียวสูงไหวเบาๆ ตามสายลม",
+"zh": "河畔芦苇。高高的绿芦苇在微风中轻轻摇摆。",
+"ja": "かわべの あし。みどりの あしが かぜに ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"river_reeds.1": {
+"en": "Slender green reeds stand tall along the wet bank.",
+"lo": "ຕົ້ນອໍ້ສີຂຽວສູງຊື່ຢູ່ແຄມຝັ່ງນ້ຳ.",
+"th": "ต้นอ้อสีเขียวสูงตรงอยู่ริมฝั่งน้ำ",
+"zh": "细长的绿芦苇高高立在水岸边。",
+"ja": "ほそながい あしが みずべに すっと たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"river_reeds.2": {
+"en": "Reeds bend and rustle whenever the breeze blows.",
+"lo": "ຕົ້ນອໍ້ເອນໄປມາ ແລະ ມີສຽງຊາໆເມື່ອລົມພັດ.",
+"th": "ต้นอ้อเอนไปมาและมีเสียงซ่าๆ เมื่อลมพัด",
+"zh": "微风吹过，芦苇就会弯弯腰沙沙作响。",
+"ja": "かぜが ふくと さらさら と おとが するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"river_reeds.3": {
+"en": "Tiny fish and dragonflies hide among the reeds.",
+"lo": "ປານ້ອຍ ແລະ ແມງປໍລີ້ຢູ່ຕາມກໍຕົ້ນອໍ້.",
+"th": "ปลาน้อยและแมลงปอซ่อนตัวตามกอต้นอ้อ",
+"zh": "小鱼和蜻蜓喜欢藏在芦苇丛里。",
+"ja": "さかなや とんぼが あしの なかに かくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"river_reeds.4": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"cottage_sky.0": {
+"en": "The sky. The soft sky glows gently above the mountain hills.",
+"lo": "ທ້ອງຟ້າ. ທ້ອງຟ້າອ່ອນໂຍນສ່ອງແສງເທິງພູເຂົາ.",
+"th": "ท้องฟ้า ท้องฟ้าอ่อนโยนส่องแสงเหนือภูเขา",
+"zh": "天空。柔和的天空在青山上方轻轻发亮。",
+"ja": "そら。やさしい そらが やまの うえに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"cottage_sky.1": {
+"en": "Soft clouds drift lazily across the mountain sky.",
+"lo": "ເມກອ່ອນລອຍຄ່ອຍໆຂ້າມທ້ອງຟ້າພູເຂົາ.",
+"th": "เมฆอ่อนลอยช้าๆ ข้ามท้องฟ้าภูเขา",
+"zh": "柔柔的白云慢悠悠地飘过山谷上空。",
+"ja": "やわらかい くもが やまの そらを ながれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"cottage_sky.2": {
+"en": "The sky turns warm gold at sunset.",
+"lo": "ທ້ອງຟ້າປ່ຽນເປັນສີຄຳອຸ່ນຍາມຕາເວັນຕົກ.",
+"th": "ท้องฟ้าเปลี่ยนเป็นสีทองอุ่นยามอาทิตย์ตก",
+"zh": "日落时，天空会染上暖暖的金色。",
+"ja": "ゆうがたは そらが きんいろに かわるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"cottage_sky.3": {
+"en": "White birds glide high in the fresh air.",
+"lo": "ນົກສີຂາວບິນຮ່ອນສູງໃນອາກາດສົດຊື່ນ.",
+"th": "นกสีขาวร่อนสูงในอากาศสดชื่น",
+"zh": "白色的鸟儿在清新的天空里高高滑翔。",
+"ja": "しろい とりが たかい そらを とんで いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"cottage_sky.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"far_hills.0": {
+"en": "Green hills. Misty green hills rise behind the peach cottage.",
+"lo": "ພູຂຽວ. ພູຂຽວມີໝອກບາງໆຢູ່ຫຼັງເຮືອນໝາກຄາຍ.",
+"th": "เนินเขาเขียว เนินเขาเขียวมีหมอกบางๆ หลังบ้านลูกท้อ",
+"zh": "青山。薄雾笼罩的青山立在茅屋后面。",
+"ja": "みどりの やま。みどりの やまが いえの うしろに つらなっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"far_hills.1": {
+"en": "Layers of soft green hills fade into the morning mist.",
+"lo": "ພູຂຽວຊ້ອນກັນຫຼາຍຊັ້ນຈາງຫາຍໄປໃນໝອກເຊົ້າ.",
+"th": "เนินเขาเขียวซ้อนกันหลายชั้นจางหายไปในหมอกเช้า",
+"zh": "一层层青山渐渐隐入清晨的薄雾里。",
+"ja": "みどりの やまが きりの むこうまで つづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"far_hills.2": {
+"en": "Grandfather walks into these hills to gather firewood.",
+"lo": "ພໍ່ຕູ້ຍ່າງເຂົ້າໄປໃນພູເຫຼົ່ານີ້ເພື່ອເກັບຟືນ.",
+"th": "คุณตาเดินเข้าไปในภูเขาเหล่านี้เพื่อเก็บฟืน",
+"zh": "老爷爷常走进这些青山里捡柴火。",
+"ja": "おじいさんは この やまへ しばかりに いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"far_hills.3": {
+"en": "The clear mountain stream begins high in the hills.",
+"lo": "ສາຍນ້ຳພູໃສໄຫຼລົງມາຈາກເທິງພູສູງ.",
+"th": "ลำธารภูเขาใสไหลลงมาจากบนเขาสูง",
+"zh": "清澈的小溪正是从高高的山间流下来的。",
+"ja": "きれいな かわは たかい やまから ながれて くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"far_hills.4": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"peach_pine.0": {
+"en": "A peach tree. A pink peach tree and gnarled pine stand by the stream.",
+"lo": "ຕົ້ນໝາກຄາຍ. ຕົ້ນໝາກຄາຍດອກສີບົວ ແລະ ຕົ້ນແປກຢືນຢູ່ແຄມນ້ຳ.",
+"th": "ต้นท้อ ต้นท้อดอกสีชมพูและต้นสนยืนอยู่ริมน้ำ",
+"zh": "桃树。粉红的桃树和老松树并肩立在溪边。",
+"ja": "ももの き。ピンクの ももと まつの きが かわべに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"peach_pine.1": {
+"en": "Soft pink blossoms bloom beside dark green pine needles.",
+"lo": "ດອກສີບົວອ່ອນບານຢູ່ຂ້າງໃບແປກສີຂຽວເຂັ້ມ.",
+"th": "ดอกสีชมพูอ่อนบานข้างใบสนสีเขียวเข้ม",
+"zh": "粉红的桃花在深绿的松针旁盛开。",
+"ja": "ピンクの ももの はなと みどりの まつが ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"peach_pine.2": {
+"en": "Pink peach petals drift down in the gentle breeze.",
+"lo": "ກີບດອກໝາກຄາຍສີບົວປິວລົງມາຕາມສາຍລົມອ່ອນ.",
+"th": "กลีบดอกท้อสีชมพูปลิวลงมาตามสายลมอ่อน",
+"zh": "粉红的桃花瓣随微风轻轻飘落。",
+"ja": "ももの はなびらが かぜに ふわっと まうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"peach_pine.3": {
+"en": "Birds and monkeys love resting in these branches.",
+"lo": "ນົກ ແລະ ລີງມັກພັກຜ່ອນຢູ່ເທິງງ່າໄມ້ເຫຼົ່ານີ້.",
+"th": "นกและลิงชอบพักผ่อนอยู่บนกิ่งไม้เหล่านี้",
+"zh": "小鸟和猴子都喜欢待在这些树枝上。",
+"ja": "とりや さるが えだで やすむのが すきだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"peach_pine.4": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"minka_cottage.0": {
+"en": "A cottage. The thatch-roofed cottage is Momotarō's warm home.",
+"lo": "ເຮືອນມຸງຫຍ້າ. ເຮືອນມຸງຫຍ້າແມ່ນບ້ານທີ່ອົບອຸ່ນຂອງໂມໂມທາໂຣ.",
+"th": "กระท่อมมุงจาก กระท่อมมุงจากคือบ้านอันอบอุ่นของโมโมทาโร่",
+"zh": "茅草屋。这座茅草屋是桃太郎温暖的家。",
+"ja": "かやぶきの いえ。かやぶきの いえは ももたろうの あたたかい おうちだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"minka_cottage.1": {
+"en": "The cottage has a thick straw roof and wooden porch.",
+"lo": "ເຮືອນມີຫຼັງຄາຫຍ້າໜາ ແລະ ຊານໄມ້.",
+"th": "บ้านมีหลังคาจากหนาและชานไม้",
+"zh": "茅屋有着厚厚的草顶和木头走廊。",
+"ja": "あつい わらの やねと きの えんがわが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"minka_cottage.2": {
+"en": "Inside, Grandmother rolls warm golden dumplings.",
+"lo": "ຢູ່ຂ້າງໃນ, ແມ່ຕູ້ປັ້ນເຂົ້າໜົມສີຄຳອຸ່ນໆ.",
+"th": "ข้างใน คุณยายปั้นขนมสีทองอุ่นๆ",
+"zh": "屋子里，老奶奶正做着暖暖的小米团子。",
+"ja": "おうちの なかで おばあさんが だんごを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"minka_cottage.3": {
+"en": "Paper doors let soft daylight fill the cozy rooms.",
+"lo": "ປະຕູເຈ້ຍໃຫ້ແສງອ່ອນໆສ່ອງເຂົ້າໄປໃນຫ້ອງອົບອຸ່ນ.",
+"th": "ประตูกระดาษให้แสงอ่อนๆ ส่องเข้าไปในห้องอบอุ่น",
+"zh": "纸拉门让柔和的阳光照进温暖的屋子。",
+"ja": "しょうじから やさしい ひかりが はいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"minka_cottage.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"millet_dumpling.0": {
+"en": "A millet dumpling. A sweet golden millet dumpling gives warmth and courage.",
+"lo": "ເຂົ້າໜົມເຂົ້າຟ່າງ. ເຂົ້າໜົມເຂົ້າຟ່າງສີຄຳຫວານໃຫ້ຄວາມອົບອຸ່ນ ແລະ ຄວາມກ້າຫານ.",
+"th": "ขนมข้าวฟ่าง ขนมข้าวฟ่างสีทองหวานให้ความอบอุ่นและความกล้าหาญ",
+"zh": "小米团子。香甜金黄的小米团子带来温暖和勇气。",
+"ja": "きびだんご。あまい きびだんごは げんきと ゆうきを くれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"millet_dumpling.1": {
+"en": "Each round golden dumpling is warm from the kitchen.",
+"lo": "ເຂົ້າໜົມມົນສີຄຳແຕ່ລະກ້ອນຍັງອຸ່ນໆຈາກເຮືອນຄົວ.",
+"th": "ขนมกลมสีทองแต่ละลูกยังอุ่นๆ จากครัว",
+"zh": "每颗圆圆的金黄团子都热乎乎的。",
+"ja": "まるくて きんいろの だんごが ほかほか だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"millet_dumpling.2": {
+"en": "Grandmother makes kibi-dango with sweet millet.",
+"lo": "ແມ່ຕູ້ເຮັດເຂົ້າໜົມເຂົ້າຟ່າງດ້ວຍເຂົ້າຟ່າງຫວານ.",
+"th": "คุณยายทำคิบิดังโกะด้วยข้าวฟ่างหวาน",
+"zh": "老奶奶用香甜的小米做成团子。",
+"ja": "おばあさんが あまい きびで つくったんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"millet_dumpling.3": {
+"en": "Sharing a dumpling makes new friends right away!",
+"lo": "ການແບ່ງເຂົ້າໜົມເຮັດໃຫ້ໄດ້ໝູ່ໃໝ່ທັນທີ!",
+"th": "การแบ่งขนมทำให้ได้เพื่อนใหม่ทันที!",
+"zh": "分一颗团子，马上就能交到好朋友！",
+"ja": "ひとつ わけると すぐ ともだちに なれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"millet_dumpling.4": {
+"en": "Yum!",
+"lo": "ແຊບ!",
+"th": "อร่อยจัง!",
+"zh": "真好吃！",
+"ja": "おいしい！",
+"who": "narrator",
+"tag": "sound"
+},
+"road_bush.0": {
+"en": "A roadside bush. A leafy bush sits right beside the garden gate!",
+"lo": "ພຸ່ມໄມ້ແຄມທາງ. ພຸ່ມໄມ້ໃບດົກຢູ່ຂ້າງປະຕູຮົ້ວພໍດີ!",
+"th": "พุ่มไม้ริมทาง พุ่มไม้ใบดกอยู่ข้างประตูรั้วพอดี!",
+"zh": "路边灌木。茂密的灌木正好长在木门旁边！",
+"ja": "みちばたの しげみ。もんの すぐ そばに はっぱの しげみが あるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"road_bush.1": {
+"en": "The round green bush is full of leaves and blossoms.",
+"lo": "ພຸ່ມໄມ້ຂຽວມົນເຕັມໄປດ້ວຍໃບ ແລະ ດອກ.",
+"th": "พุ่มไม้เขียวกลมเต็มไปด้วยใบและดอก",
+"zh": "圆滚滚的绿灌木长满叶子和小花。",
+"ja": "はっぱと はなが いっぱいの まるい しげみだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"road_bush.2": {
+"en": "Wait—why is that bush wiggling so much?",
+"lo": "ເອ໊—ເປັນຫຍັງພຸ່ມໄມ້ນັ້ນຈຶ່ງສັ່ນໄຫວແຮງແທ້?",
+"th": "เอ๊ะ—ทำไมพุ่มไม้นั้นถึงขยับไหวแรงจัง?",
+"zh": "咦——这丛灌木为什么晃得这么厉害呀？",
+"ja": "あれ、どうして しげみが ゆれているのかな？",
+"who": "narrator",
+"sp": [
+"s02"
+],
+"tag": "does"
+},
+"road_bush.3": {
+"en": "Spotted Dog was hiding inside the wiggling bush!",
+"lo": "ໝານ້ອຍລາຍຈຸດລີ້ຢູ່ໃນພຸ່ມໄມ້ທີ່ສັ່ນໄຫວ!",
+"th": "หมาลายจุดซ่อนอยู่ในพุ่มไม้ที่ขยับไหว!",
+"zh": "原来斑点狗就藏在晃动的灌木里面！",
+"ja": "なかには ぶちの いぬが かくれて いたよ！",
+"who": "narrator",
+"sp": [
+"s03"
+],
+"tag": "does"
+},
+"road_bush.4": {
+"en": "Petals shake loose whenever someone hops out.",
+"lo": "ກີບດອກໄມ້ຫຼົ່ນລົງມາເມື່ອມີໂຕຫຍັງໂດດອອກມາ.",
+"th": "กลีบดอกไม้ร่วงลงมาเมื่อมีตัวอะไรกระโดดออกมา",
+"zh": "只要有谁跳出来，花瓣就会簌簌落下来。",
+"ja": "だれかが とびだすと はなびらが ぱらぱら おちるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"road_bush.5": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"momo_heron.0": {
+"en": "A heron. A tall heron stands quietly by the stream.",
+"lo": "ນົກຍາງ. ນົກຍາງໂຕສູງຢືນງຽບໆຢູ່ແຄມສາຍນ້ຳ.",
+"th": "นกกระสา นกกระสาตัวสูงยืนเงียบๆ ริมลำธาร",
+"zh": "苍鹭。高高的苍鹭静静地站在溪水边。",
+"ja": "さぎ。せの たかい さぎが かわべに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_heron.1": {
+"en": "Hello, heron!",
+"lo": "ສະບາຍດີ ນົກຍາງ!",
+"th": "สวัสดีนกกระสา!",
+"zh": "你好，苍鹭！",
+"ja": "こんにちは、さぎ！",
+"who": "narrator",
+"tag": "greet"
+},
+"momo_heron.2": {
+"en": "A heron has long thin legs for wading in shallow streams.",
+"lo": "ນົກຍາງມີຂາຍາວບາງສຳລັບຍ່າງລຸຍນ້ຳຕື້ນ.",
+"th": "นกกระสามีขายาวบางสำหรับเดินลุยน้ำตื้น",
+"zh": "苍鹭有细长的腿，方便在浅溪里涉水。",
+"ja": "さぎは ながい あしで あさい かわを あるくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"momo_heron.3": {
+"en": "It watches patiently for shiny fish swimming by.",
+"lo": "ມັນຢືນຈ້ອງເບິ່ງປາເຫຼື້ອມທີ່ລອຍຜ່ານມາ.",
+"th": "มันยืนจ้องมองปลาเงาวับที่ว่ายผ่านมา",
+"zh": "它耐心地等着游过的小鱼。",
+"ja": "およいで くる さかなを じっと まっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"momo_heron.4": {
+"en": "Flutter, flutter!",
+"lo": "ກະພືບ, ກະພືບ!",
+"th": "พั่บๆ พั่บๆ!",
+"zh": "扑扑，扑扑！",
+"ja": "パタパタ！",
+"who": "narrator",
+"tag": "sound"
+},
+"garden_gate.0": {
+"en": "A wooden gate. A low wooden gate opens onto the pine road.",
+"lo": "ປະຕູຮົ້ວໄມ້. ປະຕູຮົ້ວໄມ້ເປີດອອກສູ່ທາງປ່າແປກ.",
+"th": "ประตูรั้วไม้ ประตูรั้วไม้เปิดออกสู่ทางป่าสน",
+"zh": "木门。矮矮的木门通向松林小路。",
+"ja": "きの もん。きの もんを でると まつの みちに つづくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"garden_gate.1": {
+"en": "Two cedar posts hold a neat bamboo latch gate.",
+"lo": "ເສົາໄມ້ສອງຕົ້ນກັ້ນປະຕູໄມ້ໄຜ່ທີ່ງາມຕາ.",
+"th": "เสาไม้สองต้นกั้นประตูไม้ไผ่ที่สวยงาม",
+"zh": "两根木柱之间装着一扇精致的竹门。",
+"ja": "きの はしらに たけの とびらが ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"garden_gate.2": {
+"en": "Momotarō steps past this gate to start his journey!",
+"lo": "ໂມໂມທາໂຣກ້າວຜ່ານປະຕູນີ້ເພື່ອອອກເດີນທາງ!",
+"th": "โมโมทาโร่ก้าวผ่านประตูนี้เพื่อออกเดินทาง!",
+"zh": "桃太郎迈出这扇木门，踏上了旅程！",
+"ja": "ももたろうは この もんから たびに でるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"garden_gate.3": {
+"en": "Listen closely—the bush beside the gate is wiggling!",
+"lo": "ຟັງດີໆ—ພຸ່ມໄມ້ຂ້າງປະຕູກຳລັງສັ່ນໄຫວ!",
+"th": "ฟังดีๆ—พุ่มไม้ข้างประตูกำลังขยับไหว!",
+"zh": "仔细听——木门旁的灌木正在晃动呢！",
+"ja": "みて、もんの そばの しげみが ゆれているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"garden_gate.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"spotted_dog.0": {
+"en": "Spotted Dog. Spotted Dog wears a bright blue kerchief.",
+"lo": "ໝານ້ອຍລາຍຈຸດ. ໝານ້ອຍລາຍຈຸດໃສ່ຜ້າພັນຄໍສີຟ້າສົດໃສ.",
+"th": "หมาลายจุด หมาลายจุดสวมผ้าพันคอสีฟ้าสดใส",
+"zh": "斑点狗。斑点狗系着一条亮蓝色的领巾。",
+"ja": "ぶちの いぬ。ぶちの いぬは あおい てぬぐいを まいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"spotted_dog.1": {
+"en": "Hello, Spotted Dog!",
+"lo": "ສະບາຍດີ ໝານ້ອຍລາຍຈຸດ!",
+"th": "สวัสดีหมาลายจุด!",
+"zh": "你好，斑点狗！",
+"ja": "こんにちは、ぶちの いぬ！",
+"who": "dog",
+"tag": "greet"
+},
+"spotted_dog.2": {
+"en": "Woof! I am Spotted Dog!",
+"lo": "ໂຮ່ງ! ຂ້ອຍແມ່ນໝານ້ອຍລາຍຈຸດ!",
+"th": "โฮ่ง! ฉันคือหมาลายจุด!",
+"zh": "汪！我是斑点狗！",
+"ja": "わん！ ぼくは ぶちの いぬだよ！",
+"who": "dog",
+"tag": "say"
+},
+"spotted_dog.3": {
+"en": "A dog has a super sharp nose for smelling treats.",
+"lo": "ໝາມີດັງທີ່ໄວຫຼາຍໃນການດົມກິ່ນຂອງກິນ.",
+"th": "หมามีจมูกที่ไวมากในการดมกลิ่นขนม",
+"zh": "小狗的鼻子很灵，很远就能闻到香味。",
+"ja": "いぬは はなが とても いいんだよ。",
+"who": "dog",
+"tag": "fact"
+},
+"spotted_dog.4": {
+"en": "I wag my tail whenever I am happy!",
+"lo": "ຂ້ອຍແກວ່ງຫາງທຸກຄັ້ງທີ່ດີໃຈ!",
+"th": "ฉันกระดิกหางทุกครั้งที่ดีใจ!",
+"zh": "我一开心就会摇尾巴！",
+"ja": "うれしいと しっぽを ふりふり するよ！",
+"who": "dog",
+"tag": "does"
+},
+"spotted_dog.5": {
+"en": "I bounded out of the bush to meet Momotarō.",
+"lo": "ຂ້ອຍໂດດອອກມາຈາກພຸ່ມໄມ້ເພື່ອພົບໂມໂມທາໂຣ.",
+"th": "ฉันกระโดดออกมาจากพุ่มไม้เพื่อพบโมโมทาโร่",
+"zh": "我从灌木丛里跳出来遇见了桃太郎。",
+"ja": "しげみから とびだして ももたろうに あったよ。",
+"who": "dog",
+"tag": "does"
+},
+"spotted_dog.6": {
+"en": "I love Grandmother's warm millet dumplings!",
+"lo": "ຂ້ອຍມັກເຂົ້າໜົມເຂົ້າຟ່າງອຸ່ນໆຂອງແມ່ຕູ້!",
+"th": "ฉันชอบขนมข้าวฟ่างอุ่นๆ ของคุณยาย!",
+"zh": "我最爱吃老奶奶做的暖暖团子啦！",
+"ja": "あたたかい きびだんごが だいすき！",
+"who": "dog",
+"tag": "does"
+},
+"spotted_dog.7": {
+"en": "I helped pull the heavy fort gate open!",
+"lo": "ຂ້ອຍຊ່ວຍດຶງປະຕູປ້ອມໜັກໆໃຫ້ເປີດອອກ!",
+"th": "ฉันช่วยดึงประตูป้อมหนักๆ ให้เปิดออก!",
+"zh": "我帮忙拉开了重重的石堡大门！",
+"ja": "おもい もんを ひっぱって あけたよ！",
+"who": "dog",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"spotted_dog.8": {
+"en": "Woof, woof!",
+"lo": "ໂຮ່ງ, ໂຮ່ງ!",
+"th": "โฮ่ง โฮ่ง!",
+"zh": "汪，汪！",
+"ja": "わん、わん！",
+"who": "dog",
+"tag": "sound"
+},
+"mountain_monkey.0": {
+"en": "Mountain Monkey. Mountain Monkey wears a bright orange vest.",
+"lo": "ລີງພູ. ລີງພູໃສ່ເສື້ອກັ໊ກສີສົ້ມສົດໃສ.",
+"th": "ลิงภูเขา ลิงภูเขาสวมเสื้อกั๊กสีส้มสดใส",
+"zh": "山猴。山猴穿着一件亮橙色的小背心。",
+"ja": "やまの さる。やまの さるは だいだいいろの ちゃんちゃんこを きているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"mountain_monkey.1": {
+"en": "Hello, Mountain Monkey!",
+"lo": "ສະບາຍດີ ລີງພູ!",
+"th": "สวัสดีลิงภูเขา!",
+"zh": "你好，山猴！",
+"ja": "こんにちは、やまの さる！",
+"who": "monkey",
+"tag": "greet"
+},
+"mountain_monkey.2": {
+"en": "Ooh-ooh! I am Mountain Monkey!",
+"lo": "ອູ້ໆ! ຂ້ອຍແມ່ນລີງພູ!",
+"th": "อู้ๆ! ฉันคือลิงภูเขา!",
+"zh": "呜呜！我是山猴！",
+"ja": "うっきー！ ぼくは やまの さるだよ！",
+"who": "monkey",
+"tag": "say"
+},
+"mountain_monkey.3": {
+"en": "Monkeys are clever climbers who love high branches.",
+"lo": "ລີງປີນຕົ້ນໄມ້ເກັ່ງ ແລະ ມັກງ່າໄມ້ສູງ.",
+"th": "ลิงปีนต้นไม้เก่งและชอบกิ่งไม้สูง",
+"zh": "猴子很会爬树，喜欢待在高高的树枝上。",
+"ja": "さるは きに のぼるのが とても じょうずだよ。",
+"who": "monkey",
+"tag": "fact"
+},
+"mountain_monkey.4": {
+"en": "I tumbled bonk right out of the pine tree!",
+"lo": "ຂ້ອຍພາດຕົກປຶກລົງມາຈາກຕົ້ນແປກ!",
+"th": "ฉันพลาดตกปึ้กลงมาจากต้นสน!",
+"zh": "我哎呀一声从松树上摔了下来！",
+"ja": "まつの きから どしんと おちちゃったよ！",
+"who": "monkey",
+"tag": "does"
+},
+"mountain_monkey.5": {
+"en": "I can do a happy flip in the air!",
+"lo": "ຂ້ອຍຕີລັງກາດີໃຈກາງອາກາດໄດ້!",
+"th": "ฉันตีลังกาดีใจกลางอากาศได้!",
+"zh": "我能在空中开心地翻跟头！",
+"ja": "うれしくて くるっと ちゅうがえり できるよ！",
+"who": "monkey",
+"tag": "does"
+},
+"mountain_monkey.6": {
+"en": "I scrambled up the wall to slide the wooden bolt!",
+"lo": "ຂ້ອຍປີນຂຶ້ນກຳແພງເພື່ອເປີດກອນປະຕູໄມ້!",
+"th": "ฉันปีนขึ้นกำแพงเพื่อเปิดกลอนประตูไม้!",
+"zh": "我爬上高墙拉开了大门的木栓！",
+"ja": "かべを のぼって もんの かぎを あけたよ！",
+"who": "monkey",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"mountain_monkey.7": {
+"en": "I love balancing paper lanterns on my head!",
+"lo": "ຂ້ອຍມັກທົງໂຄມໄຟເຈ້ຍໄວ້ເທິງຫົວ!",
+"th": "ฉันชอบทูนโคมไฟกระดาษไว้บนหัว!",
+"zh": "我喜欢把纸灯笼顶在头上！",
+"ja": "あたまに ちょうちんを のせるのが とくいだよ！",
+"who": "monkey",
+"sp": [
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"mountain_monkey.8": {
+"en": "Hee hee, ooh-ooh!",
+"lo": "ຄິກໆ, ອູ້ໆ!",
+"th": "คิกๆ อู้ๆ!",
+"zh": "嘻嘻，呜呜！",
+"ja": "えへへ、うっきー！",
+"who": "monkey",
+"tag": "sound"
+},
+"green_pheasant.0": {
+"en": "Green Pheasant. Green Pheasant wears a braided gold collar.",
+"lo": "ໄກ່ຟ້າສີຂຽວ. ໄກ່ຟ້າສີຂຽວໃສ່ສາຍຄໍຖັກສີຄຳ.",
+"th": "ไก่ฟ้าสีเขียว ไก่ฟ้าสีเขียวสวมสร้อยคอถักสีทอง",
+"zh": "绿雉。绿雉戴着一条金色编织颈带。",
+"ja": "みどりの きじ。みどりの きじは きんの くびかざりを つけているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"green_pheasant.1": {
+"en": "Hello, Green Pheasant!",
+"lo": "ສະບາຍດີ ໄກ່ຟ້າສີຂຽວ!",
+"th": "สวัสดีไก่ฟ้าสีเขียว!",
+"zh": "你好，绿雉！",
+"ja": "こんにちは、みどりの きじ！",
+"who": "pheasant",
+"tag": "greet"
+},
+"green_pheasant.2": {
+"en": "Hello! I am Green Pheasant!",
+"lo": "ສະບາຍດີ! ຂ້ອຍແມ່ນໄກ່ຟ້າສີຂຽວ!",
+"th": "สวัสดี! ฉันคือไก่ฟ้าสีเขียว!",
+"zh": "你好！我是绿雉！",
+"ja": "こんにちは！ わたしは みどりの きじよ！",
+"who": "pheasant",
+"tag": "say"
+},
+"green_pheasant.3": {
+"en": "A green pheasant has bright emerald feathers and sharp eyes.",
+"lo": "ໄກ່ຟ້າສີຂຽວມີຂົນສີຂຽວສົດ ແລະ ຕາແຫຼມຄົມ.",
+"th": "ไก่ฟ้าสีเขียวมีขนสีเขียวสดและตาแหลมคม",
+"zh": "绿雉有着翠绿的羽毛和敏锐的眼睛。",
+"ja": "みどりの きじは きれいな はねと するどい めを もっているよ。",
+"who": "pheasant",
+"tag": "fact"
+},
+"green_pheasant.4": {
+"en": "I can fly high above the rolling waves!",
+"lo": "ຂ້ອຍບິນສູງເທິງຄື້ນທະເລໄດ້!",
+"th": "ฉันบินสูงเหนือคลื่นทะเลได้!",
+"zh": "我能高高地飞在海浪上方！",
+"ja": "うみの なみの うえを たかく とべるよ！",
+"who": "pheasant",
+"tag": "does"
+},
+"green_pheasant.5": {
+"en": "I spot islands far ahead through the sea mist.",
+"lo": "ຂ້ອຍເບິ່ງເຫັນເກາະຢູ່ໄກໆຜ່ານໝອກທະເລ.",
+"th": "ฉันมองเห็นเกาะอยู่ไกลๆ ผ่านหมอกทะเล",
+"zh": "我能透过海雾看到远处的海岛。",
+"ja": "きりの むこうの しまも すぐ みつけるよ。",
+"who": "pheasant",
+"sp": [
+"s04",
+"s05",
+"s09"
+],
+"tag": "does"
+},
+"green_pheasant.6": {
+"en": "I love singing high up in the pink peach tree.",
+"lo": "ຂ້ອຍມັກຮ້ອງເພງຢູ່ເທິງຕົ້ນໝາກຄາຍສີບົວ.",
+"th": "ฉันชอบร้องเพลงอยู่บนต้นท้อสีชมพู",
+"zh": "我喜欢在粉红的桃树上唱歌。",
+"ja": "ピンクの ももの きで うたうのが すきよ。",
+"who": "pheasant",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"green_pheasant.7": {
+"en": "My flapping wings make a strong gust of wind!",
+"lo": "ປີກຂອງຂ້ອຍພັດໃຫ້ເກີດລົມແຮງ!",
+"th": "ปีกของฉันพัดให้เกิดลมแรง!",
+"zh": "我扇动翅膀能吹出阵阵大风！",
+"ja": "はねを はばたかせると つよい かぜが おきるよ！",
+"who": "pheasant",
+"tag": "does"
+},
+"green_pheasant.8": {
+"en": "Swoosh, flap, flap!",
+"lo": "ຟິ້ວ, ພຶບ, ພຶບ!",
+"th": "ฟิ้ว พั่บ พั่บ!",
+"zh": "嗖，扑扑！",
+"ja": "シュッ、パタパタ！",
+"who": "pheasant",
+"tag": "sound"
+},
+"wooden_boat.0": {
+"en": "A sailboat. The wooden sailboat carries Momotarō across the sea.",
+"lo": "ເຮືອໃບໄມ້. ເຮືອໃບໄມ້ພາໂມໂມທາໂຣຂ້າມທະເລໄປ.",
+"th": "เรือใบไม้ เรือใบไม้พาโมโมทาโร่ข้ามทะเลไป",
+"zh": "木帆船。小木帆船载着桃太郎驶过大海。",
+"ja": "ほかけぶね。ほかけぶねが ももたろうを うみの むこうへ はこぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"wooden_boat.1": {
+"en": "The sturdy wooden boat has a tall mast and white sail.",
+"lo": "ເຮືອໄມ້ແຂງແຮງມີເສົາສູງ ແລະ ໃບເຮືອສີຂາວ.",
+"th": "เรือไม้แข็งแรงมีเสาสูงและใบเรือสีขาว",
+"zh": "结实的木帆船有高高的桅杆和白帆。",
+"ja": "じょうぶな きの ふねに しろい ほが ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"wooden_boat.2": {
+"en": "It rides smoothly up and down the rolling waves.",
+"lo": "ມັນແລ່ນຂຶ້ນລົງຢ່າງນິ້ມນວນເທິງຄື້ນທະເລ.",
+"th": "มันแล่นขึ้นลงอย่างนุ่มนวลบนคลื่นทะเล",
+"zh": "它乘着海浪平稳地起伏前行。",
+"ja": "なみの うえを ゆらゆら すすむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"wooden_boat.3": {
+"en": "Momotarō, Dog, Monkey and Pheasant sail together.",
+"lo": "ໂມໂມທາໂຣ, ໝານ້ອຍ, ລີງ ແລະ ໄກ່ຟ້າແລ່ນເຮືອໄປນຳກັນ.",
+"th": "โมโมทาโร่ หมา ลิง และไก่ฟ้าแล่นเรือไปด้วยกัน",
+"zh": "桃太郎和三位伙伴一起扬帆航行。",
+"ja": "ももたろうと なかまたちが いっしょに ふねに のるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"wooden_boat.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"wooden_oar.0": {
+"en": "A wooden oar. A wooden oar pushes the boat through the waves.",
+"lo": "ໄມ້ພາຍ. ໄມ້ພາຍຊ່ວຍພາຍເຮືອຜ່ານຄື້ນທະເລ.",
+"th": "ไม้พาย ไม้พายช่วยพายเรือผ่านคลื่นทะเล",
+"zh": "木桨。木桨推着小船划过海浪。",
+"ja": "かい。かいで なみを こいで すすむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"wooden_oar.1": {
+"en": "The long wooden oar is carved smooth to hold.",
+"lo": "ໄມ້ພາຍຍາວຖືກເຫຼົາຈົນລຽບຈັບຖະໜັດມື.",
+"th": "ไม้พายยาวถูกเหลาจนเรียบจับถนัดมือ",
+"zh": "长长的木桨打磨得光光滑滑很好握。",
+"ja": "ながい かいは つるつるで もちやすいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"wooden_oar.2": {
+"en": "Dog and Monkey row in rhythm to steer the boat.",
+"lo": "ໝານ້ອຍ ແລະ ລີງພາຍເຮືອເປັນຈັງຫວະເພື່ອຄຸມທິດ.",
+"th": "หมาและลิงพายเรือเป็นจังหวะเพื่อบังคับทิศ",
+"zh": "斑点狗和山猴合着节拍划船掌舵。",
+"ja": "いぬと さるが いっしょに かいを こぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"wooden_oar.3": {
+"en": "Each dip of the oar makes a gentle splash!",
+"lo": "ທຸກຄັ້ງທີ່ພາຍລົງນ້ຳກໍມີສຽງນ້ຳແຕກຄ່ອຍໆ!",
+"th": "ทุกครั้งที่จุ่มพายลงน้ำก็มีเสียงน้ำกระเซ็นเบาๆ!",
+"zh": "木桨每次划入水里都会溅起轻快的水花！",
+"ja": "かいを こぐと みずが ばしゃんと はねるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"wooden_oar.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"white_sail.0": {
+"en": "A white sail. The white sail catches the breeze to move the boat.",
+"lo": "ໃບເຮືອສີຂາວ. ໃບເຮືອສີຂາວຮັບລົມເພື່ອພາເຮືອແລ່ນໄປ.",
+"th": "ใบเรือสีขาว ใบเรือสีขาวรับลมเพื่อพาเรือแล่นไป",
+"zh": "白帆。白帆迎着海风带着小船向前驶去。",
+"ja": "しろい ほ。しろい ほが かぜを うけて ふねを うごかすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"white_sail.1": {
+"en": "The cloth sail is bright white and stitched strong.",
+"lo": "ໃບເຮືອຜ້າສີຂາວສະອາດ ແລະ ຫຍິບຢ່າງແໜ້ນໜາ.",
+"th": "ใบเรือผ้าสีขาวสะอาดและเย็บอย่างแน่นหนา",
+"zh": "布帆雪白雪白的，缝得非常结实。",
+"ja": "しろい ぬのの ほは とても じょうぶだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"white_sail.2": {
+"en": "When morning wind fills the sail, the boat speeds ahead!",
+"lo": "ເມື່ອລົມເຊົ້າພັດເຕັມໃບເຮືອ, ເຮືອກໍແລ່ນໄປໄວ!",
+"th": "เมื่อลมเช้าพัดเต็มใบเรือ เรือก็แล่นไปเร็ว!",
+"zh": "当海风吹满白帆，小船就飞快向前冲！",
+"ja": "かぜが いっぱい ふくと ふねが すいすい すすむよ！",
+"who": "narrator",
+"tag": "does"
+},
+"white_sail.3": {
+"en": "Pheasant likes to perch right above the sail.",
+"lo": "ໄກ່ຟ້າມັກຈັບຢູ່ເທິງສຸດເໜືອໃບເຮືອ.",
+"th": "ไก่ฟ้าชอบเกาะอยู่ด้านบนเหนือใบเรือ",
+"zh": "绿雉喜欢稳稳停在白帆最上方。",
+"ja": "きじは ほの うえに とまるのが すきだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"white_sail.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"momo_crab.0": {
+"en": "A crab. A little crab scuttles sideways along the shore.",
+"lo": "ກະປູ. ກະປູນ້ອຍໄຕ່ຂ້າງໄປຕາມແຄມຝັ່ງ.",
+"th": "ปู ปูน้อยเดินตะแคงไปตามชายฝั่ง",
+"zh": "螃蟹。小螃蟹沿着海边横着爬行。",
+"ja": "かに。ちいさな かにが はまべを よこに あるくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_crab.1": {
+"en": "Hello, crab!",
+"lo": "ສະບາຍດີ ກະປູ!",
+"th": "สวัสดีปู!",
+"zh": "你好，螃蟹！",
+"ja": "こんにちは、かに！",
+"who": "narrator",
+"tag": "greet"
+},
+"momo_crab.2": {
+"en": "A crab has ten legs and two snapping claws.",
+"lo": "ກະປູມີສິບຂາ ແລະ ກ້າມໜີບສອງກ້າມ.",
+"th": "ปูมีสิบขาและก้ามหนีบสองข้าง",
+"zh": "螃蟹有十条腿和两只大钳子。",
+"ja": "かにには あしが じゅっぽんと はさみが ふたつ あるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"momo_crab.3": {
+"en": "It hides under wet rocks when big waves splash.",
+"lo": "ມັນລີ້ຢູ່ກ້ອງຫີນປຽກເມື່ອຄື້ນໃຫຍ່ຊັດມາ.",
+"th": "มันซ่อนใต้หินเปียกเมื่อคลื่นใหญ่ซัดมา",
+"zh": "大浪拍来时，它就躲到湿湿的石头下面。",
+"ja": "おおきな なみが くると いわの かげに かくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"momo_crab.4": {
+"en": "Click, click!",
+"lo": "ແຄະໆ!",
+"th": "แกร๊กๆ!",
+"zh": "咔嗒咔嗒！",
+"ja": "カチカチ！",
+"who": "narrator",
+"tag": "sound"
+},
+"momo_seafish.0": {
+"en": "A sea fish. A sea fish swims beneath the rolling waves.",
+"lo": "ປາທະເລ. ປາທະເລລອຍຢູ່ກ້ອງຄື້ນທະເລ.",
+"th": "ปลาทะเล ปลาทะเลว่ายอยู่ใต้คลื่นทะเล",
+"zh": "海鱼。海鱼在翻滚的海浪下面游动。",
+"ja": "うみの さかな。うみの なみの したを さかなが およぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_seafish.1": {
+"en": "Hello, sea fish!",
+"lo": "ສະບາຍດີ ປາທະເລ!",
+"th": "สวัสดีปลาทะเล!",
+"zh": "你好，海鱼！",
+"ja": "こんにちは、うみの さかな！",
+"who": "narrator",
+"tag": "greet"
+},
+"momo_seafish.2": {
+"en": "Sea fish live in salty ocean water.",
+"lo": "ປາທະເລອາໄສຢູ່ໃນນ້ຳທະເລເຄັມ.",
+"th": "ปลาทะเลอาศัยอยู่ในน้ำทะเลเค็ม",
+"zh": "海鱼生活在咸咸的海水里。",
+"ja": "うみの さかなは しおみずの うみに すんでいるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"momo_seafish.3": {
+"en": "It swims right alongside Momotarō's sailboat.",
+"lo": "ມັນລອຍຄຽງຂ້າງເຮືອໃບຂອງໂມໂມທາໂຣ.",
+"th": "มันว่ายเคียงข้างเรือใบของโมโมทาโร่",
+"zh": "它紧挨着桃太郎的小帆船一起游。",
+"ja": "ももたろうの ほかけぶねと いっしょに およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"momo_seafish.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"mooring_post.0": {
+"en": "A mooring post. A wooden post holds the sailboat safe by the shore.",
+"lo": "ຫຼັກມັດເຮືອ. ຫຼັກໄມ້ມັດເຮືອໃບໄວ້ຢ່າງປອດໄພແຄມຝັ່ງ.",
+"th": "หลักผูกเรือ หลักไม้ผูกเรือใบไว้อย่างปลอดภัยริมฝั่ง",
+"zh": "系船木桩。木桩把帆船稳稳地拴在岸边。",
+"ja": "ふねの くい。ふねを つないで おく きの くいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"mooring_post.1": {
+"en": "The sturdy timber post stands planted in the sand.",
+"lo": "ຫຼັກໄມ້ແຂງແຮງປັກແໜ້ນຢູ່ໃນດິນຊາຍ.",
+"th": "หลักไม้แข็งแรงปักแน่นอยู่ในผืนทราย",
+"zh": "结实的木桩牢牢插在沙滩里。",
+"ja": "じょうぶな きの くいが すなに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mooring_post.2": {
+"en": "Sailors loop ropes around the post so boats stay put.",
+"lo": "ຄົນເຮືອຄ້ອງເຊືອກອ້ອມຫຼັກເພື່ອບໍ່ໃຫ້ເຮືອລອຍໜີ.",
+"th": "คนเรือคล้องเชือกรอบหลักเพื่อไม่ให้เรือลอยไป",
+"zh": "船夫把绳子绕在木桩上，小船就不会漂走。",
+"ja": "ロープを まいて ふねが ながされない ように するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mooring_post.3": {
+"en": "Untie the post and it is time to set sail!",
+"lo": "ແກ້ເຊືອກອອກຈາກຫຼັກ ແລ້ວກໍໄດ້ເວລາອອກເຮືອ!",
+"th": "แก้เชือกออกจากหลัก แล้วก็ได้เวลาออกเรือ!",
+"zh": "解开绳子，就可以扬帆出发啦！",
+"ja": "ロープを ほどいたら いよいよ しゅっぱつ だよ！",
+"who": "narrator",
+"tag": "does"
+},
+"mooring_post.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"boat_rope.0": {
+"en": "A coiled rope. Strong coiled rope ties the boat to the pier.",
+"lo": "ເຊືອກຂົດ. ເຊືອກຂົດແຂງແຮງໃຊ້ມັດເຮືອໄວ້ກັບທ່າ.",
+"th": "เชือกขด เชือกขดแข็งแรงใช้ผูกเรือไว้กับท่า",
+"zh": "卷绳。结实的卷绳用来把小船系在岸边。",
+"ja": "まいた ロープ。ふねを むすぶ じょうぶな ロープだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"boat_rope.1": {
+"en": "Thick golden hemp rope is coiled neatly on the beach.",
+"lo": "ເຊືອກໜາສີຄຳຂົດໄວ້ຢ່າງເປັນລະບຽບເທິງຫາດຊາຍ.",
+"th": "เชือกหนาสีทองขดไว้อย่างเรียบร้อยบนชายหาด",
+"zh": "粗粗的麻绳整齐地盘在沙滩上。",
+"ja": "ふとい ロープが はまべに きれいに まいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"boat_rope.2": {
+"en": "Rope holds the sail tight and ties the boat safely.",
+"lo": "ເຊືອກດຶງໃບເຮືອໃຫ້ຕຶງ ແລະ ມັດເຮືອໃຫ້ປອດໄພ.",
+"th": "เชือกดึงใบเรือให้ตึงและผูกเรือให้ปลอดภัย",
+"zh": "绳子能拉紧白帆，还能把船系稳。",
+"ja": "ほを ひっぱったり ふねを むすんだり するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"boat_rope.3": {
+"en": "Good sailors coil their rope neatly after sailing.",
+"lo": "ຄົນເຮືອທີ່ດີຈະຂົດເຊືອກໄວ້ໃຫ້ເປັນລະບຽບ.",
+"th": "คนเรือที่ดีจะขดเชือกไว้ให้เป็นระเบียบ",
+"zh": "好水手总是把绳子盘得整整齐齐。",
+"ja": "つかった あとは きれいに まいて おくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"boat_rope.4": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"shore_rocks.0": {
+"en": "Shore rocks. Tide-washed rocks guard the sandy cove.",
+"lo": "ໂງ່ນຫີນແຄມຝັ່ງ. ໂງ່ນຫີນແຄມຝັ່ງຢູ່ລຽບອ່າວຊາຍ.",
+"th": "โขดหินริมฝั่ง โขดหินริมฝั่งเรียงรายตามอ่าวทราย",
+"zh": "岸边礁石。被海浪冲刷的礁石守着海湾。",
+"ja": "いその いわ。なみに あらわれた いわが うみべに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"shore_rocks.1": {
+"en": "Smooth wet rocks peek through the splashing surf.",
+"lo": "ໂງ່ນຫີນປຽກລຽບພົ້ນຂຶ້ນມາທ່າມກາງຟອງຄື້ນ.",
+"th": "โขดหินเปียกเรียบโผล่ขึ้นมากลางฟองคลื่น",
+"zh": "湿润光滑的礁石在浪花间探出头来。",
+"ja": "ぬれた いわが なみの あいだに みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"shore_rocks.2": {
+"en": "Little crabs love hiding in the cool tide pools here.",
+"lo": "ກະປູນ້ອຍມັກລີ້ຢູ່ໃນແອ່ງນ້ຳເຢັນແຖວນີ້.",
+"th": "ปูน้อยชอบซ่อนในแอ่งน้ำเย็นแถวนี้",
+"zh": "小螃蟹最喜欢藏在岩石旁清凉的小水洼里。",
+"ja": "ちいさな かにが いわの かげに かくれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"shore_rocks.3": {
+"en": "Waves polish shore rocks rounder every day.",
+"lo": "ຄື້ນຊັດຂັດໂງ່ນຫີນແຄມຝັ່ງໃຫ້ມົນລຽບຂຶ້ນທຸກມື້.",
+"th": "คลื่นซัดขัดโขดหินริมฝั่งให้กลมเรียบขึ้นทุกวัน",
+"zh": "海浪日复一日把礁石冲刷得越来越圆润。",
+"ja": "なみが まいにち いわを まるく みがくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"shore_rocks.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"pine_cliff.0": {
+"en": "A pine cliff. Twisted pine trees cling to the rocky sea cliff.",
+"lo": "ໜ້າຜາຕົ້ນແປກ. ຕົ້ນແປກເກາະແໜ້ນຢູ່ເທິງໜ້າຜາຫີນແຄມທະເລ.",
+"th": "หน้าผาต้นสน ต้นสนเกาะแน่นอยู่บนหน้าผาหินริมทะเล",
+"zh": "松林海崖。弯弯的松树稳稳扎根在海边悬崖上。",
+"ja": "まつの がけ。まつの きが うみの がけに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"pine_cliff.1": {
+"en": "Green Japanese pines grow atop rugged sea rocks.",
+"lo": "ຕົ້ນແປກຍີ່ປຸ່ນສີຂຽວເກີດເທິງໂງ່ນຫີນທະເລ.",
+"th": "ต้นสนญี่ปุ่นสีเขียวขึ้นบนโขดหินทะเล",
+"zh": "青翠的松树长在崎岖的海边崖石上。",
+"ja": "うみの がけの うえに まつの きが はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"pine_cliff.2": {
+"en": "The tall cliff shelters the calm home bay from wind.",
+"lo": "ໜ້າຜາສູງບັງລົມໃຫ້ອ່າວບ້ານເກີດສະຫງົບ.",
+"th": "หน้าผาสูงบังลมให้อ่าวบ้านเกิดสงบ",
+"zh": "高高的海崖为海湾挡住海风。",
+"ja": "たかい がけが かぜから うみべを まもっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pine_cliff.3": {
+"en": "Waves splash white foam against the rocky base.",
+"lo": "ຄື້ນຊັດຟອງສີຂາວໃສ່ຕີນຜາຫີນ.",
+"th": "คลื่นซัดฟองสีขาวใส่ตีนผาหิน",
+"zh": "海浪拍打着悬崖脚下溅起白浪花。",
+"ja": "がけの したで なみが しろく はねるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pine_cliff.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"sea_waves.0": {
+"en": "Sea waves. Foaming ocean waves roll and splash across the bay.",
+"lo": "ຄື້ນທະເລ. ຄື້ນທະເລຟອງຂາວກິ້ງຊັດໄປທົ່ວອ່າວ.",
+"th": "คลื่นทะเล คลื่นทะเลฟองขาวซัดไปทั่วอ่าว",
+"zh": "海浪。翻着白浪花的海水在海湾里滚滚向前。",
+"ja": "うみの なみ。しろい しぶきの なみが ざぶんと うごくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sea_waves.1": {
+"en": "Turquoise waves curl up with bright white sea foam.",
+"lo": "ຄື້ນສີຟ້າຂຽວມ້ວນຂຶ້ນພ້ອມຟອງທະເລສີຂາວ.",
+"th": "คลื่นสีฟ้าเขียวม้วนขึ้นพร้อมฟองทะเลสีขาว",
+"zh": "碧绿的海浪卷起雪白的浪花。",
+"ja": "あおい なみに しろい しぶきが ぱっと さくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sea_waves.2": {
+"en": "Waves rock the little sailboat gently up and down.",
+"lo": "ຄື້ນໂຍກເຮືອໃບນ້ອຍຂຶ້ນລົງຢ່າງນິ້ມນວນ.",
+"th": "คลื่นโยกเรือใบน้อยขึ้นลงอย่างนุ่มนวล",
+"zh": "海浪轻轻摇晃着小帆船一起一伏。",
+"ja": "なみが ほかけぶねを ゆらゆら ゆらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sea_waves.3": {
+"en": "Sea spray tickles the crew as they sail fast!",
+"lo": "ລະອອງນ້ຳທະເລຟົ້ງໃສ່ພວກເຂົາຕອນແລ່ນເຮືອໄວ!",
+"th": "ละอองน้ำทะเลกระเด็นใส่พวกเขาตอนแล่นเรือเร็ว!",
+"zh": "小船疾驶时，海浪花溅得大家哈哈笑！",
+"ja": "しぶきが かかって みんなで わらいあうよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sea_waves.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sea_sky.0": {
+"en": "The sea sky. The wide sky meets the blue ocean far away.",
+"lo": "ທ້ອງຟ້າທະເລ. ທ້ອງຟ້າກວ້າງຈົດກັບທະເລສີຟ້າຢູ່ໄກໆ.",
+"th": "ท้องฟ้าทะเล ท้องฟ้ากว้างจรดทะเลสีฟ้าไกลสุดตา",
+"zh": "海上天空。宽阔的天空在远处和大海相连。",
+"ja": "うみの そら。ひろい そらが とおくで うみと つながっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sea_sky.1": {
+"en": "Bright ocean clouds float high above the waves.",
+"lo": "ເມກທະເລສົດໃສລອຍສູງເທິງຄື້ນ.",
+"th": "เมฆทะเลสดใสลอยสูงเหนือคลื่น",
+"zh": "明亮的海云高高漂在海浪上方。",
+"ja": "うみの うえに あかるい くもが うかんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sea_sky.2": {
+"en": "A salty sea breeze blows across the wide water.",
+"lo": "ລົມທະເລພັດຂ້າມຜືນນ້ຳກວ້າງ.",
+"th": "ลมทะเลพัดข้ามผืนน้ำกว้าง",
+"zh": "带着海盐气息的海风吹过辽阔的大海。",
+"ja": "しおかぜが ひろい うみを ふきぬけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sea_sky.3": {
+"en": "Seabirds glide smoothly across the sunny sky.",
+"lo": "ນົກທະເລບິນຮ່ອນຢ່າງສະບາຍຂ້າມທ້ອງຟ້າແຈ້ງ.",
+"th": "นกทะเลร่อนอย่างสบายข้ามท้องฟ้าสว่าง",
+"zh": "海鸟在晴朗的天空里自由滑翔。",
+"ja": "うみどりが あかるい そらを ゆうゆうと とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sea_sky.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"sea_horizon.0": {
+"en": "The open sea. The wide blue sea stretches out toward adventure.",
+"lo": "ທະເລກວ້າງ. ທະເລສີຟ້າກວ້າງໄກອອກໄປສູ່ການຜະຈົນໄພ.",
+"th": "ทะเลกว้าง ทะเลสีฟ้ากว้างไกลออกไปสู่การผจญภัย",
+"zh": "辽阔大海。辽阔的蓝海一直伸向远方的冒险。",
+"ja": "ひろい うみ。あおい うみが ぼうけんへ むかって ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sea_horizon.1": {
+"en": "Deep blue water reaches all the way to the sky.",
+"lo": "ນ້ຳທະເລສີຟ້າເຂັ້ມກວ້າງໄກຈົນຈົດທ້ອງຟ້າ.",
+"th": "น้ำทะเลสีฟ้าเข้มกว้างไกลจนจรดท้องฟ้า",
+"zh": "深蓝的海水一直延伸到天边。",
+"ja": "あおい うみが そらの はてまで つづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sea_horizon.2": {
+"en": "Momotarō and his friends sail bravely out to sea!",
+"lo": "ໂມໂມທາໂຣ ແລະ ໝູ່ແລ່ນເຮືອອອກທະເລຢ່າງກ້າຫານ!",
+"th": "โมโมทาโร่และเพื่อนแล่นเรือออกทะเลอย่างกล้าหาญ!",
+"zh": "桃太郎和伙伴们勇敢地扬帆出海！",
+"ja": "ももたろうと なかまたちが うみへ こぎだすよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sea_horizon.3": {
+"en": "Sunlight dances like silver sparkles on the horizon.",
+"lo": "ແສງແດດເຕັ້ນເປັນປະກາຍສີເງິນຢູ່ຂອບຟ້າ.",
+"th": "แสงแดดเต้นเป็นประกายสีเงินที่ขอบฟ้า",
+"zh": "阳光像银色的星星在海天交界处跳跃。",
+"ja": "おひさまの ひかりが うみに きらきら ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sea_horizon.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"flying_fish.0": {
+"en": "A flying fish. A silver flying fish leaps right out of the waves!",
+"lo": "ປາບິນ. ປາບິນສີເງິນໂດດຂຶ້ນມາຈາກຄື້ນທະເລ!",
+"th": "ปลาบิน ปลาบินสีเงินกระโดดขึ้นมาจากคลื่นทะเล!",
+"zh": "飞鱼。银色的飞鱼从海浪里跃了起来！",
+"ja": "とびうお。ぎんいろの とびうおが なみから とびだすよ！",
+"who": "narrator",
+"tag": "what"
+},
+"flying_fish.1": {
+"en": "Hello, flying fish!",
+"lo": "ສະບາຍດີ ປາບິນ!",
+"th": "สวัสดีปลาบิน!",
+"zh": "你好，飞鱼！",
+"ja": "こんにちは、とびうお！",
+"who": "narrator",
+"tag": "greet"
+},
+"flying_fish.2": {
+"en": "Flying fish have wide wing-like fins to glide over waves!",
+"lo": "ປາບິນມີຄີກວ້າງຄືປີກເພື່ອຮ່ອນເທິງຄື້ນ!",
+"th": "ปลาบินมีครีบกว้างเหมือนปีกเพื่อร่อนเหนือคลื่น!",
+"zh": "飞鱼有宽宽的像翅膀一样的鱼鳍，能在浪面上滑翔！",
+"ja": "とびうおは はねみたいな ひれで なみの うえを とぶよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"flying_fish.3": {
+"en": "It leaped aboard and tickled Dog's wet nose!",
+"lo": "ມັນໂດດຂຶ້ນເຮືອ ແລ້ວມາຈັກກະຈີ້ດັງໝານ້ອຍ!",
+"th": "มันกระโดดขึ้นเรือแล้วมาจั๊กจี้จมูกหมาน้อย!",
+"zh": "它跳上小船，挠得斑点狗的鼻子痒痒的！",
+"ja": "ふねに とびのって いぬの はなを くすぐったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"flying_fish.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sea_rock.0": {
+"en": "A sea rock. A jagged sea rock rises right out of the waves!",
+"lo": "ໂງ່ນຫີນທະເລ. ໂງ່ນຫີນທະເລແຫຼມພົ້ນຂຶ້ນມາກາງຄື້ນ!",
+"th": "โขดหินทะเล โขดหินทะเลแหลมโผล่ขึ้นมากลางคลื่น!",
+"zh": "海中礁石。尖尖的礁石从海浪中冒了出来！",
+"ja": "うみの いわ。なみの なかから ごつごつの いわが でているよ！",
+"who": "narrator",
+"tag": "what"
+},
+"sea_rock.1": {
+"en": "Craggy sea rocks jut up out of the deep blue waves.",
+"lo": "ໂງ່ນຫີນທະເລແຫຼມສູງພົ້ນຂຶ້ນມາຈາກຄື້ນສີຟ້າເຂັ້ມ.",
+"th": "โขดหินทะเลแหลมสูงโผล่ขึ้นมาจากคลื่นสีฟ้าเข้ม",
+"zh": "崎岖的礁石高高露出深蓝的海面。",
+"ja": "ごつごつの いわが あおい なみから でているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sea_rock.2": {
+"en": "Steer the sailboat carefully around each sea rock!",
+"lo": "ຄຸມເຮືອໃບຫຼົບໂງ່ນຫີນທະເລແຕ່ລະກ້ອນຢ່າງລະມັດລະວັງ!",
+"th": "บังคับเรือใบหลบโขดหินทะเลแต่ละก้อนอย่างระมัดระวัง!",
+"zh": "小心掌舵，绕开每一块礁石吧！",
+"ja": "いわに ぶつからない ように ふねを うまく すべらせよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sea_rock.3": {
+"en": "White ocean foam crashes all around the dark stones.",
+"lo": "ຟອງທະເລສີຂາວແຕກກະຈາຍອ້ອມກ້ອນຫີນສີເຂັ້ມ.",
+"th": "ฟองทะเลสีขาวแตกกระจายรอบก้อนหินสีเข้ม",
+"zh": "白色的海浪花拍打着深色的礁石。",
+"ja": "しろい なみが いわに ざぶんと あたるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sea_rock.4": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"island_crags.0": {
+"en": "Rocky crags. Dark volcanic crags surround the stone fortress.",
+"lo": "ຜາຫີນ. ຜາຫີນສີເຂັ້ມລ້ອມອ້ອມປ້ອມຫີນ.",
+"th": "ผาหิน ผาหินสีเข้มล้อมรอบป้อมหิน",
+"zh": "峭壁岩石。深色的火山岩石围着石头堡垒。",
+"ja": "ごつごつの いわ。くろい いわやまが しろを かこんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"island_crags.1": {
+"en": "Steep mossy crags tower behind the fortress walls.",
+"lo": "ຜາຫີນສູງຊັນມີໄຄນ້ຳຕັ້ງສະຫງ່າຫຼັງກຳແພງປ້ອມ.",
+"th": "ผาหินสูงชันมีมอสตั้งตระหง่านหลังกำแพงป้อม",
+"zh": "长满青苔的陡峭岩壁耸立在堡垒后面。",
+"ja": "ごつごつの いわやまが しろの うしろに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"island_crags.2": {
+"en": "Green ferns sprout right out of the rocky crevices.",
+"lo": "ຜັກກູດສີຂຽວງອກອອກມາຈາກຮອຍແຕກຂອງຫີນ.",
+"th": "ต้นเฟิร์นสีเขียวขึ้นออกมาจากรอยแตกของหิน",
+"zh": "绿油油的蕨草从石头缝里钻了出来。",
+"ja": "いわの すきまから みどりの しだが はえているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"island_crags.3": {
+"en": "Ogre Island is made of tall, dark volcanic rock.",
+"lo": "ເກາະຍັກເກີດຈາກຫີນພູເຂົາໄຟສີເຂັ້ມສູງຊັນ.",
+"th": "เกาะยักษ์เกิดจากหินภูเขาไฟสีเข้มสูงชัน",
+"zh": "鬼岛是由高大的深色火山岩构成的。",
+"ja": "おにがしまは くろい おおきな いわで できているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"island_crags.4": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ogre_island_view.0": {
+"en": "Ogre Island. Craggy Ogre Island rises out of the sea mist!",
+"lo": "ເກາະຍັກ. ເກາະຍັກຜາສູງພົ້ນຂຶ້ນມາຈາກໝອກທະເລ!",
+"th": "เกาะยักษ์ เกาะยักษ์ผาสูงโผล่ขึ้นมาจากหมอกทะเล!",
+"zh": "鬼岛。峭壁林立的鬼岛从海雾中现身了！",
+"ja": "おにがしま。きりの なかから おにがしまが みえて きたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ogre_island_view.1": {
+"en": "Tall dark cliffs and a stone fort rise out of the mist!",
+"lo": "ໜ້າຜາສູງສີເຂັ້ມ ແລະ ປ້ອມຫີນພົ້ນຂຶ້ນມາຈາກໝອກ!",
+"th": "หน้าผาสูงสีเข้มและป้อมหินโผล่ขึ้นมาจากหมอก!",
+"zh": "高高的深色峭壁和石头堡垒出现在海雾里！",
+"ja": "きりの なかに ごつごつの がけと しろが みえるよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"ogre_island_view.2": {
+"en": "Pheasant spotted Ogre Island far ahead!",
+"lo": "ໄກ່ຟ້າເບິ່ງເຫັນເກາະຍັກຢູ່ຂ້າງໜ້າໄກໆ!",
+"th": "ไก่ฟ้ามองเห็นเกาะยักษ์อยู่ข้างหน้าไกลๆ!",
+"zh": "绿雉远远地发现了鬼岛！",
+"ja": "きじが おにがしまを みつけたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ogre_island_view.3": {
+"en": "Loud drumbeats echo from inside the stone fort.",
+"lo": "ສຽງກອງດັງກ້ອງອອກມາຈາກຂ້າງໃນປ້ອມຫີນ.",
+"th": "เสียงกลองดังก้องออกมาจากข้างในป้อมหิน",
+"zh": "响亮的鼓声从石堡里面传了出来。",
+"ja": "しろの なかから たいこの おとが きこえて くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ogre_island_view.4": {
+"en": "Boom, boom!",
+"lo": "ຕຶງ, ຕຶງ!",
+"th": "ตึง ตึง!",
+"zh": "咚，咚！",
+"ja": "ドン、ドン！",
+"who": "narrator",
+"tag": "sound"
+},
+"blue_ogre.0": {
+"en": "A blue ogre. A little blue ogre lives inside the stone fort.",
+"lo": "ຍັກສີຟ້າ. ຍັກນ້ອຍສີຟ້າອາໄສຢູ່ໃນປ້ອມຫີນ.",
+"th": "ยักษ์สีฟ้า ยักษ์น้อยสีฟ้าอาศัยอยู่ในป้อมหิน",
+"zh": "蓝鬼。小蓝鬼住在石头堡垒里。",
+"ja": "あおおに。ちいさな あおおには いしの しろに すんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"blue_ogre.1": {
+"en": "Hello, blue ogre!",
+"lo": "ສະບາຍດີ ຍັກສີຟ້າ!",
+"th": "สวัสดียักษ์สีฟ้า!",
+"zh": "你好，蓝鬼！",
+"ja": "こんにちは、あおおに！",
+"who": "narrator",
+"tag": "greet"
+},
+"blue_ogre.2": {
+"en": "The little blue ogre has tiny golden horns.",
+"lo": "ຍັກນ້ອຍສີຟ້າມີເຂົາສີຄຳນ້ອຍໆ.",
+"th": "ยักษ์น้อยสีฟ้ามีเขาสีทองเล็กๆ",
+"zh": "小蓝鬼头上长着一对金色的小角。",
+"ja": "ちいさな あおおには きんの つのが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"blue_ogre.3": {
+"en": "He wears a bright striped cloth around his waist.",
+"lo": "ລາວນຸ່ງຜ້າລາຍສົດໃສອ້ອມແອວ.",
+"th": "เขานุ่งผ้าลายสดใสรอบเอว",
+"zh": "他腰间围着鲜艳的条纹布。",
+"ja": "しまもようの ぬのを こしに まいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"blue_ogre.4": {
+"en": "He loves listening to Chief Gorō tap the big drum.",
+"lo": "ລາວມັກຟັງຫົວໜ້າໂກໂຣຕີກອງໃຫຍ່.",
+"th": "เขาชอบฟังหัวหน้าโกโร่ตีกลองใหญ่",
+"zh": "他最喜欢听五郎首领敲大鼓。",
+"ja": "ごろうが たいこを たたくのを きくのが すきだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"blue_ogre.5": {
+"en": "He guards the big gate, though he gets sleepy!",
+"lo": "ລາວເຝົ້າປະຕູໃຫຍ່ ແຕ່ມັກເຫງົານອນ!",
+"th": "เขาเฝ้าประตูใหญ่ แต่มักจะง่วงนอน!",
+"zh": "他守着大门，不过常常犯困打盹儿！",
+"ja": "もんを まもっているけど ねむくなっちゃうよ！",
+"who": "narrator",
+"sp": [
+"s06"
+],
+"tag": "does"
+},
+"blue_ogre.6": {
+"en": "He smiles wide when everyone becomes friends.",
+"lo": "ລາວຍິ້ມກວ້າງເມື່ອທຸກຄົນກາຍເປັນໝູ່ກັນ.",
+"th": "เขายิ้มกว้างเมื่อทุกคนกลายเป็นเพื่อนกัน",
+"zh": "大家成为朋友时，他笑得可开心啦。",
+"ja": "みんなと なかよしに なって にっこり するよ。",
+"who": "narrator",
+"sp": [
+"s08",
+"s09"
+],
+"tag": "does"
+},
+"blue_ogre.7": {
+"en": "He helps carry the drums and rice chests to the boat!",
+"lo": "ລາວຊ່ວຍຂົນກອງ ແລະ ຫີບເຂົ້າໄປທີ່ເຮືອ!",
+"th": "เขาช่วยขนกลองและหีบข้าวไปที่เรือ!",
+"zh": "他帮忙把大鼓和米箱搬到船上！",
+"ja": "たいこや こめびつを ふねへ はこぶのを てつだうよ！",
+"who": "narrator",
+"sp": [
+"s09"
+],
+"tag": "does"
+},
+"blue_ogre.8": {
+"en": "Tee hee, yawn!",
+"lo": "ຄິກໆ, ຫາວ!",
+"th": "คิกๆ หาว!",
+"zh": "嘻嘻，哈欠！",
+"ja": "えへへ、ふわあ！",
+"who": "narrator",
+"tag": "sound"
+},
+"iron_brazier.0": {
+"en": "A fire brazier. An iron brazier burns bright in the island courtyard.",
+"lo": "ເຕົາໄຟເຫຼັກ. ເຕົາໄຟເຫຼັກລຸກແຈ້ງຢູ່ໃນເດີ່ນປ້ອມ.",
+"th": "กระถางไฟเหล็ก กระถางไฟเหล็กสว่างไสวในลานป้อม",
+"zh": "铁火盆。铁火盆在鬼岛院子里烧得暖暖亮亮。",
+"ja": "かがりび。かがりびが にわを あたたかく てらしているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"iron_brazier.1": {
+"en": "Warm orange flames dance inside the dark iron basket.",
+"lo": "ແປວໄຟສີສົ້ມອຸ່ນເຕັ້ນລະບຳຢູ່ໃນກະຕ່າເຫຼັກ.",
+"th": "เปลวไฟสีส้มอุ่นเต้นระบำอยู่ในตะกร้าเหล็ก",
+"zh": "暖暖的橙色火焰在铁火盆里跳动。",
+"ja": "くろい てつの かごで オレンジの ひが ゆらゆら もえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"iron_brazier.2": {
+"en": "Braziers light the stone courtyard at dusk.",
+"lo": "ເຕົາໄຟສ່ອງສະຫວ່າງເດີ່ນຫີນໃນຍາມແລງ.",
+"th": "กระถางไฟส่องสว่างลานหินในยามเย็น",
+"zh": "火盆在黄昏时照亮石堡院子。",
+"ja": "ゆうぐれの にわを あたたかく てらしているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"iron_brazier.3": {
+"en": "Sparks drift softly up into the evening air.",
+"lo": "ປະກາຍໄຟລອຍຂຶ້ນຄ່ອຍໆສູ່ອາກາດຍາມແລງ.",
+"th": "ประกายไฟลอยขึ้นเบาๆ สู่อากาศยามเย็น",
+"zh": "小小的火花轻轻飘向夜空。",
+"ja": "ちいさな ひのこが ふわっと そらへ とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"iron_brazier.4": {
+"en": "Crackle, crackle!",
+"lo": "ແປ໊ະ, ແປ໊ະ!",
+"th": "เปรี๊ยะ เปรี๊ยะ!",
+"zh": "噼啪，噼啪！",
+"ja": "パチパチ！",
+"who": "narrator",
+"tag": "sound"
+},
+"taiko_drum.0": {
+"en": "A festival drum. A Japanese taiko drum makes a joyful booming beat.",
+"lo": "ກອງບຸນ. ກອງໄທໂກະຂອງຍີ່ປຸ່ນຕີດັງມ່ວນຊື່ນ.",
+"th": "กลองเทศกาล กลองไทโกะของญี่ปุ่นตีดังสนุกสนาน",
+"zh": "节庆大鼓。日本太鼓会敲出欢快响亮的鼓点。",
+"ja": "おまつりの たいこ。たいこは たのしくて おおきな おとが なるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"taiko_drum.1": {
+"en": "The round wooden drum has stretched pale drumskin.",
+"lo": "ກອງໄມ້ມົນມີໜ້າກອງຂຶງຕຶງ.",
+"th": "กลองไม้กลมมีหน้ากลองขึงตึง",
+"zh": "圆圆的木鼓绷着紧实的鼓面。",
+"ja": "まるい きの たいこは かわが ぴんと はっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"taiko_drum.2": {
+"en": "Villagers play taiko drums at joyful Japanese festivals.",
+"lo": "ຊາວບ້ານຕີກອງໄທໂກະໃນງານບຸນມ່ວນຊື່ນຂອງຍີ່ປຸ່ນ.",
+"th": "ชาวบ้านตีกลองไทโกะในงานเทศกาลสนุกของญี่ปุ่น",
+"zh": "村里人在热闹的日本节日里敲响太鼓。",
+"ja": "おまつりで みんなで たのしく たいこを たたくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"taiko_drum.3": {
+"en": "Chief Gorō loves tapping a cheerful rhythm!",
+"lo": "ຫົວໜ້າໂກໂຣມັກຕີຈັງຫວະມ່ວນຊື່ນ!",
+"th": "หัวหน้าโกโร่ชอบตีจังหวะสนุกสนาน!",
+"zh": "五郎首领最喜欢敲出欢快的节奏啦！",
+"ja": "ごろうも たのしい リズムを たたくのが すきだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"taiko_drum.4": {
+"en": "Don, don, ka!",
+"lo": "ດົງ, ດົງ, ຄະ!",
+"th": "ดง ดง คะ!",
+"zh": "咚，咚，咔！",
+"ja": "ドン、ドン、カッ！",
+"who": "narrator",
+"tag": "sound"
+},
+"rice_chest.0": {
+"en": "A rice chest. A sturdy wooden chest holds bags of village rice.",
+"lo": "ຫີບເຂົ້າ. ຫີບໄມ້ແຂງແຮງໃສ່ເຂົ້າຂອງຊາວບ້ານໄວ້.",
+"th": "หีบข้าว หีบไม้แข็งแรงใส่ข้าวของชาวบ้านไว้",
+"zh": "米箱。结实的木箱里装着村里的稻米。",
+"ja": "こめびつ。じょうぶな こめびつに おこめが はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rice_chest.1": {
+"en": "The strong wooden chest has dark iron corners.",
+"lo": "ຫີບໄມ້ແຂງແຮງມີເຫຼັກຫຸ້ມມຸມສີເຂັ້ມ.",
+"th": "หีบไม้แข็งแรงมีเหล็กหุ้มมุมสีเข้ม",
+"zh": "结实的木箱四角包着深色铁片。",
+"ja": "じょうぶな きの はこに てつの かざりが ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rice_chest.2": {
+"en": "It keeps the village's harvest rice safe and dry.",
+"lo": "ມັນເກັບເຂົ້າຂອງຊາວບ້ານໄວ້ໃຫ້ປອດໄພ ແລະ ແຫ້ງ.",
+"th": "มันเก็บข้าวของชาวบ้านไว้ให้ปลอดภัยและแห้ง",
+"zh": "它把村里收获的稻米保护得干干净净。",
+"ja": "むらの おこめを だいじに しまって おくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rice_chest.3": {
+"en": "Momotarō brings every rice chest safely back home.",
+"lo": "ໂມໂມທາໂຣນຳຫີບເຂົ້າທຸກຫີບກັບຄືນບ້ານຢ່າງປອດໄພ.",
+"th": "โมโมทาโร่นำหีบข้าวทุกใบกลับบ้านอย่างปลอดภัย",
+"zh": "桃太郎把每个米箱都平平安安送回了村子。",
+"ja": "ももたろうが むらの こめびつを ぜんぶ もどすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rice_chest.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"castle_lantern.0": {
+"en": "A castle lantern. A tall granite lantern stands by the ogre fort hall.",
+"lo": "ໂຄມຫີນປ້ອມ. ໂຄມຫີນສູງຕັ້ງຢູ່ຂ້າງຫໍປ້ອມຂອງຍັກ.",
+"th": "โคมหินป้อม โคมหินสูงตั้งอยู่ข้างโถงป้อมของยักษ์",
+"zh": "古堡石灯。高高的花岗岩石灯笼立在鬼堡大厅旁。",
+"ja": "しろの いしどうろう。おおきな いしどうろうが やかたの そばに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"castle_lantern.1": {
+"en": "The tall grey granite lantern has a curved slate roof.",
+"lo": "ໂຄມຫີນສີເທົາສູງມີຫຼັງຄາຫີນໂຄ້ງ.",
+"th": "โคมหินสีเทาสูงมีหลังคาหินโค้ง",
+"zh": "高高的灰花岗岩石灯笼有弯弯的石屋顶。",
+"ja": "かたい いしで できた りっぱな とうろうだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"castle_lantern.2": {
+"en": "Warm yellow light shines through its tiny window.",
+"lo": "ແສງສີເຫຼືອງອຸ່ນສ່ອງຜ່ານຊ່ອງປ່ອງຢ້ຽມນ້ອຍ.",
+"th": "แสงสีเหลืองอุ่นส่องผ่านช่องหน้าต่างเล็ก",
+"zh": "暖黄色的灯光透过小小的格子窗照出来。",
+"ja": "ちいさな まどから あたたかい あかりが もれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"castle_lantern.3": {
+"en": "It stands firmly beside the mossy stone wall.",
+"lo": "ມັນຕັ້ງຢູ່ຢ່າງໝັ້ນຄົງຂ້າງກຳແພງຫີນມີໄຄນ້ຳ.",
+"th": "มันตั้งอยู่อย่างมั่นคงข้างกำแพงหินมีมอส",
+"zh": "它稳稳地立在长满青苔的石墙旁边。",
+"ja": "こけの はえた いしがきの そばに たっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"castle_lantern.4": {
+"en": "Monkey peeks out from behind this stone lantern!",
+"lo": "ລີງແອບຊ່ອງອອກມາຈາກຫຼັງໂຄມຫີນນີ້!",
+"th": "ลิงแอบชะโงกออกมาจากหลังโคมหินนี้!",
+"zh": "山猴躲在这盏石灯笼后面偷偷张望！",
+"ja": "さるが この とうろうの かげから のぞくよ！",
+"who": "narrator",
+"sp": [
+"s07"
+],
+"tag": "does"
+},
+"castle_lantern.5": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"island_sky.0": {
+"en": "The dusk sky. Golden dusk clouds glow above Ogre Island.",
+"lo": "ຟ້າຍາມແລງ. ເມກຍາມແລງສີຄຳສ່ອງແສງເທິງເກາະຍັກ.",
+"th": "ฟ้ายามเย็น เมฆยามเย็นสีทองส่องแสงเหนือเกาะยักษ์",
+"zh": "黄昏天空。金色的晚霞在鬼岛上方闪耀。",
+"ja": "ゆうぐれの そら。ゆうぐれの くもが おにがしまの うえで ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"island_sky.1": {
+"en": "Warm peach and amber clouds glow across the dusk sky.",
+"lo": "ເມກສີສົ້ມອຳພັນສ່ອງແສງທົ່ວຟ້າຍາມແລງ.",
+"th": "เมฆสีส้มอำพันส่องแสงทั่วฟ้ายามเย็น",
+"zh": "暖暖的晚霞染红了黄昏的天空。",
+"ja": "ゆうやけの くもが そらを あたたかく そめているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"island_sky.2": {
+"en": "Evening settles softly over Ogre Island.",
+"lo": "ຍາມແລງຄ່ອຍໆປົກຄຸມເກາະຍັກ.",
+"th": "ยามเย็นค่อยๆ ปกคลุมเกาะยักษ์",
+"zh": "傍晚轻轻笼罩了鬼岛。",
+"ja": "おにがしまに ゆうぐれが やって きたよ。",
+"who": "narrator",
+"tag": "does"
+},
+"island_sky.3": {
+"en": "Torchlight shines brighter as dusk grows deep.",
+"lo": "ແສງໄຟຄົບເພີງຍິ່ງແຈ້ງຂຶ້ນເມື່ອຄ່ຳລົງ.",
+"th": "แสงคบเพลิงยิ่งสว่างขึ้นเมื่อค่ำลง",
+"zh": "夜色渐深，火把的光芒越来越明亮。",
+"ja": "くらくなると かがりびの あかりが きれいに ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"island_sky.4": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"ogre_hall.0": {
+"en": "An ogre hall. Chief Gorō's grand wooden hall sits in the courtyard.",
+"lo": "ຫໍໃຫຍ່ຂອງຍັກ. ຫໍໄມ້ໃຫຍ່ຂອງຫົວໜ້າໂກໂຣຕັ້ງຢູ່ໃນເດີ່ນ.",
+"th": "โถงใหญ่ของยักษ์ โถงไม้ใหญ่ของหัวหน้าโกโร่ตั้งอยู่ในลาน",
+"zh": "鬼王大厅。五郎首领的大木厅立在院子里。",
+"ja": "おにの やかた。ごろうの おおきな やかたが にわに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ogre_hall.1": {
+"en": "The grand wooden hall has curved dark tile roofs.",
+"lo": "ຫໍໄມ້ໃຫຍ່ມີຫຼັງຄາກະເບື້ອງສີເຂັ້ມໂຄ້ງງາມ.",
+"th": "โถงไม้ใหญ่มีหลังคากระเบื้องสีเข้มโค้งสวย",
+"zh": "大木厅有着弯弯的深色瓦片屋顶。",
+"ja": "おおきな かわらやねの りっぱな やかただよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ogre_hall.2": {
+"en": "Chief Gorō lives inside this big island hall.",
+"lo": "ຫົວໜ້າໂກໂຣອາໄສຢູ່ໃນຫໍໃຫຍ່ເທິງເກາະນີ້.",
+"th": "หัวหน้าโกโร่อาศัยอยู่ในโถงใหญ่บนเกาะนี้",
+"zh": "五郎首领就住在这座宽大的木厅里。",
+"ja": "ごろうは この おおきな やかたに すんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ogre_hall.3": {
+"en": "Wide wooden steps lead up to its sliding doors.",
+"lo": "ຂັ້ນໄດໄມ້ກວ້າງພາຂຶ້ນໄປຫາປະຕູເລື່ອນ.",
+"th": "บันไดไม้กว้างพาขึ้นไปหาประตูเลื่อน",
+"zh": "宽宽的木台阶一直通向大厅的拉门。",
+"ja": "ひろい かいだんを のぼると おへやが あるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ogre_hall.4": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fort_gate.0": {
+"en": "A fort gate. A giant timber gate guards the stone courtyard.",
+"lo": "ປະຕູປ້ອມ. ປະຕູໄມ້ໃຫຍ່ກັ້ນເດີ່ນປ້ອມຫີນໄວ້.",
+"th": "ประตูป้อม ประตูไม้ใหญ่กั้นลานป้อมหินไว้",
+"zh": "石堡大门。高大的木门守着石堡院子。",
+"ja": "しろの もん。おおきな きの もんが しろを まもっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fort_gate.1": {
+"en": "Heavy timber doors stand between towering stone walls.",
+"lo": "ປະຕູໄມ້ໜັກຕັ້ງຢູ່ລະຫວ່າງກຳແພງຫີນສູງ.",
+"th": "ประตูไม้หนักตั้งอยู่ระหว่างกำแพงหินสูง",
+"zh": "厚重的木大门立在高高的石墙之间。",
+"ja": "たかい いしがきの あいだに おおきな もんが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fort_gate.2": {
+"en": "Pheasant, Monkey and Dog worked together to open it!",
+"lo": "ໄກ່ຟ້າ, ລີງ ແລະ ໝານ້ອຍຊ່ວຍກັນເປີດປະຕູນີ້!",
+"th": "ไก่ฟ้า ลิง และหมาช่วยกันเปิดประตูนี้!",
+"zh": "绿雉、山猴和斑点狗齐心协力打开了大门！",
+"ja": "きじと さると いぬが ちからを あわせて あけたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fort_gate.3": {
+"en": "Click-clack goes the heavy wooden bolt!",
+"lo": "ແຄະ-ແຄະ, ກອນປະຕູໄມ້ໜັກເປີດອອກແລ້ວ!",
+"th": "แกร๊กๆ กลอนประตูไม้หนักเปิดออกแล้ว!",
+"zh": "咔嗒咔嗒，重重的木门栓滑开啦！",
+"ja": "カチャンと おおきな かぎが あいたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fort_gate.4": {
+"en": "Creak, creak!",
+"lo": "ອີ໊ດ, ອີ໊ດ!",
+"th": "เอี๊ยด เอี๊ยด!",
+"zh": "吱呀，吱呀！",
+"ja": "ギィー、ギィー！",
+"who": "narrator",
+"tag": "sound"
+},
+"chief_goro.0": {
+"en": "Chief Gorō. Chief Gorō is the big red ogre of Ogre Island.",
+"lo": "ຫົວໜ້າໂກໂຣ. ຫົວໜ້າໂກໂຣແມ່ນຍັກແດງໂຕໃຫຍ່ແຫ່ງເກາະຍັກ.",
+"th": "หัวหน้าโกโร่ หัวหน้าโกโร่คือยักษ์แดงตัวใหญ่แห่งเกาะยักษ์",
+"zh": "五郎首领。五郎首领是鬼岛上高大的红鬼。",
+"ja": "ごろう。ごろうは おにがしまの おおきな あかおにだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"chief_goro.1": {
+"en": "Hello, Chief Gorō!",
+"lo": "ສະບາຍດີ ຫົວໜ້າໂກໂຣ!",
+"th": "สวัสดีหัวหน้าโกโร่!",
+"zh": "你好，五郎首领！",
+"ja": "こんにちは、ごろう！",
+"who": "goro",
+"tag": "greet"
+},
+"chief_goro.2": {
+"en": "Ho ho! I am Chief Gorō!",
+"lo": "ໂຮ່ໆ! ຂ້ອຍແມ່ນຫົວໜ້າໂກໂຣ!",
+"th": "โฮ่ๆ! ข้าคือหัวหน้าโกโร่!",
+"zh": "哈哈！我是五郎首领！",
+"ja": "はっはっは！ わしは ごろうだぞ！",
+"who": "goro",
+"tag": "say"
+},
+"chief_goro.3": {
+"en": "I am as round as a big rain barrel!",
+"lo": "ຂ້ອຍອ້ວນມົນຄືຖັງນ້ຳຝົນໃຫຍ່!",
+"th": "ข้าอ้วนกลมเหมือนถังรองน้ำฝนใบใหญ่!",
+"zh": "我像大水桶一样圆滚滚的！",
+"ja": "わしは たるみたいに まるいんだぞ！",
+"who": "goro",
+"tag": "looks"
+},
+"chief_goro.4": {
+"en": "Who goes there by my big wooden gate?",
+"lo": "ແມ່ນໃຜມາຢູ່ໜ້າປະຕູໄມ້ໃຫຍ່ຂອງຂ້ອຍ?",
+"th": "ใครมาอยู่หน้าประตูไม้ใหญ่ของข้า?",
+"zh": "是谁在我的大木门外面？",
+"ja": "わしの もんに きたのは だれだ！",
+"who": "goro",
+"sp": [
+"s07"
+],
+"tag": "does"
+},
+"chief_goro.5": {
+"en": "My tummy went grumble-rumble because I was lonely.",
+"lo": "ທ້ອງຂອງຂ້ອຍຮ້ອງໂຄກຄາກ ເພາະຂ້ອຍເຫງົາໃຈ.",
+"th": "ท้องของข้าร้องโครกครากเพราะข้าเหงาใจ",
+"zh": "因为太孤单，我的肚子咕噜噜直叫。",
+"ja": "さびしくて おなかが ぐうぐう なったんだ。",
+"who": "goro",
+"sp": [
+"s08"
+],
+"tag": "does"
+},
+"chief_goro.6": {
+"en": "Momotarō's warm dumpling tastes so sweet!",
+"lo": "ເຂົ້າໜົມອຸ່ນໆຂອງໂມໂມທາໂຣຫວານແຊບຫຼາຍ!",
+"th": "ขนมอุ่นๆ ของโมโมทาโร่หวานอร่อยมาก!",
+"zh": "桃太郎给的暖暖团子真香甜啊！",
+"ja": "ももたろうの きびだんごは とても おいしいな！",
+"who": "goro",
+"sp": [
+"s08",
+"s09",
+"s11"
+],
+"tag": "does"
+},
+"chief_goro.7": {
+"en": "I love tapping happy beats on the big festival drum!",
+"lo": "ຂ້ອຍມັກຕີຈັງຫວະມ່ວນໆເທິງກອງບຸນໃຫຍ່!",
+"th": "ข้าชอบตีจังหวะสนุกๆ บนกลองเทศกาลใบใหญ่!",
+"zh": "我喜欢在大鼓上敲出欢快的节奏！",
+"ja": "おおきな たいこを たたくのが だいすきだぞ！",
+"who": "goro",
+"sp": [
+"s08",
+"s09",
+"s11"
+],
+"tag": "does"
+},
+"chief_goro.8": {
+"en": "Having friends is much better than keeping drums alone!",
+"lo": "ການມີໝູ່ດີກວ່າການເກັບກອງໄວ້ຄົນດຽວຫຼາຍ!",
+"th": "การมีเพื่อนดีกว่าการเก็บกลองไว้คนเดียวตั้งเยอะ!",
+"zh": "有朋友一起玩比独自守着鼓开心多了！",
+"ja": "ともだちが いるほうが ずっと たのしいな！",
+"who": "goro",
+"sp": [
+"s09",
+"s11"
+],
+"tag": "does"
+},
+"chief_goro.9": {
+"en": "Don, don, ka!",
+"lo": "ດົງ, ດົງ, ຄະ!",
+"th": "ดง ดง คะ!",
+"zh": "咚，咚，咔！",
+"ja": "ドン、ドン、カッ！",
+"who": "goro",
+"tag": "sound"
+},
+"paper_lantern.0": {
+"en": "A paper lantern. A paper lantern glows with warm festival light.",
+"lo": "ໂຄມໄຟເຈ້ຍ. ໂຄມໄຟເຈ້ຍສ່ອງແສງງານບຸນອຸ່ນໆ.",
+"th": "โคมไฟกระดาษ โคมไฟกระดาษส่องแสงเทศกาลอบอุ่น",
+"zh": "纸灯笼。纸灯笼亮着暖暖的节日灯光。",
+"ja": "ちょうちん。ちょうちんが おまつりの あたたかい あかりを ともすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"paper_lantern.1": {
+"en": "The round paper lantern glows warm gold and red.",
+"lo": "ໂຄມໄຟເຈ້ຍມົນສ່ອງແສງສີຄຳ ແລະ ສີແດງອຸ່ນ.",
+"th": "โคมไฟกระดาษกลมส่องแสงสีทองและสีแดงอุ่น",
+"zh": "圆圆的纸灯笼透出暖暖的金红光芒。",
+"ja": "まるい ちょうちんが あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"paper_lantern.2": {
+"en": "Lanterns light up the cottage for the evening festival.",
+"lo": "ໂຄມໄຟສ່ອງສະຫວ່າງເຮືອນໃນງານບຸນຕອນແລງ.",
+"th": "โคมไฟส่องสว่างบ้านในงานเทศกาลยามเย็น",
+"zh": "灯笼在傍晚的节庆里把小屋照得亮堂堂。",
+"ja": "よるの おまつりで おうちを あかるく てらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"paper_lantern.3": {
+"en": "Paper lanterns are light enough for Monkey to balance!",
+"lo": "ໂຄມໄຟເຈ້ຍເບົາພໍໃຫ້ລີງທົງໄວ້ເທິງຫົວໄດ້!",
+"th": "โคมไฟกระดาษเบาพอให้ลิงทูนไว้บนหัวได้!",
+"zh": "纸灯笼轻轻的，山猴都能顶在头上呢！",
+"ja": "かるいから さるが あたまに のせられるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"paper_lantern.4": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"home_bay_view.0": {
+"en": "The home bay. The green hills of home shine in the morning sun!",
+"lo": "ອ່າວບ້ານເກີດ. ພູຂຽວຂອງບ້ານເກີດສ່ອງແສງໃນແດດເຊົ້າ!",
+"th": "อ่าวบ้านเกิด เนินเขาเขียวของบ้านเกิดส่องแสงในแดดเช้า!",
+"zh": "家乡海湾。家乡的青山在晨光里闪闪发亮！",
+"ja": "ふるさとの うみ。あさひに てらされた ふるさとの やまが みえるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"home_bay_view.1": {
+"en": "Warm green pine hills welcome the sailboat home.",
+"lo": "ພູແປກສີຂຽວອົບອຸ່ນຕ້ອນຮັບເຮືອໃບກັບບ້ານ.",
+"th": "เนินสนสีเขียวอบอุ่นต้อนรับเรือใบกลับบ้าน",
+"zh": "温暖的绿色松林山坡迎接着帆船回家。",
+"ja": "みどりの やまが ふねの かえりを まっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"home_bay_view.2": {
+"en": "Grandfather and Grandmother are waving from the shore!",
+"lo": "ພໍ່ຕູ້ ແລະ ແມ່ຕູ້ກຳລັງໂບກມືຢູ່ແຄມຝັ່ງ!",
+"th": "คุณตาและคุณยายกำลังโบกมืออยู่ริมฝั่ง!",
+"zh": "老爷爷和老奶奶正在岸边招手呢！",
+"ja": "おじいさんと おばあさんが てを ふっているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"home_bay_view.3": {
+"en": "Every drum, lantern and rice chest is coming home safe.",
+"lo": "ກອງ, ໂຄມໄຟ ແລະ ຫີບເຂົ້າທຸກອັນກັບບ້ານຢ່າງປອດໄພ.",
+"th": "กลอง โคมไฟ และหีบข้าวทุกใบกลับบ้านอย่างปลอดภัย",
+"zh": "大鼓、灯笼和米箱都平平安安回家啦。",
+"ja": "たいこも ちょうちんも みんな ぶじに かえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"home_bay_view.4": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"family_hug.0": {
+"en": "A family hug. Grandfather and Grandmother wrap Momotarō in a big hug.",
+"lo": "ອ້ອມກອດຄອບຄົວ. ພໍ່ຕູ້ ແລະ ແມ່ຕູ້ກອດໂມໂມທາໂຣແໜ້ນໆ.",
+"th": "อ้อมกอดครอบครัว คุณตากับคุณยายกอดโมโมทาโร่แน่นๆ",
+"zh": "家人的拥抱。老爷爷和老奶奶紧紧抱住桃太郎。",
+"ja": "かぞくの だっこ。おじいさんと おばあさんが ももたろうを ぎゅっと だきしめるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"family_hug.1": {
+"en": "What a warm, happy homecoming hug!",
+"lo": "ຊ່າງເປັນອ້ອມກອດຕ້ອນຮັບກັບບ້ານທີ່ອົບອຸ່ນ!",
+"th": "ช่างเป็นอ้อมกอดต้อนรับกลับบ้านที่อบอุ่น!",
+"zh": "多么温暖开心的团圆拥抱呀！",
+"ja": "なんて あたたかくて うれしい だっこだろう！",
+"who": "narrator",
+"tag": "looks"
+},
+"family_hug.2": {
+"en": "Grandfather and Grandmother are so glad Momotarō is home.",
+"lo": "ພໍ່ຕູ້ ແລະ ແມ່ຕູ້ດີໃຈຫຼາຍທີ່ໂມໂມທາໂຣກັບມາເຮືອນ.",
+"th": "คุณตากับคุณยายดีใจมากที่โมโมทาโร่กลับบ้าน",
+"zh": "老爷爷和老奶奶真高兴桃太郎平安回家。",
+"ja": "おじいさんと おばあさんは ももたろうが かえって おおよろこびだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"family_hug.3": {
+"en": "A big hug shows how much family loves you.",
+"lo": "ອ້ອມກອດໃຫຍ່ສະແດງໃຫ້ເຫັນວ່າຄອບຄົວຮັກເຈົ້າຫຼາຍ.",
+"th": "อ้อมกอดใหญ่แสดงให้เห็นว่าครอบครัวรักเธอมาก",
+"zh": "大大的拥抱表达了家人满满的爱。",
+"ja": "ぎゅっと だっこすると だいすきが つたわるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"family_hug.4": {
+"en": "Welcome home, Momotarō!",
+"lo": "ຍິນດີຕ້ອນຮັບກັບບ້ານ, ໂມໂມທາໂຣ!",
+"th": "ยินดีต้อนรับกลับบ้านนะ โมโมทาโร่!",
+"zh": "欢迎回家，桃太郎！",
+"ja": "おかえりなさい、ももたろう！",
+"who": "narrator",
+"tag": "say"
+},
+"dumpling_tray.0": {
+"en": "A dumpling tray. A wooden tray holds warm millet dumplings for everyone.",
+"lo": "ຖາດເຂົ້າໜົມ. ຖາດໄມ້ວາງເຂົ້າໜົມເຂົ້າຟ່າງອຸ່ນໆໄວ້ໃຫ້ທຸກຄົນ.",
+"th": "ถาดขนม ถาดไม้วางขนมข้าวฟ่างอุ่นๆ ไว้ให้ทุกคน",
+"zh": "团子托盘。木托盘里盛满给大家的暖暖团子。",
+"ja": "だんごの おぼん。おぼんに あたたかい きびだんごが いっぱい のっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"dumpling_tray.1": {
+"en": "Warm golden dumplings are piled high on the tray.",
+"lo": "ເຂົ້າໜົມສີຄຳອຸ່ນໆວາງຊ້ອນກັນເຕັມຖາດ.",
+"th": "ขนมสีทองอุ่นๆ วางซ้อนกันเต็มถาด",
+"zh": "暖暖的金黄团子在托盘里堆得高高的。",
+"ja": "おぼんの うえに きびだんごが たっぷり あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"dumpling_tray.2": {
+"en": "Grandmother baked a whole feast for every friend!",
+"lo": "ແມ່ຕູ້ເຮັດເຂົ້າໜົມຫຼາຍໆໄວ້ລ້ຽງໝູ່ທຸກຄົນ!",
+"th": "คุณยายทำขนมมากมายไว้เลี้ยงเพื่อนทุกคน!",
+"zh": "老奶奶为每位朋友烤了一大盘团子！",
+"ja": "みんなの ために いっぱい つくって くれたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"dumpling_tray.3": {
+"en": "Everyone grabs a warm dumpling and laughs together.",
+"lo": "ທຸກຄົນຈັບເຂົ້າໜົມອຸ່ນໆ ແລະ ຫົວຂວັນນຳກັນ.",
+"th": "ทุกคนหยิบขนมอุ่นๆ และหัวเราะด้วยกัน",
+"zh": "大家一起拿团子吃，开心地笑起来。",
+"ja": "みんなで ほかほかの だんごを たべて わらうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dumpling_tray.4": {
+"en": "Yum!",
+"lo": "ແຊບ!",
+"th": "อร่อยจัง!",
+"zh": "真好吃！",
+"ja": "おいしい！",
+"who": "narrator",
+"tag": "sound"
+},
+"momo_neighbour.0": {
+"en": "A neighbour. A friendly neighbour comes to cheer at the cottage.",
+"lo": "ເພື່ອນບ້ານ. ເພື່ອນບ້ານທີ່ເປັນມິດມາຮ້ອງໂຮຍິນດີຢູ່ໜ້າເຮືອນ.",
+"th": "เพื่อนบ้าน เพื่อนบ้านที่เป็นมิตรมาโห่ร้องยินดีหน้าบ้าน",
+"zh": "邻居。热情的邻居来到茅屋前欢呼庆祝。",
+"ja": "きんじょの ひと。むらの ひとが おいわいに かけつけたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"momo_neighbour.1": {
+"en": "Hello, neighbour!",
+"lo": "ສະບາຍດີ ເພື່ອນບ້ານ!",
+"th": "สวัสดีเพื่อนบ้าน!",
+"zh": "你好，邻居！",
+"ja": "こんにちは、きんじょの ひと！",
+"who": "narrator",
+"tag": "greet"
+},
+"momo_neighbour.2": {
+"en": "Hooray! Welcome home, Peach Boy!",
+"lo": "ໄຊໂຍ! ຍິນດີຕ້ອນຮັບກັບບ້ານ, ເດັກຊາຍໝາກຄາຍ!",
+"th": "ไชโย! ยินดีต้อนรับกลับบ้านนะ เด็กชายลูกท้อ!",
+"zh": "太好啦！欢迎回家，桃太郎！",
+"ja": "ばんざい！ おかえり、ももたろう！",
+"who": "narrator",
+"tag": "say"
+},
+"momo_neighbour.3": {
+"en": "The neighbours cheer as the drums and rice return.",
+"lo": "ເພື່ອນບ້ານຮ້ອງໂຮຍິນດີເມື່ອກອງ ແລະ ເຂົ້າກັບຄືນມາ.",
+"th": "เพื่อนบ้านโห่ร้องยินดีเมื่อกลองและข้าวกลับคืนมา",
+"zh": "看到大鼓和稻米回到村里，邻居们欢呼起来。",
+"ja": "たいこや おこめが かえって むらびとが よろこんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"momo_neighbour.4": {
+"en": "Everyone gathers together for the lantern festival.",
+"lo": "ທຸກຄົນມາເຕົ້າໂຮມກັນໃນງານບຸນໂຄມໄຟ.",
+"th": "ทุกคนมารวมตัวกันในงานเทศกาลโคมไฟ",
+"zh": "大家欢聚在一起庆祝灯笼节。",
+"ja": "みんなで ちょうちんまつりに あつまったよ。",
+"who": "narrator",
+"tag": "does"
+}
+},
+"chars": {},
+"pools": {
+"momo_grandpa": [
+"momo_grandpa.0",
+"momo_grandpa.1",
+"momo_grandpa.2",
+"momo_grandpa.3",
+"momo_grandpa.4",
+"momo_grandpa.5"
+],
+"momo_grandma": [
+"momo_grandma.0",
+"momo_grandma.1",
+"momo_grandma.2",
+"momo_grandma.3",
+"momo_grandma.4",
+"momo_grandma.5"
+],
+"giant_peach": [
+"giant_peach.0",
+"giant_peach.1",
+"giant_peach.2",
+"giant_peach.3",
+"giant_peach.4"
+],
+"open_peach": [
+"open_peach.0",
+"open_peach.1",
+"open_peach.2",
+"open_peach.3",
+"open_peach.4"
+],
+"peach_glow": [
+"peach_glow.0",
+"peach_glow.1",
+"peach_glow.2",
+"peach_glow.3",
+"peach_glow.4"
+],
+"baby_momotaro": [
+"baby_momotaro.0",
+"baby_momotaro.1",
+"baby_momotaro.2",
+"baby_momotaro.3",
+"baby_momotaro.4",
+"baby_momotaro.5"
+],
+"momotaro_boy": [
+"momotaro_boy.0",
+"momotaro_boy.1",
+"momotaro_boy.2",
+"momotaro_boy.3",
+"momotaro_boy.4",
+"momotaro_boy.5",
+"momotaro_boy.6",
+"momotaro_boy.7",
+"momotaro_boy.8",
+"momotaro_boy.9"
+],
+"stream_fish": [
+"stream_fish.0",
+"stream_fish.1",
+"stream_fish.2",
+"stream_fish.3",
+"stream_fish.4"
+],
+"momo_dragonfly": [
+"momo_dragonfly.0",
+"momo_dragonfly.1",
+"momo_dragonfly.2",
+"momo_dragonfly.3",
+"momo_dragonfly.4"
+],
+"wood_shed": [
+"wood_shed.0",
+"wood_shed.1",
+"wood_shed.2",
+"wood_shed.3",
+"wood_shed.4"
+],
+"woven_baskets": [
+"woven_baskets.0",
+"woven_baskets.1",
+"woven_baskets.2",
+"woven_baskets.3",
+"woven_baskets.4"
+],
+"azalea_bush": [
+"azalea_bush.0",
+"azalea_bush.1",
+"azalea_bush.2",
+"azalea_bush.3",
+"azalea_bush.4",
+"azalea_bush.5"
+],
+"purple_iris": [
+"purple_iris.0",
+"purple_iris.1",
+"purple_iris.2",
+"purple_iris.3",
+"purple_iris.4"
+],
+"bamboo_fence": [
+"bamboo_fence.0",
+"bamboo_fence.1",
+"bamboo_fence.2",
+"bamboo_fence.3",
+"bamboo_fence.4"
+],
+"garden_lantern": [
+"garden_lantern.0",
+"garden_lantern.1",
+"garden_lantern.2",
+"garden_lantern.3",
+"garden_lantern.4"
+],
+"stream_boulder": [
+"stream_boulder.0",
+"stream_boulder.1",
+"stream_boulder.2",
+"stream_boulder.3",
+"stream_boulder.4"
+],
+"stepping_stones": [
+"stepping_stones.0",
+"stepping_stones.1",
+"stepping_stones.2",
+"stepping_stones.3",
+"stepping_stones.4"
+],
+"stream_foam": [
+"stream_foam.0",
+"stream_foam.1",
+"stream_foam.2",
+"stream_foam.3",
+"stream_foam.4"
+],
+"river_reeds": [
+"river_reeds.0",
+"river_reeds.1",
+"river_reeds.2",
+"river_reeds.3",
+"river_reeds.4"
+],
+"cottage_sky": [
+"cottage_sky.0",
+"cottage_sky.1",
+"cottage_sky.2",
+"cottage_sky.3",
+"cottage_sky.4"
+],
+"far_hills": [
+"far_hills.0",
+"far_hills.1",
+"far_hills.2",
+"far_hills.3",
+"far_hills.4"
+],
+"peach_pine": [
+"peach_pine.0",
+"peach_pine.1",
+"peach_pine.2",
+"peach_pine.3",
+"peach_pine.4"
+],
+"minka_cottage": [
+"minka_cottage.0",
+"minka_cottage.1",
+"minka_cottage.2",
+"minka_cottage.3",
+"minka_cottage.4"
+],
+"millet_dumpling": [
+"millet_dumpling.0",
+"millet_dumpling.1",
+"millet_dumpling.2",
+"millet_dumpling.3",
+"millet_dumpling.4"
+],
+"road_bush": [
+"road_bush.0",
+"road_bush.1",
+"road_bush.2",
+"road_bush.3",
+"road_bush.4",
+"road_bush.5"
+],
+"momo_heron": [
+"momo_heron.0",
+"momo_heron.1",
+"momo_heron.2",
+"momo_heron.3",
+"momo_heron.4"
+],
+"garden_gate": [
+"garden_gate.0",
+"garden_gate.1",
+"garden_gate.2",
+"garden_gate.3",
+"garden_gate.4"
+],
+"spotted_dog": [
+"spotted_dog.0",
+"spotted_dog.1",
+"spotted_dog.2",
+"spotted_dog.3",
+"spotted_dog.4",
+"spotted_dog.5",
+"spotted_dog.6",
+"spotted_dog.7",
+"spotted_dog.8"
+],
+"mountain_monkey": [
+"mountain_monkey.0",
+"mountain_monkey.1",
+"mountain_monkey.2",
+"mountain_monkey.3",
+"mountain_monkey.4",
+"mountain_monkey.5",
+"mountain_monkey.6",
+"mountain_monkey.7",
+"mountain_monkey.8"
+],
+"green_pheasant": [
+"green_pheasant.0",
+"green_pheasant.1",
+"green_pheasant.2",
+"green_pheasant.3",
+"green_pheasant.4",
+"green_pheasant.5",
+"green_pheasant.6",
+"green_pheasant.7",
+"green_pheasant.8"
+],
+"wooden_boat": [
+"wooden_boat.0",
+"wooden_boat.1",
+"wooden_boat.2",
+"wooden_boat.3",
+"wooden_boat.4"
+],
+"wooden_oar": [
+"wooden_oar.0",
+"wooden_oar.1",
+"wooden_oar.2",
+"wooden_oar.3",
+"wooden_oar.4"
+],
+"white_sail": [
+"white_sail.0",
+"white_sail.1",
+"white_sail.2",
+"white_sail.3",
+"white_sail.4"
+],
+"momo_crab": [
+"momo_crab.0",
+"momo_crab.1",
+"momo_crab.2",
+"momo_crab.3",
+"momo_crab.4"
+],
+"momo_seafish": [
+"momo_seafish.0",
+"momo_seafish.1",
+"momo_seafish.2",
+"momo_seafish.3",
+"momo_seafish.4"
+],
+"mooring_post": [
+"mooring_post.0",
+"mooring_post.1",
+"mooring_post.2",
+"mooring_post.3",
+"mooring_post.4"
+],
+"boat_rope": [
+"boat_rope.0",
+"boat_rope.1",
+"boat_rope.2",
+"boat_rope.3",
+"boat_rope.4"
+],
+"shore_rocks": [
+"shore_rocks.0",
+"shore_rocks.1",
+"shore_rocks.2",
+"shore_rocks.3",
+"shore_rocks.4"
+],
+"pine_cliff": [
+"pine_cliff.0",
+"pine_cliff.1",
+"pine_cliff.2",
+"pine_cliff.3",
+"pine_cliff.4"
+],
+"sea_waves": [
+"sea_waves.0",
+"sea_waves.1",
+"sea_waves.2",
+"sea_waves.3",
+"sea_waves.4"
+],
+"sea_sky": [
+"sea_sky.0",
+"sea_sky.1",
+"sea_sky.2",
+"sea_sky.3",
+"sea_sky.4"
+],
+"sea_horizon": [
+"sea_horizon.0",
+"sea_horizon.1",
+"sea_horizon.2",
+"sea_horizon.3",
+"sea_horizon.4"
+],
+"flying_fish": [
+"flying_fish.0",
+"flying_fish.1",
+"flying_fish.2",
+"flying_fish.3",
+"flying_fish.4"
+],
+"sea_rock": [
+"sea_rock.0",
+"sea_rock.1",
+"sea_rock.2",
+"sea_rock.3",
+"sea_rock.4"
+],
+"island_crags": [
+"island_crags.0",
+"island_crags.1",
+"island_crags.2",
+"island_crags.3",
+"island_crags.4"
+],
+"ogre_island_view": [
+"ogre_island_view.0",
+"ogre_island_view.1",
+"ogre_island_view.2",
+"ogre_island_view.3",
+"ogre_island_view.4"
+],
+"blue_ogre": [
+"blue_ogre.0",
+"blue_ogre.1",
+"blue_ogre.2",
+"blue_ogre.3",
+"blue_ogre.4",
+"blue_ogre.5",
+"blue_ogre.6",
+"blue_ogre.7",
+"blue_ogre.8"
+],
+"iron_brazier": [
+"iron_brazier.0",
+"iron_brazier.1",
+"iron_brazier.2",
+"iron_brazier.3",
+"iron_brazier.4"
+],
+"taiko_drum": [
+"taiko_drum.0",
+"taiko_drum.1",
+"taiko_drum.2",
+"taiko_drum.3",
+"taiko_drum.4"
+],
+"rice_chest": [
+"rice_chest.0",
+"rice_chest.1",
+"rice_chest.2",
+"rice_chest.3",
+"rice_chest.4"
+],
+"castle_lantern": [
+"castle_lantern.0",
+"castle_lantern.1",
+"castle_lantern.2",
+"castle_lantern.3",
+"castle_lantern.4",
+"castle_lantern.5"
+],
+"island_sky": [
+"island_sky.0",
+"island_sky.1",
+"island_sky.2",
+"island_sky.3",
+"island_sky.4"
+],
+"ogre_hall": [
+"ogre_hall.0",
+"ogre_hall.1",
+"ogre_hall.2",
+"ogre_hall.3",
+"ogre_hall.4"
+],
+"fort_gate": [
+"fort_gate.0",
+"fort_gate.1",
+"fort_gate.2",
+"fort_gate.3",
+"fort_gate.4"
+],
+"chief_goro": [
+"chief_goro.0",
+"chief_goro.1",
+"chief_goro.2",
+"chief_goro.3",
+"chief_goro.4",
+"chief_goro.5",
+"chief_goro.6",
+"chief_goro.7",
+"chief_goro.8",
+"chief_goro.9"
+],
+"paper_lantern": [
+"paper_lantern.0",
+"paper_lantern.1",
+"paper_lantern.2",
+"paper_lantern.3",
+"paper_lantern.4"
+],
+"home_bay_view": [
+"home_bay_view.0",
+"home_bay_view.1",
+"home_bay_view.2",
+"home_bay_view.3",
+"home_bay_view.4"
+],
+"family_hug": [
+"family_hug.0",
+"family_hug.1",
+"family_hug.2",
+"family_hug.3",
+"family_hug.4"
+],
+"dumpling_tray": [
+"dumpling_tray.0",
+"dumpling_tray.1",
+"dumpling_tray.2",
+"dumpling_tray.3",
+"dumpling_tray.4"
+],
+"momo_neighbour": [
+"momo_neighbour.0",
+"momo_neighbour.1",
+"momo_neighbour.2",
+"momo_neighbour.3",
+"momo_neighbour.4"
+]
+},
+"animals": [],
+"word": {
+"momo_grandpa": {
+"en": "Grandfather",
+"lo": "ພໍ່ຕູ້",
+"th": "คุณตา",
+"zh": "老爷爷",
+"ja": "おじいさん"
+},
+"momo_grandma": {
+"en": "Grandmother",
+"lo": "ແມ່ຕູ້",
+"th": "คุณยาย",
+"zh": "老奶奶",
+"ja": "おばあさん"
+},
+"giant_peach": {
+"en": "giant peach",
+"lo": "ໝາກຄາຍຍັກ",
+"th": "ลูกท้อยักษ์",
+"zh": "大桃子",
+"ja": "おおきな もも"
+},
+"open_peach": {
+"en": "open peach",
+"lo": "ໝາກຄາຍຜ່າ",
+"th": "ลูกท้อผ่า",
+"zh": "裂开的桃子",
+"ja": "われた もも"
+},
+"peach_glow": {
+"en": "golden light",
+"lo": "ແສງສີຄຳ",
+"th": "แสงสีทอง",
+"zh": "金色的光",
+"ja": "きんいろの ひかり"
+},
+"baby_momotaro": {
+"en": "baby Momotarō",
+"lo": "ເດັກນ້ອຍໂມໂມທາໂຣ",
+"th": "ทารกโมโมทาโร่",
+"zh": "桃太郎宝宝",
+"ja": "あかちゃん ももたろう"
+},
+"momotaro_boy": {
+"en": "Momotarō",
+"lo": "ໂມໂມທາໂຣ",
+"th": "โมโมทาโร่",
+"zh": "桃太郎",
+"ja": "ももたろう"
+},
+"stream_fish": {
+"en": "river fish",
+"lo": "ປາແມ່ນ້ຳ",
+"th": "ปลาแม่น้ำ",
+"zh": "河鱼",
+"ja": "かわの さかな"
+},
+"momo_dragonfly": {
+"en": "dragonfly",
+"lo": "ແມງປໍ",
+"th": "แมลงปอ",
+"zh": "蜻蜓",
+"ja": "とんぼ"
+},
+"wood_shed": {
+"en": "woodshed",
+"lo": "ຕູບເກັບຟືນ",
+"th": "โรงเก็บฟืน",
+"zh": "柴房",
+"ja": "まきごや"
+},
+"woven_baskets": {
+"en": "woven baskets",
+"lo": "ກະຕ່າສານ",
+"th": "ตะกร้าสาน",
+"zh": "竹编篮子",
+"ja": "たけかご"
+},
+"azalea_bush": {
+"en": "azalea bush",
+"lo": "ພຸ່ມດອກກຸຫຼາບພູ",
+"th": "พุ่มดอกอาซาเลีย",
+"zh": "杜鹃花丛",
+"ja": "つつじ"
+},
+"purple_iris": {
+"en": "iris flowers",
+"lo": "ດອກໄອຣິສ",
+"th": "ดอกไอริส",
+"zh": "鸢尾花",
+"ja": "あやめ"
+},
+"bamboo_fence": {
+"en": "bamboo fence",
+"lo": "ຮົ້ວໄມ້ໄຜ່",
+"th": "รั้วไม้ไผ่",
+"zh": "竹篱笆",
+"ja": "たけがき"
+},
+"garden_lantern": {
+"en": "stone lantern",
+"lo": "ໂຄມຫີນ",
+"th": "โคมหิน",
+"zh": "石灯笼",
+"ja": "いしどうろう"
+},
+"stream_boulder": {
+"en": "river boulder",
+"lo": "ກ້ອນຫີນແຄມນ້ຳ",
+"th": "ก้อนหินริมน้ำ",
+"zh": "河边大石",
+"ja": "かわの おおいわ"
+},
+"stepping_stones": {
+"en": "stepping stones",
+"lo": "ຫີນຂ້າມນ້ຳ",
+"th": "หินข้ามน้ำ",
+"zh": "汀步石",
+"ja": "とびいし"
+},
+"stream_foam": {
+"en": "stream foam",
+"lo": "ຟອງນ້ຳ",
+"th": "ฟองน้ำ",
+"zh": "水花",
+"ja": "みずの あわ"
+},
+"river_reeds": {
+"en": "river reeds",
+"lo": "ຕົ້ນອໍ້ແຄມນ້ຳ",
+"th": "ต้นอ้อริมน้ำ",
+"zh": "河畔芦苇",
+"ja": "かわべの あし"
+},
+"cottage_sky": {
+"en": "sky",
+"lo": "ທ້ອງຟ້າ",
+"th": "ท้องฟ้า",
+"zh": "天空",
+"ja": "そら"
+},
+"far_hills": {
+"en": "green hills",
+"lo": "ພູຂຽວ",
+"th": "เนินเขาเขียว",
+"zh": "青山",
+"ja": "みどりの やま"
+},
+"peach_pine": {
+"en": "peach tree",
+"lo": "ຕົ້ນໝາກຄາຍ",
+"th": "ต้นท้อ",
+"zh": "桃树",
+"ja": "ももの き"
+},
+"minka_cottage": {
+"en": "cottage",
+"lo": "ເຮືອນມຸງຫຍ້າ",
+"th": "กระท่อมมุงจาก",
+"zh": "茅草屋",
+"ja": "かやぶきの いえ"
+},
+"millet_dumpling": {
+"en": "millet dumpling",
+"lo": "ເຂົ້າໜົມເຂົ້າຟ່າງ",
+"th": "ขนมข้าวฟ่าง",
+"zh": "小米团子",
+"ja": "きびだんご"
+},
+"road_bush": {
+"en": "roadside bush",
+"lo": "ພຸ່ມໄມ້ແຄມທາງ",
+"th": "พุ่มไม้ริมทาง",
+"zh": "路边灌木",
+"ja": "みちばたの しげみ"
+},
+"momo_heron": {
+"en": "heron",
+"lo": "ນົກຍາງ",
+"th": "นกกระสา",
+"zh": "苍鹭",
+"ja": "さぎ"
+},
+"garden_gate": {
+"en": "wooden gate",
+"lo": "ປະຕູຮົ້ວໄມ້",
+"th": "ประตูรั้วไม้",
+"zh": "木门",
+"ja": "きの もん"
+},
+"spotted_dog": {
+"en": "Spotted Dog",
+"lo": "ໝານ້ອຍລາຍຈຸດ",
+"th": "หมาลายจุด",
+"zh": "斑点狗",
+"ja": "ぶちの いぬ"
+},
+"mountain_monkey": {
+"en": "Mountain Monkey",
+"lo": "ລີງພູ",
+"th": "ลิงภูเขา",
+"zh": "山猴",
+"ja": "やまの さる"
+},
+"green_pheasant": {
+"en": "Green Pheasant",
+"lo": "ໄກ່ຟ້າສີຂຽວ",
+"th": "ไก่ฟ้าสีเขียว",
+"zh": "绿雉",
+"ja": "みどりの きじ"
+},
+"wooden_boat": {
+"en": "sailboat",
+"lo": "ເຮືອໃບໄມ້",
+"th": "เรือใบไม้",
+"zh": "木帆船",
+"ja": "ほかけぶね"
+},
+"wooden_oar": {
+"en": "wooden oar",
+"lo": "ໄມ້ພາຍ",
+"th": "ไม้พาย",
+"zh": "木桨",
+"ja": "かい"
+},
+"white_sail": {
+"en": "white sail",
+"lo": "ໃບເຮືອສີຂາວ",
+"th": "ใบเรือสีขาว",
+"zh": "白帆",
+"ja": "しろい ほ"
+},
+"momo_crab": {
+"en": "crab",
+"lo": "ກະປູ",
+"th": "ปู",
+"zh": "螃蟹",
+"ja": "かに"
+},
+"momo_seafish": {
+"en": "sea fish",
+"lo": "ປາທະເລ",
+"th": "ปลาทะเล",
+"zh": "海鱼",
+"ja": "うみの さかな"
+},
+"mooring_post": {
+"en": "mooring post",
+"lo": "ຫຼັກມັດເຮືອ",
+"th": "หลักผูกเรือ",
+"zh": "系船木桩",
+"ja": "ふねの くい"
+},
+"boat_rope": {
+"en": "coiled rope",
+"lo": "ເຊືອກຂົດ",
+"th": "เชือกขด",
+"zh": "卷绳",
+"ja": "まいた ロープ"
+},
+"shore_rocks": {
+"en": "shore rocks",
+"lo": "ໂງ່ນຫີນແຄມຝັ່ງ",
+"th": "โขดหินริมฝั่ง",
+"zh": "岸边礁石",
+"ja": "いその いわ"
+},
+"pine_cliff": {
+"en": "pine cliff",
+"lo": "ໜ້າຜາຕົ້ນແປກ",
+"th": "หน้าผาต้นสน",
+"zh": "松林海崖",
+"ja": "まつの がけ"
+},
+"sea_waves": {
+"en": "sea waves",
+"lo": "ຄື້ນທະເລ",
+"th": "คลื่นทะเล",
+"zh": "海浪",
+"ja": "うみの なみ"
+},
+"sea_sky": {
+"en": "sea sky",
+"lo": "ທ້ອງຟ້າທະເລ",
+"th": "ท้องฟ้าทะเล",
+"zh": "海上天空",
+"ja": "うみの そら"
+},
+"sea_horizon": {
+"en": "open sea",
+"lo": "ທະເລກວ້າງ",
+"th": "ทะเลกว้าง",
+"zh": "辽阔大海",
+"ja": "ひろい うみ"
+},
+"flying_fish": {
+"en": "flying fish",
+"lo": "ປາບິນ",
+"th": "ปลาบิน",
+"zh": "飞鱼",
+"ja": "とびうお"
+},
+"sea_rock": {
+"en": "sea rock",
+"lo": "ໂງ່ນຫີນທະເລ",
+"th": "โขดหินทะเล",
+"zh": "海中礁石",
+"ja": "うみの いわ"
+},
+"island_crags": {
+"en": "rocky crags",
+"lo": "ຜາຫີນ",
+"th": "ผาหิน",
+"zh": "峭壁岩石",
+"ja": "ごつごつの いわ"
+},
+"ogre_island_view": {
+"en": "Ogre Island",
+"lo": "ເກາະຍັກ",
+"th": "เกาะยักษ์",
+"zh": "鬼岛",
+"ja": "おにがしま"
+},
+"blue_ogre": {
+"en": "blue ogre",
+"lo": "ຍັກສີຟ້າ",
+"th": "ยักษ์สีฟ้า",
+"zh": "蓝鬼",
+"ja": "あおおに"
+},
+"iron_brazier": {
+"en": "fire brazier",
+"lo": "ເຕົາໄຟເຫຼັກ",
+"th": "กระถางไฟเหล็ก",
+"zh": "铁火盆",
+"ja": "かがりび"
+},
+"taiko_drum": {
+"en": "festival drum",
+"lo": "ກອງບຸນ",
+"th": "กลองเทศกาล",
+"zh": "节庆大鼓",
+"ja": "おまつりの たいこ"
+},
+"rice_chest": {
+"en": "rice chest",
+"lo": "ຫີບເຂົ້າ",
+"th": "หีบข้าว",
+"zh": "米箱",
+"ja": "こめびつ"
+},
+"castle_lantern": {
+"en": "castle lantern",
+"lo": "ໂຄມຫີນປ້ອມ",
+"th": "โคมหินป้อม",
+"zh": "古堡石灯",
+"ja": "しろの いしどうろう"
+},
+"island_sky": {
+"en": "dusk sky",
+"lo": "ຟ້າຍາມແລງ",
+"th": "ฟ้ายามเย็น",
+"zh": "黄昏天空",
+"ja": "ゆうぐれの そら"
+},
+"ogre_hall": {
+"en": "ogre hall",
+"lo": "ຫໍໃຫຍ່ຂອງຍັກ",
+"th": "โถงใหญ่ของยักษ์",
+"zh": "鬼王大厅",
+"ja": "おにの やかた"
+},
+"fort_gate": {
+"en": "fort gate",
+"lo": "ປະຕູປ້ອມ",
+"th": "ประตูป้อม",
+"zh": "石堡大门",
+"ja": "しろの もん"
+},
+"chief_goro": {
+"en": "Chief Gorō",
+"lo": "ຫົວໜ້າໂກໂຣ",
+"th": "หัวหน้าโกโร่",
+"zh": "五郎首领",
+"ja": "ごろう"
+},
+"paper_lantern": {
+"en": "paper lantern",
+"lo": "ໂຄມໄຟເຈ້ຍ",
+"th": "โคมไฟกระดาษ",
+"zh": "纸灯笼",
+"ja": "ちょうちん"
+},
+"home_bay_view": {
+"en": "home bay",
+"lo": "ອ່າວບ້ານເກີດ",
+"th": "อ่าวบ้านเกิด",
+"zh": "家乡海湾",
+"ja": "ふるさとの うみ"
+},
+"family_hug": {
+"en": "family hug",
+"lo": "ອ້ອມກອດຄອບຄົວ",
+"th": "อ้อมกอดครอบครัว",
+"zh": "家人的拥抱",
+"ja": "かぞくの だっこ"
+},
+"dumpling_tray": {
+"en": "dumpling tray",
+"lo": "ຖາດເຂົ້າໜົມ",
+"th": "ถาดขนม",
+"zh": "团子托盘",
+"ja": "だんごの おぼん"
+},
+"momo_neighbour": {
+"en": "neighbour",
+"lo": "ເພື່ອນບ້ານ",
+"th": "เพื่อนบ้าน",
+"zh": "邻居",
+"ja": "きんじょの ひと"
+}
+},
+"map": {
+"grandpa": "momo_grandpa",
+"grandma": "momo_grandma",
+"peach-giant": "giant_peach",
+"peach-open": "open_peach",
+"glow-1": "peach_glow",
+"glow-2": "peach_glow",
+"glow-3": "peach_glow",
+"baby-momotaro": "baby_momotaro",
+"momotaro": "momotaro_boy",
+"fish": "stream_fish",
+"dragonfly": "momo_dragonfly",
+"wood-shed": "wood_shed",
+"baskets-k1": "woven_baskets",
+"azalea-l": "azalea_bush",
+"iris-l": "purple_iris",
+"bamboo-rail-l": "bamboo_fence",
+"stone-lantern-r": "garden_lantern",
+"stream-boulder": "stream_boulder",
+"stepping-stones": "stepping_stones",
+"stream-foam": "stream_foam",
+"reeds-r": "river_reeds",
+"sky-cottage": "cottage_sky",
+"far-hills": "far_hills",
+"peach-pine": "peach_pine",
+"minka-cottage": "minka_cottage",
+"momotaro-walk": "momotaro_boy",
+"dumpling-1": "millet_dumpling",
+"dumpling-2": "millet_dumpling",
+"dumpling-3": "millet_dumpling",
+"dumpling-4": "millet_dumpling",
+"road-bush": "road_bush",
+"heron": "momo_heron",
+"road-gate": "garden_gate",
+"dumpling-": "millet_dumpling",
+"momotaro-offer": "momotaro_boy",
+"dog": "spotted_dog",
+"dog-happy": "spotted_dog",
+"monkey-branch": "mountain_monkey",
+"monkey-bonk": "mountain_monkey",
+"monkey": "mountain_monkey",
+"pheasant-shadow": "green_pheasant",
+"dumpling-a": "millet_dumpling",
+"dumpling-b": "millet_dumpling",
+"sailboat": "wooden_boat",
+"sailboat-hull": "wooden_boat",
+"pheasant-fly": "green_pheasant",
+"pheasant": "green_pheasant",
+"momotaro-aboard": "momotaro_boy",
+"dog-aboard": "spotted_dog",
+"monkey-aboard": "mountain_monkey",
+"dumpling-c": "millet_dumpling",
+"wooden-oar": "wooden_oar",
+"white-sail": "white_sail",
+"crab": "momo_crab",
+"mooring-post": "mooring_post",
+"coil-rope": "boat_rope",
+"shore-rocks-l": "shore_rocks",
+"sea-pine-leg-l": "pine_cliff",
+"wave-crest-r": "sea_waves",
+"spray-foam-r": "sea_waves",
+"reef-crop-r": "shore_rocks",
+"sky-sea": "sea_sky",
+"far-island": "sea_horizon",
+"wave-arch": "sea_waves",
+"pine-cliff": "pine_cliff",
+"dog-sneeze": "spotted_dog",
+"flying-fish": "flying_fish",
+"sea-rock-1": "sea_rock",
+"sea-rock-2": "sea_rock",
+"sea-rock-3": "sea_rock",
+"crag-leg-r": "island_crags",
+"open-horizon": "sea_horizon",
+"sea-rock-": "sea_rock",
+"monkey-climb": "mountain_monkey",
+"blue-ogre": "blue_ogre",
+"brazier-l": "iron_brazier",
+"stolen-drums-l": "taiko_drum",
+"crag-leg-l": "island_crags",
+"brazier-r": "iron_brazier",
+"rice-chests-r": "rice_chest",
+"fort-lantern-r": "castle_lantern",
+"sky-island": "island_sky",
+"far-crags": "island_crags",
+"ogre-hall": "ogre_hall",
+"fort-gate": "fort_gate",
+"fort-gate-open": "fort_gate",
+"momotaro-brave": "momotaro_boy",
+"goro": "chief_goro",
+"goro-dizzy": "chief_goro",
+"goro-tear": "chief_goro",
+"goro-smile": "chief_goro",
+"dumpling-last": "millet_dumpling",
+"dog-lantern": "spotted_dog",
+"head-lantern-1": "paper_lantern",
+"head-lantern-2": "paper_lantern",
+"head-lantern-3": "paper_lantern",
+"grandpa-far": "momo_grandpa",
+"grandma-far": "momo_grandma",
+"taiko-big": "taiko_drum",
+"taiko-small": "taiko_drum",
+"drum-ka": "taiko_drum",
+"jetty-chest": "rice_chest",
+"jetty-lantern": "paper_lantern",
+"grandma-tray": "momo_grandma",
+"family-hug": "family_hug",
+"fest-lantern-1": "paper_lantern",
+"fest-lantern-2": "paper_lantern",
+"fest-lantern-3": "paper_lantern",
+"fest-lantern-4": "paper_lantern",
+"dumpling-tray": "dumpling_tray",
+"rice-chest": "rice_chest",
+"neighbour-1": "momo_neighbour",
+"neighbour-2": "momo_neighbour",
+"fest-lantern-": "paper_lantern"
+},
+"maps": {
+"s04": {
+"fish": "momo_seafish"
+},
+"s05": {
+"fish": "momo_seafish",
+"far-island": "ogre_island_view"
+},
+"s09": {
+"fish": "momo_seafish",
+"far-island": "home_bay_view"
+}
+}
+}

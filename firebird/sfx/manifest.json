@@ -1,0 +1,28 @@
+{
+ "beds": [
+  "autumn-woods",
+  "woodland-stream",
+  "palace-night",
+  "starry-glade",
+  "warm-lanterns",
+  "morning-birds"
+ ],
+ "shots": [],
+ "pools": {
+  "wind-gust": 1,
+  "fire-crackle": 1,
+  "splash-soft": 1,
+  "leaves-rustle": 2,
+  "soft-plop": 2,
+  "steps-stone": 2,
+  "steps-wood": 2,
+  "wood-tap": 2,
+  "cloth-rustle": 2,
+  "gate-creak": 2,
+  "wing-whoosh": 2,
+  "puff-breath": 2,
+  "seeds-patter": 2,
+  "child-giggle": 2,
+  "steam-hiss": 2
+ }
+}

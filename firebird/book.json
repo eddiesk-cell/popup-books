@@ -1,0 +1,332 @@
+{
+ "id": "firebird",
+ "released": true,
+ "words": true,
+ "chars": "firebird-",
+ "title": "The Firebird and the Golden Feather",
+ "story": "story.json",
+ "translations": "translations.json",
+ "timing": "voice/timing.json",
+ "voice": "voice/",
+ "spreads": [
+  {
+   "dir": "s01",
+   "title": "The Glowing Feather on the Trail",
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "1.5",
+    "targets": [
+     "oak-leaf-1",
+     "oak-leaf-2",
+     "oak-leaf-3",
+     "oak-leaf-4"
+    ],
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    },
+    "start": "Uncover the glowing feather with Misha! Tap all four fallen oak leaves upon the mossy bank.",
+    "praise": "Uncovered on the moss! The Firebird's golden feather blazes like a warm little lantern!"
+   }
+  },
+  {
+   "dir": "s02",
+   "title": "Tsar Boris's Tall Gilded Cage",
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "2.5",
+    "pairs": [
+     [
+      "wheat-sheaf",
+      "woven-sack"
+     ],
+     [
+      "honey-bread",
+      "saddle-basket"
+     ],
+     [
+      "wooden-flute",
+      "leather-pouch"
+     ]
+    ],
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    },
+    "start": "Pack for the quest! Match wheat to the sack, bread to the basket, and the flute to the pouch.",
+    "praise": "All packed for adventure! Woven sack, saddle basket, and leather pouch hold every travel gift!"
+   }
+  },
+  {
+   "dir": "s03",
+   "title": "Across the Sparkling Woodland Stream",
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
+   "game": {
+    "type": "order",
+    "who": "misha",
+    "before": "3.5",
+    "targets": [
+     "stream-stone-1",
+     "stream-stone-2",
+     "stream-stone-3"
+    ],
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    },
+    "start": "Cross the rushing woodland stream with Misha! Tap the three mossy stones in order from left to right.",
+    "praise": "Hop, hop, hop! Misha leaps safely across all three mossy stream-stones!"
+   }
+  },
+  {
+   "dir": "s04",
+   "title": "Friends in the Twilight Glade",
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
+   "game": {
+    "type": "collect",
+    "before": "4.4",
+    "targets": [
+     "berry-cluster-1",
+     "berry-cluster-2",
+     "berry-cluster-3",
+     "berry-cluster-4"
+    ],
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    },
+    "start": "Gather forest treats for the midnight feast! Tap all four red berry clusters beside the wiggling fern.",
+    "praise": "Sweet autumn berries! Misha gathers all four red berry clusters beside the wiggling golden fern!"
+   }
+  },
+  {
+   "dir": "s05",
+   "title": "Sunrise at Midnight",
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "5.3",
+    "pairs": [
+     [
+      "wheat-sheaf",
+      "painted-bowl"
+     ],
+     [
+      "red-berries",
+      "birch-tray"
+     ],
+     [
+      "honey-bread",
+      "woven-mat"
+     ]
+    ],
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    },
+    "start": "Set out the midnight feast! Match wheat to the bowl, berries to the tray, and bread to the mat.",
+    "praise": "Every treat ready! Painted bowl, birch tray, and woven mat welcome the midnight guest!"
+   }
+  },
+  {
+   "dir": "s06",
+   "title": "The Secret of the Living Light",
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "6.5",
+    "targets": [
+     "wooden-flute"
+    ],
+    "step": {
+     "steps": 3
+    },
+    "light": [
+     "flute-note-1",
+     "flute-note-2",
+     "flute-note-3"
+    ],
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    },
+    "start": "Play Misha's wooden flute to comfort the Firebird! Tap three times when the ring glows green.",
+    "praise": "Three sweet golden notes! Soft flute music shimmers warmly across the quiet starry glade!"
+   }
+  },
+  {
+   "dir": "s07",
+   "title": "Lantern Wings Through Midnight Mist",
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "7.5",
+    "targets": [
+     "trail-lantern-1",
+     "trail-lantern-2",
+     "trail-lantern-3",
+     "trail-lantern-4"
+    ],
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    },
+    "start": "Share the Firebird's lantern light through the mist! Tap all four wooden trail-lanterns along the path.",
+    "praise": "Bright through the mist! All four wooden trail-lanterns glow like warm little suns!"
+   }
+  },
+  {
+   "dir": "s08",
+   "title": "The Latch on the Gilded Cage",
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
+   "game": {
+    "type": "timing",
+    "before": "8.5",
+    "targets": [
+     "cage-shut-dim"
+    ],
+    "step": {
+     "steps": 3
+    },
+    "light": [
+     "cage-spark-1",
+     "cage-spark-2",
+     "cage-spark-3"
+    ],
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    },
+    "start": "Help Tsar Boris unlatch the tall gilded cage! Tap the gilded cage three times when the ring glows green.",
+    "praise": "Three bright golden clicks! Warm sparks shimmer across the gilded cage door, ready to swing open!"
+   }
+  },
+  {
+   "dir": "s09",
+   "title": "Lantern Light Across the Courtyard",
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
+   "game": {
+    "type": "collect",
+    "tap": "light",
+    "lit_glow": 1,
+    "before": "9.4",
+    "targets": [
+     "palace-lantern-1",
+     "palace-lantern-2",
+     "palace-lantern-3",
+     "palace-lantern-4"
+    ],
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    },
+    "start": "Catch the Firebird's falling lantern light! Tap all four palace lanterns along the low porch railings.",
+    "praise": "Bright courtyard gold! All four carved palace lanterns shine across Tsar Boris's rosy courtyard!"
+   }
+  },
+  {
+   "dir": "s10",
+   "title": "The Festival of Golden Lanterns",
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
+   "game": {
+    "type": "pair",
+    "before": "10.5",
+    "pairs": [
+     [
+      "golden-apples",
+      "painted-bowl"
+     ],
+     [
+      "honey-bread",
+      "carved-platter"
+     ],
+     [
+      "painted-teacup",
+      "tea-samovar"
+     ]
+    ],
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    },
+    "start": "Share the autumn feast! Match apples to the bowl, bread to the platter, and the teacup to the samovar.",
+    "praise": "Joy for all! Sweet golden apples, warm honey bread, and fragrant tea fill the courtyard!"
+   }
+  },
+  {
+   "dir": "s11",
+   "title": "What Did We Learn?",
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
+  }
+ ]
+}

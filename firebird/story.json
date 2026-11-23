@@ -1,0 +1,1045 @@
+{
+ "words": false,
+ "title": "The Firebird and the Golden Feather",
+ "credit": "From the classic Russian folk tale of the Fire-Bird (Zhar-Ptitsa), published in public-domain English by Arthur Ransome in Old Peter's Russian Tales (1916) and collected in Russian by Alexander Afanasyev (1855-1863; English translations by W. R. S. Ralston, 1873, Andrew Lang, 1890, and Post Wheeler, 1912). Retold in our own words.",
+ "status": "Locked at STOP 1 (2026-11-20: all STORY-REVIEW.md notes in a03f64209 applied and verified).",
+ "voices": {
+  "narrator": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "misha": {
+   "voice": "am_puck",
+   "speed": 1.1,
+   "pitch": 0
+  },
+  "sivka": {
+   "voice": "bm_daniel",
+   "speed": 0.9,
+   "pitch": 0
+  },
+  "boris": {
+   "voice": "bm_fable",
+   "speed": 0.95,
+   "pitch": 0
+  },
+  "firebird": {
+   "voice": "af_sky",
+   "speed": 0.95,
+   "pitch": 0
+  },
+  "closing": {
+   "voice": "bm_george",
+   "speed": 0.85,
+   "pitch": 0
+  },
+  "feather": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "cage": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "flute": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "samovar": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "bear": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  },
+  "hare": {
+   "voice": "bm_george",
+   "speed": 1.0,
+   "pitch": 0
+  }
+ },
+ "respell": {
+  "Misha": "Misha",
+  "Misha's": "Misha's",
+  "Sivka": "Seefka",
+  "Sivka's": "Seefka's",
+  "Boris": "Bah-rees",
+  "Boris's": "Bah-rees's",
+  "Tsar": "Tsahr",
+  "Tsar's": "Tsahr's",
+  "Firebird": "Firebird",
+  "Firebird's": "Firebird's"
+ },
+ "spreads": [
+  {
+   "n": 1,
+   "title": "The Glowing Feather on the Trail",
+   "lines": [
+    {
+     "id": "1.1",
+     "text": "One golden autumn in Russia, young Misha rode his wise horse Sivka, who wore a bright red scarf.",
+     "say": [
+      [
+       "narrator",
+       "One golden autumn in Russia, young Misha rode his wise horse Seefka, who wore a bright red scarf."
+      ]
+     ]
+    },
+    {
+     "id": "1.2",
+     "text": "Clip-clop! Along the dusky woodland trail, one fallen golden feather peeked bright beneath four oak leaves!",
+     "say": [
+      [
+       "narrator",
+       "Clip-clop! Along the dusky woodland trail, one fallen golden feather peeked bright beneath four oak leaves!"
+      ]
+     ]
+    },
+    {
+     "id": "1.3",
+     "text": "Sivka halted as Misha hopped down. \"Careful, Misha! One Firebird feather will make Tsar Boris want the whole bird!\"",
+     "say": [
+      [
+       "narrator",
+       "Seefka halted as Misha hopped down."
+      ],
+      [
+       "sivka",
+       "Careful, Misha! One Firebird feather will make Tsahr Bah-rees want the whole bird!"
+      ]
+     ]
+    },
+    {
+     "id": "1.4",
+     "text": "Beside the mossy bank, Misha knelt close. \"Let us bring Tsar Boris this bright wonder!\" said Misha.",
+     "say": [
+      [
+       "narrator",
+       "Beside the mossy bank, Misha knelt close."
+      ],
+      [
+       "misha",
+       "Let us bring Tsahr Bah-rees this bright wonder!"
+      ],
+      [
+       "narrator",
+       "said Misha."
+      ]
+     ]
+    },
+    {
+     "id": "1.5",
+     "text": "Mounting Sivka with the glowing feather, Misha rode toward Tsar Boris's palace! What waited inside the courtyard?",
+     "say": [
+      [
+       "narrator",
+       "Mounting Seefka with the glowing... feather, Misha rode toward Tsahr Bah-rees's palace! What waited inside the courtyard?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Tsar Boris's Tall Gilded Cage",
+   "lines": [
+    {
+     "id": "2.1",
+     "text": "Swish! Inside the dark carved palace courtyard, Misha lifted the feather, washing every painted arch in gold!",
+     "say": [
+      [
+       "narrator",
+       "Swish! Inside the dark carved palace courtyard, Misha lifted the feather, washing every painted arch in gold!"
+      ]
+     ]
+    },
+    {
+     "id": "2.2",
+     "text": "Out stepped Tsar Boris in his jewelled crown! \"Splendid! One bright feather lights my whole dark porch!\"",
+     "say": [
+      [
+       "narrator",
+       "Out stepped Tsahr Bah-rees in his jewelled crown!"
+      ],
+      [
+       "boris",
+       "Splendid! One bright feather lights my whole dark porch!"
+      ]
+     ]
+    },
+    {
+     "id": "2.3",
+     "text": "Pointing to his gilded cage, Tsar Boris gave Misha a golden net. \"Follow that feather and catch the Firebird!\"",
+     "say": [
+      [
+       "narrator",
+       "Pointing to his gilded cage, Tsahr Bah-rees gave Misha a golden net."
+      ],
+      [
+       "boris",
+       "Follow that feather and catch the Firebird!"
+      ]
+     ]
+    },
+    {
+     "id": "2.4",
+     "text": "Sivka whispered, \"Bring sweet wheat and music!\" By a sack, basket, and pouch sat wheat, bread, and a flute.",
+     "say": [
+      [
+       "narrator",
+       "Seefka whispered,"
+      ],
+      [
+       "sivka",
+       "Bring sweet wheat and music!"
+      ],
+      [
+       "narrator",
+       "By a sack, basket, and pouch sat wheat, bread, and a flute."
+      ]
+     ]
+    },
+    {
+     "id": "2.5",
+     "text": "Loading the sack, basket, and pouch onto Sivka, Misha rode toward the autumn woods! What crossed the trail?",
+     "say": [
+      [
+       "narrator",
+       "Loading the sack, basket, and... pouch onto Seefka, Misha rode toward the autumn woods! What crossed the trail?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Across the Sparkling Woodland Stream",
+   "lines": [
+    {
+     "id": "3.1",
+     "text": "By sunset next day, Misha hopped down beside Sivka where a rushing turquoise stream crossed the trail!",
+     "say": [
+      [
+       "narrator",
+       "By sunset next day, Misha hopped down beside Seefka where a rushing turquoise stream crossed the trail!"
+      ]
+     ]
+    },
+    {
+     "id": "3.2",
+     "text": "Nearby, a plump brown bear cub tugged a red rowan branch. Plop! Backwards he tumbled into soft leaves!",
+     "say": [
+      [
+       "narrator",
+       "Nearby, a plump brown bear cub tugged a red rowan branch. Plop! Backwards he tumbled into soft leaves!"
+      ]
+     ]
+    },
+    {
+     "id": "3.3",
+     "text": "Sharing honey bread with the cub, Misha lifted his feather high. \"Glow, golden feather, show the way!\"",
+     "say": [
+      [
+       "narrator",
+       "Sharing honey bread with the cub, Misha lifted his feather high."
+      ],
+      [
+       "misha",
+       "Glow, golden feather, show the way!"
+      ]
+     ]
+    },
+    {
+     "id": "3.4",
+     "text": "Warm golden light shimmered across three flat mossy stones in the rushing woodland stream.",
+     "say": [
+      [
+       "narrator",
+       "Warm golden light shimmered across three flat mossy stones in the rushing woodland stream."
+      ]
+     ]
+    },
+    {
+     "id": "3.5",
+     "text": "Stepping onto the far bank as Sivka splashed across, Misha followed his glowing feather! What opened beyond the pines?",
+     "say": [
+      [
+       "narrator",
+       "Stepping onto the far bank as Seefka splashed across, Misha followed his glowing... feather! What opened beyond the pines?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Friends in the Twilight Glade",
+   "lines": [
+    {
+     "id": "4.1",
+     "text": "Beyond the dark pines opened a wide mossy meadow glade, ringed by tall ancient oaks!",
+     "say": [
+      [
+       "narrator",
+       "Beyond the dark pines opened a wide mossy meadow glade, ringed by tall ancient oaks!"
+      ]
+     ]
+    },
+    {
+     "id": "4.2",
+     "text": "As violet twilight fell, wise Sivka nodded his grey head. \"Here the shy Firebird rests tonight!\"",
+     "say": [
+      [
+       "narrator",
+       "As violet twilight fell, wise Seefka nodded his grey head."
+      ],
+      [
+       "sivka",
+       "Here the shy Firebird rests tonight!"
+      ]
+     ]
+    },
+    {
+     "id": "4.3",
+     "text": "Beside four red berry clusters, a golden fern bush wiggled and shook! Who was hiding behind it?",
+     "say": [
+      [
+       "narrator",
+       "Beside four red berry clusters, a golden fern bush wiggled and shook! Who was hiding behind it?"
+      ]
+     ]
+    },
+    {
+     "id": "4.4",
+     "text": "Pop! Out from the golden fern bush hopped a fluffy white hare! Kindly Misha shared sweet wheat.",
+     "say": [
+      [
+       "narrator",
+       "Pop! Out from the golden fern bush hopped a fluffy white hare! Kindly Misha shared sweet wheat."
+      ]
+     ]
+    },
+    {
+     "id": "4.5",
+     "text": "With red berries gathered, starry midnight sparkled above the mossy glade! How would Misha welcome the shy Firebird?",
+     "say": [
+      [
+       "narrator",
+       "With red berries gathered, starry midnight sparkled above the mossy... glade! How would Misha welcome the shy Firebird?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Sunrise at Midnight",
+   "lines": [
+    {
+     "id": "5.1",
+     "text": "Beside wheat, red berries, and honey bread, Misha set a painted bowl, birch tray, and mat on the moss.",
+     "say": [
+      [
+       "narrator",
+       "Beside wheat, red berries, and honey bread, Misha set a painted bowl, birch tray, and mat on the moss."
+      ]
+     ]
+    },
+    {
+     "id": "5.2",
+     "text": "\"Spread a feast for a friend, never a trap!\" whispered wise Sivka beneath the silver stars.",
+     "say": [
+      [
+       "sivka",
+       "Spread a feast for a friend, never a trap!"
+      ],
+      [
+       "narrator",
+       "whispered wise Seefka beneath the silver stars."
+      ]
+     ]
+    },
+    {
+     "id": "5.3",
+     "text": "Beside the ready midnight feast, Misha lifted his feather high and called softly, \"Glow, golden feather, warm the way!\"",
+     "say": [
+      [
+       "narrator",
+       "Beside the ready midnight feast, Misha lifted his feather high and called softly,"
+      ],
+      [
+       "misha",
+       "Glow, golden feather, warm the way!"
+      ]
+     ]
+    },
+    {
+     "id": "5.4",
+     "text": "Swoosh! High above the dark oaks, warm golden light spilled across the midnight sky like sunrise!",
+     "say": [
+      [
+       "narrator",
+       "Swoosh! High above the dark oaks, warm golden light spilled across the midnight sky like sunrise!"
+      ]
+     ]
+    },
+    {
+     "id": "5.5",
+     "text": "Down glided the Firebird in a turquoise pearl necklace, bathing every leaf in gold! Would she trust Misha?",
+     "say": [
+      [
+       "narrator",
+       "Down glided the Firebird in a turquoise pearl necklace, bathing every leaf in... gold! Would she trust Misha?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "The Secret of the Living Light",
+   "lines": [
+    {
+     "id": "6.1",
+     "text": "Yes! Stepping gently onto the moss, the Firebird tasted the golden wheat while warm sparks danced!",
+     "say": [
+      [
+       "narrator",
+       "Yes! Stepping gently onto the moss, the Firebird tasted the golden wheat while warm sparks danced!"
+      ]
+     ]
+    },
+    {
+     "id": "6.2",
+     "text": "The fluffy white hare leaped at a floating spark. Boing! Gently he bounced off Sivka's nose into clover!",
+     "say": [
+      [
+       "narrator",
+       "The fluffy white hare leaped at a floating spark. Boing! Gently he bounced off Seefka's nose into clover!"
+      ]
+     ]
+    },
+    {
+     "id": "6.3",
+     "text": "Remembering Tsar Boris's order, Misha slowly lifted the golden net. Instantly, the Firebird's bright feathers dimmed!",
+     "say": [
+      [
+       "narrator",
+       "Remembering Tsahr Bah-rees's order, Misha slowly lifted the golden net. Instantly, the Firebird's bright feathers dimmed!"
+      ]
+     ]
+    },
+    {
+     "id": "6.4",
+     "text": "The Firebird sighed, \"Nets and cages dim my light!\" Misha dropped the net and held out his wooden flute.",
+     "say": [
+      [
+       "narrator",
+       "The Firebird sighed,"
+      ],
+      [
+       "firebird",
+       "Nets and cages dim my light!"
+      ],
+      [
+       "narrator",
+       "Misha dropped the net and held out his wooden flute."
+      ]
+     ]
+    },
+    {
+     "id": "6.5",
+     "text": "Playing a gentle tune, Misha smiled as her feathers shone bright! \"Will you come freely with us?\" asked Misha.",
+     "say": [
+      [
+       "narrator",
+       "Playing a gentle tune, Misha smiled as her feathers shone... bright!"
+      ],
+      [
+       "misha",
+       "Will you come freely with us?"
+      ],
+      [
+       "narrator",
+       "asked Misha."
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Lantern Wings Through Midnight Mist",
+   "lines": [
+    {
+     "id": "7.1",
+     "text": "The Firebird sang, \"Gladly, kind Misha!\" Overhead she soared as Misha, Sivka, and the white hare set off!",
+     "say": [
+      [
+       "narrator",
+       "The Firebird sang,"
+      ],
+      [
+       "firebird",
+       "Gladly, kind Misha!"
+      ],
+      [
+       "narrator",
+       "Overhead she soared as Misha, Seefka, and the white hare set off!"
+      ]
+     ]
+    },
+    {
+     "id": "7.2",
+     "text": "Whoosh! Cold grey mist rolled across the rushing stream, where four unlit wooden trail-lanterns stood ahead!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Cold grey mist rolled across the rushing stream, where four unlit wooden trail-lanterns stood ahead!"
+      ]
+     ]
+    },
+    {
+     "id": "7.3",
+     "text": "Sivka slowed by the misty bank while Misha lifted his feather. \"Glow, golden feather, light the way!\"",
+     "say": [
+      [
+       "narrator",
+       "Seefka slowed by the misty bank while Misha lifted his feather."
+      ],
+      [
+       "misha",
+       "Glow, golden feather, light the... way!"
+      ]
+     ]
+    },
+    {
+     "id": "7.4",
+     "text": "By the stream, the friendly bear cub trotted out to join them as the Firebird swooped low!",
+     "say": [
+      [
+       "narrator",
+       "By the stream, the friendly bear cub trotted out to join them as the Firebird swooped low!"
+      ]
+     ]
+    },
+    {
+     "id": "7.5",
+     "text": "Warm lantern light cleared the mist as everyone rode toward the palace! What would Tsar Boris do?",
+     "say": [
+      [
+       "narrator",
+       "Warm lantern light cleared the mist as everyone rode toward the palace! What would Tsahr Bah-rees do?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Latch on the Gilded Cage",
+   "lines": [
+    {
+     "id": "8.1",
+     "text": "Before dawn, eager Tsar Boris hurried down his carved porch steps as the Firebird glided brightly in!",
+     "say": [
+      [
+       "narrator",
+       "Before dawn, eager Tsahr Bah-rees hurried down his carved porch steps as the Firebird glided brightly in!"
+      ]
+     ]
+    },
+    {
+     "id": "8.2",
+     "text": "Tsar Boris cried joyfully, \"You brought her! Step inside my tall gilded cage, shining bird!\"",
+     "say": [
+      [
+       "narrator",
+       "Tsahr Bah-rees cried joyfully,"
+      ],
+      [
+       "boris",
+       "You brought her! Step inside my tall gilded cage, shining bird!"
+      ]
+     ]
+    },
+    {
+     "id": "8.3",
+     "text": "Clack! Before Misha could speak, Tsar Boris shut the Firebird inside his gilded cage! Instantly, her feathers dimmed!",
+     "say": [
+      [
+       "narrator",
+       "Clack! Before Misha could speak, Tsahr Bah-rees shut the Firebird inside his gilded cage! Instantly, her feathers dimmed!"
+      ]
+     ]
+    },
+    {
+     "id": "8.4",
+     "text": "Misha pleaded bravely, \"Majesty, cages dim her light!\" Tsar Boris gasped softly and reached for the gilded cage.",
+     "say": [
+      [
+       "narrator",
+       "Misha pleaded bravely,"
+      ],
+      [
+       "misha",
+       "Majesty, cages dim her light!"
+      ],
+      [
+       "narrator",
+       "Tsahr Bah-rees gasped softly and reached for the gilded cage."
+      ]
+     ]
+    },
+    {
+     "id": "8.5",
+     "text": "Click-clack! Tsar Boris swung the gilded cage door wide open! Where would the freed Firebird fly?",
+     "say": [
+      [
+       "narrator",
+       "Click-clack! Tsahr Bah-rees swung the gilded cage door wide... open! Where would the freed Firebird fly?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Lantern Light Across the Courtyard",
+   "lines": [
+    {
+     "id": "9.1",
+     "text": "Whoosh! Out soared the free Firebird onto the bare autumn apple tree, blazing brighter than sunrise!",
+     "say": [
+      [
+       "narrator",
+       "Whoosh! Out soared the free Firebird onto the bare autumn apple tree, blazing brighter than sunrise!"
+      ]
+     ]
+    },
+    {
+     "id": "9.2",
+     "text": "Stretching her radiant wings, she showered warm golden lantern light across every carved palace arch!",
+     "say": [
+      [
+       "narrator",
+       "Stretching her radiant wings, she showered warm golden lantern light across every carved palace arch!"
+      ]
+     ]
+    },
+    {
+     "id": "9.3",
+     "text": "Sweet golden apples ripened on the branches while four unlit palace lanterns rested along the low porch railings!",
+     "say": [
+      [
+       "narrator",
+       "Sweet golden apples ripened on the branches while four unlit palace lanterns rested along the low porch railings!"
+      ]
+     ]
+    },
+    {
+     "id": "9.4",
+     "text": "All four courtyard lanterns shone warm and bright! Tsar Boris bowed low. \"Freedom makes the brightest light!\"",
+     "say": [
+      [
+       "narrator",
+       "All four courtyard lanterns shone warm and bright! Tsahr Bah-rees bowed low."
+      ],
+      [
+       "boris",
+       "Freedom makes the brightest light!"
+      ]
+     ]
+    },
+    {
+     "id": "9.5",
+     "text": "Fluttering gently, the Firebird floated three glowing golden feathers into Misha's hands! Why did she give them?",
+     "say": [
+      [
+       "narrator",
+       "Fluttering gently, the Firebird floated three glowing golden feathers into Misha's... hands! Why did she give them?"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "The Festival of Golden Lanterns",
+   "lines": [
+    {
+     "id": "10.1",
+     "text": "\"My three warm feathers will keep your lanterns glowing all year!\" sang the Firebird from the apple tree.",
+     "say": [
+      [
+       "firebird",
+       "My three warm feathers will keep your lanterns glowing all year!"
+      ],
+      [
+       "narrator",
+       "sang the Firebird from the apple tree."
+      ]
+     ]
+    },
+    {
+     "id": "10.2",
+     "text": "Grateful Tsar Boris draped flowers over the open cage and thanked Misha and wise Sivka warmly!",
+     "say": [
+      [
+       "narrator",
+       "Grateful Tsahr Bah-rees draped flowers over the open cage and thanked Misha and wise Seefka warmly!"
+      ]
+     ]
+    },
+    {
+     "id": "10.3",
+     "text": "Nearby, the bear cub and white hare tugged a silk ribbon. Sproing! Nose to nose they tumbled onto hay!",
+     "say": [
+      [
+       "narrator",
+       "Nearby, the bear cub and white hare tugged a silk ribbon. Sproing! Nose to nose they tumbled onto hay!"
+      ]
+     ]
+    },
+    {
+     "id": "10.4",
+     "text": "On the feast table shone a brass samovar, bowl, and platter beside a teacup, golden apples, and honey bread.",
+     "say": [
+      [
+       "narrator",
+       "On the feast table shone a brass samovar, bowl, and platter beside a teacup, golden apples, and honey bread."
+      ]
+     ]
+    },
+    {
+     "id": "10.5",
+     "text": "Everyone celebrated together beneath glowing golden lanterns! Kindness and freedom help every bright gift shine for all!",
+     "say": [
+      [
+       "narrator",
+       "Everyone celebrated together beneath glowing golden... lanterns! Kindness and freedom help every bright gift shine for all!"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "moral": [
+  {
+   "id": "moral.1",
+   "text": "What did we learn?",
+   "say": [
+    [
+     "closing",
+     "What did we learn?"
+    ]
+   ]
+  },
+  {
+   "id": "moral.2",
+   "text": "Honest young Misha and wise Sivka followed one glowing feather on a brave woodland quest.",
+   "say": [
+    [
+     "closing",
+     "Honest young Misha and wise Seefka followed one glowing feather on a brave woodland quest."
+    ]
+   ]
+  },
+  {
+   "id": "moral.3",
+   "text": "When nets and cages dimmed the Firebird, Misha listened kindly and chose music over force.",
+   "say": [
+    [
+     "closing",
+     "When nets and cages dimmed the Firebird, Misha listened kindly and chose music over force."
+    ]
+   ]
+  },
+  {
+   "id": "moral.4",
+   "text": "Opening the gilded cage taught Tsar Boris that wonder cannot be locked away for one person!",
+   "say": [
+    [
+     "closing",
+     "Opening the gilded cage taught Tsahr Bah-rees that wonder cannot be locked away for one person!"
+    ]
+   ]
+  },
+  {
+   "id": "moral.5",
+   "text": "Glow, golden feather, light the way! True friendship and beauty shine brightest when shared freely.",
+   "say": [
+    [
+     "closing",
+     "Glow, golden feather, light the way! True friendship and beauty shine brightest when shared freely."
+    ]
+   ]
+  }
+ ],
+ "game": [
+  {
+   "id": "game.1.start",
+   "text": "Uncover the glowing feather with Misha! Tap all four fallen oak leaves upon the mossy bank.",
+   "say": [
+    [
+     "narrator",
+     "Uncover the glowing feather with Misha! Tap all four fallen oak leaves upon the mossy bank."
+    ]
+   ]
+  },
+  {
+   "id": "game.1.praise",
+   "text": "Uncovered on the moss! The Firebird's golden feather blazes like a warm little lantern!",
+   "say": [
+    [
+     "narrator",
+     "Uncovered on the moss! The Firebird's golden feather blazes like a warm little lantern!"
+    ]
+   ]
+  },
+  {
+   "id": "game.2.start",
+   "text": "Pack for the quest! Match wheat to the sack, bread to the basket, and the flute to the pouch.",
+   "say": [
+    [
+     "narrator",
+     "Pack for the quest! Match wheat to the sack, bread to the basket, and the flute to the pouch."
+    ]
+   ]
+  },
+  {
+   "id": "game.2.praise",
+   "text": "All packed for adventure! Woven sack, saddle basket, and leather pouch hold every travel gift!",
+   "say": [
+    [
+     "narrator",
+     "All packed for adventure! Woven sack, saddle basket, and leather pouch hold every travel gift!"
+    ]
+   ]
+  },
+  {
+   "id": "game.3.start",
+   "text": "Cross the rushing woodland stream with Misha! Tap the three mossy stones in order from left to right.",
+   "say": [
+    [
+     "narrator",
+     "Cross the rushing woodland stream with Misha! Tap the three mossy stones in order from left to right."
+    ]
+   ]
+  },
+  {
+   "id": "game.3.praise",
+   "text": "Hop, hop, hop! Misha leaps safely across all three mossy stream-stones!",
+   "say": [
+    [
+     "narrator",
+     "Hop, hop, hop! Misha leaps safely across all three mossy stream-stones!"
+    ]
+   ]
+  },
+  {
+   "id": "game.4.start",
+   "text": "Gather forest treats for the midnight feast! Tap all four red berry clusters beside the wiggling fern.",
+   "say": [
+    [
+     "narrator",
+     "Gather forest treats for the midnight feast! Tap all four red berry clusters beside the wiggling fern."
+    ]
+   ]
+  },
+  {
+   "id": "game.4.praise",
+   "text": "Sweet autumn berries! Misha gathers all four red berry clusters beside the wiggling golden fern!",
+   "say": [
+    [
+     "narrator",
+     "Sweet autumn berries! Misha gathers all four red berry clusters beside the wiggling golden fern!"
+    ]
+   ]
+  },
+  {
+   "id": "game.5.start",
+   "text": "Set out the midnight feast! Match wheat to the bowl, berries to the tray, and bread to the mat.",
+   "say": [
+    [
+     "narrator",
+     "Set out the midnight feast! Match wheat to the bowl, berries to the tray, and bread to the mat."
+    ]
+   ]
+  },
+  {
+   "id": "game.5.praise",
+   "text": "Every treat ready! Painted bowl, birch tray, and woven mat welcome the midnight guest!",
+   "say": [
+    [
+     "narrator",
+     "Every treat ready! Painted bowl, birch tray, and woven mat welcome the midnight guest!"
+    ]
+   ]
+  },
+  {
+   "id": "game.6.start",
+   "text": "Play Misha's wooden flute to comfort the Firebird! Tap three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Play Misha's wooden flute to comfort the Firebird! Tap three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.6.praise",
+   "text": "Three sweet golden notes! Soft flute music shimmers warmly across the quiet starry glade!",
+   "say": [
+    [
+     "narrator",
+     "Three sweet golden notes! Soft flute music shimmers warmly across the quiet starry glade!"
+    ]
+   ]
+  },
+  {
+   "id": "game.7.start",
+   "text": "Share the Firebird's lantern light through the mist! Tap all four wooden trail-lanterns along the path.",
+   "say": [
+    [
+     "narrator",
+     "Share the Firebird's lantern light through the mist! Tap all four wooden trail-lanterns along the path."
+    ]
+   ]
+  },
+  {
+   "id": "game.7.praise",
+   "text": "Bright through the mist! All four wooden trail-lanterns glow like warm little suns!",
+   "say": [
+    [
+     "narrator",
+     "Bright through the mist! All four wooden trail-lanterns glow like warm little suns!"
+    ]
+   ]
+  },
+  {
+   "id": "game.8.start",
+   "text": "Help Tsar Boris unlatch the tall gilded cage! Tap the gilded cage three times when the ring glows green.",
+   "say": [
+    [
+     "narrator",
+     "Help Tsahr Bah-rees unlatch the tall gilded cage! Tap the gilded cage three times when the ring glows green."
+    ]
+   ]
+  },
+  {
+   "id": "game.8.praise",
+   "text": "Three bright golden clicks! Warm sparks shimmer across the gilded cage door, ready to swing open!",
+   "say": [
+    [
+     "narrator",
+     "Three bright golden clicks! Warm sparks shimmer across the gilded cage door, ready to swing open!"
+    ]
+   ]
+  },
+  {
+   "id": "game.9.start",
+   "text": "Catch the Firebird's falling lantern light! Tap all four palace lanterns along the low porch railings.",
+   "say": [
+    [
+     "narrator",
+     "Catch the Firebird's falling lantern light! Tap all four palace lanterns along the low porch railings."
+    ]
+   ]
+  },
+  {
+   "id": "game.9.praise",
+   "text": "Bright courtyard gold! All four carved palace lanterns shine across Tsar Boris's rosy courtyard!",
+   "say": [
+    [
+     "narrator",
+     "Bright courtyard gold! All four carved palace lanterns shine across Tsahr Bah-rees's rosy courtyard!"
+    ]
+   ]
+  },
+  {
+   "id": "game.10.start",
+   "text": "Share the autumn feast! Match apples to the bowl, bread to the platter, and the teacup to the samovar.",
+   "say": [
+    [
+     "narrator",
+     "Share the autumn feast! Match apples to the bowl, bread to the platter, and the teacup to the samovar."
+    ]
+   ]
+  },
+  {
+   "id": "game.10.praise",
+   "text": "Joy for all! Sweet golden apples, warm honey bread, and fragrant tea fill the courtyard!",
+   "say": [
+    [
+     "narrator",
+     "Joy for all! Sweet golden apples, warm honey bread, and fragrant tea fill the courtyard!"
+    ]
+   ]
+  }
+ ],
+ "touch": {
+  "misha": [
+   "I am Misha! I wear my embroidered crimson Russian tunic and ride with my wise horse Sivka!",
+   "Along the dusky autumn woodland trail, I uncovered one glowing golden feather of the Firebird!",
+   "When the golden net dimmed the Firebird's feathers, I put it away and played my wooden flute!",
+   "Speaking bravely to Tsar Boris helped open the tall gilded cage so our friend could fly free!",
+   "Glow, golden feather, light the way! Sharing kindness and freedom warms the whole kingdom!"
+  ],
+  "sivka": [
+   "I am Sivka, Misha's wise dapple-grey horse! Do you like my bright red woven neck-scarf?",
+   "When Misha found the blazing feather, I knew Tsar Boris would send us after the Firebird!",
+   "Sweet golden wheat and gentle flute music welcome a shy friend far better than any net!",
+   "Even through chilly midnight mist, we rode safely home under the Firebird's warm lantern wings!",
+   "Now Misha and I share sweet golden apples beside Tsar Boris's sunny wooden palace!"
+  ],
+  "boris": [
+   "I am Tsar Boris! Welcome to my carved Russian wooden palace and royal orchard courtyard!",
+   "When Misha's single feather lit my dark porch, I wanted the Firebird inside my gilded cage!",
+   "Seeing her bright feathers fade behind closed bars taught me a wise lesson!",
+   "Once I swung the gilded cage door wide open, her lantern light woke my whole orchard!",
+   "Now the open cage wears autumn flowers, and the free Firebird visits us as an honoured friend!"
+  ],
+  "firebird": [
+   "I am the Firebird! My golden-amber feathers shine like warm lanterns, and I wear a turquoise pearl necklace!",
+   "At midnight I glide down to the quiet mossy glade to taste sweet golden wheat!",
+   "Nets and cages make my warm light fade away, because wonder is meant to fly free!",
+   "Misha's gentle flute music and Tsar Boris's open cage let my brightest golden light shine down!",
+   "I gifted Misha three glowing golden feathers to keep every lantern warm all year long!"
+  ],
+  "feather": [
+   "A fallen golden feather of the Firebird that glows like a warm little sun-lantern in the dark!",
+   "Three gifted golden feathers now keep Tsar Boris's carved palace lanterns shining all year!"
+  ],
+  "cage": [
+   "Tsar Boris's tall gilded cage! Closed bars dim the Firebird's glow, because wonder is meant to fly free!"
+  ],
+  "flute": [
+   "Misha's carved wooden Russian reed-flute, whose three sweet golden notes comforted the shy Firebird!"
+  ],
+  "samovar": [
+   "A gleaming Russian brass samovar that pours fragrant warm tea for the autumn courtyard feast!"
+  ],
+  "bear": [
+   "A plump brown Russian woodland bear cub who tumbled into soft autumn leaves and loves sweet honey bread!"
+  ],
+  "hare": [
+   "A fluffy white Russian woodland hare who hopped out from the wiggling golden fern and bounced off Sivka's nose!"
+  ]
+ },
+ "notes": {
+  "twist": "Old story (Arthur Ransome, Old Peter's Russian Tales, 1916, 'The Fire-Bird, the Horse of Power, and the Princess Vasilissa', and Alexander Afanasyev's classic Russian skazki of Zhar-Ptitsa, trans. Ralston 1873, Lang 1890, and Wheeler 1912): a young huntsman rides his wise Horse of Power, finds a blazing golden feather of the Fire-Bird despite his horse's warning, and brings it to a greedy Tsar who threatens death unless he traps the Fire-Bird in a cage using scattered golden corn, kidnaps a princess, and boils in a cauldron. Ours (gentle, warm, and luminous for ages 4-8 per research/folk-tales.md entry 17): 1) Zero threats, zero trapping violence, and zero cruelty: honest young Misha and his wise talking horse Sivka (wearing a bright red woven scarf) uncover the glowing golden feather beneath four fallen oak leaves on a golden-autumn Russian woodland trail and bring it to Tsar Boris's carved wooden terem palace. 2) Keeps Ransome's beloved motifs: Sivka's wise warning, one feather lighting the dark palace like a lantern, scattering sweet golden wheat in a starry midnight glade, and the Firebird's warm lantern light cascading across the page ('Pop-up: the fire-bird's light falling across the page. This fits our lantern look'). 3) Heartfelt twist & lesson (Spreads 6 & 8-9): whenever a golden net (6.3) or Tsar Boris's tall gilded cage (8.3) closes round the Firebird, her blazing feathers dim — because wonder and friendship cannot be locked up! Misha comforts her with gentle wooden flute music, she flies home freely beside them lighting four misty trail-lanterns, and when Tsar Boris unlatches his gilded cage wide open, the freed Firebird showers warm golden lantern light across the whole orchard, ripening golden apples and waking every palace lantern!",
+  "moral": "Glow, golden feather, light the way! True friendship and beauty shine brightest when shared freely.",
+  "changes": "1 Culture-true Russian fairy-tale folk-art look set in golden Russian autumn (distinct from baba-yaga's snowy winter cottage): Tsar Boris's carved onion-domed wooden terem palace courtyard with painted Khokhloma crimson-and-gold arches, golden-apple tree, and brass samovar; amber-leaf oak-and-rowan woodland trail with turquoise stream; starry mossy meadow glade — zero modern studio/film designs. Animal main characters wear one small culture-true accessory per EDDIE-TASTE.md line 19: wise horse Sivka wears a bright red woven neck-scarf, and the Firebird wears a tiny turquoise pearl necklace; non-speaking woodland animals (plump brown bear cub, fluffy white hare) stay completely plain. 2 Every speaking character takes its exact voice from stories/VOICE-CAST.md: narrator (bm_george 1.0), misha (am_puck 1.1, boy/child), sivka (bm_daniel 0.9, big gentle animal), boris (bm_fable 0.95, old man/king), firebird (af_sky 0.95, spirit/celestial bird), plus closing (bm_george 0.85). 3 Every named creature, object, weather, and light across all 50 story lines is concrete and stageable across 3 reusable places (woodland-trail, terem-courtyard, starry-glade).",
+  "level": "A1-A2, past simple, crisp British English sentences for ages 4-8 (50 story lines, 14-19 words/line, max 19 words across all story, moral, and game lines so upright phone .ra-page stays compact). Consistent British spelling (jewelled, splendid, honoured). Core vocabulary: feather, horse, scarf, leaves, lantern, palace, cage, net, wheat, bread, flute, stream, stones, glade, berries, stars, mist, apples, samovar.",
+  "who speaks": "Every speaking character uses its exact standing voice from stories/VOICE-CAST.md: misha (am_puck 1.1), sivka (bm_daniel 0.9), boris (bm_fable 0.95), firebird (af_sky 0.95). Narrator (bm_george 1.0) reads narration, game prompts, and 3rd-person prop/animal touch lines; closing (bm_george 0.85) reads the moral.",
+  "pull": "P1 hooks at all 9 turns 1.5-9.5 (paid immediately by 2.1-10.1); P2 6-word refrain 'Glow, golden feather, <show / warm / light> the way!' across spreads 3 (3.3), 5 (5.3), and 7 (7.3, pausing 'the... way!' before the last word on its 3rd return, echoed in moral.5); P3 one '...' predict pause per spread in say before a visible/repeated/third-of-three guessable word, never before the narrator's last word (1.5 feather, 2.5 pouch, 3.5 feather, 4.5 glade, 5.5 gold, 6.5 bright, 7.3 way, 8.5 open, 9.5 hands, 10.5 lanterns); P4 4.3 ends on 'Who was hiding behind it?' with four red berry clusters beside a wiggling golden fern bush followed by game.4 (collect default vanish before 4.4, >= 1.5 s wait before 4.4 brings the white hare out from behind that very bush); P5 threes (three quest supplies in s02, three mossy stream-stones in s03, three midnight treats in s05 before 5.3, three flute notes in s06, three refrain calls, three gilded-cage clicks in s08, three gifted feathers in s09-s10, three feast dishes in s10); P6 natural English sound words verified in Kokoro, <=2 per spread, zero adjacent repeats and zero bell sounds across the book (1 Clip-clop, 2 Swish, 3 Plop, 4 Pop, 5 Swoosh, 6 Boing, 7 Whoosh, 8 Clack/Click-clack, 9 Whoosh, 10 Sproing); P8 harmless animal slapstick in all three thirds as standalone !-ended sentences (3.2 brown bear cub tumbles into soft autumn leaves Plop!, 6.2 white hare bounces off Sivka's nose into clover Boing!, 10.3 bear cub and white hare tug silk ribbon and tumble nose to nose onto hay Sproing!); P11 energy curve E1 E2 E2 E2 E3 E2 E2 E2 E3 E2 + Moral E1; P16 non-repeating 10-game sequence (collect oak leaves, pair quest supplies, order stream-stones, collect red berry clusters, pair midnight feast before 5.3, timing wooden flute, collect trail-lanterns, timing gilded cage, collect low porch lanterns, pair autumn feast)."
+ }
+}

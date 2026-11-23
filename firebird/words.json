@@ -1,0 +1,2901 @@
+{
+"lines": {
+"fb_misha_sivka.0": {
+"en": "Misha and Sivka. Misha rides through the golden woods on wise Sivka.",
+"lo": "ມີຊາ ແລະ ຊີບກາ. ມີຊາຂີ່ມ້າຊີບກາຜ່ານປ່າສີຄຳ.",
+"th": "มีชาและซีฟกา มีชาขี่ม้าซีฟกาผ่านป่าสีทอง",
+"zh": "米沙和西夫卡。米沙骑着聪明的西夫卡穿过金色森林。",
+"ja": "ミーシャと シーフカ。ミーシャは かしこい シーフカに のって もりを すすむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_misha_sivka.1": {
+"en": "Hello, Misha and Sivka!",
+"lo": "ສະບາຍດີ ມີຊາ ແລະ ຊີບກາ!",
+"th": "สวัสดีมีชาและซีฟกา!",
+"zh": "你好，米沙和西夫卡！",
+"ja": "こんにちは、ミーシャと シーフカ！",
+"who": "misha",
+"tag": "greet"
+},
+"fb_misha_sivka.2": {
+"en": "Off we ride together, Sivka!",
+"lo": "ໄປກັນເລີຍ, ຊີບກາ!",
+"th": "ออกเดินทางกันเถอะ ซีฟกา!",
+"zh": "我们一起出发吧，西夫卡！",
+"ja": "いっしょに しゅっぱつ だ、シーフカ！",
+"who": "misha",
+"tag": "say"
+},
+"fb_misha_sivka.3": {
+"en": "Misha and Sivka follow the golden feather through the woods.",
+"lo": "ມີຊາ ແລະ ຊີບກາຕາມຂົນນົກສີຄຳຜ່ານປ່າໄປ.",
+"th": "มีชาและซีฟกาตามขนนกสีทองผ่านป่าไป",
+"zh": "米沙和西夫卡跟着金羽毛穿过森林。",
+"ja": "ミーシャと シーフカは きんのはねを たどって すすむよ。",
+"who": "misha",
+"tag": "does"
+},
+"fb_misha_sivka.4": {
+"en": "Sivka's bright red scarf flutters as they trot along.",
+"lo": "ຜ້າພັນຄໍສີແດງຂອງຊີບກາປິວສະບັດຕອນແລ່ນໄປ.",
+"th": "ผ้าพันคอสีแดงของซีฟกาปลิวไสวตอนวิ่งไป",
+"zh": "奔跑时，西夫卡鲜红的围巾随风飘扬。",
+"ja": "はしると あかい マフラーが ふわりと なびくよ。",
+"who": "misha",
+"tag": "looks"
+},
+"fb_misha_sivka.5": {
+"en": "Clip-clop, clip-clop!",
+"lo": "ກຶບ-ກັບ, ກຶບ-ກັບ!",
+"th": "กุบกับ กุบกับ!",
+"zh": "哒哒，哒哒！",
+"ja": "パカパカ、パカパカ！",
+"who": "misha",
+"tag": "sound"
+},
+"fb_misha.0": {
+"en": "Misha. Misha is a kind and honest Russian boy.",
+"lo": "ມີຊາ. ມີຊາເປັນເດັກຊາຍຊາວຣັດເຊຍທີ່ໃຈດີ ແລະ ຊື່ສັດ.",
+"th": "มีชา มีชาเป็นเด็กชายชาวรัสเซียที่ใจดีและซื่อสัตย์",
+"zh": "米沙。米沙是一个善良诚实的俄罗斯男孩。",
+"ja": "ミーシャ。ミーシャは やさしくて しょうじきな おとこのこだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_misha.1": {
+"en": "Hello, Misha!",
+"lo": "ສະບາຍດີ ມີຊາ!",
+"th": "สวัสดีมีชา!",
+"zh": "你好，米沙！",
+"ja": "こんにちは、ミーシャ！",
+"who": "misha",
+"tag": "greet"
+},
+"fb_misha.2": {
+"en": "Hello! I am Misha!",
+"lo": "ສະບາຍດີ! ຂ້ອຍຊື່ ມີຊາ!",
+"th": "สวัสดี! ฉันชื่อมีชา!",
+"zh": "你好！我是米沙！",
+"ja": "こんにちは！ ぼくは ミーシャだよ！",
+"who": "misha",
+"tag": "say"
+},
+"fb_misha.3": {
+"en": "I love my wise horse Sivka.",
+"lo": "ຂ້ອຍຮັກມ້າຊີບກາທີ່ສະຫຼາດຂອງຂ້ອຍ.",
+"th": "ฉันรักม้าซีฟกาที่ฉลาดของฉัน",
+"zh": "我爱我聪明的灰马西夫卡。",
+"ja": "かしこい シーフカが だいすきだよ。",
+"who": "misha",
+"tag": "does"
+},
+"fb_misha.4": {
+"en": "I play gentle music on my wooden flute.",
+"lo": "ຂ້ອຍເປົ່າເພງອ່ອນໂຍນດ້ວຍຂຸ່ຍໄມ້.",
+"th": "ฉันเป่าเพลงอ่อนโยนด้วยขลุ่ยไม้",
+"zh": "我会用木笛吹出轻柔的曲子。",
+"ja": "きの ふえで やさしい うたを ふくよ。",
+"who": "misha",
+"tag": "does"
+},
+"fb_misha.5": {
+"en": "Kindness is stronger than any golden net!",
+"lo": "ຄວາມໃຈດີແຂງແຮງກວ່າມອງສີຄຳໃດໆ!",
+"th": "ความใจดีแข็งแกร่งกว่าตาข่ายสีทองใดๆ!",
+"zh": "善良比任何金网都更有力量！",
+"ja": "やさしさは きんの あみより つよいんだよ！",
+"who": "misha",
+"tag": "does"
+},
+"fb_misha.6": {
+"en": "I wear my red embroidered Russian tunic.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອປັກລາຍສີແດງແບບຣັດເຊຍ.",
+"th": "ฉันใส่เสื้อปักลายสีแดงแบบรัสเซีย",
+"zh": "我穿着绣花红色俄罗斯长衫。",
+"ja": "あかい ししゅうの ふくを きているよ。",
+"who": "misha",
+"tag": "looks"
+},
+"fb_misha.7": {
+"en": "Glow, golden feather, light the way!",
+"lo": "ສ່ອງແສງເທາະ ຂົນນົກສີຄຳ, ນຳທາງພວກເຮົາ!",
+"th": "ส่องแสงเถิด ขนนกสีทอง นำทางพวกเรา!",
+"zh": "发光吧，金羽毛，照亮前方的路！",
+"ja": "ひかれ きんのはね、みちを てらして！",
+"who": "misha",
+"tag": "say"
+},
+"fb_sivka.0": {
+"en": "Sivka. Sivka is Misha's wise grey horse in a bright red scarf.",
+"lo": "ຊີບກາ. ຊີບກາແມ່ນມ້າສີເທົາທີ່ສະຫຼາດຂອງມີຊາ ໃສ່ຜ້າພັນຄໍສີແດງ.",
+"th": "ซีฟกา ซีฟกาคือม้าสีเทาแสนฉลาดของมีชา สวมผ้าพันคอสีแดง",
+"zh": "西夫卡。西夫卡是米沙聪明的灰马，戴着红围巾。",
+"ja": "シーフカ。シーフカは あかい マフラーの かしこい うまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_sivka.1": {
+"en": "Hello, Sivka!",
+"lo": "ສະບາຍດີ ຊີບກາ!",
+"th": "สวัสดีซีฟกา!",
+"zh": "你好，西夫卡！",
+"ja": "こんにちは、シーフカ！",
+"who": "sivka",
+"tag": "greet"
+},
+"fb_sivka.2": {
+"en": "I am Sivka, Misha's wise friend.",
+"lo": "ຂ້ອຍແມ່ນຊີບກາ, ໝູ່ທີ່ສະຫຼາດຂອງມີຊາ.",
+"th": "ฉันคือซีฟกา เพื่อนแสนฉลาดของมีชา",
+"zh": "我是西夫卡，米沙聪明的好朋友。",
+"ja": "ぼくは シーフカ、ミーシャの ともだちだよ。",
+"who": "sivka",
+"tag": "say"
+},
+"fb_sivka.3": {
+"en": "I always share calm, gentle advice with Misha.",
+"lo": "ຂ້ອຍມັກໃຫ້ຄຳແນະນຳທີ່ອ່ອນໂຍນແກ່ມີຊາສະເໝີ.",
+"th": "ฉันมักให้คำแนะนำที่อ่อนโยนแก่มีชาเสมอ",
+"zh": "我总给米沙温柔又明智的建议。",
+"ja": "いつも ミーシャに やさしく アドバイス するよ。",
+"who": "sivka",
+"tag": "does"
+},
+"fb_sivka.4": {
+"en": "Spread a feast for a friend, never a trap!",
+"lo": "ຈັດງານລ້ຽງຕ້ອນຮັບໝູ່, ຢ່າຕັ້ງກັບດັກ!",
+"th": "จัดงานเลี้ยงต้อนรับเพื่อน อย่าตั้งกับดัก!",
+"zh": "用美食款待朋友，绝不要设下陷阱！",
+"ja": "わなじゃなくて ごちそうで むかえよう！",
+"who": "sivka",
+"tag": "does"
+},
+"fb_sivka.5": {
+"en": "I wear my bright red woven scarf around my neck.",
+"lo": "ຂ້ອຍພັນຜ້າພັນຄໍສີແດງສົດໄວ້ອ້ອມຄໍ.",
+"th": "ฉันพันผ้าพันคอสีแดงสดไว้รอบคอ",
+"zh": "我脖子上围着鲜红的编织围巾。",
+"ja": "あかい マフラーが おきにいり なんだ。",
+"who": "sivka",
+"tag": "looks"
+},
+"fb_sivka.6": {
+"en": "Clip-clop!",
+"lo": "ກຶບ-ກັບ!",
+"th": "กุบกับ!",
+"zh": "哒哒！",
+"ja": "パカパカ！",
+"who": "sivka",
+"tag": "sound"
+},
+"fb_golden_feather.0": {
+"en": "A golden feather. One Firebird feather shines as bright as a warm lantern!",
+"lo": "ຂົນນົກສີຄຳ. ຂົນນົກໄຟໜຶ່ງເສັ້ນສ່ອງແສງແຈ້ງຄືໂຄມໄຟອຸ່ນ!",
+"th": "ขนนกสีทอง ขนนกไฟหนึ่งเส้นส่องแสงสว่างราวโคมไฟอุ่น!",
+"zh": "金羽毛。一根火鸟羽毛像暖暖的灯笼一样明亮！",
+"ja": "きんいろの はね。ひのとりの はねが ランタンみたいに あかるく ひかるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_golden_feather.1": {
+"en": "Its golden barbs glow warm like autumn firelight.",
+"lo": "ຂົນສີຄຳຂອງມັນສ່ອງແສງອົບອຸ່ນຄືແສງໄຟ.",
+"th": "ขนสีทองของมันส่องแสงอบอุ่นเหมือนแสงไฟ",
+"zh": "它金黄的羽丝像秋日火光一样温暖发亮。",
+"ja": "あたたかい ひかりが はねから ふんわり ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_golden_feather.2": {
+"en": "Lifting the feather lights the dark forest trail.",
+"lo": "ຍົກຂົນນົກຂຶ້ນສູງກໍສ່ອງແສງນຳທາງໃນປ່າມືດໄດ້.",
+"th": "ยกขนนกขึ้นสูงก็ส่องแสงนำทางในป่ามืดได้",
+"zh": "高高举起金羽毛，就能照亮幽暗的林间小路。",
+"ja": "はねを たかく あげると くらい みちが あかるく なるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_golden_feather.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_oak_leaf.0": {
+"en": "An oak leaf. A crisp autumn oak leaf fell onto the mossy trail.",
+"lo": "ໃບໄມ້ໂອກ. ໃບໄມ້ໂອກລະດູໃບໄມ້ຫຼົ່ນຕົກລົງເທິງທາງປ່າ.",
+"th": "ใบไม้โอ๊ก ใบโอ๊กฤดูใบไม้ร่วงร่วงลงบนทางป่า",
+"zh": "橡树叶。一片干爽的秋日橡树叶落在林间小路上。",
+"ja": "オークの はっぱ。あきの オークの はっぱが みちに おちているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_oak_leaf.1": {
+"en": "Russet and amber oak leaves blanket the autumn forest.",
+"lo": "ໃບໄມ້ໂອກສີນ້ຳຕານສົ້ມປົກຄຸມປ່າລະດູໃບໄມ້ຫຼົ່ນ.",
+"th": "ใบโอ๊กสีน้ำตาลส้มปกคลุมป่าฤดูใบไม้ร่วง",
+"zh": "红棕色和琥珀色的橡树叶铺满秋林。",
+"ja": "あきいろの オークの はっぱが とても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_oak_leaf.2": {
+"en": "Brush the leaves aside to uncover what glows beneath!",
+"lo": "ປັດໃບໄມ້ອອກເພື່ອເບິ່ງສິ່ງທີ່ສ່ອງແສງຢູ່ກ້ອງ!",
+"th": "ปัดใบไม้ออกเพื่อดูสิ่งที่ส่องแสงอยู่ข้างใต้!",
+"zh": "拨开落叶，看看下面闪闪发光的是什么！",
+"ja": "はっぱを どけると なにか ひかって みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_oak_leaf.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_moss_bank.0": {
+"en": "A mossy bank. Soft emerald moss blankets the woodland roots and rocks.",
+"lo": "ຄັນໄຄນ້ຳສີຂຽວ. ໄຄນ້ຳສີຂຽວອ່ອນນຸ້ມປົກຄຸມຮາກໄມ້ ແລະ ໂງ່ນຫີນ.",
+"th": "เนินมอสสีเขียว มอสสีเขียวอ่อนนุ่มปกคลุมรากไม้และโขดหิน",
+"zh": "青苔土坡。柔软的翠绿青苔铺满林间树根和岩石。",
+"ja": "こけの おか。やわらかい みどりの こけが ねっこを つつんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_moss_bank.1": {
+"en": "Velvety green moss grows thick and soft over the forest roots.",
+"lo": "ໄຄນ້ຳສີຂຽວນຸ້ມເກີດໜາປົກຄຸມຮາກໄມ້ໃນປ່າ.",
+"th": "มอสสีเขียวนุ่มขึ้นหนาปกคลุมรากไม้ในป่า",
+"zh": "天鹅绒般的绿青苔厚厚铺在树根上。",
+"ja": "ふかふかの みどりの こけが ねっこを つつむよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_moss_bank.2": {
+"en": "Misha found the glowing golden feather right beside this mossy bank!",
+"lo": "ມີຊາພົບຂົນນົກສີຄຳສ່ອງແສງຢູ່ຂ້າງຄັນໄຄນ້ຳນີ້ເອງ!",
+"th": "มีชาพบขนนกสีทองส่องแสงอยู่ข้างเนินมอสนี้เอง!",
+"zh": "米沙就在青苔坡旁发现了发光的金羽毛！",
+"ja": "この こけの そばで きんのはねを みつけたんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_moss_bank.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_rowan_branch.0": {
+"en": "Rowan berries. Bright red rowan berries grow across Russian autumn woods.",
+"lo": "ໝາກໂຣແວນແດງ. ໝາກໂຣແວນສີແດງສົດເກີດທົ່ວປ່າລະດູໃບໄມ້ຫຼົ່ນຂອງຣັດເຊຍ.",
+"th": "ผลโรแวนแดง ผลโรแวนสีแดงสดขึ้นทั่วป่าฤดูใบไม้ร่วงของรัสเซีย",
+"zh": "红花楸果。鲜红的花楸果长满俄罗斯的秋日森林。",
+"ja": "あかい きのみ。あかい きのみが あきの もりに たくさん みのるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_rowan_branch.1": {
+"en": "Clusters of shiny scarlet berries glow like autumn jewels.",
+"lo": "ພວງໝາກໄມ້ສີແດງສົດເຫຼື້ອມງາມຄືອັນຍະມະນີ.",
+"th": "พวงผลไม้สีแดงสดเงางามราวอัญมณี",
+"zh": "一串串鲜红发亮的浆果像秋日宝石。",
+"ja": "あかい きのみが ほうせき みたいに きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_rowan_branch.2": {
+"en": "Woodland birds, hares, and bear cubs love red autumn berries!",
+"lo": "ນົກປ່າ, ກະຕ່າຍ ແລະ ລູກໝີມັກກິນໝາກໄມ້ແດງ!",
+"th": "นกป่า กระต่าย และลูกหมีชอบกินผลไม้แดง!",
+"zh": "森林里的小鸟、野兔和小熊都喜欢红浆果！",
+"ja": "もりの どうぶつたちは あかい きのみが だいすきだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_rowan_branch.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_stream_bank.0": {
+"en": "A woodland stream. A sparkling turquoise woodland stream bubbles past the trail.",
+"lo": "ສາຍນ້ຳປ່າ. ສາຍນ້ຳປ່າສີຟ້າຂຽວໃສໄຫຼຜ່ານຂ້າງທາງ.",
+"th": "ลำธารป่า ลำธารป่าสีฟ้าเขียวใสไหลผ่านข้างทาง",
+"zh": "林间小溪。碧蓝透亮的林间小溪欢快地流过小路。",
+"ja": "もりの おがわ。きれいな おがわが みちの よこを ながれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_stream_bank.1": {
+"en": "Clear turquoise water sparkles over smooth wet pebbles.",
+"lo": "ນ້ຳສີຟ້າຂຽວໃສສ່ອງປະກາຍເທິງກ້ອນຫີນປຽກລຽບ.",
+"th": "น้ำสีฟ้าเขียวใสส่องประกายบนก้อนหินเปียกเรียบ",
+"zh": "碧蓝透亮的溪水在光滑的鹅卵石上闪闪发亮。",
+"ja": "きれいな みずが いしの うえで きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_stream_bank.2": {
+"en": "Sivka splashed right across the cool woodland stream!",
+"lo": "ຊີບກາລຸຍນ້ຳຂ້າມສາຍນ້ຳປ່າເຢັນໆ!",
+"th": "ซีฟกาลุยน้ำข้ามลำธารป่าเย็นๆ!",
+"zh": "西夫卡欢快地踏着水花跨过了林间小溪！",
+"ja": "シーフカが ざぶんと おがわを わたったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_stream_bank.3": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_golden_fern.0": {
+"en": "A golden fern. A tall golden autumn fern bush hides a shy friend.",
+"lo": "ພຸ່ມຜັກກູດສີຄຳ. ພຸ່ມຜັກກູດສີຄຳສູງຊ່ອນໝູ່ຂີ້ອາຍໄວ້.",
+"th": "พุ่มเฟิร์นสีทอง พุ่มเฟิร์นสีทองสูงซ่อนเพื่อนขี้อายไว้",
+"zh": "金色蕨丛。高高的金色秋蕨丛藏着一位害羞的朋友。",
+"ja": "きんいろの しだ。きんいろの しだの うしろに だれか かくれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_golden_fern.1": {
+"en": "Feathery autumn fern fronds glow warm copper and gold.",
+"lo": "ໃບຜັກກູດລະດູໃບໄມ້ຫຼົ່ນສີທອງແດງ ແລະ ສີຄຳງາມ.",
+"th": "ใบเฟิร์นฤดูใบไม้ร่วงสีทองแดงและสีทองสวย",
+"zh": "羽毛般的秋蕨叶子泛着温暖的铜金色。",
+"ja": "きんいろの しだの はっぱが ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_golden_fern.2": {
+"en": "Watch closely when the golden fern wiggles and shakes!",
+"lo": "ເບິ່ງດີໆເມື່ອພຸ່ມຜັກກູດສີຄຳສັ່ນໄຫວ!",
+"th": "ดูดีๆ เมื่อพุ่มเฟิร์นสีทองสั่นไหว!",
+"zh": "仔细看，金色蕨丛正在轻轻摇晃呢！",
+"ja": "しだが ゆれたら だれか でて くるかも よ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_golden_fern.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_birch_grove.0": {
+"en": "Silver birches. Chalk-white Russian silver birches stand bright among red berries.",
+"lo": "ຕົ້ນເບີດສີຂາວ. ຕົ້ນເບີດສີຂາວຂອງຣັດເຊຍຢືນໂດດເດັ່ນທ່າມກາງໝາກໄມ້ແດງ.",
+"th": "ต้นเบิร์ชสีขาว ต้นเบิร์ชสีขาวของรัสเซียยืนเด่นท่ามกลางผลไม้แดง",
+"zh": "银白桦树。雪白的俄罗斯白桦树在红果间格外明亮。",
+"ja": "しらかばの き。しろい しらかばの きが あきの もりに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_birch_grove.1": {
+"en": "Slender white silver-birch trunks have neat dark bark stripes.",
+"lo": "ລຳຕົ້ນໄມ້ເບີດສີຂາວຮຽວງາມມີລາຍເປືອກສີເຂັ້ມ.",
+"th": "ลำต้นเบิร์ชสีขาวเรียวสวยมีลายเปลือกสีเข้ม",
+"zh": "纤细雪白的白桦树干带着深色条纹。",
+"ja": "しろい みきに くろい しまもようが ある しらかば だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_birch_grove.2": {
+"en": "Silver birches grow tall beside scarlet rowan trees in Russia.",
+"lo": "ຕົ້ນເບີດສີຂາວເກີດສູງຄຽງຄູ່ຕົ້ນໂຣແວນໝາກແດງໃນຣັດເຊຍ.",
+"th": "ต้นเบิร์ชสีขาวขึ้นสูงเคียงคู่ต้นโรแวนผลแดงในรัสเซีย",
+"zh": "俄罗斯森林里，白桦树常与红果花楸相伴生长。",
+"ja": "あかい きのみの そばに しらかばが たっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_birch_grove.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_sky.0": {
+"en": "The autumn sky. The wide Russian sky shifts from dusk to starry night and dawn.",
+"lo": "ທ້ອງຟ້າລະດູໃບໄມ້ຫຼົ່ນ. ທ້ອງຟ້າກວ້າງປ່ຽນສີຈາກຍາມແລງເປັນຄືນດາວ ແລະ ຮຸ່ງເຊົ້າ.",
+"th": "ท้องฟ้าฤดูใบไม้ร่วง ท้องฟ้ากว้างเปลี่ยนสีจากยามเย็นเป็นคืนดาวและรุ่งเช้า",
+"zh": "秋日天空。辽阔的天空从黄昏变成星空与晨曦。",
+"ja": "あきの そら。ひろい そらが ゆうやけから ほしぞら あさへと かわるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_sky.1": {
+"en": "Rich autumn colours paint the wide sky above the forest.",
+"lo": "ສີສັນລະດູໃບໄມ້ຫຼົ່ນສົດໃສແຕ້ມທົ່ວທ້ອງຟ້າເທິງປ່າ.",
+"th": "สีสันฤดูใบไม้ร่วงสดใสแต้มทั่วท้องฟ้าเหนือป่า",
+"zh": "绚丽的秋色染亮了森林上方的广阔天空。",
+"ja": "あきの きれいな いろが そら いっぱいに ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_sky.2": {
+"en": "At midnight, silver stars twinkle high above the oaks.",
+"lo": "ຍາມທ່ຽງຄືນ, ດາວສີເງິນກະພິບສູງເທິງຍອດໄມ້ໂອກ.",
+"th": "ยามเที่ยงคืน ดาวสีเงินระยิบสูงเหนือยอดไม้โอ๊ก",
+"zh": "午夜时分，银色星星在橡树上方闪烁。",
+"ja": "よるには ぎんいろの ほしが きらきら ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_sky.3": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_far_woods.0": {
+"en": "Distant autumn woods. Amber oaks and green pines cover the distant autumn hills.",
+"lo": "ປ່າລະດູໃບໄມ້ຫຼົ່ນໄກໆ. ຕົ້ນໂອກສີອຳພັນ ແລະ ຕົ້ນແປກປົກຄຸມພູເຂົາໄກໆ.",
+"th": "ป่าฤดูใบไม้ร่วงไกลๆ ต้นโอ๊กสีอำพันและต้นสนปกคลุมภูเขาไกลๆ",
+"zh": "远方秋林。金黄橡树和青松覆盖着远方的秋山。",
+"ja": "とおくの もり。あきの もり が とおくの やままで つづいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_far_woods.1": {
+"en": "Rolling hills of amber oaks and green pines stretch far away.",
+"lo": "ພູເຂົາຕົ້ນໂອກສີອຳພັນ ແລະ ຕົ້ນແປກກວ້າງໄກສຸດຕາ.",
+"th": "ภูเขาต้นโอ๊กสีอำพันและต้นสนกว้างไกลสุดตา",
+"zh": "金黄橡树和青松连绵起伏伸向远方。",
+"ja": "あきの やまが とおくまで つづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_far_woods.2": {
+"en": "The Firebird's hidden starry glade lies deep beyond those hills.",
+"lo": "ທົ່ງຫຍ້າໃຕ້ແສງດາວຂອງນົກໄຟຢູ່ເລິກເຂົ້າໄປຫຼັງພູເຫຼົ່ານັ້ນ.",
+"th": "ทุ่งหญ้าใต้แสงดาวของนกไฟอยู่ลึกเข้าไปหลังภูเขาเหล่านั้น",
+"zh": "火鸟藏身的星空草地就在远山深处。",
+"ja": "あの やまの むこうに ひのとりの くさはらが あるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_far_woods.3": {
+"en": "Whoosh!",
+"lo": "ວູບ!",
+"th": "วูบ!",
+"zh": "呼——！",
+"ja": "ビューン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_oak_arch.0": {
+"en": "Autumn oaks. Tall golden autumn oaks arch warmly over the woodland trail.",
+"lo": "ຕົ້ນໂອກສີຄຳ. ຕົ້ນໂອກສີຄຳສູງໂຄ້ງປົກຄຸມທາງປ່າຢ່າງອົບອຸ່ນ.",
+"th": "ต้นโอ๊กสีทอง ต้นโอ๊กสีทองสูงโค้งปกคลุมทางป่าอย่างอบอุ่น",
+"zh": "金色橡树。高大的金色秋橡树在林间小路上方交织成拱门。",
+"ja": "あきの おおきな き。おおきな オークの きが みちの うえに ひろがるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_oak_arch.1": {
+"en": "Golden and russet oak leaves form a canopy above the path.",
+"lo": "ໃບໄມ້ໂອກສີຄຳ ແລະ ສີນ້ຳຕານປົກຄຸມເທິງທາງຍ່າງ.",
+"th": "ใบโอ๊กสีทองและสีน้ำตาลปกคลุมเหนือทางเดิน",
+"zh": "金黄和红棕的橡树叶在林间小路上方搭起华盖。",
+"ja": "きんいろの はっぱが みちの うえに やねを つくるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_oak_arch.2": {
+"en": "Autumn breezes send golden oak leaves drifting gently down.",
+"lo": "ສາຍລົມລະດູໃບໄມ້ຫຼົ່ນພັດໃບໂອກສີຄຳໃຫ້ປິວລົງຄ່ອຍໆ.",
+"th": "สายลมฤดูใบไม้ร่วงพัดใบโอ๊กสีทองให้ปลิวลงเบาๆ",
+"zh": "秋风吹过，金色橡树叶轻轻飘落下来。",
+"ja": "あきかぜが ふくと はっぱが ひらひら まって おちるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_oak_arch.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_boris.0": {
+"en": "Tsar Boris. Tsar Boris wears a royal blue coat and a jewelled crown.",
+"lo": "ພະເຈົ້າຊາ ບໍຣິສ. ພະເຈົ້າຊາ ບໍຣິສ ໃສ່ເສື້ອຄຸມສີຟ້າ ແລະ ມົງກຸດເພັດພອຍ.",
+"th": "พระเจ้าซาร์บอริส พระเจ้าซาร์บอริสสวมเสื้อคลุมสีน้ำเงินและมงกุฎเพชร",
+"zh": "沙皇鲍里斯。沙皇鲍里斯穿着蓝大衣，戴着宝石王冠。",
+"ja": "ボリスおうさま。ボリスおうさまは あおい コートと おうかんを つけているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_boris.1": {
+"en": "Hello, Tsar Boris!",
+"lo": "ສະບາຍດີ ພະເຈົ້າຊາ ບໍຣິສ!",
+"th": "สวัสดีพระเจ้าซาร์บอริส!",
+"zh": "你好，沙皇鲍里斯！",
+"ja": "こんにちは、ボリスおうさま！",
+"who": "boris",
+"tag": "greet"
+},
+"fb_boris.2": {
+"en": "I am Tsar Boris of the carved wooden palace.",
+"lo": "ຂ້ອຍແມ່ນພະເຈົ້າຊາ ບໍຣິສ ແຫ່ງວັງໄມ້ແກະສະຫຼັກ.",
+"th": "ข้าคือพระเจ้าซาร์บอริสแห่งวังไม้แกะสลัก",
+"zh": "我是雕花木宫的沙皇鲍里斯。",
+"ja": "わしは おしろの ボリスおうさま じゃ。",
+"who": "boris",
+"tag": "say"
+},
+"fb_boris.3": {
+"en": "I learned that beauty shines brightest when free!",
+"lo": "ຂ້ອຍໄດ້ຮຽນຮູ້ວ່າຄວາມງາມສ່ອງແສງແຈ້ງທີ່ສຸດເມື່ອເປັນອິດສະຫຼະ!",
+"th": "ข้าได้เรียนรู้ว่าความงามส่องแสงสว่างที่สุดเมื่อเป็นอิสระ!",
+"zh": "我明白了，自由能让美好照亮最耀眼的光！",
+"ja": "じゆうに すると いちばん かがやく ことが わかったよ！",
+"who": "boris",
+"sp": [
+"s09",
+"s10",
+"moral"
+],
+"tag": "does"
+},
+"fb_boris.4": {
+"en": "I love my tall wooden palace courtyard.",
+"lo": "ຂ້ອຍຮັກເດີ່ນວັງໄມ້ສູງໃຫຍ່ຂອງຂ້ອຍ.",
+"th": "ข้ารักลานวังไม้สูงใหญ่ของข้า",
+"zh": "我深爱着我高大的木头宫廷庭院。",
+"ja": "おおきな きの おしろの にわが だいすき じゃ。",
+"who": "boris",
+"tag": "does"
+},
+"fb_boris.5": {
+"en": "My royal blue coat is trimmed with warm brown fur.",
+"lo": "ເສື້ອຄຸມສີຟ້າຂອງຂ້ອຍປະດັບດ້ວຍຂົນສີນ້ຳຕານອຸ່ນ.",
+"th": "เสื้อคลุมสีน้ำเงินของข้าประดับด้วยขนสีน้ำตาลอุ่น",
+"zh": "我的皇室蓝大衣镶着暖暖的棕色毛边。",
+"ja": "あおい コートは ふわふわで あたたかいよ。",
+"who": "boris",
+"tag": "looks"
+},
+"fb_boris.6": {
+"en": "Thank you, brave Misha and wise Sivka!",
+"lo": "ຂອບໃຈຫຼາຍໆ, ມີຊາຜູ້ກ້າຫານ ແລະ ຊີບກາຜູ້ສະຫຼາດ!",
+"th": "ขอบใจมาก มีชาผู้กล้าหาญและซีฟกาผู้ฉลาด!",
+"zh": "谢谢你，勇敢的米沙和聪明的西夫卡！",
+"ja": "ありがとう、ミーシャと シーフカ！",
+"who": "boris",
+"sp": [
+"s09",
+"s10",
+"moral"
+],
+"tag": "say"
+},
+"fb_gilded_cage.0": {
+"en": "A gilded cage. A tall brass cage stands in Tsar Boris's courtyard.",
+"lo": "ກົງສີຄຳ. ກົງທອງເຫຼືອງສູງຕັ້ງຢູ່ໃນເດີ່ນວັງຂອງພະເຈົ້າຊາ ບໍຣິສ.",
+"th": "กรงสีทอง กรงทองเหลืองสูงตั้งอยู่ในลานวังของพระเจ้าซาร์บอริส",
+"zh": "金色大笼。高高的金色鸟笼立在沙皇庭院里。",
+"ja": "きんいろの かご。おおきな きんいろの かごが おしろの にわに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_gilded_cage.1": {
+"en": "Tall carved brass bars curve up to a golden dome.",
+"lo": "ຊີ່ກົງທອງເຫຼືອງສູງໂຄ້ງຂຶ້ນໄປຫາຍອດໂດມສີຄຳ.",
+"th": "ซี่กรงทองเหลืองสูงโค้งขึ้นไปหายอดโดมสีทอง",
+"zh": "高高的黄铜栏杆向上弯成金色圆顶。",
+"ja": "きんいろの やねが ついた おおきな かごだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_gilded_cage.2": {
+"en": "A shut cage dims living light, so the door belongs wide open!",
+"lo": "ກົງທີ່ປິດເຮັດໃຫ້ແສງມືດລົງ, ປະຕູກົງຄວນເປີດກວ້າງໄວ້!",
+"th": "กรงที่ปิดทำให้แสงมืดลง ประตูกรงควรเปิดกว้างไว้!",
+"zh": "关上的笼子会让光芒变暗，笼门应该大大敞开！",
+"ja": "とびらを おおきく あけて おくのが いちばん だよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_gilded_cage.3": {
+"en": "Click-clack!",
+"lo": "ແຄະ-ແຄະ!",
+"th": "แกร๊กๆ!",
+"zh": "咔嗒！",
+"ja": "カチャン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_golden_net.0": {
+"en": "A golden net. Tsar Boris gave Misha a woven golden silk net.",
+"lo": "ມອງສີຄຳ. ພະເຈົ້າຊາ ບໍຣິສ ມອບມອງໄໝສີຄຳໃຫ້ມີຊາ.",
+"th": "ตาข่ายสีทอง พระเจ้าซาร์บอริสมอบตาข่ายไหมสีทองให้มีชา",
+"zh": "金色网。沙皇鲍里斯给了米沙一张金色丝网。",
+"ja": "きんいろの あみ。おうさまが ミーシャに きんいろの あみを わたしたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_golden_net.1": {
+"en": "Fine golden threads are knotted into a gleaming net.",
+"lo": "ເສັ້ນໄໝສີຄຳຖັກເປັນມອງເຫຼື້ອມງາມ.",
+"th": "เส้นไหมสีทองถักเป็นตาข่ายเงางาม",
+"zh": "细细的金线编织成一张闪亮的网。",
+"ja": "きんいろの いとで あんだ きれいな あみだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_golden_net.2": {
+"en": "Misha chose to drop the net so the Firebird stayed free.",
+"lo": "ມີຊາເລືອກວາງມອງລົງເພື່ອໃຫ້ນົກໄຟເປັນອິດສະຫຼະ.",
+"th": "มีชาเลือกวางตาข่ายลงเพื่อให้นกไฟเป็นอิสระ",
+"zh": "米沙放下了金网，让火鸟自由自在。",
+"ja": "ミーシャは ひのとりの ために あみを おいたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_golden_net.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_woven_sack.0": {
+"en": "A woven sack. A sturdy linen sack carries sweet golden wheat.",
+"lo": "ຖົງຜ້າ. ຖົງຜ້າແຂງແຮງໃສ່ເຂົ້າສາລີສີຄຳຫວານ.",
+"th": "ถุงผ้า ถุงผ้าแข็งแรงใส่ข้าวสาลีสีทองหวาน",
+"zh": "布袋。结实的亚麻袋装着香甜的金麦穗。",
+"ja": "ぬのの ふくろ。じょうぶな ふくろに むぎを しまえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_woven_sack.1": {
+"en": "Soft woven cloth is tied neatly with a crimson cord.",
+"lo": "ຜ້າທໍນຸ້ມໆມັດໄວ້ຢ່າງງາມດ້ວຍເຊືອກສີແດງ.",
+"th": "ผ้าทอนุ่มๆ มัดไว้อย่างสวยด้วยเชือกสีแดง",
+"zh": "柔软的粗布袋用红绳系得整整齐齐。",
+"ja": "あかい ひもで むすんだ ぬのの ふくろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_woven_sack.2": {
+"en": "Sacks keep grain dry and safe on long woodland rides.",
+"lo": "ຖົງຜ້າຊ່ວຍຮັກສາເຂົ້າໃຫ້ແຫ້ງສະອາດຕອນເດີນທາງໄກ.",
+"th": "ถุงผ้าช่วยรักษาข้าวให้แห้งสะอาดตอนเดินทางไกล",
+"zh": "布袋在长途旅行中能保护粮食干爽安全。",
+"ja": "ながい たびでも むぎを だいじに しまえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_woven_sack.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_wheat_sheaf.0": {
+"en": "Golden wheat. Sweet golden wheat is tied in a neat autumn sheaf.",
+"lo": "ຮວງເຂົ້າສາລີ. ຮວງເຂົ້າສາລີສີຄຳຫວານມັດເປັນຟ່ອນງາມໆ.",
+"th": "รวงข้าวสาลี รวงข้าวสาลีสีทองหวานมัดเป็นฟ่อนสวยๆ",
+"zh": "金黄麦束。香甜的金黄麦穗扎成整齐的一束。",
+"ja": "きんいろの むぎ。あまい むぎが きれいに たばねて あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_wheat_sheaf.1": {
+"en": "Ripe golden wheat ears glow like autumn sunshine.",
+"lo": "ຮວງເຂົ້າສາລີສຸກສີຄຳສ່ອງແສງຄືແດດລະດູໃບໄມ້ຫຼົ່ນ.",
+"th": "รวงข้าวสาลีสุกสีทองส่องแสงเหมือนแดดฤดูใบไม้ร่วง",
+"zh": "饱满的金黄麦穗像秋日阳光一样灿烂。",
+"ja": "きんいろに みのった むぎの たばだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_wheat_sheaf.2": {
+"en": "The Firebird and white hare love sweet golden wheat!",
+"lo": "ນົກໄຟ ແລະ ກະຕ່າຍຂາວມັກກິນເຂົ້າສາລີສີຄຳຫວານ!",
+"th": "นกไฟและกระต่ายขาวชอบกินข้าวสาลีสีทองหวาน!",
+"zh": "火鸟和小白兔都喜欢香甜的金麦穗！",
+"ja": "ひのとりも うさぎも あまい むぎが だいすき だよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_wheat_sheaf.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_honey_bread.0": {
+"en": "Honey bread. Warm braided honey bread smells sweet and delicious.",
+"lo": "ເຂົ້າຈີ່ນ້ຳເຜິ້ງ. ເຂົ້າຈີ່ນ້ຳເຜິ້ງອຸ່ນໆຫອມຫວານແຊບຫຼາຍ.",
+"th": "ขนมปังน้ำผึ้ง ขนมปังน้ำผึ้งอุ่นๆ หอมหวานอร่อยมาก",
+"zh": "蜂蜜面包。暖暖的蜂蜜辫子面包香甜可口。",
+"ja": "はちみつパン。あたたかい はちみつパンが いい においを させて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_honey_bread.1": {
+"en": "A golden braided loaf shines fresh from the oven.",
+"lo": "ເຂົ້າຈີ່ຖັກສີຄຳອອກຈາກເຕົາໃໝ່ໆ.",
+"th": "ขนมปังถักสีทองออกจากเตาใหม่ๆ",
+"zh": "金黄的辫子面包刚出炉，色泽诱人。",
+"ja": "こんがり やけた おいしそうな パンだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_honey_bread.2": {
+"en": "Misha shared sweet honey bread with the friendly bear cub.",
+"lo": "ມີຊາແບ່ງເຂົ້າຈີ່ນ້ຳເຜິ້ງຫວານໃຫ້ລູກໝີໃຈດີ.",
+"th": "มีชาแบ่งขนมปังน้ำผึ้งหวานให้ลูกหมีใจดี",
+"zh": "米沙把香甜的蜂蜜面包分给了友善的小棕熊。",
+"ja": "ミーシャは こぐまに パンを わけて あげたよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_honey_bread.3": {
+"en": "Yum, sweet bread!",
+"lo": "ແຊບແທ້, ເຂົ້າຈີ່ຫວານ!",
+"th": "อร่อยจัง ขนมปังหวาน!",
+"zh": "真香甜的面包！",
+"ja": "おいしそうな あまい パンだね！",
+"who": "narrator",
+"tag": "say"
+},
+"fb_saddle_basket.0": {
+"en": "A saddle basket. A woven willow basket carries warm honey bread.",
+"lo": "ກະບຸງສານ. ກະບຸງສານໃສ່ເຂົ້າຈີ່ນ້ຳເຜິ້ງອຸ່ນໆ.",
+"th": "ตะกร้าสาน ตะกร้าสานใส่ขนมปังน้ำผึ้งอุ่นๆ",
+"zh": "柳条篮。柳条编织篮装着暖暖的蜂蜜面包。",
+"ja": "あみかご。あみかごに あたたかい パンを いれて はこぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_saddle_basket.1": {
+"en": "Sturdy woven willow strips form a round basket.",
+"lo": "ໄມ້ສານແຂງແຮງສານເປັນກະບຸງມົນງາມ.",
+"th": "ไม้สานแข็งแรงสานเป็นตะกร้ากลมสวย",
+"zh": "结实的柳条编成圆圆的小篮子。",
+"ja": "じょうぶに あまれた まるい かごだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_saddle_basket.2": {
+"en": "Baskets carry bread, apples, and forest treats with ease.",
+"lo": "ກະບຸງໃສ່ເຂົ້າຈີ່, ໝາກໂປ່ມ ແລະ ໝາກໄມ້ປ່າໄດ້ສະບາຍ.",
+"th": "ตะกร้าใส่ขนมปัง แอปเปิล และผลไม้ป่าได้สบาย",
+"zh": "篮子可以轻松装下蜂蜜面包、苹果和浆果。",
+"ja": "パンや りんごを いれて はこぶのに ぴったり だよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_saddle_basket.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_leather_pouch.0": {
+"en": "A leather pouch. A stitched leather pouch holds Misha's wooden flute.",
+"lo": "ຖົງໜັງ. ຖົງໜັງຫຍິບງາມໃສ່ຂຸ່ຍໄມ້ຂອງມີຊາ.",
+"th": "กระเป๋าหนัง กระเป๋าหนังเย็บสวยใส่ขลุ่ยไม้ของมีชา",
+"zh": "皮囊。缝好的皮囊装着米沙的木笛。",
+"ja": "かわの ふくろ。かわの ふくろに きの ふえを しまうよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_leather_pouch.1": {
+"en": "Warm brown leather closes with a neat brass clasp.",
+"lo": "ໜັງສີນ້ຳຕານອຸ່ນປິດແໜ້ນດ້ວຍຂໍທອງເຫຼືອງ.",
+"th": "หนังสีน้ำตาลอุ่นปิดแน่นด้วยขอทองเหลือง",
+"zh": "暖棕色的皮囊带着小巧的黄铜扣。",
+"ja": "ちゃいろの かわで つくった じょうぶな ふくろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_leather_pouch.2": {
+"en": "A travel pouch keeps Misha's wooden flute safe along the trail.",
+"lo": "ຖົງໜັງຊ່ວຍເກັບຂຸ່ຍໄມ້ຂອງມີຊາໄວ້ຢ່າງປອດໄພ.",
+"th": "กระเป๋าหนังช่วยเก็บขลุ่ยไม้ของมีชาไว้อย่างปลอดภัย",
+"zh": "皮囊一路保护着米沙心爱的木笛。",
+"ja": "きの ふえを だいじに しまって おけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_leather_pouch.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_wooden_flute.0": {
+"en": "A wooden flute. Misha's carved wooden flute plays gentle, comforting music.",
+"lo": "ຂຸ່ຍໄມ້. ຂຸ່ຍໄມ້ແກະສະຫຼັກຂອງມີຊາເປົ່າເພງອ່ອນໂຍນສະບາຍໃຈ.",
+"th": "ขลุ่ยไม้ ขลุ่ยไม้แกะสลักของมีชาเป่าเพลงอ่อนโยนสบายใจ",
+"zh": "木笛。米沙的木笛能吹出轻柔温暖的乐曲。",
+"ja": "きの ふえ。ミーシャの きの ふえは やさしい ねいろを かなでるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_wooden_flute.1": {
+"en": "Smooth carved wood has little round finger holes.",
+"lo": "ໄມ້ແກະສະຫຼັກລຽບມີຮູນ້ອຍໆສຳລັບວາງນິ້ວ.",
+"th": "ไม้แกะสลักเรียบมีรูเล็กๆ สำหรับวางนิ้ว",
+"zh": "光滑的雕花木笛上有整齐的小指孔。",
+"ja": "まるい あなが ならんだ きの ふえだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_wooden_flute.2": {
+"en": "Gentle flute music comforted the shy Firebird.",
+"lo": "ສຽງປີ່ອ່ອນໂຍນຊ່ວຍປອບໃຈນົກໄຟທີ່ຂີ້ອາຍ.",
+"th": "เสียงขลุ่ยอ่อนโยนช่วยปลอบใจนกไฟที่ขี้อาย",
+"zh": "轻柔的笛声安抚了害羞的火鸟。",
+"ja": "やさしい ふえの おとが ひのとりを あんしん させたよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_wooden_flute.3": {
+"en": "Toot, toot!",
+"lo": "ຕູດ, ຕູດ!",
+"th": "ปู๊ด ปู๊ด!",
+"zh": "嘟，嘟！",
+"ja": "ピーヒャラ、ふうー！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_feast_table.0": {
+"en": "A courtyard table. Carved Russian courtyard furniture welcomes everyone to rest.",
+"lo": "ໂຕະໄມ້. ໂຕະ ແລະ ຕັ່ງໄມ້ແກະສະຫຼັກຕ້ອນຮັບທຸກຄົນໃຫ້ພັກຜ່ອນ.",
+"th": "โต๊ะไม้ โต๊ะและม้านั่งไม้แกะสลักต้อนรับทุกคนให้พักผ่อน",
+"zh": "雕花木桌。雕花木桌椅欢迎大家坐下来歇歇脚。",
+"ja": "きの テーブル。きの テーブルと ベンチが みんなを むかえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_feast_table.1": {
+"en": "Rich carved wood and embroidered cloth dress the palace porch.",
+"lo": "ໄມ້ແກະສະຫຼັກງາມ ແລະ ຜ້າປັກລາຍປະດັບລະບຽງວັງ.",
+"th": "ไม้แกะสลักสวยและผ้าปักลายประดับระเบียงวัง",
+"zh": "精致的雕花木桌和绣花布装点着宫廷走廊。",
+"ja": "きれいな ぬのが かかった りっぱな テーブル だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_feast_table.2": {
+"en": "Everyone gathers around to share apples, honey bread, and warm tea.",
+"lo": "ທຸກຄົນມາໂຮມກັນແບ່ງປັນໝາກໂປ່ມ, ເຂົ້າຈີ່ນ້ຳເຜິ້ງ ແລະ ນ້ຳຊາອຸ່ນ.",
+"th": "ทุกคนมารวมตัวแบ่งปันแอปเปิล ขนมปังน้ำผึ้ง และน้ำชาอุ่น",
+"zh": "大家围坐一起分享苹果、蜂蜜面包和热茶。",
+"ja": "みんなで りんごや パンや おちゃを わけあうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_feast_table.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_tea_samovar.0": {
+"en": "A brass samovar. A gleaming Russian brass samovar keeps autumn tea hot.",
+"lo": "ໝໍ້ຕົ້ມຊາທອງເຫຼືອງ. ໝໍ້ຕົ້ມຊາທອງເຫຼືອງຂອງຣັດເຊຍຮັກສານ້ຳຊາໃຫ້ຮ້ອນ.",
+"th": "หม้อต้มชาทองเหลือง หม้อต้มชาทองเหลืองของรัสเซียเก็บน้ำชาให้อุ่นร้อน",
+"zh": "黄铜茶炊。闪亮的黄铜茶炊把秋日热茶煮得暖暖的。",
+"ja": "サモワール。ぴかぴかの サモワールで おちゃを わかすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_tea_samovar.1": {
+"en": "Polished brass gleams warm like a little golden palace dome.",
+"lo": "ທອງເຫຼືອງຂັດເຫຼື້ອມສ່ອງແສງຄືຍອດໂດມສີຄຳນ້ອຍໆ.",
+"th": "ทองเหลืองขัดเงาส่องแสงเหมือนยอดโดมสีทองเล็กๆ",
+"zh": "擦得锃亮的黄铜茶炊像一座金色小圆顶。",
+"ja": "きんいろに ぴかぴか ひかる おちゃの どうぐ だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_tea_samovar.2": {
+"en": "In Russia, families gather round a steaming samovar for warm tea.",
+"lo": "ໃນຣັດເຊຍ, ຄອບຄົວມັກມາໂຮມກັນອ້ອມໝໍ້ຊາເພື່ອດື່ມຊາອຸ່ນ.",
+"th": "ในรัสเซีย ครอบครัวมักมารวมตัวรอบหม้อชาเพื่อดื่มชาอุ่น",
+"zh": "在俄罗斯，大家喜欢围着冒热气的茶炊喝热茶。",
+"ja": "みんなで あたたかい おちゃを のむ ための どうぐ だよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_tea_samovar.3": {
+"en": "Psssshhh!",
+"lo": "ຊີ່!",
+"th": "ซู่!",
+"zh": "嘶——！",
+"ja": "しゅーっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_flowers.0": {
+"en": "Autumn flowers. Warm autumn blossoms brighten the Russian courtyard and glade.",
+"lo": "ດອກໄມ້ລະດູໃບໄມ້ຫຼົ່ນ. ດອກໄມ້ລະດູໃບໄມ້ຫຼົ່ນສົດໃສປະດັບເດີ່ນວັງ ແລະ ທົ່ງຫຍ້າ.",
+"th": "ดอกไม้ฤดูใบไม้ร่วง ดอกไม้ฤดูใบไม้ร่วงสดใสประดับลานวังและทุ่งหญ้า",
+"zh": "秋日花朵。明媚的秋日花朵装点着庭院和草地。",
+"ja": "あきの はな。あきの はなが あかるく さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_flowers.1": {
+"en": "Warm golden asters and rosy fireweed bloom brightly.",
+"lo": "ດອກໄມ້ສີຄຳອຸ່ນ ແລະ ດອກໄມ້ປ່າສີບົວບານສົດໃສ.",
+"th": "ดอกไม้สีทองอุ่นและดอกไม้ป่าสีชมพูบานสดใส",
+"zh": "金黄秋菊和粉红柳兰开得明媚灿烂。",
+"ja": "あきの おはなが きれいに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_flowers.2": {
+"en": "Butterflies and bees love visiting bright autumn petals.",
+"lo": "ແມງກະເບື້ອ ແລະ ເຜິ້ງມັກມາຢາມກີບດອກໄມ້ສົດໃສ.",
+"th": "ผีเสื้อและผึ้งชอบมาเยี่ยมกลีบดอกไม้สดใส",
+"zh": "蝴蝶和蜜蜂喜欢拜访明媚的秋日花瓣。",
+"ja": "ちょうちょが おはなに あそびに くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_flowers.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_boulder.0": {
+"en": "A mossy boulder. A sturdy moss-covered stone sits quietly along the path.",
+"lo": "ກ້ອນຫີນໄຄນ້ຳ. ກ້ອນຫີນໃຫຍ່ມີໄຄນ້ຳຕັ້ງງຽບໆຢູ່ແຄມທາງ.",
+"th": "ก้อนหินมอส ก้อนหินใหญ่มีมอสตั้งเงียบๆ อยู่ริมทาง",
+"zh": "青苔大石。长满青苔的大石头静静立在路旁。",
+"ja": "こけの いわ。こけの ついた おおきな いわが みちばたに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_boulder.1": {
+"en": "Soft grey granite wears patches of green moss and golden lichen.",
+"lo": "ຫີນສີເທົາມີໄຄນ້ຳສີຂຽວ ແລະ ໄຄສີຄຳເກາະຢູ່.",
+"th": "หินสีเทามีมอสสีเขียวและไลเคนสีทองเกาะอยู่",
+"zh": "灰色的石头上长满绿青苔和金色地衣。",
+"ja": "こけが ついた どっしり した いわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_boulder.2": {
+"en": "Woodland travellers rest on flat mossy stones along the way.",
+"lo": "ຜູ້ເດີນທາງໃນປ່າພັກເຊົາເທິງກ້ອນຫີນແບນແຄມທາງ.",
+"th": "ผู้เดินทางในป่าพักเหนื่อยบนก้อนหินแบนริมทาง",
+"zh": "林间旅人喜欢坐在平平的青苔石上歇脚。",
+"ja": "たびの とちゅうで ひとやすみ する いわだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_boulder.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_far_domes.0": {
+"en": "Palace domes. Painted wooden palace towers and onion domes rise afar.",
+"lo": "ຍອດໂດມວັງ. ຫໍຄອຍວັງໄມ້ ແລະ ຍອດໂດມສວຍງາມຕັ້ງສະຫງ່າຢູ່ໄກໆ.",
+"th": "ยอดโดมวัง หอคอยวังไม้และยอดโดมสวยงามตั้งตระหง่านอยู่ไกลๆ",
+"zh": "宫殿圆顶。雕花木宫塔楼和洋葱圆顶耸立在远处。",
+"ja": "おしろの やね。おしろの きれいな やねが とおくに みえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_far_domes.1": {
+"en": "Turquoise and gold onion domes crown the distant wooden palace.",
+"lo": "ຍອດໂດມສີຟ້າຂຽວ ແລະ ສີຄຳປະດັບເທິງວັງໄມ້ຢູ່ໄກໆ.",
+"th": "ยอดโดมสีฟ้าเขียวและสีทองประดับบนวังไม้อยู่ไกลๆ",
+"zh": "绿松石与金色洋葱圆顶矗立在远方木宫之上。",
+"ja": "あおい まるい やねが たくさん ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_far_domes.2": {
+"en": "Russian fairy-tale palaces are built from warm carved timber.",
+"lo": "ວັງໃນນິທານຣັດເຊຍສ້າງຈາກໄມ້ແກະສະຫຼັກທີ່ອົບອຸ່ນ.",
+"th": "วังในนิทานรัสเซียสร้างจากไม้แกะสลักที่อบอุ่น",
+"zh": "俄罗斯童话宫殿是用温暖的雕花原木建成的。",
+"ja": "きれいな きの おしろが むかしばなしの せかい みたいだね。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_far_domes.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_terem_arch.0": {
+"en": "A carved palace arch. Carved honey-pine arches glow with red-and-gold folk woodwork.",
+"lo": "ຊຸ້ມປະຕູໄມ້ແກະສະຫຼັກ. ຊຸ້ມປະຕູໄມ້ແກະສະຫຼັກສ່ອງແສງດ້ວຍລາຍສີແດງຄຳ.",
+"th": "ซุ้มประตูไม้แกะสลัก ซุ้มประตูไม้แกะสลักเปล่งประกายด้วยลายสีแดงทอง",
+"zh": "雕花木拱门。蜂蜜色雕花木拱门绘着红金民间花纹。",
+"ja": "きれいな もん。きれいに ほられた きの もんが おしろを かざるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_terem_arch.1": {
+"en": "Red berries, golden vines, and turquoise trim frame the doorway.",
+"lo": "ໝາກໄມ້ແດງ, ເຄືອສີຄຳ ແລະ ຂອບສີຟ້າຂຽວປະດັບອ້ອມປະຕູ.",
+"th": "ผลไม้แดง เถาสีทอง และขอบสีฟ้าเขียวประดับรอบประตู",
+"zh": "红果、金藤和绿松石花边装点着木拱门。",
+"ja": "あかい みと きんの もようが とても はなやか だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_terem_arch.2": {
+"en": "One Firebird feather washed every carved arch in warm gold!",
+"lo": "ຂົນນົກໄຟໜຶ່ງເສັ້ນສ່ອງແສງສີຄຳທົ່ວຊຸ້ມປະຕູແກະສະຫຼັກ!",
+"th": "ขนนกไฟหนึ่งเส้นส่องแสงสีทองทั่วซุ้มประตูแกะสลัก!",
+"zh": "一根火鸟羽毛把每道雕花拱门都照成金色！",
+"ja": "きんのはねの ひかりが もん いっぱいに ひろがったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_terem_arch.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_palace_steps.0": {
+"en": "Wooden porch steps. Carved wooden porch steps lead into Tsar Boris's courtyard.",
+"lo": "ຂັ້ນໄດໄມ້. ຂັ້ນໄດໄມ້ແກະສະຫຼັກພາລົງມາສູ່ເດີ່ນວັງ.",
+"th": "บันไดไม้ บันไดไม้แกะสลักพาลงมาสู่ลานวัง",
+"zh": "木头台阶。雕花木台阶通向沙皇鲍里斯的庭院。",
+"ja": "きの かいだん。きの かいだんが おしろの にわへ つづいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_palace_steps.1": {
+"en": "Broad honey-pine steps have carved railings on both sides.",
+"lo": "ຂັ້ນໄດໄມ້ແປກກວ້າງມີຮາວແກະສະຫຼັກທັງສອງຂ້າງ.",
+"th": "บันไดไม้สนกว้างมีราวแกะสลักทั้งสองข้าง",
+"zh": "宽宽的松木台阶两边立着雕花扶手。",
+"ja": "きれいな てすりの ついた きの かいだんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_palace_steps.2": {
+"en": "Tsar Boris hurried right down these steps to greet the Firebird!",
+"lo": "ພະເຈົ້າຊາ ບໍຣິສ ຮີບຍ່າງລົງຂັ້ນໄດນີ້ມາຕ້ອນຮັບນົກໄຟ!",
+"th": "พระเจ้าซาร์บอริสรีบเดินลงบันไดนี้มาต้อนรับนกไฟ!",
+"zh": "沙皇鲍里斯快步走下台阶迎接火鸟！",
+"ja": "おうさまが この かいだんを おりて きたんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_palace_steps.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_apple_tree.0": {
+"en": "An apple tree. A gnarled courtyard apple tree waits for the Firebird's warmth.",
+"lo": "ຕົ້ນໝາກໂປ່ມ. ຕົ້ນໝາກໂປ່ມໃນເດີ່ນວັງລໍຖ້າແສງອົບອຸ່ນຂອງນົກໄຟ.",
+"th": "ต้นแอปเปิล ต้นแอปเปิลในลานวังรอคอยแสงอบอุ่นของนกไฟ",
+"zh": "苹果树。庭院里的老苹果树正等待火鸟的暖光。",
+"ja": "りんごの き。にわの りんごの きが ひのとりを まっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_apple_tree.1": {
+"en": "Sturdy twisted branches reach out over the palace courtyard.",
+"lo": "ກິ່ງໄມ້ແຂງແຮງໂຄ້ງແຜ່ອອກໄປເທິງເດີ່ນວັງ.",
+"th": "กิ่งไม้แข็งแรงโค้งแผ่ออกไปเหนือลานวัง",
+"zh": "粗壮弯曲的树枝伸展在宫廷庭院上方。",
+"ja": "おおきな えだが にわの うえに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_apple_tree.2": {
+"en": "The freed Firebird loves perching and singing in this apple tree!",
+"lo": "ນົກໄຟທີ່ເປັນອິດສະຫຼະມັກມາເກາະຮ້ອງເພງເທິງຕົ້ນໝາກໂປ່ມນີ້!",
+"th": "นกไฟที่เป็นอิสระชอบมาเกาะร้องเพลงบนต้นแอปเปิลนี้!",
+"zh": "重获自由的火鸟最爱停在这棵苹果树上歌唱！",
+"ja": "ひのとりが この きに とまって うたうのが だいすきだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_apple_tree.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_bear_cub.0": {
+"en": "A brown bear cub. A plump brown bear cub loves sweet berries and honey bread.",
+"lo": "ລູກໝີສີນ້ຳຕານ. ລູກໝີສີນ້ຳຕານຕຸ້ຍນຸ້ຍມັກກິນໝາກໄມ້ ແລະ ເຂົ້າຈີ່ນ້ຳເຜິ້ງ.",
+"th": "ลูกหมีสีน้ำตาล ลูกหมีสีน้ำตาลอ้วนกลมชอบกินผลไม้และขนมปังน้ำผึ้ง",
+"zh": "小棕熊。胖乎乎的小棕熊喜欢甜浆果和蜂蜜面包。",
+"ja": "こぐま。まるまるした こぐまは きのみと パンが だいすきだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_bear_cub.1": {
+"en": "Hello, brown bear cub!",
+"lo": "ສະບາຍດີ ລູກໝີສີນ້ຳຕານ!",
+"th": "สวัสดีลูกหมีสีน้ำตาล!",
+"zh": "你好，小棕熊！",
+"ja": "こんにちは、こぐま！",
+"who": "narrator",
+"tag": "greet"
+},
+"fb_bear_cub.2": {
+"en": "The round brown bear cub has soft, fuzzy ears.",
+"lo": "ລູກໝີສີນ້ຳຕານໂຕກົມມີຫູນຸ້ມໆ.",
+"th": "ลูกหมีสีน้ำตาลตัวกลมมีหูนุ่มๆ",
+"zh": "圆滚滚的小棕熊有一对毛茸茸的耳朵。",
+"ja": "まるい こぐまは ふわふわの みみを しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_bear_cub.3": {
+"en": "He loves tumbling in soft autumn leaves!",
+"lo": "ລາວມັກກິ້ງຫຼິ້ນໃນກອງໃບໄມ້ລະດູໃບໄມ້ຫຼົ່ນ!",
+"th": "เขาชอบกลิ้งเล่นในกองใบไม้ฤดูใบไม้ร่วง!",
+"zh": "它最喜欢在软软的秋叶堆里打滚啦！",
+"ja": "あきの おちばで ころがる のが だいすき だよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_bear_cub.4": {
+"en": "Forest bears love sweet berries and golden honey.",
+"lo": "ໝີປ່າມັກກິນໝາກໄມ້ຫວານ ແລະ ນ້ຳເຜິ້ງສີຄຳ.",
+"th": "หมีป่าชอบกินผลไม้หวานและน้ำผึ้งสีทอง",
+"zh": "森林里的小熊喜欢吃甜浆果和金黄蜂蜜。",
+"ja": "もりの くまは きのみと はちみつが だいすきだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fb_bear_cub.5": {
+"en": "Plop!",
+"lo": "ປຸ໊ບ!",
+"th": "ปุ๊บ!",
+"zh": "扑通！",
+"ja": "どすん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_leaf_pile.0": {
+"en": "A leaf pile. A soft pile of fallen autumn leaves cushions the ground.",
+"lo": "ກອງໃບໄມ້. ກອງໃບໄມ້ລະດູໃບໄມ້ຫຼົ່ນອ່ອນນຸ້ມປູພື້ນດິນ.",
+"th": "กองใบไม้ กองใบไม้ฤดูใบไม้ร่วงนุ่มๆ ปูพื้นดิน",
+"zh": "落叶堆。厚厚的秋日落叶铺在地上像软垫子。",
+"ja": "おちばの やま。ふかふかの おちばの やまが じめんに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_leaf_pile.1": {
+"en": "Golden and russet oak leaves heap up crisp and deep.",
+"lo": "ໃບໄມ້ໂອກສີຄຳ ແລະ ສີນ້ຳຕານກອງຊ້ອນກັນໜານຸ້ມ.",
+"th": "ใบโอ๊กสีทองและสีน้ำตาลกองซ้อนกันหนานุ่ม",
+"zh": "金黄和红棕的橡树叶堆得厚厚软软的。",
+"ja": "あきいろの おちばが ふかふかに つもっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_leaf_pile.2": {
+"en": "A big pile of leaves makes a soft landing for a clumsy cub!",
+"lo": "ກອງໃບໄມ້ໃຫຍ່ເປັນບ່ອນລົງອ່ອນນຸ້ມໃຫ້ລູກໝີ!",
+"th": "กองใบไม้ใหญ่เป็นที่ลงนุ่มๆ ให้ลูกหมี!",
+"zh": "厚厚的落叶堆刚好接住爱打滚的小棕熊！",
+"ja": "こぐまが ころんでも いたくないよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_leaf_pile.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_stream_stone.0": {
+"en": "A stepping stone. Flat mossy stones make a bridge across the rushing stream.",
+"lo": "ຫີນຂ້າມນ້ຳ. ກ້ອນຫີນແບນມີໄຄນ້ຳເປັນຂົວຂ້າມສາຍນ້ຳໄຫຼແຮງ.",
+"th": "หินข้ามน้ำ ก้อนหินแบนมีมอสเป็นสะพานข้ามลำธารไหลแรง",
+"zh": "溪石。平平的青苔石排成小桥跨过溪水。",
+"ja": "とびいし。こけの ついた いしを ぴょんぴょん わたるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_stream_stone.1": {
+"en": "Smooth wet river stones peek up through the turquoise stream.",
+"lo": "ກ້ອນຫີນແມ່ນ້ຳປຽກລຽບພົ້ນຂຶ້ນມາກາງສາຍນ້ຳສີຟ້າຂຽວ.",
+"th": "ก้อนหินแม่น้ำเปียกเรียบโผล่ขึ้นมากลางลำธารสีฟ้าเขียว",
+"zh": "湿润光滑的溪石从碧蓝的溪水里露出来。",
+"ja": "ぬれた まるい いしが かわに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_stream_stone.2": {
+"en": "Hop across each mossy stone to keep your boots dry!",
+"lo": "ໂດດຂ້າມຫີນແຕ່ລະກ້ອນເພື່ອບໍ່ໃຫ້ເກີບປຽກ!",
+"th": "กระโดดข้ามหินแต่ละก้อนเพื่อไม่ให้รองเท้าเปียก!",
+"zh": "一块一块踩着青苔石跳过去，靴子就不会湿啦！",
+"ja": "いしを ぴょんぴょん わたれば くつが ぬれないよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_stream_stone.3": {
+"en": "Splash!",
+"lo": "ຕູມ!",
+"th": "ตูม!",
+"zh": "哗啦！",
+"ja": "ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_white_hare.0": {
+"en": "A white hare. A fluffy white hare hops softly through the meadow glade.",
+"lo": "ກະຕ່າຍຂາວ. ກະຕ່າຍຂາວຂົນນຸ້ມໂດດຄ່ອຍໆໄປໃນທົ່ງຫຍ້າ.",
+"th": "กระต่ายขาว กระต่ายขาวขนปุยกระโดดเบาๆ ในทุ่งหญ้า",
+"zh": "小白兔。毛茸茸的小白兔在草地上轻轻跳跃。",
+"ja": "しろい うさぎ。ふわふわの しろい うさぎが くさはらを ぴょんと とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_white_hare.1": {
+"en": "Hello, white hare!",
+"lo": "ສະບາຍດີ ກະຕ່າຍຂາວ!",
+"th": "สวัสดีกระต่ายขาว!",
+"zh": "你好，小白兔！",
+"ja": "こんにちは、しろい うさぎ！",
+"who": "narrator",
+"tag": "greet"
+},
+"fb_white_hare.2": {
+"en": "The fluffy white hare has tall ears with dark tips.",
+"lo": "ກະຕ່າຍຂາວຂົນນຸ້ມມີຫູຍາວປາຍສີເຂັ້ມ.",
+"th": "กระต่ายขาวขนปุยมีหูยาวปลายสีเข้ม",
+"zh": "毛茸茸的小白兔有长长的黑尖耳朵。",
+"ja": "ながい みみの さきが くろい しろい うさぎだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_white_hare.3": {
+"en": "She loves bouncing softly into green clover!",
+"lo": "ມັນມັກໂດດຄ່ອຍໆລົງໃນຫຍ້າໂຄລເວີສີຂຽວ!",
+"th": "เธอชอบกระโดดเบาๆ ลงในหญ้าโคลเวอร์สีเขียว!",
+"zh": "它喜欢轻快地蹦进绿油油的三叶草丛！",
+"ja": "みどりの クローバーへ ぴょんと とぶのが すきだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_white_hare.4": {
+"en": "Woodland hares nibble sweet wheat and fresh clover.",
+"lo": "ກະຕ່າຍປ່າມັກແທະເຂົ້າສາລີຫວານ ແລະ ຫຍ້າໂຄລເວີສົດ.",
+"th": "กระต่ายป่าชอบแทะข้าวสาลีหวานและหญ้าโคลเวอร์สด",
+"zh": "林间的野兔爱吃甜麦穗和鲜嫩的三叶草。",
+"ja": "うさぎは むぎや クローバーを もぐもぐ たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fb_white_hare.5": {
+"en": "Boing, boing!",
+"lo": "ບ໋ອຍ, ບ໋ອຍ!",
+"th": "ดึ๋ง ดึ๋ง!",
+"zh": "嘣，嘣！",
+"ja": "ぴょん、ぴょん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_hollow_log.0": {
+"en": "A mossy log. An old mossy oak log rests beside woodland ferns.",
+"lo": "ຂອນໄມ້ເກົ່າ. ຂອນໄມ້ໂອກເກົ່າມີໄຄນ້ຳນອນຢູ່ຂ້າງກໍຜັກກູດ.",
+"th": "ขอนไม้เก่า ขอนไม้โอ๊กเก่ามีมอสวางอยู่ข้างกอเฟิร์น",
+"zh": "青苔树干。长满青苔的老橡木树干静静卧在蕨草旁。",
+"ja": "こけの まるた。こけの ついた まるたが しだの そばに あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_hollow_log.1": {
+"en": "Curled woodland ferns grow along the rough mossy bark.",
+"lo": "ຜັກກູດປ່າເກີດຂຶ້ນຕາມເປືອກໄມ້ທີ່ມີໄຄນ້ຳ.",
+"th": "เฟิร์นป่าขึ้นตามเปลือกไม้ที่มีมอส",
+"zh": "卷曲的森林蕨草沿着粗糙的青苔树皮生长。",
+"ja": "こけと しだが まるたの うえに はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_hollow_log.2": {
+"en": "Little forest creatures love hiding inside mossy hollow logs.",
+"lo": "ສັດປ່ານ້ອຍໆມັກລີ້ຢູ່ໃນຂອນໄມ້ເປັນໂພງ.",
+"th": "สัตว์ป่าน้อยๆ ชอบซ่อนตัวในขอนไม้เป็นโพรง",
+"zh": "森林里的小动物最喜欢藏在青苔空心木里。",
+"ja": "ちいさな どうぶつの かくれが に なるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_hollow_log.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_firebird.0": {
+"en": "The Firebird. The Firebird shines with golden feathers and a turquoise pearl necklace.",
+"lo": "ນົກໄຟ. ນົກໄຟສ່ອງແສງດ້ວຍຂົນສີຄຳ ແລະ ສາຍຄໍໄຂ່ມຸກສີຟ້າ.",
+"th": "นกไฟ นกไฟส่องแสงด้วยขนสีทองและสร้อยไข่มุกสีฟ้า",
+"zh": "火鸟。火鸟披着金羽，戴着绿松石珍珠项链。",
+"ja": "ひのとり。ひのとりは きんの はねと あおい くびかざりで ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_firebird.1": {
+"en": "Hello, the Firebird!",
+"lo": "ສະບາຍດີ ນົກໄຟ!",
+"th": "สวัสดีนกไฟ!",
+"zh": "你好，火鸟！",
+"ja": "こんにちは、ひのとり！",
+"who": "firebird",
+"tag": "greet"
+},
+"fb_firebird.2": {
+"en": "Hello, kind friend! I am the Firebird!",
+"lo": "ສະບາຍດີ ໝູ່ທີ່ໃຈດີ! ຂ້ອຍແມ່ນນົກໄຟ!",
+"th": "สวัสดี เพื่อนใจดี! ฉันคือนกไฟ!",
+"zh": "你好，善良的朋友！我是火鸟！",
+"ja": "こんにちは、やさしい おともだち！ わたしは ひのとりよ！",
+"who": "firebird",
+"tag": "say"
+},
+"fb_firebird.3": {
+"en": "My warm golden wings light up the darkest night.",
+"lo": "ປີກສີຄຳອຸ່ນຂອງຂ້ອຍສ່ອງແສງໃຫ້ຄືນມືດສະຫວ່າງ.",
+"th": "ปีกสีทองอุ่นของฉันส่องแสงให้คืนมืดสว่าง",
+"zh": "我温暖的金色翅膀能照亮最黑的夜晚。",
+"ja": "きんいろの つばさで くらい よるを てらすのよ。",
+"who": "firebird",
+"tag": "does"
+},
+"fb_firebird.4": {
+"en": "Nets and cages dim my light, but kindness lets me shine!",
+"lo": "ມອງ ແລະ ກົງເຮັດໃຫ້ແສງຂ້ອຍມືດລົງ, ແຕ່ຄວາມໃຈດີເຮັດໃຫ້ຂ້ອຍສ່ອງແສງ!",
+"th": "ตาข่ายและกรงทำให้แสงฉันมืดลง แต่ความใจดีทำให้ฉันส่องแสง!",
+"zh": "网和笼子会让我的光芒暗淡，善良却让我闪耀！",
+"ja": "やさしさが わたしの ひかりを いちばん かがやかせるわ！",
+"who": "firebird",
+"tag": "does"
+},
+"fb_firebird.5": {
+"en": "I wear a tiny turquoise pearl necklace around my throat.",
+"lo": "ຂ້ອຍໃສ່ສາຍຄໍໄຂ່ມຸກສີຟ້ານ້ອຍໆອ້ອມຄໍ.",
+"th": "ฉันสวมสร้อยไข่มุกสีฟ้าเล็กๆ รอบคอ",
+"zh": "我脖子上戴着一串小小的绿松石珍珠项链。",
+"ja": "あおい しんじゅの くびかざりを つけているの。",
+"who": "firebird",
+"tag": "looks"
+},
+"fb_firebird.6": {
+"en": "Whoosh, whoosh!",
+"lo": "ຟູ້, ຟູ້!",
+"th": "ฟู่ว ฟู่ว!",
+"zh": "呼，呼！",
+"ja": "ばさばさ、ふわーっ！",
+"who": "firebird",
+"tag": "sound"
+},
+"fb_painted_bowl.0": {
+"en": "A painted bowl. A crimson-and-gold Khokhloma bowl holds sweet treats.",
+"lo": "ຖ້ວຍແຕ້ມລາຍ. ຖ້ວຍໄມ້ແຕ້ມລາຍສີແດງຄຳໃສ່ຂອງຫວານ.",
+"th": "ชามเพ้นท์ลาย ชามไม้เพ้นท์ลายสีแดงทองใส่ของหวาน",
+"zh": "彩绘木碗。红金彩绘木碗盛着香甜的点心。",
+"ja": "えつきの わん。あかと きんの きれいな おわんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_painted_bowl.1": {
+"en": "Traditional Russian red-and-gold swirls decorate the carved wood.",
+"lo": "ລາຍວົງສີແດງຄຳແບບຣັດເຊຍປະດັບເທິງໄມ້ແກະສະຫຼັກ.",
+"th": "ลายวงสีแดงทองแบบรัสเซียประดับบนไม้แกะสลัก",
+"zh": "传统的俄罗斯红金花纹装饰着雕花木碗。",
+"ja": "あかと きんの もようが とても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_painted_bowl.2": {
+"en": "Misha fills the painted bowl with sweet wheat and apples.",
+"lo": "ມີຊາໃສ່ເຂົ້າສາລີຫວານ ແລະ ໝາກໂປ່ມໃນຖ້ວຍແຕ້ມລາຍ.",
+"th": "มีชาใส่ข้าวสาลีหวานและแอปเปิลในชามเพ้นท์ลาย",
+"zh": "米沙用彩绘木碗盛满香甜的小麦和苹果。",
+"ja": "あまい むぎや りんごを いれる おわんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_painted_bowl.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_birch_tray.0": {
+"en": "A birch tray. A woven birch-bark tray serves red forest berries.",
+"lo": "ຖາດເປືອກໄມ້. ຖາດເປືອກໄມ້ສານໃຊ້ວາງໝາກໄມ້ປ່າສີແດງ.",
+"th": "ถาดเปลือกไม้ ถาดเปลือกไม้สานใช้วางผลไม้ป่าสีแดง",
+"zh": "桦树皮盘。桦树皮编的托盘盛着红红的浆果。",
+"ja": "きの トレー。しらかばの トレーに きのみを のせるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_birch_tray.1": {
+"en": "Light golden birch bark is woven into a wide, neat tray.",
+"lo": "ເປືອກໄມ້ເບີດສີຄຳອ່ອນສານເປັນຖາດກວ້າງງາມ.",
+"th": "เปลือกไม้เบิร์ชสีทองอ่อนสานเป็นถาดกว้างสวย",
+"zh": "浅金色的桦树皮编成宽宽整齐的托盘。",
+"ja": "しらかばの かわで あんだ すてきな トレーだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_birch_tray.2": {
+"en": "A flat birch tray holds bright red berries for a midnight guest.",
+"lo": "ຖາດເປືອກໄມ້ແບນວາງໝາກໄມ້ແດງຕ້ອນຮັບແຂກຍາມທ່ຽງຄືນ.",
+"th": "ถาดเปลือกไม้แบนวางผลไม้แดงต้อนรับแขกยามเที่ยงคืน",
+"zh": "平平的桦皮盘盛着红浆果招待午夜的客人。",
+"ja": "あかい きのみを のせて おきゃくさまを むかえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_birch_tray.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_woven_mat.0": {
+"en": "A woven mat. An embroidered Russian linen mat welcomes guests warmly.",
+"lo": "ຜ້າປູລາຍ. ຜ້າປູລາຍປັກຂອງຣັດເຊຍຕ້ອນຮັບແຂກຢ່າງອົບອຸ່ນ.",
+"th": "ผ้ารองลาย ผ้ารองลายปักของรัสเซียต้อนรับแขกอย่างอบอุ่น",
+"zh": "花纹织垫。绣花亚麻垫热情地欢迎着客人。",
+"ja": "おりものの しきもの。ししゅうの しきものが おきゃくさまを むかえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_woven_mat.1": {
+"en": "Neat crimson Russian stitching frames the cream linen cloth.",
+"lo": "ລາຍປັກສີແດງແບບຣັດເຊຍລ້ອມຂອບຜ້າລິນິນສີຄຣີມ.",
+"th": "ลายปักสีแดงแบบรัสเซียล้อมขอบผ้าลินินสีครีม",
+"zh": "精致的红线刺绣镶在米色亚麻垫边缘。",
+"ja": "あかい ししゅうの ふちどりが かわいいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_woven_mat.2": {
+"en": "Spreading a clean mat makes a warm welcome on the moss.",
+"lo": "ປູຜ້າສະອາດເທິງໄຄນ້ຳເປັນການຕ້ອນຮັບທີ່ອົບອຸ່ນ.",
+"th": "ปูผ้าสะอาดบนมอสเป็นการต้อนรับที่อบอุ่น",
+"zh": "在青苔上铺好干净的垫子，显得格外温暖贴心。",
+"ja": "きれいな しきものを ひくと みんなで うれしいね。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_woven_mat.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_flute_note.0": {
+"en": "A music note. A golden music note floats up from Misha's flute.",
+"lo": "ໂນດເພງ. ໂນດເພງສີຄຳລອຍຂຶ້ນມາຈາກຂຸ່ຍໄມ້ຂອງມີຊາ.",
+"th": "โน้ตเพลง โน้ตเพลงสีทองลอยขึ้นมาจากขลุ่ยไม้ของมีชา",
+"zh": "音符。金色音符从米沙的木笛中飘了起来。",
+"ja": "おんぷ。ふえから きんいろの おんぷが ふわりと うかぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_flute_note.1": {
+"en": "Bright golden notes shimmer across the starry glade.",
+"lo": "ໂນດເພງສີຄຳສ່ອງປະກາຍທົ່ວທົ່ງຫຍ້າໃຕ້ແສງດາວ.",
+"th": "โน้ตเพลงสีทองส่องประกายทั่วทุ่งหญ้าใต้แสงดาว",
+"zh": "闪亮的金色音符在星空草地上轻轻飘扬。",
+"ja": "きらきら ひかる おんぷが ほしぞらに うかぶよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_flute_note.2": {
+"en": "Every gentle note warms the Firebird's feathers again!",
+"lo": "ທຸກໂນດເພງອ່ອນໂຍນຊ່ວຍໃຫ້ຂົນນົກໄຟສ່ອງແສງອີກຄັ້ງ!",
+"th": "ทุกโน้ตเพลงอ่อนโยนช่วยให้ขนนกไฟส่องแสงอีกครั้ง!",
+"zh": "每一个温柔的音符都让火鸟重新闪耀！",
+"ja": "やさしい おとが ひのとりの はねを あたためるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_flute_note.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_trail_lantern.0": {
+"en": "A trail lantern. A carved wooden trail-lantern guides travellers through mist.",
+"lo": "ໂຄມໄຟທາງປ່າ. ໂຄມໄຟໄມ້ແຄມທາງນຳທາງຜູ້ເດີນທາງຜ່ານໝອກ.",
+"th": "โคมไฟทางป่า โคมไฟไม้ริมทางนำทางผู้เดินทางผ่านหมอก",
+"zh": "林间木灯。雕花木灯指引旅人穿过林间薄雾。",
+"ja": "もりの ランタン。もりの ランタンが きりの みちを てらすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_trail_lantern.1": {
+"en": "A cosy wooden roof shelters the warm glowing glass panes.",
+"lo": "ຫຼັງຄາໄມ້ນ້ອຍໆກັນລົມໃຫ້ແກ້ວໂຄມໄຟທີ່ສ່ອງແສງອຸ່ນ.",
+"th": "หลังคาไม้เล็กๆ กันลมให้กระจกโคมไฟที่ส่องแสงอุ่น",
+"zh": "小巧的木屋顶护着里面暖暖发亮的灯窗。",
+"ja": "ちいさな きの やねが ついた ランタンだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_trail_lantern.2": {
+"en": "Warm trail-lanterns shine right through cold midnight mist!",
+"lo": "ໂຄມໄຟທາງປ່າສ່ອງແສງອຸ່ນຜ່ານໝອກເຢັນຍາມທ່ຽງຄືນ!",
+"th": "โคมไฟทางป่าส่องแสงอุ่นผ่านหมอกเย็นยามเที่ยงคืน!",
+"zh": "温暖的路灯穿透了冰凉的午夜薄雾！",
+"ja": "くらい きりの なかも あたたかく てらして くれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_trail_lantern.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_cage_spark.0": {
+"en": "A golden spark. A bright golden spark shines as the cage latch loosens!",
+"lo": "ປະກາຍແສງສີຄຳ. ປະກາຍແສງສີຄຳສ່ອງແຈ້ງເມື່ອກອນກົງຄາຍອອກ!",
+"th": "ประกายแสงสีทอง ประกายแสงสีทองส่องสว่างเมื่อกลอนกรงคลายออก!",
+"zh": "金色火花。门闩松开时闪起明亮的金色火花！",
+"ja": "きんいろの ひかり。かぎが ゆるむと きんいろの ひかりが きらっと ひかるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_cage_spark.1": {
+"en": "Warm starburst sparks dance around the gilded latch.",
+"lo": "ປະກາຍແສງດາວອຸ່ນເຕັ້ນອ້ອມກອນກົງສີຄຳ.",
+"th": "ประกายแสงดาวอุ่นเต้นรอบกลอนกรงสีทอง",
+"zh": "暖暖的星芒火花在金色门闩旁跳跃。",
+"ja": "ほしみたいに ひかる ひかりが かぎの まわりで まうよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_cage_spark.2": {
+"en": "Three bright sparks help swing the gilded cage wide open!",
+"lo": "ປະກາຍແສງສາມປະກາຍຊ່ວຍເປີດປະຕູກົງໃຫ້ກວ້າງອອກ!",
+"th": "ประกายแสงสามดวงช่วยเปิดประตูกรงให้กว้างออก!",
+"zh": "三道明亮火花帮忙把金笼门大大打开！",
+"ja": "みっつの ひかりが かごの とびらを あけるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_cage_spark.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_golden_apples.0": {
+"en": "Golden apples. Sweet golden apples ripen in the Firebird's warm light!",
+"lo": "ໝາກໂປ່ມສີຄຳ. ໝາກໂປ່ມສີຄຳຫວານສຸກໃນແສງອຸ່ນຂອງນົກໄຟ!",
+"th": "แอปเปิลสีทอง แอปเปิลสีทองหวานสุกในแสงอุ่นของนกไฟ!",
+"zh": "金苹果。香甜的金苹果在火鸟温暖的光芒中成熟了！",
+"ja": "きんいろの りんご。ひのとりの ひかりで きんの りんごが みのったよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_golden_apples.1": {
+"en": "Plump golden apples blush warm honey and sunrise orange.",
+"lo": "ໝາກໂປ່ມສີຄຳອວບງາມສີນ້ຳເຜິ້ງ ແລະ ສີສົ້ມຮຸ່ງເຊົ້າ.",
+"th": "แอปเปิลสีทองอวบสวยสีน้ำผึ้งและสีส้มรุ่งเช้า",
+"zh": "饱满的金苹果透着蜂蜜和朝霞般的暖色。",
+"ja": "つやつやした きんいろの りんごが おいしそう だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_golden_apples.2": {
+"en": "The Firebird's joyful freedom ripened sweet apples on every bough!",
+"lo": "ອິດສະຫຼະພາບຂອງນົກໄຟເຮັດໃຫ້ໝາກໂປ່ມຫວານສຸກທົ່ວກິ່ງ!",
+"th": "อิสรภาพของนกไฟทำให้แอปเปิลหวานสุกทั่วกิ่ง!",
+"zh": "火鸟重获自由的喜悦催熟了满树甜苹果！",
+"ja": "ひのとりの ひかりで あまい りんごが いっぱい みのったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_golden_apples.3": {
+"en": "Sweet golden apples!",
+"lo": "ໝາກໂປ່ມສີຄຳຫວານໆ!",
+"th": "แอปเปิลสีทองหวานๆ!",
+"zh": "香甜的金苹果！",
+"ja": "あまい きんの りんごだね！",
+"who": "narrator",
+"tag": "say"
+},
+"fb_gift_feathers.0": {
+"en": "Three golden feathers. Three glowing feathers keep the palace lanterns bright all year.",
+"lo": "ຂົນນົກສີຄຳສາມເສັ້ນ. ຂົນນົກສີຄຳສາມເສັ້ນຊ່ວຍໃຫ້ໂຄມໄຟວັງສ່ອງແສງຕະຫຼອດປີ.",
+"th": "ขนนกสีทองสามเส้น ขนนกสีทองสามเส้นช่วยให้โคมไฟวังสว่างตลอดปี",
+"zh": "三根金羽毛。三根发光羽毛让宫廷灯笼全年明亮。",
+"ja": "さんぼんの きんのはね。さんぼんの はねが いちねんじゅう あかりを ともすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_gift_feathers.1": {
+"en": "Three golden feathers are tied together with a red ribbon.",
+"lo": "ຂົນນົກສີຄຳສາມເສັ້ນມັດຮ່ວມກັນດ້ວຍໂບສີແດງ.",
+"th": "ขนนกสีทองสามเส้นมัดรวมกันด้วยริบบิ้นสีแดง",
+"zh": "三根金羽毛用一根红丝带系在一起。",
+"ja": "さんぼんの はねが あかい リボンで むすんで あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_gift_feathers.2": {
+"en": "The Firebird gifted them freely out of true friendship.",
+"lo": "ນົກໄຟມອບໃຫ້ດ້ວຍຄວາມເຕັມໃຈຈາກມິດຕະພາບແທ້.",
+"th": "นกไฟมอบให้ด้วยความเต็มใจจากมิตรภาพแท้",
+"zh": "火鸟出于真挚的友谊，慷慨地送出了它们。",
+"ja": "ひのとりが ともだちの しるしに くれたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_gift_feathers.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_palace_lantern.0": {
+"en": "A palace lantern. A carved palace lantern shines warmly along the wooden porch.",
+"lo": "ໂຄມໄຟວັງ. ໂຄມໄຟວັງສ່ອງແສງອົບອຸ່ນຕາມລະບຽງໄມ້.",
+"th": "โคมไฟวัง โคมไฟวังส่องแสงอบอุ่นตามระเบียงไม้",
+"zh": "宫廷灯笼。雕花宫廷灯笼在木廊旁暖暖地亮着。",
+"ja": "おしろの ランタン。おしろの ランタンが あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_palace_lantern.1": {
+"en": "Ornate golden brass swirls frame the warm courtyard flame.",
+"lo": "ລາຍທອງເຫຼືອງສີຄຳອ້ອມແສງໄຟອຸ່ນໃນເດີ່ນວັງ.",
+"th": "ลายทองเหลืองสีทองล้อมแสงไฟอุ่นในลานวัง",
+"zh": "华丽的金色黄铜花纹环绕着温暖的烛光。",
+"ja": "きれいな かざりの ついた おしろの ランタンだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_palace_lantern.2": {
+"en": "Lit palace lanterns welcome the whole kingdom to celebrate!",
+"lo": "ໂຄມໄຟວັງທີ່ສ່ອງແສງຕ້ອນຮັບທຸກຄົນມາສະຫຼອງຮ່ວມກັນ!",
+"th": "โคมไฟวังที่ส่องแสงต้อนรับทุกคนมาฉลองร่วมกัน!",
+"zh": "亮起的宫廷灯笼迎接着大家一起欢庆！",
+"ja": "みんなを あたたかい ひかりで むかえて くれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_palace_lantern.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_flower_cage.0": {
+"en": "A flower cage. The open gilded cage is draped with bright autumn flowers!",
+"lo": "ກົງດອກໄມ້. ກົງສີຄຳທີ່ເປີດກວ້າງປະດັບດ້ວຍດອກໄມ້ລະດູໃບໄມ້ຫຼົ່ນສົດໃສ!",
+"th": "กรงดอกไม้ กรงสีทองที่เปิดกว้างประดับด้วยดอกไม้ฤดูใบไม้ร่วงสดใส!",
+"zh": "鲜花鸟笼。敞开的金笼披满了明艳的秋日鲜花！",
+"ja": "はなの かご。あいた かごに あきの はなが いっぱい かざって あるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_flower_cage.1": {
+"en": "Golden sunflowers and red berries wrap the open brass bars.",
+"lo": "ດອກຕາເວັນສີຄຳ ແລະ ໝາກໄມ້ແດງປະດັບອ້ອມກົງທີ່ເປີດ.",
+"th": "ดอกทานตะวันสีทองและผลไม้แดงประดับรอบกรงที่เปิด",
+"zh": "金色向日葵和红浆果缠绕着敞开的金笼。",
+"ja": "ひまわりと あかい きのみが かごを かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_flower_cage.2": {
+"en": "Now the open cage is a joyful courtyard flower arch!",
+"lo": "ຕອນນີ້ກົງທີ່ເປີດກາຍເປັນຊຸ້ມດອກໄມ້ທີ່ສວຍງາມແລ້ວ!",
+"th": "ตอนนี้กรงที่เปิดกลายเป็นซุ้มดอกไม้ที่สวยงามแล้ว!",
+"zh": "现在敞开的笼子变成了美丽的庭院花拱门！",
+"ja": "あいた かごが きれいな はなの アーチに なったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_flower_cage.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_tumble_pair.0": {
+"en": "Bear and hare. The bear cub and white hare tumble nose to nose on soft hay!",
+"lo": "ລູກໝີ ແລະ ກະຕ່າຍ. ລູກໝີ ແລະ ກະຕ່າຍຂາວກິ້ງລົງກອງເຟືອງອ່ອນຈົນດັງຕຳກັນ!",
+"th": "ลูกหมีกับกระต่าย ลูกหมีและกระต่ายขาวกลิ้งลงกองฟางนุ่มจนจมูกชนกัน!",
+"zh": "小熊和白兔。小棕熊和小白兔在软干草上撞了个满怀！",
+"ja": "こぐまと うさぎ。こぐまと うさぎが わらの うえで ごろんと ころんだよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_tumble_pair.1": {
+"en": "Hello, bear and hare!",
+"lo": "ສະບາຍດີ ລູກໝີ ແລະ ກະຕ່າຍ!",
+"th": "สวัสดีลูกหมีกับกระต่าย!",
+"zh": "你好，小熊和白兔！",
+"ja": "こんにちは、こぐまと うさぎ！",
+"who": "narrator",
+"tag": "greet"
+},
+"fb_tumble_pair.2": {
+"en": "The bear cub and white hare giggle nose to nose!",
+"lo": "ລູກໝີ ແລະ ກະຕ່າຍຂາວຫົວຄິກໆຕອນດັງຕຳກັນ!",
+"th": "ลูกหมีและกระต่ายขาวหัวเราะคิกๆ ตอนจมูกชนกัน!",
+"zh": "小熊和小白兔鼻尖碰鼻尖，笑得咯咯响！",
+"ja": "こぐまと うさぎが はなを くっつけて わらっているよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_tumble_pair.3": {
+"en": "They tugged a crimson silk ribbon right onto soft hay!",
+"lo": "ພວກມັນດຶງໂບຜ້າໄໝແດງຈົນລົ້ມລົງກອງເຟືອງອ່ອນ!",
+"th": "พวกเขาช่วยกันดึงริบบิ้นผ้าไหมแดงจนล้มลงกองฟางนุ่ม!",
+"zh": "它们拉着红丝带一起滚进软干草里啦！",
+"ja": "あかい リボンを ひっぱって わらに ごろんと ころんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_tumble_pair.4": {
+"en": "Sproing!",
+"lo": "ສະປຣອຍ!",
+"th": "สปริง!",
+"zh": "嘣咚！",
+"ja": "びよーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_silk_ribbon.0": {
+"en": "A silk ribbon. A bright crimson silk ribbon flutters in the autumn breeze.",
+"lo": "ໂບຜ້າໄໝແດງ. ໂບຜ້າໄໝສີແດງສົດປິວສະບັດຕາມສາຍລົມ.",
+"th": "ริบบิ้นผ้าไหมแดง ริบบิ้นผ้าไหมสีแดงสดปลิวไสวตามสายลม",
+"zh": "红丝带。鲜红的丝带在秋风中轻轻飘舞。",
+"ja": "あかい リボン。あかい リボンが かぜに ふわりと なびくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_silk_ribbon.1": {
+"en": "Glossy crimson silk loops and twirls like a festival dancer.",
+"lo": "ຜ້າໄໝສີແດງເຫຼື້ອມມ້ວນປິວຄືນັກຟ້ອນງານບຸນ.",
+"th": "ผ้าไหมสีแดงเงาม้วนปลิวเหมือนนักเต้นงานเทศกาล",
+"zh": "光滑的红丝带像节日的舞者一样轻轻翻卷。",
+"ja": "つやつやの あかい リボンが くるくる まうよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_silk_ribbon.2": {
+"en": "The bear cub and white hare love playing tug with this ribbon!",
+"lo": "ລູກໝີ ແລະ ກະຕ່າຍຂາວມັກຫຼິ້ນດຶງໂບເສັ້ນນີ້!",
+"th": "ลูกหมีและกระต่ายขาวชอบเล่นดึงริบบิ้นเส้นนี้!",
+"zh": "小棕熊和小白兔最喜欢拉着丝带玩拔河啦！",
+"ja": "こぐまと うさぎが ひっぱりっこ して あそぶよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_silk_ribbon.3": {
+"en": "Swish, swish!",
+"lo": "ວູບໆ!",
+"th": "ซิ่วๆ!",
+"zh": "沙沙！",
+"ja": "さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_hay_cushion.0": {
+"en": "A hay cushion. A soft golden hay bundle makes a bouncy landing spot!",
+"lo": "ກອງເຟືອງອ່ອນ. ກອງເຟືອງສີຄຳອ່ອນນຸ້ມເປັນບ່ອນລົງທີ່ນຸ້ມນວນ!",
+"th": "กองฟางนุ่ม กองฟางสีทองนุ่มๆ เป็นที่ลงแสนนุ่ม!",
+"zh": "软干草垫。软软的金黄干草像个弹弹的垫子！",
+"ja": "やわらかい わら。ふかふかの わらが クッションに なるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"fb_hay_cushion.1": {
+"en": "Golden harvest stalks are bundled plump and soft.",
+"lo": "ຟາງເກັບກ່ຽວສີຄຳມັດກັນໜາອ່ອນນຸ້ມ.",
+"th": "ฟางเก็บเกี่ยวสีทองมัดกันหนาอ่อนนุ่ม",
+"zh": "金黄的秋收干草扎得又厚又软。",
+"ja": "きんいろの わらが ふわふわに たばねて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_hay_cushion.2": {
+"en": "Soft autumn hay is cosy for horses and tumbling forest friends!",
+"lo": "ຟາງອ່ອນນຸ້ມສະບາຍທັງສຳລັບມ້າ ແລະ ໝູ່ສັດປ່າ!",
+"th": "ฟางอ่อนนุ่มสบายทั้งสำหรับม้าและเพื่อนสัตว์ป่า!",
+"zh": "软软的秋日干草，马儿和森林伙伴都喜欢！",
+"ja": "うまさんも もりの ともだちも わら が だいすき だよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_hay_cushion.3": {
+"en": "Rustle, rustle!",
+"lo": "ຊາໆ!",
+"th": "ซ่าๆ!",
+"zh": "沙沙！",
+"ja": "さわさわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_carved_platter.0": {
+"en": "A carved platter. A painted Russian wooden platter holds warm honey bread.",
+"lo": "ຈານໄມ້ແກະສະຫຼັກ. ຈານໄມ້ແຕ້ມລາຍຂອງຣັດເຊຍວາງເຂົ້າຈີ່ນ້ຳເຜິ້ງອຸ່ນໆ.",
+"th": "จานไม้แกะสลัก จานไม้เพ้นท์ลายของรัสเซียใส่ขนมปังน้ำผึ้งอุ่นๆ",
+"zh": "雕花木盘。彩绘木盘盛着暖暖的蜂蜜面包。",
+"ja": "きの おおざら。えつきの おおざらに パンを のせるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_carved_platter.1": {
+"en": "Bright flowers and golden leaves are painted round the wood rim.",
+"lo": "ດອກໄມ້ສົດໃສ ແລະ ໃບໄມ້ສີຄຳແຕ້ມອ້ອມຂອບຈານໄມ້.",
+"th": "ดอกไม้สดใสและใบไม้สีทองเพ้นท์รอบขอบจานไม้",
+"zh": "明亮的花朵和金叶绘满圆圆的木盘边缘。",
+"ja": "おはなの えが かいて ある きれいな おおざら だよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_carved_platter.2": {
+"en": "A grand wooden platter serves warm honey bread at the feast.",
+"lo": "ຈານໄມ້ໃຫຍ່ໃຊ້ເສີບເຂົ້າຈີ່ນ້ຳເຜິ້ງອຸ່ນໆໃນງານລ້ຽງ.",
+"th": "จานไม้ใหญ่ใช้เสิร์ฟขนมปังน้ำผึ้งอุ่นๆ ในงานเลี้ยง",
+"zh": "大木盘在丰收盛宴上端出暖暖的蜂蜜面包。",
+"ja": "おまつりで パンを ならべる おおざら だよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_carved_platter.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_painted_teacup.0": {
+"en": "A painted teacup. A blue-and-gold painted teacup is ready for warm tea.",
+"lo": "ຈອກຊາແຕ້ມລາຍ. ຈອກຊາແຕ້ມລາຍສີຟ້າຄຳພ້ອມສຳລັບນ້ຳຊາອຸ່ນ.",
+"th": "ถ้วยชาเพ้นท์ลาย ถ้วยชาเพ้นท์ลายสีฟ้าทองพร้อมสำหรับน้ำชาอุ่น",
+"zh": "彩绘茶杯。蓝金彩绘茶杯正等着斟满热茶。",
+"ja": "えつきの カップ。あおい えつきの カップで おちゃを のむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_painted_teacup.1": {
+"en": "Delicate blue flowers and gold trim shine on the porcelain cup.",
+"lo": "ດອກໄມ້ສີຟ້າ ແລະ ຂອບສີຄຳງາມເທິງຈອກກະເບື້ອງ.",
+"th": "ดอกไม้สีฟ้าและขอบสีทองสวยบนถ้วยกระเบื้อง",
+"zh": "精致的蓝花和金边在瓷杯上闪闪发亮。",
+"ja": "あおい おはなと きんの ふちが きれいな カップだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_painted_teacup.2": {
+"en": "Bring the teacup to the brass samovar for warm autumn tea!",
+"lo": "ເອົາຈອກຊາມາຫາໝໍ້ຕົ້ມຊາເພື່ອຮັບນ້ຳຊາອຸ່ນໆ!",
+"th": "นำถ้วยชามาหาหม้อต้มชาเพื่อรับน้ำชาอุ่นๆ!",
+"zh": "把茶杯端到黄铜茶炊旁倒满热茶吧！",
+"ja": "サモワールで あたたかい おちゃを いれよう！",
+"who": "narrator",
+"tag": "does"
+},
+"fb_painted_teacup.3": {
+"en": "Knock, knock!",
+"lo": "ກ໊ອກໆ!",
+"th": "ก๊อก ก๊อก!",
+"zh": "咚咚！",
+"ja": "トントン！",
+"who": "narrator",
+"tag": "sound"
+},
+"fb_butterfly.0": {
+"en": "A butterfly. A golden butterfly flutters in the warm morning sun.",
+"lo": "ແມງກະເບື້ອ. ແມງກະເບື້ອສີຄຳບິນວ່ອນໃນແສງແດດຍາມເຊົ້າ.",
+"th": "ผีเสื้อ ผีเสื้อสีทองโบยบินในแสงแดดยามเช้า",
+"zh": "蝴蝶。金色蝴蝶在温暖的晨光中翩翩起舞。",
+"ja": "ちょうちょ。きんいろの ちょうちょが あさの ひかりを とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fb_butterfly.1": {
+"en": "Hello, butterfly!",
+"lo": "ສະບາຍດີ ແມງກະເບື້ອ!",
+"th": "สวัสดีผีเสื้อ!",
+"zh": "你好，蝴蝶！",
+"ja": "こんにちは、ちょうちょ！",
+"who": "narrator",
+"tag": "greet"
+},
+"fb_butterfly.2": {
+"en": "Two bright golden wings flutter softly in the air.",
+"lo": "ປີກສີຄຳສົດໃສສອງປີກກະພືບຄ່ອຍໆໃນອາກາດ.",
+"th": "ปีกสีทองสดใสสองปีกกระพือเบาๆ ในอากาศ",
+"zh": "两只明亮的金色翅膀在空中轻轻扇动。",
+"ja": "きんいろの はねが そらで ひらひら まっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fb_butterfly.3": {
+"en": "The butterfly visits flowers all across the courtyard.",
+"lo": "ແມງກະເບື້ອບິນໄປຢາມດອກໄມ້ທົ່ວເດີ່ນວັງ.",
+"th": "ผีเสื้อบินไปเยี่ยมดอกไม้ทั่วลานวัง",
+"zh": "小蝴蝶飞过庭院探望每一朵秋花。",
+"ja": "ちょうちょが にわの はなから はなへ とんで いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fb_butterfly.4": {
+"en": "Butterflies sip sweet nectar from bright autumn blossoms.",
+"lo": "ແມງກະເບື້ອດູດນ້ຳຫວານຈາກດອກໄມ້ສົດໃສ.",
+"th": "ผีเสื้อดูดน้ำหวานจากดอกไม้สดใส",
+"zh": "蝴蝶喜欢吸吮鲜花里甜甜的花蜜。",
+"ja": "ちょうちょは はなの あまい みつを すうんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fb_butterfly.5": {
+"en": "Flutter, flutter!",
+"lo": "ກະພືບ, ກະພືບ!",
+"th": "พั่บๆ พั่บๆ!",
+"zh": "扑扑，扑扑！",
+"ja": "パタパタ！",
+"who": "narrator",
+"tag": "sound"
+}
+},
+"chars": {},
+"pools": {
+"fb_misha_sivka": [
+"fb_misha_sivka.0",
+"fb_misha_sivka.1",
+"fb_misha_sivka.2",
+"fb_misha_sivka.3",
+"fb_misha_sivka.4",
+"fb_misha_sivka.5"
+],
+"fb_misha": [
+"fb_misha.0",
+"fb_misha.1",
+"fb_misha.2",
+"fb_misha.3",
+"fb_misha.4",
+"fb_misha.5",
+"fb_misha.6",
+"fb_misha.7"
+],
+"fb_sivka": [
+"fb_sivka.0",
+"fb_sivka.1",
+"fb_sivka.2",
+"fb_sivka.3",
+"fb_sivka.4",
+"fb_sivka.5",
+"fb_sivka.6"
+],
+"fb_golden_feather": [
+"fb_golden_feather.0",
+"fb_golden_feather.1",
+"fb_golden_feather.2",
+"fb_golden_feather.3"
+],
+"fb_oak_leaf": [
+"fb_oak_leaf.0",
+"fb_oak_leaf.1",
+"fb_oak_leaf.2",
+"fb_oak_leaf.3"
+],
+"fb_moss_bank": [
+"fb_moss_bank.0",
+"fb_moss_bank.1",
+"fb_moss_bank.2",
+"fb_moss_bank.3"
+],
+"fb_rowan_branch": [
+"fb_rowan_branch.0",
+"fb_rowan_branch.1",
+"fb_rowan_branch.2",
+"fb_rowan_branch.3"
+],
+"fb_stream_bank": [
+"fb_stream_bank.0",
+"fb_stream_bank.1",
+"fb_stream_bank.2",
+"fb_stream_bank.3"
+],
+"fb_golden_fern": [
+"fb_golden_fern.0",
+"fb_golden_fern.1",
+"fb_golden_fern.2",
+"fb_golden_fern.3"
+],
+"fb_birch_grove": [
+"fb_birch_grove.0",
+"fb_birch_grove.1",
+"fb_birch_grove.2",
+"fb_birch_grove.3"
+],
+"fb_sky": [
+"fb_sky.0",
+"fb_sky.1",
+"fb_sky.2",
+"fb_sky.3"
+],
+"fb_far_woods": [
+"fb_far_woods.0",
+"fb_far_woods.1",
+"fb_far_woods.2",
+"fb_far_woods.3"
+],
+"fb_oak_arch": [
+"fb_oak_arch.0",
+"fb_oak_arch.1",
+"fb_oak_arch.2",
+"fb_oak_arch.3"
+],
+"fb_boris": [
+"fb_boris.0",
+"fb_boris.1",
+"fb_boris.2",
+"fb_boris.3",
+"fb_boris.4",
+"fb_boris.5",
+"fb_boris.6"
+],
+"fb_gilded_cage": [
+"fb_gilded_cage.0",
+"fb_gilded_cage.1",
+"fb_gilded_cage.2",
+"fb_gilded_cage.3"
+],
+"fb_golden_net": [
+"fb_golden_net.0",
+"fb_golden_net.1",
+"fb_golden_net.2",
+"fb_golden_net.3"
+],
+"fb_woven_sack": [
+"fb_woven_sack.0",
+"fb_woven_sack.1",
+"fb_woven_sack.2",
+"fb_woven_sack.3"
+],
+"fb_wheat_sheaf": [
+"fb_wheat_sheaf.0",
+"fb_wheat_sheaf.1",
+"fb_wheat_sheaf.2",
+"fb_wheat_sheaf.3"
+],
+"fb_honey_bread": [
+"fb_honey_bread.0",
+"fb_honey_bread.1",
+"fb_honey_bread.2",
+"fb_honey_bread.3"
+],
+"fb_saddle_basket": [
+"fb_saddle_basket.0",
+"fb_saddle_basket.1",
+"fb_saddle_basket.2",
+"fb_saddle_basket.3"
+],
+"fb_leather_pouch": [
+"fb_leather_pouch.0",
+"fb_leather_pouch.1",
+"fb_leather_pouch.2",
+"fb_leather_pouch.3"
+],
+"fb_wooden_flute": [
+"fb_wooden_flute.0",
+"fb_wooden_flute.1",
+"fb_wooden_flute.2",
+"fb_wooden_flute.3"
+],
+"fb_feast_table": [
+"fb_feast_table.0",
+"fb_feast_table.1",
+"fb_feast_table.2",
+"fb_feast_table.3"
+],
+"fb_tea_samovar": [
+"fb_tea_samovar.0",
+"fb_tea_samovar.1",
+"fb_tea_samovar.2",
+"fb_tea_samovar.3"
+],
+"fb_flowers": [
+"fb_flowers.0",
+"fb_flowers.1",
+"fb_flowers.2",
+"fb_flowers.3"
+],
+"fb_boulder": [
+"fb_boulder.0",
+"fb_boulder.1",
+"fb_boulder.2",
+"fb_boulder.3"
+],
+"fb_far_domes": [
+"fb_far_domes.0",
+"fb_far_domes.1",
+"fb_far_domes.2",
+"fb_far_domes.3"
+],
+"fb_terem_arch": [
+"fb_terem_arch.0",
+"fb_terem_arch.1",
+"fb_terem_arch.2",
+"fb_terem_arch.3"
+],
+"fb_palace_steps": [
+"fb_palace_steps.0",
+"fb_palace_steps.1",
+"fb_palace_steps.2",
+"fb_palace_steps.3"
+],
+"fb_apple_tree": [
+"fb_apple_tree.0",
+"fb_apple_tree.1",
+"fb_apple_tree.2",
+"fb_apple_tree.3"
+],
+"fb_bear_cub": [
+"fb_bear_cub.0",
+"fb_bear_cub.1",
+"fb_bear_cub.2",
+"fb_bear_cub.3",
+"fb_bear_cub.4",
+"fb_bear_cub.5"
+],
+"fb_leaf_pile": [
+"fb_leaf_pile.0",
+"fb_leaf_pile.1",
+"fb_leaf_pile.2",
+"fb_leaf_pile.3"
+],
+"fb_stream_stone": [
+"fb_stream_stone.0",
+"fb_stream_stone.1",
+"fb_stream_stone.2",
+"fb_stream_stone.3"
+],
+"fb_white_hare": [
+"fb_white_hare.0",
+"fb_white_hare.1",
+"fb_white_hare.2",
+"fb_white_hare.3",
+"fb_white_hare.4",
+"fb_white_hare.5"
+],
+"fb_hollow_log": [
+"fb_hollow_log.0",
+"fb_hollow_log.1",
+"fb_hollow_log.2",
+"fb_hollow_log.3"
+],
+"fb_firebird": [
+"fb_firebird.0",
+"fb_firebird.1",
+"fb_firebird.2",
+"fb_firebird.3",
+"fb_firebird.4",
+"fb_firebird.5",
+"fb_firebird.6"
+],
+"fb_painted_bowl": [
+"fb_painted_bowl.0",
+"fb_painted_bowl.1",
+"fb_painted_bowl.2",
+"fb_painted_bowl.3"
+],
+"fb_birch_tray": [
+"fb_birch_tray.0",
+"fb_birch_tray.1",
+"fb_birch_tray.2",
+"fb_birch_tray.3"
+],
+"fb_woven_mat": [
+"fb_woven_mat.0",
+"fb_woven_mat.1",
+"fb_woven_mat.2",
+"fb_woven_mat.3"
+],
+"fb_flute_note": [
+"fb_flute_note.0",
+"fb_flute_note.1",
+"fb_flute_note.2",
+"fb_flute_note.3"
+],
+"fb_trail_lantern": [
+"fb_trail_lantern.0",
+"fb_trail_lantern.1",
+"fb_trail_lantern.2",
+"fb_trail_lantern.3"
+],
+"fb_cage_spark": [
+"fb_cage_spark.0",
+"fb_cage_spark.1",
+"fb_cage_spark.2",
+"fb_cage_spark.3"
+],
+"fb_golden_apples": [
+"fb_golden_apples.0",
+"fb_golden_apples.1",
+"fb_golden_apples.2",
+"fb_golden_apples.3"
+],
+"fb_gift_feathers": [
+"fb_gift_feathers.0",
+"fb_gift_feathers.1",
+"fb_gift_feathers.2",
+"fb_gift_feathers.3"
+],
+"fb_palace_lantern": [
+"fb_palace_lantern.0",
+"fb_palace_lantern.1",
+"fb_palace_lantern.2",
+"fb_palace_lantern.3"
+],
+"fb_flower_cage": [
+"fb_flower_cage.0",
+"fb_flower_cage.1",
+"fb_flower_cage.2",
+"fb_flower_cage.3"
+],
+"fb_tumble_pair": [
+"fb_tumble_pair.0",
+"fb_tumble_pair.1",
+"fb_tumble_pair.2",
+"fb_tumble_pair.3",
+"fb_tumble_pair.4"
+],
+"fb_silk_ribbon": [
+"fb_silk_ribbon.0",
+"fb_silk_ribbon.1",
+"fb_silk_ribbon.2",
+"fb_silk_ribbon.3"
+],
+"fb_hay_cushion": [
+"fb_hay_cushion.0",
+"fb_hay_cushion.1",
+"fb_hay_cushion.2",
+"fb_hay_cushion.3"
+],
+"fb_carved_platter": [
+"fb_carved_platter.0",
+"fb_carved_platter.1",
+"fb_carved_platter.2",
+"fb_carved_platter.3"
+],
+"fb_painted_teacup": [
+"fb_painted_teacup.0",
+"fb_painted_teacup.1",
+"fb_painted_teacup.2",
+"fb_painted_teacup.3"
+],
+"fb_butterfly": [
+"fb_butterfly.0",
+"fb_butterfly.1",
+"fb_butterfly.2",
+"fb_butterfly.3",
+"fb_butterfly.4",
+"fb_butterfly.5"
+]
+},
+"animals": [],
+"word": {
+"fb_misha_sivka": {
+"en": "Misha and Sivka",
+"lo": "ມີຊາ ແລະ ຊີບກາ",
+"th": "มีชาและซีฟกา",
+"zh": "米沙和西夫卡",
+"ja": "ミーシャと シーフカ"
+},
+"fb_misha": {
+"en": "Misha",
+"lo": "ມີຊາ",
+"th": "มีชา",
+"zh": "米沙",
+"ja": "ミーシャ"
+},
+"fb_sivka": {
+"en": "Sivka",
+"lo": "ຊີບກາ",
+"th": "ซีฟกา",
+"zh": "西夫卡",
+"ja": "シーフカ"
+},
+"fb_golden_feather": {
+"en": "golden feather",
+"lo": "ຂົນນົກສີຄຳ",
+"th": "ขนนกสีทอง",
+"zh": "金羽毛",
+"ja": "きんいろの はね"
+},
+"fb_oak_leaf": {
+"en": "oak leaf",
+"lo": "ໃບໄມ້ໂອກ",
+"th": "ใบไม้โอ๊ก",
+"zh": "橡树叶",
+"ja": "オークの はっぱ"
+},
+"fb_moss_bank": {
+"en": "mossy bank",
+"lo": "ຄັນໄຄນ້ຳສີຂຽວ",
+"th": "เนินมอสสีเขียว",
+"zh": "青苔土坡",
+"ja": "こけの おか"
+},
+"fb_rowan_branch": {
+"en": "rowan berries",
+"lo": "ໝາກໂຣແວນແດງ",
+"th": "ผลโรแวนแดง",
+"zh": "红花楸果",
+"ja": "あかい きのみ"
+},
+"fb_stream_bank": {
+"en": "woodland stream",
+"lo": "ສາຍນ້ຳປ່າ",
+"th": "ลำธารป่า",
+"zh": "林间小溪",
+"ja": "もりの おがわ"
+},
+"fb_golden_fern": {
+"en": "golden fern",
+"lo": "ພຸ່ມຜັກກູດສີຄຳ",
+"th": "พุ่มเฟิร์นสีทอง",
+"zh": "金色蕨丛",
+"ja": "きんいろの しだ"
+},
+"fb_birch_grove": {
+"en": "silver birches",
+"lo": "ຕົ້ນເບີດສີຂາວ",
+"th": "ต้นเบิร์ชสีขาว",
+"zh": "银白桦树",
+"ja": "しらかばの き"
+},
+"fb_sky": {
+"en": "autumn sky",
+"lo": "ທ້ອງຟ້າລະດູໃບໄມ້ຫຼົ່ນ",
+"th": "ท้องฟ้าฤดูใบไม้ร่วง",
+"zh": "秋日天空",
+"ja": "あきの そら"
+},
+"fb_far_woods": {
+"en": "distant autumn woods",
+"lo": "ປ່າລະດູໃບໄມ້ຫຼົ່ນໄກໆ",
+"th": "ป่าฤดูใบไม้ร่วงไกลๆ",
+"zh": "远方秋林",
+"ja": "とおくの もり"
+},
+"fb_oak_arch": {
+"en": "autumn oaks",
+"lo": "ຕົ້ນໂອກສີຄຳ",
+"th": "ต้นโอ๊กสีทอง",
+"zh": "金色橡树",
+"ja": "あきの おおきな き"
+},
+"fb_boris": {
+"en": "Tsar Boris",
+"lo": "ພະເຈົ້າຊາ ບໍຣິສ",
+"th": "พระเจ้าซาร์บอริส",
+"zh": "沙皇鲍里斯",
+"ja": "ボリスおうさま"
+},
+"fb_gilded_cage": {
+"en": "gilded cage",
+"lo": "ກົງສີຄຳ",
+"th": "กรงสีทอง",
+"zh": "金色大笼",
+"ja": "きんいろの かご"
+},
+"fb_golden_net": {
+"en": "golden net",
+"lo": "ມອງສີຄຳ",
+"th": "ตาข่ายสีทอง",
+"zh": "金色网",
+"ja": "きんいろの あみ"
+},
+"fb_woven_sack": {
+"en": "woven sack",
+"lo": "ຖົງຜ້າ",
+"th": "ถุงผ้า",
+"zh": "布袋",
+"ja": "ぬのの ふくろ"
+},
+"fb_wheat_sheaf": {
+"en": "golden wheat",
+"lo": "ຮວງເຂົ້າສາລີ",
+"th": "รวงข้าวสาลี",
+"zh": "金黄麦束",
+"ja": "きんいろの むぎ"
+},
+"fb_honey_bread": {
+"en": "honey bread",
+"lo": "ເຂົ້າຈີ່ນ້ຳເຜິ້ງ",
+"th": "ขนมปังน้ำผึ้ง",
+"zh": "蜂蜜面包",
+"ja": "はちみつパン"
+},
+"fb_saddle_basket": {
+"en": "saddle basket",
+"lo": "ກະບຸງສານ",
+"th": "ตะกร้าสาน",
+"zh": "柳条篮",
+"ja": "あみかご"
+},
+"fb_leather_pouch": {
+"en": "leather pouch",
+"lo": "ຖົງໜັງ",
+"th": "กระเป๋าหนัง",
+"zh": "皮囊",
+"ja": "かわの ふくろ"
+},
+"fb_wooden_flute": {
+"en": "wooden flute",
+"lo": "ຂຸ່ຍໄມ້",
+"th": "ขลุ่ยไม้",
+"zh": "木笛",
+"ja": "きの ふえ"
+},
+"fb_feast_table": {
+"en": "courtyard table",
+"lo": "ໂຕະໄມ້",
+"th": "โต๊ะไม้",
+"zh": "雕花木桌",
+"ja": "きの テーブル"
+},
+"fb_tea_samovar": {
+"en": "brass samovar",
+"lo": "ໝໍ້ຕົ້ມຊາທອງເຫຼືອງ",
+"th": "หม้อต้มชาทองเหลือง",
+"zh": "黄铜茶炊",
+"ja": "サモワール"
+},
+"fb_flowers": {
+"en": "autumn flowers",
+"lo": "ດອກໄມ້ລະດູໃບໄມ້ຫຼົ່ນ",
+"th": "ดอกไม้ฤดูใบไม้ร่วง",
+"zh": "秋日花朵",
+"ja": "あきの はな"
+},
+"fb_boulder": {
+"en": "mossy boulder",
+"lo": "ກ້ອນຫີນໄຄນ້ຳ",
+"th": "ก้อนหินมอส",
+"zh": "青苔大石",
+"ja": "こけの いわ"
+},
+"fb_far_domes": {
+"en": "palace domes",
+"lo": "ຍອດໂດມວັງ",
+"th": "ยอดโดมวัง",
+"zh": "宫殿圆顶",
+"ja": "おしろの やね"
+},
+"fb_terem_arch": {
+"en": "carved palace arch",
+"lo": "ຊຸ້ມປະຕູໄມ້ແກະສະຫຼັກ",
+"th": "ซุ้มประตูไม้แกะสลัก",
+"zh": "雕花木拱门",
+"ja": "きれいな もん"
+},
+"fb_palace_steps": {
+"en": "wooden porch steps",
+"lo": "ຂັ້ນໄດໄມ້",
+"th": "บันไดไม้",
+"zh": "木头台阶",
+"ja": "きの かいだん"
+},
+"fb_apple_tree": {
+"en": "apple tree",
+"lo": "ຕົ້ນໝາກໂປ່ມ",
+"th": "ต้นแอปเปิล",
+"zh": "苹果树",
+"ja": "りんごの き"
+},
+"fb_bear_cub": {
+"en": "brown bear cub",
+"lo": "ລູກໝີສີນ້ຳຕານ",
+"th": "ลูกหมีสีน้ำตาล",
+"zh": "小棕熊",
+"ja": "こぐま"
+},
+"fb_leaf_pile": {
+"en": "leaf pile",
+"lo": "ກອງໃບໄມ້",
+"th": "กองใบไม้",
+"zh": "落叶堆",
+"ja": "おちばの やま"
+},
+"fb_stream_stone": {
+"en": "stepping stone",
+"lo": "ຫີນຂ້າມນ້ຳ",
+"th": "หินข้ามน้ำ",
+"zh": "溪石",
+"ja": "とびいし"
+},
+"fb_white_hare": {
+"en": "white hare",
+"lo": "ກະຕ່າຍຂາວ",
+"th": "กระต่ายขาว",
+"zh": "小白兔",
+"ja": "しろい うさぎ"
+},
+"fb_hollow_log": {
+"en": "mossy log",
+"lo": "ຂອນໄມ້ເກົ່າ",
+"th": "ขอนไม้เก่า",
+"zh": "青苔树干",
+"ja": "こけの まるた"
+},
+"fb_firebird": {
+"en": "the Firebird",
+"lo": "ນົກໄຟ",
+"th": "นกไฟ",
+"zh": "火鸟",
+"ja": "ひのとり"
+},
+"fb_painted_bowl": {
+"en": "painted bowl",
+"lo": "ຖ້ວຍແຕ້ມລາຍ",
+"th": "ชามเพ้นท์ลาย",
+"zh": "彩绘木碗",
+"ja": "えつきの わん"
+},
+"fb_birch_tray": {
+"en": "birch tray",
+"lo": "ຖາດເປືອກໄມ້",
+"th": "ถาดเปลือกไม้",
+"zh": "桦树皮盘",
+"ja": "きの トレー"
+},
+"fb_woven_mat": {
+"en": "woven mat",
+"lo": "ຜ້າປູລາຍ",
+"th": "ผ้ารองลาย",
+"zh": "花纹织垫",
+"ja": "おりものの しきもの"
+},
+"fb_flute_note": {
+"en": "music note",
+"lo": "ໂນດເພງ",
+"th": "โน้ตเพลง",
+"zh": "音符",
+"ja": "おんぷ"
+},
+"fb_trail_lantern": {
+"en": "trail lantern",
+"lo": "ໂຄມໄຟທາງປ່າ",
+"th": "โคมไฟทางป่า",
+"zh": "林间木灯",
+"ja": "もりの ランタン"
+},
+"fb_cage_spark": {
+"en": "golden spark",
+"lo": "ປະກາຍແສງສີຄຳ",
+"th": "ประกายแสงสีทอง",
+"zh": "金色火花",
+"ja": "きんいろの ひかり"
+},
+"fb_golden_apples": {
+"en": "golden apples",
+"lo": "ໝາກໂປ່ມສີຄຳ",
+"th": "แอปเปิลสีทอง",
+"zh": "金苹果",
+"ja": "きんいろの りんご"
+},
+"fb_gift_feathers": {
+"en": "three golden feathers",
+"lo": "ຂົນນົກສີຄຳສາມເສັ້ນ",
+"th": "ขนนกสีทองสามเส้น",
+"zh": "三根金羽毛",
+"ja": "さんぼんの きんのはね"
+},
+"fb_palace_lantern": {
+"en": "palace lantern",
+"lo": "ໂຄມໄຟວັງ",
+"th": "โคมไฟวัง",
+"zh": "宫廷灯笼",
+"ja": "おしろの ランタン"
+},
+"fb_flower_cage": {
+"en": "flower cage",
+"lo": "ກົງດອກໄມ້",
+"th": "กรงดอกไม้",
+"zh": "鲜花鸟笼",
+"ja": "はなの かご"
+},
+"fb_tumble_pair": {
+"en": "bear and hare",
+"lo": "ລູກໝີ ແລະ ກະຕ່າຍ",
+"th": "ลูกหมีกับกระต่าย",
+"zh": "小熊和白兔",
+"ja": "こぐまと うさぎ"
+},
+"fb_silk_ribbon": {
+"en": "silk ribbon",
+"lo": "ໂບຜ້າໄໝແດງ",
+"th": "ริบบิ้นผ้าไหมแดง",
+"zh": "红丝带",
+"ja": "あかい リボン"
+},
+"fb_hay_cushion": {
+"en": "hay cushion",
+"lo": "ກອງເຟືອງອ່ອນ",
+"th": "กองฟางนุ่ม",
+"zh": "软干草垫",
+"ja": "やわらかい わら"
+},
+"fb_carved_platter": {
+"en": "carved platter",
+"lo": "ຈານໄມ້ແກະສະຫຼັກ",
+"th": "จานไม้แกะสลัก",
+"zh": "雕花木盘",
+"ja": "きの おおざら"
+},
+"fb_painted_teacup": {
+"en": "painted teacup",
+"lo": "ຈອກຊາແຕ້ມລາຍ",
+"th": "ถ้วยชาเพ้นท์ลาย",
+"zh": "彩绘茶杯",
+"ja": "えつきの カップ"
+},
+"fb_butterfly": {
+"en": "butterfly",
+"lo": "ແມງກະເບື້ອ",
+"th": "ผีเสื้อ",
+"zh": "蝴蝶",
+"ja": "ちょうちょ"
+}
+},
+"map": {
+"misha-sivka": "fb_misha_sivka",
+"misha": "fb_misha",
+"sivka": "fb_sivka",
+"golden-feather": "fb_golden_feather",
+"oak-leaf-1": "fb_oak_leaf",
+"oak-leaf-2": "fb_oak_leaf",
+"oak-leaf-3": "fb_oak_leaf",
+"oak-leaf-4": "fb_oak_leaf",
+"mossy-bank-l": "fb_moss_bank",
+"berry-heather-l": "fb_rowan_branch",
+"stream-bank-r": "fb_stream_bank",
+"autumn-bracken-r": "fb_golden_fern",
+"rowan-clump-r": "fb_rowan_branch",
+"birch-stump-r": "fb_birch_grove",
+"sky-trail-dusk": "fb_sky",
+"far-autumn-woods": "fb_far_woods",
+"golden-oak-arch": "fb_oak_arch",
+"rowan-grove-l": "fb_birch_grove",
+"oak-leaf-": "fb_oak_leaf",
+"boris": "fb_boris",
+"gilded-cage": "fb_gilded_cage",
+"golden-net": "fb_golden_net",
+"woven-sack": "fb_woven_sack",
+"wheat-sheaf": "fb_wheat_sheaf",
+"honey-bread": "fb_honey_bread",
+"saddle-basket": "fb_saddle_basket",
+"leather-pouch": "fb_leather_pouch",
+"wooden-flute": "fb_wooden_flute",
+"feast-table-l": "fb_feast_table",
+"brass-urn-l": "fb_tea_samovar",
+"sunflower-pot-l": "fb_flowers",
+"garden-pedestal-r": "fb_boulder",
+"rowan-urn-r": "fb_rowan_branch",
+"sky-palace-night": "fb_sky",
+"far-terem-domes": "fb_far_domes",
+"terem-porch-arch": "fb_terem_arch",
+"palace-steps-l": "fb_palace_steps",
+"orchard-bough-r": "fb_apple_tree",
+"bear-cub": "fb_bear_cub",
+"bear-plop": "fb_bear_cub",
+"rowan-branch": "fb_rowan_branch",
+"leaf-pile": "fb_leaf_pile",
+"stream-stone-1": "fb_stream_stone",
+"stream-stone-2": "fb_stream_stone",
+"stream-stone-3": "fb_stream_stone",
+"sky-trail-sunset": "fb_sky",
+"stream-stone-": "fb_stream_stone",
+"golden-fern": "fb_golden_fern",
+"white-hare": "fb_white_hare",
+"berry-cluster-1": "fb_rowan_branch",
+"berry-cluster-2": "fb_rowan_branch",
+"berry-cluster-3": "fb_rowan_branch",
+"berry-cluster-4": "fb_rowan_branch",
+"flat-altar-l": "fb_boulder",
+"meadow-stone-l": "fb_boulder",
+"fireweed-clump-l": "fb_flowers",
+"hollow-log-r": "fb_hollow_log",
+"berry-briar-r": "fb_rowan_branch",
+"mossy-root-r": "fb_hollow_log",
+"sky-glade-twilight": "fb_sky",
+"far-oak-ridge": "fb_far_woods",
+"ancient-oak-arch": "fb_oak_arch",
+"mossy-crag-l": "fb_moss_bank",
+"berry-cluster-": "fb_rowan_branch",
+"firebird-soar": "fb_firebird",
+"painted-bowl": "fb_painted_bowl",
+"birch-tray": "fb_birch_tray",
+"red-berries": "fb_rowan_branch",
+"woven-mat": "fb_woven_mat",
+"sky-glade-midnight": "fb_sky",
+"misha-net": "fb_misha",
+"misha-flute": "fb_misha",
+"firebird": "fb_firebird",
+"firebird-dim": "fb_firebird",
+"hare-boing": "fb_white_hare",
+"flute-note-1": "fb_flute_note",
+"flute-note-2": "fb_flute_note",
+"flute-note-3": "fb_flute_note",
+"sky-glade-gold": "fb_sky",
+"trail-lantern-1": "fb_trail_lantern",
+"trail-lantern-2": "fb_trail_lantern",
+"trail-lantern-3": "fb_trail_lantern",
+"trail-lantern-4": "fb_trail_lantern",
+"sky-trail-mist": "fb_sky",
+"trail-lantern-": "fb_trail_lantern",
+"boris-shocked": "fb_boris",
+"cage-shut-dim": "fb_gilded_cage",
+"cage-spark-1": "fb_cage_spark",
+"cage-spark-2": "fb_cage_spark",
+"cage-spark-3": "fb_cage_spark",
+"sky-palace-predawn": "fb_sky",
+"boris-bow": "fb_boris",
+"ripened-apples": "fb_golden_apples",
+"gift-feathers": "fb_gift_feathers",
+"palace-lantern-1": "fb_palace_lantern",
+"palace-lantern-2": "fb_palace_lantern",
+"palace-lantern-3": "fb_palace_lantern",
+"palace-lantern-4": "fb_palace_lantern",
+"sky-palace-dawn": "fb_sky",
+"palace-lantern-": "fb_palace_lantern",
+"flower-cage": "fb_flower_cage",
+"tumble-pair": "fb_tumble_pair",
+"silk-ribbon": "fb_silk_ribbon",
+"hay-cushion": "fb_hay_cushion",
+"golden-apples": "fb_golden_apples",
+"carved-platter": "fb_carved_platter",
+"tea-samovar": "fb_tea_samovar",
+"painted-teacup": "fb_painted_teacup",
+"butterfly": "fb_butterfly",
+"sky-palace-morning": "fb_sky"
+},
+"maps": {}
+}

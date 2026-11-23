@@ -1,6 +1,6 @@
 {
  "released": true,
- "words": false,
+ "words": true,
  "chars": "momotaro-",
  "title": "Momotarō, the Peach Boy",
  "story": "story.json",
