@@ -4535,7 +4535,19 @@
 "mooncake-piece-3": "mooncake",
 "mooncake-piece-4": "mooncake",
 "hou-yi-cheer": "archer_houyi",
-"mooncake-piece-": "mooncake"
+"mooncake-piece-": "mooncake",
+"cliff-back-l": "searocks",
+"reef-mid": "seawaves",
+"rock-mid-r": "searocks",
+"shore-leg-l": "seareeds",
+"tree-back-l": "osmanthus",
+"wall-mid": "house",
+"bank-leg-r": "chrysanthemum",
+"crag-back-l": "moonstones",
+"rail-mid": "jadepalace",
+"pavilion-mid-r": "jadepalace",
+"moon-leg-l": "moonstones",
+"moon-leg-r": "moonstones"
 },
 "maps": {
 "s01": {

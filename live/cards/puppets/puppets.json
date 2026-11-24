@@ -20003,6 +20003,110 @@
         "Journey to the West \u2014 Chapter 3: The Peach Banquet"
       ],
       "cut": true
+    },
+    "jttw-03-gate-guard-b-stand": {
+      "look": "Bearded Ming celestial guard in bronze-and-teal armour holding crescent halberd",
+      "size": 0.16,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "step": {
+          "_lift": 0.02
+        },
+        "wobble": {
+          "_tilt": 6
+        }
+      },
+      "uses": [
+        "Journey to the West \u2014 Chapter 3: The Peach Banquet"
+      ],
+      "cut": true
+    },
+    "jttw-03-gate-guard-b-chase": {
+      "look": "Bearded Ming celestial guard in bronze-and-teal armour chasing with tasseled lance",
+      "size": 0.16,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "step": {
+          "_lift": 0.02
+        },
+        "wobble": {
+          "_tilt": 6
+        }
+      },
+      "uses": [
+        "Journey to the West \u2014 Chapter 3: The Peach Banquet"
+      ],
+      "cut": true
+    },
+    "jttw-03-peach-fairies-group-l": {
+      "look": "Three distinct Ming Peach Fairies in celadon, gold, and lilac robes with harvest baskets",
+      "size": 0.15,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "step": {
+          "_lift": 0.02
+        },
+        "wobble": {
+          "_tilt": 6
+        }
+      },
+      "uses": [
+        "Journey to the West \u2014 Chapter 3: The Peach Banquet"
+      ],
+      "cut": true
+    },
+    "jttw-03-peach-fairies-group-r": {
+      "look": "Three distinct Ming Peach Fairies in rose, turquoise, and plum robes with harvest baskets",
+      "size": 0.15,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "step": {
+          "_lift": 0.02
+        },
+        "wobble": {
+          "_tilt": 6
+        }
+      },
+      "uses": [
+        "Journey to the West \u2014 Chapter 3: The Peach Banquet"
+      ],
+      "cut": true
     }
   },
   "jttw-01-waterfall-curtain": {
