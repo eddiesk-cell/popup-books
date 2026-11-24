@@ -4,6 +4,7 @@
 //   at, rot  its origin on the page [x, y, z] (z up) and its turn about z in degrees, as the stand-ins; scale: one number
 //   lay      [x, y, z] degrees about the page's x, then y, then z: the whole prop lying or leaning at rest (a flute flat in the grass: "lay": [0, 90, 0]); `rot` then turns it about z. A hold act's "lay" does the same where it is set down (acts.js)
 //   tex      the prop's painted atlas (one picture, so one material and one draw): "cards/..." from web/live/, "assets/...", or "/..." from the site root
+//   lift     0..1: its own picture added as light (a card turned away from the sun reads dull; Eddie 2026-11-24 "if everything looks dull, we adjust to make it brighter")
 //   color    [r, g, b] without a tex; rough: roughness (0.85); cut: true lets the atlas's alpha cut holes (a knot's lattice)
 //   nodes    {"hold_grip": [x, y, z], "hold_tip": [x, y, z], ...}: empties in the prop, which acts.js reads when it is held
 //   recipe   one shape, its fields on the row; or "parts": [{recipe, ...}, ...] merged into one mesh
@@ -67,10 +68,10 @@ const picture = url => texs.get(url) ?? texs.set(url, loader.loadAsync(url.repla
   .then(t => Object.assign(t, { colorSpace: THREE.SRGBColorSpace, anisotropy: 4 })).catch(e => (console.warn("props3d: no picture", url, e?.message ?? e), null))).get(url);
 
 export async function codeProp(p) {  // -> a Mesh named p.name, its texture loaded (the spread waits for it behind its loading cover)
-  const { name, at, rot, lay, scale, nodes, tex, color, rough, cut, ...one } = p, parts = p.parts ?? [one], key = JSON.stringify([LO, parts]);
+  const { name, at, rot, lay, scale, nodes, tex, color, rough, cut, lift, ...one } = p, parts = p.parts ?? [one], key = JSON.stringify([LO, parts]);
   if (!geos.has(key)) geos.set(key, mergeGeometries(parts.map(shape)));  // one geometry per recipe, shared by every copy of the prop
   const map = tex ? await picture(tex) : null;
-  const mesh = new THREE.Mesh(geos.get(key), new THREE.MeshStandardMaterial({ map, color: map ? 0xffffff : new THREE.Color(...(color ?? [0.8, 0.68, 0.5])), roughness: rough ?? 0.85, alphaTest: cut ? 0.5 : 0 }));
+  const mesh = new THREE.Mesh(geos.get(key), new THREE.MeshStandardMaterial({ map, color: map ? 0xffffff : new THREE.Color(...(color ?? [0.8, 0.68, 0.5])), roughness: rough ?? 0.85, alphaTest: cut ? 0.5 : 0, ...(map && lift ? { emissiveMap: map, emissive: 0xffffff, emissiveIntensity: lift } : {}) }));
   mesh.name = name; mesh.position.copy(B(at ?? [0, 0, 0])); mesh.quaternion.setFromAxisAngle(AXES[2], rad(rot || 0)).multiply(layQ(lay)); mesh.scale.setScalar(scale ?? 1);
   for (const [k, v] of Object.entries(nodes ?? {})) { const o = new THREE.Object3D(); o.name = k; o.position.copy(B(v)); mesh.add(o); }
   return mesh;
