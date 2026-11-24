@@ -20,15 +20,21 @@
 //                      planted: Dash -> Run (1.7x, leaning forward), Sprint -> Run (1.8x), Sneak -> Walk (not in the five first books: as before).
 //   jump               a ballistic arc (book-scale gravity) from the floor it stands on onto the floor at `to` (a point: the highest floor there,
 //                      a rock's top; a name: its top), `up` (the clip's "apex_h", else 0.3 of its height) over the higher end. The standard Jump plays
-//                      once: it crouches where it stands, leaves the floor at the clip's "takeoff" and lands at its "land" (`secs` stretches that air
-//                      time); an old Jump (no extras) spans the flight; with none it keeps its clip and its feet hang (toes down 40 degrees, airFeet).
+//                      once: it crouches where it stands (at the clip's own pace), leaves the floor at the clip's "takeoff" and lands at its "land"; the
+//                      flight takes its own time under that gravity and the clip's air is time-scaled to it (never the gravity to the clip); a longer `secs`
+//                      raises the apex to fit, at most 1.2 x its own time (said once above that); a `secs` under its own flight keeps the apex and falls
+//                      heavier (never slower). The book's
+//                      gravity is 9.8 x height / 1.7 (the body as a person's size), or / its character's "real": <metres> (its true height: a monkey 0.5).
+//                      An old Jump (no extras) spans the flight; with none it keeps its clip and its feet hang (toes down 40 degrees, airFeet).
 //   climb              go straight up to the top surface of `to` (an object: the end point lands ON it), then step
 //                      onto it; `clip` (Climb Up) plays on the way, then it holds `then`. Walk to the foot of it first.
 //                      With motion.json's {"rise", "cycle"} for the clip, it climbs in whole cycles, rising with them
 //                      (a "loop": false clip is played again each cycle); without, it loops at a body height a second.
 //   clip               play `clip` once, then hold `then`. A Throw's `to` names a character to catch the jamun (it turns
 //                      to the thrower; without it, the nearest catches). Otherwise, with `to`, travel there over the clip (onto its top
-//                      surface when it is an object). With `ride` (a character): end on its back and ride along,
+//                      surface when it is an object); a leap (a clip named jump|leap|hop|pounce|flip|bound) travels only while its feet are off the
+//                      floor (its "takeoff"/"land" marks, else its own feet), never gliding through its crouch and landing; and one whose air time is
+//                      longer than its own rise and fall under the jump act's gravity is played that much faster (never slower, at most 3x). With `ride` (a character): end on its back and ride along,
 //                      e.g. {"do": "clip", "clip": "Mount", "ride": "bobo"}.
 //   face               turn toward `face`.
 //   fly                fly in an arc to `to`, `up` above it; onto a character: perch (`up` defaults to 0.9 of its
@@ -83,6 +89,34 @@
 //                                         to what is under it: a flute dropped flat in the grass. A code prop (props3d.js) takes the same "lay" on its row.
 //   think              the line is `who`'s thought, not said aloud: while it is read `who` neither talks nor turns to
 //                      anyone, and nobody turns to listen. With `face`, it looks there meanwhile (into the night).
+// The series acts (Journey to the West, 2026-11-23: the set is a playground). A clip they ask for that the body lacks plays the nearest it has (or a
+// pose made in code), said once per body: "<name> has no "<clip>" clip".
+//   knock              a prop of the spread (`what`) is struck: it flies on a ballistic arc under book gravity (a jump's, 9.8 x the knocker's height / 1.7),
+//                      tumbling; it bounces (dust where it lands, `started` with do "bounce": the foley "act:<what>:bounce"), rolls and comes to rest. Onto
+//                      water (a floor mesh named water|river|pond|pool|stream|lake|sea, or inside the box of "water": "<name>") it splashes (rings) and sinks.
+//                      Aim: "to" (a point or a name: it lands there first; "up" its apex over the higher end, 0.3 of the distance), else "dir" ([x, y] on the
+//                      page, or a point or name to knock toward; default away from `who`) and "force" (the launch speed in the knocker's heights a second,
+//                      4: it lands about 2.5 heights away) at "lift" degrees (35). "spin" turns a second (1.5). `who`: the knocker (its height is the scale;
+//                      0.15 without). The effects play through the page's story effects (a spread with a "storyfx" list); without, none.
+//   kick               `who` turns to `what`, plays "Kick" (or `clip`) and the knock above fires at the clip's contact (its userData "contact" seconds,
+//                      else 0.45 of its length): {"do": "kick", "who": "wukong", "what": "pebble-1", "to": "pool"}. The act ends when the prop rests.
+//   perch | hang | dangle  `who` climbs to `to` and stays there; "pose": sit (default) | stand | hang | dangle ("do": "hang" / "dangle" are a perch with that pose).
+//                      `to`: a point, a named empty (its place: "pine-sit"), or a thing (its top). The way: "via" [points or names], else "on": "<tree or post>"
+//                      (to its trunk's foot on the near side, up the trunk hand over hand to the perch's height, a step out onto it), else straight up from
+//                      where it stands (as climb). It climbs at half its height a second ("rate" times that, or "secs" for the whole climb), "Climb Up"
+//                      played again each cycle, sped up so its hands keep to the trunk (userData "rise_h" a cycle).
+//                      Poses, with the house clips and their own placing notes: sit on a branch "Perch Sit" (its origin on the branch's top line), sit
+//                      elsewhere "Sit", dangle "Sit Dangle" (its "edge_z" on the edge `to` names, the legs over it), hang "Hang" (its origin on the
+//                      branch's line: `to` a point on it), stand: its Idle, the feet on `to`. On a branch it faces square to it, on the reader's side; else
+//                      "face", else the reader (dangle: away from the middle of the thing it sits on). A body without the clip: the pose made in code on its
+//                      Idle (sit, dangle: thighs level, shins hanging and swinging, hands on the thighs, the seat lowered onto `to`; hang: the hands on `to`).
+//                      A perch on a "branch" (a node; default the parent of a named `to` when that parent is named branch|bough|limb) dips it and it springs
+//                      back (its "Dip"/"Bend"/"Sag" shape key, else its first bone, else the node turned about its own origin; "dip": 5 degrees under the
+//                      weight), shaking a few leaves down (storyfx "gust" with "shed"); the percher rides the dip. An act that moves it on its own feet
+//                      ends the perch, and the branch springs back.
+//   scout              `who` holds a lookout pose (its "Scout" clip, else a hand shading its eyes, made in code) and sweeps its head across "look" [points or
+//                      names, or degrees off its facing, + to its left] (default 50, 0, -50: left, ahead, right), "secs" a look (1.2), then lowers the hand.
+//                      A perched scout stays perched.
 // A character the manifest puts `on` another rides it (its `at` is the offset; with "bone", on that bone's perch, `at` unused)
 // until an act moves it on its own feet;
 // clip, face and hold acts do not unseat it.
@@ -519,7 +553,7 @@ const footIn = (ch, clip, t) => {  // the same, in that clip alone at time t: a 
 };
 const blendGround = ch => {  // after each of the mixer's updates; the body is at its own place here (live.js's place() set it just before)
   const run = ch.mix._actions.filter(a => a.isRunning() && a.getEffectiveWeight() > 0), was = ch.gset;  // shortcut: the mixer's private list, three has no public one; upgrade: live.js keeps the clip it fades from
-  if (run.length < 2 || ch.ride || ch.c?.bob || !ch.body.visible || Math.abs(ch.body.scale.x - ch.s0) > 0.01 * ch.s0 || !soles(ch).length) return void (ch.gset = ch.grounded = null);
+  if (run.length < 2 || ch.ride || ch.perch || ch.goal?.perch || ch.c?.bob || !ch.body.visible || Math.abs(ch.body.scale.x - ch.s0) > 0.01 * ch.s0 || !soles(ch).length) return void (ch.gset = ch.grounded = null);
   ch.gset = new Set(run);
   const joined = run.filter(a => !was?.has(a));
   if (joined.length) {  // a clip joined: it is the one fading in (the lightest, when the blend is first seen), the rest stand where they are now
@@ -536,12 +570,12 @@ const blendGround = ch => {  // after each of the mixer's updates; the body is a
 // step above it, at the top faces of the spread's drawn, non-skinned meshes (page, pieces, cast props) whose box (taken once, at the first need) holds
 // the point. shortcut: boxes are taken once and alpha cut-outs count as solid; upgrade if a stood-on prop moves on a spread or a cut-out card is walked over
 const _v = new Vector3(), _n = new Vector3(), _dn = new Vector3(0, -1, 0), _rc = new Raycaster();
-const floorAt = (ms, x, y, z, up, down) => {
+const floorAt = (ms, x, y, z, up, down, out) => {  // out: {m}, the mesh whose top it is
   let top = null;
   for (const [m, b] of ms) {
     if (x < b.min.x || x > b.max.x || z < b.min.z || z > b.max.z || b.max.y < y - down || b.min.y > y + up) continue;
     _rc.set(_v.set(x, y + up, z), _dn); _rc.far = up + down;
-    for (const h of _rc.intersectObject(m, false)) if (h.face && _n.copy(h.face.normal).transformDirection(m.matrixWorld).y > 0.5) { if (top === null || h.point.y > top) top = h.point.y; break; }
+    for (const h of _rc.intersectObject(m, false)) if (h.face && _n.copy(h.face.normal).transformDirection(m.matrixWorld).y > 0.5) { if (top === null || h.point.y > top) { top = h.point.y; if (out) out.m = m; } break; }
   }
   return top;
 };
@@ -555,7 +589,7 @@ const floorY = (A, ch, k, x, z) => {  // the floor under (x, z), within a step o
 // are on it, and nothing lifts a body while one foot is still down beside it (that foot clips the piece instead: no foot placement yet). A go-to walker's
 // height follows that floor at up to VY body heights a second (a step, never a pop); anyone else is lifted at once if a sole is below it, never lowered.
 const solid = (A, ch, dt) => {
-  if (ch.ride || ch.c?.bob || !ch.body.visible || ch.goal?.air || ch.goal?.climb || ch.goal?.hop || ch.goal?.jump || ch.slide || ch.goal?.a?.do === "swim" || A.holds.has(ch.name) ||
+  if (ch.ride || ch.perch || ch.goal?.perch || ch.c?.bob || !ch.body.visible || ch.goal?.air || ch.goal?.climb || ch.goal?.hop || ch.goal?.jump || ch.slide || ch.goal?.a?.do === "swim" || A.holds.has(ch.name) ||
     ch.c?.at?.[2] < -0.01 || Math.abs(ch.body.scale.x - ch.s0) > 0.01 * ch.s0 || OFF.test(ch.cur?.getClip().name ?? "") || !soles(ch).length) return;
   const b = ch.body.position, dk = ch.goal?.go && A.floorNames.length ? floorAt(A.decks(), b.x, ch.pos.y, b.z, STEP * ch.height, STEP * ch.height) : null;
   if (dk !== null) { b.y += dk - ch.pos.y; ch.pos.y = dk; return; }  // on a deck (smooth, its slope limited): the deck under its own place, every frame
@@ -577,7 +611,7 @@ const GAIT = /^(walk|run|sneak)/i;
 // (a wingtip sticking up, the group's ends) the deck is cut back to that slope, down to the cards' feet at both ends, so a walker steps on and off.
 // The deck lies across the cards' plane (half a card high to each side); the go-to's floor rule and cast_check both stand on it (userData.deck).
 const SLOPE = Math.tan(40 * Math.PI / 180), _uv = new Vector2(), _al = new Map(), _q = new Quaternion(), _q2 = new Quaternion();
-const opaque = (h, N = 128) => {  // the card's texel at a ray's hit is solid (alpha over half)
+export const opaque = (h, N = 128) => {  // the card's texel at a ray's hit is solid (alpha over half)
   const map = [].concat(h.object.material)[0].map; if (!map?.image || !h.uv) return true;
   let d = _al.get(map); if (d === undefined) { try { const x = Object.assign(document.createElement("canvas"), { width: N, height: N }).getContext("2d"); x.drawImage(map.image, 0, 0, N, N); d = x.getImageData(0, 0, N, N).data; } catch { d = null; } _al.set(map, d); }
   if (!d) return true; map.transformUv(_uv.copy(h.uv)); return d[(Math.min(N - 1, _uv.y * N | 0) * N + Math.min(N - 1, _uv.x * N | 0)) * 4 + 3] > 127;
@@ -612,6 +646,62 @@ const hang = ch => {
     f.parent.getWorldQuaternion(_q2); f.quaternion.premultiply(_q2).premultiply(_q).premultiply(_q2.invert()); }
 };
 
+// ---------- the series acts' bodies: the nearest clip a body has, poses made in code over the clip shown (after the mixer), a two-bone reach ----------
+const NEAR = { Kick: ["Kick", "Stomp", "Walk"], Sit: ["Sit", "Sit Idle", "Sitting"], "Perch Sit": ["Perch Sit", "Sit"], "Sit Dangle": ["Sit Dangle", "Dangle", "Sit Ledge"], Hang: ["Hang", "Hang Idle", "Hanging"], Scout: ["Scout", "Look Around"] };
+const said = new Set(), WATER = /water|river|pond|pool|stream|lake|sea/i;
+const nearest = (ch, want, alt = "a pose in code") => {  // `want`, else the nearest clip the body has, else null; a stand-in is said once per body and clip (another worker makes the clips)
+  const got = (NEAR[want] ?? [want]).find(n => ch.clips?.[n]) ?? null;
+  if (got !== want && !said.has(`${ch.name}|${want}`)) { said.add(`${ch.name}|${want}`); console.warn(`${ch.name} has no "${want}" clip: ${got ? `"${got}" plays` : alt} until it is made`); }
+  return got;
+};
+const PART = { UpperLeg: "UpLeg", LowerLeg: "Leg", Foot: "Foot", UpperArm: "Arm", LowerArm: "ForeArm", Hand: "Hand" };
+const bone = (ch, n) => (ch.bn ??= {})[n] ??= (() => {  // "leftUpperLeg" (or mixamo's "LeftUpLeg"), "head", "neck"
+  const [, s, p] = n.match(/^(left|right)(\w+)$/) ?? [], re = new RegExp(`(^|:)(${n}${s ? `|${s}${PART[p]}` : ""})$`, "i"); let b = null;
+  ch.model?.traverse(o => { if (!b && o.isBone && re.test(o.name)) b = o; }); return b;
+})();
+const _a = new Vector3(), _b = new Vector3(), _c = new Vector3(), _d = new Vector3(), _e = new Vector3(), _f = new Vector3(), _g = new Vector3(), _bq = new Quaternion(), _hq = new Quaternion(), UP3 = new Vector3(0, 1, 0);
+const turnBone = (b, q) => { b.parent.getWorldQuaternion(_q2); b.quaternion.premultiply(_q2).premultiply(q).premultiply(_q2.invert()); b.updateWorldMatrix(false, true); };  // q: a turn in the world's axes
+const aimBone = (b, c, dir) => turnBone(b, _bq.setFromUnitVectors(_d.subVectors(c.getWorldPosition(_d), b.getWorldPosition(_e)).normalize(), dir));  // b turned so the line to c lies along dir
+const grab = (ch, s, T) => {  // the hand of side s onto T: the elbow bent to the distance, then the arm swung onto T (the elbow's plane kept)
+  const up = bone(ch, `${s}UpperArm`), lo = bone(ch, `${s}LowerArm`), hd = bone(ch, `${s}Hand`); if (!up || !lo || !hd) return;
+  const S = up.getWorldPosition(_a), E = lo.getWorldPosition(_b), a = S.distanceTo(E), b = E.distanceTo(hd.getWorldPosition(_c));
+  const c = Math.min(a + b - 1e-5, Math.max(Math.abs(a - b) + 1e-5, S.distanceTo(T))), u = _d.subVectors(S, E), w = _e.subVectors(_c, E), n = _f.crossVectors(u, w);
+  if (n.lengthSq() > 1e-14) turnBone(lo, _hq.setFromAxisAngle(n.normalize(), Math.acos(Math.min(1, Math.max(-1, (a * a + b * b - c * c) / (2 * a * b)))) - u.angleTo(w)));
+  aimBone(up, hd, _g.subVectors(T, S).normalize());
+};
+const seats = ch => (ch.seats ??= (() => {  // the vertices of the hips and thighs (what a seated body rests on), as [mesh, ids, out]
+  const out = []; ch.model.traverse(m => { if (!m.isSkinnedMesh || !m.visible) return; const { j, w, n } = rig(m), ok = m.skeleton.bones.map(b => /(^|:)(hips|(left|right)(upper|up)leg)$/i.test(b.name)), ids = [], st = Math.max(1, n / 3000 | 0);
+    for (let i = 0; i < n; i += st) { let b = 0; for (let c = 1; c < 4; c++) if (w[4 * i + c] > w[4 * i + b]) b = c; if (ok[j[4 * i + b]]) ids.push(i); }
+    if (ids.length) out.push([m, ids, new Float32Array(3 * ids.length)]); });
+  return out;
+})());
+const seatY = ch => { let y = Infinity; for (const [m, ids, out] of seats(ch)) { drawn(m, ids, out); for (let i = 1; i < out.length; i += 3) y = Math.min(y, out[i]); } return y; };
+// the poses in code, after the mixer (the clip's pose this frame is their start, so nothing builds up): a perch (seated legs, hands on the thighs or on the bar, the
+// seat lowered onto the perch) and a scout (the head swept, a hand shading the eyes); each blended in by its k
+const layer = ch => {
+  fresh(ch.model);
+  const P = ch.perch, S = ch.scout, H = ch.height, f = (ch.fw ??= new Vector3()).set(Math.sin(ch.yaw), 0, Math.cos(ch.yaw)), k = P ? ease(P.k) : 0;  // its own vector: grab() reuses the module's
+  if (P?.legs && P.code && k) for (const [i, s] of ["left", "right"].entries()) {  // the thighs level and forward, the shins hanging (a dangle swings them)
+    const th = bone(ch, `${s}UpperLeg`), sh = bone(ch, `${s}LowerLeg`), ft = bone(ch, `${s}Foot`); if (!th || !sh || !ft) break;
+    P.v.copy(f).setY(-0.1).normalize(); aimBone(th, sh, P.w.subVectors(sh.getWorldPosition(P.w), th.getWorldPosition(_g)).normalize().lerp(P.v, k).normalize());
+    const sw = 0.12 + (P.pose === "dangle" ? 0.22 * Math.sin(performance.now() / 1000 * 4.2 + i * Math.PI) : 0); P.v.set(f.x * sw, -1, f.z * sw).normalize();
+    aimBone(sh, ft, P.w.subVectors(ft.getWorldPosition(P.w), sh.getWorldPosition(_g)).normalize().lerp(P.v, k).normalize());
+    const hd = bone(ch, `${s}Hand`); if (hd) grab(ch, s, P.w.copy(hd.getWorldPosition(P.w)).lerp(_g.copy(th.getWorldPosition(_g)).lerp(sh.getWorldPosition(P.v), 0.6).addScaledVector(UP3, 0.05 * H), k));  // a hand on its thigh
+  }
+  if (P?.legs && P.code && k) { const dy = (P.at().y - seatY(ch)) * k; ch.body.position.y += dy; ch.body.updateMatrixWorld(true); }  // the seat on the perch (a clip seats itself)
+  if (P?.pose === "hang" && P.code && k) for (const s of ["left", "right"]) { const hd = bone(ch, `${s}Hand`); if (hd) grab(ch, s, P.w.copy(hd.getWorldPosition(P.w)).lerp(P.v.copy(P.at()).addScaledVector(_g.set(f.z, 0, -f.x), (s === "left" ? 1 : -1) * P.half), k)); }  // the hands on the bar, a shoulder's width apart
+  if (S) {
+    const r = _g.set(f.z, 0, -f.x);  // up x forward: the turn that tips the face down
+    for (const [n, w] of [["neck", 0.4], ["head", 0.6]]) { const b = bone(ch, n); if (b) turnBone(b, _hq.setFromAxisAngle(UP3, S.yaw * w).multiply(_bq.setFromAxisAngle(r, -S.pitch * w))); }
+    const hd = bone(ch, `${S.hand}Hand`), head = bone(ch, "head");
+    if (S.k && hd && head) {  // the hand at the brow, a little to its own side, the head's way
+      const y = ch.yaw + S.yaw; S.f.set(Math.sin(y), 0, Math.cos(y));
+      S.brow.copy(head.getWorldPosition(S.brow)).addScaledVector(S.f, 0.1 * H).addScaledVector(UP3, 0.07 * H).addScaledVector(_g.set(-S.f.z, 0, S.f.x), (S.hand === "right" ? 1 : -1) * 0.03 * H);
+      grab(ch, S.hand, S.w.copy(hd.getWorldPosition(S.w)).lerp(S.brow, ease(S.k)));
+    }
+  }
+};
+
 export class Acting {
   // cast: [{name, pos, yaw, height, hold, clips, ride?: {on, off}}] (pos: a Vector3 at the feet)
   // where(to, top): a point, object or character name -> a new Vector3 or null (top: an object's top surface)
@@ -623,10 +713,10 @@ export class Acting {
   // people: the names that are characters (who speak, or can): only they turn to talk; null, everyone in the cast
   // floors: the page's "floors" (cards to stand on); legacy: one of the five first books (no stand-in clips: they play as they always did)
   constructor(acts, cast, { where, wordAt, loop, once, raise = () => {}, hold = () => {}, motion = {}, started = () => {}, spot = () => null, put = () => {}, people = null, cam = null, find = () => null, ground = false, floors = [], legacy = false, book = "" }) {
-    Object.assign(this, { book, ground, find, legacy, floorNames: floors, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map() });
+    Object.assign(this, { book, ground, find, legacy, floorNames: floors, was: new Map(), fades: [], cast, where, wordAt, loop, once, raise, hold, motion, started, spot, put, people, cam, line: null, heard: 0, passed: new Set(), by: {}, rises: [], flights: [], glows: [], lifted: {}, holds: new Map(), shapes: [], base: new Map(), knocks: [], dips: [], later: [], knocked: new Set() });
     this.hold = (ch, what, hand, on, a) => (on ? this.holds.set(what, ch) : this.holds.delete(what), hold(ch, what, hand, on, a));  // who holds what, the games' holds too
     for (const ch of cast) (this.by[ch.name] = ch), mood(ch, "natural");
-    for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); if (ch.lean) ch.body.rotation.x += ch.lean; hang(ch); blendGround(ch); ch.solid?.(dt); return r; }; }  // R36; a dash's lean (live.js place() sets the rotation afresh each frame) and a jump's hanging feet, after the clip's pose
+    for (const ch of cast) if (ch.mix && !ch.mix.grounding) { const up = ch.mix.update; ch.mix.grounding = true; ch.mix.update = function (dt) { const r = up.call(this, dt); if (ch.lean) ch.body.rotation.x += ch.lean; hang(ch); blendGround(ch); ch.solid?.(dt); if (ch.perch || ch.scout) layer(ch); return r; }; }  // R36; a dash's lean (live.js place() sets the rotation afresh each frame) and a jump's hanging feet, after the clip's pose
     for (const ch of cast) ch.solid = ground ? dt => solid(this, ch, dt) : null;  // "ground": the floor rule
     this.taps = {};  // taps counted per name, for "nth"
     this.acts = acts.map((a, i) => ({ ...a, state: "wait", prev: acts.slice(0, i).findLastIndex(b => b.who === a.who && !`${b.line}`.startsWith("tap:")) }));  // a tap act never links a chain
@@ -651,6 +741,9 @@ export class Acting {
       const ended = []; this.shapes = this.shapes.filter(g => ((g.wait -= step) > 0 || ((g.t += step), g.set(ease(Math.min(1, g.t / g.len)))), g.t < g.len || !ended.push(g)));
       ended.forEach(g => g.fin(g));  // after the filter: a finished ease may start its return, which the filter would drop
       this.fades = this.fades.filter(f => (f.t += step, f.tick(Math.min(1, f.t / f.len)), f.t < f.len || void f.end()));
+      this.later = this.later.filter(x => (x.t -= step) > 0 || void x.f());  // a kick's contact
+      this.knocks = this.knocks.filter(k => this.roll(k, step));
+      this.dips = this.dips.filter(d => this.spring(d, step));
       this.flights = this.flights.filter(f => {  // a prop let go flies on from where it was, along the characters' fly arc
         f.t += step; const k = Math.min(1, f.t / f.len);
         this.put(f.what, f.from.clone().lerp(f.to, ease(k)).add({ x: 0, y: f.arc * 4 * k * (1 - k), z: 0 }));
@@ -712,15 +805,159 @@ export class Acting {
   }
   prop(ch) { return this.acts.some(b => b.do === "hold" && b.what === ch.name) || /prop/i.test(ch.c?.model?.split("/").pop() ?? ""); }  // a thing a hand takes, or a prop model: not a body (Rule 28 is about bodies)
 
+  // ---------- the series acts (header): knock / kick, perch / hang / dangle, scout ----------
+  knock(a, done) {
+    const o = this.find(a.what);
+    if (!o) return console.warn("nothing to knock:", a), done();
+    o.updateWorldMatrix(true, true);
+    const by = this.by[a.who], H = by?.height ?? 0.15, G = 9.8 * H / 1.7, box = new Box3().setFromObject(o), c = box.getCenter(new Vector3()), r = Math.max(1e-3, (box.max.y - box.min.y) / 2);
+    const ms = this.floors().filter(([m]) => { for (let p = m; p; p = p.parent) if (p === o) return false; return true; }), wo = a.water && this.find(a.water), v = new Vector3(), to = a.to != null && this.where(a.to, true);
+    if (to) {  // it lands at `to` first, `up` over the higher end
+      const ty = (floorAt(ms, to.x, to.y, to.z, H, H) ?? to.y) + r, top = Math.max(c.y, ty) + (a.up ?? 0.3 * Math.hypot(to.x - c.x, to.z - c.z)), t1 = Math.sqrt(2 * (top - c.y) / G);
+      v.set(to.x - c.x, 0, to.z - c.z).divideScalar(t1 + Math.sqrt(2 * (top - ty) / G)).setY(G * t1);
+    } else {
+      const d = Array.isArray(a.dir) && a.dir.length === 2 ? new Vector3(a.dir[0], 0, -a.dir[1]) : a.dir != null ? this.where(a.dir)?.sub(c) ?? new Vector3() : by ? c.clone().sub(by.pos) : new Vector3(1, 0, 0);
+      const l = (a.lift ?? 35) * Math.PI / 180, sp = (a.force ?? 4) * H;
+      if (d.setY(0).lengthSq() < 1e-12) d.set(1, 0, 0);
+      v.copy(d.normalize()).multiplyScalar(sp * Math.cos(l)).setY(sp * Math.sin(l));
+    }
+    const w = new Vector3(v.z, 0, -v.x); w.multiplyScalar(w.lengthSq() > 1e-12 ? 2 * Math.PI * (a.spin ?? 1.5) / w.length() : 0);  // tumbling forward: about up x its way
+    o.userData.knock0 ??= { p: o.position.clone(), q: o.quaternion.clone() }; this.knocked.add(o);
+    this.knocks = this.knocks.filter(k => k.o !== o || void k.done());  // a new knock takes a rolling prop over
+    this.knocks.push({ a, o, c, v, w, r, G, H, ms, mm: ms.map(([m]) => m), wb: wo && new Box3().setFromObject(wo), t: 0, roll: false, sink: -1, q: new Quaternion(), q0: o.getWorldQuaternion(new Quaternion()), off: o.getWorldPosition(new Vector3()).sub(c), at: new Vector3(), hit: {}, done });
+  }
+  roll(k, dt) {  // one step of a knocked prop (flying, bouncing, rolling, sinking); false once it rests
+    const { c, v, w, r } = k; k.t += dt;
+    let rest = k.t > 12;
+    if (k.sink >= 0) { c.y -= 2 * r * dt; if ((k.sink += dt) > 0.8) return this.vis(k.o, false, 0, () => {}), k.done(), false; }  // in the water: it sinks out of sight
+    else {
+      if (!k.roll) v.y -= k.G * dt;
+      const hz = Math.hypot(v.x, v.z);
+      if (hz > 1e-6) {  // a wall ahead (a rock's side, not a card's cut-away paper): it bounces back off it
+        _rc.set(c, _a.set(v.x / hz, 0, v.z / hz)); _rc.far = r + hz * dt;
+        if (_rc.intersectObjects(k.mm, false).find(h => h.face && Math.abs(_n.copy(h.face.normal).transformDirection(h.object.matrixWorld).y) < 0.5 && opaque(h))) { const d = 2 * (v.x * _n.x + v.z * _n.z); v.x = 0.4 * (v.x - d * _n.x); v.z = 0.4 * (v.z - d * _n.z); }
+      }
+      c.addScaledVector(v, dt);
+      const f = floorAt(k.ms, c.x, c.y - r, c.z, r + Math.abs(v.y) * dt, k.roll ? r : 2 * r, k.hit);
+      if (k.roll && (f == null || f < c.y - 1.5 * r)) k.roll = false;  // off an edge: it falls again
+      else if (f != null && c.y - r <= f + (k.roll ? r : 0)) {
+        c.y = f + r;
+        const vin = -v.y, fx = globalThis.live?.sfx;
+        if (!k.roll && (WATER.test(k.hit.m?.name ?? "") || (k.wb && c.x >= k.wb.min.x && c.x <= k.wb.max.x && c.z >= k.wb.min.z && c.z <= k.wb.max.z))) {  // into the water: rings, and it sinks
+          fx?.play("splash", { at: new Vector3(c.x, f, c.z), size: 5 * r, level: 1, waterY: f }); this.started({ ...k.a, who: null, do: "splash" }); k.sink = 0; v.set(0, 0, 0); w.set(0, 0, 0);
+        } else if (!k.roll) {  // a landing: dust and a click, then a smaller bounce, or it rolls
+          if (vin > 0.25 * Math.sqrt(k.G * k.H)) { fx?.play("dust", { at: new Vector3(c.x, f, c.z), size: Math.max(4 * r, 0.3 * k.H), level: 1 }); this.started({ ...k.a, who: null, do: "bounce" }); }
+          if (vin * vin * 0.16 / (2 * k.G) > 0.15 * r) { v.y = 0.4 * vin; v.x *= 0.7; v.z *= 0.7; w.multiplyScalar(0.6); } else { v.y = 0; k.roll = true; }
+        }
+      }
+      if (k.roll) {  // rolling, slowing (rolling friction 0.4), turning as far as it goes
+        const s = Math.hypot(v.x, v.z), s2 = Math.max(0, s - 0.4 * k.G * dt);
+        if (s2 < 0.002 * k.H) rest = true, w.set(0, 0, 0); else v.x *= s2 / s, v.z *= s2 / s, w.set(v.z, 0, -v.x).divideScalar(r);
+      }
+    }
+    const wl = w.length(); if (wl > 1e-9) k.q.premultiply(_bq.setFromAxisAngle(_a.copy(w).divideScalar(wl), wl * dt));
+    const o = k.o; o.parent.getWorldQuaternion(_q2); o.quaternion.copy(_q2.invert().multiply(_hq.copy(k.q).multiply(k.q0)));
+    k.at.copy(k.off).applyQuaternion(k.q).add(c); o.position.copy(o.parent.worldToLocal(_a.copy(k.at))); this.put(k.a.what, k.at);  // put: the viewer keeps it there (moveProps)
+    return !rest || void k.done();
+  }
+  kick(ch, a, done) {  // it turns to the prop, plays its kick, and the knock flies at the contact
+    const at = this.spot(a.what) ?? this.where(a.what); if (!at) return console.warn("nothing to kick:", a), done();
+    look(ch, at);
+    const clip = nearest(ch, a.clip ?? "Kick", "the knock alone"), len = clip ? this.once(ch, clip, () => this.loop(ch, ch.hold)) : 0;
+    this.later.push({ t: ch.clips?.[clip]?.userData?.contact ?? 0.45 * len, f: () => this.knock(a, done) });
+  }
+  scout(ch, a, done) {  // the lookout: its Scout clip, or a hand at the brow in code; the head swept over `look` (a number: degrees off its facing, + to its left)
+    const H = ch.height, eye = ch.pos.clone().setY(ch.pos.y + 0.9 * H), clip = nearest(ch, a.clip ?? "Scout", "a hand at the brow in code");
+    const pts = (a.look ?? [50, 0, -50]).map(p => typeof p === "number" ? eye.clone().add(new Vector3(Math.sin(ch.yaw + p * Math.PI / 180), 0, Math.cos(ch.yaw + p * Math.PI / 180)).multiplyScalar(6 * H)) : this.where(p)).filter(Boolean);
+    const len = clip ? this.once(ch, clip, () => {}) : 0;  // its clip once, its last pose held
+    ch.scout = { pts, eye, per: Math.max(a.secs ?? 1.2, len / Math.max(1, pts.length)), t: 0, yaw: 0, pitch: 0, k: 0, hand: a.hand ?? "right", clip, done, brow: new Vector3(), f: new Vector3(), w: new Vector3() };
+  }
+  perch(ch, a, done) {  // along its way (header) to the perch, then its pose; a branch under it dips
+    const pose = a.do === "perch" ? a.pose ?? "sit" : a.do, H = ch.height, empty = n => { let m = false; n?.traverse(o => (m ||= !!o.isMesh)); return n && !m; };
+    const spot = p => { const n = typeof p === "string" && this.find(p); return empty(n) ? n.getWorldPosition(new Vector3()) : this.where(p, true); };  // a named empty: its place; a thing: its top
+    const node = typeof a.to === "string" ? this.find(a.to) : null, tgt = spot(a.to);
+    if (!tgt) return console.warn(`nothing to ${a.do} on: "${a.to}" is not on this page`, a), done();
+    this.unperch(ch); ch.moved = true; ch.ride = null;
+    const br = a.branch ? this.find(a.branch) : empty(node) && /branch|bough|limb/i.test(node.parent?.name ?? "") ? node.parent : null, mid = node && !empty(node) ? new Box3().setFromObject(node).getCenter(new Vector3()) : null;
+    const along = br && new Vector3(tgt.x, 0, tgt.z).sub(br.getWorldPosition(new Vector3()).setY(0)), side = along?.lengthSq() > 1e-8 ? Math.atan2(along.z, -along.x) : 0;  // on a branch: square to it (its clips hold the branch along their x), on the reader's side
+    const yaw = a.face != null ? yawTo(tgt, this.where(a.face) ?? tgt) : pose === "dangle" && mid ? yawTo(mid, tgt) : br ? (Math.cos(side) >= 0 ? side : side + Math.PI) : 0, f = new Vector3(Math.sin(yaw), 0, Math.cos(yaw));  // the reader faces +z
+    fresh(ch.model);
+    const o0 = ch.body.getWorldPosition(new Vector3()), [U, L, D, K, th, kn] = ["leftUpperArm", "leftLowerArm", "leftHand", "rightUpperArm", "leftUpperLeg", "leftLowerLeg"].map(n => bone(ch, n));
+    const clip = pose === "stand" ? null : nearest(ch, { sit: br ? "Perch Sit" : "Sit", dangle: "Sit Dangle", hang: "Hang" }[pose]), pd = ch.clips?.[clip]?.userData ?? {};  // a clip's own "support" places it (the house clips' notes): a branch's top or line, a ledge's edge
+    const P = { pose, code: !clip, legs: pose === "sit" || pose === "dangle", k: 0, br, half: U && K ? U.getWorldPosition(_a).distanceTo(K.getWorldPosition(_b)) / 2 : 0.12 * H, v: new Vector3(), w: new Vector3(), pt: new Vector3(), off: new Vector3() };
+    if (clip) { if (pose === "dangle") P.off.copy(f).multiplyScalar(-(pd.edge_z ?? 0) * H); }  // Hang: its origin on the branch's line; Perch Sit: on its top; Sit Dangle: its edge (edge_z ahead of its origin) on the ledge's
+    else if (pose === "hang") P.off.y = -((U ? U.getWorldPosition(_a).y - o0.y : 0.8 * H) + 0.95 * (U && L && D ? _a.distanceTo(L.getWorldPosition(_b)) + _b.distanceTo(D.getWorldPosition(_c)) + 0.04 * H : 0.4 * H));  // the hands on it: its shoulders under it by an arm
+    else if (pose === "dangle") P.off.copy(f).multiplyScalar(-0.95 * (th && kn ? th.getWorldPosition(_a).distanceTo(kn.getWorldPosition(_b)) : 0.25 * H));  // its knees over the edge
+    br?.updateWorldMatrix(true, false); P.local = br ? br.worldToLocal(tgt.clone()) : tgt; P.at = () => (br ? br.localToWorld(P.pt.copy(P.local)) : P.pt.copy(tgt));  // a dipping branch carries the point
+    const end = tgt.clone().add(P.off), from = ch.pos.clone(), top = pose === "hang" ? end.y : tgt.y, pts = [from], tr = a.on != null ? this.find(a.on) : null, ax = tr ? tr.getWorldPosition(new Vector3()) : null;
+    if (a.via) for (const p of [].concat(a.via)) { const q = spot(p); if (q) pts.push(q); }
+    else if (tr) {  // up its trunk: beside it, square to the perch's way out, on the side it comes from
+      const out = new Vector3(tgt.x - ax.x, 0, tgt.z - ax.z), side = new Vector3(from.x - ax.x, 0, from.z - ax.z);
+      if (out.lengthSq() > 1e-8) { out.normalize(); const s1 = new Vector3(-out.z, 0, out.x); side.copy(s1.dot(side) >= 0 ? s1 : s1.negate()); }
+      if (side.lengthSq() < 1e-8) side.set(0, 0, 1);
+      side.normalize(); _rc.set(_a.copy(ax).addScaledVector(side, 2 * H).setY(from.y + 0.4 * H), _b.copy(side).negate()); _rc.far = 2 * H;
+      const hit = _rc.intersectObject(tr, true)[0], foot = ax.clone().addScaledVector(side, (hit ? 2 * H - hit.distance : 0.05 * H) + (a.gap ?? 0.12) * H).setY(from.y);
+      pts.push(foot, foot.clone().setY(top));
+    } else pts.push(from.clone().setY(top));  // straight up where it stands (the climb act's way)
+    pts.push(pose === "hang" ? end : end.clone().setY(tgt.y));
+    const cu = a.clip ?? "Climb Up", cc = ch.clips?.[cu] ? cu : nearest(ch, cu, "it slides up"), ud = ch.clips?.[cc]?.userData ?? {}, vc = 0.5 * H * (a.rate ?? 1), segs = [];  // a monkey's climb: half its height a second (its clip, a slow ladder climb, sped up to keep its hands on the trunk)
+    let t = 0, tc = 0; const walk = ch.clips?.Walk?.userData?.speed_h ? ch.clips.Walk.userData.speed_h * H : this.pace(ch, "walk");  // the Walk clip's own stride: the feet do not slide
+    for (let i = 1; i < pts.length; i++) {  // a mostly upright leg is climbed, the last a step out (a little hop), the rest walked
+      const A = pts[i - 1], Bp = pts[i], dy = Math.abs(Bp.y - A.y), dh = Math.hypot(Bp.x - A.x, Bp.z - A.z), kind = dy > dh ? "climb" : i === pts.length - 1 ? "step" : "walk";
+      if (dy + dh < 1e-4) continue;
+      const len = kind === "climb" ? dy / vc : Math.max(kind === "step" ? 0.4 : 0.2, (kind === "step" ? 1.5 : 1) * dh / walk); if (kind === "climb") tc += len;
+      segs.push({ A, B: Bp, kind, len, yaw: kind === "climb" ? yawTo(A, ax ?? end) : dh > 1e-3 ? yawTo(A, Bp) : yaw });
+    }
+    const ks = a.secs && tc ? a.secs / tc : 1;  // "secs": the whole climb that long, the clip's pace with it
+    for (const s of segs) { if (s.kind === "climb") s.len *= ks; s.t0 = t; t += s.len; }
+    const cyc = (ud.rise_h > 0 ? ud.rise_h * H / vc : ud.cycle ?? 1) * ks;  // seconds a clip cycle takes on the trunk: one cycle's rise at the climb's pace
+    const old = ch.goal; ch.goal = { a, perch: P, segs, t: 0, i: -1, cc, cyc, ts: (ud.cycle ?? 1) / cyc, kc: -1, yaw, clip, done }; if (old && old !== ch.goal) old.done?.();
+  }
+  airOf(ch, name) {  // a leaping clip's time off the floor and its feet's highest: [t0, t1 (s), apex (m)], from its "takeoff"/"land"/"apex_h" marks, else its own feet; null: not a leap, or none found
+    const c = ch.clips?.[name], u = c?.userData ?? {}; if (!c || !/jump|leap|hop|pounce|flip|bound/i.test(name)) return null;
+    if (u.land > u.takeoff) return [u.takeoff, u.land, (u.apex_h ?? 0.3) * ch.height];
+    return (ch.airs ??= {})[name] ??= (() => { if (!ch.model || !soles(ch).length) return null; const n = 48, y = []; for (let i = 0; i <= n; i++) y.push(footIn(ch, c, i * c.duration / n));
+      const i0 = y.findIndex(v => v > 0.04 * ch.height), i1 = y.findLastIndex(v => v > 0.04 * ch.height); return i0 < 0 ? null : [Math.max(0, i0 - 1) * c.duration / n, Math.min(n, i1 + 1) * c.duration / n, Math.max(...y)]; })();
+  }
+  unperch(ch) {  // off its perch: the branch springs back, its perch clip is no longer what it rests in, and it goes on from its feet (a hang's origin is the branch)
+    const P = ch.perch; if (!P) return;
+    if (P.dip) P.dip.load = 0;
+    if (ch.hold === P.clip) ch.hold = "Idle";
+    if (ch.model && soles(ch).length) ch.pos.y = Math.min(ch.pos.y, ch.body.getWorldPosition(_a).y + footAt(ch));
+    ch.perch = null;
+  }
+  dip(o, p, deg, H) {  // a branch under a new weight: it sags `deg` with an overshoot, springs, and settles; a few leaves shaken down
+    o.updateWorldMatrix(true, true);
+    let morph = null, b = null; o.traverse(m => { const e = m.morphTargetDictionary && Object.entries(m.morphTargetDictionary).find(([k]) => /dip|bend|sag/i.test(k)); if (e && !morph) morph = [m, e[1]]; if (!b && m.isBone) b = m; });
+    const n = b ?? o, piv = n.getWorldPosition(new Vector3()), d = new Vector3(p.x - piv.x, 0, p.z - piv.z), A = deg * Math.PI / 180;
+    const ax = UP3.clone().cross(d.lengthSq() > 1e-10 ? d.normalize() : d.set(1, 0, 0)).applyQuaternion(n.parent.getWorldQuaternion(new Quaternion()).invert());  // about up x the way out: the tip goes down
+    const D = { o, n, morph, q0: n.quaternion.clone(), ax, A, th: 0, v: 0.6 * 2 * Math.PI * 1.8 * A, load: 1 };  // landing on it: a kick of speed
+    this.dips.push(D);
+    globalThis.live?.sfx?.play("gust", { at: new Vector3(p.x, floorAt(this.floors(), p.x, p.y - 0.02, p.z, 0, 5) ?? p.y - H, p.z), shed: o, level: 2, size: 0.8 * H, tint: [0.45, 0.62, 0.3] });
+    return D;
+  }
+  spring(D, dt) {  // the sag: a damped spring (1.8 Hz, damping 0.22) toward its load (1: the weight on it, 0: let go); false once settled unloaded
+    const w = 2 * Math.PI * 1.8; D.v += (-w * w * (D.th - D.A * D.load) - 2 * 0.22 * w * D.v) * dt; D.th += D.v * dt;
+    if (!D.load && Math.abs(D.th) < 1e-4 && Math.abs(D.v) < 1e-3) D.th = 0;
+    this.bend(D);
+    return D.load || D.th !== 0;
+  }
+  bend(D) {  // the sag drawn: a shape key's weight (the point stays), else the bone or node turned about its own origin
+    if (D.morph) D.morph[0].morphTargetInfluences[D.morph[1]] = Math.max(0, D.th / D.A);
+    else D.n.quaternion.setFromAxisAngle(D.ax, D.th).multiply(D.q0), D.n.updateWorldMatrix(false, true);
+  }
+
   busy(line) { return this.acts.some(a => a.wait && a.line === line && a.state !== "done"); }  // the reading waits on these
 
   reset() {  // "Read again": every act waits for its line again; nobody is mid-act (live.js puts them back where the page began)
     this.fades.forEach(f => f.end()); this.fades = [];
     this.acts.forEach(a => (a.state = "wait")); this.taps = {}; this.passed.clear(); this.line = null; this.rises = []; this.glows = []; this.lifted = {}; this.shapes = [];
+    this.later = []; this.knocks = []; for (const d of this.dips) (d.th = 0), this.bend(d); this.dips = [];  // knocked props back where the page put them, branches still
+    for (const o of this.knocked) { const k0 = o.userData.knock0; o.quaternion.copy(k0.q); o.position.copy(k0.p); this.put(o.name, o.parent.localToWorld(k0.p.clone())); }
     for (const [m, w] of this.base) m.morphTargetInfluences.splice(0, w.length, ...w);
     for (const o of [...this.was.keys()]) this.vis(o, true, 0, () => {});
     for (const ch of this.cast) if (ch.glowing) glow(ch.body, (ch.glowing = 0));
-    for (const ch of this.cast) (ch.goal = ch.slide = ch.facing = null), mood(ch, "natural");
+    for (const ch of this.cast) (ch.goal = ch.slide = ch.facing = ch.perch = ch.scout = null), mood(ch, "natural");
     this.open();
   }
 
@@ -785,6 +1022,7 @@ export class Acting {
       if (!ch?.body) return done();
       return this.glows.push({ ch, from: ch.glowing ?? 0, to: a.by ?? 1, t: 0, len: a.secs ?? 0.8, done }), void (a.state = "run"), void this.started(a);
     }
+    if (a.do === "knock") return a.state = "run", this.started(a), this.knock(a, done);
     if (a.do === "fly" && !a.who) {  // {"what": "kite", "do": "fly", "to": [x, y, z], "up": 0.3, "secs": 3}: a carried prop, away from where it is
       const from = this.spot(a.what), to = from && this.where(a.to);
       if (!to) return console.warn("nothing to fly:", a), done();
@@ -795,6 +1033,8 @@ export class Acting {
     if (!ch) return console.warn("act for a character not on this page:", a), done();
     if (a.mood) mood(ch, a.mood);  // {"do": "mood", "mood": "sad"}, or a mood on any other act
     if (a.do === "mood") return done();
+    if (a.do === "kick" || a.do === "scout") return a.state = "run", this.started(a), this[a.do](ch, a, done);
+    if (/^(perch|hang|dangle)$/.test(a.do)) return a.state = "run", this.started(a), this.perch(ch, a, done);
     if (this.ground && !a.go && this.goable(ch, a)) {  // "ground": a walker told to float along the ground walks there instead (go-to); a rigid body hops or does not travel
       const rigid = !skinned(ch.model) && !ch.c?.model?.startsWith("puppet:"), hop = this.motion[ch.name]?.Hop;
       if (rigid && (a.gait ?? hop?.gait) !== "hop") return (a.warned ??= (console.warn(`${ch.name} is rigid and does not glide along the ground: the act is refused (Rule 28; a hopper needs "gait": "hop")`, a), true)), done();
@@ -806,7 +1046,7 @@ export class Acting {
     const take = (slot, v) => { const old = ch[slot]; ch[slot] = v; if (old && old !== v) old.done?.(); };  // the act it replaces is finished, so a wait never hangs
     const stay = a.do === "clip" && a.ride && !a.to && ch.ride?.on === this.by[a.ride];  // a clip on the mount it rides (Sit Down, Stand Up on Bobo's back): the ride, and its hold, go on
     const moving = !stay && (MOVE[a.do] || ["fly", "float", "rise", "climb", "jump"].includes(a.do) || (a.do === "clip" && (a.to || a.ride)));
-    if (moving) { ch.moved = true; ch.ride = null; }  // on its own feet now: off whatever it rode, off its entrance path
+    if (moving) { ch.moved = true; ch.ride = null; this.unperch(ch); }  // on its own feet now: off whatever it rode, off its entrance path, off its perch
     if (a.go === "hop") {  // a rigid hopper: whole hops along the line, each an arc, a landing, and a rest (motion.json "Hop": {"gait": "hop", "hop": m, "hop_h": m, "cycle": s})
       const mo = this.motion[ch.name]?.Hop ?? {}, from = ch.pos.clone(), to = this.where(a.to).setY(from.y), d = Math.hypot(to.x - from.x, to.z - from.z), L = a.hop ?? mo.hop ?? 0.6 * ch.height;
       take("goal", { a, hop: true, from, to, n: Math.max(1, Math.ceil(d / L - 1e-6)), cyc: a.cycle ?? mo.cycle ?? 0.6, hh: a.hop_h ?? mo.hop_h ?? 0.35 * ch.height, t: 0, done });
@@ -836,25 +1076,37 @@ export class Acting {
       const on = !stay && this.by[a.ride], from = ch.pos.clone();
       const base = on && (this.where(a.ride) ?? on.pos.clone()), back = on && on.model && skin(on, base.clone().setY(base.y + on.height), new Vector3(0, -1, 0), 2 * on.height)?.at;  // onto its skin
       const to = on ? base.setY((back ?? base).y + (a.up ?? on.height * 0.6)) : !catcher && a.to && this.where(a.to, true);
+      const air = !on && to && this.airOf(ch, a.clip), lift = air ? to.y - from.y : 0, G = 9.8 * ch.height / (ch.c?.real ?? 1.7), A = air && Math.max(air[2], lift + 0.01 * ch.height);
+      const rate = air ? Math.min(3, Math.max(1, (air[1] - air[0]) / (Math.sqrt(2 * A / G) + Math.sqrt(2 * Math.max(0, A - lift) / G)))) : 1;  // a leap whose air time is longer than its own rise and fall at the body's scale is played faster, never slower (at most 3x)
       const len = this.once(ch, a.clip, () => {
         if (stay && ch.ride) ch.ride.stay = false;
         if (a.then) ch.hold = a.then;
         this.loop(ch, ch.hold); done();
       });
-      if (to) take("slide", { from, to, t: 0, len: len || 1, done: on ? () => {  // mounted: it faces the way its mount faces, unless told where to look
+      if (rate > 1 && ch.cur?.getClip() === ch.clips?.[a.clip]) ch.cur.timeScale = rate;
+      if (to) take("slide", { from, to, t: 0, len: (len || 1) / rate, air, rate, done: on ? () => {  // mounted: it faces the way its mount faces, unless told where to look
         mount(ch, on, o => this.at(o)); ch.ride.gap = a.up;  // `up`: its height over the skin under its hips (carry's seat), the same on every read
         if (a.face) look(ch, this.where(a.face)); else { ch.ride.dyaw = 0; ch.want = null; ch.yaw = on.yaw; }
       } : a.face ? () => look(ch, this.where(a.face)) : null });
       if (on && !a.face) ch.want = on.yaw;  // and turns that way while it climbs on
       else if (!on && to && a.face) look(ch, this.where(a.face));  // a leap "to" a branch turns as told on the way, and lands so
     } else if (a.do === "jump") {  // a ballistic arc from the floor it stands on onto the floor at `to`
-      const from = ch.pos.clone(), to = this.where(a.to, true), G = 9.8 * ch.height / 1.7;  // gravity at book scale: as a 1.7 m person's, for its height
+      const from = ch.pos.clone(), to = this.where(a.to, true), G = 9.8 * ch.height / (ch.c?.real ?? 1.7);  // gravity at book scale: its height as a 1.7 m person's, or as its "real" height in metres (a small monkey falls faster at its size)
       if (Array.isArray(a.to)) to.y = floorAt(this.floors(), to.x, to.y, to.z, 1, 0.05) ?? to.y;  // a point: onto the highest floor there (a rock's top)
       const clip = ch.clips?.Jump ? "Jump" : null, u = ch.clips?.Jump?.userData ?? {}, air = u.land > u.takeoff ? u.land - u.takeoff : 0;  // the standard Jump's own take-off and landing (tools/locomotion.py extras)
-      const top = Math.max(from.y, to.y) + (a.up ?? (u.apex_h ?? 0.3) * ch.height), T = Math.sqrt(2 * (top - from.y) / G) + Math.sqrt(2 * (top - to.y) / G);
-      const len = a.secs ?? (air || T), rate = air ? air / len : 1, g = G * (T / len) ** 2;  // the flight lasts the clip's air time (or `secs`): gravity scaled to fit, the arc's top kept
-      take("goal", { a, jump: true, from, to, v0: Math.sqrt(2 * g * (top - from.y)), G: g, t: 0, len, pre: air ? u.takeoff / rate : 0, clip, done }); ch.want = yawTo(from, to);
-      if (clip) { const d = this.once(ch, clip, () => {}); if (d) ch.cur.timeScale = air ? rate : d / len; }  // it leaves the floor at the clip's take-off and lands at its landing; an old Jump (no extras) spans the flight
+      const h0 = Math.max(from.y, to.y), flight = y => Math.sqrt(2 * (y - from.y) / G) + Math.sqrt(2 * (y - to.y) / G);
+      let top = h0 + (a.up ?? (u.apex_h ?? 0.3) * ch.height), g = G, len = flight(top); const T = len;
+      if (a.secs != null) {  // Eddie 2026-11-23: a jump that borrowed the clip's air time (or a long `secs`) floated in slow motion
+        if (a.secs < T || T <= 1e-3) g = G * (T / a.secs) ** 2, len = a.secs;  // the plan's quicker hop: its apex kept, a heavier fall, never a slower one
+        else {  // a longer one rises higher under the same gravity, at most 1.2 x its own flight
+          const s = Math.min(a.secs, 1.2 * T), k = s * Math.sqrt(G / 2), r = (k * k - (from.y - to.y)) / (2 * k);  // r = sqrt(top - from.y), from sqrt(a) + sqrt(a + d) = k
+          if (s < a.secs && !a.long) { a.long = true; console.warn(`jump "secs" ${a.secs} is over 1.2 x its own flight (${T.toFixed(2)} s): ${s.toFixed(2)} s`, a); }
+          top = Math.max(h0, from.y + Math.max(0, r) ** 2); len = flight(top);
+        }
+      }
+      len = Math.max(len, 1e-3); const rate = air ? air / len : 1;  // the clip's air is time-scaled to the flight, never the flight to the clip
+      take("goal", { a, jump: true, from, to, v0: Math.sqrt(2 * g * (top - from.y)), G: g, t: 0, len, pre: air ? u.takeoff : 0, rate, clip, done }); ch.want = yawTo(from, to);
+      if (clip) { const d = this.once(ch, clip, () => {}); if (d) ch.cur.timeScale = air ? 1 : d / len; }  // the crouch at the clip's own pace, the air time-scaled at take-off (move)  // it leaves the floor at the clip's take-off and lands at its landing; an old Jump (no extras) spans the flight
     } else if (a.do === "climb") {
       const to = this.where(a.to, true), clip = a.clip ?? "Climb Up", mo = this.motion[ch.name]?.[clip];
       const from = ch.pos.clone(), up = from.clone().setY(to.y), dy = Math.abs(to.y - from.y);
@@ -882,7 +1134,31 @@ export class Acting {
   move(ch, dt) {
     const g = ch.goal, f = ch.facing, s = ch.slide;
     if (ch.model) ch.model.walking = /^(Walk|Run|Sprint|Sneak|Dash|Step Back)/.test(g?.gait ?? "");  // V15: a puppet's turned card (a walking pose) only while a gait carries it; standing, its front card mirrored to its side
-    if (g?.climb) {  // straight up the trunk, then a step onto the branch
+    const sc = ch.scout;
+    if (sc) {  // a scout's sweep: each look turned to over 0.5 s and held, then the head back and the hand down over 0.5 s
+      sc.t += dt;
+      const n = sc.pts.length, end = n * sc.per, ang = i => { const p = sc.pts[i], d = yawTo(ch.pos, p) - ch.yaw; return [Math.max(-1.2, Math.min(1.2, Math.atan2(Math.sin(d), Math.cos(d)))), Math.max(-0.6, Math.min(0.6, Math.atan2(p.y - sc.eye.y, Math.hypot(p.x - ch.pos.x, p.z - ch.pos.z))))]; };
+      const i = Math.max(0, Math.min(n - 1, Math.floor(sc.t / sc.per))), u = ease(Math.min(1, (sc.t - i * sc.per) / 0.5)), [y0, p0] = i ? ang(i - 1) : [0, 0], [y1, p1] = n ? ang(i) : [0, 0], b = ease(Math.min(1, Math.max(0, (sc.t - end) / 0.5)));
+      const w = sc.clip ? 0.5 : 1;  // over a Scout clip's own looking round, half the turn
+      sc.yaw = (y0 + (y1 - y0) * u) * (1 - b) * w; sc.pitch = (p0 + (p1 - p0) * u) * (1 - b) * w; sc.k = sc.clip ? 0 : Math.min(1, sc.t / 0.4) * (1 - b);
+      if (b >= 1) { ch.scout = null; if (sc.clip) this.loop(ch, ch.hold); sc.done(); }
+    }
+    if (g?.perch) {  // a perch's way: walked to the trunk, climbed (Climb Up again each cycle, at its rise), a step out onto it; then its pose
+      g.t += dt;
+      const i = g.segs.findIndex(s => g.t < s.t0 + s.len), s = g.segs[i];
+      if (s) {
+        if (i !== g.i) { g.i = i; g.kc = -1; if (s.kind !== "climb" || !g.cc) this.loop(ch, s.kind === "climb" ? ch.hold : "Walk"); }
+        if (s.kind === "climb" && g.cc) { const kc = Math.floor((g.t - s.t0) / g.cyc); if (kc !== g.kc) { g.kc = kc; this.once(ch, g.cc, () => {}); if (ch.cur?.getClip() === ch.clips?.[g.cc]) ch.cur.timeScale = g.ts; } }
+        const k = (g.t - s.t0) / s.len; ch.pos.lerpVectors(s.A, s.B, s.kind === "climb" ? k : ease(k)); if (s.kind === "step") ch.pos.y += 0.48 * ch.height * k * (1 - k);
+        ch.want = s.yaw;
+      } else {  // there: perched, posed, and the branch takes the weight
+        const P = g.perch; ch.goal = null; ch.perch = P; ch.want = g.yaw; ch.pos.copy(P.at()).add(P.off);
+        ch.hold = g.clip ?? g.a.then ?? "Idle"; P.clip = g.clip;
+        this.loop(ch, ch.hold);
+        if (P.br) P.dip = this.dip(P.br, P.at(), g.a.dip ?? 5, ch.height);
+        g.done();
+      }
+    } else if (g?.climb) {  // straight up the trunk, then a step onto the branch
       g.t += dt;
       const [a, b, c] = g.climb, [t1, t2] = g.legs;
       if (g.t < t1) {
@@ -909,6 +1185,7 @@ export class Acting {
       ch.pos.lerpVectors(g.from, g.to, Math.min(1, (i + (i < g.n ? ease(u) : 0)) / g.n)).y += air ? 4 * g.hh * u * (1 - u) : 0;
       if (g.t >= g.n * g.cyc) { ch.goal = null; ch.pos.copy(g.to); if (g.a.face) look(ch, this.where(g.a.face)); g.done(); }
     } else if (g?.jump) {  // level travel even in time, height under gravity: off the floor at its start, onto the floor at its end
+      if (g.pre && g.t < g.pre && g.t + dt >= g.pre && ch.cur?.getClip() === ch.clips?.[g.clip]) ch.cur.timeScale = g.rate;  // off the floor: the clip's air to the flight's own time
       g.t += dt; const s = Math.max(0, Math.min(1, (g.t - g.pre) / g.len)), t = s * g.len;  // before its take-off it crouches where it stands
       ch.pos.lerpVectors(g.from, g.to, s).y = g.from.y + g.v0 * t - 0.5 * g.G * t * t;
       if (s >= 1) { ch.goal = null; ch.pos.copy(g.to); this.loop(ch, ch.hold); if (g.a.face) look(ch, this.where(g.a.face)); g.done(); }
@@ -938,9 +1215,10 @@ export class Acting {
       } else { ch.pos.addScaledVector(d.normalize(), Math.min(left, g.pace * dt)); ch.want = Math.atan2(d.x, d.z) + (g.back ? Math.PI : 0); }
     }
     if (s) {
-      s.t += dt; ch.pos.lerpVectors(s.from, s.to, ease(Math.min(1, s.t / s.len)));
+      s.t += dt; ch.pos.lerpVectors(s.from, s.to, s.air ? Math.min(1, Math.max(0, (s.t * s.rate - s.air[0]) / (s.air[1] - s.air[0]))) : ease(Math.min(1, s.t / s.len)));  // a leap travels while its feet are off the floor
       if (s.t >= s.len) ch.slide = null, s.done?.();
     }
+    if (ch.perch && !ch.goal) { const P = ch.perch; ch.pos.copy(P.at()).add(P.off); P.k = Math.min(1, P.k + dt / (P.pose === "hang" ? 0.2 : 0.4)); }  // perched: on the point as it dips, the pose blending in
     const lw = ch.goal?.lean ?? 0; if (ch.lean || lw) ch.lean = Math.abs(lw - ch.lean) < 1e-3 ? lw : (ch.lean ?? 0) + (lw - (ch.lean ?? 0)) * Math.min(1, 6 * dt);  // a dash leans in, and straightens after
     if (ch.ride && !ch.slide) carry(ch, o => this.at(o), this.cam?.position);  // riding: carried along
     if (f && !g?.go) {  // a go-to walking: a face act waits for the arrival (it would steer the walk sideways)

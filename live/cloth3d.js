@@ -14,6 +14,8 @@
 //   any of them may set stiff, drag, grav (per step, see PHYS), float (a gentle breeze from her front, in g), over (1: kept outside every skirt listed before it), rigid,
 //     vmax (top speed, H a second), bend (the sharpest turn between one link and the next, degrees: silk in S-curves), and a sleeve reach (how far its bell may swing out from the forearm, H)
 //   two skirts make layers: the outer one sets over: 1
+//   closed: 1 on a skirt (a sarong, a tube with no slit): a leg inside it pushes it out on the leg's outer and upper side, never between leg and body,
+//     so a knee lifted into it carries the cloth over the knee; and the cloth keeps moving while only the legs move (a step up with the hips still)
 //   tex: { src, rect: [x, y, w, h], mirror } a crop of a painted look sheet, or { color: "#hex" }; soft: share faded at the hem, edge: a trim colour
 // const cloth = await dress(model, garments); then every frame, after the mixer: cloth.update(dt)
 import * as THREE from "three";
@@ -141,7 +143,13 @@ export async function dress(model, garments) {
       const bx = C0[o + 3] + (C1[o + 3] - C0[o + 3]) * f - ax, by = C0[o + 4] + (C1[o + 4] - C0[o + 4]) * f - ay, bz = C0[o + 5] + (C1[o + 5] - C0[o + 5]) * f - az;
       const t = Math.min(1, Math.max(0, ((cur[p] - ax) * bx + (cur[p + 1] - ay) * by + (cur[p + 2] - az) * bz) / (bx * bx + by * by + bz * bz || 1)));
       const dx = cur[p] - ax - bx * t, dy = cur[p + 1] - ay - by * t, dz = cur[p + 2] - az - bz * t, d = Math.hypot(dx, dy, dz), R = (caps[j].r + MARGIN) * H * k;
-      if (d < R && d > 1e-9) { cur[p] += dx * (R / d - 1); cur[p + 1] += dy * (R / d - 1); cur[p + 2] += dz * (R / d - 1); }
+      if (d < R && d > 1e-9 && s.P.closed && /Leg$/.test(caps[j].a.name) && !/UpperLeg$/.test(caps[j].b.name)) {  // closed: 1 (a sarong): out on the leg's OUTER side, away from her middle and up, so a knee lifted into the tube carries the cloth over it instead of coming through
+        const a = (s.p0 + Math.floor((p / 3 - s.p0) / (s.S + 1)) * (s.S + 1)) * 3, m = s.b.matrixWorld.elements, bl = Math.hypot(bx, by, bz) || 1;
+        let ux = cur[a] - m[12], uz = cur[a + 2] - m[14]; const ul = Math.hypot(ux, uz) || 1; ux /= ul; uz /= ul; let uy = 0.6;
+        const ub = (ux * bx + uy * by + uz * bz) / bl; ux -= bx / bl * ub; uy -= by / bl * ub; uz -= bz / bl * ub; const un = Math.hypot(ux, uy, uz);
+        if (un > 1e-3 && dx * ux + dy * uy + dz * uz < 0) { cur[p] = ax + bx * t + ux / un * R; cur[p + 1] = ay + by * t + uy / un * R; cur[p + 2] = az + bz * t + uz / un * R; }
+        else { cur[p] += dx * (R / d - 1); cur[p + 1] += dy * (R / d - 1); cur[p + 2] += dz * (R / d - 1); }
+      } else if (d < R && d > 1e-9) { cur[p] += dx * (R / d - 1); cur[p + 1] += dy * (R / d - 1); cur[p + 2] += dz * (R / d - 1); }
       else if (j === s.arm && s.P.reach && d > s.P.reach * H * k) { const g = 1 - s.P.reach * H * k / d; cur[p] -= dx * g; cur[p + 1] -= dy * g; cur[p + 2] -= dz * g; }  // a sleeve's bell no further out from its forearm than reach
     }
     if (s.P.over) for (const r of skirts) {  // shortcut: a skirt is its ring of each row last step (centre, and its half-widths to her side and front), not its triangles; enough for cloth that lies over it
@@ -220,7 +228,7 @@ export async function dress(model, garments) {
     }
     geo.attributes.position.needsUpdate = geo.attributes.normal.needsUpdate = true;
   };
-  let still = 0;
+  let still = 0; const legs = garments.some(g => g.closed) ? caps.flatMap((c, j) => /Leg$/.test(c.a.name) && !/UpperLeg$/.test(c.b.name) ? [j] : []) : [];  // only with a closed skirt: every other garment is unchanged
   const cloth = {
     mesh, caps, H, sheets, cur, steps: 0,
     update(dt) {
@@ -233,6 +241,7 @@ export async function dress(model, garments) {
       }
       let mv = 0;
       for (let i = 0; i < A1.length; i += 3) mv = Math.max(mv, Math.hypot(A1[i] - A0[i], A1[i + 1] - A0[i + 1], A1[i + 2] - A0[i + 2]));
+      for (const j of legs) for (let i = j * 6; i < j * 6 + 6; i += 3) mv = Math.max(mv, Math.hypot(C1[i] - C0[i], C1[i + 1] - C0[i + 1], C1[i + 2] - C0[i + 2]));  // a knee lifted with the hips still (a step up, sitting) is not standing still
       still = mv < 0.004 * H * k ? still + Math.max(0, dt) : 0;
       acc = Math.min(acc + Math.max(0, dt), MAXSTEPS * STEP); const n = Math.floor(acc / STEP + 1e-6); acc -= n * STEP;
       if (still < 0.16) {

@@ -29,6 +29,8 @@ import { makeNotice } from "./notice.js";
 import { ambient, skyline, roomShown, storyPuppet, swingRig, cardRect } from "./ambient.js";
 import { extraModel } from "./extras3d.js";
 import { codeProp, layQ } from "./props3d.js";
+import { buildPaperShadows, updatePaperShadows } from "./papershadow.js";
+import { buildPaperBlend, updatePaperBlend, setPaperBlend } from "./paperblend.js";
 
 const $ = id => document.getElementById(id);
 const q = new URLSearchParams(location.search), FPS = 24, rad = THREE.MathUtils.degToRad;
@@ -452,6 +454,8 @@ const load = id => spreads[id] ??= (async () => {
     if (!sp.byName[n]) parts.forEach(o => sp.props.set(o, () => wiggle(n, parts)));
   }
   targetProps(sp);
+  buildPaperShadows(sp, FPS);
+  buildPaperBlend(sp, scene);
   return sp;
 })();
 
@@ -900,7 +904,8 @@ function relang() {  // timing's contents swapped in place (the Reader, acts and
   else if (mode === "moral" && ml.includes(reader.id)) reader.read(ml.slice(ml.indexOf(reader.id)));
 }
 const reader = new Reader($("read"), { voice: src, timing, text, subs });
-languages($("langs"), `${bookId}.lang`, l => { lang = l; reader.setLang(l); });
+let paired = false, setVoice;  // Eddie 2026-11-24: "switch both to Lao": picking Lao in either menu turns on the other (a pick, not a page load; an English voice can still be picked after)
+const setLang = languages($("langs"), `${bookId}.lang`, l => { lang = l; reader.setLang(l); if (paired && l === "lo") setVoice("lo"); });
 const none = n => { say(`This book has no ${n} voice yet`); setTimeout(() => say(""), 3500); return false; };
 const want = () => {
   if (narr === "lo" && loT === undefined) { loT = null; json(`${voice}lo/timing.json`).then(t => (loT = t), () => (loT = none("Lao"))).then(relang); }
@@ -908,8 +913,9 @@ const want = () => {
     .then(([t, w]) => { for (const k in w) t[`words/${k}`] = w[k]; usT = t; }, () => (usT = none("American"))).then(relang); }
   relang();
 };
-picker($("voices"), [["uk", "English (UK)", "en-GB"], ["us", "English (US)", "en-US"], ["lo", "ລາວ", "lo"]], "narrator.voice", v => { narr = v || "uk"; want(); },
+setVoice = picker($("voices"), [["uk", "English (UK)", "en-GB"], ["us", "English (US)", "en-US"], ["lo", "ລາວ", "lo"]], "narrator.voice", v => { narr = v || "uk"; want(); if (paired && v === "lo" && lang !== "lo") setLang("lo"); },
   { label: "Narrator voice", fallback: "uk", lit: v => v && v !== "uk", icon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 3a6 6 0 0 0-6 6c0 2.2 1.2 3.5 2 4.6V21h7v-2.5h2.5a1.5 1.5 0 0 0 1.5-1.5v-3l1.6-.6-1.6-3.4C15.6 5.5 12.8 3 9 3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M18.2 8.6a5 5 0 0 1 0 6.8M20.6 6.2a8.4 8.4 0 0 1 0 11.6"/></svg>' });
+paired = true;
 const notice = makeNotice({ bookId, lib, story, getLang: () => lang });  // the legal card on the title page and the end card (notice.js)
 
 // ---------- sound (sound.js): a bed for each spread, foley for what happens, all ducked under the narration ----------
@@ -1948,6 +1954,8 @@ renderer.setAnimationLoop(now => {
   }
   showHint(now); dimReading(now);
   for (const [o, flat, turn] of S.turning ?? []) if (o.castShadow === (mode === "open")) { o.castShadow = mode !== "open"; o.material = mode === "open" ? flat : turn; }
+  updatePaperShadows(S, mode === "open", frame);
+  updatePaperBlend(S, scene, hooks.find(h => h?.life)?.life);
   lightWall(S);
   renderer.shadowMap.needsUpdate = !(innerWidth < 600 && (frame_n++ & 1));  // the shadows are redrawn every frame on a big screen and every second frame on a phone (30 Hz is not seen under a drifting camera)
   composer.render();
@@ -1957,5 +1965,6 @@ enter(await load(first), "closed"); spreadReady = true; lift(); notice.open();
 canvas.focus();
 window.live = { get sfx() { return sfxHook.fx; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
   get auto() { return au; }, get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
+  setPaperBlend: on => S && setPaperBlend(S, scene, on),
   get acting() { return S.acting; }, get game() { return S.play; }, get skipGames() { return skips(); }, readMode: rm, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, speakers, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,
   halt: () => (homing = null, true) };  // the director takes the camera from the glide home (ambient.js, a spread turned to)

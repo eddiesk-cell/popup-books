@@ -18,7 +18,8 @@ import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { markWords } from "../book.js";
 import { glow } from "./games.js";
 import { extra3d } from "./extras3d.js";
-import { matchSpeakers } from "./acts.js";
+import { matchSpeakers, opaque } from "./acts.js";
+import { makeContactShadow, puppetBaseSpan } from "./papershadow.js";
 
 const B = ([x, y, z]) => new THREE.Vector3(x, z, -y);  // Blender (z up) -> three (y up)
 const rnd = (a, b) => a + Math.random() * (b - a), jit = s => s * rnd(0.75, 1.25);  // waits jitter ±25%: loops never line up
@@ -73,10 +74,10 @@ function cutShape(color) {  // a stand-in die-cut: a shaded ellipse with a cream
     const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
   })();
 }
-function card(w, h, map, glow = 0.15, pivot = [0.5, 0.5]) {  // a flat paper card w wide and h tall, pinned at `pivot` (u from the left, v from the bottom)
+function card(w, h, map, glow = 0.02, pivot = [0.5, 0.5]) {  // a flat paper card w wide and h tall, pinned at `pivot` (u from the left, v from the bottom)
   const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h).translate((0.5 - pivot[0]) * w, (0.5 - pivot[1]) * h, 0),
     new THREE.MeshStandardMaterial({ map, alphaTest: 0.5, side: THREE.DoubleSide, roughness: 0.95,
-      emissive: 0xffffff, emissiveMap: map, emissiveIntensity: glow }));  // light through thin paper: a backlit cut-out never goes black
+      emissive: 0xffffff, emissiveMap: map, emissiveIntensity: glow }));  // subtle light through thin paper without unlit sticker glow (T7 Part B)
   m.castShadow = true; m.receiveShadow = true;
   return m;
 }
@@ -115,7 +116,7 @@ function shadeTexture() {
   })();
 }
 function shadeMaterial(mat) {
-  if (!mat.isMeshStandardMaterial || mat.userData.cloudShade || mat.emissive?.getHex()) return;
+  if (!mat.isMeshStandardMaterial || mat.userData.cloudShade || (mat.emissive?.getHex() && mat.emissiveIntensity >= 0.4)) return;
   mat.userData.cloudShade = true;
   const before = mat.onBeforeCompile;
   mat.onBeforeCompile = (s, r) => {
@@ -140,7 +141,7 @@ const hue = id => [...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 360, 7);
 // owner 2026-11-18: "when night comes, please do not turn people and animal to blue": at night EVERY puppet wears its own day card, dimmed (x0.45 colour, about x0.7 sRGB), never a tinted card. A -night card is not read any more.
 const PERSON = /boy|girl|man|aunt|uncle|grand|mother|father|seller|player|carrier|sleeper|poler|outfit|khun-borom|nyeu|villager|tong$|^nok$|monk|\bking\b|queen|child|people|person/;  // the camera frames a person by its face (cameraman)
 // V14, puppets.json "selflit": true (a moon, a lit lantern): drawn at its painted colour whatever the light, never dimmed at night, casting no shadow
-const selfLit = m => { m.material.color.setScalar(0); m.material.emissiveIntensity = 1; m.material.toneMapped = false; m.castShadow = false; };
+const selfLit = m => { m.material.color.setScalar(0); m.material.emissiveIntensity = 1; m.material.toneMapped = false; m.material.userData.selflit = true; m.castShadow = false; };
 async function puppet(id, def, stage) {
   const night = stage === "night", dim = night && !def.selflit; if (night) stage = "day";
   const size = def.size || 0.06, parts = def.parts?.length ? def.parts : ["body"], hinges = def.hinges || {};
@@ -159,7 +160,7 @@ async function puppet(id, def, stage) {
     const h = a ? a.tex.image.height * px : (i ? L[2] * (stub ? 0.35 : 1) : R[1]) * size;
     const pivot = a?.j.pivot ? [a.j.pivot[0], 1 - a.j.pivot[1]] : i ? [0.5 - L[4][0], 0.5 - L[4][1]] : [0.5, 0];
     const lr = /-r$|-b$|-back$|2$/.test(n) ? -1 : 1, pin = new THREE.Group();
-    const m = card(w, h, a ? a.tex : cutShape(`hsl(${(hue(id) + i * 23) % 360} ${i ? 40 : 34}% ${i ? 62 - 6 * (i % 3) : 56}%)`), 0.15, pivot);
+    const m = card(w, h, a ? a.tex : cutShape(`hsl(${(hue(id) + i * 23) % 360} ${i ? 40 : 34}% ${i ? 62 - 6 * (i % 3) : 56}%)`), 0.02, pivot);
     if (!i) pin.position.y = legs && !a ? 0.42 * size : 0;  // a stand-in wader's body sits on its legs
     else if (a?.j.at && P.a) pin.position.set((a.j.at[0] - P.pivot[0]) * P.w, (1 - a.j.at[1] - P.pivot[1]) * P.h, 0.001 * lr);
     else pin.position.set((0.5 - P.pivot[0] + L[3][0] * (lr < 0 && /^leg|^claw/.test(n) ? -1 : 1)) * P.w, (0.5 - P.pivot[1] + L[3][1]) * P.h, 0.002 * i * lr);
@@ -178,14 +179,14 @@ async function puppet(id, def, stage) {
     const own = into === root ? meshes : parts.map(n => into.getObjectByName(n)?.children.find(o => o.isMesh));  // each part's card hangs on the pin named after it (acts.js puppetModel)
     own.forEach((m, i) => { if (!m) return; if (tex[i]) { m.material.map = m.material.emissiveMap = tex[i]; m.material.needsUpdate = true; }
       if (def.selflit) return selfLit(m);
-      m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.15 * 0.45 : 0.15; });
+      m.material.color.setScalar(dk ? 0.45 : !art && to === "night" ? 0.55 : 1); m.material.emissiveIntensity = dk ? 0.02 * 0.45 : 0.02; });
   };
   const turned = def.turned && await picture(`puppets/${def.turned}/body${VER[stage] && (def.versions || []).includes(stage) ? VER[stage] : ""}.png`);  // V13: puppets.json "turned": the id of a three-quarter card of the same puppet, drawn instead of the front card while it faces left or right
   return { root, pins, meshes, size, def, first: parts[1], turned };
 }
 async function cardPuppet(file, size) {  // a single die-cut card standing on its base (a ladybug on the trunk): a puppet with no hinges
   const tex = await picture(file), root = new THREE.Group(), pin = new THREE.Group(), def = { size, parts: ["body"] };
-  const m = card(tex ? size * tex.image.width / tex.image.height : size, size, tex || cutShape("#c8281e"), 0.15, [0.5, 0]);
+  const m = card(tex ? size * tex.image.width / tex.image.height : size, size, tex || cutShape("#c8281e"), 0.02, [0.5, 0]);
   pin.add(m); root.add(pin);
   return { root, pins: { body: pin }, meshes: [m], size, def };
 }
@@ -315,7 +316,8 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const bookId = opts.book || new URLSearchParams(location.search).get("book") || "kapi";
   const shownCast = c => !!c?.body?.visible && !window.live?.acting?.was?.has(c.body);
   const isOpen = () => !opts.mode || opts.mode() === "open";
-  const SCAM = (m.camera?.story === true || new URLSearchParams(location.search).get("story") === "1") && !!controls && !calm;  // the story camera: the page's camera.story, or ?story=1
+  const SERIES = m.camera?.grammar === "series";  // the series grammar (stories/CAMERA.md "series grammar"): top, low, behind, orbit, pullout shots and hard cuts; implies the story camera
+  const SCAM = (SERIES || m.camera?.story === true || new URLSearchParams(location.search).get("story") === "1") && !!controls && !calm;  // the story camera: the page's camera.story, or ?story=1
   const SH = m.shots || {}, W = m.wind || {}, LI = m.light || {};
   let HOME, LOOK;  // the reading view the shots offset from: the viewer's (window.live.home), else the manifest camera
   const reHome = () => { const h = opts.home?.(); HOME = h ? h.pos.clone() : B(m.camera.at); LOOK = h ? h.look.clone() : B(m.camera.look); };
@@ -357,6 +359,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
 
   // ---------- the story clock: moments ([line, word], "game", "game:won", "end") fire once per listener each time ----------
   const fired = new Set();
+  let resetIso = null;
   const storyTick = () => {
     const s = opts.story?.() || {};
     if (s.line !== story.line || s.t < story.t - 0.3) for (const k of fired) if (k.startsWith(`${s.line}|`)) fired.delete(k);  // a line (again)
@@ -365,6 +368,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     if (s.at != null && story.at != null && s.at < story.at) {  // "Read again": every moment fires again, and the lights return to the stage first
       fired.clear();
       for (const [o, w] of tweens) tweens.set(o, { from: lightNow(o) ?? w.to, to: base.get(o), t0: now, secs: 0.6 });
+      resetIso?.();
     }
     Object.assign(story, s);
   };
@@ -615,7 +619,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
     orbit.theta = Math.min(Math.max(orbit.theta, controls.minAzimuthAngle), controls.maxAzimuthAngle);
     cam.position.setFromSpherical(orbit.makeSafe()).add(controls.target);
   };
-  const inside = l => { const v = cam.position.clone().sub(controls.target), d = v.length(), phi = Math.acos(v.y / d); return d >= l.minDistance + 0.015 && phi <= l.maxPolarAngle - 0.01 && d <= (l.maxDistance ?? Infinity) - 0.015 && phi >= (l.minPolarAngle ?? 0) + 0.01; };  // a little inside, not on the limit: a camera still sinking toward it would be clamped each frame (a 0.5 m/s lurch leaving the face shot)
+  const inside = l => { const v = cam.position.clone().sub(controls.target), d = v.length(), phi = Math.acos(v.y / d); return d >= l.minDistance + 0.015 && phi <= l.maxPolarAngle - 0.01 && d <= (l.maxDistance ?? Infinity) - 0.015 && phi >= (l.minPolarAngle ?? 0) + 0.01 && (!Number.isFinite(l.minAzimuthAngle) || (Math.atan2(v.x, v.z) >= l.minAzimuthAngle + 0.01 && Math.atan2(v.x, v.z) <= l.maxAzimuthAngle - 0.01)); };  // a little inside, not on the limit: a camera still sinking toward it would be clamped each frame (a 0.5 m/s lurch leaving the face shot)
   let shot = calm || !controls ? "off" : !phone() && cam.position.distanceTo(HOME) < 1e-3 ? "hold" : "wait";  // an upright phone waits at the reading view even on a fresh load: its opening view cannot show the whole book (the orbit limits stop it short), so it cropped the text page
   let yielded = shot === "off", last = null, cur = { pos: cam.position.clone(), look: LOOK.clone() }, run = null, calmFrom = 0;
   let lastShot = null;  // the shot last played: the director returns to it 4 s after the reader lets go
@@ -643,9 +647,9 @@ export function addAmbient(scene, cam, m, opts = {}) {
     const g = par(p.pos, p.look);
     if (!sp.s) sp.s = snap ? g : par(cam.position, controls.target), sp.vL.copy(snap ? sp.vL.set(0, 0, 0) : mv.vL), sp.vq = snap ? [0, 0, 0] : [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // a fresh book stands where its opening says; a camera that has been the viewer's carries on from where it is
     else if (sp.out && cam.position.distanceToSquared(sp.out) > 1e-6) sp.s = par(cam.position, controls.target), sp.vL.copy(mv.vL), sp.vq = [...mv.vq], sp.c = { L: sp.s.L.clone(), q: [...sp.s.q] };  // someone else moved the camera (the reader, the viewer's glide): carry on from there, at the speed it had
-    const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
+    const fly = SCAM && shot === "hold" && opts.mode?.() === "turn" ? 1 : 1, S = sp.s, C = sp.c, n = Math.max(1, Math.ceil(step * 120)), h = step / n, cap = deg(story.speaking && !SC.goal?.series ? 20 : 30) * fly, om = SCAM && shot !== "in" ? 2.2 * fly : OMEGA;  // fly: the first pull's turn, the camera leaving the title view for the reading view faster (1.8 times the limits): room shows until it arrives  // the story camera settles a little slower still
     g.q[1] = C.q[1] + wrapA(g.q[1] - C.q[1]);
-    const dr = SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && SC.cl ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && (SC.beat?.speaker || (SC.key === "game" && story.game === "next")) ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // speaker beats and game transitions use 29%/s (inside CAMERA.md's 30%/s cap) so wide-to-speaker moves arrive on time
+    const dr = SC.goal?.series ? 0.35 : SCAM && SC.goal?.face ? 0.8 : SCAM && SC.goal?.near ? 1.2 : SCAM && SC.cl ? 0.8 : SCAM && (leavingFace() || now - SC.gx < 6) ? 0.5 : run?.base?.face ? 0.5 : SCAM && (SC.beat?.speaker || (SC.key === "game" && story.game === "next")) ? 0.29 : SCAM && shot === "in" && klass() !== 3 ? 0.7 : run?.over || (SCAM && shot === "in") ? 0.27 : 0.22;  // speaker beats and game transitions use 29%/s (inside CAMERA.md's 30%/s cap) so wide-to-speaker moves arrive on time
     for (let i = 0; i < n; i++) {
       const dL = g.L.clone().sub(C.L), ml = Math.min(1, 0.35 * (SCAM && shot === "hold" && opts.mode?.() === "turn" ? 0.7 : 1) * h / Math.max(dL.length(), 1e-9)); C.L.addScaledVector(dL, ml);
       C.q[0] += Math.max(-dr * fly * h, Math.min(dr * fly * h, g.q[0] - C.q[0]));
@@ -899,7 +903,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
   };
   const plans = {};
   const ownGame = () => { const G = SH.game; return SCAM && G?.constructor === Object && ({ ...G, ...(klass() === 3 ? G.phone : klass() ? G.tablet : null) }).own === true; };  // the page's own game shot, opted in ("own": true inside shots.game; a screen's override may set it too, so "phone": {"own": false} keeps the viewer's own view on phones)
-  const beatOf = (line, s) => ({ line, t0: 0, names: [s.target].flat().filter(Boolean), at: s.at, size: s.framing ?? "medium", num: s.size, pitch: s.pitch, tablet: s.tablet, phone: s.phone, move: s.move ?? "hold", lead: s.lead, by: s.by, after: s.after, len: 3, kind: "authored" });  // a page's shot as a beat
+  const beatOf = (line, s) => ({ line, t0: 0, names: [s.target].flat().filter(Boolean), at: s.at, size: s.framing ?? (SERIES ? ANG[s.angle]?.[1] : null) ?? "medium", angle: SERIES ? s.angle : undefined, deg: s.deg, cut: SERIES && !!s.cut, num: s.size, pitch: s.pitch, tablet: s.tablet, phone: s.phone, move: s.move ?? "hold", lead: s.lead, by: s.by, after: s.after, len: 3, kind: "authored" });  // a page's shot as a beat
   const speechTurnsOf = (W, say) => {
     const out = [];
     for (let i = 0; i < Math.min(W.length, say.length); i++) {
@@ -999,7 +1003,57 @@ export function addAmbient(scene, cam, m, opts = {}) {
       return o;
     });
   })();
+  // ---------- the series grammar (stories/CAMERA.md "series grammar"): a beat's "angle" top | low | behind | orbit | pullout, framed by its subjects, with the
+  // house's safety: never inside the place (a spring arm from the look point), no room past the backdrop or the desk past the page (a sky dome excepted),
+  // the subjects whole under the words. Each angle has a ladder of rungs (raise or lower it, turn it, move in); the first that holds is the frame, else the
+  // beat's last good frame, else the house's own frame for the beat.
+  const ANG = { top: [72, "wide"], low: [-12, "medium"], behind: [14, "medium"], orbit: [16, "medium"], pullout: [16, "wide"] };  // elevation (degrees above the look point) and the size it takes without a framing
+  const blockers = [], armRc = new THREE.Raycaster(), v2 = new THREE.Vector2(), RAYS = [[0, 0], [-0.97, -0.97], [0, -0.97], [0.97, -0.97], [-0.97, 0], [0.97, 0], [-0.97, 0.97], [0, 0.97], [0.97, 0.97]], vis = o => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
+  let dome;  // a place with a sky dome shows no room from any side
+  const seriesRig = (b, tt, any) => {
+    const A = ANG[b.angle], k = klass(), ov = k === 3 ? b.phone : k ? b.tablet : null;
+    if (ov) b = { ...b, ...ov, names: ov.target != null ? [ov.target].flat() : b.names, size: ov.framing ?? b.size, num: ov.size ?? b.num };
+    const names = withPair(resolveLiveNames(b, any).names.filter(Boolean)), u = boxOf(names, b.at, any); if (!u) return null;
+    if (!blockers.length) { const skip = new Set([group, ...cast.map(c => c.body)]); (function walk(o) { if (skip.has(o)) return; if (o.isMesh && !o.isSkinnedMesh) blockers.push(o); o.children.forEach(walk); })(parent); }  // the place (the spread, its props, a "surround" wall), not the cast nor the ambient extras. shortcut: as built; a mesh added later does not count
+    dome ??= blockers.some(o => /sky.?dome/i.test(o.name));  // a sky dome: no room past the backdrop from any side (the viewer's "surround" wall stands only behind the book: its ends still show the room)
+    const c = u.getCenter(new THREE.Vector3()), h = u.getSize(new THREE.Vector3()), H = Math.max(h.y, 0.03), P = [-1, 1].flatMap(x => [-1, 1].flatMap(y => [-1, 1].map(z => new THREE.Vector3(c.x + x * h.x * 0.53, c.y + y * h.y * 0.53, c.z + z * h.z * 0.53))));
+    const p = clamp01((tt - SC.since) / Math.max(1.5, b.len)), ax = SC.ax ?? HOME.clone().sub(LOOK), a0 = Math.atan2(ax.x, ax.z) + deg(b.yaw ?? 0), S = safeNow(), [tx, ty] = halves(), W = 2 * Math.min(S.x, 0.82), Hs = S.yt - S.yb;
+    const lead = names.map(n => cast.find(x => x.name === n)).find(x => x?.yaw != null), fw = new THREE.Vector3(Math.sin(lead?.yaw ?? 0), 0, Math.cos(lead?.yaw ?? 0));
+    const f0 = Math.min(0.92, b.num ?? FILL[b.size]?.[k] ?? FILL.medium[k]), fill = b.angle === "pullout" ? FILL.close[k] + (f0 - FILL.close[k]) * smooth(p) : f0;
+    if (b.angle === "orbit") SC.sa ??= Math.atan2(cam.position.x - c.x, cam.position.z - c.z);
+    const shoot = (el, az, f, look, Q = P) => {  // from elevation el and azimuth az about `look`, near enough that the points Q fill f of the safe frame, centred in it
+      const dir = new THREE.Vector3(Math.sin(az) * Math.cos(el), Math.sin(el), Math.cos(az) * Math.cos(el)), L = look.clone(); let D = Math.max(0.1, cam.position.distanceTo(controls.target));
+      for (let i = 0; i < 6; i++) { const e = extent(Q, { pos: L.clone().addScaledVector(dir, D), look: L }); D *= Math.max((e.x1 - e.x0) / W, (e.y1 - e.y0) / Hs) / f;
+        L.addScaledVector(tmp.setFromMatrixColumn(probe.matrixWorld, 0), (e.x0 + e.x1) / 2 * tx * D).addScaledVector(tmp.setFromMatrixColumn(probe.matrixWorld, 1), ((e.y0 + e.y1) / 2 - (S.yb + S.yt) / 2) * ty * D); }
+      return Number.isFinite(D) && D > 0.02 && Number.isFinite(L.x) ? { pos: L.clone().addScaledVector(dir, D), look: L, roomy: true, series: true } : null;  // subjects behind it, or none: no frame
+    };
+    const arm = r => {  // pulled in toward its look point until nothing of the place stands between: never inside a rock, a trunk, the ground
+      const d = r.pos.distanceTo(r.look), v = tmp.copy(r.pos).sub(r.look).divideScalar(d); armRc.set(r.look, v); armRc.far = d;
+      const hit = armRc.intersectObjects(blockers, false).find(x => x.face && vis(x.object) && [].concat(x.object.material)[0].opacity > 0.5 && opaque(x));
+      if (hit) r.pos.copy(r.look).addScaledVector(v, Math.max(0.02, hit.distance - 0.03));
+      return r;
+    };
+    const leaves = r => { aim(r); for (const [x, y] of RAYS) { armRc.setFromCamera(v2.set(x, y), probe); armRc.far = 8; if (!armRc.intersectObjects(blockers, false).some(h => h.face && vis(h.object) && h.object.name !== "surround" && opaque(h))) return true; } return false; };  // a ray through its edge or middle meets nothing of the place (the surround wall is not the place): it shows the room, any way it looks
+    const seen = names.map(n => cast.find(x => x.name === n)).filter(x => x?.body).map(x => [0.5, 0.85].map(k => x.body.getWorldPosition(new THREE.Vector3()).addScaledVector(UP, k * x.height)));  // each character's middle and head
+    const hidden = r => seen.some(Q => Q.every(q => { const d = r.pos.distanceTo(q); armRc.set(r.pos, tmp.copy(q).sub(r.pos).divideScalar(d)); armRc.far = d - 0.005; return armRc.intersectObjects(blockers, false).some(h => h.face && vis(h.object) && [].concat(h.object.material)[0].opacity > 0.5 && opaque(h)); }));  // a card or a rock hides a character's middle and its head (grass over its legs is the layered look)
+    const ok = r => { if (!inSafe(P, r) || hidden(r) || P.some(p => (aim(r), sv.copy(p).applyMatrix4(probe.matrixWorldInverse).z > -0.02)) || leaves(r)) return false; if (!bd || dome) return true; const q = roomOf(r); return q.top <= 0.02 && q.side <= 0.02 && deskOver(r) <= 0.02; };  // subjects whole and in front of it, no room any way
+    const up = (y = 0.15) => c.clone().addScaledVector(UP, y * H), ahead = [...P, c.clone().addScaledVector(fw, 1.6 * H)], toward = Math.sign(Math.atan2(Math.sin(a0 - lead?.yaw - Math.PI), Math.cos(a0 - lead?.yaw - Math.PI))) || 1;
+    const rungs = { top: [72, 78, 84].flatMap(e => [1, 1.2, 1.45].map(m => [e, a0, m, c])),  // raised toward straight down, then in: its frame's edges land on the floor, not past the backdrop or the page
+      low: [-12, -6, 0, 6, 12, 18].flatMap(e => [1, 1.2].map(m => [e, a0, m, up()])),  // raised from the floor until the frame holds (no room over the backdrop's top)
+      behind: [0, 20, 40, 65, -20, -40].flatMap(o => [14, 24].map(e => [e, (lead?.yaw ?? 0) + Math.PI + deg(o) * toward, 1, c, ahead])),  // over its back, framing it and where it looks; turned toward the reader's side if the room would show
+      orbit: [[16, 1], [26, 1], [16, 1.2], [26, 1.2]].map(([e, m]) => [e, SC.sa + deg(b.deg ?? 90) * smooth(p), m, c]),
+      pullout: [[16 + 10 * smooth(p), 1], [26 + 10 * smooth(p), 1], [16, 1.15]].map(([e, m]) => [e, a0, m, c]) }[b.angle];
+    for (const i of [SC.rung, ...rungs.keys()]) { if (!rungs[i]) continue; const [e, az, m, look, Q] = rungs[i], r = shoot(deg(e), az, Math.min(0.92, fill * m), look, Q); if (r && ok(arm(r))) return SC.rung = i, (SC.okr = r); }  // the rung it stands on first: the frame never flips between two that both hold
+    const held = SC.okr && ok(SC.okr) ? SC.okr : null; SC.rung = held ? "held" : "house"; return held;  // none holds: its last frame while that still does, else the house frame
+  };
+  const letOut = g => {  // the reader's orbit let out around a series frame (from above, below, behind): given back once the camera is inside it again (camera())
+    const v = g.pos.clone().sub(g.look), d = v.length(), phi = Math.acos(v.y / d);
+    faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle };
+    faceLim.maxDistance ??= controls.maxDistance; faceLim.minPolarAngle ??= controls.minPolarAngle; faceLim.minAzimuthAngle ??= controls.minAzimuthAngle; faceLim.maxAzimuthAngle ??= controls.maxAzimuthAngle;
+    Object.assign(controls, { minDistance: Math.min(controls.minDistance, d - 0.01), maxDistance: Math.min(Math.max(controls.maxDistance, d + 0.01), controls.ceil ?? Infinity), minPolarAngle: Math.min(controls.minPolarAngle, Math.max(0.02, phi - 0.05)), maxPolarAngle: Math.max(controls.maxPolarAngle, Math.min(Math.PI - 0.02, phi + 0.05)), minAzimuthAngle: -Infinity, maxAzimuthAngle: Infinity });
+  };
   const beatRig = (b, tt, any) => {  // V18: an authored wide is never closer than the reading view (the room-safe fit pulled a page-piece wide in to 1.2 m where the reading view stands at 1.3)
+    const sr = b.angle && seriesRig(b, tt, any); if (sr) return sr;
     const r = beatRig0(b, tt, any), h = r && b.kind === "authored" && b.size === "wide" && !phone() ? rigOf("reading") : null;
     return h && r.pos.distanceTo(r.look) < h.pos.distanceTo(h.look) ? h : r;
   };
@@ -1116,7 +1170,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
       const sameSpk = !beat?.speaker || beat.speaker === SC.beat?.speaker;
       const hold = sameSpk && SC.beat && /single|reply/.test(SC.beat.kind) && now - SC.since < 1.5;
       if (!hold) { if (!SC.key) opts.halt?.();  // the first beat takes the camera from the viewer's glide home
-        if (SC.goal?.face || SC.cl || (SC.goal && SC.goal.pos.distanceTo(SC.goal.look) < 0.42)) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.cl = false; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
+        if (SC.goal?.face || SC.cl || (SC.goal && SC.goal.pos.distanceTo(SC.goal.look) < 0.42)) SC.fx = now; if (/^(game|won)$/.test(SC.key) && !/^(game|won)$/.test(key)) SC.gx = now; SC.sa = SC.okr = SC.rung = null; SC.cut = !!beat?.cut; SC.swing = SERIES; SC.key = key; SC.endHold = SC.own = null; SC.rel = key === "end" ? SC.goal : null; SC.since = now; SC.sign = null; SC.half = SC.c = SC.v = null; SC.cl = false; SC.beat = beat; SC.pend = null; focus.goal = beat?.names[0] ?? null; }
     }
     if (yielded) { if (!took && !held.on && SC.since >= SC.out + 4) yielded = false, calmFrom = now; else return; }  // the reader's hand wins; after a tap the director returns at the first beat that begins 4 s after they let go, after a real zoom or turn only on the next page
     let g = null;
@@ -1127,13 +1181,16 @@ export function addAmbient(scene, cam, m, opts = {}) {
     else if (SC.key === "end") { if (!SC.endHold) { const e = endShot(), ns = e?.target != null ? [e.target].flat() : actors(), E = SH.end && typeof SH.end === "object" && !Array.isArray(SH.end) ? SH.end : {}, g0 = beatRig({ line: "end", t0: 0, len: 3, names: ns, size: E.framing ?? "wide", num: E.size, phone: E.phone, tablet: E.tablet, move: "hold", kind: "end" }, now) ?? rigOf(e); SC.endHold = g0 && { pos: g0.pos.clone(), look: g0.look.clone() }; } g = SC.endHold; }  // the close is framed once, as it begins, and held (the page's own size and screen overrides): it lands and stays, so the Next button is placed once and clear (a close that followed its people crept on under it), and a walker who leaves walks out of a still frame  // the story camera's close holds the end's subjects (its people, never everyone: 8.5's otter and kingfisher took it 2.7 m out, into the room) as a beat does (low, room-safe): the reading view's own steep look tipped 8.5's end top-down (34.6°)
     else if (SC.beat) g = SC.beat.reading ? rigOf("reading") : beatRig(SC.beat, now);
     if (g) SC.goal = g;
-    if (SC.goal?.face) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });  // the orbit let out for a face beat, as for a face shot (given back once the camera is inside it again)
+    if (SC.goal?.series) letOut(SC.goal);
+    else if (SC.goal?.face) faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }, Object.assign(controls, { minDistance: Math.min(faceLim.minDistance, 0.05), maxPolarAngle: Math.max(faceLim.maxPolarAngle, deg(110)) });  // the orbit let out for a face beat, as for a face shot (given back once the camera is inside it again)
     else if (SC.goal) {
       const d = SC.goal.pos.distanceTo(SC.goal.look), isPaperBeat = SC.beat && SC.beat.size !== "wide" && SC.beat.names.filter(Boolean).length > 0 && SC.beat.names.filter(Boolean).every(n => { const c = hero(n) ?? shownTwin(n); return !c || !!c.c?.model?.startsWith("puppet:") || (c.bones?.length ?? 0) === 0; });
       if (isPaperBeat && d < 1.0) SC.goal.near = true;
       if (d < (faceLim?.minDistance ?? controls.minDistance) - 0.01) { SC.goal.near ||= SC.beat?.names.filter(Boolean).every(n => { const c = hero(n); return !c || (c.bones?.length ?? 0) === 0; }); faceLim ??= { minDistance: controls.minDistance, maxPolarAngle: controls.maxPolarAngle }; controls.minDistance = Math.min(faceLim.minDistance, Math.max(0.05, d - 0.01)); } else lift(SC.goal);
     }
-    const trail = SC.goal ? place({ pos: SC.goal.pos.clone(), look: SC.goal.look.clone() }, t) : 0;
+    if (SC.swing && g) { SC.swing = false; const a = tmp.copy(cam.position).sub(controls.target); if (a.angleTo(g.pos.clone().sub(g.look)) > deg(60)) SC.cut = true; }  // the series grammar cuts rather than swing the camera more than 60 degrees round (a long swing passes views that show the room)
+    if (SC.cut && SC.goal) SC.cut = false, snap = true, sp.s = null, SC.fit = null;  // the series grammar's hard cut: the camera is at the new beat's frame at once, at rest
+    const trail = SC.goal ? place({ pos: SC.goal.pos.clone(), look: SC.goal.look.clone() }, t) : 0; snap = false;
     if (window.live) window.live.hint.landed = trail < 0.02 && SC.key === "end", window.live.hint.hold = SC.key === "end" ? SC.endHold : null;  // the Next page button: placed as the held close will show it, as soon as the close begins (it waited for the landing, 11-17 s on the toad pages)
   }
 
@@ -1145,7 +1202,35 @@ export function addAmbient(scene, cam, m, opts = {}) {
   const base = new Map(lights.map(o => [o, { c: o.color.clone(), i: o.intensity, p: o.position.clone() }])), tweens = new Map();
   const lightNow = o => { const w = tweens.get(o); if (!w) return null; const k = smooth((now - w.t0) / w.secs); return { c: w.from.c.clone().lerp(w.to.c, k), i: w.from.i + (w.to.i - w.from.i) * k, p: w.from.p.clone().lerp(w.to.p, k) }; };
   const lit = new Map();  // parts a cue lights (a lamp's flame): part -> {from, to, t0, secs, k}
+  // isolation spot (opt-in: built once only if a cue names "isolate"; zero cost and zero change on pages without it)
+  let iso = null, cueIso = null;
+  if ((LI.cues || []).some(c => c.isolate != null)) {
+    const amb = [], isoLit = [], isoNook = [], env0 = scene.environmentIntensity;
+    for (const g of new Set([scene, opts.lights, parent].filter(Boolean))) g.traverse(o => (o.isAmbientLight || o.isHemisphereLight) && amb.push([o, o.intensity]));
+    for (const g of new Set([root, parent].filter(Boolean))) g.traverse(o => o.isMesh && o.userData?.c0?.isColor && isoLit.push([o, o.userData.c0.clone()]));
+    scene.getObjectByName("nook")?.traverse(o => o.isMesh && o.material?.isMeshBasicMaterial && !o.material.alphaMap && isoNook.push([o.material, o.material.color.clone()]));
+    const spotMax = Math.min(4.2, Math.max(3.8, Math.max(0, ...lights.map(o => o.intensity)) * 1.6));  // shortcut: one intensity scale from the stage's brightest light so isolated cast read brightest in frame; tune per-cue via tint if needed
+    const spot = new THREE.SpotLight(0xffedd0, 0, 1.5, 0.38, 0.78, 0);  // wide soft penumbra, no shadow pass, decay 0 with distance cutoff
+    spot.castShadow = false;
+    (opts.lights || parent).add(spot, spot.target);
+    const box = new THREE.Box3(), bTmp = new THREE.Box3(), ctr = new THREE.Vector3(), sz = new THREE.Vector3();
+    iso = { spot, amb, isoLit, isoNook, env0, spotMax, box, bTmp, ctr, sz, objs: [], k: 0, fromK: 0, toK: 0, level: 0.2, fromLevel: 0.2, toLevel: 0.2,
+      t0: -9, secs: 4, dirty: false, fromCol: new THREE.Color(1, 0.93, 0.8), toCol: new THREE.Color(1, 0.93, 0.8), curCol: new THREE.Color(1, 0.93, 0.8) };
+    resetIso = () => { if (iso.k > 0 || iso.toK > 0) Object.assign(iso, { fromK: iso.k, toK: 0, fromLevel: iso.level, t0: now, secs: 0.6, dirty: true }); };
+    cueIso = c => {
+      const back = c.isolate === "back" || c.back === true;
+      iso.fromK = iso.k; iso.fromLevel = iso.level; iso.fromCol.copy(iso.curCol); iso.t0 = now; iso.dirty = true;
+      if (back) { iso.toK = 0; iso.secs = Math.max(0.1, c.secs ?? c.seconds ?? 5); return; }
+      const ns = (Array.isArray(c.isolate) ? c.isolate : String(c.isolate).split(",")).map(s => s.trim()).filter(Boolean);
+      iso.objs = ns.map(n => { const ch = cast.find(x => x.name === n); return ch ? { ch } : (pups.find(p => p.e.name === n)?.p.root || find(n)[0]); }).filter(Boolean);
+      iso.toK = 1; iso.toLevel = Math.max(0.15, Math.min(1, c.level ?? 0.2));
+      if (c.tint) Array.isArray(c.tint) ? iso.toCol.setRGB(...c.tint) : iso.toCol.set(c.tint); else iso.toCol.setRGB(1, 0.93, 0.8);
+      if (iso.k === 0) { iso.level = iso.fromLevel = iso.toLevel; iso.curCol.copy(iso.toCol); }
+      iso.secs = Math.max(0.1, c.secs ?? c.seconds ?? 4);
+    };
+  }
   const cueLight = c => {  // level × the stage watts, tint × its colour, at moves it; eases over seconds and holds; "back" returns it
+    if (c.isolate != null) return void cueIso?.(c);
     const o = lightOf(c.light), part = !o && [root, ...cast.map(ch => ch.body)].map(g => g?.getObjectByName(c.light)).find(Boolean);
     if (part) { const w = lit.get(part); return void lit.set(part, { from: w?.k ?? 0, to: c.back ? 0 : c.level ?? 1, t0: now, secs: Math.max(0.1, c.seconds ?? 0.8) }); }  // a part, not a light: it glows (a candle's "-flame" catching)
     if (!o) return;
@@ -1172,17 +1257,84 @@ export function addAmbient(scene, cam, m, opts = {}) {
   }; pageStage.n = 0;
   new Set((LI.cues || []).map(c => c.stage).filter(st => st && st !== "day")).forEach(st => pageCards.forEach(c => picture(`${c.base}-${st}.png`)));  // fetched as the page is made
   ticks.push(t => {
-    (LI.cues || []).forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
+    const cues = LI.cues || [];
+    cues.forEach((c, i) => when(c.line, c.word, `light${i}`)  // the game's light is right from its first frame: done in the pause before its prompt
       && (cueLight(c.line === "game" ? { ...c, seconds: story.game === "next" ? Math.min(c.seconds ?? 1.5, 0.4) : 0 } : c),
-        c.stage && (pageStage(c.stage), root.userData.stage = c.stage, [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage))))));  // "stage": "day": every paper puppet to its day card from this cue
+        c.stage && (pageStage(c.stage), root.userData.stage = c.stage,
+          // T7 Part B: when a cue switches a day/eve spread to night (e.g. midnight), dim any un-cued stage lights (like sky) and shift fog to night so props & walls drop into moonlit night with the backdrop
+          (() => {
+            const sib = new Set(cues.filter(q => q.line === c.line && (q.word || "") === (c.word || "") && q.light).map(q => lightOf(q.light)));
+            if (c.stage === "night" && stage !== "night") {
+              for (const o of lights) if (!sib.has(o)) {
+                const b = base.get(o), from = lightNow(o) || { c: o.color.clone(), i: o.intensity, p: o.position.clone() };
+                tweens.set(o, { from, to: { c: b.c.clone(), i: b.i * 0.42, p: b.p.clone() }, t0: now, secs: Math.max(0.1, c.seconds ?? 2.5) });
+              }
+              if (scene.fog) scene.fog.color.setRGB(0.04, 0.06, 0.12);
+            } else if (c.stage === "day" && stage !== "night") {
+              for (const o of lights) if (!sib.has(o) && tweens.has(o)) {
+                const b = base.get(o), from = lightNow(o) || { c: o.color.clone(), i: o.intensity, p: o.position.clone() };
+                tweens.set(o, { from, to: b, t0: now, secs: Math.max(0.1, c.seconds ?? 1.5) });
+              }
+              if (scene.fog) scene.fog.color.copy(bg);
+            }
+          })(),
+          [root, group, ...cast.map(ch => ch.body)].forEach(g => g?.traverse(o => o.userData.restage?.(c.stage))))));  // "stage": "day": every paper puppet to its day card from this cue
+    if (iso && (iso.k > 0 || iso.toK > 0 || iso.dirty)) for (const o of lights) if (!tweens.has(o)) o.intensity = base.get(o).i;
     for (const [o] of tweens) { const s = lightNow(o); o.color.copy(s.c); o.intensity = s.i; o.position.copy(s.p); }
     for (const [o, w] of lit) if (w.k !== w.to) glow(o, (w.k = w.from + (w.to - w.from) * smooth((now - w.t0) / w.secs)));
     for (const f of flicker) {  // a flame: 0.85..1.0 with soft noise at 6-10 Hz
       const k = 0.925 + 0.045 * Math.sin(t * TAU * 6.3 + f.ph) + 0.03 * Math.sin(t * TAU * 9.7 + 2 * f.ph);
       if (f.o) f.o.intensity = f.i * k; else f.m.emissiveIntensity = f.i * k;
     }
+    if (iso && (iso.k > 0 || iso.toK > 0 || iso.dirty)) {
+      const u = smooth((now - iso.t0) / iso.secs);
+      iso.k = iso.fromK + (iso.toK - iso.fromK) * u;
+      if (iso.toK > 0) { iso.level = iso.fromLevel + (iso.toLevel - iso.fromLevel) * u; iso.curCol.copy(iso.fromCol).lerp(iso.toCol, u); }
+      const wash = 1 + (iso.level - 1) * iso.k;
+      scene.userData.isoWash = wash;
+      for (const o of lights) o.intensity *= wash;
+      for (const [o, i0] of iso.amb) o.intensity = i0 * wash;
+      scene.environmentIntensity = iso.env0 * wash;
+      for (const [o, c0] of iso.isoLit) o.userData.c0.copy(c0).multiplyScalar(wash);
+      for (const [mat, c0] of iso.isoNook) mat.color.copy(c0).multiplyScalar(wash);
+      const dk = (root.userData.stage ?? stage) === "night";
+      for (let i = 0; i < pups.length; i++) { const x = pups[i]; if (!x.def.selflit && !iso.objs.includes(x.p.root)) for (let j = 0; j < x.p.meshes.length; j++) x.p.meshes[j].material.emissiveIntensity = (dk ? 0.009 : 0.02) * wash; }
+      if (iso.k > 0 && iso.objs.length) {
+        iso.box.makeEmpty();
+        for (let i = 0; i < iso.objs.length; i++) {
+          const it = iso.objs[i];
+          if (it.ch) {  // cast body + height (avoids NaN from scale-0 emotion heads on skinned meshes, live.js:574)
+            const ch = it.ch;
+            if (!ch.body.visible) continue;
+            ch.body.getWorldPosition(iso.ctr);
+            const h = ch.height ?? ch.c?.height ?? 0.15, r = Math.max(0.04, h * 0.42);
+            iso.bTmp.min.set(iso.ctr.x - r, iso.ctr.y, iso.ctr.z - r);
+            iso.bTmp.max.set(iso.ctr.x + r, iso.ctr.y + h, iso.ctr.z + r);
+            iso.box.union(iso.bTmp);
+          } else if (it.visible) {
+            iso.bTmp.setFromObject(it);
+            if (isFinite(iso.bTmp.min.x)) iso.box.union(iso.bTmp);
+          }
+        }
+        if (!iso.box.isEmpty()) {
+          iso.box.getCenter(iso.ctr); iso.box.getSize(iso.sz);
+          if (isFinite(iso.ctr.x)) {
+            iso.ctr.y = iso.box.min.y + iso.sz.y * 0.72;  // aim at upper bodies so characters (not the floor between them) are brightest
+            iso.spot.target.position.copy(iso.ctr);
+            iso.spot.position.set(iso.ctr.x - 0.08, iso.ctr.y + 0.85, iso.ctr.z + 0.30);
+            const span = Math.hypot(iso.sz.x, iso.sz.z) * 0.5, d = iso.spot.position.distanceTo(iso.ctr);
+            iso.spot.angle = Math.min(Math.PI / 3, Math.atan2(Math.max(0.28, span * (iso.objs.length > 1 ? 2.8 : 2.6)), d));
+            iso.spot.distance = d * 1.55;
+            iso.spot.target.updateMatrixWorld();
+          }
+        }
+      }
+      iso.spot.color.copy(iso.curCol);
+      iso.spot.intensity = iso.spotMax * iso.k;
+      if (u >= 1 && iso.k === 0) iso.dirty = false;
+    }
   });
-  disposers.push(() => { delete root.userData.stage; pageCards.forEach(c => (c.o.material.map = c.own)); for (const [o, b] of base) { o.color.copy(b.c); o.intensity = b.i; o.position.copy(b.p); } for (const [o] of lit) glow(o, 0); flicker.forEach(f => (f.o ? (f.o.intensity = f.i) : (f.m.emissiveIntensity = f.i))); });
+  disposers.push(() => { delete root.userData.stage; pageCards.forEach(c => (c.o.material.map = c.own)); for (const [o, b] of base) { o.color.copy(b.c); o.intensity = b.i; o.position.copy(b.p); } for (const [o] of lit) glow(o, 0); flicker.forEach(f => (f.o ? (f.o.intensity = f.i) : (f.m.emissiveIntensity = f.i))); if (iso) { scene.environmentIntensity = iso.env0; for (const [o, i0] of iso.amb) o.intensity = i0; for (const [o, c0] of iso.isoLit) o.userData.c0.copy(c0); for (const [mat, c0] of iso.isoNook) mat.color.copy(c0); iso.spot.removeFromParent(); iso.spot.target.removeFromParent(); iso.spot.dispose(); } });
 
   // ---------- wind: gusts crossing the spread, swaying the pieces in turn (DIRECTION.md "wind") ----------
   const WD = { base: 0.2, gust: 0.5, gust_every: [8, 14], dir: -1, ...W }, sway = [], gusts = [];
@@ -1521,11 +1673,18 @@ export function addAmbient(scene, cam, m, opts = {}) {
       p.root.scale.setScalar(1e-3); p.root.name ||= e.name ?? ""; group.add(p.root); pups.push(x);  // named, so a shot can name an extra
       p.x = x;  // a 3D extra plays the clip of the step its routine is on
       if ((x.sw = sway.find(s => s.b?.containsPoint(home)))) x.sw.carry = true;
-      if (coarse) { x.cs = new THREE.Mesh(new THREE.PlaneGeometry(p.size, p.size * 0.4).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ color: 0, transparent: true, opacity: 0.3, depthWrite: false, alphaMap: dot }));
-        group.add(x.cs); }
+      const standPaper = !e.model && !def.selflit && e.layer !== "back" && !/fly|swim|glide/.test(def.gait || "") && !(home.y - Y > 0.025);
+      if (standPaper || coarse) {
+        const spn = standPaper ? puppetBaseSpan(p.root) : { cx: 0, w: p.size * 0.7 };
+        const cw = Math.max(0.026, spn.w * 1.28), cd = THREE.MathUtils.clamp(cw * 0.44, 0.018, 0.036);
+        const op = { day: 0.60, evening: 0.50, storm: 0.46, night: 0.42 }[stage] ?? 0.50;
+        x.cs = makeContactShadow(cw, cd, op, e.name || p.root.name || e.puppet || "");
+        x.csOff = spn.cx; x.csDepth = cd; x.csBaseOp = op;
+        group.add(x.cs);
+      }
       return x;
     };
-    const coarse = matchMedia("(pointer: coarse)").matches, dot = coarse && sprite("#fff #fff8 #000");
+    const coarse = matchMedia("(pointer: coarse)").matches;
     let animated = 0;
     for (const e of m.extras || []) {
       const n = e.count || 1;
@@ -1651,7 +1810,12 @@ export function addAmbient(scene, cam, m, opts = {}) {
       x.at = ground;  // where it stands before any lift or sway: the next step starts here, so a cue mid-hop never strands it in the air and the sway never accumulates
       if (x.sw) pos.applyMatrix4(x.sw.delta);  // perched on a swaying tree: it rides the sway, never floats off the limb
       p.root.position.copy(pos);
-      if (x.cs) { x.cs.position.set(pos.x, x.home.y + 0.002, pos.z); x.cs.material.opacity = x.hidden ? 0 : 0.3 * Math.max(0, 1 - (pos.y - x.home.y) / 0.15); }
+      if (x.cs) {
+        const lift = pos.y - x.home.y, op = (x.csBaseOp ?? 0.35) * Math.max(0, 1 - Math.max(0, lift) / 0.04) * Math.min(1, grow);
+        x.cs.visible = !x.hidden && op > 0.01 && lift > -0.02;
+        x.cs.position.set(pos.x + (x.csOff ?? 0) * Math.sign(x.fs || 1), x.home.y + 0.0005, pos.z);
+        x.cs.material.opacity = op;
+      }
       pose(p, ang);
       x.fs += (x.face - x.fs) * Math.min(1, dt * 12);  // turning round flips the paper through edge-on, 0.3 s
       p.root.scale.set(Math.sign(x.fs || 1) * Math.max(0.05, Math.abs(x.fs)), 1, 1).multiplyScalar(grow);
@@ -1662,7 +1826,7 @@ export function addAmbient(scene, cam, m, opts = {}) {
 
   return {
     get shot() { return shot; },
-    get state() { return { shot, yielded, took, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, story: SCAM, beat: SC.key, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
+    get state() { return { shot, yielded, took, held: held.on, run: run?.s?.target ?? null, tilt: +tilt.toFixed(3), dz: +dz.toFixed(3), kept: kept.toArray().map(v => +v.toFixed(3)), line: story.line, story: SCAM, beat: SC.key, rung: SC.goal?.series || SC.rung === "house" ? SC.rung : null, home: HOME.toArray().map(v => +v.toFixed(3)), wide: wide.pos.toArray().map(v => +v.toFixed(3)) }; },  // for tests
     get extras() { return pups; },  // the extras, the backdrop's top, and everything this layer added, for tests
     get backdrop() { return bd; },
     group,

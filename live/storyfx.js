@@ -1,5 +1,6 @@
 // storyfx.js — the story effects (unit FX2, stories/EFFECTS.md sections 3 and 5): splash, wake, rings, sparkle, gust, shimmer, halo, notes, dust,
-// rain, haze, embers, breath, shooting-star, dust-whirl, soft-lightning, puff, wash, bubbles, sunrays. The fx.js pattern: emit writes attributes once, all motion is
+// rain, haze, embers, breath, shooting-star, dust-whirl, soft-lightning, puff, wash, bubbles, sunrays, and four code copies of Effekseer samples (golden-cloud, flame-column,
+// wind-funnel, golden-burst). The fx.js pattern: emit writes attributes once, all motion is
 // in the vertex shaders from one time uniform, the clock is its own (update(dt) adds up), so a fixed-step recorder gets the same show every time.
 //
 // API (the wiring is written from this comment alone):
@@ -11,7 +12,7 @@
 //     sound    (name, gain) => void; called once when an effect starts, gain <= 0.4; the module plays nothing itself
 //   sfx.play(type, o) -> handle { stop(), done, live, type, level }   stop() fades everything it made out over 0.6 s
 //     type     splash | wake | rings | sparkle | gust | shimmer | halo | notes | dust | rain | haze | embers | breath | shooting-star |
-//              dust-whirl | soft-lightning | puff | wash | bubbles | sunrays   (aliases: heat-shimmer = haze, music-notes = notes level 2, wind-streaks = gust, green-wash = wash)
+//              dust-whirl | soft-lightning | puff | wash | bubbles | sunrays | golden-cloud | flame-column | wind-funnel | golden-burst   (aliases: heat-shimmer = haze, music-notes = notes level 2, wind-streaks = gust, green-wash = wash)
 //     o.at     THREE.Vector3, where (world)            o.follow  an Object3D the effect rides with (its world position; effects sit low on it)
 //     o.size   the subject's height in metres (0.1)    o.level   1 to 3 (each kind's own meaning, EFFECTS.md section 3)
 //     o.secs   how long (else the kind's own length; halo, rain, haze, embers, breath, wash, wake, sparkle 1-2, notes 2 run until stop())
@@ -29,6 +30,17 @@
 //     sunrays  soft beams from above onto o.at and up to 3 more spots (o.spots: [{ at: Vector3, level? }]), a pool of light on each, dust motes only inside a beam;
 //              o.width (beam width, 0.12), o.height (0.7), o.from [dx, dz] (where the light is, per metre of height; default upstage-left); runs until stop()/o.secs,
 //              fades in over 1.6 s and out over 1.5 s; reduced: beams and pools still, no motes. 1 beam draw; one mesh for every beam on the page (8 at most)
+//     the copies (Effekseer samples redrawn in these particles, for Journey to the West; EFFECTS.md section 8, side by side: renders/review/storyfx-copies): each ends on its own,
+//     o.secs makes it longer; sized by o.size (matched at 0.12) and level 1-3 (x .6, 1, 1.4; the flame x 1.5); tuned to read inside the viewer's ACES + bloom on light paper
+//     golden-cloud  two small dark curls gather (1.2 s), then a dome of golden-khaki swirling cloud about 2.7 x size wide swells and rolls a little toward the viewer, glowing cream
+//                   billows on its rim, glints in it; 4.4 s. Wukong's somersault cloud   (peak particles desktop / phone: 100 / 60)
+//     flame-column  a standing flame about 1.4 x size tall at o.at: peach tongues with salmon outlines curling at its head round a glowing cream-yellow heart; rises in 0.5 s, burns,
+//                   lifts away from its foot; 2.3 s. The Flaming Mountain   (160 / 80)
+//     wind-funnel   a whirlwind at o.at: thin white strands (a few tinted) climbing round a funnel about 1.6 x size tall, leaning along o.dir; rings on the ground first, unwinds
+//                   from its foot; 3 s. Princess Iron Fan's wind   (1,330 / 270)
+//     golden-burst  centred o.height (0.15 x size) above o.at: a gold flash and orb with a long level glint, a spiky burst, a thick gold ring, rising needles of light, gold motes;
+//                   2.8 s. A blessing, a transformation   (85 / 85)
+//     reduced motion: the cloud, the flame, the strands held still; the burst a soft glow and its ring. Sounds: wind-whoosh, fire-crackle, wind-whoosh, gold-shimmer (bridge-shimmer at 3)
 //   sfx.rings(every, region) -> handle   (the same as play("rings", { at, area, every }))
 //     at-rest life on still water: one slow soft ring every `every` s (+-40%) at a random place in region
 //   sfx.clear()             "Read again": everything gone at once
@@ -49,6 +61,8 @@ const TUCKP = "a *= 1. - uTuck * mix(smoothstep(.64, .73, gl_FragCoord.y / uH), 
 // Particle kinds: 0 dot (a crisp glint, ember) · 1 four-point star · 2 soft glow · 3 rain streak · 4 soft puff · 5 ring of light · 6 paper note · 7 reflection · 8 spot on the ground
 // · 9 dust strung on a funnel helix · 10 wind line (a dot of a ribbon) · 11 fire spark (stretched, orange with a dark rim) · 12 water drop (paper-white, blue edge) · 13 bubble (clear, bright rim, dark outline, a glint)
 // · 14 petal (tumbling, an ink rim) · 15 silk (a dot of a thread) · 16 tear (a clear drop with a glint); 14-16 move by their own rule (PVS): still, then a straight run with a sway that ends where they land, then they lie
+// · the copies (17-20, own rules): 17 curl (a cloud puff with a turning swirl in it, aG.w its turn rad/s, growing ease-out) · 18 flame (a tongue in its colour, reddening as it ages; seed over .5: a salmon fringe and outline)
+// · 19 wind dash (circles its axis: aV.x radius, widening aV.z a second, its circle tipped by slope aV.y, rising aD.y m/s, aG.y rad/s; lies along its path on screen, aE.z: the climb of the strand it belongs to) · 20 line of light (its angle seed x pi: 0 level, .5 upright)
 const PVS = `uniform float uT, uH, uMinPx; uniform vec4 uS[${NS}], uPage; ${PAGE}
 attribute vec3 aV; attribute vec4 aA, aC, aD, aE, aG; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
 void main() {
@@ -56,7 +70,11 @@ void main() {
   if (age < 0. || age > life || S.w <= 0.) { gl_Position = vec4(2., 2., 2., 1.); gl_PointSize = 0.; return; }
   float u = age / life, sd = aD.w, turn = sd;
   vec3 p = position + aV * (aD.x < 1e-3 ? age : (1. - exp(-aD.x * age)) / aD.x); p.y -= .5 * aD.y * age * age;
-  if (k > 13.5) { float tf = max(aG.y, 1e-3), tt = clamp(age - aD.x, 0., tf), uu = tt / tf; p = position + aV * tt;  // the tells (petal 14, silk 15, tear 16): still for aD.x s, then aV for aG.y s, then they lie where they came to
+  if (k > 16.5) { if (k > 18.5 && k < 19.5) { float an = aG.y * age + sd * 6.2832, R = aV.x * (1. + aV.z * age); p = position + vec3(cos(an) * R, aD.y * age + aV.y * R * sin(an), sin(an) * R);
+    vec4 a0 = projectionMatrix * modelViewMatrix * vec4(p + S.xyz, 1.), a1 = projectionMatrix * modelViewMatrix * vec4(p + S.xyz + vec3(-sin(an), aV.y * cos(an) + aE.z, cos(an)) * .01, 1.); vec2 dd = a1.xy / a1.w - a0.xy / a0.w;
+    turn = atan(dd.y, dd.x * projectionMatrix[1][1] / projectionMatrix[0][0]); }  // the dash lies along its circle as the eye sees it
+    else if (k < 17.5) turn = sd * 6.2832 + aG.w * age; }
+  else if (k > 13.5) { float tf = max(aG.y, 1e-3), tt = clamp(age - aD.x, 0., tf), uu = tt / tf; p = position + aV * tt;  // the tells (petal 14, silk 15, tear 16): still for aD.x s, then aV for aG.y s, then they lie where they came to
     if (k < 14.5) { p.x += aE.z * sin(9.4248 * uu); p.z += aE.z * .5 * sin(9.4248 * uu); turn = sd * 6.2832 + aG.w * (tt - .5 * tt * uu); }  // a petal sways side to side and turns, slowing to rest exactly where it lands
     else if (k < 15.5) p.y += aE.z * (1. - uu) * sin(6.2832 * (age * .8 + sd * 1.5)); }  // a wave runs along the silk while it falls, gone as it settles
   else if (k > 8.5 && k < 9.5) { float r = aE.z * (.25 + 2.2 * u), an = aG.y * age + step(.5, sd) * 3.1416; p += vec3(cos(an) * r, aE.z * 6. * u, sin(an) * r); }  // two strands: the angle follows the height, so the dust is strung on a helix
@@ -66,10 +84,12 @@ void main() {
   a *= onPage(p);
   if (aE.w > 0.) a *= .5 + .5 * pow(.5 + .5 * sin(age * aE.w + sd * 6.2832), 2.);
   float s = aA.z * (1. + aG.x * u); if (aG.w > 0. && k < 6.5) s *= 1. + .1 * sin(age * aG.w * 6.2832 + sd * 6.28);
+  if (k > 16.5 && k < 17.5) s = aA.z * (1. + aG.x * (1. - exp(-4. * age)));  // a curl swells fast, then holds
   vec4 c = projectionMatrix * modelViewMatrix * vec4(p, 1.);
-  gl_Position = c; ${BIAS} float px = s * uH * .5 * projectionMatrix[1][1] / c.w; gl_PointSize = clamp(px, k > 10.5 && k < 11.5 ? uMinPx * 2.5 : k < 1.5 || k > 9.5 ? uMinPx : k > 3.5 && k < 4.5 ? uMinPx * 2.5 : k > 2.5 && k < 3.5 ? uMinPx * 5. : 0., k > 2.5 && k < 3.5 ? 90. : k > 12.5 ? 40. : k > 11.5 ? 18. : aG.z > 2.5 ? 1024. : 256.);  // rain streaks at most 90 px long, drops at most 18 px, at any camera  // a phone keeps dots and stars at least uMinPx wide, puffs 2.5 times that, rain streaks 5 times that long
+  gl_Position = c; ${BIAS} float px = s * uH * .5 * projectionMatrix[1][1] / c.w; gl_PointSize = k > 16.5 ? clamp(px, uMinPx, 1024.) : clamp(px, k > 10.5 && k < 11.5 ? uMinPx * 2.5 : k < 1.5 || k > 9.5 ? uMinPx : k > 3.5 && k < 4.5 ? uMinPx * 2.5 : k > 2.5 && k < 3.5 ? uMinPx * 5. : 0., k > 2.5 && k < 3.5 ? 90. : k > 12.5 ? 40. : k > 11.5 ? 18. : aG.z > 2.5 ? 1024. : 256.);  // rain streaks at most 90 px long, drops at most 18 px, at any camera  // a phone keeps dots and stars at least uMinPx wide, puffs 2.5 times that, rain streaks 5 times that long
   vC = vec4(aC.rgb, a); vK = k; vR = turn; vAge = age; vW = aG.w; vPx = gl_PointSize; vSky = step(1.5, aG.z) * step(aG.z, 2.5);
-  if (aG.z > 2.5) { vec4 cn = projectionMatrix * modelViewMatrix * vec4(p + normalize(cameraPosition - p) * s * .5, 1.); gl_Position.z = cn.z / cn.w * c.w; }  // a flash ball: depth taken at its front, so the ground behind it never cuts it flat
+  if (k > 17.5 && k < 18.5) { vC.rgb = mix(aC.rgb, aC.rgb * vec3(.92, .62, 1.) + vec3(0., 0., .08), smoothstep(.5, 1., u)); vW = u; }  // a flame tongue reddens as it rises (vW: its age, for its rim)
+  if (aG.z > 2.5) { vec4 cn = projectionMatrix * modelViewMatrix * vec4(p + normalize(cameraPosition - p) * s * (aG.z > 3.5 ? 2. : .5), 1.); gl_Position.z = cn.z / cn.w * c.w; }  // a flash ball: depth taken at its front, so the ground behind it never cuts it flat (near 2: twice its size in front, for light drawn at the ground)
 }`;
 const PFS = `uniform float uH, uTuck; varying vec4 vC; varying float vK, vR, vAge, vW, vPx, vSky;
 void main() {
@@ -91,6 +111,14 @@ void main() {
   else if (vK > 13.5 && vK < 14.5) { float c = cos(vR), s = sin(vR); vec2 r = vec2(c * q.x - s * q.y, s * q.x + c * q.y); r.x /= .3 + .7 * abs(cos(vR * .7));  // a petal, turned and narrowed as it tumbles
     float e = length(vec2(r.x / (.62 - .22 * r.y), r.y * 1.08 + .08 * r.x * r.x)); m = smoothstep(1., .84, e); col = mix(vC.rgb * vec3(.6, .42, .48), vC.rgb, smoothstep(.98, .72, e)) * (.93 + .07 * smoothstep(.12, 0., abs(r.x))); }  // an ink rim, a paler vein
   else if (vK > 14.5 && vK < 15.5) { m = smoothstep(1., .45, d); col = vC.rgb * (.8 + .35 * smoothstep(.5, 0., abs(q.y + .35))); }  // silk: a fine strand with a sheen on its upper edge
+  else if (vK > 16.5) { if (vK < 17.5) { float an = atan(q.y, q.x) - vR, sp = fract(d * 3.4 + .08 * sin(an * 5. + vR * 2.) - an / 6.2832), ln = smoothstep(.1, .02, min(sp, 1. - sp)) * smoothstep(.95, .2, d), hl = smoothstep(.1, .0, abs(sp - .35)) * smoothstep(.9, .3, d);  // a curl: a wobbling spiral, dark strokes with a light one beside each in a soft lobed puff, darker on its lines, lit from above
+        m = smoothstep(1., .7, d * (1. + .07 * sin(an * 5. + vR))); col = vC.rgb * (1. - .32 * ln + .2 * hl) * (.9 + .2 * smoothstep(-.6, .7, q.y)); }
+      else if (vK < 18.5) { float o = step(.5, vR), e = length(q * vec2(1.15, .85) + vec2(0., .12)), rim = smoothstep(.045, 0., abs(e - .84)) * o;  // a flame tongue: crisp, its colour at the heart; an outer one
+        vec3 edge = vec3(vC.r * 1.15, vC.g * .78, vC.r * .1 + vC.b * .3); col = mix(mix(edge, vC.rgb, min(1., smoothstep(.95, .72, e) + 1. - o)), edge, rim);  // (seed over .5) has a salmon fringe and a thin outline
+        m = max(smoothstep(.95, .75, e) * (1. - .85 * smoothstep(.7, 1., vW)), rim * (.7 + .3 * smoothstep(.2, .8, vW))); }  // that outlives its body, so the head of the flame is open curling loops
+      else if (vK < 19.5) { float c = cos(vR), s = sin(vR); m = smoothstep(1., .45, length(vec2(c * q.x + s * q.y, (c * q.y - s * q.x) * 13.))); }  // a wind dash 13 times as long as it is thick, along its path: dashes in a row draw one line
+      else { float an = vR * 3.1416, c = cos(an), s = sin(an); vec2 r = vec2(c * q.x + s * q.y, c * q.y - s * q.x); float w = clamp(1.8 / vPx, .012, .1), f = pow(max(0., 1. - abs(r.x)), 1.4);  // a line of light, thin to nothing at its ends, a soft glow either side
+        m = f * (smoothstep(w * 2., w * .5, abs(r.y)) + .3 * exp(-r.y * r.y * 90.)); } }
   else if (vK > 15.5) { m = smoothstep(1., .72, d); col = mix(vec3(.3, .5, .66), vC.rgb, smoothstep(.9, .35, d)) + .7 * smoothstep(.4, 0., length(q - vec2(-.3, .32))); }  // a tear: a clear drop, a blue-grey rim, a bright glint
   else if (vK > 12.5) { vec2 g = q - vec2(-.36, .36); m = smoothstep(1., .9, d) * (.22 + .78 * smoothstep(.45, .78, d)) + .9 * smoothstep(.3, .1, length(g * vec2(1., 1.6)));  // a bubble: a clear disc, a bright rim, a glint
     col = mix(vC.rgb, vec3(.06, .22, .34), smoothstep(.7, .88, d) * (1. - smoothstep(.1, .3, length(g)))); m = min(m, 1.); }
@@ -260,7 +288,7 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
     if (e.follow && !e.free && s === e.s && p[1] > .6 * e.size) p[1] = .6 * e.size;  // below the subject's shoulders (a tell rides a head or a hand on purpose: e.free)
     const c = o.c ?? [1, 1, 1];
     if (!put(pool, { position: p, aV: o.v ?? [0, 0, 0], aA: [b, life, o.s, o.k ?? 0], aC: [c[0], c[1], c[2], o.a ?? 1], aD: [o.dr ?? 0, o.g ?? 0, s.i, o.seed ?? rnd()],
-      aE: [o.fi ?? .05, o.fo ?? .2, o.wob ?? 0, o.tw ?? 0], aG: [o.grow ?? 0, o.wf ?? 2, e.weather ? 1 : o.sky ? 2 : o.near ? 3 : 0, o.br ?? 0] }, b + life, e.weather)) return;
+      aE: [o.fi ?? .05, o.fo ?? .2, o.wob ?? 0, o.tw ?? 0], aG: [o.grow ?? 0, o.wf ?? 2, e.weather ? 1 : o.sky ? 2 : o.near ? 2 + o.near : 0, o.br ?? 0] }, b + life, e.weather)) return;
     pool.end = Math.max(pool.end, b + life); e.die = Math.max(e.die, b + life);
   };
   const ring = (e, s, o) => { const b = T + (o.d ?? 0), c = o.c ?? [1, 1, 1];
@@ -661,11 +689,64 @@ export function createStoryFx(scene, renderer, { phone = false, reduced, sound, 
         if (!reduced) P(e, e.s, { p, d: d + .05, l: .6, s: .35 * hh * (phone ? 1.3 : 1), k: 1, c: [1.6, 1.5, 1.3], a: .85, fi: .1, fo: .4, tw: 9 });  // it wells up: a glint at the eye
         if (!reduced) for (let j = 1; j < 5; j++) P(e, e.s, { p: p.map((x, n) => x + v[n] * tf * j / 5), d: d + hold + tf * j / 5, l: .7, s: .04 * hh, k: 0, c: [.95, .98, 1], a: .45, fi: .05, fo: .5 }, PN); }  // the wet path it leaves, fading
     },
+    // the copies (2026-11-23, copy-to-code): four Effekseer samples (CC0, web/lab/effekseer/LICENSES.md) measured and redrawn in this module's own particles, tuned to read inside
+    // the viewer's tone mapping and bloom on light paper; reference and copy side by side: renders/review/storyfx-copies/. Each scales with size (they were matched at size 0.12)
+    "golden-cloud"(e, o) {  // HolySandstorm: two small curls gather at o.at (1.2 s), then a dome of golden-khaki swirling cloud swells out about 2.7 x size wide, cream
+      // billows on its rim and glints in it, holds and thins away; 4.4 s, o.secs longer; level 1-3: x .6, 1, 1.4. Reduced: the cloud, still, in and out
+      // shortcut: it plays where its subject is and stays there; to carry Wukong, add it to RIDE with the dome hung under the feet (and e.free), when a page flies him on it
+      const L = e.L, S = e.s, z = e.size / .12 * [.6, 1, 1.4][L - 1], R = .16 * z, H = .11 * z, F = .14 * z, end = Math.max(4.4, e.secs ?? 4.4), c = tint(o, [.53, .43, .22]), k = phone ? .6 : 1;  // F: it rolls a little toward the viewer
+      if (!reduced) { hook("wind-whoosh", L); for (const x of [-1, 1]) P(e, S, { p: [x * .011 * z, .004 * z, 0], l: 1.35, s: .024 * z, k: 17, c: c.map(v => v * .6), a: .8, fi: .3, fo: .2, br: 3 * x, near: 1 }, PN); }
+      const dome = (y0, y1, a0 = 0, a1 = TAU, r0 = .02) => { const an = r(a0, a1), rr = R * Math.sqrt(r(r0, 1)), h = H * Math.sqrt(1 - rr * rr / (R * R)) * r(y0, y1); return [Math.cos(an) * rr, h, Math.sin(an) * rr + F]; };
+      for (let i = 0, n = Math.round(40 * k); i < n; i++) { const p = dome(.3, 1), d = reduced ? 0 : 1.3 + r(0, .3), t = r(.85, 1.15);
+        P(e, S, { p: reduced ? p : p.map(x => x * .15), v: reduced ? [0, 0, 0] : p.map(x => x * .85), dr: 1, d, l: (reduced ? e.secs ?? 3 : end - .1 - .3 * p[1] / H) - d, s: z * r(.08, .13) * .4, grow: 1.5, k: 17, c: c.map(v => v * t), a: .96, fi: reduced ? .15 : .25, fo: .5, br: reduced ? 0 : r(.4, .9) * (rnd() < .5 ? -1 : 1), near: 1 }, PN); }
+      if (reduced) return;
+      const cream = [1.6, 1.45, .9];  // over the bloom threshold on purpose: the reference's billows glow
+      for (let i = 0, n = Math.round(11 * k); i < n; i++) { const side = rnd() < .7, p = dome(.2, side ? .8 : 1.05, side ? (rnd() < .5 ? -.6 : Math.PI - .6) : Math.PI, side ? (rnd() < .5 ? .6 : Math.PI + .6) : TAU, .85), d = 1.3 + r(0, .4), l = r(.8, 1.3);  // the billows: lumpy cream clusters on its silhouette (its sides and its top)
+        for (let j = 0; j < 3; j++) { const o3 = [r(-1, 1) * .012 * z, r(0, 1) * .012 * z, r(-1, 1) * .012 * z]; P(e, S, { p: p.map((x, m) => x * .5 + o3[m]), v: p.map(x => x * 1.4), dr: 2.8, d, l, s: z * r(.025, .04), grow: .4, k: 4, c: cream, a: .9, fi: .12, fo: .45, near: 1 }, PN); } }
+      for (let i = 0, n = Math.round(10 * k); i < n; i++) { const p = dome(.85, 1.05, Math.PI, TAU, .5);  // the rim on its top, catching the light longer
+        P(e, S, { p, d: r(1.8, 2.6), l: r(.9, 1.4), s: z * r(.02, .035), k: 4, c: cream.map(x => x * .7), a: .8, fi: .3, fo: .5, near: 1 }, PN); }
+      for (let i = 0, n = Math.round(14 * k); i < n; i++) P(e, S, { p: dome(.4, 1.05), d: r(2, end - 1.2), l: r(.5, 1), s: .006 * z, k: 1, c: [2.2, 1.8, .8], a: .9, fi: .1, fo: .3, tw: r(8, 14), near: 1 });  // glints
+    },
+    "flame-column"(e, o) {  // MagicFire1: a standing flame at o.at about 1.4 x size tall, narrow at its foot and ragged at its head: peach tongues (just under the viewer's bloom threshold) whose
+      // salmon outlines curl at its head, round a glowing cream-yellow heart (over it); it rises in 0.5 s, burns, and lifts away from its foot; 2.3 s, o.secs longer; level 1-3: x .6, 1, 1.5. Reduced: the flame held still
+      const L = e.L, S = e.s, z = e.size / .12 * [.6, 1, 1.5][L - 1], c = tint(o, [2.1, .95, .3]), warm = c.map((x, i) => x * [1.15, 2.1, 1.3][i]), hot = [2.4, 1.8, .35], n = phone ? .5 : 1, T0 = .55, len = e.secs ?? 2.3, dur = Math.max(.6, len - T0);
+      if (reduced) { for (let i = 0; i < 12; i++) { const u = i / 11; P(e, S, { p: [0, .16 * z * u, 0], l: len, s: .022 * z * (1 + 1.8 * u), k: 18, c: u < .4 ? hot : c, a: .9, fi: .15, fo: .3, seed: .75, near: 1 }, PN); } return; }
+      hook("fire-crackle", L); let a1 = 3, a2 = 1;
+      P(e, S, { p: [0, .02 * z, 0], v: [0, .1 * z, 0], l: .45, s: .04 * z, grow: .5, k: 18, c, a: .8, fi: .02, fo: .3, seed: .75, near: 1 }, PN);  // its first lick
+      e.tick = dt => { if (T - e.t0 > dur) { e.tick = null; return; }
+        for (a1 += dt * 250 * n; a1 >= 1; a1--) { const out = rnd() < .6, w = out ? .038 : .014;  // the tongues: inner ones (bright, over the bloom threshold) fill its body, outer ones draw its salmon edge and outlines
+          P(e, S, { p: [r(-1, 1) * .006 * z, 0, r(-1, 1) * .006 * z], v: [r(-1, 1) * w * z, .3 * z * r(.88, 1.12), r(-1, 1) * w * z], d: r(0, dt), l: T0, s: (out ? .026 : .022) * z, grow: out ? 1.6 : 1.4, k: 18, c: out ? c : warm, a: 1, fi: .04, fo: .2, seed: out ? .75 : .25, near: 1 }, PN); }
+        for (a2 += dt * 35 * n; a2 >= 1; a2--) P(e, S, { p: [r(-1, 1) * .003 * z, .008 * z, r(-1, 1) * .003 * z], v: [r(-1, 1) * .016 * z, .3 * z * r(.9, 1.1), r(-1, 1) * .016 * z], d: r(0, dt), l: r(.2, .35), s: .016 * z, grow: .7, k: 18, c: hot, a: .9, fi: .04, fo: .12, seed: .25, near: 1 }, PN); };  // its hot heart
+    },
+    "wind-funnel"(e, o) {  // MagicTornade: a whirlwind at o.at, dense thin white wind strands (a few tinted cyan or warm) climbing round a funnel about 1.6 x size tall, densest
+      // at the ground, leaning along o.dir: rings on the ground first, the funnel rises in 0.5 s, spins, and unwinds from its foot; 3 s, o.secs longer;
+      // level 1-3: x .6, 1, 1.4. Reduced: its strands held still
+      const L = e.L, S = e.s, z = e.size / .12 * [.6, 1, 1.4][L - 1], H = .19 * z, R0 = .09 * z, R1 = .125 * z, lean = flatDir(o.dir).multiplyScalar(.05 * z), gap = (phone ? .022 : .016) * z, hold = Math.max(0, (e.secs ?? 3) - 3);  // long thin dashes: about 1,300 at most on a desktop, 260 on a phone (budgets 3,200 and 600)
+      if (!reduced) hook("wind-whoosh", L);
+      for (let i = 0, N = phone ? 24 : 90; i < N; i++) { const u = Math.pow((i + rnd()) / N, 1.8), R = (R0 + (R1 - R0) * u) * r(.8, 1.12), n = Math.max(4, Math.round(r(.25, .5) * TAU * R / gap)), w = reduced ? 0 : r(5, 8.5), ph = rnd(), d = reduced ? 0 : .3 * u + r(0, .1),
+          tilt = r(-.25, .25) * u, climb = r(.15, .55), t = rnd(), c = t < .15 ? [.98, 1.33, 1.48] : t < .25 ? [1.42, 1.36, .98] : [1.31, 1.37, 1.37];  // climb: each strand rises as it goes round, so it sweeps up across the funnel
+        for (let j = 0; j < n; j++) P(e, S, { p: [lean.x * u * u, H * u - j * gap * climb, lean.z * u * u], v: [R, tilt, reduced ? 0 : .06], wob: climb, g: reduced ? 0 : .012 * z, seed: ph - j * gap / (TAU * R), wf: w, d, l: reduced ? e.secs ?? 2 : 2.4 + hold, s: (phone ? .05 : .04) * z, k: 19, c: c.map(x => x * (j < n / 5 ? 1.12 : .95 - .25 * j / n)), a: .85 * Math.min(1, j / 3 + .3) * (1 - .8 * j / n), fi: .15, fo: .4, near: 1 }, PN); }  // each strand tapers at both ends
+    },
+    "golden-burst"(e, o) {  // Benediction: a golden light burst centred o.height (0.15 x size) above o.at: a soft flash, a bright-rimmed gold ball with a long sharp level glint, a spiky white
+      // burst, then a crisp gold ring, thin rising needles of light and a few gold motes; 2.8 s; about 2.3 x size across; level 1-3: x .6, 1, 1.4. Reduced: a soft glow and the ring, still
+      const L = e.L, S = e.s, z = e.size / .12 * [.6, 1, 1.4][L - 1], C = [0, o.height ?? .15 * e.size, 0], gold = tint(o, [3.3, 1.6, .36]), at = (x, y) => [C[0] + x * z, C[1] + y * z, C[2]], N = { near: 2 };  // near 2: light at the ground is never cut flat by it
+      if (reduced) { for (const [s, k, a] of [[.2, 2, .6], [.1, 5, .9]]) P(e, S, { ...N, p: C, l: e.secs ?? 1.5, s: s * z, k, c: gold, a, fi: .15, fo: .4 }, PN); return; }
+      hook(L === 3 ? "bridge-shimmer" : "gold-shimmer", L);
+      P(e, S, { ...N, p: C, d: .05, l: .45, s: .3 * z, k: 2, c: [2.4, 1.5, .2], a: .85, fi: .1, fo: .25 }, PN);  // the flash
+      P(e, S, { ...N, p: C, d: .15, l: .75, s: .14 * z, k: 2, c: [2, 1.2, .05], a: 1, fi: .1, fo: .3 }, PN); P(e, S, { ...N, p: C, d: .15, l: .65, s: .1 * z, k: 0, c: [3, 2.1, .4], a: 1, fi: .1, fo: .25 }, PN); P(e, S, { ...N, p: C, d: .3, l: .5, s: .115 * z, k: 5, c: [2.4, 1.5, .2], a: .8, fi: .1, fo: .25 }, PN);  // the gold orb, its bright heart, its rim
+      P(e, S, { ...N, p: C, d: .12, l: 1.7, s: .26 * z, k: 20, seed: 0, c: [4, 3, 1.1], a: 1, fi: .1, fo: .25 }, PN);  // the level glint
+      for (let i = 0; i < 26; i++) { const an = rnd() * TAU, sp = r(.12, .35) * z, k = i % 2; P(e, S, { ...N, p: C, v: [Math.cos(an) * sp, Math.sin(an) * sp * .9, 0], dr: 5, d: r(.6, .72), l: r(.4, .6), s: (k ? r(.07, .13) : r(.015, .03)) * z, k, c: k ? [3.4, 2.4, .5] : [2.8, 2, .4], a: 1, fi: .04, fo: .25 }, PN); }  // the burst: golden spikes and flakes
+      P(e, S, { ...N, p: C, d: .62, l: .5, s: .05 * z, k: 2, c: [3, 2.2, .6], a: .95, fi: .05, fo: .3 }, PN);  // its hot core
+      for (const q of [.084, .088, .092, .096]) P(e, S, { ...N, p: C, d: 1.05, l: .9, s: q * z, k: 5, c: [2.6, 1.5, 0], a: 1, fi: .15, fo: .45 }, PN);  // the thick gold ring
+      P(e, S, { ...N, p: C, d: 1.05, l: .8, s: .03 * z, k: 2, c: [3, 2, .4], a: .9, fi: .1, fo: .4 }, PN);
+      for (let i = 0; i < 40; i++) P(e, S, { ...N, p: at(r(-.08, .08), r(-.06, .06)), v: [0, .01 * z, 0], d: r(1, 1.35), l: r(1, 1.5), s: r(.03, .1) * z, k: 20, seed: .5, c: [2.6, 1.5, .3], a: .9, fi: .2, fo: .6 }, PN);  // needles
+      for (let i = 0; i < 6; i++) { const an = rnd() * TAU, rr = r(.03, .12); P(e, S, { ...N, p: at(Math.cos(an) * rr, Math.sin(an) * rr + .03), v: [r(-1, 1) * .01 * z, .02 * z, 0], d: r(1.1, 1.5), l: r(1.2, 1.6), s: .012 * z, k: 2, c: [2.2, 1.4, .35], a: .5, fi: .2, fo: .5, tw: r(4, 8) }); }  // motes: soft gold bokeh
+    },
   };
   const ALIAS = { "heat-shimmer": ["haze"], "music-notes": ["notes", 2], "wind-streaks": ["gust"], "green-wash": ["wash"] };
   const RIDE = { wake: 1, sparkle: 1, halo: 1, embers: 1, notes: 1, breath: 1, haze: 1, petal: 1, thread: 1, tear: 1 };  // kinds that ride with o.follow; the rest start where it is
   const REPEAT = { splash: 1, "dust-whirl": 1, "shooting-star": 1, puff: 1 };
-  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, trace: 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1, flash: 1, petal: 1, thread: 1, tear: 1 };  // these end on their own length
+  const ONESHOT = { splash: 1, dust: 1, puff: 1, "shooting-star": 1, trace: 1, "dust-whirl": 1, "soft-lightning": 1, gust: 1, shimmer: 1, flash: 1, petal: 1, thread: 1, tear: 1, "golden-cloud": 1, "flame-column": 1, "wind-funnel": 1, "golden-burst": 1 };  // these end on their own length
   const own = e => (e.w.proxyOf ? [e.s] : [e.s, e.w]);
 
   function play(type, o = {}) {
