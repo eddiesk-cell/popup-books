@@ -27,6 +27,7 @@ import { addSound, manifestFor } from "./sound.js";
 import { createStoryFx } from "./storyfx.js";
 import { makeNotice } from "./notice.js";
 import { ambient, skyline, roomShown, storyPuppet, swingRig, cardRect } from "./ambient.js";
+import { life } from "./life.js";
 import { extraModel } from "./extras3d.js";
 import { codeProp, layQ } from "./props3d.js";
 import { buildPaperShadows, updatePaperShadows } from "./papershadow.js";
@@ -681,6 +682,7 @@ const show = a => { age = a; frame = a < S.L0 ? a : S.L0 + (a - S.L0) % S.P; S.m
 // and frame(dt, now) — called every frame before the picture is drawn.
 const hooks = [];
 hooks.push(ambient);
+if (q.get("life") === "1" || /^(jttw|xm)-\d+$/.test(q.get("book") || "")) hooks.push(life);  // shortcut: only the private series chapters (or ?life=1) until stories/life/REVIEW.md passes (2026-11-25 review FAIL: rivers and koi on dry books); then drop this test
 
 // ---------- hook: story effects (web/live/storyfx.js, stories/EFFECTS.md): a spread's "storyfx" entries play on their line's word ----------
 // spread.json "storyfx": [{ "type", "line", "word", "at" | "who" | "what", "level", ... }] ("line": "rest" = while the page is open). popup.py also moves
@@ -924,7 +926,7 @@ const sm = manifestFor(bookId, "../"), snd = addSound(sm, { reader, voices: [spe
 const played = [], play0 = snd.play.bind(snd);  // every library sound that starts, for scripted checks (window.live.played)
 snd.play = (n, o) => (sm.sounds[n] && !snd.muted && played.push(n), play0(n, o));
 addEventListener("ambient:sound", e => snd.play(e.detail.name, { gain: 0.3 }));  // the extras' routines, taps and surprises (ambient.js)
-addEventListener("ambient:tap", e => { foley(`tap:${e.detail.name}`, null); learn(e.detail.name, e.detail.at); });
+addEventListener("ambient:tap", e => { foley(`tap:${e.detail.name}`, null); learn(e.detail.name, e.detail.at, e.detail.card); });
 // the book's own beds when a spread names none (the director's names, stories/*/DIRECTION.md)
 const DEFAULT_BED = { kapi: { day: [["river-slow", 0.3], ["birds-day", 0.18]], evening: [["river-evening", 0.3], ["crickets", 0.12]],
   night: [["night-frogs", 0.25], ["night-breeze", 0.12]] }, mali: { night: [["river-night", 0.3], ["crickets", 0.12]] } };
@@ -990,7 +992,8 @@ async function readFrom(i) {  // the page's lines from line i; S.at keeps the pl
   sp.at = lines.length; hint.pulse = performance.now();  // read: the corners glow once to say "turn me"
   if (!sp.play.complete && !sp.skip) skips() ? skip(sp) : prompt(sp, run);
 }
-const skips = () => au.on || rm.on;  // Auto and Reading Mode skip the games (Eddie 2026-11-18: "Sometimes the kids had been playing it once already")
+let gamesOff = false; try { gamesOff = localStorage.getItem("popup-games") === "0"; } catch { /* not remembered */ }
+const skips = () => au.on || rm.on || gamesOff;  // Auto and Reading Mode skip the games (Eddie 2026-11-18: "Sometimes the kids had been playing it once already"); so does the Games switch (Eddie 2026-11-25: "switch off the mini games during the read/narration")
 function skip(sp) {  // V16: and a skipped game's targets still play their "tap:<name>" acts, as a won game would have (the suns fall): every target a win taps that was not
   ahead(sp); const was = sp.play.complete, moves = sp.play.settle();  // tapped yet, or a shadow game's answer; none for the games won by beats or a tune (echo, rally, waves, leap, steer, listen)
   if (!was && !/^(echo|rally|waves|leap|steer|listen)$/.test(sp.G.type ?? "")) for (const o of sp.play.targets) if ((!sp.G.answer || o.name === sp.G.answer) && !sp.tapped?.has(o.name)) S.acting.tap(o.name);
@@ -1325,19 +1328,21 @@ const cutWord = () => {  // a story or game line starts: a word card's voice fad
   clearInterval(cutT); cutT = setInterval(() => { speak.volume = Math.max(0, speak.volume - 0.25); if (!speak.volume) clearInterval(cutT), speak.pause(), (speak.volume = 1); }, 20);
 };
 reader.audio.addEventListener("play", cutWord);
-function learn(name, o) {  // a tapped thing says a word of its own (words.json: a pool of true things to say, a new one each tap), in a bubble beside it, with the chosen language's subtitle; one voice at a time (the same Audio), only that one file is fetched
+function learn(name, o, fallback) {  // a tapped thing says a word of its own (words.json: a pool of true things to say, a new one each tap), in a bubble beside it, with the chosen language's subtitle; one voice at a time (the same Audio), only that one file is fetched
   if (talking()) return;
   const own = heard === "lo" && loT[`touch.${name}.0`];  // in the Lao voice a character says its own recorded Lao lines (story.json "touch"); the word cards (English to learn) have no Lao voice
-  const said = touchLine(own ? { ...words, w: null } : words, name, lang, S.id), at = o ?? S.root.getObjectByName(name) ?? S.cast[0]?.body;
+  let said = touchLine(own ? { ...words, w: null } : words, name, lang, S.id);
+  const at = o ?? S.root.getObjectByName(name) ?? S.cast[0]?.body;
+  if (!said && fallback) said = { id: null, text: fallback.en, sub: "", tag: fallback.tag, word: fallback.word && { text: fallback.word.en, sub: (lang && fallback.word[lang]) || "" } };
   if (!said || !at) return;
-  if (tapped) tapped.card = said.text;
+  if (tapped) tapped.card = said.text; else tapped = { who: name, kind: "life", card: said.text };
   const s = $("sbub");
   s.innerHTML = (said.word ? "<h4><span></span><u></u></h4>" : "") + "<b></b><i></i>";  // a word card: the WORD large, the chosen language's word beside it, then the sentence said and its subtitle
   if (said.word) { s.firstChild.firstChild.textContent = said.word.text; s.firstChild.lastChild.textContent = said.word.sub || ""; s.dataset.kind = said.tag ?? ""; }  // words.json: word[key] {en, lo, th, zh, ja}, and the line's tag (what, does, looks, fact, sound, count, culture, say, who)
   s.querySelector("b").textContent = said.text; Object.assign(s.querySelector("i"), { textContent: said.sub, lang: lang || "en" });  // lang: Lao, Thai, Chinese and Japanese stand upright (no faux italic)
   s.classList.toggle("card", !!said.word); s.hidden = false; s.who = { body: at, c: { height: 0.12 }, box: true }; clearTimeout(s.t);
   s.t = setTimeout(() => (s.hidden = true), Math.min(6000, Math.max(said.word ? 3000 : 2300, (said.duration ?? timing[said.id]?.duration ?? 0) * 1000 + 500)));  // about 3 s, or until the voice has ended
-  speak.src = src(said.id); speak.play().catch(() => {});
+  if (said.id) { speak.src = src(said.id); speak.play().catch(() => {}); } else speak.pause();
 }
 function poke(ch) {  // a reaction played once, then back to what it was doing; and a touch line said
   rec(ch.name, "reaction");
@@ -1559,6 +1564,9 @@ try { au.on = (q.get("auto") ?? localStorage.getItem("popup-auto")) === "1"; } c
 const showAuto = () => autoBtn.setAttribute("aria-pressed", au.on);
 autoBtn.onclick = () => { au.on = !au.on; au.t = 0; $("next").classList.remove("autopress"); showAuto(); try { localStorage.setItem("popup-auto", au.on ? "1" : "0"); } catch { /* not remembered */ } if (au.on) rm.off(), skipNow(); };
 showAuto();
+const gamesBtn = $("games"), showGames = () => gamesBtn.setAttribute("aria-pressed", !gamesOff);
+gamesBtn.onclick = () => { gamesOff = !gamesOff; showGames(); try { localStorage.setItem("popup-games", gamesOff ? "0" : "1"); } catch { /* not remembered */ } if (gamesOff) skipNow(); };
+showGames();
 const rm = makeReadMode({ reader, live: () => ({ sp: S, mode }), lang: () => lang, turn: () => turn(true, true),  // Reading Mode (readmode.js): Auto, Read or neither
   changed: on => { if (on && au.on) autoBtn.click(); if (on) skipNow(); } });
 function autoTick(now) {
@@ -1633,7 +1641,7 @@ canvas.addEventListener("pointermove", e => {
 const up = e => {
   const [x, y] = at(e);
   if (e.type === "pointerup" && press && Math.hypot(e.clientX - press[0], e.clientY - press[1]) < 8 && performance.now() - press[2] < 450
-      && (pid === null || pend)) tap(x, y);  // a short still press is a tap, even on the page's bottom strip
+      && (pid === null || pend)) { tapped = null; if (!hooks.some(h => h.tap?.(e.clientX, e.clientY))) tap(x, y), hooks.forEach(h => h.afterTap?.(e.clientX, e.clientY)); }  // a short still press is a tap, even on the page's bottom strip
   press = null;
   if (e.pointerId !== pid) return;
   down = false; pend = null; pid = null; canvas.style.cursor = "";
@@ -1963,7 +1971,7 @@ renderer.setAnimationLoop(now => {
 });
 enter(await load(first), "closed"); spreadReady = true; lift(); notice.open();
 canvas.focus();
-window.live = { get sfx() { return sfxHook.fx; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
+window.live = { get sfx() { return sfxHook.fx; }, get living() { return life.current; }, get arrival() { return arrival3; }, get titled() { return titled; }, drawn, gradeAnimal, get home() { return HOME && { pos: HOME.clone(), look: LOOK.clone(), fov: cam.fov }; }, readHome,  // the reading view, current after every resize
   get auto() { return au; }, get mode() { return mode; }, get frame() { return frame; }, get S() { return S; }, get root() { return S.root; }, get cast() { return S.cast; },
   setPaperBlend: on => S && setPaperBlend(S, scene, on),
   get acting() { return S.acting; }, get game() { return S.play; }, get skipGames() { return skips(); }, readMode: rm, get exitOn() { return exitOn; }, get dpr() { return dpr; }, hint, snd, played, speakers, get lastTap() { return tapped; }, areaAt: (x, y) => (boxes = null, area(x, y)?.area ?? null), nearest: (x, y) => (boxes = null, aim(x, y), nearest()), scene, composer, renderer, reader, hooks, turn, tap, readFrom, fit, dim: dimReading, controls, cam, load, spreads, reset: home,

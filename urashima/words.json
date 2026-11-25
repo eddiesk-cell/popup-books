@@ -1,0 +1,5791 @@
+{
+"lines": {
+"ura_pinegrove.0": {
+"en": "A pine grove. A pine grove shelters the hillside behind the fishing cottages.",
+"lo": "ປ່າຕົ້ນແປກ. ປ່າຕົ້ນແປກ ບັງລົມໃຫ້ເນີນພູຢູ່ຫຼັງເຮືອນຊາວປະມົງ.",
+"th": "ป่าต้นสน ป่าต้นสนบังลมให้เนินเขาหลังบ้านชาวประมง",
+"zh": "松树林。松树林静静地守护在渔村小屋后面的山坡上。",
+"ja": "まつの はやし。まつの はやしが いえの うしろに しずかに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pinegrove.1": {
+"en": "Tall coastal pines block chilly wind behind the village roofs.",
+"lo": "ຕົ້ນແປກສູງແຄມທະເລບັງລົມໜາວຢູ່ຫຼັງຫຼັງຄາບ້ານ.",
+"th": "ต้นสนสูงริมทะเลบังลมหนาวหลังหลังคาบ้าน",
+"zh": "高大的海边松树林替村庄屋顶挡住寒风。",
+"ja": "まつの はやしが つよい うみかぜを やさしく さえぎるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pinegrove.2": {
+"en": "Layered green boughs rise up the warm sandy hillside.",
+"lo": "ງ່າແປກຂຽວຊ້ອນກັນຂຶ້ນໄປຕາມເນີນພູຊາຍອຸ່ນ.",
+"th": "กิ่งสนเขียวซ้อนกันขึ้นไปตามเนินเขาทรายอุ่น",
+"zh": "层层叠叠的绿松枝沿着温暖的山坡向上伸展。",
+"ja": "みどりの えだが なんそうにも かさなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pinegrove.3": {
+"en": "Coastal pine groves protect seaside towns from salt spray.",
+"lo": "ປ່າແປກແຄມທະເລປົກປ້ອງບ້ານແຄມຝັ່ງຈາກລະອອງເກືອ.",
+"th": "ป่าสนริมทะเลปกป้องหมู่บ้านริมฝั่งจากละอองเกลือ",
+"zh": "海防松林能保护海边村镇免受海盐风吹袭。",
+"ja": "うみの まつばやしは しおかぜから むらを まもるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pinegrove.4": {
+"en": "Whisper, sway!",
+"lo": "ກະຊິບ ແກວ່ງ!",
+"th": "กระซิบ ไหว!",
+"zh": "松林微风沙沙！",
+"ja": "そよそよ、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_cliffpine.0": {
+"en": "A sea cliff. A sea cliff rises above the bay with wind-bent pines on top.",
+"lo": "ໜ້າຜາແຄມທະເລ. ໜ້າຜາແຄມທະເລ ສູງຂຶ້ນເໜືອອ່າວພ້ອມຕົ້ນແປກລູ່ລົມ.",
+"th": "หน้าผาริมทะเล หน้าผาริมทะเลสูงขึ้นเหนืออ่าวพร้อมต้นสนลู่ลม",
+"zh": "海边悬崖。海边悬崖耸立在海湾旁，崖顶长着迎风的松树。",
+"ja": "うみの がけ。うみの がけの うえに かぜに ふかれた まつが たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_cliffpine.1": {
+"en": "Sea birds perch high on this rocky cliff to scan the bay.",
+"lo": "ນົກທະເລຈັບຢູ່ສູງເທິງໜ້າຜາຫີນນີ້ເພື່ອເບິ່ງອ່າວ.",
+"th": "นกทะเลเกาะสูงบนหน้าผาหินนี้เพื่อมองอ่าว",
+"zh": "海鸟停在高高的海边悬崖上俯瞰海湾。",
+"ja": "うみどりが がけの うえから うみを ながめているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_cliffpine.2": {
+"en": "Wind-bent pines cling tight to warm sandstone rocks.",
+"lo": "ຕົ້ນແປກລູ່ລົມເກາະແໜ້ນເທິງໂງ່ນຫີນຊາຍອຸ່ນ.",
+"th": "ต้นสนลู่ลมเกาะแน่นบนโขดหินทรายอุ่น",
+"zh": "迎风弯曲的松树牢牢扎根在暖色砂岩上。",
+"ja": "かぜに ゆれる まつが いわに しっかり ねを はっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_cliffpine.3": {
+"en": "Ocean waves carve coastal cliffs into dramatic rocky shapes.",
+"lo": "ຄື້ນທະເລກັດເຊາະໜ້າຜາແຄມຝັ່ງເປັນຮູບຫີນສວຍງາມ.",
+"th": "คลื่นทะเลกัดเซาะหน้าผาริมฝั่งเป็นรูปหินสวยงาม",
+"zh": "海浪经年累月把海岸悬崖冲刷出奇特的岩壁。",
+"ja": "なみが いわを けずって すごい がけが できるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_cliffpine.4": {
+"en": "Whoosh, crash!",
+"lo": "ວູບ ຊ່າ!",
+"th": "วูบ ซ่า!",
+"zh": "海浪拍打崖壁！",
+"ja": "ざぱーん、ごおー！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_boathouse.0": {
+"en": "A boat shelter. A boat shelter keeps nets and oars dry beside the bay.",
+"lo": "ຕູບເກັບເຮືອ. ຕູບເກັບເຮືອ ເກັບມອງ ແລະ ໄມ້ພາຍໃຫ້ແຫ້ງຢູ່ແຄມອ່າວ.",
+"th": "โรงเก็บเรือ โรงเก็บเรือเก็บอวนและไม้พายให้แห้งอยู่ริมอ่าว",
+"zh": "海边船棚。海边船棚替渔民收好干燥的渔网和木桨。",
+"ja": "ふなごや。ふなごやは あみや かいを あめから まもるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_boathouse.1": {
+"en": "Fishermen hang damp nets here to dry in the afternoon sun.",
+"lo": "ຊາວປະມົງຫ້ອຍມອງປຽກໄວ້ບ່ອນນີ້ໃຫ້ແຫ້ງໃນແດດບ່າຍ.",
+"th": "ชาวประมงแขวนอวนเปียกไว้ที่นี่ให้แห้งในแดดบ่าย",
+"zh": "渔夫们把湿渔网挂在这里，趁着午后阳光晒干。",
+"ja": "ぬれた あみを ほして かわかす ふなごやだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_boathouse.2": {
+"en": "Weathered honey timber and straw thatch rest by mossy boulders.",
+"lo": "ໄມ້ສີນ້ຳເຜິ້ງ ແລະ ຫຼັງຄາຫຍ້າຕັ້ງຢູ່ຂ້າງກ້ອນຫີນມີໄຄນ້ຳ.",
+"th": "ไม้สีน้ำผึ้งและหลังคาจากตั้งอยู่ข้างก้อนหินมีมอส",
+"zh": "日晒温润的木墙和草顶依偎在青苔海石旁。",
+"ja": "あたたかい きの かべと わらやねが すてきだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_boathouse.3": {
+"en": "A boathouse sits right by the tide line for quick launches.",
+"lo": "ຕູບເກັບເຮືອຕັ້ງຢູ່ຕິດແຄມນ້ຳເພື່ອອອກເຮືອໄດ້ສະດວກ.",
+"th": "โรงเก็บเรือตั้งอยู่ติดริมน้ำเพื่อออกเรือได้สะดวก",
+"zh": "船棚建在潮水线旁边，方便渔民随时出海。",
+"ja": "うみの すぐ そばに あるから ふねを だしやすいよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_boathouse.4": {
+"en": "Tap, creak!",
+"lo": "ຕ໋ອກ ແອດ!",
+"th": "ต๊อก เอี๊ยด!",
+"zh": "木板咯吱轻响！",
+"ja": "ぎしっ、こんこん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_dunehedge.0": {
+"en": "A dune fence. A dune fence holds back the soft blowing beach sand.",
+"lo": "ຮົ້ວເນີນຊາຍ. ຮົ້ວເນີນຊາຍ ກັນຊາຍຫາດທີ່ປິວໄປຕາມລົມ.",
+"th": "รั้วเนินทราย รั้วเนินทรายกันทรายหาดที่ปลิวไปตามลม",
+"zh": "沙丘木篱。沙丘木篱挡住海风吹起的细软沙粒。",
+"ja": "すなはまの さく。すなはまの さくが かぜと すなを やさしく うけとめるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_dunehedge.1": {
+"en": "This low fence catches blowing sand before it reaches the yard.",
+"lo": "ຮົ້ວຕ່ຳນີ້ກັນຊາຍທີ່ປິວມາກ່ອນຈະຮອດເດີ່ນເຮືອນ.",
+"th": "รั้วเตี้ยนี้กันทรายที่ปลิวมาก่อนจะถึงลานบ้าน",
+"zh": "矮矮的木篱能挡住吹向院子的海滩流沙。",
+"ja": "すなが にわに とんで こないように まもる さくだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_dunehedge.2": {
+"en": "Tufts of beach grass and tiny blossoms hug the warm sand ridge.",
+"lo": "ກໍຫຍ້າຫາດຊາຍ ແລະ ດອກໄມ້ນ້ອຍໆເກີດຕາມສັນຊາຍອຸ່ນ.",
+"th": "กอหญ้าหาดทรายและดอกไม้น้อยๆ ขึ้นตามสันทรายอุ่น",
+"zh": "一簇簇海滨青草和小花依偎在暖沙丘上。",
+"ja": "くさと ちいさな おはなが すなやまに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_dunehedge.3": {
+"en": "Deep beach grass roots knit loose sand dunes firmly together.",
+"lo": "ຮາກຫຍ້າຫາດຊາຍເລິກຊ່ວຍຍຶດເນີນຊາຍໃຫ້ແໜ້ນ.",
+"th": "รากหญ้าหาดทรายลึกช่วยยึดเนินทรายให้แน่น",
+"zh": "深扎的沙草根能把松散的沙丘牢牢固定住。",
+"ja": "くさの ねっこが すなを しっかり つかまえているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_dunehedge.4": {
+"en": "Swish, pat!",
+"lo": "ວູບ ແປະ!",
+"th": "ซิ่ว แปะ!",
+"zh": "草叶沙沙拂动！",
+"ja": "さらさら、そよっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_netbaskets.0": {
+"en": "A fishing creel. A fishing creel and coiled rope sit ready for the morning tide.",
+"lo": "ຂ້ອງໃສ່ປາ. ຂ້ອງໃສ່ປາ ແລະ ເຊືອກຂົດວາງກຽມໄວ້ສຳລັບນ້ຳຂຶ້ນຍາມເຊົ້າ.",
+"th": "ข้องใส่ปลา ข้องใส่ปลาและเชือกขดวางเตรียมไว้สำหรับน้ำขึ้นตอนเช้า",
+"zh": "竹鱼篓。竹鱼篓和盘好的麻绳整齐地放在海滩边。",
+"ja": "さかなの かご。さかなの かごと ロープが はまべに ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_netbaskets.1": {
+"en": "Fishermen coil hemp ropes and pack creels before sailing out.",
+"lo": "ຊາວປະມົງຂົດເຊືອກ ແລະ ຈັດຂ້ອງໃສ່ປາກ່ອນອອກເຮືອ.",
+"th": "ชาวประมงขดเชือกและจัดข้องใส่ปลาก่อนออกเรือ",
+"zh": "渔夫们出海前总会盘好麻绳、备齐竹鱼篓。",
+"ja": "うみへ でる まえに かごと ロープを じゅんび するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_netbaskets.2": {
+"en": "Hand-woven bamboo baskets nestle among smooth shore pebbles.",
+"lo": "ກະຕ່າໄມ້ໄຜ່ສານວາງຢູ່ທ່າມກາງກ້ອນຫີນລຽບແຄມຫາດ.",
+"th": "ตะกร้าไม้ไผ่สานวางอยู่ท่ามกลางก้อนหินเรียบริมหาด",
+"zh": "手工编织的竹鱼篓静静放在光滑的鹅卵石旁。",
+"ja": "てあみの たけかごが いしの そばに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_netbaskets.3": {
+"en": "Woven bamboo lets seawater drain right out of a fish basket.",
+"lo": "ໄມ້ໄຜ່ສານຊ່ວຍໃຫ້ນ້ຳທະເລໄຫຼອອກຈາກຂ້ອງໃສ່ປາໄດ້ງ່າຍ.",
+"th": "ไม้ไผ่สานช่วยให้น้ำทะเลไหลออกจากข้องใส่ปลาได้ง่าย",
+"zh": "竹编鱼篓的缝隙能让海水很快沥干。",
+"ja": "たけかごは みずが すっと きれるから べんりだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_netbaskets.4": {
+"en": "Rustle, clink!",
+"lo": "ຊາ ແຄະ!",
+"th": "ซ่า แกร๊ก!",
+"zh": "竹篓轻响！",
+"ja": "かさっ、ころん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_taro.0": {
+"en": "Urashima Tarō. Urashima Tarō is a kind young fisherman from Japan.",
+"lo": "ອຸຣາຊິມະ ທາໂຣ. ອຸຣາຊິມະ ທາໂຣ ແມ່ນຊາວປະມົງໜຸ່ມໃຈດີຈາກປະເທດຍີ່ປຸ່ນ.",
+"th": "อุราชิมะ ทาโร่ อุราชิมะ ทาโร่คือชาวประมงหนุ่มใจดีจากญี่ปุ่น",
+"zh": "浦岛太郎。浦岛太郎是一位善良的日本年轻渔夫。",
+"ja": "うらしまたろう。うらしまたろうは やさしい わかい りょうしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_taro.1": {
+"en": "Hello, Urashima Tarō!",
+"lo": "ສະບາຍດີ ອຸຣາຊິມະ ທາໂຣ!",
+"th": "สวัสดีอุราชิมะ ทาโร่!",
+"zh": "你好，浦岛太郎！",
+"ja": "こんにちは、うらしまたろう！",
+"who": "taro",
+"tag": "greet"
+},
+"ura_taro.2": {
+"en": "Hello! I am Urashima Tarō!",
+"lo": "ສະບາຍດີ! ຂ້ອຍຊື່ ອຸຣາຊິມະ ທາໂຣ!",
+"th": "สวัสดี! ฉันชื่ออุราชิมะ ทาโร่!",
+"zh": "你好！我是浦岛太郎！",
+"ja": "こんにちは！ ぼくは うらしまたろうだよ！",
+"who": "taro",
+"tag": "say"
+},
+"ura_taro.3": {
+"en": "A fisherman uses nets and oars to work on the sea.",
+"lo": "ຊາວປະມົງໃຊ້ມອງ ແລະ ໄມ້ພາຍເຮັດວຽກຢູ່ທະເລ.",
+"th": "ชาวประมงใช้อวนและไม้พายทำงานในทะเล",
+"zh": "渔夫用渔网和木桨在大海上劳作。",
+"ja": "りょうしは あみと かいで うみで はたらくよ。",
+"who": "taro",
+"tag": "fact"
+},
+"ura_taro.4": {
+"en": "I try to be gentle to every living creature.",
+"lo": "ຂ້ອຍພະຍາຍາມອ່ອນໂຍນຕໍ່ສິ່ງມີຊີວິດທຸກໂຕ.",
+"th": "ฉันพยายามอ่อนโยนต่อสิ่งมีชีวิตทุกตัว",
+"zh": "我用心温柔地对待每一个小生命。",
+"ja": "どの いきものにも やさしく したいんだ。",
+"who": "taro",
+"tag": "does"
+},
+"ura_taro.5": {
+"en": "I love my cottage and my family by the blue bay.",
+"lo": "ຂ້ອຍຮັກເຮືອນນ້ອຍ ແລະ ຄອບຄົວຂອງຂ້ອຍແຄມອ່າວສີຟ້າ.",
+"th": "ฉันรักบ้านน้อยและครอบครัวริมอ่าวสีฟ้า",
+"zh": "我爱海湾边的小屋和我的家人。",
+"ja": "うみべの いえと かぞくが だいすきだよ。",
+"who": "taro",
+"tag": "does"
+},
+"ura_taro.6": {
+"en": "Helping the sea turtle brought me an amazing friend!",
+"lo": "ການຊ່ວຍເຕົ່າທະເລເຮັດໃຫ້ຂ້ອຍໄດ້ໝູ່ທີ່ດີຫຼາຍ!",
+"th": "การช่วยเต่าทะเลทำให้ฉันได้เพื่อนที่แสนวิเศษ!",
+"zh": "帮助海龟让我交到了一位了不起的好朋友！",
+"ja": "うみがめを たすけて すてきな ともだちが できたよ！",
+"who": "taro",
+"sp": [
+"s02",
+"s03",
+"s04",
+"s05",
+"s06",
+"s07",
+"s08",
+"s09"
+],
+"tag": "does"
+},
+"ura_taro.7": {
+"en": "I row my little wooden boat out on the morning tide.",
+"lo": "ຂ້ອຍພາຍເຮືອໄມ້ນ້ອຍອອກໄປກັບນ້ຳຂຶ້ນຍາມເຊົ້າ.",
+"th": "ฉันพายเรือไม้น้อยออกไปกับน้ำขึ้นตอนเช้า",
+"zh": "我划着小木船在清晨的潮水上出海。",
+"ja": "あさの うみに きの ふねを こぎだすよ。",
+"who": "taro",
+"sp": [
+"s01",
+"s02"
+],
+"tag": "does"
+},
+"ura_taro.8": {
+"en": "The Sea Palace is full of coral, music and wonder!",
+"lo": "ວັງໃຕ້ທະເລເຕັມໄປດ້ວຍປະກາລັງ ດົນຕີ ແລະ ຄວາມອັດສະຈັນ!",
+"th": "วังใต้ทะเลเต็มไปด้วยปะการัง ดนตรี และความอัศจรรย์!",
+"zh": "海龙宫里满是珊瑚、音乐和奇妙的景色！",
+"ja": "りゅうぐうじょうは とっても ふしぎで きれいだよ！",
+"who": "taro",
+"sp": [
+"s04",
+"s05",
+"s06"
+],
+"tag": "does"
+},
+"ura_taro.9": {
+"en": "I must keep my promise to Princess Otohime.",
+"lo": "ຂ້ອຍຕ້ອງຮັກສາຄຳສັນຍາກັບເຈົ້າຍິງໂອໂຕຮິເມະ.",
+"th": "ฉันต้องรักษาสัญญากับเจ้าหญิงโอโตฮิเมะ",
+"zh": "我一定要守住对乙姬公主许下的约定。",
+"ja": "おとひめさまとの やくそくを まもらなくちゃ。",
+"who": "taro",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09"
+],
+"tag": "does"
+},
+"ura_taro.10": {
+"en": "I wear a blue fisherman jacket tied with a rope belt.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອຊາວປະມົງສີຟ້າມັດແອວດ້ວຍເຊືອກ.",
+"th": "ฉันใส่เสื้อชาวประมงสีฟ้าผูกเอวด้วยเชือก",
+"zh": "我穿着蓝色的渔夫衣，腰间系着草绳。",
+"ja": "あおい きものに ロープの おびを しめているよ。",
+"who": "taro",
+"tag": "looks"
+},
+"ura_taro.11": {
+"en": "Listen to the gentle waves along the shore.",
+"lo": "ຟັງສຽງຄື້ນອ່ອນໂຍນຕາມແຄມຝັ່ງແມ້.",
+"th": "ฟังเสียงคลื่นอ่อนโยนตามชายฝั่งสิ",
+"zh": "听听海浪轻轻拍打海岸的声音吧。",
+"ja": "やさしい なみの おとを きいて ごらん。",
+"who": "taro",
+"tag": "say"
+},
+"ura_boys.0": {
+"en": "Beach boys. The beach boys play noisily along the warm sandy shore.",
+"lo": "ເດັກຊາຍແຄມຫາດ. ເດັກຊາຍແຄມຫາດ ຫຼິ້ນສົ່ງສຽງດັງຢູ່ຕາມຫາດຊາຍອຸ່ນ.",
+"th": "เด็กชายริมหาด เด็กชายริมหาดเล่นส่งเสียงดังตามชายหาดทราย",
+"zh": "海滩男孩。海滩男孩们在温暖的沙滩上吵闹地玩耍。",
+"ja": "はまべの こどもたち。はまべの こどもたちは すなはまで にぎやかに あそぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_boys.1": {
+"en": "Hello, beach boys!",
+"lo": "ສະບາຍດີ ເດັກຊາຍແຄມຫາດ!",
+"th": "สวัสดีเด็กชายริมหาด!",
+"zh": "你好，海滩男孩！",
+"ja": "こんにちは、はまべの こどもたち！",
+"who": "boys",
+"tag": "greet"
+},
+"ura_boys.2": {
+"en": "Hey! We found a turtle on the sandy beach!",
+"lo": "ເຮີ້ຍ! ພວກເຮົາພົບເຕົ່າຢູ່ເທິງຫາດຊາຍ!",
+"th": "เฮ้! พวกเราเจอเต่าบนหาดทราย!",
+"zh": "嘿！我们在沙滩上发现了一只海龟！",
+"ja": "ねえ！ すなはまで うみがめを みつけたよ！",
+"who": "boys",
+"tag": "say"
+},
+"ura_boys.3": {
+"en": "Children love exploring beaches and tide pools after school.",
+"lo": "ເດັກນ້ອຍມັກສຳຫຼວດຫາດຊາຍ ແລະ ແອ່ງນ້ຳທະເລ.",
+"th": "เด็กๆ ชอบสำรวจชายหาดและแอ่งน้ำทะเล",
+"zh": "孩子们喜欢在沙滩和潮汐水洼里探索。",
+"ja": "こどもたちは はまべで あそぶのが だいすきだよ。",
+"who": "boys",
+"tag": "fact"
+},
+"ura_boys.4": {
+"en": "We piled driftwood sticks before Tarō taught us better.",
+"lo": "ພວກເຮົາກອງໄມ້ລອຍນ້ຳກ່ອນທີ່ທາໂຣຈະສອນພວກເຮົາ.",
+"th": "พวกเรากองไม้ลอยน้ำก่อนที่ทาโร่จะสอนพวกเรา",
+"zh": "在太郎劝说之前，我们堆起了浮木枝。",
+"ja": "たろうに おしえて もらう まえに きを つんだよ。",
+"who": "boys",
+"tag": "does"
+},
+"ura_boys.5": {
+"en": "We listened to Tarō and ran home for warm supper.",
+"lo": "ພວກເຮົາຟັງຄຳທາໂຣ ແລ້ວແລ່ນກັບບ້ານໄປກິນເຂົ້າແລງ.",
+"th": "พวกเราฟังคำทาโร่แล้ววิ่งกลับบ้านไปกินข้าวเย็น",
+"zh": "我们听从了太郎的话，跑回家吃晚饭了。",
+"ja": "たろうの はなしを きいて おうちへ かえったよ。",
+"who": "boys",
+"tag": "does"
+},
+"ura_boys.6": {
+"en": "Now we know wild sea creatures belong in the sea!",
+"lo": "ຕອນນີ້ພວກເຮົາຮູ້ແລ້ວວ່າສັດທະເລຄວນຢູ່ໃນທະເລ!",
+"th": "ตอนนี้พวกเรารู้แล้วว่าสัตว์ทะเลควรอยู่ในทะเล!",
+"zh": "现在我们明白了，海洋生物应该回到大海的家！",
+"ja": "うみの いきものは うみが おうちなんだね！",
+"who": "boys",
+"tag": "does"
+},
+"ura_boys.7": {
+"en": "We wear simple summer kimonos and straw sandals.",
+"lo": "ພວກເຮົາໃສ່ຊຸດກິໂມໂນລະດູຮ້ອນ ແລະ ເກີບເຟືອງ.",
+"th": "พวกเราใส่กิโมโนหน้าร้อนและรองเท้าฟาง",
+"zh": "我们穿着简单的夏布和服和草鞋。",
+"ja": "すずしい きものと ぞうりを はいているよ。",
+"who": "boys",
+"tag": "looks"
+},
+"ura_boys.8": {
+"en": "Sorry, little turtle! Swim safe back to the waves!",
+"lo": "ຂໍໂທດເດີ້ ເຕົ່ານ້ອຍ! ລອຍກັບສູ່ຄື້ນຢ່າງປອດໄພເດີ້!",
+"th": "ขอโทษนะ เต่าน้อย! ว่ายกลับสู่คลื่นอย่างปลอดภัยนะ!",
+"zh": "对不起小海龟！平安游回大海吧！",
+"ja": "ごめんね うみがめさん！ げんきに うみへ かえってね！",
+"who": "boys",
+"tag": "say"
+},
+"ura_boys.9": {
+"en": "Pitter-pat, pitter-pat!",
+"lo": "ຕຶກຕັກ ຕຶກຕັກ!",
+"th": "ตึกตัก ตึกตัก!",
+"zh": "哒哒哒，哒哒哒！",
+"ja": "ぱたぱた、ぱたぱた！",
+"who": "boys",
+"tag": "sound"
+},
+"ura_turtle.0": {
+"en": "A sea turtle. The sea turtle wears a bright coral charm on his shell.",
+"lo": "ເຕົ່າທະເລ. ເຕົ່າທະເລ ໃສ່ເຄື່ອງປະດັບປະກາລັງສີແດງຢູ່ອ້ອມກະດອງ.",
+"th": "เต่าทะเล เต่าทะเลสวมเครื่องรางปะการังสีแดงสดใส",
+"zh": "海龟。海龟戴着一个鲜艳的珊瑚挂饰。",
+"ja": "うみがめ。うみがめは あかい さんごの かざりを つけているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_turtle.1": {
+"en": "Hello, sea turtle!",
+"lo": "ສະບາຍດີ ເຕົ່າທະເລ!",
+"th": "สวัสดีเต่าทะเล!",
+"zh": "你好，海龟！",
+"ja": "こんにちは、うみがめ！",
+"who": "turtle",
+"tag": "greet"
+},
+"ura_turtle.2": {
+"en": "Hello! I am the Sea Palace turtle!",
+"lo": "ສະບາຍດີ! ຂ້ອຍແມ່ນເຕົ່າແຫ່ງວັງໃຕ້ທະເລ!",
+"th": "สวัสดี! ฉันคือเต่าแห่งวังใต้ทะเล!",
+"zh": "你好！我是海龙宫的大海龟！",
+"ja": "やあ！ ぼくは りゅうぐうの うみがめだよ！",
+"who": "turtle",
+"tag": "say"
+},
+"ura_turtle.3": {
+"en": "Sea turtles use wide flippers like wings to glide underwater.",
+"lo": "ເຕົ່າທະເລໃຊ້ຄີບກວ້າງຄືປີກລອຍໄປໃຕ້ນ້ຳ.",
+"th": "เต่าทะเลใช้ครีบกว้างเหมือนปีกแหวกว่ายใต้น้ำ",
+"zh": "海龟用宽宽的鳍像翅膀一样在水中滑行。",
+"ja": "うみがめは ひろい ひれで うみを とぶように およぐよ。",
+"who": "turtle",
+"tag": "fact"
+},
+"ura_turtle.4": {
+"en": "I carry Urashima Tarō safely on my smooth shell.",
+"lo": "ຂ້ອຍພາອຸຣາຊິມະ ທາໂຣຂີ່ກະດອງລຽບຂອງຂ້ອຍຢ່າງປອດໄພ.",
+"th": "ฉันพาอุราชิมะ ทาโร่ขี่กระดองเรียบอย่างปลอดภัย",
+"zh": "我用光滑的龟壳稳稳地驮着浦岛太郎。",
+"ja": "たろうを こうらに のせて あんぜんに はこぶよ。",
+"who": "turtle",
+"sp": [
+"s02",
+"s03",
+"s04",
+"s07",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"ura_turtle.5": {
+"en": "I never forget someone who shows me kindness.",
+"lo": "ຂ້ອຍບໍ່ເຄີຍລືມຄົນທີ່ສະແດງຄວາມໃຈດີຕໍ່ຂ້ອຍ.",
+"th": "ฉันไม่เคยลืมคนที่แสดงความใจดีต่อฉัน",
+"zh": "我永远不会忘记善待过我的人。",
+"ja": "やさしく して くれた ひとを ずっと わすれないよ。",
+"who": "turtle",
+"tag": "does"
+},
+"ura_turtle.6": {
+"en": "I swim home through the sunlit blue ocean waves.",
+"lo": "ຂ້ອຍລອຍກັບບ້ານຜ່ານຄື້ນທະເລສີຟ້າແດດອຸ່ນ.",
+"th": "ฉันว่ายกลับบ้านผ่านคลื่นทะเลสีฟ้าแดดอุ่น",
+"zh": "我穿过阳光灿烂的蓝色海浪游回家。",
+"ja": "あおい なみを こえて おうちへ およぐよ。",
+"who": "turtle",
+"tag": "does"
+},
+"ura_turtle.7": {
+"en": "My shell is patterned in warm sea-green and amber.",
+"lo": "ກະດອງຂອງຂ້ອຍມີລາຍສີຂຽວທະເລ ແລະ ສີອຳພັນອຸ່ນ.",
+"th": "กระดองของฉันมีลายสีเขียวทะเลและสีอำพันอบอุ่น",
+"zh": "我的龟壳有着温暖的海绿和琥珀花纹。",
+"ja": "こうらには うみいろの きれいな もようが あるよ。",
+"who": "turtle",
+"tag": "looks"
+},
+"ura_turtle.8": {
+"en": "Splash! I pop up from the waves to say hello!",
+"lo": "ຕູມ! ຂ້ອຍໂຜ່ຂຶ້ນມາຈາກຄື້ນເພື່ອທັກທາຍ!",
+"th": "ตูม! ฉันโผล่ขึ้นมาจากคลื่นเพื่อทักทาย!",
+"zh": "哗啦！我从浪花里探出头来打招呼！",
+"ja": "ざぶん！ なみから かおを だして こんにちは！",
+"who": "turtle",
+"tag": "does"
+},
+"ura_turtle.9": {
+"en": "Hold on tight for our ocean ride!",
+"lo": "ຈັບແໜ້ນໆເດີ້ ສຳລັບການເດີນທາງໃຕ້ທະເລຂອງພວກເຮົາ!",
+"th": "จับแน่นๆ นะ สำหรับการเดินทางใต้ทะเลของเรา!",
+"zh": "抓紧啦，我们要出发去海底旅行了！",
+"ja": "しっかり つかまってね、うみの たびへ しゅっぱつ！",
+"who": "turtle",
+"sp": [
+"s02",
+"s03",
+"s07"
+],
+"tag": "say"
+},
+"ura_driftwood.0": {
+"en": "A driftwood stick. A driftwood stick washed onto the beach with the tide.",
+"lo": "ໄມ້ລອຍນ້ຳ. ໄມ້ລອຍນ້ຳ ຖືກຄື້ນພັດມາເກີຍຢູ່ເທິງຫາດຊາຍ.",
+"th": "ไม้ลอยน้ำ ไม้ลอยน้ำถูกคลื่นซัดมาเกยบนชายหาด",
+"zh": "浮木枝。浮木枝随着潮水冲上了沙滩。",
+"ja": "りゅうぼく。りゅうぼくが なみに のって はまべに ながれついたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_driftwood.1": {
+"en": "Moving the driftwood clears a safe path for the turtle.",
+"lo": "ການຍ້າຍໄມ້ລອຍນ້ຳເປີດທາງປອດໄພໃຫ້ເຕົ່າທະເລ.",
+"th": "การย้ายไม้ลอยน้ำเปิดทางปลอดภัยให้เต่าทะเล",
+"zh": "移开浮木枝就能给海龟让出回家的安全小路。",
+"ja": "りゅうぼくを どかすと うみがめが うみへ かえれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_driftwood.2": {
+"en": "Sun and saltwater smooth driftwood pale and silky.",
+"lo": "ແສງແດດ ແລະ ນ້ຳທະເລຂັດໄມ້ລອຍນ້ຳໃຫ້ລຽບສີອ່ອນ.",
+"th": "แสงแดดและน้ำทะเลขัดไม้ลอยน้ำให้เรียบสีอ่อน",
+"zh": "阳光和海水把浮木打磨得光滑又淡雅。",
+"ja": "しおと おひさまで すべすべに なった きだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_driftwood.3": {
+"en": "Ocean currents carry fallen branches from faraway forests.",
+"lo": "ກະແສນ້ຳທະເລພັດກິ່ງໄມ້ມາຈາກປ່າທີ່ຢູ່ໄກ.",
+"th": "กระแสน้ำทะเลพัดกิ่งไม้มาจากป่าที่อยู่ไกล",
+"zh": "海流把远方森林里落下的树枝带到了海滩上。",
+"ja": "うみの ながれが とおくの もりから はこんで きたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_driftwood.4": {
+"en": "Tap, clack!",
+"lo": "ຕ໋ອກ ແຄະ!",
+"th": "ต๊อก แกร๊ก!",
+"zh": "嗒，咔嗒！",
+"ja": "こんこん、ことん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_crab.0": {
+"en": "A shore crab. A shore crab scuttles sideways across the sunlit sand.",
+"lo": "ກະປູແຄມຫາດ. ກະປູແຄມຫາດ ໄຕ່ຂ້າງໄປຕາມຫາດຊາຍແດດອຸ່ນ.",
+"th": "ปูชายหาด ปูชายหาดเดินตะแคงไปตามหาดทรายแดดอุ่น",
+"zh": "海滩螃蟹。海滩螃蟹沿着阳光照耀的沙滩横着爬行。",
+"ja": "はまべの かに。はまべの かにが すなはまを よこに とことこ あるくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_crab.1": {
+"en": "Hello, shore crab!",
+"lo": "ສະບາຍດີ ກະປູແຄມຫາດ!",
+"th": "สวัสดีปูชายหาด!",
+"zh": "你好，海滩螃蟹！",
+"ja": "こんにちは、はまべの かに！",
+"who": "crab",
+"tag": "greet"
+},
+"ura_crab.2": {
+"en": "Crabs have ten legs and walk quickly sideways on sand.",
+"lo": "ກະປູມີຂາສິບຂາ ແລະ ຍ່າງຂ້າງໄດ້ໄວເທິງຫາດຊາຍ.",
+"th": "ปูมีขาสบขาและเดินตะแคงได้เร็วบนหาดทราย",
+"zh": "螃蟹有十条腿，在沙滩上横着跑得飞快。",
+"ja": "かには あしが じゅっぽん あって よこに はやく あるくよ。",
+"who": "crab",
+"tag": "fact"
+},
+"ura_crab.3": {
+"en": "It scuttles near the wet shells looking for a tasty snack.",
+"lo": "ມັນໄຕ່ໃກ້ເປືອກຫອຍປຽກເພື່ອຫາຂອງກິນແຊບໆ.",
+"th": "มันเดินใกล้เปลือกหอยเปียกเพื่อหาของกินอร่อยๆ",
+"zh": "它在湿润的贝壳边爬来爬去寻找美味点心。",
+"ja": "ぬれた かいがらの そばで たべものを さがすよ。",
+"who": "crab",
+"tag": "does"
+},
+"ura_crab.4": {
+"en": "Its two small claws click happily in the sunshine.",
+"lo": "ກ້າມນ້ອຍສອງກ້າມຂອງມັນໜີບດັງແຄະໆໃນແສງແດດ.",
+"th": "ก้ามน้อยสองข้างของมันหนีบดังแกร๊กๆ ในแสงแดด",
+"zh": "它的两只小钳子在阳光下欢快地咔嗒作响。",
+"ja": "ちいさな はさみを かちかち うごかすよ。",
+"who": "crab",
+"tag": "looks"
+},
+"ura_crab.5": {
+"en": "Click, clack, scuttle!",
+"lo": "ແຄະ ແຄະ ໄຕ່ໄວ!",
+"th": "แกร๊ก แกร๊ก เดินเร็ว!",
+"zh": "咔嗒，咔嗒，快快爬！",
+"ja": "かちかち、とことこ！",
+"who": "crab",
+"tag": "sound"
+},
+"ura_heron.0": {
+"en": "A white heron. A white heron watches calmly beside the blue water.",
+"lo": "ນົກຍາງຂາວ. ນົກຍາງຂາວ ຢືນເບິ່ງງຽບໆຢູ່ແຄມນ້ຳສີຟ້າ.",
+"th": "นกกระสาขาว นกกระสาขาวเฝ้ามองเงียบๆ ริมน้ำสีฟ้า",
+"zh": "白鹭。白鹭静静地站在蓝色的海水边张望。",
+"ja": "しろさぎ。しろさぎが あおい うみの そばで しずかに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_heron.1": {
+"en": "Hello, white heron!",
+"lo": "ສະບາຍດີ ນົກຍາງຂາວ!",
+"th": "สวัสดีนกกระสาขาว!",
+"zh": "你好，白鹭！",
+"ja": "こんにちは、しろさぎ！",
+"who": "narrator",
+"tag": "greet"
+},
+"ura_heron.2": {
+"en": "Herons have long legs for wading patiently in shallow bays.",
+"lo": "ນົກຍາງມີຂາຍາວໄວ້ຍ່າງຢ່າງໃຈເຢັນໃນນ້ຳຕື້ນ.",
+"th": "นกกระสามีขายาวไว้เดินอย่างใจเย็นในน้ำตื้น",
+"zh": "白鹭长着长长的腿，喜欢在浅海湾里耐心涉水。",
+"ja": "しろさぎは ながい あしで あさい うみを あるくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_heron.3": {
+"en": "It watches the sparkling water and spreads wide white wings.",
+"lo": "ມັນຈ້ອງເບິ່ງນ້ຳເຫຼື້ອມ ແລະ ກາງປີກສີຂາວກວ້າງ.",
+"th": "มันจ้องมองน้ำระยิบและกางปีกสีขาวกว้าง",
+"zh": "它注视着闪亮的海水，展露出宽阔的白翅膀。",
+"ja": "ひろい しろい つばさを ばさっと ひろげるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_heron.4": {
+"en": "Its feathers shine snow-white against the blue bay.",
+"lo": "ຂົນຂອງມັນຂາວສະອາດຕັດກັບອ່າວສີຟ້າ.",
+"th": "ขนของมันขาวสะอาดตัดกับอ่าวสีฟ้า",
+"zh": "它的羽毛在蓝色海湾映衬下洁白如雪。",
+"ja": "まっしろな はねが あおい うみに はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_heron.5": {
+"en": "Flap, swoosh!",
+"lo": "ພຶບ ວູບ!",
+"th": "พั่บ วูบ!",
+"zh": "扑啦，呼！",
+"ja": "ばさっ、ふわっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_seafish.0": {
+"en": "A sea fish. A sea fish glides swiftly through the cool blue waves.",
+"lo": "ປາທະເລ. ປາທະເລ ລອຍຢ່າງໄວຜ່ານຄື້ນສີຟ້າເຢັນ.",
+"th": "ปลาทะเล ปลาทะเลว่ายอย่างรวดเร็วผ่านคลื่นสีฟ้าเย็น",
+"zh": "海鱼。海鱼在清凉的蓝色海浪里轻快地游动。",
+"ja": "うみの さかな。うみの さかなが あおい なみの なかを すいすい およぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_seafish.1": {
+"en": "Hello, sea fish!",
+"lo": "ສະບາຍດີ ປາທະເລ!",
+"th": "สวัสดีปลาทะเล!",
+"zh": "你好，海鱼！",
+"ja": "こんにちは、うみの さかな！",
+"who": "narrator",
+"tag": "greet"
+},
+"ura_seafish.2": {
+"en": "Fish breathe underwater using tiny gills behind their cheeks.",
+"lo": "ປາຫາຍໃຈໃຕ້ນ້ຳໂດຍໃຊ້ເຫືອກນ້ອຍໆຢູ່ຂ້າງແກ້ມ.",
+"th": "ปลาหายใจใต้น้ำโดยใช้เหงือกเล็กๆ ข้างแก้ม",
+"zh": "鱼儿用脸颊后面的鳃在水里自由呼吸。",
+"ja": "さかなは えらを つかって みずの なかで いきを するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_seafish.3": {
+"en": "It darts through the waves and leaps with a tiny splash.",
+"lo": "ມັນລອຍໄວຜ່ານຄື້ນ ແລະ ໂດດຂຶ້ນພ້ອມສຽງນ້ຳກະເດັນ.",
+"th": "มันว่ายเร็วผ่านคลื่นและกระโดดขึ้นพร้อมเสียงน้ำกระเซ็น",
+"zh": "它在浪花间轻快穿梭，时不时跃出水面溅起水花。",
+"ja": "なみの なかを すいすい およいで ぴょんと はねるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_seafish.4": {
+"en": "Its shiny scales glint like silver coins in the sun.",
+"lo": "ເກັດເຫຼື້ອມຂອງມັນວິບວັບຄືຫຼຽນເງິນໃນແສງແດດ.",
+"th": "เกล็ดเงาของมันระยิบเหมือนเหรียญเงินในแสงแดด",
+"zh": "它闪亮的鳞片在阳光下像银币一样发亮。",
+"ja": "うろこが おひさまに あたって きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_seafish.5": {
+"en": "Splash, swish!",
+"lo": "ຕູມ ວູບ!",
+"th": "ตูม ซิ่ว!",
+"zh": "哗啦，嗖！",
+"ja": "ぴちゃん、すいっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_fishrack.0": {
+"en": "A drying rack. A drying rack holds salted fish in the warm ocean breeze.",
+"lo": "ຮາວຕາກປາ. ຮາວຕາກປາ ຕາກປາໃນສາຍລົມທະເລອຸ່ນ.",
+"th": "ราวตากปลา ราวตากปลาตากปลาในสายลมทะเลอุ่น",
+"zh": "晒鱼架。晒鱼架在暖暖的海风里晾晒着海鱼。",
+"ja": "さかなぼしの だいな。さかなぼしの だいなで うみかぜに さかなを ほすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_fishrack.1": {
+"en": "Warm sea breezes dry the daily catch hanging on this rack.",
+"lo": "ລົມທະເລອຸ່ນຕາກປາທີ່ຈັບໄດ້ແຕ່ລະມື້ໃຫ້ແຫ້ງເທິງຮາວນີ້.",
+"th": "ลมทะเลอุ่นตากปลาที่จับได้แต่ละวันให้แห้งบนราวนี้",
+"zh": "温暖的海风吹干挂在架子上的新鲜渔获。",
+"ja": "うみかぜが さかなを おいしく かわかして くれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_fishrack.2": {
+"en": "Simple bamboo poles tie together with rough hemp twine.",
+"lo": "ໄມ້ໄຜ່ລຽບງ່າຍມັດເຂົ້າກັນດ້ວຍເຊືອກປ່ານ.",
+"th": "ไม้ไผ่เรียบง่ายมัดเข้าด้วยกันด้วยเชือกป่าน",
+"zh": "简朴的竹竿用粗麻绳结实地捆扎在一起。",
+"ja": "たけの ぼうを ひもで しっかり むすんで あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_fishrack.3": {
+"en": "Sun-dried fish keeps well for coastal villages all winter.",
+"lo": "ປາຕາກແດດເກັບໄວ້ກິນໄດ້ດົນຕະຫຼອດລະດູໜາວ.",
+"th": "ปลาตากแดดเก็บไว้กินได้นานตลอดหน้าหนาว",
+"zh": "晒干的海鱼能让渔村安稳度过整个冬天。",
+"ja": "ほした さかなは ながく ほぞん できるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_fishrack.4": {
+"en": "Creak, flutter!",
+"lo": "ແອດ ປິວ!",
+"th": "เอี๊ยด ปลิว!",
+"zh": "竹架轻晃！",
+"ja": "きしっ、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_baskets.0": {
+"en": "Woven baskets. Woven baskets carry fresh catch up from the sandy shore.",
+"lo": "ກະຕ່າສານ. ກະຕ່າສານ ໃຊ້ໃສ່ປາສົດຂຶ້ນມາຈາກຫາດຊາຍ.",
+"th": "ตะกร้าสาน ตะกร้าสานใช้ใส่ปลาสดขึ้นมาจากชายหาด",
+"zh": "竹编篮子。竹编篮子用来从沙滩提回新鲜的渔获。",
+"ja": "たけかご。たけかごに とれたての さかなを いれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_baskets.1": {
+"en": "Villagers carry shells, nets and lunch in these woven baskets.",
+"lo": "ຊາວບ້ານໃຊ້ກະຕ່າສານເຫຼົ່ານີ້ໃສ່ຫອຍ ມອງ ແລະ ອາຫານ.",
+"th": "ชาวบ้านใช้ตะกร้าสานเหล่านี้ใส่หอย อวน และอาหาร",
+"zh": "村民们用竹篮装贝壳、渔网和美味的午餐。",
+"ja": "かいがらや おべんとうを いれて はこぶ かごだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_baskets.2": {
+"en": "Warm honey bamboo strips crisscross in tidy hand-made patterns.",
+"lo": "ຕອກໄມ້ໄຜ່ສີນ້ຳເຜິ້ງສານໄຂວ່ກັນຢ່າງປານີດ.",
+"th": "ตอกไม้ไผ่สีน้ำผึ้งสานไขว้กันอย่างประณีต",
+"zh": "暖蜜色的竹篾交错编出整齐精巧的花纹。",
+"ja": "ていねいに あまれた きれいな たけかごだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_baskets.3": {
+"en": "Light bamboo baskets are strong enough to carry heavy loads.",
+"lo": "ກະຕ່າໄມ້ໄຜ່ເບົາແຕ່ແຂງແຮງພໍໃສ່ຂອງໜັກໄດ້.",
+"th": "ตะกร้าไม้ไผ่เบาแต่แข็งแรงพอใส่ของหนักได้",
+"zh": "竹篮虽然轻巧，却结实得能装下沉甸甸的东西。",
+"ja": "かるくて じょうぶだから まいにち つかわれるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_baskets.4": {
+"en": "Tap, rustle!",
+"lo": "ຕ໋ອກ ຊາ!",
+"th": "ต๊อก ซ่า!",
+"zh": "竹篮轻声沙沙！",
+"ja": "ことん、かさかさ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_shrub.0": {
+"en": "A coastal bush. A coastal bush blooms with hardy green leaves near the sand.",
+"lo": "ພຸ່ມໄມ້ແຄມທະເລ. ພຸ່ມໄມ້ແຄມທະເລ ມີໃບຂຽວທົນທານຢູ່ໃກ້ຫາດຊາຍ.",
+"th": "พุ่มไม้ริมทะเล พุ่มไม้ริมทะเลมีใบเขียวทนทานอยู่ใกล้ชายหาด",
+"zh": "海边灌木。海边灌木在沙滩旁长出耐风的翠绿枝叶。",
+"ja": "うみべの しげみ。うみべの しげみが しおかぜに まけずに そだつよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_shrub.1": {
+"en": "Tiny beach insects hide safely beneath this leafy bush.",
+"lo": "ແມງໄມ້ແຄມຫາດນ້ອຍໆຫຼົບຢູ່ຢ່າງປອດໄພກ້ອງພຸ່ມໄມ້ນີ້.",
+"th": "แมลงริมหาดตัวน้อยหลบอย่างปลอดภัยใต้พุ่มไม้นี้",
+"zh": "小小的海滩昆虫躲在这丛茂密灌木下乘凉。",
+"ja": "ちいさな むしたちが はっぱの かげで やすむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_shrub.2": {
+"en": "Waxy green leaves stay bright right beside the salty shore.",
+"lo": "ໃບຂຽວເງົາສົດໃສຢູ່ຕິດແຄມທະເລເຄັມ.",
+"th": "ใบเขียวเงาสดใสอยู่ติดริมทะเลเค็ม",
+"zh": "油亮的绿叶在海风吹拂下依然苍翠。",
+"ja": "つやつやの みどりの はっぱが げんきに しげるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_shrub.3": {
+"en": "Seaside bushes have thick leaves that hold precious fresh water.",
+"lo": "ພຸ່ມໄມ້ແຄມທະເລມີໃບໜາໄວ້ເກັບນ້ຳຈືດ.",
+"th": "พุ่มไม้ริมทะเลมีใบหนาไว้เก็บน้ำจืด",
+"zh": "海边灌木厚实的叶片能牢牢锁住宝贵的水分。",
+"ja": "あつい はっぱで みずを だいじに ためているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_shrub.4": {
+"en": "Rustle, shake!",
+"lo": "ຊາ ໄຫວ!",
+"th": "ซ่า ไหว!",
+"zh": "灌木沙沙轻摇！",
+"ja": "がさがさ、そよっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_reeds.0": {
+"en": "Beach reeds. Beach reeds bend and whisper in the salty ocean wind.",
+"lo": "ຕົ້ນອໍ້ແຄມຫາດ. ຕົ້ນອໍ້ແຄມຫາດ ໂອນເອນ ແລະ ກະຊິບຕາມລົມທະເລ.",
+"th": "ต้นอ้อริมหาด ต้นอ้อริมหาดเอนไหวและกระซิบตามลมทะเล",
+"zh": "海边芦苇。海边芦苇在咸咸的海风里轻轻弯腰低语。",
+"ja": "はまべの あし。はまべの あしが うみかぜに ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_reeds.1": {
+"en": "Beach reeds sway back and forth whenever the sea breeze blows.",
+"lo": "ຕົ້ນອໍ້ແຄມຫາດແກວ່ງໄປມາທຸກຄັ້ງທີ່ລົມທະເລພັດ.",
+"th": "ต้นอ้อริมหาดไหวไปมาทุกครั้งที่ลมทะเลพัด",
+"zh": "海风一吹，海边芦苇就轻轻来回摇摆。",
+"ja": "うみかぜが ふくと あしが ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_reeds.2": {
+"en": "Slender green blades lean gently toward the sunny dunes.",
+"lo": "ໃບສີຂຽວຮຽວໂອນຄ່ອຍໆໄປທາງເນີນຊາຍແດດອຸ່ນ.",
+"th": "ใบสีเขียวเรียวเอนเบาๆ ไปทางเนินทรายแดดอุ่น",
+"zh": "细长的绿叶向着阳光温暖的沙丘轻轻倾斜。",
+"ja": "ほそい はっぱが すなはまの かぜに なびくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_reeds.3": {
+"en": "Crickets and tiny frogs love hiding in cool shore reeds.",
+"lo": "ຈິ່ງຫຼີດ ແລະ ກົບນ້ອຍມັກຫຼົບຢູ່ໃນກໍຕົ້ນອໍ້ເຢັນໆ.",
+"th": "จิ้งหรีดและกบน้อยชอบหลบอยู่ในกอต้นอ้อเย็นๆ",
+"zh": "蟋蟀和小青蛙最喜欢躲在凉爽的芦苇丛里。",
+"ja": "こおろぎや かえるが あしの かげに かくれるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_reeds.4": {
+"en": "Swish, whisper!",
+"lo": "ວູບ ກະຊິບ!",
+"th": "ซิ่ว กระซิบ!",
+"zh": "芦苇沙沙低唱！",
+"ja": "さらさら、さやさや！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_stonelantern.0": {
+"en": "A stone lantern. A stone lantern guides fishing boats safely back to shore.",
+"lo": "ໂຄມຫີນ. ໂຄມຫີນ ນຳທາງເຮືອປະມົງກັບສູ່ຝັ່ງຢ່າງປອດໄພ.",
+"th": "โคมหิน โคมหินนำทางเรือประมงกลับสู่ฝั่งอย่างปลอดภัย",
+"zh": "石灯笼。石灯笼在海边指引渔船平安回家。",
+"ja": "いしどうろう。いしどうろうが うみの ふねを やさしく みちびくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_stonelantern.1": {
+"en": "At dusk, a warm flame inside this stone lantern guides boats home.",
+"lo": "ຍາມຄ່ຳ ແສງໄຟອຸ່ນໃນໂຄມຫີນນີ້ນຳທາງເຮືອກັບບ້ານ.",
+"th": "ยามค่ำ แสงไฟอุ่นในโคมหินนี้นำทางเรือกลับบ้าน",
+"zh": "傍晚时分，石灯笼里的暖光指引小船归家。",
+"ja": "ゆうがたに あかりが ともって ふねを まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_stonelantern.2": {
+"en": "Carved grey granite sits mossy and calm beside the tide.",
+"lo": "ຫີນແກຣນິດແກະສະຫຼັກສີເທົາມີໄຄນ້ຳຕັ້ງສະຫງົບແຄມນ້ຳ.",
+"th": "หินแกรนิตแกะสลักสีเทามีมอสตั้งสงบริมน้ำ",
+"zh": "雕琢的灰石灯笼长着青苔，静立海边。",
+"ja": "こけの ついた いしどうろうが しずかに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_stonelantern.3": {
+"en": "Stone lanterns called toro have stood along Japanese coasts for ages.",
+"lo": "ໂຄມຫີນໂທໂຣຕັ້ງຢູ່ຕາມແຄມຝັ່ງຍີ່ປຸ່ນມາແຕ່ບູຮານ.",
+"th": "โคมหินโทโรตั้งอยู่ตามริมฝั่งญี่ปุ่นมาแต่โบราณ",
+"zh": "日本海岸边自古就立着指引方向的石灯笼。",
+"ja": "むかしから うみべの みちしるべに なっているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_stonelantern.4": {
+"en": "Clack, glow!",
+"lo": "ແຄະ ເຮືອງ!",
+"th": "แกร๊ก เรือง!",
+"zh": "石灯稳稳闪光！",
+"ja": "こつん、ぽわっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_searocks.0": {
+"en": "Sea rocks. Sea rocks sit slick and mossy where the gentle waves splash.",
+"lo": "ໂງ່ນຫີນທະເລ. ໂງ່ນຫີນທະເລ ລຽບ ແລະ ມີໄຄນ້ຳຢູ່ບ່ອນຄື້ນຊັດ.",
+"th": "โขดหินทะเล โขดหินทะเลเรียบและมีมอสตรงที่คลื่นซัด",
+"zh": "海边礁石。海边礁石长满青苔，任由海浪轻轻拍打。",
+"ja": "うみの いわ。うみの いわに やさしい なみが ざぶんと あたるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_searocks.1": {
+"en": "Tiny crabs and snails cling to these sea rocks when waves splash.",
+"lo": "ກະປູນ້ອຍ ແລະ ຫອຍເກາະແໜ້ນເທິງໂງ່ນຫີນເມື່ອຄື້ນຊັດ.",
+"th": "ปูน้อยและหอยเกาะแน่นบนโขดหินเมื่อคลื่นซัด",
+"zh": "浪花拍来时，小螃蟹和海螺紧紧贴在礁石上。",
+"ja": "なみが きても かにや かいが いわに しがみつくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_searocks.2": {
+"en": "Rounded coastal boulders shine dark and wet along the waterline.",
+"lo": "ໂງ່ນຫີນແຄມຝັ່ງກົມມົນເປັນເງົາປຽກຕາມຂອບນ້ຳ.",
+"th": "โขดหินริมฝั่งกลมมนเป็นเงาเปียกตามขอบน้ำ",
+"zh": "圆润的海礁在水线边被海水浸润得闪闪发亮。",
+"ja": "なみに ぬれた いわが つやつや ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_searocks.3": {
+"en": "Tide pools form between sea rocks when the ocean tide goes out.",
+"lo": "ແອ່ງນ້ຳທະເລເກີດຂຶ້ນລະຫວ່າງໂງ່ນຫີນເມື່ອນ້ຳທະເລລົງ.",
+"th": "แอ่งน้ำทะเลเกิดขึ้นระหว่างโขดหินเมื่อน้ำทะเลลง",
+"zh": "退潮时，礁石之间会留下一汪汪神奇的潮汐水洼。",
+"ja": "しおが ひくと いわの あいだに みずたまりが できるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_searocks.4": {
+"en": "Splash, tap!",
+"lo": "ຕູມ ຕ໋ອກ!",
+"th": "ตูม ต๊อก!",
+"zh": "海浪拍石哗啦响！",
+"ja": "ざぶん、こつん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_shells.0": {
+"en": "Sea shells. Sea shells sparkle like tiny treasures along the wet sand.",
+"lo": "ເປືອກຫອຍທະເລ. ເປືອກຫອຍທະເລ ເຫຼື້ອມຄືຊັບສົມບັດນ້ອຍໆຕາມຊາຍປຽກ.",
+"th": "เปลือกหอยทะเล เปลือกหอยทะเลส่องประกายเหมือนสมบัติชิ้นน้อยตามทรายเปียก",
+"zh": "海贝壳。海贝壳像小小的宝藏一样散落在湿润的沙滩上。",
+"ja": "かいがら。かいがらが はまべの たからものみたいに きらきら ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_shells.1": {
+"en": "Hold a sea shell to your ear to imagine the gentle ocean breeze!",
+"lo": "ຍົກເປືອກຫອຍແນບຫູເພື່ອຈິນຕະນາການສຽງລົມທະເລ!",
+"th": "ยกเปลือกหอยแนบหูเพื่อจินตนาการเสียงลมทะเล!",
+"zh": "把海贝壳贴近耳朵，就像听见大海轻轻歌唱！",
+"ja": "かいがらを みみに あてると うみの おとが きこえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_shells.2": {
+"en": "Cream, rose and pearly spirals brighten the damp sand.",
+"lo": "ເປືອກຫອຍສີຄີມ ສີບົວ ແລະ ສີໄຂ່ມຸກປະດັບຫາດຊາຍ.",
+"th": "เปลือกหอยสีครีม สีชมพู และสีไข่มุกประดับหาดทราย",
+"zh": "乳白、粉红和珍珠色的螺旋贝壳点亮湿沙。",
+"ja": "ピンクや しろの きれいな かいがらが ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_shells.3": {
+"en": "Sea shells were once hard little houses for soft sea animals.",
+"lo": "ເປືອກຫອຍເຄີຍເປັນເຮືອນແຂງນ້ອຍໆຂອງສັດທະເລໂຕອ່ອນ.",
+"th": "เปลือกหอยเคยเป็นบ้านแข็งน้อยๆ ของสัตว์ทะเลตัวอ่อน",
+"zh": "海贝壳曾经是软软小海洋生物坚硬的小房子。",
+"ja": "かいがらは ちいさな うみの いきものの おうちだったんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_shells.4": {
+"en": "Clink, shhh!",
+"lo": "ແຄະ ຊູ່!",
+"th": "แกร๊ก ชู่!",
+"zh": "贝壳清脆轻碰！",
+"ja": "かちゃっ、ざざーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_waves.0": {
+"en": "Sea waves. Sea waves roll onto the beach with ribbons of white foam.",
+"lo": "ຄື້ນທະເລ. ຄື້ນທະເລ ກິ້ງຊັດເຂົ້າຝັ່ງພ້ອມຟອງສີຂາວ.",
+"th": "คลื่นทะเล คลื่นทะเลซัดเข้าฝั่งพร้อมฟองสีขาว",
+"zh": "海浪。海浪卷着白色的浪花轻轻拍上沙滩。",
+"ja": "うみの なみ。うみの なみが しろい あわを つれて よせて くるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_waves.1": {
+"en": "Gentle sea waves wash fresh shells onto the shore all day.",
+"lo": "ຄື້ນທະເລອ່ອນໂຍນພັດເປືອກຫອຍໃໝ່ຂຶ້ນຝັ່ງຕະຫຼອດມື້.",
+"th": "คลื่นทะเลอ่อนโยนพัดเปลือกหอยใหม่ขึ้นฝั่งตลอดวัน",
+"zh": "温柔的海浪整天把新的贝壳送上沙滩。",
+"ja": "なみが まいにち かいがらを はまべに はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_waves.2": {
+"en": "Lacy white sea foam sparkles over clear blue-green water.",
+"lo": "ຟອງທະເລສີຂາວເຫຼື້ອມວິບວັບເທິງນ້ຳສີຟ້າຂຽວໃສ.",
+"th": "ฟองทะเลสีขาวระยิบระยับเหนือน้ำสีฟ้าอมเขียวใส",
+"zh": "蕾丝般的白浪花在清澈的蓝绿海面上闪耀。",
+"ja": "しろい あわが あおい うみの うえで きらきら するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_waves.3": {
+"en": "Wind blowing across the wide ocean pushes waves toward land.",
+"lo": "ລົມທີ່ພັດຂ້າມມະຫາສະໝຸດກວ້າງຊຸກຄື້ນເຂົ້າສູ່ຝັ່ງ.",
+"th": "ลมที่พัดข้ามมหาสมุทรกว้างผลักคลื่นเข้าสู่ฝั่ง",
+"zh": "吹过辽阔海面的海风把海浪推向岸边。",
+"ja": "うみの かぜが なみを はまべへ おして くるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_waves.4": {
+"en": "Shhh, splash!",
+"lo": "ຊູ່ ຕູມ!",
+"th": "ชู่ ตูม!",
+"zh": "海浪沙沙拍岸！",
+"ja": "ざざーん、ざぶん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_shoresky.0": {
+"en": "The morning sky. The morning sky glows warm and gold above the blue bay.",
+"lo": "ທ້ອງຟ້າຍາມເຊົ້າ. ທ້ອງຟ້າຍາມເຊົ້າ ສ່ອງແສງສີຄຳອຸ່ນເທິງອ່າວສີຟ້າ.",
+"th": "ท้องฟ้าตอนเช้า ท้องฟ้าตอนเช้าส่องแสงสีทองอบอุ่นเหนืออ่าวสีฟ้า",
+"zh": "清晨天空。清晨天空在蔚蓝海湾上方泛着暖金色的光。",
+"ja": "あさの そら。あさの そらが あおい うみの うえで あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_shoresky.1": {
+"en": "Soft clouds drift slowly across the morning sky.",
+"lo": "ເມກອ່ອນລອຍຊ້າໆຂ້າມທ້ອງຟ້າຍາມເຊົ້າ.",
+"th": "เมฆอ่อนลอยช้าๆ ข้ามท้องฟ้าตอนเช้า",
+"zh": "柔软的云朵缓缓飘过清晨的天空。",
+"ja": "しろい くもが あさの そらを ゆっくり ながれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_shoresky.2": {
+"en": "Warm peach and pale blue blend above the calm bay.",
+"lo": "ສີພີດອຸ່ນ ແລະ ສີຟ້າອ່ອນກົມກືນເທິງອ່າວສະຫງົບ.",
+"th": "สีพีชอุ่นและสีฟ้าอ่อนกลมกลืนเหนืออ่าวสงบ",
+"zh": "暖桃色与淡蓝色在宁静的海湾上方柔和交融。",
+"ja": "あたたかい ひかりと あおい そらが とけあっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_shoresky.3": {
+"en": "Coastal skies turn golden at sunrise and soft rose at sunset.",
+"lo": "ທ້ອງຟ້າແຄມທະເລເປັນສີຄຳຕອນເຊົ້າ ແລະ ສີບົວອ່ອນຕອນແລງ.",
+"th": "ท้องฟ้าริมทะเลเป็นสีทองตอนเช้าและสีชมพูอ่อนตอนเย็น",
+"zh": "海边的天空在日出时泛金，日落时染粉。",
+"ja": "うみの そらは あさも ゆうがたも とっても きれいだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_shoresky.4": {
+"en": "Breeze, hush!",
+"lo": "ລົມ ຊູ່!",
+"th": "ลม ชู่!",
+"zh": "微风轻轻拂过！",
+"ja": "そよそよ、ふわり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_headland.0": {
+"en": "A far headland. A far headland stretches quietly across the misty ocean.",
+"lo": "ແຫຼມພູໄກ. ແຫຼມພູໄກ ຢຽດຍາວງຽບໆຂ້າມທະເລທີ່ມີໝອກ.",
+"th": "แหลมภูเขาไกล แหลมภูเขาไกลทอดยาวเงียบๆ ข้ามทะเลมีหมอก",
+"zh": "远方海角。远方海角静静地伸向薄雾缭绕的大海。",
+"ja": "とおい みさき。とおい みさきが うみの むこうに みえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_headland.1": {
+"en": "This far headland shelters the fishing bay from rough ocean winds.",
+"lo": "ແຫຼມພູໄກນີ້ບັງລົມທະເລແຮງໃຫ້ອ່າວປະມົງ.",
+"th": "แหลมภูเขาไกลนี้บังลมทะเลแรงให้อ่าวประมง",
+"zh": "远处的海角为渔村海湾挡住了猛烈的海风。",
+"ja": "とおい みさきが みなとを つよい かぜから まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_headland.2": {
+"en": "Misty blue hills fade gently into the bright sea horizon.",
+"lo": "ພູສີຟ້າມີໝອກຄ່ອຍໆຈາງໄປກັບຂອບຟ້າທະເລ.",
+"th": "ภูเขาสีฟ้ามีหมอกค่อยๆ จางไปกับขอบฟ้าทะเล",
+"zh": "薄雾蓝山轻轻融入明亮的海天一线。",
+"ja": "うすい あおいろの やまが うみに つづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_headland.3": {
+"en": "A headland is a point of rocky land reaching into the sea.",
+"lo": "ແຫຼມແມ່ນສ່ວນດິນຫີນທີ່ຍື່ນອອກໄປໃນທະເລ.",
+"th": "แหลมคือส่วนดินหินที่ยื่นออกไปในทะเล",
+"zh": "海角是伸进大海里的岩石陆地。",
+"ja": "みさきは うみへ つきだした りくのことだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_headland.4": {
+"en": "Shhh, sea breeze!",
+"lo": "ຊູ່ ລົມທະເລ!",
+"th": "ชู่ ลมทะเล!",
+"zh": "海风呼呼吹过！",
+"ja": "しおの かぜが そよぐよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_cottage.0": {
+"en": "A thatched cottage. The thatched cottage is Tarō's warm wooden home by the sea.",
+"lo": "ເຮືອນມຸງຫຍ້າ. ເຮືອນມຸງຫຍ້າ ແມ່ນບ້ານໄມ້ອຸ່ນຂອງທາໂຣຢູ່ແຄມທະເລ.",
+"th": "กระท่อมมุงจาก กระท่อมมุงจากคือบ้านไม้อบอุ่นของทาโร่ริมทะเล",
+"zh": "茅草小屋。茅草小屋是太郎在海边温暖的小木家。",
+"ja": "かやぶきの いえ。かやぶきの いえは たろうの あたたかい おうちだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_cottage.1": {
+"en": "Tarō lives inside this cozy cottage with his mother and father.",
+"lo": "ທາໂຣອາໄສຢູ່ໃນເຮືອນອົບອຸ່ນຫຼັງນີ້ກັບພໍ່ ແລະ ແມ່.",
+"th": "ทาโร่อาศัยอยู่ในบ้านอบอุ่นหลังนี้กับพ่อและแม่",
+"zh": "太郎和爸爸妈妈住在这座温馨的小屋里。",
+"ja": "たろうは おとうさんと おかあさんと ここに すんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_cottage.2": {
+"en": "Sliding paper doors glow warm beneath thick golden straw thatch.",
+"lo": "ປະຕູເຈ້ຍເລື່ອນສ່ອງແສງອຸ່ນກ້ອງຫຼັງຄາຫຍ້າສີຄຳໜາ.",
+"th": "ประตูเลื่อนกระดาษส่องแสงอุ่นใต้หลังคาจากสีทองหนา",
+"zh": "厚厚的金黄茅草屋顶下，纸拉门透出暖意。",
+"ja": "しょうじの とびらと わらぶきの やねが あたたかいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_cottage.3": {
+"en": "Thick straw thatch keeps a Japanese cottage cool in summer and warm in winter.",
+"lo": "ຫຼັງຄາຫຍ້າໜາຊ່ວຍໃຫ້ເຮືອນເຢັນໃນລະດູຮ້ອນ ແລະ ອຸ່ນໃນລະດູໜາວ.",
+"th": "หลังคาจากหนาช่วยให้บ้านเย็นในหน้าร้อนและอุ่นในหน้าหนาว",
+"zh": "厚厚的茅草屋顶让小屋冬暖夏凉。",
+"ja": "かやぶきやねは なつは すずしく ふゆは あたたかいんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_cottage.4": {
+"en": "Creak, tap!",
+"lo": "ແອດ ຕ໋ອກ!",
+"th": "เอี๊ยด ต๊อก!",
+"zh": "吱呀，轻敲木门！",
+"ja": "からから、とんとん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_pinegreat.0": {
+"en": "A pine tree. The pine tree spreads its wide green branches over the sand.",
+"lo": "ຕົ້ນແປກໃຫຍ່. ຕົ້ນແປກໃຫຍ່ ແຜ່ກິ່ງໃບສີຂຽວກວ້າງເທິງຫາດຊາຍ.",
+"th": "ต้นสนใหญ่ ต้นสนใหญ่แผ่กิ่งใบสีเขียวกว้างเหนือหาดทราย",
+"zh": "大松树。大松树把宽阔的绿枝伸展在沙滩上方。",
+"ja": "おおきな まつ。おおきな まつが すなはまの うえに えだを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pinegreat.1": {
+"en": "This green pine shades the beach where Tarō rests each day.",
+"lo": "ຕົ້ນແປກສີຂຽວນີ້ໃຫ້ຮົ່ມເທິງຫາດຊາຍບ່ອນທາໂຣພັກຜ່ອນ.",
+"th": "ต้นสนสีเขียวนี้ให้ร่มเงาบนหาดทรายที่ทาโร่พักผ่อน",
+"zh": "这棵绿松树在沙滩上撑起一片清凉的树荫。",
+"ja": "みどりの まつが はまべに すずしい かげを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pinegreat.2": {
+"en": "Tufted pine needles sway gracefully in the salty sea wind.",
+"lo": "ໃບແປກເປັນພຸ່ມແກວ່ງຢ່າງອ່ອນຊ້ອຍຕາມລົມທະເລ.",
+"th": "ใบสนเป็นพุ่มไหวอย่างอ่อนช้อยตามลมทะเล",
+"zh": "簇簇松针在咸咸的海风里优雅摇曳。",
+"ja": "まつの はが しおかぜに さらさら ゆれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pinegreat.3": {
+"en": "Pine trees stay green all year round, even in winter snow.",
+"lo": "ຕົ້ນແປກຂຽວຕະຫຼອດປີ ແມ່ນແຕ່ໃນຫິມະລະດູໜາວ.",
+"th": "ต้นสนเขียวตลอดปี แม้ในหิมะหน้าหนาว",
+"zh": "松树一年四季常青，冬天大雪里也依然翠绿。",
+"ja": "まつは ふゆでも いちねんじゅう みどりなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pinegreat.4": {
+"en": "Swoosh, rustle!",
+"lo": "ວູບ ຊາ!",
+"th": "วูบ ซ่า!",
+"zh": "松涛沙沙作响！",
+"ja": "ざわざわ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_seastack.0": {
+"en": "A sea stack. A sea stack stands tall in the blue water with a lone pine.",
+"lo": "ຜາຫີນກາງນ້ຳ. ຜາຫີນກາງນ້ຳ ຕັ້ງສູງກາງນ້ຳສີຟ້າພ້ອມຕົ້ນແປກຕົ້ນດຽວ.",
+"th": "ผาหินกลางน้ำ ผาหินกลางน้ำตั้งสูงกลางน้ำสีฟ้าพร้อมต้นสนต้นเดียว",
+"zh": "海蚀岩柱。海蚀岩柱高高耸立在蓝海里，顶着一棵小松树。",
+"ja": "うみの いわやま。うみの いわやまの てっぺんに まつの きが たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_seastack.1": {
+"en": "Fishermen steer by this tall sea stack when rowing out to sea.",
+"lo": "ຊາວປະມົງເບິ່ງຜາຫີນກາງນ້ຳນີ້ເປັນຫຼັກເມື່ອພາຍເຮືອອອກທະເລ.",
+"th": "ชาวประมงดูผาหินกลางน้ำนี้เป็นหลักเมื่อพายเรือออกทะเล",
+"zh": "渔夫们划船出海时常以这座高耸的岩柱辨认方向。",
+"ja": "うみの いわやまが ふねの めじるしに なっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_seastack.2": {
+"en": "One brave coastal pine crowns the misty slate pillar.",
+"lo": "ຕົ້ນແປກແຄມທະເລຕົ້ນໜຶ່ງຢືນເທິງຍອດຜາຫີນມີໝອກ.",
+"th": "ต้นสนริมทะเลต้นหนึ่งยืนบนยอดผาหินมีหมอก",
+"zh": "一棵勇敢的松树挺立在薄雾缭绕的岩柱顶上。",
+"ja": "いわの うえに まつの きが ぽつんと たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_seastack.3": {
+"en": "Sea stacks are left standing when ocean waves wear away soft rock.",
+"lo": "ຜາຫີນກາງນ້ຳເກີດຂຶ້ນເມື່ອຄື້ນກັດເຊາະຫີນອ່ອນອ້ອມຂ້າງ.",
+"th": "ผาหินกลางน้ำเกิดขึ้นเมื่อคลื่นกัดเซาะหินอ่อนรอบข้าง",
+"zh": "海浪冲走周围松软岩层后，坚硬的岩柱就独自留了下来。",
+"ja": "かたい いわだけが うみの なかに のこったんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_seastack.4": {
+"en": "Whoosh, wash!",
+"lo": "ວູບ ຊ່າ!",
+"th": "วูบ ซ่า!",
+"zh": "海浪拍打岩柱！",
+"ja": "ざぱーん、ごおっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_islandoutcrop.0": {
+"en": "A rocky island. A rocky island marks the outer edge of the calm blue bay.",
+"lo": "ເກາະຫີນນ້ອຍ. ເກາະຫີນນ້ອຍ ຕັ້ງຢູ່ຂອບນອກຂອງອ່າວສີຟ້າສະຫງົບ.",
+"th": "เกาะหินน้อย เกาะหินน้อยตั้งอยู่ขอบนอกของอ่าวสีฟ้าสงบ",
+"zh": "海中小岛。海中小岛静静立在宁静海湾的外侧。",
+"ja": "いわの こじま。いわの こじまが しずかな うみに うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_islandoutcrop.1": {
+"en": "Seabirds rest on this quiet rocky island far from the shore.",
+"lo": "ນົກທະເລພັກຜ່ອນຢູ່ເທິງເກາະຫີນນ້ອຍງຽບສະຫງົບກາງນ້ຳ.",
+"th": "นกทะเลพักผ่อนบนเกาะหินน้อยเงียบสงบกลางน้ำ",
+"zh": "海鸟在这座远离海岸的宁静小岩岛上歇脚。",
+"ja": "うみどりが しずかな こじまで はねを やすめるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_islandoutcrop.2": {
+"en": "A tiny mossy shrine stone peeks beside the island pine.",
+"lo": "ຫີນສານນ້ອຍມີໄຄນ້ຳໂຜ່ຢູ່ຂ້າງຕົ້ນແປກເທິງເກາະ.",
+"th": "หินศาลน้อยมีมอสโผล่อยู่ข้างต้นสนบนเกาะ",
+"zh": "青苔石龛从岛上松树旁露出一角。",
+"ja": "こじまの まつの そばに ちいさな いしが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_islandoutcrop.3": {
+"en": "Japan is made of thousands of islands surrounded by blue sea.",
+"lo": "ປະເທດຍີ່ປຸ່ນປະກອບດ້ວຍເກາະຫຼາຍພັນເກາະອ້ອມຮອບດ້ວຍທະເລ.",
+"th": "ญี่ปุ่นประกอบด้วยเกาะหลายพันเกาะล้อมรอบด้วยทะเล",
+"zh": "日本由数千座被蔚蓝大海环绕的岛屿组成。",
+"ja": "にほんの うみには ちいさな しまが たくさん あるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_islandoutcrop.4": {
+"en": "Lap, splash!",
+"lo": "ຊ່າ ຕູມ!",
+"th": "ซ่า ตูม!",
+"zh": "海水轻拍小岛！",
+"ja": "ちゃぷん、ざぶん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_reefswell.0": {
+"en": "A foaming reef. A foaming reef splashes white spray around smooth ocean stones.",
+"lo": "ໂງ່ນຫີນຟອງຄື້ນ. ໂງ່ນຫີນຟອງຄື້ນ ສາດຟອງສີຂາວອ້ອມກ້ອນຫີນກາງທະເລ.",
+"th": "โขดหินฟองคลื่น โขดหินฟองคลื่นสาดฟองสีขาวรอบก้อนหินกลางทะเล",
+"zh": "浪花礁岩。浪花礁岩在光滑的海石周围溅起洁白水花。",
+"ja": "しぶきの いわ。しぶきの いわの まわりで しろい なみが はねるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_reefswell.1": {
+"en": "Sparkling spray dances around these wet sea rocks.",
+"lo": "ລະອອງນ້ຳເຫຼື້ອມວິບວັບເຕັ້ນອ້ອມໂງ່ນຫີນປຽກເຫຼົ່ານີ້.",
+"th": "ละอองน้ำระยิบเต้นรำรอบโขดหินเปียกเหล่านี้",
+"zh": "晶莹的水花在湿润的礁石周围欢快起舞。",
+"ja": "しぶきが ぬれた いわの まわりで きらきら はねるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_reefswell.2": {
+"en": "Curled turquoise swells wrap mossy boulders in white foam.",
+"lo": "ຄື້ນສີຟ້າຂຽວມ້ວນຫຸ້ມກ້ອນຫີນມີໄຄນ້ຳດ້ວຍຟອງຂາວ.",
+"th": "คลื่นสีฟ้าอมเขียวม้วนหุ้มก้อนหินมีมอสด้วยฟองขาว",
+"zh": "碧绿卷浪用白沫包裹着青苔海石。",
+"ja": "しろい あわが こけの いわを やさしく つつむよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_reefswell.3": {
+"en": "Sea snails cling tightly to wave-washed reef stones.",
+"lo": "ຫອຍທະເລເກາະແໜ້ນຢູ່ເທິງໂງ່ນຫີນທີ່ຄື້ນຊັດ.",
+"th": "หอยทะเลเกาะแน่นบนโขดหินที่คลื่นซัด",
+"zh": "海螺牢牢附在海浪冲刷的礁石上。",
+"ja": "うみの かいが なみの いわに ぴったり ついているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_reefswell.4": {
+"en": "Fizz, splash!",
+"lo": "ຟູ່ ຕູມ!",
+"th": "ฟู่ ตูม!",
+"zh": "浪花嘶嘶溅起！",
+"ja": "しゅわっ、ざぶん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_wavecrest.0": {
+"en": "A wave crest. A wave crest curls into sparkling foam under the warm sun.",
+"lo": "ຍອດຄື້ນຟອງຂາວ. ຍອດຄື້ນຟອງຂາວ ມ້ວນເປັນຟອງເຫຼື້ອມກ້ອງແສງແດດອຸ່ນ.",
+"th": "ยอดคลื่นฟองขาว ยอดคลื่นฟองขาวม้วนเป็นฟองระยิบใต้แสงแดดอุ่น",
+"zh": "白浪峰。白浪峰在温暖的阳光下卷起晶莹的浪花。",
+"ja": "しろい なみがしら。しろい なみがしらが ひかりを あびて くるりと まくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_wavecrest.1": {
+"en": "This curling wave crest tosses bright foam drops into the air!",
+"lo": "ຍອດຄື້ນມ້ວນນີ້ສາດຢົດຟອງສົດໃສຂຶ້ນໄປໃນອາກາດ!",
+"th": "ยอดคลื่นม้วนนี้สาดหยดฟองสดใสขึ้นไปในอากาศ!",
+"zh": "卷起的白浪峰把晶莹的水珠抛向空中！",
+"ja": "なみがしらが しろい しぶきを ぽんと とばすよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_wavecrest.2": {
+"en": "Curving ribbons of sea-foam echo classic Japanese woodblock art.",
+"lo": "ລາຍຟອງຄື້ນໂຄ້ງງາມຄືພາບພິມໄມ້ບູຮານຂອງຍີ່ປຸ່ນ.",
+"th": "ลายฟองคลื่นโค้งสวยเหมือนภาพพิมพ์ไม้โบราณญี่ปุ่น",
+"zh": "优美卷曲的浪花宛如经典的日本浮世绘木版画。",
+"ja": "にほんの えみたいに くるんと きれいな なみだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_wavecrest.3": {
+"en": "Wave crests look white because millions of tiny bubbles catch light.",
+"lo": "ຍອດຄື້ນເປັນສີຂາວເພາະຟອງນ້ອຍໆນັບລ້ານສະທ້ອນແສງ.",
+"th": "ยอดคลื่นเป็นสีขาวเพราะฟองน้อยๆ นับล้านสะท้อนแสง",
+"zh": "浪峰呈现白色，是因为无数细小气泡折射着阳光。",
+"ja": "ちいさな あわが たくさん あつまって しろく みえるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_wavecrest.4": {
+"en": "Swoosh, spray!",
+"lo": "ວູບ ຊ່າ!",
+"th": "วูบ ซ่า!",
+"zh": "浪花飞溅！",
+"ja": "ざっぱーん、しゅわー！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_boat.0": {
+"en": "A wooden boat. The wooden boat floats gently on the calm morning sea.",
+"lo": "ເຮືອໄມ້. ເຮືອໄມ້ ລອຍຄ່ອຍໆຢູ່ເທິງທະເລຍາມເຊົ້າທີ່ສະຫງົບ.",
+"th": "เรือไม้ เรือไม้ลอยเบาๆ บนทะเลตอนเช้าที่สงบ",
+"zh": "小木船。小木船轻轻漂浮在平静的清晨海面上。",
+"ja": "きの ふね。きの ふねが しずかな あさの うみに うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_boat.1": {
+"en": "Tarō rows this wooden boat with steady strokes each morning.",
+"lo": "ທາໂຣພາຍເຮືອໄມ້ນີ້ຢ່າງໝັ້ນຄົງທຸກເຊົ້າ.",
+"th": "ทาโร่พายเรือไม้นี้อย่างมั่นคงทุกเช้า",
+"zh": "太郎每天清晨都稳稳地划着这艘小木船出海。",
+"ja": "たろうは まいあさ この ふねを こいで うみへ でるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_boat.2": {
+"en": "Its curved cedar planks rest lightly on the blue swells.",
+"lo": "ແຜ່ນໄມ້ໂຄ້ງຂອງມັນລອຍເບົາໆເທິງຄື້ນສີຟ້າ.",
+"th": "แผ่นไม้โค้งของมันลอยเบาๆ บนคลื่นสีฟ้า",
+"zh": "弯弯的木板船身轻巧地浮在蓝色海浪上。",
+"ja": "きの いたで ていねいに つくられた ふねだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_boat.3": {
+"en": "Traditional Japanese fishing skiffs glide smoothly over waves.",
+"lo": "ເຮືອປະມົງພື້ນເມືອງຍີ່ປຸ່ນແລ່ນລຽບຜ່ານຄື້ນທະເລ.",
+"th": "เรือประมงพื้นเมืองญี่ปุ่นแล่นเรียบผ่านคลื่นทะเล",
+"zh": "传统的日本木渔船能在海浪上平稳滑行。",
+"ja": "むかしの にほんの ふねは なみに やさしく すすむよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_boat.4": {
+"en": "Dip, pull, splash!",
+"lo": "ຈຸ່ມ ດຶງ ຕູມ!",
+"th": "จุ่ม ดึง ตูม!",
+"zh": "划呀划，哗啦！",
+"ja": "ぎーこ、ぎーこ、ざぶん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_bubble.0": {
+"en": "A silver bubble. A silver bubble rises shimmering up from the deep blue sea!",
+"lo": "ຟອງນ້ຳສີເງິນ. ຟອງນ້ຳສີເງິນ ລອຍເຫຼື້ອມຂຶ້ນມາຈາກທະເລສີຟ້າເລິກ!",
+"th": "ฟองน้ำสีเงิน ฟองน้ำสีเงินลอยระยิบขึ้นมาจากทะเลสีฟ้าลึก!",
+"zh": "银色泡泡。银色泡泡从蔚蓝的深海里闪着光升起来！",
+"ja": "ぎんの あわ。ぎんの あわが ふかい うみから ぷくぷく うかんで くるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_bubble.1": {
+"en": "Tap the rising silver bubbles to see who is calling!",
+"lo": "ກົດຟອງນ້ຳສີເງິນທີ່ລອຍຂຶ້ນເພື່ອເບິ່ງວ່າໃຜເອີ້ນ!",
+"th": "แตะฟองน้ำสีเงินที่ลอยขึ้นเพื่อดูว่าใครเรียก!",
+"zh": "点一点升起来的银色泡泡，看看是谁在呼唤！",
+"ja": "あわを タップすると だれが よんで いるか わかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_bubble.2": {
+"en": "Each bubble catches morning sunlight like a tiny mirror.",
+"lo": "ຟອງນ້ຳແຕ່ລະໜ່ວຍສະທ້ອນແສງແດດເຊົ້າຄືແວ່ນນ້ອຍ.",
+"th": "ฟองน้ำแต่ละลูกสะท้อนแสงแดดเช้าเหมือนกระจกน้อย",
+"zh": "每个泡泡都像小镜子一样映着晨光。",
+"ja": "あさひを うけて きらきら ひかる あわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_bubble.3": {
+"en": "Air trapped underwater floats straight up to the surface.",
+"lo": "ອາກາດໃຕ້ນ້ຳລອຍຊື່ຂຶ້ນສູ່ໜ້ານ້ຳສະເໝີ.",
+"th": "อากาศใต้น้ำลอยตรงขึ้นสู่ผิวน้ำเสมอ",
+"zh": "水下的空气总会笔直地浮向水面。",
+"ja": "みずの なかの くうきは うえへ ぷくぷく のぼるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_bubble.4": {
+"en": "Bloop, pop!",
+"lo": "ບຸບ ປຸ໊ບ!",
+"th": "บุ๋ง ป๊อป!",
+"zh": "咕噜，啵！",
+"ja": "ぷくっ、ぱちん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_midswell.0": {
+"en": "An ocean swell. An ocean swell lifts Tarō's boat gently across the open sea.",
+"lo": "ຄື້ນທະເລກວ້າງ. ຄື້ນທະເລກວ້າງ ຍົກເຮືອຂອງທາໂຣຂຶ້ນຄ່ອຍໆກາງທະເລ.",
+"th": "คลื่นทะเลกว้าง คลื่นทะเลกว้างยกเรือของทาโร่ขึ้นเบาๆ กลางทะเล",
+"zh": "辽阔海涌。辽阔海涌轻轻托起太郎的小船驶向大海。",
+"ja": "ひろい うねり。ひろい うねりが ふねを ゆらゆら もちあげるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_midswell.1": {
+"en": "Long ocean swells rock the little boat gently up and down.",
+"lo": "ຄື້ນທະເລກວ້າງໂຍກເຮືອນ້ອຍຂຶ້ນລົງຄ່ອຍໆ.",
+"th": "คลื่นทะเลกว้างโยกเรือน้อยขึ้นลงเบาๆ",
+"zh": "绵长的海涌轻轻摇晃着小木船起起伏伏。",
+"ja": "おおきな うねりが ふねを ゆらゆら ゆらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_midswell.2": {
+"en": "Sunlit turquoise crests shine gold across the open water.",
+"lo": "ຍອດຄື້ນສີຟ້າຂຽວສ່ອງແສງສີຄຳທົ່ວທະເລກວ້າງ.",
+"th": "ยอดคลื่นสีฟ้าอมเขียวส่องแสงสีทองทั่วทะเลกว้าง",
+"zh": "碧蓝的浪峰在辽阔海面上闪着金光。",
+"ja": "あおと きんいろの なみが どこまでも つづくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_midswell.3": {
+"en": "Deep ocean swells travel smoothly for hundreds of miles.",
+"lo": "ຄື້ນທະເລເລິກເຄື່ອນທີ່ລຽບໄປໄດ້ໄກຫຼາຍຮ້ອຍກິໂລແມັດ.",
+"th": "คลื่นทะเลลึกเคลื่อนที่เรียบไปได้ไกลหลายร้อยกิโลเมตร",
+"zh": "深海涌浪能平稳地奔涌数百公里远。",
+"ja": "うみの うねりは とおくまで ずっと すすむんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_midswell.4": {
+"en": "Roll, shhh!",
+"lo": "ກິ້ງ ຊູ່!",
+"th": "กลิ้ง ชู่!",
+"zh": "海涌滚滚向前！",
+"ja": "うねり、ざざーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_kelpforest.0": {
+"en": "Tall kelp. Tall kelp sways like green silk curtains along the ocean road.",
+"lo": "ສາຫຼ່າຍທະເລສູງ. ສາຫຼ່າຍທະເລສູງ ແກວ່ງຄືຜ້າມ່ານໄໝສີຂຽວຕາມທາງໃຕ້ທະເລ.",
+"th": "สาหร่ายทะเลสูง สาหร่ายทะเลสูงไหวเหมือนม่านไหมสีเขียวตามทางใต้ทะเล",
+"zh": "高大海带。高大海带像绿色丝绸窗帘一样在海底摇曳。",
+"ja": "おおきな こんぶ。おおきな こんぶが みどりの カーテンみたいに ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_kelpforest.1": {
+"en": "Tall kelp bends gently with every underwater ocean current.",
+"lo": "ສາຫຼ່າຍທະເລສູງໂອນເອນຄ່ອຍໆຕາມກະແສນ້ຳໃຕ້ທະເລ.",
+"th": "สาหร่ายทะเลสูงเอนไหวเบาๆ ตามกระแสน้ำใต้ทะเล",
+"zh": "高大海带随着每一股海底洋流轻轻摆动。",
+"ja": "おおきな こんぶが うみの ながれに ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_kelpforest.2": {
+"en": "Olive-green ribbons stretch high from smooth seabed stones.",
+"lo": "ໃບສາຫຼ່າຍສີຂຽວໝາກກອກຍືດສູງຂຶ້ນຈາກຫີນພື້ນທະເລ.",
+"th": "ใบสาหร่ายสีเขียวมะกอกยืดสูงขึ้นจากหินพื้นทะเล",
+"zh": "橄榄绿的长叶片从光滑的海底石间高高伸展。",
+"ja": "みどりの はっぱが いわから たかく のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_kelpforest.3": {
+"en": "Kelp forests shelter tiny fish, sea snails and shy crabs.",
+"lo": "ປ່າສາຫຼ່າຍເປັນບ່ອນຢູ່ຂອງປານ້ອຍ ຫອຍ ແລະ ກະປູ.",
+"th": "ป่าสาหร่ายเป็นที่อยู่ของปลาน้อย หอย และปู",
+"zh": "海带森林是小鱼、海螺和害羞螃蟹的温暖家园。",
+"ja": "こんぶの もりには ちいさな いきものが たくさん すむよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_kelpforest.4": {
+"en": "Sway, swish!",
+"lo": "ແກວ່ງ ວູບ!",
+"th": "ไหว ซิ่ว!",
+"zh": "海带轻柔摇曳！",
+"ja": "ゆらり、さらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_kelpspire.0": {
+"en": "A kelp spire. A kelp spire rises tall from cool blue seabed boulders.",
+"lo": "ຍອດສາຫຼ່າຍເລິກ. ຍອດສາຫຼ່າຍເລິກ ສູງຂຶ້ນມາຈາກກ້ອນຫີນພື້ນທະເລສີຟ້າ.",
+"th": "ยอดสาหร่ายลึก ยอดสาหร่ายลึกสูงขึ้นมาจากก้อนหินพื้นทะเลสีฟ้า",
+"zh": "海带岩柱。海带岩柱从清凉的蓝色海底礁石间高高升起。",
+"ja": "こんぶの いわ。こんぶの いわが うみぞこから すっと のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_kelpspire.1": {
+"en": "Swaying fronds on this kelp spire hide darting little fish.",
+"lo": "ໃບສາຫຼ່າຍເທິງຍອດສາຫຼ່າຍນີ້ເປັນບ່ອນລີ້ຂອງປານ້ອຍ.",
+"th": "ใบสาหร่ายบนยอดสาหร่ายนี้เป็นที่ซ่อนของปลาน้อย",
+"zh": "摇曳的海带叶片替穿梭的小鱼提供了藏身处。",
+"ja": "こんぶの かげから ちいさな さかなが のぞくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_kelpspire.2": {
+"en": "Emerald leaves climb tall beside a pale blue sea pillar.",
+"lo": "ໃບສີມໍລະກົດປີນສູງຂ້າງເສົາຫີນທະເລສີຟ້າອ່ອນ.",
+"th": "ใบสีมรกตปีนสูงข้างเสาหินทะเลสีฟ้าอ่อน",
+"zh": "翠绿叶片沿着淡蓝海岩柱高高生长。",
+"ja": "みどりの こんぶが あおい いわに まっすぐ のびるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_kelpspire.3": {
+"en": "Tiny air bladders help kelp leaves float upright in seawater.",
+"lo": "ຖົງລົມນ້ອຍໆຊ່ວຍໃຫ້ໃບສາຫຼ່າຍລອຍຕັ້ງຊື່ໃນນ້ຳທະເລ.",
+"th": "ถุงลมเล็กๆ ช่วยให้ใบสาหร่ายลอยตั้งตรงในน้ำทะเล",
+"zh": "小小的气囊帮助海带在海水中笔直挺立。",
+"ja": "くうきの つぶが こんぶを うえへ うかべるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_kelpspire.4": {
+"en": "Drift, sway!",
+"lo": "ລອຍ ແກວ່ງ!",
+"th": "ลอย ไหว!",
+"zh": "海带随波轻舞！",
+"ja": "ふわり、ゆらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coralspire.0": {
+"en": "A coral spire. A coral spire branches pink and bright against the deep water.",
+"lo": "ຍອດປະກາລັງ. ຍອດປະກາລັງ ແຕກກິ່ງສີບົວສົດໃສຕັດກັບນ້ຳເລິກ.",
+"th": "ยอดปะการัง ยอดปะการังแตกกิ่งสีชมพูสดใสตัดกับน้ำลึก",
+"zh": "珊瑚尖塔。珊瑚尖塔在深蓝海水里伸展出粉红的枝丫。",
+"ja": "さんごの とう。さんごの とうが ピンクいろの えだを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralspire.1": {
+"en": "Bright sea fish weave around this tall coral spire.",
+"lo": "ປາທະເລສີສົດລອຍລັດເລາະອ້ອມຍອດປະກາລັງສູງນີ້.",
+"th": "ปลาทะเลสีสดว่ายลัดเลาะรอบยอดปะการังสูงนี้",
+"zh": "色彩鲜艳的海鱼绕着高高的珊瑚尖塔穿梭。",
+"ja": "きれいな さかなが さんごの とうの まわりを およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralspire.2": {
+"en": "Soft rose coral branches reach upward like underwater trees.",
+"lo": "ກິ່ງປະກາລັງສີບົວອ່ອນຍືດຂຶ້ນຄືຕົ້ນໄມ້ໃຕ້ທະເລ.",
+"th": "กิ่งปะการังสีชมพูอ่อนยืดขึ้นเหมือนต้นไม้ใต้ทะเล",
+"zh": "柔和的粉红珊瑚枝像海底小树一样向上伸展。",
+"ja": "うみの きみたいに ピンクの えだが のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralspire.3": {
+"en": "Coral grows very slowly, just a tiny bit each year.",
+"lo": "ປະກາລັງເຕີບໂຕຊ້າຫຼາຍ ພຽງໜ້ອຍດຽວໃນແຕ່ລະປີ.",
+"th": "ปะการังเติบโตช้ามาก เพียงนิดเดียวในแต่ละปี",
+"zh": "珊瑚长得非常缓慢，每年只长高一点点。",
+"ja": "さんごは すこしずつ ゆっくり そだつんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralspire.4": {
+"en": "Bloop, shimmer!",
+"lo": "ບຸບ ວິບວັບ!",
+"th": "บุ๋ง ระยิบ!",
+"zh": "泡泡轻轻升起！",
+"ja": "ぷくぷく、きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_reefridge.0": {
+"en": "A sandy reef. A sandy reef winds past tiny shells toward the golden towers.",
+"lo": "ສັນຊາຍໃຕ້ທະເລ. ສັນຊາຍໃຕ້ທະເລ ຄົດລ້ຽວຜ່ານຫອຍນ້ອຍໆໄປສູ່ຫໍຄອຍສີຄຳ.",
+"th": "สันทรายใต้ทะเล สันทรายใต้ทะเลคดเคี้ยวผ่านหอยน้อยๆ ไปสู่หอคอยสีทอง",
+"zh": "海底沙礁。海底沙礁绕过小小贝壳延伸向金色高塔。",
+"ja": "うみの すなやま。うみの すなやまが りゅうぐうへ つづいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_reefridge.1": {
+"en": "This sandy reef guides sea travellers toward the glowing palace.",
+"lo": "ສັນຊາຍໃຕ້ທະເລນີ້ນຳທາງຜູ້ເດີນທາງໄປສູ່ວັງເຫຼື້ອມແສງ.",
+"th": "สันทรายใต้ทะเลนี้นำทางผู้เดินทางไปสู่วังเรืองแสง",
+"zh": "海底沙礁指引着旅人前往闪耀的龙宫。",
+"ja": "すなやまの むこうに りゅうぐうが みえているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_reefridge.2": {
+"en": "Tiny aqua fans and shells dot the sunlit seabed ridge.",
+"lo": "ພັດປະກາລັງນ້ອຍ ແລະ ຫອຍປະດັບສັນຊາຍພື້ນທະເລ.",
+"th": "พัดปะการังน้อยและหอยประดับสันทรายพื้นทะเล",
+"zh": "小小的青色海扇和贝壳点缀在沙脊上。",
+"ja": "ちいさな かいがらや さんごが ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_reefridge.3": {
+"en": "Underwater currents sweep seabed sand into soft wavy dunes.",
+"lo": "ກະແສນ້ຳໃຕ້ທະເລພັດຊາຍພື້ນທະເລເປັນລອນຄື້ນອ່ອນ.",
+"th": "กระแสน้ำใต้ทะเลพัดทรายพื้นทะเลเป็นลอนคลื่นอ่อน",
+"zh": "海底水流把细沙吹拂出一道道柔和的沙波。",
+"ja": "うみの ながれが すなに きれいな なみもようを つくるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_reefridge.4": {
+"en": "Swish, hush!",
+"lo": "ວູບ ຊູ່!",
+"th": "ซิ่ว ชู่!",
+"zh": "海底水流轻柔流淌！",
+"ja": "さらさら、しずかだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_kelpboulder.0": {
+"en": "A mossy boulder. A mossy boulder shelters shy little sea creatures below.",
+"lo": "ກ້ອນຫີນໄຄນ້ຳ. ກ້ອນຫີນໄຄນ້ຳ ເປັນບ່ອນຫຼົບລີ້ຂອງສັດທະເລນ້ອຍໆ.",
+"th": "ก้อนหินมอส ก้อนหินมอสเป็นที่หลบซ่อนของสัตว์ทะเลตัวน้อย",
+"zh": "青苔海石。青苔海石为害羞的小海洋生物遮风挡浪。",
+"ja": "こけの いわ。こけの いわの かげに ちいさな いきものが かくれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_kelpboulder.1": {
+"en": "Shy sea snails crawl slowly across this mossy boulder.",
+"lo": "ຫອຍທະເລຂີ້ອາຍໄຕ່ຊ້າໆຂ້າມກ້ອນຫີນໄຄນ້ຳນີ້.",
+"th": "หอยทะเลขี้อายคลานช้าๆ ข้ามก้อนหินมอสนี้",
+"zh": "害羞的小海螺慢吞吞地爬过这块青苔海石。",
+"ja": "うみの かいが こけの いわを ゆっくり あるくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_kelpboulder.2": {
+"en": "Soft sea moss blankets rounded blue-grey ocean rocks.",
+"lo": "ໄຄນ້ຳທະເລອ່ອນນຸ້ມປົກຄຸມກ້ອນຫີນສີຟ້າເທົາກົມ.",
+"th": "มอสทะเลอ่อนนุ่มปกคลุมก้อนหินสีฟ้าเทากลม",
+"zh": "柔软的海苔覆盖着圆润的蓝灰色海石。",
+"ja": "ふわふわの こけが まるい いわを つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_kelpboulder.3": {
+"en": "Sea moss and kelp give tiny underwater grazers food to eat.",
+"lo": "ໄຄນ້ຳ ແລະ ສາຫຼ່າຍເປັນອາຫານໃຫ້ສັດທະເລນ້ອຍໆ.",
+"th": "มอสทะเลและสาหร่ายเป็นอาหารให้สัตว์ทะเลตัวน้อย",
+"zh": "海苔和海带为海底小动物提供美味食物。",
+"ja": "こけや かいそうは ちいさな いきものの ごはんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_kelpboulder.4": {
+"en": "Plop, bubble!",
+"lo": "ປຸບ ບຸບ!",
+"th": "ปุ๊บ บุ๋ง!",
+"zh": "水泡轻冒！",
+"ja": "ぽこん、ぷくっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coralfan.0": {
+"en": "A sea fan. A sea fan waves its lacy rose branches in the current.",
+"lo": "ພັດປະກາລັງ. ພັດປະກາລັງ ແກວ່ງກິ່ງສີບົວລາຍລູກໄມ້ໄປຕາມກະແສນ້ຳ.",
+"th": "พัดปะการัง พัดปะการังแกว่งกิ่งสีชมพูลายลูกไม้ตามกระแสน้ำ",
+"zh": "海扇珊瑚。海扇珊瑚在海流里轻摇着蕾丝般的粉红枝条。",
+"ja": "うみうちわ。うみうちわが しおの ながれに やさしく ゆれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralfan.1": {
+"en": "This lacy sea fan catches tiny ocean drifting snacks in its net.",
+"lo": "ພັດປະກາລັງລາຍລູກໄມ້ນີ້ດັກອາຫານນ້ອຍໆທີ່ລອຍມາກັບນ້ຳ.",
+"th": "พัดปะการังลายลูกไม้นี้ดักอาหารน้อยๆ ที่ลอยมากับน้ำ",
+"zh": "蕾丝般的海扇珊瑚在海流里捕捉微小的浮游食物。",
+"ja": "うみうちわが ながれて くる ごはんを つかまえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralfan.2": {
+"en": "Delicate rose-pink branches spread wide like a painted fan.",
+"lo": "ກິ່ງສີບົວອ່ອນລະອຽດແຜ່ກວ້າງຄືພັດແຕ້ມງາມ.",
+"th": "กิ่งสีชมพูอ่อนละเอียดแผ่กว้างเหมือนพัดวาดสวย",
+"zh": "纤巧的玫瑰粉枝条像画扇一样优雅展开。",
+"ja": "ピンクの おうぎみたいに きれいに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralfan.3": {
+"en": "Sea fans always face across the ocean current so water flows through.",
+"lo": "ພັດປະກາລັງຫັນໜ້າຂວາງກະແສນ້ຳສະເໝີເພື່ອໃຫ້ນ້ຳໄຫຼຜ່ານ.",
+"th": "พัดปะการังหันหน้าขวางกระแสน้ำเสมอเพื่อให้น้ำไหลผ่าน",
+"zh": "海扇总是迎着水流展开，好让海水从枝间流过。",
+"ja": "しおの ながれに むかって ひらくんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralfan.4": {
+"en": "Fan, swish!",
+"lo": "ພັດ ວູບ!",
+"th": "พัด ซิ่ว!",
+"zh": "海扇轻柔摇曳！",
+"ja": "ゆらゆら、ふわり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_puffer.0": {
+"en": "A puffer fish. A puffer fish puffs up round and bounces like a ball!",
+"lo": "ປາປັກເປົ້າ. ປາປັກເປົ້າ ພອງໂຕກົມ ແລະ ເດັ້ງຄືໝາກບານ!",
+"th": "ปลาปักเป้า ปลาปักเป้าพองตัวกลมและเด้งเหมือนลูกบอล!",
+"zh": "河豚。河豚鼓得圆滚滚的，像皮球一样弹跳！",
+"ja": "ふぐ。ふぐは まるく ふくらんで ボールみたいに ぽんと はねるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_puffer.1": {
+"en": "Hello, puffer fish!",
+"lo": "ສະບາຍດີ ປາປັກເປົ້າ!",
+"th": "สวัสดีปลาปักเป้า!",
+"zh": "你好，河豚！",
+"ja": "こんにちは、ふぐ！",
+"who": "fish",
+"tag": "greet"
+},
+"ura_puffer.2": {
+"en": "Puffer fish swallow water to puff up big when surprised.",
+"lo": "ປາປັກເປົ້າກືນນ້ຳເພື່ອພອງໂຕໃຫຍ່ເມື່ອຕົກໃຈ.",
+"th": "ปลาปักเป้ากลืนน้ำเพื่อพองตัวใหญ่เมื่อตกใจ",
+"zh": "河豚受到惊吓时会吸进海水，鼓成一个圆球。",
+"ja": "ふぐは おどろくと みずを のんで まるく ふくらむよ。",
+"who": "fish",
+"tag": "fact"
+},
+"ura_puffer.3": {
+"en": "It goes poof and bounces gently off the turtle's shell!",
+"lo": "ມັນພອງປຸ໊ບ ແລ້ວເດັ້ງຄ່ອຍໆອອກຈາກກະດອງເຕົ່າ!",
+"th": "มันพองปุ๊บแล้วเด้งเบาๆ ออกจากกระดองเต่า!",
+"zh": "它噗地鼓起来，从海龟壳上轻轻弹开！",
+"ja": "ぷくっと ふくらんで こうらから ぽんと はねたよ！",
+"who": "fish",
+"tag": "does"
+},
+"ura_puffer.4": {
+"en": "Its spotted belly turns as round as a cheerful balloon.",
+"lo": "ທ້ອງລາຍຈຸດຂອງມັນກົມຄືປຸມເປົ້າທີ່ໜ້າຮັກ.",
+"th": "ท้องลายจุดของมันกลมเหมือนลูกโป่งน่ารัก",
+"zh": "它圆鼓鼓的小肚子像一只可爱的气球。",
+"ja": "おなかが ふうせんみたいに まんまるに なるよ。",
+"who": "fish",
+"tag": "looks"
+},
+"ura_puffer.5": {
+"en": "Poof, boing!",
+"lo": "ປຸ໊ບ ດຶ໋ງ!",
+"th": "ปุ๊บ ดึ๋ง!",
+"zh": "噗，嘣！",
+"ja": "ぷくっ、ぽよん！",
+"who": "fish",
+"tag": "sound"
+},
+"ura_silverfish.0": {
+"en": "A silver fish. A silver fish sparkles in a bright underwater school.",
+"lo": "ປາເງິນ. ປາເງິນ ເຫຼື້ອມວິບວັບໃນຝູງປາໃຕ້ທະເລ.",
+"th": "ปลาสีเงิน ปลาสีเงินส่องประกายในฝูงปลาใต้ทะเล",
+"zh": "银鱼。银鱼在明亮的海底鱼群里闪闪发亮。",
+"ja": "ぎんの さかな。ぎんの さかなが うみの なかで きらきら およぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_silverfish.1": {
+"en": "Hello, silver fish!",
+"lo": "ສະບາຍດີ ປາເງິນ!",
+"th": "สวัสดีปลาสีเงิน!",
+"zh": "你好，银鱼！",
+"ja": "こんにちは、ぎんの さかな！",
+"who": "fish",
+"tag": "greet"
+},
+"ura_silverfish.2": {
+"en": "Many ocean fish swim in schools to stay safe together.",
+"lo": "ປາທະເລຫຼາຍຊະນິດລອຍເປັນຝູງເພື່ອຄວາມປອດໄພນຳກັນ.",
+"th": "ปลาทะเลหลายชนิดว่ายเป็นฝูงเพื่อความปลอดภัยด้วยกัน",
+"zh": "许多海鱼成群结队地游动，彼此保护更安全。",
+"ja": "うみの さかなは みんなで いっしょに およぐと あんしんだよ。",
+"who": "fish",
+"tag": "fact"
+},
+"ura_silverfish.3": {
+"en": "They flash past Tarō and the turtle like ribbons of silver.",
+"lo": "ພວກມັນລອຍຜ່ານທາໂຣ ແລະ ເຕົ່າຄືໂບສີເງິນ.",
+"th": "พวกมันว่ายผ่านทาโร่และเต่าเหมือนริบบิ้นสีเงิน",
+"zh": "它们像银色丝带一样从太郎和海龟身旁闪过。",
+"ja": "ぎんいろの リボンみたいに たろうの そばを およぐよ。",
+"who": "fish",
+"tag": "does"
+},
+"ura_silverfish.4": {
+"en": "Every little tail flicks in perfect underwater harmony.",
+"lo": "ຫາງນ້ອຍທຸກຫາງໂບກໄປພ້ອມກັນຢ່າງກົມກືນໃຕ້ນ້ຳ.",
+"th": "หางน้อยทุกหางโบกไปพร้อมกันอย่างกลมกลืนใต้น้ำ",
+"zh": "每一条小尾巴都在水下整齐划一地摆动。",
+"ja": "ちいさな しっぽを そろえて すいすい すすむよ。",
+"who": "fish",
+"tag": "looks"
+},
+"ura_silverfish.5": {
+"en": "Swish, shimmer!",
+"lo": "ວູບ ເຫຼື້ອມ!",
+"th": "ซิ่ว ระยิบ!",
+"zh": "嗖，闪闪发亮！",
+"ja": "すいすい、きらきら！",
+"who": "fish",
+"tag": "sound"
+},
+"ura_coralreef.0": {
+"en": "A coral reef. A coral reef blooms with branching colours on the seabed.",
+"lo": "ແນວປະກາລັງ. ແນວປະກາລັງ ແຕກກິ່ງສີສັນສົດໃສຢູ່ພື້ນທະເລ.",
+"th": "แนวปะการัง แนวปะการังแตกกิ่งสีสันสดใสบนพื้นทะเล",
+"zh": "珊瑚礁。珊瑚礁在海底绽放出分叉的美丽色彩。",
+"ja": "さんごしょう。さんごしょうが うみぞこに きれいに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralreef.1": {
+"en": "Steer the sea turtle smoothly past these coral reefs!",
+"lo": "ບັງຄັບເຕົ່າທະເລລອຍຜ່ານແນວປະກາລັງເຫຼົ່ານີ້ຢ່າງລຽບງ່າຍ!",
+"th": "บังคับเต่าทะเลว่ายผ่านแนวปะการังเหล่านี้อย่างนุ่มนวล!",
+"zh": "驾着海龟轻巧地绕过这些珊瑚礁吧！",
+"ja": "さんごしょうを よけて すいすい すすもう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralreef.2": {
+"en": "Bright red branches reach up from mossy seabed stones.",
+"lo": "ກິ່ງສີແດງສົດແຕກຂຶ້ນມາຈາກຫີນພື້ນທະເລມີໄຄນ້ຳ.",
+"th": "กิ่งสีแดงสดแตกขึ้นมาจากหินพื้นทะเลมีมอส",
+"zh": "鲜红的分枝从青苔海石上伸展出来。",
+"ja": "あかい えだが うみぞこの いわから のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralreef.3": {
+"en": "Coral reefs are busy underwater homes for thousands of fish.",
+"lo": "ແນວປະກາລັງແມ່ນບ້ານໃຕ້ທະເລຂອງປາຫຼາຍພັນໂຕ.",
+"th": "แนวปะการังเป็นบ้านใต้ทะเลของปลาหลายพันตัว",
+"zh": "珊瑚礁是成千上万条小鱼热闹的海底家园。",
+"ja": "さんごしょうは たくさんの さかなの おうちなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralreef.4": {
+"en": "Bubble, shimmer!",
+"lo": "ບຸບ ເຫຼື້ອມ!",
+"th": "บุ๋ง ระยิบ!",
+"zh": "咕噜，亮晶晶！",
+"ja": "ぷくぷく、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_kelpshort.0": {
+"en": "A seaweed tuft. A seaweed tuft dances gently on the sandy seabed.",
+"lo": "ກໍສາຫຼ່າຍ. ກໍສາຫຼ່າຍ ຟ້ອນລຳຄ່ອຍໆຢູ່ເທິງພື້ນຊາຍໃຕ້ທະເລ.",
+"th": "กอสาหร่าย กอสาหร่ายเต้นรำเบาๆ บนพื้นทรายใต้ทะเล",
+"zh": "海草丛。海草丛在海底沙滩上轻轻舞动。",
+"ja": "かいそう。かいそうが うみぞこで ゆらゆら おどっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_kelpshort.1": {
+"en": "Little ocean fish hide inside this green seaweed tuft.",
+"lo": "ປາທະເລນ້ອຍໆຫຼົບຢູ່ໃນກໍສາຫຼ່າຍສີຂຽວນີ້.",
+"th": "ปลาทะเลน้อยๆ หลบอยู่ในกอสาหร่ายสีเขียวนี้",
+"zh": "小海鱼喜欢躲在这丛绿油油的海草里捉迷藏。",
+"ja": "ちいさな さかなが かいそうの なかで かくれんぼ するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_kelpshort.2": {
+"en": "Wavy green blades curl softly above pale reef pebbles.",
+"lo": "ໃບສາຫຼ່າຍສີຂຽວມ້ວນຄ່ອຍໆເທິງກ້ອນຫີນແນວປະກາລັງ.",
+"th": "ใบสาหร่ายสีเขียวม้วนเบาๆ เหนือก้อนหินแนวปะการัง",
+"zh": "波浪般的绿叶片在浅色礁石上方轻轻卷曲。",
+"ja": "みどりの はっぱが くるんと ゆれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_kelpshort.3": {
+"en": "Seaweed helps keep ocean water fresh and clean for fish.",
+"lo": "ສາຫຼ່າຍຊ່ວຍຮັກສານ້ຳທະເລໃຫ້ສົດຊື່ນ ແລະ ສະອາດໃຫ້ປາ.",
+"th": "สาหร่ายช่วยรักษาน้ำทะเลให้สดชื่นและสะอาดให้ปลา",
+"zh": "海草能让海水保持清新洁净。",
+"ja": "かいそうは うみの みずを きれいに して くれるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_kelpshort.4": {
+"en": "Wiggle, swish!",
+"lo": "ດິ້ນ ວູບ!",
+"th": "ดุ๊กดิ๊ก ซิ่ว!",
+"zh": "海草扭呀扭！",
+"ja": "にょろり、ゆらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_seabedrocks.0": {
+"en": "Seabed stones. Seabed stones rest smooth and round along the ocean floor.",
+"lo": "ຫີນພື້ນທະເລ. ຫີນພື້ນທະເລ ວາງລຽບ ແລະ ກົມຢູ່ຕາມພື້ນທະເລ.",
+"th": "หินพื้นทะเล หินพื้นทะเลวางเรียบและกลมตามพื้นทะเล",
+"zh": "海底石头。海底石头圆润光滑地躺在海洋底部。",
+"ja": "うみぞこの いし。うみぞこの いしが まるく ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_seabedrocks.1": {
+"en": "Seabed stones anchor swaying kelp and colourful coral.",
+"lo": "ຫີນພື້ນທະເລຍຶດສາຫຼ່າຍ ແລະ ປະກາລັງສີສັນໄວ້ໃຫ້ໝັ້ນຄົງ.",
+"th": "หินพื้นทะเลยึดสาหร่ายและปะการังสีสันไว้ให้มั่นคง",
+"zh": "海底石头稳稳托住摇曳的海带和多彩的珊瑚。",
+"ja": "かいそうや さんごを しっかり ささえる いしだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_seabedrocks.2": {
+"en": "Smooth blue and sandy pebbles line the underwater path.",
+"lo": "ກ້ອນຫີນສີຟ້າ ແລະ ສີຊາຍລຽບລຽງຕາມທາງໃຕ້ທະເລ.",
+"th": "ก้อนหินสีฟ้าและสีทรายเรียบเรียงตามทางใต้ทะเล",
+"zh": "光滑的蓝色和沙色石子排在海底小路旁。",
+"ja": "まるくて すべすべの いしが ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_seabedrocks.3": {
+"en": "Moving ocean water polishes rough stones smooth over time.",
+"lo": "ນ້ຳທະເລທີ່ໄຫຼຂັດຫີນຫຍາບໃຫ້ລຽບມົນຕາມການເວລາ.",
+"th": "น้ำทะเลที่ไหลขัดหินหยาบให้เรียบมนตามกาลเวลา",
+"zh": "流动的海水日复一日把粗糙的石头磨得圆滑。",
+"ja": "うみの みずが いしを まるく みがくんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_seabedrocks.4": {
+"en": "Clack, bloop!",
+"lo": "ແຄະ ບຸບ!",
+"th": "แกร๊ก บุ๋ง!",
+"zh": "海底石轻碰！",
+"ja": "こつん、ぷくっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_anemone.0": {
+"en": "A sea anemone. A sea anemone blooms like a soft flower under the ocean.",
+"lo": "ດອກໄມ້ທະເລ. ດອກໄມ້ທະເລ ບານຄືດອກໄມ້ອ່ອນນຸ້ມຢູ່ໃຕ້ທະເລ.",
+"th": "ดอกไม้ทะเล ดอกไม้ทะเลบานเหมือนดอกไม้อ่อนนุ่มใต้ทะเล",
+"zh": "海葵。海葵像海底盛开的柔软花朵。",
+"ja": "いそぎんちゃく。いそぎんちゃくは うみの おはなみたいに さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_anemone.1": {
+"en": "A sea anemone waves soft petals gently in the warm current.",
+"lo": "ດອກໄມ້ທະເລໂບກກີບອ່ອນນຸ້ມຄ່ອຍໆຕາມກະແສນ້ຳອຸ່ນ.",
+"th": "ดอกไม้ทะเลโบกกลีบอ่อนนุ่มเบาๆ ตามกระแสน้ำอุ่น",
+"zh": "海葵在暖流中轻柔地挥动着花瓣般的触手。",
+"ja": "やわらかい はなびらみたいに ゆらゆら うごくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_anemone.2": {
+"en": "Bright pink and sunny gold centres shine like sea blossoms.",
+"lo": "ສີບົວສົດ ແລະ ໃຈກາງສີຄຳສ່ອງງາມຄືດອກໄມ້ທະເລ.",
+"th": "สีชมพูสดและใจกลางสีทองส่องสวยเหมือนดอกไม้ทะเล",
+"zh": "粉红的花瓣和金色花心像盛开的海底鲜花。",
+"ja": "ピンクと きいろの おはなみたいに とっても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_anemone.3": {
+"en": "Even though it looks like a flower, a sea anemone is a sea animal!",
+"lo": "ເຖິງແມ່ນຈະຄືດອກໄມ້ ແຕ່ດອກໄມ້ທະເລແມ່ນສັດທະເລເດີ້!",
+"th": "แม้จะเหมือนดอกไม้ แต่ดอกไม้ทะเลเป็นสัตว์ทะเลนะ!",
+"zh": "海葵虽然长得像花朵，其实是一种奇妙的海洋动物！",
+"ja": "おはなみたいだけど じつは うみの いきもの なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_anemone.4": {
+"en": "Wiggle, bloom!",
+"lo": "ໄຫວ ບານ!",
+"th": "ไหว บาน!",
+"zh": "海葵轻轻绽放！",
+"ja": "ふわっ、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_seasky.0": {
+"en": "Deep water. Deep water glows turquoise where sunbeams reach below the waves.",
+"lo": "ນ້ຳທະເລເລິກ. ນ້ຳທະເລເລິກ ສ່ອງສີຟ້າຂຽວບ່ອນແສງແດດສ່ອງລົງມາ.",
+"th": "น้ำทะเลลึก น้ำทะเลลึกส่องสีฟ้าอมเขียวตรงที่แสงแดดส่องลงมา",
+"zh": "深蓝海水。深蓝海水在阳光穿透海浪时闪着碧绿的光。",
+"ja": "ふかい うみ。ふかい うみに おひさまの ひかりが すけて きれいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_seasky.1": {
+"en": "Warm golden sunbeams shine straight down through the deep water.",
+"lo": "ແສງແດດສີຄຳອຸ່ນສ່ອງຊື່ລົງມາຜ່ານນ້ຳທະເລເລິກ.",
+"th": "แสงแดดสีทองอบอุ่นส่องตรงลงมาผ่านน้ำทะเลลึก",
+"zh": "温暖的金色阳光笔直穿透深蓝海水。",
+"ja": "おひさまの ひかりが うみの なかまで とどいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_seasky.2": {
+"en": "Rippling teal and sky-blue shimmer far overhead.",
+"lo": "ສີຟ້າຂຽວ ແລະ ສີຟ້າອ່ອນເຫຼື້ອມພິ້ວຢູ່ເທິງຫົວ.",
+"th": "สีฟ้าอมเขียวและสีฟ้าอ่อนระยิบพริ้วอยู่เหนือศีรษะ",
+"zh": "波光粼粼的青碧与天蓝在头顶上方闪动。",
+"ja": "みずの うえが きらきら ゆれて みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_seasky.3": {
+"en": "Sunlight makes shallow ocean water glow bright turquoise.",
+"lo": "ແສງແດດເຮັດໃຫ້ນ້ຳທະເລຕື້ນສ່ອງສີຟ້າຂຽວສົດໃສ.",
+"th": "แสงแดดทำให้น้ำทะเลตื้นส่องสีฟ้าอมเขียวสดใส",
+"zh": "阳光会让清澈的浅海呈现出明亮的碧蓝色。",
+"ja": "ひかりが あたると うみは エメラルドいろに ひかるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_seasky.4": {
+"en": "Glug, hush!",
+"lo": "ບຸບ ຊູ່!",
+"th": "บุ๋ง ชู่!",
+"zh": "深海静谧咕噜声！",
+"ja": "ぽこぽこ、しーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_farreefs.0": {
+"en": "A distant palace. The distant palace shines gold at the end of the Sea Road!",
+"lo": "ພະລາຊະວັງໄກ. ພະລາຊະວັງໄກ ສ່ອງແສງສີຄຳຢູ່ປາຍທາງໃຕ້ທະເລ!",
+"th": "พระราชวังไกล พระราชวังไกลส่องแสงสีทองที่ปลายทางใต้ทะเล!",
+"zh": "远方龙宫。远方龙宫在海底之路的尽头闪耀着金光！",
+"ja": "とおい りゅうぐう。とおい りゅうぐうが きんいろに かがやいて みえるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_farreefs.1": {
+"en": "Follow the winding sandy road straight toward the distant palace!",
+"lo": "ຕາມທາງຊາຍຄົດລ້ຽວຊື່ໄປຫາພະລາຊະວັງໄກພຸ້ນ!",
+"th": "ตามทางทรายคดเคี้ยวตรงไปหาพระราชวังไกลโน้น!",
+"zh": "顺着弯弯的海底沙路直奔远方闪耀的龙宫吧！",
+"ja": "すなの みちを すすむと とおくの りゅうぐうに つくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_farreefs.2": {
+"en": "Golden spires glow warm against cool aqua water.",
+"lo": "ຍອດຫໍຄອຍສີຄຳສ່ອງແສງອຸ່ນຕັດກັບນ້ຳສີຟ້າເຢັນ.",
+"th": "ยอดหอคอยสีทองส่องแสงอุ่นตัดกับน้ำสีฟ้าเย็น",
+"zh": "金色尖顶在清凉的碧蓝海水映衬下暖暖发亮。",
+"ja": "きんいろの やねが うみの むこうで かがやいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_farreefs.3": {
+"en": "In folklore, the Dragon Sea Palace sits far beneath the waves.",
+"lo": "ໃນນິທານພື້ນເມືອງ ວັງພະຍານາກໃຕ້ທະເລຢູ່ເລິກກ້ອງຄື້ນ.",
+"th": "ในนิทานพื้นบ้าน วังใต้ทะเลอยู่ลึกลงไปใต้คลื่น",
+"zh": "在古老传说中，海龙宫静静坐落在海浪深处。",
+"ja": "りゅうぐうじょうは ふかい うみの そこに あるんだって。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_farreefs.4": {
+"en": "Shimmer, glow!",
+"lo": "ວິບວັບ ແຈ້ງ!",
+"th": "ระยิบ สว่าง!",
+"zh": "远方金光闪烁！",
+"ja": "きらきら、ぽわーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coralarch.0": {
+"en": "A coral arch. A coral arch frames the road down to the Sea Palace.",
+"lo": "ປະຕູໂຄ້ງປະກາລັງ. ປະຕູໂຄ້ງປະກາລັງ ຕັ້ງເປັນປະຕູທາງລົງສູ່ວັງໃຕ້ທະເລ.",
+"th": "ซุ้มโค้งปะการัง ซุ้มโค้งปะการังตั้งเป็นประตูทางลงสู่วังใต้ทะเล",
+"zh": "珊瑚拱门。珊瑚拱门框起了通往海龙宫的神奇之路。",
+"ja": "さんごの アーチ。さんごの アーチが りゅうぐうへの みちを かざっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralarch.1": {
+"en": "Sea creatures swim right through this coral arch on the Sea Road.",
+"lo": "ສັດທະເລລອຍລອດປະຕູໂຄ້ງປະກາລັງນີ້ໄປຕາມທາງໃຕ້ທະເລ.",
+"th": "สัตว์ทะเลว่ายลอดซุ้มโค้งปะการังนี้ไปตามทางใต้ทะเล",
+"zh": "海洋生灵穿过这座珊瑚拱门沿着海底之路前行。",
+"ja": "うみの いきものが アーチを くぐって およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralarch.2": {
+"en": "Pink coral branches crown mossy blue reef boulders.",
+"lo": "ກິ່ງປະກາລັງສີບົວປະດັບເທິງກ້ອນຫີນແນວປະກາລັງສີຟ້າ.",
+"th": "กิ่งปะการังสีชมพูประดับบนก้อนหินแนวปะการังสีฟ้า",
+"zh": "粉红珊瑚枝像花冠一样长在青苔蓝礁岩上。",
+"ja": "ピンクの さんごが いわの アーチを かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralarch.3": {
+"en": "Ocean currents slowly shape underwater rock arches over ages.",
+"lo": "ກະແສນ້ຳທະເລຄ່ອຍໆປັ້ນປະຕູໂຄ້ງຫີນໃຕ້ນ້ຳຕາມການເວລາ.",
+"th": "กระแสน้ำทะเลค่อยๆ ปั้นซุ้มโค้งหินใต้น้ำตามกาลเวลา",
+"zh": "海流历经漫长岁月雕琢出天然的海底石拱门。",
+"ja": "ながい じかんを かけて できた うみの アーチだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralarch.4": {
+"en": "Bubble, swish!",
+"lo": "ບຸບ ວູບ!",
+"th": "บุ๋ง ซิ่ว!",
+"zh": "水流穿过拱门咕噜响！",
+"ja": "ぷくっ、すいーっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coraltower.0": {
+"en": "A jade veranda. A jade veranda connects the coral halls of the Sea Palace.",
+"lo": "ລະບຽງຢົກ. ລະບຽງຢົກ ເຊື່ອມຕໍ່ຫໍປະກາລັງຂອງວັງໃຕ້ທະເລ.",
+"th": "ระเบียงหยก ระเบียงหยกเชื่อมต่อหอปะการังของวังใต้ทะเล",
+"zh": "翡翠长廊。翡翠长廊连接着海龙宫的一座座珊瑚殿堂。",
+"ja": "ひすいの ろうか。ひすいの ろうかが りゅうぐうの おへやを つないで いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coraltower.1": {
+"en": "Palace attendants stroll along this jade veranda behind the gate.",
+"lo": "ຄົນຮັບໃຊ້ໃນວັງຍ່າງຫຼິ້ນຕາມລະບຽງຢົກຫຼັງປະຕູ.",
+"th": "คนรับใช้ในวังเดินเล่นตามระเบียงหยกหลังประตู",
+"zh": "龙宫侍者们沿着大门后的翡翠长廊悠然漫步。",
+"ja": "もんの うしろの ろうかを みんなが あるくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coraltower.2": {
+"en": "Pale jade walls meet curved coral-pink eaves gracefully.",
+"lo": "ຝາສີຢົກອ່ອນຮັບກັບຊາຍຄາໂຄ້ງສີປະກາລັງຢ່າງອ່ອນຊ້ອຍ.",
+"th": "ผนังสีหยกอ่อนรับกับชายคาโค้งสีปะการังอย่างอ่อนช้อย",
+"zh": "淡翡翠墙面与弯曲的珊瑚粉屋檐优雅相接。",
+"ja": "ひすいいろと さんごいろの やねが うつくしいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coraltower.3": {
+"en": "Covered verandas let palace visitors enjoy the garden in calm shade.",
+"lo": "ລະບຽງມີຫຼັງຄາຊ່ວຍໃຫ້ແຂກຊົມສວນໃນຮົ່ມສະບາຍ.",
+"th": "ระเบียงมีหลังคาช่วยให้แขกชมสวนในร่มสบาย",
+"zh": "带屋檐的长廊让客人们在清凉荫蔽下欣赏花园。",
+"ja": "やねつきの ろうかから にわを ゆっくり ながめられるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coraltower.4": {
+"en": "Glide, hush!",
+"lo": "ລອຍ ຊູ່!",
+"th": "ร่อน ชู่!",
+"zh": "长廊静谧安详！",
+"ja": "すーっと、しずかだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_palacegarden.0": {
+"en": "A coral garden. A coral garden glows with warm lamps and turquoise ferns.",
+"lo": "ສວນປະກາລັງ. ສວນປະກາລັງ ສ່ອງແສງດ້ວຍໂຄມໄຟອຸ່ນ ແລະ ຕົ້ນກູດສີຟ້າຂຽວ.",
+"th": "สวนปะการัง สวนปะการังส่องแสงด้วยโคมไฟอุ่นและเฟิร์นสีฟ้าอมเขียว",
+"zh": "珊瑚花园。珊瑚花园里亮着暖灯，长满碧绿的海蕨。",
+"ja": "さんごの にわ。さんごの にわに あたたかい あかりが ともっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_palacegarden.1": {
+"en": "Fish peek out from the turquoise ferns of this coral garden.",
+"lo": "ປາໂຜ່ໜ້າອອກມາຈາກຕົ້ນກູດສີຟ້າຂຽວໃນສວນປະກາລັງນີ້.",
+"th": "ปลาโผล่หน้าออกมาจากเฟิร์นสีฟ้าอมเขียวในสวนปะการังนี้",
+"zh": "小鱼从珊瑚花园的碧绿海蕨间悄悄探出头来。",
+"ja": "にわの かいそうから さかなが ひょっこり かおを だすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_palacegarden.2": {
+"en": "Golden roof eaves and pearl lamps frame blooming sea plants.",
+"lo": "ຊາຍຄາສີຄຳ ແລະ ໂຄມໄຂ່ມຸກປະດັບພືດທະເລທີ່ບານງາມ.",
+"th": "ชายคาสีทองและโคมไข่มุกประดับพืชทะเลที่บานสวย",
+"zh": "金色屋檐与珍珠宫灯映衬着盛开的海底植物。",
+"ja": "きんいろの やねと あかりが にわを てらしているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_palacegarden.3": {
+"en": "Japanese gardens arrange stones, water and plants in peaceful harmony.",
+"lo": "ສວນຍີ່ປຸ່ນຈັດວາງຫີນ ນ້ຳ ແລະ ຕົ້ນໄມ້ຢ່າງກົມກືນສະຫງົບ.",
+"th": "สวนญี่ปุ่นจัดวางหิน น้ำ และต้นไม้อย่างกลมกลืนสงบ",
+"zh": "日本庭院讲究将山石、水流与花木安排得宁静和谐。",
+"ja": "にほんの おにわは いしと みどりを きれいに ならべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_palacegarden.4": {
+"en": "Bubble, glow!",
+"lo": "ບຸບ ເຮືອງ!",
+"th": "บุ๋ง เรือง!",
+"zh": "花园水泡轻舞！",
+"ja": "ぷくぷく、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coralwall.0": {
+"en": "A pearl rail. A pearl rail borders the sunlit sandy palace courtyard.",
+"lo": "ຮົ້ວໄຂ່ມຸກ. ຮົ້ວໄຂ່ມຸກ ລ້ອມຂອບເດີ່ນຊາຍແດດອຸ່ນຂອງພະລາຊະວັງ.",
+"th": "รั้วไข่มุก รั้วไข่มุกล้อมขอบลานทรายแดดอุ่นของพระราชวัง",
+"zh": "珍珠栏杆。珍珠栏杆围在阳光洒落的龙宫沙院四周。",
+"ja": "しんじゅの てすり。しんじゅの てすりが りゅうぐうの にわを かこんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralwall.1": {
+"en": "This pearl rail neatly frames the wide sandy palace courtyard.",
+"lo": "ຮົ້ວໄຂ່ມຸກນີ້ລ້ອມຂອບເດີ່ນຊາຍກວ້າງຂອງວັງຢ່າງສວຍງາມ.",
+"th": "รั้วไข่มุกนี้ล้อมขอบลานทรายกว้างของวังอย่างสวยงาม",
+"zh": "珍珠栏杆整齐地围起宽阔的龙宫沙院。",
+"ja": "りゅうぐうの ひろい にわを ぐるりと かこむ てすりだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralwall.2": {
+"en": "Carved cream stone glows beside tiny pink coral blossoms.",
+"lo": "ຫີນແກະສະຫຼັກສີຄີມສ່ອງງາມຂ້າງດອກປະກາລັງສີບົວນ້ອຍ.",
+"th": "หินแกะสลักสีครีมส่องสวยข้างดอกปะการังสีชมพูน้อย",
+"zh": "雕花乳白石栏映衬着小巧的粉红珊瑚花。",
+"ja": "しろい てすりに ピンクの さんごが さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralwall.3": {
+"en": "Low courtyard rails keep the open ocean view clear for everyone.",
+"lo": "ຮົ້ວເດີ່ນຕ່ຳຊ່ວຍໃຫ້ເຫັນວິວທະເລກວ້າງໄດ້ຊັດເຈນ.",
+"th": "รั้วลานเตี้ยช่วยให้เห็นวิวทะเลกว้างได้ชัดเจน",
+"zh": "低矮的庭院栏杆让每个人都能一眼望见开阔的海景。",
+"ja": "ひくい てすりだから うみの けしきが よく みえるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralwall.4": {
+"en": "Tap, shimmer!",
+"lo": "ຕ໋ອກ ວິບວັບ!",
+"th": "ต๊อก ระยิบ!",
+"zh": "珍珠栏杆轻泛微光！",
+"ja": "こんっ、きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_anemoneleg.0": {
+"en": "A coral bloom. A coral bloom frames the palace court in pink and blue.",
+"lo": "ດອກປະກາລັງ. ດອກປະກາລັງ ປະດັບຂອບເດີ່ນວັງດ້ວຍສີບົວ ແລະ ສີຟ້າ.",
+"th": "ดอกปะการัง ดอกปะการังประดับขอบลานวังด้วยสีชมพูและสีฟ้า",
+"zh": "珊瑚海葵丛。珊瑚海葵丛用粉红与蔚蓝装点着龙宫庭院。",
+"ja": "さんごの はな。さんごの はなが にわを はなやかに かざっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_anemoneleg.1": {
+"en": "Tiny reef creatures peek out from this colourful coral bloom!",
+"lo": "ສັດແນວປະກາລັງນ້ອຍໆໂຜ່ອອກມາຈາກດອກປະກາລັງສີສັນນີ້!",
+"th": "สัตว์แนวปะการังน้อยๆ โผล่ออกมาจากดอกปะการังสีสันนี้!",
+"zh": "小小的礁石生物从这丛绚丽珊瑚海葵里探出脑袋！",
+"ja": "さんごの はなの あいだに ちいさな いきものが かくれているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_anemoneleg.2": {
+"en": "Rosy sea anemones and sky-blue branches brighten the corner.",
+"lo": "ດອກໄມ້ທະເລສີບົວ ແລະ ກິ່ງສີຟ້າອ່ອນເຮັດໃຫ້ມຸມວັງສົດໃສ.",
+"th": "ดอกไม้ทะเลสีชมพูและกิ่งสีฟ้าอ่อนทำให้มุมวังสดใส",
+"zh": "粉红海葵与天蓝珊瑚枝把庭院角落装点得缤纷夺目。",
+"ja": "ピンクと みずいろの さんごが にわの すみを かざるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_anemoneleg.3": {
+"en": "Coral polyps and sea anemones are close underwater cousins!",
+"lo": "ປະກາລັງ ແລະ ດອກໄມ້ທະເລແມ່ນພີ່ນ້ອງໃກ້ຊິດກັນໃຕ້ທະເລ!",
+"th": "ปะการังและดอกไม้ทะเลเป็นญาติใกล้ชิดกันใต้ทะเล!",
+"zh": "珊瑚虫和海葵在海洋大家族里可是亲戚呢！",
+"ja": "さんごと いそぎんちゃくは うみの なかま なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_anemoneleg.4": {
+"en": "Bloom, bubble!",
+"lo": "ບານ ບຸບ!",
+"th": "บาน บุ๋ง!",
+"zh": "珊瑚花丛水泡轻舞！",
+"ja": "ふわっ、ぷくぷく！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_otohime.0": {
+"en": "Princess Otohime. Princess Otohime rules the shining Sea Palace beneath the waves.",
+"lo": "ເຈົ້າຍິງໂອໂຕຮິເມະ. ເຈົ້າຍິງໂອໂຕຮິເມະ ປົກຄອງວັງໃຕ້ທະເລທີ່ສ່ອງແສງ.",
+"th": "เจ้าหญิงโอโตฮิเมะ เจ้าหญิงโอโตฮิเมะปกครองวังใต้ทะเลอันงดงาม",
+"zh": "乙姬公主。乙姬公主掌管着海浪下闪闪发光的海龙宫。",
+"ja": "おとひめさま。おとひめさまは うみの したの りゅうぐうじょうの おひめさまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_otohime.1": {
+"en": "Hello, Princess Otohime!",
+"lo": "ສະບາຍດີ ເຈົ້າຍິງໂອໂຕຮິເມະ!",
+"th": "สวัสดีเจ้าหญิงโอโตฮิเมะ!",
+"zh": "你好，乙姬公主！",
+"ja": "こんにちは、おとひめさま！",
+"who": "otohime",
+"tag": "greet"
+},
+"ura_otohime.2": {
+"en": "Welcome to the Sea Palace! I am Princess Otohime.",
+"lo": "ຍິນດີຕ້ອນຮັບສູ່ວັງໃຕ້ທະເລ! ຂ້ອຍແມ່ນເຈົ້າຍິງໂອໂຕຮິເມະ.",
+"th": "ยินดีต้อนรับสู่วังใต้ทะเล! ฉันคือเจ้าหญิงโอโตฮิเมะ",
+"zh": "欢迎来到海龙宫！我是乙姬公主。",
+"ja": "ようこそ！ わたくしは おとひめさまですよ。",
+"who": "otohime",
+"tag": "say"
+},
+"ura_otohime.3": {
+"en": "In old Japanese tales, Otohime watches over all sea creatures.",
+"lo": "ໃນນິທານເກົ່າຍີ່ປຸ່ນ ໂອໂຕຮິເມະເບິ່ງແຍງສັດທະເລທຸກໂຕ.",
+"th": "ในนิทานเก่าญี่ปุ่น โอโตฮิเมะดูแลสัตว์ทะเลทุกตัว",
+"zh": "在日本古老传说里，乙姬守护着所有海洋生灵。",
+"ja": "おとひめさまは うみの いきものを みんな まもっているよ。",
+"who": "otohime",
+"tag": "fact"
+},
+"ura_otohime.4": {
+"en": "I thank every kind heart who helps my sea friends.",
+"lo": "ຂ້ອຍຂອບໃຈທຸກຄົນໃຈດີທີ່ຊ່ວຍໝູ່ທະເລຂອງຂ້ອຍ.",
+"th": "ฉันขอบคุณทุกใจดีที่ช่วยเพื่อนทะเลของฉัน",
+"zh": "我感谢每一位善待海洋朋友的好心人。",
+"ja": "うみの ともだちを たすけて くれて ありがとう。",
+"who": "otohime",
+"tag": "does"
+},
+"ura_otohime.5": {
+"en": "My palace garden shows all four seasons at once!",
+"lo": "ສວນວັງຂອງຂ້ອຍສະແດງທັງສີ່ລະດູພ້ອມກັນ!",
+"th": "สวนวังของฉันแสดงทั้งสี่ฤดูพร้อมกัน!",
+"zh": "我的龙宫花园可以同时看到春夏秋冬四个季节！",
+"ja": "おにわでは よっつの きせつが いっぺんに みられるのよ！",
+"who": "otohime",
+"sp": [
+"s04",
+"s05"
+],
+"tag": "does"
+},
+"ura_otohime.6": {
+"en": "I tied the jewelled box with three tight silk knots.",
+"lo": "ຂ້ອຍມັດກ່ອງປະດັບເພັດດ້ວຍປົມໄໝແໜ້ນສາມປົມ.",
+"th": "ฉันผูกกล่องประดับอัญมณีด้วยปมไหมแน่นสามปม",
+"zh": "我用三个结实的红丝结系紧了宝盒。",
+"ja": "たまてばこを あかい ひもで しっかり むすびましたよ。",
+"who": "otohime",
+"sp": [
+"s06",
+"s07",
+"s11"
+],
+"tag": "does"
+},
+"ura_otohime.7": {
+"en": "Kindness travels farther than the widest ocean.",
+"lo": "ຄວາມໃຈດີເດີນທາງໄປໄດ້ໄກກວ່າມະຫາສະໝຸດທີ່ກວ້າງທີ່ສຸດ.",
+"th": "ความใจดีเดินทางไปได้ไกลกว่ามหาสมุทรที่กว้างที่สุด",
+"zh": "善良比最辽阔的海洋走得更远。",
+"ja": "やさしい こころは ひろい うみより とおくへ とどくのよ。",
+"who": "otohime",
+"tag": "does"
+},
+"ura_otohime.8": {
+"en": "My silk robes shimmer in pale gold, jade and rose.",
+"lo": "ຊຸດໄໝຂອງຂ້ອຍເຫຼື້ອມງາມສີຄຳອ່ອນ ສີຢົກ ແລະ ສີບົວ.",
+"th": "ชุดไหมของฉันส่องประกายสีทองอ่อน สีหยก และสีชมพู",
+"zh": "我的丝绸长袍闪着淡金、翡翠与粉红的光彩。",
+"ja": "きんいろと ひすいいろの きものが きらきら ひかるよ。",
+"who": "otohime",
+"tag": "looks"
+},
+"ura_otohime.9": {
+"en": "Please remember my promise, kind fisherman.",
+"lo": "ກະລຸນາຈື່ຄຳສັນຍາຂອງຂ້ອຍໄວ້ເດີ້ ຊາວປະມົງໃຈດີ.",
+"th": "โปรดจำคำสัญญาของฉันไว้ด้วยนะ ชาวประมงใจดี",
+"zh": "请记住我们的约定呀，善良的渔夫。",
+"ja": "やくそくを わすれないでね、やさしい りょうしさん。",
+"who": "otohime",
+"tag": "say"
+},
+"ura_bream.0": {
+"en": "A sea bream. A sea bream dances in graceful loops through the palace court.",
+"lo": "ປາກະພົງແດງ. ປາກະພົງແດງ ຟ້ອນລຳວົນຢ່າງອ່ອນຊ້ອຍໃນເດີ່ນວັງ.",
+"th": "ปลากะพงแดง ปลากะพงแดงเต้นรำวนอย่างอ่อนช้อยในลานวัง",
+"zh": "红鲷鱼。红鲷鱼在龙宫庭院里优雅地转圈起舞。",
+"ja": "たい。たいが りゅうぐうじょうの にわで くるくる おどるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_bream.1": {
+"en": "Hello, sea bream!",
+"lo": "ສະບາຍດີ ປາກະພົງແດງ!",
+"th": "สวัสดีปลากะพงแดง!",
+"zh": "你好，红鲷鱼！",
+"ja": "こんにちは、たい！",
+"who": "fish",
+"tag": "greet"
+},
+"ura_bream.2": {
+"en": "In Japan, red sea bream is a cheerful symbol of celebration.",
+"lo": "ໃນປະເທດຍີ່ປຸ່ນ ປາກະພົງແດງແມ່ນສັນຍະລັກແຫ່ງຄວາມມ່ວນຊື່ນ.",
+"th": "ในญี่ปุ่น ปลากะพงแดงเป็นสัญลักษณ์แห่งความรื่นเริง",
+"zh": "在日本，红鲷鱼象征着喜庆和好运。",
+"ja": "にほんでは たいは おめでたい おいわいの さかなだよ。",
+"who": "fish",
+"tag": "fact"
+},
+"ura_bream.3": {
+"en": "It spins and swoops to welcome guests at the Sea Palace!",
+"lo": "ມັນໝຸນໂຕ ແລະ ລອຍວົນຕ້ອນຮັບແຂກຢູ່ວັງໃຕ້ທະເລ!",
+"th": "มันหมุนตัวและว่ายวนต้อนรับแขกที่วังใต้ทะเล!",
+"zh": "它在海龙宫里转着圈欢快迎接贵客！",
+"ja": "りゅうぐうじょうの おきゃくさまを おどりで むかえるよ！",
+"who": "fish",
+"tag": "does"
+},
+"ura_bream.4": {
+"en": "Its fan-shaped fins glow soft coral pink in the water.",
+"lo": "ຄີບຮູບພັດຂອງມັນເປັນສີປະກາລັງອ່ອນງາມໃນນ້ຳ.",
+"th": "ครีบรูปพัดของมันเป็นสีปะการังอ่อนสวยในน้ำ",
+"zh": "它扇形的鱼鳍在海水中泛着柔和的珊瑚粉色。",
+"ja": "きれいな ももいろの ひれが ひらひら ゆれるよ。",
+"who": "fish",
+"tag": "looks"
+},
+"ura_bream.5": {
+"en": "Swish, twirl!",
+"lo": "ວູບ ໝຸນ!",
+"th": "ซิ่ว หมุน!",
+"zh": "嗖，转个圈！",
+"ja": "くるりん、ひらり！",
+"who": "fish",
+"tag": "sound"
+},
+"ura_flounder.0": {
+"en": "A flat flounder. A flat flounder swirls beside its friends in the water.",
+"lo": "ປາແປ້ນ. ປາແປ້ນ ລອຍວົນຄຽງຄູ່ໝູ່ເພື່ອນໃນນ້ຳ.",
+"th": "ปลาลิ้นหมา ปลาลิ้นหมาว่ายวนเคียงคู่เพื่อนๆ ในน้ำ",
+"zh": "比目鱼。比目鱼在水中和伙伴们一起欢快盘旋。",
+"ja": "ひらめ。ひらめが なかまと いっしょに みずの なかを おどるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_flounder.1": {
+"en": "Hello, flat flounder!",
+"lo": "ສະບາຍດີ ປາແປ້ນ!",
+"th": "สวัสดีปลาลิ้นหมา!",
+"zh": "你好，比目鱼！",
+"ja": "こんにちは、ひらめ！",
+"who": "fish",
+"tag": "greet"
+},
+"ura_flounder.2": {
+"en": "Flounders are flat fish that glide smoothly near sandy bottoms.",
+"lo": "ປາແປ້ນແມ່ນປາໂຕແບນທີ່ລອຍລຽບໃກ້ພື້ນຊາຍ.",
+"th": "ปลาลิ้นหมาเป็นปลาตัวแบนที่ว่ายเรียบใกล้พื้นทราย",
+"zh": "比目鱼身体扁扁的，喜欢贴着沙地平稳滑行。",
+"ja": "ひらめは からだが ひらたくて すなの そばを およぐよ。",
+"who": "fish",
+"tag": "fact"
+},
+"ura_flounder.3": {
+"en": "It ripples its silky fins to dance beside the sea bream.",
+"lo": "ມັນພິ້ວຄີບອ່ອນນຸ້ມເພື່ອຟ້ອນຄຽງຄູ່ປາກະພົງແດງ.",
+"th": "มันพริ้วครีบนุ่มเพื่อเต้นรำเคียงคู่ปลากะพงแดง",
+"zh": "它抖动丝滑的鱼鳍，和红鲷鱼一起翩翩起舞。",
+"ja": "ひれを なみうたせて たいと いっしょに おどるよ。",
+"who": "fish",
+"tag": "does"
+},
+"ura_flounder.4": {
+"en": "Both of its bright eyes sit neatly on the same side!",
+"lo": "ຕາໃສທັງສອງຂ້າງຂອງມັນຢູ່ດ້ານດຽວກັນເລີຍ!",
+"th": "ตาใสทั้งสองข้างของมันอยู่ด้านเดียวกันเลย!",
+"zh": "它两只明亮的眼睛整齐地长在同一侧呢！",
+"ja": "ふたつの めが おなじ がわに ならんでいるんだよ！",
+"who": "fish",
+"tag": "looks"
+},
+"ura_flounder.5": {
+"en": "Flutter, glide!",
+"lo": "ພິ້ວ ລອຍ!",
+"th": "พริ้ว ร่อน!",
+"zh": "扑棱，滑行！",
+"ja": "ひらひら、すーい！",
+"who": "fish",
+"tag": "sound"
+},
+"ura_jelly.0": {
+"en": "A lantern jellyfish. A lantern jellyfish glows softly to light the ocean road.",
+"lo": "ແມງກະພຸນໄຟ. ແມງກະພຸນໄຟ ສ່ອງແສງອ່ອນໆເຍືອງທາງໃຕ້ທະເລ.",
+"th": "แมงกะพรุนไฟ แมงกะพรุนไฟส่องแสงอ่อนๆ นำทางใต้ทะเล",
+"zh": "灯笼水母。灯笼水母发出柔和的光芒照亮海底之路。",
+"ja": "ひかる くらげ。ひかる くらげが うみの みちを やさしく てらすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_jelly.1": {
+"en": "Hello, lantern jellyfish!",
+"lo": "ສະບາຍດີ ແມງກະພຸນໄຟ!",
+"th": "สวัสดีแมงกะพรุนไฟ!",
+"zh": "你好，灯笼水母！",
+"ja": "こんにちは、ひかる くらげ！",
+"who": "fish",
+"tag": "greet"
+},
+"ura_jelly.2": {
+"en": "Some deep-sea jellyfish make their own soft glowing light!",
+"lo": "ແມງກະພຸນທະເລເລິກບາງຊະນິດສ້າງແສງເຫຼື້ອມເອງໄດ້!",
+"th": "แมงกะพรุนทะเลลึกบางชนิดสร้างแสงเรืองรองเองได้!",
+"zh": "有些深海水母能自己发出柔和的光芒！",
+"ja": "うみの ふかい ところには じぶんで ひかる くらげが いるよ！",
+"who": "fish",
+"tag": "fact"
+},
+"ura_jelly.3": {
+"en": "It floats softly through the water like a living lamp.",
+"lo": "ມັນລອຍຄ່ອຍໆຜ່ານນ້ຳຄືໂຄມໄຟທີ່ມີຊີວິດ.",
+"th": "มันลอยเบาๆ ผ่านน้ำเหมือนโคมไฟที่มีชีวิต",
+"zh": "它像一盏会游动的小灯一样在水中轻轻漂浮。",
+"ja": "みずの なかを あかりみたいに ふわふわ ただようよ。",
+"who": "fish",
+"tag": "does"
+},
+"ura_jelly.4": {
+"en": "Its golden ribbons trail gently beneath its shining cap.",
+"lo": "ໜວດສີຄຳຂອງມັນລາກຄ່ອຍໆກ້ອງໝວກເຫຼື້ອມແສງ.",
+"th": "หนวดสีทองของมันลากเบาๆ ใต้หมวกเรืองแสง",
+"zh": "金色丝带般的触手在发亮的伞盖下轻轻飘荡。",
+"ja": "きんいろの あしが ひかりながら ゆらゆら ゆれるよ。",
+"who": "fish",
+"tag": "looks"
+},
+"ura_jelly.5": {
+"en": "Glow, drift!",
+"lo": "ເຫຼື້ອມ ລອຍ!",
+"th": "เรืองรอง ลอย!",
+"zh": "亮晶晶，漂呀漂！",
+"ja": "ぽわーん、ふわふわ！",
+"who": "fish",
+"tag": "sound"
+},
+"ura_lantern.0": {
+"en": "A pearl lantern. A pearl lantern shines softly beside the palace gate.",
+"lo": "ໂຄມໄຟໄຂ່ມຸກ. ໂຄມໄຟໄຂ່ມຸກ ສ່ອງແສງອ່ອນໆຢູ່ຂ້າງປະຕູວັງ.",
+"th": "โคมไฟไข่มุก โคมไฟไข่มุกส่องแสงอ่อนๆ ข้างประตูวัง",
+"zh": "珍珠灯笼。珍珠灯笼在龙宫大门旁柔和地闪耀。",
+"ja": "しんじゅの ちょうちん。しんじゅの ちょうちんが もんの そばで やさしく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_lantern.1": {
+"en": "Tap each pearl lantern to light up the Sea Palace gate!",
+"lo": "ກົດໂຄມໄຟໄຂ່ມຸກແຕ່ລະໜ່ວຍເພື່ອໄຕ້ແສງໜ້າປະຕູວັງ!",
+"th": "แตะโคมไฟไข่มุกแต่ละดวงเพื่อจุดแสงหน้าประตูวัง!",
+"zh": "点一点每盏珍珠灯笼，把龙宫大门照亮吧！",
+"ja": "ちょうちんを タップして もんを あかるく しよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_lantern.2": {
+"en": "Warm golden light glows inside a smooth white pearl shell.",
+"lo": "ແສງສີຄຳອຸ່ນສ່ອງຢູ່ໃນເປືອກໄຂ່ມຸກສີຂາວລຽບ.",
+"th": "แสงสีทองอบอุ่นส่องอยู่ในเปลือกไข่มุกสีขาวเรียบ",
+"zh": "光滑的白色珍珠壳里透出暖金色的灯光。",
+"ja": "まっしろな しんじゅの なかで あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_lantern.3": {
+"en": "Lanterns welcome guests warmly at Japanese evening gatherings.",
+"lo": "ໂຄມໄຟຕ້ອນຮັບແຂກຢ່າງອົບອຸ່ນໃນງານຕ້ອນຮັບຂອງຍີ່ປຸ່ນ.",
+"th": "โคมไฟต้อนรับแขกอย่างอบอุ่นในงานต้อนรับของญี่ปุ่น",
+"zh": "在日本传统里，点亮灯笼代表热情欢迎客人。",
+"ja": "あかりを ともして おきゃくさまを むかえるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_lantern.4": {
+"en": "Shimmer, glow!",
+"lo": "ວິບວັບ ເຮືອງແສງ!",
+"th": "ระยิบ เรืองแสง!",
+"zh": "闪闪发亮！",
+"ja": "ぽわっと きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_pearlstand.0": {
+"en": "A pearl stand. A pearl stand holds a glowing sea gem beside the gate.",
+"lo": "ແທ່ນໄຂ່ມຸກ. ແທ່ນໄຂ່ມຸກ ວາງແກ້ວທະເລເຫຼື້ອມແສງຢູ່ຂ້າງປະຕູ.",
+"th": "แท่นไข่มุก แท่นไข่มุกวางแก้วทะเลเรืองแสงอยู่ข้างประตู",
+"zh": "珍珠灯座。珍珠灯座在大门旁托起一颗发光的海珠。",
+"ja": "しんじゅの だい。しんじゅの だいが もんの そばで ひかっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pearlstand.1": {
+"en": "This pearl stand lights the sandy steps beside the gate.",
+"lo": "ແທ່ນໄຂ່ມຸກນີ້ສ່ອງແສງໃຫ້ຂັ້ນໄດຊາຍຂ້າງປະຕູ.",
+"th": "แท่นไข่มุกนี้ส่องแสงให้ขั้นบันไดทรายข้างประตู",
+"zh": "珍珠灯座照亮大门旁松软的沙路。",
+"ja": "もんの そばの みちを やさしく てらす だいだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pearlstand.2": {
+"en": "A round luminous pearl rests atop a carved coral pillar.",
+"lo": "ໄຂ່ມຸກກົມເຫຼື້ອມແສງວາງເທິງເສົາປະກາລັງແກະສະຫຼັກ.",
+"th": "ไข่มุกกลมเรืองแสงวางบนเสาปะการังแกะสลัก",
+"zh": "一颗圆润发光的大珍珠安放在雕花珊瑚柱上。",
+"ja": "まるい しんじゅが はしらの うえで ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pearlstand.3": {
+"en": "Real pearls grow inside oysters layer by smooth shiny layer.",
+"lo": "ໄຂ່ມຸກແທ້ເກີດໃນຫອຍນາງລົມເປັນຊັ້ນລຽບເງົາ.",
+"th": "ไข่มุกแท้เกิดในหอยมุกเป็นชั้นเรียบเงา",
+"zh": "真正的珍珠是在珍珠贝里一层层温柔包裹长成的。",
+"ja": "しんじゅは かいがらの なかで すこしずつ できるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pearlstand.4": {
+"en": "Glow, twinkle!",
+"lo": "ເຮືອງ ວິບວັບ!",
+"th": "เรือง ระยิบ!",
+"zh": "珍珠微光闪烁！",
+"ja": "きらり、ぽわっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_coralbed.0": {
+"en": "A coral bed. A coral bed grows in soft pink branches along the court.",
+"lo": "ພຸ່ມປະກາລັງ. ພຸ່ມປະກາລັງ ເກີດເປັນກິ່ງສີບົວອ່ອນຕາມເດີ່ນວັງ.",
+"th": "พุ่มปะการัง พุ่มปะการังงอกเป็นกิ่งสีชมพูอ่อนตามลานวัง",
+"zh": "珊瑚丛。珊瑚丛在庭院边长出柔和的粉红枝丫。",
+"ja": "さんごの しげみ。さんごの しげみが にわの すみに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_coralbed.1": {
+"en": "Shy palace fish dart around this soft coral bed.",
+"lo": "ປາວັງຂີ້ອາຍລອຍລັດເລາະອ້ອມພຸ່ມປະກາລັງອ່ອນນີ້.",
+"th": "ปลาวังขี้อายว่ายลัดเลาะรอบพุ่มปะการังอ่อนนี้",
+"zh": "害羞的龙宫小鱼绕着这丛柔美的珊瑚穿梭玩耍。",
+"ja": "ちいさな さかなが さんごの しげみで あそぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_coralbed.2": {
+"en": "Warm salmon and cream coral tufts hug the palace sand.",
+"lo": "ກໍປະກາລັງສີສົ້ມອ່ອນ ແລະ ສີຄີມຢູ່ຕິດຊາຍວັງ.",
+"th": "กอปะการังสีส้มอ่อนและสีครีมอยู่ติดทรายวัง",
+"zh": "暖橘粉和乳白色的珊瑚丛依偎在龙宫细沙上。",
+"ja": "あたたかい いろの さんごが すなに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_coralbed.3": {
+"en": "Healthy coral beds bring bright colour to the ocean floor.",
+"lo": "ພຸ່ມປະກາລັງທີ່ສົມບູນນຳສີສັນສົດໃສມາສູ່ພື້ນທະເລ.",
+"th": "พุ่มปะการังที่สมบูรณ์นำสีสันสดใสมาสู่พื้นทะเล",
+"zh": "生机勃勃的珊瑚丛给海底带来了斑斓色彩。",
+"ja": "げんきな さんごが うみぞこを きれいに するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_coralbed.4": {
+"en": "Swish, bloop!",
+"lo": "ວູບ ບຸບ!",
+"th": "ซิ่ว บุ๋ง!",
+"zh": "珊瑚丛中水波轻漾！",
+"ja": "ゆらり、ぷくっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_pearlurn.0": {
+"en": "A pearl urn. A pearl urn decorates the palace yard with smooth shells.",
+"lo": "ໂຖໄຂ່ມຸກ. ໂຖໄຂ່ມຸກ ປະດັບເດີ່ນວັງດ້ວຍເປືອກຫອຍລຽບງາມ.",
+"th": "โถไข่มุก โถไข่มุกประดับลานวังด้วยเปลือกหอยเรียบสวย",
+"zh": "珍珠花瓶。珍珠花瓶用光滑的贝壳装点着龙宫庭院。",
+"ja": "しんじゅの つぼ。しんじゅの つぼが きれいな かいがらで かざられているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pearlurn.1": {
+"en": "This pearl urn holds sea blossoms beside the palace hall.",
+"lo": "ໂຖໄຂ່ມຸກນີ້ໃສ່ດອກໄມ້ທະເລຢູ່ຂ້າງຫໍໃຫຍ່ຂອງວັງ.",
+"th": "โถไข่มุกนี้ใส่ดอกไม้ทะเลอยู่ข้างหอใหญ่ของวัง",
+"zh": "珍珠花瓶在宫殿旁插着美丽的海底花朵。",
+"ja": "うみの おはなを いける きれいな つぼだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pearlurn.2": {
+"en": "Swirling shell patterns shine around its curved cream rim.",
+"lo": "ລາຍເປືອກຫອຍວົນເຫຼື້ອມງາມອ້ອມຂອບໂຄ້ງສີຄີມ.",
+"th": "ลายเปลือกหอยวนเงางามรอบขอบโค้งสีครีม",
+"zh": "螺旋贝壳纹路在乳白色的弧形瓶口旁闪耀。",
+"ja": "かいがらの もようが くるりと ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pearlurn.3": {
+"en": "Palace craftspeople carved urns from giant pearly shells.",
+"lo": "ຊ່າງຝີມືໃນວັງແກະສະຫຼັກໂຖຈາກເປືອກຫອຍໄຂ່ມຸກໃຫຍ່.",
+"th": "ช่างฝีมือในวังแกะสลักโถจากเปลือกหอยไข่มุกใหญ่",
+"zh": "龙宫工匠用光滑的大珍珠贝雕琢出精美的花瓶。",
+"ja": "おおきな かいがらから つくられた たからものの つぼだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pearlurn.4": {
+"en": "Clink, glow!",
+"lo": "ແຄະ ເຮືອງ!",
+"th": "แกร๊ก เรือง!",
+"zh": "珍珠花瓶清润生辉！",
+"ja": "こんっ、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_palacesky.0": {
+"en": "Palace water. Palace water shimmers with soft sunbeams from far above.",
+"lo": "ນ້ຳວັງໃຕ້ທະເລ. ນ້ຳວັງໃຕ້ທະເລ ເຫຼື້ອມວິບວັບດ້ວຍແສງແດດອ່ອນຈາກດ້ານເທິງ.",
+"th": "น้ำวังใต้ทะเล น้ำวังใต้ทะเลระยิบระยับด้วยแสงแดดอ่อนจากด้านบน",
+"zh": "龙宫碧水。龙宫碧水映着上方洒下的柔和阳光闪闪发亮。",
+"ja": "りゅうぐうの うみ。りゅうぐうの うみに ひかりが きらきら ふりそそぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_palacesky.1": {
+"en": "Soft water currents carry shimmering sparkles over the palace.",
+"lo": "ກະແສນ້ຳອ່ອນພາແສງວິບວັບລອຍເທິງພະລາຊະວັງ.",
+"th": "กระแสน้ำอ่อนพาแสงระยิบลอยเหนือพระราชวัง",
+"zh": "轻柔的水流带着闪亮光点飘过龙宫上方。",
+"ja": "きらきらした ひかりが りゅうぐうの うえを ながれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_palacesky.2": {
+"en": "Pale jade and sky aqua glow smoothly like painted silk.",
+"lo": "ສີຢົກອ່ອນ ແລະ ສີຟ້ານ້ຳທະເລເຫຼື້ອມລຽບຄືຜ້າໄໝແຕ້ມ.",
+"th": "สีหยกอ่อนและสีฟ้าน้ำทะเลเรืองรองเรียบเหมือนผ้าไหมวาด",
+"zh": "淡翡翠与浅碧色像手绘丝绸般温润发亮。",
+"ja": "やさしい みずいろが きぬみたいに かがやいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_palacesky.3": {
+"en": "Sunbeams refract in seawater to form dancing golden rays.",
+"lo": "ແສງແດດຫັກເຫໃນນ້ຳທະເລສ້າງເປັນລຳແສງສີຄຳເຕັ້ນລຳ.",
+"th": "แสงแดดหักเหในน้ำทะเลสร้างเป็นลำแสงสีทองเต้นรำ",
+"zh": "阳光在海水中折射出舞动的金色光柱。",
+"ja": "ひかりの すじが うみの なかで きらきら おどるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_palacesky.4": {
+"en": "Shimmer, drift!",
+"lo": "ວິບວັບ ລອຍ!",
+"th": "ระยิบ ลอย!",
+"zh": "水光粼粼！",
+"ja": "きらきら、ゆらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_fartowers.0": {
+"en": "Coral towers. Coral towers rise pearly and bright behind the palace roof.",
+"lo": "ຫໍຄອຍປະກາລັງ. ຫໍຄອຍປະກາລັງ ສູງສົດໃສສີໄຂ່ມຸກຢູ່ຫຼັງຫຼັງຄາວັງ.",
+"th": "หอคอยปะการัง หอคอยปะการังสูงสดใสสีไข่มุกอยู่หลังหลังคาวัง",
+"zh": "珊瑚高塔。珊瑚高塔在龙宫屋顶后方闪耀着珍珠般的光彩。",
+"ja": "さんごの やぐら。さんごの やぐらが やねの うしろに そびえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_fartowers.1": {
+"en": "These coral towers stand watch behind Princess Otohime's hall.",
+"lo": "ຫໍຄອຍປະກາລັງເຫຼົ່ານີ້ຕັ້ງຢູ່ຫຼັງຫໍໃຫຍ່ຂອງເຈົ້າຍິງໂອໂຕຮິເມະ.",
+"th": "หอคอยปะการังเหล่านี้ตั้งอยู่หลังหอใหญ่ของเจ้าหญิงโอโตฮิเมะ",
+"zh": "这些珊瑚高塔静静矗立在乙姬公主的宫殿后方。",
+"ja": "おとひめさまの やかたの うしろに たかく そびえているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_fartowers.2": {
+"en": "Tiered sea roofs gleam in soft mother-of-pearl colours.",
+"lo": "ຫຼັງຄາຊ້ອນຊັ້ນເຫຼື້ອມງາມສີໄຂ່ມຸກອ່ອນ.",
+"th": "หลังคาซ้อนชั้นเงางามสีไข่มุกอ่อน",
+"zh": "重檐海宫屋顶闪着温润的珍珠贝母光泽。",
+"ja": "しんじゅいろの やねが なんかいも かさなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_fartowers.3": {
+"en": "Traditional palace roofs curve upward at the corners like wings.",
+"lo": "ຫຼັງຄາວັງບູຮານໂຄ້ງຂຶ້ນຢູ່ມຸມຄືປີກນົກ.",
+"th": "หลังคาวังโบราณโค้งขึ้นที่มุมเหมือนปีกนก",
+"zh": "传统宫殿屋檐四角像飞鸟翅膀一样轻盈上翘。",
+"ja": "やねの はしが とりの つばさみたいに そっているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_fartowers.4": {
+"en": "Glow, hush!",
+"lo": "ເຮືອງແສງ ຊູ່!",
+"th": "เรืองแสง ชู่!",
+"zh": "远塔生辉！",
+"ja": "きらり、しずかだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_pearlgate.0": {
+"en": "A pearl gate. The pearl gate opens wide in pink coral and shining pearls.",
+"lo": "ປະຕູໄຂ່ມຸກ. ປະຕູໄຂ່ມຸກ ເປີດກວ້າງດ້ວຍປະກາລັງສີບົວ ແລະ ໄຂ່ມຸກເຫຼື້ອມ.",
+"th": "ประตูไข่มุก ประตูไข่มุกเปิดกว้างด้วยปะการังสีชมพูและไข่มุกเงางาม",
+"zh": "珍珠大门。珍珠大门由粉红珊瑚和发光珍珠筑成，敞开迎客。",
+"ja": "しんじゅの もん。しんじゅの もんが さんごと しんじゅで きらきら かがやくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pearlgate.1": {
+"en": "Tarō walks right under this pearl gate into the Sea Palace!",
+"lo": "ທາໂຣຍ່າງລອດປະຕູໄຂ່ມຸກນີ້ເຂົ້າສູ່ວັງໃຕ້ທະເລ!",
+"th": "ทาโร่เดินลอดประตูไข่มุกนี้เข้าสู่วังใต้ทะเล!",
+"zh": "太郎穿过这座珍珠大门步入神奇的海龙宫！",
+"ja": "たろうが この もんを くぐって りゅうぐうへ はいるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pearlgate.2": {
+"en": "Polished white pearls dot the rosy coral archway beams.",
+"lo": "ໄຂ່ມຸກຂາວເງົາປະດັບທົ່ວຄານປະຕູປະກາລັງສີບົວ.",
+"th": "ไข่มุกขาวเงาประดับทั่วคานประตูประการังสีชมพู",
+"zh": "圆润白珍珠点缀在粉红珊瑚拱门横梁上。",
+"ja": "ピンクの はしらに しんじゅが いっぱい ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pearlgate.3": {
+"en": "A Japanese torii gate marks the entrance to a special place.",
+"lo": "ປະຕູໂທຣິອິຂອງຍີ່ປຸ່ນເປັນສັນຍະລັກທາງເຂົ້າສະຖານທີ່ພິເສດ.",
+"th": "ประตูโทริอิของญี่ปุ่นเป็นสัญลักษณ์ทางเข้าสถานที่พิเศษ",
+"zh": "日本的鸟居牌坊标志着踏入神奇圣洁之地的入口。",
+"ja": "とりいの もんは とくべつな ばしょの いりぐちだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pearlgate.4": {
+"en": "Sparkle, welcome!",
+"lo": "ວິບວັບ ຍິນດີຕ້ອນຮັບ!",
+"th": "ระยิบ ยินดีต้อนรับ!",
+"zh": "大门闪耀迎客！",
+"ja": "きらきら、ようこそ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_palacehall.0": {
+"en": "Sea Palace. Sea Palace gleams with curved golden roofs and warm lamps.",
+"lo": "ວັງໃຕ້ທະເລ. ວັງໃຕ້ທະເລ ເຫຼື້ອມງາມດ້ວຍຫຼັງຄາໂຄ້ງສີຄຳ ແລະ ໂຄມໄຟອຸ່ນ.",
+"th": "วังใต้ทะเล วังใต้ทะเลงดงามด้วยหลังคาโค้งสีทองและโคมไฟอุ่น",
+"zh": "海龙宫。海龙宫有着金色的飞檐屋顶和温暖的灯火。",
+"ja": "りゅうぐうじょう。りゅうぐうじょうは きんいろの やねが とても りっぱだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_palacehall.1": {
+"en": "Guests gather in Sea Palace for music, dancing and four seasons!",
+"lo": "ແຂກມາເຕົ້າໂຮມຢູ່ວັງໃຕ້ທະເລເພື່ອຟັງດົນຕີ ຟ້ອນລຳ ແລະ ຊົມສີ່ລະດູ!",
+"th": "แขกมารวมตัวกันที่วังใต้ทะเลเพื่อฟังดนตรี เต้นรำ และชมสี่ฤดู!",
+"zh": "客人们齐聚海龙宫欣赏音乐、舞蹈和四季奇景！",
+"ja": "おんがくと おどりと よっつの きせつを たのしむ おしろだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_palacehall.2": {
+"en": "Warm round lamps hang along wide wooden palace steps.",
+"lo": "ໂຄມໄຟກົມອຸ່ນຫ້ອຍລຽງຕາມຂັ້ນໄດໄມ້ກວ້າງຂອງວັງ.",
+"th": "โคมไฟกลมอุ่นห้อยเรียงตามขั้นบันไดไม้กว้างของวัง",
+"zh": "圆润温暖的宫灯沿着宽阔的木阶梯整齐悬挂。",
+"ja": "あたたかい ちょうちんが かいだんの うえに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_palacehall.3": {
+"en": "In Japan this magical undersea home is called Ryugu-jo.",
+"lo": "ໃນຍີ່ປຸ່ນ ວັງໃຕ້ທະເລວິເສດນີ້ເອີ້ນວ່າ ຣິວກຸໂຈ.",
+"th": "ในญี่ปุ่น วังใต้ทะเลวิเศษนี้เรียกว่า ริวกุโจ",
+"zh": "在日本，这座神奇的海底宫殿被称为龙宫城。",
+"ja": "うみの したの おしろを りゅうぐうじょうと よぶよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_palacehall.4": {
+"en": "Warm glow, hum!",
+"lo": "ແສງອຸ່ນ ຮຳ!",
+"th": "แสงอุ่น ฮัม!",
+"zh": "龙宫乐声悠扬！",
+"ja": "ぽわーん、すてきな おと！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_octopus.0": {
+"en": "A sea octopus. The sea octopus plays joyful beats on the palace drums!",
+"lo": "ປາມຶກຍັກ. ປາມຶກຍັກ ຕີກອງມ່ວນຊື່ນຢູ່ໃນວັງໃຕ້ທະເລ!",
+"th": "ปลาหมึกยักษ์ ปลาหมึกยักษ์ตีกลองสนุกสนานในวังใต้ทะเล!",
+"zh": "章鱼。章鱼在龙宫里欢快地敲打着大鼓！",
+"ja": "たこ。たこは りゅうぐうじょうで たのしく たいこを たたくよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_octopus.1": {
+"en": "Hello, sea octopus!",
+"lo": "ສະບາຍດີ ປາມຶກຍັກ!",
+"th": "สวัสดีปลาหมึกยักษ์!",
+"zh": "你好，章鱼！",
+"ja": "こんにちは、たこ！",
+"who": "octopus",
+"tag": "greet"
+},
+"ura_octopus.2": {
+"en": "Pon, pon! I am the octopus drummer!",
+"lo": "ປົ່ງ ປົ່ງ! ຂ້ອຍແມ່ນປາມຶກນັກຕີກອງ!",
+"th": "ป่ง ป่ง! ฉันคือปลาหมึกนักตีกลอง!",
+"zh": "咚咚！我是章鱼小鼓手！",
+"ja": "ぽんぽん！ ぼくは たいこを たたく たこだよ！",
+"who": "octopus",
+"tag": "say"
+},
+"ura_octopus.3": {
+"en": "An octopus has eight clever arms that bend any way.",
+"lo": "ປາມຶກມີໜວດສະຫຼາດແປດເສັ້ນທີ່ໂຄ້ງໄດ້ທຸກທາງ.",
+"th": "ปลาหมึกมีหนวดฉลาดแปดเส้นที่งอได้ทุกทาง",
+"zh": "章鱼有八条灵活聪明的腕足，能随意弯曲。",
+"ja": "たこには やわらかい あしが やっつも あるんだよ。",
+"who": "octopus",
+"tag": "fact"
+},
+"ura_octopus.4": {
+"en": "I beat four sea drums at the very same time!",
+"lo": "ຂ້ອຍຕີກອງທະເລສີ່ໜ່ວຍພ້ອມກັນເລີຍ!",
+"th": "ฉันตีกลองทะเลสี่ใบพร้อมกันเลย!",
+"zh": "我能同时敲打四面大海鼓！",
+"ja": "よっつの たいこを いっぺんに たたけるよ！",
+"who": "octopus",
+"tag": "does"
+},
+"ura_octopus.5": {
+"en": "Oops! Sometimes my eight arms get tied in a funny knot!",
+"lo": "ອຸ໊ຍ! ບາງເທື່ອໜວດແປດເສັ້ນຂອງຂ້ອຍກໍພັນກັນເປັນປົມຕະຫຼົກ!",
+"th": "อุ๊ย! บางทีหนวดแปดเส้นของฉันก็พันกันเป็นปมตลกๆ!",
+"zh": "哎呀！有时候我的八条腕足会打成一个搞笑的结！",
+"ja": "おっと！ あしが くるくる からまっちゃった！",
+"who": "octopus",
+"tag": "does"
+},
+"ura_octopus.6": {
+"en": "I take a proud bow whenever everyone laughs!",
+"lo": "ຂ້ອຍກົ້ມຫົວຄຳນັບຢ່າງພູມໃຈເມື່ອທຸກຄົນຫົວ!",
+"th": "ฉันโค้งคำนับอย่างภูมิใจเมื่อทุกคนหัวเราะ!",
+"zh": "每当大家开怀大笑，我就骄傲地鞠个躬！",
+"ja": "みんなが わらって くれたら ぺこりと おじぎ するよ！",
+"who": "octopus",
+"tag": "does"
+},
+"ura_octopus.7": {
+"en": "I hold wooden drumsticks and wear a big happy grin.",
+"lo": "ຂ້ອຍຖືໄມ້ຕີກອງ ແລະ ຍິ້ມກວ້າງຢ່າງມ່ວນຊື່ນ.",
+"th": "ฉันถือไม้ตีกลองและยิ้มกว้างอย่างสนุกสนาน",
+"zh": "我拿着木鼓槌，脸上挂着开心的大笑容。",
+"ja": "ばちを もって にっこり わらっているよ。",
+"who": "octopus",
+"tag": "looks"
+},
+"ura_octopus.8": {
+"en": "Pon, pon, bonk!",
+"lo": "ປົ່ງ, ປົ່ງ, ປຶກ!",
+"th": "ป่ง ป่ง ปึ้ก!",
+"zh": "咚，咚，梆！",
+"ja": "ぽん、ぽん、ぼん！",
+"who": "octopus",
+"tag": "sound"
+},
+"ura_octopus.9": {
+"en": "Tap the drums and play a sea song with me!",
+"lo": "ກົດກອງແລ້ວຫຼິ້ນເພງທະເລນຳກັນແມ້!",
+"th": "แตะกลองแล้วเล่นเพลงทะเลด้วยกันสิ!",
+"zh": "敲敲海鼓，和我一起奏一首大海之歌吧！",
+"ja": "たいこを たたいて いっしょに おんがくを たのしもう！",
+"who": "octopus",
+"tag": "say"
+},
+"ura_drum.0": {
+"en": "A sea drum. A sea drum booms with a happy underwater rhythm!",
+"lo": "ກອງທະເລ. ກອງທະເລ ຕີດັງເປັນຈັງຫວະມ່ວນຊື່ນໃຕ້ທະເລ!",
+"th": "กลองทะเล กลองทะเลตีดังเป็นจังหวะสนุกสนานใต้ทะเล!",
+"zh": "大海鼓。大海鼓在海底敲出欢快的节奏！",
+"ja": "うみの たいこ。うみの たいこが たのしく ぽんぽん なるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_drum.1": {
+"en": "Tap the sea drum to echo the joyful palace beat!",
+"lo": "ກົດກອງທະເລເພື່ອຕີຈັງຫວະມ່ວນຊື່ນຂອງວັງຕາມ!",
+"th": "แตะกลองทะเลเพื่อตีจังหวะสนุกสนานของวังตาม!",
+"zh": "敲敲大海鼓，跟着敲出欢快的龙宫节拍！",
+"ja": "うみの たいこを たたいて リズムを まねして みよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_drum.2": {
+"en": "A big round drum gives a deep boom, and a small drum taps high.",
+"lo": "ກອງໜ່ວຍໃຫຍ່ສຽງທຸ້ມດັງ ແລະ ກອງໜ່ວຍນ້ອຍສຽງໃສສູງ.",
+"th": "กลองใบใหญ่เสียงทุ้มดัง และกลองใบเล็กเสียงใสสูง",
+"zh": "大鼓声音低沉浑厚，小鼓声音清脆轻快。",
+"ja": "おおきい たいこは どん、ちいさい たいこは ぽんと なるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_drum.3": {
+"en": "Taiko drums have been played at Japanese festivals for centuries.",
+"lo": "ກອງໄທໂກະຖືກຕີໃນງານບຸນຂອງຍີ່ປຸ່ນມາຫຼາຍຮ້ອຍປີ.",
+"th": "กลองไทโกะถูกตีในงานเทศกาลของญี่ปุ่นมาหลายร้อยปี",
+"zh": "日本太鼓在庆典上已经敲响了许多个世纪。",
+"ja": "たいこは むかしから おまつりで たたかれて きたよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_drum.4": {
+"en": "Pon, pon, boom!",
+"lo": "ປົ່ງ ປົ່ງ ຕຶງ!",
+"th": "ป่ง ป่ง ตึง!",
+"zh": "咚，咚，轰！",
+"ja": "ぽん、ぽん、どん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_shellharp.0": {
+"en": "Shell music. Shell music makes soft pearly notes in the sea band.",
+"lo": "ເຄື່ອງດົນຕີຫອຍ. ເຄື່ອງດົນຕີຫອຍ ສ້າງສຽງດົນຕີອ່ອນຫວານໃນວົງດົນຕີທະເລ.",
+"th": "เครื่องดนตรีหอย เครื่องดนตรีหอยสร้างเสียงดนตรีอ่อนหวานในวงดนตรีทะเล",
+"zh": "贝壳乐器。贝壳乐器在海底乐队里奏出柔和的乐音。",
+"ja": "かいがらの がっき。かいがらの がっきが やさしい おとを かなでるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_shellharp.1": {
+"en": "Tap the sea shells to play sweet underwater melody notes!",
+"lo": "ກົດເປືອກຫອຍເພື່ອຫຼິ້ນສຽງດົນຕີຫວານໆໃຕ້ທະເລ!",
+"th": "แตะเปลือกหอยเพื่อเล่นเสียงดนตรีหวานๆ ใต้ทะเล!",
+"zh": "轻敲贝壳就能奏出甜美动听的海底乐声！",
+"ja": "かいがらを たたくと すてきな おとが ひびくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_shellharp.2": {
+"en": "Smooth pearly shells hang in a neat row on coral wood.",
+"lo": "ເປືອກຫອຍໄຂ່ມຸກລຽບຫ້ອຍລຽງກັນຢ່າງສວຍງາມເທິງໄມ້ປະກາລັງ.",
+"th": "เปลือกหอยไข่มุกเรียบห้อยเรียงกันอย่างสวยงามบนไม้ปะการัง",
+"zh": "光滑的珍珠贝壳整齐地挂在珊瑚木架上。",
+"ja": "きれいな かいがらが ずらりと ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_shellharp.3": {
+"en": "Different shell sizes make higher and lower musical notes.",
+"lo": "ເປືອກຫອຍຂະໜາດຕ່າງກັນສ້າງສຽງດົນຕີສູງ ແລະ ຕ່ຳຕ່າງກັນ.",
+"th": "เปลือกหอยขนาดต่างกันสร้างเสียงดนตรีสูงและต่ำต่างกัน",
+"zh": "不同大小的贝壳能发出高低不同的音符。",
+"ja": "おおきさが ちがうと たかい おとや ひくい おとに なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_shellharp.4": {
+"en": "Plink, plonk, hum!",
+"lo": "ປິ໊ງ ປ່ອງ ຮຳ!",
+"th": "ปิ๊ง ป่อง ฮัม!",
+"zh": "叮咚，清脆悦耳！",
+"ja": "ぽろん、ころん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_spring.0": {
+"en": "A spring blossom. A spring blossom window shows pink cherry petals drifting.",
+"lo": "ດອກຊາກຸຣະ. ດອກຊາກຸຣະ ໃນປ່ອງຢ້ຽມສະແດງກີບດອກສີບົວປິວ.",
+"th": "ดอกซากุระ ดอกซากุระในหน้าต่างแสดงกลีบดอกสีชมพูปลิว",
+"zh": "春樱花。春樱花之窗里飘落着粉红的樱花瓣。",
+"ja": "はるの さくら。はるの さくらの まどから はなびらが ひらひら まうよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_spring.1": {
+"en": "Look through this window to watch pink cherry petals drift!",
+"lo": "ເບິ່ງຜ່ານປ່ອງຢ້ຽມນີ້ເພື່ອຊົມກີບດອກຊາກຸຣະສີບົວປິວ!",
+"th": "มองผ่านหน้าต่างนี้เพื่อชมกลีบดอกซากุระสีชมพูปลิว!",
+"zh": "透过这扇窗，能看见粉红的樱花瓣轻轻飘落！",
+"ja": "この まどから はるの さくらが ひらひら みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_spring.2": {
+"en": "Soft pastel blossoms paint the whole palace wall pink.",
+"lo": "ດອກໄມ້ສີບົວອ່ອນແຕ້ມຝາວັງໃຫ້ສົດໃສ.",
+"th": "ดอกไม้สีชมพูอ่อนแต่งแต้มผนังวังให้สดใส",
+"zh": "柔和的粉红花朵把龙宫墙壁装点得春意盎然。",
+"ja": "やさしい ピンクの はなが いっぱい さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_spring.3": {
+"en": "In Japan, spring cherry blossoms are celebrated with picnics.",
+"lo": "ໃນຍີ່ປຸ່ນ ຜູ້ຄົນມັກນັ່ງຊົມດອກຊາກຸຣະໃນລະດູໃບໄມ້ປົ່ງ.",
+"th": "ในญี่ปุ่น ผู้คนชอบนั่งชมดอกซากุระในฤดูใบไม้ผลิ",
+"zh": "在日本，春天赏樱花是大家最喜爱的活动。",
+"ja": "はるに なると みんなで おはなみを するんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_spring.4": {
+"en": "Flutter, hush!",
+"lo": "ປິວ ຊູ່!",
+"th": "ปลิว ชู่!",
+"zh": "飘呀飘，沙沙！",
+"ja": "ひらひら、そよそよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_summer.0": {
+"en": "A summer lotus. A summer lotus window blooms over a warm sunny pond.",
+"lo": "ດອກບົວລະດູຮ້ອນ. ດອກບົວລະດູຮ້ອນ ບານສະພັ່ງເທິງໜອງນ້ຳອຸ່ນ.",
+"th": "ดอกบัวหน้าร้อน ดอกบัวหน้าร้อนบานสะพรั่งเหนือสระน้ำอุ่น",
+"zh": "夏荷花。夏荷花之窗里温暖池塘上荷花盛开。",
+"ja": "なつの はす。なつの はすの まどに きれいな はなが さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_summer.1": {
+"en": "Look through this window to see summer lotus flowers bloom!",
+"lo": "ເບິ່ງຜ່ານປ່ອງຢ້ຽມນີ້ເພື່ອຊົມດອກບົວລະດູຮ້ອນບານ!",
+"th": "มองผ่านหน้าต่างนี้เพื่อชมดอกบัวหน้าร้อนบาน!",
+"zh": "透过这扇窗，能看见夏日荷花在水面盛开！",
+"ja": "この まどから なつの はすの はなが みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_summer.2": {
+"en": "Wide green pads float beneath rosy pink lotus petals.",
+"lo": "ໃບບົວຂຽວກວ້າງລອຍຢູ່ກ້ອງກີບດອກບົວສີບົວ.",
+"th": "ใบบัวเขียวกว้างลอยอยู่ใต้กลีบดอกบัวสีชมพู",
+"zh": "宽大的绿荷叶浮在粉红荷花瓣下面。",
+"ja": "おおきな はっぱの うえに はなが さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_summer.3": {
+"en": "Lotus flowers open fresh in the warm morning sun.",
+"lo": "ດອກບົວບານສົດໃສໃນແສງແດດອຸ່ນຍາມເຊົ້າ.",
+"th": "ดอกบัวบานสดใสในแสงแดดอุ่นยามเช้า",
+"zh": "荷花喜欢在温暖的晨光里清新绽放。",
+"ja": "はすの はなは あさの ひかりで きれいに ひらくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_summer.4": {
+"en": "Splash, ripple!",
+"lo": "ຕູມ ວົນ!",
+"th": "ตูม วน!",
+"zh": "水波荡漾！",
+"ja": "ちゃぷん、ゆらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_autumn.0": {
+"en": "An autumn maple. An autumn maple window glows with bright scarlet leaves.",
+"lo": "ໃບເມເປິ້ນແດງ. ໃບເມເປິ້ນແດງ ໃນປ່ອງຢ້ຽມສ່ອງແສງສີແດງສົດໃສ.",
+"th": "ใบเมเปิลแดง ใบเมเปิลแดงในหน้าต่างส่องแสงสีแดงสดใส",
+"zh": "秋枫叶。秋枫叶之窗里火红的枫叶闪闪发光。",
+"ja": "あきの もみじ。あきの もみじの まどが あかく きれいに かがやくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_autumn.1": {
+"en": "Look through this window to watch bright red maple leaves turn!",
+"lo": "ເບິ່ງຜ່ານປ່ອງຢ້ຽມນີ້ເພື່ອຊົມໃບເມເປິ້ນແດງປິວ!",
+"th": "มองผ่านหน้าต่างนี้เพื่อชมใบเมเปิลแดงปลิว!",
+"zh": "透过这扇窗，能看见火红的秋枫叶随风旋转！",
+"ja": "この まどから あきの もみじが まうのが みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_autumn.2": {
+"en": "Star-shaped leaves glow crimson and warm amber gold.",
+"lo": "ໃບໄມ້ຮູບດາວສ່ອງສີແດງເຂັ້ມ ແລະ ສີຄຳອຳພັນ.",
+"th": "ใบไม้รูปดาวส่องสีแดงเข้มและสีทองอำพัน",
+"zh": "星形的枫叶闪着深红和暖金的光彩。",
+"ja": "ほしがたの はっぱが あかく いろづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_autumn.3": {
+"en": "Cool autumn air turns green maple leaves fiery red.",
+"lo": "ອາກາດເຢັນລະດູໃບໄມ້ຫຼົ່ນປ່ຽນໃບເມເປິ້ນຂຽວເປັນສີແດງ.",
+"th": "อากาศเย็นฤดูใบไม้ร่วงเปลี่ยนใบเมเปิลเขียวเป็นสีแดง",
+"zh": "凉爽的秋风把绿色的枫叶染成火红。",
+"ja": "あきに なると もみじの はっぱが あかく なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_autumn.4": {
+"en": "Rustle, swirl!",
+"lo": "ຊາ ໝຸນ!",
+"th": "ซ่า หมุน!",
+"zh": "沙沙，旋呀旋！",
+"ja": "かさかさ、くるり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_winter.0": {
+"en": "Winter snow. Winter snow sparkles gently outside the fourth palace window.",
+"lo": "ຫິມະລະດູໜາວ. ຫິມະລະດູໜາວ ເຫຼື້ອມວິບວັບຢູ່ນອກປ່ອງຢ້ຽມທີສີ່.",
+"th": "หิมะหน้าหนาว หิมะหน้าหนาวระยิบระยับนอกหน้าต่างบานที่สี่",
+"zh": "冬白雪。冬白雪在第四扇龙宫窗外轻轻闪耀。",
+"ja": "ふゆの ゆき。ふゆの ゆきが まどの そとで きらきら ふるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_winter.1": {
+"en": "Look through this window to watch soft winter snow fall!",
+"lo": "ເບິ່ງຜ່ານປ່ອງຢ້ຽມນີ້ເພື່ອຊົມຫິມະລະດູໜາວຕົກ!",
+"th": "มองผ่านหน้าต่างนี้เพื่อชมหิมะหน้าหนาวตก!",
+"zh": "透过这扇窗，能看见洁白的冬雪轻轻飘落！",
+"ja": "この まどから ふゆの ゆきが ふるのが みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_winter.2": {
+"en": "Tiny white flakes sparkle on quiet pine boughs.",
+"lo": "ເກັດຫິມະສີຂາວນ້ອຍໆເຫຼື້ອມວິບວັບເທິງງ່າແປກ.",
+"th": "เกล็ดหิมะสีขาวน้อยๆ ระยิบระยับบนกิ่งสน",
+"zh": "细小的雪花在静谧的松枝上闪闪发光。",
+"ja": "しろい ゆきが まつの えだに つもっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_winter.3": {
+"en": "Every snowflake has six tiny crystal points!",
+"lo": "ເກັດຫິມະທຸກເກັດມີຫົກແຫຼມນ້ອຍໆ!",
+"th": "เกล็ดหิมะทุกเกล็ดมีหกแฉกเล็กๆ!",
+"zh": "每一片雪花都有六个精致的小晶角呢！",
+"ja": "ゆきの けっしょうは ろっかくけい なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_winter.4": {
+"en": "Hush, sparkle!",
+"lo": "ຊູ່ ວິບວັບ!",
+"th": "ชู่ ระยิบ!",
+"zh": "静悄悄，闪闪亮！",
+"ja": "しんしん、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_box.0": {
+"en": "A promise box. The promise box is tied tight with a red silk cord.",
+"lo": "ກ່ອງສັນຍາ. ກ່ອງສັນຍາ ມັດແໜ້ນດ້ວຍເຊືອກໄໝສີແດງ.",
+"th": "กล่องสัญญา กล่องสัญญาผูกแน่นด้วยเชือกไหมสีแดง",
+"zh": "约定宝盒。约定宝盒用红丝绳紧紧系着。",
+"ja": "たまてばこ。たまてばこは あかい ひもで しっかり むすばれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_box.1": {
+"en": "Princess Otohime gave Tarō this box to treasure, never to open.",
+"lo": "ເຈົ້າຍິງໂອໂຕຮິເມະມອບກ່ອງນີ້ໃຫ້ທາໂຣເກັບໄວ້ ແຕ່ຫ້າມເປີດ.",
+"th": "เจ้าหญิงโอโตฮิเมะมอบกล่องนี้ให้ทาโร่เก็บไว้ แต่ห้ามเปิด",
+"zh": "乙姬公主把宝盒送给太郎珍藏，嘱咐他千万不要打开。",
+"ja": "おとひめさまが ぜったいに あけないでねと わたした はこだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_box.2": {
+"en": "Gold flowers gleam on its polished lacquer lid.",
+"lo": "ດອກໄມ້ສີຄຳເຫຼື້ອມງາມເທິງຝາກ່ອງເຄືອບເງົາ.",
+"th": "ดอกไม้สีทองเงางามบนฝากล่องเคลือบเงา",
+"zh": "光亮的漆盒盖上闪耀着金色花纹。",
+"ja": "きんいろの はなの もようが きれいな たまてばこだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_box.3": {
+"en": "In Japan this famous keepsake box is called a tamatebako.",
+"lo": "ໃນຍີ່ປຸ່ນ ກ່ອງວິເສດທີ່ໂດ່ງດັງນີ້ເອີ້ນວ່າ ທາມາເຕະບາໂກະ.",
+"th": "ในญี่ปุ่น กล่องวิเศษชื่อดังนี้เรียกว่า ทามาเตะบาโกะ",
+"zh": "在日本，这个著名的宝盒叫做玉手箱。",
+"ja": "にほんでは この はこを たまてばこと よぶんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_box.4": {
+"en": "Shimmer, hush!",
+"lo": "ວິບວັບ ງຽບ!",
+"th": "ระยิบ เงียบ!",
+"zh": "闪着神秘的微光！",
+"ja": "きらり、そっと！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_knot.0": {
+"en": "A silk knot. A silk knot keeps Princess Otohime's promise safe and tight.",
+"lo": "ປົມເຊືອກໄໝ. ປົມເຊືອກໄໝ ຮັກສາຄຳສັນຍາຂອງເຈົ້າຍິງໄວ້ຢ່າງແໜ້ນໜາ.",
+"th": "ปมเชือกไหม ปมเชือกไหมรักษาคำสัญญาของเจ้าหญิงไว้อย่างแน่นหนา",
+"zh": "红丝结。红丝结把乙姬公主的约定牢牢系紧。",
+"ja": "あかい むすびめ。あかい むすびめが おとひめさまとの やくそくを まもるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_knot.1": {
+"en": "Tie each red silk knot tight to seal the promise!",
+"lo": "ມັດປົມເຊືອກໄໝສີແດງແຕ່ລະປົມໃຫ້ແໜ້ນເພື່ອຮັກສາຄຳສັນຍາ!",
+"th": "ผูกปมเชือกไหมสีแดงแต่ละปมให้แน่นเพื่อรักษาสัญญา!",
+"zh": "把每个红丝结系紧，牢牢守住约定！",
+"ja": "あかい むすびめを ぎゅっと むすんで やくそく しよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_knot.2": {
+"en": "Glossy red cord loops neatly around the jewelled lid.",
+"lo": "ເຊືອກໄໝສີແດງເງົາງາມຄ້ອງຢ່າງຮຽບຮ້ອຍອ້ອມຝາກ່ອງ.",
+"th": "เชือกไหมสีแดงเงางามคล้องอย่างเรียบร้อยรอบฝากล่อง",
+"zh": "光亮的红丝绳整齐地绕在宝盒盖上。",
+"ja": "きれいな あかい ひもが むすばれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_knot.3": {
+"en": "Japanese gift knots symbolize good wishes and care.",
+"lo": "ປົມມັດຂອງຂວັນຍີ່ປຸ່ນໝາຍເຖິງຄຳອວຍພອນ ແລະ ຄວາມຫ່ວງໃຍ.",
+"th": "ปมผูกของขวัญญี่ปุ่นหมายถึงคำอวยพรและความห่วงใย",
+"zh": "日本礼物上的丝结象征着美好的祝福与心意。",
+"ja": "にほんの むすびめには たいせつな おもいが こめられているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_knot.4": {
+"en": "Pull, tug!",
+"lo": "ດຶງ ແໜ້ນ!",
+"th": "ดึง แน่น!",
+"zh": "一拉，系紧啦！",
+"ja": "ぎゅっ、きゅっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_returnwing.0": {
+"en": "A home shore. The home shore rises back into view as Tarō surfaces!",
+"lo": "ຝັ່ງບ້ານເກີດ. ຝັ່ງບ້ານເກີດ ປາກົດຂຶ້ນມາອີກຄັ້ງເມື່ອທາໂຣໂຜ່ຂຶ້ນຈາກນ້ຳ!",
+"th": "ฝั่งบ้านเกิด ฝั่งบ้านเกิดปรากฏขึ้นมาอีกครั้งเมื่อทาโร่โผล่ขึ้นจากน้ำ!",
+"zh": "家乡海岸。家乡海岸在太郎浮出水面时重新出现在眼前！",
+"ja": "ふるさとの はま。ふるさとの はまが うみの うえに みえて きたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_returnwing.1": {
+"en": "The turtle brings Tarō safely back onto this sunny home shore!",
+"lo": "ເຕົ່າພາທາໂຣກັບຄືນສູ່ຝັ່ງບ້ານເກີດແດດອຸ່ນນີ້ຢ່າງປອດໄພ!",
+"th": "เต่าพาทาโร่กลับคืนสู่ฝั่งบ้านเกิดแดดอุ่นนี้อย่างปลอดภัย!",
+"zh": "海龟把太郎平安送回了阳光温暖的家乡海岸！",
+"ja": "うみがめが たろうを ふるさとの はまへ とどけたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_returnwing.2": {
+"en": "Golden sand and green pines shimmer above the gentle surf.",
+"lo": "ຊາຍສີຄຳ ແລະ ຕົ້ນແປກສີຂຽວເຫຼື້ອມງາມເໜືອຄື້ນອ່ອນ.",
+"th": "ทรายสีทองและต้นสนสีเขียวระยิบเหนือคลื่นอ่อน",
+"zh": "金色沙滩和苍翠松林在温柔的浪花上方闪耀。",
+"ja": "あたたかい すなはまと まつの きが みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_returnwing.3": {
+"en": "Coming up from deep blue sea into sunshine feels warm and bright.",
+"lo": "ການຂຶ້ນມາຈາກທະເລເລິກສູ່ແສງແດດຮູ້ສຶກອຸ່ນ ແລະ ສະຫວ່າງ.",
+"th": "การขึ้นมาจากทะเลลึกสู่แสงแดดรู้สึกอุ่นและสว่าง",
+"zh": "从深蓝海底浮出阳光灿烂的水面，感觉温暖又明亮。",
+"ja": "うみから でると おひさまが ぽかぽか あたたかいよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_returnwing.4": {
+"en": "Splash, breeze!",
+"lo": "ຕູມ ລົມ!",
+"th": "ตูม ลม!",
+"zh": "海浪欢呼，海风轻吹！",
+"ja": "ざぶん、そよそよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_returnsky.0": {
+"en": "The sunlit sky. The sunlit sky welcomes Tarō back to the warm morning air.",
+"lo": "ຟ້າແດດອຸ່ນ. ຟ້າແດດອຸ່ນ ຕ້ອນຮັບທາໂຣກັບຄືນສູ່ອາກາດຍາມເຊົ້າ.",
+"th": "ฟ้าแดดอุ่น ฟ้าแดดอุ่นต้อนรับทาโร่กลับสู่อากาศยามเช้า",
+"zh": "晴朗天空。晴朗天空迎接着太郎回到温暖的晨风里。",
+"ja": "あかるい そら。あかるい そらが たろうを やさしく むかえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_returnsky.1": {
+"en": "Warm morning sunlight pours down onto the returning waves.",
+"lo": "ແສງແດດເຊົ້າອຸ່ນສ່ອງລົງມາເທິງຄື້ນທີ່ກັບຄືນຝັ່ງ.",
+"th": "แสงแดดเช้าอุ่นส่องลงมาบนคลื่นที่กลับคืนฝั่ง",
+"zh": "温暖的晨光洒满归家的海浪。",
+"ja": "あたたかい ひかりが はまべに ふりそそぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_returnsky.2": {
+"en": "Soft gold and clear blue stretch wide above the beach.",
+"lo": "ສີຄຳອ່ອນ ແລະ ສີຟ້າໃສແຜ່ກວ້າງເທິງຫາດຊາຍ.",
+"th": "สีทองอ่อนและสีฟ้าใสแผ่กว้างเหนือหาดทราย",
+"zh": "淡金与澄蓝在沙滩上方舒展开来。",
+"ja": "あおい そらと きんいろの くもが ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_returnsky.3": {
+"en": "Morning sunlight warms the cool ocean air after night.",
+"lo": "ແສງແດດເຊົ້າເຮັດໃຫ້ອາກາດທະເລເຢັນອຸ່ນຂຶ້ນຫຼັງກາງຄືນ.",
+"th": "แสงแดดเช้าทำให้อากาศทะเลเย็นอุ่นขึ้นหลังกลางคืน",
+"zh": "清晨阳光赶走夜凉，让海风变得暖洋洋的。",
+"ja": "あさの ひかりが うみの かぜを あたためるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_returnsky.4": {
+"en": "Shine, breeze!",
+"lo": "ສ່ອງແສງ ລົມ!",
+"th": "ส่องแสง ลม!",
+"zh": "阳光灿烂！",
+"ja": "きらきら、ぽかぽか！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_villager.0": {
+"en": "An old fisherman. The old fisherman mends his sturdy nets beside the bay.",
+"lo": "ຊາວປະມົງເຖົ້າ. ຊາວປະມົງເຖົ້າ ແປງມອງທີ່ແຂງແຮງຢູ່ແຄມອ່າວ.",
+"th": "ชาวประมงเฒ่า ชาวประมงเฒ่าซ่อมอวนแข็งแรงอยู่ริมอ่าว",
+"zh": "老渔夫。老渔夫在海湾边修补结实的渔网。",
+"ja": "としよりの りょうし。としよりの りょうしは うみべで あみを なおしているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_villager.1": {
+"en": "Hello, old fisherman!",
+"lo": "ສະບາຍດີ ຊາວປະມົງເຖົ້າ!",
+"th": "สวัสดีชาวประมงเฒ่า!",
+"zh": "你好，老渔夫！",
+"ja": "こんにちは、としよりの りょうし！",
+"who": "villager",
+"tag": "greet"
+},
+"ura_villager.2": {
+"en": "Good day, stranger! Welcome to our fishing shore.",
+"lo": "ສະບາຍດີ ແຂກຜູ້ມາຢາມ! ຍິນດີຕ້ອນຮັບສູ່ຝັ່ງປະມົງຂອງພວກເຮົາ.",
+"th": "สวัสดีคนแปลกหน้า! ยินดีต้อนรับสู่ฝั่งประมงของเรา",
+"zh": "你好，远方的客人！欢迎来到我们的渔村海岸。",
+"ja": "こんにちは！ わたしたちの むらへ ようこそ。",
+"who": "villager",
+"tag": "say"
+},
+"ura_villager.3": {
+"en": "Fishermen mend their nets every afternoon so no fish slips through.",
+"lo": "ຊາວປະມົງແປງມອງທຸກບ່າຍເພື່ອບໍ່ໃຫ້ມອງຂາດ.",
+"th": "ชาวประมงซ่อมอวนทุกบ่ายเพื่อไม่ให้อวนขาด",
+"zh": "渔夫们每天下午都要修补渔网，好让网结实耐用。",
+"ja": "りょうしは まいにち あみを ていねいに なおすんだよ。",
+"who": "villager",
+"tag": "fact"
+},
+"ura_villager.4": {
+"en": "I remember the old legend of Urashima Tarō from long ago!",
+"lo": "ຂ້ອຍຈື່ນິທານເກົ່າຂອງອຸຣາຊິມະ ທາໂຣແຕ່ດົນນານມາແລ້ວ!",
+"th": "ฉันจำตำนานเก่าของอุราชิมะ ทาโร่เมื่อนานมาแล้วได้!",
+"zh": "我记得很久以前关于浦岛太郎的古老传说！",
+"ja": "うらしまたろうの むかしばなしを しっているよ！",
+"who": "villager",
+"tag": "does"
+},
+"ura_villager.5": {
+"en": "My great-grandfather told me that story when I was small.",
+"lo": "ພໍ່ທວດຂອງຂ້ອຍເລົ່າເລື່ອງນັ້ນໃຫ້ຂ້ອຍຟັງຕອນຍັງນ້ອຍ.",
+"th": "ปู่ทวดของฉันเล่าเรื่องนั้นให้ฟังตอนยังเด็ก",
+"zh": "我小时候曾祖父曾给我讲过那个故事。",
+"ja": "ひいおじいさんが こどもの ころに きかせて くれたんだ。",
+"who": "villager",
+"tag": "does"
+},
+"ura_villager.6": {
+"en": "Three hundred years have changed every cottage on this beach.",
+"lo": "ສາມຮ້ອຍປີໄດ້ປ່ຽນແປງເຮືອນທຸກຫຼັງເທິງຫາດຊາຍນີ້.",
+"th": "สามร้อยปีได้เปลี่ยนแปลงบ้านทุกหลังบนหาดทรายนี้",
+"zh": "三百年的时光改变了海滩上的每一座小屋。",
+"ja": "さんびゃくねんで はまべの いえは すっかり かわったよ。",
+"who": "villager",
+"tag": "does"
+},
+"ura_villager.7": {
+"en": "I wear a weathered straw hat and carry hemp fishing nets.",
+"lo": "ຂ້ອຍໃສ່ໝວກເຟືອງເກົ່າ ແລະ ຖືມອງຈັບປາ.",
+"th": "ฉันสวมหมวกฟางเก่าและถืออวนจับปลา",
+"zh": "我戴着晒旧的斗笠，手里拿着结实的渔网。",
+"ja": "むぎわらぼうしを かぶって あみを もっているよ。",
+"who": "villager",
+"tag": "looks"
+},
+"ura_villager.8": {
+"en": "That fisherman sailed away three hundred years ago!",
+"lo": "ຊາວປະມົງຄົນນັ້ນອອກເຮືອໄປຕັ້ງສາມຮ້ອຍປີກ່ອນແລ້ວ!",
+"th": "ชาวประมงคนนั้นออกเรือไปตั้งสามร้อยปีก่อนแล้ว!",
+"zh": "那位渔夫可是三百年前出海的呀！",
+"ja": "その ひとは さんびゃくねん まえに うみへ でたんだよ！",
+"who": "villager",
+"tag": "say"
+},
+"ura_villager.9": {
+"en": "The blue bay and the ancient pine are still right here.",
+"lo": "ອ່າວສີຟ້າ ແລະ ຕົ້ນແປກບູຮານຍັງຄົງຢູ່ບ່ອນນີ້.",
+"th": "อ่าวสีฟ้าและต้นสนโบราณยังคงอยู่ที่นี่",
+"zh": "蔚蓝的海湾和那棵古松依然守在这里。",
+"ja": "あおい うみと おおまつは いまも ここに あるよ。",
+"who": "villager",
+"tag": "does"
+},
+"ura_pinesign.0": {
+"en": "A pine sign. A pine sign marks the old coastal path beside the tree.",
+"lo": "ປ້າຍຕົ້ນແປກ. ປ້າຍຕົ້ນແປກ ບອກທາງແຄມທະເລເກົ່າຢູ່ຂ້າງຕົ້ນໄມ້.",
+"th": "ป้ายต้นสน ป้ายต้นสนบอกทางริมทะเลเก่าอยู่ข้างต้นไม้",
+"zh": "松树路牌。松树路牌立在大树旁指示着海边小路。",
+"ja": "まつの かんばん。まつの かんばんが うみべの みちを おしえて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pinesign.1": {
+"en": "Tap this sign to see how much the old pine has grown!",
+"lo": "ກົດປ້າຍນີ້ເພື່ອເບິ່ງວ່າຕົ້ນແປກເກົ່າໃຫຍ່ຂຶ້ນຫຼາຍປານໃດ!",
+"th": "แตะป้ายนี้เพื่อดูว่าต้นสนเก่าโตขึ้นมากแค่ไหน!",
+"zh": "点一点路牌，看看从前的松树长大了多少！",
+"ja": "かんばんを タップして おおまつを みて みよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pinesign.2": {
+"en": "Weathered wood stands near the twisted roots of the pine.",
+"lo": "ໄມ້ເກົ່າຕັ້ງຢູ່ໃກ້ຮາກຄົດງໍຂອງຕົ້ນແປກ.",
+"th": "ไม้เก่าตั้งอยู่ใกล้รากคดงอของต้นสน",
+"zh": "古旧的木牌立在苍劲盘绕的松树根旁。",
+"ja": "おおまつの ねっこの そばに たっている きの かんばんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pinesign.3": {
+"en": "Japanese black pines can live for hundreds of years by the sea.",
+"lo": "ຕົ້ນແປກດຳຍີ່ປຸ່ນສາມາດມີອາຍຸໄດ້ຫຼາຍຮ້ອຍປີແຄມທະເລ.",
+"th": "ต้นสนดำญี่ปุ่นสามารถมีอายุได้หลายร้อยปีริมทะเล",
+"zh": "海边的日本黑松可以生长几百年呢。",
+"ja": "うみべの まつは なんびゃくねんも いきるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pinesign.4": {
+"en": "Knock, rustle!",
+"lo": "ກ໊ອກ ຊາ!",
+"th": "ก๊อก ซ่า!",
+"zh": "笃笃，风吹叶响！",
+"ja": "こんこん、ざわざわ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_cottagespot.0": {
+"en": "An empty yard. An empty yard sits where Tarō's little home once stood.",
+"lo": "ເດີ່ນບ້ານເກົ່າ. ເດີ່ນບ້ານເກົ່າ ຢູ່ບ່ອນທີ່ເຮືອນນ້ອຍຂອງທາໂຣເຄີຍຕັ້ງຢູ່.",
+"th": "ลานบ้านเก่า ลานบ้านเก่าอยู่ตรงที่บ้านน้อยของทาโร่เคยตั้งอยู่",
+"zh": "旧屋空地。旧屋空地就在太郎从前小屋所在的地方。",
+"ja": "いえの あと。いえの あとは たろうの おうちが あった ばしょだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_cottagespot.1": {
+"en": "Look closely where Tarō's family cottage used to stand.",
+"lo": "ເບິ່ງໃກ້ໆບ່ອນທີ່ເຮືອນຄອບຄົວຂອງທາໂຣເຄີຍຕັ້ງຢູ່.",
+"th": "มองใกล้ๆ ตรงที่บ้านครอบครัวของทาโร่เคยตั้งอยู่",
+"zh": "仔细看看太郎家人小屋曾经所在的地方。",
+"ja": "たろうの いえが あった ばしょを そっと みて みよう。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_cottagespot.2": {
+"en": "Only soft beach grass and smooth stones remain in the breeze.",
+"lo": "ເຫຼືອພຽງຫຍ້າຫາດຊາຍອ່ອນ ແລະ ກ້ອນຫີນລຽບໃນສາຍລົມ.",
+"th": "เหลือเพียงหญ้าหาดทรายอ่อนและก้อนหินเรียบในสายลม",
+"zh": "微风中只剩下柔软的沙草和光滑的石头。",
+"ja": "くさと いしだけが かぜに ふかれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_cottagespot.3": {
+"en": "Seasons and centuries slowly reshape every village by the shore.",
+"lo": "ລະດູການ ແລະ ຫຼາຍຮ້ອຍປີຄ່ອຍໆປ່ຽນແປງບ້ານແຄມຝັ່ງ.",
+"th": "ฤดูกาลและหลายร้อยปีค่อยๆ เปลี่ยนแปลงหมู่บ้านริมฝั่ง",
+"zh": "四季更迭与百年光阴悄悄改变着海边村庄的模样。",
+"ja": "ながい ときの なかで むらの けしきも かわるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_cottagespot.4": {
+"en": "Whoosh, sigh!",
+"lo": "ວູບ ຊູ່!",
+"th": "วูบ ชู่!",
+"zh": "微风轻轻吹过！",
+"ja": "そよそよ、ふうー！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_newcottages.0": {
+"en": "New houses. New houses now stand along the village shore three hundred years later.",
+"lo": "ເຮືອນໃໝ່. ເຮືອນໃໝ່ ຕັ້ງຢູ່ແຄມຝັ່ງບ້ານຫຼັງຈາກສາມຮ້ອຍປີຜ່ານໄປ.",
+"th": "บ้านใหม่ บ้านใหม่ตั้งอยู่ริมฝั่งหมู่บ้านหลังจากสามร้อยปีผ่านไป",
+"zh": "新木屋。新木屋在三百年后沿着海边村庄建了起来。",
+"ja": "あたらしい いえ。あたらしい いえが さんびゃくねんごの はまべに ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_newcottages.1": {
+"en": "New fishing families live and laugh in these shore houses now.",
+"lo": "ຄອບຄົວຊາວປະມົງໃໝ່ອາໄສ ແລະ ຫົວມ່ວນໃນເຮືອນແຄມຝັ່ງເຫຼົ່ານີ້.",
+"th": "ครอบครัวชาวประมงใหม่อาศัยและหัวเราะในบ้านริมฝั่งเหล่านี้",
+"zh": "如今新的渔民人家在这些海边木屋里欢笑生活。",
+"ja": "あたらしい りょうしの かぞくが にぎやかに くらしているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_newcottages.2": {
+"en": "Tiled wooden roofs stand taller than Tarō's old thatch hut.",
+"lo": "ຫຼັງຄາໄມ້ມຸງກະເບື້ອງສູງກວ່າເຮືອນມຸງຫຍ້າເກົ່າຂອງທາໂຣ.",
+"th": "หลังคาไม้มุงกระเบื้องสูงกว่ากระท่อมมุงจากเก่าของทาโร่",
+"zh": "铺着瓦片的木屋比太郎从前的茅草屋更高大。",
+"ja": "かわらやねの いえが たろうの むかしより おおきいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_newcottages.3": {
+"en": "Over three hundred years, a tiny beach hamlet grew into a busy village.",
+"lo": "ຫຼັງຈາກສາມຮ້ອຍປີ ບ້ານນ້ອຍແຄມຫາດກາຍເປັນບ້ານໃຫຍ່ຄຶກຄື້ນ.",
+"th": "หลังจากสามร้อยปี หมู่บ้านน้อยริมหาดกลายเป็นหมู่บ้านใหญ่คึกคัก",
+"zh": "历经三百年，小小的海边渔舍变成了热闹的村庄。",
+"ja": "さんびゃくねんで ちいさな むらが おおきく なったんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_newcottages.4": {
+"en": "Chatter, tap!",
+"lo": "ລົມກັນ ຕ໋ອກ!",
+"th": "คุยกัน ต๊อก!",
+"zh": "村里热闹的欢声笑语！",
+"ja": "がやがや、とんとん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_pineancient.0": {
+"en": "An ancient pine. The ancient pine has grown huge and twisted over three hundred years.",
+"lo": "ຕົ້ນແປກບູຮານ. ຕົ້ນແປກບູຮານ ເຕີບໃຫຍ່ ແລະ ຄົດງໍມາໄດ້ສາມຮ້ອຍປີແລ້ວ.",
+"th": "ต้นสนโบราณ ต้นสนโบราณเติบโตใหญ่และคดงอมาสามร้อยปีแล้ว",
+"zh": "古老松树。古老松树历经三百年长得高大苍劲。",
+"ja": "ふるい おおまつ。ふるい おおまつは さんびゃくねん たって とっても おおきく なったよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_pineancient.1": {
+"en": "Grandfather Tarō sits under this ancient pine to tell his tales.",
+"lo": "ພໍ່ຕູ້ທາໂຣນັ່ງກ້ອງຕົ້ນແປກບູຮານນີ້ເພື່ອເລົ່ານິທານ.",
+"th": "คุณตาทาโร่นั่งใต้ต้นสนโบราณนี้เพื่อเล่านิทาน",
+"zh": "太郎爷爷常坐在这棵古松树下给孩子们讲故事。",
+"ja": "おじいさんは この おおまつの したで おはなしを するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_pineancient.2": {
+"en": "Its gnarled trunk and massive canopy grew huge over three centuries.",
+"lo": "ລຳຕົ້ນຄົດງໍ ແລະ ພຸ່ມໃບກວ້າງໃຫຍ່ເຕີບໂຕມາສາມຮ້ອຍປີ.",
+"th": "ลำต้นคดงอและพุ่มใบกว้างใหญ่เติบโตมาสามร้อยปี",
+"zh": "它盘曲苍劲的树干和庞大的树冠历经了三百年风雨。",
+"ja": "ふとい みきと おおきな えだが とっても りっぱだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_pineancient.3": {
+"en": "Old coastal pines remember generations of village children.",
+"lo": "ຕົ້ນແປກເກົ່າແຄມທະເລເປັນຮົ່ມໃຫ້ເດັກນ້ອຍຫຼາຍລຸ້ນຄົນ.",
+"th": "ต้นสนเก่าแก่ริมทะเลให้ร่มเงาแก่เด็กๆ หลายรุ่น",
+"zh": "海边的古松见证了一代又一代村里孩子的成长。",
+"ja": "ながい あいだ むらの こどもたちを みまもって きたよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_pineancient.4": {
+"en": "Shhh, deep rustle!",
+"lo": "ຊູ່ ຊາ!",
+"th": "ชู่ ซ่า!",
+"zh": "古松枝叶沙沙低语！",
+"ja": "ざーっ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_oldtaro.0": {
+"en": "Grandfather Tarō. Grandfather Tarō has a gentle smile and a snowy white beard.",
+"lo": "ພໍ່ຕູ້ທາໂຣ. ພໍ່ຕູ້ທາໂຣ ມີຮອຍຍິ້ມອ່ອນໂຍນ ແລະ ໜວດຂາວຄືຫິມະ.",
+"th": "คุณตาทาโร่ คุณตาทาโร่มีรอยยิ้มอ่อนโยนและหนวดขาวเหมือนหิมะ",
+"zh": "太郎爷爷。太郎爷爷有着温柔的笑容和雪白的胡子。",
+"ja": "おじいさん たろう。おじいさん たろうは やさしい えがおと しろい ひげだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_oldtaro.1": {
+"en": "Hello, Grandfather Tarō!",
+"lo": "ສະບາຍດີ ພໍ່ຕູ້ທາໂຣ!",
+"th": "สวัสดีคุณตาทาโร่!",
+"zh": "你好，太郎爷爷！",
+"ja": "こんにちは、おじいさん たろう！",
+"who": "oldtaro",
+"tag": "greet"
+},
+"ura_oldtaro.2": {
+"en": "Hello, little friend! I am Grandfather Tarō.",
+"lo": "ສະບາຍດີ ຫຼານນ້ອຍ! ຂ້ອຍແມ່ນພໍ່ຕູ້ທາໂຣ.",
+"th": "สวัสดี หลานน้อย! ตาคือคุณตาทาโร่",
+"zh": "你好呀小朋友！我是太郎爷爷。",
+"ja": "こんにちは！ わたしは おじいさん たろうだよ。",
+"who": "oldtaro",
+"tag": "say"
+},
+"ura_oldtaro.3": {
+"en": "Three hundred years passed while I visited under the sea.",
+"lo": "ສາມຮ້ອຍປີຜ່ານໄປຕອນຂ້ອຍໄປຢາມໃຕ້ທະເລ.",
+"th": "สามร้อยปีผ่านไปตอนตาไปเยี่ยมใต้ทะเล",
+"zh": "我在海底做客时，陆地上已经过了三百年。",
+"ja": "うみに いる あいだに さんびゃくねん たっていたんだよ。",
+"who": "oldtaro",
+"tag": "fact"
+},
+"ura_oldtaro.4": {
+"en": "I sit beneath the ancient pine and tell sea stories.",
+"lo": "ຂ້ອຍນັ່ງກ້ອງຕົ້ນແປກບູຮານ ແລະ ເລົ່ານິທານທະເລ.",
+"th": "ตานั่งใต้ต้นสนโบราณและเล่านิทานทะเล",
+"zh": "我坐在古老松树下给大家讲大海的故事。",
+"ja": "おおまつの したで うみの おはなしを するよ。",
+"who": "oldtaro",
+"tag": "does"
+},
+"ura_oldtaro.5": {
+"en": "Kind children bring me warm rice cakes to share.",
+"lo": "ເດັກນ້ອຍໃຈດີເອົາເຂົ້າໜົມອຸ່ນໆມາແບ່ງໃຫ້ຂ້ອຍ.",
+"th": "เด็กๆ ใจดีนำขนมอุ่นๆ มาแบ่งให้ตา",
+"zh": "善良的孩子们送来暖暖的年糕和我分享。",
+"ja": "やさしい こどもたちが おもちを もって きて くれるよ。",
+"who": "oldtaro",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"ura_oldtaro.6": {
+"en": "My little pink shell still hums the song of the waves.",
+"lo": "ເປືອກຫອຍສີບົວນ້ອຍຂອງຂ້ອຍຍັງຮ້ອງເພງຂອງຄື້ນທະເລ.",
+"th": "เปลือกหอยสีชมพูน้อยของตายังฮัมเพลงแห่งคลื่นทะเล",
+"zh": "我的粉色小贝壳至今还轻唱着海浪之歌。",
+"ja": "ちいさな かいがらが いまも うみの うたを うたうよ。",
+"who": "oldtaro",
+"tag": "does"
+},
+"ura_oldtaro.7": {
+"en": "A promise is a precious gift to keep with care.",
+"lo": "ຄຳສັນຍາແມ່ນຂອງຂວັນລ້ຳຄ່າທີ່ຕ້ອງຮັກສາໃຫ້ດີ.",
+"th": "คำสัญญาคือของขวัญล้ำค่าที่ต้องรักษาให้ดี",
+"zh": "约定是一份需要用心守护的珍贵礼物。",
+"ja": "やくそくは たいせつに まもる ものなんだよ。",
+"who": "oldtaro",
+"tag": "does"
+},
+"ura_oldtaro.8": {
+"en": "Treasure the people you love right while you are together.",
+"lo": "ຈົ່ງຮັກແພງຄົນທີ່ເຈົ້າຮັກໃນຕອນທີ່ຍັງຢູ່ນຳກັນ.",
+"th": "จงรักและหวงแหนคนที่รักในตอนที่ยังอยู่ด้วยกัน",
+"zh": "要珍惜此刻陪在身边的亲人和朋友。",
+"ja": "いっしょに いる じかんを たいせつに しようね。",
+"who": "oldtaro",
+"tag": "does"
+},
+"ura_oldtaro.9": {
+"en": "My snowy beard and eyebrows are soft as sea foam.",
+"lo": "ໜວດ ແລະ ຄິ້ວສີຂາວຂອງຂ້ອຍນຸ້ມຄືຟອງຄື້ນ.",
+"th": "หนวดและคิ้วสีขาวของตานุ่มเหมือนฟองคลื่น",
+"zh": "我雪白的胡子和眉毛像浪花一样柔软。",
+"ja": "しろい ひげは なみの あわみたいに ふわふわだよ。",
+"who": "oldtaro",
+"tag": "looks"
+},
+"ura_openbox.0": {
+"en": "An open box. An open box holds a tiny pink sea shell that sings softly.",
+"lo": "ກ່ອງເປີດແລ້ວ. ກ່ອງເປີດແລ້ວ ມີເປືອກຫອຍສີບົວນ້ອຍທີ່ຮ້ອງເພງຄ່ອຍໆ.",
+"th": "กล่องที่เปิดแล้ว กล่องที่เปิดแล้วมีเปลือกหอยสีชมพูน้อยที่ร้องเพลงเบาๆ",
+"zh": "打开的宝盒。打开的宝盒里躺着一只轻声歌唱的粉色小贝壳。",
+"ja": "あいた たまてばこ。あいた たまてばこの なかに ちいさな かいがらが あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_openbox.1": {
+"en": "Inside the open box rests a singing pink sea shell!",
+"lo": "ຂ້າງໃນກ່ອງທີ່ເປີດແລ້ວມີເປືອກຫອຍສີບົວຮ້ອງເພງໄດ້!",
+"th": "ข้างในกล่องที่เปิดแล้วมีเปลือกหอยสีชมพูร้องเพลงได้!",
+"zh": "打开的宝盒里静静躺着一只会唱歌的粉色小贝壳！",
+"ja": "あいた はこの なかに うたう かいがらが はいっているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_openbox.2": {
+"en": "The red silk ribbon lies untied beside the golden lid.",
+"lo": "ໂບໄໝສີແດງແກ້ອອກວາງຢູ່ຂ້າງຝາກ່ອງສີຄຳ.",
+"th": "โบว์ไหมสีแดงแก้ออกวางอยู่ข้างฝากล่องสีทอง",
+"zh": "解开的红丝带静静地垂在金漆盒盖旁。",
+"ja": "あかい ひもが ほどけて ふたが あいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_openbox.3": {
+"en": "Even after the mist drifted away, a gentle memory remained.",
+"lo": "ເຖິງແມ່ນໝອກຈະລອຍໄປແລ້ວ ແຕ່ຄວາມຊົງຈຳອ່ອນໂຍນຍັງຄົງຢູ່.",
+"th": "แม้หมอกจะลอยไปแล้ว แต่ความทรงจำอ่อนโยนยังคงอยู่",
+"zh": "即使白雾散去了，温柔的回忆依然留了下来。",
+"ja": "けむりが きえても やさしい おもいでが のこったよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_openbox.4": {
+"en": "Hum, shhh!",
+"lo": "ຮຳ ຊູ່!",
+"th": "ฮัม ชู่!",
+"zh": "轻柔的海浪声！",
+"ja": "ふわり、ざざーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_mist.0": {
+"en": "White mist. White mist curls softly out of the opened box into the breeze.",
+"lo": "ໝອກສີຂາວ. ໝອກສີຂາວ ລອຍມ້ວນອອກມາຈາກກ່ອງທີ່ເປີດສູ່ສາຍລົມ.",
+"th": "หมอกสีขาว หมอกสีขาวลอยม้วนออกจากกล่องที่เปิดสู่สายลม",
+"zh": "白雾云。白雾云从打开的宝盒里轻轻卷出随风飘散。",
+"ja": "しろい けむり。しろい けむりが はこから ふわっと たちのぼるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_mist.1": {
+"en": "Tap the white mist puffs to clear the shore air gently!",
+"lo": "ກົດກ້ອນໝອກສີຂາວເພື່ອປັດອາກາດແຄມຝັ່ງໃຫ້ໃສ!",
+"th": "แตะก้อนหมอกสีขาวเพื่อปัดอากาศริมฝั่งให้ใส!",
+"zh": "点一点白雾云，轻轻吹散海滩上的云雾！",
+"ja": "しろい けむりを タップして そらを すっきり させよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_mist.2": {
+"en": "Silky silver clouds curl softly upward into the sky.",
+"lo": "ເມກສີເງິນອ່ອນນຸ້ມລອຍມ້ວນຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "เมฆสีเงินอ่อนนุ่มลอยม้วนขึ้นสู่ท้องฟ้า",
+"zh": "丝滑的银白云雾轻轻卷向天空。",
+"ja": "ふわふわの しろい くもみたいに そらへ のぼるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_mist.3": {
+"en": "All three hundred years slept gently inside the white mist.",
+"lo": "ທັງສາມຮ້ອຍປີຫຼັບໄຫຼຢ່າງອ່ອນໂຍນຢູ່ໃນໝອກສີຂາວ.",
+"th": "ทั้งสามร้อยปีหลับใหลอย่างอ่อนโยนอยู่ในหมอกสีขาว",
+"zh": "三百年的光阴就静静沉睡在这缕白雾里。",
+"ja": "さんびゃくねんの じかんが けむりの なかに あったんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_mist.4": {
+"en": "Whoosh, puff!",
+"lo": "ວູບ ປຸ໊ບ!",
+"th": "วูบ ปุ๊บ!",
+"zh": "呼，轻飘飘！",
+"ja": "ふわっ、しゅわー！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_boy.0": {
+"en": "A village boy. The village boy brings a sturdy walking stick for Grandfather Tarō.",
+"lo": "ເດັກຊາຍໃນບ້ານ. ເດັກຊາຍໃນບ້ານ ເອົາໄມ້ເທົ້າແຂງແຮງມາໃຫ້ພໍ່ຕູ້ທາໂຣ.",
+"th": "เด็กชายในหมู่บ้าน เด็กชายในหมู่บ้านนำไม้เท้าแข็งแรงมาให้คุณตาทาโร่",
+"zh": "村里男孩。村里男孩给太郎爷爷送来一根结实的拐杖。",
+"ja": "むらの おとこのこ。むらの おとこのこは おじいさんに つえを もって きたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_boy.1": {
+"en": "Hello, village boy!",
+"lo": "ສະບາຍດີ ເດັກຊາຍໃນບ້ານ!",
+"th": "สวัสดีเด็กชายในหมู่บ้าน!",
+"zh": "你好，村里男孩！",
+"ja": "こんにちは、むらの おとこのこ！",
+"who": "children",
+"tag": "greet"
+},
+"ura_boy.2": {
+"en": "Good morning, Grandfather! Look what I brought you!",
+"lo": "ສະບາຍດີຕອນເຊົ້າ ພໍ່ຕູ້! ເບິ່ງສິ່ງທີ່ຫຼານເອົາມາໃຫ້ແມ້!",
+"th": "สวัสดีตอนเช้าครับคุณตา! ดูสิ่งที่หนูเอามาให้สิ!",
+"zh": "早上好爷爷！看我给您带什么来了！",
+"ja": "おはようございます おじいさん！ つえを もって きたよ！",
+"who": "children",
+"tag": "say"
+},
+"ura_boy.3": {
+"en": "A sturdy wooden walking stick helps elders walk smoothly on sand.",
+"lo": "ໄມ້ເທົ້າແຂງແຮງຊ່ວຍໃຫ້ຜູ້ເຖົ້າຍ່າງເທິງຊາຍໄດ້ສະບາຍ.",
+"th": "ไม้เท้าแข็งแรงช่วยให้ผู้เฒ่าเดินบนทรายได้สบาย",
+"zh": "结实的木拐杖能帮助老人在沙滩上稳稳行走。",
+"ja": "じょうぶな つえが あると すなはまも らくに あるけるよ。",
+"who": "children",
+"tag": "fact"
+},
+"ura_boy.4": {
+"en": "I love hearing Grandfather's tales of the Sea Palace!",
+"lo": "ຫຼານມັກຟັງນິທານວັງໃຕ້ທະເລຂອງພໍ່ຕູ້ຫຼາຍ!",
+"th": "หนูชอบฟังนิทานวังใต้ทะเลของคุณตามาก!",
+"zh": "我最喜欢听爷爷讲海龙宫的故事啦！",
+"ja": "おじいさんの りゅうぐうの おはなしが だいすき！",
+"who": "children",
+"tag": "does"
+},
+"ura_boy.5": {
+"en": "I laugh when the cheeky crab steals a rice cake crumb!",
+"lo": "ຫຼານຫົວເມື່ອກະປູຂີ້ຫຼິ້ນລັກເສດເຂົ້າໜົມ!",
+"th": "หนูหัวเราะเมื่อปูจอมซนแอบหยิบเศษขนม!",
+"zh": "调皮的小螃蟹偷走糕点碎屑时，我笑得可开心啦！",
+"ja": "かにが おもちを もって いって みんなで わらったよ！",
+"who": "children",
+"tag": "does"
+},
+"ura_boy.6": {
+"en": "I will always keep my promises just like Tarō learned.",
+"lo": "ຫຼານຈະຮັກສາຄຳສັນຍາສະເໝີຄືກັບທີ່ທາໂຣໄດ້ຮຽນຮູ້.",
+"th": "หนูจะรักษาสัญญาเสมอเหมือนที่ทาโร่ได้เรียนรู้",
+"zh": "我会一直信守诺言，记住太郎爷爷教给我们的道理。",
+"ja": "ぼくも やくそくを ずっと たいせつに まもるよ。",
+"who": "children",
+"tag": "does"
+},
+"ura_boy.7": {
+"en": "I run down the shore in a bright striped summer jacket.",
+"lo": "ຫຼານແລ່ນລົງຫາດຊາຍໃນເສື້ອລາຍສົດໃສ.",
+"th": "หนูวิ่งลงหาดทรายในเสื้อลายสดใส",
+"zh": "我穿着条纹夏衣沿着海滩欢快地奔跑。",
+"ja": "しまもようの きもので はまべを かけるよ。",
+"who": "children",
+"tag": "looks"
+},
+"ura_boy.8": {
+"en": "Tell us about the octopus drummer again, please!",
+"lo": "ເລົ່າເລື່ອງປາມຶກຕີກອງໃຫ້ຟັງອີກແດ່ເດີ້!",
+"th": "เล่าเรื่องปลาหมึกตีกลองให้ฟังอีกนะครับ!",
+"zh": "请再给我们讲讲章鱼鼓手的故事吧！",
+"ja": "たこの たいこの おはなし、もう いちど きかせて！",
+"who": "children",
+"tag": "say"
+},
+"ura_boy.9": {
+"en": "Hee hee hee!",
+"lo": "ຄິກ ຄິກ ຄິກ!",
+"th": "คิก คิก คิก!",
+"zh": "嘻嘻嘻！",
+"ja": "えへへへ！",
+"who": "children",
+"tag": "sound"
+},
+"ura_girl.0": {
+"en": "A village girl. The village girl shares warm rice cakes from her basket.",
+"lo": "ເດັກຍິງໃນບ້ານ. ເດັກຍິງໃນບ້ານ ແບ່ງເຂົ້າໜົມອຸ່ນໆຈາກກະຕ່າຂອງນາງ.",
+"th": "เด็กหญิงในหมู่บ้าน เด็กหญิงในหมู่บ้านแบ่งขนมอุ่นๆ จากตะกร้าของเธอ",
+"zh": "村里女孩。村里女孩从篮子里拿出暖暖的年糕分享给大家。",
+"ja": "むらの おんなのこ。むらの おんなのこは かごから あたたかい おもちを わけるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_girl.1": {
+"en": "Hello, village girl!",
+"lo": "ສະບາຍດີ ເດັກຍິງໃນບ້ານ!",
+"th": "สวัสดีเด็กหญิงในหมู่บ้าน!",
+"zh": "你好，村里女孩！",
+"ja": "こんにちは、むらの おんなのこ！",
+"who": "children",
+"tag": "greet"
+},
+"ura_girl.2": {
+"en": "Hello, Grandfather! Have a warm rice cake!",
+"lo": "ສະບາຍດີ ພໍ່ຕູ້! ກິນເຂົ້າໜົມແປ້ງເຂົ້າອຸ່ນໆແດ່ເດີ້!",
+"th": "สวัสดีค่ะคุณตา! ทานขนมแป้งข้าวอุ่นๆ นะคะ!",
+"zh": "您好爷爷！来尝一块暖暖的年糕吧！",
+"ja": "こんにちは おじいさん！ あたたかい おもちを どうぞ！",
+"who": "children",
+"tag": "say"
+},
+"ura_girl.3": {
+"en": "Sharing food with neighbours is a warm Japanese village custom.",
+"lo": "ການແບ່ງປັນອາຫານໃຫ້ເພື່ອນບ້ານແມ່ນປະເພນີອົບອຸ່ນຂອງບ້ານ.",
+"th": "การแบ่งปันอาหารให้เพื่อนบ้านเป็นประเพณีอบอุ่นของหมู่บ้าน",
+"zh": "与邻里分享食物是日本乡村温暖的传统。",
+"ja": "みんなで おもちを わけあうと こころが ぽかぽか するよ。",
+"who": "children",
+"tag": "fact"
+},
+"ura_girl.4": {
+"en": "I carried a woven basket of fresh rice cakes down to the pine.",
+"lo": "ຫຼານຖືກະຕ່າເຂົ້າໜົມໃໝ່ໆລົງມາກ້ອງຕົ້ນແປກ.",
+"th": "หนูถือตะกร้าขนมสดใหม่ลงมาใต้ต้นสน",
+"zh": "我提着一篮热腾腾的年糕来到大松树下。",
+"ja": "かごに おもちを いれて おおまつの したへ きたよ。",
+"who": "children",
+"tag": "does"
+},
+"ura_girl.5": {
+"en": "I waved back when the friendly sea turtle popped from the surf!",
+"lo": "ຫຼານໂບກມືຕອບເມື່ອເຕົ່າທະເລໃຈດີໂຜ່ຂຶ້ນມາຈາກຄື້ນ!",
+"th": "หนูโบกมือตอบเมื่อเต่าทะเลใจดีโผล่ขึ้นมาจากคลื่น!",
+"zh": "友善的海龟从浪花里探出头时，我高兴地挥手回应！",
+"ja": "うみがめさんに てを ふって あいさつ したよ！",
+"who": "children",
+"tag": "does"
+},
+"ura_girl.6": {
+"en": "We sit together under the pine and listen to the sea.",
+"lo": "ພວກເຮົານັ່ງນຳກັນກ້ອງຕົ້ນແປກ ແລະ ຟັງສຽງທະເລ.",
+"th": "พวกเรานั่งด้วยกันใต้ต้นสนและฟังเสียงทะเล",
+"zh": "我们一起坐在松树下倾听大海的声音。",
+"ja": "おおまつの したで みんなで うみの おとを きくよ。",
+"who": "children",
+"tag": "does"
+},
+"ura_girl.7": {
+"en": "I wear a soft rose kimono and a neat ribbon in my hair.",
+"lo": "ຫຼານໃສ່ຊຸດກິໂມໂນສີບົວອ່ອນ ແລະ ຜູກໂບງາມຢູ່ຜົມ.",
+"th": "หนูใส่กิโมโนสีชมพูอ่อนและผูกโบว์สวยที่ผม",
+"zh": "我穿着淡粉色和服，头发上系着漂亮的发带。",
+"ja": "ピンクの きものに きれいな リボンを つけているよ。",
+"who": "children",
+"tag": "looks"
+},
+"ura_girl.8": {
+"en": "Your stories make the whole village smile!",
+"lo": "ນິທານຂອງພໍ່ຕູ້ເຮັດໃຫ້ທັງບ້ານຍິ້ມຢ່າງມີຄວາມສຸກ!",
+"th": "นิทานของคุณตาทำให้ทั้งหมู่บ้านยิ้มอย่างมีความสุข!",
+"zh": "爷爷讲的故事让全村人都露出了笑容！",
+"ja": "おじいさんの おはなしで みんな えがおに なるよ！",
+"who": "children",
+"tag": "say"
+},
+"ura_girl.9": {
+"en": "Giggle, giggle!",
+"lo": "ຄິກໆ ຄັກໆ!",
+"th": "คิกๆ คักๆ!",
+"zh": "咯咯笑！",
+"ja": "くすくす！",
+"who": "children",
+"tag": "sound"
+},
+"ura_ricecake.0": {
+"en": "A rice cake. A rice cake is warm, soft and sweet to share with friends.",
+"lo": "ເຂົ້າໜົມແປ້ງເຂົ້າ. ເຂົ້າໜົມແປ້ງເຂົ້າ ອຸ່ນ ນຸ້ມ ແລະ ຫວານໄວ້ແບ່ງໝູ່ເພື່ອນ.",
+"th": "ขนมแป้งข้าว ขนมแป้งข้าวอุ่น นุ่ม และหวานไว้แบ่งเพื่อนๆ",
+"zh": "年糕。年糕暖乎乎、软绵绵的，最适合和朋友分享。",
+"ja": "おもち。おもちは あたたかくて やわらかくて おいしいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_ricecake.1": {
+"en": "Share each warm rice cake with Grandfather and his friends!",
+"lo": "ແບ່ງເຂົ້າໜົມແປ້ງເຂົ້າອຸ່ນໆໃຫ້ພໍ່ຕູ້ ແລະ ໝູ່ເພື່ອນ!",
+"th": "แบ่งขนมแป้งข้าวอุ่นๆ ให้คุณตาและเพื่อนๆ!",
+"zh": "把暖乎乎的年糕分给太郎爷爷和小伙伴们吧！",
+"ja": "おもちを おじいさんと みんなで わけあおう！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_ricecake.2": {
+"en": "Plump round rice cakes rest neatly on green leaves.",
+"lo": "ເຂົ້າໜົມກົມອວບວາງຮຽບຮ້ອຍເທິງໃບໄມ້ສີຂຽວ.",
+"th": "ขนมกลมอวบวางเรียบร้อยบนใบไม้สีเขียว",
+"zh": "圆滚滚的年糕整齐地摆在绿叶上。",
+"ja": "まるくて もちもちの おもちが はっぱに のっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_ricecake.3": {
+"en": "Japanese mochi is pounded from steamed sweet rice until soft.",
+"lo": "ໂມຈິຍີ່ປຸ່ນຕຳຈາກເຂົ້າໜຽວໜຶ້ງຈົນອ່ອນນຸ້ມ.",
+"th": "โมจิญี่ปุ่นตำจากข้าวเหนียวนึ่งจนอ่อนนุ่ม",
+"zh": "日本年糕是用蒸熟的糯米舂打至软糯做成的。",
+"ja": "おもちは もちごめを ついて やわらかく つくるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_ricecake.4": {
+"en": "Yum, munch!",
+"lo": "ແຊບ ງ່ຳໆ!",
+"th": "อร่อยจัง ง่ำๆ!",
+"zh": "真好吃，嚼呀嚼！",
+"ja": "もぐもぐ、おいしい！",
+"who": "narrator",
+"tag": "sound"
+},
+"ura_crumb.0": {
+"en": "A cake crumb. A cake crumb dropped onto the sand for a cheeky little crab!",
+"lo": "ເສດເຂົ້າໜົມ. ເສດເຂົ້າໜົມ ຕົກລົງເທິງຊາຍໃຫ້ກະປູນ້ອຍຂີ້ຫຼິ້ນ!",
+"th": "เศษขนม เศษขนมตกลงบนทรายให้ปูน้อยจอมซน!",
+"zh": "糕点碎屑。糕点碎屑掉在沙滩上，被调皮的小螃蟹捡到了！",
+"ja": "おもちの かけら。おもちの かけらが すなはまに おちて かにが みつけたよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ura_crumb.1": {
+"en": "The cheeky shore crab lifts this crumb like a tiny prize!",
+"lo": "ກະປູແຄມຫາດຂີ້ຫຼິ້ນຍົກເສດເຂົ້າໜົມນີ້ຄືລາງວັນນ້ອຍ!",
+"th": "ปูชายหาดจอมซนยกเศษขนมนี้เหมือนรางวัลชิ้นน้อย!",
+"zh": "调皮的海滩螃蟹举起这块碎屑，像得了大奖！",
+"ja": "かにが たからものみたいに もちあげて はしるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ura_crumb.2": {
+"en": "A golden sweet morsel sits bright on the pale beach sand.",
+"lo": "ເສດເຂົ້າໜົມສີຄຳຫວານຕັ້ງເດັ່ນເທິງຫາດຊາຍສີອ່ອນ.",
+"th": "เศษขนมสีทองหวานเด่นบนหาดทรายสีอ่อน",
+"zh": "金黄香甜的小碎块落在淡色沙滩上。",
+"ja": "ちいさな おもちの かけらが すなに おちているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_crumb.3": {
+"en": "Even the tiniest snack makes a beach crab very happy!",
+"lo": "ແມ່ນແຕ່ຂອງກິນນ້ອຍໆກໍເຮັດໃຫ້ກະປູແຄມຫາດດີໃຈຫຼາຍ!",
+"th": "แม้แต่ของกินชิ้นเล็กๆ ก็ทำให้ปูชายหาดดีใจมาก!",
+"zh": "哪怕是一小丁点点心，也能让海滩小螃蟹乐开花！",
+"ja": "ちいさな かけらでも かにには ごちそう なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_crumb.4": {
+"en": "Nib, nibble!",
+"lo": "ງັບ ງັບ!",
+"th": "งับ งับ!",
+"zh": "咔嚓，咬一口！",
+"ja": "もぐっ、ちょきん！",
+"who": "narrator",
+"tag": "sound"
+}
+},
+"chars": {},
+"pools": {
+"ura_pinegrove": [
+"ura_pinegrove.0",
+"ura_pinegrove.1",
+"ura_pinegrove.2",
+"ura_pinegrove.3",
+"ura_pinegrove.4"
+],
+"ura_cliffpine": [
+"ura_cliffpine.0",
+"ura_cliffpine.1",
+"ura_cliffpine.2",
+"ura_cliffpine.3",
+"ura_cliffpine.4"
+],
+"ura_boathouse": [
+"ura_boathouse.0",
+"ura_boathouse.1",
+"ura_boathouse.2",
+"ura_boathouse.3",
+"ura_boathouse.4"
+],
+"ura_dunehedge": [
+"ura_dunehedge.0",
+"ura_dunehedge.1",
+"ura_dunehedge.2",
+"ura_dunehedge.3",
+"ura_dunehedge.4"
+],
+"ura_netbaskets": [
+"ura_netbaskets.0",
+"ura_netbaskets.1",
+"ura_netbaskets.2",
+"ura_netbaskets.3",
+"ura_netbaskets.4"
+],
+"ura_taro": [
+"ura_taro.0",
+"ura_taro.1",
+"ura_taro.2",
+"ura_taro.3",
+"ura_taro.4",
+"ura_taro.5",
+"ura_taro.6",
+"ura_taro.7",
+"ura_taro.8",
+"ura_taro.9",
+"ura_taro.10",
+"ura_taro.11"
+],
+"ura_boys": [
+"ura_boys.0",
+"ura_boys.1",
+"ura_boys.2",
+"ura_boys.3",
+"ura_boys.4",
+"ura_boys.5",
+"ura_boys.6",
+"ura_boys.7",
+"ura_boys.8",
+"ura_boys.9"
+],
+"ura_turtle": [
+"ura_turtle.0",
+"ura_turtle.1",
+"ura_turtle.2",
+"ura_turtle.3",
+"ura_turtle.4",
+"ura_turtle.5",
+"ura_turtle.6",
+"ura_turtle.7",
+"ura_turtle.8",
+"ura_turtle.9"
+],
+"ura_driftwood": [
+"ura_driftwood.0",
+"ura_driftwood.1",
+"ura_driftwood.2",
+"ura_driftwood.3",
+"ura_driftwood.4"
+],
+"ura_crab": [
+"ura_crab.0",
+"ura_crab.1",
+"ura_crab.2",
+"ura_crab.3",
+"ura_crab.4",
+"ura_crab.5"
+],
+"ura_heron": [
+"ura_heron.0",
+"ura_heron.1",
+"ura_heron.2",
+"ura_heron.3",
+"ura_heron.4",
+"ura_heron.5"
+],
+"ura_seafish": [
+"ura_seafish.0",
+"ura_seafish.1",
+"ura_seafish.2",
+"ura_seafish.3",
+"ura_seafish.4",
+"ura_seafish.5"
+],
+"ura_fishrack": [
+"ura_fishrack.0",
+"ura_fishrack.1",
+"ura_fishrack.2",
+"ura_fishrack.3",
+"ura_fishrack.4"
+],
+"ura_baskets": [
+"ura_baskets.0",
+"ura_baskets.1",
+"ura_baskets.2",
+"ura_baskets.3",
+"ura_baskets.4"
+],
+"ura_shrub": [
+"ura_shrub.0",
+"ura_shrub.1",
+"ura_shrub.2",
+"ura_shrub.3",
+"ura_shrub.4"
+],
+"ura_reeds": [
+"ura_reeds.0",
+"ura_reeds.1",
+"ura_reeds.2",
+"ura_reeds.3",
+"ura_reeds.4"
+],
+"ura_stonelantern": [
+"ura_stonelantern.0",
+"ura_stonelantern.1",
+"ura_stonelantern.2",
+"ura_stonelantern.3",
+"ura_stonelantern.4"
+],
+"ura_searocks": [
+"ura_searocks.0",
+"ura_searocks.1",
+"ura_searocks.2",
+"ura_searocks.3",
+"ura_searocks.4"
+],
+"ura_shells": [
+"ura_shells.0",
+"ura_shells.1",
+"ura_shells.2",
+"ura_shells.3",
+"ura_shells.4"
+],
+"ura_waves": [
+"ura_waves.0",
+"ura_waves.1",
+"ura_waves.2",
+"ura_waves.3",
+"ura_waves.4"
+],
+"ura_shoresky": [
+"ura_shoresky.0",
+"ura_shoresky.1",
+"ura_shoresky.2",
+"ura_shoresky.3",
+"ura_shoresky.4"
+],
+"ura_headland": [
+"ura_headland.0",
+"ura_headland.1",
+"ura_headland.2",
+"ura_headland.3",
+"ura_headland.4"
+],
+"ura_cottage": [
+"ura_cottage.0",
+"ura_cottage.1",
+"ura_cottage.2",
+"ura_cottage.3",
+"ura_cottage.4"
+],
+"ura_pinegreat": [
+"ura_pinegreat.0",
+"ura_pinegreat.1",
+"ura_pinegreat.2",
+"ura_pinegreat.3",
+"ura_pinegreat.4"
+],
+"ura_seastack": [
+"ura_seastack.0",
+"ura_seastack.1",
+"ura_seastack.2",
+"ura_seastack.3",
+"ura_seastack.4"
+],
+"ura_islandoutcrop": [
+"ura_islandoutcrop.0",
+"ura_islandoutcrop.1",
+"ura_islandoutcrop.2",
+"ura_islandoutcrop.3",
+"ura_islandoutcrop.4"
+],
+"ura_reefswell": [
+"ura_reefswell.0",
+"ura_reefswell.1",
+"ura_reefswell.2",
+"ura_reefswell.3",
+"ura_reefswell.4"
+],
+"ura_wavecrest": [
+"ura_wavecrest.0",
+"ura_wavecrest.1",
+"ura_wavecrest.2",
+"ura_wavecrest.3",
+"ura_wavecrest.4"
+],
+"ura_boat": [
+"ura_boat.0",
+"ura_boat.1",
+"ura_boat.2",
+"ura_boat.3",
+"ura_boat.4"
+],
+"ura_bubble": [
+"ura_bubble.0",
+"ura_bubble.1",
+"ura_bubble.2",
+"ura_bubble.3",
+"ura_bubble.4"
+],
+"ura_midswell": [
+"ura_midswell.0",
+"ura_midswell.1",
+"ura_midswell.2",
+"ura_midswell.3",
+"ura_midswell.4"
+],
+"ura_kelpforest": [
+"ura_kelpforest.0",
+"ura_kelpforest.1",
+"ura_kelpforest.2",
+"ura_kelpforest.3",
+"ura_kelpforest.4"
+],
+"ura_kelpspire": [
+"ura_kelpspire.0",
+"ura_kelpspire.1",
+"ura_kelpspire.2",
+"ura_kelpspire.3",
+"ura_kelpspire.4"
+],
+"ura_coralspire": [
+"ura_coralspire.0",
+"ura_coralspire.1",
+"ura_coralspire.2",
+"ura_coralspire.3",
+"ura_coralspire.4"
+],
+"ura_reefridge": [
+"ura_reefridge.0",
+"ura_reefridge.1",
+"ura_reefridge.2",
+"ura_reefridge.3",
+"ura_reefridge.4"
+],
+"ura_kelpboulder": [
+"ura_kelpboulder.0",
+"ura_kelpboulder.1",
+"ura_kelpboulder.2",
+"ura_kelpboulder.3",
+"ura_kelpboulder.4"
+],
+"ura_coralfan": [
+"ura_coralfan.0",
+"ura_coralfan.1",
+"ura_coralfan.2",
+"ura_coralfan.3",
+"ura_coralfan.4"
+],
+"ura_puffer": [
+"ura_puffer.0",
+"ura_puffer.1",
+"ura_puffer.2",
+"ura_puffer.3",
+"ura_puffer.4",
+"ura_puffer.5"
+],
+"ura_silverfish": [
+"ura_silverfish.0",
+"ura_silverfish.1",
+"ura_silverfish.2",
+"ura_silverfish.3",
+"ura_silverfish.4",
+"ura_silverfish.5"
+],
+"ura_coralreef": [
+"ura_coralreef.0",
+"ura_coralreef.1",
+"ura_coralreef.2",
+"ura_coralreef.3",
+"ura_coralreef.4"
+],
+"ura_kelpshort": [
+"ura_kelpshort.0",
+"ura_kelpshort.1",
+"ura_kelpshort.2",
+"ura_kelpshort.3",
+"ura_kelpshort.4"
+],
+"ura_seabedrocks": [
+"ura_seabedrocks.0",
+"ura_seabedrocks.1",
+"ura_seabedrocks.2",
+"ura_seabedrocks.3",
+"ura_seabedrocks.4"
+],
+"ura_anemone": [
+"ura_anemone.0",
+"ura_anemone.1",
+"ura_anemone.2",
+"ura_anemone.3",
+"ura_anemone.4"
+],
+"ura_seasky": [
+"ura_seasky.0",
+"ura_seasky.1",
+"ura_seasky.2",
+"ura_seasky.3",
+"ura_seasky.4"
+],
+"ura_farreefs": [
+"ura_farreefs.0",
+"ura_farreefs.1",
+"ura_farreefs.2",
+"ura_farreefs.3",
+"ura_farreefs.4"
+],
+"ura_coralarch": [
+"ura_coralarch.0",
+"ura_coralarch.1",
+"ura_coralarch.2",
+"ura_coralarch.3",
+"ura_coralarch.4"
+],
+"ura_coraltower": [
+"ura_coraltower.0",
+"ura_coraltower.1",
+"ura_coraltower.2",
+"ura_coraltower.3",
+"ura_coraltower.4"
+],
+"ura_palacegarden": [
+"ura_palacegarden.0",
+"ura_palacegarden.1",
+"ura_palacegarden.2",
+"ura_palacegarden.3",
+"ura_palacegarden.4"
+],
+"ura_coralwall": [
+"ura_coralwall.0",
+"ura_coralwall.1",
+"ura_coralwall.2",
+"ura_coralwall.3",
+"ura_coralwall.4"
+],
+"ura_anemoneleg": [
+"ura_anemoneleg.0",
+"ura_anemoneleg.1",
+"ura_anemoneleg.2",
+"ura_anemoneleg.3",
+"ura_anemoneleg.4"
+],
+"ura_otohime": [
+"ura_otohime.0",
+"ura_otohime.1",
+"ura_otohime.2",
+"ura_otohime.3",
+"ura_otohime.4",
+"ura_otohime.5",
+"ura_otohime.6",
+"ura_otohime.7",
+"ura_otohime.8",
+"ura_otohime.9"
+],
+"ura_bream": [
+"ura_bream.0",
+"ura_bream.1",
+"ura_bream.2",
+"ura_bream.3",
+"ura_bream.4",
+"ura_bream.5"
+],
+"ura_flounder": [
+"ura_flounder.0",
+"ura_flounder.1",
+"ura_flounder.2",
+"ura_flounder.3",
+"ura_flounder.4",
+"ura_flounder.5"
+],
+"ura_jelly": [
+"ura_jelly.0",
+"ura_jelly.1",
+"ura_jelly.2",
+"ura_jelly.3",
+"ura_jelly.4",
+"ura_jelly.5"
+],
+"ura_lantern": [
+"ura_lantern.0",
+"ura_lantern.1",
+"ura_lantern.2",
+"ura_lantern.3",
+"ura_lantern.4"
+],
+"ura_pearlstand": [
+"ura_pearlstand.0",
+"ura_pearlstand.1",
+"ura_pearlstand.2",
+"ura_pearlstand.3",
+"ura_pearlstand.4"
+],
+"ura_coralbed": [
+"ura_coralbed.0",
+"ura_coralbed.1",
+"ura_coralbed.2",
+"ura_coralbed.3",
+"ura_coralbed.4"
+],
+"ura_pearlurn": [
+"ura_pearlurn.0",
+"ura_pearlurn.1",
+"ura_pearlurn.2",
+"ura_pearlurn.3",
+"ura_pearlurn.4"
+],
+"ura_palacesky": [
+"ura_palacesky.0",
+"ura_palacesky.1",
+"ura_palacesky.2",
+"ura_palacesky.3",
+"ura_palacesky.4"
+],
+"ura_fartowers": [
+"ura_fartowers.0",
+"ura_fartowers.1",
+"ura_fartowers.2",
+"ura_fartowers.3",
+"ura_fartowers.4"
+],
+"ura_pearlgate": [
+"ura_pearlgate.0",
+"ura_pearlgate.1",
+"ura_pearlgate.2",
+"ura_pearlgate.3",
+"ura_pearlgate.4"
+],
+"ura_palacehall": [
+"ura_palacehall.0",
+"ura_palacehall.1",
+"ura_palacehall.2",
+"ura_palacehall.3",
+"ura_palacehall.4"
+],
+"ura_octopus": [
+"ura_octopus.0",
+"ura_octopus.1",
+"ura_octopus.2",
+"ura_octopus.3",
+"ura_octopus.4",
+"ura_octopus.5",
+"ura_octopus.6",
+"ura_octopus.7",
+"ura_octopus.8",
+"ura_octopus.9"
+],
+"ura_drum": [
+"ura_drum.0",
+"ura_drum.1",
+"ura_drum.2",
+"ura_drum.3",
+"ura_drum.4"
+],
+"ura_shellharp": [
+"ura_shellharp.0",
+"ura_shellharp.1",
+"ura_shellharp.2",
+"ura_shellharp.3",
+"ura_shellharp.4"
+],
+"ura_spring": [
+"ura_spring.0",
+"ura_spring.1",
+"ura_spring.2",
+"ura_spring.3",
+"ura_spring.4"
+],
+"ura_summer": [
+"ura_summer.0",
+"ura_summer.1",
+"ura_summer.2",
+"ura_summer.3",
+"ura_summer.4"
+],
+"ura_autumn": [
+"ura_autumn.0",
+"ura_autumn.1",
+"ura_autumn.2",
+"ura_autumn.3",
+"ura_autumn.4"
+],
+"ura_winter": [
+"ura_winter.0",
+"ura_winter.1",
+"ura_winter.2",
+"ura_winter.3",
+"ura_winter.4"
+],
+"ura_box": [
+"ura_box.0",
+"ura_box.1",
+"ura_box.2",
+"ura_box.3",
+"ura_box.4"
+],
+"ura_knot": [
+"ura_knot.0",
+"ura_knot.1",
+"ura_knot.2",
+"ura_knot.3",
+"ura_knot.4"
+],
+"ura_returnwing": [
+"ura_returnwing.0",
+"ura_returnwing.1",
+"ura_returnwing.2",
+"ura_returnwing.3",
+"ura_returnwing.4"
+],
+"ura_returnsky": [
+"ura_returnsky.0",
+"ura_returnsky.1",
+"ura_returnsky.2",
+"ura_returnsky.3",
+"ura_returnsky.4"
+],
+"ura_villager": [
+"ura_villager.0",
+"ura_villager.1",
+"ura_villager.2",
+"ura_villager.3",
+"ura_villager.4",
+"ura_villager.5",
+"ura_villager.6",
+"ura_villager.7",
+"ura_villager.8",
+"ura_villager.9"
+],
+"ura_pinesign": [
+"ura_pinesign.0",
+"ura_pinesign.1",
+"ura_pinesign.2",
+"ura_pinesign.3",
+"ura_pinesign.4"
+],
+"ura_cottagespot": [
+"ura_cottagespot.0",
+"ura_cottagespot.1",
+"ura_cottagespot.2",
+"ura_cottagespot.3",
+"ura_cottagespot.4"
+],
+"ura_newcottages": [
+"ura_newcottages.0",
+"ura_newcottages.1",
+"ura_newcottages.2",
+"ura_newcottages.3",
+"ura_newcottages.4"
+],
+"ura_pineancient": [
+"ura_pineancient.0",
+"ura_pineancient.1",
+"ura_pineancient.2",
+"ura_pineancient.3",
+"ura_pineancient.4"
+],
+"ura_oldtaro": [
+"ura_oldtaro.0",
+"ura_oldtaro.1",
+"ura_oldtaro.2",
+"ura_oldtaro.3",
+"ura_oldtaro.4",
+"ura_oldtaro.5",
+"ura_oldtaro.6",
+"ura_oldtaro.7",
+"ura_oldtaro.8",
+"ura_oldtaro.9"
+],
+"ura_openbox": [
+"ura_openbox.0",
+"ura_openbox.1",
+"ura_openbox.2",
+"ura_openbox.3",
+"ura_openbox.4"
+],
+"ura_mist": [
+"ura_mist.0",
+"ura_mist.1",
+"ura_mist.2",
+"ura_mist.3",
+"ura_mist.4"
+],
+"ura_boy": [
+"ura_boy.0",
+"ura_boy.1",
+"ura_boy.2",
+"ura_boy.3",
+"ura_boy.4",
+"ura_boy.5",
+"ura_boy.6",
+"ura_boy.7",
+"ura_boy.8",
+"ura_boy.9"
+],
+"ura_girl": [
+"ura_girl.0",
+"ura_girl.1",
+"ura_girl.2",
+"ura_girl.3",
+"ura_girl.4",
+"ura_girl.5",
+"ura_girl.6",
+"ura_girl.7",
+"ura_girl.8",
+"ura_girl.9"
+],
+"ura_ricecake": [
+"ura_ricecake.0",
+"ura_ricecake.1",
+"ura_ricecake.2",
+"ura_ricecake.3",
+"ura_ricecake.4"
+],
+"ura_crumb": [
+"ura_crumb.0",
+"ura_crumb.1",
+"ura_crumb.2",
+"ura_crumb.3",
+"ura_crumb.4"
+]
+},
+"animals": [],
+"word": {
+"ura_pinegrove": {
+"en": "pine grove",
+"lo": "ປ່າຕົ້ນແປກ",
+"th": "ป่าต้นสน",
+"zh": "松树林",
+"ja": "まつの はやし"
+},
+"ura_cliffpine": {
+"en": "sea cliff",
+"lo": "ໜ້າຜາແຄມທະເລ",
+"th": "หน้าผาริมทะเล",
+"zh": "海边悬崖",
+"ja": "うみの がけ"
+},
+"ura_boathouse": {
+"en": "boat shelter",
+"lo": "ຕູບເກັບເຮືອ",
+"th": "โรงเก็บเรือ",
+"zh": "海边船棚",
+"ja": "ふなごや"
+},
+"ura_dunehedge": {
+"en": "dune fence",
+"lo": "ຮົ້ວເນີນຊາຍ",
+"th": "รั้วเนินทราย",
+"zh": "沙丘木篱",
+"ja": "すなはまの さく"
+},
+"ura_netbaskets": {
+"en": "fishing creel",
+"lo": "ຂ້ອງໃສ່ປາ",
+"th": "ข้องใส่ปลา",
+"zh": "竹鱼篓",
+"ja": "さかなの かご"
+},
+"ura_taro": {
+"en": "Urashima Tarō",
+"lo": "ອຸຣາຊິມະ ທາໂຣ",
+"th": "อุราชิมะ ทาโร่",
+"zh": "浦岛太郎",
+"ja": "うらしまたろう"
+},
+"ura_boys": {
+"en": "beach boys",
+"lo": "ເດັກຊາຍແຄມຫາດ",
+"th": "เด็กชายริมหาด",
+"zh": "海滩男孩",
+"ja": "はまべの こどもたち"
+},
+"ura_turtle": {
+"en": "sea turtle",
+"lo": "ເຕົ່າທະເລ",
+"th": "เต่าทะเล",
+"zh": "海龟",
+"ja": "うみがめ"
+},
+"ura_driftwood": {
+"en": "driftwood stick",
+"lo": "ໄມ້ລອຍນ້ຳ",
+"th": "ไม้ลอยน้ำ",
+"zh": "浮木枝",
+"ja": "りゅうぼく"
+},
+"ura_crab": {
+"en": "shore crab",
+"lo": "ກະປູແຄມຫາດ",
+"th": "ปูชายหาด",
+"zh": "海滩螃蟹",
+"ja": "はまべの かに"
+},
+"ura_heron": {
+"en": "white heron",
+"lo": "ນົກຍາງຂາວ",
+"th": "นกกระสาขาว",
+"zh": "白鹭",
+"ja": "しろさぎ"
+},
+"ura_seafish": {
+"en": "sea fish",
+"lo": "ປາທະເລ",
+"th": "ปลาทะเล",
+"zh": "海鱼",
+"ja": "うみの さかな"
+},
+"ura_fishrack": {
+"en": "drying rack",
+"lo": "ຮາວຕາກປາ",
+"th": "ราวตากปลา",
+"zh": "晒鱼架",
+"ja": "さかなぼしの だいな"
+},
+"ura_baskets": {
+"en": "woven baskets",
+"lo": "ກະຕ່າສານ",
+"th": "ตะกร้าสาน",
+"zh": "竹编篮子",
+"ja": "たけかご"
+},
+"ura_shrub": {
+"en": "coastal bush",
+"lo": "ພຸ່ມໄມ້ແຄມທະເລ",
+"th": "พุ่มไม้ริมทะเล",
+"zh": "海边灌木",
+"ja": "うみべの しげみ"
+},
+"ura_reeds": {
+"en": "beach reeds",
+"lo": "ຕົ້ນອໍ້ແຄມຫາດ",
+"th": "ต้นอ้อริมหาด",
+"zh": "海边芦苇",
+"ja": "はまべの あし"
+},
+"ura_stonelantern": {
+"en": "stone lantern",
+"lo": "ໂຄມຫີນ",
+"th": "โคมหิน",
+"zh": "石灯笼",
+"ja": "いしどうろう"
+},
+"ura_searocks": {
+"en": "sea rocks",
+"lo": "ໂງ່ນຫີນທະເລ",
+"th": "โขดหินทะเล",
+"zh": "海边礁石",
+"ja": "うみの いわ"
+},
+"ura_shells": {
+"en": "sea shells",
+"lo": "ເປືອກຫອຍທະເລ",
+"th": "เปลือกหอยทะเล",
+"zh": "海贝壳",
+"ja": "かいがら"
+},
+"ura_waves": {
+"en": "sea waves",
+"lo": "ຄື້ນທະເລ",
+"th": "คลื่นทะเล",
+"zh": "海浪",
+"ja": "うみの なみ"
+},
+"ura_shoresky": {
+"en": "morning sky",
+"lo": "ທ້ອງຟ້າຍາມເຊົ້າ",
+"th": "ท้องฟ้าตอนเช้า",
+"zh": "清晨天空",
+"ja": "あさの そら"
+},
+"ura_headland": {
+"en": "far headland",
+"lo": "ແຫຼມພູໄກ",
+"th": "แหลมภูเขาไกล",
+"zh": "远方海角",
+"ja": "とおい みさき"
+},
+"ura_cottage": {
+"en": "thatched cottage",
+"lo": "ເຮືອນມຸງຫຍ້າ",
+"th": "กระท่อมมุงจาก",
+"zh": "茅草小屋",
+"ja": "かやぶきの いえ"
+},
+"ura_pinegreat": {
+"en": "pine tree",
+"lo": "ຕົ້ນແປກໃຫຍ່",
+"th": "ต้นสนใหญ่",
+"zh": "大松树",
+"ja": "おおきな まつ"
+},
+"ura_seastack": {
+"en": "sea stack",
+"lo": "ຜາຫີນກາງນ້ຳ",
+"th": "ผาหินกลางน้ำ",
+"zh": "海蚀岩柱",
+"ja": "うみの いわやま"
+},
+"ura_islandoutcrop": {
+"en": "rocky island",
+"lo": "ເກາະຫີນນ້ອຍ",
+"th": "เกาะหินน้อย",
+"zh": "海中小岛",
+"ja": "いわの こじま"
+},
+"ura_reefswell": {
+"en": "foaming reef",
+"lo": "ໂງ່ນຫີນຟອງຄື້ນ",
+"th": "โขดหินฟองคลื่น",
+"zh": "浪花礁岩",
+"ja": "しぶきの いわ"
+},
+"ura_wavecrest": {
+"en": "wave crest",
+"lo": "ຍອດຄື້ນຟອງຂາວ",
+"th": "ยอดคลื่นฟองขาว",
+"zh": "白浪峰",
+"ja": "しろい なみがしら"
+},
+"ura_boat": {
+"en": "wooden boat",
+"lo": "ເຮືອໄມ້",
+"th": "เรือไม้",
+"zh": "小木船",
+"ja": "きの ふね"
+},
+"ura_bubble": {
+"en": "silver bubble",
+"lo": "ຟອງນ້ຳສີເງິນ",
+"th": "ฟองน้ำสีเงิน",
+"zh": "银色泡泡",
+"ja": "ぎんの あわ"
+},
+"ura_midswell": {
+"en": "ocean swell",
+"lo": "ຄື້ນທະເລກວ້າງ",
+"th": "คลื่นทะเลกว้าง",
+"zh": "辽阔海涌",
+"ja": "ひろい うねり"
+},
+"ura_kelpforest": {
+"en": "tall kelp",
+"lo": "ສາຫຼ່າຍທະເລສູງ",
+"th": "สาหร่ายทะเลสูง",
+"zh": "高大海带",
+"ja": "おおきな こんぶ"
+},
+"ura_kelpspire": {
+"en": "kelp spire",
+"lo": "ຍອດສາຫຼ່າຍເລິກ",
+"th": "ยอดสาหร่ายลึก",
+"zh": "海带岩柱",
+"ja": "こんぶの いわ"
+},
+"ura_coralspire": {
+"en": "coral spire",
+"lo": "ຍອດປະກາລັງ",
+"th": "ยอดปะการัง",
+"zh": "珊瑚尖塔",
+"ja": "さんごの とう"
+},
+"ura_reefridge": {
+"en": "sandy reef",
+"lo": "ສັນຊາຍໃຕ້ທະເລ",
+"th": "สันทรายใต้ทะเล",
+"zh": "海底沙礁",
+"ja": "うみの すなやま"
+},
+"ura_kelpboulder": {
+"en": "mossy boulder",
+"lo": "ກ້ອນຫີນໄຄນ້ຳ",
+"th": "ก้อนหินมอส",
+"zh": "青苔海石",
+"ja": "こけの いわ"
+},
+"ura_coralfan": {
+"en": "sea fan",
+"lo": "ພັດປະກາລັງ",
+"th": "พัดปะการัง",
+"zh": "海扇珊瑚",
+"ja": "うみうちわ"
+},
+"ura_puffer": {
+"en": "puffer fish",
+"lo": "ປາປັກເປົ້າ",
+"th": "ปลาปักเป้า",
+"zh": "河豚",
+"ja": "ふぐ"
+},
+"ura_silverfish": {
+"en": "silver fish",
+"lo": "ປາເງິນ",
+"th": "ปลาสีเงิน",
+"zh": "银鱼",
+"ja": "ぎんの さかな"
+},
+"ura_coralreef": {
+"en": "coral reef",
+"lo": "ແນວປະກາລັງ",
+"th": "แนวปะการัง",
+"zh": "珊瑚礁",
+"ja": "さんごしょう"
+},
+"ura_kelpshort": {
+"en": "seaweed tuft",
+"lo": "ກໍສາຫຼ່າຍ",
+"th": "กอสาหร่าย",
+"zh": "海草丛",
+"ja": "かいそう"
+},
+"ura_seabedrocks": {
+"en": "seabed stones",
+"lo": "ຫີນພື້ນທະເລ",
+"th": "หินพื้นทะเล",
+"zh": "海底石头",
+"ja": "うみぞこの いし"
+},
+"ura_anemone": {
+"en": "sea anemone",
+"lo": "ດອກໄມ້ທະເລ",
+"th": "ดอกไม้ทะเล",
+"zh": "海葵",
+"ja": "いそぎんちゃく"
+},
+"ura_seasky": {
+"en": "deep water",
+"lo": "ນ້ຳທະເລເລິກ",
+"th": "น้ำทะเลลึก",
+"zh": "深蓝海水",
+"ja": "ふかい うみ"
+},
+"ura_farreefs": {
+"en": "distant palace",
+"lo": "ພະລາຊະວັງໄກ",
+"th": "พระราชวังไกล",
+"zh": "远方龙宫",
+"ja": "とおい りゅうぐう"
+},
+"ura_coralarch": {
+"en": "coral arch",
+"lo": "ປະຕູໂຄ້ງປະກາລັງ",
+"th": "ซุ้มโค้งปะการัง",
+"zh": "珊瑚拱门",
+"ja": "さんごの アーチ"
+},
+"ura_coraltower": {
+"en": "jade veranda",
+"lo": "ລະບຽງຢົກ",
+"th": "ระเบียงหยก",
+"zh": "翡翠长廊",
+"ja": "ひすいの ろうか"
+},
+"ura_palacegarden": {
+"en": "coral garden",
+"lo": "ສວນປະກາລັງ",
+"th": "สวนปะการัง",
+"zh": "珊瑚花园",
+"ja": "さんごの にわ"
+},
+"ura_coralwall": {
+"en": "pearl rail",
+"lo": "ຮົ້ວໄຂ່ມຸກ",
+"th": "รั้วไข่มุก",
+"zh": "珍珠栏杆",
+"ja": "しんじゅの てすり"
+},
+"ura_anemoneleg": {
+"en": "coral bloom",
+"lo": "ດອກປະກາລັງ",
+"th": "ดอกปะการัง",
+"zh": "珊瑚海葵丛",
+"ja": "さんごの はな"
+},
+"ura_otohime": {
+"en": "Princess Otohime",
+"lo": "ເຈົ້າຍິງໂອໂຕຮິເມະ",
+"th": "เจ้าหญิงโอโตฮิเมะ",
+"zh": "乙姬公主",
+"ja": "おとひめさま"
+},
+"ura_bream": {
+"en": "sea bream",
+"lo": "ປາກະພົງແດງ",
+"th": "ปลากะพงแดง",
+"zh": "红鲷鱼",
+"ja": "たい"
+},
+"ura_flounder": {
+"en": "flat flounder",
+"lo": "ປາແປ້ນ",
+"th": "ปลาลิ้นหมา",
+"zh": "比目鱼",
+"ja": "ひらめ"
+},
+"ura_jelly": {
+"en": "lantern jellyfish",
+"lo": "ແມງກະພຸນໄຟ",
+"th": "แมงกะพรุนไฟ",
+"zh": "灯笼水母",
+"ja": "ひかる くらげ"
+},
+"ura_lantern": {
+"en": "pearl lantern",
+"lo": "ໂຄມໄຟໄຂ່ມຸກ",
+"th": "โคมไฟไข่มุก",
+"zh": "珍珠灯笼",
+"ja": "しんじゅの ちょうちん"
+},
+"ura_pearlstand": {
+"en": "pearl stand",
+"lo": "ແທ່ນໄຂ່ມຸກ",
+"th": "แท่นไข่มุก",
+"zh": "珍珠灯座",
+"ja": "しんじゅの だい"
+},
+"ura_coralbed": {
+"en": "coral bed",
+"lo": "ພຸ່ມປະກາລັງ",
+"th": "พุ่มปะการัง",
+"zh": "珊瑚丛",
+"ja": "さんごの しげみ"
+},
+"ura_pearlurn": {
+"en": "pearl urn",
+"lo": "ໂຖໄຂ່ມຸກ",
+"th": "โถไข่มุก",
+"zh": "珍珠花瓶",
+"ja": "しんじゅの つぼ"
+},
+"ura_palacesky": {
+"en": "palace water",
+"lo": "ນ້ຳວັງໃຕ້ທະເລ",
+"th": "น้ำวังใต้ทะเล",
+"zh": "龙宫碧水",
+"ja": "りゅうぐうの うみ"
+},
+"ura_fartowers": {
+"en": "coral towers",
+"lo": "ຫໍຄອຍປະກາລັງ",
+"th": "หอคอยปะการัง",
+"zh": "珊瑚高塔",
+"ja": "さんごの やぐら"
+},
+"ura_pearlgate": {
+"en": "pearl gate",
+"lo": "ປະຕູໄຂ່ມຸກ",
+"th": "ประตูไข่มุก",
+"zh": "珍珠大门",
+"ja": "しんじゅの もん"
+},
+"ura_palacehall": {
+"en": "Sea Palace",
+"lo": "ວັງໃຕ້ທະເລ",
+"th": "วังใต้ทะเล",
+"zh": "海龙宫",
+"ja": "りゅうぐうじょう"
+},
+"ura_octopus": {
+"en": "sea octopus",
+"lo": "ປາມຶກຍັກ",
+"th": "ปลาหมึกยักษ์",
+"zh": "章鱼",
+"ja": "たこ"
+},
+"ura_drum": {
+"en": "sea drum",
+"lo": "ກອງທະເລ",
+"th": "กลองทะเล",
+"zh": "大海鼓",
+"ja": "うみの たいこ"
+},
+"ura_shellharp": {
+"en": "shell music",
+"lo": "ເຄື່ອງດົນຕີຫອຍ",
+"th": "เครื่องดนตรีหอย",
+"zh": "贝壳乐器",
+"ja": "かいがらの がっき"
+},
+"ura_spring": {
+"en": "spring blossom",
+"lo": "ດອກຊາກຸຣະ",
+"th": "ดอกซากุระ",
+"zh": "春樱花",
+"ja": "はるの さくら"
+},
+"ura_summer": {
+"en": "summer lotus",
+"lo": "ດອກບົວລະດູຮ້ອນ",
+"th": "ดอกบัวหน้าร้อน",
+"zh": "夏荷花",
+"ja": "なつの はす"
+},
+"ura_autumn": {
+"en": "autumn maple",
+"lo": "ໃບເມເປິ້ນແດງ",
+"th": "ใบเมเปิลแดง",
+"zh": "秋枫叶",
+"ja": "あきの もみじ"
+},
+"ura_winter": {
+"en": "winter snow",
+"lo": "ຫິມະລະດູໜາວ",
+"th": "หิมะหน้าหนาว",
+"zh": "冬白雪",
+"ja": "ふゆの ゆき"
+},
+"ura_box": {
+"en": "promise box",
+"lo": "ກ່ອງສັນຍາ",
+"th": "กล่องสัญญา",
+"zh": "约定宝盒",
+"ja": "たまてばこ"
+},
+"ura_knot": {
+"en": "silk knot",
+"lo": "ປົມເຊືອກໄໝ",
+"th": "ปมเชือกไหม",
+"zh": "红丝结",
+"ja": "あかい むすびめ"
+},
+"ura_returnwing": {
+"en": "home shore",
+"lo": "ຝັ່ງບ້ານເກີດ",
+"th": "ฝั่งบ้านเกิด",
+"zh": "家乡海岸",
+"ja": "ふるさとの はま"
+},
+"ura_returnsky": {
+"en": "sunlit sky",
+"lo": "ຟ້າແດດອຸ່ນ",
+"th": "ฟ้าแดดอุ่น",
+"zh": "晴朗天空",
+"ja": "あかるい そら"
+},
+"ura_villager": {
+"en": "old fisherman",
+"lo": "ຊາວປະມົງເຖົ້າ",
+"th": "ชาวประมงเฒ่า",
+"zh": "老渔夫",
+"ja": "としよりの りょうし"
+},
+"ura_pinesign": {
+"en": "pine sign",
+"lo": "ປ້າຍຕົ້ນແປກ",
+"th": "ป้ายต้นสน",
+"zh": "松树路牌",
+"ja": "まつの かんばん"
+},
+"ura_cottagespot": {
+"en": "empty yard",
+"lo": "ເດີ່ນບ້ານເກົ່າ",
+"th": "ลานบ้านเก่า",
+"zh": "旧屋空地",
+"ja": "いえの あと"
+},
+"ura_newcottages": {
+"en": "new houses",
+"lo": "ເຮືອນໃໝ່",
+"th": "บ้านใหม่",
+"zh": "新木屋",
+"ja": "あたらしい いえ"
+},
+"ura_pineancient": {
+"en": "ancient pine",
+"lo": "ຕົ້ນແປກບູຮານ",
+"th": "ต้นสนโบราณ",
+"zh": "古老松树",
+"ja": "ふるい おおまつ"
+},
+"ura_oldtaro": {
+"en": "Grandfather Tarō",
+"lo": "ພໍ່ຕູ້ທາໂຣ",
+"th": "คุณตาทาโร่",
+"zh": "太郎爷爷",
+"ja": "おじいさん たろう"
+},
+"ura_openbox": {
+"en": "open box",
+"lo": "ກ່ອງເປີດແລ້ວ",
+"th": "กล่องที่เปิดแล้ว",
+"zh": "打开的宝盒",
+"ja": "あいた たまてばこ"
+},
+"ura_mist": {
+"en": "white mist",
+"lo": "ໝອກສີຂາວ",
+"th": "หมอกสีขาว",
+"zh": "白雾云",
+"ja": "しろい けむり"
+},
+"ura_boy": {
+"en": "village boy",
+"lo": "ເດັກຊາຍໃນບ້ານ",
+"th": "เด็กชายในหมู่บ้าน",
+"zh": "村里男孩",
+"ja": "むらの おとこのこ"
+},
+"ura_girl": {
+"en": "village girl",
+"lo": "ເດັກຍິງໃນບ້ານ",
+"th": "เด็กหญิงในหมู่บ้าน",
+"zh": "村里女孩",
+"ja": "むらの おんなのこ"
+},
+"ura_ricecake": {
+"en": "rice cake",
+"lo": "ເຂົ້າໜົມແປ້ງເຂົ້າ",
+"th": "ขนมแป้งข้าว",
+"zh": "年糕",
+"ja": "おもち"
+},
+"ura_crumb": {
+"en": "cake crumb",
+"lo": "ເສດເຂົ້າໜົມ",
+"th": "เศษขนม",
+"zh": "糕点碎屑",
+"ja": "おもちの かけら"
+}
+},
+"map": {
+"pine-grove-back-l": "ura_pinegrove",
+"cliff-pine-back-r": "ura_cliffpine",
+"boathouse-mid-r": "ura_boathouse",
+"dune-hedge-mid": "ura_dunehedge",
+"net-baskets-fg-l": "ura_netbaskets",
+"taro-walk": "ura_taro",
+"taro": "ura_taro",
+"boys": "ura_boys",
+"sea-turtle-beach": "ura_turtle",
+"sea-turtle-pop": "ura_turtle",
+"wood-1": "ura_driftwood",
+"wood-2": "ura_driftwood",
+"wood-3": "ura_driftwood",
+"wood-4": "ura_driftwood",
+"crab": "ura_crab",
+"heron": "ura_heron",
+"fish": "ura_seafish",
+"fish-rack": "ura_fishrack",
+"baskets-k1": "ura_baskets",
+"shrub-k1": "ura_shrub",
+"reeds-l": "ura_reeds",
+"stone-lantern": "ura_stonelantern",
+"sea-rocks": "ura_searocks",
+"shells-front": "ura_shells",
+"waves-front": "ura_waves",
+"sky-shore": "ura_shoresky",
+"far-headland": "ura_headland",
+"cottage": "ura_cottage",
+"pine-great": "ura_pinegreat",
+"wood-": "ura_driftwood",
+"sea-stack-back-l": "ura_seastack",
+"headland-back-r": "ura_islandoutcrop",
+"reef-swell-mid-l": "ura_reefswell",
+"reef-swell-mid-r": "ura_reefswell",
+"wave-crest-fg-l": "ura_wavecrest",
+"wave-crest-fg-r": "ura_wavecrest",
+"boat": "ura_boat",
+"taro-ride": "ura_taro",
+"bubble-ring-1": "ura_bubble",
+"bubble-ring-2": "ura_bubble",
+"bubble-ring-3": "ura_bubble",
+"mid-swell": "ura_midswell",
+"bubble-ring-": "ura_bubble",
+"kelp-forest": "ura_kelpforest",
+"kelp-spire-back-l": "ura_kelpspire",
+"coral-spire-back-r": "ura_coralspire",
+"reef-ridge-mid": "ura_reefridge",
+"kelp-boulder-mid-l": "ura_kelpboulder",
+"coral-fan-mid-r": "ura_coralfan",
+"sea-turtle-swim": "ura_turtle",
+"taro-happy": "ura_taro",
+"puffer": "ura_puffer",
+"puffer-poof": "ura_puffer",
+"silver-fish-1": "ura_silverfish",
+"silver-fish-2": "ura_silverfish",
+"silver-fish-3": "ura_silverfish",
+"silver-fish-4": "ura_silverfish",
+"silver-fish-5": "ura_silverfish",
+"silver-fish-6": "ura_silverfish",
+"coral-reef-1": "ura_coralreef",
+"coral-reef-2": "ura_coralreef",
+"coral-reef-3": "ura_coralreef",
+"fish-a": "ura_seafish",
+"fish-b": "ura_seafish",
+"kelp-short-l": "ura_kelpshort",
+"sea-fan-r": "ura_coralfan",
+"seabed-rocks-r": "ura_seabedrocks",
+"anemone-fg-r": "ura_anemone",
+"sky-sea": "ura_seasky",
+"far-reefs": "ura_farreefs",
+"coral-arch": "ura_coralarch",
+"coral-reef-": "ura_coralreef",
+"coral-tower-back-l": "ura_coraltower",
+"palace-garden-back-r": "ura_palacegarden",
+"coral-wall-mid": "ura_coralwall",
+"coral-anemone-leg-l": "ura_anemoneleg",
+"coral-anemone-leg-r": "ura_anemoneleg",
+"taro-stand": "ura_taro",
+"otohime": "ura_otohime",
+"bream": "ura_bream",
+"bream-2": "ura_bream",
+"flounder": "ura_flounder",
+"flounder-2": "ura_flounder",
+"jelly-1": "ura_jelly",
+"jelly-2": "ura_jelly",
+"jelly-3": "ura_jelly",
+"jelly-4": "ura_jelly",
+"pearl-lantern-1": "ura_lantern",
+"pearl-lantern-2": "ura_lantern",
+"pearl-lantern-3": "ura_lantern",
+"pearl-lantern-4": "ura_lantern",
+"jelly-bg": "ura_jelly",
+"pearl-stand-l": "ura_pearlstand",
+"coral-bed-l": "ura_coralbed",
+"anemone-fg-l": "ura_anemone",
+"pearl-urn-r": "ura_pearlurn",
+"sky-palace": "ura_palacesky",
+"far-coral-towers": "ura_fartowers",
+"pearl-gate": "ura_pearlgate",
+"palace-hall": "ura_palacehall",
+"pearl-lantern-": "ura_lantern",
+"taro-sad": "ura_taro",
+"octopus": "ura_octopus",
+"octopus-knot": "ura_octopus",
+"sea-drum-big": "ura_drum",
+"sea-drum-3": "ura_drum",
+"sea-drum-small": "ura_drum",
+"sea-drum-4": "ura_drum",
+"shell-chime": "ura_shellharp",
+"season-spring": "ura_spring",
+"season-summer": "ura_summer",
+"season-autumn": "ura_autumn",
+"season-winter": "ura_winter",
+"bream-r": "ura_bream",
+"taro-box": "ura_taro",
+"otohime-sad-box": "ura_otohime",
+"box": "ura_box",
+"knot-1": "ura_knot",
+"knot-2": "ura_knot",
+"knot-3": "ura_knot",
+"bream-l": "ura_bream",
+"jelly-5": "ura_jelly",
+"shore-return-wing": "ura_returnwing",
+"shore-return-sky": "ura_returnsky",
+"jelly-": "ura_jelly",
+"villager": "ura_villager",
+"villager-2": "ura_villager",
+"pine-sign": "ura_pinesign",
+"cottage-spot": "ura_cottagespot",
+"taro-open-box": "ura_taro",
+"oldtaro": "ura_oldtaro",
+"mist-puff-1": "ura_mist",
+"mist-puff-2": "ura_mist",
+"mist-puff-3": "ura_mist",
+"mist-puff-": "ura_mist",
+"oldtaro-start": "ura_oldtaro",
+"village-boy": "ura_boy",
+"village-girl": "ura_girl",
+"rice-cake-1": "ura_ricecake",
+"rice-cake-2": "ura_ricecake",
+"rice-cake-3": "ura_ricecake",
+"crumb": "ura_crumb",
+"rice-cake-": "ura_ricecake"
+},
+"maps": {
+"s08": {
+"cottage": "ura_newcottages",
+"pine-great": "ura_pineancient"
+},
+"s09": {
+"box": "ura_openbox",
+"cottage": "ura_newcottages",
+"pine-great": "ura_pineancient"
+},
+"s10": {
+"cottage": "ura_newcottages",
+"pine-great": "ura_pineancient"
+},
+"s11": {
+"box": "ura_openbox",
+"cottage": "ura_newcottages",
+"pine-great": "ura_pineancient"
+}
+}
+}

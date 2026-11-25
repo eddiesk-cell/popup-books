@@ -1,6 +1,6 @@
 {
  "released": true,
- "words": false,
+ "words": true,
  "chars": "urashima-",
  "title": "Urashima Tarō and the Sea Palace",
  "story": "story.json",
@@ -11,160 +11,326 @@
   {
    "dir": "s01",
    "title": "The Turtle on the Shore",
-   "lines": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
    "game": {
     "type": "collect",
     "before": "1.5",
-    "targets": ["wood-1", "wood-2", "wood-3", "wood-4"],
+    "targets": [
+     "wood-1",
+     "wood-2",
+     "wood-3",
+     "wood-4"
+    ],
     "start": "Help Tarō clear the beach! Tap each driftwood stick so the turtle can reach the sea.",
     "praise": "The path is clear! Swim home, little friend!",
-    "voice": {"start": "game.1.start", "praise": "game.1.praise"}
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    }
    }
   },
   {
    "dir": "s02",
    "title": "A Voice from the Waves",
-   "lines": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 0,
     "before": "2.3",
-    "targets": ["bubble-ring-1", "bubble-ring-2", "bubble-ring-3"],
+    "targets": [
+     "bubble-ring-1",
+     "bubble-ring-2",
+     "bubble-ring-3"
+    ],
     "start": "Something is bubbling around the boat! Tap the three bubble rings to see who is calling.",
     "praise": "Hello again! It is the sea turtle!",
-    "voice": {"start": "game.2.start", "praise": "game.2.praise"}
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    }
    }
   },
   {
    "dir": "s03",
    "title": "Down the Sea Road",
-   "lines": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
    "game": {
     "type": "steer",
     "before": "3.4",
     "who": "sea-turtle-swim",
     "rider": "taro",
     "move": "fly",
-    "targets": ["coral-reef-1", "coral-reef-2", "coral-reef-3"],
+    "targets": [
+     "coral-reef-1",
+     "coral-reef-2",
+     "coral-reef-3"
+    ],
     "start": "Ride the turtle down the Sea Road! Tap the glowing spot to steer past the coral reefs.",
     "praise": "Way to steer! Look at the golden glow ahead!",
-    "voice": {"start": "game.3.start", "praise": "game.3.praise"}
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    }
    }
   },
   {
    "dir": "s04",
    "title": "The Palace Under the Sea",
-   "lines": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "4.5",
-    "targets": ["pearl-lantern-1", "pearl-lantern-2", "pearl-lantern-3", "pearl-lantern-4"],
+    "targets": [
+     "pearl-lantern-1",
+     "pearl-lantern-2",
+     "pearl-lantern-3",
+     "pearl-lantern-4"
+    ],
     "start": "Welcome Tarō to the Sea Palace! Tap each pearl lantern by the gate to make it shine.",
     "praise": "Every pearl lantern is glowing! Welcome to the palace!",
-    "voice": {"start": "game.4.start", "praise": "game.4.praise"}
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    }
    }
   },
   {
    "dir": "s05",
    "title": "Four Seasons in One Day",
-   "lines": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
    "game": {
     "type": "echo",
     "before": "5.4",
-    "targets": ["sea-drum-big", "sea-drum-small", "shell-chime"],
-    "sounds": ["taiko-big", "taiko-small", "shell-chime"],
+    "targets": [
+     "sea-drum-big",
+     "sea-drum-small",
+     "shell-chime"
+    ],
+    "sounds": [
+     "taiko-big",
+     "taiko-small",
+     "shell-chime"
+    ],
     "rounds": [
-     ["sea-drum-big", "sea-drum-small"],
-     ["sea-drum-big", "shell-chime", "sea-drum-small"]
+     [
+      "sea-drum-big",
+      "sea-drum-small"
+     ],
+     [
+      "sea-drum-big",
+      "shell-chime",
+      "sea-drum-small"
+     ]
     ],
     "start": "The sea band is playing! Listen to the drums and shell chime, then tap the song back.",
     "praise": "Pon, pon, chime! What a wonderful sea song!",
-    "voice": {"start": "game.5.start", "praise": "game.5.praise"}
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
    }
   },
   {
    "dir": "s06",
    "title": "The Promise Box",
-   "lines": ["6.1", "6.2", "6.3", "6.4", "6.5"],
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
    "game": {
     "type": "timing",
     "before": "6.5",
-    "targets": ["box"],
-    "light": ["knot-1", "knot-2", "knot-3"],
-    "step": {"steps": 3},
+    "targets": [
+     "box"
+    ],
+    "light": [
+     "knot-1",
+     "knot-2",
+     "knot-3"
+    ],
+    "step": {
+     "steps": 3
+    },
     "start": "Help Princess Otohime tie the red silk cord! Tap when the ring turns green to tie each knot tight.",
     "praise": "Three tight knots! Remember the promise: never open the box.",
-    "voice": {"start": "game.6.start", "praise": "game.6.praise"}
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    }
    }
   },
   {
    "dir": "s07",
    "title": "Up Through the Bubbles",
-   "lines": ["7.1", "7.2", "7.3", "7.4", "7.5"],
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "7.4",
-    "targets": ["jelly-1", "jelly-2", "jelly-3", "jelly-4", "jelly-5"],
+    "targets": [
+     "jelly-1",
+     "jelly-2",
+     "jelly-3",
+     "jelly-4",
+     "jelly-5"
+    ],
     "start": "The deep water is dim! Tap the five lantern-jellyfish to light the road back up to the sun.",
     "praise": "So bright! Up into the sunshine we go!",
-    "voice": {"start": "game.7.start", "praise": "game.7.praise"}
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    }
    }
   },
   {
    "dir": "s08",
    "title": "Three Hundred Years",
-   "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
    "game": {
     "type": "collect",
     "before": "8.4",
-    "targets": ["pine-sign", "cottage-spot", "villager"],
+    "targets": [
+     "pine-sign",
+     "cottage-spot",
+     "villager"
+    ],
     "start": "Everything looks different! Tap the tall pine tree, the new cottage, and the old fisherman to look for Tarō's home.",
     "praise": "Three hundred years have passed while Tarō was under the sea!",
-    "voice": {"start": "game.8.start", "praise": "game.8.praise"}
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    }
    }
   },
   {
    "dir": "s09",
    "title": "The White Cloud",
-   "lines": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
    "game": {
     "type": "collect",
     "before": "9.5",
-    "targets": ["mist-puff-1", "mist-puff-2", "mist-puff-3"],
+    "targets": [
+     "mist-puff-1",
+     "mist-puff-2",
+     "mist-puff-3"
+    ],
     "start": "White mist fills the shore! Tap the three soft cloud puffs to gently clear the air.",
     "praise": "The mist has cleared! Look at Grandfather Tarō's snowy white beard!",
-    "voice": {"start": "game.9.start", "praise": "game.9.praise"}
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    }
    }
   },
   {
    "dir": "s10",
    "title": "Grandfather by the Sea",
-   "lines": ["10.1", "10.2", "10.3", "10.4", "10.5"],
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
    "game": {
     "type": "pair",
     "before": "10.3",
     "pairs": [
-     ["rice-cake-1", "oldtaro"],
-     ["rice-cake-2", "village-boy"],
-     ["rice-cake-3", "village-girl"]
+     [
+      "rice-cake-1",
+      "oldtaro"
+     ],
+     [
+      "rice-cake-2",
+      "village-boy"
+     ],
+     [
+      "rice-cake-3",
+      "village-girl"
+     ]
     ],
     "start": "Share warm rice cakes under the pine tree! Tap each rice cake, then tap who it is for.",
     "praise": "Warm cakes and kind friends! Everyone is smiling by the sea.",
-    "voice": {"start": "game.10.start", "praise": "game.10.praise"}
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    }
    }
   },
   {
    "dir": "s11",
    "title": "What did we learn?",
-   "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
   }
  ],
  "moral": {
-  "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+  "lines": [
+   "moral.1",
+   "moral.2",
+   "moral.3",
+   "moral.4",
+   "moral.5"
+  ]
  }
 }

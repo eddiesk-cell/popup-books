@@ -1,5 +1,5 @@
 {
- "words": false,
+ "words": true,
  "title": "Urashima Tarō and the Sea Palace",
  "credit": "From the old Japanese folk tale of Urashima Tarō, told in Japan for more than a thousand years and retold in English by Yei Theodora Ozaki in Japanese Fairy Tales (1908). Retold in our own words.",
  "status": "Locked at STOP 1 (Eddie, 2026-11-18: \"Ok, lets go with this\").",
@@ -1113,6 +1113,5 @@
   "level": "A1-A2, past simple, short vivid sentences for ages 4-8. Repeated core words: sea, turtle, waves, shell, palace, box, cord, promise, home, kind.",
   "who speaks": "Mains in their own Kokoro voices (BOOK-STANDARD 2026-11-18): taro (bm_fable +1), oldtaro (bm_fable -2, 0.89x — same voice aged), otohime (bf_alice), turtle (bm_lewis -1). Narrator (bm_george) reads narration and minor lines (villager, children).",
   "pull": "P1 hooks at turns 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5 (paid by 2.1-2.3, 3.1, 4.1, 5.1, 6.1, 7.1-7.2, 8.1, 9.1-9.2, 10.1); P2 refrain 'Never open the box' on spreads 6, 7, 9 (third return pauses before 'box': 'Never open the... box'); P3 one '...' predict pause per spread in say; P6 spoken sound words on every E2/E3 spread, never repeated on adjacent spreads (1 Splash, 2 Dip/pull, 3 Whoosh/Poof, 4 Swish, 5 Pon/Bonk, 7 Swoosh, 9 Snap/Whoosh, 10 Pitter-pat/Splash); P8 slapstick in all three thirds (3.4 pufferfish Poof bounce, 5.4 octopus drummer tangles arms Bonk, 10.3 shore crab tiptoes off with a rice-cake crumb); P11 energy curve E2 E1 E3 E2 E2 E1 E2 E1 E3 E2 E1; P16 every game lets the child do the spread's own action (clear sticks, pop bubbles, steer turtle down Sea Road, light pearl lanterns, echo sea-band drums/chime, tie red silk knots, light lantern-jellyfish up, search changed village, clear white mist puffs, share warm rice cakes). Item 16 world-crossing explicitly named going in (3.1) and coming back (7.4)."
- },
- "words": false
+ }
 }
