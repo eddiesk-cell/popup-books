@@ -1,7 +1,7 @@
 {
  "id": "simurgh",
  "released": true,
- "words": false,
+ "words": true,
  "chars": "simurgh-",
  "title": "The Simurgh and Zal",
  "story": "story.json",

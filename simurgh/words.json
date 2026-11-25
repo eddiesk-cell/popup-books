@@ -1,0 +1,4509 @@
+{
+"lines": {
+"sim_arcade.0": {
+"en": "A tiled arcade. A tiled arcade frames the sunny courtyard with arched Persian walls.",
+"lo": "ລະບຽງກະເບື້ອງສີຟ້າ. ລະບຽງກະເບື້ອງສີຟ້າ ອ້ອມຂ້າງເດີ່ນແດດອຸ່ນດ້ວຍກຳແພງໂຄ້ງແບບເປີເຊຍ.",
+"th": "ระเบียงกระเบื้องสีฟ้า ระเบียงกระเบื้องสีฟ้าโอบล้อมลานแดดอุ่นด้วยกำแพงโค้งแบบเปอร์เซีย",
+"zh": "青砖拱廊。青砖拱廊用优雅的波斯拱墙环抱着阳光庭院。",
+"ja": "あおい たいるの かべ。あおい たいるの かべが にわの まわりを かこんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_arcade.1": {
+"en": "Graceful tiled arches line the side of Zabul's sunny palace garden.",
+"lo": "ລະບຽງປະຕູໂຄ້ງກະເບື້ອງລຽງງາມຢູ່ຂ້າງສວນວັງຊາບູນແດດອຸ່ນ.",
+"th": "ระเบียงซุ้มโค้งกระเบื้องเรียงงามอยู่ข้างสวนวังซาบูลแดดอุ่น",
+"zh": "优雅的青砖拱廊沿着扎布尔阳光花园一侧延伸。",
+"ja": "あおい たいるの かべが にわを きれいに かこんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_arcade.2": {
+"en": "Shady niches keep the courtyard cool on warm sunny afternoons.",
+"lo": "ຊ່ອງໂຄ້ງຮົ່ມເຢັນຊ່ວຍໃຫ້ເດີ່ນວັງເຢັນສະບາຍໃນຍາມບ່າຍແດດອຸ່ນ.",
+"th": "ซุ้มโค้งร่มเย็นช่วยให้ลานวังเย็นสบายในยามบ่ายแดดอุ่น",
+"zh": "荫凉的拱龛在暖洋洋的午后让庭院保持清凉舒适。",
+"ja": "すずしい かげを つくって くれる やさしい かべだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_arcade.3": {
+"en": "Turquoise tiles and warm honey sandstone blend together beautifully.",
+"lo": "ກະເບື້ອງສີຟ້າຂຽວ ແລະ ຫີນຊາຍສີນ້ຳເຜິ້ງປະສານກັນຢ່າງງົດງາມ.",
+"th": "กระเบื้องสีฟ้าเขียวและหินทรายสีน้ำผึ้งผสานกันอย่างงดงาม",
+"zh": "绿松石瓷砖与暖蜜色砂岩相映成趣。",
+"ja": "あおい たいると きいろい いしが とても よく にあうよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_arcade.4": {
+"en": "Look closely along the ledge — a sleepy courtyard cat loves sunny walls!",
+"lo": "ເບິ່ງໃກ້ໆຕາມຂອບກຳແພງ — ແມວເດີ່ນວັງຂີ້ເຊົາມັກກຳແພງແດດອຸ່ນ!",
+"th": "ดูใกล้ๆ ตามขอบกำแพง — แมวลานวังขี้เซาชอบกำแพงแดดอุ่น!",
+"zh": "仔细瞧瞧墙沿，爱晒太阳的小猫最喜欢趴在暖暖的墙头上！",
+"ja": "かべの うえを よく みてごらん、ねこが ひなたぼっこ しているかも！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cypress.0": {
+"en": "A cypress tree. A cypress tree stands tall and evergreen beside the Persian palace walls.",
+"lo": "ຕົ້ນໄຊເປຣສ. ຕົ້ນໄຊເປຣສ ຢືນຕົ້ນສູງຂຽວຕະຫຼອດປີຢູ່ຂ້າງກຳແພງວັງເປີເຊຍ.",
+"th": "ต้นไซเปรส ต้นไซเปรสยืนต้นสูงเขียวตลอดปีข้างกำแพงวังเปอร์เซีย",
+"zh": "波斯柏树。波斯柏树挺拔常青，静静守立在宫殿花园墙边。",
+"ja": "いとすぎの き。いとすぎの きは ほそく たかく そらへ のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_cypress.1": {
+"en": "Slender dark-green cypress trees point straight up toward the sky.",
+"lo": "ຕົ້ນໄຊເປຣສສີຂຽວເຂັ້ມຮຽວຍາວຊີ້ຕົງຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "ต้นไซเปรสสีเขียวเข้มเรียวยาวชี้ตรงขึ้นสู่ท้องฟ้า",
+"zh": "修长苍翠的波斯柏树笔直地指向蔚蓝的天空。",
+"ja": "ほそくて たかい みどりの きが そらへ まっすぐ のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cypress.2": {
+"en": "In Persian gardens, evergreen cypress trees stand for grace and steady strength.",
+"lo": "ໃນສວນເປີເຊຍ ຕົ້ນໄຊເປຣສຂຽວຕະຫຼອດປີເປັນສັນຍາລັກຂອງຄວາມສະຫງ່າ ແລະ ຄວາມເຂັ້ມແຂງ.",
+"th": "ในสวนเปอร์เซีย ต้นไซเปรสเขียวตลอดปีเป็นสัญลักษณ์ของความสง่าและความเข้มแข็ง",
+"zh": "在波斯园林里，四季常青的柏树象征着优雅与坚韧。",
+"ja": "いつも みどりの じょうぶな きなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_cypress.3": {
+"en": "Their tall leafy tops sway gently whenever a cool breeze passes.",
+"lo": "ຍອດໃບສູງຂອງມັນໂອນເອນຄ່ອຍໆທຸກຄັ້ງທີ່ສາຍລົມເຢັນພັດຜ່ານ.",
+"th": "ยอดใบสูงของมันเอนไหวเบาๆ ทุกครั้งที่สายลมเย็นพัดผ่าน",
+"zh": "清凉微风吹过时，高高的柏树梢便轻轻摇曳。",
+"ja": "かぜが ふくと てっぺんが ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cypress.4": {
+"en": "Small garden birds love perching high inside the cool green branches.",
+"lo": "ນົກນ້ອຍໃນສວນມັກຈັບຢູ່ສູງຂ້າງໃນກິ່ງໃບສີຂຽວເຢັນ.",
+"th": "นกน้อยในสวนชอบเกาะอยู่สูงข้างในกิ่งใบสีเขียวเย็น",
+"zh": "小园鸟喜欢停歇在阴凉翠绿的高枝间歌唱。",
+"ja": "ちいさな とりが すずしい えだに とまって うたうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pomegranate.0": {
+"en": "A pomegranate tree. A pomegranate tree carries sweet ruby-red fruit in Zabul's sunny garden.",
+"lo": "ຕົ້ນໝາກພິລາ. ຕົ້ນໝາກພິລາ ອອກໜ່ວຍສີແດງຫວານໃນສວນແດດອຸ່ນຂອງເມືອງຊາບູນ.",
+"th": "ต้นทับทิม ต้นทับทิมออกผลสีแดงหวานในสวนแดดอุ่นของเมืองซาบูล",
+"zh": "红石榴树。红石榴树在扎布尔阳光明媚的花园里挂满红宝石般的果实。",
+"ja": "ざくろの き。ざくろの きに あかい ざくろが たくさん なっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_pomegranate.1": {
+"en": "Ruby-red pomegranates hang like bright little lanterns among green leaves.",
+"lo": "ໝາກພິລາສີແດງຫ້ອຍຄືໂຄມໄຟນ້ອຍສົດໃສທ່າມກາງໃບໄມ້ຂຽວ.",
+"th": "ทับทิมสีแดงห้อยเหมือนโคมไฟน้อยสดใสท่ามกลางใบไม้เขียว",
+"zh": "红宝石般的石榴藏在翠绿叶片间，像一盏盏红灯笼。",
+"ja": "まっかな ざくろが みどりの はっぱの なかに たくさん なっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_pomegranate.2": {
+"en": "Pomegranate trees love warm sunny courtyards and have grown in Persia for thousands of years.",
+"lo": "ຕົ້ນໝາກພິລາມັກເດີ່ນແດດອຸ່ນ ແລະ ປູກໃນເປີເຊຍມາຫຼາຍພັນປີແລ້ວ.",
+"th": "ต้นทับทิมชอบลานแดดอุ่นและปลูกในเปอร์เซียมานับพันปีแล้ว",
+"zh": "石榴树喜暖喜阳，在波斯已经种植了数千年。",
+"ja": "おひさまが だいすきで むかしから にわに うえられて いるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_pomegranate.3": {
+"en": "Its gnarled brown branches shade the cool courtyard fountain below.",
+"lo": "ກິ່ງສີນ້ຳຕານຄົດງໍຂອງມັນໃຫ້ຮົ່ມເງົາແກ່ນ້ຳພຸເຢັນຢູ່ດ້ານລຸ່ມ.",
+"th": "กิ่งสีน้ำตาลคดงอของมันให้ร่มเงาแก่น้ำพุเย็นอยู่ด้านล่าง",
+"zh": "苍劲弯曲的树枝为下方清凉的喷泉撑起一片荫凉。",
+"ja": "おおきな えだが ふんすいに すずしい かげを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pomegranate.4": {
+"en": "Sweet red fruit from this tree fills Zal's welcome bowl!",
+"lo": "ໝາກໄມ້ສີແດງຫວານຈາກຕົ້ນນີ້ເຕັມຖ້ວຍຕ້ອນຮັບຂອງຊານ!",
+"th": "ผลไม้สีแดงหวานจากต้นนี้เต็มชามต้อนรับของซาล!",
+"zh": "这棵树上结出的甜石榴装满了扎尔的迎宾果碗！",
+"ja": "この きで とれた あまい ざくろを みんなで たべるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_gardenwall.0": {
+"en": "A rose wall. A rose wall borders the courtyard with carved sandstone and pink blooms.",
+"lo": "ກຳແພງດອກກຸຫຼາບ. ກຳແພງດອກກຸຫຼາບ ກັ້ນຂອບເດີ່ນດ້ວຍຫີນຊາຍແກະສະຫຼັກ ແລະ ດອກໄມ້ສີບົວ.",
+"th": "กำแพงดอกกุหลาบ กำแพงดอกกุหลาบกั้นขอบลานด้วยหินทรายแกะสลักและดอกไม้สีชมพู",
+"zh": "玫瑰花墙。玫瑰花墙用雕花砂岩和盛开的粉红玫瑰点缀庭院。",
+"ja": "ばらの かべ。ばらの かべに ピンクの ばらが いっぱい さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_gardenwall.1": {
+"en": "Carved honey-sandstone blocks are topped with a bright turquoise tile trim.",
+"lo": "ຫີນຊາຍສີນ້ຳເຜິ້ງແກະສະຫຼັກມີຂອບກະເບື້ອງສີຟ້າຂຽວສົດໃສຢູ່ດ້ານເທິງ.",
+"th": "หินทรายสีน้ำผึ้งแกะสลักมีขอบกระเบื้องสีฟ้าเขียวสดใสอยู่ด้านบน",
+"zh": "雕花蜜色砂岩矮墙顶部镶着一条亮丽的绿松石彩砖。",
+"ja": "あたたかい いしの かべに あおい たいるが かざって あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_gardenwall.2": {
+"en": "Pink garden roses spill happily over the warm carved ledge.",
+"lo": "ດອກກຸຫຼາບສວນສີບົວບານລົ້ນອອກມາເທິງຂອບກຳແພງອຸ່ນ.",
+"th": "ดอกกุหลาบสวนสีชมพูบานล้นออกมาเหนือขอบกำแพงอุ่น",
+"zh": "盛开的粉红玫瑰欢快地探出暖暖的雕花墙沿。",
+"ja": "ピンクの ばらが かべの うえから こぼれる ように さいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_gardenwall.3": {
+"en": "Tall green cypresses stand quietly right behind the garden wall.",
+"lo": "ຕົ້ນໄຊເປຣສສີຂຽວສູງຢືນງຽບໆຢູ່ຫຼັງກຳແພງສວນ.",
+"th": "ต้นไซเปรสสีเขียวสูงยืนเงียบๆ อยู่หลังกำแพงสวน",
+"zh": "高大的翠绿柏树静静矗立在花园围墙之后。",
+"ja": "かべの うしろに たかい いとすぎが しずかに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_gardenwall.4": {
+"en": "Butterflies love dancing past these blooming pink garden roses.",
+"lo": "ແມງກະເບື້ອມັກບິນຟ້ອນຜ່ານດອກກຸຫຼາບສີບົວທີ່ກຳລັງບານເຫຼົ່ານີ້.",
+"th": "ผีเสื้อมักบินร่ายรำผ่านดอกกุหลาบสีชมพูที่กำลังบานเหล่านี้",
+"zh": "蝴蝶最喜欢在这些盛开的粉红玫瑰旁翩翩起舞。",
+"ja": "ちょうちょが ばらの まわりを ひらひら とんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_roserow.0": {
+"en": "A rose border. A rose border blooms with fragrant pink Persian roses along the arch.",
+"lo": "ແຖວດອກກຸຫຼາບ. ແຖວດອກກຸຫຼາບ ບານສະພັ່ງດ້ວຍກຸຫຼາບເປີເຊຍສີບົວຫອມຕາມໜ້າປະຕູໂຄ້ງ.",
+"th": "แถวดอกกุหลาบ แถวดอกกุหลาบบานสะพรั่งด้วยกุหลาบเปอร์เซียสีชมพูหอมตามหน้าซุ้มประตู",
+"zh": "玫瑰花坛。玫瑰花坛沿着拱门脚下盛开着芬芳的粉红波斯玫瑰。",
+"ja": "ばらの かだん。ばらの かだんから いい かおりが ふわっと するよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_roserow.1": {
+"en": "Low stone planters overflow with soft pink Persian roses and green leaves.",
+"lo": "ກະຖາງຫີນຕ່ຳເຕັມໄປດ້ວຍດອກກຸຫຼາບເປີເຊຍສີບົວ ແລະ ໃບໄມ້ຂຽວ.",
+"th": "กระถางหินเตี้ยเต็มไปด้วยดอกกุหลาบเปอร์เซียสีชมพูและใบไม้เขียว",
+"zh": "低矮的石花坛里溢满了柔美的粉红波斯玫瑰和翠叶。",
+"ja": "ひくい かだんに ピンクの ばらが いっぱい さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_roserow.2": {
+"en": "Gentle breezes carry their sweet perfume all across the courtyard.",
+"lo": "ສາຍລົມອ່ອນໆພັດກິ່ນຫອມຫວານຂອງພວກມັນໄປທົ່ວເດີ່ນວັງ.",
+"th": "สายลมอ่อนๆ พัดกลิ่นหอมหวานของพวกมันไปทั่วลานวัง",
+"zh": "微风把玫瑰甜美的清香送遍整个庭院。",
+"ja": "やさしい かぜが あまい かおりを にわ じゅうに はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_roserow.3": {
+"en": "Bright blossoms soften the stone foot of Zabul's tall tiled arch.",
+"lo": "ດອກໄມ້ສົດໃສເຮັດໃຫ້ຕີນຫີນຂອງປະຕູໂຄ້ງຊາບູນດູອ່ອນໂຍນງົດງາມ.",
+"th": "ดอกไม้สดใสทำให้ฐานหินของซุ้มประตูซาบูลดูอ่อนโยนงดงาม",
+"zh": "明媚的玫瑰柔化了扎布尔高大拱门的石基。",
+"ja": "もんの あしもとを おはなが やさしく かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_roserow.4": {
+"en": "Tiny crickets love hiding in the cool leaves beneath the roses!",
+"lo": "ຈິ່ງຫຼີດນ້ອຍມັກລີ້ຢູ່ໃນໃບໄມ້ເຢັນກ້ອງພຸ່ມກຸຫຼາບ!",
+"th": "จิ้งหรีดน้อยชอบซ่อนอยู่ในใบไม้เย็นใต้พุ่มกุหลาบ!",
+"zh": "小蟋蟀最爱躲在玫瑰花下清凉的绿叶丛里！",
+"ja": "ばらの したの すずしい はっぱに こおろぎが かくれているかも！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_sam.0": {
+"en": "Lord Sam. Lord Sam rules sunny Zabul beneath the snowy peaks of Mount Alborz.",
+"lo": "ທ່ານຊາມ. ທ່ານຊາມ ປົກຄອງເມືອງຊາບູນແດດອຸ່ນຢູ່ຕີນພູອານບໍສ.",
+"th": "ท่านซาม ท่านซามปกครองเมืองซาบูลแสนอบอุ่นใต้ยอดเขาอัลบอร์ซ",
+"zh": "萨姆领主。萨姆领主守护着厄尔布尔士雪峰下阳光明媚的扎布尔。",
+"ja": "サムさま。サムさまは おひさまが あたたかい ザブールの とのさまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_sam.1": {
+"en": "Hello, Lord Sam!",
+"lo": "ສະບາຍດີ ທ່ານຊາມ!",
+"th": "สวัสดีท่านซาม!",
+"zh": "你好，萨姆领主！",
+"ja": "こんにちは、サムさま！",
+"who": "sam",
+"tag": "greet"
+},
+"sim_sam.2": {
+"en": "I am Lord Sam of sunny Zabul in Persia, beneath the snowy peaks of Mount Alborz.",
+"lo": "ຂ້ອຍແມ່ນທ່ານຊາມແຫ່ງເມືອງຊາບູນໃນເປີເຊຍ ຢູ່ຕີນພູອານບໍສ.",
+"th": "ฉันคือท่านซามแห่งเมืองซาบูลในเปอร์เซีย ใต้ยอดเขาอัลบอร์ซ",
+"zh": "我是波斯扎布尔的萨姆领主，住在厄尔布尔士雪峰脚下。",
+"ja": "わたしは ザブールの サムだ。アルボルズやまの ふもとに すんでいるよ。",
+"who": "sam",
+"tag": "say"
+},
+"sim_sam.3": {
+"en": "I wear a turquoise and gold Persian brocade coat and a royal cap.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອຄຸມເປີເຊຍສີຟ້າຂຽວປົນຄຳ ແລະ ໝວກເຈົ້າເມືອງ.",
+"th": "ฉันใส่เสื้อคลุมเปอร์เซียสีฟ้าเขียวขลิบทองและหมวกเจ้าเมือง",
+"zh": "我穿着绿松石蓝配金丝的波斯锦袍，戴着精致的礼帽。",
+"ja": "あおと きんいろの りっぱな うわぎを きているよ。",
+"who": "sam",
+"tag": "looks"
+},
+"sim_sam.4": {
+"en": "At first I worried too much about what others might think.",
+"lo": "ຕອນທຳອິດຂ້ອຍກັງວົນຫຼາຍເກີນໄປວ່າຄົນອື່ນຈະຄິດແນວໃດ.",
+"th": "ตอนแรกฉันกังวลมากเกินไปว่าคนอื่นจะคิดอย่างไร",
+"zh": "起初我太在意别人的议论，差点忘了倾听自己的真心。",
+"ja": "はじめは ほかの ひとの めばかり きに して しまったんだ。",
+"who": "sam",
+"sp": [
+"s01",
+"s02",
+"s05"
+],
+"tag": "does"
+},
+"sim_sam.5": {
+"en": "I listened to foolish pride instead of loving my snow-haired son!",
+"lo": "ຂ້ອຍຟັງຄວາມຖືຕົວໂງ່ໆແທນທີ່ຈະຮັກລູກຊາຍຜົມຂາວຂອງຂ້ອຍ!",
+"th": "ฉันฟังความหยิ่งทระนงแทนที่จะรักลูกชายผมขาวของฉัน!",
+"zh": "我曾听信愚蠢的虚荣，竟没有好好珍惜我雪发飘飘的儿子！",
+"ja": "じぶんの こころの あいに きづかなくて、ほんとうに すまなかった！",
+"who": "sam",
+"sp": [
+"s05",
+"s06"
+],
+"tag": "say"
+},
+"sim_sam.6": {
+"en": "I climbed Mount Alborz at sunrise to ask my dear Zal's forgiveness!",
+"lo": "ຂ້ອຍປີນຂຶ້ນພູອານບໍສຍາມຕາເວັນຂຶ້ນເພື່ອຂໍໂທດຊານລູກຮັກ!",
+"th": "ฉันปีนขึ้นภูเขาอัลบอร์ซตอนพระอาทิตย์ขึ้นเพื่อขอโทษซาลลูกรัก!",
+"zh": "我在日出时攀上厄尔布尔士山，真诚地向亲爱的扎尔请求原谅！",
+"ja": "あさひの なか やまを のぼって、ザールに あやまったんだよ！",
+"who": "sam",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_sam.7": {
+"en": "My snow-haired son Zal is the brightest joy in all of Zabul!",
+"lo": "ລູກຊາຍຜົມຂາວຊານແມ່ນຄວາມສຸກທີ່ສົດໃສທີ່ສຸດໃນເມືອງຊາບູນ!",
+"th": "ลูกชายผมขาวซาลคือความสุขที่สดใสที่สุดในเมืองซาบูล!",
+"zh": "我雪发闪亮的儿子扎尔是整个扎布尔最耀眼的骄傲！",
+"ja": "しろい かみの ザールは ザブールいちばんの よろこびだよ！",
+"who": "sam",
+"sp": [
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_sam.8": {
+"en": "I pushed hard against the grey boulders to help the little mountain goat!",
+"lo": "ຂ້ອຍຍູ້ກ້ອນຫີນສີເທົາສຸດແຮງເພື່ອຊ່ວຍແບ້ພູຜາໂຕນ້ອຍ!",
+"th": "ฉันผลักก้อนหินสีเทาสุดแรงเพื่อช่วยแพะภูเขาตัวน้อย!",
+"zh": "我使出浑身力气推开灰色巨石，想救出受困的小白山羊！",
+"ja": "やぎを たすけようと おおきな いわを いっしょうけんめい おしたよ！",
+"who": "sam",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_sam.9": {
+"en": "I bow in joyful thanks to the wise Simurgh for her kindness.",
+"lo": "ຂ້ອຍກົ້ມຫົວຂອບໃຈນົກຊີມວກຜູ້ສະຫຼາດຢ່າງສຸດໃຈສຳລັບຄວາມໃຈດີ.",
+"th": "ฉันโค้งคำนับขอบคุณนกซิมูร์กผู้ชาญฉลาดอย่างสุดใจสำหรับความเมตตา",
+"zh": "我怀着满满的感激向智慧的神鸟深深鞠躬致谢。",
+"ja": "やさしい シームルグに こころから ありがとうと おじぎを したよ。",
+"who": "sam",
+"sp": [
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_babyzal.0": {
+"en": "Baby Zal. Baby Zal smiles warmly with bright snowy white hair.",
+"lo": "ນ້ອງນ້ອຍຊານ. ນ້ອງນ້ອຍຊານ ຍິ້ມຢ່າງອົບອຸ່ນດ້ວຍຜົມສີຂາວຄືຫິມະ.",
+"th": "หนูน้อยซาล หนูน้อยซาลยิ้มอย่างอบอุ่นพร้อมผมสีขาวเหมือนหิมะ",
+"zh": "小扎尔。小扎尔留着雪白的头发，正暖暖地微笑着。",
+"ja": "あかちゃん ザール。あかちゃん ザールは しろい かみで にっこり わらっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_babyzal.1": {
+"en": "Hello, Baby Zal!",
+"lo": "ສະບາຍດີ ນ້ອງນ້ອຍຊານ!",
+"th": "สวัสดีหนูน้อยซาล!",
+"zh": "你好，小扎尔！",
+"ja": "こんにちは、あかちゃん ザール！",
+"who": "narrator",
+"tag": "greet"
+},
+"sim_babyzal.2": {
+"en": "Baby Zal has soft hair as bright and white as fresh mountain snow.",
+"lo": "ນ້ອງນ້ອຍຊານມີຜົມນຸ້ມຂາວສົດໃສຄືຫິມະໃໝ່ເທິງພູ.",
+"th": "หนูน้อยซาลมีผมนุ่มขาวสดใสเหมือนหิมะใหม่บนภูเขา",
+"zh": "小扎尔的头发又软又白，像山巅的新雪一样明亮。",
+"ja": "あかちゃん ザールの かみは ゆきみたいに まっしろで ふわふわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_babyzal.3": {
+"en": "Baby Zal giggles happily when the playful mountain goat sneezes!",
+"lo": "ນ້ອງນ້ອຍຊານຫົວຄິກຄັກຢ່າງມີຄວາມສຸກເມື່ອແບ້ພູຜາຈາມ!",
+"th": "หนูน้อยซาลหัวเราะคิกคักอย่างมีความสุขเมื่อแพะภูเขาจาม!",
+"zh": "小扎尔看到调皮的山羊打喷嚏时开心地咯咯笑！",
+"ja": "やぎが くしゃみを すると、あかちゃん ザールは にこにこ わらうよ！",
+"who": "narrator",
+"sp": [
+"s02"
+],
+"tag": "does"
+},
+"sim_babyzal.4": {
+"en": "Baby Zal waves his tiny hands in the cool sunlit breeze.",
+"lo": "ນ້ອງນ້ອຍຊານໂບກມືນ້ອຍໆໃນສາຍລົມເຢັນແດດອຸ່ນ.",
+"th": "หนูน้อยซาลโบกมือน้อยๆ ในสายลมเย็นแดดอุ่น",
+"zh": "小扎尔在清凉的阳光微风里挥舞着胖乎乎的小手。",
+"ja": "ちいさな てを ふって かぜと あそんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_babyzal.5": {
+"en": "Warm and safe, baby Zal sleeps peacefully beneath the Simurgh's golden wing.",
+"lo": "ອົບອຸ່ນ ແລະ ປອດໄພ ນ້ອງນ້ອຍຊານນອນຫຼັບສະບາຍກ້ອງປີກສີຄຳຂອງນົກຊີມວກ.",
+"th": "อบอุ่นและปลอดภัย หนูน้อยซาลนอนหลับสบายใต้ปีกสีทองของนกซิมูร์ก",
+"zh": "小扎尔在神鸟温暖的金色翅膀下安稳香甜地睡着了。",
+"ja": "シームルグの つばさの したで すやすや ねむっているよ。",
+"who": "narrator",
+"sp": [
+"s03"
+],
+"tag": "does"
+},
+"sim_babyzal.6": {
+"en": "Baby Zal rests snug inside his crimson silk blanket.",
+"lo": "ນ້ອງນ້ອຍຊານນອນອຸ່ນສະບາຍຢູ່ໃນຜ້າຫົ່ມໄໝສີແດງ.",
+"th": "หนูน้อยซาลนอนอุ่นสบายอยู่ในผ้าห่มไหมสีแดง",
+"zh": "小扎尔舒舒服服地裹在深红丝绸毯子里。",
+"ja": "あかい きぬの もうふに つつまれて ぽかぽかだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_babyzal.7": {
+"en": "In Persian stories, Zal's snowy hair is a sign of bright wisdom.",
+"lo": "ໃນນິທານເປີເຊຍ ຜົມຂາວຂອງຊານເປັນສັນຍາລັກຂອງປັນຍາທີ່ສົດໃສ.",
+"th": "ในนิทานเปอร์เซีย ผมขาวของซาลเป็นสัญลักษณ์ของปัญญาอันสดใส",
+"zh": "在波斯故事里，扎尔洁白的头发是闪耀智慧的象征。",
+"ja": "しろい かみは かしこい こころの しるしなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_lantern.0": {
+"en": "A brass lantern. A brass lantern glows with warm golden light beside the courtyard arch.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງ. ໂຄມໄຟທອງເຫຼືອງ ສ່ອງແສງສີຄຳອຸ່ນຢູ່ຂ້າງປະຕູໂຄ້ງເດີ່ນວັງ.",
+"th": "โคมไฟทองเหลือง โคมไฟทองเหลืองส่องแสงสีทองอบอุ่นข้างซุ้มประตูลานวัง",
+"zh": "黄铜灯笼。黄铜灯笼在庭院拱门旁散发着温暖的金色光芒。",
+"ja": "しんちゅうの らんたん。しんちゅうの らんたんが もんの そばで あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_lantern.1": {
+"en": "Tiny pierced stars in the brass let warm light dance out.",
+"lo": "ຮູດາວນ້ອຍໆເທິງທອງເຫຼືອງປ່ອຍໃຫ້ແສງອຸ່ນສ່ອງອອກມາ.",
+"th": "รูเล็กๆ รูปดาวบนทองเหลืองปล่อยให้แสงอุ่นส่องออกมา",
+"zh": "黄铜灯壁上雕着小小的星孔，洒出温暖灵动的光点。",
+"ja": "ちいさな ほしの あなから あたたかい ひかりが もれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_lantern.2": {
+"en": "Tap the courtyard lanterns to make them glow bright as morning gold!",
+"lo": "ແຕະໂຄມໄຟໃນເດີ່ນເພື່ອໃຫ້ມັນສ່ອງແສງສົດໃສຄືຄຳຍາມເຊົ້າ!",
+"th": "แตะโคมไฟในลานเพื่อให้มันส่องแสงสดใสเหมือนทองยามเช้า!",
+"zh": "轻点庭院灯笼，让它们像晨曦一样闪耀金光！",
+"ja": "らんたんに さわると きんいろに ぴかっと ひかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_lantern.3": {
+"en": "Four matching brass lanterns hang neatly along Zabul's arch.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງສີ່ໜ່ວຍແຂວນລຽງກັນຢ່າງງົດງາມຕາມປະຕູໂຄ້ງຊາບູນ.",
+"th": "โคมไฟทองเหลืองสี่ดวงแขวนเรียงกันอย่างงดงามตามซุ้มประตูซาบูล",
+"zh": "四盏成对的黄铜灯笼整齐地悬在扎布尔的拱门上。",
+"ja": "よっつの らんたんが もんに きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_lantern.4": {
+"en": "Persian craftspeople hammer brass lanterns by hand into delicate lacework.",
+"lo": "ຊ່າງຫັດຖະກຳເປີເຊຍຕີທອງເຫຼືອງດ້ວຍມືເປັນລວດລາຍລະອຽດງົດງາມ.",
+"th": "ช่างฝีมือเปอร์เซียตีทองเหลืองด้วยมือเป็นลวดลายละเอียดงดงาม",
+"zh": "波斯工匠手工敲打黄铜，镂刻出蕾丝般精细的灯罩。",
+"ja": "てづくりで ほそい もようを ほった きれいな らんたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"frog.0": {
+"en": "A frog. A frog is an animal that jumps and swims.",
+"lo": "ກົບ. ກົບເປັນສັດທີ່ໂດດ ແລະ ລອຍນ້ຳ.",
+"th": "กบ กบเป็นสัตว์ที่กระโดดและว่ายน้ำ",
+"zh": "青蛙。青蛙是会跳也会游的动物。",
+"ja": "カエル。カエルは とんだり およいだり する どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"frog.1": {
+"en": "Hello, frog!",
+"lo": "ສະບາຍດີ ກົບ!",
+"th": "สวัสดีกบ!",
+"zh": "你好，青蛙！",
+"ja": "こんにちは、カエル！",
+"who": "narrator",
+"tag": "greet"
+},
+"frog.2": {
+"en": "The frog jumps.",
+"lo": "ກົບໂດດ.",
+"th": "กบกระโดด",
+"zh": "青蛙在跳。",
+"ja": "カエルが ぴょんと とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"frog.3": {
+"en": "Ribbit, ribbit!",
+"lo": "ອຽບໆ!",
+"th": "อ๊บๆ!",
+"zh": "呱呱！",
+"ja": "ゲロゲロ！",
+"who": "narrator",
+"tag": "sound"
+},
+"frog.4": {
+"en": "A frog has long back legs.",
+"lo": "ກົບມີຂາຫຼັງຍາວ.",
+"th": "กบมีขาหลังยาว",
+"zh": "青蛙的后腿很长。",
+"ja": "カエルの うしろあしは ながいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"frog.5": {
+"en": "A frog eats flies.",
+"lo": "ກົບກິນແມງວັນ.",
+"th": "กบกินแมลงวัน",
+"zh": "青蛙吃苍蝇。",
+"ja": "カエルは ハエを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_butterfly.0": {
+"en": "A mountain butterfly. A mountain butterfly flutters with turquoise and gold wings through the sunlit air.",
+"lo": "ແມງກະເບື້ອພູຜາ. ແມງກະເບື້ອພູຜາ ບິນກະພືບປີກສີຟ້າຂຽວ ແລະ ສີຄຳໃນອາກາດແດດອຸ່ນ.",
+"th": "ผีเสื้อภูเขา ผีเสื้อภูเขากระพือปีกสีฟ้าเขียวและสีทองในอากาศแจ่มใส",
+"zh": "山间蝴蝶。山间蝴蝶扇动着蓝金色的翅膀在阳光下翩翩飞舞。",
+"ja": "やまの ちょうちょ。やまの ちょうちょが あおと きんいろの はねで ひらひら とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_butterfly.1": {
+"en": "Hello, mountain butterfly!",
+"lo": "ສະບາຍດີ ແມງກະເບື້ອພູຜາ!",
+"th": "สวัสดีผีเสื้อภูเขา!",
+"zh": "你好，山间蝴蝶！",
+"ja": "こんにちは、やまの ちょうちょ！",
+"who": "narrator",
+"tag": "greet"
+},
+"sim_butterfly.2": {
+"en": "Butterflies sip sweet nectar from garden roses and alpine wildflowers.",
+"lo": "ແມງກະເບື້ອດູດນ້ຳຫວານຈາກດອກກຸຫຼາບໃນສວນ ແລະ ດອກໄມ້ປ່າເທິງພູ.",
+"th": "ผีเสื้อดูดน้ำหวานจากดอกกุหลาบในสวนและดอกไม้ป่าบนภูเขา",
+"zh": "蝴蝶喜欢吸吮玫瑰花和山间野花里香甜的花蜜。",
+"ja": "ちょうちょは はなの あまい みつを すうんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_butterfly.3": {
+"en": "It glides quietly on warm breezes from blossom to blossom.",
+"lo": "ມັນບິນລ່ອງໄປງຽບໆຕາມສາຍລົມອຸ່ນຈາກດອກໄມ້ໜຶ່ງໄປຫາອີກດອກໜຶ່ງ.",
+"th": "มันร่อนไปเงียบๆ ตามสายลมอุ่นจากดอกไม้หนึ่งไปอีกดอกหนึ่ง",
+"zh": "它乘着温暖的微风，静静地从一朵花翩翩飞向另一朵花。",
+"ja": "あたたかい かぜに のって はなから はなへ とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_butterfly.4": {
+"en": "Its patterned wings shimmer in turquoise blue and Persian gold.",
+"lo": "ປີກລວດລາຍຂອງມັນເຫຼື້ອມງາມສີຟ້າຂຽວ ແລະ ສີຄຳແບບເປີເຊຍ.",
+"th": "ปีกลวดลายของมันเงางามสีฟ้าเขียวและสีทองแบบเปอร์เซีย",
+"zh": "它带花纹的翅膀闪着绿松石蓝和波斯金的光泽。",
+"ja": "あおと きんいろの もようが きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_butterfly.5": {
+"en": "Tap gently and watch it flutter higher into the sunshine!",
+"lo": "ແຕະຄ່ອຍໆແລ້ວເບິ່ງມັນບິນສູງຂຶ້ນສູ່ແສງແດດ!",
+"th": "แตะเบาๆ แล้วดูมันบินสูงขึ้นสู่แสงแดด!",
+"zh": "轻轻点一点，看它拍着翅膀飞向更高的阳光里！",
+"ja": "そっと さわると ひなたへ ふわりと まいあがるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_fountain.0": {
+"en": "A courtyard fountain. The courtyard fountain splashes cool turquoise water in an eight-sided pool.",
+"lo": "ນ້ຳພຸໃນເດີ່ນ. ນ້ຳພຸໃນເດີ່ນ ພົ່ນນ້ຳສີຟ້າຂຽວເຢັນຊື່ນໃຈໃນອ່າງແປດຫຼ່ຽມ.",
+"th": "น้ำพุในลาน น้ำพุในลานพ่นน้ำสีฟ้าเขียวเย็นชื่นใจในอ่างแปดเหลี่ยม",
+"zh": "庭院喷泉。庭院喷泉在八角水池里溅起清凉碧蓝的水花。",
+"ja": "にわの ふんすい。にわの ふんすいから すずしい みずが わきでて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_fountain.1": {
+"en": "An eight-sided turquoise stone basin holds clear shimmering water.",
+"lo": "ອ່າງຫີນແປດຫຼ່ຽມສີຟ້າຂຽວໃສ່ນ້ຳໃສເຫຼື້ອມວິບວັບ.",
+"th": "อ่างหินแปดเหลี่ยมสีฟ้าเขียวใส่น้ำใสระยิบระยับ",
+"zh": "八角形的绿松石水池里蓄着清澈微漾的碧水。",
+"ja": "あおい いしの いけに すきとおった みずが たまって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_fountain.2": {
+"en": "Cool water splashes gently in ripples to refresh the sunny garden.",
+"lo": "ນ້ຳເຢັນພົ່ນເປັນຄື້ນວົງຄ່ອຍໆເພື່ອໃຫ້ຄວາມສົດຊື່ນແກ່ສວນແດດອຸ່ນ.",
+"th": "น้ำเย็นพ่นเป็นคลื่นวงเบาๆ เพื่อให้ความสดชื่นแก่สวนแดดอุ่น",
+"zh": "清凉的水花溅起圈圈涟漪，为阳光花园带来丝丝凉意。",
+"ja": "すずしい みずが ぽちゃぽちゃ はねて きもち いいよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_fountain.3": {
+"en": "Traditional Persian gardens place a quiet pool in the courtyard to reflect the sky.",
+"lo": "ສວນເປີເຊຍແບບດັ້ງເດີມມັກມີອ່າງນ້ຳງຽບໆໃນເດີ່ນເພື່ອສະທ້ອນທ້ອງຟ້າ.",
+"th": "สวนเปอร์เซียแบบดั้งเดิมมักมีสระน้ำเงียบๆ ในลานเพื่อสะท้อนท้องฟ้า",
+"zh": "传统波斯花园常在庭院里修建水池，用来倒映蓝天星光。",
+"ja": "にわの いけは そらや ほしを うつす かがみなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_fountain.4": {
+"en": "A little green frog loves sitting right beside this cool pool!",
+"lo": "ກົບສີຂຽວໂຕນ້ອຍມັກນັ່ງຢູ່ຂ້າງອ່າງນ້ຳເຢັນໜ່ວຍນີ້!",
+"th": "กบสีเขียวตัวน้อยชอบนั่งอยู่ข้างสระน้ำเย็นนี้!",
+"zh": "一只小绿青蛙最喜欢蹲在这汪清凉的水池边！",
+"ja": "ちいさな かえるが いけの そばで やすんで いるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_ewer.0": {
+"en": "A brass ewer. A brass ewer pours cool fresh water for guests in the courtyard.",
+"lo": "ໂຖນ້ຳທອງເຫຼືອງ. ໂຖນ້ຳທອງເຫຼືອງ ໃຊ້ຖອກນ້ຳເຢັນສົດຊື່ນໃຫ້ແຂກໃນເດີ່ນວັງ.",
+"th": "เหยือกน้ำทองเหลือง เหยือกน้ำทองเหลืองใช้รินน้ำเย็นสดชื่นให้แขกในลานวัง",
+"zh": "黄铜水壶。黄铜水壶为庭院里的客人们斟满清凉甘甜的清水。",
+"ja": "しんちゅうの みずさし。しんちゅうの みずさしは つめたい おみずを そそぐ どうぐだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_ewer.1": {
+"en": "A slender curved spout and graceful handle shine in polished brass.",
+"lo": "ປາກພວຍຮຽວໂຄ້ງ ແລະ ຫູຈັບອ່ອນຊ້ອຍເຫຼື້ອມງາມດ້ວຍທອງເຫຼືອງຂັດເງົາ.",
+"th": "ปากพวยเรียวโค้งและหูจับอ่อนช้อยเงางามด้วยทองเหลืองขัดเงา",
+"zh": "纤长优雅的弯壶嘴与弧形壶柄闪耀着擦亮的黄铜光泽。",
+"ja": "ほそい そそぎぐちが きれいな しんちゅうの みずさしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_ewer.2": {
+"en": "It holds cool rose-scented water to refresh dusty hands and faces.",
+"lo": "ມັນໃສ່ນ້ຳເຢັນຫອມກິ່ນກຸຫຼາບໄວ້ລ້າງມື ແລະ ໜ້າໃຫ້ສົດຊື່ນ.",
+"th": "มันใส่น้ำเย็นหอมกลิ่นกุหลาบไว้ล้างมือและหน้าให้สดชื่น",
+"zh": "壶里盛着清凉芬芳的玫瑰花水，供客人们洗手净面。",
+"ja": "ばらの かおりの つめたい おみずが はいっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_ewer.3": {
+"en": "Tiny etched blossoms decorate the round brass belly.",
+"lo": "ລາຍດອກໄມ້ແກະສະຫຼັກນ້ອຍໆປະດັບອ້ອມຕົວໂຖທອງເຫຼືອງ.",
+"th": "ลายดอกไม้แกะสลักน้อยๆ ประดับรอบตัวเหยือกทองเหลือง",
+"zh": "圆润的铜壶身上细细镌刻着朵朵小花。",
+"ja": "まるい おなかに ちいさな はなが ほられて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_ewer.4": {
+"en": "It rests neatly beside the fountain ready for welcome guests.",
+"lo": "ມັນວາງຢູ່ຢ່າງເປັນລະບຽບຂ້າງນ້ຳພຸພ້ອມຕ້ອນຮັບແຂກ.",
+"th": "มันวางอยู่อย่างเป็นระเบียบข้างน้ำพุพร้อมต้อนรับแขก",
+"zh": "它整齐地放在喷泉旁，随时准备招待贵客。",
+"ja": "ふんすいの そばに きれいに ならんで いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_urn.0": {
+"en": "A glazed urn. A glazed urn shines with hand-painted turquoise ceramic patterns.",
+"lo": "ໄຫເຄືອບສີຟ້າ. ໄຫເຄືອບສີຟ້າ ເຫຼື້ອມງາມດ້ວຍລວດລາຍເຄື່ອງປັ້ນດິນເຜົາແຕ້ມດ້ວຍມື.",
+"th": "ไหเคลือบสีฟ้า ไหเคลือบสีฟ้าเงางามด้วยลวดลายเครื่องปั้นดินเผาวาดมือ",
+"zh": "青釉花瓶。青釉花瓶闪耀着手工绘制的绿松石色釉彩花纹。",
+"ja": "あおい つぼ。あおい つぼは てがきのもようで ピカピカ ひかっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_urn.1": {
+"en": "Glossy turquoise glaze catches warm reflections from the courtyard sun.",
+"lo": "ຜິວເຄືອບສີຟ້າຂຽວເງົາງາມສະທ້ອນແສງແດດອຸ່ນຂອງເດີ່ນວັງ.",
+"th": "ผิวเคลือบสีฟ้าเขียวเงางามสะท้อนแสงแดดอุ่นของลานวัง",
+"zh": "光亮的绿松石釉面映照出庭院温暖的日光。",
+"ja": "つやつやの あおい つぼが おひさまを うつして ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_urn.2": {
+"en": "Ornate glazed urns hold fresh cool water or blooming garden branches.",
+"lo": "ໄຫເຄືອບລວດລາຍງາມໃຊ້ໃສ່ນ້ຳເຢັນ ຫຼື ປັກກິ່ງດອກໄມ້ສົດໃນສວນ.",
+"th": "ไหเคลือบลวดลายงามใช้ใส่น้ำเย็นหรือปักกิ่งดอกไม้สดในสวน",
+"zh": "精美的彩釉大瓶既能盛清凉泉水，也能插上鲜花枝。",
+"ja": "おみずを いれたり おはなを かざったり する つぼだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_urn.3": {
+"en": "Fine dark sepia lines trace delicate floral patterns around its neck.",
+"lo": "ເສັ້ນສີນ້ຳຕານເຂັ້ມລະອຽດແຕ້ມລາຍດອກໄມ້ອ້ອມຄໍໄຫ.",
+"th": "เส้นสีน้ำตาลเข้มละเอียดวาดลายดอกไม้รอบคอไห",
+"zh": "细致的深棕线条在瓶口勾勒出优雅的花卉纹饰。",
+"ja": "くびの まわりに おはなの もようが えがかれて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_urn.4": {
+"en": "Persian potters have made bright turquoise pottery for over a thousand years.",
+"lo": "ຊ່າງປັ້ນເປີເຊຍເຮັດເຄື່ອງປັ້ນດິນເຜົາສີຟ້າຂຽວສົດໃສມາຫຼາຍກວ່າພັນປີແລ້ວ.",
+"th": "ช่างปั้นเปอร์เซียทำเครื่องปั้นดินเผาสีฟ้าเขียวสดใสมานานกว่าพันปีแล้ว",
+"zh": "波斯陶艺匠人烧制绚丽绿松石瓷器已有一千多年历史。",
+"ja": "むかしから ていねいに やかれた きれいな やきものだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_brazier.0": {
+"en": "A fire brazier. A fire brazier holds warm glowing embers in carved Persian bronze.",
+"lo": "ເຕົາໄຟທອງສຳລິດ. ເຕົາໄຟທອງສຳລິດ ໃສ່ຖ່ານໄຟແດງອຸ່ນໃນເຕົາແກະສະຫຼັກແບບເປີເຊຍ.",
+"th": "เตาไฟสำริด เตาไฟสำริดใส่ถ่านไฟอุ่นในเตาแกะสลักแบบเปอร์เซีย",
+"zh": "青铜火盆。青铜火盆里跳动着温暖明亮的火焰和余烬。",
+"ja": "あかがねの ひばち。あかがねの ひばちに あたたかい ひが ゆらゆら もえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_brazier.1": {
+"en": "Its carved bronze bowl stands on sturdy scrolled feet.",
+"lo": "ອ່າງທອງສຳລິດແກະສະຫຼັກຕັ້ງຢູ່ເທິງຂາໂຄ້ງທີ່ແຂງແຮງ.",
+"th": "อ่างสำริดแกะสลักตั้งอยู่บนขาโค้งที่แข็งแรง",
+"zh": "精雕青铜火盆稳稳地立在卷草纹支脚上。",
+"ja": "りっぱな あかがねの ぼうるが しっかり たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_brazier.2": {
+"en": "Warm glowing embers crackle softly inside to keep travellers cosy.",
+"lo": "ຖ່ານໄຟແດງອຸ່ນແຕກສຽງຄ່ອຍໆຢູ່ຂ້າງໃນເພື່ອໃຫ້ຄວາມອົບອຸ່ນແກ່ຜູ້ເດີນທາງ.",
+"th": "ถ่านไฟแดงอุ่นแตกเสียงเบาๆ ข้างในเพื่อให้ความอบอุ่นแก่นักเดินทาง",
+"zh": "温暖的余烬在盆中轻轻噼啪作响，为旅人带来暖意。",
+"ja": "ぱちぱち あたたかい ひが たびびとを あたためて くれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brazier.3": {
+"en": "Touching a golden feather to this flame sends starlight skyward!",
+"lo": "ການແຕະຂົນນົກສີຄຳໃສ່ແປວໄຟນີ້ສົ່ງແສງດາວຂຶ້ນສູ່ທ້ອງຟ້າ!",
+"th": "การแตะขนนกสีทองใส่เปลวไฟนี้ส่งแสงดาวขึ้นสู่ท้องฟ้า!",
+"zh": "只要把金色羽毛轻触这团暖火，星光就会升上夜空！",
+"ja": "きんのはねを ひに ふれると ほしあかりが そらへ まいあがるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brazier.4": {
+"en": "Amber firelight dances gently across the carved metal rim.",
+"lo": "ແສງໄຟສີອຳພັນເຕັ້ນຄ່ອຍໆຕາມຂອບໂລຫະແກະສະຫຼັກ.",
+"th": "แสงไฟสีอำพันเต้นรำเบาๆ ตามขอบโลหะแกะสลัก",
+"zh": "琥珀色的火光在雕花青铜盆沿上轻轻跳跃。",
+"ja": "オレンジの ひかりが ふちに ゆらゆら うつっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_saffronbasket.0": {
+"en": "A saffron basket. A saffron basket holds golden spice threads harvested in Persia.",
+"lo": "ກະຕ່າຫຍ້າຝຣັ່ນ. ກະຕ່າຫຍ້າຝຣັ່ນ ໃສ່ເສັ້ນເກສອນສີຄຳທີ່ເກັບກ່ຽວໃນເປີເຊຍ.",
+"th": "ตะกร้าหญ้าฝรั่น ตะกร้าหญ้าฝรั่นใส่เส้นเกสรสีทองที่เก็บเกี่ยวในเปอร์เซีย",
+"zh": "藏红花篮。藏红花篮里装满了波斯采收的金色藏红花丝。",
+"ja": "サフランの かご。サフランの かごには きんいろの かおりの いい はなが 入っているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_saffronbasket.1": {
+"en": "A woven basket brims with bright red-gold threads of Persian saffron.",
+"lo": "ກະຕ່າສານເຕັມໄປດ້ວຍເສັ້ນຫຍ້າຝຣັ່ນສີແດງຄຳສົດໃສຂອງເປີເຊຍ.",
+"th": "ตะกร้าสานเต็มไปด้วยเส้นหญ้าฝรั่นสีแดงทองสดใสของเปอร์เซีย",
+"zh": "编织小篮里盛满了鲜艳红金色的波斯藏红花丝。",
+"ja": "あんだ かごに きんいろの サフランが いっぱい はいっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_saffronbasket.2": {
+"en": "A tiny pinch of saffron turns Zabul's feast cakes sunny gold!",
+"lo": "ຫຍ້າຝຣັ່ນພຽງໜ້ອຍດຽວກໍເຮັດໃຫ້ເຂົ້າໜົມງານລ້ຽງຊາບູນມີສີຄຳສົດໃສ!",
+"th": "หญ้าฝรั่นเพียงนิดเดียวก็ทำให้ขนมงานเลี้ยงซาบูลมีสีทองสดใส!",
+"zh": "只需轻轻一撮藏红花，就能让扎布尔的糕点金黄飘香！",
+"ja": "ほんの すこし いれる だけで おかしが きんいろに なるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_saffronbasket.3": {
+"en": "Its neat woven reeds feel light and sturdy in the hand.",
+"lo": "ເສັ້ນຕອກສານຢ່າງລະອຽດຮູ້ສຶກເບົາ ແລະ ແຂງແຮງ.",
+"th": "เส้นตอกสานอย่างละเอียดรู้สึกเบาและแข็งแรง",
+"zh": "细密编织的篮身拿在手里既轻巧又结实。",
+"ja": "かるくて じょうぶに あまれた かわいい かごだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_saffronbasket.4": {
+"en": "Persia grows the finest fragrant saffron in the world.",
+"lo": "ເປີເຊຍປູກຫຍ້າຝຣັ່ນທີ່ຫອມ ແລະ ດີທີ່ສຸດໃນໂລກ.",
+"th": "เปอร์เซียปลูกหญ้าฝรั่นที่หอมและดีที่สุดในโลก",
+"zh": "波斯出产着世界上最芬芳珍贵的藏红花。",
+"ja": "せかいで いちばん いい かおりの サフランなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_courtyardsky.0": {
+"en": "The Zabul sky. The Zabul sky shines warm blue and gold over the tiled garden.",
+"lo": "ທ້ອງຟ້າເມືອງຊາບູນ. ທ້ອງຟ້າເມືອງຊາບູນ ສ່ອງແສງສີຟ້າອຸ່ນ ແລະ ສີຄຳເໜືອສວນກະເບື້ອງ.",
+"th": "ท้องฟ้าเมืองซาบูล ท้องฟ้าเมืองซาบูลส่องแสงสีฟ้าอุ่นและสีทองเหนือสวนกระเบื้อง",
+"zh": "扎布尔天空。扎布尔天空蔚蓝明朗，温暖地照耀着瓷砖庭院。",
+"ja": "ザブールの そら。ザブールの そらが あおく あたたかく ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_courtyardsky.1": {
+"en": "Soft white clouds drift lazily across the warm Persian blue sky.",
+"lo": "ກ້ອນເມກສີຂາວນຸ້ມລອຍຊ້າໆຂ້າມທ້ອງຟ້າສີຟ້າອຸ່ນຂອງເປີເຊຍ.",
+"th": "ปุยเมฆสีขาวนุ่มลอยช้าๆ ข้ามท้องฟ้าสีฟ้าอุ่นของเปอร์เซีย",
+"zh": "柔软的白云在波斯蔚蓝的天空里悠然飘荡。",
+"ja": "しろい くもが あおい そらを ゆっくり ながれて いくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_courtyardsky.2": {
+"en": "Golden sunshine warms every flagstone and rose bush in Zabul.",
+"lo": "ແສງແດດສີຄຳໃຫ້ຄວາມອົບອຸ່ນແກ່ທຸກແຜ່ນຫີນ ແລະ ພຸ່ມກຸຫຼາບໃນຊາບູນ.",
+"th": "แสงแดดสีทองให้ความอบอุ่นแก่ทุกแผ่นหินและพุ่มกุหลาบในซาบูล",
+"zh": "金色阳光温暖地洒在扎布尔的每一块石板和玫瑰丛上。",
+"ja": "あたたかい おひさまが にわ いっぱいに ふりそそぐよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_courtyardsky.3": {
+"en": "Look high into the sky and you might spot the Simurgh gliding far away!",
+"lo": "ແນມຂຶ້ນສູງເທິງທ້ອງຟ້າ ອາດຈະເຫັນນົກຊີມວກບິນລ່ອງຢູ່ໄກໆ!",
+"th": "มองขึ้นสูงบนท้องฟ้า อาจเห็นนกซิมูร์กร่อนอยู่ไกลๆ!",
+"zh": "抬头望向高空，也许能看见远方滑翔的西穆尔格神鸟！",
+"ja": "そらを みあげると とおくを とぶ シームルグが みえるかも！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_courtyardsky.4": {
+"en": "Sunny mornings in Zabul feel bright, calm and welcoming.",
+"lo": "ຍາມເຊົ້າແດດອຸ່ນໃນຊາບູນຮູ້ສຶກສົດໃສ ສະຫງົບ ແລະ ອົບອຸ່ນ.",
+"th": "ยามเช้าแดดอุ่นในซาบูลรู้สึกสดใส สงบ และอบอุ่น",
+"zh": "扎布尔阳光明媚的清晨宁静明亮，令人心旷神怡。",
+"ja": "はれた あさの そらは とても きもち いいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_alborzpeaks.0": {
+"en": "Mount Alborz. Mount Alborz rises tall and snowy along the northern horizon of Persia.",
+"lo": "ພູອານບໍສ. ພູອານບໍສ ຕັ້ງສູງ ແລະ ປົກຄຸມດ້ວຍຫິມະຕາມຂອບຟ້າທາງເໜືອຂອງເປີເຊຍ.",
+"th": "ภูเขาอัลบอร์ซ ภูเขาอัลบอร์ซตั้งสูงและปกคลุมด้วยหิมะตามขอบฟ้าทางเหนือของเปอร์เซีย",
+"zh": "厄尔布尔士雪峰。厄尔布尔士雪峰高耸入云，绵延在波斯的北方天际。",
+"ja": "アルボルズやま。アルボルズやまは ゆきを かぶった たかい やまなみだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_alborzpeaks.1": {
+"en": "Jagged snowy mountain peaks crown the far horizon above Zabul.",
+"lo": "ຍອດພູຫິມະສູງຊັນຕັ້ງສະຫງ່າຕາມຂອບຟ້າໄກເໜືອເມືອງຊາບູນ.",
+"th": "ยอดเขาหิมะสูงชันตั้งตระหง่านตามขอบฟ้าไกลเหนือเมืองซาบูล",
+"zh": "连绵的雪峰巍峨耸立在扎布尔远方的天际线上。",
+"ja": "しろい ゆきを かぶった やまが とおくに そびえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_alborzpeaks.2": {
+"en": "Mount Alborz is a real, grand mountain range in northern Iran.",
+"lo": "ພູອານບໍສແມ່ນສາຍພູໃຫຍ່ທີ່ມີຢູ່ແທ້ທາງພາກເໜືອຂອງປະເທດອີຣ່ານ.",
+"th": "ภูเขาอัลบอร์ซเป็นเทือกเขาใหญ่ที่มีอยู่จริงทางตอนเหนือของประเทศอิหร่าน",
+"zh": "厄尔布尔士山脉是伊朗北部一座真实而宏伟的高大山脉。",
+"ja": "アルボルズやまは ほんとうに ある おおきな やまなみなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_alborzpeaks.3": {
+"en": "High above these snowy peaks sits the Simurgh's giant sandalwood nest!",
+"lo": "ສູງເໜືອຍອດພູຫິມະເຫຼົ່ານີ້ແມ່ນຮັງໄມ້ຈັນຫອມໃຫຍ່ຂອງນົກຊີມວກ!",
+"th": "สูงเหนือยอดเขาหิมะเหล่านี้คือรังไม้จันทน์หอมใหญ่ของนกซิมูร์ก!",
+"zh": "就在这些高耸雪峰的云端之上，坐落着神鸟的檀香大巢！",
+"ja": "この たかい やまの くもの うえに シームルグの すがあるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_alborzpeaks.4": {
+"en": "Cool blue shadows and bright white snow gleam on the tall slopes.",
+"lo": "ເງົາສີຟ້າເຢັນ ແລະ ຫິມະສີຂາວສົດໃສເຫຼື້ອມງາມເທິງເນີນພູສູງ.",
+"th": "เงาสีฟ้าเย็นและหิมะสีขาวสดใสเปล่งประกายบนไหล่เขาสูง",
+"zh": "清凉的蓝影与皑皑白雪在巍峨山坡上交相辉映。",
+"ja": "あおい かげと しろい ゆきが とても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_zabularch.0": {
+"en": "A tiled arch. The tiled arch of Zabul sparkles with turquoise and lapis Persian patterns.",
+"lo": "ປະຕູໂຄ້ງກະເບື້ອງສີຟ້າ. ປະຕູໂຄ້ງກະເບື້ອງສີຟ້າ ຂອງຊາບູນເຫຼື້ອມງາມດ້ວຍລວດລາຍເປີເຊຍ.",
+"th": "ซุ้มประตูกระเบื้องสีฟ้า ซุ้มประตูกระเบื้องสีฟ้าของซาบูลเปล่งประกายด้วยลวดลายเปอร์เซีย",
+"zh": "蓝釉拱门。蓝釉拱门饰满精美的绿松石色与青金石色波斯花纹。",
+"ja": "あおい たいるの もん。あおい たいるの もんには きれいな もようが えがかれて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_zabularch.1": {
+"en": "A grand pointed Persian arch opens wide from the garden courtyard.",
+"lo": "ປະຕູໂຄ້ງຍອດແຫຼມແບບເປີເຊຍເປີດກວ້າງຈາກເດີ່ນສວນ.",
+"th": "ซุ้มประตูยอดแหลมแบบเปอร์เซียเปิดกว้างจากลานสวน",
+"zh": "宏伟的波斯尖拱门从阳光花园庭院敞开迎客。",
+"ja": "とんがった かたちの りっぱな もんが にわに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_zabularch.2": {
+"en": "Traditional Persian kashi tiles are glazed in brilliant turquoise and lapis blue.",
+"lo": "ກະເບື້ອງຄາຊີແບບດັ້ງເດີມຂອງເປີເຊຍເຄືອບສີຟ້າຂຽວ ແລະ ສີຟ້າເຂັ້ມງົດງາມ.",
+"th": "กระเบื้องคาชีแบบดั้งเดิมของเปอร์เซียเคลือบสีฟ้าเขียวและสีน้ำเงินเข้มงดงาม",
+"zh": "传统的波斯彩釉瓷砖以绚丽的绿松石蓝和青金石蓝闻名。",
+"ja": "あおい たいるは むかしから たいせつに つくられて きたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_zabularch.3": {
+"en": "The Simurgh and her chicks perched right atop this turquoise arch!",
+"lo": "ນົກຊີມວກ ແລະ ລູກນົກຈັບຢູ່ເທິງຍອດປະຕູໂຄ້ງສີຟ້າຂຽວນີ້ເລີຍ!",
+"th": "นกซิมูร์กและลูกนกเกาะอยู่บนยอดซุ้มประตูสีฟ้าเขียวนี้เลย!",
+"zh": "神鸟和两只小雏鸟就稳稳落在青砖拱门顶上！",
+"ja": "シームルグと ひなたちが この もんの うえに とまったよ！",
+"who": "narrator",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_zabularch.4": {
+"en": "Intricate golden vines wind around every glazed blue tile.",
+"lo": "ລາຍເຄືອໄມ້ສີຄຳລະອຽດກ້ຽວພັນໄປທົ່ວທຸກແຜ່ນກະເບື້ອງສີຟ້າ.",
+"th": "ลายเถาไม้สีทองละเอียดเลื้อยพันไปทั่วทุกแผ่นกระเบื้องสีฟ้า",
+"zh": "精美的金色蔓草花纹蜿蜒点缀在每一块蓝釉瓷砖上。",
+"ja": "きんいろの きれいな もようが たいる いっぱいに えがかれて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_zabularch.5": {
+"en": "Everyone passes beneath this bright arch when entering Zabul's garden.",
+"lo": "ທຸກຄົນຍ່າງຜ່ານກ້ອງປະຕູໂຄ້ງສົດໃສນີ້ເມື່ອເຂົ້າສູ່ສວນເມືອງຊາບູນ.",
+"th": "ทุกคนเดินผ่านใต้ซุ้มประตูสดใสนี้เมื่อเข้าสู่สวนเมืองซาบูล",
+"zh": "大家走进扎布尔花园时，都会穿过这座明亮的拱门。",
+"ja": "ザブールの にわに はいる とき みんな この もんを くぐるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pinecrag.0": {
+"en": "A pine cliff. A pine cliff holds tall green Caspian pines high on the mountainside.",
+"lo": "ຜາຕົ້ນແປກ. ຜາຕົ້ນແປກ ມີຕົ້ນແປກສີຂຽວສູງໃຫຍ່ຢູ່ເທິງເນີນພູສູງ.",
+"th": "ผาต้นสน ผาต้นสนมีต้นสนสีเขียวสูงใหญ่อยู่บนไหล่เขาสูง",
+"zh": "松林峭壁。松林峭壁上挺立着高大苍翠的高山松树。",
+"ja": "まつの がけ。まつの がけに みどりの まつが たくさん はえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_pinecrag.1": {
+"en": "Tall evergreen Caspian pines rise high above mossy stone ledges.",
+"lo": "ຕົ້ນແປກສີຂຽວສູງໃຫຍ່ຕັ້ງສະຫງ່າເໜືອຂອບຫີນທີ່ມີໄຄນ້ຳ.",
+"th": "ต้นสนสีเขียวสูงใหญ่ตั้งตระหง่านเหนือขอบหินที่มีมอส",
+"zh": "高大常青的高山松树挺立在长满青苔的岩石之上。",
+"ja": "たかい まつの きが こけの いわの うえに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_pinecrag.2": {
+"en": "Cool mountain winds rustle softly through the green pine needles.",
+"lo": "ລົມພູເຢັນພັດສຽງຊ່າໆຄ່ອຍໆຜ່ານໃບແປກສີຂຽວ.",
+"th": "ลมเขาเย็นพัดเสียงซ่าๆ เบาๆ ผ่านใบสนสีเขียว",
+"zh": "清凉的山风吹过松针，发出轻柔的沙沙声。",
+"ja": "やまかぜが まつの はを さらさら ゆらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pinecrag.3": {
+"en": "Pine trees keep their green needles even when mountain snow falls.",
+"lo": "ຕົ້ນແປກຮັກສາໃບສີຂຽວໄວ້ໄດ້ແມ່ນແຕ່ຕອນຫິມະຕົກເທິງພູ.",
+"th": "ต้นสนรักษาใบสีเขียวไว้ได้แม้ตอนหิมะตกบนภูเขา",
+"zh": "即便高山飘雪，松树也依然保持着翠绿的针叶。",
+"ja": "ゆきが ふっても ずっと みどりの ままだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_pinecrag.4": {
+"en": "Small mountain birds build warm nests high in these sturdy boughs.",
+"lo": "ນົກນ້ອຍເທິງພູສ້າງຮັງອຸ່ນໆຢູ່ສູງເທິງກິ່ງໄມ້ທີ່ແຂງແຮງເຫຼົ່ານີ້.",
+"th": "นกน้อยบนภูเขาสร้างรังอุ่นๆ อยู่สูงบนกิ่งไม้ที่แข็งแรงเหล่านี้",
+"zh": "山间小鸟喜欢在这些结实的高枝间筑起温暖的小窝。",
+"ja": "ちいさな とりが たかい えだに すを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_terraceflowers.0": {
+"en": "Alpine flowers. Alpine flowers brighten the rocky steps in purple and sunny yellow.",
+"lo": "ດອກໄມ້ປ່າເທິງພູ. ດອກໄມ້ປ່າເທິງພູ ແຕ່ງແຕ້ມຂັ້ນຫີນດ້ວຍສີມ່ວງ ແລະ ສີເຫຼືອງສົດໃສ.",
+"th": "ดอกไม้ป่าบนเขา ดอกไม้ป่าบนเขาแต่งแต้มขั้นหินด้วยสีม่วงและสีเหลืองสดใส",
+"zh": "高山野花。高山野花在石阶间绽放出明丽的紫色与鹅黄。",
+"ja": "やまの はな。やまの はなが むらさきや きいろに さいて きれいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_terraceflowers.1": {
+"en": "Clusters of purple heather and bright yellow blooms dot the rocky steps.",
+"lo": "ກຸ່ມດອກສີມ່ວງ ແລະ ດອກສີເຫຼືອງສົດໃສປະດັບຕາມຂັ້ນຫີນ.",
+"th": "กลุ่มดอกสีม่วงและดอกสีเหลืองสดใสประดับตามขั้นหิน",
+"zh": "一簇簇紫色山花与明黄野花点缀在石阶之间。",
+"ja": "むらさきと きいろの おはなが いわの うえに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_terraceflowers.2": {
+"en": "Mountain butterflies pause here to sip sweet nectar in the sun.",
+"lo": "ແມງກະເບື້ອພູຜາແວ່ພັກດູດນ້ຳຫວານຢູ່ບ່ອນນີ້ກາງແສງແດດ.",
+"th": "ผีเสื้อภูเขาแวะพักดูดน้ำหวานที่นี่กลางแสงแดด",
+"zh": "山间蝴蝶常在阳光下停在这里啜饮甜美的花蜜。",
+"ja": "ちょうちょが あまい みつを すいに とんで くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_terraceflowers.3": {
+"en": "Soft green leaves cushion every delicate flower stem.",
+"lo": "ໃບໄມ້ສີຂຽວນຸ້ມຮອງຮັບກ້ານດອກໄມ້ອ່ອນນ້ອຍທຸກກ້ານ.",
+"th": "ใบไม้สีเขียวนุ่มรองรับก้านดอกไม้อ่อนน้อยทุกก้าน",
+"zh": "嫩绿的叶片温柔地托起每一枝娇巧的花茎。",
+"ja": "みどりの はっぱが おはなを やさしく つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_terraceflowers.4": {
+"en": "Alpine flowers grow short and sturdy so mountain winds cannot blow them over.",
+"lo": "ດອກໄມ້ເທິງພູມີລຳຕົ້ນຕ່ຳ ແລະ ແຂງແຮງເພື່ອບໍ່ໃຫ້ລົມພູພັດລົ້ມ.",
+"th": "ดอกไม้บนเขามีลำต้นเตี้ยและแข็งแรงเพื่อไม่ให้ลมเขาพัดล้ม",
+"zh": "高山野花长得低矮结实，再大的山风也吹不倒它们。",
+"ja": "やまかぜに まけない ように じょうぶに そだつ おはなだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_mossrow.0": {
+"en": "Mossy rocks. Mossy rocks line the footpath with soft green velvet cushions.",
+"lo": "ຫີນໄຄນ້ຳ. ຫີນໄຄນ້ຳ ລຽງຕາມທາງຍ່າງດ້ວຍພົມໄຄນ້ຳສີຂຽວນຸ້ມ.",
+"th": "หินมอส หินมอสเรียงตามทางเดินด้วยพรมมอสสีเขียวนุ่ม",
+"zh": "青苔石阶。青苔石阶覆着毛茸茸的绿苔，温柔地镶在山路旁。",
+"ja": "こけの いわ。こけの いわが みちばたに やわらかく ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_mossrow.1": {
+"en": "Soft emerald moss blankets the cool stones beside the mountain trail.",
+"lo": "ໄຄນ້ຳສີຂຽວນຸ້ມປົກຄຸມກ້ອນຫີນເຢັນຢູ່ຂ້າງທາງພູ.",
+"th": "มอสสีเขียวนุ่มปกคลุมก้อนหินเย็นข้างทางเขา",
+"zh": "翠绿柔软的青苔像地毯一样铺在清凉的山石上。",
+"ja": "ふわふわの みどりの こけが いわを つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_mossrow.2": {
+"en": "The Simurgh gently set the rescued white goat right onto soft green moss!",
+"lo": "ນົກຊີມວກວາງແບ້ຂາວທີ່ຊ່ວຍໄດ້ລົງເທິງໄຄນ້ຳສີຂຽວນຸ້ມຢ່າງອ່ອນໂຍນ!",
+"th": "นกซิมูร์กวางแพะขาวที่ช่วยได้ลงบนมอสสีเขียวนุ่มอย่างอ่อนโยน!",
+"zh": "神鸟正是把救下的小白羊轻轻放到了软软的绿苔上！",
+"ja": "シームルグが たすけた やぎを ふわふわの こけに おろしたよ！",
+"who": "narrator",
+"sp": [
+"s09"
+],
+"tag": "does"
+},
+"sim_mossrow.3": {
+"en": "Tiny yellow wildflowers peek brightly between the mossy boulders.",
+"lo": "ດອກໄມ້ປ່າສີເຫຼືອງນ້ອຍໆໂຜ່ສົດໃສລະຫວ່າງກ້ອນຫີນໄຄນ້ຳ.",
+"th": "ดอกไม้ป่าสีเหลืองน้อยๆ โผล่สดใสระหว่างก้อนหินมอส",
+"zh": "小小的黄野花从青苔石缝间明媚地探出头来。",
+"ja": "こけの あいだに きいろい おはなが ちょこんと さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_mossrow.4": {
+"en": "Cool damp moss is a favourite spot for tiny snails and beetles.",
+"lo": "ໄຄນ້ຳເຢັນຊຸ່ມເປັນບ່ອນທີ່ຫອຍນ້ອຍ ແລະ ແມງກັບແກ້ມັກຢູ່.",
+"th": "มอสเย็นชุ่มเป็นที่ที่หอยทากน้อยและด้วงชอบอยู่",
+"zh": "湿润清凉的青苔是小蜗牛和小甲虫最爱的地方。",
+"ja": "すずしい こけの うえは かたつむりの おきにいりだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_mossrow.5": {
+"en": "Mountain moss stays green and soft in the cool shady air.",
+"lo": "ໄຄນ້ຳເທິງພູຍັງຄົງຂຽວ ແລະ ນຸ້ມໃນອາກາດຮົ່ມເຢັນ.",
+"th": "มอสบนภูเขายังคงเขียวและนุ่มในอากาศร่มเย็น",
+"zh": "在清凉荫润的山风里，高山青苔始终柔软翠绿。",
+"ja": "やまの こけは すずしい かげの なかで いつも みどりだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_canyonrock.0": {
+"en": "A canyon rock. A canyon rock glows in stripes of rose terracotta and golden ochre.",
+"lo": "ຜາຫີນສີທອງ. ຜາຫີນສີທອງ ສ່ອງສີເປັນຊັ້ນສີດິນເຜົາ ແລະ ສີເຫຼືອງຄຳ.",
+"th": "ผาหินสีทอง ผาหินสีทองส่องสีเป็นชั้นสีดินเผาและสีเหลืองทอง",
+"zh": "彩岩峡壁。彩岩峡壁泛着玫瑰赤陶与金黄赭石交织的波斯画色彩。",
+"ja": "あかい いわかべ。あかい いわかべが しまもように なって きれいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_canyonrock.1": {
+"en": "Warm rose-terracotta and golden ochre stripes ripple across the cliff face.",
+"lo": "ແຖບສີດິນເຜົາອຸ່ນ ແລະ ສີເຫຼືອງຄຳລຽງເປັນຄື້ນຕາມໜ້າຜາຫີນ.",
+"th": "แถบสีดินเผาอุ่นและสีเหลืองทองเรียงเป็นคลื่นตามหน้าผาหิน",
+"zh": "温暖的玫瑰赤陶与金黄赭石条纹在岩壁上如画卷般层叠。",
+"ja": "あかと きんいろの しまもようが きれいな いわかべだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_canyonrock.2": {
+"en": "Persian miniature painters love painting rocky cliffs in jewel-bright layers.",
+"lo": "ຊ່າງແຕ້ມຮູບແບບເປີເຊຍມັກແຕ້ມໜ້າຜາຫີນເປັນຊັ້ນສີສົດໃສຄືແກ້ວມະນີ.",
+"th": "ช่างวาดภาพแบบเปอร์เซียชอบวาดหน้าผาหินเป็นชั้นสีสดใสเหมือนอัญมณี",
+"zh": "波斯细密画师最爱用宝石般明丽的分层色彩描绘山崖。",
+"ja": "むかしの えほんみたいに きれいな いろで かかれた いわだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_canyonrock.3": {
+"en": "Wildflowers and soft moss tuck neatly into its warm crevices.",
+"lo": "ດອກໄມ້ປ່າ ແລະ ໄຄນ້ຳນຸ້ມເກີດຢູ່ຕາມຊອກຫີນອຸ່ນໆ.",
+"th": "ดอกไม้ป่าและมอสนุ่มงอกอยู่ตามซอกหินอุ่นๆ",
+"zh": "野花和柔软的青苔静静长在暖暖的岩缝里。",
+"ja": "いわの すきまに かわいい おはなが さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_canyonrock.4": {
+"en": "Little lizards love basking in the sunshine on these warm stones!",
+"lo": "ຂີ້ກະປອມນ້ອຍມັກນອນຕາກແດດເທິງກ້ອນຫີນອຸ່ນເຫຼົ່ານີ້!",
+"th": "กิ้งก่าน้อยชอบนอนอาบแดดบนก้อนหินอุ่นเหล่านี้!",
+"zh": "小蜥蜴最爱趴在这些暖烘烘的阳光岩石上晒太阳！",
+"ja": "あたたかい いわの うえで とかげが ひなたぼっこ するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_simurgh.0": {
+"en": "Simurgh. The Simurgh is the wise mythical bird of Mount Alborz with golden and turquoise wings.",
+"lo": "ນົກຊີມວກ. ນົກຊີມວກ ແມ່ນນົກວິເສດຜູ້ສະຫຼາດແຫ່ງພູອານບໍສ ທີ່ມີປີກສີຄຳ ແລະ ສີຟ້າຂຽວ.",
+"th": "นกซิมูร์ก นกซิมูร์กคือนกวิเศษผู้ชาญฉลาดแห่งภูเขาอัลบอร์ซที่มีปีกสีทองและสีฟ้าอมเขียว",
+"zh": "西穆尔格神鸟。西穆尔格神鸟是厄尔布尔士山充满智慧的神鸟，长着金蓝双色的羽翼。",
+"ja": "シームルグ。シームルグは きんいろと あおい つばさを もつ かしこい とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_simurgh.1": {
+"en": "Hello, Simurgh!",
+"lo": "ສະບາຍດີ ນົກຊີມວກ!",
+"th": "สวัสดีนกซิมูร์ก!",
+"zh": "你好，西穆尔格神鸟！",
+"ja": "こんにちは、シームルグ！",
+"who": "simurgh",
+"tag": "greet"
+},
+"sim_simurgh.2": {
+"en": "I am the Simurgh of Mount Alborz! My golden and turquoise wings soar above the clouds.",
+"lo": "ຂ້ອຍແມ່ນນົກຊີມວກແຫ່ງພູອານບໍສ! ປີກສີຄຳ ແລະ ສີຟ້າຂຽວຂອງຂ້ອຍບິນສູງເໜືອກ້ອນເມກ.",
+"th": "ฉันคือนกซิมูร์กแห่งภูเขาอัลบอร์ซ! ปีกสีทองและสีฟ้าเขียวของฉันโบยบินเหนือเมฆ",
+"zh": "我是厄尔布尔士山的西穆尔格神鸟！我的金蓝双翼翱翔在云海之上。",
+"ja": "わたしは アルボルズやまの シームルグ！ くもの うえを じゆうに とぶよ。",
+"who": "simurgh",
+"tag": "say"
+},
+"sim_simurgh.3": {
+"en": "I wear my shining turquoise necklace wherever I glide across the sky.",
+"lo": "ຂ້ອຍໃສ່ສາຍຄໍສີຟ້າຂຽວເຫຼື້ອມແສງທຸກບ່ອນທີ່ຂ້ອຍບິນຜ່ານທ້ອງຟ້າ.",
+"th": "ฉันสวมสร้อยคอสีฟ้าเขียวเงางามทุกที่ที่ฉันร่อนผ่านท้องฟ้า",
+"zh": "无论飞到哪里，我都戴着我闪亮的绿松石项链。",
+"ja": "あおい いしの くびかざりを いつも つけているのよ。",
+"who": "simurgh",
+"tag": "does"
+},
+"sim_simurgh.4": {
+"en": "I carry little ones gently in my claws and keep them warm beneath my wing.",
+"lo": "ຂ້ອຍອຸ້ມເດັກນ້ອຍຢ່າງອ່ອນໂຍນ ແລະ ໃຫ້ຄວາມອົບອຸ່ນກ້ອງປີກຂອງຂ້ອຍ.",
+"th": "ฉันอุ้มเด็กน้อยอย่างอ่อนโยนและให้ความอบอุ่นใต้ปีกของฉัน",
+"zh": "我轻柔地托起弱小的生命，用羽翼为他们遮风挡雨。",
+"ja": "ちいさな こを やさしく つつんで まもるんだよ。",
+"who": "simurgh",
+"tag": "does"
+},
+"sim_simurgh.5": {
+"en": "In ancient Persian tales, the Simurgh is a wise guardian of kindness and healing.",
+"lo": "ໃນນິທານເກົ່າເປີເຊຍ ນົກຊີມວກແມ່ນຜູ້ປົກປ້ອງຄວາມໃຈດີ ແລະ ການປິ່ນປົວ.",
+"th": "ในนิทานเก่าเปอร์เซีย นกซิมูร์กคือผู้พิทักษ์ความใจดีและการเยียวยา",
+"zh": "在古老的波斯传说里，西穆尔格神鸟是善良与治愈的智慧守护者。",
+"ja": "むかしの おはなしでは シームルグは やさしさを まもる とりなんだよ。",
+"who": "simurgh",
+"tag": "fact"
+},
+"sim_simurgh.6": {
+"en": "Stand tall, kind heart, shine bright!",
+"lo": "ຢືນໃຫ້ໝັ້ນ ຫົວໃຈໃຈດີ ສ່ອງແສງໃຫ້ສົດໃສ!",
+"th": "ยืนให้มั่น หัวใจแสนดี ส่องแสงให้สดใส!",
+"zh": "挺起胸膛，善良的心，闪耀光芒吧！",
+"ja": "まっすぐ たって、やさしい こころを かがやかせてね！",
+"who": "simurgh",
+"tag": "say"
+},
+"sim_simurgh.7": {
+"en": "I gave Zal three glowing golden feathers so one warm spark can always call me.",
+"lo": "ຂ້ອຍມອບຂົນນົກສີຄຳສາມອັນໃຫ້ຊານ ເພື່ອໃຫ້ປະກາຍໄຟອຸ່ນເອີ້ນຂ້ອຍໄດ້ສະເໝີ.",
+"th": "ฉันมอบขนนกสีทองสามเส้นให้ซาล เพื่อให้ประกายไฟอุ่นเรียกฉันได้เสมอ",
+"zh": "我送给扎尔三根闪亮的金羽，只要一点暖火就能呼唤我飞来。",
+"ja": "ザールに さんぼんの きんのはねを わたしたのよ。",
+"who": "simurgh",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_simurgh.8": {
+"en": "Whenever kindness calls, love remembers the way.",
+"lo": "ທຸກຄັ້ງທີ່ຄວາມໃຈດີຮ້ອງເອີ້ນ ຄວາມຮັກຈະຈື່ທາງກັບມາສະເໝີ.",
+"th": "ทุกครั้งที่ความใจดีร้องเรียก ความรักจะจำทางกลับมาเสมอ",
+"zh": "只要善良发出呼唤，爱就永远记得回来的路。",
+"ja": "やさしさが よぶ ときは、あいが いつでも みちを おぼえているよ。",
+"who": "simurgh",
+"sp": [
+"s09",
+"s10",
+"s11"
+],
+"tag": "say"
+},
+"sim_simurgh.9": {
+"en": "My feathers gleam in peacock turquoise, saffron gold and ruby red.",
+"lo": "ຂົນຂອງຂ້ອຍເຫຼື້ອມງາມສີຟ້າຂຽວນົກຍູງ ສີຄຳຫຍ້າຝຣັ່ນ ແລະ ສີແດງທັບທິມ.",
+"th": "ขนของฉันเงางามสีฟ้าเขียวนกยูง สีทองหญ้าฝรั่น และสีแดงทับทิม",
+"zh": "我的羽毛闪耀着孔雀蓝、藏红花金与宝石红的光彩。",
+"ja": "わたしのはねは あおと きんいろと あかに かがやいて いるよ。",
+"who": "simurgh",
+"tag": "looks"
+},
+"sim_goat.0": {
+"en": "A mountain goat. A mountain goat is a playful white climber on the rocky trails of Mount Alborz.",
+"lo": "ແບ້ພູຜາ. ແບ້ພູຜາ ແມ່ນແບ້ສີຂາວຂີ້ຫຼິ້ນທີ່ປີນໄປຕາມທາງຫີນຂອງພູອານບໍສ.",
+"th": "แพะภูเขา แพะภูเขาคือแพะสีขาวขี้เล่นที่ปีนป่ายตามทางหินของภูเขาอัลบอร์ซ",
+"zh": "白山羊。白山羊是厄尔布尔士山石径上活泼爱攀爬的小精灵。",
+"ja": "やまの やぎ。やまの やぎは いわみちを げんきに はねる しろい やぎだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_goat.1": {
+"en": "Hello, mountain goat!",
+"lo": "ສະບາຍດີ ແບ້ພູຜາ!",
+"th": "สวัสดีแพะภูเขา!",
+"zh": "你好，白山羊！",
+"ja": "こんにちは、やまの やぎ！",
+"who": "narrator",
+"tag": "greet"
+},
+"sim_goat.2": {
+"en": "Ah-choo!",
+"lo": "ອັດຊິ້ວ!",
+"th": "ฮัดเช้ย!",
+"zh": "阿嚏！",
+"ja": "はっくしょん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sim_goat.3": {
+"en": "Mountain goats have nimble hooves that grip steep rocky ledges safely.",
+"lo": "ແບ້ພູຜາມີກີບຕີນທີ່ຄ່ອງແຄ້ວສາມາດເກາະໜ້າຜາຫີນຊັນໄດ້ຢ່າງປອດໄພ.",
+"th": "แพะภูเขามีกรีบเท้าคล่องแคล่วที่เกาะหน้าผาหินชันได้อย่างปลอดภัย",
+"zh": "山羊长着灵活的蹄子，可以稳稳地踩在陡峭的岩石边缘。",
+"ja": "やまの やぎは ひづめで きゅうな いわも へいきで あるけるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_goat.4": {
+"en": "This curious white goat loves sniffing yellow dandelions along the path.",
+"lo": "ແບ້ສີຂາວຂີ້ສົງໄສໂຕນີ້ມັກດົມດອກແດນດີໄລອອນສີເຫຼືອງຕາມທາງ.",
+"th": "แพะสีขาวขี้สงสัยตัวนี้ชอบดมดอกแดนดิไลออนสีเหลืองตามทาง",
+"zh": "这只好奇的小白羊最爱沿着山路嗅一嗅黄色蒲公英。",
+"ja": "きいろい たんぽぽの においを かぐのが すきなんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_goat.5": {
+"en": "Its warm snowy coat matches Prince Zal's bright white hair!",
+"lo": "ຂົນສີຂາວອຸ່ນຂອງມັນຄ້າຍຄືກັບຜົມສີຂາວສົດໃສຂອງເຈົ້າຊາຍຊານ!",
+"th": "ขนสีขาวอุ่นของมันคล้ายกับผมสีขาวสดใสของเจ้าชายซาล!",
+"zh": "它一身雪白的绒毛和扎尔王子洁白的头发真般配！",
+"ja": "まっしろな けが ザールおうじの かみと おそろいだよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_dandelion.0": {
+"en": "A yellow dandelion. A yellow dandelion blooms bright and fluffy beside the mossy mountain trail.",
+"lo": "ດອກແດນດີໄລອອນເຫຼືອງ. ດອກແດນດີໄລອອນເຫຼືອງ ບານສົດໃສຢູ່ຂ້າງທາງພູທີ່ມີໄຄນ້ຳ.",
+"th": "ดอกแดนดิไลออนเหลือง ดอกแดนดิไลออนเหลืองบานสดใสข้างทางเขาที่มีมอส",
+"zh": "黄蒲公英。黄蒲公英在长满青苔的山间小路旁明媚绽放。",
+"ja": "きいろい たんぽぽ。きいろい たんぽぽが やまみちの そばに さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_dandelion.1": {
+"en": "Its sunny yellow petals shine like a tiny star in the green moss.",
+"lo": "ກີບດອກສີເຫຼືອງສົດໃສເຫຼື້ອມຄືດາວນ້ອຍຢູ່ເທິງໄຄນ້ຳສີຂຽວ.",
+"th": "กลีบดอกสีเหลืองสดใสเหมือนดาวน้อยบนมอสสีเขียว",
+"zh": "明黄色的花瓣像一颗落在绿苔上的小星星。",
+"ja": "きいろい はなびらが みどりの こけの なかで ぴかっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_dandelion.2": {
+"en": "Its tickly yellow pollen makes the curious white goat sneeze!",
+"lo": "ເກສອນສີເຫຼືອງທີ່ຄັນດັງເຮັດໃຫ້ແບ້ຂາວຂີ້ສົງໄສຈາມ!",
+"th": "เกสรสีเหลืองที่คันจมูกทำให้แพะขาวขี้สงสัยจาม!",
+"zh": "毛茸茸的黄色花粉痒痒的，把好奇的小白羊逗得直打喷嚏！",
+"ja": "くすぐったい かふんで しろい やぎが くしゃみを するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_dandelion.3": {
+"en": "Later, a yellow dandelion turns into a fluffy white puffball of seeds.",
+"lo": "ຕໍ່ມາ ດອກແດນດີໄລອອນສີເຫຼືອງຈະກາຍເປັນປຸຍເມັດສີຂາວທີ່ປິວໄປຕາມລົມ.",
+"th": "ต่อมา ดอกแดนดิไลออนสีเหลืองจะกลายเป็นปุยเมล็ดสีขาวที่ปลิวตามลม",
+"zh": "不久后，黄蒲公英会变成毛茸茸的白绒球随风播种。",
+"ja": "あとで ふわふわの しろい わたげに かわって かぜに とぶよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_dandelion.4": {
+"en": "Wildflowers like dandelions love cool sunlit mountain paths.",
+"lo": "ດອກໄມ້ປ່າຄືແດນດີໄລອອນມັກທາງພູທີ່ເຢັນ ແລະ ມີແສງແດດ.",
+"th": "ดอกไม้ป่าอย่างแดนดิไลออนชอบทางเขาที่เย็นและมีแสงแดด",
+"zh": "像蒲公英这样的野花最爱清凉又向阳的山间小路。",
+"ja": "おひさまが あたる やまみちが だいすきな はなだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_sunring.0": {
+"en": "A sunbeam circle. A sunbeam circle marks the shining path through the bright mountain air.",
+"lo": "ວົງແສງແດດ. ວົງແສງແດດ ຊີ້ທາງສ່ອງແສງຜ່ານອາກາດສົດໃສເທິງພູ.",
+"th": "วงแสงแดด วงแสงแดดชี้ทางส่องแสงผ่านอากาศสดใสบนภูเขา",
+"zh": "金色光环。金色光环在明媚的山间空气中勾勒出闪亮的路径。",
+"ja": "ひかりの わ。ひかりの わが やまの そらに きらきら うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_sunring.1": {
+"en": "Three golden circles shimmer softly in the crisp mountain air.",
+"lo": "ວົງແສງສີຄຳສາມວົງເຫຼື້ອມອ່ອນໆໃນອາກາດເຢັນເທິງພູ.",
+"th": "วงแสงสีทองสามวงเปล่งประกายอ่อนๆ ในอากาศเย็นบนภูเขา",
+"zh": "三个金色光环在清冽的山风里柔和闪耀。",
+"ja": "みっつの きんいろの わが そらに きらきら うかんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_sunring.2": {
+"en": "They guide the Simurgh's wide wings down toward baby Zal's cradle.",
+"lo": "ພວກມັນນຳທາງປີກກວ້າງຂອງນົກຊີມວກລົງມາຫາອູ່ຂອງນ້ອງນ້ອຍຊານ.",
+"th": "พวกมันนำทางปีกกว้างของนกซิมูร์กลงมาหาเปลของหนูน้อยซาล",
+"zh": "它们指引着西穆尔格神鸟宽阔的羽翼落向小扎尔的摇篮。",
+"ja": "シームルグの つばさを あかちゃんの ところへ みちびくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_sunring.3": {
+"en": "Each circle glows with warm morning sunlight above the pines.",
+"lo": "ແຕ່ລະວົງສ່ອງແສງແດດຍາມເຊົ້າອຸ່ນໆເໜືອຍອດຕົ້ນແປກ.",
+"th": "แต่ละวงส่องแสงแดดยามเช้าอุ่นๆ เหนือยอดต้นสน",
+"zh": "每一道光环都闪耀着松林上方温暖的晨光。",
+"ja": "あさひの ひかりが わになって きらめいて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_sunring.4": {
+"en": "Tap the circles in order to help the Simurgh glide gently down!",
+"lo": "ແຕະວົງແສງຕາມລຳດັບເພື່ອຊ່ວຍນົກຊີມວກບິນລົງມາຢ່າງອ່ອນໂຍນ!",
+"th": "แตะวงแสงตามลำดับเพื่อช่วยนกซิมูร์กร่อนลงมาอย่างอ่อนโยน!",
+"zh": "按顺序轻点光环，帮助神鸟稳稳地滑翔下来！",
+"ja": "じゅんばんに さわって シームルグを あんない しよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_trailfern.0": {
+"en": "A mountain fern. A mountain fern unfurls its feathery green fronds in the cool breeze.",
+"lo": "ຕົ້ນກູດເທິງພູ. ຕົ້ນກູດເທິງພູ ຄີ່ໃບສີຂຽວຄືຂົນນົກໃນສາຍລົມເຢັນ.",
+"th": "เฟิร์นภูเขา เฟิร์นภูเขาคลี่ใบสีเขียวคล้ายขนนกในสายลมเย็น",
+"zh": "高山蕨草。高山蕨草在清凉山风里舒展着羽毛般的绿叶。",
+"ja": "やまの シダ。やまの シダが すずしい かぜに ゆらゆら ゆれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_trailfern.1": {
+"en": "Curled green fern fronds fan out gracefully beside the mossy rocks.",
+"lo": "ໃບຕົ້ນກູດສີຂຽວແຜ່ອອກຢ່າງອ່ອນຊ້ອຍຢູ່ຂ້າງກ້ອນຫີນໄຄນ້ຳ.",
+"th": "ใบเฟิร์นสีเขียวแผ่ออกอย่างอ่อนช้อยข้างก้อนหินมอส",
+"zh": "翠绿的蕨草叶片在青苔岩畔优雅地舒展开来。",
+"ja": "みどりの シダが いわの そばで ふわりと ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_trailfern.2": {
+"en": "Its feathery leaves nod gently in every cool mountain breeze.",
+"lo": "ໃບຄືຂົນນົກຂອງມັນງຶກຫົວຄ່ອຍໆຕາມທຸກສາຍລົມພູເຢັນ.",
+"th": "ใบคล้ายขนนกของมันพยักหน้าเบาๆ ตามทุกสายลมเขาเย็น",
+"zh": "它羽毛般的叶片随着每一阵清凉山风轻轻点头。",
+"ja": "かぜが ふくと はっぱが やさしく うなずくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_trailfern.3": {
+"en": "Ferns love shady, cool mountain corners where morning mist settles.",
+"lo": "ຕົ້ນກູດມັກມຸມພູທີ່ຮົ່ມເຢັນບ່ອນທີ່ມີໝອກຍາມເຊົ້າ.",
+"th": "เฟิร์นชอบมุมเขาที่ร่มเย็นตรงที่มีหมอกยามเช้า",
+"zh": "蕨草最喜欢晨雾缭绕的清凉阴润山角。",
+"ja": "あさの きりが おりる すずしい ばしょが だいすきだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_trailfern.4": {
+"en": "Dewdrops glisten like tiny pearls along its green tips.",
+"lo": "ຢົດນ້ຳຄ້າງເຫຼື້ອມຄືໄຂ່ມຸກນ້ອຍໆຕາມປາຍໃບສີຂຽວ.",
+"th": "หยดน้ำค้างเงาเหมือนไข่มุกเม็ดน้อยตามปลายใบสีเขียว",
+"zh": "晶莹的露珠像小小珍珠一样挂在翠绿的叶尖上。",
+"ja": "あさつゆが はっぱの さきで きらっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_heather.0": {
+"en": "A purple heather. Purple heather clings sturdily to the sunny ledges of Mount Alborz.",
+"lo": "ພຸ່ມດອກສີມ່ວງ. ພຸ່ມດອກສີມ່ວງ ເກາະແໜ້ນຢູ່ຕາມຂອບຜາແດດອຸ່ນຂອງພູອານບໍສ.",
+"th": "พุ่มดอกสีม่วง พุ่มดอกสีม่วงเกาะแน่นอยู่ตามขอบผาแดดอุ่นของภูเขาอัลบอร์ซ",
+"zh": "紫色山花。紫色山花坚韧地盛开在阳光照耀的山石边缘。",
+"ja": "むらさきの はな。むらさきの はなが いわの すきまに 元気に さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_heather.1": {
+"en": "Tiny purple blossoms cluster thickly along woody alpine stems.",
+"lo": "ດອກສີມ່ວງນ້ອຍໆອອກເປັນພວງແໜ້ນຕາມກິ່ງພູຜາ.",
+"th": "ดอกสีม่วงน้อยๆ ออกเป็นพวงแน่นตามกิ่งภูเขา",
+"zh": "成簇的小紫花密密麻麻地开在坚韧的高山枝头。",
+"ja": "ちいさな むらさきの はなが いっぱい あつまって さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_heather.2": {
+"en": "Busy bees and mountain butterflies love its sweet purple flowers.",
+"lo": "ເຜິ້ງດຸໝັ່ນ ແລະ ແມງກະເບື້ອພູມັກດອກໄມ້ສີມ່ວງຫວານຂອງມັນ.",
+"th": "ผึ้งขยันและผีเสื้อภูเขาชอบดอกไม้สีม่วงหวานของมัน",
+"zh": "勤劳的小蜜蜂和山间蝴蝶最爱这些香甜的紫花。",
+"ja": "みつばちや ちょうちょが あまい みつを さがしに くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_heather.3": {
+"en": "Its rich lavender colour shines against the warm golden trail stones.",
+"lo": "ສີມ່ວງອ່ອນສົດໃສຂອງມັນເດັ່ນງາມຕັດກັບຫີນທາງສີຄຳອຸ່ນ.",
+"th": "สีม่วงอ่อนสดใสของมันเด่นงามตัดกับหินทางสีทองอุ่น",
+"zh": "浓郁的薰衣草紫衬在暖金色山石旁格外亮眼。",
+"ja": "きんいろの いわに むらさきの はなが よく はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_heather.4": {
+"en": "It stays cheerful and bright even high in the crisp mountain wind.",
+"lo": "ມັນຍັງສົດໃສງົດງາມແມ່ນແຕ່ຢູ່ສູງໃນສາຍລົມພູທີ່ເຢັນ.",
+"th": "มันยังสดใสงดงามแม้จะอยู่สูงในสายลมเขาที่เย็น",
+"zh": "即便在高海拔的清冽山风里，它依然开得明媚灿烂。",
+"ja": "つめた い かぜの なかでも げんきに さいて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_trailsky.0": {
+"en": "The mountain sky. The mountain sky stretches crisp and clear over the high Alborz pines.",
+"lo": "ທ້ອງຟ້າເທິງພູ. ທ້ອງຟ້າເທິງພູ ກວ້າງສົດໃສ ແລະ ປອດໂປ່ງເໜືອປ່າແປກພູອານບໍສ.",
+"th": "ท้องฟ้าบนภูเขา ท้องฟ้าบนภูเขากว้างสดใสและปลอดโปร่งเหนือป่าสนภูเขาอัลบอร์ซ",
+"zh": "高山晴空。高山晴空清澈湛蓝，高悬在厄尔布尔士松林上方。",
+"ja": "やまの そら。やまの そらが すっきり はれて きもち いいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_trailsky.1": {
+"en": "Crisp blue sky and soft wisps of cloud stretch over Mount Alborz.",
+"lo": "ທ້ອງຟ້າສີຟ້າສົດໃສ ແລະ ກ້ອນເມກບາງໆຢຽດກວ້າງເໜືອພູອານບໍສ.",
+"th": "ท้องฟ้าสีฟ้าสดใสและปุยเมฆบางๆ ทอดกว้างเหนือภูเขาอัลบอร์ซ",
+"zh": "清澈湛蓝的天空与轻柔云缕铺展在厄尔布尔士山巅。",
+"ja": "あおい そらと やわらかい くもが やまの うえに ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_trailsky.2": {
+"en": "Cool mountain breezes carry the clean pine scent down the trail.",
+"lo": "ສາຍລົມພູເຢັນພັດກິ່ນຫອມສົດຊື່ນຂອງຕົ້ນແປກລົງມາຕາມທາງ.",
+"th": "สายลมเขาเย็นพัดกลิ่นหอมสดชื่นของต้นสนลงมาตามทาง",
+"zh": "清凉的山风把松林清新的香气送下石径。",
+"ja": "すずしい かぜが まつの いい かおりを はこんで くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_trailsky.3": {
+"en": "High in this wide sky, the Simurgh watches gently over travellers.",
+"lo": "ສູງເທິງທ້ອງຟ້າກວ້າງນີ້ ນົກຊີມວກຄອຍເບິ່ງແຍງຜູ້ເດີນທາງຢ່າງອ່ອນໂຍນ.",
+"th": "สูงบนท้องฟ้ากว้างนี้ นกซิมูร์กคอยดูแลนักเดินทางอย่างอ่อนโยน",
+"zh": "在这片辽阔高空之上，神鸟温柔地守望着旅人们。",
+"ja": "ひろい そらから シームルグが やさしく みまもって いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_trailsky.4": {
+"en": "Sunlight sparkles brightly on the distant snowy mountain ridge.",
+"lo": "ແສງແດດເຫຼື້ອມສົດໃສເທິງສັນພູຫິມະທີ່ຢູ່ໄກ.",
+"th": "แสงแดดเปล่งประกายสดใสบนสันเขาหิมะที่อยู่ไกล",
+"zh": "明媚的阳光在远处的雪岭上闪闪发光。",
+"ja": "とおくの ゆきの やまが おひさまで きらきら しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cragpass.0": {
+"en": "A mountain pass. The mountain pass winds between towering rocky cliffs toward the peaks.",
+"lo": "ຊ່ອງຜາພູຜາ. ຊ່ອງຜາພູຜາ ຄົດລ້ຽວລະຫວ່າງໜ້າຜາຫີນສູງຊັນມຸ່ງໜ້າສູ່ຍອດພູ.",
+"th": "ช่องเขาหิน ช่องเขาหินคดเคี้ยวระหว่างหน้าผาหินสูงชันมุ่งหน้าสู่ยอดเขา",
+"zh": "山间峡谷。山间峡谷在巍峨的峭壁之间蜿蜒通往雪峰。",
+"ja": "やまの とうげ。やまの とうげが たかい いわの あいだを つづいて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_cragpass.1": {
+"en": "Stepped golden and slate-blue cliffs frame the winding mountain road.",
+"lo": "ໜ້າຜາຫີນຊັ້ນສີຄຳ ແລະ ສີຟ້າເທົາອ້ອມຂ້າງທາງພູທີ່ຄົດລ້ຽວ.",
+"th": "หน้าผาหินชั้นสีทองและสีฟ้าเทาโอบล้อมทางเขาที่คดเคี้ยว",
+"zh": "层叠的金黄与青灰峭壁框起蜿蜒向上的山路。",
+"ja": "たかい いわかべが やまみちの りょうがわに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cragpass.2": {
+"en": "This rocky mountain pass leads from sunny Zabul up toward the clouds!",
+"lo": "ຊ່ອງຜາຫີນນີ້ນຳທາງຈາກເມືອງຊາບູນແດດອຸ່ນຂຶ້ນໄປຫາກ້ອນເມກ!",
+"th": "ช่องเขาหินนี้นำทางจากเมืองซาบูลแดดอุ่นขึ้นไปหาปุยเมฆ!",
+"zh": "这条山间石径从阳光扎布尔一直蜿蜒通向云端！",
+"ja": "ザブールから くもの うえへ つづく やまの とうげだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cragpass.3": {
+"en": "Hardy alpine pines and wildflowers cling to every sunny rock ledge.",
+"lo": "ຕົ້ນແປກພູ ແລະ ດອກໄມ້ປ່າທົນທານເກາະຢູ່ຕາມທຸກຂອບຜາແດດອຸ່ນ.",
+"th": "ต้นสนภูเขาและดอกไม้ป่าทนทานเกาะอยู่ตามทุกขอบผาแดดอุ่น",
+"zh": "坚韧的高山松树与野花生长在每一层向阳的岩台上。",
+"ja": "いわの すきまに まつや おはなが げんきに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cragpass.4": {
+"en": "Playful mountain goats know every single stone along this pass!",
+"lo": "ແບ້ພູຜາຂີ້ຫຼິ້ນຮູ້ຈັກກ້ອນຫີນທຸກກ້ອນຕາມຊ່ອງຜານີ້!",
+"th": "แพะภูเขาขี้เล่นรู้จักก้อนหินทุกก้อนตามช่องเขานี้!",
+"zh": "活泼的小白山羊熟悉这条山口里的每一块石头！",
+"ja": "やまの やぎは この とうげの みちを ぜんぶ しっているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_basaltcrag.0": {
+"en": "A turquoise crag. A turquoise crag rises in jewel-like turquoise and saffron stone facets.",
+"lo": "ຜາຫີນສີຟ້າຂຽວ. ຜາຫີນສີຟ້າຂຽວ ຕັ້ງສູງເປັນຫຼ່ຽມຫີນສີຟ້າຂຽວ ແລະ ສີຄຳຄືແກ້ວມະນີ.",
+"th": "ผาหินสีฟ้าเขียว ผาหินสีฟ้าเขียวตั้งสูงเป็นเหลี่ยมหินสีฟ้าเขียวและสีทองเหมือนอัญมณี",
+"zh": "青金岩峰。青金岩峰呈绿松石蓝与藏红花金相间的多面石柱，宛如宝石。",
+"ja": "あおい いわやま。あおい いわやまが ほうせきみたいに きらきら かがやいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_basaltcrag.1": {
+"en": "Tall columns of turquoise and saffron rock sparkle like painted jewels.",
+"lo": "ເສົາຫີນສູງສີຟ້າຂຽວ ແລະ ສີຄຳເຫຼື້ອມຄືແກ້ວມະນີທີ່ແຕ້ມສີ.",
+"th": "เสาหินสูงสีฟ้าเขียวและสีทองเหมือนอัญมณีที่แต้มสี",
+"zh": "高耸的绿松石色与藏红花色岩柱闪耀得宛如彩绘宝石。",
+"ja": "あおと きんいろの いわが ほうせきみたいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_basaltcrag.2": {
+"en": "These sturdy summit crags hold the Simurgh's giant nest above the clouds.",
+"lo": "ຜາຫີນຍອດພູທີ່ແຂງແຮງເຫຼົ່ານີ້ຮອງຮັບຮັງໃຫຍ່ຂອງນົກຊີມວກໄວ້ເໜືອກ້ອນເມກ.",
+"th": "ผาหินยอดเขาที่แข็งแรงเหล่านี้รองรับรังใหญ่ของนกซิมูร์กไว้เหนือปุยเมฆ",
+"zh": "这些坚实的山巅岩峰在云海之上稳稳托起神鸟的大巢。",
+"ja": "じょうぶな いわが くもの うえで すを ささえて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_basaltcrag.3": {
+"en": "Young Zal loves leaping playfully from crag to crag!",
+"lo": "ຊານນ້ອຍມັກໂດດຫຼິ້ນຢ່າງມ່ວນຊື່ນຈາກຜາຫີນໜຶ່ງໄປຫາອີກຜາໜຶ່ງ!",
+"th": "ซาลน้อยชอบกระโดดเล่นอย่างสนุกสนานจากผาหินหนึ่งไปอีกผาหนึ่ง!",
+"zh": "小扎尔最喜欢在岩峰之间欢快地蹦跳奔跑！",
+"ja": "ザールが いわの うえを ぴょんぴょん とんで あそぶ ばしょだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_basaltcrag.4": {
+"en": "Bright green mountain herbs sprout neatly from every sunny ledge.",
+"lo": "ສະໝຸນໄພພູຜາສີຂຽວສົດງອກງາມຢູ່ຕາມທຸກຂອບຜາແດດອຸ່ນ.",
+"th": "สมุนไพรภูเขาสีเขียวสดงอกงามอยู่ตามทุกขอบผาแดดอุ่น",
+"zh": "翠绿的高山香草从每一层向阳的岩台上生机勃勃地长出。",
+"ja": "いわの うえから みどりの くさが げんきに はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_healingherbs.0": {
+"en": "Healing herbs. Healing herbs grow fragrant and emerald-green beside the Simurgh's nest.",
+"lo": "ສະໝຸນໄພຫອມ. ສະໝຸນໄພຫອມ ເຕີບໃຫຍ່ສີຂຽວສົດ ແລະ ມີກິ່ນຫອມຂ້າງຮັງນົກຊີມວກ.",
+"th": "สมุนไพรหอม สมุนไพรหอมเติบโตสีเขียวสดและมีกลิ่นหอมข้างรังนกซิมูร์ก",
+"zh": "高山香草。高山香草翠绿芬芳，生长在西穆尔格神鸟的巢畔。",
+"ja": "やまの やくそう。やまの やくそうが シームルグの すの そばに はえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_healingherbs.1": {
+"en": "Fragrant emerald leaves grow lush and bright around the summit stones.",
+"lo": "ໃບໄມ້ຫອມສີຂຽວມໍລະກົດງອກງາມສົດໃສອ້ອມກ້ອນຫີນຍອດພູ.",
+"th": "ใบไม้หอมสีเขียวมรกตงอกงามสดใสรอบก้อนหินยอดเขา",
+"zh": "芬芳的翠绿香草在山巅岩石四周长得郁郁葱葱。",
+"ja": "いい かおりの みどりの はっぱが いわの まわりに いっぱいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_healingherbs.2": {
+"en": "The wise Simurgh taught Zal how gentle mountain herbs help people feel well.",
+"lo": "ນົກຊີມວກຜູ້ສະຫຼາດສອນຊານວ່າສະໝຸນໄພພູຜາຊ່ວຍໃຫ້ຄົນແຂງແຮງໄດ້ແນວໃດ.",
+"th": "นกซิมูร์กผู้ชาญฉลาดสอนซาลว่าสมุนไพรภูเขาช่วยให้คนแข็งแรงได้อย่างไร",
+"zh": "智慧的神鸟教导扎尔如何用温和的高山香草照顾生病的人。",
+"ja": "シームルグに やくそうの ちからを おそわったんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_healingherbs.3": {
+"en": "Tiny golden blossoms sparkle among the crisp green sprigs.",
+"lo": "ດອກໄມ້ສີຄຳນ້ອຍໆເຫຼື້ອມວິບວັບທ່າມກາງຍອດໃບສີຂຽວສົດ.",
+"th": "ดอกไม้สีทองน้อยๆ ระยิบระยับท่ามกลางยอดใบสีเขียวสด",
+"zh": "嫩绿的草叶间点缀着星星点点的小黄花。",
+"ja": "ちいさな きいろい はなが みどりの なかで きらきら しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_healingherbs.4": {
+"en": "A cool summit breeze fills the air with their clean minty scent.",
+"lo": "ສາຍລົມຍອດພູເຢັນພັດກິ່ນຫອມສົດຊື່ນຂອງພວກມັນໄປທົ່ວອາກາດ.",
+"th": "สายลมยอดเขาเย็นพัดกลิ่นหอมสดชื่นของพวกมันไปทั่วอากาศ",
+"zh": "清凉的山巅微风让空气里弥漫着清爽的草本幽香。",
+"ja": "やまかぜに のって さわやかな かおりが ひろがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_berrycrag.0": {
+"en": "A berry crag. A berry crag offers bright clusters of sweet red mountain fruit.",
+"lo": "ຜາໝາກເບີຣີ. ຜາໝາກເບີຣີ ມີພວງໝາກໄມ້ປ່າສີແດງຫວານສົດໃສ.",
+"th": "ผาลูกเบอร์รี ผาลูกเบอร์รีมีพวงผลไม้ป่าสีแดงหวานสดใส",
+"zh": "浆果岩台。浆果岩台上结满了一簇簇鲜红香甜的高山浆果。",
+"ja": "きのみの いわ。きのみの いわに あかい きのみが どっさり なっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_berrycrag.1": {
+"en": "Clusters of ruby-red mountain berries brighten the turquoise rock shelf.",
+"lo": "ພວງໝາກເບີຣີພູສີແດງສົດປະດັບຂອບຜາຫີນສີຟ້າຂຽວ.",
+"th": "พวงลูกเบอร์รีเขาสีแดงสดประดับขอบผาหินสีฟ้าเขียว",
+"zh": "一簇簇红宝石般的山果点亮了绿松石色的岩台。",
+"ja": "あかい きのみが あおい いわを はなやかに かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_berrycrag.2": {
+"en": "The two Simurgh chicks hop over here to pick sweet treats for Zal!",
+"lo": "ລູກນົກຊີມວກສອງໂຕໂດດມາບ່ອນນີ້ເພື່ອເກັບໝາກໄມ້ຫວານໃຫ້ຊານ!",
+"th": "ลูกนกซิมูร์กสองตัวกระโดดมาที่นี่เพื่อเก็บผลไม้หวานให้ซาล!",
+"zh": "两只神鸟雏鸟常蹦蹦跳跳地跑来这儿替扎尔摘甜浆果！",
+"ja": "ひなたちが ザールの ために あまい きのみを つみに くるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_berrycrag.3": {
+"en": "Dwarf mountain cedar sprigs shelter the ripe red fruit.",
+"lo": "ກິ່ງຕົ້ນຊີດາພູນ້ອຍໆບັງລົມໃຫ້ໝາກໄມ້ສີແດງສຸກ.",
+"th": "กิ่งต้นซีดาร์เขาน้อยๆ บังลมให้ผลไม้สีแดงสุก",
+"zh": "矮小的高山雪松枝温柔地护着成熟的红浆果。",
+"ja": "ちいさな えだが あかい きのみを かぜから まもっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_berrycrag.4": {
+"en": "Golden alpine butterflies love fluttering near these bright berries.",
+"lo": "ແມງກະເບື້ອພູສີຄຳມັກບິນກະພືບປີກຢູ່ໃກ້ໝາກເບີຣີສົດໃສເຫຼົ່ານີ້.",
+"th": "ผีเสื้อภูเขาสีทองชอบบินกระพือปีกใกล้ลูกเบอร์รีสดใสเหล่านี้",
+"zh": "金色的高山蝴蝶也喜欢在这些鲜艳的浆果旁翩翩飞舞。",
+"ja": "きんいろの ちょうちょが きのみの まわりを とんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cloudcrag.0": {
+"en": "A cloud crag. A cloud crag wraps soft cream clouds around steep summit rocks.",
+"lo": "ເມກ ແລະ ຍອດຜາ. ເມກ ແລະ ຍອດຜາ ໂອບກອດກ້ອນເມກສີຄີມນຸ້ມອ້ອມຫີນຍອດພູ.",
+"th": "เมฆและยอดผา เมฆและยอดผาโอบกอดปุยเมฆสีครีมนุ่มรอบหินยอดเขา",
+"zh": "云端岩角。云端岩角让柔软的乳白卷云紧紧拥抱着高耸的岩柱。",
+"ja": "くもと いわ。くもと いわが やさしく ならんで そらに うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_cloudcrag.1": {
+"en": "Swirling cream-white clouds hug the tall turquoise and saffron rocks.",
+"lo": "ກ້ອນເມກສີຂາວຄີມລອຍມ້ວນໂອບກອດຜາຫີນສີຟ້າຂຽວ ແລະ ສີຄຳ.",
+"th": "ปุยเมฆสีขาวครีมลอยม้วนโอบกอดผาหินสีฟ้าเขียวและสีทอง",
+"zh": "乳白色的卷云轻柔地环抱着高耸的蓝金岩峰。",
+"ja": "ふわふわの くもが あおと きんいろの いわを つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cloudcrag.2": {
+"en": "It feels like standing on a magical island floating in the sky!",
+"lo": "ຮູ້ສຶກຄືຢືນຢູ່ເທິງເກາະວິເສດທີ່ລອຍຢູ່ເທິງທ້ອງຟ້າ!",
+"th": "รู้สึกเหมือนยืนอยู่บนเกาะวิเศษที่ลอยอยู่บนท้องฟ้า!",
+"zh": "站在这里就像置身于一座漂浮在云海中的神奇空中岛屿！",
+"ja": "そらに うかぶ ふしぎな しまに たっている みたいだよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cloudcrag.3": {
+"en": "Gentle clouds drift softly in and out around the summit corners.",
+"lo": "ກ້ອນເມກອ່ອນນຸ້ມລອຍເຂົ້າອອກຄ່ອຍໆອ້ອມມຸມຍອດພູ.",
+"th": "ปุยเมฆอ่อนนุ่มลอยเข้าออกเบาๆ รอบมุมยอดเขา",
+"zh": "柔和的云朵在山巅角落间轻轻飘进飘出。",
+"ja": "くもが やまの まわりを ゆっくり ながれて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cloudcrag.4": {
+"en": "Green herbs and bright berries peek right through the ivory mist.",
+"lo": "ສະໝຸນໄພສີຂຽວ ແລະ ໝາກເບີຣີສົດໂຜ່ອອກມາຈາກໝອກສີຂາວງາຊ້າງ.",
+"th": "สมุนไพรสีเขียวและลูกเบอร์รีสดโผล่ออกมาจากหมอกสีขาวงาช้าง",
+"zh": "翠绿香草与鲜红浆果从乳白色的云雾间探出身来。",
+"ja": "しろい くもの あいだに みどりの くさが みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_chick.0": {
+"en": "A Simurgh chick. A Simurgh chick is a fluffy golden baby bird raised in the sandalwood nest.",
+"lo": "ລູກນົກຊີມວກ. ລູກນົກຊີມວກ ແມ່ນລູກນົກຂົນຟູສີຄຳທີ່ເຕີບໃຫຍ່ໃນຮັງໄມ້ຈັນຫອມ.",
+"th": "ลูกนกซิมูร์ก ลูกนกซิมูร์กคือลูกนกขนฟูสีทองที่เติบโตในรังไม้จันทน์หอม",
+"zh": "神鸟雏鸟。神鸟雏鸟是在檀香大巢里长大的毛茸茸金色小鸟。",
+"ja": "シームルグの ひな。シームルグの ひなは ふわふわの きんいろの あかちゃんとりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_chick.1": {
+"en": "Hello, Simurgh chick!",
+"lo": "ສະບາຍດີ ລູກນົກຊີມວກ!",
+"th": "สวัสดีลูกนกซิมูร์ก!",
+"zh": "你好，神鸟雏鸟！",
+"ja": "こんにちは、シームルグの ひな！",
+"who": "narrator",
+"tag": "greet"
+},
+"sim_chick.2": {
+"en": "Chirp-chirp!",
+"lo": "ຈິບໆ!",
+"th": "จิ๊บๆ!",
+"zh": "啾啾！",
+"ja": "ちゅんちゅん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sim_chick.3": {
+"en": "Young birds grow strong feathers by hopping, flapping and eating sweet berries.",
+"lo": "ລູກນົກເຕີບໃຫຍ່ມີຂົນແຂງແຮງດ້ວຍການໂດດ ກະພືບປີກ ແລະ ກິນໝາກເບີຣີຫວານ.",
+"th": "ลูกนกเติบโตมีขนแข็งแรงด้วยการกระโดด กระพือปีก และกินลูกเบอร์รีหวาน",
+"zh": "小雏鸟每天蹦蹦跳跳、拍打翅膀、吃甜浆果，渐渐长出结实的羽毛。",
+"ja": "ひなは はねて きのみを たべて じょうぶな つばさを そだてるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_chick.4": {
+"en": "The fluffy chicks love balancing sweet red berries on their beaks!",
+"lo": "ລູກນົກຂົນຟູມັກວາງໝາກເບີຣີສີແດງຫວານໄວ້ເທິງສົບຂອງມັນ!",
+"th": "ลูกนกขนฟูชอบวางลูกเบอร์รีสีแดงหวานไว้บนจะงอยปาก!",
+"zh": "毛茸茸的小雏鸟最爱用尖尖的小嘴顶着红浆果玩杂技！",
+"ja": "くちばしに あかい きのみを のせて あそぶのが だいすきだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_chick.5": {
+"en": "Soft saffron and turquoise down makes every chick look like a little sun.",
+"lo": "ຂົນອ່ອນສີຄຳ ແລະ ສີຟ້າຂຽວເຮັດໃຫ້ລູກນົກທຸກໂຕຄືດວງຕາເວັນນ້ອຍ.",
+"th": "ขนอ่อนสีทองและสีฟ้าเขียวทำให้ลูกนกทุกตัวเหมือนดวงอาทิตย์น้อย",
+"zh": "松软的金黄色和青蓝色绒毛让雏鸟像一团团小太阳。",
+"ja": "ふわふわの きんいろと あおの うぶげが とっても かわいいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_mosspillow.0": {
+"en": "A moss pillow. A moss pillow is soft and cool for baby Zal's head in the nest.",
+"lo": "ໝອນໄຄນ້ຳ. ໝອນໄຄນ້ຳ ນຸ້ມ ແລະ ເຢັນສະບາຍສຳລັບຫົວນ້ອງນ້ອຍຊານໃນຮັງ.",
+"th": "หมอนมอส หมอนมอสนุ่มและเย็นสบายสำหรับหนูน้อยซาลในรัง",
+"zh": "青苔软枕。青苔软枕又软又清凉，正好给巢里的小扎尔垫头。",
+"ja": "こけの まくら。こけの まくらは ふわふわで あかちゃんに やさしいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_mosspillow.1": {
+"en": "Plump emerald-green mountain moss feels just like a tiny velvet cushion.",
+"lo": "ໄຄນ້ຳພູຜາສີຂຽວມໍລະກົດນຸ້ມຄືໝອນກຳມະຫຍີ່ນ້ອຍ.",
+"th": "มอสภูเขาสีเขียวมรกตนุ่มเหมือนหมอนกำมะหยี่น้อย",
+"zh": "饱满的翠绿山苔摸起来就像一块小小丝绒软枕。",
+"ja": "みどりの こけは びろうどみたいに ふわふわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_mosspillow.2": {
+"en": "The Simurgh gathers soft moss to make her high nest extra cosy.",
+"lo": "ນົກຊີມວກເກັບໄຄນ້ຳນຸ້ມມາປູຮັງສູງຂອງນາງໃຫ້ອຸ່ນສະບາຍ.",
+"th": "นกซิมูร์กเก็บมอสนุ่มมาปูรังสูงของเธอให้อุ่นสบาย",
+"zh": "神鸟采来柔软的青苔，把云端大巢铺得格外舒适。",
+"ja": "シームルグが すを ふわふわに する ために あつめたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_mosspillow.3": {
+"en": "Tiny mountain clover leaves peek from its soft green edges.",
+"lo": "ໃບຫຍ້ານ້ອຍໆໂຜ່ອອກມາຈາກຂອບສີຂຽວນຸ້ມຂອງມັນ.",
+"th": "ใบหญ้าน้อยๆ โผล่ออกมาจากขอบสีเขียวนุ่มของมัน",
+"zh": "翠绿软枕边缘还点缀着几片嫩嫩的小山草叶。",
+"ja": "ちいさな はっぱが ふちから ちょこんと のぞいて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_mosspillow.4": {
+"en": "Place the moss pillow in the nest for baby Zal's nap!",
+"lo": "ວາງໝອນໄຄນ້ຳໄວ້ໃນຮັງເພື່ອໃຫ້ນ້ອງນ້ອຍຊານນອນພັກຜ່ອນ!",
+"th": "วางหมอนมอสไว้ในรังเพื่อให้หนูน้อยซาลนอนพักผ่อน!",
+"zh": "把青苔软枕放进大巢里，让小扎尔睡个香甜的好觉！",
+"ja": "すの なかに おいて あかちゃんを ねかせて あげよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_blanket.0": {
+"en": "A crimson blanket. A crimson blanket keeps little Zal cosy high above the mountain clouds.",
+"lo": "ຜ້າຫົ່ມສີແດງ. ຜ້າຫົ່ມສີແດງ ຫົ່ມໃຫ້ນ້ອງນ້ອຍຊານອຸ່ນສະບາຍເໜືອກ້ອນເມກ.",
+"th": "ผ้าห่มสีแดง ผ้าห่มสีแดงห่มให้หนูน้อยซาลอุ่นสบายเหนือปุยเมฆ",
+"zh": "深红丝毯。深红丝毯把高高云端上的小扎尔裹得暖暖和和。",
+"ja": "あかい もうふ。あかい もうふが くもの うえの ザールを あたためるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_blanket.1": {
+"en": "Deep crimson silk is woven with delicate golden Persian motifs.",
+"lo": "ຜ້າໄໝສີແດງເຂັ້ມຕ່ຳດ້ວຍລວດລາຍສີຄຳອັນປະນີດຂອງເປີເຊຍ.",
+"th": "ผ้าไหมสีแดงเข้มทอด้วยลวดลายสีทองอันประณีตของเปอร์เซีย",
+"zh": "深红丝毯上织着细腻华美的金色波斯纹样。",
+"ja": "あかい きぬに きんいろの きれいな もようが おられて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_blanket.2": {
+"en": "It keeps mountain breezes out while baby Zal naps snugly.",
+"lo": "ມັນຊ່ວຍກັນລົມພູທີ່ໜາວເຢັນເວລານ້ອງນ້ອຍຊານນອນຫຼັບສະບາຍ.",
+"th": "มันช่วยกันลมภูเขาที่หนาวเย็นเวลาน้องน้อยซาลนอนหลับสบาย",
+"zh": "它挡住清凉的山风，让小扎尔安稳地打盹。",
+"ja": "つめた い やまかぜから あかちゃんを まもって くれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_blanket.3": {
+"en": "Even high above the clouds, its warm red colour shines cheerfully.",
+"lo": "ແມ່ນແຕ່ສູງເໜືອກ້ອນເມກ ສີແດງອຸ່ນຂອງມັນກໍຍັງສົດໃສ.",
+"th": "แม้จะอยู่สูงเหนือเมฆ สีแดงอุ่นของมันก็ยังสดใส",
+"zh": "即便高踞云端，它温暖的深红色依然明媚动人。",
+"ja": "くもの うえでも あたたかい あかいろが よく はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_blanket.4": {
+"en": "Tuck this soft blanket right beside baby Zal in the nest!",
+"lo": "ປູຜ້າຫົ່ມນຸ້ມຜືນນີ້ໄວ້ຂ້າງນ້ອງນ້ອຍຊານໃນຮັງເລີຍ!",
+"th": "ปูผ้าห่มนุ่มผืนนี้ไว้ข้างหนูน้อยซาลในรังเลย!",
+"zh": "把柔软的丝毯轻轻铺在巢里的小扎尔身旁吧！",
+"ja": "あかちゃんの そばに そっと かけて あげよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_berries.0": {
+"en": "Sweet berries. Sweet berries grow bright red along the high crags of Mount Alborz.",
+"lo": "ໝາກເບີຣີຫວານ. ໝາກເບີຣີຫວານ ເກີດເປັນໜ່ວຍສີແດງສົດຕາມຜາສູງຂອງພູອານບໍສ.",
+"th": "ลูกเบอร์รีหวาน ลูกเบอร์รีหวานขึ้นสีแดงสดตามผาสูงของภูเขาอัลบอร์ซ",
+"zh": "甜红浆果。甜红浆果生长在厄尔布尔士山高高的岩石上。",
+"ja": "あまい きのみ。あまい きのみが いわやまの うえで あかく みのっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_berries.1": {
+"en": "Plump ruby-red berries shine like tiny jewels among green leaves.",
+"lo": "ໝາກເບີຣີສີແດງເຕັ່ງຕຶງເຫຼື້ອມຄືແກ້ວມະນີນ້ອຍໆທ່າມກາງໃບໄມ້ຂຽວ.",
+"th": "ลูกเบอร์รีสีแดงเต่งตึงเหมือนอัญมณีเม็ดน้อยท่ามกลางใบไม้เขียว",
+"zh": "饱满的红浆果藏在绿叶间，像一颗颗闪亮的小红宝石。",
+"ja": "まっかな きのみが ほうせきみたいに つやつや ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_berries.2": {
+"en": "The two fluffy chicks love sharing sweet berries with baby Zal!",
+"lo": "ລູກນົກຂົນຟູສອງໂຕມັກແບ່ງໝາກເບີຣີຫວານໃຫ້ນ້ອງນ້ອຍຊານ!",
+"th": "ลูกนกขนฟูสองตัวชอบแบ่งลูกเบอร์รีหวานให้หนูน้อยซาล!",
+"zh": "两只毛茸茸的雏鸟最爱把甜红浆果分给小扎尔！",
+"ja": "ひなたちは あまい きのみを ザールに わけて くれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_berries.3": {
+"en": "One cheeky chick balanced three berries right on its beak!",
+"lo": "ລູກນົກຂີ້ຫຼິ້ນໂຕໜຶ່ງວາງໝາກເບີຣີສາມໜ່ວຍໄວ້ເທິງສົບຂອງມັນ!",
+"th": "ลูกนกจอมซนตัวหนึ่งวางลูกเบอร์รีสามลูกไว้บนจะงอยปาก!",
+"zh": "有只调皮的小雏鸟还在嘴尖上顶起了三颗红浆果！",
+"ja": "くちばしに みっつ のせて ぽろっと おとしちゃったね！",
+"who": "narrator",
+"sp": [
+"s04",
+"s06",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_berries.4": {
+"en": "Mountain birds love ripe red berries for sweet energy.",
+"lo": "ນົກເທິງພູມັກກິນໝາກເບີຣີສີແດງສຸກເພື່ອໃຫ້ພະລັງງານຫວານຊື່ນ.",
+"th": "นกบนภูเขาชอบกินลูกเบอร์รีสีแดงสุกเพื่อเพิ่มพลังหวานชื่น",
+"zh": "山间的鸟儿都喜欢吃成熟香甜的红浆果补充能量。",
+"ja": "やまの とりたちは あまい きのみが だいすきなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_berries.5": {
+"en": "Morning dew sparkles softly on each round red berry.",
+"lo": "ຢົດນ້ຳຄ້າງຍາມເຊົ້າເຫຼື້ອມອ່ອນໆເທິງໝາກເບີຣີສີແດງທຸກໜ່ວຍ.",
+"th": "หยดน้ำค้างยามเช้าเงาอ่อนๆ บนลูกเบอร์รีสีแดงทุกลูก",
+"zh": "清晨的露珠在每一颗圆滚滚的红浆果上微微闪亮。",
+"ja": "あさつゆが まっかな きのみの うえで きらっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nestspot.0": {
+"en": "A nest spot. A nest spot is a snug place ready for pillows, blankets and berries.",
+"lo": "ບ່ອນວາງໃນຮັງ. ບ່ອນວາງໃນຮັງ ແມ່ນບ່ອນອຸ່ນທີ່ກຽມໄວ້ສຳລັບໝອນ ຜ້າຫົ່ມ ແລະ ໝາກເບີຣີ.",
+"th": "ที่วางในรัง ที่วางในรังคือมุมอุ่นๆ สำหรับหมอน ผ้าห่ม และลูกเบอร์รี",
+"zh": "鸟巢位置。鸟巢位置是留给软枕、丝毯和甜浆果的温暖小窝。",
+"ja": "すの ばしょ。すの ばしょは まくらや もうふを おく あたたかい ところだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_nestspot.1": {
+"en": "A gentle woven hollow rests inside the giant sandalwood nest.",
+"lo": "ແອ່ງໄມ້ສານອ່ອນນຸ້ມຢູ່ຂ້າງໃນຮັງໄມ້ຈັນຫອມໃຫຍ່.",
+"th": "แอ่งไม้สานอ่อนนุ่มอยู่ข้างในรังไม้จันทน์หอมใหญ่",
+"zh": "檀香大巢里铺出了一个个整整齐齐的小凹窝。",
+"ja": "すの なかに ぴったりの ばしょが ようい されて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nestspot.2": {
+"en": "Match each cosy item to its spot to make the nest snug!",
+"lo": "ຈັບຄູ່ຂອງໃຊ້ອຸ່ນໆໃສ່ບ່ອນຂອງມັນເພື່ອເຮັດໃຫ້ຮັງອຸ່ນສະບາຍ!",
+"th": "จับคู่ของใช้อุ่นๆ ใส่ที่ของมันเพื่อให้รังอุ่นสบาย!",
+"zh": "把每件温暖的小物放到合适的位置，把大巢布置得舒舒服服！",
+"ja": "あたたかい ものを ならべて すを ふかふかに しよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nestspot.3": {
+"en": "Fragrant sandalwood twigs cradle every corner of the nest.",
+"lo": "ກິ່ງໄມ້ຈັນຫອມໂອບລ້ອມທຸກມຸມຂອງຮັງນົກ.",
+"th": "กิ่งไม้จันทน์หอมโอบล้อมทุกมุมของรังนก",
+"zh": "芬芳的檀香木枝轻轻托起大巢的每一个角落。",
+"ja": "いい かおりの えだが すを やさしく つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nestspot.4": {
+"en": "Baby Zal and the chicks will be happy and warm here.",
+"lo": "ນ້ອງນ້ອຍຊານ ແລະ ລູກນົກຈະມີຄວາມສຸກ ແລະ ອົບອຸ່ນຢູ່ບ່ອນນີ້.",
+"th": "หนูน้อยซาลและลูกนกจะมีความสุขและอบอุ่นอยู่ที่นี่",
+"zh": "小扎尔和两只小雏鸟在这里会又暖和又开心。",
+"ja": "ザールと ひなたちが ここで ぽかぽか あそぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nestsky.0": {
+"en": "The summit sky. The summit sky opens vast and bright high above the white clouds.",
+"lo": "ທ້ອງຟ້າຍອດພູ. ທ້ອງຟ້າຍອດພູ ເປີດກວ້າງສົດໃສສູງເໜືອກ້ອນເມກສີຂາວ.",
+"th": "ท้องฟ้ายอดเขา ท้องฟ้ายอดเขาเปิดกว้างสดใสสูงเหนือปุยเมฆสีขาว",
+"zh": "山巅晴空。山巅晴空在洁白无垠的云海之上辽阔明亮。",
+"ja": "いただきの そら。いただきの そらが くもの うえに ひろく ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_nestsky.1": {
+"en": "Vast blue heavens shine clear and bright above the drifting cloud sea.",
+"lo": "ທ້ອງຟ້າສີຟ້າກວ້າງໃຫຍ່ສ່ອງແສງສົດໃສເໜືອທະເລເມກທີ່ລອຍຜ່ານ.",
+"th": "ท้องฟ้าสีฟ้ากว้างใหญ่ส่องแสงสดใสเหนือทะเลเมฆที่ลอยผ่าน",
+"zh": "湛蓝辽阔的天空在绵延云海之上明亮澄澈。",
+"ja": "くもの うえに ひろい あおい そらが すっきり ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nestsky.2": {
+"en": "At sunrise and evening, soft rose and golden light paints the clouds.",
+"lo": "ຍາມຕາເວັນຂຶ້ນ ແລະ ຍາມແລງ ແສງສີບົວອ່ອນ ແລະ ສີຄຳແຕ້ມສີໃສ່ກ້ອນເມກ.",
+"th": "ยามพระอาทิตย์ขึ้นและยามเย็น แสงสีชมพูอ่อนและสีทองแต้มสีให้ปุยเมฆ",
+"zh": "日出与黄昏时，柔美的玫瑰粉与金光为云海披上彩衣。",
+"ja": "あさやけや ゆうやけの ひかりが くもを きれいに そめるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nestsky.3": {
+"en": "High up here, the Simurgh spreads her wide wings in pure freedom.",
+"lo": "ຢູ່ສູງເທິງນີ້ ນົກຊີມວກກາງປີກກວ້າງບິນຢ່າງອິດສະຫຼະ.",
+"th": "อยู่สูงบนนี้ นกซิมูร์กกางปีกกว้างบินอย่างอิสระ",
+"zh": "在这片高远的天空里，神鸟自由自在地展开双翼。",
+"ja": "シームルグが おおきな つばさを のびのび ひろげて とぶ そらだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nestsky.4": {
+"en": "Zal loves gazing past the rosy clouds toward sunny Zabul far below.",
+"lo": "ຊານມັກແນມຜ່ານກ້ອນເມກສີບົວລົງໄປຫາເມືອງຊາບູນແດດອຸ່ນຢູ່ດ້ານລຸ່ມ.",
+"th": "ซาลชอบมองผ่านเมฆสีชมพูลงไปยังเมืองซาบูลแดดอุ่นอยู่ด้านล่าง",
+"zh": "扎尔常常望过玫瑰色的云霞，眺望下方阳光明媚的扎布尔。",
+"ja": "ザールは くもの むこうの ザブールを なつかしそうに ながめるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cloudsea.0": {
+"en": "A cloud sea. The cloud sea drifts like soft white wool around the mountain peak.",
+"lo": "ທະເລເມກຂາວ. ທະເລເມກຂາວ ລອຍຄ່ອຍໆຄືປຸຍຝ້າຍສີຂາວອ້ອມຍອດພູ.",
+"th": "ทะเลเมฆขาว ทะเลเมฆขาวลอยเบาๆ เหมือนปุยฝ้ายสีขาวรอบยอดเขา",
+"zh": "绵绵云海。绵绵云海像柔软的白色绒毛轻轻环绕着山巅。",
+"ja": "しろい くもの うみ。しろい くもの うみが やまの まわりを ふわふわ ながれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_cloudsea.1": {
+"en": "Billowing ivory-white clouds stretch like soft waves below the summit.",
+"lo": "ກ້ອນເມກສີຂາວງາຊ້າງຢຽດກວ້າງຄືຄື້ນນຸ້ມຢູ່ກ້ອງຍອດພູ.",
+"th": "ปุยเมฆสีขาวงาช้างทอดกว้างเหมือนคลื่นนุ่มใต้ยอดเขา",
+"zh": "翻涌的乳白云海像柔软的浪涛铺展在山巅之下。",
+"ja": "しろい くもが うみの なみみたいに ふわふわ ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_cloudsea.2": {
+"en": "They float quietly past the turquoise crags of Mount Alborz.",
+"lo": "ພວກມັນລອຍຜ່ານຜາຫີນສີຟ້າຂຽວຂອງພູອານບໍສໄປຢ່າງງຽບໆ.",
+"th": "พวกมันลอยผ่านผาหินสีฟ้าเขียวของภูเขาอัลบอร์ซไปอย่างเงียบๆ",
+"zh": "白云静静地漂浮在厄尔布尔士山青金色的岩峰之间。",
+"ja": "あおい いわやまの あいだを くもが ゆっくり ながれて いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_cloudsea.3": {
+"en": "Clouds are made of millions of tiny cool water droplets floating in the air.",
+"lo": "ກ້ອນເມກເກີດຈາກຢົດນ້ຳເຢັນນ້ອຍໆຫຼາຍລ້ານຢົດທີ່ລອຍຢູ່ໃນອາກາດ.",
+"th": "ก้อนเมฆเกิดจากหยดน้ำเย็นน้อยๆ นับล้านหยดที่ลอยอยู่ในอากาศ",
+"zh": "云朵是由千千万万悬浮在空中的微小水珠聚成的。",
+"ja": "くもは ちいさな みずの つぶが いっぱい あつまって できているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_cloudsea.4": {
+"en": "Warm sunlight rims every curled cloud edge in pale gold.",
+"lo": "ແສງແດດອຸ່ນແຕ້ມຂອບກ້ອນເມກມ້ວນທຸກກ້ອນເປັນສີຄຳອ່ອນ.",
+"th": "แสงแดดอุ่นแต้มขอบก้อนเมฆม้วนทุกก้อนเป็นสีทองอ่อน",
+"zh": "温暖的阳光为每一朵卷云镶上了淡金色的亮边。",
+"ja": "おひさまが くもの ふちを きんいろに てらして きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_sandalwoodnest.0": {
+"en": "A sandalwood nest. The sandalwood nest is woven from fragrant branches high above the clouds.",
+"lo": "ຮັງໄມ້ຈັນຫອມ. ຮັງໄມ້ຈັນຫອມ ສານຈາກກິ່ງໄມ້ຫອມສູງເໜືອກ້ອນເມກ.",
+"th": "รังไม้จันทน์หอม รังไม้จันทน์หอมสานจากกิ่งไม้หอมสูงเหนือปุยเมฆ",
+"zh": "檀香大巢。檀香大巢由芬芳的檀香木枝精心编织而成，高踞云端。",
+"ja": "びゃくだんの おおきな す。びゃくだんの おおきな すは いい かおりの えだで あまれて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_sandalwoodnest.1": {
+"en": "Hundreds of warm fragrant sandalwood boughs weave together like a golden crown.",
+"lo": "ກິ່ງໄມ້ຈັນຫອມສີອຸ່ນຫຼາຍຮ້ອຍກິ່ງສານເຂົ້າກັນຄືມົງກຸດສີຄຳ.",
+"th": "กิ่งไม้จันทน์หอมสีอุ่นหลายร้อยกิ่งสานเข้าด้วยกันเหมือนมงกุฎสีทอง",
+"zh": "数百根温润芬芳的檀香木枝编织在一起，宛如一顶金色王冠。",
+"ja": "いい かおりの えだが たくさん あまれて りっぱな すに なっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_sandalwoodnest.2": {
+"en": "Baby Zal grew up warm, safe and loved inside this giant mountain nest!",
+"lo": "ນ້ອງນ້ອຍຊານເຕີບໃຫຍ່ຢ່າງອົບອຸ່ນ ປອດໄພ ແລະ ມີຄວາມຮັກໃນຮັງພູໃຫຍ່ນີ້!",
+"th": "หนูน้อยซาลเติบโตอย่างอบอุ่น ปลอดภัย และเปี่ยมความรักในรังเขาใหญ่นี้!",
+"zh": "小扎尔就是在这座温暖的大巢里平安快乐地长大的！",
+"ja": "ザールは この あたたかい すで げんきに そだったんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_sandalwoodnest.3": {
+"en": "Sandalwood is treasured across Asia for its gentle, sweet woody perfume.",
+"lo": "ໄມ້ຈັນຫອມເປັນໄມ້ລ້ຳຄ່າທົ່ວອາຊີຍ້ອນກິ່ນຫອມອ່ອນໂຍນຂອງມັນ.",
+"th": "ไม้จันทน์หอมเป็นไม้ล้ำค่าทั่วเอเชียเพราะกลิ่นหอมอ่อนโยนของมัน",
+"zh": "檀香木以温柔甘甜的木质清香闻名于亚洲各地。",
+"ja": "びゃくだんは やさしくて いい かおりの する たいせつな きだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_sandalwoodnest.4": {
+"en": "Soft green moss and golden feathers line its cosy centre.",
+"lo": "ໄຄນ້ຳສີຂຽວນຸ້ມ ແລະ ຂົນນົກສີຄຳປູຢູ່ກາງຮັງຢ່າງອຸ່ນສະບາຍ.",
+"th": "มอสสีเขียวนุ่มและขนนกสีทองปูอยู่กลางรังอย่างอุ่นสบาย",
+"zh": "柔软的绿苔和金色羽毛把大巢中央铺得格外暖和。",
+"ja": "ふわふわの こけと きんのはねが すの なかに しいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_zal.0": {
+"en": "Prince Zal. Prince Zal is a brave Persian boy with hair as white as mountain snow.",
+"lo": "ເຈົ້າຊາຍຊານ. ເຈົ້າຊາຍຊານ ແມ່ນເດັກຊາຍຊາວເປີເຊຍຜູ້ກ້າຫານທີ່ມີຜົມຂາວຄືຫິມະເທິງພູ.",
+"th": "เจ้าชายซาล เจ้าชายซาลเป็นเด็กชายชาวเปอร์เซียผู้กล้าหาญที่มีผมขาวเหมือนหิมะบนภูเขา",
+"zh": "扎尔王子。扎尔王子是一位勇敢的波斯少年，有着像山顶白雪一样洁白的头发。",
+"ja": "ザールおうじ。ザールおうじは ゆきのように しろい かみの ゆうかんな おとこのこだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_zal.1": {
+"en": "Hello, Prince Zal!",
+"lo": "ສະບາຍດີ ເຈົ້າຊາຍຊານ!",
+"th": "สวัสดีเจ้าชายซาล!",
+"zh": "你好，扎尔王子！",
+"ja": "こんにちは、ザールおうじ！",
+"who": "zal",
+"tag": "greet"
+},
+"sim_zal.2": {
+"en": "I am Prince Zal! My hair has shone as white as mountain snow since the day I was born!",
+"lo": "ຂ້ອຍແມ່ນເຈົ້າຊາຍຊານ! ຜົມຂອງຂ້ອຍຂາວຄືຫິມະເທິງພູຕັ້ງແຕ່ມື້ຂ້ອຍເກີດ!",
+"th": "ฉันคือเจ้าชายซาล! ผมของฉันขาวเหมือนหิมะบนภูเขาตั้งแต่วันที่เกิด!",
+"zh": "我是扎尔王子！从出生那天起，我的头发就像山顶白雪一样洁白！",
+"ja": "ぼくは ザールおうじ！ うまれた ひから かみが ゆきみたいに しろいんだ！",
+"who": "zal",
+"tag": "say"
+},
+"sim_zal.3": {
+"en": "The wise Simurgh raised me high above the clouds in her giant sandalwood nest!",
+"lo": "ນົກຊີມວກຜູ້ສະຫຼາດລ້ຽງຂ້ອຍສູງເໜືອກ້ອນເມກໃນຮັງໄມ້ຈັນຫອມ!",
+"th": "นกซิมูร์กผู้ชาญฉลาดเลี้ยงฉันสูงเหนือเมฆในรังไม้จันทน์หอม!",
+"zh": "智慧的神鸟在云端之上的檀香大巢里把我养大！",
+"ja": "シームルグが くもの うえの すで ぼくを そだてて くれたよ！",
+"who": "zal",
+"tag": "does"
+},
+"sim_zal.4": {
+"en": "I love leaping across sunlit crags and racing the two fluffy Simurgh chicks!",
+"lo": "ຂ້ອຍມັກໂດດຂ້າມຜາແດດອຸ່ນ ແລະ ແລ່ນແຂ່ງກັບລູກນົກຊີມວກສອງໂຕ!",
+"th": "ฉันชอบกระโดดข้ามผาแดดอุ่นและวิ่งแข่งกับลูกนกซิมูร์กสองตัว!",
+"zh": "我喜欢在阳光岩石间奔跑跳跃，和两只毛茸茸的小雏鸟赛跑！",
+"ja": "ひなたの いわを ぴょんぴょん とんで ひなたちと きょうそうするんだ！",
+"who": "zal",
+"tag": "does"
+},
+"sim_zal.5": {
+"en": "The Simurgh taught me the names of mountain herbs and gentle kindness.",
+"lo": "ນົກຊີມວກສອນຂ້ອຍໃຫ້ຮູ້ຈັກສະໝຸນໄພເທິງພູ ແລະ ຄວາມໃຈດີ.",
+"th": "นกซิมูร์กสอนฉันให้รู้จักสมุนไพรบนเขาและความใจดี",
+"zh": "神鸟教我辨认高山香草，也教我温柔待人。",
+"ja": "シームルグに やまの やくそうと やさしさを おそわったよ。",
+"who": "zal",
+"tag": "fact"
+},
+"sim_zal.6": {
+"en": "I keep the Simurgh's glowing golden feathers safely close to my heart.",
+"lo": "ຂ້ອຍເກັບຂົນນົກສີຄຳທີ່ເຫຼື້ອມແສງຂອງນົກຊີມວກໄວ້ໃກ້ຫົວໃຈ.",
+"th": "ฉันเก็บขนนกสีทองเรืองแสงของนกซิมูร์กไว้ใกล้หัวใจ",
+"zh": "我把神鸟闪闪发光的金色羽毛小心翼翼地收在胸口。",
+"ja": "シームルグの きんのはねを たいせつに もっているよ。",
+"who": "zal",
+"sp": [
+"s06",
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_zal.7": {
+"en": "When boulders trapped the white goat, I burned one golden feather to call the Simurgh!",
+"lo": "ຕອນກ້ອນຫີນກີດຂວາງແບ້ຂາວ ຂ້ອຍເຜົາຂົນນົກສີຄຳເພື່ອເອີ້ນນົກຊີມວກ!",
+"th": "ตอนก้อนหินขวางแพะขาว ฉันเผาขนนกสีทองเพื่อเรียกนกซิมูร์ก!",
+"zh": "当巨石困住小白羊时，我点燃一根金羽呼唤神鸟来帮忙！",
+"ja": "やぎが いわに とじこめられた とき、きんのはねで シームルグを よんだよ！",
+"who": "zal",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_zal.8": {
+"en": "Princess Rudaba welcomed me to sunny Zabul with a warm smile!",
+"lo": "ເຈົ້າຍິງຣູດາບາຕ້ອນຮັບຂ້ອຍສູ່ເມືອງຊາບູນດ້ວຍຮອຍຍິ້ມອົບອຸ່ນ!",
+"th": "เจ้าหญิงรูดะบาต้อนรับฉันสู่เมืองซาบูลด้วยรอยยิ้มอบอุ่น!",
+"zh": "鲁达巴公主用温暖的笑容欢迎我回到阳光扎布尔！",
+"ja": "ルダバひめが えがおで ザブールへ むかえて くれたよ！",
+"who": "zal",
+"sp": [
+"s07",
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_zal.9": {
+"en": "Now I have two loving homes, and what makes us different helps us shine!",
+"lo": "ຕອນນີ້ຂ້ອຍມີບ້ານທີ່ອົບອຸ່ນສອງແຫ່ງ ແລະ ສິ່ງທີ່ແຕກຕ່າງເຮັດໃຫ້ເຮົາສ່ອງແສງ!",
+"th": "ตอนนี้ฉันมีบ้านที่อบอุ่นสองแห่ง และความแตกต่างทำให้เราเปล่งประกาย!",
+"zh": "现在我有两个充满爱的家，与众不同让我们闪闪发光！",
+"ja": "ふたつの おうちが あって、ちがう ところが ぼくの かがやきなんだ！",
+"who": "zal",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_zal.10": {
+"en": "I wear a crimson and gold Persian tunic with sturdy climbing boots.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອເປີເຊຍສີແດງປົນຄຳ ແລະ ເກີບປີນພູທີ່ແຂງແຮງ.",
+"th": "ฉันใส่เสื้อเปอร์เซียสีแดงขลิบทองและรองเท้าปีนเขาแข็งแรง",
+"zh": "我穿着红金色的波斯短袍和结实的登山靴。",
+"ja": "あかと きんいろの ふくに じょうぶな ぶーつを はいているよ。",
+"who": "zal",
+"tag": "looks"
+},
+"sim_leapstone.0": {
+"en": "A stepping rock. A stepping rock makes a fun perch for leaping across the sunlit crags.",
+"lo": "ກ້ອນຫີນກະໂດດ. ກ້ອນຫີນກະໂດດ ເປັນບ່ອນຢືນມ່ວນໆສຳລັບໂດດຂ້າມຜາແດດອຸ່ນ.",
+"th": "ก้อนหินกระโดด ก้อนหินกระโดดเป็นที่ยืนสนุกๆ สำหรับกระโดดข้ามผาแดดอุ่น",
+"zh": "跳跃石块。跳跃石块是阳光岩石间练习腾跃的好踏脚石。",
+"ja": "とびいし。とびいしは やまの うえで ぴょんと とぶ ための いしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_leapstone.1": {
+"en": "Smooth golden-ochre summit stones stand in a neat row across the crags.",
+"lo": "ກ້ອນຫີນຍອດພູສີເຫຼືອງຄຳລຽງກັນເປັນແຖວງາມຂ້າມຜາຫີນ.",
+"th": "ก้อนหินยอดเขาสีเหลืองทองเรียงกันเป็นแถวงามข้ามผาหิน",
+"zh": "平滑的金黄色山岩整齐地排成一列，通向云端岩台。",
+"ja": "きんいろの いしが いわの うえに きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_leapstone.2": {
+"en": "Young Zal leaps swiftly from stone to stone in the mountain wind!",
+"lo": "ຊານນ້ອຍໂດດຢ່າງວ່ອງໄວຈາກກ້ອນຫີນໜຶ່ງໄປຫາອີກກ້ອນໜຶ່ງໃນສາຍລົມພູ!",
+"th": "ซาลน้อยกระโดดอย่างว่องไวจากก้อนหินหนึ่งไปอีกก้อนหนึ่งในสายลมเขา!",
+"zh": "小扎尔迎着山风，在石块之间轻快地一跃而过！",
+"ja": "ザールが かぜの なか いしから いしへ ぴょんと とぶよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_leapstone.3": {
+"en": "Tap right when the green circle glows to help Zal bound high!",
+"lo": "ແຕະຕອນວົງແຫວນສີຂຽວສ່ອງແສງເພື່ອຊ່ວຍຊານໂດດສູງ!",
+"th": "แตะตอนวงแหวนสีเขียวส่องแสงเพื่อช่วยซาลกระโดดสูง!",
+"zh": "绿环亮起时轻轻一点，帮扎尔高高跃起！",
+"ja": "みどりの わが ひかったら さわって たかく とぼう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_leapstone.4": {
+"en": "Each stepping rock catches the bright golden light of Mount Alborz.",
+"lo": "ກ້ອນຫີນກະໂດດແຕ່ລະກ້ອນຮັບແສງສີຄຳສົດໃສຂອງພູອານບໍສ.",
+"th": "ก้อนหินกระโดดแต่ละก้อนรับแสงสีทองสดใสของภูเขาอัลบอร์ซ",
+"zh": "每一块跳跃石都沐浴着厄尔布尔士山灿烂的金光。",
+"ja": "おひさまの ひかりを あびて いしが きらきら しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_feather.0": {
+"en": "A golden feather. A golden feather from the Simurgh shines with warmth and promise.",
+"lo": "ຂົນນົກສີຄຳ. ຂົນນົກສີຄຳ ຈາກປີກນົກຊີມວກສ່ອງແສງອົບອຸ່ນພ້ອມຄຳສັນຍາ.",
+"th": "ขนนกสีทอง ขนนกสีทองจากปีกนกซิมูร์กส่องแสงอบอุ่นพร้อมคำสัญญา",
+"zh": "金色羽毛。西穆尔格神鸟的金色羽毛闪耀着温暖与守护的承诺。",
+"ja": "きんいろの はね。きんいろの はねは シームルグからの たいせつな おくりものだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_feather.1": {
+"en": "Golden and turquoise barbs shimmer softly along its curved plume.",
+"lo": "ເສັ້ນຂົນສີຄຳ ແລະ ສີຟ້າຂຽວເຫຼື້ອມອ່ອນໆຕາມກ້ານຂົນໂຄ້ງງາມ.",
+"th": "เส้นขนสีทองและสีฟ้าเขียวเงาอ่อนๆ ตามก้านขนโค้งงาม",
+"zh": "弯曲的羽枝上闪耀着金色与绿松石蓝的柔和微光。",
+"ja": "きんいろと あおの はねが やさしく ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_feather.2": {
+"en": "Touching one golden feather to warm fire calls the Simurgh from afar!",
+"lo": "ການແຕະຂົນນົກສີຄຳໃສ່ໄຟອຸ່ນຈະເອີ້ນນົກຊີມວກມາຈາກໄກ!",
+"th": "การแตะขนนกสีทองใส่ไฟอุ่นจะเรียกนกซิมูร์กมาจากไกล!",
+"zh": "只要把一根金羽轻触暖火，就能从远方呼唤神鸟飞来！",
+"ja": "あたたかい ひに ふれると とおくから シームルグが とんで くるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_feather.3": {
+"en": "One glowing feather drifted down on the night breeze to comfort Lord Sam.",
+"lo": "ຂົນນົກເຫຼື້ອມແສງໜຶ່ງອັນລອຍລົງມາຕາມລົມກາງຄືນເພື່ອປອບໃຈທ່ານຊາມ.",
+"th": "ขนนกเรืองแสงหนึ่งเส้นลอยลงมาตามลมกลางคืนเพื่อปลอบใจท่านซาม",
+"zh": "一根闪亮的金羽乘着夜风轻轻飘落，安慰了思念儿子的萨姆。",
+"ja": "よかぜに のって サムさまの もとへ まいおりたんだよ。",
+"who": "narrator",
+"sp": [
+"s05"
+],
+"tag": "does"
+},
+"sim_feather.4": {
+"en": "Every golden feather is a promise of love that never fades.",
+"lo": "ຂົນນົກສີຄຳທຸກອັນແມ່ນຄຳສັນຍາແຫ່ງຄວາມຮັກທີ່ບໍ່ມີວັນຈາງ.",
+"th": "ขนนกสีทองทุกเส้นคือคำสัญญาแห่งความรักที่ไม่มีวันจาง",
+"zh": "每一根金色羽毛都是永不褪色的爱的承诺。",
+"ja": "いつまでも きえない あいの やくそくの はねだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_feather.5": {
+"en": "Soft warm light shimmers gently along its delicate golden tip.",
+"lo": "ແສງອຸ່ນອ່ອນໆເຫຼື້ອມລະຍິບຕາມປາຍຂົນສີຄຳອັນປະນີດ.",
+"th": "แสงอุ่นอ่อนๆ ระยิบระยับตามปลายขนสีทองอันประณีต",
+"zh": "柔和温暖的光彩在细腻的金色羽尖轻轻流转。",
+"ja": "やさしい ひかりが きんいろの はねの さきで きらめくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nightstar.0": {
+"en": "A night star. A night star twinkles silver above the snowy peaks of Mount Alborz.",
+"lo": "ດາວຍາມຄ່ຳ. ດາວຍາມຄ່ຳ ກະພິບແສງສີເງິນເໜືອຍອດຫິມະຂອງພູອານບໍສ.",
+"th": "ดาวยามค่ำ ดาวยามค่ำกะพริบแสงสีเงินเหนือยอดหิมะของภูเขาอัลบอร์ซ",
+"zh": "夜空星星。夜空星星在厄尔布尔士雪峰上方眨着银色的眼睛。",
+"ja": "よぞらの ほし。よぞらの ほしが ゆきの やまの うえで きらきら ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_nightstar.1": {
+"en": "Bright silver-gold stars twinkle softly above Zabul's night courtyard.",
+"lo": "ດາວສີເງິນປົນຄຳກະພິບແສງອ່ອນໆເໜືອເດີ່ນວັງຊາບູນຍາມຄ່ຳ.",
+"th": "ดาวสีเงินปนทองกะพริบแสงอ่อนๆ เหนือลานวังซาบูลยามค่ำ",
+"zh": "银金色的星星在扎布尔宁静的夜空庭院上方眨着眼。",
+"ja": "ぎんいろの ほしが よるの にわの うえで きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nightstar.2": {
+"en": "Four night stars show Lord Sam the mountain trail toward Mount Alborz.",
+"lo": "ດາວຍາມຄ່ຳສີ່ດວງຊີ້ທາງພູໃຫ້ທ່ານຊາມມຸ່ງໜ້າສູ່ພູອານບໍສ.",
+"th": "ดาวยามค่ำสี่ดวงชี้ทางเขาให้ท่านซามมุ่งหน้าสู่ภูเขาอัลบอร์ซ",
+"zh": "四颗夜星为萨姆领主照亮通往厄尔布尔士山的道路。",
+"ja": "よっつの ほしが アルボルズやまへの みちを てらして いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nightstar.3": {
+"en": "Tap each star to light the starry sky above the snowy peaks!",
+"lo": "ແຕະດາວແຕ່ລະດວງເພື່ອໃຫ້ທ້ອງຟ້າຍາມຄ່ຳສ່ອງແສງເໜືອຍອດຫິມະ!",
+"th": "แตะดาวแต่ละดวงเพื่อให้ท้องฟ้ายามค่ำส่องแสงเหนือยอดหิมะ!",
+"zh": "轻点每一颗星星，点亮雪峰之上的璀璨星空！",
+"ja": "ほしに さわって よぞらを あかるく てらそう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nightstar.4": {
+"en": "Long ago, travellers watched bright stars to find their way home.",
+"lo": "ສະໄໝກ່ອນ ນັກເດີນທາງເບິ່ງດາວສ່ອງແສງເພື່ອຊອກທາງກັບບ້ານ.",
+"th": "สมัยก่อน นักเดินทางดูดาวส่องแสงเพื่อหาทางกลับบ้าน",
+"zh": "很久以前，旅人们常常仰望明亮的星星辨认回家的路。",
+"ja": "むかしの たびびとは ほしを みて みちを さがしたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_nightsky.0": {
+"en": "The starry sky. The starry sky glows deep blue over silent moonlit Mount Alborz.",
+"lo": "ທ້ອງຟ້າຍາມຄ່ຳ. ທ້ອງຟ້າຍາມຄ່ຳ ສ່ອງສີຟ້າເຂັ້ມເໜືອພູອານບໍສທີ່ງຽບສະຫງົບ.",
+"th": "ท้องฟ้ามีดาว ท้องฟ้ามีดาวส่องสีน้ำเงินเข้มเหนือภูเขาอัลบอร์ซอันเงียบสงบ",
+"zh": "繁星夜空。繁星夜空深邃宁静，洒满月光照耀着厄尔布尔士山。",
+"ja": "ほしぞら。ほしぞらが つきの ひかりで しずかに かがやいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_nightsky.1": {
+"en": "Velvety indigo sky sparkles with gentle silver stars.",
+"lo": "ທ້ອງຟ້າສີຄາມເຂັ້ມເຫຼື້ອມວິບວັບດ້ວຍດາວສີເງິນອ່ອນໂຍນ.",
+"th": "ท้องฟ้าสีครามเข้มระยิบระยับด้วยดาวสีเงินอ่อนโยน",
+"zh": "天鹅绒般的靛蓝夜空闪烁着柔和的银色星光。",
+"ja": "ふかい あおの よぞらに ぎんいろの ほしが きらめくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nightsky.2": {
+"en": "Quiet crickets sing softly while the moon watches over Mount Alborz.",
+"lo": "ຈິ່ງຫຼີດຮ້ອງເພງຄ່ອຍໆເມື່ອດວງຈັນສ່ອງແສງເໜືອພູອານບໍສ.",
+"th": "จิ้งหรีดร้องเพลงเบาๆ ขณะพระจันทร์ส่องแสงเหนือภูเขาอัลบอร์ซ",
+"zh": "明月静静守望着厄尔布尔士山，蟋蟀在夜色里轻声歌唱。",
+"ja": "つきが やまを てらす よるに むしの こえが きこえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_nightsky.3": {
+"en": "Even on a dark night, gentle starlight keeps the way clear.",
+"lo": "ແມ່ນແຕ່ໃນຄືນມືດ ແສງດາວອ່ອນໂຍນກໍຍັງສ່ອງທາງໃຫ້ແຈ້ງ.",
+"th": "แม้ในคืนมืด แสงดาวอ่อนโยนก็ยังส่องทางให้แจ่มชัด",
+"zh": "即使在幽深的夜晚，柔和的星光也照亮前行的路。",
+"ja": "くらい よるでも ほしあかりが みちを やさしく てらすよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_nightsky.4": {
+"en": "Look up at the stars and make a kind wish!",
+"lo": "ແນມຂຶ້ນເບິ່ງດາວແລ້ວອະທິຖານສິ່ງດີໆແມ້!",
+"th": "มองขึ้นดูดาวแล้วอธิษฐานสิ่งดีๆ สิ!",
+"zh": "仰望漫天繁星，许下一个善良美好的心愿吧！",
+"ja": "ほしぞらを みあげて やさしい おねがいを しよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_rudaba.0": {
+"en": "Princess Rudaba. Princess Rudaba is Zal's kind and clever friend in sunny Zabul.",
+"lo": "ເຈົ້າຍິງຣູດາບາ. ເຈົ້າຍິງຣູດາບາ ແມ່ນໝູ່ຜູ້ໃຈດີ ແລະ ສະຫຼາດຂອງຊານໃນເມືອງຊາບູນ.",
+"th": "เจ้าหญิงรูดะบา เจ้าหญิงรูดะบาคือเพื่อนผู้ใจดีและฉลาดของซาลในเมืองซาบูล",
+"zh": "鲁达巴公主。鲁达巴公主是扎尔在扎布尔善良又聪明的好朋友。",
+"ja": "ルダバひめ。ルダバひめは ザブールに すむ やさしくて かしこい ともだちだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_rudaba.1": {
+"en": "Hello, Princess Rudaba!",
+"lo": "ສະບາຍດີ ເຈົ້າຍິງຣູດາບາ!",
+"th": "สวัสดีเจ้าหญิงรูดะบา!",
+"zh": "你好，鲁达巴公主！",
+"ja": "こんにちは、ルダバひめ！",
+"who": "rudaba",
+"tag": "greet"
+},
+"sim_rudaba.2": {
+"en": "I am Princess Rudaba! I love rose gardens, mountain trails and kind friends!",
+"lo": "ຂ້ອຍແມ່ນເຈົ້າຍິງຣູດາບາ! ຂ້ອຍມັກສວນກຸຫຼາບ ທາງພູ ແລະ ໝູ່ທີ່ໃຈດີ!",
+"th": "ฉันคือเจ้าหญิงรูดะบา! ฉันรักสวนกุหลาบ ทางเขา และเพื่อนใจดี!",
+"zh": "我是鲁达巴公主！我喜欢玫瑰花园、山间小路和善良的朋友！",
+"ja": "わたしは ルダバひめ！ ばらの にわと やさしい ともだちが だいすき！",
+"who": "rudaba",
+"tag": "say"
+},
+"sim_rudaba.3": {
+"en": "Prince Zal's snowy hair gleams just like bright winter starlight!",
+"lo": "ຜົມຂາວຂອງເຈົ້າຊາຍຊານເຫຼື້ອມງາມຄືແສງດາວລະດູໜາວ!",
+"th": "ผมขาวของเจ้าชายซาลเปล่งประกายเหมือนแสงดาวฤดูหนาว!",
+"zh": "扎尔王子雪白的头发像冬夜的星光一样闪闪发光！",
+"ja": "ザールおうじの しろい かみは ふゆの ほしみたいに きれいね！",
+"who": "rudaba",
+"tag": "say"
+},
+"sim_rudaba.4": {
+"en": "I wear a fresh pink rose circlet woven in my dark braids.",
+"lo": "ຂ້ອຍໃສ່ມົງກຸດດອກກຸຫຼາບສີບົວສົດປະດັບເທິງຜົມເປຍສີດຳ.",
+"th": "ฉันสวมมงกุฎดอกกุหลาบสีชมพูสดบนเปียผมสีดำ",
+"zh": "我的深色长辫上戴着一圈新鲜的粉红玫瑰花环。",
+"ja": "くろい みつあみに ピンクの ばらの かんむりを つけているよ。",
+"who": "rudaba",
+"tag": "looks"
+},
+"sim_rudaba.5": {
+"en": "Sharing sweet red pomegranates and saffron cakes tastes best with friends!",
+"lo": "ການແບ່ງປັນໝາກພິລາຫວານ ແລະ ເຂົ້າໜົມຫຍ້າຝຣັ່ນແຊບທີ່ສຸດເມື່ອກິນກັບໝູ່!",
+"th": "การแบ่งปันทับทิมหวานและขนมหญ้าฝรั่นอร่อยที่สุดเมื่อกินกับเพื่อน!",
+"zh": "和好朋友一起分享红石榴和藏红花糕是最香甜的事！",
+"ja": "ともだちと ざくろや おかしを わけて たべると とっても おいしいよ！",
+"who": "rudaba",
+"tag": "does"
+},
+"sim_rudaba.6": {
+"en": "When boulders blocked the trail, I spotted the glowing bronze brazier!",
+"lo": "ຕອນກ້ອນຫີນຕັນທາງພູ ຂ້ອຍເຫັນເຕົາໄຟທອງສຳລິດທີ່ກຳລັງລຸກແດງ!",
+"th": "ตอนก้อนหินขวางทางเขา ฉันเห็นเตาไฟสำริดที่กำลังส่องแสง!",
+"zh": "巨石挡路时，我一眼就看见了路边闪亮的青铜火盆！",
+"ja": "いわが みちを ふさいだ とき、ひばちに きづいたんだよ！",
+"who": "rudaba",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_rudaba.7": {
+"en": "Sometimes a clever idea is stronger than pushing as hard as you can!",
+"lo": "ບາງເທື່ອຄວາມຄິດທີ່ສະຫຼາດກໍແຂງແຮງກວ່າການອອກແຮງຍູ້ສຸດກຳລັງ!",
+"th": "บางครั้งความคิดที่ฉลาดก็แข็งแรงกว่าการออกแรงผลักสุดกำลัง!",
+"zh": "有时候，一个聪明的好点子比使出蛮力更有力量！",
+"ja": "ちからまかせより かしこい ひらめきの ほうが つよい ことも あるのよ！",
+"who": "rudaba",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_rudaba.8": {
+"en": "I helped prepare the shining brass stand for the Simurgh's visit!",
+"lo": "ຂ້ອຍຊ່ວຍກຽມແທ່ນທອງເຫຼືອງເຫຼື້ອມແສງໄວ້ຕ້ອນຮັບນົກຊີມວກ!",
+"th": "ฉันช่วยเตรียมแท่นทองเหลืองเงางามไว้ต้อนรับนกซิมูร์ก!",
+"zh": "我帮忙准备了闪亮的黄铜羽座，欢迎神鸟来做客！",
+"ja": "シームルグの ために ぴかぴかの だいを じゅんびしたよ！",
+"who": "rudaba",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"sim_rudaba.9": {
+"en": "Rudaba is famous in Persian stories for her courage and warm heart.",
+"lo": "ຣູດາບາມີຊື່ສຽງໃນນິທານເປີເຊຍດ້ານຄວາມກ້າຫານ ແລະ ຫົວໃຈອົບອຸ່ນ.",
+"th": "รูดะบามีชื่อเสียงในนิทานเปอร์เซียด้านความกล้าหาญและหัวใจอบอุ่น",
+"zh": "在波斯经典故事里，鲁达巴以勇敢和热心肠而闻名。",
+"ja": "ルダバは ゆうかんで やさしい こころの もちぬしなんだよ。",
+"who": "rudaba",
+"tag": "fact"
+},
+"sim_feasttable.0": {
+"en": "A welcome table. A welcome table is carved from warm Persian walnut for sharing treats.",
+"lo": "ໂຕະຕ້ອນຮັບ. ໂຕະຕ້ອນຮັບ ແກະສະຫຼັກຈາກໄມ້ສີອຸ່ນແບບເປີເຊຍໄວ້ແບ່ງປັນຂອງກິນ.",
+"th": "โต๊ะต้อนรับ โต๊ะต้อนรับแกะสลักจากไม้สีอุ่นแบบเปอร์เซียไว้แบ่งปันของอร่อย",
+"zh": "迎宾木桌。迎宾木桌由精雕波斯胡桃木制成，摆满了待客佳肴。",
+"ja": "ごちそうの テーブル。ごちそうの テーブルは みんなで おいしい ものを わける つくえだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_feasttable.1": {
+"en": "Low Persian tables are richly carved with flowers and vines.",
+"lo": "ໂຕະຕ່ຳແບບເປີເຊຍແກະສະຫຼັກລວດລາຍດອກໄມ້ ແລະ ເຄືອໄມ້ຢ່າງປະນີດ.",
+"th": "โต๊ะเตี้ยแบบเปอร์เซียแกะสลักลวดลายดอกไม้และเถาไม้อย่างประณีต",
+"zh": "低矮的波斯木桌上雕满了繁复的花朵和藤蔓花纹。",
+"ja": "おはなや つたの ほりものが きれいな ひくい テーブルだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_feasttable.2": {
+"en": "Friends gather round this table to share pomegranates and saffron cakes!",
+"lo": "ໝູ່ເພື່ອນມາໂຮມກັນອ້ອມໂຕະນີ້ເພື່ອແບ່ງປັນໝາກພິລາ ແລະ ເຂົ້າໜົມຫຍ້າຝຣັ່ນ!",
+"th": "เพื่อนๆ มารวมตัวรอบโต๊ะนี้เพื่อแบ่งปันทับทิมและขนมหญ้าฝรั่น!",
+"zh": "朋友们围坐在木桌旁，一起分享红石榴和藏红花糕！",
+"ja": "みんなで ざくろや おかしを わけて たべる テーブルだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_feasttable.3": {
+"en": "Its warm walnut wood gleams softly in Zabul's courtyard sunlight.",
+"lo": "ໄມ້ສີອຸ່ນຂອງມັນເຫຼື້ອມອ່ອນໆໃນແສງແດດເດີ່ນວັງຊາບູນ.",
+"th": "ไม้สีอุ่นของมันเงาอ่อนๆ ในแสงแดดลานวังซาบูล",
+"zh": "温润的胡桃木在扎布尔庭院的阳光下泛着柔和光泽。",
+"ja": "あたたかい きの いろが ひなたで きれいに ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_feasttable.4": {
+"en": "There is always room at Zabul's table for a welcome friend.",
+"lo": "ໂຕະຂອງເມືອງຊາບູນມີບ່ອນວ່າງຕ້ອນຮັບໝູ່ເພື່ອນສະເໝີ.",
+"th": "โต๊ะของเมืองซาบูลมีที่ว่างต้อนรับเพื่อนเสมอ",
+"zh": "扎布尔的迎宾桌永远为远道而来的朋友留着座位。",
+"ja": "やさしい ともだちの せきは いつでも あいて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pombowl.0": {
+"en": "A pomegranate bowl. A pomegranate bowl holds glossy ruby-red fruit picked fresh in Zabul.",
+"lo": "ຖ້ວຍໝາກພິລາ. ຖ້ວຍໝາກພິລາ ໃສ່ໝາກໄມ້ສີແດງເງົາທີ່ເກັບສົດໆຈາກເມືອງຊາບູນ.",
+"th": "ชามทับทิม ชามทับทิมใส่ผลไม้สีแดงเงาที่เก็บสดๆ จากเมืองซาบูล",
+"zh": "石榴果碗。石榴果碗盛满了扎布尔刚刚采摘的宝石红石榴。",
+"ja": "ざくろの ぼうる。ざくろの ぼうるには まっかな ざくろが いっぱい はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_pombowl.1": {
+"en": "Bright red pomegranates are piled high inside a turquoise glazed bowl.",
+"lo": "ໝາກພິລາສີແດງສົດວາງຊ້ອນກັນຢູ່ໃນຖ້ວຍເຄືອບສີຟ້າຂຽວ.",
+"th": "ทับทิมสีแดงสดวางซ้อนกันอยู่ในชามเคลือบสีฟ้าเขียว",
+"zh": "青釉果碗里堆满了鲜红饱满的大石榴。",
+"ja": "あおい ぼうるに まっかな ざくろが もりもり 入っているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_pombowl.2": {
+"en": "Inside every pomegranate are hundreds of sweet ruby-red seeds!",
+"lo": "ຂ້າງໃນໝາກພິລາທຸກໜ່ວຍມີເມັດສີແດງຫວານຊື່ນຫຼາຍຮ້ອຍເມັດ!",
+"th": "ข้างในทับทิมทุกลูกมีเมล็ดสีแดงหวานชื่นหลายร้อยเมล็ด!",
+"zh": "每颗石榴里面都藏着几百颗晶莹香甜的红宝石籽！",
+"ja": "ざくろの なかには あまい あかい つぶが いっぱい つまって いるよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_pombowl.3": {
+"en": "Zal and Rudaba love sharing sweet pomegranates by the fountain.",
+"lo": "ຊານ ແລະ ຣູດາບາມັກແບ່ງກັນກິນໝາກພິລາຫວານຢູ່ຂ້າງນ້ຳພຸ.",
+"th": "ซาลและรูดะบาชอแบ่งกันกินทับทิมหวานข้างน้ำพุ",
+"zh": "扎尔和鲁达巴最爱在喷泉边一起分享甜美的红石榴。",
+"ja": "ふんすいの そばで ざくろを わけて たべるのが たのしいよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pombowl.4": {
+"en": "Persia is famous for its sunny pomegranate orchards.",
+"lo": "ປະເທດເປີເຊຍມີຊື່ສຽງດ້ານສວນໝາກພິລາທີ່ອຸດົມສົມບູນ.",
+"th": "ประเทศเปอร์เซียมีชื่อเสียงด้านสวนทับทิมที่อุดมสมบูรณ์",
+"zh": "波斯素来以阳光丰饶的石榴园而闻名。",
+"ja": "おひさまを たっぷり あびた あまい ざくろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_saffroncakes.0": {
+"en": "Saffron cakes. Saffron cakes are golden Persian sweets fragrant with spice and honey.",
+"lo": "ເຂົ້າໜົມຫຍ້າຝຣັ່ນ. ເຂົ້າໜົມຫຍ້າຝຣັ່ນ ແມ່ນເຂົ້າໜົມສີຄຳຫອມຫວານຂອງເປີເຊຍ.",
+"th": "ขนมหญ้าฝรั่น ขนมหญ้าฝรั่นคือขนมสีทองหอมหวานของเปอร์เซีย",
+"zh": "藏红花糕。藏红花糕是金黄香甜、带着蜂蜜芬芳的波斯点心。",
+"ja": "サフランの おかし。サフランの おかしは きんいろで いい かおりの あまい おかしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_saffroncakes.1": {
+"en": "Warm golden cakes dusted with pistachio nuts sit neatly on a brass tray.",
+"lo": "ເຂົ້າໜົມສີຄຳອຸ່ນໂຮຍດ້ວຍຖົ່ວພິສຕາຊີໂອວາງລຽງງາມເທິງຖາດທອງເຫຼືອງ.",
+"th": "ขนมสีทองอุ่นโรยด้วยถั่วพิสตาชิโอวางเรียงงามบนถาดทองเหลือง",
+"zh": "撒着开心果碎的金黄糕点整齐地摆在黄铜托盘上。",
+"ja": "きんいろの おかしが おぼんに きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_saffroncakes.2": {
+"en": "Saffron comes from purple crocus flowers and turns cakes sunny gold!",
+"lo": "ຫຍ້າຝຣັ່ນມາຈາກດອກໂຄຣຄັສສີມ່ວງ ແລະ ເຮັດໃຫ້ເຂົ້າໜົມມີສີຄຳສົດໃສ!",
+"th": "หญ้าฝรั่นมาจากดอกโครคัสสีม่วงและทำให้ขนมมีสีทองสดใส!",
+"zh": "藏红花来自紫色的番红花，能把糕点染成温暖的阳光金色！",
+"ja": "サフランは むらさきの はなから とれて おかしを きんいろに するよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_saffroncakes.3": {
+"en": "Everyone smiles when sweet saffron cakes are shared in the courtyard!",
+"lo": "ທຸກຄົນຍິ້ມຢ່າງມີຄວາມສຸກເມື່ອແບ່ງກັນກິນເຂົ້າໜົມຫຍ້າຝຣັ່ນໃນເດີ່ນ!",
+"th": "ทุกคนยิ้มอย่างมีความสุขเมื่อแบ่งกันกินขนมหญ้าฝรั่นในลาน!",
+"zh": "在庭院里分享香甜藏红花糕时，每个人脸上都笑开了花！",
+"ja": "あまい おかしを わけて たべると みんな にっこり するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_saffroncakes.4": {
+"en": "They smell sweetly of honey, rosewater and warm spice.",
+"lo": "ພວກມັນມີກິ່ນຫອມຫວານຂອງນ້ຳເຜິ້ງ ນ້ຳດອກກຸຫຼາບ ແລະ ເຄື່ອງເທດອຸ່ນ.",
+"th": "พวกมันมีกลิ่นหอมหวานของน้ำผึ้ง น้ำดอกกุหลาบ และเครื่องเทศอุ่น",
+"zh": "它们散发着蜂蜜、玫瑰水和香料的甜美芬芳。",
+"ja": "はちみつと ばらの いい かおりが ふわっと ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosevase.0": {
+"en": "A rose vase. A rose vase holds blooming pink Persian roses in glazed turquoise clay.",
+"lo": "ໂຖດອກກຸຫຼາບ. ໂຖດອກກຸຫຼາບ ໃສ່ດອກກຸຫຼາບສີບົວບານໃນໂຖເຄືອບສີຟ້າຂຽວ.",
+"th": "แจกันกุหลาบ แจกันกุหลาบใส่ดอกกุหลาบสีชมพูบานในแจกันเคลือบสีฟ้าเขียว",
+"zh": "玫瑰花瓶。青釉玫瑰花瓶里插着盛开的粉红波斯玫瑰。",
+"ja": "ばらの かびん。ばらの かびんには ピンクの ばらが きれいに かざって あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_rosevase.1": {
+"en": "Fresh pink garden roses bloom brightly inside a glazed Persian vase.",
+"lo": "ດອກກຸຫຼາບສວນສີບົວສົດບານສະພັ່ງໃນໂຖເຄືອບແບບເປີເຊຍ.",
+"th": "ดอกกุหลาบสวนสีชมพูสดบานสะพรั่งในแจกันเคลือบแบบเปอร์เซีย",
+"zh": "新鲜的粉红波斯玫瑰在青釉花瓶里明艳盛开。",
+"ja": "あおい かびんに ピンクの ばらが きれいに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosevase.2": {
+"en": "Rudaba picked these fragrant roses to welcome Zal home to Zabul!",
+"lo": "ຣູດາບາເກັບດອກກຸຫຼາບຫອມເຫຼົ່ານີ້ເພື່ອຕ້ອນຮັບຊານກັບບ້ານຊາບູນ!",
+"th": "รูดะบาเก็บดอกกุหลาบหอมเหล่านี้เพื่อต้อนรับซาลกลับบ้านซาบูล!",
+"zh": "鲁达巴摘下这些芬芳的玫瑰，欢迎扎尔回到扎布尔！",
+"ja": "ルダバひめが ザールを むかえる ために つんだ ばらだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_rosevase.3": {
+"en": "Their soft pink petals match the rose circlet in Rudaba's hair.",
+"lo": "ກີບດອກສີບົວນຸ້ມຂອງພວກມັນເຂົ້າກັນກັບມົງກຸດກຸຫຼາບເທິງຜົມຣູດາບາ.",
+"th": "กลีบดอกสีชมพูนุ่มของพวกมันเข้ากันกับมงกุฎกุหลาบบนผมรูดะบา",
+"zh": "柔和的粉红花瓣与鲁达巴发间的玫瑰花环交相辉映。",
+"ja": "ルダバひめの かんむりと おそろいの ピンクの ばらだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosevase.4": {
+"en": "Damask roses from Persia are famous for their gentle sweet scent.",
+"lo": "ດອກກຸຫຼາບຈາກເປີເຊຍມີຊື່ສຽງດ້ານກິ່ນຫອມຫວານອ່ອນໂຍນ.",
+"th": "ดอกกุหลาบจากเปอร์เซียมีชื่อเสียงด้านกลิ่นหอมหวานอ่อนโยน",
+"zh": "波斯玫瑰以温柔甜美的花香闻名于世。",
+"ja": "やさしい いい かおりが する ばらなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_tablespot.0": {
+"en": "A table place. A table place waits neatly for a sweet treat or flower vase.",
+"lo": "ບ່ອນວາງເທິງໂຕະ. ບ່ອນວາງເທິງໂຕະ ກຽມໄວ້ຢ່າງເປັນລະບຽບສຳລັບຂອງຫວານ ຫຼື ໂຖດອກໄມ້.",
+"th": "ที่วางบนโต๊ะ ที่วางบนโต๊ะเตรียมไว้อย่างเป็นระเบียบสำหรับของหวานหรือแจกันดอกไม้",
+"zh": "桌面位置。桌面位置整整齐齐地留给美味果点或玫瑰花瓶。",
+"ja": "テーブルの ばしょ。テーブルの ばしょは おかしや かびんを おく ところだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_tablespot.1": {
+"en": "A bright turquoise medallion marks a place on the welcome table.",
+"lo": "ແຜ່ນສີຟ້າຂຽວສົດໃສບອກຕຳແໜ່ງວາງເທິງໂຕະຕ້ອນຮັບ.",
+"th": "แผ่นสีฟ้าเขียวสดใสบอกตำแหน่งวางบนโต๊ะต้อนรับ",
+"zh": "一块明亮的绿松石色圆垫标出了迎宾桌上的摆盘位。",
+"ja": "あおい しるしが テーブルの ばしょを おしえて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_tablespot.2": {
+"en": "Match the fruit, cakes and flowers to their spots on the table!",
+"lo": "ຈັບຄູ່ໝາກໄມ້ ເຂົ້າໜົມ ແລະ ດອກໄມ້ໃສ່ບ່ອນຂອງມັນເທິງໂຕະ!",
+"th": "จับคู่ผลไม้ ขนม และดอกไม้ใส่ที่ของมันบนโต๊ะ!",
+"zh": "把红石榴、藏红花糕和玫瑰花瓶放到桌上的位置吧！",
+"ja": "くだものや おかしを ぴったり ならべて みよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_tablespot.3": {
+"en": "Three neat places wait in a row across the carved wood.",
+"lo": "ສາມບ່ອນວາງລຽງເປັນແຖວຢ່າງເປັນລະບຽບເທິງໜ້າໂຕະໄມ້ແກະສະຫຼັກ.",
+"th": "สามที่วางเรียงเป็นแถวอย่างเป็นระเบียบเหนือหน้าโต๊ะไม้แกะสลัก",
+"zh": "雕花木桌上整齐排开着三个迎宾摆位。",
+"ja": "みっつの ばしょが きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_tablespot.4": {
+"en": "Once all three treats are placed, the welcome feast is ready!",
+"lo": "ເມື່ອວາງຄົບທັງສາມຢ່າງແລ້ວ ງານລ້ຽງຕ້ອນຮັບກໍພ້ອມແລ້ວ!",
+"th": "เมื่อวางครบทั้งสามอย่างแล้ว งานเลี้ยงต้อนรับก็พร้อมแล้ว!",
+"zh": "三样好物都摆好后，丰盛的迎宾茶点就准备好啦！",
+"ja": "みっつ そろったら ごちそうの じゅんびが できたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_stormcloud.0": {
+"en": "A storm cloud. A storm cloud rolls dark and heavy around the peaks of Mount Alborz.",
+"lo": "ເມກພາຍຸ. ເມກພາຍຸ ລອຍມ້ວນສີເຂັ້ມ ແລະ ໜັກໜ່ວງອ້ອມຍອດພູອານບໍສ.",
+"th": "เมฆพายุ เมฆพายุลอยม้วนสีเข้มและหนักหน่วงรอบยอดเขาอัลบอร์ซ",
+"zh": "雷雨乌云。雷雨乌云沉沉地翻滚在厄尔布尔士雪峰四周。",
+"ja": "あらしの くも。あらしの くもが やまの まわりを くるくる まわっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_stormcloud.1": {
+"en": "Dark grey storm clouds gather swirling above snowy Mount Alborz.",
+"lo": "ເມກພາຍຸສີເທົາເຂັ້ມລອຍມ້ວນເຂົ້າມາເໜືອຍອດຫິມະຂອງພູອານບໍສ.",
+"th": "เมฆพายุสีเทาเข้มลอยม้วนเข้ามาเหนือยอดหิมะของภูเขาอัลบอร์ซ",
+"zh": "深灰色的雷雨乌云在厄尔布尔士雪峰上空翻涌盘旋。",
+"ja": "くろい くもが くるくる まわって やまに あつまって きたよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_stormcloud.2": {
+"en": "Rumble-roll!",
+"lo": "ຄືນໆ!",
+"th": "ครืนๆ!",
+"zh": "轰隆隆！",
+"ja": "ごろごろ！",
+"who": "narrator",
+"tag": "sound"
+},
+"sim_stormcloud.3": {
+"en": "Distant thunder echoes all the way down from the peaks to Zabul.",
+"lo": "ສຽງຟ້າຮ້ອງໄກໆດັງກ້ອງລົງມາຈາກຍອດພູຈົນຮອດເມືອງຊາບູນ.",
+"th": "เสียงฟ้าร้องไกลๆ ดังก้องลงมาจากยอดเขาจนถึงเมืองซาบูล",
+"zh": "远处的雷声从山顶一路回荡到扎布尔的庭院里。",
+"ja": "とおくの かみなりの おとが やまから きこえて くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_stormcloud.4": {
+"en": "Someone up on the rocky mountain trail needs help!",
+"lo": "ມີໃຜບາງຄົນເທິງທາງຫີນພູຜາກຳລັງຕ້ອງການຄວາມຊ່ວຍເຫຼືອ!",
+"th": "มีใครบางคนบนทางหินภูเขากำลังต้องการความช่วยเหลือ!",
+"zh": "高山石径上有位小家伙正需要大家的帮助！",
+"ja": "やまみちで だれかが たすけを もとめて いるみたいだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_boulder.0": {
+"en": "A grey boulder. A grey boulder tumbled down the steep cliff onto the rocky trail.",
+"lo": "ກ້ອນຫີນໃຫຍ່ສີເທົາ. ກ້ອນຫີນໃຫຍ່ສີເທົາ ກິ້ງຕົກລົງມາຈາກໜ້າຜາຊັນໃສ່ທາງຫີນ.",
+"th": "ก้อนหินใหญ่สีเทา ก้อนหินใหญ่สีเทากลิ้งตกลงมาจากหน้าผาชันใส่ทางหิน",
+"zh": "灰色巨石。灰色巨石从陡峭的山崖滚落下来挡住了山路。",
+"ja": "おおきな はいいろの いわ。おおきな はいいろの いわが やまみちを ふさいで いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_boulder.1": {
+"en": "Crash-thud!",
+"lo": "ຕູມ-ຕຶງ!",
+"th": "โครม-ตึง!",
+"zh": "轰隆咚！",
+"ja": "どしん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sim_boulder.2": {
+"en": "Heavy craggy grey rocks with mossy sides block the narrow mountain pass.",
+"lo": "ກ້ອນຫີນໃຫຍ່ສີເທົາທີ່ມີໄຄນ້ຳເກາະຕັນຊ່ອງທາງພູແຄບໆ.",
+"th": "ก้อนหินใหญ่สีเทาที่มีมอสเกาะขวางช่องทางเขาแคบๆ",
+"zh": "长着青苔的灰扑扑巨石严严实实地堵住了狭窄山路。",
+"ja": "こけの ついた おおきな いわが みちを ふさいで いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_boulder.3": {
+"en": "Even Sam, Zal and Rudaba pushing together cannot budge these giant rocks!",
+"lo": "ແມ່ນແຕ່ຊາມ ຊານ ແລະ ຣູດາບາຊ່ວຍກັນຍູ້ກໍຍູ້ກ້ອນຫີນໃຫຍ່ເຫຼົ່ານີ້ບໍ່ອອກ!",
+"th": "แม้แต่ซาม ซาล และรูดะบาช่วยกันผลักก็ผลักก้อนหินใหญ่เหล่านี้ไม่ออก!",
+"zh": "连萨姆、扎尔和鲁达巴一起用力推，也推不动这些巨石！",
+"ja": "みんなで いっしょうけんめい おしても うごかない くらい おもいよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_boulder.4": {
+"en": "With three strong sweeps, the wise Simurgh lifts the boulders clear!",
+"lo": "ດ້ວຍການໂສບສາມຄັ້ງທີ່ແຂງແຮງ ນົກຊີມວກຍົກກ້ອນຫີນອອກຈາກທາງໄດ້ງ່າຍໆ!",
+"th": "ด้วยการโฉบสามครั้งที่แข็งแรง นกซิมูร์กยกก้อนหินออกจากทางได้ง่ายๆ!",
+"zh": "智慧的神鸟展翅三掠，便轻轻松松搬开了所有巨石！",
+"ja": "シームルグが つよい つめで いわを かるく もちあげたよ！",
+"who": "narrator",
+"sp": [
+"s09"
+],
+"tag": "does"
+},
+"sim_boulder.5": {
+"en": "Cold rough mountain rock sits heavy and solid across the path.",
+"lo": "ຫີນພູຜາສີເທົາເຢັນ ແລະ ຫຍາບວາງໜັກແໜ້ນຂວາງທາງຢູ່.",
+"th": "หินภูเขาสีเทาเย็นและหยาบวางหนักแน่นขวางทางอยู่",
+"zh": "冰凉粗糙的灰色山石沉甸甸地横卧在山道中间。",
+"ja": "つめたくて ごつごつ した いわが どっしり おいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_spark.0": {
+"en": "A golden spark. A golden spark leaps upward from the warm bronze brazier.",
+"lo": "ປະກາຍໄຟສີຄຳ. ປະກາຍໄຟສີຄຳ ກະໂດດລອຍຂຶ້ນຈາກເຕົາໄຟທອງສຳລິດອຸ່ນ.",
+"th": "ประกายไฟสีทอง ประกายไฟสีทองกระโดดลอยขึ้นจากเตาไฟสำริดอุ่น",
+"zh": "金色火花。金色火花从温暖的青铜火盆里欢快地跃向夜空。",
+"ja": "きんいろの ひのこ。きんいろの ひのこが ひばちから そらへ とんで いくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_spark.1": {
+"en": "Bright golden sparks dance upward like tiny fireflies from the brazier.",
+"lo": "ປະກາຍໄຟສີຄຳສົດໃສເຕັ້ນລອຍຂຶ້ນຄືແມງໄຟນ້ອຍຈາກເຕົາໄຟ.",
+"th": "ประกายไฟสีทองสดใสเต้นลอยขึ้นเหมือนหิ่งห้อยน้อยจากเตาไฟ",
+"zh": "明亮的金色火花像小萤火虫一样从火盆里翩翩飞起。",
+"ja": "きんいろの ひのこが ほたるみたいに そらへ まいあがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_spark.2": {
+"en": "Three warm sparks kindle the Simurgh's golden feather into starlight!",
+"lo": "ປະກາຍໄຟອຸ່ນສາມດວງຈູດຂົນນົກສີຄຳຂອງນົກຊີມວກໃຫ້ກາຍເປັນແສງດາວ!",
+"th": "ประกายไฟอุ่นสามดวงจุดขนนกสีทองของนกซิมูร์กให้กลายเป็นแสงดาว!",
+"zh": "三点暖火把神鸟的金羽化作了璀璨升空的星光！",
+"ja": "みっつの ひのこが きんのはねを ほしあかりに かえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_spark.3": {
+"en": "Every spark glows amber-gold against the twilight mountain sky.",
+"lo": "ປະກາຍໄຟທຸກດວງສ່ອງແສງສີຄຳຕັດກັບທ້ອງຟ້າຍາມແລງເທິງພູ.",
+"th": "ประกายไฟทุกดวงส่องแสงสีทองตัดกับท้องฟ้ายามเย็นบนภูเขา",
+"zh": "每一颗火花都在暮色山空中闪着温暖的琥珀金光。",
+"ja": "ゆうぐれの そらに きんいろの ひかりが きらめくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_spark.4": {
+"en": "Tap the brazier on the beat to wake all three golden sparks!",
+"lo": "ແຕະເຕົາໄຟໃຫ້ຖືກຈັງຫວະເພື່ອປຸກປະກາຍໄຟສີຄຳທັງສາມດວງ!",
+"th": "แตะเตาไฟให้ถูกจังหวะเพื่อปลุกประกายไฟสีทองทั้งสามดวง!",
+"zh": "踩准节拍轻点火盆，唤醒三颗耀眼的金色火花！",
+"ja": "タイミングよく さわって みっつの ひのこを ひからせよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_ribbon.0": {
+"en": "A starlight ribbon. A starlight ribbon swirls high into the twilight sky to call the Simurgh.",
+"lo": "ແສງດາວສີຄຳ. ແສງດາວສີຄຳ ລອຍມ້ວນສູງຂຶ້ນສູ່ທ້ອງຟ້າຍາມແລງເພື່ອເອີ້ນນົກຊີມວກ.",
+"th": "สายแสงดาวสีทอง สายแสงดาวสีทองลอยม้วนสูงขึ้นสู่ท้องฟ้ายามเย็นเพื่อเรียกนกซิมูร์ก",
+"zh": "星光丝带。星光丝带盘旋升上暮色天空，向远方呼唤西穆尔格神鸟。",
+"ja": "ほしあかりの りぼん。ほしあかりの りぼんが そらへ まいあがって シームルグを よぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_ribbon.1": {
+"en": "Swirling ribbons of golden starlight climb high into the dusk clouds.",
+"lo": "ແສງດາວສີຄຳລອຍມ້ວນສູງຂຶ້ນສູ່ກ້ອນເມກຍາມແລງ.",
+"th": "สายแสงดาวสีทองลอยม้วนสูงขึ้นสู่ปุยเมฆยามเย็น",
+"zh": "盘旋的金色星光丝带高高升入暮色云海之中。",
+"ja": "きんいろの ほしあかりが くるくる そらへ のぼって いくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_ribbon.2": {
+"en": "It carries Zal's message of kindness straight to Mount Alborz's peak!",
+"lo": "ມັນສົ່ງຂໍ້ຄວາມແຫ່ງຄວາມໃຈດີຂອງຊານຕົງໄປຫາຍອດພູອານບໍສ!",
+"th": "มันส่งข้อความแห่งความใจดีของซาลตรงไปยังยอดเขาอัลบอร์ซ!",
+"zh": "它把扎尔善良的呼唤笔直传向厄尔布尔士山巅！",
+"ja": "ザールの ねがいを アルボルズやまの てっぺんへ とどけるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_ribbon.3": {
+"en": "Tiny twinkling stars trail behind its shimmering golden curl.",
+"lo": "ດາວນ້ອຍໆກະພິບແສງໄຫຼຕາມຫຼັງກຽວແສງສີຄຳທີ່ເຫຼື້ອມງາມ.",
+"th": "ดาวน้อยๆ กะพริบแสงไหลตามหลังเกลียวแสงสีทองอันงดงาม",
+"zh": "点点繁星紧随着这道闪耀的金色光带翩翩起舞。",
+"ja": "ちいさな ほしが きらきら あとを おいかけるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_ribbon.4": {
+"en": "Far above the clouds, the wise Simurgh sees the shining call right away!",
+"lo": "ສູງເໜືອກ້ອນເມກ ນົກຊີມວກຜູ້ສະຫຼາດເຫັນແສງເອີ້ນນັ້ນທັນທີ!",
+"th": "สูงเหนือเมฆ นกซิมูร์กผู้ชาญฉลาดเห็นแสงเรียกนั้นทันที!",
+"zh": "高高云端上的智慧神鸟一眼就看见了这束闪亮的呼唤！",
+"ja": "くもの うえの シームルグが すぐに みつけて くれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_dusksky.0": {
+"en": "The dusk sky. The dusk sky turns warm rose and violet as evening settles on the trail.",
+"lo": "ທ້ອງຟ້າຍາມແລງ. ທ້ອງຟ້າຍາມແລງ ປ່ຽນເປັນສີບົວອຸ່ນ ແລະ ສີມ່ວງເມື່ອຄ່ຳລົງເທິງທາງພູ.",
+"th": "ท้องฟ้ายามเย็น ท้องฟ้ายามเย็นเปลี่ยนเป็นสีชมพูอุ่นและสีม่วงเมื่อค่ำลงบนทางเขา",
+"zh": "暮色天空。暮色天空染上温暖的玫瑰紫红，傍晚悄悄降临山路。",
+"ja": "ゆうぐれの そら。ゆうぐれの そらが ピンクと むらさきに そまって いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_dusksky.1": {
+"en": "Warm apricot, rose and violet clouds glow as sunset fades.",
+"lo": "ກ້ອນເມກສີສົ້ມອ່ອນ ສີບົວ ແລະ ສີມ່ວງສ່ອງແສງເມື່ອຕາເວັນຕົກດິນ.",
+"th": "ปุยเมฆสีส้มอ่อน สีชมพู และสีม่วงส่องแสงเมื่อพระอาทิตย์ตกดิน",
+"zh": "夕阳渐落，杏黄、玫瑰粉和紫罗兰色的晚霞温柔发亮。",
+"ja": "オレンジと ピンクの ゆうやけが やまを やさしく そめるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_dusksky.2": {
+"en": "As dusk falls on the trail, Zal's golden starlight shines even brighter!",
+"lo": "ເມື່ອຄ່ຳລົງເທິງທາງພູ ແສງດາວສີຄຳຂອງຊານຍິ່ງສ່ອງສະຫວ່າງຂຶ້ນ!",
+"th": "เมื่อค่ำลงบนทางเขา แสงดาวสีทองของซาลยิ่งส่องสว่างขึ้น!",
+"zh": "夜幕降临山路时，扎尔唤出的金色星光显得更加耀眼！",
+"ja": "ゆうぐれに なると きんいろの ひかりが いっそう きらきら するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_dusksky.3": {
+"en": "The first evening stars begin peeking above the snowy crags.",
+"lo": "ດາວຍາມແລງດວງທຳອິດເລີ່ມໂຜ່ແສງເໜືອຜາຫິມະ.",
+"th": "ดาวยามเย็นดวงแรกเริ่มโผล่แสงเหนือผาหิมะ",
+"zh": "第一批晚星开始在雪峰之上悄悄眨眼。",
+"ja": "いちばんぼしが やまの うえから ちょこんと かおを だすよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_dusksky.4": {
+"en": "Warm embers in the trail brazier glow invitingly in the evening air.",
+"lo": "ຖ່ານໄຟອຸ່ນໃນເຕົາໄຟແຄມທາງສ່ອງແສງອົບອຸ່ນໃນອາກາດຍາມແລງ.",
+"th": "ถ่านไฟอุ่นในเตาไฟริมทางส่องแสงอบอุ่นในอากาศยามเย็น",
+"zh": "路边火盆里的温暖火光在傍晚清风里格外明亮。",
+"ja": "ゆうぐれの かぜの なかで ひばちの ひが ぽかぽか もえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_petalpile.0": {
+"en": "Pink petals. Pink petals gather in a soft fragrant heap across the sunny tiles.",
+"lo": "ກອງກີບດອກກຸຫຼາບ. ກອງກີບດອກກຸຫຼາບ ກອງລວມກັນນຸ້ມຫອມຢູ່ເທິງພື້ນກະເບື້ອງແດດອຸ່ນ.",
+"th": "กองกลีบกุหลาบ กองกลีบกุหลาบกองรวมกันนุ่มหอมอยู่บนพื้นกระเบื้องแดดอุ่น",
+"zh": "粉红花瓣。粉红花瓣在阳光庭院的地砖上聚成软绵绵香喷喷的一堆。",
+"ja": "ばらの はなびら。ばらの はなびらが にわに ふわふわ つもって いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_petalpile.1": {
+"en": "Soft pink Persian rose petals lie piled like a fluffy garden cloud.",
+"lo": "ກີບດອກກຸຫຼາບເປີເຊຍສີບົວນຸ້ມກອງກັນຄືກ້ອນເມກນຸ້ມໃນສວນ.",
+"th": "กลีบดอกกุหลาบเปอร์เซียสีชมพูนุ่มกองกันเหมือนปุยเมฆในสวน",
+"zh": "柔软的粉红波斯玫瑰花瓣堆得像一朵软绵绵的花园云。",
+"ja": "ピンクの ばらの はなびらが くもみたいに ふわふわ つもっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_petalpile.2": {
+"en": "It makes the softest landing spot for playful chicks and goats!",
+"lo": "ມັນເປັນບ່ອນລົງທີ່ນຸ້ມທີ່ສຸດສຳລັບລູກນົກ ແລະ ແບ້ຂີ້ຫຼິ້ນ!",
+"th": "มันเป็นที่ลงที่นุ่มที่สุดสำหรับลูกนกและแพะขี้เล่น!",
+"zh": "它是调皮小雏鸟和小白羊打滚时最柔软的垫子！",
+"ja": "ひなや やぎが ころがるのに ぴったりの ふわふわな ばしょだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_petalpile.3": {
+"en": "Every breeze lifts a few sweet-smelling pink petals into the air.",
+"lo": "ທຸກສາຍລົມພັດພາເອົາກີບດອກສີບົວຫອມບາງກີບປິວຂຶ້ນໃນອາກາດ.",
+"th": "ทุกสายลมพัดพากลีบดอกสีชมพูหอมบางกลีบปลิวขึ้นในอากาศ",
+"zh": "微风拂过，总会扬起几片香喷喷的粉红花瓣。",
+"ja": "かぜが ふくと はなびらが ひらひら まいあがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_petalpile.4": {
+"en": "Watch the chicks and goat tug a silk ribbon right beside these petals!",
+"lo": "ເບິ່ງລູກນົກ ແລະ ແບ້ດຶງໂບໄໝຢູ່ຂ້າງກອງກີບດອກໄມ້ເຫຼົ່ານີ້!",
+"th": "ดูลูกนกและแพะดึงโบว์ไหมอยู่ข้างกองกลีบดอกไม้เหล่านี้!",
+"zh": "快看两只雏鸟和小白羊在花瓣旁拔河拉红丝带！",
+"ja": "はなびらの そばで りぼんを ひっぱりっこ しているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_petaltumble.0": {
+"en": "A playful tumble. A playful tumble sends chicks and goat rolling into soft pink rose petals!",
+"lo": "ການລົ້ມກິ້ງຫຼິ້ນ. ການລົ້ມກິ້ງຫຼິ້ນ ເຮັດໃຫ້ລູກນົກ ແລະ ແບ້ກິ້ງລົງໃສ່ກີບກຸຫຼາບສີບົວນຸ້ມ!",
+"th": "การกลิ้งเล่น การกลิ้งเล่นทำให้ลูกนกและแพะกลิ้งลงใส่กลีบกุหลาบสีชมพูนุ่ม!",
+"zh": "花瓣翻滚。花瓣翻滚让两只雏鸟和小白羊滚进软软的粉红花瓣堆里！",
+"ja": "はなびら ころころ。ひなと やぎが はなびらの なかへ ころころ ころがったよ！",
+"who": "narrator",
+"tag": "what"
+},
+"sim_petaltumble.1": {
+"en": "Sproing!",
+"lo": "ສະປຣິ້ງ!",
+"th": "สปริง!",
+"zh": "砰蹦！",
+"ja": "ぽよん！",
+"who": "narrator",
+"tag": "sound"
+},
+"sim_petaltumble.2": {
+"en": "The chicks and white goat tumbled head-over-heels into soft pink petals!",
+"lo": "ລູກນົກ ແລະ ແບ້ຂາວລົ້ມກິ້ງຕີລັງກາລົງໃສ່ກີບດອກກຸຫຼາບສີບົວນຸ້ມ!",
+"th": "ลูกนกและแพะขาวล้มกลิ้งตีลังกาลงใส่กลีบกุหลาบสีชมพูนุ่ม!",
+"zh": "小雏鸟和小白羊头脚朝天滚进了软软的粉红花瓣里！",
+"ja": "ひなと やぎが はなびらの なかに ころんと ころがったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_petaltumble.3": {
+"en": "Pink rose petals stick playfully to the goat's woolly ears and the chicks' wings!",
+"lo": "ກີບກຸຫຼາບສີບົວຕິດຢູ່ຫູຂົນປຸຍຂອງແບ້ ແລະ ປີກລູກນົກຢ່າງໜ້າຮັກ!",
+"th": "กลีบกุหลาบสีชมพูติดอยู่หูขนปุยของแพะและปีกลูกนกอย่างน่ารัก!",
+"zh": "粉红玫瑰花瓣俏皮地沾在小羊的毛耳朵和小鸟翅膀上！",
+"ja": "やぎの みみにも ひなの はねにも はなびらが ついて かわいいね！",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_petaltumble.4": {
+"en": "Everyone in Zabul bursts out laughing at their silly game!",
+"lo": "ທຸກຄົນໃນເມືອງຊາບູນພາກັນຫົວຂວັນຢ່າງມ່ວນຊື່ນກັບການຫຼິ້ນຕະຫຼົກຂອງພວກມັນ!",
+"th": "ทุกคนในเมืองซาบูลพากันหัวเราะอย่างสนุกสนานกับการเล่นตลกของพวกมัน!",
+"zh": "扎布尔的每个人都被它们滑稽的模样逗得哈哈大笑！",
+"ja": "みんな たのしくて おおきな こえで わらったよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brassstand.0": {
+"en": "A brass stand. A brass stand is polished bright to honour the Simurgh's gift.",
+"lo": "ແທ່ນທອງເຫຼືອງ. ແທ່ນທອງເຫຼືອງ ຖືກຂັດຈົນເຫຼື້ອມເພື່ອເຊີດຊູຂອງຂວັນຈາກນົກຊີມວກ.",
+"th": "แท่นทองเหลือง แท่นทองเหลืองถูกขัดจนเงางามเพื่อเชิดชูของขวัญจากนกซิมูร์ก",
+"zh": "黄铜羽座。黄铜羽座擦得锃亮，准备用来敬奉神鸟的礼物。",
+"ja": "しんちゅうの だい。しんちゅうの だいが ピカピカに みがかれて いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_brassstand.1": {
+"en": "Carved Persian brass gleams with warm golden shine in the morning sun.",
+"lo": "ທອງເຫຼືອງແກະສະຫຼັກແບບເປີເຊຍເຫຼື້ອມແສງສີຄຳອຸ່ນໃນແສງແດດຍາມເຊົ້າ.",
+"th": "ทองเหลืองแกะสลักแบบเปอร์เซียเงางามสีทองอุ่นในแสงแดดยามเช้า",
+"zh": "雕花波斯黄铜在晨光里泛着温暖耀眼的金色光泽。",
+"ja": "あさひを あびて しんちゅうの だいが ぴかぴか ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_brassstand.2": {
+"en": "Zal, Rudaba and Sam prepared this stand to honour the wise Simurgh.",
+"lo": "ຊານ ຣູດາບາ ແລະ ຊາມກຽມແທ່ນນີ້ໄວ້ເພື່ອເຊີດຊູນົກຊີມວກຜູ້ສະຫຼາດ.",
+"th": "ซาล รูดะบา และซามเตรียมแท่นนี้ไว้เพื่อเชิดชูนกซิมูร์กผู้ชาญฉลาด",
+"zh": "扎尔、鲁达巴和萨姆准备了这座铜座来向智慧的神鸟致敬。",
+"ja": "シームルグへの ありがとうを こめて じゅんびした だいだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brassstand.3": {
+"en": "Match the feathers, roses and silk cushion to dress the stand!",
+"lo": "ຈັບຄູ່ຂົນນົກ ດອກກຸຫຼາບ ແລະ ໝອນໄໝເພື່ອປະດັບແທ່ນໃຫ້ງົດງາມ!",
+"th": "จับคู่ขนนก ดอกกุหลาบ และหมอนไหมเพื่อประดับแท่นให้งดงาม!",
+"zh": "把金羽、玫瑰花环和丝绸软垫摆上铜座装点一番吧！",
+"ja": "はねと ばらと くっしょんを のせて きれいに かざろう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brassstand.4": {
+"en": "Its graceful curved legs stand proudly in the centre of the courtyard.",
+"lo": "ຂາໂຄ້ງອ່ອນຊ້ອຍຂອງມັນຕັ້ງຢ່າງສະຫງ່າຢູ່ກາງເດີ່ນວັງ.",
+"th": "ขาโค้งอ่อนช้อยของมันตั้งอย่างสง่าอยู่กลางลานวัง",
+"zh": "它优雅的弧形底座稳稳矗立在庭院中央。",
+"ja": "にわの まんなかに りっぱに たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_brassstandfull.0": {
+"en": "A honour stand. The honour stand holds Zal's two golden feathers crowned with pink roses.",
+"lo": "ແທ່ນເຊີດຊູກຽດ. ແທ່ນເຊີດຊູກຽດ ວາງຂົນນົກສີຄຳສອງອັນຂອງຊານປະດັບດ້ວຍດອກກຸຫຼາບສີບົວ.",
+"th": "แท่นเชิดชูเกียรติ แท่นเชิดชูเกียรติวางขนนกสีทองสองเส้นของซาลประดับด้วยดอกกุหลาบสีชมพู",
+"zh": "荣耀羽座。荣耀羽座安放着扎尔的两根金羽，点缀着粉红玫瑰。",
+"ja": "おいわいの だい。おいわいの だいに ふたつの きんのはねと ばらが かざって あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_brassstandfull.1": {
+"en": "Zal's two remaining golden feathers shine proudly above pink Persian roses.",
+"lo": "ຂົນນົກສີຄຳສອງອັນທີ່ເຫຼືອຂອງຊານສ່ອງແສງຢ່າງພາກພູມໃຈເໜືອດອກກຸຫຼາບສີບົວ.",
+"th": "ขนนกสีทองสองเส้นที่เหลือของซาลส่องแสงอย่างภาคภูมิใจเหนือดอกกุหลาบสีชมพู",
+"zh": "扎尔留存的两根金羽在粉红波斯玫瑰上方熠熠生辉。",
+"ja": "ふたつの きんのはねが ピンクの ばらの うえで かがやいて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_brassstandfull.2": {
+"en": "It reminds everyone in Zabul of kindness, courage and two loving homes.",
+"lo": "ມັນເຕືອນໃຈທຸກຄົນໃນຊາບູນເຖິງຄວາມໃຈດີ ຄວາມກ້າຫານ ແລະ ບ້ານອຸ່ນສອງແຫ່ງ.",
+"th": "มันเตือนใจทุกคนในซาบูลถึงความใจดี ความกล้าหาญ และบ้านอุ่นสองแห่ง",
+"zh": "它提醒着扎布尔的每一个人牢记善良、勇气与两座温暖的家。",
+"ja": "やさしさと ゆうきの おもいでを ずっと つたえて くれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sim_brassstandfull.3": {
+"en": "A soft crimson silk cushion cradles the bright golden feathers.",
+"lo": "ໝອນຜ້າໄໝສີແດງນຸ້ມຮອງຮັບຂົນນົກສີຄຳທີ່ສ່ອງແສງ.",
+"th": "หมอนผ้าไหมสีแดงนุ่มรองรับขนนกสีทองที่ส่องแสง",
+"zh": "柔软的深红丝绸软垫稳稳托住闪亮的金色羽毛。",
+"ja": "あかい きぬの くっしょんが きんのはねを やさしく ささえて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_brassstandfull.4": {
+"en": "Warm sunlight makes the whole honour stand sparkle gently!",
+"lo": "ແສງແດດອຸ່ນເຮັດໃຫ້ແທ່ນເຊີດຊູກຽດທັງໝົດເຫຼື້ອມວິບວັບ!",
+"th": "แสงแดดอุ่นทำให้แท่นเชิดชูเกียรติทั้งหมดเปล่งประกายระยิบระยับ!",
+"zh": "温暖的阳光让整座荣耀羽座都闪烁着柔和光芒！",
+"ja": "おひさまに てらされて だい ぜんたいが きらきら ひかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pairedfeathers.0": {
+"en": "Paired feathers. Paired feathers are the two remaining golden gifts from the wise Simurgh.",
+"lo": "ຂົນນົກຄູ່ສີຄຳ. ຂົນນົກຄູ່ສີຄຳ ແມ່ນຂອງຂວັນສີຄຳສອງອັນທີ່ຍັງເຫຼືອຈາກນົກຊີມວກ.",
+"th": "ขนนกคู่สีทอง ขนนกคู่สีทองคือของขวัญสีทองสองเส้นที่เหลือจากนกซิมูร์ก",
+"zh": "一对金羽。一对金羽是智慧的神鸟留给扎尔的另外两根金羽毛。",
+"ja": "ふたつの きんのはね。ふたつの きんのはねは シームルグからの たいせつな たからものだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_pairedfeathers.1": {
+"en": "Two matching golden-and-turquoise feathers gleam side by side.",
+"lo": "ຂົນນົກສີຄຳປົນຟ້າຂຽວສອງອັນເຫຼື້ອມງາມຄຽງຄູ່ກັນ.",
+"th": "ขนนกสีทองปนฟ้าเขียวสองเส้นเงางามเคียงคู่กัน",
+"zh": "两根成对的金蓝羽毛并肩闪耀着温暖的光辉。",
+"ja": "ふたつの きんいろの はねが ならんで きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_pairedfeathers.2": {
+"en": "Zal burned one of his three feathers to save the goat, leaving these two!",
+"lo": "ຊານເຜົາຂົນນົກໜຶ່ງໃນສາມອັນເພື່ອຊ່ວຍແບ້ ຈຶ່ງເຫຼືອສອງອັນນີ້!",
+"th": "ซาลเผาขนนกหนึ่งในสามเส้นเพื่อช่วยแพะ จึงเหลือสองเส้นนี้!",
+"zh": "扎尔点燃了三根金羽中的一根救下小白羊，留下了这两根珍贵的羽毛！",
+"ja": "さんぼんの うち いっぽんを やぎの ために つかって、ふたつ のこったんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"sim_pairedfeathers.3": {
+"en": "Place the paired feathers safely on the shining brass honour stand!",
+"lo": "ວາງຂົນນົກຄູ່ສີຄຳໄວ້ຢ່າງປອດໄພເທິງແທ່ນທອງເຫຼືອງ!",
+"th": "วางขนนกคู่สีทองไว้อย่างปลอดภัยบนแท่นทองเหลือง!",
+"zh": "把这对金羽稳稳地安放在闪亮的黄铜羽座上吧！",
+"ja": "しんちゅうの だいに たいせつに かざって あげよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_pairedfeathers.4": {
+"en": "They feel as warm as morning sunshine above the clouds.",
+"lo": "ພວກມັນອຸ່ນຄືແສງແດດຍາມເຊົ້າເໜືອກ້ອນເມກ.",
+"th": "พวกมันอุ่นเหมือนแสงแดดยามเช้าเหนือเมฆ",
+"zh": "它们摸起来像云端之上的晨曦一样温暖。",
+"ja": "くもの うえの あさひみたいに ぽかぽか あたたかいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosegarland.0": {
+"en": "A rose garland. A rose garland is woven from fresh pink garden roses of Zabul.",
+"lo": "ພວງດອກກຸຫຼາບ. ພວງດອກກຸຫຼາບ ຮ້ອຍຈາກດອກກຸຫຼາບສວນສີບົວສົດຂອງເມືອງຊາບູນ.",
+"th": "พวงมาลัยกุหลาบ พวงมาลัยกุหลาบร้อยจากดอกกุหลาบสวนสีชมพูสดของเมืองซาบูล",
+"zh": "玫瑰花环。玫瑰花环由扎布尔花园新鲜采摘的粉红玫瑰编成。",
+"ja": "ばらの はなわ。ばらの はなわは いい かおりの ピンクの ばらで あんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_rosegarland.1": {
+"en": "A circle of soft pink roses and green leaves smells sweet and fresh.",
+"lo": "ພວງດອກກຸຫຼາບສີບົວນຸ້ມ ແລະ ໃບໄມ້ຂຽວມີກິ່ນຫອມສົດຊື່ນ.",
+"th": "พวงดอกกุหลาบสีชมพูนุ่มและใบไม้เขียวมีกลิ่นหอมสดชื่น",
+"zh": "一圈粉红玫瑰与翠绿叶片编成的花环清香扑鼻。",
+"ja": "ピンクの ばらと みどりの はっぱの いい かおりの はなわだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosegarland.2": {
+"en": "Rudaba wove this garland to decorate the Simurgh's honour stand!",
+"lo": "ຣູດາບາຮ້ອຍພວງດອກໄມ້ນີ້ເພື່ອປະດັບແທ່ນເຊີດຊູນົກຊີມວກ!",
+"th": "รูดะบาร้อยพวงมาลัยนี้เพื่อประดับแท่นเชิดชูนกซิมูร์ก!",
+"zh": "鲁达巴亲手编织了这串花环来装点神鸟的荣耀羽座！",
+"ja": "ルダバひめが おいわいの ために あんだ はなわだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_rosegarland.3": {
+"en": "Every petal shines pink and cheerful in the courtyard light.",
+"lo": "ກີບດອກທຸກກີບສົດໃສສີບົວງາມໃນແສງແດດເດີ່ນວັງ.",
+"th": "กลีบดอกทุกกลีบสดใสสีชมพูงามในแสงแดดลานวัง",
+"zh": "每一片玫瑰花瓣都在庭院的阳光下显得明媚动人。",
+"ja": "おひさまの なかで ピンクの はなびらが きれいに はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_rosegarland.4": {
+"en": "Hang the rose garland around the brass stand for the festival!",
+"lo": "ຄ້ອງພວງດອກກຸຫຼາບອ້ອມແທ່ນທອງເຫຼືອງສຳລັບງານສະຫຼອງ!",
+"th": "คล้องพวงมาลัยกุหลาบรอบแท่นทองเหลืองสำหรับงานฉลอง!",
+"zh": "把玫瑰花环挂在黄铜羽座上迎接庆典吧！",
+"ja": "おまつりの だいに きれいに かけて かざろう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_silkcushion.0": {
+"en": "A silk cushion. A silk cushion is sewn from soft crimson cloth with gold thread.",
+"lo": "ໝອນຜ້າໄໝ. ໝອນຜ້າໄໝ ຫຍິບຈາກຜ້າສີແດງນຸ້ມປັກດ້ວຍດ້າຍສີຄຳ.",
+"th": "หมอนผ้าไหม หมอนผ้าไหมเย็บจากผ้าสีแดงนุ่มปักด้วยด้ายสีทอง",
+"zh": "丝绸软垫。丝绸软垫由柔软的深红丝绸缝制，绣着金色丝线。",
+"ja": "きぬの くっしょん。きぬの くっしょんは きんいろの いとで かざられた ふわふわの ざぶとんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_silkcushion.1": {
+"en": "Plump crimson Persian silk is finished with four golden tassels.",
+"lo": "ໝອນໄໝເປີເຊຍສີແດງນຸ້ມປະດັບດ້ວຍພູ່ສີຄຳສີ່ມຸມ.",
+"th": "หมอนไหมเปอร์เซียสีแดงนุ่มประดับด้วยพู่สีทองสี่มุม",
+"zh": "饱满的深红波斯丝绸软垫四角缀着金色流苏。",
+"ja": "よすみに きんいろの ふさが ついた ふかふかの くっしょんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_silkcushion.2": {
+"en": "It gives the glowing golden feathers a soft royal resting place!",
+"lo": "ມັນເປັນບ່ອນວາງອ່ອນນຸ້ມສຳລັບຂົນນົກສີຄຳທີ່ເຫຼື້ອມແສງ!",
+"th": "มันเป็นที่วางอ่อนนุ่มสำหรับขนนกสีทองที่เปล่งประกาย!",
+"zh": "它为闪耀的金羽铺出了一块柔软华贵的安放处！",
+"ja": "きんのはねを やさしく のせる ふわふわの くっしょんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_silkcushion.3": {
+"en": "Fine golden thread stitches tiny Persian stars across the silk.",
+"lo": "ດ້າຍສີຄຳລະອຽດປັກເປັນຮູບດາວເປີເຊຍນ້ອຍໆເທິງຜ້າໄໝ.",
+"th": "ด้ายสีทองละเอียดปักเป็นรูปดาวเปอร์เซียน้อยๆ บนผ้าไหม",
+"zh": "细密的金线在丝绸上绣出了小小的波斯星纹。",
+"ja": "きんいろの いとで ちいさな ほしが ぬわれて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_silkcushion.4": {
+"en": "Set the silk cushion neatly on the brass stand!",
+"lo": "ວາງໝອນຜ້າໄໝໄວ້ຢ່າງເປັນລະບຽບເທິງແທ່ນທອງເຫຼືອງ!",
+"th": "วางหมอนผ้าไหมไว้อย่างเป็นระเบียบบนแท่นทองเหลือง!",
+"zh": "把丝绸软垫端端正正地放上黄铜羽座吧！",
+"ja": "しんちゅうの だいに そっと おいて あげよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_standspot.0": {
+"en": "A honour spot. An honour spot marks where each festive gift rests on the brass stand.",
+"lo": "ບ່ອນວາງເທິງແທ່ນ. ບ່ອນວາງເທິງແທ່ນ ບອກຕຳແໜ່ງວາງຂອງຂວັນແຕ່ລະຢ່າງເທິງແທ່ນທອງເຫຼືອງ.",
+"th": "ที่วางบนแท่น ที่วางบนแท่นบอกตำแหน่งวางของขวัญแต่ละชิ้นบนแท่นทองเหลือง",
+"zh": "羽座位置。羽座位置标出了每件庆典礼物安放在铜座上的地方。",
+"ja": "だいの ばしょ。だいの ばしょは おくりものを のせる ところだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sim_standspot.1": {
+"en": "A bright turquoise medallion shows where each festive piece goes.",
+"lo": "ແຜ່ນສີຟ້າຂຽວສົດໃສບອກຕຳແໜ່ງວາງຂອງປະດັບງານສະຫຼອງແຕ່ລະອັນ.",
+"th": "แผ่นสีฟ้าเขียวสดใสบอกตำแหน่งวางของประดับงานฉลองแต่ละชิ้น",
+"zh": "明亮的绿松石圆垫标出了每件庆典饰物安放的地方。",
+"ja": "あおい しるしが かざりを おく ばしょを おしえて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_standspot.2": {
+"en": "Match the feathers, garland and cushion to complete the honour stand!",
+"lo": "ຈັບຄູ່ຂົນນົກ ພວງດອກໄມ້ ແລະ ໝອນເພື່ອຕົກແຕ່ງແທ່ນໃຫ້ສົມບູນ!",
+"th": "จับคู่ขนนก พวงมาลัย และหมอนเพื่อตกแต่งแท่นให้สมบูรณ์!",
+"zh": "把金羽、花环和软垫放到对应位置，完成荣耀羽座！",
+"ja": "みっつの かざりを そろえて おいわいの だいを かんせいさせよう！",
+"who": "narrator",
+"tag": "does"
+},
+"sim_standspot.3": {
+"en": "Three shining spots wait cleanly across the polished brass.",
+"lo": "ສາມບ່ອນວາງເຫຼື້ອມແສງລໍຖ້າຢ່າງເປັນລະບຽບເທິງແທ່ນທອງເຫຼືອງ.",
+"th": "สามที่วางส่องแสงรออย่างเป็นระเบียบเหนือแท่นทองเหลือง",
+"zh": "擦亮的黄铜座上整齐排着三个发亮的位置。",
+"ja": "みっつの ばしょが きらっと まって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sim_standspot.4": {
+"en": "Once dressed, the honour stand shines bright for the Simurgh!",
+"lo": "ເມື່ອປະດັບແລ້ວ ແທ່ນເຊີດຊູກຽດຈະສ່ອງແສງສົດໃສຕ້ອນຮັບນົກຊີມວກ!",
+"th": "เมื่อประดับแล้ว แท่นเชิดชูเกียรติจะส่องแสงสดใสต้อนรับนกซิมูร์ก!",
+"zh": "装点完毕后，荣耀羽座就会为神鸟闪闪发光！",
+"ja": "かざりおわったら シームルグを むかえる じゅんびが できるよ！",
+"who": "narrator",
+"tag": "does"
+}
+},
+"chars": {},
+"pools": {
+"sim_arcade": [
+"sim_arcade.0",
+"sim_arcade.1",
+"sim_arcade.2",
+"sim_arcade.3",
+"sim_arcade.4"
+],
+"sim_cypress": [
+"sim_cypress.0",
+"sim_cypress.1",
+"sim_cypress.2",
+"sim_cypress.3",
+"sim_cypress.4"
+],
+"sim_pomegranate": [
+"sim_pomegranate.0",
+"sim_pomegranate.1",
+"sim_pomegranate.2",
+"sim_pomegranate.3",
+"sim_pomegranate.4"
+],
+"sim_gardenwall": [
+"sim_gardenwall.0",
+"sim_gardenwall.1",
+"sim_gardenwall.2",
+"sim_gardenwall.3",
+"sim_gardenwall.4"
+],
+"sim_roserow": [
+"sim_roserow.0",
+"sim_roserow.1",
+"sim_roserow.2",
+"sim_roserow.3",
+"sim_roserow.4"
+],
+"sim_sam": [
+"sim_sam.0",
+"sim_sam.1",
+"sim_sam.2",
+"sim_sam.3",
+"sim_sam.4",
+"sim_sam.5",
+"sim_sam.6",
+"sim_sam.7",
+"sim_sam.8",
+"sim_sam.9"
+],
+"sim_babyzal": [
+"sim_babyzal.0",
+"sim_babyzal.1",
+"sim_babyzal.2",
+"sim_babyzal.3",
+"sim_babyzal.4",
+"sim_babyzal.5",
+"sim_babyzal.6",
+"sim_babyzal.7"
+],
+"sim_lantern": [
+"sim_lantern.0",
+"sim_lantern.1",
+"sim_lantern.2",
+"sim_lantern.3",
+"sim_lantern.4"
+],
+"frog": [
+"frog.0",
+"frog.1",
+"frog.2",
+"frog.3",
+"frog.4",
+"frog.5"
+],
+"sim_butterfly": [
+"sim_butterfly.0",
+"sim_butterfly.1",
+"sim_butterfly.2",
+"sim_butterfly.3",
+"sim_butterfly.4",
+"sim_butterfly.5"
+],
+"sim_fountain": [
+"sim_fountain.0",
+"sim_fountain.1",
+"sim_fountain.2",
+"sim_fountain.3",
+"sim_fountain.4"
+],
+"sim_ewer": [
+"sim_ewer.0",
+"sim_ewer.1",
+"sim_ewer.2",
+"sim_ewer.3",
+"sim_ewer.4"
+],
+"sim_urn": [
+"sim_urn.0",
+"sim_urn.1",
+"sim_urn.2",
+"sim_urn.3",
+"sim_urn.4"
+],
+"sim_brazier": [
+"sim_brazier.0",
+"sim_brazier.1",
+"sim_brazier.2",
+"sim_brazier.3",
+"sim_brazier.4"
+],
+"sim_saffronbasket": [
+"sim_saffronbasket.0",
+"sim_saffronbasket.1",
+"sim_saffronbasket.2",
+"sim_saffronbasket.3",
+"sim_saffronbasket.4"
+],
+"sim_courtyardsky": [
+"sim_courtyardsky.0",
+"sim_courtyardsky.1",
+"sim_courtyardsky.2",
+"sim_courtyardsky.3",
+"sim_courtyardsky.4"
+],
+"sim_alborzpeaks": [
+"sim_alborzpeaks.0",
+"sim_alborzpeaks.1",
+"sim_alborzpeaks.2",
+"sim_alborzpeaks.3",
+"sim_alborzpeaks.4"
+],
+"sim_zabularch": [
+"sim_zabularch.0",
+"sim_zabularch.1",
+"sim_zabularch.2",
+"sim_zabularch.3",
+"sim_zabularch.4",
+"sim_zabularch.5"
+],
+"sim_pinecrag": [
+"sim_pinecrag.0",
+"sim_pinecrag.1",
+"sim_pinecrag.2",
+"sim_pinecrag.3",
+"sim_pinecrag.4"
+],
+"sim_terraceflowers": [
+"sim_terraceflowers.0",
+"sim_terraceflowers.1",
+"sim_terraceflowers.2",
+"sim_terraceflowers.3",
+"sim_terraceflowers.4"
+],
+"sim_mossrow": [
+"sim_mossrow.0",
+"sim_mossrow.1",
+"sim_mossrow.2",
+"sim_mossrow.3",
+"sim_mossrow.4",
+"sim_mossrow.5"
+],
+"sim_canyonrock": [
+"sim_canyonrock.0",
+"sim_canyonrock.1",
+"sim_canyonrock.2",
+"sim_canyonrock.3",
+"sim_canyonrock.4"
+],
+"sim_simurgh": [
+"sim_simurgh.0",
+"sim_simurgh.1",
+"sim_simurgh.2",
+"sim_simurgh.3",
+"sim_simurgh.4",
+"sim_simurgh.5",
+"sim_simurgh.6",
+"sim_simurgh.7",
+"sim_simurgh.8",
+"sim_simurgh.9"
+],
+"sim_goat": [
+"sim_goat.0",
+"sim_goat.1",
+"sim_goat.2",
+"sim_goat.3",
+"sim_goat.4",
+"sim_goat.5"
+],
+"sim_dandelion": [
+"sim_dandelion.0",
+"sim_dandelion.1",
+"sim_dandelion.2",
+"sim_dandelion.3",
+"sim_dandelion.4"
+],
+"sim_sunring": [
+"sim_sunring.0",
+"sim_sunring.1",
+"sim_sunring.2",
+"sim_sunring.3",
+"sim_sunring.4"
+],
+"sim_trailfern": [
+"sim_trailfern.0",
+"sim_trailfern.1",
+"sim_trailfern.2",
+"sim_trailfern.3",
+"sim_trailfern.4"
+],
+"sim_heather": [
+"sim_heather.0",
+"sim_heather.1",
+"sim_heather.2",
+"sim_heather.3",
+"sim_heather.4"
+],
+"sim_trailsky": [
+"sim_trailsky.0",
+"sim_trailsky.1",
+"sim_trailsky.2",
+"sim_trailsky.3",
+"sim_trailsky.4"
+],
+"sim_cragpass": [
+"sim_cragpass.0",
+"sim_cragpass.1",
+"sim_cragpass.2",
+"sim_cragpass.3",
+"sim_cragpass.4"
+],
+"sim_basaltcrag": [
+"sim_basaltcrag.0",
+"sim_basaltcrag.1",
+"sim_basaltcrag.2",
+"sim_basaltcrag.3",
+"sim_basaltcrag.4"
+],
+"sim_healingherbs": [
+"sim_healingherbs.0",
+"sim_healingherbs.1",
+"sim_healingherbs.2",
+"sim_healingherbs.3",
+"sim_healingherbs.4"
+],
+"sim_berrycrag": [
+"sim_berrycrag.0",
+"sim_berrycrag.1",
+"sim_berrycrag.2",
+"sim_berrycrag.3",
+"sim_berrycrag.4"
+],
+"sim_cloudcrag": [
+"sim_cloudcrag.0",
+"sim_cloudcrag.1",
+"sim_cloudcrag.2",
+"sim_cloudcrag.3",
+"sim_cloudcrag.4"
+],
+"sim_chick": [
+"sim_chick.0",
+"sim_chick.1",
+"sim_chick.2",
+"sim_chick.3",
+"sim_chick.4",
+"sim_chick.5"
+],
+"sim_mosspillow": [
+"sim_mosspillow.0",
+"sim_mosspillow.1",
+"sim_mosspillow.2",
+"sim_mosspillow.3",
+"sim_mosspillow.4"
+],
+"sim_blanket": [
+"sim_blanket.0",
+"sim_blanket.1",
+"sim_blanket.2",
+"sim_blanket.3",
+"sim_blanket.4"
+],
+"sim_berries": [
+"sim_berries.0",
+"sim_berries.1",
+"sim_berries.2",
+"sim_berries.3",
+"sim_berries.4",
+"sim_berries.5"
+],
+"sim_nestspot": [
+"sim_nestspot.0",
+"sim_nestspot.1",
+"sim_nestspot.2",
+"sim_nestspot.3",
+"sim_nestspot.4"
+],
+"sim_nestsky": [
+"sim_nestsky.0",
+"sim_nestsky.1",
+"sim_nestsky.2",
+"sim_nestsky.3",
+"sim_nestsky.4"
+],
+"sim_cloudsea": [
+"sim_cloudsea.0",
+"sim_cloudsea.1",
+"sim_cloudsea.2",
+"sim_cloudsea.3",
+"sim_cloudsea.4"
+],
+"sim_sandalwoodnest": [
+"sim_sandalwoodnest.0",
+"sim_sandalwoodnest.1",
+"sim_sandalwoodnest.2",
+"sim_sandalwoodnest.3",
+"sim_sandalwoodnest.4"
+],
+"sim_zal": [
+"sim_zal.0",
+"sim_zal.1",
+"sim_zal.2",
+"sim_zal.3",
+"sim_zal.4",
+"sim_zal.5",
+"sim_zal.6",
+"sim_zal.7",
+"sim_zal.8",
+"sim_zal.9",
+"sim_zal.10"
+],
+"sim_leapstone": [
+"sim_leapstone.0",
+"sim_leapstone.1",
+"sim_leapstone.2",
+"sim_leapstone.3",
+"sim_leapstone.4"
+],
+"sim_feather": [
+"sim_feather.0",
+"sim_feather.1",
+"sim_feather.2",
+"sim_feather.3",
+"sim_feather.4",
+"sim_feather.5"
+],
+"sim_nightstar": [
+"sim_nightstar.0",
+"sim_nightstar.1",
+"sim_nightstar.2",
+"sim_nightstar.3",
+"sim_nightstar.4"
+],
+"sim_nightsky": [
+"sim_nightsky.0",
+"sim_nightsky.1",
+"sim_nightsky.2",
+"sim_nightsky.3",
+"sim_nightsky.4"
+],
+"sim_rudaba": [
+"sim_rudaba.0",
+"sim_rudaba.1",
+"sim_rudaba.2",
+"sim_rudaba.3",
+"sim_rudaba.4",
+"sim_rudaba.5",
+"sim_rudaba.6",
+"sim_rudaba.7",
+"sim_rudaba.8",
+"sim_rudaba.9"
+],
+"sim_feasttable": [
+"sim_feasttable.0",
+"sim_feasttable.1",
+"sim_feasttable.2",
+"sim_feasttable.3",
+"sim_feasttable.4"
+],
+"sim_pombowl": [
+"sim_pombowl.0",
+"sim_pombowl.1",
+"sim_pombowl.2",
+"sim_pombowl.3",
+"sim_pombowl.4"
+],
+"sim_saffroncakes": [
+"sim_saffroncakes.0",
+"sim_saffroncakes.1",
+"sim_saffroncakes.2",
+"sim_saffroncakes.3",
+"sim_saffroncakes.4"
+],
+"sim_rosevase": [
+"sim_rosevase.0",
+"sim_rosevase.1",
+"sim_rosevase.2",
+"sim_rosevase.3",
+"sim_rosevase.4"
+],
+"sim_tablespot": [
+"sim_tablespot.0",
+"sim_tablespot.1",
+"sim_tablespot.2",
+"sim_tablespot.3",
+"sim_tablespot.4"
+],
+"sim_stormcloud": [
+"sim_stormcloud.0",
+"sim_stormcloud.1",
+"sim_stormcloud.2",
+"sim_stormcloud.3",
+"sim_stormcloud.4"
+],
+"sim_boulder": [
+"sim_boulder.0",
+"sim_boulder.1",
+"sim_boulder.2",
+"sim_boulder.3",
+"sim_boulder.4",
+"sim_boulder.5"
+],
+"sim_spark": [
+"sim_spark.0",
+"sim_spark.1",
+"sim_spark.2",
+"sim_spark.3",
+"sim_spark.4"
+],
+"sim_ribbon": [
+"sim_ribbon.0",
+"sim_ribbon.1",
+"sim_ribbon.2",
+"sim_ribbon.3",
+"sim_ribbon.4"
+],
+"sim_dusksky": [
+"sim_dusksky.0",
+"sim_dusksky.1",
+"sim_dusksky.2",
+"sim_dusksky.3",
+"sim_dusksky.4"
+],
+"sim_petalpile": [
+"sim_petalpile.0",
+"sim_petalpile.1",
+"sim_petalpile.2",
+"sim_petalpile.3",
+"sim_petalpile.4"
+],
+"sim_petaltumble": [
+"sim_petaltumble.0",
+"sim_petaltumble.1",
+"sim_petaltumble.2",
+"sim_petaltumble.3",
+"sim_petaltumble.4"
+],
+"sim_brassstand": [
+"sim_brassstand.0",
+"sim_brassstand.1",
+"sim_brassstand.2",
+"sim_brassstand.3",
+"sim_brassstand.4"
+],
+"sim_brassstandfull": [
+"sim_brassstandfull.0",
+"sim_brassstandfull.1",
+"sim_brassstandfull.2",
+"sim_brassstandfull.3",
+"sim_brassstandfull.4"
+],
+"sim_pairedfeathers": [
+"sim_pairedfeathers.0",
+"sim_pairedfeathers.1",
+"sim_pairedfeathers.2",
+"sim_pairedfeathers.3",
+"sim_pairedfeathers.4"
+],
+"sim_rosegarland": [
+"sim_rosegarland.0",
+"sim_rosegarland.1",
+"sim_rosegarland.2",
+"sim_rosegarland.3",
+"sim_rosegarland.4"
+],
+"sim_silkcushion": [
+"sim_silkcushion.0",
+"sim_silkcushion.1",
+"sim_silkcushion.2",
+"sim_silkcushion.3",
+"sim_silkcushion.4"
+],
+"sim_standspot": [
+"sim_standspot.0",
+"sim_standspot.1",
+"sim_standspot.2",
+"sim_standspot.3",
+"sim_standspot.4"
+]
+},
+"animals": [
+"frog"
+],
+"word": {
+"sim_arcade": {
+"en": "tiled arcade",
+"lo": "ລະບຽງກະເບື້ອງສີຟ້າ",
+"th": "ระเบียงกระเบื้องสีฟ้า",
+"zh": "青砖拱廊",
+"ja": "あおい たいるの かべ"
+},
+"sim_cypress": {
+"en": "cypress tree",
+"lo": "ຕົ້ນໄຊເປຣສ",
+"th": "ต้นไซเปรส",
+"zh": "波斯柏树",
+"ja": "いとすぎの き"
+},
+"sim_pomegranate": {
+"en": "pomegranate tree",
+"lo": "ຕົ້ນໝາກພິລາ",
+"th": "ต้นทับทิม",
+"zh": "红石榴树",
+"ja": "ざくろの き"
+},
+"sim_gardenwall": {
+"en": "rose wall",
+"lo": "ກຳແພງດອກກຸຫຼາບ",
+"th": "กำแพงดอกกุหลาบ",
+"zh": "玫瑰花墙",
+"ja": "ばらの かべ"
+},
+"sim_roserow": {
+"en": "rose border",
+"lo": "ແຖວດອກກຸຫຼາບ",
+"th": "แถวดอกกุหลาบ",
+"zh": "玫瑰花坛",
+"ja": "ばらの かだん"
+},
+"sim_sam": {
+"en": "Lord Sam",
+"lo": "ທ່ານຊາມ",
+"th": "ท่านซาม",
+"zh": "萨姆领主",
+"ja": "サムさま"
+},
+"sim_babyzal": {
+"en": "Baby Zal",
+"lo": "ນ້ອງນ້ອຍຊານ",
+"th": "หนูน้อยซาล",
+"zh": "小扎尔",
+"ja": "あかちゃん ザール"
+},
+"sim_lantern": {
+"en": "brass lantern",
+"lo": "ໂຄມໄຟທອງເຫຼືອງ",
+"th": "โคมไฟทองเหลือง",
+"zh": "黄铜灯笼",
+"ja": "しんちゅうの らんたん"
+},
+"frog": {
+"en": "frog",
+"lo": "ກົບ",
+"th": "กบ",
+"zh": "青蛙",
+"ja": "カエル"
+},
+"sim_butterfly": {
+"en": "mountain butterfly",
+"lo": "ແມງກະເບື້ອພູຜາ",
+"th": "ผีเสื้อภูเขา",
+"zh": "山间蝴蝶",
+"ja": "やまの ちょうちょ"
+},
+"sim_fountain": {
+"en": "courtyard fountain",
+"lo": "ນ້ຳພຸໃນເດີ່ນ",
+"th": "น้ำพุในลาน",
+"zh": "庭院喷泉",
+"ja": "にわの ふんすい"
+},
+"sim_ewer": {
+"en": "brass ewer",
+"lo": "ໂຖນ້ຳທອງເຫຼືອງ",
+"th": "เหยือกน้ำทองเหลือง",
+"zh": "黄铜水壶",
+"ja": "しんちゅうの みずさし"
+},
+"sim_urn": {
+"en": "glazed urn",
+"lo": "ໄຫເຄືອບສີຟ້າ",
+"th": "ไหเคลือบสีฟ้า",
+"zh": "青釉花瓶",
+"ja": "あおい つぼ"
+},
+"sim_brazier": {
+"en": "fire brazier",
+"lo": "ເຕົາໄຟທອງສຳລິດ",
+"th": "เตาไฟสำริด",
+"zh": "青铜火盆",
+"ja": "あかがねの ひばち"
+},
+"sim_saffronbasket": {
+"en": "saffron basket",
+"lo": "ກະຕ່າຫຍ້າຝຣັ່ນ",
+"th": "ตะกร้าหญ้าฝรั่น",
+"zh": "藏红花篮",
+"ja": "サフランの かご"
+},
+"sim_courtyardsky": {
+"en": "Zabul sky",
+"lo": "ທ້ອງຟ້າເມືອງຊາບູນ",
+"th": "ท้องฟ้าเมืองซาบูล",
+"zh": "扎布尔天空",
+"ja": "ザブールの そら"
+},
+"sim_alborzpeaks": {
+"en": "Mount Alborz",
+"lo": "ພູອານບໍສ",
+"th": "ภูเขาอัลบอร์ซ",
+"zh": "厄尔布尔士雪峰",
+"ja": "アルボルズやま"
+},
+"sim_zabularch": {
+"en": "tiled arch",
+"lo": "ປະຕູໂຄ້ງກະເບື້ອງສີຟ້າ",
+"th": "ซุ้มประตูกระเบื้องสีฟ้า",
+"zh": "蓝釉拱门",
+"ja": "あおい たいるの もん"
+},
+"sim_pinecrag": {
+"en": "pine cliff",
+"lo": "ຜາຕົ້ນແປກ",
+"th": "ผาต้นสน",
+"zh": "松林峭壁",
+"ja": "まつの がけ"
+},
+"sim_terraceflowers": {
+"en": "alpine flowers",
+"lo": "ດອກໄມ້ປ່າເທິງພູ",
+"th": "ดอกไม้ป่าบนเขา",
+"zh": "高山野花",
+"ja": "やまの はな"
+},
+"sim_mossrow": {
+"en": "mossy rocks",
+"lo": "ຫີນໄຄນ້ຳ",
+"th": "หินมอส",
+"zh": "青苔石阶",
+"ja": "こけの いわ"
+},
+"sim_canyonrock": {
+"en": "canyon rock",
+"lo": "ຜາຫີນສີທອງ",
+"th": "ผาหินสีทอง",
+"zh": "彩岩峡壁",
+"ja": "あかい いわかべ"
+},
+"sim_simurgh": {
+"en": "Simurgh",
+"lo": "ນົກຊີມວກ",
+"th": "นกซิมูร์ก",
+"zh": "西穆尔格神鸟",
+"ja": "シームルグ"
+},
+"sim_goat": {
+"en": "mountain goat",
+"lo": "ແບ້ພູຜາ",
+"th": "แพะภูเขา",
+"zh": "白山羊",
+"ja": "やまの やぎ"
+},
+"sim_dandelion": {
+"en": "yellow dandelion",
+"lo": "ດອກແດນດີໄລອອນເຫຼືອງ",
+"th": "ดอกแดนดิไลออนเหลือง",
+"zh": "黄蒲公英",
+"ja": "きいろい たんぽぽ"
+},
+"sim_sunring": {
+"en": "sunbeam circle",
+"lo": "ວົງແສງແດດ",
+"th": "วงแสงแดด",
+"zh": "金色光环",
+"ja": "ひかりの わ"
+},
+"sim_trailfern": {
+"en": "mountain fern",
+"lo": "ຕົ້ນກູດເທິງພູ",
+"th": "เฟิร์นภูเขา",
+"zh": "高山蕨草",
+"ja": "やまの シダ"
+},
+"sim_heather": {
+"en": "purple heather",
+"lo": "ພຸ່ມດອກສີມ່ວງ",
+"th": "พุ่มดอกสีม่วง",
+"zh": "紫色山花",
+"ja": "むらさきの はな"
+},
+"sim_trailsky": {
+"en": "mountain sky",
+"lo": "ທ້ອງຟ້າເທິງພູ",
+"th": "ท้องฟ้าบนภูเขา",
+"zh": "高山晴空",
+"ja": "やまの そら"
+},
+"sim_cragpass": {
+"en": "mountain pass",
+"lo": "ຊ່ອງຜາພູຜາ",
+"th": "ช่องเขาหิน",
+"zh": "山间峡谷",
+"ja": "やまの とうげ"
+},
+"sim_basaltcrag": {
+"en": "turquoise crag",
+"lo": "ຜາຫີນສີຟ້າຂຽວ",
+"th": "ผาหินสีฟ้าเขียว",
+"zh": "青金岩峰",
+"ja": "あおい いわやま"
+},
+"sim_healingherbs": {
+"en": "healing herbs",
+"lo": "ສະໝຸນໄພຫອມ",
+"th": "สมุนไพรหอม",
+"zh": "高山香草",
+"ja": "やまの やくそう"
+},
+"sim_berrycrag": {
+"en": "berry crag",
+"lo": "ຜາໝາກເບີຣີ",
+"th": "ผาลูกเบอร์รี",
+"zh": "浆果岩台",
+"ja": "きのみの いわ"
+},
+"sim_cloudcrag": {
+"en": "cloud crag",
+"lo": "ເມກ ແລະ ຍອດຜາ",
+"th": "เมฆและยอดผา",
+"zh": "云端岩角",
+"ja": "くもと いわ"
+},
+"sim_chick": {
+"en": "Simurgh chick",
+"lo": "ລູກນົກຊີມວກ",
+"th": "ลูกนกซิมูร์ก",
+"zh": "神鸟雏鸟",
+"ja": "シームルグの ひな"
+},
+"sim_mosspillow": {
+"en": "moss pillow",
+"lo": "ໝອນໄຄນ້ຳ",
+"th": "หมอนมอส",
+"zh": "青苔软枕",
+"ja": "こけの まくら"
+},
+"sim_blanket": {
+"en": "crimson blanket",
+"lo": "ຜ້າຫົ່ມສີແດງ",
+"th": "ผ้าห่มสีแดง",
+"zh": "深红丝毯",
+"ja": "あかい もうふ"
+},
+"sim_berries": {
+"en": "sweet berries",
+"lo": "ໝາກເບີຣີຫວານ",
+"th": "ลูกเบอร์รีหวาน",
+"zh": "甜红浆果",
+"ja": "あまい きのみ"
+},
+"sim_nestspot": {
+"en": "nest spot",
+"lo": "ບ່ອນວາງໃນຮັງ",
+"th": "ที่วางในรัง",
+"zh": "鸟巢位置",
+"ja": "すの ばしょ"
+},
+"sim_nestsky": {
+"en": "summit sky",
+"lo": "ທ້ອງຟ້າຍອດພູ",
+"th": "ท้องฟ้ายอดเขา",
+"zh": "山巅晴空",
+"ja": "いただきの そら"
+},
+"sim_cloudsea": {
+"en": "cloud sea",
+"lo": "ທະເລເມກຂາວ",
+"th": "ทะเลเมฆขาว",
+"zh": "绵绵云海",
+"ja": "しろい くもの うみ"
+},
+"sim_sandalwoodnest": {
+"en": "sandalwood nest",
+"lo": "ຮັງໄມ້ຈັນຫອມ",
+"th": "รังไม้จันทน์หอม",
+"zh": "檀香大巢",
+"ja": "びゃくだんの おおきな す"
+},
+"sim_zal": {
+"en": "Prince Zal",
+"lo": "ເຈົ້າຊາຍຊານ",
+"th": "เจ้าชายซาล",
+"zh": "扎尔王子",
+"ja": "ザールおうじ"
+},
+"sim_leapstone": {
+"en": "stepping rock",
+"lo": "ກ້ອນຫີນກະໂດດ",
+"th": "ก้อนหินกระโดด",
+"zh": "跳跃石块",
+"ja": "とびいし"
+},
+"sim_feather": {
+"en": "golden feather",
+"lo": "ຂົນນົກສີຄຳ",
+"th": "ขนนกสีทอง",
+"zh": "金色羽毛",
+"ja": "きんいろの はね"
+},
+"sim_nightstar": {
+"en": "night star",
+"lo": "ດາວຍາມຄ່ຳ",
+"th": "ดาวยามค่ำ",
+"zh": "夜空星星",
+"ja": "よぞらの ほし"
+},
+"sim_nightsky": {
+"en": "starry sky",
+"lo": "ທ້ອງຟ້າຍາມຄ່ຳ",
+"th": "ท้องฟ้ามีดาว",
+"zh": "繁星夜空",
+"ja": "ほしぞら"
+},
+"sim_rudaba": {
+"en": "Princess Rudaba",
+"lo": "ເຈົ້າຍິງຣູດາບາ",
+"th": "เจ้าหญิงรูดะบา",
+"zh": "鲁达巴公主",
+"ja": "ルダバひめ"
+},
+"sim_feasttable": {
+"en": "welcome table",
+"lo": "ໂຕະຕ້ອນຮັບ",
+"th": "โต๊ะต้อนรับ",
+"zh": "迎宾木桌",
+"ja": "ごちそうの テーブル"
+},
+"sim_pombowl": {
+"en": "pomegranate bowl",
+"lo": "ຖ້ວຍໝາກພິລາ",
+"th": "ชามทับทิม",
+"zh": "石榴果碗",
+"ja": "ざくろの ぼうる"
+},
+"sim_saffroncakes": {
+"en": "saffron cakes",
+"lo": "ເຂົ້າໜົມຫຍ້າຝຣັ່ນ",
+"th": "ขนมหญ้าฝรั่น",
+"zh": "藏红花糕",
+"ja": "サフランの おかし"
+},
+"sim_rosevase": {
+"en": "rose vase",
+"lo": "ໂຖດອກກຸຫຼາບ",
+"th": "แจกันกุหลาบ",
+"zh": "玫瑰花瓶",
+"ja": "ばらの かびん"
+},
+"sim_tablespot": {
+"en": "table place",
+"lo": "ບ່ອນວາງເທິງໂຕະ",
+"th": "ที่วางบนโต๊ะ",
+"zh": "桌面位置",
+"ja": "テーブルの ばしょ"
+},
+"sim_stormcloud": {
+"en": "storm cloud",
+"lo": "ເມກພາຍຸ",
+"th": "เมฆพายุ",
+"zh": "雷雨乌云",
+"ja": "あらしの くも"
+},
+"sim_boulder": {
+"en": "grey boulder",
+"lo": "ກ້ອນຫີນໃຫຍ່ສີເທົາ",
+"th": "ก้อนหินใหญ่สีเทา",
+"zh": "灰色巨石",
+"ja": "おおきな はいいろの いわ"
+},
+"sim_spark": {
+"en": "golden spark",
+"lo": "ປະກາຍໄຟສີຄຳ",
+"th": "ประกายไฟสีทอง",
+"zh": "金色火花",
+"ja": "きんいろの ひのこ"
+},
+"sim_ribbon": {
+"en": "starlight ribbon",
+"lo": "ແສງດາວສີຄຳ",
+"th": "สายแสงดาวสีทอง",
+"zh": "星光丝带",
+"ja": "ほしあかりの りぼん"
+},
+"sim_dusksky": {
+"en": "dusk sky",
+"lo": "ທ້ອງຟ້າຍາມແລງ",
+"th": "ท้องฟ้ายามเย็น",
+"zh": "暮色天空",
+"ja": "ゆうぐれの そら"
+},
+"sim_petalpile": {
+"en": "pink petals",
+"lo": "ກອງກີບດອກກຸຫຼາບ",
+"th": "กองกลีบกุหลาบ",
+"zh": "粉红花瓣",
+"ja": "ばらの はなびら"
+},
+"sim_petaltumble": {
+"en": "playful tumble",
+"lo": "ການລົ້ມກິ້ງຫຼິ້ນ",
+"th": "การกลิ้งเล่น",
+"zh": "花瓣翻滚",
+"ja": "はなびら ころころ"
+},
+"sim_brassstand": {
+"en": "brass stand",
+"lo": "ແທ່ນທອງເຫຼືອງ",
+"th": "แท่นทองเหลือง",
+"zh": "黄铜羽座",
+"ja": "しんちゅうの だい"
+},
+"sim_brassstandfull": {
+"en": "honour stand",
+"lo": "ແທ່ນເຊີດຊູກຽດ",
+"th": "แท่นเชิดชูเกียรติ",
+"zh": "荣耀羽座",
+"ja": "おいわいの だい"
+},
+"sim_pairedfeathers": {
+"en": "paired feathers",
+"lo": "ຂົນນົກຄູ່ສີຄຳ",
+"th": "ขนนกคู่สีทอง",
+"zh": "一对金羽",
+"ja": "ふたつの きんのはね"
+},
+"sim_rosegarland": {
+"en": "rose garland",
+"lo": "ພວງດອກກຸຫຼາບ",
+"th": "พวงมาลัยกุหลาบ",
+"zh": "玫瑰花环",
+"ja": "ばらの はなわ"
+},
+"sim_silkcushion": {
+"en": "silk cushion",
+"lo": "ໝອນຜ້າໄໝ",
+"th": "หมอนผ้าไหม",
+"zh": "丝绸软垫",
+"ja": "きぬの くっしょん"
+},
+"sim_standspot": {
+"en": "honour spot",
+"lo": "ບ່ອນວາງເທິງແທ່ນ",
+"th": "ที่วางบนแท่น",
+"zh": "羽座位置",
+"ja": "だいの ばしょ"
+}
+},
+"map": {
+"courtyard-arcade-back-l": "sim_arcade",
+"courtyard-cypress-back-r": "sim_cypress",
+"courtyard-pomegranate-mid-l": "sim_pomegranate",
+"courtyard-brazier-wall-mid-r": "sim_gardenwall",
+"courtyard-rose-row-l": "sim_roserow",
+"courtyard-rose-row-r": "sim_roserow",
+"courtyard-cypress-fg-l": "sim_cypress",
+"courtyard-cypress-fg-r": "sim_cypress",
+"sam": "sim_sam",
+"sam-worry": "sim_sam",
+"sam-cradle": "sim_sam",
+"cradle-zal": "sim_cradle",
+"brass-lantern-1": "sim_lantern",
+"brass-lantern-2": "sim_lantern",
+"brass-lantern-3": "sim_lantern",
+"brass-lantern-4": "sim_lantern",
+"frog": "frog",
+"butterfly": "sim_butterfly",
+"courtyard-pool-l": "sim_fountain",
+"brass-ewer-l": "sim_ewer",
+"glazed-urn-l": "sim_urn",
+"courtyard-brazier-r": "sim_brazier",
+"saffron-basket-r": "sim_saffronbasket",
+"sky-courtyard": "sim_courtyardsky",
+"far-alborz-peaks": "sim_alborzpeaks",
+"zabul-arch": "sim_zabularch",
+"brass-lantern-": "sim_lantern",
+"trail-pine-crag-back-l": "sim_pinecrag",
+"trail-ridge-pine-back-r": "sim_pinecrag",
+"trail-boulder-pine-mid-l": "sim_pinecrag",
+"trail-terrace-flowers-mid-r": "sim_terraceflowers",
+"trail-moss-row-l": "sim_mossrow",
+"trail-moss-row-r": "sim_mossrow",
+"trail-canyon-fg-l": "sim_canyonrock",
+"trail-canyon-fg-r": "sim_canyonrock",
+"simurgh-glide": "sim_simurgh",
+"simurgh-carry-cradle": "sim_simurgh",
+"goat": "sim_goat",
+"goat-hop": "sim_goat",
+"dandelion": "sim_dandelion",
+"trail-brazier": "sim_brazier",
+"sun-ring-1": "sim_sunring",
+"sun-ring-2": "sim_sunring",
+"sun-ring-3": "sim_sunring",
+"mossy-outcrop-l": "sim_mossrow",
+"fern-clump-l": "sim_trailfern",
+"trail-ledge-r": "sim_mossrow",
+"heather-shrub-r": "sim_heather",
+"sky-trail": "sim_trailsky",
+"far-alborz-ridge": "sim_alborzpeaks",
+"crag-pass-arch": "sim_cragpass",
+"sun-ring-": "sim_sunring",
+"nest-crag-back-l": "sim_basaltcrag",
+"nest-crag-back-r": "sim_basaltcrag",
+"nest-herb-crag-mid-l": "sim_healingherbs",
+"nest-berry-crag-mid-r": "sim_berrycrag",
+"nest-herb-row-l": "sim_healingherbs",
+"nest-herb-row-r": "sim_healingherbs",
+"nest-cloud-crag-fg-l": "sim_cloudcrag",
+"nest-cloud-crag-fg-r": "sim_cloudcrag",
+"simurgh": "sim_simurgh",
+"simurgh-wing": "sim_simurgh",
+"baby-zal": "sim_babyzal",
+"baby-zal-sleep": "sim_babyzal",
+"chick-1": "sim_chick",
+"chick-2": "sim_chick",
+"moss-pillow": "sim_mosspillow",
+"crimson-blanket": "sim_blanket",
+"sweet-berries": "sim_berries",
+"nest-spot-1": "sim_nestspot",
+"nest-spot-2": "sim_nestspot",
+"nest-spot-3": "sim_nestspot",
+"herb-ledge-l": "sim_healingherbs",
+"mountain-herb-l": "sim_healingherbs",
+"berry-sprig-l": "sim_berries",
+"lower-crag-r": "sim_basaltcrag",
+"sky-nest": "sim_nestsky",
+"far-cloud-sea": "sim_cloudsea",
+"sandalwood-nest": "sim_sandalwoodnest",
+"nest-spot-": "sim_nestspot",
+"zal": "sim_zal",
+"zal-leap": "sim_zal",
+"zal-berry": "sim_zal",
+"chick-berry": "sim_chick",
+"leap-stone-1": "sim_leapstone",
+"leap-stone-2": "sim_leapstone",
+"leap-stone-3": "sim_leapstone",
+"sky-nest-eve": "sim_nestsky",
+"leap-stone-": "sim_leapstone",
+"sam-sit": "sim_sam",
+"sam-sad": "sim_sam",
+"sam-feather": "sim_sam",
+"golden-feather": "sim_feather",
+"night-star-1": "sim_nightstar",
+"night-star-2": "sim_nightstar",
+"night-star-3": "sim_nightstar",
+"night-star-4": "sim_nightstar",
+"sky-courtyard-night": "sim_nightsky",
+"night-star-": "sim_nightstar",
+"simurgh-zal-hug": "sim_simurgh",
+"simurgh-carry-zal": "sim_simurgh",
+"sam-kneel": "sim_sam",
+"golden-feather-1": "sim_feather",
+"golden-feather-2": "sim_feather",
+"golden-feather-3": "sim_feather",
+"sky-nest-sunrise": "sim_nestsky",
+"golden-feather-": "sim_feather",
+"zal-feather": "sim_zal",
+"rudaba": "sim_rudaba",
+"feast-table": "sim_feasttable",
+"pomegranate-bowl": "sim_pombowl",
+"saffron-cakes": "sim_saffroncakes",
+"rose-vase": "sim_rosevase",
+"table-spot-1": "sim_tablespot",
+"table-spot-2": "sim_tablespot",
+"table-spot-3": "sim_tablespot",
+"storm-cloud-1": "sim_stormcloud",
+"storm-cloud-2": "sim_stormcloud",
+"table-spot-": "sim_tablespot",
+"sam-push": "sim_sam",
+"zal-push": "sim_zal",
+"rudaba-push": "sim_rudaba",
+"rudaba-point": "sim_rudaba",
+"grey-boulder-1": "sim_boulder",
+"grey-boulder-2": "sim_boulder",
+"grey-boulder-3": "sim_boulder",
+"spark-1": "sim_spark",
+"spark-2": "sim_spark",
+"spark-3": "sim_spark",
+"starlight-ribbon": "sim_ribbon",
+"sky-trail-dusk": "sim_dusksky",
+"simurgh-stand-l": "sim_simurgh",
+"sam-bow": "sim_sam",
+"sky-trail-night": "sim_nightsky",
+"grey-boulder-": "sim_boulder",
+"petal-pile": "sim_petalpile",
+"petal-tumble": "sim_petaltumble",
+"brass-stand": "sim_brassstand",
+"brass-stand-full": "sim_brassstandfull",
+"paired-feathers": "sim_pairedfeathers",
+"rose-garland": "sim_rosegarland",
+"silk-cushion": "sim_silkcushion",
+"stand-spot-1": "sim_standspot",
+"stand-spot-2": "sim_standspot",
+"stand-spot-3": "sim_standspot",
+"stand-spot-": "sim_standspot"
+},
+"maps": {
+"s01": {
+"cradle-zal": "sim_babyzal"
+},
+"s02": {
+"cradle-zal": "sim_babyzal"
+},
+"s03": {
+"cradle-zal": "sim_babyzal"
+}
+}
+}

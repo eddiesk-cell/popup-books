@@ -23,9 +23,9 @@ const B=([x,y,z])=>[x,z,-y],cl=(v,a,b)=>max(a,min(b,v)),ev=(t,d)=>dispatchEvent(
 const UH="uniform float uT,uRT,uM,uH;\n#define F float\n#define S smoothstep\n#define M mix\n#define C(x) clamp(x,0.,1.)\n#define SN(x) (.5+.5*sin(x))\n#define L length\n#define V2 vec2\n#define V3 vec3\n#define V4 vec4\n#define P 3.14159\n#define T 6.28318\n#define Q position\n#define GP gl_Position\n#define FC gl_FragColor\n#define PV projectionMatrix*viewMatrix\n";
 const NS="F h21(V2 p){p=fract(p*V2(123.34,456.21));p+=dot(p,p+45.32);return fract(p.x*p.y);}\nF vn(V2 p){V2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return M(M(h21(i),h21(i+V2(1.,0.)),f.x),M(h21(i+V2(0.,1.)),h21(i+V2(1.,1.)),f.x),f.y);}\nF bf(V2 u,F e){return S(0.,e,u.x)*S(0.,e,1.-u.x)*S(0.,e,u.y)*S(0.,e,1.-u.y);}\n";
 const TK="a*=1.-S(.70,.78,gl_FragCoord.y/uH);";
-const HD=(b,r)=>`uniform V4 uHD[8];${b}for(int i=0;i<8;i++){V4 h=uHD[i];if(h.w<=0.)break;V3 ro=cameraPosition,rd=h.xyz-ro;F hl=L(rd);if(hl<.05)continue;rd/=hl;V3 ap=p-ro;F pr=dot(ap,rd);if(pr<.08||pr>hl+.24)continue;V3 pd=ap-rd*pr;F d=L(pd);${r}}\n`;
-const AV=HD("V3 avH(V3 p){","if(d<h.w){V3 u=d>1e-4?pd/d:V3(0.,1.,0.);p+=V3(u.x,abs(u.y)+.35,u.z*.2)*(h.w-d)*1.15;}}return p;");
-const AF=HD("F hdF(V3 p){F f=1.;","f*=S(h.w*.6,h.w*1.3,d);}return f;");
+const HD=(b,r)=>`uniform V4 uHD[8];${b}for(int i=0;i<8;i++){V4 h=uHD[i];if(h.w<=0.)break;V3 ro=cameraPosition,rd=h.xyz-ro;F hl=L(rd);if(hl<.05)continue;rd/=hl;V3 ap=p-ro;F pr=dot(ap,rd);if(pr<.08||pr>hl+.24)continue;V3 pd=ap-rd*pr;${r}}\n`;
+const AV=HD("V3 avH(V3 p){","F d=L(pd);if(d<h.w){V3 u=d>1e-4?pd/d:V3(0.,1.,0.);p+=V3(u.x,abs(u.y)+.35,u.z*.2)*(h.w-d)*1.15;}}return p;");
+const AF=HD("F hdF(V3 p){F f=1.;","F w2=h.w*h.w;f*=S(w2*.36,w2*1.69,dot(pd,pd));}return f;");
 
 let aTex=null,aProm=null;const ASP={ant:1.6};
 function loadAtlas(){
@@ -67,7 +67,7 @@ if(k<.5){F h=1.-vU.y,tu=sqrt(h+.06),s1=vn(V2(vU.x*11.,tu*5.2-t*2.1)),s2=vn(V2(vU
 c=M(uC*uL*V3(.72,.88,.96),wh,C(sr*.68+ft*.8));a=(.3+.44*sr+.32*ft)*bf(vU,.12)*st;}
 else if(k<1.5){F r=L(q),n1=vn(V2(atan(q.y,q.x)*3.+r*6.,r*7.-t*2.4)),rg=SN(r*18.-t*5.5+n1*3.);c=M(uC*uL,wh,.6+.35*rg);a=S(1.,.15,r)*(.32+.45*n1*rg+.3*(1.-r)*(1.-r))*st;}
 else{F m1=vn(vU*V2(4.,3.)-V2(t*.18,t*.65)),m2=vn(vU*V2(7.,5.)+V2(t*.25,-t*.95));c=M(uC*uL,wh,.7);a=S(1.,.2,L(q))*S(.32,.78,m1*.6+m2*.5)*(1.-vU.y*.55)*.38*st;}a=min(a,.85);}
-else if(uK<2.5){F tf=t*vR.x;c=uFC*uL;a=clamp(S(.32,.82,vn(vU*V2(3.6,2.2)+V2(tf+vR.y*11.,vR.y*5.)))*bf(vU,.24)*S(0.,.38,1.-vU.y)*vR.z*uFM,0.,.2)*hdF(vW);}
+else if(uK<2.5){F tf=t*vR.x;c=uFC*uL;a=clamp(S(.32,.82,vn(vU*V2(3.6,2.2)+V2(tf+vR.y*11.,vR.y*5.)))*bf(vU,.24)*S(0.,.38,1.-vU.y)*vR.z*uFM,0.,.2);if(a>.004)a*=hdF(vW);}
 else if(uK<3.5){F k=vR.w;
 if(k<.5){F b=min(min(L((q-V2(-.38,-.08))*V2(1.4,2.)),L((q-V2(0.,.14))*V2(1.25,1.55))),min(L((q-V2(.36,-.05))*V2(1.45,2.)),L((q-V2(0.,-.18))*V2(.88,2.3))));
 c=M(uCC,uCR,S(.74,.67,b)*(1.-S(.68,.58,b))*.55+S(-.3,.4,q.y)*.25)*uL;a=S(.78,.66,b)*S(-.55,-.35,q.y)*vA;}
@@ -88,7 +88,7 @@ else if(k<3.5){F cy=fract(t*sp+sd);p+=V3(sin(t*2.6+sd*19.)*aB.x*(1.+cy),cy*aB.y,
 else if(k<4.5){F cy=fract(sd+t*.045),rd=aC.w*.5*sin(t*.7+sd*14.);p+=V3(aB.x*cy+rd,cy*aB.z,aB.y*cy+rd*.5);tw=M(.5,sin(cy*P)*(.55+.45*sin(t*1.8+sd*25.)),uM);}
 else{F ph=t*sp+sd*T;p+=V3(sin(ph)*aB.x,sin(ph*2.)*aB.y,cos(ph*1.3)*aB.z);tw=.7;}
 if(k<.5||k>1.5)p=avH(p);V4 c=PV*V4(p,1.);GP=c;GP.z-=2e-4*c.w;
-gl_PointSize=clamp(sz*uH*.5*projectionMatrix[1][1]/max(c.w,.05),k>4.5?2.:3.,k<1.5&&k>.5?110.:42.);vC=V4(aC.rgb,al*tw);vK=k;}`;
+gl_PointSize=clamp(sz*uH*.5*projectionMatrix[1][1]/max(c.w,.05),k>4.5?2.:3.,k<1.5&&k>.5?68.:26.);vC=V4(aC.rgb,al*tw);vK=k;}`;
 const PT_FS=`${UH}varying V4 vC;varying F vK;
 void main(){V2 q=gl_PointCoord*2.-1.;F d=L(q),m=0.;V3 c=vC.rgb;
 if(vK<.5){m=exp(-d*d*4.5)*S(1.,.6,d);c=M(c,V3(1.,1.,.92),exp(-d*d*12.));}
@@ -216,7 +216,7 @@ function buildLife(sc,cam,sp){
 
   if(S.water.length){const I=mkA(S.water.length,0,"life-fx-water",2);S.water.forEach((w,i)=>I.put(i,[w.x,w.y,w.z],[w.w,w.d,0,0],[w.flowX??.35,w.flowZ??.05,w.foam??.7,w.alpha??.85]));addL(I.m,"water");}
   if(S.waterfall.length){const I=mkA(S.waterfall.length*3,1,"life-fx-waterfall",3);S.waterfall.forEach((f,i)=>{const h=max(.08,f.y1-f.y0),ln=f.lean??.04,s=f.strength??.9;I.put(i*3,[f.x,(f.y0+f.y1)*.5,f.z],[f.w,h,ln,0],[0,s,0,0]);I.put(i*3+1,[f.x,f.y0,f.z+ln+.02],[f.w*2.1,f.w*1.4,0,0],[1,s,0,0]);I.put(i*3+2,[f.x,f.y0,f.z+ln+.03],[f.w*2.4,h*.65,0,0],[2,s*.9,0,0]);});addL(I.m,"waterfall");}
-  {const nF=ph?1:2,I=mkA(nF,2,"life-fx-fog",2),pw=px.x-pn.x,pd=px.z-pn.z;for(let i=0;i<nF;i++)I.put(i,[rr(.12)*pw*.5,Y+.018,pn.z+pd*[.22,.48][i]],[pw*(i?.58:.8),i?.14:.19,0,0],[wD*(.04+.02*i),rng(),[.15,.11][i],0]);addL(I.m,"fog");}
+  {const I=mkA(1,2,"life-fx-fog",2),pw=px.x-pn.x,pd=px.z-pn.z;I.put(0,[rr(.1)*pw*.5,Y+.018,pn.z+pd*.3],[pw*.82,.18,0,0],[wD*.045,rng(),.16,0]);addL(I.m,"fog");}
   const sky=S.sky,sup=!(spm!=null?seed%5===0:rng()<.22)||ind?null:(dk?"shooting-star":(pl.rain?"rainbow":"kite"));
   if(!ind){const nC=ph?2:3,I=mkA(nC+(sup?1:0),3,"life-fx-sky",1);for(let i=0;i<nC;i++){const w=r(.18,.28);I.put(i,[r(sky.x0,sky.x1),sky.y-r(.05,.15),sky.z+.015+i*.014],[w,w*r(.36,.45),sky.x0,sky.x1],[wD*r(.012,.026),rng(),dk?.22:.4,0]);}if(sup){const k=sup==="kite"?1:sup==="rainbow"?2:3;I.put(nC,[rr(.2),sky.y-(k===2?.12:.08),sky.z+.03],[k===2?.65:k===3?.32:.09,k===2?.32:.12,sky.x0,sky.x1],[.02,rng(),k===2?.34:.85,k]);}addL(I.m,"sky");}
   const ff=[];
@@ -235,7 +235,7 @@ function buildLife(sc,cam,sp){
     addL(Object.assign(new THREE.Points(g,new THREE.ShaderMaterial({uniforms:U,vertexShader:PT_VS,fragmentShader:PT_FS,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending})),{name:"life-fx-points",frustumCulled:false,renderOrder:5,raycast:()=>{}}),"lights");
   }
   const pB=/garden|mountain/.test(bm),pc=pl.pc||(pB?[.98,.72,.8]:[.56,.74,.36]);
-  let drI=null,bH=0,BS=ph?12:20,bD=cnt(S.trees.length?18:10,6);
+  let drI=null,bH=0,BS=ph?10:16,bD=cnt(S.trees.length?12:8,5);
   if(!ind){
     drI=mkI(bD+BS,p1,DR_VS,DR_FS,U,{aP:3,aD:4,aR:4,aC:4},"life-fx-drift",4);
     for(let i=0;i<bD;i++){const tr=S.trees[i%S.trees.length],lf=!pB||i%4===3,sz=lf?r(.015,.024):r(.012,.02),x=tr?tr.x+rr(tr.w*.55):(i%2?1:-1)*r(.18,.48),y=tr?tr.y+rr(.04):Y+r(.28,.46),z=tr?tr.z+rr(.08):r(pn.z+.1,px.z-.1);drI.put(i,[x,y,z],[sz,sz*(lf?.62:.85),.5,.5],[rng(),r(.11,.22),max(.15,y-Y-.005),0],lf?[.46+r(0,.18),.66+r(0,.14),.28,1]:[pc[0],pc[1]+r(-.08,.12),pc[2]+rr(.07),0]);}
@@ -254,8 +254,8 @@ function buildLife(sc,cam,sp){
   const pr=S.roofs.find(o=>abs(o.x)<=lx(o.z))||S.trees.find(o=>abs(o.x)<=lx(o.z))||{x:0,y:Y+.32,z:sky.z+.1},flk=[];
   if(!dk&&!ind){
     rep(4,2,i=>flk.push(addC("bird",0,13,r(.062,.072),1,[wD>0?sky.x0+.06:sky.x1-.06,sky.y-r(.06,.14)-i*.012,sky.z+.05+i*.015],[cl(pr.x,-lx(pr.z)*.8,lx(pr.z)*.8)+(i-1.5)*.032,pr.y+.005,pr.z+.01],.065,wD,rng(),.08+i*.025)));
-    const fy=Y+r(.12,.22),fl=[["butterfly",3,1,.056,1.38],["butterfly",4,1,.056,1.38],["bee",5,2,.054,1]];if(vw)fl.push(["dragonfly",6,2,.066,1.4]);
-    shuf(fl).slice(0,cnt(fl.length,2)).forEach(([nm,cll,b,sz,asp],i)=>{const sg=i%2?1:-1,ws=nm==="dragonfly"&&vw,z0=ws?ws.z:r(pn.z+.18,.16),l=lx(z0);addC(nm,b,cll,sz,asp,[ws?cl(ws.x-.08,-l,l):ph?sg*r(.05,min(.14,l*.7)):sg*r(.16,.36),fy+i*.016,z0],[ws?cl(ws.x+.08,-l,l):ph?sg*r(.08,min(.18,l*.85)):sg*r(.24,.44),fy+.035,z0+rr(.05)],r(.45,.75),1,nm==="dragonfly"?1:0);});ks.push("flyers");
+    const fy=Y+r(.11,.17),fl=[["butterfly",3,1,.056,1.38],["butterfly",4,1,.056,1.38],["bee",5,2,.054,1]];if(vw)fl.push(["dragonfly",6,2,.066,1.4]);
+    shuf(fl).slice(0,cnt(fl.length,2)).forEach(([nm,cll,b,sz,asp],i)=>{const sg=i%2?1:-1,ws=nm==="dragonfly"&&vw,z0=ws?ws.z:r(pn.z+.18,.16),l=lx(z0);addC(nm,b,cll,sz,asp,[ws?cl(ws.x-.08,-l,l):ph?sg*r(.05,min(.14,l*.7)):sg*r(.14,.26),fy+i*.014,z0],[ws?cl(ws.x+.08,-l,l):ph?sg*r(.08,min(.18,l*.85)):sg*r(.2,.32),fy+.03,z0+rr(.05)],r(.45,.75),1,nm==="dragonfly"?1:0);});ks.push("flyers");
   }
   const rks=shuf(S.rocks),rk=i=>rks[i%rks.length],cr=(s,k,b,c,sz,a,dx,sp,d=1,ax=0,p=rng())=>{const[x,z]=clF(s.x,s.z+.012,.18);if(!inW(x,z))addC(k,b,c,sz,a,[x-dx,Y,z],[x+dx,Y,z],sp,d,ax,p);};
   if(!ind)cr(rk(0),"snail",3,0,.064,1.75,.04,.16,1);

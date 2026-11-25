@@ -12386,7 +12386,7 @@
     "simurgh-simurgh-glide": {
       "look": "Mythical Simurgh soaring gracefully with wide peacock-turquoise and golden wings spread.",
       "size": 0.221,
-      "gait": "idle",
+      "gait": "fly",
       "versions": [
         "day"
       ],
@@ -12430,7 +12430,7 @@
     "simurgh-simurgh-carry-zal": {
       "look": "Mythical Simurgh gliding gently downward carrying young snow-haired Prince Zal on her back.",
       "size": 0.226,
-      "gait": "idle",
+      "gait": "fly",
       "versions": [
         "day"
       ],
@@ -13659,7 +13659,7 @@
     "simurgh-simurgh-carry-cradle": {
       "look": "Mythical Simurgh soaring gracefully carrying baby Zal's warm crimson cradle in her golden claws.",
       "size": 0.235,
-      "gait": "idle",
+      "gait": "fly",
       "versions": [
         "day"
       ],
@@ -20105,6 +20105,94 @@
       },
       "uses": [
         "Journey to the West \u2014 Chapter 3: The Peach Banquet"
+      ],
+      "cut": true
+    },
+    "xieng-mieng-heron": {
+      "look": "Indian pond heron: buff-brown streaked body, white wings that flash in flight, yellow bill",
+      "size": 0.12,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "step": {
+          "_lift": 0.012
+        },
+        "freeze": {
+          "_tilt": -2.5
+        },
+        "strike": {
+          "_tilt": -10
+        },
+        "swallow": {
+          "_tilt": 10
+        },
+        "flap": {
+          "_tilt": 7.5
+        },
+        "preen": {
+          "_tilt": 6.5
+        }
+      },
+      "cycles": {
+        "step": 1.5,
+        "flap": 4
+      },
+      "uses": [
+        "Xieng Mieng"
+      ],
+      "cut": true
+    },
+    "xieng-mieng-buffalo": {
+      "look": "the same old grey-brown water buffalo lying down at rest, its legs folded under its body, big swept-back horns, a gentle smiling face and a long tufted tail curled out behind",
+      "size": 0.119,
+      "gait": "walk",
+      "versions": [
+        "day",
+        "evening",
+        "night"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Xieng Mieng"
+      ],
+      "cut": true
+    },
+    "simurgh-butterfly": {
+      "look": "Delicate Persian turquoise-and-gold mountain swallowtail butterfly in mid-flight.",
+      "size": 0.02,
+      "gait": "fly",
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "The Simurgh and Zal"
       ],
       "cut": true
     }
