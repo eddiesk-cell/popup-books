@@ -1,6 +1,6 @@
 {
  "released": true,
- "words": false,
+ "words": true,
  "chars": "bamboo-cutter-",
  "title": "The Bamboo Cutter's Moon Child",
  "story": "story.json",
@@ -11,156 +11,318 @@
   {
    "dir": "s01",
    "title": "The Shining Bamboo",
-   "lines": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "1.4",
-    "targets": ["glow-ring-1", "glow-ring-2", "glow-ring-3"],
+    "targets": [
+     "glow-ring-1",
+     "glow-ring-2",
+     "glow-ring-3"
+    ],
     "start": "One bamboo stalk is glowing! Tap the three shining rings on the stalk to open it.",
     "praise": "Tap, tap! Look inside the shining bamboo: a tiny Moon Child!",
-    "voice": {"start": "game.1.start", "praise": "game.1.praise"}
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    }
    }
   },
   {
    "dir": "s02",
    "title": "Little Light of Home",
-   "lines": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
    "game": {
     "type": "pair",
     "before": "2.3",
     "pairs": [
-     ["warm-quilt", "cradle"],
-     ["milk-cup", "cradle"],
-     ["bamboo-rattle", "cradle"]
+     [
+      "warm-quilt",
+      "cradle"
+     ],
+     [
+      "milk-cup",
+      "cradle"
+     ],
+     [
+      "bamboo-rattle",
+      "cradle"
+     ]
     ],
     "start": "Help Grandmother care for little Kaguya! Tap the quilt, cup, and rattle, then tap her cradle.",
     "praise": "Warm, cosy, and happy! Look how fast little Kaguya grows!",
-    "voice": {"start": "game.2.start", "praise": "game.2.praise"}
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    }
    }
   },
   {
    "dir": "s03",
    "title": "Gifts of the Grove",
-   "lines": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
    "game": {
     "type": "collect",
     "before": "3.2",
-    "targets": ["coin-1", "coin-2", "coin-3", "coin-4", "coin-5"],
+    "targets": [
+     "coin-1",
+     "coin-2",
+     "coin-3",
+     "coin-4",
+     "coin-5"
+    ],
     "start": "Golden gifts gleam in the grove! Tap the five gold coins to share them with the neighbours.",
     "praise": "Clink, clink! Enough gold to help every family in the village!",
-    "voice": {"start": "game.3.start", "praise": "game.3.praise"}
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    }
    }
   },
   {
    "dir": "s04",
    "title": "Three Boastful Lords",
-   "lines": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
    "game": {
     "type": "collect",
     "before": "4.4",
-    "targets": ["fan-1", "fan-2", "fan-3"],
+    "targets": [
+     "fan-1",
+     "fan-2",
+     "fan-3"
+    ],
     "start": "Three boastful lords wait at the gate! Tap each lord's fan to give him Kaguya's test.",
     "praise": "A branch, a bowl, and a fan! Let us see if their hearts are true.",
-    "voice": {"start": "game.4.start", "praise": "game.4.praise"}
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    }
    }
   },
   {
    "dir": "s05",
    "title": "The Silly Tricks!",
-   "lines": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
    "game": {
     "type": "collect",
     "before": "5.2",
-    "targets": ["fake-branch", "fake-bowl", "star-fan"],
+    "targets": [
+     "fake-branch",
+     "fake-bowl",
+     "star-fan"
+    ],
     "start": "Look closely at the treasures! Tap the branch, the bowl, and the fan to test them.",
     "praise": "Plink, splash, ker-plop! Every single one was a silly trick!",
-    "voice": {"start": "game.5.start", "praise": "game.5.praise"}
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
    }
   },
   {
    "dir": "s06",
    "title": "A Song Across the Garden",
-   "lines": ["6.1", "6.2", "6.3", "6.4", "6.5"],
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
    "game": {
     "type": "echo",
     "before": "6.4",
-    "targets": ["flute-note", "koto-low", "koto-high"],
-    "sounds": ["flute-low", "koto-low", "koto-high"],
+    "targets": [
+     "flute-note",
+     "koto-low",
+     "koto-high"
+    ],
+    "sounds": [
+     "flute-low",
+     "koto-low",
+     "koto-high"
+    ],
     "rounds": [
-     ["flute-note", "koto-low"],
-     ["flute-note", "koto-high", "koto-low"]
+     [
+      "flute-note",
+      "koto-low"
+     ],
+     [
+      "flute-note",
+      "koto-high",
+      "koto-low"
+     ]
     ],
     "start": "The Mikado plays a gentle tune! Listen to the flute and harp, then tap the song back.",
     "praise": "Sweet and clear! Music makes two true friends.",
-    "voice": {"start": "game.6.start", "praise": "game.6.praise"}
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    }
    }
   },
   {
    "dir": "s07",
    "title": "A Secret Under the Moon",
-   "lines": ["7.1", "7.2", "7.3", "7.4", "7.5"],
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "7.2",
-    "targets": ["porch-lantern-1", "porch-lantern-2", "porch-lantern-3"],
+    "targets": [
+     "porch-lantern-1",
+     "porch-lantern-2",
+     "porch-lantern-3"
+    ],
     "start": "The evening air is cool! Tap the three garden lanterns to warm the porch around Kaguya.",
     "praise": "Soft warm glow! Now Kaguya feels brave enough to tell her secret.",
-    "voice": {"start": "game.7.start", "praise": "game.7.praise"}
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    }
    }
   },
   {
    "dir": "s08",
    "title": "The Silver Cloud Procession",
-   "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "8.3",
-    "targets": ["star-lantern-1", "star-lantern-2", "star-lantern-3", "star-lantern-4", "star-lantern-5"],
+    "targets": [
+     "star-lantern-1",
+     "star-lantern-2",
+     "star-lantern-3",
+     "star-lantern-4",
+     "star-lantern-5"
+    ],
     "start": "The silver cloud bridge is here! Tap the five star-lanterns to light the Moon Queen's path.",
     "praise": "Ting-a-ling! The whole cloud bridge shines like pearl!",
-    "voice": {"start": "game.8.start", "praise": "game.8.praise"}
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    }
    }
   },
   {
    "dir": "s09",
    "title": "A Memory Kept Forever",
-   "lines": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
    "game": {
     "type": "timing",
     "before": "9.4",
-    "targets": ["keepsake-lantern"],
-    "light": ["star-beam-1", "star-beam-2", "star-beam-3"],
-    "step": {"steps": 3},
+    "targets": [
+     "keepsake-lantern"
+    ],
+    "light": [
+     "star-beam-1",
+     "star-beam-2",
+     "star-beam-3"
+    ],
+    "step": {
+     "steps": 3
+    },
     "start": "Help Kaguya fill her bamboo keepsake with golden light! Tap when the ring glows.",
     "praise": "Warm golden light inside green bamboo: a promise that never fades!",
-    "voice": {"start": "game.9.start", "praise": "game.9.praise"}
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    }
    }
   },
   {
    "dir": "s10",
    "title": "Lanterns Under Mount Fuji",
-   "lines": ["10.1", "10.2", "10.3", "10.4", "10.5"],
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "10.4",
-    "targets": ["bamboo-lantern-1", "bamboo-lantern-2", "bamboo-lantern-3", "bamboo-lantern-4", "bamboo-lantern-5"],
+    "targets": [
+     "bamboo-lantern-1",
+     "bamboo-lantern-2",
+     "bamboo-lantern-3",
+     "bamboo-lantern-4",
+     "bamboo-lantern-5"
+    ],
     "start": "It is Moon-Viewing night! Tap the five carved bamboo lanterns so Kaguya can see them.",
     "praise": "Every bamboo lantern glows! Look, a golden moonbeam shines right back down!",
-    "voice": {"start": "game.10.start", "praise": "game.10.praise"}
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    }
    }
   },
   {
    "dir": "s11",
    "title": "What Did We Learn?",
-   "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
   }
  ]
 }
