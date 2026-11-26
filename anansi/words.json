@@ -1,0 +1,4297 @@
+{
+"lines": {
+"ana_odumtree.0": {
+"en": "An odum tree. The tall odum tree shades the Ashanti compound with leafy boughs.",
+"lo": "ຕົ້ນໂອດຸມໃຫຍ່. ຕົ້ນໂອດຸມໃຫຍ່ ໃຫ້ຮົ່ມເຢັນແກ່ເຮືອນອາຊັນຕີດ້ວຍກິ່ງໃບໜາ.",
+"th": "ต้นโอดุมใหญ่ ต้นโอดุมใหญ่ให้ร่มเย็นแก่เรือนอาซานตีด้วยกิ่งใบหนา",
+"zh": "高大奥杜姆树。高大的奥杜姆树用繁茂枝叶为阿散蒂院落遮阴。",
+"ja": "おおきな オドゥムの き。おおきな オドゥムの きが むらに すずしい かげを つくるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_odumtree.1": {
+"en": "Birds perch high in this tall odum tree above the compound wall.",
+"lo": "ນົກຈັບສູງຢູ່ເທິງຕົ້ນໂອດຸມໃຫຍ່ນີ້ເໜືອກຳແພງເຮືອນ.",
+"th": "นกเกาะสูงอยู่บนต้นโอดุมใหญ่นี้เหนือกำแพงเรือน",
+"zh": "小鸟停在高高的奥杜姆树冠上俯瞰村庄院落。",
+"ja": "たかい きの うえで ことりが やすんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_odumtree.2": {
+"en": "Broad warm-green leaves crown the sturdy bark trunk.",
+"lo": "ໃບສີຂຽວອຸ່ນກວ້າງປົກຄຸມລຳຕົ້ນເປືອກແຂງແຮງ.",
+"th": "ใบสีเขียวอุ่นกว้างปกคลุมลำต้นเปลือกแข็งแรง",
+"zh": "宽阔的翠绿树冠撑在粗壮坚实的树干上。",
+"ja": "おおきな みきと いっぱいの はっぱが りっぱだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_odumtree.3": {
+"en": "Odum trees are prized across West Africa for their strong timber.",
+"lo": "ຕົ້ນໂອດຸມມີຄ່າທົ່ວອາຟຣິກາຕາເວັນຕົກດ້ວຍເນື້ອໄມ້ແຂງແຮງ.",
+"th": "ต้นโอดุมมีค่าทั่วแอฟริกาตะวันตกด้วยเนื้อไม้แข็งแรง",
+"zh": "奥杜姆树在西非以木质坚硬、树冠宽大而备受珍视。",
+"ja": "とっても つよくて りっぱな ガーナの きなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_odumtree.4": {
+"en": "Rustle, sway!",
+"lo": "ຊາໆ ແກວ່ງ!",
+"th": "ซ่าๆ แกว่ง!",
+"zh": "树叶沙沙摇曳！",
+"ja": "さらさら、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_thatch.0": {
+"en": "A thatched house. The thatched house keeps village families cool in the midday sun.",
+"lo": "ເຮືອນມຸງຫຍ້າ. ເຮືອນມຸງຫຍ້າ ຊ່ວຍໃຫ້ຄອບຄົວໃນບ້ານເຢັນສະບາຍໃນແດດທ່ຽງ.",
+"th": "บ้านมุงหญ้า บ้านมุงหญ้าช่วยให้ครอบครัวในหมู่บ้านเย็นสบายในแดดเที่ยง",
+"zh": "茅草屋。茅草屋在烈日下让村里的家人们清凉舒适。",
+"ja": "かやぶきの いえ。かやぶきの いえは あつい ひも すずしく すごせるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_thatch.1": {
+"en": "Golden woven thatch roofs shelter the sunny courtyard edge.",
+"lo": "ຫຼັງຄາມຸງຫຍ້າສີຄຳບັງແດດໃຫ້ຂອບເດີ່ນບ້ານ.",
+"th": "หลังคามุงหญ้าสีทองบังแดดให้ขอบลานบ้าน",
+"zh": "金黄色的茅草屋檐安静地守在阳光院落旁。",
+"ja": "きいろい かやぶきの やねが にわを みまもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_thatch.2": {
+"en": "Warm terracotta walls meet neat bundles of golden grass thatch.",
+"lo": "ຝາດິນເຜົາສີອຸ່ນຮັບກັບມັດຫຍ້າມຸງສີຄຳທີ່ລຽງງາມ.",
+"th": "ผนังดินเผาสีอุ่นรับกับมัดหญ้ามุงสีทองที่เรียงงาม",
+"zh": "温暖的红土墙配着整齐束好的金黄茅草屋顶。",
+"ja": "あたたかい つちの かべと きいろい やねが すてきだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_thatch.3": {
+"en": "Thick grass thatch sheds tropical rain quickly and keeps rooms cool.",
+"lo": "ຫຍ້າມຸງໜາຊ່ວຍລະບາຍນ້ຳຝົນໄວ ແລະ ເຮັດໃຫ້ຫ້ອງເຢັນ.",
+"th": "หญ้ามุงหนาช่วยระบายน้ำฝนไวและทำให้ห้องเย็น",
+"zh": "厚实的茅草屋顶排水很快，还能让屋里保持凉爽。",
+"ja": "あめを はじいて おへやを すずしく する やねだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_thatch.4": {
+"en": "Hush, shelter!",
+"lo": "ຊູ່ ຮົ່ມເຢັນ!",
+"th": "ชู่ ร่มเย็น!",
+"zh": "茅屋安宁遮阳！",
+"ja": "ほっと する おうちだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_plantaintrees.0": {
+"en": "A plantain grove. The plantain grove grows tall beside the warm terracotta walls.",
+"lo": "ກໍຕົ້ນກ້ວຍ. ກໍຕົ້ນກ້ວຍ ເຕີບໃຫຍ່ສູງຢູ່ຂ້າງຝາດິນເຜົາສີສົ້ມອຸ່ນ.",
+"th": "กอต้นกล้วย กอต้นกล้วยเติบโตสูงอยู่ข้างผนังดินเผาสีส้มอุ่น",
+"zh": "大蕉林。大蕉林在温暖的红土墙旁高高生长。",
+"ja": "バナナの はやし。バナナの はやしが いえの そばで げんきに そだつよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_plantaintrees.1": {
+"en": "Anansi spins his silver web-rungs right beside this tall grove!",
+"lo": "ອານັນຊີປັ່ນຂັ້ນໄດໃຍເງິນຢູ່ຂ້າງກໍຕົ້ນກ້ວຍສູງນີ້!",
+"th": "อนันซีปั่นขั้นบันไดใยเงินอยู่ข้างกอต้นกล้วยสูงนี้!",
+"zh": "阿南西就在这片高大的大蕉树旁织起银丝天梯！",
+"ja": "アナンシが この きの そばに いとを はるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_plantaintrees.2": {
+"en": "Wide arched green leaves shade bunches of yellow plantains.",
+"lo": "ໃບຂຽວໂຄ້ງກວ້າງບັງແດດໃຫ້ເຄືອໝາກກ້ວຍສີເຫຼືອງ.",
+"th": "ใบเขียวโค้งกว้างบังแดดให้เครือกล้วยสีเหลือง",
+"zh": "宽大的绿叶像伞一样遮着成串的金黄大蕉。",
+"ja": "おおきな はっぱの したに バナナが ぶらさがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_plantaintrees.3": {
+"en": "Plantain leaves are so wide that people use them as umbrellas in rain!",
+"lo": "ໃບກ້ວຍກວ້າງຈົນຄົນໃຊ້ກັ້ງຝົນແທນຄັນຮົ່ມໄດ້!",
+"th": "ใบตองกว้างจนคนใช้กางกันฝนแทนร่มได้!",
+"zh": "大蕉叶又大又宽，下雨时人们还能举着它当雨伞！",
+"ja": "おおきな はっぱは あめの ひの かさにも なるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_plantaintrees.4": {
+"en": "Swish, rustle!",
+"lo": "ວູບ ຊາໆ!",
+"th": "ฟิ้ว ซ่าๆ!",
+"zh": "大蕉叶沙沙响！",
+"ja": "ばさばさ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_shed.0": {
+"en": "A veranda shed. The veranda shed shelters carved drums and baskets from rain.",
+"lo": "ຊາຍຄາໄມ້ແກະສະຫຼັກ. ຊາຍຄາໄມ້ແກະສະຫຼັກ ບັງຝົນໃຫ້ກອງແກະສະຫຼັກ ແລະ ກະຕ້າ.",
+"th": "ชายคาไม้แกะสลัก ชายคาไม้แกะสลักบังฝนให้กลองแกะสลักและตะกร้า",
+"zh": "雕花木檐。雕花木檐为木鼓和编织篮遮风挡雨。",
+"ja": "きの ひさし。きの ひさしが たいこや かごを あめから まもるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_shed.1": {
+"en": "Carved wooden eaves keep baskets and drums dry beside the yard.",
+"lo": "ຊາຍຄາໄມ້ແກະສະຫຼັກເກັບກະຕ້າ ແລະ ກອງໃຫ້ແຫ້ງຂ້າງເດີ່ນບ້ານ.",
+"th": "ชายคาไม้แกะสลักเก็บตะกร้าและกลองให้แห้งข้างลานบ้าน",
+"zh": "雕花木檐在院旁为编织篮和木鼓遮挡风雨。",
+"ja": "たいこや かごを しまって おく きの ひさしだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_shed.2": {
+"en": "Warm brown timber beams stand beside leafy cocoa branches.",
+"lo": "ຄານໄມ້ສີນ້ຳຕານອຸ່ນຕັ້ງຂ້າງກິ່ງຕົ້ນໂກໂກ້ໃບຂຽວ.",
+"th": "คานไม้สีน้ำตาลอุ่นตั้งข้างกิ่งต้นโกโก้ใบเขียว",
+"zh": "深棕色的雕花木柱依偎着结满金果的可可树。",
+"ja": "ちゃいろい きの はしらと みどりの はっぱが きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_shed.3": {
+"en": "Ghana grows golden cocoa pods that become chocolate around the world!",
+"lo": "ປະເທດການາປູກໝາກໂກໂກ້ສີຄຳທີ່ເຮັດເປັນຊັອກໂກແລັດທົ່ວໂລກ!",
+"th": "กานาปลูกผลโกโก้สีทองที่ทำเป็นช็อกโกแลตทั่วโลก!",
+"zh": "加纳盛产金黄色的可可果，它们能做成香甜的巧克力！",
+"ja": "ガーナの カカオから おいしい チョコレートが できるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_shed.4": {
+"en": "Knock, rustle!",
+"lo": "ກ໊ອກ ຊາໆ!",
+"th": "ก๊อก ซ่าๆ!",
+"zh": "木檐沙沙微风！",
+"ja": "こんっ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_pottery.0": {
+"en": "Clay pots. Clay pots keep fresh drinking water cool beside the courtyard arch.",
+"lo": "ໝໍ້ດິນເຜົາ. ໝໍ້ດິນເຜົາ ເກັບນ້ຳດື່ມໃຫ້ເຢັນສົດຊື່ນຢູ່ຂ້າງປະຕູໂຄ້ງ.",
+"th": "หม้อดินเผา หม้อดินเผาเก็บน้ำดื่มให้เย็นสดชื่นอยู่ข้างซุ้มประตู",
+"zh": "陶土水罐。陶土水罐在拱门旁盛着清凉甘甜的饮用水。",
+"ja": "つちの つぼ。つちの つぼは みずを つめたく たもつんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_pottery.1": {
+"en": "Round clay pots rest along the low terracotta courtyard kerb.",
+"lo": "ໝໍ້ດິນເຜົາກົມວາງລຽງຕາມຂອບດິນເຜົາຕ່ຳຂອງເດີ່ນບ້ານ.",
+"th": "หม้อดินเผากลมวางเรียงตามขอบดินเผาต่ำของลานบ้าน",
+"zh": "圆润的陶土水罐整齐排在低矮的红土院台边。",
+"ja": "まるい つちの つぼが にわに ならんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_pottery.2": {
+"en": "Smooth warm orange clay pairs with bright red hibiscus blooms.",
+"lo": "ດິນເຜົາສີສົ້ມອຸ່ນລຽບຄູ່ກັບດອກຊະບາສີແດງສົດ.",
+"th": "ดินเผาสีส้มอุ่นเรียบคู่กับดอกชบาสีแดงสด",
+"zh": "温润的红陶罐与鲜艳的红扶桑花相映成趣。",
+"ja": "あたたかい つぼと あかい おはなが きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_pottery.3": {
+"en": "Porous clay pots cool drinking water naturally in warm breezes.",
+"lo": "ໝໍ້ດິນເຜົາຊ່ວຍໃຫ້ນ້ຳດື່ມເຢັນຕາມທຳມະຊາດໃນສາຍລົມອຸ່ນ.",
+"th": "หม้อดินเผาช่วยให้น้ำดื่มเย็นตามธรรมชาติในสายลมอุ่น",
+"zh": "透气的陶罐在微风里能让里面的水自然保持清凉。",
+"ja": "つちの つぼは なかの みずを すずしく するんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_pottery.4": {
+"en": "Clink, cool!",
+"lo": "ແຄະ ເຢັນ!",
+"th": "แกร๊ก เย็น!",
+"zh": "陶罐清脆轻响！",
+"ja": "こんっ、つめたーい！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_hibiscus.0": {
+"en": "A red hibiscus. Red hibiscus blossoms brighten the sunny village garden corner.",
+"lo": "ດອກຊະບາແດງ. ດອກຊະບາແດງ ບານສົດໃສເຮັດໃຫ້ມຸມສວນບ້ານງົດງາມ.",
+"th": "ดอกชบาแดง ดอกชบาแดงบานสดใสทำให้มุมสวนหมู่บ้านงดงาม",
+"zh": "红扶桑花。鲜红的扶桑花把阳光村院的角落装点得明媚动人。",
+"ja": "あかい ハイビスカス。あかい ハイビスカスが にわの すみを あかるく かざるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_hibiscus.1": {
+"en": "Bright red hibiscus petals welcome butterflies to the village!",
+"lo": "ກີບດອກຊະບາສີແດງສົດຕ້ອນຮັບແມງກະເບື້ອມາສູ່ໝູ່ບ້ານ!",
+"th": "กลีบดอกชบาสีแดงสดต้อนรับผีเสื้อมาสู่หมู่บ้าน!",
+"zh": "鲜艳的红扶桑花朵吸引着蝴蝶飞进村庄！",
+"ja": "あかい おはなに ちょうちょが あそびに くるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_hibiscus.2": {
+"en": "Ruffled crimson blossoms glow vividly against deep green leaves.",
+"lo": "ດອກສີແດງສົດເດັ່ນຊັດເຈນຕັດກັບໃບໄມ້ສີຂຽວເຂັ້ມ.",
+"th": "ดอกสีแดงสดเด่นชัดตัดกับใบไม้สีเขียวเข้ม",
+"zh": "深红花瓣在翠绿的叶片映衬下格外明艳。",
+"ja": "まっかな はなびらが みどりの なかで パッと さくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_hibiscus.3": {
+"en": "Hibiscus flowers are brewed into a refreshing ruby drink called sobolo!",
+"lo": "ດອກຊະບາໃຊ້ຕົ້ມເປັນເຄື່ອງດື່ມສີແດງສົດຊື່ນຊື່ວ່າ ໂຊໂບໂລ!",
+"th": "ดอกชบาใช้ต้มเป็นเครื่องดื่มสีแดงสดชื่นชื่อว่า โซโบโล!",
+"zh": "人们常把扶桑花泡成酸甜清爽的红宝石花茶！",
+"ja": "ハイビスカスは おいしい おちゃにも なるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_hibiscus.4": {
+"en": "Bloom, rustle!",
+"lo": "ບານ ຊາໆ!",
+"th": "บาน ซ่าๆ!",
+"zh": "花丛沙沙摇曳！",
+"ja": "ふわっ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_anansi.0": {
+"en": "Anansi. Anansi is a clever little spider from Ashanti in Ghana.",
+"lo": "ອານັນຊີ. ອານັນຊີ ແມ່ນແມງມຸມນ້ອຍສະຫຼາດຈາກເມືອງອາຊັນຕີໃນປະເທດການາ.",
+"th": "อนันซี อนันซีคือแมงมุมตัวน้อยผู้ฉลาดจากอาซานตีในกานา",
+"zh": "阿南西。阿南西是来自加纳阿散蒂的聪明小蜘蛛。",
+"ja": "アナンシ。アナンシは ガーナの かしこい ちいさな くもだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_anansi.1": {
+"en": "Hello, Anansi!",
+"lo": "ສະບາຍດີ ອານັນຊີ!",
+"th": "สวัสดีอนันซี!",
+"zh": "你好，阿南西！",
+"ja": "こんにちは、アナンシ！",
+"who": "anansi",
+"tag": "greet"
+},
+"ana_anansi.2": {
+"en": "Hello! I am Anansi the spider!",
+"lo": "ສະບາຍດີ! ຂ້ອຍແມ່ນແມງມຸມອານັນຊີ!",
+"th": "สวัสดี! ฉันคือแมงมุมอนันซี!",
+"zh": "你好呀！我是小蜘蛛阿南西！",
+"ja": "こんにちは！ ぼく、アナンシだよ！",
+"who": "anansi",
+"tag": "greet"
+},
+"ana_anansi.3": {
+"en": "Small hands and a clever mind can solve the biggest puzzles!",
+"lo": "ມືນ້ອຍ ແລະ ສະໝອງສະຫຼາດສາມາດແກ້ບັນຫາໃຫຍ່ໄດ້!",
+"th": "มือน้อยและสมองฉลาดแก้ปัญหาใหญ่ได้!",
+"zh": "小小双手加上聪明头脑，什么难题都能解开！",
+"ja": "ちいさな てと かしこい あたまで なんでも できるよ！",
+"who": "anansi",
+"tag": "does"
+},
+"ana_anansi.4": {
+"en": "Look at my bright gold-and-green Ashanti kente cap!",
+"lo": "ເບິ່ງໝວກຜ້າເຄັນເຕສີຄຳ ແລະ ສີຂຽວຂອງຂ້ອຍແມ້!",
+"th": "ดูหมวกผ้าเคนเตสีทองและสีเขียวของฉันสิ!",
+"zh": "快看我这顶金绿相间的阿散蒂肯特帽！",
+"ja": "きんいろと みどりの ぼうし、かっこいいでしょ！",
+"who": "anansi",
+"tag": "looks"
+},
+"ana_anansi.5": {
+"en": "In Ghana, clever spider stories are called Anansesem!",
+"lo": "ໃນປະເທດການາ ນິທານແມງມຸມສະຫຼາດເອີ້ນວ່າ ອານັນເຊເຊັມ!",
+"th": "ในกานา นิทานแมงมุมฉลาดเรียกว่า อนันเซเซม!",
+"zh": "在加纳，聪明的蜘蛛故事被称为阿南西故事！",
+"ja": "ガーナでは クモの おはなしが みんなに だいすき なんだよ！",
+"who": "anansi",
+"tag": "fact"
+},
+"ana_anansi.6": {
+"en": "I love bringing stories back to share with every child!",
+"lo": "ຂ້ອຍມັກນຳນິທານກັບມາແບ່ງປັນໃຫ້ເດັກນ້ອຍທຸກຄົນ!",
+"th": "ฉันชอบนำนิทานกลับมาแบ่งปันให้เด็กทุกคน!",
+"zh": "我最喜欢把故事带回来讲给每个孩子听！",
+"ja": "おはなしを みんなに とどけるのが だいすきだよ！",
+"who": "anansi",
+"tag": "does"
+},
+"ana_anansi.7": {
+"en": "Swish, spin, bright!",
+"lo": "ວູບ ປັ່ນ ສົດໃສ!",
+"th": "ฟิ้ว ปั่น สดใส!",
+"zh": "嗖嗖，织网亮晶晶！",
+"ja": "しゅっ、くるくる、きらり！",
+"who": "anansi",
+"tag": "sound"
+},
+"ana_aso.0": {
+"en": "Aso. Aso is Anansi's wise partner who weaves bright kente cloth.",
+"lo": "ອາໂຊ. ອາໂຊ ແມ່ນຄູ່ຄິດທີ່ສະຫຼາດຂອງອານັນຊີ ຜູ້ຕ່ຳຫູກຜ້າເຄັນເຕສົດໃສ.",
+"th": "อาโซ อาโซคือคู่คิดผู้ชาญฉลาดของอนันซีที่ทอผ้าเคนเตสดใส",
+"zh": "阿索。阿索是阿南西聪明的伴侣，擅长织美丽的肯特布。",
+"ja": "アソ。アソは ケンテを おる かしこい おくさんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_aso.1": {
+"en": "Hello, Aso!",
+"lo": "ສະບາຍດີ ອາໂຊ!",
+"th": "สวัสดีอาโซ!",
+"zh": "你好，阿索！",
+"ja": "こんにちは、アソ！",
+"who": "aso",
+"tag": "greet"
+},
+"ana_aso.2": {
+"en": "Hello, little one! I am Aso!",
+"lo": "ສະບາຍດີ ຫຼານນ້ອຍ! ຂ້ອຍຊື່ອາໂຊ!",
+"th": "สวัสดีจ้ะ หนูน้อย! ฉันชื่ออาโซ!",
+"zh": "你好呀小朋友！我是阿索！",
+"ja": "こんにちは！ わたしは アソだよ！",
+"who": "aso",
+"tag": "greet"
+},
+"ana_aso.3": {
+"en": "I help Anansi think of gentle, clever plans!",
+"lo": "ຂ້ອຍຊ່ວຍອານັນຊີຄິດແຜນທີ່ອ່ອນໂຍນ ແລະ ສະຫຼາດ!",
+"th": "ฉันช่วยอนันซีคิดแผนที่อ่อนโยนและฉลาด!",
+"zh": "我帮阿南西想出温柔又巧妙的好主意！",
+"ja": "アナンシと いっしょに やさしい さくせんを かんがえるよ！",
+"who": "aso",
+"tag": "does"
+},
+"ana_aso.4": {
+"en": "My crimson beads shine beside the golden kente loom.",
+"lo": "ລູກປັດສີແດງຂອງຂ້ອຍເຫຼື້ອມງາມຂ້າງກີ່ຕ່ຳຫູກເຄັນເຕ.",
+"th": "ลูกปัดสีแดงของฉันส่องสวยข้างกี่ทอผ้าเคนเต",
+"zh": "我的红珠项链在金色肯特织布机旁闪闪发光。",
+"ja": "あかい ビーズが きれいに ひかっているよ。",
+"who": "aso",
+"tag": "looks"
+},
+"ana_aso.5": {
+"en": "Working together as a team makes hard tasks feel lighter.",
+"lo": "ການເຮັດວຽກຮ່ວມກັນເປັນທີມເຮັດໃຫ້ວຽກຍາກເບົາລົງ.",
+"th": "การทำงานร่วมกันเป็นทีมทำให้งานยากเบาลง",
+"zh": "齐心协力一起合作，再难的事也会变轻松。",
+"ja": "みんなで ちからを あわせると なんでも できるよ。",
+"who": "aso",
+"tag": "fact"
+},
+"ana_aso.6": {
+"en": "Kindness and patience win friends everywhere!",
+"lo": "ຄວາມໃຈດີ ແລະ ຄວາມອົດທົນຊະນະໃຈໝູ່ໄດ້ທຸກບ່ອນ!",
+"th": "ความใจดีและความอดทนชนะใจเพื่อนได้ทุกที่!",
+"zh": "善良和耐心在哪里都能赢得好朋友！",
+"ja": "やさしさと おもいやりが いちばん だいじだよ！",
+"who": "aso",
+"tag": "does"
+},
+"ana_aso.7": {
+"en": "Clack, click, weave!",
+"lo": "ແກັກ ກິກ ຕ່ຳ!",
+"th": "แกร๊ก กริ๊ก ทอ!",
+"zh": "咔嗒咔嗒织布忙！",
+"ja": "とんとん、からから！",
+"who": "aso",
+"tag": "sound"
+},
+"ana_boy.0": {
+"en": "A village boy. The village boy loves gathering around the talking drums for stories.",
+"lo": "ເດັກຊາຍໃນບ້ານ. ເດັກຊາຍໃນບ້ານ ມັກມາໂຮມກັນອ້ອມກອງເວົ້າເພື່ອຟັງນິທານ.",
+"th": "เด็กชายในหมู่บ้าน เด็กชายในหมู่บ้านชอบมารวมตัวรอบกลองพูดเพื่อฟังนิทาน",
+"zh": "村里男孩。村里男孩最喜欢围在说话鼓旁听故事。",
+"ja": "むらの おとこのこ。むらの おとこのこは たいこの そばで おはなしを きくのが すきだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_boy.1": {
+"en": "Hello, village boy!",
+"lo": "ສະບາຍດີ ເດັກຊາຍໃນບ້ານ!",
+"th": "สวัสดีเด็กชายในหมู่บ้าน!",
+"zh": "你好，村里男孩！",
+"ja": "こんにちは、むらの おとこのこ！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_boy.2": {
+"en": "Hello! Come listen to Anansi's tales with us!",
+"lo": "ສະບາຍດີ! ມາຟັງນິທານຂອງອານັນຊີນຳພວກເຮົາແມ້!",
+"th": "สวัสดี! มาฟังนิทานของอนันซีกับพวกเราสิ!",
+"zh": "你好！快来和我们一起听阿南西的故事吧！",
+"ja": "やあ！ いっしょに アナンシの おはなしを きこうよ！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_boy.3": {
+"en": "I sit right beside the talking drums waiting for a new story.",
+"lo": "ຂ້ອຍນັ່ງຢູ່ຂ້າງກອງເວົ້າລໍຖ້າຟັງນິທານເລື່ອງໃໝ່.",
+"th": "ฉันนั่งอยู่ข้างกลองพูดรอฟังนิทานเรื่องใหม่",
+"zh": "我坐在说话鼓旁边，期待着精彩的新故事。",
+"ja": "たいこの そばに すわって おはなしを まって いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_boy.4": {
+"en": "My bright kente wrap glows warm gold under the lanterns.",
+"lo": "ຜ້າເຄັນເຕສົດໃສຂອງຂ້ອຍເຫຼື້ອມສີຄຳອຸ່ນກ້ອງແສງໂຄມໄຟ.",
+"th": "ผ้าเคนเตสดใสของฉันเรืองสีทองอุ่นใต้แสงโคมไฟ",
+"zh": "我鲜艳的肯特披肩在灯笼下泛着温暖的金光。",
+"ja": "きれいな ぬのが らんぷの ひかりで あたたかく みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_boy.5": {
+"en": "Sharing stories under the stars brings the whole village together.",
+"lo": "ການເລົ່ານິທານໃຕ້ແສງດາວເຮັດໃຫ້ທັງໝູ່ບ້ານມາໂຮມກັນ.",
+"th": "การเล่านิทานใต้แสงดาวทำให้ทั้งหมู่บ้านมารวมตัวกัน",
+"zh": "在星空下分享故事让整个村庄紧紧连在一起。",
+"ja": "ほしの したで おはなしを きくと みんな なかよしに なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_boy.6": {
+"en": "Clap, hooray!",
+"lo": "ແປະ ໄຊໂຍ!",
+"th": "แปะ ไชโย!",
+"zh": "拍手欢呼！",
+"ja": "ぱちぱち、わーい！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_girl.0": {
+"en": "A village girl. The village girl claps with joy when the golden tales appear.",
+"lo": "ເດັກຍິງໃນບ້ານ. ເດັກຍິງໃນບ້ານ ຕົບມືດ້ວຍຄວາມດີໃຈເມື່ອນິທານສີຄຳປາກົດ.",
+"th": "เด็กหญิงในหมู่บ้าน เด็กหญิงในหมู่บ้านปรบมือดีใจเมื่อนิทานสีทองปรากฏ",
+"zh": "村里女孩。看到金色故事飞出来时，村里女孩开心得直拍手。",
+"ja": "むらの おんなのこ。むらの おんなのこは おはなしを みて うれしそうに てを たたくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_girl.1": {
+"en": "Hello, village girl!",
+"lo": "ສະບາຍດີ ເດັກຍິງໃນບ້ານ!",
+"th": "สวัสดีเด็กหญิงในหมู่บ้าน!",
+"zh": "你好，村里女孩！",
+"ja": "こんにちは、むらの おんなのこ！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_girl.2": {
+"en": "Hi there! Which story scroll is your favourite?",
+"lo": "ສະບາຍດີ! ມ້ວນນິທານອັນໃດທີ່ເຈົ້າມັກທີ່ສຸດ?",
+"th": "สวัสดีจ้ะ! ม้วนนิทานอันไหนที่เธอชอบที่สุด?",
+"zh": "你好呀！你最喜欢哪一卷故事呀？",
+"ja": "こんにちは！ どの おはなしが いちばん すき？",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_girl.3": {
+"en": "I love clapping along to the rhythm of the courtyard drums!",
+"lo": "ຂ້ອຍມັກຕົບມືຕາມຈັງຫວະກອງຢູ່ເດີ່ນບ້ານ!",
+"th": "ฉันชอบปรบมือตามจังหวะกลองที่ลานบ้าน!",
+"zh": "我最喜欢跟着院子里的鼓声一起打拍子！",
+"ja": "たいこの リズムに あわせて てを たたくのが すき！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_girl.4": {
+"en": "My woven kente wrap shines with bright crimson and gold stripes.",
+"lo": "ຜ້າເຄັນເຕຂອງຂ້ອຍເຫຼື້ອມງາມດ້ວຍລາຍແດງ ແລະ ສີຄຳ.",
+"th": "ผ้าเคนเตของฉันเงางามด้วยลายแดงและสีทอง",
+"zh": "我的肯特织布闪耀着深红与金色的条纹。",
+"ja": "あかと きんいろの しまもようが とっても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_girl.5": {
+"en": "Children everywhere remember kind stories long after bedtime.",
+"lo": "ເດັກນ້ອຍທຸກບ່ອນຈື່ນິທານດີໆໄດ້ດົນຫຼັງເຂົ້ານອນ.",
+"th": "เด็กทุกที่จำนิทานดีๆ ได้นานหลังเข้านอน",
+"zh": "全世界的孩子都会把温暖的故事记在心里。",
+"ja": "やさしい おはなしは いつまでも こころに のこるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_girl.6": {
+"en": "Giggle, clap!",
+"lo": "ຄິກໆ ແປະ!",
+"th": "คิกๆ แปะ!",
+"zh": "嘻嘻笑，拍拍手！",
+"ja": "くすくす、ぱちぱち！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_webrung.0": {
+"en": "A silver web. A silver web-rung forms a shimmering ladder right up to the clouds.",
+"lo": "ຂັ້ນໄດໃຍເງິນ. ຂັ້ນໄດໃຍເງິນ ຕໍ່ເປັນຂັ້ນໄດເຫຼື້ອມຂຶ້ນໄປຫາກ້ອນເມກ.",
+"th": "ขั้นบันไดใยเงิน ขั้นบันไดใยเงินต่อเป็นบันไดระยิบขึ้นไปหาก้อนเมฆ",
+"zh": "银丝梯级。银丝梯级搭成一把通往云端的闪亮天梯。",
+"ja": "ぎんの くもの いと。ぎんの くもの いとが くもまで つづく はしごに なるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_webrung.1": {
+"en": "Anansi climbs step by step up these silver web-rungs!",
+"lo": "ອານັນຊີປີນຂຶ້ນເທື່ອລະຂັ້ນຕາມຂັ້ນໄດໃຍເງິນນີ້!",
+"th": "อนันซีปีนขึ้นทีละขั้นตามขั้นบันไดใยเงินนี้!",
+"zh": "阿南西踩着这些银丝梯级一步步爬向云端！",
+"ja": "アナンシが ぎんの いとを どんどん のぼるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_webrung.2": {
+"en": "Fine shimmering spider silk gleams bright in the morning sun.",
+"lo": "ໃຍແມງມຸມເຫຼື້ອມລະອຽດສ່ອງແສງສົດໃສໃນແດດເຊົ້າ.",
+"th": "ใยแมงมุมระยิบละเอียดส่องแสงสดใสในแดดเช้า",
+"zh": "细密的银色蛛丝在晨光中闪闪发亮。",
+"ja": "あさの ひかりに ぎんの いとが きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_webrung.3": {
+"en": "Real spider silk is amazingly light yet stronger than steel thread!",
+"lo": "ໃຍແມງມຸມແທ້ເບົາຫຼາຍແຕ່ແຂງແຮງກວ່າເສັ້ນເຫຼັກ!",
+"th": "ใยแมงมุมแท้เบามากแต่แข็งแรงกว่าเส้นเหล็ก!",
+"zh": "真正的蜘蛛丝又轻又细，却比同粗细的钢丝还结实！",
+"ja": "くもの いとは かるいのに とっても じょうぶ なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_webrung.4": {
+"en": "Swish, zip!",
+"lo": "ວູບ ຟິ້ວ!",
+"th": "ฟิ้ว ซิ่ว!",
+"zh": "嗖嗖织丝！",
+"ja": "しゅっ、きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_tortoise.0": {
+"en": "A tortoise. The plump tortoise waddles gently across the sunny courtyard.",
+"lo": "ເຕົ່າ. ເຕົ່າໂຕອ້ວນ ຍ່າງຕ້ອມແຕ້ມຄ່ອຍໆຂ້າມເດີ່ນບ້ານແດດອຸ່ນ.",
+"th": "เต่า เต่าตัวอ้วนเดินต้วมเตี้ยมเบาๆ ข้ามลานบ้านแดดอุ่น",
+"zh": "陆龟。圆滚滚的陆龟在温暖的院子里慢慢摇摆着走。",
+"ja": "かめ。まるい かめが にわを ゆっくり とことこ あるくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_tortoise.1": {
+"en": "Hello, tortoise!",
+"lo": "ສະບາຍດີ ເຕົ່າ!",
+"th": "สวัสดีเต่า!",
+"zh": "你好，陆龟！",
+"ja": "こんにちは、かめ！",
+"who": "tortoise",
+"tag": "greet"
+},
+"ana_tortoise.2": {
+"en": "Hello! Slow and steady wins the smile!",
+"lo": "ສະບາຍດີ! ຊ້າໆແຕ່ໝັ້ນຄົງກໍຍິ້ມໄດ້!",
+"th": "สวัสดี! ช้าๆ แต่มั่นคงก็ยิ้มได้!",
+"zh": "你好呀！慢悠悠也很开心！",
+"ja": "こんにちは！ ゆっくり すすむのが すきだよ！",
+"who": "tortoise",
+"tag": "greet"
+},
+"ana_tortoise.3": {
+"en": "Oops! Sometimes I tumble plop into a basket of sweet plantains!",
+"lo": "ອຸ້ຍ! ບາງເທື່ອຂ້ອຍກໍກິ້ງຕຸບລົງກະຕ້າໝາກກ້ວຍສຸກ!",
+"th": "อุ๊ย! บางทีฉันก็กลิ้งตุ้บลงตะกร้ากล้วยสุก!",
+"zh": "哎呀！有时候我会扑通滚进装满大蕉的篮子里！",
+"ja": "おっと！ バナナの かごに ころんと ころがるよ！",
+"who": "tortoise",
+"tag": "does"
+},
+"ana_tortoise.4": {
+"en": "My domed brown shell has neat golden hexagon patterns.",
+"lo": "ກະດອງສີນ້ຳຕານກົມຂອງຂ້ອຍມີລາຍຫົກຫຼ່ຽມສີຄຳງາມ.",
+"th": "กระดองสีน้ำตาลกลมของฉันมีลายหกเหลี่ยมสีทองงาม",
+"zh": "我圆圆的棕色龟壳上画着整齐的金色六边形花纹。",
+"ja": "ちゃいろの こうらに きれいな もようが あるよ。",
+"who": "tortoise",
+"tag": "looks"
+},
+"ana_tortoise.5": {
+"en": "Tortoises live on land and carry their sturdy homes on their backs.",
+"lo": "ເຕົ່າບົກອາໄສຢູ່ເທິງບົກ ແລະ ແບກເຮືອນແຂງແຮງໄວ້ເທິງຫຼັງ.",
+"th": "เต่าบกอาศัยอยู่บนบกและแบกบ้านแข็งแรงไว้บนหลัง",
+"zh": "陆龟生活在陆地上，背上驮着自己结实的小房子。",
+"ja": "かめは せなかに おうちを のせて あるくんだよ。",
+"who": "tortoise",
+"tag": "fact"
+},
+"ana_tortoise.6": {
+"en": "Plop, tumble!",
+"lo": "ຕຸບ ກິ້ງ!",
+"th": "ตุ้บ กลิ้ง!",
+"zh": "扑通打个滚！",
+"ja": "ぽとん、ころりん！",
+"who": "tortoise",
+"tag": "sound"
+},
+"ana_flutter.0": {
+"en": "A story butterfly. A golden story butterfly sparkles as it dances through the air.",
+"lo": "ແມງກະເບື້ອນິທານ. ແມງກະເບື້ອນິທານສີຄຳ ເຫຼື້ອມວິບວັບຕອນບິນຟ້ອນໃນອາກາດ.",
+"th": "ผีเสื้อนิทาน ผีเสื้อนิทานสีทองระยิบระยับตอนบินรำในอากาศ",
+"zh": "故事蝴蝶。金色故事蝴蝶在空中闪闪发光地翩翩起舞。",
+"ja": "おはなしの ちょうちょ。きんいろの ちょうちょが きらきら ひかりながら まうよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_flutter.1": {
+"en": "Hello, story butterfly!",
+"lo": "ສະບາຍດີ ແມງກະເບື້ອນິທານ!",
+"th": "สวัสดีผีเสื้อนิทาน!",
+"zh": "你好，故事蝴蝶！",
+"ja": "こんにちは、おはなしの ちょうちょ！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_flutter.2": {
+"en": "Each story butterfly carries a tale floating out across the village!",
+"lo": "ແມງກະເບື້ອນິທານແຕ່ລະໂຕພານິທານລອຍໄປທົ່ວໝູ່ບ້ານ!",
+"th": "ผีเสื้อนิทานแต่ละตัวพานิทานลอยไปทั่วหมู่บ้าน!",
+"zh": "每一只故事蝴蝶都载着一个故事飞向村庄四方！",
+"ja": "ちょうちょが おはなしを のせて そらへ とんで いくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_flutter.3": {
+"en": "Glowing gold wings trail soft sparkles in the warm breeze.",
+"lo": "ປີກສີຄຳເຮືອງແສງປ່ອຍປະກາຍອ່ອນໆໃນສາຍລົມອຸ່ນ.",
+"th": "ปีกสีทองเรืองแสงปล่อยประกายอ่อนๆ ในสายลมอุ่น",
+"zh": "发着金光的翅膀在暖风中洒下柔和星点。",
+"ja": "きんいろの はねから きらきらが こぼれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_flutter.4": {
+"en": "Butterflies taste sweet nectar with tiny sensors on their feet.",
+"lo": "ແມງກະເບື້ອຊີມນ້ຳຫວານດອກໄມ້ດ້ວຍຕີນນ້ອຍໆຂອງມັນ.",
+"th": "ผีเสื้อชิมน้ำหวานดอกไม้ด้วยเท้าน้อยๆ ของมัน",
+"zh": "蝴蝶是用小脚上的小器官来品尝花蜜的呢。",
+"ja": "ちょうちょは あしで おはなの みつの あじが わかるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_flutter.5": {
+"en": "Flutter, sparkle!",
+"lo": "ກະພືບ ວິບວັບ!",
+"th": "พั่บๆ ระยิบ!",
+"zh": "扑扑翅膀闪金光！",
+"ja": "ひらひら、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_loom.0": {
+"en": "A kente loom. The kente loom weaves bright strips of gold, green and crimson.",
+"lo": "ກີ່ຕ່ຳຫູກເຄັນເຕ. ກີ່ຕ່ຳຫູກເຄັນເຕ ຕ່ຳຜ້າລາຍສີຄຳ ຂຽວ ແລະ ແດງສົດ.",
+"th": "กี่ทอผ้าเคนเต กี่ทอผ้าเคนเตทอผ้าลายสีทอง เขียว และแดงสด",
+"zh": "肯特织布机。肯特织布机织出金黄、翠绿和鲜红的绚丽布条。",
+"ja": "ケンテの はたおりき。ケンテの はたおりきで きいろや みどりの ぬのを おるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_loom.1": {
+"en": "Aso weaves bright kente strips right here on her wooden loom!",
+"lo": "ອາໂຊຕ່ຳຜ້າເຄັນເຕສົດໃສຢູ່ກີ່ໄມ້ນີ້!",
+"th": "อาโซทอผ้าเคนเตสดใสอยู่ที่กี่ไม้นี้!",
+"zh": "阿索就在这架木织布机上织出绚丽的肯特布条！",
+"ja": "アソが きれいな ケンテの ぬのを おる どうぐだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_loom.2": {
+"en": "Rich gold, crimson and green patterns glow tightly on the frame.",
+"lo": "ລາຍສີຄຳ ແດງ ແລະ ຂຽວສ່ອງງາມແໜ້ນຢູ່ເທິງກີ່.",
+"th": "ลายสีทอง แดง และเขียวส่องสวยแน่นอยู่บนกี่",
+"zh": "金黄、深红和翠绿的几何花纹在织架上熠熠生辉。",
+"ja": "きんいろや あかや みどりの きれいな ぬのが みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_loom.3": {
+"en": "Every colour and pattern in Ghanaian kente cloth tells a story!",
+"lo": "ທຸກສີ ແລະ ທຸກລາຍໃນຜ້າເຄັນເຕການາລ້ວນເລົ່າເລື່ອງລາວ!",
+"th": "ทุกสีและทุกลายในผ้าเคนเตกานาล้วนเล่าเรื่องราว!",
+"zh": "加纳肯特布上的每一种颜色和花纹都蕴含着故事和寓意！",
+"ja": "ケンテの もようには それぞれ すてきな いみが あるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_loom.4": {
+"en": "Clack, weave!",
+"lo": "ແກັກ ຕ່ຳ!",
+"th": "แกร๊ก ทอ!",
+"zh": "织布机咔嗒作响！",
+"ja": "とんとん、からから！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_drum.0": {
+"en": "A talking drum. A talking drum sends warm rhythms across the Ashanti village.",
+"lo": "ກອງເວົ້າ. ກອງເວົ້າ ສົ່ງຈັງຫວະອຸ່ນໆໄປທົ່ວໝູ່ບ້ານອາຊັນຕີ.",
+"th": "กลองพูด กลองพูดส่งจังหวะอุ่นๆ ไปทั่วหมู่บ้านอาซานตี",
+"zh": "说话鼓。说话鼓把温暖欢快的鼓点传遍阿散蒂村庄。",
+"ja": "おしゃべり たいこ。おしゃべり たいこが むらじゅうに リズムを ひびかせるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_drum.1": {
+"en": "Rat-a-tat! The talking drum calls friends with warm beats!",
+"lo": "ຕຶ່ງ-ຕຶ່ງ! ກອງເວົ້າເອີ້ນໝູ່ມາດ້ວຍຈັງຫວະອົບອຸ່ນ!",
+"th": "ตึ่ง-ตึ่ง! กลองพูดเรียกเพื่อนมาด้วยจังหวะอบอุ่น!",
+"zh": "咚咚哒！说话鼓用温暖的鼓点呼唤大家！",
+"ja": "とんとん！ やさしい リズムで みんなを よぶよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_drum.2": {
+"en": "Carved wooden shells and taut drumheads gleam in sunset light.",
+"lo": "ໂຕກອງໄມ້ແກະສະຫຼັກ ແລະ ໜ້າກອງເຄັ່ງເຫຼື້ອມໃນແສງແລງ.",
+"th": "ตัวกลองไม้แกะสลักและหน้ากลองตึงเงาในแสงเย็น",
+"zh": "雕花木鼓身和紧绷的鼓面在灯光下泛着暖光。",
+"ja": "きれいな ほりものが ついた たいこだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_drum.3": {
+"en": "Ashanti talking drums can copy the rising and falling tones of speech!",
+"lo": "ກອງເວົ້າອາຊັນຕີສາມາດຕີສຽງສູງຕ່ຳຄືຄຳເວົ້າຂອງຄົນໄດ້!",
+"th": "กลองพูดอาซานตีสามารถตีเสียงสูงต่ำเหมือนคำพูดของคนได้!",
+"zh": "阿散蒂说话鼓能敲出高低起伏的音调，就像在说话一样！",
+"ja": "たかい おとと ひくい おとで おしゃべりみたいに なるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_drum.4": {
+"en": "Rat-a-tat, boom!",
+"lo": "ຕຶ່ງໆ ຕູມ!",
+"th": "ตึ่งๆ ตูม!",
+"zh": "咚咚哒！",
+"ja": "とんとん、どんっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_villagesky.0": {
+"en": "The Ashanti sky. The Ashanti sky stretches bright and warm over the village.",
+"lo": "ທ້ອງຟ້າອາຊັນຕີ. ທ້ອງຟ້າອາຊັນຕີ ແຜ່ກວ້າງສົດໃສ ແລະ ອົບອຸ່ນເໜືອໝູ່ບ້ານ.",
+"th": "ท้องฟ้าอาซานตี ท้องฟ้าอาซานตีแผ่กว้างสดใสและอบอุ่นเหนือหมู่บ้าน",
+"zh": "阿散蒂天空。阿散蒂的天空在村庄上方温暖明朗地展开。",
+"ja": "アシャンティの そら。アシャンティの そらが むらの うえに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_villagesky.1": {
+"en": "Morning sun, rosy sunset and starry nights all pass across this sky.",
+"lo": "ແດດເຊົ້າ ແສງແລງສີບົວ ແລະ ຄືນດາວລ້ວນຜ່ານທ້ອງຟ້ານີ້.",
+"th": "แดดเช้า แสงเย็นสีชมพู และคืนดาวล้วนผ่านท้องฟ้านี้",
+"zh": "晨光、玫瑰色晚霞和满天繁星依次流过这片天空。",
+"ja": "あさも ゆうがたも ほしぞらも ぜんぶ きれいな そらだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_villagesky.2": {
+"en": "Soft painted brushstrokes blend warm gold into clear blue.",
+"lo": "ສີແຕ້ມອ່ອນໆປະສານສີຄຳອຸ່ນເຂົ້າກັບສີຟ້າໃສ.",
+"th": "สีวาดอ่อนๆ ผสานสีทองอุ่นเข้ากับสีฟ้าใส",
+"zh": "柔和的手绘笔触把暖金色融进澄澈的蓝天里。",
+"ja": "やさしい いろが とけあう きれいな そらだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_villagesky.3": {
+"en": "Ghana lies near the equator, so sunshine feels warm all year!",
+"lo": "ປະເທດການາຢູ່ໃກ້ເສັ້ນສູນສູດ ແສງແດດຈຶ່ງອຸ່ນຕະຫຼອດປີ!",
+"th": "กานาอยู่ใกล้เส้นศูนย์สูตร แสงแดดจึงอุ่นตลอดปี!",
+"zh": "加纳靠近赤道，一年四季都有温暖明亮的阳光！",
+"ja": "ガーナは いちねんじゅう ぽかぽか あたたかい ところだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_villagesky.4": {
+"en": "Breeze, shine!",
+"lo": "ລົມອ່ອນ ສ່ອງແສງ!",
+"th": "ลมอ่อน ส่องแสง!",
+"zh": "微风拂过晴空！",
+"ja": "そよそよ、ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_hills.0": {
+"en": "Odum hills. The odum hills roll green and peaceful beyond the courtyard.",
+"lo": "ພູປ່າໂອດຸມ. ພູປ່າໂອດຸມ ທອດຍາວສີຂຽວສະຫງົບຢູ່ຫຼັງເດີ່ນບ້ານ.",
+"th": "ภูเขาป่าโอดุม ภูเขาป่าโอดุมทอดยาวสีเขียวสงบอยู่หลังลานบ้าน",
+"zh": "奥杜姆群山。翠绿宁静的奥杜姆群山连绵在村庄后方。",
+"ja": "オドゥムの やま。みどりの オドゥムの やまが とおくに みえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_hills.1": {
+"en": "Tall silk-cotton crowns dot the green hills behind the village.",
+"lo": "ຍອດຕົ້ນງິ້ວສູງປະດັບເທິງພູສີຂຽວຢູ່ຫຼັງໝູ່ບ້ານ.",
+"th": "ยอดต้นงิ้วสูงประดับบนภูเขาสีเขียวหลังหมู่บ้าน",
+"zh": "高大的树冠点缀在村庄背后连绵的青山上。",
+"ja": "むらの うしろに みどりの やまが つづいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_hills.2": {
+"en": "Soft rolling slopes turn deep emerald beneath the evening stars.",
+"lo": "ເນີນພູຄື້ນອ່ອນປ່ຽນເປັນສີຂຽວເຂັ້ມໃຕ້ແສງດາວຍາມຄ່ຳ.",
+"th": "เนินเขาคลื่นอ่อนเปลี่ยนเป็นสีเขียวเข้มใต้แสงดาวยามค่ำ",
+"zh": "柔和起伏的山坡在星夜下化作静谧的深翠绿。",
+"ja": "なだらかな やまが ほしの したで しずかに ねむるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_hills.3": {
+"en": "The Ashanti region of Ghana is famous for its lush green hills.",
+"lo": "ເຂດອາຊັນຕີຂອງການາມີຊື່ສຽງດ້ານພູເຂົາສີຂຽວອຸດົມສົມບູນ.",
+"th": "เขตอาซานตีของกานามีชื่อเสียงด้านภูเขาสีเขียวอุดมสมบูรณ์",
+"zh": "加纳的阿散蒂地区以郁郁葱葱的青山闻名。",
+"ja": "アシャンティには みどり いっぱいの やまが あるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_hills.4": {
+"en": "Hush, breeze!",
+"lo": "ຊູ່ ລົມອ່ອນ!",
+"th": "ชู่ ลมอ่อน!",
+"zh": "远山清风静谧！",
+"ja": "そよそよ、しずかだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_arch.0": {
+"en": "A courtyard arch. The courtyard arch is decorated with swirling Adinkra patterns.",
+"lo": "ປະຕູໂຄ້ງເດີ່ນບ້ານ. ປະຕູໂຄ້ງເດີ່ນບ້ານ ປະດັບດ້ວຍລວດລາຍອາດິງກຣາວົນງາມ.",
+"th": "ซุ้มประตูลานบ้าน ซุ้มประตูลานบ้านประดับด้วยลวดลายอดิงกราวนงาม",
+"zh": "村庄拱门。村庄拱门装饰着卷曲美丽的阿丁克拉花纹。",
+"ja": "にわの アーチ。にわの アーチに きれいな うずまき もようが あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_arch.1": {
+"en": "Villagers walk through this terracotta arch into the sunny yard.",
+"lo": "ຊາວບ້ານຍ່າງລອດປະຕູໂຄ້ງດິນເຜົານີ້ເຂົ້າສູ່ເດີ່ນບ້ານແດດອຸ່ນ.",
+"th": "ชาวบ้านเดินลอดซุ้มประตูดินเผานี้เข้าสู่ลานบ้านแดดอุ่น",
+"zh": "村民们穿过这座红土拱门走进阳光温暖的院子。",
+"ja": "この アーチを くぐって にわへ はいるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_arch.2": {
+"en": "Swirling ochre Adinkra carvings frame the cool shady doorway.",
+"lo": "ລາຍແກະສະຫຼັກອາດິງກຣາສີເຫຼືອງອຸ່ນລ້ອມປະຕູຮົ່ມເຢັນ.",
+"th": "ลายแกะสลักอดิงกราสีเหลืองอุ่นล้อมประตูร่มเย็น",
+"zh": "卷曲的赭色阿丁克拉浮雕环绕着阴凉的门洞。",
+"ja": "あたたかい つちいろの かべに もようが ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_arch.3": {
+"en": "Traditional Ashanti courtyards are built around a shared open space.",
+"lo": "ເຮືອນອາຊັນຕີບູຮານສ້າງອ້ອມເດີ່ນກາງທີ່ທຸກຄົນໃຊ້ຮ່ວມກັນ.",
+"th": "เรือนอาซานตีโบราณสร้างรอบลานกลางที่ทุกคนใช้ร่วมกัน",
+"zh": "传统阿散蒂民居围绕着大家共享的开阔庭院而建。",
+"ja": "みんなで あつまる ひろい にわを かこむ いえだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_arch.4": {
+"en": "Warm shade, hush!",
+"lo": "ຮົ່ມອຸ່ນ ຊູ່!",
+"th": "ร่มอุ่น ชู่!",
+"zh": "拱门静谧遮阳！",
+"ja": "すずしい かげだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_umbrella.0": {
+"en": "A royal umbrella. A royal umbrella shades Sky God Nyame's sunlit cloud court.",
+"lo": "ຄັນຮົ່ມຫຼວງ. ຄັນຮົ່ມຫຼວງ ກັ້ງຮົ່ມໃຫ້ວັງເມກແດດອຸ່ນຂອງເທບນະຍາເມ.",
+"th": "ร่มหลวง ร่มหลวงกางร่มให้วังเมฆแดดอุ่นของเทพนยาเม",
+"zh": "皇家华盖伞。华丽的皇家华盖伞为天神尼亚美的云宫遮阳。",
+"ja": "おうさまの かさ。おうさまの かさが そらの にわを りっぱに かざるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_umbrella.1": {
+"en": "Tall royal umbrellas shade Nyame's court in crimson and gold!",
+"lo": "ຄັນຮົ່ມຫຼວງສູງກັ້ງຮົ່ມໃຫ້ວັງນະຍາເມດ້ວຍສີແດງ ແລະ ສີຄຳ!",
+"th": "ร่มหลวงสูงกางร่มให้วังนยาเมด้วยสีแดงและสีทอง!",
+"zh": "高大的皇家华盖伞以深红和金色装点着天神的云宫！",
+"ja": "おおきな きれいな かさが そらの みやを かざるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_umbrella.2": {
+"en": "Kente panels and golden tassels sway gently in the sky breeze.",
+"lo": "ຜ້າເຄັນເຕ ແລະ ພູ່ສີຄຳແກວ່ງຄ່ອຍໆໃນສາຍລົມເທິງຟ້າ.",
+"th": "ผ้าเคนเตและพู่สีทองแกว่งเบาๆ ในสายลมบนฟ้า",
+"zh": "肯特布伞面和金色流苏在云端清风里轻轻摇摆。",
+"ja": "きんの ふさが かぜに ゆらゆら ゆれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_umbrella.3": {
+"en": "In Ashanti culture, a grand state umbrella is called a kyiniie.",
+"lo": "ໃນວັດທະນະທຳອາຊັນຕີ ຄັນຮົ່ມຫຼວງໃຫຍ່ເອີ້ນວ່າ ຄີນີເອ.",
+"th": "ในวัฒนธรรมอาซานตี ร่มหลวงใหญ่เรียกว่า คีนีเอ",
+"zh": "在阿散蒂文化里，华丽的皇家大伞象征着尊贵与庇护。",
+"ja": "おうさまを まもる とくべつな おおきな かさなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_umbrella.4": {
+"en": "Flutter, sway!",
+"lo": "ສະບັດ ແກວ່ງ!",
+"th": "สะบัด แกว่ง!",
+"zh": "华盖迎风轻摇！",
+"ja": "ひらひら、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_brasslamps.0": {
+"en": "Oil lamps. Brass oil lamps gleam warmly atop a carved ivory terrace plinth.",
+"lo": "ຕະກຽງທອງເຫຼືອງ. ຕະກຽງທອງເຫຼືອງ ສ່ອງແສງອຸ່ນຢູ່ເທິງແທ່ນງາຊ້າງແກະສະຫຼັກ.",
+"th": "ตะเกียงทองเหลือง ตะเกียงทองเหลืองส่องแสงอุ่นอยู่บนแท่นงาช้างแกะสลัก",
+"zh": "黄铜油灯。黄铜油灯在雕花象牙高台上散发着温暖的光泽。",
+"ja": "きんの らんぷ。きんの らんぷが しろい だいの うえで あたたかく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_brasslamps.1": {
+"en": "Warm golden light dances softly above these brass oil lamps.",
+"lo": "ແສງສີຄຳອຸ່ນຟ້ອນລຳອ່ອນໆເໜືອຕະກຽງທອງເຫຼືອງເຫຼົ່ານີ້.",
+"th": "แสงสีทองอุ่นเต้นรำอ่อนๆ เหนือตะเกียงทองเหลืองเหล่านี้",
+"zh": "温暖的金色光芒在黄铜油灯上方柔柔跳动。",
+"ja": "きんの らんぷが あたたかい ひかりを ともすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_brasslamps.2": {
+"en": "Polished brass vessels shine proudly on carved ivory stone.",
+"lo": "ພາຊະນະທອງເຫຼືອງຂັດເງົາສ່ອງງາມເທິງແທ່ນຫີນສີງາຊ້າງ.",
+"th": "ภาชนะทองเหลืองขัดเงาส่องงามบนแท่นหินสีงาช้าง",
+"zh": "擦得锃亮的黄铜油灯稳稳立在雕花白石台上。",
+"ja": "ぴかぴかの きんの つぼが しろい だいに のっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_brasslamps.3": {
+"en": "Ashanti brass workers cast intricate lamps using beeswax moulds!",
+"lo": "ຊ່າງທອງເຫຼືອງອາຊັນຕີຫຼໍ່ຕະກຽງລະອຽດດ້ວຍແມ່ພິມຂີ້ເຜິ້ງ!",
+"th": "ช่างทองเหลืองอาซานตีหล่อตะเกียงละเอียดด้วยแม่พิมพ์ขี้ผึ้ง!",
+"zh": "阿散蒂铜匠用古老的失蜡法铸造出精美的黄铜油灯！",
+"ja": "ていねいに つくられた きんの らんぷなんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_brasslamps.4": {
+"en": "Glow, shimmer!",
+"lo": "ເຮືອງ ວິບວັບ!",
+"th": "เรือง ระยิบ!",
+"zh": "油灯暖光微闪！",
+"ja": "ぽわっ、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_royaldrum.0": {
+"en": "A drum. The royal sky-drum booms like gentle thunder across the clouds.",
+"lo": "ກອງຫຼວງວັງຟ້າ. ກອງຫຼວງວັງຟ້າ ດັງກ້ອງຄືສຽງຟ້າຮ້ອງເບົາໆຂ້າມກ້ອນເມກ.",
+"th": "กลองหลวงวังฟ้า กลองหลวงวังฟ้าดังก้องเหมือนเสียงฟ้าร้องเบาๆ ข้ามก้อนเมฆ",
+"zh": "天宫皇家大鼓。天宫皇家大鼓像温柔的春雷在云海间回响。",
+"ja": "そらの おおだいこ。そらの おおだいこが どんっと くもに ひびくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_royaldrum.1": {
+"en": "Boom-boom! Sky God Nyame taps his golden sky-drum with a laugh!",
+"lo": "ຕູມໆ! ເທບນະຍາເມຕີກອງຫຼວງວັງຟ້າພ້ອມສຽງຫົວ!",
+"th": "ตูมๆ! เทพนยาเมตีกลองหลวงวังฟ้าพร้อมเสียงหัวเราะ!",
+"zh": "咚咚！天神尼亚美笑着敲响了他的天宫皇家大鼓！",
+"ja": "どんっ！ ニャメが わらいながら たいこを たたくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_royaldrum.2": {
+"en": "Carved gold lattice gleams around the round cream drumhead.",
+"lo": "ລາຍຕາຂ່າຍສີຄຳແກະສະຫຼັກເຫຼື້ອມອ້ອມໜ້າກອງສີຄີມກົມ.",
+"th": "ลายตาข่ายสีทองแกะสลักเงาอ้อมหน้ากลองสีครีมกลม",
+"zh": "精雕的金色花格环绕着圆润的乳白色鼓面。",
+"ja": "きんいろの かざりが ついた おおきな たいこだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_royaldrum.3": {
+"en": "Royal drums greet visitors and celebrate big moments in Ashanti.",
+"lo": "ກອງຫຼວງຕ້ອນຮັບແຂກ ແລະ ສະຫຼອງໂອກາດສຳຄັນໃນອາຊັນຕີ.",
+"th": "กลองหลวงต้อนรับแขกและฉลองโอกาสสำคัญในอาซานตี",
+"zh": "在阿散蒂王庭，皇家大鼓用来迎接贵客和欢庆盛典。",
+"ja": "おきゃくさまを むかえる りっぱな おおだいこだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_royaldrum.4": {
+"en": "Boom-boom, echo!",
+"lo": "ຕູມໆ ກ້ອງ!",
+"th": "ตูมๆ ก้อง!",
+"zh": "大鼓轰隆回响！",
+"ja": "どーん、どーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_balustrade.0": {
+"en": "A cloud balustrade. The cloud balustrade borders Sky God Nyame's golden terrace.",
+"lo": "ຮົ້ວງາຊ້າງເມກ. ຮົ້ວງາຊ້າງເມກ ລ້ອມຂອບລະບຽງສີຄຳຂອງເທບນະຍາເມ.",
+"th": "รั้วงาช้างเมฆ รั้วงาช้างเมฆล้อมขอบระเบียงสีทองของเทพนยาเม",
+"zh": "云端白玉栏。云端白玉栏杆优雅地围起天神的金色露台。",
+"ja": "くもの てすり。くもの てすりが きんいろの にわを ぐるりと かこむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_balustrade.1": {
+"en": "Carved ivory rails border the glowing golden cloud courtyard.",
+"lo": "ຮົ້ວງາຊ້າງແກະສະຫຼັກລ້ອມຂອບເດີ່ນເມກສີຄຳເຮືອງແສງ.",
+"th": "รั้วงาช้างแกะสลักล้อมขอบลานเมฆสีทองเรืองแสง",
+"zh": "雕花白玉栏杆整齐围着发光的金色云庭。",
+"ja": "しろくて きれいな てすりが にわを かこんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_balustrade.2": {
+"en": "Soft cream stone pillars nestle inside warm golden cloud puffs.",
+"lo": "ເສົາຫີນສີຄີມອ່ອນຢູ່ໃນກ້ອນເມກສີຄຳອຸ່ນ.",
+"th": "เสาหินสีครีมอ่อนอยู่ในก้อนเมฆสีทองอุ่น",
+"zh": "温润的乳白石栏依偎在暖金色云团之间。",
+"ja": "ふわふわの くもの なかに しろい てすりが みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_balustrade.3": {
+"en": "Low balustrades keep the open view wide and clear above the sky.",
+"lo": "ຮົ້ວຕ່ຳຊ່ວຍໃຫ້ເຫັນວິວທ້ອງຟ້າກວ້າງ ແລະ ຊັດເຈນ.",
+"th": "รั้วต่ำช่วยให้เห็นวิวท้องฟ้ากว้างและชัดเจน",
+"zh": "低矮的栏杆让云端壮丽的晴空美景一览无遗。",
+"ja": "ひくい てすりだから そらの けしきが よく みえるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_balustrade.4": {
+"en": "Hush, breeze!",
+"lo": "ຊູ່ ລົມອ່ອນ!",
+"th": "ชู่ ลมอ่อน!",
+"zh": "云栏清风轻拂！",
+"ja": "そよそよ、きもちいいよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_clouds.0": {
+"en": "Billowing clouds. Billowing clouds drift softly around the golden sky court.",
+"lo": "ກ້ອນເມກຟູ. ກ້ອນເມກຟູ ລອຍອ່ອນໆອ້ອມວັງຟ້າສີຄຳ.",
+"th": "ก้อนเมฆฟู ก้อนเมฆฟูลอยอ่อนๆ รอบวังฟ้าสีทอง",
+"zh": "翻涌彩云。翻涌的彩云在金色天宫四周轻柔飘荡。",
+"ja": "ふわふわの くも。ふわふわの くもが そらの みやを やさしく つつむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_clouds.1": {
+"en": "Fluffy golden clouds cradle the corners of Nyame's sky court!",
+"lo": "ກ້ອນເມກສີຄຳຟູໂອບອ້ອມມຸມວັງຟ້າຂອງເທບນະຍາເມ!",
+"th": "ก้อนเมฆสีทองฟูโอบล้อมมุมวังฟ้าของเทพนยาเม!",
+"zh": "蓬松的金色云朵温柔托起天宫的每一个角落！",
+"ja": "ふわふわの きんの くもが にわを つつんでいるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_clouds.2": {
+"en": "Creamy ivory and sunlit amber curls puff soft as cotton.",
+"lo": "ກ້ອນເມກສີງາຊ້າງ ແລະ ສີອຳພັນແດດອຸ່ນຟູນຸ້ມຄືຝ້າຍ.",
+"th": "ก้อนเมฆสีงาช้างและสีอำพันแดดอุ่นฟูนุ่มเหมือนฝ้าย",
+"zh": "乳白与琥珀金的云卷像软绵绵的棉花糖。",
+"ja": "わたがしみたいに ふわふわ やわらかそうだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_clouds.3": {
+"en": "Sunlight turns white cloud edges warm gold at sunrise!",
+"lo": "ແສງແດດປ່ຽນຂອບເມກສີຂາວເປັນສີຄຳອຸ່ນຍາມຕາເວັນຂຶ້ນ!",
+"th": "แสงแดดเปลี่ยนขอบเมฆสีขาวเป็นสีทองอุ่นยามพระอาทิตย์ขึ้น!",
+"zh": "日出时，阳光会把白云的边缘染成温暖的金色！",
+"ja": "おひさまの ひかりで くもが きんいろに なるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_clouds.4": {
+"en": "Puff, float!",
+"lo": "ຟູ ລອຍ!",
+"th": "ฟู ลอย!",
+"zh": "彩云轻飘！",
+"ja": "ふわふわ、ぷかぷか！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_nyame.0": {
+"en": "Nyame. Sky God Nyame keeps every tale inside the Golden Story Box.",
+"lo": "ເທບນະຍາເມ. ເທບນະຍາເມ ເກັບນິທານທຸກເລື່ອງໄວ້ໃນກ່ອງນິທານສີຄຳ.",
+"th": "เทพนยาเม เทพนยาเมเก็บนิทานทุกเรื่องไว้ในกล่องนิทานสีทอง",
+"zh": "天神尼亚美。天神尼亚美把所有的故事都珍藏在黄金故事盒里。",
+"ja": "そらの かみ ニャメ。そらの かみ ニャメは すべての おはなしを もっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_nyame.1": {
+"en": "Hello, Nyame!",
+"lo": "ສະບາຍດີ ເທບນະຍາເມ!",
+"th": "สวัสดีเทพนยาเม!",
+"zh": "你好，天神尼亚美！",
+"ja": "こんにちは、そらの かみ ニャメ！",
+"who": "nyame",
+"tag": "greet"
+},
+"ana_nyame.2": {
+"en": "Welcome to my golden cloud court! I am Nyame!",
+"lo": "ຍິນດີຕ້ອນຮັບສູ່ວັງເມກສີຄຳຂອງຂ້ອຍ! ຂ້ອຍແມ່ນເທບນະຍາເມ!",
+"th": "ยินดีต้อนรับสู่วังเมฆสีทองของข้า! ข้าคือเทพนยาเม!",
+"zh": "欢迎来到我的金色云宫！我是天神尼亚美！",
+"ja": "きんの くもの みやへ ようこそ！ ニャメだよ！",
+"who": "nyame",
+"tag": "greet"
+},
+"ana_nyame.3": {
+"en": "I guard the Golden Story Box high above the sunlit clouds.",
+"lo": "ຂ້ອຍຮັກສາກ່ອງນິທານສີຄຳໄວ້ສູງເໜືອກ້ອນເມກແດດອຸ່ນ.",
+"th": "ข้ารักษากล่องนิทานสีทองไว้สูงเหนือก้อนเมฆแดดอุ่น",
+"zh": "我在阳光云海之上守护着黄金故事盒。",
+"ja": "くもの うえで おはなしばこを まもっているよ。",
+"who": "nyame",
+"tag": "does"
+},
+"ana_nyame.4": {
+"en": "My royal kente robes gleam in gold, crimson and forest green.",
+"lo": "ເສື້ອຄຸມຫຼວງຜ້າເຄັນເຕຂອງຂ້ອຍເຫຼື້ອມສີຄຳ ແດງ ແລະ ຂຽວ.",
+"th": "เสื้อคลุมหลวงผ้าเคนเตของข้าเงางามสีทอง แดง และเขียว",
+"zh": "我的皇家肯特长袍闪耀着金色、深红和翠绿。",
+"ja": "きんいろと あかと みどりの ころもが かがやくよ。",
+"who": "nyame",
+"tag": "looks"
+},
+"ana_nyame.5": {
+"en": "In Ashanti tradition, Nyame is the wise Sky God who honours promises.",
+"lo": "ໃນປະເພນີອາຊັນຕີ ເທບນະຍາເມແມ່ນເທບແຫ່ງຟ້າທີ່ຮັກສາຄຳໝັ້ນສັນຍາ.",
+"th": "ในประเพณีอาซานตี เทพนยาเมคือเทพแห่งฟ้าที่รักษาคำมั่นสัญญา",
+"zh": "在阿散蒂传统里，尼亚美是信守诺言的智慧天神。",
+"ja": "ニャメは やくそくを しっかり まもる そらの かみさまだよ。",
+"who": "nyame",
+"tag": "fact"
+},
+"ana_nyame.6": {
+"en": "When Anansi kept his word, I blessed every forest wonder!",
+"lo": "ເມື່ອອານັນຊີຮັກສາຄຳເວົ້າ ຂ້ອຍກໍອວຍພອນສິ່ງມະຫັດສະຈັນທຸກໂຕ!",
+"th": "เมื่ออนันซีรักษาคำพูด ข้าก็อวยพรสิ่งมหัศจรรย์ทุกตัว!",
+"zh": "阿南西信守承诺，我祝福了每一位森林伙伴！",
+"ja": "アナンシが がんばったから おはなしばこを あげたよ！",
+"who": "nyame",
+"tag": "does"
+},
+"ana_nyame.7": {
+"en": "Boom, clap, hooray!",
+"lo": "ຕູມ ແປະ ໄຊໂຍ!",
+"th": "ตูม แปะ ไชโย!",
+"zh": "咚咚鼓响，欢呼喝彩！",
+"ja": "どんっ、ぱちぱち！",
+"who": "nyame",
+"tag": "sound"
+},
+"ana_storybox.0": {
+"en": "Story Box. The Golden Story Box holds all the tales of the world.",
+"lo": "ກ່ອງນິທານສີຄຳ. ກ່ອງນິທານສີຄຳ ເກັບນິທານທັງໝົດຂອງໂລກໄວ້ຂ້າງໃນ.",
+"th": "กล่องนิทานสีทอง กล่องนิทานสีทองเก็บนิทานทั้งหมดของโลกไว้ข้างใน",
+"zh": "黄金故事盒。黄金故事盒里珍藏着全世界的精彩故事。",
+"ja": "きんいろの おはなしばこ。きんいろの おはなしばこには せかいの おはなしが つまっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_storybox.1": {
+"en": "Sky God Nyame keeps every tale locked safely inside this box.",
+"lo": "ເທບນະຍາເມເກັບນິທານທຸກເລື່ອງໄວ້ຢ່າງປອດໄພໃນກ່ອງນີ້.",
+"th": "เทพนยาเมเก็บนิทานทุกเรื่องไว้อย่างปลอดภัยในกล่องนี้",
+"zh": "天神尼亚美把全世界的奇闻故事都锁在这个盒子里。",
+"ja": "せかいの おはなしが たいせつに しまって ある はこだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_storybox.2": {
+"en": "Carved golden Ashanti spirals gleam along every side.",
+"lo": "ລາຍກ້ຽວສີຄຳອາຊັນຕີແກະສະຫຼັກເຫຼື້ອມງາມທຸກດ້ານ.",
+"th": "ลายเกลียวสีทองอาซานตีแกะสลักเงางามทุกด้าน",
+"zh": "盒身四面都雕刻着闪闪发亮的阿散蒂金色螺旋纹。",
+"ja": "きんいろの うずまき もようが ほって あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_storybox.3": {
+"en": "In Ghana, stories are treasured like gleaming royal gold.",
+"lo": "ໃນປະເທດການາ ນິທານມີຄ່າຄືຄຳຫຼວງທີ່ສ່ອງແສງ.",
+"th": "ในกานา นิทานมีค่าเหมือนทองคำหลวงที่ส่องแสง",
+"zh": "在加纳，人们把代代相传的故事看得像黄金一样珍贵。",
+"ja": "ガーナでは おはなしは たからものみたいに だいじだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_storybox.4": {
+"en": "Glow, click!",
+"lo": "ເຮືອງ ແກັກ!",
+"th": "เรือง แกร๊ก!",
+"zh": "金盒微闪！",
+"ja": "きらり、かちっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_banner.0": {
+"en": "A golden banner. A golden banner shows one of the four wonders Nyame asked for.",
+"lo": "ທຸງສີຄຳ. ທຸງສີຄຳ ສະແດງໜຶ່ງໃນສີ່ສິ່ງມະຫັດສະຈັນທີ່ເທບນະຍາເມຂໍ.",
+"th": "ธงสีทอง ธงสีทองแสดงหนึ่งในสี่สิ่งมหัศจรรย์ที่เทพนยาเมขอ",
+"zh": "金色旗帜。金色旗帜画着天神尼亚美提出的四件奇珍之一。",
+"ja": "きんいろの はた。きんいろの はたに ニャメの おねがいが かいて あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_banner.1": {
+"en": "Each golden banner unrolls to show one of Nyame's four wonders!",
+"lo": "ທຸງສີຄຳແຕ່ລະຜືນກາງອອກສະແດງໜຶ່ງໃນສີ່ສິ່ງມະຫັດສະຈັນ!",
+"th": "ธงสีทองแต่ละผืนกางออกแสดงหนึ่งในสี่สิ่งมหัศจรรย์!",
+"zh": "每一面金色旗帜展开，画着尼亚美要找的四件奇珍之一！",
+"ja": "きんの はたが ひらいて よっつの たからを みせるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_banner.2": {
+"en": "Woven red, green and gold borders shine around the emblem.",
+"lo": "ຂອບຜ້າສີແດງ ຂຽວ ແລະ ຄຳສ່ອງງາມອ້ອມຮູບສັນຍະລັກ.",
+"th": "ขอบผ้าสีแดง เขียว และทองส่องสวยรอบสัญลักษณ์",
+"zh": "红绿金三色织边环绕着精美的图案。",
+"ja": "あかと みどりと きんいろの もようが はでに ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_banner.3": {
+"en": "Royal banners announce important quests in West African courts.",
+"lo": "ທຸງຫຼວງປະກາດພາລະກິດສຳຄັນໃນລາຊະສຳນັກອາຟຣິກາຕາເວັນຕົກ.",
+"th": "ธงหลวงประกาศภารกิจสำคัญในราชสำนักแอฟริกาตะวันตก",
+"zh": "在西非宫廷里，皇家旗帜用来宣告重要的使命。",
+"ja": "おうさまの だいじな おしらせを つたえる はただよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_banner.4": {
+"en": "Flutter, snap!",
+"lo": "ສະບັດ ພັບ!",
+"th": "สะบัด พั่บ!",
+"zh": "旗帜迎风招展！",
+"ja": "ばさっ、ひらひら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_skysky.0": {
+"en": "The golden sky. The golden sky glows high above the billowing white clouds.",
+"lo": "ທ້ອງຟ້າສີຄຳ. ທ້ອງຟ້າສີຄຳ ສ່ອງແສງສູງເໜືອກ້ອນເມກຂາວຟູ.",
+"th": "ท้องฟ้าสีทอง ท้องฟ้าสีทองส่องแสงสูงเหนือก้อนเมฆขาวฟู",
+"zh": "金色晴空。金色晴空在翻涌的白云上方熠熠生辉。",
+"ja": "きんいろの そら。きんいろの そらが くもの うえで かがやいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_skysky.1": {
+"en": "Golden sunbeams pour across Nyame's high cerulean sky.",
+"lo": "ລຳແສງແດດສີຄຳສ່ອງທົ່ວທ້ອງຟ້າສີຄາມສູງຂອງເທບນະຍາເມ.",
+"th": "ลำแสงแดดสีทองส่องทั่วท้องฟ้าสีครามสูงของเทพนยาเม",
+"zh": "金色阳光倾洒在天神尼亚美高远的晴空里。",
+"ja": "そらの たかい ところから きんの ひかりが ふってくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_skysky.2": {
+"en": "Clear sky blue blends smoothly into warm sunrise gold.",
+"lo": "ສີຟ້າໃສປະສານລຽບເຂົ້າກັບສີຄຳຍາມຕາເວັນຂຶ້ນ.",
+"th": "สีฟ้าใสผสานเรียบเข้ากับสีทองยามพระอาทิตย์ขึ้น",
+"zh": "清澈的天蓝与温暖的朝霞金色柔和交融。",
+"ja": "あおい そらと あさやけの きんいろが とっても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_skysky.3": {
+"en": "High above the clouds, the sky looks bright even on cloudy days!",
+"lo": "ສູງເໜືອກ້ອນເມກ ທ້ອງຟ້າຍັງສົດໃສເຖິງແມ່ນມື້ມີເມກຫຼາຍ!",
+"th": "สูงเหนือก้อนเมฆ ท้องฟ้ายังสดใสแม้ในวันมีเมฆมาก!",
+"zh": "在云层之上，即使地面阴天，天空依然阳光灿烂！",
+"ja": "くもの うえは いつでも ぴかぴか はれて いるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_skysky.4": {
+"en": "Whoosh, gleam!",
+"lo": "ວູບ ເຫຼື້ອມ!",
+"th": "ฟิ้ว เงาวับ!",
+"zh": "晴空清风拂过！",
+"ja": "すーっ、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_cloudterrace.0": {
+"en": "Cloud terraces. Cloud terraces float softly like sunlit stairs across the heavens.",
+"lo": "ຊັ້ນເມກສີຄຳ. ຊັ້ນເມກສີຄຳ ລອຍອ່ອນໆຄືຂັ້ນໄດແສງແດດທົ່ວທ້ອງຟ້າ.",
+"th": "ชั้นเมฆสีทอง ชั้นเมฆสีทองลอยอ่อนๆ เหมือนขั้นบันไดแสงแดดทั่วท้องฟ้า",
+"zh": "金色云阶。金色云阶像阳光铺成的台阶漂浮在天际。",
+"ja": "きんの くもの だん。きんの くもの だんが そらに ふわふわ うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_cloudterrace.1": {
+"en": "Sunlit cloud terraces float far behind Sky God Nyame's court.",
+"lo": "ຊັ້ນເມກແດດອຸ່ນລອຍຢູ່ໄກໆຫຼັງວັງຂອງເທບນະຍາເມ.",
+"th": "ชั้นเมฆแดดอุ่นลอยอยู่ไกลๆ หลังวังของเทพนยาเม",
+"zh": "阳光照耀的云阶静静漂浮在天神云宫后方。",
+"ja": "きんの くもが とおくに ふわふわ ならんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_cloudterrace.2": {
+"en": "Soft cream and honey-gold puffs stack like palace steps.",
+"lo": "ກ້ອນເມກສີຄີມ ແລະ ສີຄຳນ້ຳເຜິ້ງຊ້ອນກັນຄືຂັ້ນໄດວັງ.",
+"th": "ก้อนเมฆสีครีมและสีทองน้ำผึ้งซ้อนกันเหมือนขั้นบันไดวัง",
+"zh": "奶油色与蜜金色的云朵像宫殿台阶般层层叠叠。",
+"ja": "ふわふわの くもが かいだんみたいに かさなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_cloudterrace.3": {
+"en": "Clouds are made of millions of tiny floating water droplets!",
+"lo": "ກ້ອນເມກເກີດຈາກຢົດນ້ຳນ້ອຍໆຫຼາຍລ້ານຢົດທີ່ລອຍຢູ່!",
+"th": "ก้อนเมฆเกิดจากหยดน้ำน้อยๆ หลายล้านหยดที่ลอยอยู่!",
+"zh": "云朵其实是由数不清的微小水珠漂浮汇聚而成的！",
+"ja": "くもは ちいさな みずの つぶが あつまって できているよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_cloudterrace.4": {
+"en": "Drift, float!",
+"lo": "ລອຍ ຟູ!",
+"th": "ลอย ฟู!",
+"zh": "云阶轻柔飘浮！",
+"ja": "ふわふわ、ゆらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_goldarch.0": {
+"en": "A Court arch. The Sky Court arch gleams with Ashanti gold spirals above the clouds.",
+"lo": "ປະຕູໂຄ້ງວັງຟ້າ. ປະຕູໂຄ້ງວັງຟ້າ ເຫຼື້ອມງາມດ້ວຍລາຍກ້ຽວຄຳອາຊັນຕີເໜືອເມກ.",
+"th": "ซุ้มประตูวังฟ้า ซุ้มประตูวังฟ้าเงางามด้วยลายเกลียวทองอาซานตีเหนือเมฆ",
+"zh": "天宫金拱门。天宫金拱门在云端闪耀着阿散蒂金色螺旋纹。",
+"ja": "そらの みやの もん。そらの みやの もんが きんいろに きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_goldarch.1": {
+"en": "Anansi steps beneath this golden arch to speak with Nyame!",
+"lo": "ອານັນຊີຍ່າງລອດປະຕູໂຄ້ງສີຄຳນີ້ເພື່ອລົມກັບເທບນະຍາເມ!",
+"th": "อนันซีเดินลอดซุ้มประตูสีทองนี้เพื่อคุยกับเทพนยาเม!",
+"zh": "阿南西穿过这座金色拱门来拜见天神尼亚美！",
+"ja": "アナンシが この きんいろの もんを くぐって きたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_goldarch.2": {
+"en": "Intricate gold spirals and crimson panels shine atop ivory clouds.",
+"lo": "ລາຍກ້ຽວຄຳລະອຽດ ແລະ ແຜ່ນສີແດງສ່ອງງາມເທິງເມກສີງາຊ້າງ.",
+"th": "ลายเกลียวทองละเอียดและแผ่นสีแดงส่องงามบนเมฆสีงาช้าง",
+"zh": "精美的金色螺旋和深红纹板在乳白云朵上闪耀。",
+"ja": "きんいろと あかの かざりが ぴかぴか ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_goldarch.3": {
+"en": "Ashanti goldsmiths are celebrated worldwide for fine royal artistry.",
+"lo": "ຊ່າງຄຳອາຊັນຕີມີຊື່ສຽງທົ່ວໂລກດ້ານສິລະປະຫຼວງອັນປະນີດ.",
+"th": "ช่างทองอาซานตีมีชื่อเสียงทั่วโลกด้านศิลปะหลวงอันประณีต",
+"zh": "阿散蒂金匠以巧夺天工的皇家金饰工艺享誉世界。",
+"ja": "ガーナの きんざいくは せかいじゅうで ゆうめい なんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_goldarch.4": {
+"en": "Shine, gleam!",
+"lo": "ສ່ອງແສງ ເຫຼື້ອມ!",
+"th": "ส่องแสง เงาวับ!",
+"zh": "金门光芒璀璨！",
+"ja": "ぴかぴか、きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_plantain.0": {
+"en": "A ripe plantain. A ripe plantain is sweet, golden and loved across Ghana.",
+"lo": "ໝາກກ້ວຍສຸກ. ໝາກກ້ວຍສຸກ ຫວານ ສີຄຳ ແລະ ເປັນທີ່ມັກທົ່ວປະເທດການາ.",
+"th": "กล้วยสุก กล้วยสุกหวาน สีทอง และเป็นที่ชื่นชอบทั่วกานา",
+"zh": "熟大蕉。熟透的大蕉香甜金黄，在加纳深受大家喜爱。",
+"ja": "じゅくした バナナ。じゅくした バナナは あまくて みんなの だいこうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_plantain.1": {
+"en": "Sweet ripe plantains make a tasty courtyard snack!",
+"lo": "ໝາກກ້ວຍສຸກຫວານເປັນອາຫານວ່າງແຊບໃນເດີ່ນບ້ານ!",
+"th": "กล้วยสุกหวานเป็นของว่างอร่อยในลานบ้าน!",
+"zh": "香甜的熟大蕉是院子里最美味的点心！",
+"ja": "あまい バナナは おいしい おやつに なるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_plantain.2": {
+"en": "Plump sunny yellow peel curves in a cheerful bunch.",
+"lo": "ເປືອກສີເຫຼືອງສົດໂຄ້ງເປັນຫວີສວຍງາມ.",
+"th": "เปลือกสีเหลืองสดโค้งเป็นหวีสวยงาม",
+"zh": "饱满明黄的大蕉弯弯地长成一串。",
+"ja": "きいろくて まるい ふさに なっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_plantain.3": {
+"en": "Plantains are cooked baked, fried or mashed all across Ghana.",
+"lo": "ໝາກກ້ວຍນິຍົມປີ້ງ ຈືນ ຫຼື ບົດກິນທົ່ວປະເທດການາ.",
+"th": "กล้วยนิยมปิ้ง ทอด หรือบดกินทั่วกานา",
+"zh": "在加纳，人们喜欢把大蕉烤着、煎着或捣成泥吃。",
+"ja": "ガーナでは バナナを やいたり して たべるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_plantain.4": {
+"en": "Plop, yum!",
+"lo": "ຕຸບ ແຊບ!",
+"th": "ตุ้บ อร่อย!",
+"zh": "扑通真香甜！",
+"ja": "ぽとん、おいしい！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_basket.0": {
+"en": "A woven basket. A woven basket carries sweet yams and treats for the journey.",
+"lo": "ກະຕ້າສານ. ກະຕ້າສານ ໃຊ້ໃສ່ມັນເພົາຫວານ ແລະ ຂອງຝາກໄປນຳ.",
+"th": "ตะกร้าสาน ตะกร้าสานใช้ใส่มันเทศหวานและของฝากไปด้วย",
+"zh": "编织篮。编织篮用来装香甜的山药和旅途上的礼物。",
+"ja": "あんだ かご。あんだ かごに あまい いもや おくりものを いれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_basket.1": {
+"en": "This woven basket holds sweet yams and gifts safely inside.",
+"lo": "ກະຕ້າສານນີ້ໃສ່ມັນເພົາຫວານ ແລະ ຂອງຝາກໄວ້ຢ່າງປອດໄພ.",
+"th": "ตะกร้าสานนี้ใส่มันเทศหวานและของฝากไว้อย่างปลอดภัย",
+"zh": "编织篮里稳稳装着香甜的山药和心意满满的礼物。",
+"ja": "あまい いもや おくりものを いれて はこぶ かごだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_basket.2": {
+"en": "Warm golden reeds twist tightly in neat spiral rows.",
+"lo": "ເສັ້ນຫຍ້າສີຄຳອຸ່ນສານແໜ້ນເປັນແຖວວົນງາມ.",
+"th": "เส้นหญ้าสีทองอุ่นสานแน่นเป็นแถววนสวย",
+"zh": "温暖的金黄色草条一圈圈编织得整整齐齐。",
+"ja": "きいろい くさを きれいに くるくる あんで あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_basket.3": {
+"en": "Ghanaian weavers craft sturdy baskets from strong elephant grass.",
+"lo": "ຊ່າງສານການາສານກະຕ້າແຂງແຮງຈາກຫຍ້າຊ້າງທົນທານ.",
+"th": "ช่างสานกานาสานตะกร้าแข็งแรงจากหญ้าช้างทนทาน",
+"zh": "加纳手艺人擅长用坚韧的象草编织结实的篮子。",
+"ja": "じょうぶな くさで しっかり あんだ かごなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_basket.4": {
+"en": "Rustle, plop!",
+"lo": "ຊາໆ ຕຸບ!",
+"th": "ซ่าๆ ตุ้บ!",
+"zh": "草篮沙沙轻响！",
+"ja": "かさかさ、ぽとん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_bag.0": {
+"en": "A woven bag. A woven bag holds Anansi's clever tools safe and snug.",
+"lo": "ຖົງສານ. ຖົງສານ ເກັບເຄື່ອງມືສະຫຼາດຂອງອານັນຊີໄວ້ຢ່າງປອດໄພ.",
+"th": "ถุงสาน ถุงสานเก็บเครื่องมือฉลาดของอนันซีไว้อย่างปลอดภัย",
+"zh": "编织袋。编织袋把阿南西的巧妙工具装得稳稳当当。",
+"ja": "あんだ ふくろ。あんだ ふくろに アナンシの どうぐが はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_bag.1": {
+"en": "Anansi packs his pole, vine and gourd right into this bag!",
+"lo": "ອານັນຊີເກັບໄມ້ໄຜ່ ເຄືອໄມ້ ແລະ ໝາກນ້ຳເຕົ້າໃສ່ຖົງນີ້!",
+"th": "อนันซีเก็บไม้ไผ่ เถาวัลย์ และน้ำเต้าใส่ถุงนี้!",
+"zh": "阿南西把竹竿、藤蔓和葫芦全都收进这个编织袋里！",
+"ja": "アナンシが どうぐを ぜんぶ しまう ふくろだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_bag.2": {
+"en": "Bright geometric stripes pattern the sturdy woven cloth.",
+"lo": "ລາຍເລຂາຄະນິດສົດໃສປະດັບເທິງຜ້າສານທີ່ແຂງແຮງ.",
+"th": "ลายเรขาคณิตสดใสประดับบนผ้าสานที่แข็งแรง",
+"zh": "鲜艳的几何条纹点缀在结实的织布袋上。",
+"ja": "きれいな しまもようが ついた ふくろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_bag.3": {
+"en": "A light travel bag keeps every explorer's hands free.",
+"lo": "ຖົງເດີນທາງເບົາຊ່ວຍໃຫ້ນັກສຳຫຼວດຍ່າງສະບາຍ.",
+"th": "ถุงเดินทางเบาช่วยให้นักสำรวจเดินสบาย",
+"zh": "轻巧的旅行袋让小小探险家一路轻松前行。",
+"ja": "かるい ふくろが あると おでかけが らくちんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_bag.4": {
+"en": "Pack, rustle!",
+"lo": "ເກັບ ຊາໆ!",
+"th": "เก็บ ซ่าๆ!",
+"zh": "装袋沙沙响！",
+"ja": "ぎゅっ、かさかさ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_bamboo.0": {
+"en": "A bamboo pole. A bamboo pole is tall, straight and light to carry.",
+"lo": "ລຳໄມ້ໄຜ່. ລຳໄມ້ໄຜ່ ສູງ ຊື່ ແລະ ເບົາຖືໄປມາງ່າຍ.",
+"th": "ลำไม้ไผ่ ลำไม้ไผ่สูง ตรง และเบาถือไปมาง่าย",
+"zh": "竹竿。竹竿笔直修长，拿在手里轻巧方便。",
+"ja": "たけの ぼう。たけの ぼうは まっすぐで かるくて もちやすいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_bamboo.1": {
+"en": "Anansi measures proud Onini straight beside this bamboo pole!",
+"lo": "ອານັນຊີແທກໂອນີນີໃຫ້ຢຽດຊື່ຂ້າງລຳໄມ້ໄຜ່ນີ້!",
+"th": "อนันซีวัดโอนีนีให้เหยียดตรงข้างลำไม้ไผ่นี้!",
+"zh": "阿南西让骄傲的奥尼尼笔直躺在这根竹竿旁比长短！",
+"ja": "オニニの ながさを はかる たけの ぼうだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_bamboo.2": {
+"en": "Smooth golden-green joints mark each neat section.",
+"lo": "ຂໍ້ສີຂຽວອົມຄຳລຽບແບ່ງແຕ່ລະປ້ອງຢ່າງງົດງາມ.",
+"th": "ข้อสีเขียวอมทองเรียบแบ่งแต่ละปล้องอย่างงดงาม",
+"zh": "光滑的黄绿色竹节把竹竿分成整齐的一段段。",
+"ja": "つやつやの ふしが まっすぐ ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_bamboo.3": {
+"en": "Bamboo is one of the fastest-growing giant grasses on Earth!",
+"lo": "ໄມ້ໄຜ່ແມ່ນພືດຕະກູນຫຍ້າທີ່ໃຫຍ່ໄວທີ່ສຸດຊະນິດໜຶ່ງໃນໂລກ!",
+"th": "ไม้ไผ่เป็นพืชตระกูลหญ้าที่โตเร็วที่สุดชนิดหนึ่งในโลก!",
+"zh": "竹子是世界上生长最快的高大草本植物之一！",
+"ja": "たけは ぐんぐん はやく そだつ すごい くさなんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_bamboo.4": {
+"en": "Tap, clack!",
+"lo": "ຕ໋ອກ ແກັກ!",
+"th": "ต๊อก แกร๊ก!",
+"zh": "竹竿嗒嗒轻敲！",
+"ja": "こんこん、かちっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_vine.0": {
+"en": "A soft vine. A soft vine ties gentle knots without hurting anyone.",
+"lo": "ເຄືອໄມ້ອ່ອນ. ເຄືອໄມ້ອ່ອນ ມັດປົມເບົາໆໂດຍບໍ່ເຮັດໃຫ້ໃຜເຈັບ.",
+"th": "เถาวัลย์อ่อน เถาวัลย์อ่อนผูกปมเบาๆ โดยไม่ทำให้ใครเจ็บ",
+"zh": "柔软藤蔓。柔软的藤蔓能系出轻柔又结实的绳结。",
+"ja": "やわらかい つる。やわらかい つるは やさしく しっかり むすべるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_vine.1": {
+"en": "Three soft vine loops hold proud Onini snugly to the pole.",
+"lo": "ບ່ວງເຄືອໄມ້ອ່ອນສາມອັນມັດໂອນີນີໄວ້ກັບໄມ້ໄຜ່ຢ່າງພໍດີ.",
+"th": "บ่วงเถาวัลย์อ่อนสามอันผูกโอนีนีไว้กับไม้ไผ่อย่างพอดี",
+"zh": "三个柔软的藤环把奥尼尼稳稳系在竹竿上。",
+"ja": "みっつの つるの わっかで やさしく むすぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_vine.2": {
+"en": "Supple forest-green stems curl smoothly like braided ribbon.",
+"lo": "ກ້ານສີຂຽວປ່າອ່ອນໂຄ້ງລຽບຄືໂບຖັກ.",
+"th": "ก้านสีเขียวป่าอ่อนโค้งเรียบเหมือนริบบิ้นถัก",
+"zh": "柔韧的森绿色藤条像编好的丝带般顺滑卷曲。",
+"ja": "みどりの つるが ひもみたいに くるんと なるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_vine.3": {
+"en": "Rainforest vines climb high toward sunlight along tall trunks.",
+"lo": "ເຄືອໄມ້ປ່າດົງເລືອຂຶ້ນສູງຫາແສງແດດຕາມລຳຕົ້ນໄມ້ໃຫຍ່.",
+"th": "เถาวัลย์ป่าดงเลื้อยขึ้นสูงหาแสงแดดตามลำต้นไม้ใหญ่",
+"zh": "雨林藤蔓顺着高大树干向上攀爬寻找阳光。",
+"ja": "もりの つるは きに まきついて のびるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_vine.4": {
+"en": "Creak, loop!",
+"lo": "ອຽດ ມັດ!",
+"th": "เอี๊ยด ผูก!",
+"zh": "藤蔓轻绕！",
+"ja": "ぎゅっ、くるん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_gourd.0": {
+"en": "A calabash gourd. A calabash gourd is hollow and dry inside like a cosy shelter.",
+"lo": "ໝາກນ້ຳເຕົ້າ. ໝາກນ້ຳເຕົ້າ ກວ້າງ ແລະ ແຫ້ງຂ້າງໃນຄືບ່ອນພັກອົບອຸ່ນ.",
+"th": "น้ำเต้า น้ำเต้ากลวงและแห้งข้างในเหมือนที่พักอบอุ่น",
+"zh": "葫芦。葫芦里面干爽宽敞，像一间暖和的小屋。",
+"ja": "ひょうたん。ひょうたんの なかは かわいて いて あたたかいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_gourd.1": {
+"en": "All four buzzing hornets shelter dry inside this calabash gourd!",
+"lo": "ແຕນໂມໂບໂຣທັງສີ່ໂຕເຂົ້າໄປຫຼົບຝົນແຫ້ງສະບາຍໃນໝາກນ້ຳເຕົ້ານີ້!",
+"th": "แตนโมโบโรทั้งสี่ตัวเข้าไปหลบฝนแห้งสบายในน้ำเต้านี้!",
+"zh": "四只嗡嗡叫的大黄蜂全都飞进干爽的葫芦里躲雨啦！",
+"ja": "スズメバチたちが ひょうたんの なかで あまやどり するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_gourd.2": {
+"en": "Round warm honey-gold skin curves smoothly around its mouth.",
+"lo": "ຜິວສີຄຳນ້ຳເຜິ້ງກົມມົນໂຄ້ງລຽບອ້ອມປາກໝາກນ້ຳເຕົ້າ.",
+"th": "ผิวสีทองน้ำผึ้งกลมมนโค้งเรียบรอบปากน้ำเต้า",
+"zh": "圆润温暖的蜜金色葫芦表面光滑漂亮。",
+"ja": "まるくて つやつやの ちゃいろい ひょうたんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_gourd.3": {
+"en": "Dried calabash gourds serve as bowls, bottles and musical instruments!",
+"lo": "ໝາກນ້ຳເຕົ້າແຫ້ງໃຊ້ເຮັດຖ້ວຍ ກະຕຸກນ້ຳ ແລະ ເຄື່ອງດົນຕີໄດ້!",
+"th": "น้ำเต้าแห้งใช้ทำชาม กระติกน้ำ และเครื่องดนตรีได้!",
+"zh": "晒干的葫芦在非洲可以用来做碗、水壶和乐器呢！",
+"ja": "かわいた ひょうたんは うつわや がっきに なるんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_gourd.4": {
+"en": "Knock, pop!",
+"lo": "ກ໊ອກ ປ໊ອບ!",
+"th": "ก๊อก ป๊อบ!",
+"zh": "叩叩葫芦响！",
+"ja": "こんこん、ぽんっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_ridge.0": {
+"en": "A rainforest ridge. The rainforest ridge rises misty and emerald in the far distance.",
+"lo": "ສັນພູປ່າດົງ. ສັນພູປ່າດົງ ສູງຂຶ້ນມີໝອກຂຽວມໍລະກົດຢູ່ໄກໆ.",
+"th": "สันเขาป่าดง สันเขาป่าดงสูงขึ้นมีหมอกเขียวมรกตอยู่ไกลๆ",
+"zh": "雨林山脊。翠绿的雨林山脊在远方薄雾中层层起伏。",
+"ja": "もりの やまなみ。とおくの もりの やまなみが きりの なかに みえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_ridge.1": {
+"en": "Misty green mountains stretch quietly beyond the bamboo stream.",
+"lo": "ພູສີຂຽວມີໝອກທອດຍາວງຽບໆຢູ່ຫຼັງຫ້ວຍໄມ້ໄຜ່.",
+"th": "ภูเขาสีเขียวมีหมอกทอดยาวเงียบๆ หลังลำธารไผ่",
+"zh": "薄雾缭绕的翠绿山脊静静延展在竹溪远方。",
+"ja": "きりの なかに みどりの やまが つづいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_ridge.2": {
+"en": "Layers of pale sage and deep emerald fade gently into mist.",
+"lo": "ຊັ້ນພູສີຂຽວອ່ອນ ແລະ ຂຽວມໍລະກົດຈາງຫາຍໄປໃນໝອກອ່ອນ.",
+"th": "ชั้นภูเขาสีเขียวอ่อนและเขียวมรกตจางหายไปในหมอกอ่อน",
+"zh": "浅灰绿与深翡翠色的山峦层层隐入薄雾。",
+"ja": "とおくの やまほど やさしい いろに みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_ridge.3": {
+"en": "Cool mountain mist keeps rainforest mosses lush and green.",
+"lo": "ໝອກພູເຢັນຊ່ວຍໃຫ້ໄຄນ້ຳໃນປ່າດົງຂຽວຊຸ່ມຊື່ນ.",
+"th": "หมอกภูเขาเย็นช่วยให้มอสในป่าดงเขียวชุ่มชื่น",
+"zh": "清凉的山雾让雨林里的苔藓和蕨草常年苍翠。",
+"ja": "やまの きりが もりを しっとり まもるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_ridge.4": {
+"en": "Mist, hush!",
+"lo": "ໝອກ ຊູ່!",
+"th": "หมอก ชู่!",
+"zh": "山雾轻笼！",
+"ja": "しーん、きりが ながれるよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_kapok.0": {
+"en": "A kapok tree. The kapok tree lifts leafy branches high into the misty air.",
+"lo": "ຕົ້ນງິ້ວປ່າ. ຕົ້ນງິ້ວປ່າ ຊູກິ່ງໃບຂຽວສູງຂຶ້ນສູ່ອາກາດທີ່ມີໝອກ.",
+"th": "ต้นงิ้วป่า ต้นงิ้วป่าชูกิ่งใบเขียวสูงขึ้นสู่อากาศมีหมอก",
+"zh": "高大木棉树。高大的木棉树把繁茂枝叶伸向云雾缭绕的空中。",
+"ja": "カポックの き。カポックの きが そらへ たかく のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_kapok.1": {
+"en": "Towering kapok trees frame the misty left bank of the glade.",
+"lo": "ຕົ້ນງິ້ວປ່າສູງປະດັບຝັ່ງຊ້າຍທີ່ມີໝອກຂອງລານປ່າ.",
+"th": "ต้นงิ้วป่าสูงประดับฝั่งซ้ายที่มีหมอกของลานป่า",
+"zh": "巍峨的木棉树静静矗立在林间空地左侧。",
+"ja": "たかい カポックの きが もりの ひだりに たっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_kapok.2": {
+"en": "Buttressed brown trunks rise into bright emerald leaf crowns.",
+"lo": "ລຳຕົ້ນສີນ້ຳຕານມີຮາກຄ້ຳສູງຂຶ້ນສູ່ຍອດໃບສີຂຽວມໍລະກົດ.",
+"th": "ลำต้นสีน้ำตาลมีรากค้ำสูงขึ้นสู่ยอดใบสีเขียวมรกต",
+"zh": "粗壮的板根树干托起层层翠绿的伞状树冠。",
+"ja": "おおきな ねっこと たかい みきが かっこいいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_kapok.3": {
+"en": "Kapok seed pods hold silky fluffy cotton that drifts on the wind!",
+"lo": "ຝັກຕົ້ນງິ້ວມີປຸຍຝ້າຍອ່ອນນຸ້ມທີ່ປິວໄປຕາມລົມ!",
+"th": "ฝักต้นงิ้วมีปุยฝ้ายอ่อนนุ่มที่ปลิวไปตามลม!",
+"zh": "木棉果荚里藏着丝滑蓬松的木棉絮，会随风飘舞！",
+"ja": "ふわふわの わたが かぜに のって とぶ きなんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_kapok.4": {
+"en": "Sway, rustle!",
+"lo": "ແກວ່ງ ຊາໆ!",
+"th": "แกว่ง ซ่าๆ!",
+"zh": "木棉树叶沙沙！",
+"ja": "ゆらゆら、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_canopy.0": {
+"en": "Rainforest palms. Rainforest palms fan wide emerald fronds along the shady trail.",
+"lo": "ປ່າປາມຂຽວ. ປ່າປາມຂຽວ ແຜ່ໃບສີຂຽວມໍລະກົດກວ້າງຕາມທາງປ່າຮົ່ມເຢັນ.",
+"th": "ป่าปาล์มเขียว ป่าปาล์มเขียวแผ่ใบสีเขียวมรกตกว้างตามทางป่าร่มเย็น",
+"zh": "雨林棕榈林。雨林棕榈在阴凉小路旁舒展着宽大的翠绿叶片。",
+"ja": "もりの やし。もりの やしが みちの わきで はっぱを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_canopy.1": {
+"en": "Layered rainforest palms sway above the shady right trail.",
+"lo": "ປ່າປາມຊ້ອນຊັ້ນແກວ່ງໄປມາເໜືອທາງປ່າຮົ່ມດ້ານຂວາ.",
+"th": "ป่าปาล์มซ้อนชั้นแกว่งไปมาเหนือทางป่าร่มด้านขวา",
+"zh": "层叠的雨林棕榈在右侧树荫小路上方轻轻摇曳。",
+"ja": "やしの はっぱが みちの みぎで ゆらゆら ゆれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_canopy.2": {
+"en": "Feathery green palm fronds catch golden afternoon sunbeams.",
+"lo": "ໃບປາມສີຂຽວອ່ອນຮັບລຳແສງແດດສີຄຳຍາມບ່າຍ.",
+"th": "ใบปาล์มสีเขียวอ่อนรับลำแสงแดดสีทองยามบ่าย",
+"zh": "羽毛般的绿色棕榈叶在午后阳光里闪闪发亮。",
+"ja": "ひかりを あびて みどりの はっぱが きらきら するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_canopy.3": {
+"en": "Oil palms grow wild across West African rainforests.",
+"lo": "ຕົ້ນປາມນ້ຳມັນເກີດຕາມທຳມະຊາດທົ່ວປ່າດົງອາຟຣິກາຕາເວັນຕົກ.",
+"th": "ต้นปาล์มน้ำมันเกิดตามธรรมชาติทั่วป่าดงแอฟริกาตะวันตก",
+"zh": "油棕树自然生长在西非广袤的热带雨林里。",
+"ja": "にしアフリカのもりに たくさん はえている やしだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_canopy.4": {
+"en": "Swish, whisper!",
+"lo": "ວູບ ກະຊິບ!",
+"th": "ฟิ้ว กระซิบ!",
+"zh": "棕榈叶沙沙低语！",
+"ja": "さらさら、そよそよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_bamboogrove.0": {
+"en": "A bamboo grove. The bamboo grove sways gently beside the mossy forest bank.",
+"lo": "ກໍໄມ້ໄຜ່. ກໍໄມ້ໄຜ່ ໂອນເອນຄ່ອຍໆຢູ່ຂ້າງຝັ່ງປ່າທີ່ມີໄຄນ້ຳ.",
+"th": "กอไม้ไผ่ กอไม้ไผ่เอนไหวเบาๆ ข้างฝั่งป่าที่มีมอส",
+"zh": "翠绿竹林。翠绿竹林在长满青苔的溪岸边随风轻摆。",
+"ja": "たけやぶ。たけやぶが かわの きしで さらさら ゆれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_bamboogrove.1": {
+"en": "Tall golden-green bamboo grows right beside the clear forest stream!",
+"lo": "ໄມ້ໄຜ່ສີຂຽວຄຳສູງເກີດຢູ່ຂ້າງຫ້ວຍນ້ຳໃສໃນປ່າ!",
+"th": "ไม้ไผ่สีเขียวทองสูงเกิดอยู่ข้างลำธารใสในป่า!",
+"zh": "高大的黄绿竹林生长在清澈的森林小溪岸边！",
+"ja": "かわの そばに たかい たけやぶが ゆれているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_bamboogrove.2": {
+"en": "Slender jointed culms arch gracefully over mossy stream rocks.",
+"lo": "ລຳໄມ້ໄຜ່ຮຽວໂຄ້ງອ່ອນຊ້ອຍເໜືອກ້ອນຫີນຫ້ວຍໄຄນ້ຳ.",
+"th": "ลำไม้ไผ่เรียวโค้งอ่อนช้อยเหนือก้อนหินลำธารมอส",
+"zh": "修长带节的竹竿优雅地垂在长满青苔的溪石上方。",
+"ja": "ほそくて ながい たけが やさしく しなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_bamboogrove.3": {
+"en": "Bamboo groves rustle with soft music whenever forest breezes blow.",
+"lo": "ກໍໄມ້ໄຜ່ສົ່ງສຽງດົນຕີອ່ອນໆທຸກຄັ້ງທີ່ລົມປ່າພັດຜ່ານ.",
+"th": "กอไม้ไผ่ส่งเสียงดนตรีอ่อนๆ ทุกครั้งที่ลมป่าพัดผ่าน",
+"zh": "山风吹过竹林时，竹叶会奏出沙沙的悦耳乐声。",
+"ja": "かぜが ふくと たけの はっぱが さらさら うたうよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_bamboogrove.4": {
+"en": "Clack, swish!",
+"lo": "ແກັກ ວູບ!",
+"th": "แกร๊ก ฟิ้ว!",
+"zh": "竹林沙沙轻响！",
+"ja": "さらさら、こんっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_wildplantain.0": {
+"en": "Wild plantains. Wild plantains spread wide glossy leaves in the rainforest glade.",
+"lo": "ກໍກ້ວຍປ່າ. ກໍກ້ວຍປ່າ ແຜ່ໃບກວ້າງເງົາງາມໃນລານປ່າດົງ.",
+"th": "กอกล้วยป่า กอกล้วยป่าแผ่ใบกว้างเงางามในลานป่าดง",
+"zh": "野生大蕉丛。野生大蕉在林间空地舒展开油亮宽大的叶片。",
+"ja": "もりの バナナ。もりの バナナが おおきな はっぱを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_wildplantain.1": {
+"en": "Broad wild plantains shade cool mossy roots along the forest edge.",
+"lo": "ກໍກ້ວຍປ່າໃບກວ້າງໃຫ້ຮົ່ມແກ່ຮາກໄມ້ໄຄນ້ຳຕາມຂອບປ່າ.",
+"th": "กอกล้วยป่าใบกว้างให้ร่มแก่รากไม้มอสตามขอบป่า",
+"zh": "宽大的野生大蕉为林边的青苔树根遮出一片清凉。",
+"ja": "おおきな はっぱが もりの きの ねもとを まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_wildplantain.2": {
+"en": "Glossy green leaves curve out beside hanging calabash vines.",
+"lo": "ໃບຂຽວເງົາໂຄ້ງອອກຂ້າງເຄືອໝາກນ້ຳເຕົ້າທີ່ຫ້ອຍລົງ.",
+"th": "ใบเขียวเงาโค้งออกข้างเถาน้ำเต้าที่ห้อยลง",
+"zh": "油亮的绿叶舒展在垂挂着葫芦的藤蔓旁。",
+"ja": "つやつやの みどりの はっぱが きれいに ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_wildplantain.3": {
+"en": "Raindrops roll smoothly off waxy plantain leaves like silver beads!",
+"lo": "ຢົດຝົນກິ້ງລົງຈາກໃບກ້ວຍເງົາຄືລູກປັດສີເງິນ!",
+"th": "หยดฝนกลิ้งลงจากใบตองเงาเหมือนลูกปัดสีเงิน!",
+"zh": "雨滴会像银色水珠一样从光滑的大蕉叶上滚落！",
+"ja": "あめの しずくが はっぱの うえを ころころ ころがるよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_wildplantain.4": {
+"en": "Patter, rustle!",
+"lo": "ແປະໆ ຊາໆ!",
+"th": "แปะๆ ซ่าๆ!",
+"zh": "叶上雨珠沙沙！",
+"ja": "ぽつぽつ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_fernboulders.0": {
+"en": "Mossy ferns. Mossy ferns curl softly around smooth grey rainforest stones.",
+"lo": "ກ້ອນຫີນໃບກູດ. ກ້ອນຫີນໃບກູດ ມີໃບກູດມ້ວນອ່ອນອ້ອມຫີນປ່າສີເທົາລຽບ.",
+"th": "ก้อนหินใบเฟิร์น ก้อนหินใบเฟิร์นม้วนอ่อนรอบหินป่าสีเทาเรียบ",
+"zh": "青苔蕨石。青苔蕨草柔柔地环绕在圆润的雨林灰石旁。",
+"ja": "こけと しだ。こけと しだが まるい いしの まわりに はえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_fernboulders.1": {
+"en": "Crickets and snails love hiding among these mossy forest ferns!",
+"lo": "ຈິ່ງຫຼີດ ແລະ ຫອຍທາກມັກລີ້ຢູ່ຕາມກ້ອນຫີນໃບກູດເຫຼົ່ານີ້!",
+"th": "จิ้งหรีดและหอยทากชอบซ่อนตัวตามก้อนหินใบเฟิร์นเหล่านี้!",
+"zh": "蟋蟀和小蜗牛最喜欢藏在这些青苔蕨草和石头间！",
+"ja": "こおろぎや かたつむりが こけの いしに かくれているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_fernboulders.2": {
+"en": "Soft emerald moss blankets rounded grey stones and orange fungi.",
+"lo": "ໄຄນ້ຳສີຂຽວມໍລະກົດນຸ້ມປົກຄຸມຫີນສີເທົາ ແລະ ເຫັດສີສົ້ມ.",
+"th": "มอสสีเขียวมรกตนุ่มปกคลุมหินสีเทาและเห็ดสีส้ม",
+"zh": "柔软的绿苔覆盖在圆润灰石和橙色林间蘑菇上。",
+"ja": "ふわふわの こけと まるい いしと きのこが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_fernboulders.3": {
+"en": "Moss acts like a tiny green sponge holding cool rainforest water.",
+"lo": "ໄຄນ້ຳເຮັດໜ້າທີ່ຄືຟອງນ້ຳສີຂຽວນ້ອຍເກັບນ້ຳເຢັນໃນປ່າ.",
+"th": "มอสทำหน้าที่เหมือนฟองน้ำสีเขียวน้อยเก็บน้ำเย็นในป่า",
+"zh": "青苔像一块小小的绿色海绵，把清凉的水分留在大地里。",
+"ja": "こけは みずを たっぷり ためる みどりの スポンジだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_fernboulders.4": {
+"en": "Hush, rustle!",
+"lo": "ຊູ່ ຊາໆ!",
+"th": "ชู่ ซ่าๆ!",
+"zh": "蕨草青苔静谧！",
+"ja": "さらさら、しっとり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_streambank.0": {
+"en": "A stream bank. The stream bank is lined with smooth river stones and water-lilies.",
+"lo": "ຝັ່ງຫ້ວຍຂຽວ. ຝັ່ງຫ້ວຍຂຽວ ລຽງດ້ວຍກ້ອນຫີນຫ້ວຍລຽບ ແລະ ດອກບົວປ່າ.",
+"th": "ฝั่งลำธารเขียว ฝั่งลำธารเขียวเรียงด้วยก้อนหินลำธารเรียบและดอกบัวป่า",
+"zh": "清溪河岸。清溪河岸旁排列着光滑的鹅卵石和热带睡莲。",
+"ja": "かわの きし。かわの きしに まるい いしと すいれんが あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_streambank.1": {
+"en": "Frogs hop across these smooth mossy boulders beside the stream!",
+"lo": "ກົບໂດດຂ້າມກ້ອນຫີນໄຄນ້ຳລຽບເຫຼົ່ານີ້ຢູ່ແຄມຫ້ວຍ!",
+"th": "กบกระโดดข้ามก้อนหินมอสเรียบเหล่านี้อยู่ริมลำธาร!",
+"zh": "青蛙沿着溪边这些圆润的青苔大石欢快跳跃！",
+"ja": "かわの きしの まるい いしで かえるが ぴょんと とぶよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_streambank.2": {
+"en": "Tall emerald reeds and a golden water-lily brighten the bank.",
+"lo": "ຕົ້ນອໍ້ສີຂຽວສູງ ແລະ ດອກບົວສີຄຳເຮັດໃຫ້ຝັ່ງຫ້ວຍສົດໃສ.",
+"th": "ต้นอ้อสีเขียวสูงและดอกบัวสีทองทำให้ฝั่งลำธารสดใส",
+"zh": "高挺的翠绿芦苇和金色睡莲点亮了清溪岸边。",
+"ja": "みどりの くさと きいろい すいれんが さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_streambank.3": {
+"en": "Clear forest streams carry cool rainwater down from the green hills.",
+"lo": "ຫ້ວຍນ້ຳໃສໃນປ່າພານ້ຳຝົນເຢັນໄຫຼລົງມາຈາກພູສີຂຽວ.",
+"th": "ลำธารใสในป่าพาน้ำฝนเย็นไหลลงมาจากภูเขาสีเขียว",
+"zh": "清澈的森林溪流把山间凉爽的雨水一路带向远方。",
+"ja": "やまから ながれて くる つめたくて きれいな かわだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_streambank.4": {
+"en": "Babble, splash!",
+"lo": "ຈ໊ອກໆ ຕູມ!",
+"th": "จ๊อกๆ ตูม!",
+"zh": "溪水潺潺拍岸！",
+"ja": "さらさら、ちゃぷん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_onini.0": {
+"en": "Onini. Onini is a proud green-and-gold python by the bamboo stream.",
+"lo": "ງູເຫຼືອມໂອນີນີ. ໂອນີນີ ແມ່ນງູເຫຼືອມສີຂຽວຄຳຜູ້ພາກພູມໃຈຢູ່ແຄມຫ້ວຍໄມ້ໄຜ່.",
+"th": "งูหลามโอนีนี โอนีนีคืองูหลามสีเขียวทองผู้ภาคภูมิใจริมลำธารไผ่",
+"zh": "巨蟒奥尼尼。奥尼尼是竹溪边一条骄傲的绿金色大蟒蛇。",
+"ja": "おおへび オニニ。オニニは たけの かわべに すむ おおきな へびだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_onini.1": {
+"en": "Hello, Onini!",
+"lo": "ສະບາຍດີ ງູເຫຼືອມໂອນີນີ!",
+"th": "สวัสดีงูหลามโอนีนี!",
+"zh": "你好，巨蟒奥尼尼！",
+"ja": "こんにちは、おおへび オニニ！",
+"who": "onini",
+"tag": "greet"
+},
+"ana_onini.2": {
+"en": "Hiss-hiss! I am Onini, the longest python in the forest!",
+"lo": "ຊີ່ໆ! ຂ້ອຍແມ່ນໂອນີນີ ງູເຫຼືອມທີ່ຍາວທີ່ສຸດໃນປ່າ!",
+"th": "ซี่ๆ! ข้าคือโอนีนี งูหลามที่ยาวที่สุดในป่า!",
+"zh": "嘶嘶！我是森林里最长的巨蟒奥尼尼！",
+"ja": "しゅーっ！ ぼくは ながーい オニニだよ！",
+"who": "onini",
+"tag": "greet"
+},
+"ana_onini.3": {
+"en": "I love stretching straight as a golden bamboo pole!",
+"lo": "ຂ້ອຍມັກຢຽດໂຕຊື່ຄືລຳໄມ້ໄຜ່ສີຄຳ!",
+"th": "ข้าชอบเหยียดตัวตรงเหมือนลำไม้ไผ่สีทอง!",
+"zh": "我最喜欢像金色竹竿一样笔直伸展身体！",
+"ja": "たけの ぼうみたいに まっすぐ のびるよ！",
+"who": "onini",
+"tag": "does"
+},
+"ana_onini.4": {
+"en": "Emerald and gold diamond scales shimmer down my long back.",
+"lo": "ເກັດລາຍເພັດສີຂຽວ ແລະ ສີຄຳເຫຼື້ອມໄປຕາມຫຼັງຍາວຂອງຂ້ອຍ.",
+"th": "เกล็ดลายเพชรสีเขียวและสีทองระยิบไปตามหลังยาวของข้า",
+"zh": "翠绿与金色的菱形鳞片在我长长的背上闪亮。",
+"ja": "みどりと きんいろの うろこが きれいでしょう！",
+"who": "onini",
+"tag": "looks"
+},
+"ana_onini.5": {
+"en": "Pythons are great swimmers and love cool rainforest streams.",
+"lo": "ງູເຫຼືອມລອຍນ້ຳເກັ່ງ ແລະ ມັກຫ້ວຍນ້ຳເຢັນໃນປ່າດົງ.",
+"th": "งูหลามว่ายน้ำเก่งและชอบลำธารเย็นในป่าดง",
+"zh": "蟒蛇是游泳高手，非常喜欢清凉的雨林小溪。",
+"ja": "おおへびは およぐのが じょうずで かわが すきだよ。",
+"who": "onini",
+"tag": "fact"
+},
+"ana_onini.6": {
+"en": "Swoosh, slither!",
+"lo": "ວູບ ເລືອ!",
+"th": "ฟิ้ว เลื้อย!",
+"zh": "唰啦滑过草地！",
+"ja": "にょろにょろ、しゅーっ！",
+"who": "onini",
+"tag": "sound"
+},
+"ana_forestsky.0": {
+"en": "The forest sky. The forest sky shines through the tall green rainforest canopy.",
+"lo": "ທ້ອງຟ້າປ່າດົງ. ທ້ອງຟ້າປ່າດົງ ສ່ອງລອດຍອດໄມ້ສີຂຽວສູງຂອງປ່າດົງ.",
+"th": "ท้องฟ้าป่าดง ท้องฟ้าป่าดงส่องลอดยอดไม้สีเขียวสูงของป่าดง",
+"zh": "雨林天空。雨林天空透过高大翠绿的树冠洒下光亮。",
+"ja": "もりの そら。もりの そらが たかい きの あいだ から みえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_forestsky.1": {
+"en": "Sunbeams and starlight shine down into the Ashanti rainforest.",
+"lo": "ລຳແສງແດດ ແລະ ແສງດາວສ່ອງລົງມາສູ່ປ່າດົງອາຊັນຕີ.",
+"th": "ลำแสงแดดและแสงดาวส่องลงมาสู่ป่าดงอาซานตี",
+"zh": "阳光与星光从这片天空洒进神秘的阿散蒂雨林。",
+"ja": "もりの うえに ひろがる きれいな そらだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_forestsky.2": {
+"en": "Clear aqua midday skies turn deep indigo when stars appear.",
+"lo": "ທ້ອງຟ້າສີຟ້າຂຽວຍາມທ່ຽງປ່ຽນເປັນສີຄາມເຂັ້ມເມື່ອດາວປາກົດ.",
+"th": "ท้องฟ้าสีฟ้าเขียวยามเที่ยงเปลี่ยนเป็นสีครามเข้มเมื่อดาวปรากฏ",
+"zh": "正午清透的蓝绿天空到了夜晚化作深邃星蓝。",
+"ja": "ひるは あおく、よるは ほしが きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_forestsky.3": {
+"en": "Rainforest clouds bring warm afternoon showers that help trees grow.",
+"lo": "ເມກປ່າດົງນຳຝົນບ່າຍອຸ່ນໆມາຊ່ວຍໃຫ້ຕົ້ນໄມ້ເຕີບໃຫຍ່.",
+"th": "เมฆป่าดงนำฝนบ่ายอุ่นๆ มาช่วยให้ต้นไม้เติบโต",
+"zh": "雨林云彩带来温暖的阵雨，滋润着参天大树。",
+"ja": "もりの あめが きや くさを げんきに そだてるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_forestsky.4": {
+"en": "Breeze, hush!",
+"lo": "ລົມອ່ອນ ຊູ່!",
+"th": "ลมอ่อน ชู่!",
+"zh": "林梢微风拂过！",
+"ja": "そよそよ、すずしいよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_odumarch.0": {
+"en": "An odum canopy. The odum canopy arches high overhead with hanging golden gourds.",
+"lo": "ຊຸ້ມໄມ້ໂອດຸມ. ຊຸ້ມໄມ້ໂອດຸມ ໂຄ້ງສູງເໜືອຫົວພ້ອມໝາກນ້ຳເຕົ້າສີຄຳຫ້ອຍ.",
+"th": "ซุ้มไม้โอดุม ซุ้มไม้โอดุมโค้งสูงเหนือหัวพร้อมน้ำเต้าสีทองห้อย",
+"zh": "奥杜姆树拱。奥杜姆树拱高高架在头顶，垂挂着金色葫芦。",
+"ja": "オドゥムの きのもん。オドゥムの きのもんから ひょうたんが ゆらゆら さがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_odumarch.1": {
+"en": "Giant odum roots arch right over the winding rainforest path!",
+"lo": "ຮາກຕົ້ນໂອດຸມໃຫຍ່ໂຄ້ງຂ້າມທາງຍ່າງປ່າດົງທີ່ຄົດລ້ຽວ!",
+"th": "รากต้นโอดุมใหญ่โค้งข้ามทางเดินป่าดงที่คดเคี้ยว!",
+"zh": "参天奥杜姆大树在蜿蜒林路之上搭起天然绿色拱门！",
+"ja": "おおきな オドゥムの きが もりの もんを つくっているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_odumarch.2": {
+"en": "Golden gourds hang softly beneath thick emerald leafy branches.",
+"lo": "ໝາກນ້ຳເຕົ້າສີຄຳຫ້ອຍອ່ອນໆກ້ອງກິ່ງໃບສີຂຽວມໍລະກົດໜາ.",
+"th": "น้ำเต้าสีทองห้อยอ่อนๆ ใต้กิ่งใบสีเขียวมรกตหนา",
+"zh": "金色葫芦垂挂在浓密的翡翠枝叶下轻轻摇晃。",
+"ja": "みどりの えだから きいろい ひょうたんが さがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_odumarch.3": {
+"en": "Massive rainforest canopies shelter birds, monkeys and fairies alike!",
+"lo": "ຍອດໄມ້ປ່າດົງໃຫຍ່ເປັນບ່ອນອາໄສຂອງນົກ ລີງ ແລະ ນາງຟ້າ!",
+"th": "ยอดไม้ป่าดงใหญ่เป็นที่อาศัยของนก ลิง และนางฟ้า!",
+"zh": "高大的雨林树冠是鸟儿、小猴和精灵共同的家园！",
+"ja": "もりの いっぱいの いきものが くらす おおきな きだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_odumarch.4": {
+"en": "Rustle, breeze!",
+"lo": "ຊາໆ ລົມ!",
+"th": "ซ่าๆ ลม!",
+"zh": "树拱沙沙清风！",
+"ja": "さらさら、そよそよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_shell.0": {
+"en": "A water shell. A water shell scoops clear drops from the rainforest stream.",
+"lo": "ກາບຫອຍຕັກນ້ຳ. ກາບຫອຍຕັກນ້ຳ ຕັກຢົດນ້ຳໃສຈາກຫ້ວຍໃນປ່າດົງ.",
+"th": "เปลือกหอยตักน้ำ เปลือกหอยตักน้ำตักหยดน้ำใสจากลำธารในป่าดง",
+"zh": "舀水贝壳。舀水贝壳可以从雨林小溪里舀起清凉的水珠。",
+"ja": "みずくみの かいがら。みずくみの かいがらで かわの みずを すくうよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_shell.1": {
+"en": "Anansi sprinkles pitter-patter raindrops using this water shell!",
+"lo": "ອານັນຊີພົມຢົດນ້ຳຄືຝົນຕົກດ້ວຍກາບຫອຍຕັກນ້ຳນີ້!",
+"th": "อนันซีพรมหยดน้ำเหมือนฝนตกด้วยเปลือกหอยตักน้ำนี้!",
+"zh": "阿南西用这只贝壳洒出噼啪水珠假装下雨！",
+"ja": "アナンシが かいがらで みずを ぱらぱら まくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_shell.2": {
+"en": "Curved pearl-ivory edges catch cool turquoise stream water.",
+"lo": "ຂອບໂຄ້ງສີງາຊ້າງໄຂ່ມຸກຮອງຮັບນ້ຳຫ້ວຍສີຟ້າຂຽວເຢັນ.",
+"th": "ขอบโค้งสีงาช้างไข่มุกรองรับน้ำลำธารสีฟ้าเขียวเย็น",
+"zh": "弯弯的乳白贝壳舀起清凉碧蓝的溪水。",
+"ja": "しろくて まるい かいがらが きらっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_shell.3": {
+"en": "Empty river shells make natural little scoops in the forest.",
+"lo": "ກາບຫອຍຫ້ວຍເປົ່າໃຊ້ເປັນກະບວຍຕັກນ້ຳນ້ອຍຕາມທຳມະຊາດໄດ້.",
+"th": "เปลือกหอยลำธารเปล่าใช้เป็นกระบวยตักน้ำน้อยตามธรรมชาติได้",
+"zh": "空河蚌壳在大自然里就是天然的小水勺。",
+"ja": "かわの かいがらは ちいさな スプーンみたいに つかえるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_shell.4": {
+"en": "Splash, patter!",
+"lo": "ຊ່າ ແປະໆ!",
+"th": "ซ่า แปะๆ!",
+"zh": "水花噼啪洒！",
+"ja": "ぱしゃっ、ぽつぽつ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_hornet.0": {
+"en": "A Mmoboro hornet. A Mmoboro hornet hums and zips past the green rainforest leaves.",
+"lo": "ແຕນໂມໂບໂຣ. ແຕນໂມໂບໂຣ ບິນຮຶ່ງໆຜ່ານໃບໄມ້ສີຂຽວໃນປ່າດົງ.",
+"th": "แตนโมโบโร แตนโมโบโรบินหึ่งๆ ผ่านใบไม้สีเขียวในป่าดง",
+"zh": "莫博罗大黄蜂。莫博罗大黄蜂嗡嗡叫着飞过翠绿的雨林树叶。",
+"ja": "スズメバチ。スズメバチが ぶんぶんと もりの なかを とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_hornet.1": {
+"en": "Hello, Mmoboro hornet!",
+"lo": "ສະບາຍດີ ແຕນໂມໂບໂຣ!",
+"th": "สวัสดีแตนโมโบโร!",
+"zh": "你好，莫博罗大黄蜂！",
+"ja": "こんにちは、スズメバチ！",
+"who": "mmoboro",
+"tag": "greet"
+},
+"ana_hornet.2": {
+"en": "Bzzz! Keep our golden wings dry from the rain!",
+"lo": "ບື້! ຊ່ວຍໃຫ້ປີກສີຄຳຂອງພວກເຮົາແຫ້ງຈາກຝົນແດ່!",
+"th": "บื๊อ! ช่วยให้ปีกสีทองของพวกเราแห้งจากฝนหน่อย!",
+"zh": "嗡嗡！快让我们的金翅膀躲开雨水吧！",
+"ja": "ぶんぶん！ あめに ぬれない ばしょへ いこう！",
+"who": "mmoboro",
+"tag": "greet"
+},
+"ana_hornet.3": {
+"en": "We zip straight into the cosy dry calabash gourd!",
+"lo": "ພວກເຮົາບິນເຂົ້າໄປໃນໝາກນ້ຳເຕົ້າແຫ້ງອົບອຸ່ນ!",
+"th": "พวกเราบินเข้าไปในน้ำเต้าแห้งอบอุ่น!",
+"zh": "我们嗖地钻进干爽暖和的葫芦小屋里！",
+"ja": "あたたかい ひょうたんの なかへ とびこむよ！",
+"who": "mmoboro",
+"tag": "does"
+},
+"ana_hornet.4": {
+"en": "Sunny gold and dark brown stripes gleam on our tiny wings.",
+"lo": "ລາຍສີຄຳ ແລະ ສີນ້ຳຕານເຂັ້ມເຫຼື້ອມເທິງປີກນ້ອຍຂອງພວກເຮົາ.",
+"th": "ลายสีทองและสีน้ำตาลเข้มเงาบนปีกน้อยของพวกเรา",
+"zh": "金黄与深棕条纹在我们小巧的身体上闪闪发亮。",
+"ja": "きいろと ちゃいろの しましまが かっこいいよ。",
+"who": "mmoboro",
+"tag": "looks"
+},
+"ana_hornet.5": {
+"en": "Hornets build papery nests and prefer staying warm and dry.",
+"lo": "ແຕນສ້າງຮັງຄືເຈ້ຍ ແລະ ມັກຢູ່ບ່ອນອົບອຸ່ນແຫ້ງສະບາຍ.",
+"th": "แตนสร้างรังเหมือนกระดาษและชอบอยู่ที่อบอุ่นแห้งสบาย",
+"zh": "黄蜂会筑纸一样的巢，最喜欢待在干燥暖和的地方。",
+"ja": "ハチは あったかくて かわいた ばしょが すきなんだよ。",
+"who": "mmoboro",
+"tag": "fact"
+},
+"ana_hornet.6": {
+"en": "Bzzz, hum!",
+"lo": "ບື້ ຮຶ່ງ!",
+"th": "บื๊อ หึ่ง!",
+"zh": "嗡嗡直响！",
+"ja": "ぶんぶん、ぶーん！",
+"who": "mmoboro",
+"tag": "sound"
+},
+"ana_frog.0": {
+"en": "A forest frog. The forest frog leaps with a lively bounce into the clear stream.",
+"lo": "ກົບປ່າ. ກົບປ່າ ໂດດດຶ໋ງໆລົງໄປໃນຫ້ວຍນ້ຳໃສ.",
+"th": "กบป่า กบป่ากระโดดดึ๋งๆ ลงไปในลำธารใส",
+"zh": "森林青蛙。森林青蛙欢快地一跃跳进清澈的小溪。",
+"ja": "もりの かえる。もりの かえるが ぴょんと かわへ とびこむよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_frog.1": {
+"en": "Hello, forest frog!",
+"lo": "ສະບາຍດີ ກົບປ່າ!",
+"th": "สวัสดีกบป่า!",
+"zh": "你好，森林青蛙！",
+"ja": "こんにちは、もりの かえる！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_frog.2": {
+"en": "Boing! The forest frog leaps off Anansi's leaf into the stream!",
+"lo": "ດຶ໋ງ! ກົບປ່າໂດດຈາກໃບກ້ວຍຂອງອານັນຊີລົງຫ້ວຍ!",
+"th": "ดึ๋ง! กบป่ากระโดดจากใบตองของอนันซีลงลำธาร!",
+"zh": "嘣！森林青蛙从阿南西的大叶子上跃进溪水里！",
+"ja": "ぴょん！ はっぱから かわへ とびこむよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_frog.3": {
+"en": "Glossy emerald skin and bright golden eyes shine by the water.",
+"lo": "ຜິວສີຂຽວມໍລະກົດເງົາ ແລະ ຕາສີຄຳສົດໃສຢູ່ແຄມນ້ຳ.",
+"th": "ผิวสีเขียวมรกตเงาและตาสีทองสดใสอยู่ริมน้ำ",
+"zh": "油亮的翠绿皮肤和金亮的大眼睛在溪边闪闪发光。",
+"ja": "つやつやの みどりの からだと まんまる おめめだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_frog.4": {
+"en": "Frogs have strong back legs that let them jump many times their size.",
+"lo": "ກົບມີຂາຫຼັງແຂງແຮງທີ່ຊ່ວຍໃຫ້ໂດດໄດ້ໄກຫຼາຍເທົ່າຂອງໂຕ.",
+"th": "กบมีขาหลังแข็งแรงที่ช่วยให้กระโดดได้ไกลหลายเท่าของตัว",
+"zh": "青蛙强壮的后腿能让它们跳出好几倍身长的距离。",
+"ja": "つよい あしで びょーんと たかく とべるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_frog.5": {
+"en": "Ribbit, splash!",
+"lo": "ອົບ ຕູມ!",
+"th": "อ๊บ ตูม!",
+"zh": "呱呱噗通！",
+"ja": "けろけろ、ばしゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_osebo.0": {
+"en": "Osebo. Osebo is a swift spotted leopard who bounds through the glade.",
+"lo": "ເສືອດາວໂອເຊໂບ. ໂອເຊໂບ ແມ່ນເສືອດາວວ່ອງໄວທີ່ກະໂດດຂ້າມປ່າ.",
+"th": "เสือดาวโอเซโบ โอเซโบคือเสือดาวว่องไวที่กระโจนข้ามป่า",
+"zh": "花豹奥塞博。奥塞博是一只在林间飞奔的矫健花豹。",
+"ja": "ヒョウの オセボ。オセボは もりを すばやく はしる ヒョウだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_osebo.1": {
+"en": "Hello, Osebo!",
+"lo": "ສະບາຍດີ ເສືອດາວໂອເຊໂບ!",
+"th": "สวัสดีเสือดาวโอเซโบ!",
+"zh": "你好，花豹奥塞博！",
+"ja": "こんにちは、ヒョウの オセボ！",
+"who": "osebo",
+"tag": "greet"
+},
+"ana_osebo.2": {
+"en": "Purr-rr! I am Osebo, the swiftest leopard in Ashanti!",
+"lo": "ຄືດໆ! ຂ້ອຍແມ່ນໂອເຊໂບ ເສືອດາວທີ່ໄວທີ່ສຸດໃນອາຊັນຕີ!",
+"th": "ครืดๆ! ข้าคือโอเซโบ เสือดาวที่เร็วที่สุดในอาซานตี!",
+"zh": "呼噜呼噜！我是阿散蒂跑得最快的花豹奥塞博！",
+"ja": "ごろごろ！ ぼくは あしが はやい オセボだよ！",
+"who": "osebo",
+"tag": "greet"
+},
+"ana_osebo.3": {
+"en": "I bound softly over mossy roots and love a cosy silk hammock!",
+"lo": "ຂ້ອຍໂດດເບົາໆຂ້າມຮາກໄມ້ໄຄນ້ຳ ແລະ ມັກເປໄໝນຸ້ມໆ!",
+"th": "ข้ากระโดดเบาๆ ข้ามรากไม้มอสและชอบเปลไหมนุ่มๆ!",
+"zh": "我轻盈地越过青苔树根，还爱上了软软的银丝吊床！",
+"ja": "もりを ぴょんと とんで ハンモックで ごろごろ するよ！",
+"who": "osebo",
+"tag": "does"
+},
+"ana_osebo.4": {
+"en": "Golden fur and velvety dark spots help me hide in dappled shade.",
+"lo": "ຂົນສີຄຳ ແລະ ຈຸດດຳນຸ້ມຊ່ວຍໃຫ້ຂ້ອຍລີ້ໃນຮົ່ມໄມ້.",
+"th": "ขนสีทองและจุดดำนุ่มช่วยให้ข้าซ่อนตัวในร่มไม้",
+"zh": "金色皮毛和深色花斑帮我在树影间隐身。",
+"ja": "きんいろの けと もようで きの かげに かくれるよ。",
+"who": "osebo",
+"tag": "looks"
+},
+"ana_osebo.5": {
+"en": "Leopards are nimble climbers who rest high on sturdy branches.",
+"lo": "ເສືອດາວປີນຕົ້ນໄມ້ຄ່ອງແຄ້ວ ແລະ ມັກພັກຜ່ອນເທິງງ່າໄມ້ແຂງແຮງ.",
+"th": "เสือดาวปีนต้นไม้คล่องแคล่วและชอบพักผ่อนบนกิ่งไม้แข็งแรง",
+"zh": "花豹身手敏捷，最爱爬到结实的树枝上歇息。",
+"ja": "ヒョウは きのぼりが とくいで えだの うえで ねむるよ。",
+"who": "osebo",
+"tag": "fact"
+},
+"ana_osebo.6": {
+"en": "Whoosh, purr!",
+"lo": "ວູບ ຄືດໆ!",
+"th": "ฟิ้ว ครืดๆ!",
+"zh": "呼呼飞奔，呼噜撒娇！",
+"ja": "しゅっ、ごろごろ！",
+"who": "osebo",
+"tag": "sound"
+},
+"ana_hollow.0": {
+"en": "A fern hollow. A fern hollow is tucked softly beneath leafy green fronds.",
+"lo": "ຫຼຸມໃບກູດ. ຫຼຸມໃບກູດ ເຊື່ອງຢູ່ອ່ອນໆກ້ອງໃບກູດສີຂຽວ.",
+"th": "หลุมใบเฟิร์น หลุมใบเฟิร์นซ่อนอยู่อ่อนๆ ใต้ใบเฟิร์นสีเขียว",
+"zh": "蕨草小坑。蕨草小坑悄悄藏在茂密的绿叶下面。",
+"ja": "しだの くぼみ。しだの くぼみは みどりの はっぱの したに かくれているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_hollow.1": {
+"en": "Anansi spreads green ferns gently over this mossy forest hollow.",
+"lo": "ອານັນຊີປູໃບກູດສີຂຽວຄ່ອຍໆປົກຫຼຸມໄຄນ້ຳໃນປ່ານີ້.",
+"th": "อนันซีปูใบเฟิร์นสีเขียวเบาๆ ปิดหลุมมอสในป่านี้",
+"zh": "阿南西把绿油油的蕨叶轻轻铺在青苔树坑上。",
+"ja": "しだの はっぱを ふんわり のせた くぼみだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_hollow.2": {
+"en": "Soft feathery fern fronds hide the shady earthen rim.",
+"lo": "ໃບກູດອ່ອນຄືຂົນນົກປົກປິດຂອບດິນໃນຮົ່ມ.",
+"th": "ใบเฟิร์นอ่อนเหมือนขนนกปกปิดขอบดินในร่ม",
+"zh": "柔软如羽毛的蕨叶遮住了阴凉的泥土坑边。",
+"ja": "みどりの はっぱが ふわっと かさなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_hollow.3": {
+"en": "Forest hollows collect soft leaves and cool rainwater.",
+"lo": "ຫຼຸມໃນປ່າສະສົມໃບໄມ້ອ່ອນ ແລະ ນ້ຳຝົນເຢັນ.",
+"th": "หลุมในป่าสะสมใบไม้อ่อนและน้ำฝนเย็น",
+"zh": "林间小坑常常积满松软的落叶和清凉的雨水。",
+"ja": "もりの くぼみは ふかふかの はっぱが たまるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_hollow.4": {
+"en": "Poof, rustle!",
+"lo": "ພຸບ ຊາໆ!",
+"th": "ฟุ่บ ซ่าๆ!",
+"zh": "扑通落叶响！",
+"ja": "ふさっ、かさかさ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_branch.0": {
+"en": "A springy branch. A springy branch bends gently and lifts like a woodland crane.",
+"lo": "ງ່າໄມ້ອ່ອນ. ງ່າໄມ້ອ່ອນ ກົ່ງລົງຄ່ອຍໆ ແລະ ຍົກຂຶ້ນຄືຄັນງັດໃນປ່າ.",
+"th": "กิ่งไม้อ่อน กิ่งไม้อ่อนโค้งลงเบาๆ และยกขึ้นเหมือนคันงัดในป่า",
+"zh": "弹性树枝。弹性树枝能温柔地弯下再弹起，像森林起重机。",
+"ja": "しなやかな えだ。しなやかな えだは ぐっと まがって やさしく もちあげるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_branch.1": {
+"en": "Anansi bends this springy branch to lift Osebo's silk hammock!",
+"lo": "ອານັນຊີກົ່ງງ່າໄມ້ອ່ອນນີ້ເພື່ອຍົກເປໄໝຂອງໂອເຊໂບຂຶ້ນ!",
+"th": "อนันซีโน้มกิ่งไม้อ่อนนี้เพื่อยกเปลไหมของโอเซโบขึ้น!",
+"zh": "阿南西弯下这根弹性树枝，把奥塞博的吊床轻轻拉起！",
+"ja": "しなやかな えだを まげて オセボを もちあげるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_branch.2": {
+"en": "Warm mossy bark curves gracefully above the forest trail.",
+"lo": "ເປືອກໄມ້ໄຄນ້ຳອຸ່ນໂຄ້ງອ່ອນຊ້ອຍເໜືອທາງປ່າ.",
+"th": "เปลือกไม้มอสอุ่นโค้งอ่อนช้อยเหนือทางป่า",
+"zh": "长满青苔的棕色树枝优雅地垂在林间小路上方。",
+"ja": "こけの ついた えだが ぐいっと しなるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_branch.3": {
+"en": "Young green tree branches bend far without snapping.",
+"lo": "ງ່າໄມ້ອ່ອນສີຂຽວສາມາດກົ່ງໄດ້ຫຼາຍໂດຍບໍ່ຫັກ.",
+"th": "กิ่งไม้อ่อนสีเขียวสามารถโค้งได้มากโดยไม่หัก",
+"zh": "鲜活柔韧的树枝能弯下很大弧度而不会折断。",
+"ja": "わかい えだは ぐっと まがっても おれないんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_branch.4": {
+"en": "Creak, boing!",
+"lo": "ອຽດ ດຶ໋ງ!",
+"th": "เอี๊ยด ดึ๋ง!",
+"zh": "吱呀弹起来！",
+"ja": "ぎぃっ、びよーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_hammock.0": {
+"en": "A silk hammock. A silk hammock cradles Osebo softly up out of the hollow.",
+"lo": "ເປໄໝເງິນ. ເປໄໝເງິນ ອຸ້ມໂອເຊໂບຂຶ້ນຈາກຫຼຸມຢ່າງອ່ອນໂຍນ.",
+"th": "เปลไหมเงิน เปลไหมเงินอุ้มโอเซโบขึ้นจากหลุมอย่างอ่อนโยน",
+"zh": "银丝吊床。银丝吊床把花豹奥塞博稳稳温柔地托出树坑。",
+"ja": "ぎんの ハンモック。ぎんの ハンモックが オセボを やさしく つつんで もちあげるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_hammock.1": {
+"en": "Silver spider-silk strands weave a strong cosy hammock!",
+"lo": "ເສັ້ນໄໝເງິນແມງມຸມສານເປັນເປທີ່ແຂງແຮງ ແລະ ອົບອຸ່ນ!",
+"th": "เส้นไหมเงินแมงมุมสานเป็นเปลที่แข็งแรงและอบอุ่น!",
+"zh": "银色蛛丝织成一张又结实又舒服的吊床！",
+"ja": "ぎんの いとで じょうぶな ハンモックを あんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_hammock.2": {
+"en": "Shimmering pale silver threads gleam softly in afternoon light.",
+"lo": "ເສັ້ນໄໝສີເງິນອ່ອນເຫຼື້ອມວິບວັບໃນແສງແດດບ່າຍ.",
+"th": "เส้นไหมสีเงินอ่อนระยิบในแสงแดดบ่าย",
+"zh": "闪亮的淡银丝线在午后阳光里散发着柔和光芒。",
+"ja": "ぎんいろの いとが きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_hammock.3": {
+"en": "Weaving many thin threads together makes them remarkably strong.",
+"lo": "ການສານເສັ້ນນ້ອຍໆຫຼາຍເສັ້ນເຂົ້າກັນເຮັດໃຫ້ແຂງແຮງຫຼາຍ.",
+"th": "การสานเส้นน้อยๆ หลายเส้นเข้าด้วยกันทำให้แข็งแรงมาก",
+"zh": "把许多细丝编织在一起，就会产生惊人的力量。",
+"ja": "ほそい いとも たくさん あむと とっても つよく なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_hammock.4": {
+"en": "Swish, swing!",
+"lo": "ວູບ ແກວ່ງ!",
+"th": "ฟิ้ว แกว่ง!",
+"zh": "银丝轻晃荡！",
+"ja": "ゆらゆら、きらり！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_mortar.0": {
+"en": "A wooden mortar. A wooden mortar pounds golden yams into creamy sweet fufu.",
+"lo": "ຄົກໄມ້. ຄົກໄມ້ ຕຳມັນເພົາສີຄຳໃຫ້ແຫຼກນຽນຫວານມັນ.",
+"th": "ครกไม้ ครกไม้ตำมันเทศสีทองให้ละเอียดเนียนหวานมัน",
+"zh": "木舂臼。木舂臼把金黄的山药捣成香甜软糯的泥。",
+"ja": "きの うす。きの うすで あまい いもを ぺったん つくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_mortar.1": {
+"en": "Aso pounds sweet golden yams rhythmically in this mortar.",
+"lo": "ອາໂຊຕຳມັນເພົາສີຄຳຫວານເປັນຈັງຫວະໃນຄົກໄມ້ນີ້.",
+"th": "อาโซตำมันเทศสีทองหวานเป็นจังหวะในครกไม้นี้",
+"zh": "阿索用木舂臼有节奏地把香甜山药捣成软泥。",
+"ja": "あまい いもを とんとん つく おおきな うすだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_mortar.2": {
+"en": "Solid carved hardwood stands tall with smooth warm grain.",
+"lo": "ໄມ້ເນື້ອແຂງແກະສະຫຼັກຕັ້ງໝັ້ນຄົງດ້ວຍລາຍໄມ້ອຸ່ນລຽບ.",
+"th": "ไม้เนื้อแข็งแกะสลักตั้งมั่นคงด้วยลายไม้อุ่นเรียบ",
+"zh": "厚实的雕花硬木带着温润光滑的天然木纹。",
+"ja": "じょうぶな きを ほって つくって あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_mortar.3": {
+"en": "In Ghana, fufu is pounded together in a tall wooden mortar.",
+"lo": "ໃນປະເທດການາ ຟູຟູຕຳຮ່ວມກັນໃນຄົກໄມ້ສູງ.",
+"th": "ในกานา ฟูฟูตำร่วมกันในครกไม้สูง",
+"zh": "在加纳，家人们常一起用高木臼舂制美味的富富。",
+"ja": "ガーナでは おおきな うすで いもを つくんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_mortar.4": {
+"en": "Thump, tap-tap!",
+"lo": "ຕຸບ ປ໊ອກໆ!",
+"th": "ตุ้บ ป๊อกๆ!",
+"zh": "咚咚捣山药！",
+"ja": "ぺったん、とんとん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_yams.0": {
+"en": "Sweet yams. Sweet yams are cooked warm and fragrant in Ashanti kitchens.",
+"lo": "ມັນເພົາຫວານ. ມັນເພົາຫວານ ຕົ້ມສຸກອຸ່ນ ແລະ ຫອມໃນເຮືອນຄົວອາຊັນຕີ.",
+"th": "มันเทศหวาน มันเทศหวานต้มสุกอุ่นและหอมในครัวอาซานตี",
+"zh": "香甜山药。香甜的山药在阿散蒂厨房里煮得又暖又香。",
+"ja": "あまい いも。あまい いもは ほかほか いい においが するよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_yams.1": {
+"en": "Sweet mashed yams smell so delicious that fairy Mmoatia loves them!",
+"lo": "ມັນເພົາບົດຫວານຫອມແຊບຈົນນາງຟ້າມົວເຕຍມັກຫຼາຍ!",
+"th": "มันเทศบดหวานหอมอร่อยจนนางฟ้ามัวเตียชอบมาก!",
+"zh": "香喷喷的甜山药泥让小精灵莫阿提亚闻着就开心！",
+"ja": "いい においの あまい いもは モアティアの だいこうぶつ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_yams.2": {
+"en": "Creamy golden yams glow warm inside the carved bowl.",
+"lo": "ມັນເພົາສີຄຳນຽນສ່ອງອຸ່ນຢູ່ໃນຖ້ວຍແກະສະຫຼັກ.",
+"th": "มันเทศสีทองเนียนส่องอุ่นอยู่ในชามแกะสลัก",
+"zh": "金黄绵密的山药在雕花木碗里冒着暖香。",
+"ja": "きいろくて ほかほか とっても おいしそうだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_yams.3": {
+"en": "West Africa celebrates the Yam Festival every harvest season.",
+"lo": "ອາຟຣິກາຕາເວັນຕົກສະຫຼອງບຸນມັນເພົາທຸກລະດູເກັບກ່ຽວ.",
+"th": "แอฟริกาตะวันตกฉลองเทศกาลมันเทศทุกฤดูเก็บเกี่ยว",
+"zh": "西非人们每年丰收季都会欢庆热闹的山药节。",
+"ja": "あきには いもの おまつりを ひらくんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_yams.4": {
+"en": "Mmm, sweet!",
+"lo": "ອືມ ຫວານແຊບ!",
+"th": "อื้ม หวานอร่อย!",
+"zh": "嗯，真香甜！",
+"ja": "うーん、おいしそう！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_bowl.0": {
+"en": "A wooden bowl. A wooden bowl holds warm mashed yams ready to share.",
+"lo": "ຖ້ວຍໄມ້. ຖ້ວຍໄມ້ ໃສ່ມັນເພົາບົດອຸ່ນໆກຽມໄວ້ແບ່ງປັນ.",
+"th": "ชามไม้ ชามไม้ใส่มันเทศบดอุ่นๆ เตรียมไว้แบ่งปัน",
+"zh": "木碗。木碗里盛着热乎乎的香甜山药泥。",
+"ja": "きの おわん。きの おわんに あたたかい いもが はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_bowl.1": {
+"en": "This carved wooden bowl holds Aso's warm sweet yams.",
+"lo": "ຖ້ວຍໄມ້ແກະສະຫຼັກນີ້ໃສ່ມັນເພົາຫວານອຸ່ນຂອງອາໂຊ.",
+"th": "ชามไม้แกะสลักนี้ใส่มันเทศหวานอุ่นของอาโซ",
+"zh": "这只雕花木碗盛着阿索精心准备的甜山药。",
+"ja": "アソが つくった あまい いもを いれる おわんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_bowl.2": {
+"en": "Rich brown wood shines smoothly with golden rim carvings.",
+"lo": "ໄມ້ສີນ້ຳຕານເຂັ້ມເງົາງາມພ້ອມລາຍແກະສະຫຼັກຂອບສີຄຳ.",
+"th": "ไม้สีน้ำตาลเข้มเงางามพร้อมลายแกะสลักขอบสีทอง",
+"zh": "深棕色的木碗打磨得温润光亮，碗边刻着花纹。",
+"ja": "つやつやの ちゃいろい きの おわんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_bowl.3": {
+"en": "Hand-carved wooden bowls keep warm food cosy longer.",
+"lo": "ຖ້ວຍໄມ້ແກະສະຫຼັກດ້ວຍມືຊ່ວຍເກັບຄວາມອຸ່ນຂອງອາຫານໄດ້ດົນ.",
+"th": "ชามไม้แกะสลักด้วยมือช่วยเก็บความอุ่นของอาหารได้นาน",
+"zh": "手工雕刻的木碗能让热腾腾的食物保温更久。",
+"ja": "きの うつわは りょうりを あたたかく たもつよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_bowl.4": {
+"en": "Clack, clink!",
+"lo": "ແກັກ ກິກ!",
+"th": "แกร๊ก กริ๊ก!",
+"zh": "木碗轻响！",
+"ja": "ことん、こんっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_doll.0": {
+"en": "A wooden doll. A wooden doll wears a cheerful carved smile in the moonlight.",
+"lo": "ຕຸກກະຕາໄມ້. ຕຸກກະຕາໄມ້ ມີຮອຍຍິ້ມແກະສະຫຼັກສົດໃສໃຕ້ແສງຈັນ.",
+"th": "ตุ๊กตาไม้ ตุ๊กตาไม้มีรอยยิ้มแกะสลักสดใสใต้แสงจันทร์",
+"zh": "小木偶。小木偶在月光下挂着开心的微笑。",
+"ja": "きの にんぎょう。きの にんぎょうは にっこり やさしく わらっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_doll.1": {
+"en": "Anansi carved this smiling wooden doll with sticky tree gum!",
+"lo": "ອານັນຊີຄວັດຕຸກກະຕາໄມ້ໜ້າຍິ້ມນີ້ແລ້ວທາດ້ວຍຢາງໄມ້ໜຽວ!",
+"th": "อนันซีแกะสลักตุ๊กตาไม้หน้ายิ้มนี้แล้วทาด้วยยางไม้เหนียว!",
+"zh": "阿南西雕出这只微笑的小木偶，还抹上了粘粘的树胶！",
+"ja": "アナンシが ほった にっこり きの にんぎょうだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_doll.2": {
+"en": "Round cheerful eyes and a warm carved smile greet the fairy.",
+"lo": "ຕາກົມສົດໃສ ແລະ ຮອຍຍິ້ມແກະສະຫຼັກອຸ່ນໆຕ້ອນຮັບນາງຟ້າ.",
+"th": "ตากลมสดใสและรอยยิ้มแกะสลักอุ่นๆ ต้อนรับนางฟ้า",
+"zh": "圆圆的眼睛和温暖的笑容迎接着森林小精灵。",
+"ja": "まんまる おめめと にっこり えがおが かわいいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_doll.3": {
+"en": "Ashanti woodcarvers are famous for graceful Akuaba figures.",
+"lo": "ຊ່າງແກະສະຫຼັກອາຊັນຕີມີຊື່ສຽງດ້ານຕຸກກະຕາໄມ້ອາຄູອາບາ.",
+"th": "ช่างแกะสลักอาซานตีมีชื่อเสียงด้านตุ๊กตาไม้อาคูอาบา",
+"zh": "阿散蒂木雕师以雕刻精美的阿库阿巴木偶闻名世界。",
+"ja": "きを ほって つくる にんぎょうは ガーナの でんとうだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_doll.4": {
+"en": "Tap-tap, stick!",
+"lo": "ປ໊ອກໆ ຕິດ!",
+"th": "ป๊อกๆ ติด!",
+"zh": "嗒嗒雕木偶！",
+"ja": "こんこん、ぺたっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_mmoatia.0": {
+"en": "Mmoatia. Mmoatia is a joyful little forest fairy with a green leaf crown.",
+"lo": "ນາງຟ້າມົວເຕຍ. ມົວເຕຍ ແມ່ນນາງຟ້າປ່ານ້ອຍສົດໃສທີ່ໃສ່ມົງກຸດໃບໄມ້ຂຽວ.",
+"th": "นางฟ้ามัวเตีย มัวเตียคือนางฟ้าป่าน้อยสดใสที่สวมมงกุฎใบไม้เขียว",
+"zh": "森林精灵莫阿提亚。莫阿提亚是戴着绿叶花冠的快乐森林小精灵。",
+"ja": "ようせい モアティア。モアティアは はっぱの かんむりを かぶった もりの ようせいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_mmoatia.1": {
+"en": "Hello, Mmoatia!",
+"lo": "ສະບາຍດີ ນາງຟ້າມົວເຕຍ!",
+"th": "สวัสดีนางฟ้ามัวเตีย!",
+"zh": "你好，森林精灵莫阿提亚！",
+"ja": "こんにちは、ようせい モアティア！",
+"who": "mmoatia",
+"tag": "greet"
+},
+"ana_mmoatia.2": {
+"en": "Hee-hee! I am Mmoatia, the dancing fairy of the odum glade!",
+"lo": "ຄິກໆ! ຂ້ອຍແມ່ນມົວເຕຍ ນາງຟ້າຟ້ອນລຳແຫ່ງປ່າໂອດຸມ!",
+"th": "คิกๆ! ฉันคือมัวเตีย นางฟ้าร่ายรำแห่งป่าโอดุม!",
+"zh": "嘻嘻！我是奥杜姆林间爱跳舞的小精灵莫阿提亚！",
+"ja": "えへへ！ おどるのが すきな モアティアだよ！",
+"who": "mmoatia",
+"tag": "greet"
+},
+"ana_mmoatia.3": {
+"en": "I love sweet mashed yams and joyful starlight drumbeats!",
+"lo": "ຂ້ອຍມັກມັນເພົາບົດຫວານໆ ແລະ ສຽງກອງມ່ວນຊື່ນໃຕ້ແສງດາວ!",
+"th": "ฉันชอบมันเทศบดหวานๆ และเสียงกลองสนุกใต้แสงดาว!",
+"zh": "我最喜欢吃香甜的山药泥，听星光下的欢快鼓声！",
+"ja": "あまい いもと たのしい たいこの おとが だいすき！",
+"who": "mmoatia",
+"tag": "does"
+},
+"ana_mmoatia.4": {
+"en": "My green leaf crown sparkles whenever I twirl beneath the stars.",
+"lo": "ມົງກຸດໃບໄມ້ຂຽວຂອງຂ້ອຍເຫຼື້ອມວິບວັບຕອນຂ້ອຍໝຸນໂຕໃຕ້ແສງດາວ.",
+"th": "มงกุฎใบไม้เขียวของฉันส่องประกายเวลาหมุนตัวใต้แสงดาว",
+"zh": "每当我在星光下旋转，我的绿叶花冠就闪闪发亮。",
+"ja": "みどりの かんむりが ほしの ひかりで きらきら ひかるよ。",
+"who": "mmoatia",
+"tag": "looks"
+},
+"ana_mmoatia.5": {
+"en": "In Ghanaian folklore, Mmoatia are playful forest spirits who love kindness.",
+"lo": "ໃນນິທານພື້ນບ້ານການາ ມົວເຕຍແມ່ນພູດປ່າຂີ້ຫຼິ້ນທີ່ມັກຄວາມໃຈດີ.",
+"th": "ในนิทานพื้นบ้านกานา มัวเตียคือภูตป่าขี้เล่นที่ชอบความใจดี",
+"zh": "在加纳民间传说里，莫阿提亚是喜爱善良之人的调皮林间精灵。",
+"ja": "もりの ようせいは やさしい ひとが だいすき なんだよ。",
+"who": "mmoatia",
+"tag": "fact"
+},
+"ana_mmoatia.6": {
+"en": "Twirl, giggle!",
+"lo": "ໝຸນ ຄິກໆ!",
+"th": "หมุน คิกๆ!",
+"zh": "转圈圈，咯咯笑！",
+"ja": "くるくる、くすくす！",
+"who": "mmoatia",
+"tag": "sound"
+},
+"ana_fern.0": {
+"en": "A wiggling fern. A wiggling fern rustles right before fairy Mmoatia peeks out!",
+"lo": "ຕົ້ນກູດໄຫວ. ຕົ້ນກູດໄຫວ ສັ່ນໄຫວພໍດີກ່ອນນາງຟ້າມົວເຕຍຈະໂຜ່ອອກມາ!",
+"th": "เฟิร์นขยับได้ เฟิร์นขยับได้สั่นไหวพอดีก่อนนางฟ้ามัวเตียจะโผล่ออกมา!",
+"zh": "晃动的蕨草。蕨草轻轻晃动起来，小精灵莫阿提亚马上要探头啦！",
+"ja": "ゆれる しだ。しだが ゆらゆら ゆれて モアティアが でて くるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ana_fern.1": {
+"en": "Watch closely! The green fern wiggles right before Mmoatia appears!",
+"lo": "ເບິ່ງດີໆ! ຕົ້ນກູດສີຂຽວສັ່ນໄຫວພໍດີກ່ອນມົວເຕຍຈະປາກົດ!",
+"th": "ดูดีๆ! เฟิร์นสีเขียวสั่นไหวพอดีก่อนมัวเตียจะปรากฏ!",
+"zh": "仔细看！绿蕨草一晃动，小精灵莫阿提亚就要出来啦！",
+"ja": "よく みてね！ しだが ゆれて ようせいが でて くるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_fern.2": {
+"en": "Lush lacy fronds shimmer softly in the starlit glade.",
+"lo": "ໃບກູດລາຍລູກໄມ້ຂຽວສົດເຫຼື້ອມອ່ອນໆໃຕ້ແສງດາວ.",
+"th": "ใบเฟิร์นลายลูกไม้เขียวสดระยิบอ่อนๆ ใต้แสงดาว",
+"zh": "繁茂如花边般的翠绿蕨叶在星光下微微发亮。",
+"ja": "ほしの ひかりで みどりの はっぱが ゆらゆら するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_fern.3": {
+"en": "Ferns are among the oldest leafy plants in tropical rainforests.",
+"lo": "ຕົ້ນກູດແມ່ນພືດໃບຂຽວທີ່ເກົ່າແກ່ທີ່ສຸດຊະນິດໜຶ່ງໃນປ່າດົງ.",
+"th": "เฟิร์นเป็นพืชใบเขียวที่เก่าแก่ที่สุดชนิดหนึ่งในป่าดง",
+"zh": "蕨类植物是热带雨林里最古老的绿色植物之一。",
+"ja": "しだは むかしから もりに はえている くさなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_fern.4": {
+"en": "Wiggle, rustle!",
+"lo": "ໄຫວ ຊາໆ!",
+"th": "ไหว ซ่าๆ!",
+"zh": "沙沙轻轻晃！",
+"ja": "ゆらゆら、かさかさ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_spark.0": {
+"en": "A music spark. A music spark dances upward from the joyful little drum.",
+"lo": "ປະກາຍສຽງດົນຕີ. ປະກາຍສຽງດົນຕີ ຟ້ອນລຳຂຶ້ນໄປຈາກກອງນ້ອຍມ່ວນຊື່ນ.",
+"th": "ประกายเสียงดนตรี ประกายเสียงดนตรีเต้นรำขึ้นไปจากกลองน้อยแสนสนุก",
+"zh": "音乐星光。音乐星光从欢快的小鼓上闪亮飘起。",
+"ja": "おんがくの きらめき。たいこの おとと いっしょに きらめきが まいあがるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_spark.1": {
+"en": "Tap the drum on the green beat to light each golden music spark!",
+"lo": "ແຕະກອງຕອນວົງແຫວນສີຂຽວເພື່ອເຮັດໃຫ້ປະກາຍດົນຕີສີຄຳສະຫວ່າງ!",
+"th": "แตะกลองตอนวงแหวนสีเขียวเพื่อให้ประกายดนตรีสีทองสว่าง!",
+"zh": "在绿环亮起时敲鼓，就能点亮每一颗金色音乐星光！",
+"ja": "みどりの ときに たたくと おんがくの ひかりが つくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_spark.2": {
+"en": "Warm golden notes glow like tiny fireflies in the forest night.",
+"lo": "ໂນດສີຄຳອຸ່ນສ່ອງແສງຄືຫິ່ງຫ້ອຍນ້ອຍໃນປ່າຍາມຄ່ຳ.",
+"th": "โน้ตสีทองอุ่นส่องแสงเหมือนหิ่งห้อยน้อยในป่ายามค่ำ",
+"zh": "温暖的金色音符像林夜里的小萤火虫般闪烁。",
+"ja": "ほたるみたいに きんいろの おんぷが ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_spark.3": {
+"en": "Soft rhythm invites shy woodland creatures to come out and dance.",
+"lo": "ຈັງຫວະອ່ອນໂຍນຊວນສັດປ່າຂີ້ອາຍອອກມາຟ້ອນລຳ.",
+"th": "จังหวะอ่อนโยนชวนสัตว์ป่าขี้อายออกมาเต้นรำ",
+"zh": "温柔的鼓点节奏能邀请害羞的林间精灵出来起舞。",
+"ja": "やさしい リズムは もりの なかまを うれしく するよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_spark.4": {
+"en": "Sparkle, beat!",
+"lo": "ວິບວັບ ຕຶ່ງ!",
+"th": "ระยิบ ตึ่ง!",
+"zh": "音符闪亮！",
+"ja": "きらっ、とんっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_starseal.0": {
+"en": "A star. A golden star-seal glows with Sky God Nyame's warm blessing.",
+"lo": "ຕາດາວສີຄຳ. ຕາດາວສີຄຳ ສ່ອງແສງດ້ວຍພອນອັນອົບອຸ່ນຂອງເທບນະຍາເມ.",
+"th": "ตราดาวสีทอง ตราดาวสีทองส่องแสงด้วยพรอันอบอุ่นของเทพนยาเม",
+"zh": "金色星印。金色星印闪耀着天神尼亚美温暖的祝福。",
+"ja": "きんの ほしじるし。きんの ほしじるしが ニャメの おくりものに かがやくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_starseal.1": {
+"en": "Tap all four golden star-seals to wake the Golden Story Box!",
+"lo": "ແຕະຕາດາວສີຄຳທັງສີ່ອັນເພື່ອປຸກກ່ອງນິທານສີຄຳ!",
+"th": "แตะตราดาวสีทองทั้งสี่อันเพื่อปลุกกล่องนิทานสีทอง!",
+"zh": "点亮四枚金色星印，唤醒神奇的黄金故事盒！",
+"ja": "よっつの ほしじるしに さわって はこを ひからせよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_starseal.2": {
+"en": "Eight golden points shine brightly around Sky God Nyame's gift.",
+"lo": "ແສງດາວແປດແຈສີຄຳສ່ອງສະຫວ່າງອ້ອມຂອງຂວັນຂອງເທບນະຍາເມ.",
+"th": "แสงดาวแปดแฉกสีทองส่องสว่างรอบของขวัญของเทพนยาเม",
+"zh": "八角金色星芒在天神的礼物周围熠熠生辉。",
+"ja": "きらきら ひかる ほしの かたちの しるしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_starseal.3": {
+"en": "Eight-pointed stars symbolize wisdom and guidance in Ashanti art.",
+"lo": "ດາວແປດແຈເປັນສັນຍະລັກຂອງປັນຍາ ແລະ ການນຳທາງໃນສິລະປະອາຊັນຕີ.",
+"th": "ดาวแปดแฉกเป็นสัญลักษณ์ของปัญญาและการนำทางในศิลปะอาซานตี",
+"zh": "在阿散蒂艺术里，八角星象征着智慧与指引。",
+"ja": "ほしの もようは ちえと みちびきの しるしだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_starseal.4": {
+"en": "Twinkle, shine!",
+"lo": "ວິບວັບ ສ່ອງແສງ!",
+"th": "ระยิบ ส่องแสง!",
+"zh": "星印闪耀！",
+"ja": "きらきら、ぴかっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_storybox_open.0": {
+"en": "A Story Box. The open Story Box spills warm golden tales into the night sky.",
+"lo": "ກ່ອງນິທານທີ່ເປີດແລ້ວ. ກ່ອງນິທານທີ່ເປີດແລ້ວ ປ່ອຍນິທານສີຄຳອຸ່ນອອກສູ່ທ້ອງຟ້າຍາມຄ່ຳ.",
+"th": "กล่องนิทานที่เปิดแล้ว กล่องนิทานที่เปิดแล้วปล่อยนิทานสีทองอุ่นออกสู่ท้องฟ้ายามค่ำ",
+"zh": "打开的故事盒。打开的故事盒把温暖的金色故事洒向夜空。",
+"ja": "あいた おはなしばこ。あいた おはなしばこから あたたかい おはなしが とびだすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_storybox_open.1": {
+"en": "Now the Story Box stands open so every child can hear its tales!",
+"lo": "ດຽວນີ້ກ່ອງນິທານເປີດແລ້ວເພື່ອໃຫ້ເດັກນ້ອຍທຸກຄົນໄດ້ຟັງ!",
+"th": "ตอนนี้กล่องนิทานเปิดแล้วเพื่อให้เด็กทุกคนได้ฟัง!",
+"zh": "现在故事盒打开啦，每个孩子都能听到动听的故事！",
+"ja": "はこが あいて みんなに おはなしが とどくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_storybox_open.2": {
+"en": "Warm golden light spills over the carved wooden lid.",
+"lo": "ແສງສີຄຳອຸ່ນໄຫຼອອກມາເໜືອຝາໄມ້ແກະສະຫຼັກ.",
+"th": "แสงสีทองอุ่นไหลออกมาเหนือฝาไม้แกะสลัก",
+"zh": "温暖的金色光芒从雕花盒盖间洋溢出来。",
+"ja": "あたたかい ひかりが はこの なかから あふれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_storybox_open.3": {
+"en": "Stories grow richer every single time we share them together.",
+"lo": "ນິທານຍິ່ງອຸດົມສົມບູນຂຶ້ນທຸກຄັ້ງທີ່ພວກເຮົາແບ່ງປັນກັນ.",
+"th": "นิทานยิ่งงดงามขึ้นทุกครั้งที่พวกเราแบ่งปันกัน",
+"zh": "故事每次被分享给别人，都会变得更加美好。",
+"ja": "おはなしは みんなで わけあうと もっと たのしく なるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_storybox_open.4": {
+"en": "Whoomp, sparkle!",
+"lo": "ຟູ່ມ ວິບວັບ!",
+"th": "ฟู่ม ระยิบ!",
+"zh": "呼啦金光绽放！",
+"ja": "ふわっ、きらきら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_lantern.0": {
+"en": "A brass lantern. A brass lantern lights the courtyard for evening storytelling.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງ. ໂຄມໄຟທອງເຫຼືອງ ສ່ອງແສງເດີ່ນບ້ານສຳລັບເລົ່ານິທານຍາມຄ່ຳ.",
+"th": "โคมไฟทองเหลือง โคมไฟทองเหลืองส่องแสงลานบ้านสำหรับเล่านิทานยามค่ำ",
+"zh": "黄铜灯笼。黄铜灯笼照亮夜晚讲故事的热闹院子。",
+"ja": "しんちゅうの らんぷ。しんちゅうの らんぷが よるの にわを あたたかく てらすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_lantern.1": {
+"en": "Carved brass lanterns cast warm amber pools across the night yard.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງແກະສະຫຼັກສ່ອງແສງສີອຳພັນອຸ່ນທົ່ວເດີ່ນບ້ານຍາມຄ່ຳ.",
+"th": "โคมไฟทองเหลืองแกะสลักส่องแสงสีอำพันอุ่นทั่วลานบ้านยามค่ำ",
+"zh": "雕花黄铜灯笼在夜晚院子里洒下暖暖的琥珀光晕。",
+"ja": "あたたかい ひかりが よるの にわを てらしているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ana_lantern.2": {
+"en": "Golden filigree arches frame the glowing flame inside.",
+"lo": "ລວດລາຍໂຄ້ງສີຄຳລ້ອມແສງໄຟທີ່ສ່ອງສະຫວ່າງຂ້າງໃນ.",
+"th": "ลวดลายโค้งสีทองล้อมแสงไฟที่ส่องสว่างข้างใน",
+"zh": "精巧的金色镂空花纹映出里面温柔跳跃的灯光。",
+"ja": "きんの すかしもようの なかで ひが ぽっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_lantern.3": {
+"en": "Warm lantern light welcomes families together after sunset.",
+"lo": "ແສງໂຄມໄຟອຸ່ນຕ້ອນຮັບຄອບຄົວມາໂຮມກັນຫຼັງຕາເວັນຕົກດິນ.",
+"th": "แสงโคมไฟอุ่นต้อนรับครอบครัวมารวมตัวกันหลังพระอาทิตย์ตก",
+"zh": "日落之后，温暖的灯光把家人们聚在一起听故事。",
+"ja": "ひが しずむと らんぷの まわりに みんなが あつまるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_lantern.4": {
+"en": "Glow, flicker!",
+"lo": "ເຮືອງ ວັບໆ!",
+"th": "เรือง วับๆ!",
+"zh": "灯火温柔摇曳！",
+"ja": "ぽわっ、ゆらゆら！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_weaver.0": {
+"en": "A weaver bird. The yellow weaver bird twitters merrily above the courtyard mat.",
+"lo": "ນົກກະຈາບ. ນົກກະຈາບສີເຫຼືອງ ຮ້ອງຈິບໆມ່ວນຊື່ນເໜືອສາດສານ.",
+"th": "นกกระจาบ นกกระจาบสีเหลืองร้องจิ๊บๆ สนุกสนานเหนือเสื่อสาน",
+"zh": "织布鸟。金黄色的织布鸟在院子草席上方欢快地啾啾歌唱。",
+"ja": "はたおりどり。きいろい はたおりどりが たのしく ちゅんちゅん うたうよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_weaver.1": {
+"en": "Hello, weaver bird!",
+"lo": "ສະບາຍດີ ນົກກະຈາບ!",
+"th": "สวัสดีนกกระจาบ!",
+"zh": "你好，织布鸟！",
+"ja": "こんにちは、はたおりどり！",
+"who": "narrator",
+"tag": "greet"
+},
+"ana_weaver.2": {
+"en": "This yellow weaver bird chirps happily as the golden ribbon pops!",
+"lo": "ນົກກະຈາບສີເຫຼືອງຮ້ອງມ່ວນຊື່ນເມື່ອໂບສີຄຳເດັ້ງຂຶ້ນ!",
+"th": "นกกระจาบสีเหลืองร้องสนุกเมื่อริบบิ้นสีทองเด้งขึ้น!",
+"zh": "金色丝带弹出来时，织布鸟欢快地叽喳歌唱！",
+"ja": "リボンが とびだすと はたおりどりが うれしく うたうよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_weaver.3": {
+"en": "Bright sunny feathers flash against the starry Ashanti night.",
+"lo": "ຂົນສີເຫຼືອງສົດໃສເຫຼື້ອມງາມກາງຄືນທີ່ມີດາວ.",
+"th": "ขนสีเหลืองสดใสเปล่งประกายกลางคืนที่มีดาว",
+"zh": "明黄色的羽毛在星光闪烁的夜空下格外耀眼。",
+"ja": "きいろい はねが よるの にわで ぱっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_weaver.4": {
+"en": "African weaver birds weave hanging basket nests out of grass.",
+"lo": "ນົກກະຈາບອາຟຣິກາສານຮັງຫ້ອຍຄືກະຕ້າຈາກໃບຫຍ້າ.",
+"th": "นกกระจาบแอฟริกาสานรังห้อยเหมือนตะกร้าจากใบหญ้า",
+"zh": "非洲织布鸟会用细草编织出精巧的吊篮鸟巢。",
+"ja": "くさを あんで かごみたいな すを つくる とりだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_weaver.5": {
+"en": "Chirp, sproing!",
+"lo": "ຈິບ ດຶ໋ງ!",
+"th": "จิ๊บ ดึ๋ง!",
+"zh": "叽叽喳喳蹦起来！",
+"ja": "ちゅんちゅん、びよーん！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_ribbon.0": {
+"en": "A golden ribbon. A golden ribbon curls cheerfully out of the Story Box.",
+"lo": "ໂບໄໝສີຄຳ. ໂບໄໝສີຄຳ ມ້ວນງໍສົດໃສອອກມາຈາກກ່ອງນິທານ.",
+"th": "ริบบิ้นไหมสีทอง ริบบิ้นไหมสีทองม้วนงอสดใสออกมาจากกล่องนิทาน",
+"zh": "金色丝带。金色丝带欢快地从故事盒里卷了出来。",
+"ja": "きんいろの リボン。きんいろの リボンが くるくる はこから とびだすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_ribbon.1": {
+"en": "Sproing! The golden ribbon bounces out when the Story Box opens!",
+"lo": "ດຶ໋ງ! ໂບໄໝສີຄຳເດັ້ງອອກມາເມື່ອກ່ອງນິທານເປີດ!",
+"th": "ดึ๋ง! ริบบิ้นไหมสีทองเด้งออกมาเมื่อกล่องนิทานเปิด!",
+"zh": "嘣！故事盒一打开，金色丝带就欢快地弹了出来！",
+"ja": "びよーん！ はこが あくと リボンが はねるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_ribbon.2": {
+"en": "Silky gold loops twist playfully right beside the tortoise.",
+"lo": "ວົງໂບໄໝສີຄຳມ້ວນຂີ້ຫຼິ້ນຢູ່ຂ້າງເຕົ່າ.",
+"th": "วงโบว์ไหมสีทองม้วนขี้เล่นอยู่ข้างเต่า",
+"zh": "丝滑的金色丝带卷在陆龟身旁俏皮地翻滚。",
+"ja": "つやつやの きんいろの リボンが くるくる まわるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_ribbon.3": {
+"en": "Bright silk ribbons celebrate joyful festivals and gifts.",
+"lo": "ໂບໄໝສົດໃສໃຊ້ສະຫຼອງງານບຸນ ແລະ ຂອງຂວັນທີ່ມີຄວາມສຸກ.",
+"th": "ริบบิ้นไหมสดใสใช้ฉลองงานเทศกาลและของขวัญที่มีความสุข",
+"zh": "鲜艳的丝带常用来装点喜庆的节日和珍贵的礼物。",
+"ja": "おめでたい おくりものに かざる きれいな リボンだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_ribbon.4": {
+"en": "Sproing, twirl!",
+"lo": "ດຶ໋ງ ໝຸນ!",
+"th": "ดึ๋ง หมุน!",
+"zh": "嘣地一弹！",
+"ja": "びよーん、くるっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_mat.0": {
+"en": "A woven mat. A woven mat makes a soft cosy place to sit and listen.",
+"lo": "ສາດສານ. ສາດສານ ເປັນບ່ອນນັ່ງອ່ອນນຸ້ມສະບາຍໄວ້ນັ່ງຟັງນິທານ.",
+"th": "เสื่อสาน เสื่อสานเป็นที่นั่งอ่อนนุ่มสบายไว้นั่งฟังนิทาน",
+"zh": "编织草席。编织草席软软的，坐上去听故事最舒服。",
+"ja": "あんだ ござ。あんだ ござは すわって おはなしを きくのに ぴったりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ana_mat.1": {
+"en": "Tortoise and weaver bird land safely on this soft woven mat!",
+"lo": "ເຕົ່າ ແລະ ນົກກະຈາບຕົກລົງຢ່າງປອດໄພເທິງສາດສານອ່ອນນຸ້ມນີ້!",
+"th": "เต่าและนกกระจาบตกลงอย่างปลอดภัยบนเสื่อสานอ่อนนุ่มนี้!",
+"zh": "陆龟和织布鸟安安稳稳地落在软软的编织草席上！",
+"ja": "かめと とりが やわらかい ござの うえに ぽとん！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_mat.2": {
+"en": "Warm tan reeds and colourful border stripes lie flat and neat.",
+"lo": "ເສັ້ນຫຍ້າສີນ້ຳຕານອຸ່ນ ແລະ ຂອບລາຍສີສັນປູລຽບງາມ.",
+"th": "เส้นหญ้าสีน้ำตาลอุ่นและขอบลายสีสันปูเรียบงาม",
+"zh": "暖棕色的草席镶着彩色花边，平整又舒适。",
+"ja": "きれいな もようの ついた ふかふかの ござだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_mat.3": {
+"en": "Woven courtyard mats welcome guests to sit and share tales.",
+"lo": "ສາດສານເດີ່ນບ້ານຕ້ອນຮັບແຂກມານັ່ງຟັງນິທານນຳກັນ.",
+"th": "เสื่อสานลานบ้านต้อนรับแขกมานั่งฟังนิทานด้วยกัน",
+"zh": "院子里的草席最适合请客人们坐下来一起讲故事。",
+"ja": "みんなで すわって おはなしを きく ござなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_mat.4": {
+"en": "Flump, cosy!",
+"lo": "ຕຸບ ອຸ່ນສະບາຍ!",
+"th": "ตุ้บ อุ่นสบาย!",
+"zh": "软绵绵真舒服！",
+"ja": "ぽふっ、ふかふか！",
+"who": "narrator",
+"tag": "sound"
+},
+"ana_scroll.0": {
+"en": "A story scroll. A story scroll shines with one of Anansi's clever forest tales!",
+"lo": "ມ້ວນນິທານ. ມ້ວນນິທານ ສ່ອງແສງດ້ວຍໜຶ່ງໃນນິທານປ່າສະຫຼາດຂອງອານັນຊີ!",
+"th": "ม้วนนิทาน ม้วนนิทานส่องแสงด้วยหนึ่งในนิทานป่าแสนฉลาดของอนันซี!",
+"zh": "故事卷轴。故事卷轴闪耀着阿南西精彩的森林故事！",
+"ja": "おはなしの まきもの。おはなしの まきものに アナンシの たのしい ものがたりが あるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"ana_scroll.1": {
+"en": "Match each glowing story scroll to a smiling listener!",
+"lo": "ຈັບຄູ່ມ້ວນນິທານເຮືອງແສງແຕ່ລະອັນກັບຜູ້ຟັງທີ່ຍິ້ມແຍ້ມ!",
+"th": "จับคู่ม้วนนิทานเรืองแสงแต่ละอันกับผู้ฟังที่ยิ้มแย้ม!",
+"zh": "把每一卷闪闪发光的故事卷轴送给微笑的听众吧！",
+"ja": "ひかる まきものを みんなに わけて あげよう！",
+"who": "narrator",
+"tag": "does"
+},
+"ana_scroll.2": {
+"en": "Warm parchment unrolls with bright pictures of forest friends.",
+"lo": "ເຈ້ຍສີອຸ່ນຄີ່ອອກພ້ອມຮູບໝູ່ໃນປ່າສົດໃສ.",
+"th": "กระดาษสีอุ่นคลี่ออกพร้อมรูปเพื่อนในป่าสดใส",
+"zh": "温暖的卷轴展开，绘着森林伙伴们生动的图画。",
+"ja": "もりの なかまの えが かいて ある まきものだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ana_scroll.3": {
+"en": "Every adventure Anansi had became a favourite tale for children!",
+"lo": "ການຜະຈົນໄພທຸກຄັ້ງຂອງອານັນຊີກາຍເປັນນິທານທີ່ເດັກນ້ອຍມັກ!",
+"th": "การผจญภัยทุกครั้งของอนันซีกลายเป็นนิทานที่เด็กๆ ชอบ!",
+"zh": "阿南西的每一次冒险都成了孩子们最爱听的故事！",
+"ja": "アナンシの ぼうけんが すてきな おはなしに なったよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"ana_scroll.4": {
+"en": "Unroll, sparkle!",
+"lo": "ຄີ່ອອກ ວິບວັບ!",
+"th": "คลี่ออก ระยิบ!",
+"zh": "卷轴展开闪光！",
+"ja": "くるくる、きらり！",
+"who": "narrator",
+"tag": "sound"
+}
+},
+"chars": {},
+"pools": {
+"ana_odumtree": [
+"ana_odumtree.0",
+"ana_odumtree.1",
+"ana_odumtree.2",
+"ana_odumtree.3",
+"ana_odumtree.4"
+],
+"ana_thatch": [
+"ana_thatch.0",
+"ana_thatch.1",
+"ana_thatch.2",
+"ana_thatch.3",
+"ana_thatch.4"
+],
+"ana_plantaintrees": [
+"ana_plantaintrees.0",
+"ana_plantaintrees.1",
+"ana_plantaintrees.2",
+"ana_plantaintrees.3",
+"ana_plantaintrees.4"
+],
+"ana_shed": [
+"ana_shed.0",
+"ana_shed.1",
+"ana_shed.2",
+"ana_shed.3",
+"ana_shed.4"
+],
+"ana_pottery": [
+"ana_pottery.0",
+"ana_pottery.1",
+"ana_pottery.2",
+"ana_pottery.3",
+"ana_pottery.4"
+],
+"ana_hibiscus": [
+"ana_hibiscus.0",
+"ana_hibiscus.1",
+"ana_hibiscus.2",
+"ana_hibiscus.3",
+"ana_hibiscus.4"
+],
+"ana_anansi": [
+"ana_anansi.0",
+"ana_anansi.1",
+"ana_anansi.2",
+"ana_anansi.3",
+"ana_anansi.4",
+"ana_anansi.5",
+"ana_anansi.6",
+"ana_anansi.7"
+],
+"ana_aso": [
+"ana_aso.0",
+"ana_aso.1",
+"ana_aso.2",
+"ana_aso.3",
+"ana_aso.4",
+"ana_aso.5",
+"ana_aso.6",
+"ana_aso.7"
+],
+"ana_boy": [
+"ana_boy.0",
+"ana_boy.1",
+"ana_boy.2",
+"ana_boy.3",
+"ana_boy.4",
+"ana_boy.5",
+"ana_boy.6"
+],
+"ana_girl": [
+"ana_girl.0",
+"ana_girl.1",
+"ana_girl.2",
+"ana_girl.3",
+"ana_girl.4",
+"ana_girl.5",
+"ana_girl.6"
+],
+"ana_webrung": [
+"ana_webrung.0",
+"ana_webrung.1",
+"ana_webrung.2",
+"ana_webrung.3",
+"ana_webrung.4"
+],
+"ana_tortoise": [
+"ana_tortoise.0",
+"ana_tortoise.1",
+"ana_tortoise.2",
+"ana_tortoise.3",
+"ana_tortoise.4",
+"ana_tortoise.5",
+"ana_tortoise.6"
+],
+"ana_flutter": [
+"ana_flutter.0",
+"ana_flutter.1",
+"ana_flutter.2",
+"ana_flutter.3",
+"ana_flutter.4",
+"ana_flutter.5"
+],
+"ana_loom": [
+"ana_loom.0",
+"ana_loom.1",
+"ana_loom.2",
+"ana_loom.3",
+"ana_loom.4"
+],
+"ana_drum": [
+"ana_drum.0",
+"ana_drum.1",
+"ana_drum.2",
+"ana_drum.3",
+"ana_drum.4"
+],
+"ana_villagesky": [
+"ana_villagesky.0",
+"ana_villagesky.1",
+"ana_villagesky.2",
+"ana_villagesky.3",
+"ana_villagesky.4"
+],
+"ana_hills": [
+"ana_hills.0",
+"ana_hills.1",
+"ana_hills.2",
+"ana_hills.3",
+"ana_hills.4"
+],
+"ana_arch": [
+"ana_arch.0",
+"ana_arch.1",
+"ana_arch.2",
+"ana_arch.3",
+"ana_arch.4"
+],
+"ana_umbrella": [
+"ana_umbrella.0",
+"ana_umbrella.1",
+"ana_umbrella.2",
+"ana_umbrella.3",
+"ana_umbrella.4"
+],
+"ana_brasslamps": [
+"ana_brasslamps.0",
+"ana_brasslamps.1",
+"ana_brasslamps.2",
+"ana_brasslamps.3",
+"ana_brasslamps.4"
+],
+"ana_royaldrum": [
+"ana_royaldrum.0",
+"ana_royaldrum.1",
+"ana_royaldrum.2",
+"ana_royaldrum.3",
+"ana_royaldrum.4"
+],
+"ana_balustrade": [
+"ana_balustrade.0",
+"ana_balustrade.1",
+"ana_balustrade.2",
+"ana_balustrade.3",
+"ana_balustrade.4"
+],
+"ana_clouds": [
+"ana_clouds.0",
+"ana_clouds.1",
+"ana_clouds.2",
+"ana_clouds.3",
+"ana_clouds.4"
+],
+"ana_nyame": [
+"ana_nyame.0",
+"ana_nyame.1",
+"ana_nyame.2",
+"ana_nyame.3",
+"ana_nyame.4",
+"ana_nyame.5",
+"ana_nyame.6",
+"ana_nyame.7"
+],
+"ana_storybox": [
+"ana_storybox.0",
+"ana_storybox.1",
+"ana_storybox.2",
+"ana_storybox.3",
+"ana_storybox.4"
+],
+"ana_banner": [
+"ana_banner.0",
+"ana_banner.1",
+"ana_banner.2",
+"ana_banner.3",
+"ana_banner.4"
+],
+"ana_skysky": [
+"ana_skysky.0",
+"ana_skysky.1",
+"ana_skysky.2",
+"ana_skysky.3",
+"ana_skysky.4"
+],
+"ana_cloudterrace": [
+"ana_cloudterrace.0",
+"ana_cloudterrace.1",
+"ana_cloudterrace.2",
+"ana_cloudterrace.3",
+"ana_cloudterrace.4"
+],
+"ana_goldarch": [
+"ana_goldarch.0",
+"ana_goldarch.1",
+"ana_goldarch.2",
+"ana_goldarch.3",
+"ana_goldarch.4"
+],
+"ana_plantain": [
+"ana_plantain.0",
+"ana_plantain.1",
+"ana_plantain.2",
+"ana_plantain.3",
+"ana_plantain.4"
+],
+"ana_basket": [
+"ana_basket.0",
+"ana_basket.1",
+"ana_basket.2",
+"ana_basket.3",
+"ana_basket.4"
+],
+"ana_bag": [
+"ana_bag.0",
+"ana_bag.1",
+"ana_bag.2",
+"ana_bag.3",
+"ana_bag.4"
+],
+"ana_bamboo": [
+"ana_bamboo.0",
+"ana_bamboo.1",
+"ana_bamboo.2",
+"ana_bamboo.3",
+"ana_bamboo.4"
+],
+"ana_vine": [
+"ana_vine.0",
+"ana_vine.1",
+"ana_vine.2",
+"ana_vine.3",
+"ana_vine.4"
+],
+"ana_gourd": [
+"ana_gourd.0",
+"ana_gourd.1",
+"ana_gourd.2",
+"ana_gourd.3",
+"ana_gourd.4"
+],
+"ana_ridge": [
+"ana_ridge.0",
+"ana_ridge.1",
+"ana_ridge.2",
+"ana_ridge.3",
+"ana_ridge.4"
+],
+"ana_kapok": [
+"ana_kapok.0",
+"ana_kapok.1",
+"ana_kapok.2",
+"ana_kapok.3",
+"ana_kapok.4"
+],
+"ana_canopy": [
+"ana_canopy.0",
+"ana_canopy.1",
+"ana_canopy.2",
+"ana_canopy.3",
+"ana_canopy.4"
+],
+"ana_bamboogrove": [
+"ana_bamboogrove.0",
+"ana_bamboogrove.1",
+"ana_bamboogrove.2",
+"ana_bamboogrove.3",
+"ana_bamboogrove.4"
+],
+"ana_wildplantain": [
+"ana_wildplantain.0",
+"ana_wildplantain.1",
+"ana_wildplantain.2",
+"ana_wildplantain.3",
+"ana_wildplantain.4"
+],
+"ana_fernboulders": [
+"ana_fernboulders.0",
+"ana_fernboulders.1",
+"ana_fernboulders.2",
+"ana_fernboulders.3",
+"ana_fernboulders.4"
+],
+"ana_streambank": [
+"ana_streambank.0",
+"ana_streambank.1",
+"ana_streambank.2",
+"ana_streambank.3",
+"ana_streambank.4"
+],
+"ana_onini": [
+"ana_onini.0",
+"ana_onini.1",
+"ana_onini.2",
+"ana_onini.3",
+"ana_onini.4",
+"ana_onini.5",
+"ana_onini.6"
+],
+"ana_forestsky": [
+"ana_forestsky.0",
+"ana_forestsky.1",
+"ana_forestsky.2",
+"ana_forestsky.3",
+"ana_forestsky.4"
+],
+"ana_odumarch": [
+"ana_odumarch.0",
+"ana_odumarch.1",
+"ana_odumarch.2",
+"ana_odumarch.3",
+"ana_odumarch.4"
+],
+"ana_shell": [
+"ana_shell.0",
+"ana_shell.1",
+"ana_shell.2",
+"ana_shell.3",
+"ana_shell.4"
+],
+"ana_hornet": [
+"ana_hornet.0",
+"ana_hornet.1",
+"ana_hornet.2",
+"ana_hornet.3",
+"ana_hornet.4",
+"ana_hornet.5",
+"ana_hornet.6"
+],
+"ana_frog": [
+"ana_frog.0",
+"ana_frog.1",
+"ana_frog.2",
+"ana_frog.3",
+"ana_frog.4",
+"ana_frog.5"
+],
+"ana_osebo": [
+"ana_osebo.0",
+"ana_osebo.1",
+"ana_osebo.2",
+"ana_osebo.3",
+"ana_osebo.4",
+"ana_osebo.5",
+"ana_osebo.6"
+],
+"ana_hollow": [
+"ana_hollow.0",
+"ana_hollow.1",
+"ana_hollow.2",
+"ana_hollow.3",
+"ana_hollow.4"
+],
+"ana_branch": [
+"ana_branch.0",
+"ana_branch.1",
+"ana_branch.2",
+"ana_branch.3",
+"ana_branch.4"
+],
+"ana_hammock": [
+"ana_hammock.0",
+"ana_hammock.1",
+"ana_hammock.2",
+"ana_hammock.3",
+"ana_hammock.4"
+],
+"ana_mortar": [
+"ana_mortar.0",
+"ana_mortar.1",
+"ana_mortar.2",
+"ana_mortar.3",
+"ana_mortar.4"
+],
+"ana_yams": [
+"ana_yams.0",
+"ana_yams.1",
+"ana_yams.2",
+"ana_yams.3",
+"ana_yams.4"
+],
+"ana_bowl": [
+"ana_bowl.0",
+"ana_bowl.1",
+"ana_bowl.2",
+"ana_bowl.3",
+"ana_bowl.4"
+],
+"ana_doll": [
+"ana_doll.0",
+"ana_doll.1",
+"ana_doll.2",
+"ana_doll.3",
+"ana_doll.4"
+],
+"ana_mmoatia": [
+"ana_mmoatia.0",
+"ana_mmoatia.1",
+"ana_mmoatia.2",
+"ana_mmoatia.3",
+"ana_mmoatia.4",
+"ana_mmoatia.5",
+"ana_mmoatia.6"
+],
+"ana_fern": [
+"ana_fern.0",
+"ana_fern.1",
+"ana_fern.2",
+"ana_fern.3",
+"ana_fern.4"
+],
+"ana_spark": [
+"ana_spark.0",
+"ana_spark.1",
+"ana_spark.2",
+"ana_spark.3",
+"ana_spark.4"
+],
+"ana_starseal": [
+"ana_starseal.0",
+"ana_starseal.1",
+"ana_starseal.2",
+"ana_starseal.3",
+"ana_starseal.4"
+],
+"ana_storybox_open": [
+"ana_storybox_open.0",
+"ana_storybox_open.1",
+"ana_storybox_open.2",
+"ana_storybox_open.3",
+"ana_storybox_open.4"
+],
+"ana_lantern": [
+"ana_lantern.0",
+"ana_lantern.1",
+"ana_lantern.2",
+"ana_lantern.3",
+"ana_lantern.4"
+],
+"ana_weaver": [
+"ana_weaver.0",
+"ana_weaver.1",
+"ana_weaver.2",
+"ana_weaver.3",
+"ana_weaver.4",
+"ana_weaver.5"
+],
+"ana_ribbon": [
+"ana_ribbon.0",
+"ana_ribbon.1",
+"ana_ribbon.2",
+"ana_ribbon.3",
+"ana_ribbon.4"
+],
+"ana_mat": [
+"ana_mat.0",
+"ana_mat.1",
+"ana_mat.2",
+"ana_mat.3",
+"ana_mat.4"
+],
+"ana_scroll": [
+"ana_scroll.0",
+"ana_scroll.1",
+"ana_scroll.2",
+"ana_scroll.3",
+"ana_scroll.4"
+]
+},
+"animals": [],
+"word": {
+"ana_odumtree": {
+"en": "odum tree",
+"lo": "ຕົ້ນໂອດຸມໃຫຍ່",
+"th": "ต้นโอดุมใหญ่",
+"zh": "高大奥杜姆树",
+"ja": "おおきな オドゥムの き"
+},
+"ana_thatch": {
+"en": "thatched house",
+"lo": "ເຮືອນມຸງຫຍ້າ",
+"th": "บ้านมุงหญ้า",
+"zh": "茅草屋",
+"ja": "かやぶきの いえ"
+},
+"ana_plantaintrees": {
+"en": "plantain grove",
+"lo": "ກໍຕົ້ນກ້ວຍ",
+"th": "กอต้นกล้วย",
+"zh": "大蕉林",
+"ja": "バナナの はやし"
+},
+"ana_shed": {
+"en": "veranda shed",
+"lo": "ຊາຍຄາໄມ້ແກະສະຫຼັກ",
+"th": "ชายคาไม้แกะสลัก",
+"zh": "雕花木檐",
+"ja": "きの ひさし"
+},
+"ana_pottery": {
+"en": "clay pots",
+"lo": "ໝໍ້ດິນເຜົາ",
+"th": "หม้อดินเผา",
+"zh": "陶土水罐",
+"ja": "つちの つぼ"
+},
+"ana_hibiscus": {
+"en": "red hibiscus",
+"lo": "ດອກຊະບາແດງ",
+"th": "ดอกชบาแดง",
+"zh": "红扶桑花",
+"ja": "あかい ハイビスカス"
+},
+"ana_anansi": {
+"en": "Anansi",
+"lo": "ອານັນຊີ",
+"th": "อนันซี",
+"zh": "阿南西",
+"ja": "アナンシ"
+},
+"ana_aso": {
+"en": "Aso",
+"lo": "ອາໂຊ",
+"th": "อาโซ",
+"zh": "阿索",
+"ja": "アソ"
+},
+"ana_boy": {
+"en": "village boy",
+"lo": "ເດັກຊາຍໃນບ້ານ",
+"th": "เด็กชายในหมู่บ้าน",
+"zh": "村里男孩",
+"ja": "むらの おとこのこ"
+},
+"ana_girl": {
+"en": "village girl",
+"lo": "ເດັກຍິງໃນບ້ານ",
+"th": "เด็กหญิงในหมู่บ้าน",
+"zh": "村里女孩",
+"ja": "むらの おんなのこ"
+},
+"ana_webrung": {
+"en": "silver web",
+"lo": "ຂັ້ນໄດໃຍເງິນ",
+"th": "ขั้นบันไดใยเงิน",
+"zh": "银丝梯级",
+"ja": "ぎんの くもの いと"
+},
+"ana_tortoise": {
+"en": "tortoise",
+"lo": "ເຕົ່າ",
+"th": "เต่า",
+"zh": "陆龟",
+"ja": "かめ"
+},
+"ana_flutter": {
+"en": "story butterfly",
+"lo": "ແມງກະເບື້ອນິທານ",
+"th": "ผีเสื้อนิทาน",
+"zh": "故事蝴蝶",
+"ja": "おはなしの ちょうちょ"
+},
+"ana_loom": {
+"en": "kente loom",
+"lo": "ກີ່ຕ່ຳຫູກເຄັນເຕ",
+"th": "กี่ทอผ้าเคนเต",
+"zh": "肯特织布机",
+"ja": "ケンテの はたおりき"
+},
+"ana_drum": {
+"en": "talking drum",
+"lo": "ກອງເວົ້າ",
+"th": "กลองพูด",
+"zh": "说话鼓",
+"ja": "おしゃべり たいこ"
+},
+"ana_villagesky": {
+"en": "Ashanti sky",
+"lo": "ທ້ອງຟ້າອາຊັນຕີ",
+"th": "ท้องฟ้าอาซานตี",
+"zh": "阿散蒂天空",
+"ja": "アシャンティの そら"
+},
+"ana_hills": {
+"en": "odum hills",
+"lo": "ພູປ່າໂອດຸມ",
+"th": "ภูเขาป่าโอดุม",
+"zh": "奥杜姆群山",
+"ja": "オドゥムの やま"
+},
+"ana_arch": {
+"en": "courtyard arch",
+"lo": "ປະຕູໂຄ້ງເດີ່ນບ້ານ",
+"th": "ซุ้มประตูลานบ้าน",
+"zh": "村庄拱门",
+"ja": "にわの アーチ"
+},
+"ana_umbrella": {
+"en": "royal umbrella",
+"lo": "ຄັນຮົ່ມຫຼວງ",
+"th": "ร่มหลวง",
+"zh": "皇家华盖伞",
+"ja": "おうさまの かさ"
+},
+"ana_brasslamps": {
+"en": "oil lamps",
+"lo": "ຕະກຽງທອງເຫຼືອງ",
+"th": "ตะเกียงทองเหลือง",
+"zh": "黄铜油灯",
+"ja": "きんの らんぷ"
+},
+"ana_royaldrum": {
+"en": "drum",
+"lo": "ກອງຫຼວງວັງຟ້າ",
+"th": "กลองหลวงวังฟ้า",
+"zh": "天宫皇家大鼓",
+"ja": "そらの おおだいこ"
+},
+"ana_balustrade": {
+"en": "cloud balustrade",
+"lo": "ຮົ້ວງາຊ້າງເມກ",
+"th": "รั้วงาช้างเมฆ",
+"zh": "云端白玉栏",
+"ja": "くもの てすり"
+},
+"ana_clouds": {
+"en": "billowing clouds",
+"lo": "ກ້ອນເມກຟູ",
+"th": "ก้อนเมฆฟู",
+"zh": "翻涌彩云",
+"ja": "ふわふわの くも"
+},
+"ana_nyame": {
+"en": "Nyame",
+"lo": "ເທບນະຍາເມ",
+"th": "เทพนยาเม",
+"zh": "天神尼亚美",
+"ja": "そらの かみ ニャメ"
+},
+"ana_storybox": {
+"en": "Story Box",
+"lo": "ກ່ອງນິທານສີຄຳ",
+"th": "กล่องนิทานสีทอง",
+"zh": "黄金故事盒",
+"ja": "きんいろの おはなしばこ"
+},
+"ana_banner": {
+"en": "golden banner",
+"lo": "ທຸງສີຄຳ",
+"th": "ธงสีทอง",
+"zh": "金色旗帜",
+"ja": "きんいろの はた"
+},
+"ana_skysky": {
+"en": "golden sky",
+"lo": "ທ້ອງຟ້າສີຄຳ",
+"th": "ท้องฟ้าสีทอง",
+"zh": "金色晴空",
+"ja": "きんいろの そら"
+},
+"ana_cloudterrace": {
+"en": "cloud terraces",
+"lo": "ຊັ້ນເມກສີຄຳ",
+"th": "ชั้นเมฆสีทอง",
+"zh": "金色云阶",
+"ja": "きんの くもの だん"
+},
+"ana_goldarch": {
+"en": "Court arch",
+"lo": "ປະຕູໂຄ້ງວັງຟ້າ",
+"th": "ซุ้มประตูวังฟ้า",
+"zh": "天宫金拱门",
+"ja": "そらの みやの もん"
+},
+"ana_plantain": {
+"en": "ripe plantain",
+"lo": "ໝາກກ້ວຍສຸກ",
+"th": "กล้วยสุก",
+"zh": "熟大蕉",
+"ja": "じゅくした バナナ"
+},
+"ana_basket": {
+"en": "woven basket",
+"lo": "ກະຕ້າສານ",
+"th": "ตะกร้าสาน",
+"zh": "编织篮",
+"ja": "あんだ かご"
+},
+"ana_bag": {
+"en": "woven bag",
+"lo": "ຖົງສານ",
+"th": "ถุงสาน",
+"zh": "编织袋",
+"ja": "あんだ ふくろ"
+},
+"ana_bamboo": {
+"en": "bamboo pole",
+"lo": "ລຳໄມ້ໄຜ່",
+"th": "ลำไม้ไผ่",
+"zh": "竹竿",
+"ja": "たけの ぼう"
+},
+"ana_vine": {
+"en": "soft vine",
+"lo": "ເຄືອໄມ້ອ່ອນ",
+"th": "เถาวัลย์อ่อน",
+"zh": "柔软藤蔓",
+"ja": "やわらかい つる"
+},
+"ana_gourd": {
+"en": "calabash gourd",
+"lo": "ໝາກນ້ຳເຕົ້າ",
+"th": "น้ำเต้า",
+"zh": "葫芦",
+"ja": "ひょうたん"
+},
+"ana_ridge": {
+"en": "rainforest ridge",
+"lo": "ສັນພູປ່າດົງ",
+"th": "สันเขาป่าดง",
+"zh": "雨林山脊",
+"ja": "もりの やまなみ"
+},
+"ana_kapok": {
+"en": "kapok tree",
+"lo": "ຕົ້ນງິ້ວປ່າ",
+"th": "ต้นงิ้วป่า",
+"zh": "高大木棉树",
+"ja": "カポックの き"
+},
+"ana_canopy": {
+"en": "rainforest palms",
+"lo": "ປ່າປາມຂຽວ",
+"th": "ป่าปาล์มเขียว",
+"zh": "雨林棕榈林",
+"ja": "もりの やし"
+},
+"ana_bamboogrove": {
+"en": "bamboo grove",
+"lo": "ກໍໄມ້ໄຜ່",
+"th": "กอไม้ไผ่",
+"zh": "翠绿竹林",
+"ja": "たけやぶ"
+},
+"ana_wildplantain": {
+"en": "wild plantains",
+"lo": "ກໍກ້ວຍປ່າ",
+"th": "กอกล้วยป่า",
+"zh": "野生大蕉丛",
+"ja": "もりの バナナ"
+},
+"ana_fernboulders": {
+"en": "mossy ferns",
+"lo": "ກ້ອນຫີນໃບກູດ",
+"th": "ก้อนหินใบเฟิร์น",
+"zh": "青苔蕨石",
+"ja": "こけと しだ"
+},
+"ana_streambank": {
+"en": "stream bank",
+"lo": "ຝັ່ງຫ້ວຍຂຽວ",
+"th": "ฝั่งลำธารเขียว",
+"zh": "清溪河岸",
+"ja": "かわの きし"
+},
+"ana_onini": {
+"en": "Onini",
+"lo": "ງູເຫຼືອມໂອນີນີ",
+"th": "งูหลามโอนีนี",
+"zh": "巨蟒奥尼尼",
+"ja": "おおへび オニニ"
+},
+"ana_forestsky": {
+"en": "forest sky",
+"lo": "ທ້ອງຟ້າປ່າດົງ",
+"th": "ท้องฟ้าป่าดง",
+"zh": "雨林天空",
+"ja": "もりの そら"
+},
+"ana_odumarch": {
+"en": "odum canopy",
+"lo": "ຊຸ້ມໄມ້ໂອດຸມ",
+"th": "ซุ้มไม้โอดุม",
+"zh": "奥杜姆树拱",
+"ja": "オドゥムの きのもん"
+},
+"ana_shell": {
+"en": "water shell",
+"lo": "ກາບຫອຍຕັກນ້ຳ",
+"th": "เปลือกหอยตักน้ำ",
+"zh": "舀水贝壳",
+"ja": "みずくみの かいがら"
+},
+"ana_hornet": {
+"en": "Mmoboro hornet",
+"lo": "ແຕນໂມໂບໂຣ",
+"th": "แตนโมโบโร",
+"zh": "莫博罗大黄蜂",
+"ja": "スズメバチ"
+},
+"ana_frog": {
+"en": "forest frog",
+"lo": "ກົບປ່າ",
+"th": "กบป่า",
+"zh": "森林青蛙",
+"ja": "もりの かえる"
+},
+"ana_osebo": {
+"en": "Osebo",
+"lo": "ເສືອດາວໂອເຊໂບ",
+"th": "เสือดาวโอเซโบ",
+"zh": "花豹奥塞博",
+"ja": "ヒョウの オセボ"
+},
+"ana_hollow": {
+"en": "fern hollow",
+"lo": "ຫຼຸມໃບກູດ",
+"th": "หลุมใบเฟิร์น",
+"zh": "蕨草小坑",
+"ja": "しだの くぼみ"
+},
+"ana_branch": {
+"en": "springy branch",
+"lo": "ງ່າໄມ້ອ່ອນ",
+"th": "กิ่งไม้อ่อน",
+"zh": "弹性树枝",
+"ja": "しなやかな えだ"
+},
+"ana_hammock": {
+"en": "silk hammock",
+"lo": "ເປໄໝເງິນ",
+"th": "เปลไหมเงิน",
+"zh": "银丝吊床",
+"ja": "ぎんの ハンモック"
+},
+"ana_mortar": {
+"en": "wooden mortar",
+"lo": "ຄົກໄມ້",
+"th": "ครกไม้",
+"zh": "木舂臼",
+"ja": "きの うす"
+},
+"ana_yams": {
+"en": "sweet yams",
+"lo": "ມັນເພົາຫວານ",
+"th": "มันเทศหวาน",
+"zh": "香甜山药",
+"ja": "あまい いも"
+},
+"ana_bowl": {
+"en": "wooden bowl",
+"lo": "ຖ້ວຍໄມ້",
+"th": "ชามไม้",
+"zh": "木碗",
+"ja": "きの おわん"
+},
+"ana_doll": {
+"en": "wooden doll",
+"lo": "ຕຸກກະຕາໄມ້",
+"th": "ตุ๊กตาไม้",
+"zh": "小木偶",
+"ja": "きの にんぎょう"
+},
+"ana_mmoatia": {
+"en": "Mmoatia",
+"lo": "ນາງຟ້າມົວເຕຍ",
+"th": "นางฟ้ามัวเตีย",
+"zh": "森林精灵莫阿提亚",
+"ja": "ようせい モアティア"
+},
+"ana_fern": {
+"en": "wiggling fern",
+"lo": "ຕົ້ນກູດໄຫວ",
+"th": "เฟิร์นขยับได้",
+"zh": "晃动的蕨草",
+"ja": "ゆれる しだ"
+},
+"ana_spark": {
+"en": "music spark",
+"lo": "ປະກາຍສຽງດົນຕີ",
+"th": "ประกายเสียงดนตรี",
+"zh": "音乐星光",
+"ja": "おんがくの きらめき"
+},
+"ana_starseal": {
+"en": "star",
+"lo": "ຕາດາວສີຄຳ",
+"th": "ตราดาวสีทอง",
+"zh": "金色星印",
+"ja": "きんの ほしじるし"
+},
+"ana_storybox_open": {
+"en": "Story Box",
+"lo": "ກ່ອງນິທານທີ່ເປີດແລ້ວ",
+"th": "กล่องนิทานที่เปิดแล้ว",
+"zh": "打开的故事盒",
+"ja": "あいた おはなしばこ"
+},
+"ana_lantern": {
+"en": "brass lantern",
+"lo": "ໂຄມໄຟທອງເຫຼືອງ",
+"th": "โคมไฟทองเหลือง",
+"zh": "黄铜灯笼",
+"ja": "しんちゅうの らんぷ"
+},
+"ana_weaver": {
+"en": "weaver bird",
+"lo": "ນົກກະຈາບ",
+"th": "นกกระจาบ",
+"zh": "织布鸟",
+"ja": "はたおりどり"
+},
+"ana_ribbon": {
+"en": "golden ribbon",
+"lo": "ໂບໄໝສີຄຳ",
+"th": "ริบบิ้นไหมสีทอง",
+"zh": "金色丝带",
+"ja": "きんいろの リボン"
+},
+"ana_mat": {
+"en": "woven mat",
+"lo": "ສາດສານ",
+"th": "เสื่อสาน",
+"zh": "编织草席",
+"ja": "あんだ ござ"
+},
+"ana_scroll": {
+"en": "story scroll",
+"lo": "ມ້ວນນິທານ",
+"th": "ม้วนนิทาน",
+"zh": "故事卷轴",
+"ja": "おはなしの まきもの"
+}
+},
+"map": {
+"village-odum-back-l": "ana_odumtree",
+"village-thatch-back-r": "ana_thatch",
+"village-plantain-mid-l": "ana_plantaintrees",
+"village-drum-shed-mid-r": "ana_shed",
+"village-pottery-row-l": "ana_pottery",
+"village-pottery-row-r": "ana_pottery",
+"village-hibiscus-fg-l": "ana_hibiscus",
+"village-plantain-fg-r": "ana_plantaintrees",
+"anansi": "ana_anansi",
+"anansi-climb": "ana_anansi",
+"aso": "ana_aso",
+"boy-sit": "ana_boy",
+"girl-sit": "ana_girl",
+"web-rung-1": "ana_webrung",
+"web-rung-2": "ana_webrung",
+"web-rung-3": "ana_webrung",
+"tortoise": "ana_tortoise",
+"butterfly": "ana_flutter",
+"kente-frame-l": "ana_loom",
+"talking-drums-r": "ana_drum",
+"sky-village": "ana_villagesky",
+"far-odum-hills": "ana_hills",
+"courtyard-arch": "ana_arch",
+"web-rung-": "ana_webrung",
+"sky-umbrella-back-l": "ana_umbrella",
+"sky-umbrella-back-r": "ana_umbrella",
+"sky-lamps-mid-l": "ana_brasslamps",
+"sky-drum-mid-r": "ana_royaldrum",
+"sky-cloud-row-l": "ana_balustrade",
+"sky-cloud-row-r": "ana_balustrade",
+"sky-cloud-fg-l": "ana_clouds",
+"sky-cloud-fg-r": "ana_clouds",
+"nyame-stool": "ana_nyame",
+"anansi-bow": "ana_anansi",
+"story-box": "ana_storybox",
+"golden-banner-1": "ana_banner",
+"golden-banner-2": "ana_banner",
+"golden-banner-3": "ana_banner",
+"golden-banner-4": "ana_banner",
+"sky-court-day": "ana_skysky",
+"far-cloud-terraces": "ana_cloudterrace",
+"golden-court-arch": "ana_goldarch",
+"golden-banner-": "ana_banner",
+"tortoise-plop": "ana_tortoise",
+"ripe-plantain": "ana_plantain",
+"leaf-basket": "ana_basket",
+"woven-bag": "ana_bag",
+"bamboo-pole": "ana_bamboo",
+"vine-cord": "ana_vine",
+"calabash-gourd": "ana_gourd",
+"far-rainforest-ridge": "ana_ridge",
+"forest-kapok-back-l": "ana_kapok",
+"forest-odum-back-r": "ana_canopy",
+"forest-bamboo-mid-l": "ana_bamboogrove",
+"forest-plantain-mid-r": "ana_wildplantain",
+"forest-fern-row-l": "ana_fernboulders",
+"forest-fern-row-r": "ana_fernboulders",
+"forest-bank-fg-l": "ana_streambank",
+"forest-glade-fg-r": "ana_fernboulders",
+"onini": "ana_onini",
+"onini-straight": "ana_onini",
+"vine-loop-1": "ana_vine",
+"vine-loop-2": "ana_vine",
+"vine-loop-3": "ana_vine",
+"sky-forest": "ana_forestsky",
+"odum-arch": "ana_odumarch",
+"vine-loop-": "ana_vine",
+"anansi-leaf": "ana_anansi",
+"water-shell": "ana_shell",
+"calabash-closed": "ana_gourd",
+"hornet-1": "ana_hornet",
+"hornet-2": "ana_hornet",
+"hornet-3": "ana_hornet",
+"hornet-4": "ana_hornet",
+"frog": "ana_frog",
+"frog-hop": "ana_frog",
+"sky-forest-cloud": "ana_forestsky",
+"hornet-": "ana_hornet",
+"osebo-leap": "ana_osebo",
+"osebo-pit": "ana_osebo",
+"osebo-hammock": "ana_osebo",
+"fern-hollow": "ana_hollow",
+"spring-branch": "ana_branch",
+"silk-strand-1": "ana_hammock",
+"silk-strand-2": "ana_hammock",
+"silk-strand-3": "ana_hammock",
+"silver-hammock": "ana_hammock",
+"sky-forest-eve": "ana_forestsky",
+"anansi-carve": "ana_anansi",
+"aso-pestle": "ana_aso",
+"wooden-mortar": "ana_mortar",
+"sweet-yams": "ana_yams",
+"wooden-bowl": "ana_bowl",
+"wooden-doll": "ana_doll",
+"woven-basket": "ana_basket",
+"little-drum": "ana_drum",
+"sky-village-sunset": "ana_villagesky",
+"mmoatia": "ana_mmoatia",
+"mmoatia-stuck": "ana_mmoatia",
+"wiggle-fern": "ana_fern",
+"yam-bowl-full": "ana_yams",
+"drum-spark-1": "ana_spark",
+"drum-spark-2": "ana_spark",
+"drum-spark-3": "ana_spark",
+"sky-forest-night": "ana_forestsky",
+"nyame": "ana_nyame",
+"nyame-box": "ana_nyame",
+"star-seal-1": "ana_starseal",
+"star-seal-2": "ana_starseal",
+"star-seal-3": "ana_starseal",
+"star-seal-4": "ana_starseal",
+"sky-court-sunrise": "ana_skysky",
+"star-seal-": "ana_starseal",
+"boy": "ana_boy",
+"girl": "ana_girl",
+"story-box-open": "ana_storybox_open",
+"courtyard-lantern-1": "ana_lantern",
+"courtyard-lantern-2": "ana_lantern",
+"story-flutter-1": "ana_flutter",
+"story-flutter-2": "ana_flutter",
+"story-flutter-3": "ana_flutter",
+"weaver-bird": "ana_weaver",
+"box-ribbon": "ana_ribbon",
+"soft-mat": "ana_mat",
+"ribbon-tumble": "ana_tortoise",
+"python-scroll": "ana_scroll",
+"leopard-scroll": "ana_scroll",
+"fairy-scroll": "ana_scroll",
+"sky-village-night": "ana_villagesky",
+"osebo": "ana_osebo"
+},
+"maps": {}
+}

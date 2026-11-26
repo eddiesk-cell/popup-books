@@ -1692,6 +1692,51 @@
 "who": "narrator",
 "tag": "sound"
 },
+"xm_coconutpalm.0": {
+"en": "A coconut palm. A coconut palm lifts tall feathery fronds toward the sky.",
+"lo": "ຕົ້ນໝາກພ້າວ. ຕົ້ນໝາກພ້າວ ຊູໃບສູງຄືຂົນນົກຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "ต้นมะพร้าว ต้นมะพร้าวชูใบสูงเหมือนขนนกขึ้นสู่ท้องฟ้า",
+"zh": "椰子树。椰子树朝天空高高举起羽状大叶。",
+"ja": "やしの き。やしの きが たかく はっぱを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"xm_coconutpalm.1": {
+"en": "The coconut palm leans gracefully in the warm riverbank breeze.",
+"lo": "ຕົ້ນໝາກພ້າວເອນອ່ອນຊ້ອຍໃນສາຍລົມອຸ່ນແຄມແມ່ນ້ຳ.",
+"th": "ต้นมะพร้าวเอนอ่อนช้อยในสายลมอุ่นริมแม่น้ำ",
+"zh": "椰子树在温暖的河岸微风里优雅摇曳。",
+"ja": "かわべの かぜに やさしく ゆれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"xm_coconutpalm.2": {
+"en": "Big feathery green leaves fan out atop a slender ringed trunk.",
+"lo": "ໃບຂຽວໃຫຍ່ຄືຂົນນົກແຜ່ອອກເທິງລຳຕົ້ນຍາວມີປ້ອງ.",
+"th": "ใบเขียวใหญ่เหมือนขนนกแผ่ออกบนลำต้นยาวมีปล้อง",
+"zh": "修长带环纹的树干顶着一蓬羽状大绿叶。",
+"ja": "ながい みきの てっぺんに はっぱが ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"xm_coconutpalm.3": {
+"en": "Sweet refreshing coconut water grows right inside green coconuts!",
+"lo": "ນ້ຳໝາກພ້າວຫວານສົດຊື່ນຢູ່ຂ້າງໃນໝາກພ້າວຂຽວ!",
+"th": "น้ำมะพร้าวหวานสดชื่นอยู่ข้างในลูกมะพร้าวเขียว!",
+"zh": "青青的椰子里藏着清甜爽口的椰子水！",
+"ja": "みどりの みの なかに あまい ジュースが はいっているんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"xm_coconutpalm.4": {
+"en": "Rustle, clack!",
+"lo": "ຊາໆ, ແຄະ!",
+"th": "ซ่าๆ แกร๊ก!",
+"zh": "椰叶沙沙摇响！",
+"ja": "さわさわ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
 "xm_kham.0": {
 "en": "Kham. Kham is a clever young boy from Laos.",
 "lo": "ຄຳ. ຄຳ ແມ່ນເດັກຊາຍສະຫຼາດຈາກປະເທດລາວ.",
@@ -2226,51 +2271,6 @@
 "th": "ม้อ!",
 "zh": "哞——！",
 "ja": "もーう！",
-"who": "narrator",
-"tag": "sound"
-},
-"xm_coconutpalm.0": {
-"en": "A coconut palm. A coconut palm lifts tall feathery fronds toward the sky.",
-"lo": "ຕົ້ນໝາກພ້າວ. ຕົ້ນໝາກພ້າວ ຊູໃບສູງຄືຂົນນົກຂຶ້ນສູ່ທ້ອງຟ້າ.",
-"th": "ต้นมะพร้าว ต้นมะพร้าวชูใบสูงเหมือนขนนกขึ้นสู่ท้องฟ้า",
-"zh": "椰子树。椰子树朝天空高高举起羽状大叶。",
-"ja": "やしの き。やしの きが たかく はっぱを ひろげているよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_coconutpalm.1": {
-"en": "The coconut palm leans gracefully in the warm riverbank breeze.",
-"lo": "ຕົ້ນໝາກພ້າວເອນອ່ອນຊ້ອຍໃນສາຍລົມອຸ່ນແຄມແມ່ນ້ຳ.",
-"th": "ต้นมะพร้าวเอนอ่อนช้อยในสายลมอุ่นริมแม่น้ำ",
-"zh": "椰子树在温暖的河岸微风里优雅摇曳。",
-"ja": "かわべの かぜに やさしく ゆれているよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_coconutpalm.2": {
-"en": "Big feathery green leaves fan out atop a slender ringed trunk.",
-"lo": "ໃບຂຽວໃຫຍ່ຄືຂົນນົກແຜ່ອອກເທິງລຳຕົ້ນຍາວມີປ້ອງ.",
-"th": "ใบเขียวใหญ่เหมือนขนนกแผ่ออกบนลำต้นยาวมีปล้อง",
-"zh": "修长带环纹的树干顶着一蓬羽状大绿叶。",
-"ja": "ながい みきの てっぺんに はっぱが ひろがるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_coconutpalm.3": {
-"en": "Sweet refreshing coconut water grows right inside green coconuts!",
-"lo": "ນ້ຳໝາກພ້າວຫວານສົດຊື່ນຢູ່ຂ້າງໃນໝາກພ້າວຂຽວ!",
-"th": "น้ำมะพร้าวหวานสดชื่นอยู่ข้างในลูกมะพร้าวเขียว!",
-"zh": "青青的椰子里藏着清甜爽口的椰子水！",
-"ja": "みどりの みの なかに あまい ジュースが はいっているんだよ！",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_coconutpalm.4": {
-"en": "Rustle, clack!",
-"lo": "ຊາໆ, ແຄະ!",
-"th": "ซ่าๆ แกร๊ก!",
-"zh": "椰叶沙沙摇响！",
-"ja": "さわさわ、さらさら！",
 "who": "narrator",
 "tag": "sound"
 },
@@ -2949,6 +2949,96 @@
 "who": "narrator",
 "tag": "sound"
 },
+"xm_frangipani.0": {
+"en": "A frangipani tree. A frangipani tree blooms with sweet white dok champa flowers.",
+"lo": "ຕົ້ນດອກຈຳປາ. ຕົ້ນດອກຈຳປາ ບານດອກຈຳປາສີຂາວຫອມຫວານ.",
+"th": "ต้นลีลาวดี ต้นลีลาวดีบานดอกสีขาวหอมหวาน",
+"zh": "鸡蛋花树。鸡蛋花树开满洁白芬芳的老挝占芭花。",
+"ja": "プルメリアの き。プルメリアの きに いい かおりの しろい はなが さくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"xm_frangipani.1": {
+"en": "The frangipani tree drops sweet white blossoms onto the green grass.",
+"lo": "ຕົ້ນດອກຈຳປາໂຮຍດອກສີຂາວຫອມລົງເທິງສະໜາມຫຍ້າຂຽວ.",
+"th": "ต้นลีลาวดีโปรยดอกสีขาวหอมลงบนสนามหญ้าเขียว",
+"zh": "鸡蛋花树把香甜的雪白花朵轻轻洒落在青草地上。",
+"ja": "しろい おはなが しばふの うえに ふわりと おちるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"xm_frangipani.2": {
+"en": "Each five-petalled white flower glows with a sunny yellow centre.",
+"lo": "ດອກສີຂາວຫ້າກີບແຕ່ລະດອກມີໃຈກາງສີເຫຼືອງສົດໃສ.",
+"th": "ดอกสีขาวห้ากลีบแต่ละดอกมีใจกลางสีเหลืองสดใส",
+"zh": "每一朵五瓣白花中心都闪着阳光般的明黄色。",
+"ja": "いつつの しろい はなびらの まんなかが きいろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"xm_frangipani.3": {
+"en": "In Laos this tree is dok champa, the beloved national flower!",
+"lo": "ໃນລາວ ຕົ້ນນີ້ແມ່ນ ດອກຈຳປາ ດອກໄມ້ປະຈຳຊາດທີ່ຮັກແພງ!",
+"th": "ในลาว ต้นนี้คือดอกจำปา ดอกไม้ประจำชาติอันเป็นที่รัก!",
+"zh": "在老挝它叫占芭花，是深受喜爱的老挝国花！",
+"ja": "ラオスでは ドークチャンパーと よばれる だいじな はなだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"xm_frangipani.4": {
+"en": "Drift, sweet!",
+"lo": "ປິວ, ຫອມ!",
+"th": "ปลิว หอม!",
+"zh": "花瓣轻落飘香！",
+"ja": "ひらひら、いい におい！",
+"who": "narrator",
+"tag": "sound"
+},
+"xm_mango.0": {
+"en": "A mango tree. The mango tree spreads wide leafy shade over the grass.",
+"lo": "ຕົ້ນໝາກມ່ວງ. ຕົ້ນໝາກມ່ວງ ແຜ່ກິ່ງໃບຂຽວກວ້າງໃຫ້ຮົ່ມເທິງສະໜາມຫຍ້າ.",
+"th": "ต้นมะม่วง ต้นมะม่วงแผ่กิ่งใบเขียวกว้างให้ร่มเงาบนสนามหญ้า",
+"zh": "芒果树。芒果树在草地上撑开宽广浓密的绿荫。",
+"ja": "マンゴーの き。マンゴーの きが ひろい はっぱで すずしい かげを つくるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"xm_mango.1": {
+"en": "Kham rests in this big mango tree's cool shade and plays his khaen.",
+"lo": "ຄຳພັກຜ່ອນໃນຮົ່ມເຢັນຂອງຕົ້ນໝາກມ່ວງໃຫຍ່ນີ້ ແລະ ເປົ່າແຄນ.",
+"th": "คำพักผ่อนในร่มเย็นของต้นมะม่วงใหญ่นี้และเป่าแคน",
+"zh": "坎坐在大芒果树的清凉树荫下悠闲吹芦笙。",
+"ja": "カムが すずしい こかげで やすんで ケーンを ふくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"xm_mango.2": {
+"en": "Long glossy green leaves arch wide over a gnarled brown trunk.",
+"lo": "ໃບຂຽວຍາວເງົາແຜ່ກວ້າງເທິງລຳຕົ້ນສີນ້ຳຕານໃຫຍ່.",
+"th": "ใบเขียวยาวเงาแผ่กว้างเหนือลำต้นสีน้ำตาลใหญ่",
+"zh": "修长发亮的绿叶在苍劲的棕色树干上撑开巨伞。",
+"ja": "つやつやの ながい はっぱが おおきく ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"xm_mango.3": {
+"en": "Mangoes grow green first and turn sweet golden yellow when ripe!",
+"lo": "ໝາກມ່ວງອອກມາສີຂຽວກ່ອນ ແລ້ວປ່ຽນເປັນສີເຫຼືອງຫວານເມື່ອສຸກ!",
+"th": "มะม่วงออกเป็นสีเขียวก่อน แล้วเปลี่ยนเป็นสีเหลืองหวานเมื่อสุก!",
+"zh": "芒果一开始是青绿色的，熟透了才会变成香甜的金黄色！",
+"ja": "みどりから あまい きいろに かわると たべごろだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"xm_mango.4": {
+"en": "Rustle, shade!",
+"lo": "ຊາໆ, ຮົ່ມ!",
+"th": "ซ่าๆ ร่ม!",
+"zh": "树叶沙沙送凉荫！",
+"ja": "さわさわ、すずしいね！",
+"who": "narrator",
+"tag": "sound"
+},
 "xm_squirrel.0": {
 "en": "A tree squirrel. A tree squirrel scampers briskly along the mango trunk.",
 "lo": "ກະຮອກ. ກະຮອກ ແລ່ນໄວໆໄປຕາມລຳຕົ້ນໝາກມ່ວງ.",
@@ -3289,51 +3379,6 @@
 "who": "narrator",
 "tag": "sound"
 },
-"xm_frangipani.0": {
-"en": "A frangipani tree. A frangipani tree blooms with sweet white dok champa flowers.",
-"lo": "ຕົ້ນດອກຈຳປາ. ຕົ້ນດອກຈຳປາ ບານດອກຈຳປາສີຂາວຫອມຫວານ.",
-"th": "ต้นลีลาวดี ต้นลีลาวดีบานดอกสีขาวหอมหวาน",
-"zh": "鸡蛋花树。鸡蛋花树开满洁白芬芳的老挝占芭花。",
-"ja": "プルメリアの き。プルメリアの きに いい かおりの しろい はなが さくよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_frangipani.1": {
-"en": "The frangipani tree drops sweet white blossoms onto the green grass.",
-"lo": "ຕົ້ນດອກຈຳປາໂຮຍດອກສີຂາວຫອມລົງເທິງສະໜາມຫຍ້າຂຽວ.",
-"th": "ต้นลีลาวดีโปรยดอกสีขาวหอมลงบนสนามหญ้าเขียว",
-"zh": "鸡蛋花树把香甜的雪白花朵轻轻洒落在青草地上。",
-"ja": "しろい おはなが しばふの うえに ふわりと おちるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_frangipani.2": {
-"en": "Each five-petalled white flower glows with a sunny yellow centre.",
-"lo": "ດອກສີຂາວຫ້າກີບແຕ່ລະດອກມີໃຈກາງສີເຫຼືອງສົດໃສ.",
-"th": "ดอกสีขาวห้ากลีบแต่ละดอกมีใจกลางสีเหลืองสดใส",
-"zh": "每一朵五瓣白花中心都闪着阳光般的明黄色。",
-"ja": "いつつの しろい はなびらの まんなかが きいろだよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_frangipani.3": {
-"en": "In Laos this tree is dok champa, the beloved national flower!",
-"lo": "ໃນລາວ ຕົ້ນນີ້ແມ່ນ ດອກຈຳປາ ດອກໄມ້ປະຈຳຊາດທີ່ຮັກແພງ!",
-"th": "ในลาว ต้นนี้คือดอกจำปา ดอกไม้ประจำชาติอันเป็นที่รัก!",
-"zh": "在老挝它叫占芭花，是深受喜爱的老挝国花！",
-"ja": "ラオスでは ドークチャンパーと よばれる だいじな はなだよ！",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_frangipani.4": {
-"en": "Drift, sweet!",
-"lo": "ປິວ, ຫອມ!",
-"th": "ปลิว หอม!",
-"zh": "花瓣轻落飘香！",
-"ja": "ひらひら、いい におい！",
-"who": "narrator",
-"tag": "sound"
-},
 "xm_sala.0": {
 "en": "A garden sala. The garden sala offers cool red-roofed shade beside the pond.",
 "lo": "ສາລາສວນ. ສາລາສວນ ໃຫ້ຮົ່ມເຢັນຫຼັງຄາແດງຢູ່ຂ້າງໜອງບົວ.",
@@ -3376,51 +3421,6 @@
 "th": "เปาะ แปะ!",
 "zh": "凉亭微风轻拂！",
 "ja": "そよそよ、すずしいね！",
-"who": "narrator",
-"tag": "sound"
-},
-"xm_mango.0": {
-"en": "A mango tree. The mango tree spreads wide leafy shade over the grass.",
-"lo": "ຕົ້ນໝາກມ່ວງ. ຕົ້ນໝາກມ່ວງ ແຜ່ກິ່ງໃບຂຽວກວ້າງໃຫ້ຮົ່ມເທິງສະໜາມຫຍ້າ.",
-"th": "ต้นมะม่วง ต้นมะม่วงแผ่กิ่งใบเขียวกว้างให้ร่มเงาบนสนามหญ้า",
-"zh": "芒果树。芒果树在草地上撑开宽广浓密的绿荫。",
-"ja": "マンゴーの き。マンゴーの きが ひろい はっぱで すずしい かげを つくるよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_mango.1": {
-"en": "Kham rests in this big mango tree's cool shade and plays his khaen.",
-"lo": "ຄຳພັກຜ່ອນໃນຮົ່ມເຢັນຂອງຕົ້ນໝາກມ່ວງໃຫຍ່ນີ້ ແລະ ເປົ່າແຄນ.",
-"th": "คำพักผ่อนในร่มเย็นของต้นมะม่วงใหญ่นี้และเป่าแคน",
-"zh": "坎坐在大芒果树的清凉树荫下悠闲吹芦笙。",
-"ja": "カムが すずしい こかげで やすんで ケーンを ふくよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_mango.2": {
-"en": "Long glossy green leaves arch wide over a gnarled brown trunk.",
-"lo": "ໃບຂຽວຍາວເງົາແຜ່ກວ້າງເທິງລຳຕົ້ນສີນ້ຳຕານໃຫຍ່.",
-"th": "ใบเขียวยาวเงาแผ่กว้างเหนือลำต้นสีน้ำตาลใหญ่",
-"zh": "修长发亮的绿叶在苍劲的棕色树干上撑开巨伞。",
-"ja": "つやつやの ながい はっぱが おおきく ひろがっているよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_mango.3": {
-"en": "Mangoes grow green first and turn sweet golden yellow when ripe!",
-"lo": "ໝາກມ່ວງອອກມາສີຂຽວກ່ອນ ແລ້ວປ່ຽນເປັນສີເຫຼືອງຫວານເມື່ອສຸກ!",
-"th": "มะม่วงออกเป็นสีเขียวก่อน แล้วเปลี่ยนเป็นสีเหลืองหวานเมื่อสุก!",
-"zh": "芒果一开始是青绿色的，熟透了才会变成香甜的金黄色！",
-"ja": "みどりから あまい きいろに かわると たべごろだよ！",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_mango.4": {
-"en": "Rustle, shade!",
-"lo": "ຊາໆ, ຮົ່ມ!",
-"th": "ซ่าๆ ร่ม!",
-"zh": "树叶沙沙送凉荫！",
-"ja": "さわさわ、すずしいね！",
 "who": "narrator",
 "tag": "sound"
 },
@@ -4068,6 +4068,13 @@
 "xm_rice.3",
 "xm_rice.4"
 ],
+"xm_coconutpalm": [
+"xm_coconutpalm.0",
+"xm_coconutpalm.1",
+"xm_coconutpalm.2",
+"xm_coconutpalm.3",
+"xm_coconutpalm.4"
+],
 "xm_kham": [
 "xm_kham.0",
 "xm_kham.1",
@@ -4143,13 +4150,6 @@
 "xm_buffalo.3",
 "xm_buffalo.4",
 "xm_buffalo.5"
-],
-"xm_coconutpalm": [
-"xm_coconutpalm.0",
-"xm_coconutpalm.1",
-"xm_coconutpalm.2",
-"xm_coconutpalm.3",
-"xm_coconutpalm.4"
 ],
 "xm_banyanroot": [
 "xm_banyanroot.0",
@@ -4256,6 +4256,20 @@
 "xm_lotus.3",
 "xm_lotus.4"
 ],
+"xm_frangipani": [
+"xm_frangipani.0",
+"xm_frangipani.1",
+"xm_frangipani.2",
+"xm_frangipani.3",
+"xm_frangipani.4"
+],
+"xm_mango": [
+"xm_mango.0",
+"xm_mango.1",
+"xm_mango.2",
+"xm_mango.3",
+"xm_mango.4"
+],
 "xm_squirrel": [
 "xm_squirrel.0",
 "xm_squirrel.1",
@@ -4305,26 +4319,12 @@
 "xm_gardenhedge.3",
 "xm_gardenhedge.4"
 ],
-"xm_frangipani": [
-"xm_frangipani.0",
-"xm_frangipani.1",
-"xm_frangipani.2",
-"xm_frangipani.3",
-"xm_frangipani.4"
-],
 "xm_sala": [
 "xm_sala.0",
 "xm_sala.1",
 "xm_sala.2",
 "xm_sala.3",
 "xm_sala.4"
-],
-"xm_mango": [
-"xm_mango.0",
-"xm_mango.1",
-"xm_mango.2",
-"xm_mango.3",
-"xm_mango.4"
 ],
 "xm_stepstone": [
 "xm_stepstone.0",
@@ -4619,6 +4619,13 @@
 "zh": "嫩绿稻苗",
 "ja": "あおい いね"
 },
+"xm_coconutpalm": {
+"en": "coconut palm",
+"lo": "ຕົ້ນໝາກພ້າວ",
+"th": "ต้นมะพร้าว",
+"zh": "椰子树",
+"ja": "やしの き"
+},
 "xm_kham": {
 "en": "Kham",
 "lo": "ຄຳ",
@@ -4681,13 +4688,6 @@
 "th": "ควาย",
 "zh": "水牛",
 "ja": "すいぎゅう"
-},
-"xm_coconutpalm": {
-"en": "coconut palm",
-"lo": "ຕົ້ນໝາກພ້າວ",
-"th": "ต้นมะพร้าว",
-"zh": "椰子树",
-"ja": "やしの き"
 },
 "xm_banyanroot": {
 "en": "banyan root",
@@ -4794,6 +4794,20 @@
 "zh": "粉红荷花",
 "ja": "ピンクの はす"
 },
+"xm_frangipani": {
+"en": "frangipani tree",
+"lo": "ຕົ້ນດອກຈຳປາ",
+"th": "ต้นลีลาวดี",
+"zh": "鸡蛋花树",
+"ja": "プルメリアの き"
+},
+"xm_mango": {
+"en": "mango tree",
+"lo": "ຕົ້ນໝາກມ່ວງ",
+"th": "ต้นมะม่วง",
+"zh": "芒果树",
+"ja": "マンゴーの き"
+},
 "xm_squirrel": {
 "en": "tree squirrel",
 "lo": "ກະຮອກ",
@@ -4836,26 +4850,12 @@
 "zh": "绿叶矮篱",
 "ja": "みどりの いけがき"
 },
-"xm_frangipani": {
-"en": "frangipani tree",
-"lo": "ຕົ້ນດອກຈຳປາ",
-"th": "ต้นลีลาวดี",
-"zh": "鸡蛋花树",
-"ja": "プルメリアの き"
-},
 "xm_sala": {
 "en": "garden sala",
 "lo": "ສາລາສວນ",
 "th": "ศาลาสวน",
 "zh": "花园凉亭",
 "ja": "にわの あずまや"
-},
-"xm_mango": {
-"en": "mango tree",
-"lo": "ຕົ້ນໝາກມ່ວງ",
-"th": "ต้นมะม่วง",
-"zh": "芒果树",
-"ja": "マンゴーの き"
 },
 "xm_stepstone": {
 "en": "stepping stone",
@@ -4969,6 +4969,7 @@
 "river-bund-mid": "xm_bund",
 "river-rice-fg-l": "xm_rice",
 "river-rice-fg-r": "xm_rice",
+"palm-l": "xm_coconutpalm",
 "kham": "xm_kham",
 "kham-think": "xm_kham",
 "kham-stand": "xm_kham",
@@ -4983,7 +4984,6 @@
 "crab": "xm_crab",
 "fisher-boat": "xm_fisherboat",
 "buffalo": "xm_buffalo",
-"palm-l": "xm_coconutpalm",
 "rice-mid-l": "xm_rice",
 "rice-mid-r": "xm_rice",
 "banyan-root": "xm_banyanroot",
@@ -5007,6 +5007,8 @@
 "garden-lantern-mid-r": "xm_stonelantern",
 "garden-lotus-fg-l": "xm_lotus",
 "garden-lotus-fg-r": "xm_lotus",
+"card-garden-frangipani-l": "xm_frangipani",
+"card-garden-mango": "xm_mango",
 "king-sit": "xm_king",
 "king-step": "xm_king",
 "king-water": "xm_king",
@@ -5021,10 +5023,8 @@
 "card-garden-roofs": "xm_palaceroofs",
 "card-garden-wall": "xm_gardenwall",
 "card-garden-hedge": "xm_gardenhedge",
-"card-garden-frangipani-l": "xm_frangipani",
 "card-garden-frangipani-r": "xm_frangipani",
 "card-garden-sala": "xm_sala",
-"card-garden-mango": "xm_mango",
 "card-garden-lotus-a": "xm_lotus",
 "card-garden-lotus-d": "xm_lotus",
 "card-garden-lotus-b": "xm_lotus",
@@ -5045,6 +5045,8 @@
 "garden-lantern-mid-r-night": "xm_stonelantern",
 "garden-lotus-fg-l-night": "xm_lotus",
 "garden-lotus-fg-r-night": "xm_lotus",
+"card-garden-frangipani-l-night": "xm_frangipani",
+"card-garden-mango-night": "xm_mango",
 "kham-calm": "xm_kham",
 "kham-lend": "xm_kham",
 "kham-e": "xm_kham",

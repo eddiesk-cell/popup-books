@@ -1,7 +1,7 @@
 {
  "id": "anansi",
  "released": true,
- "words": false,
+ "words": true,
  "chars": "anansi-",
  "title": "Anansi and the Sky God's Stories",
  "story": "story.json",
