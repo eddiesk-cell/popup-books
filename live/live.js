@@ -682,7 +682,7 @@ const show = a => { age = a; frame = a < S.L0 ? a : S.L0 + (a - S.L0) % S.P; S.m
 // and frame(dt, now) — called every frame before the picture is drawn.
 const hooks = [];
 hooks.push(ambient);
-if (q.get("life") === "1" || /^(jttw|xm)-\d+$/.test(q.get("book") || "")) hooks.push(life);  // shortcut: only the private series chapters (or ?life=1) until stories/life/REVIEW.md passes (2026-11-25 review FAIL: rivers and koi on dry books); then drop this test
+hooks.push(life);  // the living stage on every book (stories/life/REVIEW.md passed 2026-11-26); ?life=0 or a spread's "life": false turns it off
 
 // ---------- hook: story effects (web/live/storyfx.js, stories/EFFECTS.md): a spread's "storyfx" entries play on their line's word ----------
 // spread.json "storyfx": [{ "type", "line", "word", "at" | "who" | "what", "level", ... }] ("line": "rest" = while the page is open). popup.py also moves

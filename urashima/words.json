@@ -137,7 +137,7 @@
 },
 "ura_dunehedge.0": {
 "en": "A dune fence. A dune fence holds back the soft blowing beach sand.",
-"lo": "ຮົ້ວເນີນຊາຍ. ຮົ້ວເນີນຊາຍ ກັນຊາຍຫາດທີ່ປິວໄປຕາມລົມ.",
+"lo": "ຮົ້ວເນີນຊາຍ. ຮົ້ວເນີນຊາຍ ກັນຫາດຊາຍທີ່ປິວໄປຕາມລົມ.",
 "th": "รั้วเนินทราย รั้วเนินทรายกันทรายหาดที่ปลิวไปตามลม",
 "zh": "沙丘木篱。沙丘木篱挡住海风吹起的细软沙粒。",
 "ja": "すなはまの さく。すなはまの さくが かぜと すなを やさしく うけとめるよ。",
@@ -1613,51 +1613,6 @@
 "who": "narrator",
 "tag": "sound"
 },
-"ura_kelpforest.0": {
-"en": "Tall kelp. Tall kelp sways like green silk curtains along the ocean road.",
-"lo": "ສາຫຼ່າຍທະເລສູງ. ສາຫຼ່າຍທະເລສູງ ແກວ່ງຄືຜ້າມ່ານໄໝສີຂຽວຕາມທາງໃຕ້ທະເລ.",
-"th": "สาหร่ายทะเลสูง สาหร่ายทะเลสูงไหวเหมือนม่านไหมสีเขียวตามทางใต้ทะเล",
-"zh": "高大海带。高大海带像绿色丝绸窗帘一样在海底摇曳。",
-"ja": "おおきな こんぶ。おおきな こんぶが みどりの カーテンみたいに ゆれるよ。",
-"who": "narrator",
-"tag": "what"
-},
-"ura_kelpforest.1": {
-"en": "Tall kelp bends gently with every underwater ocean current.",
-"lo": "ສາຫຼ່າຍທະເລສູງໂອນເອນຄ່ອຍໆຕາມກະແສນ້ຳໃຕ້ທະເລ.",
-"th": "สาหร่ายทะเลสูงเอนไหวเบาๆ ตามกระแสน้ำใต้ทะเล",
-"zh": "高大海带随着每一股海底洋流轻轻摆动。",
-"ja": "おおきな こんぶが うみの ながれに ゆらゆら ゆれるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"ura_kelpforest.2": {
-"en": "Olive-green ribbons stretch high from smooth seabed stones.",
-"lo": "ໃບສາຫຼ່າຍສີຂຽວໝາກກອກຍືດສູງຂຶ້ນຈາກຫີນພື້ນທະເລ.",
-"th": "ใบสาหร่ายสีเขียวมะกอกยืดสูงขึ้นจากหินพื้นทะเล",
-"zh": "橄榄绿的长叶片从光滑的海底石间高高伸展。",
-"ja": "みどりの はっぱが いわから たかく のびているよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"ura_kelpforest.3": {
-"en": "Kelp forests shelter tiny fish, sea snails and shy crabs.",
-"lo": "ປ່າສາຫຼ່າຍເປັນບ່ອນຢູ່ຂອງປານ້ອຍ ຫອຍ ແລະ ກະປູ.",
-"th": "ป่าสาหร่ายเป็นที่อยู่ของปลาน้อย หอย และปู",
-"zh": "海带森林是小鱼、海螺和害羞螃蟹的温暖家园。",
-"ja": "こんぶの もりには ちいさな いきものが たくさん すむよ。",
-"who": "narrator",
-"tag": "fact"
-},
-"ura_kelpforest.4": {
-"en": "Sway, swish!",
-"lo": "ແກວ່ງ ວູບ!",
-"th": "ไหว ซิ่ว!",
-"zh": "海带轻柔摇曳！",
-"ja": "ゆらり、さらり！",
-"who": "narrator",
-"tag": "sound"
-},
 "ura_kelpspire.0": {
 "en": "A kelp spire. A kelp spire rises tall from cool blue seabed boulders.",
 "lo": "ຍອດສາຫຼ່າຍເລິກ. ຍອດສາຫຼ່າຍເລິກ ສູງຂຶ້ນມາຈາກກ້ອນຫີນພື້ນທະເລສີຟ້າ.",
@@ -2261,6 +2216,51 @@
 "who": "narrator",
 "tag": "sound"
 },
+"ura_kelpforest.0": {
+"en": "Tall kelp. Tall kelp sways like green silk curtains along the ocean road.",
+"lo": "ສາຫຼ່າຍທະເລສູງ. ສາຫຼ່າຍທະເລສູງ ແກວ່ງຄືຜ້າມ່ານໄໝສີຂຽວຕາມທາງໃຕ້ທະເລ.",
+"th": "สาหร่ายทะเลสูง สาหร่ายทะเลสูงไหวเหมือนม่านไหมสีเขียวตามทางใต้ทะเล",
+"zh": "高大海带。高大海带像绿色丝绸窗帘一样在海底摇曳。",
+"ja": "おおきな こんぶ。おおきな こんぶが みどりの カーテンみたいに ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"ura_kelpforest.1": {
+"en": "Tall kelp bends gently with every underwater ocean current.",
+"lo": "ສາຫຼ່າຍທະເລສູງໂອນເອນຄ່ອຍໆຕາມກະແສນ້ຳໃຕ້ທະເລ.",
+"th": "สาหร่ายทะเลสูงเอนไหวเบาๆ ตามกระแสน้ำใต้ทะเล",
+"zh": "高大海带随着每一股海底洋流轻轻摆动。",
+"ja": "おおきな こんぶが うみの ながれに ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"ura_kelpforest.2": {
+"en": "Olive-green ribbons stretch high from smooth seabed stones.",
+"lo": "ໃບສາຫຼ່າຍສີຂຽວໝາກກອກຍືດສູງຂຶ້ນຈາກຫີນພື້ນທະເລ.",
+"th": "ใบสาหร่ายสีเขียวมะกอกยืดสูงขึ้นจากหินพื้นทะเล",
+"zh": "橄榄绿的长叶片从光滑的海底石间高高伸展。",
+"ja": "みどりの はっぱが いわから たかく のびているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"ura_kelpforest.3": {
+"en": "Kelp forests shelter tiny fish, sea snails and shy crabs.",
+"lo": "ປ່າສາຫຼ່າຍເປັນບ່ອນຢູ່ຂອງປານ້ອຍ ຫອຍ ແລະ ກະປູ.",
+"th": "ป่าสาหร่ายเป็นที่อยู่ของปลาน้อย หอย และปู",
+"zh": "海带森林是小鱼、海螺和害羞螃蟹的温暖家园。",
+"ja": "こんぶの もりには ちいさな いきものが たくさん すむよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"ura_kelpforest.4": {
+"en": "Sway, swish!",
+"lo": "ແກວ່ງ ວູບ!",
+"th": "ไหว ซิ่ว!",
+"zh": "海带轻柔摇曳！",
+"ja": "ゆらり、さらり！",
+"who": "narrator",
+"tag": "sound"
+},
 "ura_coralarch.0": {
 "en": "A coral arch. A coral arch frames the road down to the Sea Palace.",
 "lo": "ປະຕູໂຄ້ງປະກາລັງ. ປະຕູໂຄ້ງປະກາລັງ ຕັ້ງເປັນປະຕູທາງລົງສູ່ວັງໃຕ້ທະເລ.",
@@ -2641,7 +2641,7 @@
 },
 "ura_flounder.0": {
 "en": "A flat flounder. A flat flounder swirls beside its friends in the water.",
-"lo": "ປາແປ້ນ. ປາແປ້ນ ລອຍວົນຄຽງຄູ່ໝູ່ເພື່ອນໃນນ້ຳ.",
+"lo": "ປາແປ້ນ. ປາແປ້ນ ລອຍວົນຄຽງຄູ່ໝູ່ໃນນ້ຳ.",
 "th": "ปลาลิ้นหมา ปลาลิ้นหมาว่ายวนเคียงคู่เพื่อนๆ ในน้ำ",
 "zh": "比目鱼。比目鱼在水中和伙伴们一起欢快盘旋。",
 "ja": "ひらめ。ひらめが なかまと いっしょに みずの なかを おどるよ。",
@@ -4220,7 +4220,7 @@
 },
 "ura_girl.3": {
 "en": "Sharing food with neighbours is a warm Japanese village custom.",
-"lo": "ການແບ່ງປັນອາຫານໃຫ້ເພື່ອນບ້ານແມ່ນປະເພນີອົບອຸ່ນຂອງບ້ານ.",
+"lo": "ການແບ່ງປັນອາຫານໃຫ້ຊາວບ້ານແມ່ນປະເພນີອົບອຸ່ນຂອງບ້ານ.",
 "th": "การแบ่งปันอาหารให้เพื่อนบ้านเป็นประเพณีอบอุ่นของหมู่บ้าน",
 "zh": "与邻里分享食物是日本乡村温暖的传统。",
 "ja": "みんなで おもちを わけあうと こころが ぽかぽか するよ。",
@@ -4283,7 +4283,7 @@
 },
 "ura_ricecake.0": {
 "en": "A rice cake. A rice cake is warm, soft and sweet to share with friends.",
-"lo": "ເຂົ້າໜົມແປ້ງເຂົ້າ. ເຂົ້າໜົມແປ້ງເຂົ້າ ອຸ່ນ ນຸ້ມ ແລະ ຫວານໄວ້ແບ່ງໝູ່ເພື່ອນ.",
+"lo": "ເຂົ້າໜົມແປ້ງເຂົ້າ. ເຂົ້າໜົມແປ້ງເຂົ້າ ອຸ່ນ ນຸ້ມ ແລະ ຫວານໄວ້ແບ່ງໝູ່.",
 "th": "ขนมแป้งข้าว ขนมแป้งข้าวอุ่น นุ่ม และหวานไว้แบ่งเพื่อนๆ",
 "zh": "年糕。年糕暖乎乎、软绵绵的，最适合和朋友分享。",
 "ja": "おもち。おもちは あたたかくて やわらかくて おいしいよ。",
@@ -4292,7 +4292,7 @@
 },
 "ura_ricecake.1": {
 "en": "Share each warm rice cake with Grandfather and his friends!",
-"lo": "ແບ່ງເຂົ້າໜົມແປ້ງເຂົ້າອຸ່ນໆໃຫ້ພໍ່ຕູ້ ແລະ ໝູ່ເພື່ອນ!",
+"lo": "ແບ່ງເຂົ້າໜົມແປ້ງເຂົ້າອຸ່ນໆໃຫ້ພໍ່ຕູ້ ແລະ ໝູ່!",
 "th": "แบ่งขนมแป้งข้าวอุ่นๆ ให้คุณตาและเพื่อนๆ!",
 "zh": "把暖乎乎的年糕分给太郎爷爷和小伙伴们吧！",
 "ja": "おもちを おじいさんと みんなで わけあおう！",
@@ -4611,13 +4611,6 @@
 "ura_midswell.3",
 "ura_midswell.4"
 ],
-"ura_kelpforest": [
-"ura_kelpforest.0",
-"ura_kelpforest.1",
-"ura_kelpforest.2",
-"ura_kelpforest.3",
-"ura_kelpforest.4"
-],
 "ura_kelpspire": [
 "ura_kelpspire.0",
 "ura_kelpspire.1",
@@ -4710,6 +4703,13 @@
 "ura_farreefs.2",
 "ura_farreefs.3",
 "ura_farreefs.4"
+],
+"ura_kelpforest": [
+"ura_kelpforest.0",
+"ura_kelpforest.1",
+"ura_kelpforest.2",
+"ura_kelpforest.3",
+"ura_kelpforest.4"
 ],
 "ura_coralarch": [
 "ura_coralarch.0",
@@ -5244,13 +5244,6 @@
 "zh": "辽阔海涌",
 "ja": "ひろい うねり"
 },
-"ura_kelpforest": {
-"en": "tall kelp",
-"lo": "ສາຫຼ່າຍທະເລສູງ",
-"th": "สาหร่ายทะเลสูง",
-"zh": "高大海带",
-"ja": "おおきな こんぶ"
-},
 "ura_kelpspire": {
 "en": "kelp spire",
 "lo": "ຍອດສາຫຼ່າຍເລິກ",
@@ -5341,6 +5334,13 @@
 "th": "พระราชวังไกล",
 "zh": "远方龙宫",
 "ja": "とおい りゅうぐう"
+},
+"ura_kelpforest": {
+"en": "tall kelp",
+"lo": "ສາຫຼ່າຍທະເລສູງ",
+"th": "สาหร่ายทะเลสูง",
+"zh": "高大海带",
+"ja": "おおきな こんぶ"
 },
 "ura_coralarch": {
 "en": "coral arch",
@@ -5667,7 +5667,6 @@
 "bubble-ring-3": "ura_bubble",
 "mid-swell": "ura_midswell",
 "bubble-ring-": "ura_bubble",
-"kelp-forest": "ura_kelpforest",
 "kelp-spire-back-l": "ura_kelpspire",
 "coral-spire-back-r": "ura_coralspire",
 "reef-ridge-mid": "ura_reefridge",
@@ -5694,6 +5693,7 @@
 "anemone-fg-r": "ura_anemone",
 "sky-sea": "ura_seasky",
 "far-reefs": "ura_farreefs",
+"kelp-forest": "ura_kelpforest",
 "coral-arch": "ura_coralarch",
 "coral-reef-": "ura_coralreef",
 "coral-tower-back-l": "ura_coraltower",

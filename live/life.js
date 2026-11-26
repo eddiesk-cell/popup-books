@@ -171,7 +171,7 @@ function derivePlan(sp,rt,cd,bd,pg){
   fi("rocks",RE.rock,10,a=>a.h<.35&&abs(a.cx)>.08&&{x:a.cx,y:max(Y,a.y0),top:min(Y+.14,a.y1),z:cl(a.cz+.02,z0,z1)});
   fi("walls",RE.wall,4,a=>a.h>.18&&{x:a.cx+(a.cx>=0?-.05:.05),y0:Y+.05,y1:min(a.y1-.04,Y+.28),z:a.cz+.02});
   fi("magic",RE.magic,6,a=>({x:a.cx,y:a.y0+a.h*.55,z:a.cz+.015}));
-  if(!s.water.length&&!ov.spots){by(WRE,3).filter(a=>!WEX.test(a.n)).forEach(a=>s.water.push({x:a.cx,y:Y,z:cl(a.cz,z0+.05,z1-.04),w:cl(a.w,.14,.7),d:cl(max(a.d,.16),.12,.4)}));if(!s.water.length&&hw)s.water.push({x:0,y:Y,z:(z0+z1)*.5+.06,w:(x1-x0)*.72,d:(z1-z0)*.36});}
+  if(!s.water.length&&!ov.spots){by(WRE,3).filter(a=>!WEX.test(a.n)).forEach(a=>s.water.push({x:a.cx,y:Y,z:cl(a.cz,z0+.05,z1-.04),w:cl(a.w,.14,.7),d:cl(max(a.d,.16),.12,.4)}))}
   fi("waterfall",RE.fall,2,a=>({x:a.cx,y0:Y+.01,y1:min(a.y1,Y+.28),z:a.cz+.02,w:cl(a.w*.5,.06,.16)}));
   if(s.rocks.length<3)s.rocks.push({x:x0+.16,y:Y,top:Y+.04,z:z1-.12},{x:x1-.16,y:Y,top:Y+.04,z:z1-.12},{x:-.18,y:Y,top:Y+.05,z:z1-.18});
   if(!s.trees.length&&/garden|forest|mountain|river/.test(bm))s.trees.push({name:"canopy-l",x:x0+.16,y:Y+.38,z:z0+.18,w:.26},{name:"canopy-r",x:x1-.16,y:Y+.38,z:z0+.18,w:.26});
