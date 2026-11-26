@@ -1,1916 +1,5252 @@
 {
- "lines": {
-  "buffalo.0": {
-   "en": "I am a buffalo. Moo.",
-   "lo": "ຂ້ອຍແມ່ນຄວາຍ. ມໍ.",
-   "th": "ฉันคือควาย มอ",
-   "zh": "我是一头水牛。哞。",
-   "ja": "すいぎゅうだよ。モー。",
-   "who": "narrator",
-   "tag": "say"
-  },
-  "buffalo.1": {
-   "en": "I have two horns.",
-   "lo": "ຂ້ອຍມີສອງເຂົາ.",
-   "th": "ฉันมีเขาสองข้าง",
-   "zh": "我有两只角。",
-   "ja": "つのが 2ほん あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "buffalo.2": {
-   "en": "I like mud.",
-   "lo": "ຂ້ອຍມັກຂີ້ຕົມ.",
-   "th": "ฉันชอบโคลน",
-   "zh": "我喜欢泥巴。",
-   "ja": "どろんこが すきだよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "gecko.0": {
-   "en": "A gecko. It climbs walls.",
-   "lo": "ຕຸ໊ກແກ. ມັນປີນຝາ.",
-   "th": "ตุ๊กแก มันปีนผนัง",
-   "zh": "壁虎。它会爬墙。",
-   "ja": "ヤモリ。かべを のぼるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "gecko.1": {
-   "en": "A gecko has sticky toes.",
-   "lo": "ຕຸ໊ກແກມີນິ້ວຕີນທີ່ຕິດ.",
-   "th": "ตุ๊กแกมีนิ้วเท้าที่เกาะติด",
-   "zh": "壁虎的脚趾能粘住墙。",
-   "ja": "ヤモリの あしの ゆびは くっつくよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "gecko.2": {
-   "en": "A gecko eats little bugs.",
-   "lo": "ຕຸ໊ກແກກິນແມງໄມ້ນ້ອຍ.",
-   "th": "ตุ๊กแกกินแมลงตัวเล็กๆ",
-   "zh": "壁虎吃小虫子。",
-   "ja": "ヤモリは ちいさな むしを たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "egret.0": {
-   "en": "An egret. A white bird.",
-   "lo": "ນົກຍາງ. ນົກສີຂາວ.",
-   "th": "นกยางขาว นกสีขาว",
-   "zh": "白鹭。一只白色的鸟。",
-   "ja": "シラサギ。しろい とりだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "egret.1": {
-   "en": "An egret has long legs.",
-   "lo": "ນົກຍາງມີຂາຍາວ.",
-   "th": "นกยางมีขายาว",
-   "zh": "白鹭的腿很长。",
-   "ja": "シラサギは あしが ながいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "egret.2": {
-   "en": "An egret eats fish.",
-   "lo": "ນົກຍາງກິນປາ.",
-   "th": "นกยางกินปลา",
-   "zh": "白鹭吃鱼。",
-   "ja": "シラサギは さかなを たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "turtle.0": {
-   "en": "A turtle. It is slow.",
-   "lo": "ເຕົ່າ. ມັນຊ້າ.",
-   "th": "เต่า มันช้า",
-   "zh": "乌龟。它很慢。",
-   "ja": "カメ。のろのろ あるくよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "turtle.1": {
-   "en": "A turtle can hide in its shell.",
-   "lo": "ເຕົ່າຫຼົບຢູ່ໃນກະດອງໄດ້.",
-   "th": "เต่าซ่อนตัวในกระดองได้",
-   "zh": "乌龟能躲进壳里。",
-   "ja": "カメは こうらに かくれられるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "turtle.2": {
-   "en": "A turtle can swim.",
-   "lo": "ເຕົ່າລອຍນ້ຳໄດ້.",
-   "th": "เต่าว่ายน้ำได้",
-   "zh": "乌龟会游泳。",
-   "ja": "カメは およげるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "frog.0": {
-   "en": "A frog. It hops.",
-   "lo": "ກົບ. ມັນໂດດ.",
-   "th": "กบ มันกระโดด",
-   "zh": "青蛙。它会蹦蹦跳。",
-   "ja": "カエル。ぴょんと はねるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "frog.1": {
-   "en": "Ribbit, ribbit!",
-   "lo": "ອຽບໆ!",
-   "th": "อ๊บๆ!",
-   "zh": "呱呱！",
-   "ja": "ゲロゲロ！",
-   "who": "narrator",
-   "tag": "sound"
-  },
-  "frog.2": {
-   "en": "A frog eats flies.",
-   "lo": "ກົບກິນແມງວັນ.",
-   "th": "กบกินแมลงวัน",
-   "zh": "青蛙吃苍蝇。",
-   "ja": "カエルは ハエを たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "duck.0": {
-   "en": "A duck. It floats.",
-   "lo": "ເປັດ. ມັນລອຍ.",
-   "th": "เป็ด มันลอยน้ำ",
-   "zh": "鸭子。它浮在水上。",
-   "ja": "アヒル。みずに うかぶよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "duck.1": {
-   "en": "A duck has a flat beak.",
-   "lo": "ເປັດມີປາກແບນ.",
-   "th": "เป็ดมีปากแบน",
-   "zh": "鸭子有扁扁的嘴。",
-   "ja": "アヒルの くちばしは ぺたんこだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "duck.2": {
-   "en": "Quack, quack!",
-   "lo": "ກາບໆ!",
-   "th": "แง๊บๆ!",
-   "zh": "嘎嘎！",
-   "ja": "グワグワ！",
-   "who": "narrator",
-   "tag": "sound"
-  },
-  "fish.0": {
-   "en": "A fish. It swims.",
-   "lo": "ປາ. ມັນລອຍນ້ຳ.",
-   "th": "ปลา มันว่ายน้ำ",
-   "zh": "鱼。它会游泳。",
-   "ja": "さかな。およぐよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "fish.1": {
-   "en": "A fish has fins.",
-   "lo": "ປາມີຄີບ.",
-   "th": "ปลามีครีบ",
-   "zh": "鱼有鱼鳍。",
-   "ja": "さかなには ひれが あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "fish.2": {
-   "en": "Splash!",
-   "lo": "ຕູມ!",
-   "th": "ตูม!",
-   "zh": "哗啦！",
-   "ja": "ばしゃん！",
-   "who": "narrator",
-   "tag": "sound"
-  },
-  "butterfly.0": {
-   "en": "A butterfly. Big wings.",
-   "lo": "ແມງກະເບື້ອ. ປີກໃຫຍ່.",
-   "th": "ผีเสื้อ ปีกใหญ่",
-   "zh": "蝴蝶。大大的翅膀。",
-   "ja": "ちょうちょ。おおきな はねだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "butterfly.1": {
-   "en": "The butterfly can fly.",
-   "lo": "ແມງກະເບື້ອບິນໄດ້.",
-   "th": "ผีเสื้อบินได้",
-   "zh": "蝴蝶会飞。",
-   "ja": "ちょうちょは とべるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "butterfly.2": {
-   "en": "A butterfly drinks from flowers.",
-   "lo": "ແມງກະເບື້ອດູດນ້ຳຫວານຈາກດອກໄມ້.",
-   "th": "ผีเสื้อดูดน้ำหวานจากดอกไม้",
-   "zh": "蝴蝶从花里喝甜甜的花蜜。",
-   "ja": "ちょうちょは はなの みつを すうよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "dragonfly.0": {
-   "en": "A dragonfly. It hovers.",
-   "lo": "ແມງປໍ. ມັນລອຍຢູ່ກັບທີ່.",
-   "th": "แมลงปอ มันบินลอยอยู่กับที่",
-   "zh": "蜻蜓。它能停在半空。",
-   "ja": "トンボ。くうちゅうで とまるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "dragonfly.1": {
-   "en": "The dragonfly can fly fast.",
-   "lo": "ແມງປໍບິນໄວ.",
-   "th": "แมลงปอบินเร็ว",
-   "zh": "蜻蜓飞得很快。",
-   "ja": "トンボは はやく とべるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "dragonfly.2": {
-   "en": "A dragonfly likes the water.",
-   "lo": "ແມງປໍມັກນ້ຳ.",
-   "th": "แมลงปอชอบอยู่ใกล้น้ำ",
-   "zh": "蜻蜓喜欢水边。",
-   "ja": "トンボは みずの ちかくが すき。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "squirrel.0": {
-   "en": "A squirrel. It climbs trees.",
-   "lo": "ກະຮອກ. ມັນປີນຕົ້ນໄມ້.",
-   "th": "กระรอก มันปีนต้นไม้",
-   "zh": "松鼠。它会爬树。",
-   "ja": "リス。きに のぼるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "squirrel.1": {
-   "en": "A squirrel has a fluffy tail.",
-   "lo": "ກະຮອກມີຫາງຟູ.",
-   "th": "กระรอกมีหางฟู",
-   "zh": "松鼠有蓬蓬的大尾巴。",
-   "ja": "リスの しっぽは ふさふさだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "squirrel.2": {
-   "en": "A squirrel eats nuts.",
-   "lo": "ກະຮອກກິນຖົ່ວ.",
-   "th": "กระรอกกินถั่ว",
-   "zh": "松鼠吃坚果。",
-   "ja": "リスは きのみを たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "house.0": {
-   "en": "A house on stilts. Stilts are posts.",
-   "lo": "ເຮືອນຍົກພື້ນ. ເສົາຄ້ຳແມ່ນເສົາທີ່ຄ້ຳເຮືອນ.",
-   "th": "บ้านใต้ถุนสูง เสาคือเสาที่ค้ำบ้าน",
-   "zh": "高脚屋。柱子把房子撑得高高的。",
-   "ja": "たかゆかの いえ。はしらが いえを たかく ささえるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "house.1": {
-   "en": "A ladder. Up and down.",
-   "lo": "ຂັ້ນໄດ. ຂຶ້ນແລະລົງ.",
-   "th": "บันได ขึ้นและลง",
-   "zh": "梯子。上去，下来。",
-   "ja": "はしご。のぼって おりるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "house.2": {
-   "en": "A water jar. It holds water.",
-   "lo": "ໂອ່ງນ້ຳ. ມັນໃສ່ນ້ຳ.",
-   "th": "ตุ่มน้ำ ใส่น้ำได้",
-   "zh": "水缸。它能装水。",
-   "ja": "みずがめ。みずを ためるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "fire.0": {
-   "en": "A fire. Fire is hot.",
-   "lo": "ໄຟ. ໄຟຮ້ອນ.",
-   "th": "ไฟ ไฟร้อน",
-   "zh": "火。火是热的。",
-   "ja": "ひ。ひは あついよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "fire.1": {
-   "en": "Smoke goes up, up, up.",
-   "lo": "ຄວັນລອຍຂຶ້ນ, ຂຶ້ນ, ຂຶ້ນ.",
-   "th": "ควันลอยขึ้น ขึ้น ขึ้น",
-   "zh": "烟往上飘，飘，飘。",
-   "ja": "けむりが のぼる、のぼる、のぼる。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "fire.2": {
-   "en": "A clay pot sits by the fire.",
-   "lo": "ໝໍ້ດິນຕັ້ງຢູ່ຂ້າງໄຟ.",
-   "th": "หม้อดินตั้งอยู่ข้างไฟ",
-   "zh": "陶罐放在火边。",
-   "ja": "ねんどの つぼが ひの そばに あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "plough.0": {
-   "en": "A plough. It makes the soil soft.",
-   "lo": "ໄຖ. ມັນເຮັດໃຫ້ດິນອ່ອນ.",
-   "th": "คันไถ ทำให้ดินร่วนซุย",
-   "zh": "犁。它把土变松软。",
-   "ja": "すき。つちを やわらかくするよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "plough.1": {
-   "en": "A buffalo pulls a plough.",
-   "lo": "ຄວາຍລາກໄຖ.",
-   "th": "ควายลากคันไถ",
-   "zh": "水牛拉着犁。",
-   "ja": "すいぎゅうが すきを ひくよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "plough.2": {
-   "en": "A plough is made of wood.",
-   "lo": "ໄຖເຮັດດ້ວຍໄມ້.",
-   "th": "คันไถทำจากไม้",
-   "zh": "犁是木头做的。",
-   "ja": "すきは きで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "rice.0": {
-   "en": "Rice. We eat rice.",
-   "lo": "ເຂົ້າ. ພວກເຮົາກິນເຂົ້າ.",
-   "th": "ข้าว เรากินข้าว",
-   "zh": "稻米。我们吃米饭。",
-   "ja": "おこめ。わたしたちは ごはんを たべるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "rice.1": {
-   "en": "A rice plant is green.",
-   "lo": "ຕົ້ນເຂົ້າສີຂຽວ.",
-   "th": "ต้นข้าวสีเขียว",
-   "zh": "稻苗是绿色的。",
-   "ja": "いねは みどりいろだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "rice.2": {
-   "en": "Rice grows in wet mud.",
-   "lo": "ເຂົ້າຂຶ້ນໃນຂີ້ຕົມປຽກ.",
-   "th": "ข้าวงอกในโคลนเปียก",
-   "zh": "稻子长在湿泥里。",
-   "ja": "いねは ぬれた どろで そだつよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "taro.0": {
-   "en": "A taro leaf. Big as an ear.",
-   "lo": "ໃບເຜືອກ. ໃຫຍ່ຄືຫູ.",
-   "th": "ใบเผือก ใหญ่เท่าหู",
-   "zh": "芋头叶。大得像一只耳朵。",
-   "ja": "さといもの は。みみみたいに おおきいよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "taro.1": {
-   "en": "A taro leaf is big and green.",
-   "lo": "ໃບເຜືອກໃຫຍ່ແລະສີຂຽວ.",
-   "th": "ใบเผือกใหญ่และสีเขียว",
-   "zh": "芋头叶又大又绿。",
-   "ja": "さといもの はは おおきくて みどりいろ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "taro.2": {
-   "en": "Rain rolls off a taro leaf.",
-   "lo": "ນ້ຳຝົນກິ້ງລົງຈາກໃບເຜືອກ.",
-   "th": "น้ำฝนกลิ้งลงจากใบเผือก",
-   "zh": "雨水从芋头叶上滚下来。",
-   "ja": "あめが さといもの はから ころがるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "marigold.0": {
-   "en": "Marigolds. Orange flowers.",
-   "lo": "ດອກດາວເຮືອງ. ດອກໄມ້ສີສົ້ມ.",
-   "th": "ดอกดาวเรือง ดอกไม้สีส้ม",
-   "zh": "万寿菊。橙色的花。",
-   "ja": "マリーゴールド。オレンジいろの はなだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "marigold.1": {
-   "en": "Marigolds are bright.",
-   "lo": "ດອກດາວເຮືອງສົດໃສ.",
-   "th": "ดอกดาวเรืองสดใส",
-   "zh": "万寿菊很鲜艳。",
-   "ja": "マリーゴールドは あかるいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "marigold.2": {
-   "en": "Flowers open in the sun.",
-   "lo": "ດອກໄມ້ບານໃນແສງຕາເວັນ.",
-   "th": "ดอกไม้บานเมื่อโดนแดด",
-   "zh": "花儿在阳光下开放。",
-   "ja": "はなは おひさまを あびて ひらくよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "mango-tree.0": {
-   "en": "A mango tree. Mangoes are sweet.",
-   "lo": "ຕົ້ນໝາກມ່ວງ. ໝາກມ່ວງຫວານ.",
-   "th": "ต้นมะม่วง มะม่วงหวาน",
-   "zh": "芒果树。芒果很甜。",
-   "ja": "マンゴーの き。マンゴーは あまいよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "mango-tree.1": {
-   "en": "Mangoes are green, then yellow.",
-   "lo": "ໝາກມ່ວງສີຂຽວ ແລ້ວກາຍເປັນສີເຫຼືອງ.",
-   "th": "มะม่วงสีเขียว แล้วกลายเป็นสีเหลือง",
-   "zh": "芒果先是绿的，后来变黄。",
-   "ja": "マンゴーは みどりから きいろに なるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "mango-tree.2": {
-   "en": "A mango tree gives shade.",
-   "lo": "ຕົ້ນໝາກມ່ວງໃຫ້ຮົ່ມ.",
-   "th": "ต้นมะม่วงให้ร่มเงา",
-   "zh": "芒果树能遮阴。",
-   "ja": "マンゴーの きは かげを つくるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "termite-mound.0": {
-   "en": "A termite mound. Tiny builders live inside.",
-   "lo": "ຈອມປວກ. ຊ່າງກໍ່ສ້າງໂຕນ້ອຍໆ ອາໄສຢູ່ຂ້າງໃນ.",
-   "th": "จอมปลวก ช่างก่อสร้างตัวจิ๋วอาศัยอยู่ข้างใน",
-   "zh": "白蚁丘。里面住着小小的建筑师。",
-   "ja": "シロアリの つか。なかに ちいさな だいくさんが すんでいるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "termite-mound.1": {
-   "en": "Termites are very small.",
-   "lo": "ປວກໂຕນ້ອຍຫຼາຍ.",
-   "th": "ปลวกตัวเล็กมาก",
-   "zh": "白蚁非常小。",
-   "ja": "シロアリは とても ちいさいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "termite-mound.2": {
-   "en": "A termite mound is made of mud.",
-   "lo": "ຈອມປວກເຮັດດ້ວຍດິນ.",
-   "th": "จอมปลวกทำจากดิน",
-   "zh": "白蚁丘是用泥土筑成的。",
-   "ja": "シロアリの つかは つちで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "log.0": {
-   "en": "A log. An old tree.",
-   "lo": "ທ່ອນໄມ້. ຕົ້ນໄມ້ເກົ່າ.",
-   "th": "ท่อนไม้ ต้นไม้เก่า",
-   "zh": "木头。一棵老树。",
-   "ja": "まるた。ふるい きだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "log.1": {
-   "en": "A log is made of wood.",
-   "lo": "ທ່ອນໄມ້ເຮັດຈາກໄມ້.",
-   "th": "ท่อนไม้ทำจากไม้",
-   "zh": "木头是用树做的。",
-   "ja": "まるたは きで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "log.2": {
-   "en": "A frog can sit on a log.",
-   "lo": "ກົບນັ່ງຢູ່ເທິງທ່ອນໄມ້ໄດ້.",
-   "th": "กบนั่งบนท่อนไม้ได้",
-   "zh": "青蛙能坐在木头上。",
-   "ja": "カエルは まるたに すわれるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "rock.0": {
-   "en": "A rock. It is hard.",
-   "lo": "ກ້ອນຫີນ. ມັນແຂງ.",
-   "th": "ก้อนหิน มันแข็ง",
-   "zh": "石头。它很硬。",
-   "ja": "いし。かたいよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "rock.1": {
-   "en": "Rocks do not move.",
-   "lo": "ກ້ອນຫີນບໍ່ເຄື່ອນທີ່.",
-   "th": "ก้อนหินไม่ขยับ",
-   "zh": "石头不会动。",
-   "ja": "いわは うごかないよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "rock.2": {
-   "en": "Frogs and turtles rest on rocks.",
-   "lo": "ກົບ ແລະ ເຕົ່າພັກຢູ່ເທິງກ້ອນຫີນ.",
-   "th": "กบและเต่าพักอยู่บนก้อนหิน",
-   "zh": "青蛙和乌龟在石头上休息。",
-   "ja": "カエルや カメは いわの うえで やすむよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "lotus.0": {
-   "en": "A lotus. It grows in water.",
-   "lo": "ດອກບົວ. ມັນເກີດໃນນ້ຳ.",
-   "th": "ดอกบัว ขึ้นอยู่ในน้ำ",
-   "zh": "莲花。它长在水里。",
-   "ja": "はす。みずの なかで そだつよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "lotus.1": {
-   "en": "A lotus can be pink.",
-   "lo": "ດອກບົວອາດເປັນສີບົວ.",
-   "th": "ดอกบัวอาจเป็นสีชมพู",
-   "zh": "莲花可以是粉红色的。",
-   "ja": "はすの はなは ピンクいろの ことも あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "lotus.2": {
-   "en": "Frogs sit on lily pads.",
-   "lo": "ກົບນັ່ງຢູ່ເທິງໃບບົວ.",
-   "th": "กบนั่งอยู่บนใบบัว",
-   "zh": "青蛙坐在荷叶上。",
-   "ja": "カエルは はすの はに すわるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "river.0": {
-   "en": "A river. It is slow.",
-   "lo": "ແມ່ນ້ຳ. ມັນໄຫຼຊ້າ.",
-   "th": "แม่น้ำ ไหลช้า",
-   "zh": "河。它流得很慢。",
-   "ja": "かわ。ゆっくり ながれるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "river.1": {
-   "en": "Fish live in a river.",
-   "lo": "ປາອາໄສຢູ່ໃນແມ່ນ້ຳ.",
-   "th": "ปลาอาศัยอยู่ในแม่น้ำ",
-   "zh": "鱼住在河里。",
-   "ja": "さかなは かわに すんでいるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "river.2": {
-   "en": "A river runs to the sea.",
-   "lo": "ແມ່ນ້ຳໄຫຼໄປຫາທະເລ.",
-   "th": "แม่น้ำไหลไปสู่ทะเล",
-   "zh": "河流向大海。",
-   "ja": "かわは うみへ ながれるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "palm.0": {
-   "en": "A sugar palm. It is very tall.",
-   "lo": "ຕົ້ນຕານ. ມັນສູງຫຼາຍ.",
-   "th": "ต้นตาล สูงมาก",
-   "zh": "糖棕。它非常高。",
-   "ja": "サトウヤシ。とても せが たかいよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "palm.1": {
-   "en": "A palm has big leaves.",
-   "lo": "ຕົ້ນຕານມີໃບໃຫຍ່.",
-   "th": "ต้นตาลมีใบใหญ่",
-   "zh": "棕榈有大大的叶子。",
-   "ja": "ヤシは おおきな はが あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "palm.2": {
-   "en": "Palm leaves sway in the wind.",
-   "lo": "ໃບຕານແກວ່ງຕາມລົມ.",
-   "th": "ใบตาลโบกไหวตามลม",
-   "zh": "棕榈叶在风里摇摆。",
-   "ja": "ヤシの はは かぜで ゆれるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "hill.0": {
-   "en": "Hills. Far away.",
-   "lo": "ພູ. ຢູ່ໄກໆ.",
-   "th": "ภูเขา อยู่ไกลๆ",
-   "zh": "山丘。在很远的地方。",
-   "ja": "おやま。とおくに あるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "hill.1": {
-   "en": "A hill is high ground.",
-   "lo": "ເນີນພູແມ່ນດິນທີ່ສູງ.",
-   "th": "เนินเขาคือพื้นดินที่สูง",
-   "zh": "山丘是高高的土地。",
-   "ja": "おかは たかい ところだよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "hill.2": {
-   "en": "Far hills look blue.",
-   "lo": "ພູທີ່ຢູ່ໄກເບິ່ງເປັນສີຟ້າ.",
-   "th": "ภูเขาที่อยู่ไกลดูเป็นสีฟ้า",
-   "zh": "远处的山看起来是蓝色的。",
-   "ja": "とおくの やまは あおく みえるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "cloud.0": {
-   "en": "A cloud. The Sky King lives far up.",
-   "lo": "ເມກ. ກະສັດທ້ອງຟ້າອາໄສຢູ່ສູງໆ.",
-   "th": "เมฆ ราชาแห่งท้องฟ้าอาศัยอยู่สูงลิ่ว",
-   "zh": "云。天空之王住在很高很高的地方。",
-   "ja": "くも。そらの おうさまは ずっと うえに すんでいるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "cloud.1": {
-   "en": "A cloud. It floats.",
-   "lo": "ເມກ. ມັນລອຍ.",
-   "th": "เมฆ ลอยได้",
-   "zh": "云。它会飘。",
-   "ja": "くも。ふわふわ うかぶよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "cloud.2": {
-   "en": "A cloud is soft and white.",
-   "lo": "ເມກອ່ອນແລະຂາວ.",
-   "th": "เมฆนุ่มและขาว",
-   "zh": "云又软又白。",
-   "ja": "くもは ふわふわで しろいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "small-cloud.0": {
-   "en": "A cloud. It floats.",
-   "lo": "ເມກ. ມັນລອຍ.",
-   "th": "เมฆ ลอยได้",
-   "zh": "云。它会飘。",
-   "ja": "くも。ふわふわ うかぶよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "small-cloud.1": {
-   "en": "Clouds float in the sky.",
-   "lo": "ເມກລອຍຢູ່ເທິງທ້ອງຟ້າ.",
-   "th": "เมฆลอยอยู่บนท้องฟ้า",
-   "zh": "云在天空中飘。",
-   "ja": "くもは そらに うかぶよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "small-cloud.2": {
-   "en": "A little cloud can carry a buffalo!",
-   "lo": "ເມກນ້ອຍໆອາດແບກຄວາຍໄດ້!",
-   "th": "เมฆน้อยอุ้มควายได้!",
-   "zh": "小小的云能驮起一头水牛！",
-   "ja": "ちいさな くもが すいぎゅうを のせるよ！",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "bird.0": {
-   "en": "A bird. It flies.",
-   "lo": "ນົກ. ມັນບິນ.",
-   "th": "นก มันบินได้",
-   "zh": "鸟。它会飞。",
-   "ja": "とり。そらを とぶよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "bird.1": {
-   "en": "A bird has wings.",
-   "lo": "ນົກມີປີກ.",
-   "th": "นกมีปีก",
-   "zh": "鸟有翅膀。",
-   "ja": "とりには はねが あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "bird.2": {
-   "en": "Birds fly in a flock.",
-   "lo": "ນົກບິນເປັນຝູງ.",
-   "th": "นกบินเป็นฝูง",
-   "zh": "鸟儿成群飞。",
-   "ja": "とりは むれで とぶよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "reeds.0": {
-   "en": "Reeds. Reeds are tall grasses that grow by water.",
-   "lo": "ຕົ້ນອໍ້. ຕົ້ນອໍ້ເປັນຫຍ້າສູງທີ່ເກີດຢູ່ໃກ້ນ້ຳ.",
-   "th": "ต้นอ้อ ต้นอ้อเป็นหญ้าสูงที่ขึ้นใกล้น้ำ",
-   "zh": "芦苇。芦苇是长在水边的高草。",
-   "ja": "あし。あしは みずの ちかくに はえる せの たかい くさだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "reeds.1": {
-   "en": "Reeds bend in the wind.",
-   "lo": "ຕົ້ນອໍ້ໂນ້ມຕາມລົມ.",
-   "th": "ต้นอ้อเอนไปตามลม",
-   "zh": "芦苇随风弯腰。",
-   "ja": "あしは かぜで ゆれるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "reeds.2": {
-   "en": "Birds hide in the reeds.",
-   "lo": "ນົກຫຼົບຢູ່ໃນຕົ້ນອໍ້.",
-   "th": "นกซ่อนตัวอยู่ในพงอ้อ",
-   "zh": "鸟儿躲在芦苇里。",
-   "ja": "とりが あしの なかに かくれるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "grass.0": {
-   "en": "Grass. Grass is a green plant that covers the ground.",
-   "lo": "ຫຍ້າ. ຫຍ້າເປັນພືດສີຂຽວທີ່ປົກຄຸມພື້ນດິນ.",
-   "th": "หญ้า หญ้าเป็นพืชสีเขียวที่ปกคลุมพื้นดิน",
-   "zh": "草。草是覆盖在地面上的绿色植物。",
-   "ja": "くさ。くさは じめんを おおう みどりの しょくぶつだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "grass.1": {
-   "en": "Grass grows by the river.",
-   "lo": "ຫຍ້າເກີດຢູ່ແຄມແມ່ນ້ຳ.",
-   "th": "หญ้าขึ้นริมแม่น้ำ",
-   "zh": "草长在河边。",
-   "ja": "くさは かわの そばに はえるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "grass.2": {
-   "en": "Buffalo eat grass.",
-   "lo": "ຄວາຍກິນຫຍ້າ.",
-   "th": "ควายกินหญ้า",
-   "zh": "水牛吃草。",
-   "ja": "すいぎゅうは くさを たべるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "flowers.0": {
-   "en": "Flowers. Flowers are the colourful part of a plant.",
-   "lo": "ດອກໄມ້. ດອກໄມ້ແມ່ນສ່ວນທີ່ມີສີສັນຂອງພືດ.",
-   "th": "ดอกไม้ ดอกไม้เป็นส่วนที่มีสีสันของพืช",
-   "zh": "花。花是植物上五颜六色的部分。",
-   "ja": "はな。はなは しょくぶつの いろとりどりの ぶぶんだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "flowers.1": {
-   "en": "Flowers have petals.",
-   "lo": "ດອກໄມ້ມີກີບ.",
-   "th": "ดอกไม้มีกลีบ",
-   "zh": "花有花瓣。",
-   "ja": "はなには はなびらが あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "flowers.2": {
-   "en": "Flowers smell sweet.",
-   "lo": "ດອກໄມ້ມີກິ່ນຫອມ.",
-   "th": "ดอกไม้หอมหวาน",
-   "zh": "花儿香香的。",
-   "ja": "はなは いい においが するよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "ferns.0": {
-   "en": "Ferns. A fern is a plant with feathery leaves.",
-   "lo": "ຕົ້ນກູດ. ຕົ້ນກູດເປັນພືດທີ່ມີໃບຄືຂົນນົກ.",
-   "th": "ต้นเฟิร์น เฟิร์นเป็นพืชที่มีใบเหมือนขนนก",
-   "zh": "蕨草。蕨草是长着羽毛般叶子的植物。",
-   "ja": "シダ。シダは はねの ような はっぱの しょくぶつだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "ferns.1": {
-   "en": "Ferns like the shade.",
-   "lo": "ຕົ້ນກູດມັກບ່ອນຮົ່ມ.",
-   "th": "ต้นเฟิร์นชอบที่ร่ม",
-   "zh": "蕨草喜欢阴凉的地方。",
-   "ja": "シダは かげが すきだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "ferns.2": {
-   "en": "Ferns have many leaves.",
-   "lo": "ຕົ້ນກູດມີໃບຫຼາຍ.",
-   "th": "ต้นเฟิร์นมีใบมากมาย",
-   "zh": "蕨草有很多叶子。",
-   "ja": "シダには はっぱが たくさん あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "plants.0": {
-   "en": "Plants. They grow by the river.",
-   "lo": "ພືດ. ພວກມັນເກີດຢູ່ຂ້າງແມ່ນ້ຳ.",
-   "th": "พืช ขึ้นอยู่ริมแม่น้ำ",
-   "zh": "植物。它们长在河边。",
-   "ja": "しょくぶつ。かわの そばに はえるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "plants.1": {
-   "en": "A banana plant has big leaves.",
-   "lo": "ຕົ້ນກ້ວຍມີໃບໃຫຍ່.",
-   "th": "ต้นกล้วยมีใบใหญ่",
-   "zh": "香蕉树有大大的叶子。",
-   "ja": "バナナの きは おおきな はが あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "plants.2": {
-   "en": "Firewood is dry wood.",
-   "lo": "ຟືນແມ່ນໄມ້ແຫ້ງ.",
-   "th": "ฟืนคือไม้แห้ง",
-   "zh": "柴火是干木头。",
-   "ja": "まきは かわいた きだよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "knoll.0": {
-   "en": "A knoll. It is a small hill.",
-   "lo": "ເນີນ. ມັນແມ່ນພູນ້ອຍ.",
-   "th": "เนิน คือเนินเขาเล็กๆ",
-   "zh": "小土丘。它是一座小山丘。",
-   "ja": "おか。ちいさな やまだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "knoll.1": {
-   "en": "Grass grows on a knoll.",
-   "lo": "ຫຍ້າຂຶ້ນເທິງເນີນ.",
-   "th": "หญ้าขึ้นบนเนิน",
-   "zh": "草长在小土丘上。",
-   "ja": "おかに くさが はえるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "knoll.2": {
-   "en": "A knoll is soft and round.",
-   "lo": "ເນີນອ່ອນແລະມົນ.",
-   "th": "เนินนุ่มและกลม",
-   "zh": "小土丘又软又圆。",
-   "ja": "おかは やわらかくて まるいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "mound.0": {
-   "en": "A mound. It is a heap of earth.",
-   "lo": "ກອງດິນ. ມັນແມ່ນດິນທີ່ກອງໄວ້.",
-   "th": "กองดิน คือดินที่กองสูงขึ้นมา",
-   "zh": "土堆。它是一堆泥土。",
-   "ja": "つちの やま。つちが つみあがっているよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "mound.1": {
-   "en": "Earth is soft and brown.",
-   "lo": "ດິນອ່ອນແລະສີນ້ຳຕານ.",
-   "th": "ดินนุ่มและสีน้ำตาล",
-   "zh": "泥土又软又棕。",
-   "ja": "つちは やわらかくて ちゃいろだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "mound.2": {
-   "en": "A mound is higher than the ground.",
-   "lo": "ກອງດິນສູງກວ່າພື້ນດິນ.",
-   "th": "กองดินสูงกว่าพื้นดิน",
-   "zh": "土堆比地面高。",
-   "ja": "つちの やまは じめんより たかいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "fence.0": {
-   "en": "A fence. It is made of bamboo.",
-   "lo": "ຮົ້ວ. ມັນເຮັດຈາກໄມ້ໄຜ່.",
-   "th": "รั้ว ทำจากไม้ไผ่",
-   "zh": "栅栏。它是竹子做的。",
-   "ja": "さく。たけで できているよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "fence.1": {
-   "en": "A fence keeps the garden safe.",
-   "lo": "ຮົ້ວຊ່ວຍປົກປ້ອງສວນ.",
-   "th": "รั้วช่วยปกป้องสวน",
-   "zh": "栅栏保护菜园。",
-   "ja": "さくは はたけを まもるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "fence.2": {
-   "en": "Bamboo grows tall and fast.",
-   "lo": "ໄມ້ໄຜ່ເຕີບໂຕສູງແລະໄວ.",
-   "th": "ไผ่โตสูงและโตเร็ว",
-   "zh": "竹子长得又高又快。",
-   "ja": "たけは たかく はやく のびるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "chilli.0": {
-   "en": "A chilli. It is red and hot.",
-   "lo": "ໝາກເຜັດ. ມັນສີແດງແລະເຜັດ.",
-   "th": "พริก สีแดงและเผ็ด",
-   "zh": "辣椒。它红红的，辣辣的。",
-   "ja": "とうがらし。あかくて からいよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "chilli.1": {
-   "en": "Chilli plants grow in the garden.",
-   "lo": "ຕົ້ນໝາກເຜັດຂຶ້ນຢູ່ໃນສວນ.",
-   "th": "ต้นพริกขึ้นในสวน",
-   "zh": "辣椒长在菜园里。",
-   "ja": "とうがらしは はたけに そだつよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "chilli.2": {
-   "en": "Be careful. Chilli is spicy!",
-   "lo": "ລະວັງ. ໝາກເຜັດເຜັດ!",
-   "th": "ระวังนะ พริกเผ็ด!",
-   "zh": "小心。辣椒很辣！",
-   "ja": "きをつけて。とうがらしは からいよ！",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "eggplant.0": {
-   "en": "An eggplant. It is purple.",
-   "lo": "ໝາກເຂືອ. ມັນສີມ່ວງ.",
-   "th": "มะเขือ สีม่วง",
-   "zh": "茄子。它是紫色的。",
-   "ja": "なす。むらさきいろだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "eggplant.1": {
-   "en": "Eggplants hang from the plant.",
-   "lo": "ໝາກເຂືອຫ້ອຍຢູ່ເທິງຕົ້ນ.",
-   "th": "มะเขือห้อยอยู่บนต้น",
-   "zh": "茄子挂在枝上。",
-   "ja": "なすは えだに ぶらさがるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "eggplant.2": {
-   "en": "We cook eggplant to eat.",
-   "lo": "ພວກເຮົາແກງໝາກເຂືອກິນ.",
-   "th": "เราเอามะเขือไปปรุงกิน",
-   "zh": "我们把茄子煮着吃。",
-   "ja": "なすは りょうりして たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "beans.0": {
-   "en": "Beans. Long green beans.",
-   "lo": "ຖົ່ວ. ຖົ່ວຝັກຍາວສີຂຽວ.",
-   "th": "ถั่ว ถั่วฝักยาวสีเขียว",
-   "zh": "豆子。长长的绿豆角。",
-   "ja": "まめ。ながくて みどりの さやだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "beans.1": {
-   "en": "Bean vines climb up sticks.",
-   "lo": "ເຄືອຖົ່ວປີນຂຶ້ນໄມ້ຄ້ຳ.",
-   "th": "เถาถั่วเลื้อยขึ้นไม้ค้ำ",
-   "zh": "豆藤沿着木棍往上爬。",
-   "ja": "まめの つるは ぼうを のぼるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "beans.2": {
-   "en": "We eat the beans.",
-   "lo": "ພວກເຮົາກິນຖົ່ວ.",
-   "th": "เรากินถั่ว",
-   "zh": "我们吃豆子。",
-   "ja": "まめは たべるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "gourd-vine.0": {
-   "en": "A gourd vine. Gourds grow on it.",
-   "lo": "ເຄືອໝາກນ້ຳ. ໝາກນ້ຳຂຶ້ນຢູ່ເທິງມັນ.",
-   "th": "เถาน้ำเต้า น้ำเต้าเติบโตบนเถานี้",
-   "zh": "葫芦藤。葫芦长在上面。",
-   "ja": "ひょうたんの つる。ひょうたんが なるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "gourd-vine.1": {
-   "en": "A vine climbs up a frame.",
-   "lo": "ເຄືອປີນຂຶ້ນໄມ້ຄ້ຳ.",
-   "th": "เถาไม้เลื้อยขึ้นโครง",
-   "zh": "藤蔓顺着架子往上爬。",
-   "ja": "つるは わくを のぼるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "gourd-vine.2": {
-   "en": "A gourd has a hard skin.",
-   "lo": "ໝາກນ້ຳມີເປືອກແຂງ.",
-   "th": "น้ำเต้ามีเปลือกแข็ง",
-   "zh": "葫芦的皮很硬。",
-   "ja": "ひょうたんは かわが かたいよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "hay.0": {
-   "en": "A pile of hay.",
-   "lo": "ກອງຟາງ.",
-   "th": "กองฟาง",
-   "zh": "一堆干草。",
-   "ja": "ほしくさの やま。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "hay.1": {
-   "en": "Hay is dry grass.",
-   "lo": "ຟາງແມ່ນຫຍ້າແຫ້ງ.",
-   "th": "ฟางคือหญ้าแห้ง",
-   "zh": "干草就是晒干的草。",
-   "ja": "ほしくさは かわいた くさだよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "hay.2": {
-   "en": "Hay is a soft, warm bed.",
-   "lo": "ຟາງເປັນບ່ອນນອນອ່ອນໆ ແລະອຸ່ນ.",
-   "th": "ฟางเป็นที่นอนนุ่มๆ อุ่นๆ",
-   "zh": "干草是又软又暖的床。",
-   "ja": "ほしくさは やわらかくて あたたかい ベッドだよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "fish-trap.0": {
-   "en": "A fish trap. It catches fish.",
-   "lo": "ໄຊດັກປາ. ມັນດັກປາ.",
-   "th": "ไซดักปลา ใช้จับปลา",
-   "zh": "鱼篓。它用来捉鱼。",
-   "ja": "さかなの わな。さかなを とるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "fish-trap.1": {
-   "en": "A fish trap is made of bamboo.",
-   "lo": "ໄຊດັກປາເຮັດຈາກໄມ້ໄຜ່.",
-   "th": "ไซดักปลาทำจากไม้ไผ่",
-   "zh": "鱼篓是竹子编的。",
-   "ja": "さかなの わなは たけで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "fish-trap.2": {
-   "en": "Fish swim in, and cannot swim out.",
-   "lo": "ປາລອຍເຂົ້າໄປ ແຕ່ລອຍອອກບໍ່ໄດ້.",
-   "th": "ปลาว่ายเข้าไปแล้วว่ายออกไม่ได้",
-   "zh": "鱼游进去，就游不出来了。",
-   "ja": "さかなは はいると でられないよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "pot.0": {
-   "en": "A clay pot. It is old.",
-   "lo": "ໝໍ້ດິນ. ມັນເກົ່າແລ້ວ.",
-   "th": "หม้อดิน เก่าแล้ว",
-   "zh": "陶罐。它很旧了。",
-   "ja": "どびん。ふるい つぼだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "pot.1": {
-   "en": "A clay pot is made from earth.",
-   "lo": "ໝໍ້ດິນເຮັດຈາກດິນ.",
-   "th": "หม้อดินทำจากดิน",
-   "zh": "陶罐是用泥土做的。",
-   "ja": "どびんは つちで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "pot.2": {
-   "en": "A pot can hold water or rice.",
-   "lo": "ໝໍ້ໃສ່ນ້ຳ ຫຼື ເຂົ້າໄດ້.",
-   "th": "หม้อใส่น้ำหรือข้าวได้",
-   "zh": "罐子能装水，也能装米。",
-   "ja": "つぼには みずや おこめを いれられるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "jar.0": {
-   "en": "A jar. It holds water.",
-   "lo": "ໂອ່ງ. ມັນໃສ່ນ້ຳ.",
-   "th": "โอ่ง ใส่น้ำได้",
-   "zh": "水缸。它能装水。",
-   "ja": "かめ。みずを ためるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "jar.1": {
-   "en": "Jars are made of clay.",
-   "lo": "ໂອ່ງເຮັດຈາກດິນເຜົາ.",
-   "th": "โอ่งทำจากดินเผา",
-   "zh": "缸是用陶土烧的。",
-   "ja": "かめは やきものの つちで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "jar.2": {
-   "en": "Jars stand at the foot of the house.",
-   "lo": "ໂອ່ງຕັ້ງຢູ່ຕີນເຮືອນ.",
-   "th": "โอ่งตั้งอยู่ใต้ถุนบ้าน",
-   "zh": "缸放在房子脚下。",
-   "ja": "かめは いえの したに おいてあるよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "basket.0": {
-   "en": "Baskets. They are woven.",
-   "lo": "ກະຕ່າ. ມັນຖືກຈັກສານ.",
-   "th": "ตะกร้า สานด้วยมือ",
-   "zh": "篮子。它们是编出来的。",
-   "ja": "かご。あんで つくるよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "basket.1": {
-   "en": "Baskets are made of bamboo or rattan.",
-   "lo": "ກະຕ່າເຮັດຈາກໄມ້ໄຜ່ ຫຼື ຫວາຍ.",
-   "th": "ตะกร้าทำจากไม้ไผ่หรือหวาย",
-   "zh": "篮子是用竹子或藤编的。",
-   "ja": "かごは たけや とうで できているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "basket.2": {
-   "en": "We keep rice in a basket.",
-   "lo": "ພວກເຮົາເກັບເຂົ້າໄວ້ໃນກະຕ່າ.",
-   "th": "เราเก็บข้าวไว้ในตะกร้า",
-   "zh": "我们把米放在篮子里。",
-   "ja": "かごに おこめを しまっておくよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "granary.0": {
-   "en": "A granary. It keeps rice dry.",
-   "lo": "ເລົ້າເຂົ້າ. ມັນຮັກສາເຂົ້າໃຫ້ແຫ້ງ.",
-   "th": "ยุ้งฉาง เก็บข้าวไว้ไม่ให้เปียก",
-   "zh": "谷仓。它让稻谷保持干燥。",
-   "ja": "こめぐら。おこめを かわいた ままに しておくよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "granary.1": {
-   "en": "A granary stands on posts.",
-   "lo": "ເລົ້າເຂົ້າຕັ້ງຢູ່ເທິງເສົາ.",
-   "th": "ยุ้งฉางตั้งอยู่บนเสา",
-   "zh": "谷仓建在柱子上。",
-   "ja": "こめぐらは はしらの うえに たっているよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "granary.2": {
-   "en": "Posts keep the mice out.",
-   "lo": "ເສົາກັນໜູບໍ່ໃຫ້ເຂົ້າ.",
-   "th": "เสาช่วยกันหนูไม่ให้เข้า",
-   "zh": "柱子能挡住老鼠。",
-   "ja": "はしらが ねずみを ふせぐよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "spirit-house.0": {
-   "en": "A spirit house. It is a tiny home.",
-   "lo": "ຫໍເຈົ້າທີ່. ມັນເປັນເຮືອນນ້ອຍໆ.",
-   "th": "ศาลพระภูมิ บ้านหลังเล็กๆ",
-   "zh": "土地神龛。它是一座小小的房子。",
-   "ja": "ほこら。ちいさな おうちだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "spirit-house.1": {
-   "en": "People leave flowers for the spirits.",
-   "lo": "ຄົນວາງດອກໄມ້ໃຫ້ເທວະດາ.",
-   "th": "คนวางดอกไม้ไว้ให้เทพ",
-   "zh": "人们把花放在神龛前。",
-   "ja": "ひとびとは ほこらに はなを そなえるよ。",
-   "who": "narrator",
-   "tag": "does"
-  },
-  "spirit-house.2": {
-   "en": "The spirits watch over the yard.",
-   "lo": "ເທວະດາເຝົ້າເບິ່ງເດີ່ນເຮືອນ.",
-   "th": "เทพคอยดูแลลานบ้าน",
-   "zh": "神灵守护着院子。",
-   "ja": "かみさまが にわを まもっているよ。",
-   "who": "narrator",
-   "tag": "fact"
-  },
-  "firewood.0": {
-   "en": "Firewood. Dry wood for the fire.",
-   "lo": "ຟືນ. ໄມ້ແຫ້ງສຳລັບກອງໄຟ.",
-   "th": "ฟืน ไม้แห้งสำหรับก่อไฟ",
-   "zh": "柴火。烧火用的干木头。",
-   "ja": "まき。ひを たく かわいた きだよ。",
-   "who": "narrator",
-   "tag": "what"
-  },
-  "firewood.1": {
-   "en": "Firewood is stacked in a pile.",
-   "lo": "ຟືນຖືກວາງຊ້ອນກັນເປັນກອງ.",
-   "th": "ฟืนกองซ้อนกันเป็นกอง",
-   "zh": "柴火堆成一堆。",
-   "ja": "まきは つみかさねて あるよ。",
-   "who": "narrator",
-   "tag": "looks"
-  },
-  "firewood.2": {
-   "en": "We burn it to cook rice.",
-   "lo": "ພວກເຮົາເຜົາມັນເພື່ອຫຸງເຂົ້າ.",
-   "th": "เราเผามันเพื่อหุงข้าว",
-   "zh": "我们烧它来煮饭。",
-   "ja": "もやして ごはんを たくよ。",
-   "who": "narrator",
-   "tag": "fact"
-  }
- },
- "chars": {},
- "pools": {
-  "buffalo": [
-   "buffalo.0",
-   "buffalo.1",
-   "buffalo.2"
-  ],
-  "gecko": [
-   "gecko.0",
-   "gecko.1",
-   "gecko.2"
-  ],
-  "egret": [
-   "egret.0",
-   "egret.1",
-   "egret.2"
-  ],
-  "turtle": [
-   "turtle.0",
-   "turtle.1",
-   "turtle.2"
-  ],
-  "frog": [
-   "frog.0",
-   "frog.1",
-   "frog.2"
-  ],
-  "duck": [
-   "duck.0",
-   "duck.1",
-   "duck.2"
-  ],
-  "fish": [
-   "fish.0",
-   "fish.1",
-   "fish.2"
-  ],
-  "butterfly": [
-   "butterfly.0",
-   "butterfly.1",
-   "butterfly.2"
-  ],
-  "dragonfly": [
-   "dragonfly.0",
-   "dragonfly.1",
-   "dragonfly.2"
-  ],
-  "squirrel": [
-   "squirrel.0",
-   "squirrel.1",
-   "squirrel.2"
-  ],
-  "house": [
-   "house.0",
-   "house.1",
-   "house.2"
-  ],
-  "fire": [
-   "fire.0",
-   "fire.1",
-   "fire.2"
-  ],
-  "plough": [
-   "plough.0",
-   "plough.1",
-   "plough.2"
-  ],
-  "rice": [
-   "rice.0",
-   "rice.1",
-   "rice.2"
-  ],
-  "taro": [
-   "taro.0",
-   "taro.1",
-   "taro.2"
-  ],
-  "marigold": [
-   "marigold.0",
-   "marigold.1",
-   "marigold.2"
-  ],
-  "mango-tree": [
-   "mango-tree.0",
-   "mango-tree.1",
-   "mango-tree.2"
-  ],
-  "termite-mound": [
-   "termite-mound.0",
-   "termite-mound.1",
-   "termite-mound.2"
-  ],
-  "log": [
-   "log.0",
-   "log.1",
-   "log.2"
-  ],
-  "rock": [
-   "rock.0",
-   "rock.1",
-   "rock.2"
-  ],
-  "lotus": [
-   "lotus.0",
-   "lotus.1",
-   "lotus.2"
-  ],
-  "river": [
-   "river.0",
-   "river.1",
-   "river.2"
-  ],
-  "palm": [
-   "palm.0",
-   "palm.1",
-   "palm.2"
-  ],
-  "hill": [
-   "hill.0",
-   "hill.1",
-   "hill.2"
-  ],
-  "cloud": [
-   "cloud.0",
-   "cloud.1",
-   "cloud.2"
-  ],
-  "small-cloud": [
-   "small-cloud.0",
-   "small-cloud.1",
-   "small-cloud.2"
-  ],
-  "bird": [
-   "bird.0",
-   "bird.1",
-   "bird.2"
-  ],
-  "reeds": [
-   "reeds.0",
-   "reeds.1",
-   "reeds.2"
-  ],
-  "grass": [
-   "grass.0",
-   "grass.1",
-   "grass.2"
-  ],
-  "flowers": [
-   "flowers.0",
-   "flowers.1",
-   "flowers.2"
-  ],
-  "ferns": [
-   "ferns.0",
-   "ferns.1",
-   "ferns.2"
-  ],
-  "plants": [
-   "plants.0",
-   "plants.1",
-   "plants.2"
-  ],
-  "knoll": [
-   "knoll.0",
-   "knoll.1",
-   "knoll.2"
-  ],
-  "mound": [
-   "mound.0",
-   "mound.1",
-   "mound.2"
-  ],
-  "fence": [
-   "fence.0",
-   "fence.1",
-   "fence.2"
-  ],
-  "chilli": [
-   "chilli.0",
-   "chilli.1",
-   "chilli.2"
-  ],
-  "eggplant": [
-   "eggplant.0",
-   "eggplant.1",
-   "eggplant.2"
-  ],
-  "beans": [
-   "beans.0",
-   "beans.1",
-   "beans.2"
-  ],
-  "gourd-vine": [
-   "gourd-vine.0",
-   "gourd-vine.1",
-   "gourd-vine.2"
-  ],
-  "hay": [
-   "hay.0",
-   "hay.1",
-   "hay.2"
-  ],
-  "fish-trap": [
-   "fish-trap.0",
-   "fish-trap.1",
-   "fish-trap.2"
-  ],
-  "pot": [
-   "pot.0",
-   "pot.1",
-   "pot.2"
-  ],
-  "jar": [
-   "jar.0",
-   "jar.1",
-   "jar.2"
-  ],
-  "basket": [
-   "basket.0",
-   "basket.1",
-   "basket.2"
-  ],
-  "granary": [
-   "granary.0",
-   "granary.1",
-   "granary.2"
-  ],
-  "spirit-house": [
-   "spirit-house.0",
-   "spirit-house.1",
-   "spirit-house.2"
-  ],
-  "firewood": [
-   "firewood.0",
-   "firewood.1",
-   "firewood.2"
-  ]
- },
- "word": {
-  "buffalo": {
-   "en": "buffalo",
-   "lo": "ຄວາຍ",
-   "th": "ควาย",
-   "zh": "水牛",
-   "ja": "すいぎゅう"
-  },
-  "gecko": {
-   "en": "gecko",
-   "lo": "ຕຸ໊ກແກ",
-   "th": "ตุ๊กแก",
-   "zh": "壁虎",
-   "ja": "ヤモリ"
-  },
-  "egret": {
-   "en": "egret",
-   "lo": "ນົກຍາງ",
-   "th": "นกยางขาว",
-   "zh": "白鹭",
-   "ja": "シラサギ"
-  },
-  "turtle": {
-   "en": "turtle",
-   "lo": "ເຕົ່າ",
-   "th": "เต่า",
-   "zh": "乌龟",
-   "ja": "カメ"
-  },
-  "frog": {
-   "en": "frog",
-   "lo": "ກົບ",
-   "th": "กบ",
-   "zh": "青蛙",
-   "ja": "カエル"
-  },
-  "duck": {
-   "en": "duck",
-   "lo": "ເປັດ",
-   "th": "เป็ด",
-   "zh": "鸭子",
-   "ja": "アヒル"
-  },
-  "fish": {
-   "en": "fish",
-   "lo": "ປາ",
-   "th": "ปลา",
-   "zh": "鱼",
-   "ja": "さかな"
-  },
-  "butterfly": {
-   "en": "butterfly",
-   "lo": "ແມງກະເບື້ອ",
-   "th": "ผีเสื้อ",
-   "zh": "蝴蝶",
-   "ja": "ちょうちょ"
-  },
-  "dragonfly": {
-   "en": "dragonfly",
-   "lo": "ແມງປໍ",
-   "th": "แมลงปอ",
-   "zh": "蜻蜓",
-   "ja": "トンボ"
-  },
-  "squirrel": {
-   "en": "squirrel",
-   "lo": "ກະຮອກ",
-   "th": "กระรอก",
-   "zh": "松鼠",
-   "ja": "リス"
-  },
-  "house": {
-   "en": "house",
-   "lo": "ເຮືອນ",
-   "th": "บ้าน",
-   "zh": "房子",
-   "ja": "いえ"
-  },
-  "fire": {
-   "en": "fire",
-   "lo": "ໄຟ",
-   "th": "ไฟ",
-   "zh": "火",
-   "ja": "ひ"
-  },
-  "plough": {
-   "en": "plough",
-   "lo": "ໄຖ",
-   "th": "คันไถ",
-   "zh": "犁",
-   "ja": "すき"
-  },
-  "rice": {
-   "en": "rice",
-   "lo": "ເຂົ້າ",
-   "th": "ข้าว",
-   "zh": "稻米",
-   "ja": "こめ"
-  },
-  "taro": {
-   "en": "taro leaf",
-   "lo": "ໃບເຜືອກ",
-   "th": "ใบเผือก",
-   "zh": "芋头叶",
-   "ja": "さといもの は"
-  },
-  "marigold": {
-   "en": "marigold",
-   "lo": "ດອກດາວເຮືອງ",
-   "th": "ดอกดาวเรือง",
-   "zh": "万寿菊",
-   "ja": "マリーゴールド"
-  },
-  "mango-tree": {
-   "en": "mango tree",
-   "lo": "ຕົ້ນໝາກມ່ວງ",
-   "th": "ต้นมะม่วง",
-   "zh": "芒果树",
-   "ja": "マンゴーの き"
-  },
-  "termite-mound": {
-   "en": "termite mound",
-   "lo": "ຈອມປວກ",
-   "th": "จอมปลวก",
-   "zh": "白蚁丘",
-   "ja": "シロアリの つか"
-  },
-  "log": {
-   "en": "log",
-   "lo": "ທ່ອນໄມ້",
-   "th": "ท่อนไม้",
-   "zh": "木头",
-   "ja": "まるた"
-  },
-  "rock": {
-   "en": "rock",
-   "lo": "ກ້ອນຫີນ",
-   "th": "ก้อนหิน",
-   "zh": "石头",
-   "ja": "いし"
-  },
-  "lotus": {
-   "en": "lotus",
-   "lo": "ດອກບົວ",
-   "th": "ดอกบัว",
-   "zh": "莲花",
-   "ja": "はす"
-  },
-  "river": {
-   "en": "river",
-   "lo": "ແມ່ນ້ຳ",
-   "th": "แม่น้ำ",
-   "zh": "河",
-   "ja": "かわ"
-  },
-  "palm": {
-   "en": "sugar palm",
-   "lo": "ຕົ້ນຕານ",
-   "th": "ต้นตาล",
-   "zh": "糖棕",
-   "ja": "サトウヤシ"
-  },
-  "hill": {
-   "en": "hills",
-   "lo": "ພູ",
-   "th": "ภูเขา",
-   "zh": "山丘",
-   "ja": "おやま"
-  },
-  "cloud": {
-   "en": "cloud",
-   "lo": "ເມກ",
-   "th": "เมฆ",
-   "zh": "云",
-   "ja": "くも"
-  },
-  "small-cloud": {
-   "en": "cloud",
-   "lo": "ເມກ",
-   "th": "เมฆ",
-   "zh": "云",
-   "ja": "くも"
-  },
-  "bird": {
-   "en": "bird",
-   "lo": "ນົກ",
-   "th": "นก",
-   "zh": "鸟",
-   "ja": "とり"
-  },
-  "reeds": {
-   "en": "reeds",
-   "lo": "ຕົ້ນອໍ້",
-   "th": "ต้นอ้อ",
-   "zh": "芦苇",
-   "ja": "あし"
-  },
-  "grass": {
-   "en": "grass",
-   "lo": "ຫຍ້າ",
-   "th": "หญ้า",
-   "zh": "草",
-   "ja": "くさ"
-  },
-  "flowers": {
-   "en": "flowers",
-   "lo": "ດອກໄມ້",
-   "th": "ดอกไม้",
-   "zh": "花",
-   "ja": "はな"
-  },
-  "ferns": {
-   "en": "ferns",
-   "lo": "ຕົ້ນກູດ",
-   "th": "ต้นเฟิร์น",
-   "zh": "蕨草",
-   "ja": "シダ"
-  },
-  "plants": {
-   "en": "plants",
-   "lo": "ພືດ",
-   "th": "พืช",
-   "zh": "植物",
-   "ja": "しょくぶつ"
-  },
-  "knoll": {
-   "en": "knoll",
-   "lo": "ເນີນ",
-   "th": "เนิน",
-   "zh": "小土丘",
-   "ja": "おか"
-  },
-  "mound": {
-   "en": "mound",
-   "lo": "ກອງດິນ",
-   "th": "กองดิน",
-   "zh": "土堆",
-   "ja": "つちの やま"
-  },
-  "jar": {
-   "en": "jar",
-   "lo": "ໂອ່ງ",
-   "th": "โอ่ง",
-   "zh": "罐子",
-   "ja": "かめ"
-  },
-  "basket": {
-   "en": "basket",
-   "lo": "ກະຕ່າ",
-   "th": "ตะกร้า",
-   "zh": "篮子",
-   "ja": "かご"
-  },
-  "fence": {
-   "en": "fence",
-   "lo": "ຮົ້ວ",
-   "th": "รั้ว",
-   "zh": "栅栏",
-   "ja": "さく"
-  },
-  "granary": {
-   "en": "granary",
-   "lo": "ເລົ້າເຂົ້າ",
-   "th": "ยุ้งฉาง",
-   "zh": "谷仓",
-   "ja": "こめぐら"
-  },
-  "spirit-house": {
-   "en": "spirit house",
-   "lo": "ຫໍເຈົ້າທີ່",
-   "th": "ศาลพระภูมิ",
-   "zh": "土地神龛",
-   "ja": "ほこら"
-  },
-  "chilli": {
-   "en": "chilli",
-   "lo": "ໝາກເຜັດ",
-   "th": "พริก",
-   "zh": "辣椒",
-   "ja": "とうがらし"
-  },
-  "eggplant": {
-   "en": "eggplant",
-   "lo": "ໝາກເຂືອ",
-   "th": "มะเขือ",
-   "zh": "茄子",
-   "ja": "なす"
-  },
-  "beans": {
-   "en": "beans",
-   "lo": "ຖົ່ວ",
-   "th": "ถั่ว",
-   "zh": "豆子",
-   "ja": "まめ"
-  },
-  "gourd-vine": {
-   "en": "gourd vine",
-   "lo": "ເຄືອໝາກນ້ຳ",
-   "th": "เถาน้ำเต้า",
-   "zh": "葫芦藤",
-   "ja": "ひょうたんの つる"
-  },
-  "hay": {
-   "en": "hay",
-   "lo": "ຟາງ",
-   "th": "ฟาง",
-   "zh": "干草",
-   "ja": "ほしくさ"
-  },
-  "fish-trap": {
-   "en": "fish trap",
-   "lo": "ໄຊດັກປາ",
-   "th": "ไซดักปลา",
-   "zh": "鱼篓",
-   "ja": "さかなの わな"
-  },
-  "pot": {
-   "en": "clay pot",
-   "lo": "ໝໍ້ດິນ",
-   "th": "หม้อดิน",
-   "zh": "陶罐",
-   "ja": "どびん"
-  },
-  "firewood": {
-   "en": "firewood",
-   "lo": "ຟືນ",
-   "th": "ฟืน",
-   "zh": "柴火",
-   "ja": "まき"
-  }
- },
- "map": {
-  "buffalo": "buffalo",
-  "house": "house",
-  "mango-tree": "mango-tree",
-  "hearth": "fire",
-  "knoll": "knoll",
-  "plough": "plough",
-  "mound": "mound",
-  "shoot": "rice",
-  "cloud-small": "small-cloud",
-  "palm-a": "palm",
-  "palm-b": "palm",
-  "mid": "palm",
-  "posed-egret": "egret",
-  "egret": "egret",
-  "posed-turtle": "turtle",
-  "posed-duck": "duck",
-  "posed-fish": "fish",
-  "posed-butterfly": "butterfly",
-  "posed-dragonfly": "dragonfly",
-  "posed-squirrel": "squirrel",
-  "gecko": "gecko",
-  "frog": "frog",
-  "termite": "termite-mound",
-  "stones": "rock",
-  "flowers-b": "flowers",
-  "tuft-pink": "flowers",
-  "flowers-a": "marigold",
-  "grass-a": "grass",
-  "grass-b": "grass",
-  "tuft-clover": "grass",
-  "sedge-a": "grass",
-  "sedge-b": "grass",
-  "sedge-c": "grass",
-  "pond-reeds": "reeds",
-  "reeds-tall": "reeds",
-  "reeds-mid": "reeds",
-  "cattail-b": "reeds",
-  "pond-front": "reeds",
-  "log": "log",
-  "ferns": "ferns",
-  "lotus-clump": "lotus",
-  "frame-left": "taro",
-  "bank-quiet": "plants",
-  "river-bank": "river",
-  "backdrop": "cloud",
-  "far": "hill",
-  "birds": "bird",
-  "bush": "flowers",
-  "rice-front": "rice",
-  "firewood": "firewood",
-  "reeds": "reeds",
-  "fore-left": "taro",
-  "lotus": "lotus",
-  "fore-flowers": "marigold",
-  "jars": "jar",
-  "baskets": "basket",
-  "row-a0": "grass",
-  "row-a1": "rock",
-  "row-b0": "chilli",
-  "row-b1": "eggplant",
-  "row-b2": "hay",
-  "row-c0": "beans",
-  "close-a": "fish-trap",
-  "close-b": "pot",
-  "close-c": "grass",
-  "garden-a": "fence",
-  "garden-b": "granary",
-  "garden-c": "gourd-vine",
-  "wing-b": "plants",
-  "spirit-house": "spirit-house",
-  "mound-flowers": "flowers",
-  "palm-grass": "grass"
- }
+"lines": {
+"punyeu.0": {
+"en": "I am Pu Nyeu. Pu means grandfather in Lao!",
+"lo": "ຂ້ອຍແມ່ນປູ່ເຍີ. ປູ່ແປວ່າພໍ່ເຖົ້າໃນພາສາລາວ!",
+"th": "ข้าคือปู่เยอ ปู่แปลว่าคุณปู่ในภาษาลาว!",
+"zh": "我是布约爷爷。在老挝语里，布就是爷爷的意思！",
+"ja": "わしは プーニョーじゃ。ラオスごで おじいさん という意味じゃよ！",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.1": {
+"en": "Pu Nyeu is a kind, brave Lao grandfather.",
+"lo": "ປູ່ເຍີເປັນພໍ່ເຖົ້າຊາວລາວທີ່ໃຈດີ ແລະ ກ້າຫານ.",
+"th": "ปู่เยอเป็นคุณปู่ชาวลาวที่ใจดีและกล้าหาญ",
+"zh": "布约爷爷是一位善良又勇敢的老挝老爷爷。",
+"ja": "プーニョーは やさしくて ゆうかんな ラオスの おじいさんです。",
+"who": "narrator",
+"tag": "who"
+},
+"punyeu.2": {
+"en": "I wear my woven indigo shirt and checkered headcloth.",
+"lo": "ຂ້ອຍນຸ່ງເສື້ອສີຄາມ ແລະ ພັນຜ້າຂາວມ້າຢູ່ຫົວ.",
+"th": "ข้านุ่งเสื้อสีครามและโพกผ้าขาวม้าที่ศีรษะ",
+"zh": "我穿着靛蓝色的粗布衫，头上包着格子头巾。",
+"ja": "あいぞめの シャツに チェックの ぬのを あたまに まいておるよ。",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.3": {
+"en": "I care for the rice field and the quiet valley.",
+"lo": "ຂ້ອຍດູແລທົ່ງນາ ແລະ ຮ່ອມພູທີ່ສະຫງົບງຽບ.",
+"th": "ข้าดูแลทุ่งนาและหุบเขาที่เงียบสงบ",
+"zh": "我照料着稻田和这片宁静的山谷。",
+"ja": "たんぼと しずかな たにを たいせつに まもっておるよ。",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.4": {
+"en": "Nya Nyeu and I always work side by side.",
+"lo": "ຍ່າເຍີກັບຂ້ອຍເຮັດວຽກຄຽງຂ້າງກັນສະເໝີ.",
+"th": "ย่าเยอกับข้าทำงานเคียงข้างกันเสมอ",
+"zh": "雅约奶奶和我总是并肩一起干活。",
+"ja": "ヤーニョーと わしは いつも いっしょに はたらくのじゃ。",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.5": {
+"en": "Little Lion follows my footsteps wherever I go.",
+"lo": "ສິງນ້ອຍຍ່າງຕາມຮອຍຕີນຂ້ອຍໄປທຸກບ່ອນ.",
+"th": "สิงห์น้อยเดินตามรอยเท้าข้าไปทุกแห่ง",
+"zh": "小狮子无论我走到哪里都会跟着我的脚步。",
+"ja": "ちいさな シシは どこへ いっても ついてくるよ。",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.6": {
+"en": "Old hands can still do big, brave deeds!",
+"lo": "ມືຂອງຄົນເຖົ້າກໍຍັງເຮັດວຽກໃຫຍ່ທີ່ກ້າຫານໄດ້!",
+"th": "มือของคนแก่ก็ยังทำงานใหญ่ที่กล้าหาญได้!",
+"zh": "年老的双手依然能做伟大的勇敢之事！",
+"ja": "としをとった てでも おおきな ゆうきある しごとが できるのじゃ！",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.7": {
+"en": "Never forget the people who help you along the way.",
+"lo": "ຢ່າລືມຄົນທີ່ຊ່ວຍເຫຼືອເຈົ້າຕາມທາງເດີ້.",
+"th": "อย่าลืมคนที่ช่วยเหลือเจ้าตลอดทางนะ",
+"zh": "永远不要忘记一路上帮助过你的人们。",
+"ja": "たすけてくれた ひとたちの ことを わすれないでおくれよ。",
+"who": "punyeu",
+"tag": "say"
+},
+"punyeu.8": {
+"en": "Come and eat, children! Every New Year we dance together!",
+"lo": "ມາກິນເຂົ້າເດີ້ຫຼານໆ! ທຸກປີໃໝ່ພວກເຮົາຟ້ອນນຳກັນ!",
+"th": "มากินข้าวนะหลานๆ! ทุกปีใหม่พวกเรารำด้วยกัน!",
+"zh": "快来吃饭吧，孩子们！每年新年我们都一起跳舞！",
+"ja": "さあ ごはんを たべよう！ まいとし しんねんに いっしょに おどるよ！",
+"who": "punyeu",
+"tag": "say",
+"sp": [
+"s10",
+"s11"
+]
+},
+"nyanyeu.0": {
+"en": "I am Nya Nyeu. Nya means grandmother in Lao!",
+"lo": "ຂ້ອຍແມ່ນຍ່າເຍີ. ຍ່າແປວ່າແມ່ເຖົ້າໃນພາສາລາວ!",
+"th": "ข้าคือย่าเยอ ย่าแปลว่าคุณย่าในภาษาลาว!",
+"zh": "我是雅约奶奶。在老挝语里，雅就是奶奶的意思！",
+"ja": "わたしは ヤーニョーよ。ラオスごで おばあさん という意味なのよ！",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.1": {
+"en": "Nya Nyeu is a warm, wise Lao grandmother.",
+"lo": "ຍ່າເຍີເປັນແມ່ເຖົ້າຊາວລາວທີ່ອົບອຸ່ນ ແລະ ສະຫຼາດ.",
+"th": "ย่าเยอเป็นคุณย่าชาวลาวที่อบอุ่นและฉลาด",
+"zh": "雅约奶奶是一位温暖又智慧的老挝老奶奶。",
+"ja": "ヤーニョーは あたたかくて ちえのある ラオスの おばあさんです。",
+"who": "narrator",
+"tag": "who"
+},
+"nyanyeu.2": {
+"en": "I wear my hand-woven Lao sinh skirt and red shawl.",
+"lo": "ຂ້ອຍນຸ່ງສິ້ນລາວຕ່ຳມື ແລະ ຜ້າບ່ຽງສີແດງ.",
+"th": "ข้านุ่งผ้าซิ่นลาวทอมือและผ้าสไบสีแดง",
+"zh": "我穿着手工织就的老挝筒裙，披着红披肩。",
+"ja": "ておりの ラオスの シンと あかい ショールを きていますよ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.3": {
+"en": "I tend the hearth fire and cook warm sticky rice.",
+"lo": "ຂ້ອຍດູແລເຕົາໄຟ ແລະ ໜຶ້ງເຂົ້າໜຽວອຸ່ນໆ.",
+"th": "ข้าดูแลเตาไฟและนึ่งข้าวเหนียวอุ่นๆ",
+"zh": "我照看灶火，蒸出热腾腾的糯米饭。",
+"ja": "かまどの ひを まもって あたたかい もちごめを たくのよ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.4": {
+"en": "My silver hair is tied neatly in a soft bun.",
+"lo": "ຜົມສີເງິນຂອງຂ້ອຍເກົ້າເປັນມວຍຢ່າງຮຽບຮ້ອຍ.",
+"th": "ผมสีเงินของข้าเกล้ามวยไว้อย่างเรียบร้อย",
+"zh": "我的银发整整齐齐地盘成一个发髻。",
+"ja": "ぎんいろの かみを きれいに おだんごに むすんでいるわ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.5": {
+"en": "Pu Nyeu and I love every child like our own family.",
+"lo": "ປູ່ເຍີກັບຂ້ອຍຮັກເດັກນ້ອຍທຸກຄົນຄືຄອບຄົວດຽວກັນ.",
+"th": "ปู่เยอกับข้ารักเด็กทุกคนเหมือนครอบครัวเดียวกัน",
+"zh": "布约爷爷和我把每个孩子都当成自己的家人一样疼爱。",
+"ja": "プーニョーと わたしは みんなを かぞくのように あいしているのよ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.6": {
+"en": "With gentle care and steady hands, we help everyone.",
+"lo": "ດ້ວຍຄວາມເອົາໃຈໃສ່ ແລະ ມືທີ່ໝັ້ນຄົງ ພວກເຮົາຊ່ວຍທຸກຄົນ.",
+"th": "ด้วยความใส่ใจและมือที่มั่นคง พวกเราช่วยทุกคน",
+"zh": "用温柔的关怀和稳健的双手，我们帮助每一个人。",
+"ja": "やさしさと しっかりした てで みんなを たすけるのよ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.7": {
+"en": "Round door or square door, we all share one sky.",
+"lo": "ປະຕູມົນ ຫຼື ປະຕູສີ່ຫຼ່ຽມ ພວກເຮົາຢູ່ໃຕ້ທ້ອງຟ້າດຽວກັນ.",
+"th": "ประตูกลมหรือประตูเหลี่ยม พวกเราอยู่ใต้ท้องฟ้าเดียวกัน",
+"zh": "无论圆门还是方门，我们都在同一片天空下。",
+"ja": "まるい とびらも しかくい とびらも おなじ そらの したよ。",
+"who": "nyanyeu",
+"tag": "say"
+},
+"nyanyeu.8": {
+"en": "Look at our joyful masks when we return for New Year!",
+"lo": "ເບິ່ງໜ້າກາກມ່ວນຊື່ນຂອງພວກເຮົາຕອນກັບມາປີໃໝ່ແມ້!",
+"th": "ดูหน้ากากแสนสนุกของพวกเราตอนกลับมาปีใหม่สิ!",
+"zh": "看我们新年回来时戴着多么欢快的面具！",
+"ja": "しんねんに かえってきたときの たのしい おめんを みてね！",
+"who": "nyanyeu",
+"tag": "say",
+"sp": [
+"s10",
+"s11"
+]
+},
+"lion.0": {
+"en": "I am Little Lion! Rawr, rawr!",
+"lo": "ຂ້ອຍແມ່ນສິງນ້ອຍ! ໂຮກ, ໂຮກ!",
+"th": "ฉันคือสิงห์น้อย! โฮก โฮก!",
+"zh": "我是小狮子！嗷呜，嗷呜！",
+"ja": "ぼくは ちいさなシシ！ がおー、がおー！",
+"who": "lion",
+"tag": "say"
+},
+"lion.1": {
+"en": "Little Lion is Pu Nyeu and Nya Nyeu's loyal golden cub.",
+"lo": "ສິງນ້ອຍເປັນລູກສິງສີຄຳທີ່ຊື່ສັດຂອງປູ່ເຍີ ແລະ ຍ່າເຍີ.",
+"th": "สิงห์น้อยเป็นลูกสิงโตสีทองที่ซื่อสัตย์ของปู่เยอและย่าเยอ",
+"zh": "小狮子是布约爷爷和雅约奶奶忠实的金色小狮崽。",
+"ja": "ちいさなシシは プーニョーと ヤーニョーの なかよしの こじしだよ。",
+"who": "narrator",
+"tag": "who"
+},
+"lion.2": {
+"en": "My fluffy mane bounces whenever I trot across the grass!",
+"lo": "ຂົນຄໍຟູໆຂອງຂ້ອຍເດັ້ງຂຶ້ນລົງເວລາຂ້ອຍແລ່ນເທິງຫຍ້າ!",
+"th": "แผงคอฟูๆ ของฉันเด้งขึ้นลงเวลาวิ่งบนหญ้า!",
+"zh": "我在草地上小跑时，毛茸茸的鬃毛会一蹦一蹦的！",
+"ja": "くさの うえを はしると ふわふわの たてがみが はねるよ！",
+"who": "lion",
+"tag": "say"
+},
+"lion.3": {
+"en": "I sniff every flower and listen closely with my round ears.",
+"lo": "ຂ້ອຍດົມດອກໄມ້ທຸກດອກ ແລະ ຟັງຢ່າງຕັ້ງໃຈດ້ວຍຫູກົມໆ.",
+"th": "ฉันดมดอกไม้ทุกดอกและตั้งใจฟังด้วยหูกลมๆ",
+"zh": "我闻一闻每朵花，用圆圆的耳朵仔细倾听。",
+"ja": "おはなの においを かいだり まるい みみで よく きくんだ。",
+"who": "lion",
+"tag": "say"
+},
+"lion.4": {
+"en": "I stay right beside Pu Nyeu and Nya Nyeu.",
+"lo": "ຂ້ອຍຢູ່ຄຽງຂ້າງປູ່ເຍີ ແລະ ຍ່າເຍີສະເໝີ.",
+"th": "ฉันอยู่เคียงข้างปู่เยอและย่าเยอเสมอ",
+"zh": "我一直守在布约爷爷和雅约奶奶身边。",
+"ja": "プーニョーと ヤーニョーの そばに ずっと いるよ。",
+"who": "lion",
+"tag": "say"
+},
+"lion.5": {
+"en": "My golden paws love to pounce and play in the yard!",
+"lo": "ອຸ້ງຕີນສີຄຳຂອງຂ້ອຍມັກໂດດຫຼິ້ນຢູ່ໃນເດີ່ນບ້ານ!",
+"th": "อุ้งเท้าสีทองของฉันชอบกระโดดเล่นในลานบ้าน!",
+"zh": "我的金色小爪子最喜欢在院子里扑跳玩耍！",
+"ja": "きんいろの あしで おにわを ぴょんと とんで あそぶのが すき！",
+"who": "lion",
+"tag": "say"
+},
+"lion.6": {
+"en": "I wear a bright green collar around my neck.",
+"lo": "ຂ້ອຍໃສ່ປອກຄໍສີຂຽວສົດໃສຢູ່ອ້ອມຄໍ.",
+"th": "ฉันใส่ปลอกคอสีเขียวสดใสรอบคอ",
+"zh": "我的脖子上戴着一条亮绿色的项圈。",
+"ja": "くびに あかるい みどりの くびわを つけてるよ。",
+"who": "lion",
+"tag": "say"
+},
+"lion.7": {
+"en": "Friends who share make the whole valley happy!",
+"lo": "ໝູ່ທີ່ແບ່ງປັນກັນເຮັດໃຫ້ທົ່ວຮ່ອມພູມີຄວາມສຸກ!",
+"th": "เพื่อนที่แบ่งปันกันทำให้ทั้งหุบเขามีความสุข!",
+"zh": "懂得分享的朋友会让整座山谷都充满快乐！",
+"ja": "わけあう ともだちが いると たに じゅうが うれしくなるよ！",
+"who": "lion",
+"tag": "say"
+},
+"lion.8": {
+"en": "I dance with my marigold garland for Lao New Year!",
+"lo": "ຂ້ອຍຟ້ອນພ້ອມພວງມາໄລດອກດາວເຮືອງໃນປີໃໝ່ລາວ!",
+"th": "ฉันเต้นรำกับพวงมาลัยดอกดาวเรืองในวันปีใหม่ลาว!",
+"zh": "我戴着万寿菊花环在老挝新年欢快地跳舞！",
+"ja": "マリーゴールドの かざりで ラオスの しんねんを おどるよ！",
+"who": "lion",
+"tag": "say",
+"sp": [
+"s10",
+"s11"
+]
+},
+"khun-borom.0": {
+"en": "I am Khun Borom, son of the Sky King.",
+"lo": "ຂ້ອຍແມ່ນຂຸນບູລົມ, ລູກຊາຍຂອງພະຍາແຖນ.",
+"th": "ข้าคือขุนบูลม โอรสแห่งพญาแถน",
+"zh": "我是坤布伦，天帝之子。",
+"ja": "わたしは クン・ボロム、てんの おうさまの むすこです。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.1": {
+"en": "Khun Borom is the wise prince who taught the people to live in peace.",
+"lo": "ຂຸນບູລົມເປັນເຈົ້າຊາຍທີ່ສະຫຼາດ ຜູ້ສອນໃຫ້ຄົນຢູ່ຮ່ວມກັນຢ່າງສະຫງົບ.",
+"th": "ขุนบูลมเป็นเจ้าชายผู้ชาญฉลาดที่สอนให้ผู้คนอยู่ร่วมกันอย่างสงบ",
+"zh": "坤布伦是一位睿智的王子，他教导人们和睦相处。",
+"ja": "クン・ボロムは ひとびとに へいわに くらすことを おしえた おうじです。",
+"who": "narrator",
+"tag": "who"
+},
+"khun-borom.2": {
+"en": "I came down from the sky to help every village grow.",
+"lo": "ຂ້ອຍລົງມາຈາກຟ້າເພື່ອຊ່ວຍໃຫ້ທຸກໝູ່ບ້ານເຕີບໃຫຍ່.",
+"th": "ข้าลงมาจากฟ้าเพื่อช่วยให้ทุกหมู่บ้านเติบโต",
+"zh": "我从天上降临，帮助每个村庄兴旺成长。",
+"ja": "みんなの むらが そだつように そらから おりてきたのです。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.3": {
+"en": "I teach the people to weave, build houses, and grow rice.",
+"lo": "ຂ້ອຍສອນຄົນໃຫ້ຕ່ຳຫູກ, ສ້າງເຮືອນ, ແລະ ປູກເຂົ້າ.",
+"th": "ข้าสอนผู้คนให้ทอผ้า สร้างบ้าน และปลูกข้าว",
+"zh": "我教人们织布、建房和种稻谷。",
+"ja": "はたおりや いえづくり、おこめづくりを おしえています。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.4": {
+"en": "Round door, square door: every person belongs to one family.",
+"lo": "ປະຕູມົນ, ປະຕູສີ່ຫຼ່ຽມ: ທຸກຄົນເປັນຄອບຄົວດຽວກັນ.",
+"th": "ประตูกลม ประตูเหลี่ยม ทุกคนเป็นครอบครัวเดียวกัน",
+"zh": "无论圆门还是方门，每一个人都是一家人。",
+"ja": "まるい とびらも しかくい とびらも、みんな ひとつの かぞくです。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.5": {
+"en": "My golden crown shines gently in the morning sun.",
+"lo": "ມົງກຸດຄຳຂອງຂ້ອຍສ່ອງແສງອ່ອນໆໃນແສງແດດຍາມເຊົ້າ.",
+"th": "มงกุฎทองของข้าส่องแสงอ่อนๆ ในแสงแดดยามเช้า",
+"zh": "我的金冠在晨光中泛着柔和的光芒。",
+"ja": "きんの かんむりが あさひに やさしく かがやきます。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.6": {
+"en": "When we hold hands in the dark, nobody walks alone.",
+"lo": "ເມື່ອພວກເຮົາຈັບມືກັນໃນຄວາມມືດ ບໍ່ມີໃຜຕ້ອງຍ່າງຄົນດຽວ.",
+"th": "เมื่อเราจับมือกันในความมืด ไม่มีใครต้องเดินลำพัง",
+"zh": "当我们在黑暗中手拉手，就没有人会孤单前行。",
+"ja": "くらやみでも てを つなげば だれも ひとりぼっちでは ないよ。",
+"who": "khunborom",
+"tag": "say"
+},
+"khun-borom.7": {
+"en": "We will always remember Pu Nyeu and Nya Nyeu's kindness.",
+"lo": "ພວກເຮົາຈະຈື່ຈຳຄວາມດີຂອງປູ່ເຍີ ແລະ ຍ່າເຍີຕະຫຼອດໄປ.",
+"th": "พวกเราจะจดจำความดีของปู่เยอและย่าเยอตลอดไป",
+"zh": "我们将永远铭记布约爷爷和雅约奶奶的恩情。",
+"ja": "プーニョーと ヤーニョーの やさしさを ずっと おぼえています。",
+"who": "khunborom",
+"tag": "say"
+},
+"bamboo.0": {
+"en": "A bamboo grove. Tall green stalks rustle in the breeze.",
+"lo": "ກໍໄມ້ໄຜ່. ລຳໄມ້ສີຂຽວສູງສຽດສີກັນໃນສາຍລົມ.",
+"th": "กอไผ่ ลำไผ่สีเขียวสูงเสียดสีกันในสายลม",
+"zh": "竹林。高高的绿竹在微风中沙沙作响。",
+"ja": "たけばやし。たかい みどりの たけが かぜに さわさわ ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bamboo.1": {
+"en": "Hollow bamboo stems bend smoothly without breaking.",
+"lo": "ລຳໄມ້ໄຜ່ທີ່ເປັນປ້ອງໂຄ້ງອ່ອນໄປຕາມລົມໂດຍບໍ່ຫັກ.",
+"th": "ลำไม้ไผ่ที่เป็นปล้องโค้งอ่อนไปตามลมโดยไม่หัก",
+"zh": "中空的竹竿随风柔韧地弯曲而不折断。",
+"ja": "たけは しなやかに まがって かぜでも おれないんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"bamboo.2": {
+"en": "Feathery bamboo leaves cast dancing shadows on the grass.",
+"lo": "ໃບໄມ້ໄຜ່ລະອຽດສ້າງເງົາໄຫວເຕັ້ນເທິງພື້ນຫຍ້າ.",
+"th": "ใบไผ่ละเอียดสร้างเงาไหวเต้นบนพื้นหญ้า",
+"zh": "细长的竹叶在草地上投下舞动的影子。",
+"ja": "ほそい はっぱが くさの うえに かげを おどらせるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bamboo.3": {
+"en": "Bamboo grows faster than almost any other plant on earth.",
+"lo": "ໄມ້ໄຜ່ເຕີບໃຫຍ່ໄວກວ່າພືດເກືອບທຸກຊະນິດເທິງໂລກ.",
+"th": "ไม้ไผ่เติบโตเร็วกว่าพืชเกือบทุกชนิดบนโลก",
+"zh": "竹子的生长速度几乎比地球上任何植物都快。",
+"ja": "たけは どんな しょくぶつよりも はやく のびるんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bamboo.4": {
+"en": "Villagers weave bamboo into fences, baskets, and houses.",
+"lo": "ຊາວບ້ານສານໄມ້ໄຜ່ເຮັດຮົ້ວ, ກະບຸງ, ແລະ ຝາເຮືອນ.",
+"th": "ชาวบ้านสานไม้ไผ่ทำรั้ว ตะกร้า และฝาบ้าน",
+"zh": "村民们用竹子编织篱笆、篮子和房屋。",
+"ja": "むらの ひとは たけで かきねや かごや いえを つくるんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"bamboo-pole.0": {
+"en": "A bamboo pole. Long, straight, and light to carry.",
+"lo": "ລຳໄມ້ໄຜ່. ຍາວ, ຊື່, ແລະ ເບົາຖືງ່າຍ.",
+"th": "ลำไม้ไผ่ ยาว ตรง และเบาถือง่าย",
+"zh": "竹竿。又长又直，扛起来轻巧极了。",
+"ja": "たけざお。ながくて まっすぐで かるくて もちやすいよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bamboo-pole.1": {
+"en": "Villagers lash bamboo poles together to build strong rafters.",
+"lo": "ຊາວບ້ານມັດລຳໄມ້ໄຜ່ເຂົ້າກັນເພື່ອເຮັດໂຄງຫຼັງຄາທີ່ແຂງແຮງ.",
+"th": "ชาวบ้านมัดลำไม้ไผ่เข้าด้วยกันเพื่อทำโครงหลังคาที่แข็งแรง",
+"zh": "村民们把竹竿绑在一起，搭出结实的屋梁。",
+"ja": "むらの ひとが むすびあわせて じょうぶな やねを つくるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bamboo-pole.2": {
+"en": "Neat bands mark every joint along the smooth green stem.",
+"lo": "ປ້ອງໄມ້ໄຜ່ລຽງກັນເປັນລະບຽບຕາມລຳສີຂຽວກ້ຽງ.",
+"th": "ปล้องไม้ไผ่เรียงกันเป็นระเบียบตามลำสีเขียวเรียบ",
+"zh": "光滑的绿竹竿上一节节竹节清晰整齐。",
+"ja": "つるつるの みどりの ぼうに ふしが きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bamboo-pole.3": {
+"en": "Long poles also hold up bright festival lamps at night.",
+"lo": "ລຳໄມ້ໄຜ່ຍາວຍັງໃຊ້ຄ້ຳໂຄມໄຟງານບຸນໃນຍາມຄ່ຳຄືນ.",
+"th": "ลำไม้ไผ่ยาวยังใช้ค้ำตะเกียงงานบุญในยามค่ำคืน",
+"zh": "长长的竹竿夜晚还能挑起明亮的节庆油灯。",
+"ja": "よるには おまつりの ランプを たかく かかげるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bamboo-pole.4": {
+"en": "Bamboo is one of the most useful plants in all of Laos.",
+"lo": "ໄມ້ໄຜ່ແມ່ນໜຶ່ງໃນພືດທີ່ມີປະໂຫຍດທີ່ສຸດໃນລາວ.",
+"th": "ไม้ไผ่เป็นหนึ่งในพืชที่มีประโยชน์ที่สุดในลาว",
+"zh": "竹子是整个老挝用途最广泛的植物之一。",
+"ja": "たけは ラオスで とても やくに たつ だいじな しょくぶつだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"banana-shrub.0": {
+"en": "A banana tree. Broad green leaves catch the morning sun.",
+"lo": "ຕົ້ນກ້ວຍ. ໃບສີຂຽວກວ້າງຮັບແສງແດດຍາມເຊົ້າ.",
+"th": "ต้นกล้วย ใบสีเขียวกว้างรับแสงแดดยามเช้า",
+"zh": "香蕉树。宽大的绿叶迎接清晨的阳光。",
+"ja": "バナナのき。おおきな みどりの はっぱが あさひを あびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"banana-shrub.1": {
+"en": "Cool raindrops roll smoothly down its wide ribbed leaves.",
+"lo": "ຢົດນ້ຳຝົນກິ້ງໄຫຼລົງຕາມໃບກ້ວຍກວ້າງໆ.",
+"th": "หยดน้ำฝนกลิ้งไหลลงตามใบกล้วยกว้างๆ",
+"zh": "凉爽的雨滴顺着宽大的叶脉滑落下来。",
+"ja": "あまつぶが ひろい はっぱの うえを ころころ ころがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"banana-shrub.2": {
+"en": "Sweet bunches of bananas ripen under the big canopy.",
+"lo": "ເຄືອກ້ວຍຫວານໆສຸກຢູ່ໃຕ້ຮົ່ມໃບໃຫຍ່.",
+"th": "เครือกล้วยหวานๆ สุกอยู่ใต้ร่มใบใหญ่",
+"zh": "一串串香甜的香蕉在大叶子下慢慢成熟。",
+"ja": "おおきな はっぱの したで あまい バナナが みのるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"banana-shrub.3": {
+"en": "Bright white blossoms bloom right beside the shady shrub.",
+"lo": "ດອກໄມ້ສີຂາວສົດໃສບານຢູ່ຂ້າງພຸ່ມໄມ້ຮົ່ມເຢັນ.",
+"th": "ดอกไม้สีขาวสดใสบานอยู่ข้างพุ่มไม้ร่มเย็น",
+"zh": "洁白的花朵在阴凉的灌木旁绽放。",
+"ja": "すずしい しげみの そばに しろい はなが さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"banana-shrub.4": {
+"en": "In Laos, people wrap sticky rice snacks in fresh banana leaves.",
+"lo": "ໃນລາວ ຄົນຫໍ່ເຂົ້າຕົ້ມ ແລະ ຂອງຫວານດ້ວຍໃບຕອງກ້ວຍສົດ.",
+"th": "ในลาว ผู้คนห่อข้าวต้มและขนมด้วยใบตองกล้วยสด",
+"zh": "在老挝，人们用新鲜的香蕉叶包裹糯米点心。",
+"ja": "ラオスでは しんせんな バナナの はっぱで おかしを つつむんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"basket.0": {
+"en": "A woven basket. Made by hand from split bamboo.",
+"lo": "ກະບຸງ. ສານດ້ວຍມືຈາກໄມ້ໄຜ່.",
+"th": "ตะกร้าสาน สานด้วยมือจากไม้ไผ่",
+"zh": "竹篮。用劈开的竹篾手工编织而成。",
+"ja": "あみかご。たけを ていねいに あんで つくった かごだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"basket.1": {
+"en": "Villagers carry warm rice, fruit, and threads in baskets.",
+"lo": "ຊາວບ້ານໃສ່ເຂົ້າອຸ່ນ, ໝາກໄມ້, ແລະ ໄໝໄວ້ໃນກະບຸງ.",
+"th": "ชาวบ้านใส่ข้าวอุ่น ผลไม้ และเส้นไหมไว้ในตะกร้า",
+"zh": "村民们用竹篮装热米饭、水果和丝线。",
+"ja": "おこめや くだものや いとを いれて はこぶんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"basket.2": {
+"en": "Crisscross strips make the basket light yet strong.",
+"lo": "ເສັ້ນຕອກສານຂັດກັນເຮັດໃຫ້ກະບຸງເບົາແຕ່ແຂງແຮງ.",
+"th": "เส้นตอกสานขัดกันทำให้ตะกร้าเบาแต่แข็งแรง",
+"zh": "纵横交错的竹篾让竹篮既轻巧又结实。",
+"ja": "かるいのに とても じょうぶに あまれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"basket.3": {
+"en": "A tidy lid keeps warm sticky rice fresh for lunch.",
+"lo": "ຝາປິດທີ່ຮຽບຮ້ອຍຊ່ວຍໃຫ້ເຂົ້າໜຽວອຸ່ນໆສົດໃໝ່ສຳລັບອາຫານທ່ຽງ.",
+"th": "ฝาปิดที่เรียบร้อยช่วยให้ข้าวเหนียวอุ่นๆ สดใหม่สำหรับมื้อเที่ยง",
+"zh": "合身的盖子让香甜的糯米饭一直保持温热。",
+"ja": "ふたを すると あたたかい もちごめが さめないんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"basket.4": {
+"en": "Basket weaving is a prized craft in every Lao village.",
+"lo": "ການສານກະບຸງແມ່ນຫັດຖະກຳອັນລ້ຳຄ່າໃນທຸກໝູ່ບ້ານລາວ.",
+"th": "การสานตะกร้าเป็นหัตถกรรมอันล้ำค่าในทุกหมู่บ้านลาว",
+"zh": "竹编是每个老挝村庄珍视的传统手艺。",
+"ja": "かごあみは ラオスの むらで だいじに されている わざだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"bat.0": {
+"en": "A fruit bat. Soaring smoothly across the starry evening sky.",
+"lo": "ເຈຍ. ບິນລ່ອນຢ່າງຄ່ອງແຄ້ວຂ້າມທ້ອງຟ້າທີ່ມີດາວ.",
+"th": "ค้างคาวแม่ไก่ บินร่อนอย่างคล่องแคล่วข้ามท้องฟ้าที่มีดาว",
+"zh": "果蝠。在繁星点点的夜空中轻盈滑翔。",
+"ja": "こうもり。ほしぞらを ひろい つばさで すいすい とんでいくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bat.1": {
+"en": "Fruit bats love ripe mangoes and help spread tree seeds at night.",
+"lo": "ເຈຍມັກກິນໝາກມ່ວງສຸກ ແລະ ຊ່ວຍກະຈາຍເມັດພືດໃນຍາມຄ່ຳຄືນ.",
+"th": "ค้างคาวแม่ไก่ชอบกินมะม่วงสุกและช่วยกระจายเมล็ดพืชในยามค่ำคืน",
+"zh": "果蝠爱吃熟透的芒果，夜晚还会帮忙播撒种子。",
+"ja": "あまい マンゴーが だいすきで きの たねを はこぶ やくめも あるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"bat.2": {
+"en": "Wide leathery wings beat quietly through the cool night air.",
+"lo": "ປີກກວ້າງກະພືບຄ່ອຍໆຜ່ານອາກາດເຢັນຍາມຄ່ຳຄືນ.",
+"th": "ปีกกว้างกระพือเบาๆ ผ่านอากาศเย็นยามค่ำคืน",
+"zh": "宽大的翼膜在清凉的夜风中静静扇动。",
+"ja": "ひろい つばさで すずしい よるの そらを しずかに はばたくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bat.3": {
+"en": "By daytime, fruit bats hang upside down asleep in tall trees.",
+"lo": "ຕອນກາງເວັນ ເຈຍຫ້ອຍຫົວລົງນອນຫຼັບຢູ່ເທິງຕົ້ນໄມ້ສູງ.",
+"th": "ตอนกลางวัน ค้างคาวแม่ไก่ห้อยหัวลงนอนหลับอยู่บนต้นไม้สูง",
+"zh": "白天，果蝠倒挂在高高的树枝上甜甜睡觉。",
+"ja": "ひるまは たかい きに さかさまに ぶらさがって ねむるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bat.4": {
+"en": "Sharp eyes and keen noses lead them straight to sweet orchards.",
+"lo": "ຕາແຫຼມ ແລະ ດັງໄວພາພວກມັນໄປຫາສວນໝາກໄມ້ຫວານ.",
+"th": "ตาแหลมและจมูกไวพาพวกมันไปหาสวนผลไม้หวาน",
+"zh": "明亮的眼睛和灵敏的鼻子带它们直奔香甜的果园。",
+"ja": "よい めと はなで あまい くだものの きを すぐ みつけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bowls.0": {
+"en": "A water bowl. Filled with cool scented water and golden petals.",
+"lo": "ຂັນນ້ຳ. ເຕັມໄປດ້ວຍນ້ຳຫອມເຢັນໆ ແລະ ກີບດອກໄມ້ສີຄຳ.",
+"th": "ขันน้ำ เต็มไปด้วยน้ำหอมเย็นๆ และกลีบดอกไม้สีทอง",
+"zh": "水碗。里面盛满清凉的香水和金色花瓣。",
+"ja": "みずわん。いい かおりの みずと きんいろの はなびらが はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"bowls.1": {
+"en": "People pour gentle blessing water from the bowl at New Year.",
+"lo": "ຄົນຫົດນ້ຳອວຍພອນຄ່ອຍໆຈາກຂັນນ້ຳໃນວັນປີໃໝ່.",
+"th": "ผู้คนรดน้ำอวยพรเบาๆ จากขันน้ำในวันปีใหม่",
+"zh": "新年时人们用碗轻轻洒下祝福之水。",
+"ja": "しんねんに みんなの しあわせを ねがって やさしく みずを かけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"bowls.2": {
+"en": "Bright marigold petals float across the clear water.",
+"lo": "ກີບດອກດາວເຮືອງສົດໃສລອຍຢູ່ເທິງໜ້ານ້ຳໃສ.",
+"th": "กลีบดอกดาวเรืองสดใสลอยอยู่บนผิวน้ำใส",
+"zh": "金黄的万寿菊花瓣漂浮在清澈的水面上。",
+"ja": "あざやかな はなびらが すきとおった みずに うかんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"bowls.3": {
+"en": "Kind hands lift the bowl to share cool water with elders.",
+"lo": "ມືທີ່ອ່ອນໂຍນຍົກຂັນນ້ຳເພື່ອຫົດນ້ຳອວຍພອນຜູ້ເຖົ້າ.",
+"th": "มือที่อ่อนโยนยกขันน้ำเพื่อรดน้ำอวยพรผู้ใหญ่",
+"zh": "温柔的双手捧起水碗，为长辈送上清凉的祝福。",
+"ja": "やさしい てで おとしよりに いわいの みずを そそぐんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"bowls.4": {
+"en": "In Lao New Year, scented water brings peace and fresh beginnings.",
+"lo": "ໃນປີໃໝ່ລາວ ນ້ຳຫອມນຳຄວາມສະຫງົບ ແລະ ການເລີ່ມຕົ້ນໃໝ່ມາໃຫ້.",
+"th": "ในวันปีใหม่ลาว น้ำหอมนำความสงบและการเริ่มต้นใหม่มาให้",
+"zh": "在老挝新年，花香水象征平安与崭新的开始。",
+"ja": "ラオスの しんねんの はなみずは へいわと あたらしい はじまりの しるしだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"buffalo.0": {
+"en": "A water buffalo. Big, gentle, and strong enough to pull the plough!",
+"lo": "ຄວາຍ. ໂຕໃຫຍ່, ໃຈດີ, ແລະ ແຂງແຮງພໍທີ່ຈະລາກໄຖນາ!",
+"th": "ควาย ตัวใหญ่ ใจดี และแข็งแรงพอที่จะลากไถนา!",
+"zh": "水牛。高大温顺，力气大得能拉动木犁！",
+"ja": "すいぎゅう。おおきくて やさしくて すきを ひく ちからもちだよ！",
+"who": "narrator",
+"tag": "what"
+},
+"buffalo.1": {
+"en": "Wide curved horns frame its calm brown face.",
+"lo": "ເຂົາໂຄ້ງກວ້າງປະດັບໜ້າສີນ້ຳຕານທີ່ສະຫງົບ.",
+"th": "เขาโค้งกว้างประดับหน้าสีน้ำตาลที่สงบ",
+"zh": "宽阔弯曲的大角衬着它温厚沉静的棕色脸庞。",
+"ja": "りっぱな まがった つのが やさしい かおに よく にあうよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"buffalo.2": {
+"en": "Water buffaloes love to wallow in cool mud and river water.",
+"lo": "ຄວາຍມັກນອນແຊ່ຂີ້ຕົມເຢັນໆ ແລະ ນ້ຳແມ່ນ້ຳ.",
+"th": "ควายชอบนอนแช่โคลนเย็นๆ และน้ำแม่น้ำ",
+"zh": "水牛最喜欢泡在清凉的泥潭和河水里。",
+"ja": "すいぎゅうは つめたい どろや かわの みずに つかるのが だいすきなんだ。",
+"who": "narrator",
+"tag": "fact"
+},
+"buffalo.3": {
+"en": "Step by slow step, it helps farmers prepare the rice paddy.",
+"lo": "ກ້າວຊ້າໆເທື່ອລະກ້າວ ມັນຊ່ວຍຊາວນາໄຖຄາດທົ່ງນາ.",
+"th": "ก้าวช้าๆ ทีละก้าว มันช่วยชาวนาไถคราดทุ่งนา",
+"zh": "它一步一步稳稳走过，帮农夫耕好稻田。",
+"ja": "ゆっくり しっかり あるいて たんぼづくりを てつだうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"buffalo.4": {
+"en": "In the tale, the Sky King gifted this loyal buffalo to Pu Nyeu and Nya Nyeu.",
+"lo": "ໃນນິທານ ພະຍາແຖນມອບຄວາຍທີ່ຊື່ສັດໂຕນີ້ໃຫ້ປູ່ເຍີ ແລະ ຍ່າເຍີ.",
+"th": "ในนิทาน พญาแถนมอบควายที่ซื่อสัตย์ตัวนี้ให้ปู่เยอและย่าเยอ",
+"zh": "在故事里，天帝把这头忠实的水牛送给了布约爷爷和雅约奶奶。",
+"ja": "おはなしでは てんの おうさまが プーニョーたちに おくってくれたんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"butterfly.0": {
+"en": "A butterfly. Painted wings flutter softly over the flowers.",
+"lo": "ແມງກະເບື້ອ. ປີກລາຍງາມກະພືບຄ່ອຍໆເໜືອດອກໄມ້.",
+"th": "ผีเสื้อ ปีกลายงามกระพือเบาๆ เหนือดอกไม้",
+"zh": "蝴蝶。彩色的翅膀在花朵上空轻柔扑动。",
+"ja": "ちょうちょ。きれいな はねを ひらひら させて おはなの うえを とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"butterfly.1": {
+"en": "Butterflies sip sweet nectar through a curled straw-like tongue.",
+"lo": "ແມງກະເບື້ອດູດນ້ຳຫວານດ້ວຍງວງນ້ອຍໆທີ່ມ້ວນໄດ້.",
+"th": "ผีเสื้อดูดน้ำหวานด้วยงวงเล็กๆ ที่ม้วนได้",
+"zh": "蝴蝶用卷曲如吸管的口器吸食甜甜的花蜜。",
+"ja": "くるんと まるまった くちで おはなの みつを すうんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"butterfly.2": {
+"en": "It dances lightly on the breeze from marigold to lotus.",
+"lo": "ມັນບິນຟ້ອນເບົາໆໄປຕາມລົມຈາກດອກດາວເຮືອງໄປຫາດອກບົວ.",
+"th": "มันบินร่ายรำเบาๆ ไปตามลมจากดอกดาวเรืองไปหาดอกบัว",
+"zh": "它乘着微风，从万寿菊轻盈飞舞到莲花旁。",
+"ja": "かぜに のって マリーゴールドから はすへ とんでいくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"butterfly.3": {
+"en": "Warm golden and blue patterns shimmer in the morning sun.",
+"lo": "ລວດລາຍສີຄຳ ແລະ ສີຟ້າເຫຼື້ອມວິບວັບໃນແສງແດດເຊົ້າ.",
+"th": "ลวดลายสีทองและสีฟ้าเปล่งประกายในแสงแดดเช้า",
+"zh": "金黄与蔚蓝的翅纹在晨光中闪闪发亮。",
+"ja": "きんいろや あおの もようが あさひに きらめくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"butterfly.4": {
+"en": "Every butterfly begins life as a tiny hungry caterpillar.",
+"lo": "ແມງກະເບື້ອທຸກໂຕເລີ່ມຊີວິດຈາກບົ້ງນ້ອຍທີ່ກິນເກັ່ງ.",
+"th": "ผีเสื้อทุกตัวเริ่มชีวิตจากหนอนผีเสื้อตัวน้อยที่กินเก่ง",
+"zh": "每一只蝴蝶最初都是一条爱吃叶子的小毛毛虫。",
+"ja": "もともとは ちいさな あおむしから へんしん したんだね。",
+"who": "narrator",
+"tag": "looks"
+},
+"calf.0": {
+"en": "A young calf. Standing curiously on steady little legs.",
+"lo": "ລູກຄວາຍ. ຢືນເບິ່ງຢ່າງຢາກຮູ້ຢາກເຫັນເທິງຂານ້ອຍໆ.",
+"th": "ลูกควาย ยืนมองอย่างอยากรู้อยากเห็นบนขาเล็กๆ",
+"zh": "小牛犊。迈着稳稳的小腿好奇地张望。",
+"ja": "こうし。ちいさな あしで しっかり たって きょろきょろ みているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"calf.1": {
+"en": "Calves stay close to their mothers while learning to graze.",
+"lo": "ລູກຄວາຍຢູ່ໃກ້ແມ່ສະເໝີໃນຂະນະທີ່ຮຽນກິນຫຍ້າ.",
+"th": "ลูกควายอยู่ใกล้แม่เสมอในขณะที่หัดกินหญ้า",
+"zh": "小牛犊在学吃草时总是紧跟在妈妈身边。",
+"ja": "くさの たべかたを おぼえるあいだ いつも おかあさんの そばに いるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"calf.2": {
+"en": "Its soft tail swishes back and forth to shoo away flies.",
+"lo": "ຫາງອ່ອນຂອງມັນປັດໄປມາເພື່ອໄລ່ແມງວັນ.",
+"th": "หางอ่อนของมันปัดไปมาเพื่อไล่แมลงวัน",
+"zh": "柔软的小尾巴甩来甩去赶走小苍蝇。",
+"ja": "しっぽを ぱたぱた ふって ちいさな むしを おいはらうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"calf.3": {
+"en": "Big gentle brown eyes blink slowly in the morning light.",
+"lo": "ຕາສີນ້ຳຕານໃຫຍ່ອ່ອນໂຍນກະພິບຊ້າໆໃນແສງເຊົ້າ.",
+"th": "ตาสีน้ำตาลใหญ่อ่อนโยนกะพริบช้าๆ ในแสงเช้า",
+"zh": "温柔的棕色大眼睛在晨光里慢慢眨动。",
+"ja": "やさしい ちゃいろの ひとみを パチパチ させているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"calf.4": {
+"en": "Soon it will grow strong enough to help in the green rice fields.",
+"lo": "ອີກບໍ່ດົນມັນຈະແຂງແຮງພໍຊ່ວຍວຽກໃນທົ່ງນາຂຽວ.",
+"th": "อีกไม่นานมันจะแข็งแรงพอช่วยงานในทุ่งนาเขียว",
+"zh": "很快它就会长得壮壮的，在绿油油的稻田里帮忙。",
+"ja": "おおきく なったら たんぼの おてつだいを するんだね。",
+"who": "narrator",
+"tag": "does"
+},
+"child.0": {
+"en": "A village child. Laughing and playing in the sunny square!",
+"lo": "ເດັກນ້ອຍ. ຫົວເລາະ ແລະ ຫຼິ້ນຢ່າງມ່ວນຊື່ນຢູ່ເດີ່ນບ້ານ!",
+"th": "เด็กน้อย หัวเราะและเล่นอย่างสนุกสนานในลานบ้าน!",
+"zh": "村里的孩子。在阳光明媚的广场上欢笑玩耍！",
+"ja": "こども。おひさまの したで げんきに わらって あそんでいるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"child.1": {
+"en": "Children learn songs, stories, and weaving from their elders.",
+"lo": "ເດັກນ້ອຍຮຽນຮ້ອງເພງ, ເລົ່ານິທານ, ແລະ ຕ່ຳຫູກຈາກຜູ້ເຖົ້າ.",
+"th": "เด็กๆ เรียนร้องเพลง เล่านิทาน และทอผ้าจากผู้ใหญ่",
+"zh": "孩子们跟着长辈学唱歌、听故事、学织布。",
+"ja": "おとなから うたや おはなしや てわざを たくさん おそわるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"child.2": {
+"en": "Bright footsteps hop playfully beside Little Lion.",
+"lo": "ສຽງຕີນນ້ອຍໆໂດດຫຼິ້ນຢ່າງມ່ວນຊື່ນຂ້າງສິງນ້ອຍ.",
+"th": "เสียงเท้าน้อยๆ กระโดดเล่นอย่างสนุกสนานข้างสิงห์น้อย",
+"zh": "轻快的小脚步欢快地跟在小狮子旁边蹦蹦跳跳。",
+"ja": "ちいさなシシの そばで ぴょんぴょん たのしく はねるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"child.3": {
+"en": "At New Year, children pour cool flower water and build sand stupas.",
+"lo": "ໃນວັນປີໃໝ່ ເດັກນ້ອຍຫົດນ້ຳດອກໄມ້ເຢັນໆ ແລະ ຕົບພະທາດຊາຍ.",
+"th": "ในวันปีใหม่ เด็กๆ รดน้ำดอกไม้เย็นๆ และก่อเจดีย์ทราย",
+"zh": "新年时，孩子们洒下清凉的花香水，一起堆沙塔。",
+"ja": "しんねんには おはなのみずを かけたり すなのとうを つくるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"child.4": {
+"en": "Every child remembers Pu Nyeu and Nya Nyeu with a warm heart.",
+"lo": "ເດັກນ້ອຍທຸກຄົນຈື່ຈຳປູ່ເຍີ ແລະ ຍ່າເຍີດ້ວຍຫົວໃຈອົບອຸ່ນ.",
+"th": "เด็กทุกคนจดจำปู่เยอและย่าเยอด้วยหัวใจที่อบอุ่น",
+"zh": "每个孩子都怀着温暖的心铭记布约爷爷和雅约奶奶。",
+"ja": "みんな プーニョーと ヤーニョーの ことを やさしく おぼえているよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"chilli.0": {
+"en": "A chilli plant. Tiny bright red pods grow on leafy stems.",
+"lo": "ຕົ້ນໝາກເຜັດ. ໜ່ວຍສີແດງສົດນ້ອຍໆອອກຕາມກິ່ງໃບ.",
+"th": "ต้นพริก เม็ดสีแดงสดเล็กๆ ออกตามกิ่งใบ",
+"zh": "辣椒苗。绿枝上挂满鲜红的小辣椒。",
+"ja": "とうがらし。あかい ちいさな みが はっぱの あいだに なるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"chilli.1": {
+"en": "Sunlit garden soil helps the little peppers turn bright red.",
+"lo": "ດິນສວນທີ່ມີແສງແດດຊ່ວຍໃຫ້ໝາກເຜັດປ່ຽນເປັນສີແດງສົດ.",
+"th": "ดินสวนที่มีแสงแดดช่วยให้พริกเปลี่ยนเป็นสีแดงสด",
+"zh": "阳光充足的园土让小辣椒慢慢变红。",
+"ja": "おひさまを たっぷり あびて あかく いろづくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"chilli.2": {
+"en": "Careful! Even one tiny chilli tastes very spicy!",
+"lo": "ລະວັງເດີ້! ແມ່ນແຕ່ໝາກເຜັດນ້ອຍໜ່ວຍດຽວກໍເຜັດຫຼາຍ!",
+"th": "ระวังนะ! แม้แต่พริกเม็ดเล็กเม็ดเดียวก็เผ็ดมาก!",
+"zh": "小心哦！哪怕一颗小小的辣椒也辣得很呢！",
+"ja": "きをつけて！ ちいさくても とっても からいんだよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"chilli.3": {
+"en": "Cooks pick fresh chillies from the yard to season warm soup.",
+"lo": "ຄົນຄົວເກັບໝາກເຜັດສົດຈາກສວນມາປຸງແກງອຸ່ນໆ.",
+"th": "คนครัวเก็บพริกสดจากสวนมาปรุงแกงอุ่นๆ",
+"zh": "做饭时人们从院子里摘下鲜辣椒给热汤调味。",
+"ja": "おにわから つんで スープの あじつけに つかうんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"chilli.4": {
+"en": "Nearly every Lao kitchen garden grows bright red chillies.",
+"lo": "ເກືອບທຸກສວນຄົວລາວປູກໝາກເຜັດສີແດງສົດ.",
+"th": "เกือบทุกสวนครัวลาวปลูกพริกสีแดงสด",
+"zh": "几乎每家老挝菜园里都种着鲜红的小辣椒。",
+"ja": "ラオスの おにわでは よく そだてられている やさいだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"cloud.0": {
+"en": "A soft cloud. It floats lightly across the blue sky.",
+"lo": "ກ້ອນເມກ. ມັນລອຍເບົາໆຂ້າມທ້ອງຟ້າສີຟ້າ.",
+"th": "ก้อนเมฆ มันลอยเบาๆ ข้ามท้องฟ้าสีฟ้า",
+"zh": "云朵。它轻盈地飘过蓝天。",
+"ja": "くも。あおい そらを ふわふわ うかんで いくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"cloud.1": {
+"en": "Creamy white puffs drift slowly on the high morning breeze.",
+"lo": "ກ້ອນເມກສີຂາວນວນລອຍຊ້າໆໄປຕາມລົມເຊົ້າເທິງຟ້າສູງ.",
+"th": "ก้อนเมฆสีขาวนวลลอยช้าๆ ไปตามลมเช้าบนฟ้าสูง",
+"zh": "乳白色的云团乘着清晨的高风缓缓漂移。",
+"ja": "まっしろな くもが あさの かぜに のって ゆっくり ながれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"cloud.2": {
+"en": "In the tale, the Sky King sends gifts down on a gentle cloud.",
+"lo": "ໃນນິທານ ພະຍາແຖນສົ່ງຂອງຂວັນລົງມາເທິງກ້ອນເມກອ່ອນນຸ້ມ.",
+"th": "ในนิทาน พญาแถนส่งของขวัญลงมาบนก้อนเมฆอ่อนนุ่ม",
+"zh": "在故事里，天帝乘着温柔的云朵送来礼物。",
+"ja": "おはなしでは てんの おうさまが くもに のせて おくりものを とどけるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"cloud.3": {
+"en": "Clouds carry cool rain to help the rice fields grow green.",
+"lo": "ກ້ອນເມກພາຝົນເຢັນໆມາຊ່ວຍໃຫ້ທົ່ງນາຂຽວງາມ.",
+"th": "ก้อนเมฆพาฝนเย็นๆ มาช่วยให้ทุ่งนาเขียวชอุ่ม",
+"zh": "云朵带来清凉的雨水，让稻田变得郁郁葱葱。",
+"ja": "くもが やさしい あめを はこんで たんぼを みどりに するんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"cloud.4": {
+"en": "Look up and see soft shapes drifting over the blue mountains.",
+"lo": "ແງນເບິ່ງຟ້າຈະເຫັນຮູບຮ່າງອ່ອນນຸ້ມລອຍເໜືອພູສີຟ້າ.",
+"th": "เงยหน้ามองฟ้าจะเห็นรูปร่างอ่อนนุ่มลอยเหนือภูเขาสีฟ้า",
+"zh": "抬头看，柔软的云朵正飘过远处的青山。",
+"ja": "みあげると あおい やまの うえを やさしい かたちが ながれてるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"crab.0": {
+"en": "A river crab. Scuttling sideways beside the wet stones!",
+"lo": "ກະປູ. ຄານທາງຂ້າງຢູ່ຂ້າງກ້ອນຫີນຊຸ່ມ!",
+"th": "ปูนา เดินตะแคงข้างอยู่ข้างก้อนหินชื้น!",
+"zh": "河蟹。在湿漉漉的石头旁横着快步爬行！",
+"ja": "かに。ぬれた いしの そばを よこあるきで すたすた あるくよ！",
+"who": "narrator",
+"tag": "what"
+},
+"crab.1": {
+"en": "Crabs walk sideways because of the way their jointed legs bend.",
+"lo": "ກະປູຍ່າງທາງຂ້າງຍ້ອນລັກສະນະການພັບຂອງຂໍ້ຂາ.",
+"th": "ปูเดินตะแคงข้างเพราะลักษณะการพับของข้อขา",
+"zh": "螃蟹因为腿关节的弯曲方式，所以总是横着走路。",
+"ja": "あしの かんせつの かたちで よこあるきが とくいなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"crab.2": {
+"en": "Two tiny pincers lift up quickly whenever it greets a friend.",
+"lo": "ກ້າມນ້ອຍສອງຂ້າງຍົກຂຶ້ນໄວໆເວລາທັກທາຍໝູ່.",
+"th": "ก้ามเล็กสองข้างยกขึ้นเร็วๆ เวลาทักทายเพื่อน",
+"zh": "遇见朋友时，它会飞快举起两只小钳子打招呼。",
+"ja": "ちいさな はさみを ぱちんと あげて あいさつ するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"crab.3": {
+"en": "Its smooth shell matches the earthy pebbles by the pond.",
+"lo": "ກະດອງກ້ຽງຂອງມັນຄ້າຍຄືກ້ອນກວດຂ້າງໜອງນ້ຳ.",
+"th": "กระดองเรียบของมันคล้ายกับก้อนกรวดข้างสระน้ำ",
+"zh": "它光滑的小壳和池塘边的鹅卵石颜色相近。",
+"ja": "いけの そばの いしと そっくりな いろの こうらだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"crab.4": {
+"en": "Little crabs dig cosy burrows along the muddy rice-field banks.",
+"lo": "ກະປູນ້ອຍຂຸດຮູອົບອຸ່ນຢູ່ຕາມຄັນນາ.",
+"th": "ปูนาตัวน้อยขุดรูอบอุ่นอยู่ตามคันนา",
+"zh": "小河蟹在湿润的田埂边挖出舒服的小洞。",
+"ja": "たんぼの あぜに ちいさな おうちを ほって すんでいるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"dog.0": {
+"en": "A village dog. Wagging its happy tail beside the lane!",
+"lo": "ໝາບ້ານ. ແກວ່ງຫາງຢ່າງມີຄວາມສຸກຢູ່ຂ້າງທາງ!",
+"th": "สุนัขบ้าน กระดิกหางอย่างมีความสุขอยู่ข้างทาง!",
+"zh": "村里的小狗。在村道旁欢快地摇着尾巴！",
+"ja": "いぬ。むらみちの そばで しっぽを うれしそうに ふっているよ！",
+"who": "narrator",
+"tag": "what"
+},
+"dog.1": {
+"en": "Dogs have an amazing nose that can sniff out trails from far away.",
+"lo": "ໝາມີດັງທີ່ວິເສດສາມາດດົມກິ່ນຕາມຮອຍໄດ້ໄກຫຼາຍ.",
+"th": "สุนัขมีจมูกที่ยอดเยี่ยมสามารถดมกลิ่นตามรอยได้ไกลมาก",
+"zh": "小狗的鼻子特别灵敏，能从很远的地方闻出气味。",
+"ja": "いぬは とおくの においまで わかる すごい はなを もっているんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"dog.2": {
+"en": "Friendly barks greet neighbours walking home at dusk.",
+"lo": "ສຽງເຫົ່າທີ່ເປັນມິດທັກທາຍຊາວບ້ານທີ່ຍ່າງກັບເຮືອນຍາມແລງ.",
+"th": "เสียงเห่าที่เป็นมิตรทักทายเพื่อนบ้านที่เดินกลับบ้านยามเย็น",
+"zh": "友善的汪汪声向傍晚回家的邻居们打招呼。",
+"ja": "ゆうがた かえってくる むらの ひとを げんきに むかえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dog.3": {
+"en": "Warm golden fur shines softly as it trots beside the children.",
+"lo": "ຂົນສີຄຳອຸ່ນເຫຼື້ອມອ່ອນໆເວລາມັນແລ່ນຂ້າງເດັກນ້ອຍ.",
+"th": "ขนสีทองอุ่นเปล่งประกายอ่อนๆ เวลามันวิ่งข้างเด็กๆ",
+"zh": "它跟着孩子们小跑时，暖黄色的毛发闪着柔光。",
+"ja": "きんいろの けが ふわふわ ゆれて こどもたちと あそぶんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"dog.4": {
+"en": "Loyal dogs help watch over the stilt house and garden.",
+"lo": "ໝາທີ່ຊື່ສັດຊ່ວຍເຝົ້າເຮືອນຮ້ານ ແລະ ສວນ.",
+"th": "สุนัขที่ซื่อสัตย์ช่วยเฝ้าบ้านใต้ถุนสูงและสวน",
+"zh": "忠诚的小狗帮大家看守高脚屋和菜园。",
+"ja": "いえと おにわを しっかり みまもってくれる 頼もしい なかまだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dragonfly.0": {
+"en": "A dragonfly. Four glassy wings hover over the lotus pond!",
+"lo": "ແມງປໍ. ປີກໃສສີ່ຂ້າງບິນລອຍຢູ່ເໜືອໜອງບົວ!",
+"th": "แมลงปอ ปีกใสสี่ข้างบินลอยอยู่เหนือสระบัว!",
+"zh": "蜻蜓。四片透明的翅膀在莲花池上空悬停！",
+"ja": "トンボ。よんまいの すきとおった はねで いけの うえに とまっているよ！",
+"who": "narrator",
+"tag": "what"
+},
+"dragonfly.1": {
+"en": "Dragonflies can fly forward, backward, and hover right in place.",
+"lo": "ແມງປໍບິນໄປໜ້າ, ຖອຍຫຼັງ, ແລະ ລອຍຢູ່ກັບທີ່ໄດ້.",
+"th": "แมลงปอบินไปหน้า ถอยหลัง และลอยอยู่กับที่ได้",
+"zh": "蜻蜓既能向前飞、向后飞，还能稳稳悬停在空中。",
+"ja": "まえにも うしろにも とべて くうちゅうで ぴたっと とまれるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"dragonfly.2": {
+"en": "It zips swiftly over the water to catch tiny gnats.",
+"lo": "ມັນບິນປາດໄວໆເໜືອໜ້ານ້ຳເພື່ອຈັບແມງໄມ້ນ້ອຍ.",
+"th": "มันบินโฉบเร็วๆ เหนือผิวน้ำเพื่อจับแมลงตัวเล็ก",
+"zh": "它贴着水面飞快掠过，捕捉小飞虫。",
+"ja": "みずの うえを すいーっと とんで ちいさな むしを つかまえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"dragonfly.3": {
+"en": "Shimmering turquoise scales glint along its slender body.",
+"lo": "ລຳໂຕຮຽວຍາວສີຟ້າຂຽວເຫຼື້ອມວິບວັບ.",
+"th": "ลำตัวเรียวยาวสีฟ้าเขียวเปล่งประกายวิบวับ",
+"zh": "它修长的身体泛着蓝绿色的金属光泽。",
+"ja": "ほそながい みずいろの からだが きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"dragonfly.4": {
+"en": "When tired, it rests quietly on the tip of a green reed.",
+"lo": "ເມື່ອເມື່ອຍ ມັນພັກຜ່ອນຄ່ອຍໆຢູ່ປາຍຕົ້ນອໍ້ສີຂຽວ.",
+"th": "เมื่อเหนื่อย มันพักผ่อนเบาๆ อยู่บนปลายต้นอ้อสีเขียว",
+"zh": "累了的时候，它就安静地停在绿芦苇尖上歇息。",
+"ja": "つかれると あしの さきっぽに ちょこんと とまって やすむんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"drum.0": {
+"en": "A festival drum. Boom, boom, boom across the valley!",
+"lo": "ກອງບຸນ. ຕູມ, ຕູມ, ຕູມ ດັງກ້ອງທົ່ວຮ່ອມພູ!",
+"th": "กลองงานบุญ ตูม ตูม ตูม ดังก้องทั่วหุบเขา!",
+"zh": "节庆鼓。咚、咚、咚，鼓声传遍整个山谷！",
+"ja": "たいこ。どん、どん、どん と たにじゅうに ひびくよ！",
+"who": "narrator",
+"tag": "what"
+},
+"drum.1": {
+"en": "Villagers beat the stretched drumhead to call everyone to dance.",
+"lo": "ຊາວບ້ານຕີໜ້າກອງທີ່ຂຶງຕຶງເພື່ອເອີ້ນທຸກຄົນມາຟ້ອນ.",
+"th": "ชาวบ้านตีหน้ากลองที่ขึงตึงเพื่อเรียกทุกคนมารำ",
+"zh": "村民们敲响紧绷的鼓面，唤大家一起来跳舞。",
+"ja": "ぴんと はった かわを たたいて みんなを おどりに よぶんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"drum.2": {
+"en": "Warm red wood and golden patterns shine around the rim.",
+"lo": "ໄມ້ສີແດງອຸ່ນ ແລະ ລວດລາຍສີຄຳເຫຼື້ອມອ້ອມຂອບກອງ.",
+"th": "ไม้สีแดงอุ่นและลวดลายสีทองเปล่งประกายรอบขอบกลอง",
+"zh": "温润的红木和金色纹饰在鼓身周围闪亮。",
+"ja": "あたたかい あかい きと きんいろの もようが すてきだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"drum.3": {
+"en": "Deep booming rhythms echo off the distant blue hills.",
+"lo": "ຈັງຫວະກອງດັງກ້ອງສະທ້ອນກັບຈາກພູສີຟ້າໄກໆ.",
+"th": "จังหวะกลองดังก้องสะท้อนกลับจากภูเขาสีฟ้าไกลๆ",
+"zh": "低沉洪亮的鼓点在远处的青山间回荡。",
+"ja": "ふかい リズムが とおくの やままで ひびきわたるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"drum.4": {
+"en": "Drums welcome Pu Nyeu and Nya Nyeu at every Lao New Year.",
+"lo": "ສຽງກອງຕ້ອນຮັບປູ່ເຍີ ແລະ ຍ່າເຍີໃນທຸກງານບຸນປີໃໝ່ລາວ.",
+"th": "เสียงกลองต้อนรับปู่เยอและย่าเยอในทุกงานบุญปีใหม่ลาว",
+"zh": "每个老挝新年，欢快的鼓声都在迎接布约爷爷和雅约奶奶。",
+"ja": "ラオスの しんねんには たいこが プーニョーと ヤーニョーを むかえるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"duck.0": {
+"en": "A pond duck. Quack, quack! It loves splashing near the reeds.",
+"lo": "ເປັດ. ກ໊າບ, ກ໊າບ! ມັນມັກຫຼິ້ນນ້ຳໃກ້ປ່າອໍ້.",
+"th": "เป็ด ก๊าบ ก๊าบ! มันชอบเล่นน้ำใกล้ป่าอ้อ",
+"zh": "鸭子。嘎嘎！它最喜欢在芦苇旁戏水。",
+"ja": "あひる。がーがー！ みずべで ぱしゃぱしゃ あそぶのが すきだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"duck.1": {
+"en": "Webbed feet paddle smoothly like little oars underwater.",
+"lo": "ຕີນເປັດທີ່ເປັນພັງຜືດພາຍນ້ຳໄດ້ຄ່ອງແຄ້ວຄືໄມ້ພາຍນ້ອຍ.",
+"th": "เท้าเป็ดที่เป็นพังผืดพายน้ำได้คล่องแคล่วเหมือนไม้พายน้อย",
+"zh": "带蹼的脚掌在水下像小船桨一样轻快划水。",
+"ja": "みずかきのある あしで みずの なかを すいすい こぐんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"duck.2": {
+"en": "Ducks dip their flat bills underwater to nibble water plants.",
+"lo": "ເປັດມຸດສົບແປໆລົງໃຕ້ນ້ຳເພື່ອກິນພືດນ້ຳ.",
+"th": "เป็ดมุดปากแบนๆ ลงใต้น้ำเพื่อกินพืชน้ำ",
+"zh": "鸭子把扁扁的嘴巴探进水下寻找水草。",
+"ja": "みずの なかに くちばしを いれて えさを さがすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"duck.3": {
+"en": "Waterproof feathers keep the duck cosy and dry.",
+"lo": "ຂົນກັນນ້ຳຊ່ວຍໃຫ້ເປັດອົບອຸ່ນ ແລະ ແຫ້ງສະບາຍ.",
+"th": "ขนกันน้ำช่วยให้เป็ดอบอุ่นและแห้งสบาย",
+"zh": "防水的羽毛让鸭子一直保持暖和干爽。",
+"ja": "みずを はじく はねで からだが ぬれないんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"duck.4": {
+"en": "Waddling ducks bring cheerful quacks to every Lao village yard.",
+"lo": "ເປັດຍ່າງຕ້ວຍຕ້ຽມນຳສຽງຮ້ອງມ່ວນຊື່ນມາສູ່ເດີ່ນບ້ານລາວ.",
+"th": "เป็ดเดินเตาะแตะนำเสียงร้องสนุกสนานมาสู่ลานบ้านลาว",
+"zh": "摇摇摆摆的鸭子给每个老挝村院带来欢快的叫声。",
+"ja": "よちよち あるいて おにわを にぎやかに してくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"egret.0": {
+"en": "A white egret. Standing gracefully on slender legs.",
+"lo": "ນົກຍາງ. ຢືນຢ່າງສະຫງ່າງາມເທິງຂາຮຽວຍາວ.",
+"th": "นกยาง ยืนอย่างสง่างามบนขาเรียวยาว",
+"zh": "白鹭。优雅地立在细长的腿上。",
+"ja": "しろさぎ。ほそい あしで すっと きれいに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"egret.1": {
+"en": "Egrets wade quietly in shallow water hunting tiny fish.",
+"lo": "ນົກຍາງຍ່າງຄ່ອຍໆໃນນ້ຳຕື້ນເພື່ອຫາປານ້ອຍກິນ.",
+"th": "นกยางเดินเบาๆ ในน้ำตื้นเพื่อหาปลาน้อยกิน",
+"zh": "白鹭在浅水里静静涉水，寻找小鱼。",
+"ja": "あさい みずを そっと あるいて ちいさな さかなを つかまえるんだ。",
+"who": "narrator",
+"tag": "fact"
+},
+"egret.2": {
+"en": "Soft snow-white wings lift it smoothly over the rice field.",
+"lo": "ປີກສີຂາວອ່ອນນຸ້ມພາມັນບິນຂຶ້ນເໜືອທົ່ງນາຢ່າງນຸ່ມນວນ.",
+"th": "ปีกสีขาวอ่อนนุ่มพามันบินขึ้นเหนือทุ่งนาอย่างนุ่มนวล",
+"zh": "洁白柔软的翅膀载着它轻盈飞过稻田。",
+"ja": "しろい つばさで たんぼの うえを ゆったり とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"egret.3": {
+"en": "Its long curved neck stretches high to scan the reeds.",
+"lo": "ຄໍຍາວໂຄ້ງຂອງມັນຢຽດສູງເພື່ອສ່ອງເບິ່ງປ່າອໍ້.",
+"th": "คอยาวโค้งของมันเหยียดสูงเพื่อส่องดูป่าอ้อ",
+"zh": "它伸长弯曲的脖子，仔细望向芦苇丛。",
+"ja": "ながい くびを のばして みずべを よく みているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"egret.4": {
+"en": "White egrets often keep company with water buffaloes in Lao fields.",
+"lo": "ນົກຍາງມັກຢູ່ເປັນໝູ່ກັບຄວາຍຕາມທົ່ງນາໃນລາວ.",
+"th": "นกยางมักอยู่เป็นเพื่อนกับควายตามทุ่งนาในลาว",
+"zh": "在老挝稻田里，白鹭常常陪伴在水牛身旁。",
+"ja": "ラオスの たんぼでは すいぎゅうの そばで よく みかけるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"fence.0": {
+"en": "A bamboo fence. Golden poles bound neatly in a row.",
+"lo": "ຮົ້ວໄມ້ໄຜ່. ໄມ້ໄຜ່ສີຄຳມັດລຽງກັນຢ່າງຮຽບຮ້ອຍ.",
+"th": "รั้วไม้ไผ่ ไม้ไผ่สีทองมัดเรียงกันอย่างเรียบร้อย",
+"zh": "竹篱笆。一根根金黄的竹竿整齐地绑成一排。",
+"ja": "たけがき。きんいろの たけが きれいに ならんで むすんであるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fence.1": {
+"en": "The sturdy garden fence keeps wandering animals out of the greens.",
+"lo": "ຮົ້ວສວນທີ່ແຂງແຮງກັນສັດບໍ່ໃຫ້ເຂົ້າໄປກິນຜັກ.",
+"th": "รั้วสวนที่แข็งแรงกันสัตว์ไม่ให้เข้าไปกินผัก",
+"zh": "结实的篱笆拦住贪吃的小动物，保护菜园。",
+"ja": "じょうぶな かきねが はたけの やさいを まもってくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fence.2": {
+"en": "Woven rattan ties hold every upright stalk firm.",
+"lo": "ຕອກຫວາຍສານມັດລຳໄມ້ໄຜ່ທຸກລຳໃຫ້ແໜ້ນໜາ.",
+"th": "ตอกหวายสานมัดลำไม้ไผ่ทุกลำให้แน่นหนา",
+"zh": "编织的藤条把每一根立柱牢牢固定。",
+"ja": "とうの ひもで しっかり しばって あるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fence.3": {
+"en": "Blooming flowers peek cheerfully between the bamboo rails.",
+"lo": "ດອກໄມ້ທີ່ກຳລັງບານໂຜ່ອອກມາຢ່າງສົດໃສລະຫວ່າງຮົ້ວໄມ້ໄຜ່.",
+"th": "ดอกไม้ที่กำลังบานโผล่ออกมาอย่างสดใสระหว่างรั้วไม้ไผ่",
+"zh": "盛开的花朵从竹篱笆缝隙间欢快地探出头。",
+"ja": "たけの あいだ から きれいな おはなが のぞいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fence.4": {
+"en": "Lao village gardens use bamboo fences along every lane.",
+"lo": "ສວນໃນໝູ່ບ້ານລາວໃຊ້ຮົ້ວໄມ້ໄຜ່ຕາມແຄມທາງທຸກສາຍ.",
+"th": "สวนในหมู่บ้านลาวใช้รั้วไม้ไผ่ตามริมทางทุกสาย",
+"zh": "老挝村庄的小路两旁随处可见竹篱笆。",
+"ja": "ラオスの むらみちに よく みかける やさしい かきねだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"fire.0": {
+"en": "A campfire. Warm orange flames dance and crackle.",
+"lo": "ກອງໄຟ. ແປວໄຟສີສົ້ມອຸ່ນເຕັ້ນລະບຳ ແລະ ແຕກປຸໆ.",
+"th": "กองไฟ เปลวไฟสีส้มอุ่นเต้นระบำและแตกปะทุ",
+"zh": "篝火。温暖的橙色火苗欢快地跳动、噼啪作响。",
+"ja": "たきび。あたたかい オレンジの ほのおが ぱちぱち おどるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fire.1": {
+"en": "A circle of river stones keeps the cooking fire safe.",
+"lo": "ກ້ອນຫີນແມ່ນ້ຳທີ່ລຽງເປັນວົງຊ່ວຍໃຫ້ເຕົາໄຟປອດໄພ.",
+"th": "ก้อนหินแม่น้ำที่เรียงเป็นวงช่วยให้เตาไฟปลอดภัย",
+"zh": "一圈河石围着火堆，让生火做饭更安全。",
+"ja": "かわの いしで まわりを かこんで あんぜんに たいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fire.2": {
+"en": "Soft grey smoke curls upward toward the quiet sky.",
+"lo": "ຄວັນສີເທົາອ່ອນໆລອຍຂຶ້ນສູ່ທ້ອງຟ້າທີ່ສະຫງົບ.",
+"th": "ควันสีเทาอ่อนๆ ลอยขึ้นสู่ท้องฟ้าที่สงบ",
+"zh": "柔和的灰烟袅袅升向宁静的天空。",
+"ja": "やわらかい けむりが そらへ ゆっくり のぼっていくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fire.3": {
+"en": "On dark chilly nights, everyone gathers close to get warm.",
+"lo": "ໃນຄືນມືດທີ່ໜາວເຢັນ ທຸກຄົນມານັ່ງໃກ້ກັນເພື່ອຮັບຄວາມອຸ່ນ.",
+"th": "ในคืนมืดที่หนาวเย็น ทุกคนมานั่งใกล้กันเพื่อรับความอบอุ่น",
+"zh": "在寒冷的黑夜里，大家围坐在一起取暖。",
+"ja": "さむい よるには みんなが そばに あつまって あたたまるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fire.4": {
+"en": "A black clay pot simmers delicious soup right over the coals.",
+"lo": "ໝໍ້ດິນສີດຳຕົ້ມແກງແຊບໆຢູ່ເທິງຖ່ານໄຟ.",
+"th": "หม้อดินสีดำต้มแกงอร่อยๆ อยู่บนถ่านไฟ",
+"zh": "黑陶锅在炭火上咕嘟咕嘟炖着美味的汤。",
+"ja": "くろい つちの なべで おいしい スープを にているんだ。",
+"who": "narrator",
+"tag": "culture"
+},
+"firewood.0": {
+"en": "Firewood. Dry logs stacked neatly beside the hearth.",
+"lo": "ຟືນ. ທ່ອນໄມ້ແຫ້ງລຽງຊ້ອນກັນຢ່າງຮຽບຮ້ອຍຂ້າງເຕົາໄຟ.",
+"th": "ฟืน ท่อนไม้แห้งเรียงซ้อนกันอย่างเรียบร้อยข้างเตาไฟ",
+"zh": "木柴。干木头整整齐齐地堆在灶旁。",
+"ja": "まき。かわいた きが かまどの そばに きれいに つんであるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"firewood.1": {
+"en": "Dry wood burns brightly and keeps the evening pot warm.",
+"lo": "ໄມ້ແຫ້ງລຸກໄໝ້ດີ ແລະ ຊ່ວຍໃຫ້ໝໍ້ເຂົ້າຍາມແລງອຸ່ນສະເໝີ.",
+"th": "ไม้แห้งติดไฟดีและช่วยให้หม้อข้าวยามเย็นอุ่นเสมอ",
+"zh": "干柴燃烧得很旺，让晚饭的锅一直热腾腾的。",
+"ja": "かわいた まきは よく もえて ゆうごはんを あたためるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"firewood.2": {
+"en": "Rough brown bark covers every split wooden log.",
+"lo": "ເປືອກໄມ້ສີນ້ຳຕານຫຍາບຫຸ້ມທ່ອນໄມ້ທຸກທ່ອນ.",
+"th": "เปลือกไม้สีน้ำตาลหยาบหุ้มท่อนไม้ทุกท่อน",
+"zh": "粗糙的棕色树皮包裹着每一根劈开的木柴。",
+"ja": "ちゃいろい きの かわが まきを つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"firewood.3": {
+"en": "Villagers gather fallen branches from the forest edge.",
+"lo": "ຊາວບ້ານເກັບກິ່ງໄມ້ແຫ້ງທີ່ລົ່ນຢູ່ແຄມປ່າ.",
+"th": "ชาวบ้านเก็บกิ่งไม้แห้งที่ร่วงอยู่ริมป่า",
+"zh": "村民们从森林边缘拾来掉落的干树枝。",
+"ja": "むらの ひとが もりの はしで おちた えだを ひろうんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"firewood.4": {
+"en": "Warm wood smoke smells cosy at dinner time.",
+"lo": "ກິ່ນຄວັນຟືນອຸ່ນໆຫອມສະບາຍໃຈໃນຍາມກິນເຂົ້າແລງ.",
+"th": "กลิ่นควันฟืนอุ่นๆ หอมสบายใจในยามกินข้าวเย็น",
+"zh": "晚饭时分，暖暖的柴火烟散发着温馨的气息。",
+"ja": "ゆうごはんの じかんに まきの けむりは ほっとする においだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fish.0": {
+"en": "A pond fish. Gliding smoothly through cool blue water.",
+"lo": "ປາ. ລອຍນ້ຳຢ່າງຄ່ອງແຄ້ວຜ່ານນ້ຳສີຟ້າເຢັນ.",
+"th": "ปลา ว่ายน้ำอย่างคล่องแคล่วผ่านน้ำสีฟ้าเย็น",
+"zh": "小鱼。在清凉的蓝水中轻盈游动。",
+"ja": "さかな。つめたい みずの なかを すいすい およぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fish.1": {
+"en": "Fish breathe underwater using their delicate gills.",
+"lo": "ປາຫາຍໃຈໃຕ້ນ້ຳດ້ວຍຟັນຟືມທີ່ລະອຽດອ່ອນ.",
+"th": "ปลาหายใจใต้น้ำด้วยเหงือกที่ละเอียดอ่อน",
+"zh": "鱼儿用细密的鱼鳃在水下呼吸。",
+"ja": "さかなは えらを つかって みずの なかで いきを するんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"fish.2": {
+"en": "With a flick of its tail, the fish leaps up with a splash!",
+"lo": "ພຽງແຕ່ສະບັດຫາງ ປາກໍໂດດຂຶ້ນເໜືອນ້ຳດັງຕູມ!",
+"th": "เพียงแค่สะบัดหาง ปลาก็กระโดดขึ้นเหนือน้ำดังตูม!",
+"zh": "尾巴轻轻一摆，小鱼哗啦一声跃出水面！",
+"ja": "しっぽを ぴちんと ふって ぽちゃんと はねるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"fish.3": {
+"en": "Shiny scales catch bright flashes of sunlight in the pond.",
+"lo": "ເກັດເຫຼື້ອມໆສະທ້ອນແສງແດດວິບວັບໃນໜອງນ້ຳ.",
+"th": "เกล็ดเงางามสะท้อนแสงแดดวิบวับในสระน้ำ",
+"zh": "闪亮的鱼鳞在池塘里折射出点点阳光。",
+"ja": "きらきらした うろこが おひさまの ひかりを はじくんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fish.4": {
+"en": "Cool lotus leaves give the fish a shady place to rest.",
+"lo": "ໃບບົວເຢັນໆໃຫ້ບ່ອນຮົ່ມສຳລັບປາພັກຜ່ອນ.",
+"th": "ใบบัวเย็นๆ ให้ที่ร่มสำหรับปลาพักผ่อน",
+"zh": "清凉的荷叶为小鱼撑起阴凉的歇脚处。",
+"ja": "はすの はっぱの かげが すずしい おやすみ ばしょだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fish-trap.0": {
+"en": "A fish trap. A funnel woven from fine bamboo strips.",
+"lo": "ໄຊດັກປາ. ຊ່ວຍສານຈາກຕອກໄມ້ໄຜ່ລະອຽດ.",
+"th": "ไซดักปลา สานเป็นกรวยจากตอกไม้ไผ่ละเอียด",
+"zh": "鱼笼。用细竹篾编成的漏斗形捕鱼笼。",
+"ja": "うおとりかご。ほそい たけで あんだ さかなとりの かごだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"fish-trap.1": {
+"en": "Fishers set the trap quietly in shallow stream water.",
+"lo": "ຊາວປະມົງວາງໄຊໄວ້ຄ່ອຍໆໃນນ້ຳຫ້ວຍຕື້ນ.",
+"th": "ชาวประมงวางไซไว้เบาๆ ในน้ำลำธารตื้น",
+"zh": "渔人把鱼笼轻轻放在浅浅的溪水里。",
+"ja": "あさい かわの みずに そっと しずめて つかうんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fish-trap.2": {
+"en": "Clean river water flows straight through the open weave.",
+"lo": "ນ້ຳແມ່ນ້ຳໃສໄຫຼຜ່ານຊ່ອງສານໄດ້ຢ່າງສະດວກ.",
+"th": "น้ำแม่น้ำใสไหลผ่านช่องสานได้อย่างสะดวก",
+"zh": "清澈的河水畅通无阻地穿过稀疏的竹篾。",
+"ja": "きれいな みずが あみめを すーっと とおりぬけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"fish-trap.3": {
+"en": "Curved bamboo ribs give the trap its graceful shape.",
+"lo": "ຊີ່ໄມ້ໄຜ່ໂຄ້ງເຮັດໃຫ້ໄຊມີຮູບຊົງສວຍງາມ.",
+"th": "ซี่ไม้ไผ่โค้งทำให้ไซมีรูปทรงสวยงาม",
+"zh": "弯曲的竹骨赋予鱼笼优美的流线外形。",
+"ja": "まるく まがった たけの かたちが とても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"fish-trap.4": {
+"en": "Lao families hang bamboo fish traps near the river bank.",
+"lo": "ຄອບຄົວຊາວລາວຫ້ອຍໄຊດັກປາໄວ້ໃກ້ແຄມແມ່ນ້ຳ.",
+"th": "ครอบครัวชาวลาวแขวนไซดักปลาไว้ใกล้ริมแม่น้ำ",
+"zh": "老挝人家常把竹鱼笼挂在河岸边。",
+"ja": "ラオスの かわべの むらで むかしから つかわれているよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"flowers.0": {
+"en": "Marigold flowers. Bright golden petals glow like little suns.",
+"lo": "ດອກດາວເຮືອງ. ກີບດອກສີຄຳສົດໃສເຫຼື້ອມຄືດວງຕາເວັນນ້ອຍ.",
+"th": "ดอกดาวเรือง กลีบดอกสีทองสดใสเปล่งประกายเหมือนดวงอาทิตย์น้อย",
+"zh": "万寿菊。金灿灿的花瓣像一朵朵小太阳。",
+"ja": "マリーゴールド。あかるい きんいろの はなが ちいさな たいよう みたいだね。",
+"who": "narrator",
+"tag": "what"
+},
+"flowers.1": {
+"en": "Butterflies and bees dance from bloom to bloom for sweet nectar.",
+"lo": "ແມງກະເບື້ອ ແລະ ເຜິ້ງບິນຈາກດອກໜຶ່ງໄປອີກດອກເພື່ອກິນນ້ຳຫວານ.",
+"th": "ผีเสื้อและผึ้งบินจากดอกหนึ่งไปอีกดอกเพื่อกินน้ำหวาน",
+"zh": "蝴蝶和蜜蜂在花丛间飞舞采蜜。",
+"ja": "ちょうちょや みつばちが あまい みつを さがして とんでくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"flowers.2": {
+"en": "Ruffled orange and yellow blossoms brighten the garden edge.",
+"lo": "ດອກສີສົ້ມ ແລະ ສີເຫຼືອງຟູໆເຮັດໃຫ້ຂອບສວນສົດໃສ.",
+"th": "ดอกสีส้มและสีเหลืองฟูๆ ทำให้ขอบสวนสดใส",
+"zh": "层层叠叠的橙黄花朵照亮了园子边缘。",
+"ja": "オレンジや きいろの はなが おにわを パッと あかるく するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"flowers.3": {
+"en": "Soft petals sway gently when a warm breeze passes by.",
+"lo": "ກີບດອກອ່ອນໆແກວ່ງໄກວຄ່ອຍໆເມື່ອລົມອຸ່ນພັດຜ່ານ.",
+"th": "กลีบดอกอ่อนๆ แกว่งไกวเบาๆ เมื่อลมอุ่นพัดผ่าน",
+"zh": "暖风拂过时，柔软的花瓣轻轻晃动。",
+"ja": "あたたかい かぜに ふわふわ ゆれて きれいだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"flowers.4": {
+"en": "In Laos, marigolds are woven into garlands for New Year blessings.",
+"lo": "ໃນລາວ ດອກດາວເຮືອງຖືກຮ້ອຍເປັນພວງມາໄລອວຍພອນປີໃໝ່.",
+"th": "ในลาว ดอกดาวเรืองถูกร้อยเป็นพวงมาลัยอวยพรปีใหม่",
+"zh": "在老挝，人们用万寿菊串成花环，送上新年祝福。",
+"ja": "ラオスでは しんねんの おいわいに かざられる たいせつな はなだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"garland.0": {
+"en": "A flower garland. Strung with bright festival blooms.",
+"lo": "ພວງມາໄລ. ຮ້ອຍດ້ວຍດອກໄມ້ງານບຸນສີສົດໃສ.",
+"th": "พวงมาลัย ร้อยด้วยดอกไม้งานบุญสีสดใส",
+"zh": "花环。用绚丽的节日鲜花串成。",
+"ja": "はなかざり。おまつりの あかるい おはなを つないだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"garland.1": {
+"en": "Festive banners and flowers sway overhead in the warm wind.",
+"lo": "ທຸງ ແລະ ດອກໄມ້ງານບຸນແກວ່ງໄກວຢູ່ເທິງຫົວໃນສາຍລົມອຸ່ນ.",
+"th": "ธงและดอกไม้งานบุญแกว่งไกวอยู่เหนือศีรษะในสายลมอุ่น",
+"zh": "节日的彩旗和花串在暖风中轻轻摇摆。",
+"ja": "あたたかい かぜに ゆらゆら ゆれて おまつりを もりあげるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"garland.2": {
+"en": "Golden marigolds and bright ribbons welcome every guest.",
+"lo": "ດອກດາວເຮືອງສີຄຳ ແລະ ໂບສີສົດໃສຕ້ອນຮັບແຂກທຸກຄົນ.",
+"th": "ดอกดาวเรืองสีทองและริบบิ้นสีสดใสต้อนรับแขกทุกคน",
+"zh": "金色的万寿菊和彩带欢迎每一位客人。",
+"ja": "きんいろの はなと リボンが みんなを えがおで むかえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"garland.3": {
+"en": "Sweet floral scents drift across the happy village square.",
+"lo": "ກິ່ນຫອມຫວານຂອງດອກໄມ້ລອຍໄປທົ່ວເດີ່ນບ້ານທີ່ມ່ວນຊື່ນ.",
+"th": "กลิ่นหอมหวานของดอกไม้ลอยไปทั่วลานบ้านที่สนุกสนาน",
+"zh": "清甜的花香飘荡在欢乐的村广场上。",
+"ja": "あまい はなの かおりが ひろばに ふんわり ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"garland.4": {
+"en": "In Laos, garlands celebrate New Year and honour loved ones.",
+"lo": "ໃນລາວ ພວງມາໄລໃຊ້ສະຫຼອງປີໃໝ່ ແລະ ສະແດງຄວາມເຄົາລົບຄົນທີ່ຮັກ.",
+"th": "ในลาว พวงมาลัยใช้ฉลองปีใหม่และแสดงความเคารพคนที่รัก",
+"zh": "在老挝，花环用来庆祝新年并向挚爱致敬。",
+"ja": "ラオスでは しんねんや だいじな ひとへの おいわいに かざるんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"gecko.0": {
+"en": "A house gecko. Clinging lightly to the warm wooden post.",
+"lo": "ກັບແກ້. ເກາະເບົາໆຢູ່ເທິງເສົາໄມ້ອຸ່ນ.",
+"th": "จิ้งจก เกาะเบาๆ อยู่บนเสาไม้อุ่น",
+"zh": "壁虎。轻巧地趴在温暖的木柱上。",
+"ja": "やもり。あたたかい きの はしらに ぴたっと はりついているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"gecko.1": {
+"en": "Special sticky toe pads let geckos walk straight up walls.",
+"lo": "ອຸ້ງຕີນພິເສດທີ່ຕິດແໜ້ນເຮັດໃຫ້ກັບແກ້ໄຕ່ຝາຂຶ້ນຊື່ໄດ້.",
+"th": "อุ้งเท้าพิเศษที่ยึดเกาะแน่นทำให้จิ้งจกไต่ผนังขึ้นตรงๆ ได้",
+"zh": "神奇的吸附脚垫让壁虎能笔直爬上墙壁。",
+"ja": "ふしぎな あしの うらで かべも まっすぐ のぼれるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"gecko.2": {
+"en": "At dusk, the gecko darts quickly to catch tiny night bugs.",
+"lo": "ຕອນຄ່ຳ ກັບແກ້ແລ່ນໄວໆເພື່ອຈັບແມງໄມ້ກາງຄືນນ້ອຍໆ.",
+"th": "ตอนค่ำ จิ้งจกวิ่งเร็วๆ เพื่อจับแมลงกลางคืนตัวเล็กๆ",
+"zh": "傍晚时分，壁虎飞快冲出去捉夜间的小虫子。",
+"ja": "ゆうがたに すばやく うごいて ちいさな むしを つかまえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gecko.3": {
+"en": "Big glossy eyes see clearly even in gentle moonlight.",
+"lo": "ຕາໃຫຍ່ເຫຼື້ອມໃສເບິ່ງເຫັນແຈ້ງແມ່ນແຕ່ໃນແສງຈັນອ່ອນ.",
+"th": "ตาโตแวววาวมองเห็นชัดเจนแม้ในแสงจันทร์อ่อน",
+"zh": "大大的亮眼睛在柔和的月光下也能看得清清楚楚。",
+"ja": "おおきな めで つきあかりでも よく みえるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"gecko.4": {
+"en": "Friendly geckos are welcome helpers in every Lao home.",
+"lo": "ກັບແກ້ທີ່ໃຈດີເປັນຜູ້ຊ່ວຍທີ່ໜ້າຮັກໃນທຸກເຮືອນລາວ.",
+"th": "จิ้งจกที่เป็นมิตรเป็นผู้ช่วยที่น่ารักในทุกบ้านลาว",
+"zh": "友善的壁虎是每家老挝人家都欢迎的小帮手。",
+"ja": "ラオスの いえでは むしを とってくれる いい おともだちだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"gourd.0": {
+"en": "The great gourd. It grew bigger than a house!",
+"lo": "ໝາກນ້ຳເຕົ້າ. ມັນໃຫຍ່ກວ່າເຮືອນອີກ!",
+"th": "น้ำเต้ายักษ์ มันโตใหญ่กว่าบ้านเสียอีก!",
+"zh": "大葫芦。它长得比房子还要大！",
+"ja": "おおきなひょうたん。いえよりも おおきく そだったよ！",
+"who": "narrator",
+"tag": "what"
+},
+"gourd.1": {
+"en": "Smooth pale-green skin gleams in the warm valley light.",
+"lo": "ຜິວກ້ຽງສີຂຽວອ່ອນເຫຼື້ອມໃນແສງແດດອຸ່ນຂອງຮ່ອມພູ.",
+"th": "ผิวเรียบสีเขียวอ่อนเปล่งประกายในแสงแดดอุ่นของหุบเขา",
+"zh": "光滑的淡绿色表皮在温暖的山谷阳光下闪耀。",
+"ja": "なめらかな みどりの かわが あたたかい ひかりに かがやくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"gourd.2": {
+"en": "Inside this giant gourd, all the peoples of the land waited.",
+"lo": "ຢູ່ໃນໝາກນ້ຳເຕົ້າໃຫຍ່ນີ້ ຜູ້ຄົນທັງຫຼາຍກຳລັງລໍຖ້າອອກມາ.",
+"th": "ภายในน้ำเต้ายักษ์นี้ ผู้คนทั้งหลายกำลังรอคอยออกมา",
+"zh": "在这个大葫芦里面，大地上的人们正等着走出来。",
+"ja": "この なかで たくさんの ひとたちが そとへ でるのを まっていたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gourd.3": {
+"en": "Listen close! Tap the shell to hear a hollow woody sound.",
+"lo": "ຟັງໃກ້ໆແມ້! ເຄາະເປືອກເບິ່ງຈະໄດ້ຍິນສຽງກ້ອງໆ.",
+"th": "ฟังใกล้ๆ สิ! เคาะเปลือกดูจะได้ยินเสียงก้องๆ",
+"zh": "仔细听！轻轻一敲，葫芦壳发出空灵的木头声。",
+"ja": "みみを すませて！ たたくと ぽこんと いい おとが するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gourd.4": {
+"en": "The Great Gourd is one of the oldest folk tales of Laos.",
+"lo": "ນິທານໝາກນ້ຳເຕົ້າປຸງແມ່ນນິທານພື້ນເມືອງເກົ່າແກ່ທີ່ສຸດຂອງລາວ.",
+"th": "นิทานน้ำเต้าปุงเป็นนิทานพื้นบ้านที่เก่าแก่ที่สุดเรื่องหนึ่งของลาว",
+"zh": "大葫芦传说是老挝最古老的民间故事之一。",
+"ja": "おおきな ひょうたんの おはなしは ラオスで とても ふるい みんわだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"gourd-vine.0": {
+"en": "A gourd trellis. Little green gourds hang from bamboo poles.",
+"lo": "ຮ້ານໝາກນ້ຳເຕົ້າ. ໝາກນ້ຳເຕົ້ານ້ອຍສີຂຽວຫ້ອຍຢູ່ເທິງໄມ້ໄຜ່.",
+"th": "ค้างน้ำเต้า น้ำเต้าลูกเล็กสีเขียวห้อยอยู่บนไม้ไผ่",
+"zh": "葫芦架。嫩绿的小葫芦挂在竹竿上。",
+"ja": "ひょうたんだな。ちいさな みどりの ひょうたんが ぶらさがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"gourd-vine.1": {
+"en": "Climbing vines twist up the sturdy wooden garden frame.",
+"lo": "ເຄືອໄມ້ເລືອຂຶ້ນຕາມຮ້ານໄມ້ສວນທີ່ແຂງແຮງ.",
+"th": "เถาวัลย์เลื้อยขึ้นตามค้างไม้ในสวนที่แข็งแรง",
+"zh": "攀援的藤蔓顺着结实的园子木架向上爬。",
+"ja": "つるが じょうぶな たけの たなに くるくる のぼっていくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gourd-vine.2": {
+"en": "White gourd blossoms open softly among the leaves.",
+"lo": "ດອກໝາກນ້ຳເຕົ້າສີຂາວບານອ່ອນໆທ່າມກາງໃບໄມ້.",
+"th": "ดอกน้ำเต้าสีขาวบานอ่อนๆ ท่ามกลางใบไม้",
+"zh": "白色的葫芦花在绿叶间温柔绽放。",
+"ja": "しろい ひょうたんの はなが はっぱの あいだに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"gourd-vine.3": {
+"en": "Gardeners tie the bamboo rails neatly with rattan strips.",
+"lo": "ຊາວສວນມັດຄານໄມ້ໄຜ່ຢ່າງຮຽບຮ້ອຍດ້ວຍຕອກຫວາຍ.",
+"th": "ชาวสวนมัดค้างไม้ไผ่อย่างเรียบร้อยด้วยตอกหวาย",
+"zh": "园丁用藤条把竹架绑得整整齐齐。",
+"ja": "たけの ぼうを とうの ひもで きれいに むすんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"gourd-vine.4": {
+"en": "Lao families grow gourds for soup and water flasks.",
+"lo": "ຄອບຄົວຊາວລາວປູກໝາກນ້ຳເຕົ້າໄວ້ແກງ ແລະ ເຮັດກະຕິກນ້ຳ.",
+"th": "ครอบครัวชาวลาวปลูกน้ำเต้าไว้ทำแกงและทำกระติกน้ำ",
+"zh": "老挝家庭种葫芦用来煮汤和做水壶。",
+"ja": "ラオスの いえでは ひょうたんを スープや すいとうに つかうんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"granary.0": {
+"en": "A rice granary. It stores the village harvest.",
+"lo": "ເລົ້າເຂົ້າ. ມັນເກັບຮັກສາເຂົ້າຂອງໝູ່ບ້ານ.",
+"th": "ยุ้งข้าว ใช้เก็บข้าวเปลือกของหมู่บ้าน",
+"zh": "粮仓。它用来储存村里丰收的稻谷。",
+"ja": "こめぐら。むらの おこめを しまっておく たてものだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"granary.1": {
+"en": "Short wooden stilts lift the rice granary off the damp ground.",
+"lo": "ເສົາໄມ້ສັ້ນໆຍົກເລົ້າເຂົ້າໃຫ້ພົ້ນຈາກພື້ນດິນຊຸ່ມ.",
+"th": "เสาไม้สั้นๆ ยกยุ้งข้าวให้พ้นจากพื้นดินชื้น",
+"zh": "矮木柱把粮仓垫高，远离潮湿的地面。",
+"ja": "みじかい はしらで しめった じめんから おこめを まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"granary.2": {
+"en": "Woven bamboo walls let fresh air dry the golden grain.",
+"lo": "ຝາໄມ້ໄຜ່ສານຊ່ວຍໃຫ້ລົມຖ່າຍເທເຮັດໃຫ້ເຂົ້າແຫ້ງດີ.",
+"th": "ฝาไม้ไผ่สานช่วยให้อากาศถ่ายเททำให้ข้าวแห้งดี",
+"zh": "编织的竹墙让新鲜空气流通，保持稻谷干爽。",
+"ja": "あんだ たけの かべから かぜが とおって おこめを かわかすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"granary.3": {
+"en": "A sloped thatch roof shelters the harvest all year.",
+"lo": "ຫຼັງຄາຫຍ້າຄາປົກປ້ອງຜົນລະປູກຕະຫຼອດປີ.",
+"th": "หลังคาหญ้าคาปกป้องผลผลิตตลอดทั้งปี",
+"zh": "斜斜的茅草屋顶一年四季保护着粮食。",
+"ja": "かやぶきの やねが いちねんじゅう おこめを まもるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"granary.4": {
+"en": "Every Lao family treasures a full granary after harvest.",
+"lo": "ທຸກຄອບຄົວຊາວລາວດີໃຈເມື່ອເລົ້າເຂົ້າເຕັມຫຼັງເກັບກ່ຽວ.",
+"th": "ทุกครอบครัวชาวลาวภูมิใจเมื่อยุ้งข้าวเต็มหลังเก็บเกี่ยว",
+"zh": "丰收后满满的粮仓是每个老挝家庭的珍宝。",
+"ja": "しゅうかくの あとに いっぱいの こめぐらは みんなの たからものだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"grass.0": {
+"en": "Soft grass. Cool green blades tickle bare feet.",
+"lo": "ກໍຫຍ້າ. ໃບຫຍ້າສີຂຽວເຢັນໆຈັກກະຈີ້ຕີນເປົ່າ.",
+"th": "กอหญ้า ใบหญ้าสีเขียวเย็นๆ จั๊กจี้เท้าเปล่า",
+"zh": "青草。清凉的绿草叶挠得光脚丫痒痒的。",
+"ja": "くさむら。すずしい みどりの くさが はだしを くすぐるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"grass.1": {
+"en": "Morning dew sparkles like tiny drops of silver on every blade.",
+"lo": "ນ້ຳໝອກຍາມເຊົ້າເຫຼື້ອມຄືຢົດເງິນນ້ອຍໆເທິງໃບຫຍ້າ.",
+"th": "น้ำค้างยามเช้าเปล่งประกายเหมือนหยดเงินเล็กๆ บนใบหญ้า",
+"zh": "清晨的露珠像小银珠一样在草叶上闪闪发亮。",
+"ja": "あさつゆが はっぱの うえで きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"grass.2": {
+"en": "The buffalo munches sweet green grass after working the field.",
+"lo": "ຄວາຍກິນຫຍ້າຂຽວຫວານຫຼັງຈາກໄຖນາແລ້ວ.",
+"th": "ควายกินหญ้าเขียวหวานหลังจากไถนาเสร็จ",
+"zh": "水牛耕完田后大口嚼着香甜的青草。",
+"ja": "はたけしごとの あとに すいぎゅうが おいしく たべるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"grass.3": {
+"en": "Gentle wind ripples across the meadow like soft green waves.",
+"lo": "ລົມອ່ອນໆພັດຜ່ານທົ່ງຫຍ້າຄືຄື້ນສີຂຽວນຸ້ມ.",
+"th": "ลมอ่อนๆ พัดผ่านทุ่งหญ้าเหมือนคลื่นสีเขียวนุ่ม",
+"zh": "微风吹过草地，泛起柔软的绿浪。",
+"ja": "かぜが ふくと みどりの なみみたいに さらさら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"grass.4": {
+"en": "Tiny clover and wildflowers hide right inside the grassy tufts.",
+"lo": "ໃບຫຍ້າ ແລະ ດອກໄມ້ປ່ານ້ອຍໆລີ້ຢູ່ໃນກໍຫຍ້າ.",
+"th": "ใบหญ้าและดอกไม้ป่าเล็กๆ ซ่อนอยู่ในกอหญ้า",
+"zh": "三叶草和小野花悄悄藏在草丛中间。",
+"ja": "くさの なかには ちいさな おはなも かくれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"hen.0": {
+"en": "A village hen. Cluck, cluck! Scratching happily in the yard.",
+"lo": "ແມ່ໄກ່. ກຸກໆ! ເຂ່ຍຫາອາຫານຢ່າງມ່ວນຊື່ນໃນເດີ່ນ.",
+"th": "แม่ไก่ กุ๊กๆ! คุ้ยเขี่ยหาอาหารอย่างสนุกสนานในลาน",
+"zh": "母鸡。咯咯！在院子里欢快地刨食。",
+"ja": "にわとり。こけこっこー！ おにわで たのしく えさを さがしているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"hen.1": {
+"en": "Hens scratch the soil with their toes to find seeds and bugs.",
+"lo": "ແມ່ໄກ່ໃຊ້ຕີນເຂ່ຍດິນເພື່ອຫາເມັດພືດ ແລະ ແມງໄມ້ກິນ.",
+"th": "แม่ไก่ใช้เท้าคุ้ยดินเพื่อหาเมล็ดพืชและแมลงกิน",
+"zh": "母鸡用爪子刨开泥土寻找种子和小虫。",
+"ja": "あしで つちを けって たねや ちいさな むしを みつけるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"hen.2": {
+"en": "Warm speckled feathers puff up when she settles down to rest.",
+"lo": "ຂົນລາຍອຸ່ນໆພອງຂຶ້ນເວລາມັນໝອບລົງພັກຜ່ອນ.",
+"th": "ขนลายอุ่นๆ พองขึ้นเวลามันหมอบลงพักผ่อน",
+"zh": "歇脚时，它温暖的斑纹羽毛蓬松地鼓起来。",
+"ja": "やすむ ときは ふわふわの はねを ふくらませるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"hen.3": {
+"en": "She pecks up scattered rice grains around the stilt house.",
+"lo": "ມັນຈິກກິນເມັດເຂົ້າທີ່ຕົກເຮ່ຍອ້ອມເຮືອນຮ້ານ.",
+"th": "มันจิกกินเมล็ดข้าวที่ตกหล่นรอบบ้านใต้ถุนสูง",
+"zh": "它啄起高脚屋周围散落的米粒。",
+"ja": "いえの まわりに おちた おこめを つついて たべるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"hen.4": {
+"en": "Every morning, roosters and hens wake up the Lao village.",
+"lo": "ທຸກເຊົ້າ ໄກ່ຜູ້ ແລະ ແມ່ໄກ່ປຸກໝູ່ບ້ານລາວໃຫ້ຕື່ນຂຶ້ນ.",
+"th": "ทุกเช้า ไก่ตัวผู้และแม่ไก่ปลุกหมู่บ้านลาวให้ตื่นขึ้น",
+"zh": "每天清晨，公鸡和母鸡唤醒宁静的老挝村庄。",
+"ja": "まいあさ むらの あさを げんきに しらせてくれるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"hill.0": {
+"en": "Blue hills. Tall misty peaks rise behind the valley.",
+"lo": "ພູຜາ. ຍອດພູສູງທີ່ມີໝອກປົກຄຸມຕັ້ງຢູ່ຫຼັງຮ່ອມພູ.",
+"th": "ภูเขา ยอดเขาสูงที่มีหมอกปกคลุมตั้งอยู่หลังหุบเขา",
+"zh": "青山。雾气缭绕的高峰矗立在山谷后方。",
+"ja": "やま。きりに つつまれた たかい やまが たにの むこうに つづくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"hill.1": {
+"en": "Cool mountain streams flow down to water the green plains.",
+"lo": "ຫ້ວຍນ້ຳເຢັນຈາກພູໄຫຼລົງມາຫຼໍ່ລ້ຽງທົ່ງພຽງສີຂຽວ.",
+"th": "ลำธารเย็นจากภูเขาไหลลงมาหล่อเลี้ยงทุ่งราบสีเขียว",
+"zh": "清凉的山溪流下山坡，滋润着翠绿的平原。",
+"ja": "やまの きれいな みずが ながれおりて たんぼを うるおすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"hill.2": {
+"en": "Soft white mist wraps gently around the green slopes.",
+"lo": "ໝອກສີຂາວອ່ອນໂອບກອດໄຫຼ່ພູສີຂຽວຄ່ອຍໆ.",
+"th": "หมอกสีขาวอ่อนโอบกอดไหล่เขาสีเขียวเบาๆ",
+"zh": "柔软的白雾轻轻环绕着苍翠的山坡。",
+"ja": "しろい きりが みどりの やまを ふんわり つつんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"hill.3": {
+"en": "Tall forests blanket the ridges as far as the eye can see.",
+"lo": "ປ່າໄມ້ສູງປົກຄຸມສັນພູໄກສຸດສາຍຕາ.",
+"th": "ป่าไม้สูงปกคลุมสันเขาไกลสุดสายตา",
+"zh": "茂密的森林沿着山脊绵延到天边。",
+"ja": "みどりの もりが とおくまで ずっと ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"hill.4": {
+"en": "Mountain peaks watch peacefully over the Lao countryside.",
+"lo": "ຍອດພູຜາເຝົ້າເບິ່ງຊົນນະບົດລາວຢ່າງສະຫງົບ.",
+"th": "ยอดภูเขาเฝ้ามองชนบทลาวอย่างสงบ",
+"zh": "群山静静守护着宁静的老挝田园。",
+"ja": "やまやまが ラオスの のどかな むらを しずかに みまもるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"house.0": {
+"en": "A stilt house. It stands high on wooden posts.",
+"lo": "ເຮືອນຮ້ານ. ມັນຕັ້ງສູງຢູ່ເທິງເສົາໄມ້.",
+"th": "บ้านใต้ถุนสูง ตั้งอยู่บนเสาไม้สูง",
+"zh": "高脚屋。它高高地立在木柱上。",
+"ja": "たかゆかのいえ。きの はしらに たかく たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"house.1": {
+"en": "A thatch roof keeps the home cool and dry in the rain.",
+"lo": "ຫຼັງຄາຫຍ້າຄາຊ່ວຍໃຫ້ເຮືອນເຢັນ ແລະ ແຫ້ງເວລາຝົນຕົກ.",
+"th": "หลังคาหญ้าคาช่วยให้บ้านเย็นและแห้งเวลาฝนตก",
+"zh": "茅草屋顶让屋子在雨天也能保持凉爽干燥。",
+"ja": "かやぶきの やねは あめの ひも すずしく まもってくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"house.2": {
+"en": "People climb a wooden ladder up to the shady porch.",
+"lo": "ຄົນປີນຂັ້ນໄດໄມ້ຂຶ້ນໄປລະບຽງທີ່ຮົ່ມເຢັນ.",
+"th": "ผู้คนปีนบันไดไม้ขึ้นไปยังชานบ้านที่ร่มเย็น",
+"zh": "人们顺着木梯爬上阴凉的走廊。",
+"ja": "きの はしごを のぼって すずしい えんがわへ あがるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"house.3": {
+"en": "Cool breezes blow underneath the raised wooden floor.",
+"lo": "ລົມເຢັນພັດຜ່ານໃຕ້ພື້ນເຮືອນໄມ້ທີ່ຍົກສູງ.",
+"th": "ลมเย็นพัดผ่านใต้พื้นเรือนไม้ที่ยกสูง",
+"zh": "凉爽的微风从架空的木地板下吹过。",
+"ja": "ゆかの したを すずしい かぜが ふきぬけるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"house.4": {
+"en": "Many Lao villages build stilt houses near rivers and fields.",
+"lo": "ຫຼາຍໝູ່ບ້ານໃນລາວສ້າງເຮືອນຮ້ານໃກ້ແມ່ນ້ຳ ແລະ ທົ່ງນາ.",
+"th": "หลายหมู่บ้านในลาวสร้างบ้านใต้ถุนสูงใกล้แม่น้ำและทุ่งนา",
+"zh": "许多老挝村庄在河边和田野旁建造高脚屋。",
+"ja": "ラオスの むらでは かわや たんぼの そばに よく たてられるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"house-frame.0": {
+"en": "A house frame. Villagers build it together.",
+"lo": "ໂຄງເຮືອນ. ຊາວບ້ານຊ່ວຍກັນສ້າງມັນ.",
+"th": "โครงบ้าน ชาวบ้านช่วยกันสร้างมัน",
+"zh": "屋架。村民们一起合力搭建它。",
+"ja": "いえのほねぐみ。むらの みんなが ちからを あわせて たてるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"house-frame.1": {
+"en": "Sturdy timber beams lock tightly into tall wooden posts.",
+"lo": "ຄານໄມ້ແຂງແຮງຕໍ່ເຂົ້າກັນກັບເສົາໄມ້ສູງຢ່າງແໜ້ນໜາ.",
+"th": "คานไม้แข็งแรงยึดเข้ากับเสาไม้สูงอย่างแน่นหนา",
+"zh": "结实的木梁紧紧卡在高高的木柱上。",
+"ja": "じょうぶな きの はりが たかい はしらに しっかり くみあうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"house-frame.2": {
+"en": "Khun Borom showed the people how to raise strong homes.",
+"lo": "ຂຸນບູລົມສອນໃຫ້ຄົນຮູ້ວິທີປຸກເຮືອນທີ່ແຂງແຮງ.",
+"th": "ขุนบูลมสอนให้ผู้คนรู้จักสร้างบ้านที่แข็งแรง",
+"zh": "坤布伦教导人们如何建造结实的房屋。",
+"ja": "クン・ボロムが じょうぶな いえの たてかたを おしえたんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"house-frame.3": {
+"en": "Freshly cut wood smells sweet in the village breeze.",
+"lo": "ໄມ້ທີ່ຫາກໍຕັດໃໝ່ມີກິ່ນຫອມອ່ອນໆໃນສາຍລົມ.",
+"th": "ไม้ที่เพิ่งตัดใหม่มีกลิ่นหอมอ่อนๆ ในสายลม",
+"zh": "新砍下的木材在村里的微风中散发着清香。",
+"ja": "きったばかりの きが むらの かぜに いい においを はこぶよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"house-frame.4": {
+"en": "Many hands raise a whole wooden frame in one sunny day.",
+"lo": "ຫຼາຍມືຊ່ວຍກັນຍົກໂຄງເຮືອນໄມ້ໃຫ້ແລ້ວພາຍໃນມື້ດຽວ.",
+"th": "หลายมือช่วยกันยกโครงบ้านไม้ให้เสร็จได้ในวันเดียว",
+"zh": "众人齐心，一个晴天就能架起整座木屋架。",
+"ja": "みんなで てつだえば いちにちで ほねぐみが たちあがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"iron-stick.0": {
+"en": "An iron poker. Heated in the hearth until its tip glows red.",
+"lo": "ເຫຼັກຊີ. ເຜົາໃນເຕົາໄຟຈົນປາຍແດງຮ້ອນ.",
+"th": "เหล็กแหลม เผาในเตาไฟจนปลายแดงร้อน",
+"zh": "铁棒。放在灶火里烧到尖端通红。",
+"ja": "てつのぼう。かまどの ひで さきが あかく なるまで あたためたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"iron-stick.1": {
+"en": "Sssss! The hot tip burned a smooth round opening in the gourd.",
+"lo": "ຊີ້! ປາຍຮ້ອນເຈາະເປັນຊ່ອງມົນກ້ຽງຢູ່ໝາກນ້ຳເຕົ້າ.",
+"th": "ซู่! ปลายร้อนเจาะเป็นช่องกลมเรียบที่น้ำเต้า",
+"zh": "滋滋！烧红的铁尖在葫芦上烫出了一扇光滑的圆门。",
+"ja": "じゅーっ！ あつい さきで ひょうたんに まるい あなを あけたんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"iron-stick.2": {
+"en": "Strong dark iron stays straight even in bright fire.",
+"lo": "ເຫຼັກສີເຂັ້ມແຂງແຮງຍັງຊື່ຢູ່ເຖິງຈະຢູ່ໃນກອງໄຟຮ້ອນ.",
+"th": "เหล็กสีเข้มแข็งแรงยังตรงอยู่แม้จะอยู่ในกองไฟร้อน",
+"zh": "坚硬的深色铁棒在烈火中依然笔直。",
+"ja": "かたい てつは あつい ひの なかでも まっすぐ じょうぶだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"iron-stick.3": {
+"en": "Pu Nyeu held the cool wooden grip with steady care.",
+"lo": "ປູ່ເຍີຈັບດ້າມໄມ້ທີ່ເຢັນດ້ວຍຄວາມລະມັດລະວັງ.",
+"th": "ปู่เยอจับด้ามไม้ที่เย็นด้วยความระมัดระวัง",
+"zh": "布约爷爷小心翼翼地握着凉爽的木柄。",
+"ja": "プーニョーが ていねいに きをつけて にぎったんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"iron-stick.4": {
+"en": "Always stay back from hot tools by the cooking fire.",
+"lo": "ຢູ່ຫ່າງຈາກເຄື່ອງມືຮ້ອນຂ້າງເຕົາໄຟສະເໝີເດີ້.",
+"th": "อยู่ห่างจากเครื่องมือร้อนข้างเตาไฟเสมอนะ",
+"zh": "靠近灶火的发烫工具，小朋友一定要离远一点哦。",
+"ja": "あつい どうぐには さわらないように きをつけようね。",
+"who": "narrator",
+"tag": "looks"
+},
+"jar.0": {
+"en": "A clay jar. Shaped from earth and fired until strong.",
+"lo": "ໄຫດິນ. ປັ້ນຈາກດິນໜຽວ ແລະ ເຜົາຈົນແຂງແຮງ.",
+"th": "ไหดินเผา ปั้นจากดินเหนียวและเผาจนแข็งแรง",
+"zh": "陶罐。用黏土捏成，烧制得结实耐用。",
+"ja": "つぼ。ねんどで かたちを つくって やいた じょうぶな うつわだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"jar.1": {
+"en": "Thick terracotta walls keep drinking water cool all day.",
+"lo": "ຝາດິນເຜົາໜາຊ່ວຍໃຫ້ນ້ຳດື່ມເຢັນສະບາຍຕະຫຼອດມື້.",
+"th": "ผนังดินเผาหนาช่วยให้น้ำดื่มเย็นสบายตลอดวัน",
+"zh": "厚厚的红陶壁让饮用水一整天都保持清凉。",
+"ja": "あつい つちの かべが みずを いちにちじゅう つめたく たもつよ。",
+"who": "narrator",
+"tag": "does"
+},
+"jar.2": {
+"en": "Warm reddish-brown glaze glows softly beside the steps.",
+"lo": "ຜິວສີນ້ຳຕານແດງອຸ່ນເຫຼື້ອມອ່ອນໆຢູ່ຂ້າງຂັ້ນໄດ.",
+"th": "ผิวสีน้ำตาลแดงอุ่นเปล่งประกายอ่อนๆ ข้างบันได",
+"zh": "温暖的红褐色陶面在台阶旁泛着柔光。",
+"ja": "あたたかい ちゃいろが かいだんの そばで やさしく ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"jar.3": {
+"en": "People dip a coconut ladle into the jar to wash their feet.",
+"lo": "ຄົນຕັກນ້ຳຈາກໄຫດ້ວຍກະໂປະພ້າວເພື່ອລ້າງຕີນ.",
+"th": "ผู้คนตักน้ำจากไหด้วยกระบวยมะพร้าวเพื่อล้างเท้า",
+"zh": "人们用椰壳勺从陶罐里舀水洗脚。",
+"ja": "ひしゃくで みずを くんで あしを あらったり するんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"jar.4": {
+"en": "Every Lao stilt house keeps a cool water jar by the ladder.",
+"lo": "ເຮືອນຮ້ານລາວທຸກຫຼັງມີໄຫນ້ຳເຢັນຕັ້ງໄວ້ຂ້າງຂັ້ນໄດ.",
+"th": "บ้านใต้ถุนสูงลาวทุกหลังมีไห่น้ำเย็นตั้งไว้ข้างบันได",
+"zh": "每座老挝高脚屋的梯子旁都放着清凉的水罐。",
+"ja": "ラオスの いえでは はしごの そばに みずの つぼを おくんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"knoll.0": {
+"en": "A grassy hill. Soft green moss and flowers cover the mound.",
+"lo": "ໂນນຫຍ້າ. ຫຍ້າສີຂຽວອ່ອນ ແລະ ດອກໄມ້ປົກຄຸມໂນນດິນ.",
+"th": "เนินหญ้า หญ้าสีเขียวอ่อนและดอกไม้ปกคลุมเนินดิน",
+"zh": "草坡。柔软的绿草和野花覆盖着小土丘。",
+"ja": "くさのおカ。やわらかい みどりと はなが こんもり さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"knoll.1": {
+"en": "Tiny wildflowers dot the rounded hillside with yellow and white.",
+"lo": "ດອກໄມ້ປ່ານ້ອຍໆສີເຫຼືອງ ແລະ ສີຂາວແຕ້ມຢູ່ເທິງໂນນ.",
+"th": "ดอกไม้ป่าเล็กๆ สีเหลืองและสีขาวแต้มอยู่บนเนิน",
+"zh": "黄白相间的小野花点缀在圆圆的山坡上。",
+"ja": "きいろや しろの ちいさな はなが おかに さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"knoll.2": {
+"en": "Little Lion likes to climb up the hill to look around.",
+"lo": "ສິງນ້ອຍມັກປີນຂຶ້ນໂນນຫຍ້າເພື່ອເບິ່ງອ້ອມຮອບ.",
+"th": "สิงห์น้อยชอบปีนขึ้นเนินหญ้าเพื่อมองไปรอบๆ",
+"zh": "小狮子喜欢爬上草坡四处张望。",
+"ja": "ちいさなシシが のぼって まわりを ながめるのが すきだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"knoll.3": {
+"en": "Gentle morning breezes brush across the grassy crest.",
+"lo": "ສາຍລົມຍາມເຊົ້າພັດຜ່ານຍອດໂນນຫຍ້າຄ່ອຍໆ.",
+"th": "สายลมยามเช้าพัดผ่านยอดเนินหญ้าเบาๆ",
+"zh": "柔和的晨风轻轻拂过草坡顶。",
+"ja": "あさの かぜが くさの てっぺんを やさしく なでていくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"knoll.4": {
+"en": "Warm sunlight turns the soft meadow slope bright green.",
+"lo": "ແສງແດດອຸ່ນເຮັດໃຫ້ໂນນຫຍ້າອ່ອນເປັນສີຂຽວສົດໃສ.",
+"th": "แสงแดดอุ่นทำให้เนินหญ้าอ่อนเป็นสีเขียวสดใส",
+"zh": "温暖的阳光把柔缓的草坡照得翠绿明亮。",
+"ja": "おひさまの ひかりで おかが あかるい みどりいろに みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"knot.0": {
+"en": "A gourd knot. Tap it gently to listen for voices inside!",
+"lo": "ປຸ່ມໝາກນ້ຳເຕົ້າ. ແຕະຄ່ອຍໆເພື່ອຟັງສຽງຂ້າງໃນ!",
+"th": "ปุ่มน้ำเต้า แตะเบาๆ เพื่อฟังเสียงข้างใน!",
+"zh": "葫芦结。轻轻敲一敲，听听里面的声音！",
+"ja": "ひょうたんのふし。そっと たたいて なかの こえを きいてみよう！",
+"who": "narrator",
+"tag": "what"
+},
+"knot.1": {
+"en": "Knock, knock! Someone is singing and laughing inside the shell.",
+"lo": "ກ໊ອກໆ! ມີຄົນກຳລັງຮ້ອງເພງ ແລະ ຫົວເລາະຢູ່ຂ້າງໃນເປືອກ.",
+"th": "ก๊อกๆ! มีคนกำลังร้องเพลงและหัวเราะอยู่ข้างในเปลือก",
+"zh": "咚咚！有人在葫芦壳里面唱歌和欢笑呢。",
+"ja": "とんとん！ なかで だれかが うたったり わらったり しているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"knot.2": {
+"en": "A rounded pale bump marks a thin spot on the gourd wall.",
+"lo": "ປຸ່ມມົນສີອ່ອນໝາຍເຖິງຈຸດບາງໆເທິງຜິວໝາກນ້ຳເຕົ້າ.",
+"th": "ปุ่มกลมสีอ่อนหมายถึงจุดบางๆ บนผิวเปลือกน้ำเต้า",
+"zh": "圆润的浅色凸点标记着葫芦壁上较薄的位置。",
+"ja": "まるい ぽっちが かたい かわの かわった しるしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"knot.3": {
+"en": "Pu Nyeu leaned his ear close to hear every joyful sound.",
+"lo": "ປູ່ເຍີເງ່ຍງຫູຟັງໃກ້ໆເພື່ອໄດ້ຍິນທຸກສຽງທີ່ມ່ວນຊື່ນ.",
+"th": "ปู่เยอเอียงหูฟังใกล้ๆ เพื่อได้ยินทุกเสียงที่สนุกสนาน",
+"zh": "布约爷爷把耳朵贴近，细听里面每一道欢快的声音。",
+"ja": "プーニョーが みみを あてて なかの おとを きいたんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"knot.4": {
+"en": "Soon these spots will open into doors for the whole village!",
+"lo": "ອີກບໍ່ດົນຈຸດເຫຼົ່ານີ້ຈະເປີດເປັນປະຕູໃຫ້ທັງໝູ່ບ້ານ!",
+"th": "อีกไม่นานจุดเหล่านี้จะเปิดเป็นประตูให้ทั้งหมู่บ้าน!",
+"zh": "很快这里就会打开，成为全村人走出来的门！",
+"ja": "もうすぐ ここから みんなが そとへ でてくるんだよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"lamp.0": {
+"en": "An oil lamp. A tiny flame glows warmly in the dark.",
+"lo": "ໂຄມໄຟ. ແປວໄຟນ້ອຍໆສ່ອງແສງອຸ່ນໃນຄວາມມືດ.",
+"th": "ตะเกียงน้ำมัน เปลวไฟเล็กๆ ส่องแสงอุ่นในความมืด",
+"zh": "油灯。小小的火苗在夜色中散发温暖的光芒。",
+"ja": "ランプ。くらい よるに ちいさな ひが あたたかく ともるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lamp.1": {
+"en": "The clay dish holds oil that feeds the steady wick.",
+"lo": "ຖ້ວຍດິນເຜົາໃສ່ນ້ຳມັນເພື່ອຫຼໍ່ລ້ຽງໄສ້ຕະກຽງໃຫ້ລຸກສະໝ່ຳສະເໝີ.",
+"th": "ถ้วยดินเผาใส่น้ำมันเพื่อหล่อเลี้ยงไส้ตะเกียงให้ลุกสม่ำเสมอ",
+"zh": "小陶碟盛着灯油，滋养着平稳燃烧的灯芯。",
+"ja": "つちの さらの あぶらが しんの ひを ずっと もやしつづけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lamp.2": {
+"en": "Golden light flickers softly across the village lane.",
+"lo": "ແສງສີຄຳກະພິບອ່ອນໆທົ່ວທາງຍ່າງໃນໝູ່ບ້ານ.",
+"th": "แสงสีทองกะพริบอ่อนๆ ทั่วทางเดินในหมู่บ้าน",
+"zh": "金黄的灯光在村道上柔和地摇曳。",
+"ja": "きんいろの あかりが むらみちを やさしく てらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lamp.3": {
+"en": "Tall bamboo poles lift the lamps high above the feast.",
+"lo": "ເສົາໄມ້ໄຜ່ສູງຍົກໂຄມໄຟຂຶ້ນສູງເໜືອງານລ້ຽງ.",
+"th": "เสาไม้ไผ่สูงยกตะเกียงขึ้นสูงเหนืองานเลี้ยง",
+"zh": "高高的竹竿把油灯挑在宴席上方。",
+"ja": "たかい たけの ぼうが ランプを たかく かかげているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lamp.4": {
+"en": "Even one small lamp pushes back the night shadows.",
+"lo": "ແມ່ນແຕ່ໂຄມໄຟນ້ອຍໜ່ວຍດຽວກໍໄລ່ເງົາມືດຍາມຄ່ຳຄືນໄດ້.",
+"th": "แม้แต่ตะเกียงดวงเล็กดวงเดียวก็ขับไล่เงามืดยามค่ำคืนได้",
+"zh": "哪怕只是一盏小小的油灯，也能驱散黑夜的阴影。",
+"ja": "ちいさな あかり ひとつでも くらやみを やさしく てらせるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"leaf.0": {
+"en": "A vine leaf. Broad and green in the tall canopy.",
+"lo": "ໃບໄມ້. ກວ້າງ ແລະ ສີຂຽວຢູ່ເທິງຍອດສູງ.",
+"th": "ใบไม้ กว้างและสีเขียวอยู่บนยอดสูง",
+"zh": "绿叶。在高高的藤冠上宽大翠绿。",
+"ja": "はっぱ。たかい つるの うえで おおきく ひろがる みどりの はだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"leaf.1": {
+"en": "Green leaves soak up warm sunlight to help the plant grow.",
+"lo": "ໃບໄມ້ສີຂຽວຮັບແສງແດດອຸ່ນເພື່ອຊ່ວຍໃຫ້ຕົ້ນໄມ້ເຕີບໃຫຍ່.",
+"th": "ใบไม้สีเขียวรับแสงแดดอุ่นเพื่อช่วยให้ต้นไม้เติบโต",
+"zh": "绿叶吸收温暖的阳光，帮助植物茁壮成长。",
+"ja": "おひさまの ひかりを あびて しょくぶつを げんきに そだてるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"leaf.2": {
+"en": "Gentle wind sets the leaves dancing with a soft rustle.",
+"lo": "ລົມອ່ອນໆພັດໃຫ້ໃບໄມ້ເຕັ້ນລະບຳພ້ອມສຽງຊາໆ.",
+"th": "ลมอ่อนๆ พัดให้ใบไม้เต้นระบำพร้อมเสียงซ่าๆ",
+"zh": "微风吹过，叶片随风起舞，发出沙沙轻响。",
+"ja": "かぜが ふくと さらさら おどって やさしい おとを たてるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"leaf.3": {
+"en": "Fine veins branch outward like tiny rivers across each leaf.",
+"lo": "ເສັ້ນໃບລະອຽດແຕກແໜງອອກຄືສາຍນ້ຳນ້ອຍໆເທິງໃບ.",
+"th": "เส้นใบละเอียดแตกแขนงออกเหมือนสายน้ำเล็กๆ บนใบ",
+"zh": "细细的叶脉像小河一样在叶片上舒展开来。",
+"ja": "ほそい すじが ちいさな かわみたいに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"leaf.4": {
+"en": "When a leaf flutters down, it lands softly on the meadow grass.",
+"lo": "ເມື່ອໃບໄມ້ປິວລົງມາ ມັນຕົກລົງເທິງຫຍ້າຄ່ອຍໆ.",
+"th": "เมื่อใบไม้ปลิวลงมา มันตกลงบนหญ้าเบาๆ",
+"zh": "一片树叶飘落下来，轻轻停在草地上。",
+"ja": "ひらひら おちて くさの うえに そっと のるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.0": {
+"en": "A mossy log. A fallen trunk resting quietly on the grass.",
+"lo": "ຂອນໄມ້. ລຳໄມ້ລົ້ມທີ່ນອນສະຫງົບຢູ່ເທິງພື້ນຫຍ້າ.",
+"th": "ขอนไม้ ลำไม้ล้มที่นอนสงบอยู่บนพื้นหญ้า",
+"zh": "木头。一根倒下的树干静静躺在草地上。",
+"ja": "まるた。こけの ついた きの みきが くさに やすんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"log.1": {
+"en": "Slow snails and shiny beetles crawl along the rough bark.",
+"lo": "ຫອຍທາກຊ້າໆ ແລະ ແມງກວາງເຫຼື້ອມຄານໄປຕາມເປືອກໄມ້ຫຍາບ.",
+"th": "หอยทากช้าๆ และแมลงปีกแข็งเงางามคลานไปตามเปลือกไม้หยาบ",
+"zh": "慢吞吞的蜗牛和发亮的甲虫顺着粗糙的树皮爬行。",
+"ja": "かたつむりや むしたちが ゆっくり はって いくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"log.2": {
+"en": "Soft green moss grows like velvet along its shady side.",
+"lo": "ໄຄຂຽວອ່ອນນຸ້ມເກີດຂຶ້ນຄືຜ້າກຳມະຫຍີ່ຕາມດ້ານຮົ່ມ.",
+"th": "ตะไคร่เขียวอ่อนนุ่มขึ้นเหมือนกำมะหยี่ตามด้านร่ม",
+"zh": "柔软的绿苔像天鹅绒般长在背阴的一侧。",
+"ja": "ひかげの ほうに ふわふわの こけが はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"log.3": {
+"en": "Turtles love to climb onto a sunny log beside the pond.",
+"lo": "ເຕົ່າມັກປີນຂຶ້ນຂອນໄມ້ທີ່ມີແສງແດດຂ້າງໜອງນ້ຳ.",
+"th": "เต่าชอบปีนขึ้นขอนไม้ที่มีแสงแดดข้างสระน้ำ",
+"zh": "小乌龟喜欢爬到池塘边晒太阳的木头上。",
+"ja": "かめが ひなたぼっこを するために のぼってくるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"log.4": {
+"en": "Old fallen wood slowly feeds new ferns and wildflowers.",
+"lo": "ໄມ້ເກົ່າທີ່ລົ້ມຄ່ອຍໆບຳລຸງຕົ້ນກູດ ແລະ ດອກໄມ້ປ່າໃໝ່.",
+"th": "ไม้เก่าที่ล้มค่อยๆ บำรุงต้นเฟิร์นและดอกไม้ป่าใหม่",
+"zh": "倒下的老木头慢慢滋养着新的蕨草和野花。",
+"ja": "ふるい きは あたらしい しだや おはなを そだてるんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"loom.0": {
+"en": "A weaving loom. Click-clack goes the wooden shuttle!",
+"lo": "ກີ່ຕ່ຳຫູກ. ກະສວຍໄມ້ແລ່ນໄປມາແກັກໆ!",
+"th": "กี่ทอผ้า กระสวยไม้แล่นไปมาแกร๊กๆ!",
+"zh": "织布机。木梭子咔嗒咔嗒来回穿梭！",
+"ja": "はたおりき。きの ひが かたんことん と いったりきたり するよ！",
+"who": "narrator",
+"tag": "what"
+},
+"loom.1": {
+"en": "Colourful silk threads weave together into bright Lao cloth.",
+"lo": "ເສັ້ນໄໝຫຼາກສີຕ່ຳເຂົ້າກັນເປັນຜ້າລາວສີສົດໃສ.",
+"th": "เส้นไหมหลากสีทอเข้ากันเป็นผ้าลาวสีสดใส",
+"zh": "五彩丝线交织成明丽的老挝织锦。",
+"ja": "いろとりどりの いとが きれいな ぬのに おりあがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"loom.2": {
+"en": "A tall wooden frame holds hundreds of fine threads tight.",
+"lo": "ໂຄງໄມ້ສູງຂຶງເສັ້ນໄໝນ້ອຍໆຫຼາຍຮ້ອຍເສັ້ນໃຫ້ຕຶງ.",
+"th": "โครงไม้สูงขึงเส้นไหมเล็กๆ หลายร้อยเส้นให้ตึง",
+"zh": "高高的木架把数百根细丝线拉得笔直。",
+"ja": "たかい きの わくが たくさんの いとを ぴんと はっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"loom.3": {
+"en": "Khun Borom taught the village how to weave patterns of diamond and river.",
+"lo": "ຂຸນບູລົມສອນໝູ່ບ້ານຕ່ຳລວດລາຍເພັດ ແລະ ສາຍນ້ຳ.",
+"th": "ขุนบูลมสอนหมู่บ้านทอลวดลายเพชรและสายน้ำ",
+"zh": "坤布伦教村民们织出菱形和河水般的花纹。",
+"ja": "クン・ボロムが うつくしい もようの おりかたを おしえたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"loom.4": {
+"en": "In Laos, hand-woven silk skirts tell stories in their patterns.",
+"lo": "ໃນລາວ ສິ້ນໄໝຕ່ຳມືເລົ່າເລື່ອງລາວຜ່ານລວດລາຍຂອງມັນ.",
+"th": "ในลาว ผ้าซิ่นไหมทอมือเล่าเรื่องราวผ่านลวดลายของมัน",
+"zh": "在老挝，手工丝绸筒裙的花纹里藏着动人的故事。",
+"ja": "ラオスの ておりの もようには むかしの おはなしが こめられているよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"lotus.0": {
+"en": "A lotus flower. Soft pink petals open above the pond.",
+"lo": "ດອກບົວ. ກີບສີບົວອ່ອນບານຢູ່ເໜືອໜອງນ້ຳ.",
+"th": "ดอกบัว กลีบสีชมพูอ่อนบานอยู่เหนือสระน้ำ",
+"zh": "莲花。柔粉色的花瓣在池塘上空绽放。",
+"ja": "はすのはな。やさしい ピンクの はなびらが いけの うえで ひらくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lotus.1": {
+"en": "Each morning the lotus opens wide to greet the warm sun.",
+"lo": "ທຸກເຊົ້າດອກບົວບານກວ້າງເພື່ອຕ້ອນຮັບແສງແດດອຸ່ນ.",
+"th": "ทุกเช้าดอกบัวบานกว้างเพื่อต้อนรับแสงแดดอุ่น",
+"zh": "每天清晨莲花大大舒展，迎接温暖的阳光。",
+"ja": "まいあさ あたたかい たいように むかって ぱっと ひらくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lotus.2": {
+"en": "Round green leaves shed sparkling drops of water like pearls.",
+"lo": "ໃບສີຂຽວມົນກິ້ງຢົດນ້ຳເຫຼື້ອມໆຄືໄຂ່ມຸກ.",
+"th": "ใบสีเขียวกลมกลิ้งหยดน้ำระยิบระยับเหมือนไข่มุก",
+"zh": "圆圆的绿叶上滚落着珍珠般闪亮的水珠。",
+"ja": "まるい はっぱの うえを みずたまが ころころ ころがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lotus.3": {
+"en": "Pink blossoms rise clean and bright from muddy pond roots.",
+"lo": "ດອກສີບົວງາມສະອາດສົດໃສເກີດຂຶ້ນຈາກຮາກໃນຕົມ.",
+"th": "ดอกสีชมพูงามสะอาดสดใสเติบโตขึ้นจากรากในโคลน",
+"zh": "粉红的花朵从池底的淤泥里生出，却洁净明亮。",
+"ja": "どろの なかから こんなに きれいに さくんだね。",
+"who": "narrator",
+"tag": "looks"
+},
+"lotus.4": {
+"en": "The lotus is a treasured flower of peace across Laos.",
+"lo": "ດອກບົວແມ່ນດອກໄມ້ແຫ່ງຄວາມສະຫງົບອັນລ້ຳຄ່າທົ່ວລາວ.",
+"th": "ดอกบัวเป็นดอกไม้แห่งความสงบอันล้ำค่าทั่วลาว",
+"zh": "莲花是老挝处处珍视的和平之花。",
+"ja": "ラオスでは へいわを あらわす たいせつな おはなだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"mallet.0": {
+"en": "A wooden axe. Chop, chop, chop against the thick dark vine!",
+"lo": "ຂວານໄມ້. ຟັນ, ຟັນ, ຟັນ ໃສ່ເຄືອໄມ້ມືດໜາ!",
+"th": "ขวาน ฟัน ฟัน ฟัน ใส่เถาวัลย์มืดหนา!",
+"zh": "木斧。砍、砍、砍，劈向粗壮的黑藤！",
+"ja": "おの。こん、こん、こん と ふとい つるに ふりおろすよ！",
+"who": "narrator",
+"tag": "what"
+},
+"mallet.1": {
+"en": "Pu Nyeu and Nya Nyeu swung steadily side by side.",
+"lo": "ປູ່ເຍີ ແລະ ຍ່າເຍີຟັນຄຽງຂ້າງກັນຢ່າງໝັ້ນຄົງ.",
+"th": "ปู่เยอและย่าเยอฟันเคียงข้างกันอย่างมั่นคง",
+"zh": "布约爷爷和雅约奶奶并肩稳稳地挥舞着它。",
+"ja": "プーニョーと ヤーニョーが ならんで いっしょうけんめい ふったんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"mallet.2": {
+"en": "Warm polished wood fits neatly into brave hands.",
+"lo": "ໄມ້ຂັດມັນອຸ່ນໆພໍດີກັບມືທີ່ກ້າຫານ.",
+"th": "ไม้ขัดมันอุ่นๆ พอดีกับมือที่กล้าหาญ",
+"zh": "温润光滑的木柄正好握在勇敢的掌心里。",
+"ja": "みがかれた きの えが ゆうかんな てに しっかり おさまるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mallet.3": {
+"en": "Every steady swing brings the bright morning sun closer.",
+"lo": "ທຸກຄັ້ງທີ່ຟັນຢ່າງໝັ້ນຄົງ ແສງແດດຍາມເຊົ້າກໍໃກ້ເຂົ້າມາ.",
+"th": "ทุกครั้งที่ฟันอย่างมั่นคง แสงแดดยามเช้าก็ใกล้เข้ามา",
+"zh": "每一次稳健的挥砍，都让明媚的朝阳更近一步。",
+"ja": "ひとふりごとに あかるい あさひが ちかづいて くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mallet.4": {
+"en": "Working together turns even the hardest job into hope.",
+"lo": "ການຊ່ວຍກັນເຮັດວຽກປ່ຽນແມ່ນແຕ່ວຽກຍາກທີ່ສຸດໃຫ້ເປັນຄວາມຫວັງ.",
+"th": "การช่วยกันทำงานเปลี่ยนแม้แต่งานยากที่สุดให้เป็นความหวัง",
+"zh": "齐心协力能让最艰难的工作也变成希望。",
+"ja": "みんなで ちからを あわせれば たいへんな しごとも のりこえられるね。",
+"who": "narrator",
+"tag": "culture"
+},
+"mango-tree.0": {
+"en": "A mango tree. Its leafy crown gives cool shade.",
+"lo": "ຕົ້ນໝາກມ່ວງ. ຍອດໃບດົກໃຫ້ຮົ່ມເຢັນ.",
+"th": "ต้นมะม่วง เรือนยอดใบดกให้ร่มเงาเย็นสบาย",
+"zh": "芒果树。它茂密的树冠带来凉爽的树荫。",
+"ja": "マンゴーのき。しげった はっぱが すずしい こかげを つくるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"mango-tree.1": {
+"en": "Sweet golden mangoes hang beneath the green leaves.",
+"lo": "ໝາກມ່ວງສຸກຫວານຫ້ອຍຢູ່ໃຕ້ໃບໄມ້ສີຂຽວ.",
+"th": "มะม่วงสุกหวานห้อยอยู่ใต้ใบไม้สีเขียว",
+"zh": "香甜的金黄芒果挂在绿叶下面。",
+"ja": "あまい マンゴーが みどりの はっぱの したに ぶらさがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mango-tree.2": {
+"en": "Strong roots grip the earth beside the village lane.",
+"lo": "ຮາກໄມ້ແຂງແຮງຢັ່ງເລິກລົງດິນຂ້າງທາງໝູ່ບ້ານ.",
+"th": "รากไม้แข็งแรงหยั่งลึกลงดินข้างทางหมู่บ้าน",
+"zh": "粗壮的树根紧紧抓着村道旁的泥土。",
+"ja": "ふとい ねっこが むらみちの じめんを しっかり つかんでいるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mango-tree.3": {
+"en": "Birds and squirrels rest high in its spreading branches.",
+"lo": "ນົກ ແລະ ກະຮອກພັກຜ່ອນຢູ່ສູງເທິງກິ່ງໄມ້ທີ່ແຜ່ກວ້າງ.",
+"th": "นกและกระรอกพักผ่อนอยู่สูงบนกิ่งไม้ที่แผ่กว้าง",
+"zh": "小鸟和松鼠在高高的树枝间歇息。",
+"ja": "ことりや リスが ひろい えだの うえで やすむんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mango-tree.4": {
+"en": "People gather under the mango tree to talk and share stories.",
+"lo": "ຄົນມາເຕົ້າໂຮມກັນໃຕ້ຕົ້ນໝາກມ່ວງເພື່ອລົມກັນ ແລະ ເລົ່ານິທານ.",
+"th": "ผู้คนมารวมตัวกันใต้ต้นมะม่วงเพื่อพูดคุยและเล่านิทาน",
+"zh": "人们喜欢聚在芒果树下聊天、讲故事。",
+"ja": "みんなが きの したに あつまって おはなしを するんだ。",
+"who": "narrator",
+"tag": "culture"
+},
+"moon.0": {
+"en": "The silver moon. It shines softly above the night valley.",
+"lo": "ດວງຈັນ. ມັນສ່ອງແສງອ່ອນໆເໜືອຮ່ອມພູຍາມຄ່ຳຄືນ.",
+"th": "ดวงจันทร์ มันส่องแสงอ่อนๆ เหนือหุบเขายามค่ำคืน",
+"zh": "月亮。它在夜晚的山谷上空温柔地照耀。",
+"ja": "おつきさま。よるの たにの うえで やさしく ひかっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"moon.1": {
+"en": "Pale moonlight guides brave travellers through the dark.",
+"lo": "ແສງຈັນອ່ອນໆນຳທາງຜູ້ເດີນທາງທີ່ກ້າຫານຜ່ານຄວາມມືດ.",
+"th": "แสงจันทร์อ่อนๆ นำทางผู้เดินทางที่กล้าหาญผ่านความมืด",
+"zh": "柔和的月光指引着勇敢的旅人穿过黑夜。",
+"ja": "やさしい つきあかりが くらい みちを てらしてくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"moon.2": {
+"en": "Soft silver beams shimmer across the quiet pond.",
+"lo": "ແສງສີເງິນອ່ອນໆສະທ້ອນເຫຼື້ອມເທິງໜອງນ້ຳທີ່ສະຫງົບ.",
+"th": "แสงสีเงินอ่อนๆ สะท้อนระยิบระยับบนสระน้ำที่สงบ",
+"zh": "银色的月光在宁静的池塘水面上轻轻荡漾。",
+"ja": "ぎんいろの ひかりが しずかな いけの みずに きらきら うつるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"moon.3": {
+"en": "Night after night, the moon slowly changes its rounded shape.",
+"lo": "ຄືນແລ້ວຄືນເລົ່າ ດວງຈັນຄ່ອຍໆປ່ຽນຮູບຮ່າງມົນຂອງມັນ.",
+"th": "คืนแล้วคืนเล่า ดวงจันทร์ค่อยๆ เปลี่ยนรูปร่างกลมของมัน",
+"zh": "一夜又一夜，月亮慢慢变换着圆满的模样。",
+"ja": "まいばん すこしずつ まるい かたちを かえていくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"moon.4": {
+"en": "In Laos, bright full-moon nights are special times for festivals.",
+"lo": "ໃນລາວ ຄືນເພັງດວງຈັນເຕັມດວງແມ່ນເວລາພິເສດຂອງງານບຸນ.",
+"th": "ในลาว คืนวันเพ็ญดวงจันทร์เต็มดวงเป็นเวลาพิเศษของงานบุญ",
+"zh": "在老挝，明亮的满月之夜是举办节庆的美好时光。",
+"ja": "ラオスでは まんげつの よるに すてきな おまつりが ひらかれるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"moth.0": {
+"en": "A night moth. Soft dusty wings circle the warm lantern glow.",
+"lo": "ແມງກະເບື້ອກາງຄືນ. ປີກອ່ອນນຸ້ມບິນວົນອ້ອມແສງໂຄມໄຟອຸ່ນ.",
+"th": "ผีเสื้อกลางคืน ปีกอ่อนนุ่มบินวนรอบแสงตะเกียงอุ่น",
+"zh": "夜蛾。毛茸茸的翅膀绕着温暖的灯光盘旋。",
+"ja": "よるのが。やわらかい はねで ランプの あかりの まわりを とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"moth.1": {
+"en": "Moths wake up after sunset and guide themselves by moonlight.",
+"lo": "ແມງກະເບື້ອກາງຄືນຕື່ນຫຼັງຕາເວັນຕົກ ແລະ ບິນຕາມແສງຈັນ.",
+"th": "ผีเสื้อกลางคืนตื่นหลังพระอาทิตย์ตกและบินตามแสงจันทร์",
+"zh": "夜蛾在日落后醒来，依靠月光辨认方向。",
+"ja": "ひが しずむと おきて つきあかりを たよりに とぶんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"moth.2": {
+"en": "Feathery antennae sense flower scents drifting in the dark.",
+"lo": "ໜວດຄ້າຍຂົນນົກຮັບກິ່ນດອກໄມ້ທີ່ລອຍມາໃນຄວາມມືດ.",
+"th": "หนวดคล้ายขนนกรับกลิ่นดอกไม้ที่ลอยมาในความมืด",
+"zh": "羽毛般的触角能在夜色中闻到飘来的花香。",
+"ja": "ふさふさの しょっかくで よるの はなの かおりを さがすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"moth.3": {
+"en": "Velvety cream and gold patterns decorate its gentle wings.",
+"lo": "ລວດລາຍສີນວນ ແລະ ສີຄຳນຸ້ມປະດັບປີກທີ່ອ່ອນໂຍນ.",
+"th": "ลวดลายสีนวลและสีทองนุ่มประดับปีกที่อ่อนโยน",
+"zh": "奶油色和金色的绒毛花纹点缀着柔和的翅膀。",
+"ja": "クリームいろと きんいろの やさしい もようが きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"moth.4": {
+"en": "Quiet moths flutter silently over the sleeping garden.",
+"lo": "ແມງກະເບື້ອກາງຄືນບິນຢ່າງງຽບໆເໜືອສວນທີ່ກຳລັງຫຼັບ.",
+"th": "ผีเสื้อกลางคืนบินอย่างเงียบๆ เหนือสวนที่กำลังหลับ",
+"zh": "安静的夜蛾在沉睡的园子上空无声飞舞。",
+"ja": "ねむる おにわの うえを おとも たてずに ふわふわ とぶんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"mound.0": {
+"en": "An earth mound. Soft soil piled gently in the yard.",
+"lo": "ໂພນດິນ. ດິນອ່ອນກອງສູງຂຶ້ນຄ່ອຍໆໃນເດີ່ນ.",
+"th": "เนินดิน ดินอ่อนกองสูงขึ้นเบาๆ ในลาน",
+"zh": "土丘。松软的泥土在院子里轻轻隆起。",
+"ja": "つちやま。おにわに やわらかい つちが こんもり もりあがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"mound.1": {
+"en": "New green sprouts peek out from the warm earth.",
+"lo": "ໜໍ່ໄມ້ສີຂຽວໃໝ່ໂຜ່ອອກມາຈາກພື້ນດິນອຸ່ນ.",
+"th": "หน่อไม้สีเขียวใหม่โผล่ออกมาจากพื้นดินอุ่น",
+"zh": "嫩绿的新芽从温暖的泥土里探出头来。",
+"ja": "あたたかい つちから あたらしい みどりの めが のぞくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mound.2": {
+"en": "The mound marks the quiet resting spot in the grass.",
+"lo": "ໂພນດິນໝາຍບ່ອນພັກຜ່ອນອັນສະຫງົບເທິງພື້ນຫຍ້າ.",
+"th": "เนินดินหมายจุดพักผ่อนอันสงบบนพื้นหญ้า",
+"zh": "土丘静静标记着草地上安宁的角落。",
+"ja": "くさむらの なかの しずかな ばしょを しらせているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mound.3": {
+"en": "Soft rain patters gently on the rounded earth.",
+"lo": "ຝົນອ່ອນໆຕົກກະທົບໂພນດິນມົນໆຄ່ອຍໆ.",
+"th": "ฝนอ่อนๆ ตกกระทบเนินดินกลมๆ เบาๆ",
+"zh": "细雨轻轻敲打在圆圆的土丘上。",
+"ja": "やさしい あめが まるい つちの うえに ぽつぽつ ふるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mound.4": {
+"en": "Little wildflowers soon bloom around the mossy rim.",
+"lo": "ອີກບໍ່ດົນດອກໄມ້ປ່ານ້ອຍໆກໍບານອ້ອມຂອບໂພນ.",
+"th": "อีกไม่นานดอกไม้ป่าเล็กๆ ก็บานรอบขอบเนิน",
+"zh": "很快小野花就在长满青苔的土丘边缘绽放。",
+"ja": "まわりには ちいさな のばなが きれいに さくんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mud.0": {
+"en": "A mud patch. Soft brown soil ready for rice seeds.",
+"lo": "ຂີ້ຕົມ. ດິນອ່ອນສີນ້ຳຕານພ້ອມສຳລັບຫວ່ານເມັດເຂົ້າ.",
+"th": "โคลน ดินอ่อนสีน้ำตาลพร้อมสำหรับหว่านเมล็ดข้าว",
+"zh": "泥地。松软的褐色泥土正适合播下稻种。",
+"ja": "どろ。おこめの たねを まくための やわらかい つちだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"mud.1": {
+"en": "Cool rainwater softens the earth into rich wet mud.",
+"lo": "ນ້ຳຝົນເຢັນໆເຮັດໃຫ້ດິນອ່ອນນຸ້ມກາຍເປັນຂີ້ຕົມທີ່ອຸດົມສົມບູນ.",
+"th": "น้ำฝนเย็นๆ ทำให้ดินอ่อนนุ่มกลายเป็นโคลนที่อุดมสมบูรณ์",
+"zh": "凉爽的雨水把泥土泡软，变成肥沃的湿泥。",
+"ja": "あめみずが つちを やわらかく うるおしてくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"mud.2": {
+"en": "Water buffaloes love to splash and cool off in the mud.",
+"lo": "ຄວາຍມັກລົງນອນແຊ່ຂີ້ຕົມເພື່ອຄາຍຮ້ອນ.",
+"th": "ควายชอบลงนอนแช่โคลนเพื่อคลายร้อน",
+"zh": "水牛最喜欢在泥巴里打滚乘凉。",
+"ja": "すいぎゅうは どろで すずむのが だいすきなんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"mud.3": {
+"en": "Deep wet furrows shine softly in the morning light.",
+"lo": "ຮ່ອງຂີ້ຕົມຊຸ່ມເຫຼື້ອມອ່ອນໆໃນແສງແດດຍາມເຊົ້າ.",
+"th": "ร่องโคลนชุ่มเปล่งประกายอ่อนๆ ในแสงแดดยามเช้า",
+"zh": "湿润的泥垄在晨光里泛着柔和的光泽。",
+"ja": "しめった みぞが あさひを やさしく うつしているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"mud.4": {
+"en": "Rich valley soil feeds the village season after season.",
+"lo": "ດິນຮ່ອມພູທີ່ອຸດົມສົມບູນລ້ຽງດູໝູ່ບ້ານລະດູແລ້ວລະດູເລົ່າ.",
+"th": "ดินหุบเขาที่อุดมสมบูรณ์เลี้ยงดูหมู่บ้านฤดูแล้วฤดูเล่า",
+"zh": "肥沃的山谷泥土一季又一季地养育着村庄。",
+"ja": "ゆたかな たにの つちが まいとし むらを そだてるんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"palm.0": {
+"en": "A palm tree. Its tall trunk reaches for the sky.",
+"lo": "ຕົ້ນພ້າວ. ລຳຕົ້ນສູງຢຽດຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "ต้นมะพร้าว ลำต้นสูงชะลูดขึ้นสู่ท้องฟ้า",
+"zh": "棕榈树。它高高的树干伸向天空。",
+"ja": "ヤシのき。たかい みきが そらへ のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"palm.1": {
+"en": "Long feathery fronds sway gently when the wind blows.",
+"lo": "ໃບພ້າວຍາວໆແກວ່ງໄກວຄ່ອຍໆເວລາລົມພັດ.",
+"th": "ใบมะพร้าวยาวๆ แกว่งไกวเบาๆ เวลาลมพัด",
+"zh": "细长如羽的棕榈叶随风轻轻摇曳。",
+"ja": "ながい はっぱが かぜに ゆらゆら ゆれるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"palm.2": {
+"en": "Coconuts grow in heavy clusters high under the leaves.",
+"lo": "ໝາກພ້າວອອກເປັນທະລາຍສູງຢູ່ໃຕ້ໃບ.",
+"th": "มะพร้าวออกผลเป็นทะลายสูงอยู่ใต้ใบ",
+"zh": "椰子一串串长在叶片高高的下方。",
+"ja": "はっぱの したに ヤシのみが たわわに なるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"palm.3": {
+"en": "Tall palms frame the edge of the Lao valley.",
+"lo": "ຕົ້ນພ້າວສູງຕັ້ງລຽງລາຍຢູ່ແຄມຮ່ອມພູລາວ.",
+"th": "ต้นมะพร้าวสูงตั้งเรียงรายอยู่ริมหุบเขาลาว",
+"zh": "高大的棕榈树点缀着老挝山谷的边缘。",
+"ja": "たかい ヤシが たにの はしを きれいに かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"palm.4": {
+"en": "People drink cool coconut water on warm sunny afternoons.",
+"lo": "ຄົນດື່ມນ້ຳໝາກພ້າວເຢັນໆໃນຕອນບ່າຍທີ່ແດດອຸ່ນ.",
+"th": "ผู้คนดื่มน้ำมะพร้าวเย็นๆ ในตอนบ่ายที่แดดอุ่น",
+"zh": "人们在温暖的午后喝着清凉的椰子水。",
+"ja": "あつい ごごに つめたい ヤシのみジュースを のむんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"peep.0": {
+"en": "A tiny face. Peeking eagerly out of the great gourd!",
+"lo": "ໃບໜ້ານ້ອຍ. ແນມອອກມາຈາກໝາກນ້ຳເຕົ້າໃຫຍ່ຢ່າງຕື່ນເຕັ້ນ!",
+"th": "ใบหน้าน้อย แอบมองออกมาจากน้ำเต้ายักษ์อย่างตื่นเต้น!",
+"zh": "小脸蛋。正满怀期待地从大葫芦里探出来！",
+"ja": "ちいさなかお。おおきな ひょうたんから うれしそうに のぞいているよ！",
+"who": "narrator",
+"tag": "what"
+},
+"peep.1": {
+"en": "People inside waited for bright morning sunlight to shine in.",
+"lo": "ຜູ້ຄົນຂ້າງໃນລໍຖ້າແສງແດດຍາມເຊົ້າສ່ອງເຂົ້າໄປ.",
+"th": "ผู้คนข้างในรอคอยแสงแดดยามเช้าส่องเข้าไป",
+"zh": "葫芦里的人们一直盼望着明媚的晨光照进来。",
+"ja": "なかの ひとたちは あかるい あさひが さすのを まっていたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"peep.2": {
+"en": "Curious eyes blink as the fresh valley air greets them.",
+"lo": "ຕາທີ່ຢາກຮູ້ຢາກເຫັນກະພິບເມື່ອອາກາດສົດຊື່ນທັກທາຍພວກເຂົາ.",
+"th": "ตาที่อยากรู้อยากเห็นกะพริบเมื่ออากาศสดชื่นทักทายพวกเขา",
+"zh": "新鲜的山谷空气扑面而来，好奇的眼睛眨了又眨。",
+"ja": "しんせんな たにの かぜに であえて めを パチパチ させているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"peep.3": {
+"en": "Warm smiles appear one after another at the doorway.",
+"lo": "ຮອຍຍິ້ມອົບອຸ່ນປາກົດຂຶ້ນຕໍ່ເນື່ອງກັນຢູ່ໜ້າປະຕູ.",
+"th": "รอยยิ้มอบอุ่นปรากฏขึ้นต่อเนื่องกันที่หน้าประตู",
+"zh": "一张张温暖的笑脸接连出现在门口。",
+"ja": "あたたかい えがおが つぎつぎと とびらから あらわれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"peep.4": {
+"en": "Welcome to the wide green world, new neighbours!",
+"lo": "ຍິນດີຕ້ອນຮັບສູ່ໂລກສີຂຽວກວ້າງໃຫຍ່ເດີ້!",
+"th": "ยินดีต้อนรับสู่โลกสีเขียวกว้างใหญ่นะ!",
+"zh": "欢迎来到这片辽阔翠绿的新世界！",
+"ja": "ひろい みどりの せかいへ ようこそ！",
+"who": "narrator",
+"tag": "does"
+},
+"pig.0": {
+"en": "A little pig. Oink, oink! Snuffling happily through the grass.",
+"lo": "ໝູນ້ອຍ. ອູດໆ! ດົມຫາອາຫານຢ່າງມ່ວນຊື່ນໃນກໍຫຍ້າ.",
+"th": "หมูน้อย อู๊ดๆ! ดมหาอาหารอย่างสนุกสนานในกอหญ้า",
+"zh": "小猪。哼哼！欢快地在草丛里拱来拱去。",
+"ja": "こぶた。ぶーぶー！ くさむらで うれしそうに はなを ならしているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"pig.1": {
+"en": "Pigs use their strong flat snouts to root for tasty treats.",
+"lo": "ໝູໃຊ້ດັງແປໆທີ່ແຂງແຮງຂຸດຫາຂອງກິນແຊບໆ.",
+"th": "หมูใช้จมูกแบนๆ ที่แข็งแรงขุดหาของกินอร่อยๆ",
+"zh": "小猪用结实扁平的鼻子拱土寻找美味。",
+"ja": "じょうぶな はなで つちを ほって おいしい ものを さがすんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"pig.2": {
+"en": "Its little curly tail wiggles whenever it trots across the yard.",
+"lo": "ຫາງຂົດນ້ອຍໆກະດິກໄປມາເວລາມັນແລ່ນຂ້າມເດີ່ນ.",
+"th": "หางขดเล็กๆ กระดิกไปมาเวลามันวิ่งข้ามลาน",
+"zh": "它在院子里小跑时，卷卷的小尾巴一扭一扭的。",
+"ja": "はしると くるんと した しっぽが ぷりぷり ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pig.3": {
+"en": "Cool mud baths keep pigs comfortable on hot sunny days.",
+"lo": "ການນອນແຊ່ຂີ້ຕົມເຢັນໆຊ່ວຍໃຫ້ໝູສະບາຍໂຕໃນມື້ແດດຮ້ອນ.",
+"th": "การนอนแช่โคลนเย็นๆ ช่วยให้หมูสบายตัวในวันแดดร้อน",
+"zh": "炎热的晴天里，洗个凉爽的泥浴让小猪特别舒服。",
+"ja": "あつい ひは つめたい どろあそびが だいの おきにいりなんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"pig.4": {
+"en": "In the story, pigs came tumbling right out of the great gourd!",
+"lo": "ໃນນິທານ ໝູກໍອອກມາຈາກໝາກນ້ຳເຕົ້າໃຫຍ່ເຊັ່ນກັນ!",
+"th": "ในนิทาน หมูก็ออกมาจากน้ำเต้ายักษ์เช่นกัน!",
+"zh": "故事里，小猪们也是跟着人们一起从大葫芦里跑出来的！",
+"ja": "おはなしでは ぶたも ひょうたんから とびだしてきたんだよ！",
+"who": "narrator",
+"tag": "culture"
+},
+"plough.0": {
+"en": "A wooden plough. It turns the soft earth for planting rice.",
+"lo": "ໄຖນາ. ມັນພວນດິນອ່ອນເພື່ອປູກເຂົ້າ.",
+"th": "ไถนา มันพลิกดินอ่อนเพื่อปลูกข้าว",
+"zh": "木犁。它翻松泥土，准备插秧种稻。",
+"ja": "きのすき。おこめを うえるために つちを たがやすんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"plough.1": {
+"en": "The strong water buffalo pulls the plough across the field.",
+"lo": "ຄວາຍທີ່ແຂງແຮງລາກໄຖນາຂ້າມທົ່ງນາ.",
+"th": "ควายที่แข็งแรงลากไถนาข้ามทุ่งนา",
+"zh": "强壮的水牛拉着木犁走过田野。",
+"ja": "ちからもちの すいぎゅうが たんぼで ひっぱるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"plough.2": {
+"en": "Curved hardwood handles fit comfortably in Pu Nyeu's hands.",
+"lo": "ຄັນໄຖໄມ້ແຂງໂຄ້ງພໍດີກັບມືຂອງປູ່ເຍີ.",
+"th": "คันไถไม้แข็งโค้งพอดีกับมือของปู่เยอ",
+"zh": "弯曲的硬木扶手正好贴合布约爷爷的双手。",
+"ja": "まがった きの えは プーニョーの てに ぴったり なじむよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"plough.3": {
+"en": "Neatly turned furrows hold rainwater for young rice shoots.",
+"lo": "ຮ່ອງດິນທີ່ໄຖຢ່າງຮຽບຮ້ອຍກັກເກັບນ້ຳຝົນໃຫ້ຕົ້ນກ້າອ່ອນ.",
+"th": "ร่องดินที่ไถอย่างเรียบร้อยกักเก็บน้ำฝนให้ต้นกล้าอ่อน",
+"zh": "翻得整整齐齐的田垄为嫩稻秧蓄住雨水。",
+"ja": "たがやした みぞに あめみずが たまって なえを そだてるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"plough.4": {
+"en": "Wooden ploughs helped Lao farmers feed whole villages for ages.",
+"lo": "ໄຖໄມ້ຊ່ວຍຊາວນາລາວລ້ຽງດູທັງໝູ່ບ້ານມາຫຼາຍຊົ່ວອາຍຸຄົນ.",
+"th": "ไถไม้ช่วยชาวนาลาวเลี้ยงดูทั้งหมู่บ้านมาหลายชั่วอายุคน",
+"zh": "木犁世世代代帮助老挝农夫养活了整个村庄。",
+"ja": "むかしから ラオスの むらの ひとびとの くらしを ささえてきたよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"pot.0": {
+"en": "A cooking pot. Round clay pots rest near the village hearth.",
+"lo": "ໝໍ້ດິນ. ໝໍ້ດິນເຜົາມົນໆວາງຢູ່ໃກ້ເຕົາໄຟໝູ່ບ້ານ.",
+"th": "หม้อดิน หม้อดินเผากลมๆ วางอยู่ใกล้เตาไฟหมู่บ้าน",
+"zh": "砂锅。圆滚滚的陶锅放在村里的灶台旁。",
+"ja": "どなべ。まるい つちの なべが かまどの そばに ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"pot.1": {
+"en": "Slow heat inside clay pots makes stews rich and fragrant.",
+"lo": "ຄວາມຮ້ອນອ່ອນໆໃນໝໍ້ດິນເຮັດໃຫ້ແກງຫອມ ແລະ ແຊບ.",
+"th": "ความร้อนอ่อนๆ ในหม้อดินทำให้แกงหอมและอร่อย",
+"zh": "砂锅里温和的火力把汤炖得香浓美味。",
+"ja": "つちの なべで じっくり にると おいしい にものが できるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pot.2": {
+"en": "Rounded clay handles make the pot easy to lift.",
+"lo": "ຫູໝໍ້ດິນມົນໆຊ່ວຍໃຫ້ຍົກໝໍ້ໄດ້ງ່າຍ.",
+"th": "หูหม้อดินกลมๆ ช่วยให้ยกหม้อได้ง่าย",
+"zh": "圆润的陶耳让端锅变得更加顺手。",
+"ja": "まるい とってが ついていて もちやすいんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"pot.3": {
+"en": "Potters spin smooth wet clay to shape every curve.",
+"lo": "ຊ່າງປັ້ນໝຸນດິນໜຽວອ່ອນເພື່ອປັ້ນສ່ວນໂຄ້ງທຸກສ່ວນ.",
+"th": "ช่างปั้นหมุนดินเหนียวอ่อนเพื่อปั้นส่วนโค้งทุกส่วน",
+"zh": "陶匠转动湿润的黏土，拉出光滑的弧线。",
+"ja": "しょくにんさんが ねんどを まわして きれいに つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"pot.4": {
+"en": "Clay pots have cooked Lao village feasts for generations.",
+"lo": "ໝໍ້ດິນໄດ້ແຕ່ງອາຫານງານລ້ຽງໝູ່ບ້ານລາວມາຫຼາຍຮຸ່ນຄົນ.",
+"th": "หม้อดินได้ปรุงอาหารงานเลี้ยงหมู่บ้านลาวมาหลายชั่วอายุคน",
+"zh": "砂锅世世代代为老挝村庄烹煮着节日的盛宴。",
+"ja": "むかしから おまつりの ごちそうを つくってきた なべだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"reeds.0": {
+"en": "Water reeds. Slender green stalks grow along the pond edge.",
+"lo": "ຕົ້ນອໍ້. ລຳຕົ້ນສີຂຽວຮຽວຍາວເກີດຕາມຂອບໜອງ.",
+"th": "ต้นอ้อ ลำต้นสีเขียวเรียวยาวขึ้นตามขอบสระ",
+"zh": "芦苇。纤细修长的绿茎长在池塘边。",
+"ja": "あし。ほそい みどりの くきが みずべに すっと そだっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"reeds.1": {
+"en": "Soft rushes whisper and bend when the breeze sweeps past.",
+"lo": "ຕົ້ນອໍ້ອ່ອນຊິມຊາ ແລະ ໂອນເອນເມື່ອລົມພັດຜ່ານ.",
+"th": "ต้นอ้ออ่อนส่งเสียงซ่าและโอนเอนเมื่อลมพัดผ่าน",
+"zh": "微风拂过时，柔软的芦苇沙沙低语、随风摇曳。",
+"ja": "かぜが ふくと さわさわ やさしく ゆれて うたうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"reeds.2": {
+"en": "Dragonflies love to perch on the tallest reed tips.",
+"lo": "ແມງປໍມັກຈັບຢູ່ປາຍຕົ້ນອໍ້ທີ່ສູງທີ່ສຸດ.",
+"th": "แมลงปอชอบเกาะอยู่บนปลายต้นอ้อที่สูงที่สุด",
+"zh": "蜻蜓最喜欢停在最高那根芦苇尖上。",
+"ja": "トンボが いちばん たかい さきっぽに とまるのが すきなんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"reeds.3": {
+"en": "Fuzzy brown cattails stand upright among the narrow blades.",
+"lo": "ດອກທູບລືສີສີນ້ຳຕານຕັ້ງຊື່ທ່າມກາງໃບຮຽວຍາວ.",
+"th": "ดอกธูปฤาษีสีน้ำตาลตั้งตรงท่ามกลางใบเรียวยาว",
+"zh": "毛茸茸的棕色香蒲笔直地立在细叶中间。",
+"ja": "ちゃいろい ほが ほそい はっぱの あいだに まっすぐ たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"reeds.4": {
+"en": "Tiny frogs hide safely inside the shady reed clump.",
+"lo": "ກົບນ້ອຍລີ້ຊ່ອນຢ່າງປອດໄພຢູ່ໃນກໍອໍ້ທີ່ຮົ່ມເຢັນ.",
+"th": "กบน้อยซ่อนตัวอย่างปลอดภัยอยู่ในกออ้อที่ร่มเย็น",
+"zh": "小青蛙安安全全地躲在阴凉的芦苇丛里。",
+"ja": "ちいさな かえるが すずしい かげに かくれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rice.0": {
+"en": "Rice shoots. Fresh green blades sprout from the dark earth.",
+"lo": "ຕົ້ນກ້າ. ໃບສີຂຽວສົດງອກຂຶ້ນຈາກດິນສີເຂັ້ມ.",
+"th": "ต้นกล้าข้าว ใบสีเขียวสดงอกขึ้นจากดินสีเข้ม",
+"zh": "稻秧。嫩绿的芽叶从深色泥土里冒出来。",
+"ja": "いねのなえ。やわらかい つちから みどりの めが でたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rice.1": {
+"en": "Warm sun and gentle rain help the young rice grow tall.",
+"lo": "ແສງແດດອຸ່ນ ແລະ ຝົນອ່ອນໆຊ່ວຍໃຫ້ຕົ້ນເຂົ້າໃຫຍ່ສູງ.",
+"th": "แสงแดดอุ่นและฝนอ่อนๆ ช่วยให้ต้นข้าวโตสูง",
+"zh": "温暖的阳光和细雨帮助嫩稻秧长高。",
+"ja": "あたたかい ひざしと あめで すくすく たかく そだつよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rice.2": {
+"en": "Soon the green stalks will turn into golden grain.",
+"lo": "ອີກບໍ່ດົນຕົ້ນສີຂຽວຈະປ່ຽນເປັນຮວງເຂົ້າສີຄຳ.",
+"th": "อีกไม่นานต้นสีเขียวจะเปลี่ยนเป็นรวงข้าวสีทอง",
+"zh": "很快绿色的稻秆就会结出金黄的稻穗。",
+"ja": "もうすぐ きんいろの いなほに かわるんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rice.3": {
+"en": "Farmers plant each tender shoot carefully by hand.",
+"lo": "ຊາວນາປັກດຳຕົ້ນກ້າອ່ອນແຕ່ລະຕົ້ນຢ່າງລະມັດລະວັງດ້ວຍມື.",
+"th": "ชาวนาปักดำต้นกล้าอ่อนแต่ละต้นอย่างระมัดระวังด้วยมือ",
+"zh": "农夫们用手小心地插下一棵棵嫩稻秧。",
+"ja": "ひとたちが ていねいに いっぽんずつ うえていくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rice.4": {
+"en": "Sticky rice is the heart of every Lao family meal.",
+"lo": "ເຂົ້າໜຽວແມ່ນຫົວໃຈຂອງອາຫານທຸກຄາບໃນຄອບຄົວລາວ.",
+"th": "ข้าวเหนียวคือหัวใจของอาหารทุกมื้อในครอบครัวลาว",
+"zh": "糯米饭是每个老挝家庭餐桌上的主角。",
+"ja": "もちごめは ラオスの しょくたくに かかせない だいじな たべものだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"rice-bundle.0": {
+"en": "A rice bundle. Golden stalks tied neatly after harvest.",
+"lo": "ມັດເຂົ້າ. ຮວງເຂົ້າສີຄຳມັດໄວ້ຢ່າງຮຽບຮ້ອຍຫຼັງເກັບກ່ຽວ.",
+"th": "มัดข้าว รวงข้าวสีทองมัดไว้อย่างเรียบร้อยหลังเก็บเกี่ยว",
+"zh": "稻束。丰收后捆扎得整整齐齐的金黄稻秆。",
+"ja": "いなたば。しゅうかくした きんいろの いねを きれいに たばねたよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rice-bundle.1": {
+"en": "Heavy golden heads bend softly with ripe grain.",
+"lo": "ຮວງເຂົ້າສີຄຳໜັກໆໂຄ້ງລົງອ່ອນໆດ້ວຍເມັດເຂົ້າສຸກ.",
+"th": "รวงข้าวสีทองหนักๆ โค้งลงอ่อนๆ ด้วยเมล็ดข้าวสุก",
+"zh": "沉甸甸的金黄稻穗缀满成熟的稻谷。",
+"ja": "みった おこめの おもみで きんいろの ほが たれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rice-bundle.2": {
+"en": "Villagers carry bundles of rice back to the village granary.",
+"lo": "ຊາວບ້ານຫາບມັດເຂົ້າກັບຄືນໄປໃສ່ເລົ້າເຂົ້າຂອງໝູ່ບ້ານ.",
+"th": "ชาวบ้านหาบมัดข้าวกลับไปเก็บไว้ในยุ้งข้าวของหมู่บ้าน",
+"zh": "村民们把一捆捆稻谷挑回村里的粮仓。",
+"ja": "むらの ひとは いなたばを こめぐらまで はこぶんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rice-bundle.3": {
+"en": "Dry golden straw smells sweet in the sunny courtyard.",
+"lo": "ເຟືອງເຂົ້າສີຄຳແຫ້ງມີກິ່ນຫອມໃນເດີ່ນບ້ານທີ່ມີແສງແດດ.",
+"th": "ฟางข้าวสีทองแห้งมีกลิ่นหอมในลานบ้านที่มีแสงแดด",
+"zh": "晒干的金黄稻草在阳光明媚的院子里散发清香。",
+"ja": "かわいた わらが おひさまの したで いい においを させるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rice-bundle.4": {
+"en": "Sharing the harvest brings the whole Lao village together.",
+"lo": "ການແບ່ງປັນຜົນລະປູກເຮັດໃຫ້ທັງໝູ່ບ້ານລາວສາມັກຄີກັນ.",
+"th": "การแบ่งปันผลผลิตทำให้ทั้งหมู่บ้านลาวสามัคคีกัน",
+"zh": "分享丰收的稻谷让整个老挝村庄紧密团结在一起。",
+"ja": "しゅうかくを わけあうと むら じゅうが ひとつに なるんだ。",
+"who": "narrator",
+"tag": "culture"
+},
+"river.0": {
+"en": "A river bank. Cool clear water winds through green reeds.",
+"lo": "ແຄມນ້ຳ. ນ້ຳໃສເຢັນໄຫຼຄົດລ້ຽວຜ່ານປ່າອໍ້ສີຂຽວ.",
+"th": "ริมน้ำ น้ำใสเย็นไหลคดเคี้ยวผ่านป่าอ้อสีเขียว",
+"zh": "河岸。清凉的河水蜿蜒流过青翠的芦苇丛。",
+"ja": "かわべ。すんだ みずが みどりの あしの あいだを ながれていくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"river.1": {
+"en": "Gentle currents carry fallen petals down the quiet valley.",
+"lo": "ສາຍນ້ຳອ່ອນໆພັດກີບດອກໄມ້ທີ່ລົ່ນໄຫຼໄປຕາມຮ່ອມພູ.",
+"th": "สายน้ำอ่อนๆ พัดกลีบดอกไม้ที่ร่วงไหลไปตามหุบเขา",
+"zh": "柔和的水流带着飘落的花瓣流向宁静的山谷。",
+"ja": "ゆるやかな ながれが おちた はなびらを やさしく はこぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"river.2": {
+"en": "Pink lotus buds and grassy clumps line the water's edge.",
+"lo": "ດອກບົວຈູມສີບົວ ແລະ ກໍຫຍ້າລຽງລາຍຕາມຂອບນ້ຳ.",
+"th": "ดอกบัวตูมสีชมพูและกอหญ้าเรียงรายตามขอบน้ำ",
+"zh": "粉红的荷花苞和青草簇沿着水边排开。",
+"ja": "ピンクの はすの つぼみと くさが みずべを かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"river.3": {
+"en": "Egrets and dragonflies visit the sunny bank every morning.",
+"lo": "ນົກຍາງ ແລະ ແມງປໍມາຢາມແຄມນ້ຳທີ່ມີແສງແດດທຸກເຊົ້າ.",
+"th": "นกยางและแมลงปอมาเยือนริมน้ำที่มีแสงแดดทุกเช้า",
+"zh": "白鹭和蜻蜓每天清晨都会飞来阳光明媚的河岸。",
+"ja": "まいあさ サギや トンボが ひなたの かわべに あそびに くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"river.4": {
+"en": "Rivers give water, fish, and cool breezes to Lao villages.",
+"lo": "ແມ່ນ້ຳໃຫ້ນ້ຳ, ປາ, ແລະ ລົມເຢັນແກ່ໝູ່ບ້ານລາວ.",
+"th": "แม่น้ำให้น้ำ ปลา และลมเย็นแก่หมู่บ้านลาว",
+"zh": "河流为老挝村庄带来清泉、鱼儿和凉风。",
+"ja": "かわは むらに みずと さかなと すずしい かぜを とどけてくれるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"rope.0": {
+"en": "A hemp rope. Twisted tight to hold heavy loads.",
+"lo": "ເຊືອກ. ຟັ້ນແໜ້ນເພື່ອມັດຂອງໜັກ.",
+"th": "เชือก ฟั่นแน่นเพื่อมัดของหนัก",
+"zh": "麻绳。紧紧拧在一起，能捆住沉重的东西。",
+"ja": "ロープ。おもい ものを しっかり しばれるように よってあるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"rope.1": {
+"en": "Villagers coil the sturdy rope neatly beside the tools.",
+"lo": "ຊາວບ້ານຂົດເຊືອກທີ່ແຂງແຮງໄວ້ຢ່າງຮຽບຮ້ອຍຂ້າງເຄື່ອງມື.",
+"th": "ชาวบ้านขดเชือกที่แข็งแรงไว้อย่างเรียบร้อยข้างเครื่องมือ",
+"zh": "村民们把结实的麻绳整齐地盘在工具旁。",
+"ja": "どうぐの そばに くるくる きれいに まいて おいてあるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"rope.2": {
+"en": "Many thin fibres twist together to become very strong.",
+"lo": "ເສັ້ນໄຍນ້ອຍໆຫຼາຍເສັ້ນຟັ້ນເຂົ້າກັນຈົນແຂງແຮງຫຼາຍ.",
+"th": "เส้นใยเล็กๆ หลายเส้นฟั่นเข้ากันจนแข็งแรงมาก",
+"zh": "许多细小的纤维拧成一股，变得无比结实。",
+"ja": "ほそい せんいが あつまって とても つよく なるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"rope.3": {
+"en": "Warm tan strands loop in a soft spiral on the grass.",
+"lo": "ເສັ້ນສີນ້ຳຕານອ່ອນຂົດເປັນວົງອ່ອນໆເທິງພື້ນຫຍ້າ.",
+"th": "เส้นสีน้ำตาลอ่อนขดเป็นวงอ่อนๆ บนพื้นหญ้า",
+"zh": "浅棕色的绳股在草地上盘成柔和的圆圈。",
+"ja": "うすい ちゃいろの わっかが くさの うえに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"rope.4": {
+"en": "Just like a rope, people grow stronger when they stay together.",
+"lo": "ຄືກັບເຊືອກ, ຄົນເຮົາແຂງແຮງຂຶ້ນເມື່ອສາມັກຄີກັນ.",
+"th": "เหมือนกับเชือก ผู้คนแข็งแรงขึ้นเมื่อสามัคคีกัน",
+"zh": "就像麻绳一样，人们团结在一起就会更加强大。",
+"ja": "ロープみたいに みんなが ちからを あわせると つよく なるね。",
+"who": "narrator",
+"tag": "culture"
+},
+"sand-stupa.0": {
+"en": "A sand stupa. Shaped carefully from clean river sand.",
+"lo": "ພະທາດຊາຍ. ປັ້ນຢ່າງປະນີດຈາກຊາຍແມ່ນ້ຳສະອາດ.",
+"th": "เจดีย์ทราย ปั้นอย่างประณีตจากทรายแม่น้ำสะอาด",
+"zh": "沙塔。用干净的河沙精心堆砌而成。",
+"ja": "すなのとう。きれいな かわの すなで ていねいに つくったんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sand-stupa.1": {
+"en": "Children decorate the sand stupa with bright marigold flowers.",
+"lo": "ເດັກນ້ອຍປະດັບພະທາດຊາຍດ້ວຍດອກດາວເຮືອງສີສົດໃສ.",
+"th": "เด็กๆ ประดับเจดีย์ทรายด้วยดอกดาวเรืองสีสดใส",
+"zh": "孩子们用金黄的万寿菊花点缀沙塔。",
+"ja": "こどもたちが きいろい おはなで きれいに かざりつけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sand-stupa.2": {
+"en": "Little paper flags flutter cheerfully at the pointed peak.",
+"lo": "ທຸງເຈ້ຍນ້ອຍໆປິວໄສວຢ່າງສົດໃສຢູ່ຍອດແຫຼມ.",
+"th": "ธงกระดาษเล็กๆ ปลิวไสวอย่างสดใสอยู่ยอดแหลม",
+"zh": "小小的纸旗在尖尖的塔顶欢快地飘扬。",
+"ja": "てっぺんの ちいさな かみのはたが かぜに ひらひら おどるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sand-stupa.3": {
+"en": "Step by step, tiered golden bands rise toward the sky.",
+"lo": "ເປັນຊັ້ນໆ ວົງສີຄຳຊ້ອນຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "เป็นชั้นๆ วงสีทองซ้อนขึ้นสู่ท้องฟ้า",
+"zh": "一层层金色的沙阶稳稳升向蓝天。",
+"ja": "だんだんに つみあげた かたちが そらへ のびて きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sand-stupa.4": {
+"en": "Building sand stupas is a beloved Lao New Year tradition.",
+"lo": "ການຕົບພະທາດຊາຍແມ່ນປະເພນີປີໃໝ່ລາວທີ່ທຸກຄົນຮັກ.",
+"th": "การก่อเจดีย์ทรายเป็นประเพณีปีใหม่ลาวที่ทุกคนรัก",
+"zh": "堆沙塔是老挝新年人人喜爱的传统习俗。",
+"ja": "ラオスの しんねんに みんなが たのしむ すてきな ぎょうじだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"sky.0": {
+"en": "The morning sky. Wide, bright, and full of soft clouds.",
+"lo": "ທ້ອງຟ້າ. ກວ້າງໃຫຍ່, ສົດໃສ, ແລະ ເຕັມໄປດ້ວຍກ້ອນເມກອ່ອນ.",
+"th": "ท้องฟ้า กว้างใหญ่ สดใส และเต็มไปด้วยก้อนเมฆอ่อน",
+"zh": "天空。辽阔明亮，飘满柔软的白云。",
+"ja": "そら。ひろくて あかるくて やわらかい くもが うかんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"sky.1": {
+"en": "Warm sunlight pours down over the mountains and valley.",
+"lo": "ແສງແດດອຸ່ນສ່ອງລົງມາທົ່ວພູຜາ ແລະ ຮ່ອມພູ.",
+"th": "แสงแดดอุ่นส่องลงมาทั่วภูเขาและหุบเขา",
+"zh": "温暖的阳光倾泻在群山与山谷之上。",
+"ja": "あたたかい ひざしが やまと たにに ふりそそぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sky.2": {
+"en": "At night, the sky turns deep blue and sparkles with stars.",
+"lo": "ໃນຍາມຄ່ຳຄືນ ທ້ອງຟ້າປ່ຽນເປັນສີຟ້າເຂັ້ມ ແລະ ມີດາວລະຍິບລະຍັບ.",
+"th": "ในยามค่ำคืน ท้องฟ้าเปลี่ยนเป็นสีน้ำเงินเข้มและมีดาวระยิบระยับ",
+"zh": "到了夜晚，天空变成深蓝色，闪烁着点点繁星。",
+"ja": "よるに なると ふかい あおに かわって ほしが きらめくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"sky.3": {
+"en": "Flocks of songbirds wheel gracefully across the open air.",
+"lo": "ຝູງນົກນ້ອຍບິນວົນຢ່າງງົດງາມກາງອາກາດກວ້າງ.",
+"th": "ฝูงนกน้อยบินวนอย่างงดงามกลางอากาศกว้าง",
+"zh": "成群的小鸟在开阔的空中优雅地盘旋。",
+"ja": "ことりの むれが ひろい そらを きもちよさそうに とぶんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"sky.4": {
+"en": "Everyone in the valley shares the very same wide sky.",
+"lo": "ທຸກຄົນໃນຮ່ອມພູຢູ່ໃຕ້ທ້ອງຟ້າກວ້າງຜືນດຽວກັນ.",
+"th": "ทุกคนในหุบเขาอยู่ใต้ท้องฟ้ากว้างผืนเดียวกัน",
+"zh": "山谷里的每一个人都共享这同一片辽阔的天空。",
+"ja": "たにに すむ みんなが おなじ ひろい そらの したに いるよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"spirit-house.0": {
+"en": "A spirit house. A tiny wooden shrine standing on a post.",
+"lo": "ຫໍພະພູມ. ຫໍໄມ້ນ້ອຍໆຕັ້ງຢູ່ເທິງເສົາ.",
+"th": "ศาลพระภูมิ ศาลไม้เล็กๆ ตั้งอยู่บนเสา",
+"zh": "土地神龛。一座立在木柱上的小木神龛。",
+"ja": "ほこら。きの はしらの うえに たつ ちいさな おやしろだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"spirit-house.1": {
+"en": "People place marigolds and candles here to give thanks.",
+"lo": "ຄົນວາງດອກດາວເຮືອງ ແລະ ທຽນໄວ້ບ່ອນນີ້ເພື່ອຂອບໃຈ.",
+"th": "ผู้คนวางดอกดาวเรืองและเทียนไว้ที่นี่เพื่อขอบคุณ",
+"zh": "人们在这里献上万寿菊和蜡烛表达感恩。",
+"ja": "ひとびとが おはなを そなえて かんしゃを つたえるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"spirit-house.2": {
+"en": "Its carved roof matches the traditional Lao stilt house.",
+"lo": "ຫຼັງຄາແກະສະຫຼັກຄ້າຍຄືກັບເຮືອນຮ້ານແບບດັ້ງເດີມຂອງລາວ.",
+"th": "หลังคาแกะสลักคล้ายกับบ้านใต้ถุนสูงแบบดั้งเดิมของลาว",
+"zh": "它精雕的屋顶和传统老挝高脚屋一样精致。",
+"ja": "ほりものの やねが ラオスの いえと おそろいで きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"spirit-house.3": {
+"en": "The spirit house watches peacefully over the home and garden.",
+"lo": "ຫໍພະພູມປົກປັກຮັກສາເຮືອນ ແລະ ສວນຢ່າງສະຫງົບ.",
+"th": "ศาลพระภูมิปกปักรักษาบ้านและสวนอย่างสงบ",
+"zh": "土地神龛安宁地守护着家园与园子。",
+"ja": "いえと おにわを しずかに みまもってくれるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"spirit-house.4": {
+"en": "Many homes across Laos keep a tidy spirit house in the yard.",
+"lo": "ຫຼາຍເຮືອນທົ່ວປະເທດລາວມີຫໍພະພູມທີ່ສະອາດງາມຕາຢູ່ໃນເດີ່ນ.",
+"th": "หลายบ้านทั่วประเทศลาวมีศาลพระภูมิที่สะอาดสวยงามอยู่ในลาน",
+"zh": "老挝许多人家都在院子里立着整洁的土地神龛。",
+"ja": "ラオスでは おにわに たいせつに おかれているんだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"squirrel.0": {
+"en": "A tree squirrel. Scampering swiftly along the mango boughs!",
+"lo": "ກະຮອກ. ແລ່ນໄຕ່ໄປຕາມກິ່ງຕົ້ນໝາກມ່ວງຢ່າງວ່ອງໄວ!",
+"th": "กระรอก วิ่งไต่ไปตามกิ่งต้นมะม่วงอย่างว่องไว!",
+"zh": "松鼠。沿着芒果树枝飞快地跑来跑去！",
+"ja": "リス。マンゴーの えだを すばやく かけていくよ！",
+"who": "narrator",
+"tag": "what"
+},
+"squirrel.1": {
+"en": "Its big bushy tail helps it keep balance high in the canopy.",
+"lo": "ຫາງໃຫຍ່ຟູຂອງມັນຊ່ວຍຊົງໂຕຢູ່ສູງເທິງຍອດໄມ້.",
+"th": "หางใหญ่ฟูของมันช่วยทรงตัวอยู่สูงบนยอดไม้",
+"zh": "毛茸茸的大尾巴帮它在高高的树冠间保持平衡。",
+"ja": "ふわふわの おおきな しっぽで バランスを とるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"squirrel.2": {
+"en": "Sharp little paws nibble sweet mangoes and seeds.",
+"lo": "ອຸ້ງຕີນນ້ອຍຄ່ອງແຄ້ວຈັບໝາກມ່ວງຫວານ ແລະ ເມັດພືດແທະກິນ.",
+"th": "อุ้งเท้าน้อยคล่องแคล่วจับมะม่วงหวานและเมล็ดพืชแทะกิน",
+"zh": "灵巧的小爪子捧着甜芒果和种子咔嚓咔嚓啃。",
+"ja": "ちいさな てで マンゴーや きのみを もって かじるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"squirrel.3": {
+"en": "Bright dark eyes peek shyly around the rough trunk.",
+"lo": "ຕາດຳສົດໃສແນມອອກມາຢ່າງຂີ້ອາຍອ້ອມລຳຕົ້ນໄມ້.",
+"th": "ตาดำสดใสแอบมองอย่างขี้อายรอบลำต้นไม้",
+"zh": "乌溜溜的大眼睛羞怯地从树干后探出头。",
+"ja": "くりっとした めで みきの うしろから そっと のぞくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"squirrel.4": {
+"en": "Squirrels chatter cheerfully whenever friends walk beneath the tree.",
+"lo": "ກະຮອກຮ້ອງທັກທາຍຢ່າງມ່ວນຊື່ນເວລາໝູ່ຍ່າງຜ່ານໃຕ້ຕົ້ນໄມ້.",
+"th": "กระรอกร้องทักทายอย่างสนุกสนานเวลาเพื่อนเดินผ่านใต้ต้นไม้",
+"zh": "每当朋友走过树下，松鼠就会欢快地叽叽叫。",
+"ja": "きの したを ひとが とおると げんきに ないて あいさつするよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stones.0": {
+"en": "River stones. Smooth grey rocks worn round by flowing water.",
+"lo": "ກ້ອນຫີນ. ຫີນສີເທົາກ້ຽງທີ່ນ້ຳໄຫຼກັດເຊາະຈົນມົນ.",
+"th": "ก้อนหิน หินสีเทาเรียบที่น้ำไหลกัดเซาะจนกลม",
+"zh": "石头。被流水冲刷得圆润光滑的灰色河石。",
+"ja": "いし。かわの みずに みがかれて まるくなった きれいなしだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stones.1": {
+"en": "Warm stones hold the afternoon sun long into the evening.",
+"lo": "ກ້ອນຫີນອຸ່ນເກັບຄວາມຮ້ອນຈາກແດດບ່າຍໄວ້ຈົນຮອດຍາມແລງ.",
+"th": "ก้อนหินอุ่นเก็บความร้อนจากแดดบ่ายไว้จนถึงยามเย็น",
+"zh": "温热的石头把午后的阳光一直留到傍晚。",
+"ja": "ひるまの おひさまの あたたかさを ゆうがたまで もっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stones.2": {
+"en": "Little crickets sing softly from behind cool mossy rocks.",
+"lo": "ຈິ່ງຫຼີດນ້ອຍຮ້ອງເພງຄ່ອຍໆຢູ່ຫຼັງກ້ອນຫີນທີ່ມີໄຄເຢັນ.",
+"th": "จิ้งหรีดน้อยร้องเพลงเบาๆ อยู่หลังก้อนหินที่มีตะไคร่เย็น",
+"zh": "小蟋蟀躲在凉爽的青苔石头后面轻声歌唱。",
+"ja": "いしの うしろで こおろぎが きれいに ないているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stones.3": {
+"en": "Smooth stones make dry stepping paths beside the garden pond.",
+"lo": "ກ້ອນຫີນກ້ຽງເຮັດເປັນທາງຍ່າງແຫ້ງຂ້າງໜອງນ້ຳໃນສວນ.",
+"th": "ก้อนหินเรียบทำเป็นทางเดินแห้งข้างสระน้ำในสวน",
+"zh": "光滑的石头在池塘边铺出干爽的踏脚小路。",
+"ja": "いけの そばの とびいしの みちに なっているんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stones.4": {
+"en": "Heavy stones also keep the village hearth neat and safe.",
+"lo": "ກ້ອນຫີນໜັກຍັງຊ່ວຍລ້ອມເຕົາໄຟໝູ່ບ້ານໃຫ້ຮຽບຮ້ອຍ ແລະ ປອດໄພ.",
+"th": "ก้อนหินหนักยังช่วยล้อมเตาไฟหมู่บ้านให้เรียบร้อยและปลอดภัย",
+"zh": "结实的石头还能围住村里的火塘，让灶火安全整洁。",
+"ja": "かまどの まわりを かこんで ひを あんぜんに まもるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stump.0": {
+"en": "A tree stump. The sturdy woody base left in the clearing.",
+"lo": "ຕໍໄມ້. ໂຄນໄມ້ແຂງແຮງທີ່ເຫຼືອຢູ່ໃນເດີ່ນ.",
+"th": "ตอไม้ โคนไม้แข็งแรงที่เหลืออยู่ในลาน",
+"zh": "树桩。空地上留下的结实木桩底座。",
+"ja": "きりかぶ。ひろばに のこった じょうぶな きの ねもとだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"stump.1": {
+"en": "Growth circles across the flat top show how many years it grew.",
+"lo": "ວົງປີເທິງໜ້າຕັດສະແດງໃຫ້ເຫັນວ່າມັນໃຫຍ່ມາຈັກປີແລ້ວ.",
+"th": "วงปีบนหน้าตัดแสดงให้เห็นว่ามันโตมากี่ปีแล้ว",
+"zh": "切面上一圈圈年轮记录着它生长的岁月。",
+"ja": "うえの わっかを かぞえると なんねん そだったか わかるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"stump.2": {
+"en": "Thick mossy roots spread outward into the valley floor.",
+"lo": "ຮາກໄມ້ໜາທີ່ມີໄຄຂຽວແຜ່ອອກໄປຕາມພື້ນດິນ.",
+"th": "รากไม้หนาที่มีตะไคร่เขียวแผ่ออกไปตามพื้นดิน",
+"zh": "粗壮长苔的树根向山谷泥土伸展开去。",
+"ja": "こけの ついた ふとい ねっこが じめんに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"stump.3": {
+"en": "Little beetles and crickets like to hide under its bark.",
+"lo": "ແມງກວາງ ແລະ ຈິ່ງຫຼີດນ້ອຍມັກລີ້ຢູ່ໃຕ້ເປືອກໄມ້.",
+"th": "แมลงปีกแข็งและจิ้งหรีดน้อยชอบซ่อนอยู่ใต้เปลือกไม้",
+"zh": "小甲虫和小蟋蟀喜欢躲在树皮下面。",
+"ja": "ちいさな むしたちが きの かわの したに かくれるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"stump.4": {
+"en": "When the great vine fell, bright sunlight filled the yard again.",
+"lo": "ເມື່ອເຄືອໄມ້ໃຫຍ່ລົ້ມລົງ ແສງແດດສົດໃສກໍສ່ອງທົ່ວເດີ່ນອີກຄັ້ງ.",
+"th": "เมื่อเถาวัลย์ใหญ่ล้มลง แสงแดดสดใสก็ส่องทั่วลานอีกครั้ง",
+"zh": "当巨藤倒下后，明媚的阳光再次洒满院子。",
+"ja": "おおきな つるが たおれて おにわに また たいようが もどったよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"table.0": {
+"en": "A feast table. Set low so family and neighbours sit together.",
+"lo": "ພາເຂົ້າ. ຕັ້ງຕ່ຳເພື່ອໃຫ້ຄອບຄົວ ແລະ ໝູ່ບ້ານນັ່ງກິນນຳກັນ.",
+"th": "โต๊ะอาหาร ตั้งเตี้ยเพื่อให้ครอบครัวและเพื่อนบ้านนั่งกินด้วยกัน",
+"zh": "餐桌。矮矮的桌子让家人和邻居围坐在一起。",
+"ja": "しょくたく。かぞくや むらの みんなが かこんで すわる ひくい つくえだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"table.1": {
+"en": "Woven baskets of warm rice and bowls of soup fill the table.",
+"lo": "ກະຕິບເຂົ້າໜຽວອຸ່ນໆ ແລະ ຖ້ວຍແກງວາງເຕັມພາເຂົ້າ.",
+"th": "กระติบข้าวเหนียวอุ่นๆ และถ้วยแกงวางเต็มโต๊ะอาหาร",
+"zh": "一篮篮热米饭和一碗碗热汤摆满了餐桌。",
+"ja": "あたたかい ごはんや スープが いっぱい ならぶんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"table.2": {
+"en": "Everyone shares dishes from the centre with joyful smiles.",
+"lo": "ທຸກຄົນແບ່ງປັນອາຫານຈາກກາງພາເຂົ້າດ້ວຍຮອຍຍິ້ມທີ່ມີຄວາມສຸກ.",
+"th": "ทุกคนแบ่งปันอาหารจากกลางโต๊ะด้วยรอยยิ้มที่มีความสุข",
+"zh": "大家带着灿烂的笑容分享桌中央的美味。",
+"ja": "まんなかの ごちそうを みんなで えがおで わけあうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"table.3": {
+"en": "Smooth bamboo slats form a sturdy flat top.",
+"lo": "ແຜ່ນໄມ້ໄຜ່ກ້ຽງໆປະກອບເປັນໜ້າໂຕະທີ່ແຂງແຮງ.",
+"th": "แผ่นไม้ไผ่เรียบๆ ประกอบเป็นหน้าโต๊ะที่แข็งแรง",
+"zh": "光滑的竹条拼成结实平整的桌面。",
+"ja": "なめらかな たけで じょうぶに つくられているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"table.4": {
+"en": "Eating together around one table makes every villager family.",
+"lo": "ການກິນເຂົ້າຮ່ວມພາເຂົ້າດຽວກັນເຮັດໃຫ້ທຸກຄົນເປັນຄອບຄົວດຽວກັນ.",
+"th": "การกินข้าวร่วมโต๊ะเดียวกันทำให้ทุกคนเป็นครอบครัวเดียวกัน",
+"zh": "围坐一桌共进晚餐让每个村民都成为一家人。",
+"ja": "ひとつの つくえを かこんで たべると みんな かぞくに なるね。",
+"who": "narrator",
+"tag": "culture"
+},
+"taro.0": {
+"en": "Taro leaves. Broad tropical leaves frame the pond corner.",
+"lo": "ໃບບອນ. ໃບໄມ້ເຂດຮ້ອນກວ້າງໃຫຍ່ປະດັບມຸມໜອງນ້ຳ.",
+"th": "ใบบอน ใบไม้เขตร้อนกว้างใหญ่ประดับมุมสระน้ำ",
+"zh": "芋叶。宽大的热带绿叶点缀着池塘一角。",
+"ja": "さといものは。おおきな はっぱが いけの すみを かざっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"taro.1": {
+"en": "Shiny water droplets roll across the velvety green surface.",
+"lo": "ຢົດນ້ຳເຫຼື້ອມກິ້ງໄປມາເທິງໜ້າໃບສີຂຽວນຸ້ມ.",
+"th": "หยดน้ำแวววาวกลิ้งไปมาบนผิวใบสีเขียวนุ่ม",
+"zh": "晶莹的水珠在天鹅绒般的绿叶面上滚来滚去。",
+"ja": "きらきらした みずたまが はっぱの うえを ころころ すべるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"taro.2": {
+"en": "Big heart-shaped leaves reach upward on tall stems.",
+"lo": "ໃບໃຫຍ່ຮູບຫົວໃຈຊູຂຶ້ນສູງເທິງກ້ານຍາວ.",
+"th": "ใบใหญ่รูปหัวใจชูขึ้นสูงบนก้านยาว",
+"zh": "心形的大叶片在长长的叶柄上高高舒展。",
+"ja": "おおきな ハートの かたちの はっぱが ぐんぐん のびるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"taro.3": {
+"en": "Frogs and snails rest under the wide leafy umbrellas.",
+"lo": "ກົບ ແລະ ຫອຍທາກພັກຜ່ອນຢູ່ໃຕ້ຄັນຮົ່ມໃບກວ້າງ.",
+"th": "กบและหอยทากพักผ่อนอยู่ใต้ร่มใบกว้าง",
+"zh": "小青蛙和蜗牛喜欢躲在宽大的叶子伞下乘凉。",
+"ja": "かえるや かたつむりが はっぱの かさの したで やすむんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"taro.4": {
+"en": "Taro loves warm damp soil near streams and gardens.",
+"lo": "ຕົ້ນບອນມັກດິນຊຸ່ມອຸ່ນໃກ້ຫ້ວຍນ້ຳ ແລະ ສວນ.",
+"th": "ต้นบอนชอบดินชื้นอุ่นใกล้ลำธารและสวน",
+"zh": "芋头喜欢小溪和园子旁温暖湿润的泥土。",
+"ja": "みずべの しめった つちで げんきに そだつんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"thread.0": {
+"en": "Silk thread. Soft dyed skeins ready for the loom.",
+"lo": "ເສັ້ນໄໝ. ກຸ່ມໄໝຍ້ອມສີອ່ອນນຸ້ມພ້ອມສຳລັບກີ່ຕ່ຳຫູກ.",
+"th": "เส้นไหม กลุ่มไหมย้อมสีอ่อนนุ่มพร้อมสำหรับกี่ทอผ้า",
+"zh": "丝线。染好色的柔软线束，正准备上织布机。",
+"ja": "きぬいと。きれいに そめた やわらかい いとが はたおりを まっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"thread.1": {
+"en": "Natural roots, bark, and leaves colour the thread red and gold.",
+"lo": "ຮາກໄມ້, ເປືອກໄມ້, ແລະ ໃບໄມ້ທຳມະຊາດຍ້ອມເສັ້ນໄໝເປັນສີແດງ ແລະ ສີຄຳ.",
+"th": "รากไม้ เปลือกไม้ และใบไม้ธรรมชาติย้อมเส้นไหมเป็นสีแดงและสีทอง",
+"zh": "天然树根、树皮和树叶把丝线染成红色和金色。",
+"ja": "きの ねっこや はっぱで あかや きんいろに そめるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"thread.2": {
+"en": "Smooth golden strands catch the morning light like sunbeams.",
+"lo": "ເສັ້ນໄໝສີຄຳກ້ຽງເຫຼື້ອມຮັບແສງແດດຍາມເຊົ້າຄືແສງຕາເວັນ.",
+"th": "เส้นไหมสีทองเรียบเปล่งประกายรับแสงแดดยามเช้าเหมือนแสงตะวัน",
+"zh": "顺滑的金丝线在晨光中像阳光般闪耀。",
+"ja": "つやつやした いとが あさひに きらっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"thread.3": {
+"en": "Weavers wind each skein onto a bamboo bobbin before weaving.",
+"lo": "ຊ່າງຕ່ຳຫູກພັນໄໝແຕ່ລະກຸ່ມໃສ່ຫຼອດໄມ້ໄຜ່ກ່ອນຕ່ຳ.",
+"th": "ช่างทอผ้าพันไหมแต่ละกลุ่มใส่หลอดไม้ไผ่ก่อนทอ",
+"zh": "织工在织布前把每一束丝线绕在竹梭芯上。",
+"ja": "おる まえに たけの いとまきに くるくる まきとるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"thread.4": {
+"en": "Soft Lao silk has been spun in quiet villages for centuries.",
+"lo": "ໄໝລາວອ່ອນນຸ້ມຖືກສາວໃນໝູ່ບ້ານທີ່ສະຫງົບມາຫຼາຍຮ້ອຍປີ.",
+"th": "ไหมลาวอ่อนนุ่มถูกสาวในหมู่บ้านที่สงบมาหลายร้อยปี",
+"zh": "柔软的老挝丝绸在宁静的村落里传承了数百年。",
+"ja": "ラオスの むらで ながい あいだ つむがれてきた きれいな いとだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"tool.0": {
+"en": "A wood chisel. Tap, tap, tap to carve a tidy doorway.",
+"lo": "ສິ່ວໄມ້. ຕອກ, ຕອກ, ຕອກ ເພື່ອເຈາະປະຕູທີ່ຮຽບຮ້ອຍ.",
+"th": "สิ่วไม้ ตอก ตอก ตอก เพื่อเจาะประตูที่เรียบร้อย",
+"zh": "木凿。笃、笃、笃，凿出一扇整齐的门。",
+"ja": "のみ。こん、こん、こん と きれいな とびらを ほる どうぐだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"tool.1": {
+"en": "A smooth wooden handle gives steady control with every tap.",
+"lo": "ດ້າມໄມ້ກ້ຽງໆຊ່ວຍໃຫ້ຈັບໝັ້ນຄົງໃນທຸກຈັງຫວະຕອກ.",
+"th": "ด้ามไม้เรียบๆ ช่วยให้จับมั่นคงในทุกจังหวะตอก",
+"zh": "光滑的木柄让每一次敲击都稳稳当当。",
+"ja": "なめらかな きの えで しっかり ねらって ほれるんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"tool.2": {
+"en": "Nya Nyeu used her sharp tool to widen the great gourd's doors.",
+"lo": "ຍ່າເຍີໃຊ້ເຄື່ອງມືຄົມຂອງນາງຂະຫຍາຍປະຕູໝາກນ້ຳເຕົ້າ.",
+"th": "ย่าเยอใช้เครื่องมือคมของนางขยายประตูน้ำเต้ายักษ์",
+"zh": "雅约奶奶用锋利的工具拓宽了大葫芦的门。",
+"ja": "ヤーニョーが ひょうたんの とびらを ひろげるのに つかったんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"tool.3": {
+"en": "Careful hands shape wood into houses, bowls, and doorways.",
+"lo": "ມືທີ່ປະນີດປັ້ນໄມ້ເປັນເຮືອນ, ຖ້ວຍ, ແລະ ປະຕູ.",
+"th": "มือที่ประณีตแกะสลักไม้เป็นบ้าน ถ้วย และประตู",
+"zh": "灵巧的双手把木头雕成房屋、木碗和门窗。",
+"ja": "ていねいな てで いえや うつわや とびらを つくりだすよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"tool.4": {
+"en": "Good tools last for years when you keep them clean and dry.",
+"lo": "ເຄື່ອງມືດີໆໃຊ້ໄດ້ຫຼາຍປີເມື່ອເກັບຮັກສາໃຫ້ສະອາດ ແລະ ແຫ້ງ.",
+"th": "เครื่องมือดีๆ ใช้ได้หลายปีเมื่อเก็บรักษาให้สะอาดและแห้ง",
+"zh": "好好爱惜、保持干燥，好工具能用上很多年。",
+"ja": "きれいに しまって おけば ながく つかえる たいせつな どうぐだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"turtle.0": {
+"en": "A pond turtle. Carrying its patterned shell wherever it goes.",
+"lo": "ເຕົ່າ. ແບກກະດອງລາຍງາມໄປນຳທຸກບ່ອນ.",
+"th": "เต่า แบกกระดองลายงามไปด้วยทุกแห่ง",
+"zh": "乌龟。走到哪里都背着花纹漂亮的小壳。",
+"ja": "かめ。きれいな もようの こうらを せおって あるくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"turtle.1": {
+"en": "Turtles love to bask in the warm sun on a mossy log.",
+"lo": "ເຕົ່າມັກນອນອາບແດດອຸ່ນໆເທິງຂອນໄມ້.",
+"th": "เต่าชอบนอนอาบแดดอุ่นๆ บนขอนไม้",
+"zh": "乌龟最喜欢趴在长满青苔的木头上晒太阳。",
+"ja": "まるたの うえで おひさまを あびるのが だいすきなんだ。",
+"who": "narrator",
+"tag": "fact"
+},
+"turtle.2": {
+"en": "When startled, it tucks its head safely inside its hard shell.",
+"lo": "ເມື່ອຕົກໃຈ ມັນຫົດຫົວເຂົ້າໄປໃນກະດອງແຂງຢ່າງປອດໄພ.",
+"th": "เมื่อตกใจ มันหดหัวเข้าไปในกระดองแข็งอย่างปลอดภัย",
+"zh": "受惊时，它会把小脑袋安全地缩进硬壳里。",
+"ja": "びっくりすると かたい こうらの なかに あたまを ひっこめるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.3": {
+"en": "Short sturdy legs swim gracefully once it slides into the pond.",
+"lo": "ຂາສັ້ນແຂງແຮງລອຍນ້ຳໄດ້ຢ່າງຄ່ອງແຄ້ວເມື່ອລົງໜອງ.",
+"th": "ขาสั้นแข็งแรงว่ายน้ำได้อย่างคล่องแคล่วเมื่อลงสระ",
+"zh": "滑进池塘后，它的小短腿便优雅地划起水来。",
+"ja": "いけに はいると じょうずに すいすい およぐんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.4": {
+"en": "Slow and steady, the turtle never misses a single sunny day.",
+"lo": "ຊ້າແຕ່ໝັ້ນຄົງ, ເຕົ່າບໍ່ເຄີຍພາດມື້ແດດອຸ່ນເລີຍ.",
+"th": "ช้าแต่มั่นคง เต่าไม่เคยพลาดวันแดดอุ่นเลย",
+"zh": "不紧不慢，小乌龟从不错过任何一个晴朗的好日子。",
+"ja": "ゆっくり マイペースで まいにち たのしそうに すごしているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"villager.0": {
+"en": "A villager. Smiling warmly as everyone builds the new valley home.",
+"lo": "ຊາວບ້ານ. ຍິ້ມຢ່າງອົບອຸ່ນເມື່ອທຸກຄົນຊ່ວຍກັນສ້າງບ້ານໃໝ່.",
+"th": "ชาวบ้าน ยิ้มอย่างอบอุ่นเมื่อทุกคนช่วยกันสร้างบ้านใหม่",
+"zh": "村民。大家合力建设新山谷家园时露出了温暖的笑容。",
+"ja": "むらのひと。みんなで あたらしい むらを つくって にこにこ しているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"villager.1": {
+"en": "Villagers wear traditional Lao, Khmu, and Hmong clothes with pride.",
+"lo": "ຊາວບ້ານນຸ່ງຊຸດປະຈຳເຜົ່າລາວ, ກຶມມຸ, ແລະ ມົ້ງຢ່າງພາກພູມໃຈ.",
+"th": "ชาวบ้านสวมชุดประจำเผ่าลาว ขมุ และม้งอย่างภาคภูมิใจ",
+"zh": "村民们自豪地穿着老族、克木族和苗族的传统服饰。",
+"ja": "ラオぞく、クムぞく、モンぞくの きれいな ふくを たいせつに きているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"villager.2": {
+"en": "Neighbours help each other plant rice, weave silk, and raise houses.",
+"lo": "ບ້ານໃກ້ເຮືອນຄຽງຊ່ວຍກັນປູກເຂົ້າ, ຕ່ຳຫູກ, ແລະ ປຸກເຮືອນ.",
+"th": "เพื่อนบ้านช่วยกันปลูกข้าว ทอผ้า และสร้างบ้าน",
+"zh": "邻里之间互相帮忙插秧、织布、盖房子。",
+"ja": "おこめづくりや はたおり、いえづくりを みんなで たすけあうんだ。",
+"who": "narrator",
+"tag": "does"
+},
+"villager.3": {
+"en": "Happy voices sing together whenever the festival drums begin.",
+"lo": "ສຽງມ່ວນຊື່ນຮ້ອງເພງນຳກັນເມື່ອສຽງກອງບຸນເລີ່ມດັງ.",
+"th": "เสียงสนุกสนานร้องเพลงด้วยกันเมื่อเสียงกลองงานบุญเริ่มดัง",
+"zh": "节日鼓声一响，欢快的歌声便齐声唱起。",
+"ja": "たいこが なると みんなで たのしく うたを うたうよ。",
+"who": "narrator",
+"tag": "does"
+},
+"villager.4": {
+"en": "Round door or square door, all neighbours live as one big family.",
+"lo": "ປະຕູມົນ ຫຼື ປະຕູສີ່ຫຼ່ຽມ ທຸກຄົນຢູ່ຮ່ວມກັນຄືຄອບຄົວໃຫຍ່ດຽວກັນ.",
+"th": "ประตูกลมหรือประตูเหลี่ยม ทุกคนอยู่ร่วมกันเหมือนครอบครัวใหญ่เดียวกัน",
+"zh": "无论圆门还是方门，所有的乡亲都像一大家人一样生活在一起。",
+"ja": "どの とびらから でた ひとたちも みんな なかよしの ひとつの かぞくだよ。",
+"who": "narrator",
+"tag": "culture"
+},
+"vine.0": {
+"en": "A giant vine. Its thick stems twist high into the clouds.",
+"lo": "ເຄືອໝາກນ້ຳເຕົ້າ. ລຳເຄືອໜາພັນສູງຂຶ້ນສູ່ກ້ອນເມກ.",
+"th": "เถาวัลย์ยักษ์ ลำเถาหนาเลื้อยพันสูงขึ้นสู่ก้อนเมฆ",
+"zh": "巨藤。它粗壮的藤蔓一直盘旋伸向云端。",
+"ja": "おおきなつる。ふとい くきが くもまで たかく のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"vine.1": {
+"en": "Broad dark leaves stretch wide across the sky.",
+"lo": "ໃບໃຫຍ່ສີຂຽວເຂັ້ມແຜ່ກວ້າງປົກຄຸມທ້ອງຟ້າ.",
+"th": "ใบใหญ่สีเขียวเข้มแผ่กว้างปกคลุมท้องฟ้า",
+"zh": "宽大的深绿叶子在天空中铺展开来。",
+"ja": "おおきな はっぱが そら いっぱいに ひろがっているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"vine.2": {
+"en": "Twisting tendrils curl tightly around the heavy woody stem.",
+"lo": "ໜວດເຄືອກ້ຽວພັນແໜ້ນອ້ອມລຳໄມ້ໜາ.",
+"th": "มือเกาะม้วนพันแน่นรอบลำต้นไม้หนา",
+"zh": "卷曲的藤须紧紧缠绕在粗木茎上。",
+"ja": "くるくるした つるが ふとい みきに しっかり まきつくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"vine.3": {
+"en": "Even when it grows too tall, brave hearts can clear the way.",
+"lo": "ເຖິງວ່າມັນຈະສູງໃຫຍ່ປານໃດ ຫົວໃຈກ້າຫານກໍສາມາດເປີດທາງໄດ້.",
+"th": "แม้มันจะสูงใหญ่เพียงใด หัวใจที่กล้าหาญก็สามารถเปิดทางได้",
+"zh": "就算它长得再高大，勇敢的心也能开辟出道路。",
+"ja": "どんなに たかくても ゆうきがあれば みちを ひらけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"vine.4": {
+"en": "Gourd vines love warm sunlight and soft valley rain.",
+"lo": "ເຄືອໝາກນ້ຳເຕົ້າມັກແສງແດດອຸ່ນ ແລະ ຝົນອ່ອນໆໃນຮ່ອມພູ.",
+"th": "เถาวัลย์น้ำเต้าชอบแสงแดดอุ่นและฝนอ่อนๆ ในหุบเขา",
+"zh": "葫芦藤喜欢温暖的阳光和山谷里柔和的细雨。",
+"ja": "ひょうたんの つるは あたたかい ひざしと やさしい あめが すきなんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"water.0": {
+"en": "A lotus pond. Clear blue water ripples beside smooth stones.",
+"lo": "ໜອງບົວ. ນ້ຳສີຟ້າໃສເປັນຄື້ນນ້ອຍໆຂ້າງກ້ອນຫີນກ້ຽງ.",
+"th": "สระบัว น้ำสีฟ้าใสเป็นคลื่นเล็กๆ ข้างก้อนหินเรียบ",
+"zh": "莲花池。清澈的蓝水在光滑的卵石旁泛起涟漪。",
+"ja": "はすいけ。すきとおった みずが いしの そばで きらきら ゆれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"water.1": {
+"en": "Bright fish dart beneath the round floating lily pads.",
+"lo": "ປານ້ອຍລອຍໄປມາໃຕ້ໃບບົວມົນທີ່ລອຍຢູ່ໜ້ານ້ຳ.",
+"th": "ปลาน้อยว่ายไปมาใต้ใบบัวกลมที่ลอยอยู่บนผิวน้ำ",
+"zh": "灵巧的鱼儿在漂浮的圆圆荷叶下游动。",
+"ja": "まるい はすの はの したを さかなが すいすい およぐよ。",
+"who": "narrator",
+"tag": "does"
+},
+"water.2": {
+"en": "Tap the water to watch soft silver ripples spread out.",
+"lo": "ແຕະໜ້ານ້ຳເພື່ອເບິ່ງວົງຄື້ນສີເງິນແຜ່ອອກໄປ.",
+"th": "แตะผิวน้ำเพื่อดูวงคลื่นสีเงินแผ่ออกไป",
+"zh": "轻点水面，看柔和的银色涟漪荡漾开来。",
+"ja": "みずを タップすると まるい はもんが ひろがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"water.3": {
+"en": "Stepping stones curve neatly along the mossy pond edge.",
+"lo": "ກ້ອນຫີນຍ່າງລຽງໂຄ້ງຢ່າງຮຽບຮ້ອຍຕາມຂອບໜອງ.",
+"th": "ก้อนหินทางเดินเรียงโค้งอย่างเรียบร้อยตามขอบสระ",
+"zh": "踏脚石沿着长满青苔的池边优雅排开。",
+"ja": "まるい いしが いけの ふちに きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"water.4": {
+"en": "A cool lotus pond brings life and calm to the yard.",
+"lo": "ໜອງບົວເຢັນໆນຳຊີວິດຊີວາ ແລະ ຄວາມສະຫງົບມາສູ່ເດີ່ນບ້ານ.",
+"th": "สระบัวเย็นๆ นำชีวิตชีวาและความสงบมาสู่ลานบ้าน",
+"zh": "清凉的莲花池为院子带来生机与宁静。",
+"ja": "すずしい いけが おにわに いのちと やすらぎを くれるんだ。",
+"who": "narrator",
+"tag": "looks"
+},
+"white-elephant.0": {
+"en": "A white elephant. Noble, gentle, and dressed in royal gold!",
+"lo": "ຊ້າງເຜືອກ. ສະຫງ່າງາມ, ອ່ອນໂຍນ, ແລະ ປະດັບດ້ວຍຄຳ!",
+"th": "ช้างเผือก สง่างาม อ่อนโยน และประดับด้วยทองคำ!",
+"zh": "白象。高贵温顺，披着金色的皇家盛装！",
+"ja": "しろいぞう。やさしくて りっぱな きんの かざりを つけているよ！",
+"who": "narrator",
+"tag": "what"
+},
+"white-elephant.1": {
+"en": "Khun Borom rode the white elephant down from the sky.",
+"lo": "ຂຸນບູລົມຂີ່ຊ້າງເຜືອກລົງມາຈາກທ້ອງຟ້າ.",
+"th": "ขุนบูลมขี่ช้างเผือกลงมาจากท้องฟ้า",
+"zh": "坤布伦骑着白象从天而降。",
+"ja": "クン・ボロムが そらから のって おりてきたんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"white-elephant.2": {
+"en": "Elephants use their long trunks to drink water and pluck leaves.",
+"lo": "ຊ້າງໃຊ້ງວງຍາວດື່ມນ້ຳ ແລະ ດຶງໃບໄມ້ກິນ.",
+"th": "ช้างใช้งวงยาวดื่มน้ำและดึงใบไม้กิน",
+"zh": "大象用长长的鼻子喝水、摘树叶吃。",
+"ja": "ぞうは ながい はなで みずを のんだり はっぱを とって たべるんだ。",
+"who": "narrator",
+"tag": "fact"
+},
+"white-elephant.3": {
+"en": "Wide flapping ears help the elephant stay cool in the sun.",
+"lo": "ຫູໃຫຍ່ທີ່ກະພືບຊ່ວຍໃຫ້ຊ້າງເຢັນສະບາຍໃນແສງແດດ.",
+"th": "หูใหญ่ที่กระพือช่วยให้ช้างเย็นสบายในแสงแดด",
+"zh": "大象扇动宽大的耳朵，在阳光下给自己降温。",
+"ja": "おおきな みみを パタパタ させて すずしく するんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"white-elephant.4": {
+"en": "Laos was once called Lan Xang, the Land of a Million Elephants.",
+"lo": "ລາວເຄີຍມີຊື່ວ່າລ້ານຊ້າງ, ດິນແດນແຫ່ງຊ້າງລ້ານໂຕ.",
+"th": "ลาวเคยมีชื่อว่าล้านช้าง ดินแดนแห่งช้างล้านตัว",
+"zh": "老挝古称澜沧，意为百万大象之国。",
+"ja": "ラオスは むかし ひゃくまんとうの ぞうの くに と よばれていたんだよ。",
+"who": "narrator",
+"tag": "culture"
+}
+},
+"chars": {
+"punyeu": [
+"punyeu.0",
+"punyeu.1",
+"punyeu.2",
+"punyeu.3",
+"punyeu.4",
+"punyeu.5",
+"punyeu.6",
+"punyeu.7",
+"punyeu.8"
+],
+"pu-nyeu": [
+"punyeu.0",
+"punyeu.1",
+"punyeu.2",
+"punyeu.3",
+"punyeu.4",
+"punyeu.5",
+"punyeu.6",
+"punyeu.7",
+"punyeu.8"
+],
+"pu-nyeu-newyear": [
+"punyeu.0",
+"punyeu.1",
+"punyeu.2",
+"punyeu.3",
+"punyeu.4",
+"punyeu.5",
+"punyeu.6",
+"punyeu.7",
+"punyeu.8"
+],
+"nyanyeu": [
+"nyanyeu.0",
+"nyanyeu.1",
+"nyanyeu.2",
+"nyanyeu.3",
+"nyanyeu.4",
+"nyanyeu.5",
+"nyanyeu.6",
+"nyanyeu.7",
+"nyanyeu.8"
+],
+"nya-nyeu": [
+"nyanyeu.0",
+"nyanyeu.1",
+"nyanyeu.2",
+"nyanyeu.3",
+"nyanyeu.4",
+"nyanyeu.5",
+"nyanyeu.6",
+"nyanyeu.7",
+"nyanyeu.8"
+],
+"nya-nyeu-newyear": [
+"nyanyeu.0",
+"nyanyeu.1",
+"nyanyeu.2",
+"nyanyeu.3",
+"nyanyeu.4",
+"nyanyeu.5",
+"nyanyeu.6",
+"nyanyeu.7",
+"nyanyeu.8"
+],
+"lion": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"little-lion": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"lion-ears": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"lion-garland": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"lion-happy": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"lion-sad": [
+"lion.0",
+"lion.1",
+"lion.2",
+"lion.3",
+"lion.4",
+"lion.5",
+"lion.6",
+"lion.7",
+"lion.8"
+],
+"khun-borom": [
+"khun-borom.0",
+"khun-borom.1",
+"khun-borom.2",
+"khun-borom.3",
+"khun-borom.4",
+"khun-borom.5",
+"khun-borom.6",
+"khun-borom.7"
+],
+"borom-worried": [
+"khun-borom.0",
+"khun-borom.1",
+"khun-borom.2",
+"khun-borom.3",
+"khun-borom.4",
+"khun-borom.5",
+"khun-borom.6",
+"khun-borom.7"
+],
+"borom-mourning": [
+"khun-borom.0",
+"khun-borom.1",
+"khun-borom.2",
+"khun-borom.3",
+"khun-borom.4",
+"khun-borom.5",
+"khun-borom.6",
+"khun-borom.7"
+],
+"borom-welcome": [
+"khun-borom.0",
+"khun-borom.1",
+"khun-borom.2",
+"khun-borom.3",
+"khun-borom.4",
+"khun-borom.5",
+"khun-borom.6",
+"khun-borom.7"
+],
+"p6-borom-ride": [
+"khun-borom.0",
+"khun-borom.1",
+"khun-borom.2",
+"khun-borom.3",
+"khun-borom.4",
+"khun-borom.5",
+"khun-borom.6",
+"khun-borom.7"
+]
+},
+"pools": {
+"bamboo": [
+"bamboo.0",
+"bamboo.1",
+"bamboo.2",
+"bamboo.3",
+"bamboo.4"
+],
+"bamboo-pole": [
+"bamboo-pole.0",
+"bamboo-pole.1",
+"bamboo-pole.2",
+"bamboo-pole.3",
+"bamboo-pole.4"
+],
+"banana-shrub": [
+"banana-shrub.0",
+"banana-shrub.1",
+"banana-shrub.2",
+"banana-shrub.3",
+"banana-shrub.4"
+],
+"basket": [
+"basket.0",
+"basket.1",
+"basket.2",
+"basket.3",
+"basket.4"
+],
+"bat": [
+"bat.0",
+"bat.1",
+"bat.2",
+"bat.3",
+"bat.4"
+],
+"bowls": [
+"bowls.0",
+"bowls.1",
+"bowls.2",
+"bowls.3",
+"bowls.4"
+],
+"buffalo": [
+"buffalo.0",
+"buffalo.1",
+"buffalo.2",
+"buffalo.3",
+"buffalo.4"
+],
+"butterfly": [
+"butterfly.0",
+"butterfly.1",
+"butterfly.2",
+"butterfly.3",
+"butterfly.4"
+],
+"calf": [
+"calf.0",
+"calf.1",
+"calf.2",
+"calf.3",
+"calf.4"
+],
+"child": [
+"child.0",
+"child.1",
+"child.2",
+"child.3",
+"child.4"
+],
+"chilli": [
+"chilli.0",
+"chilli.1",
+"chilli.2",
+"chilli.3",
+"chilli.4"
+],
+"cloud": [
+"cloud.0",
+"cloud.1",
+"cloud.2",
+"cloud.3",
+"cloud.4"
+],
+"crab": [
+"crab.0",
+"crab.1",
+"crab.2",
+"crab.3",
+"crab.4"
+],
+"dog": [
+"dog.0",
+"dog.1",
+"dog.2",
+"dog.3",
+"dog.4"
+],
+"dragonfly": [
+"dragonfly.0",
+"dragonfly.1",
+"dragonfly.2",
+"dragonfly.3",
+"dragonfly.4"
+],
+"drum": [
+"drum.0",
+"drum.1",
+"drum.2",
+"drum.3",
+"drum.4"
+],
+"duck": [
+"duck.0",
+"duck.1",
+"duck.2",
+"duck.3",
+"duck.4"
+],
+"egret": [
+"egret.0",
+"egret.1",
+"egret.2",
+"egret.3",
+"egret.4"
+],
+"fence": [
+"fence.0",
+"fence.1",
+"fence.2",
+"fence.3",
+"fence.4"
+],
+"fire": [
+"fire.0",
+"fire.1",
+"fire.2",
+"fire.3",
+"fire.4"
+],
+"firewood": [
+"firewood.0",
+"firewood.1",
+"firewood.2",
+"firewood.3",
+"firewood.4"
+],
+"fish": [
+"fish.0",
+"fish.1",
+"fish.2",
+"fish.3",
+"fish.4"
+],
+"fish-trap": [
+"fish-trap.0",
+"fish-trap.1",
+"fish-trap.2",
+"fish-trap.3",
+"fish-trap.4"
+],
+"flowers": [
+"flowers.0",
+"flowers.1",
+"flowers.2",
+"flowers.3",
+"flowers.4"
+],
+"garland": [
+"garland.0",
+"garland.1",
+"garland.2",
+"garland.3",
+"garland.4"
+],
+"gecko": [
+"gecko.0",
+"gecko.1",
+"gecko.2",
+"gecko.3",
+"gecko.4"
+],
+"gourd": [
+"gourd.0",
+"gourd.1",
+"gourd.2",
+"gourd.3",
+"gourd.4"
+],
+"gourd-vine": [
+"gourd-vine.0",
+"gourd-vine.1",
+"gourd-vine.2",
+"gourd-vine.3",
+"gourd-vine.4"
+],
+"granary": [
+"granary.0",
+"granary.1",
+"granary.2",
+"granary.3",
+"granary.4"
+],
+"grass": [
+"grass.0",
+"grass.1",
+"grass.2",
+"grass.3",
+"grass.4"
+],
+"hen": [
+"hen.0",
+"hen.1",
+"hen.2",
+"hen.3",
+"hen.4"
+],
+"hill": [
+"hill.0",
+"hill.1",
+"hill.2",
+"hill.3",
+"hill.4"
+],
+"house": [
+"house.0",
+"house.1",
+"house.2",
+"house.3",
+"house.4"
+],
+"house-frame": [
+"house-frame.0",
+"house-frame.1",
+"house-frame.2",
+"house-frame.3",
+"house-frame.4"
+],
+"iron-stick": [
+"iron-stick.0",
+"iron-stick.1",
+"iron-stick.2",
+"iron-stick.3",
+"iron-stick.4"
+],
+"jar": [
+"jar.0",
+"jar.1",
+"jar.2",
+"jar.3",
+"jar.4"
+],
+"knoll": [
+"knoll.0",
+"knoll.1",
+"knoll.2",
+"knoll.3",
+"knoll.4"
+],
+"knot": [
+"knot.0",
+"knot.1",
+"knot.2",
+"knot.3",
+"knot.4"
+],
+"lamp": [
+"lamp.0",
+"lamp.1",
+"lamp.2",
+"lamp.3",
+"lamp.4"
+],
+"leaf": [
+"leaf.0",
+"leaf.1",
+"leaf.2",
+"leaf.3",
+"leaf.4"
+],
+"log": [
+"log.0",
+"log.1",
+"log.2",
+"log.3",
+"log.4"
+],
+"loom": [
+"loom.0",
+"loom.1",
+"loom.2",
+"loom.3",
+"loom.4"
+],
+"lotus": [
+"lotus.0",
+"lotus.1",
+"lotus.2",
+"lotus.3",
+"lotus.4"
+],
+"mallet": [
+"mallet.0",
+"mallet.1",
+"mallet.2",
+"mallet.3",
+"mallet.4"
+],
+"mango-tree": [
+"mango-tree.0",
+"mango-tree.1",
+"mango-tree.2",
+"mango-tree.3",
+"mango-tree.4"
+],
+"moon": [
+"moon.0",
+"moon.1",
+"moon.2",
+"moon.3",
+"moon.4"
+],
+"moth": [
+"moth.0",
+"moth.1",
+"moth.2",
+"moth.3",
+"moth.4"
+],
+"mound": [
+"mound.0",
+"mound.1",
+"mound.2",
+"mound.3",
+"mound.4"
+],
+"mud": [
+"mud.0",
+"mud.1",
+"mud.2",
+"mud.3",
+"mud.4"
+],
+"palm": [
+"palm.0",
+"palm.1",
+"palm.2",
+"palm.3",
+"palm.4"
+],
+"peep": [
+"peep.0",
+"peep.1",
+"peep.2",
+"peep.3",
+"peep.4"
+],
+"pig": [
+"pig.0",
+"pig.1",
+"pig.2",
+"pig.3",
+"pig.4"
+],
+"plough": [
+"plough.0",
+"plough.1",
+"plough.2",
+"plough.3",
+"plough.4"
+],
+"pot": [
+"pot.0",
+"pot.1",
+"pot.2",
+"pot.3",
+"pot.4"
+],
+"reeds": [
+"reeds.0",
+"reeds.1",
+"reeds.2",
+"reeds.3",
+"reeds.4"
+],
+"rice": [
+"rice.0",
+"rice.1",
+"rice.2",
+"rice.3",
+"rice.4"
+],
+"rice-bundle": [
+"rice-bundle.0",
+"rice-bundle.1",
+"rice-bundle.2",
+"rice-bundle.3",
+"rice-bundle.4"
+],
+"river": [
+"river.0",
+"river.1",
+"river.2",
+"river.3",
+"river.4"
+],
+"rope": [
+"rope.0",
+"rope.1",
+"rope.2",
+"rope.3",
+"rope.4"
+],
+"sand-stupa": [
+"sand-stupa.0",
+"sand-stupa.1",
+"sand-stupa.2",
+"sand-stupa.3",
+"sand-stupa.4"
+],
+"sky": [
+"sky.0",
+"sky.1",
+"sky.2",
+"sky.3",
+"sky.4"
+],
+"spirit-house": [
+"spirit-house.0",
+"spirit-house.1",
+"spirit-house.2",
+"spirit-house.3",
+"spirit-house.4"
+],
+"squirrel": [
+"squirrel.0",
+"squirrel.1",
+"squirrel.2",
+"squirrel.3",
+"squirrel.4"
+],
+"stones": [
+"stones.0",
+"stones.1",
+"stones.2",
+"stones.3",
+"stones.4"
+],
+"stump": [
+"stump.0",
+"stump.1",
+"stump.2",
+"stump.3",
+"stump.4"
+],
+"table": [
+"table.0",
+"table.1",
+"table.2",
+"table.3",
+"table.4"
+],
+"taro": [
+"taro.0",
+"taro.1",
+"taro.2",
+"taro.3",
+"taro.4"
+],
+"thread": [
+"thread.0",
+"thread.1",
+"thread.2",
+"thread.3",
+"thread.4"
+],
+"tool": [
+"tool.0",
+"tool.1",
+"tool.2",
+"tool.3",
+"tool.4"
+],
+"turtle": [
+"turtle.0",
+"turtle.1",
+"turtle.2",
+"turtle.3",
+"turtle.4"
+],
+"villager": [
+"villager.0",
+"villager.1",
+"villager.2",
+"villager.3",
+"villager.4"
+],
+"vine": [
+"vine.0",
+"vine.1",
+"vine.2",
+"vine.3",
+"vine.4"
+],
+"water": [
+"water.0",
+"water.1",
+"water.2",
+"water.3",
+"water.4"
+],
+"white-elephant": [
+"white-elephant.0",
+"white-elephant.1",
+"white-elephant.2",
+"white-elephant.3",
+"white-elephant.4"
+]
+},
+"animals": [
+"bat",
+"buffalo",
+"butterfly",
+"calf",
+"child",
+"crab",
+"dog",
+"dragonfly",
+"duck",
+"egret",
+"fish",
+"gecko",
+"hen",
+"moth",
+"peep",
+"pig",
+"squirrel",
+"turtle",
+"villager",
+"white-elephant"
+],
+"word": {
+"punyeu": {
+"en": "Pu Nyeu",
+"lo": "ປູ່ເຍີ",
+"th": "ปู่เยอ",
+"zh": "布约爷爷",
+"ja": "プーニョー"
+},
+"pu-nyeu": {
+"en": "Pu Nyeu",
+"lo": "ປູ່ເຍີ",
+"th": "ปู่เยอ",
+"zh": "布约爷爷",
+"ja": "プーニョー"
+},
+"pu-nyeu-newyear": {
+"en": "Pu Nyeu",
+"lo": "ປູ່ເຍີ",
+"th": "ปู่เยอ",
+"zh": "布约爷爷",
+"ja": "プーニョー"
+},
+"nyanyeu": {
+"en": "Nya Nyeu",
+"lo": "ຍ່າເຍີ",
+"th": "ย่าเยอ",
+"zh": "雅约奶奶",
+"ja": "ヤーニョー"
+},
+"nya-nyeu": {
+"en": "Nya Nyeu",
+"lo": "ຍ່າເຍີ",
+"th": "ย่าเยอ",
+"zh": "雅约奶奶",
+"ja": "ヤーニョー"
+},
+"nya-nyeu-newyear": {
+"en": "Nya Nyeu",
+"lo": "ຍ່າເຍີ",
+"th": "ย่าเยอ",
+"zh": "雅约奶奶",
+"ja": "ヤーニョー"
+},
+"lion": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"little-lion": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"lion-ears": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"lion-garland": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"lion-happy": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"lion-sad": {
+"en": "Little Lion",
+"lo": "ສິງນ້ອຍ",
+"th": "สิงห์น้อย",
+"zh": "小狮子",
+"ja": "ちいさなシシ"
+},
+"khun-borom": {
+"en": "Khun Borom",
+"lo": "ຂຸນບູລົມ",
+"th": "ขุนบูลม",
+"zh": "坤布伦",
+"ja": "クン・ボロム"
+},
+"borom-worried": {
+"en": "Khun Borom",
+"lo": "ຂຸນບູລົມ",
+"th": "ขุนบูลม",
+"zh": "坤布伦",
+"ja": "クン・ボロム"
+},
+"borom-mourning": {
+"en": "Khun Borom",
+"lo": "ຂຸນບູລົມ",
+"th": "ขุนบูลม",
+"zh": "坤布伦",
+"ja": "クン・ボロム"
+},
+"borom-welcome": {
+"en": "Khun Borom",
+"lo": "ຂຸນບູລົມ",
+"th": "ขุนบูลม",
+"zh": "坤布伦",
+"ja": "クン・ボロム"
+},
+"p6-borom-ride": {
+"en": "Khun Borom",
+"lo": "ຂຸນບູລົມ",
+"th": "ขุนบูลม",
+"zh": "坤布伦",
+"ja": "クン・ボロム"
+},
+"bamboo": {
+"en": "bamboo grove",
+"lo": "ກໍໄມ້ໄຜ່",
+"th": "กอไผ่",
+"zh": "竹林",
+"ja": "たけばやし"
+},
+"bamboo-pole": {
+"en": "bamboo pole",
+"lo": "ລຳໄມ້ໄຜ່",
+"th": "ลำไม้ไผ่",
+"zh": "竹竿",
+"ja": "たけざお"
+},
+"banana-shrub": {
+"en": "banana tree",
+"lo": "ຕົ້ນກ້ວຍ",
+"th": "ต้นกล้วย",
+"zh": "香蕉树",
+"ja": "バナナのき"
+},
+"basket": {
+"en": "woven basket",
+"lo": "ກະບຸງ",
+"th": "ตะกร้าสาน",
+"zh": "竹篮",
+"ja": "あみかご"
+},
+"bat": {
+"en": "fruit bat",
+"lo": "ເຈຍ",
+"th": "ค้างคาวแม่ไก่",
+"zh": "果蝠",
+"ja": "こうもり"
+},
+"bowls": {
+"en": "water bowl",
+"lo": "ຂັນນ້ຳ",
+"th": "ขันน้ำ",
+"zh": "水碗",
+"ja": "みずわん"
+},
+"buffalo": {
+"en": "water buffalo",
+"lo": "ຄວາຍ",
+"th": "ควาย",
+"zh": "水牛",
+"ja": "すいぎゅう"
+},
+"butterfly": {
+"en": "butterfly",
+"lo": "ແມງກະເບື້ອ",
+"th": "ผีเสื้อ",
+"zh": "蝴蝶",
+"ja": "ちょうちょ"
+},
+"calf": {
+"en": "young calf",
+"lo": "ລູກຄວາຍ",
+"th": "ลูกควาย",
+"zh": "小牛犊",
+"ja": "こうし"
+},
+"child": {
+"en": "village child",
+"lo": "ເດັກນ້ອຍ",
+"th": "เด็กน้อย",
+"zh": "村里的孩子",
+"ja": "こども"
+},
+"chilli": {
+"en": "chilli plant",
+"lo": "ຕົ້ນໝາກເຜັດ",
+"th": "ต้นพริก",
+"zh": "辣椒苗",
+"ja": "とうがらし"
+},
+"cloud": {
+"en": "soft cloud",
+"lo": "ກ້ອນເມກ",
+"th": "ก้อนเมฆ",
+"zh": "云朵",
+"ja": "くも"
+},
+"crab": {
+"en": "river crab",
+"lo": "ກະປູ",
+"th": "ปูนา",
+"zh": "河蟹",
+"ja": "かに"
+},
+"dog": {
+"en": "village dog",
+"lo": "ໝາບ້ານ",
+"th": "สุนัขบ้าน",
+"zh": "村里的小狗",
+"ja": "いぬ"
+},
+"dragonfly": {
+"en": "dragonfly",
+"lo": "ແມງປໍ",
+"th": "แมลงปอ",
+"zh": "蜻蜓",
+"ja": "トンボ"
+},
+"drum": {
+"en": "festival drum",
+"lo": "ກອງບຸນ",
+"th": "กลองงานบุญ",
+"zh": "节庆鼓",
+"ja": "たいこ"
+},
+"duck": {
+"en": "pond duck",
+"lo": "ເປັດ",
+"th": "เป็ด",
+"zh": "鸭子",
+"ja": "あひる"
+},
+"egret": {
+"en": "white egret",
+"lo": "ນົກຍາງ",
+"th": "นกยาง",
+"zh": "白鹭",
+"ja": "しろさぎ"
+},
+"fence": {
+"en": "bamboo fence",
+"lo": "ຮົ້ວໄມ້ໄຜ່",
+"th": "รั้วไม้ไผ่",
+"zh": "竹篱笆",
+"ja": "たけがき"
+},
+"fire": {
+"en": "campfire",
+"lo": "ກອງໄຟ",
+"th": "กองไฟ",
+"zh": "篝火",
+"ja": "たきび"
+},
+"firewood": {
+"en": "firewood",
+"lo": "ຟືນ",
+"th": "ฟืน",
+"zh": "木柴",
+"ja": "まき"
+},
+"fish": {
+"en": "pond fish",
+"lo": "ປາ",
+"th": "ปลา",
+"zh": "小鱼",
+"ja": "さかな"
+},
+"fish-trap": {
+"en": "fish trap",
+"lo": "ໄຊດັກປາ",
+"th": "ไซดักปลา",
+"zh": "鱼笼",
+"ja": "うおとりかご"
+},
+"flowers": {
+"en": "marigold flowers",
+"lo": "ດອກດາວເຮືອງ",
+"th": "ดอกดาวเรือง",
+"zh": "万寿菊",
+"ja": "マリーゴールド"
+},
+"garland": {
+"en": "flower garland",
+"lo": "ພວງມາໄລ",
+"th": "พวงมาลัย",
+"zh": "花环",
+"ja": "はなかざり"
+},
+"gecko": {
+"en": "house gecko",
+"lo": "ກັບແກ້",
+"th": "จิ้งจก",
+"zh": "壁虎",
+"ja": "やもり"
+},
+"gourd": {
+"en": "great gourd",
+"lo": "ໝາກນ້ຳເຕົ້າ",
+"th": "น้ำเต้ายักษ์",
+"zh": "大葫芦",
+"ja": "おおきなひょうたん"
+},
+"gourd-vine": {
+"en": "gourd trellis",
+"lo": "ຮ້ານໝາກນ້ຳເຕົ້າ",
+"th": "ค้างน้ำเต้า",
+"zh": "葫芦架",
+"ja": "ひょうたんだな"
+},
+"granary": {
+"en": "rice granary",
+"lo": "ເລົ້າເຂົ້າ",
+"th": "ยุ้งข้าว",
+"zh": "粮仓",
+"ja": "こめぐら"
+},
+"grass": {
+"en": "soft grass",
+"lo": "ກໍຫຍ້າ",
+"th": "กอหญ้า",
+"zh": "青草",
+"ja": "くさむら"
+},
+"hen": {
+"en": "village hen",
+"lo": "ແມ່ໄກ່",
+"th": "แม่ไก่",
+"zh": "母鸡",
+"ja": "にわとり"
+},
+"hill": {
+"en": "blue hills",
+"lo": "ພູຜາ",
+"th": "ภูเขา",
+"zh": "青山",
+"ja": "やま"
+},
+"house": {
+"en": "stilt house",
+"lo": "ເຮືອນຮ້ານ",
+"th": "บ้านใต้ถุนสูง",
+"zh": "高脚屋",
+"ja": "たかゆかのいえ"
+},
+"house-frame": {
+"en": "house frame",
+"lo": "ໂຄງເຮືອນ",
+"th": "โครงบ้าน",
+"zh": "屋架",
+"ja": "いえのほねぐみ"
+},
+"iron-stick": {
+"en": "iron poker",
+"lo": "ເຫຼັກຊີ",
+"th": "เหล็กแหลม",
+"zh": "铁棒",
+"ja": "てつのぼう"
+},
+"jar": {
+"en": "clay jar",
+"lo": "ໄຫດິນ",
+"th": "ไหดินเผา",
+"zh": "陶罐",
+"ja": "つぼ"
+},
+"knoll": {
+"en": "grassy hill",
+"lo": "ໂນນຫຍ້າ",
+"th": "เนินหญ้า",
+"zh": "草坡",
+"ja": "くさのおカ"
+},
+"knot": {
+"en": "gourd knot",
+"lo": "ປຸ່ມໝາກນ້ຳເຕົ້າ",
+"th": "ปุ่มน้ำเต้า",
+"zh": "葫芦结",
+"ja": "ひょうたんのふし"
+},
+"lamp": {
+"en": "oil lamp",
+"lo": "ໂຄມໄຟ",
+"th": "ตะเกียงน้ำมัน",
+"zh": "油灯",
+"ja": "ランプ"
+},
+"leaf": {
+"en": "vine leaf",
+"lo": "ໃບໄມ້",
+"th": "ใบไม้",
+"zh": "绿叶",
+"ja": "はっぱ"
+},
+"log": {
+"en": "mossy log",
+"lo": "ຂອນໄມ້",
+"th": "ขอนไม้",
+"zh": "木头",
+"ja": "まるた"
+},
+"loom": {
+"en": "weaving loom",
+"lo": "ກີ່ຕ່ຳຫູກ",
+"th": "กี่ทอผ้า",
+"zh": "织布机",
+"ja": "はたおりき"
+},
+"lotus": {
+"en": "lotus flower",
+"lo": "ດອກບົວ",
+"th": "ดอกบัว",
+"zh": "莲花",
+"ja": "はすのはな"
+},
+"mallet": {
+"en": "wooden axe",
+"lo": "ຂວານໄມ້",
+"th": "ขวาน",
+"zh": "木斧",
+"ja": "おの"
+},
+"mango-tree": {
+"en": "mango tree",
+"lo": "ຕົ້ນໝາກມ່ວງ",
+"th": "ต้นมะม่วง",
+"zh": "芒果树",
+"ja": "マンゴーのき"
+},
+"moon": {
+"en": "silver moon",
+"lo": "ດວງຈັນ",
+"th": "ดวงจันทร์",
+"zh": "月亮",
+"ja": "おつきさま"
+},
+"moth": {
+"en": "night moth",
+"lo": "ແມງກະເບື້ອກາງຄືນ",
+"th": "ผีเสื้อกลางคืน",
+"zh": "夜蛾",
+"ja": "よるのが"
+},
+"mound": {
+"en": "earth mound",
+"lo": "ໂພນດິນ",
+"th": "เนินดิน",
+"zh": "土丘",
+"ja": "つちやま"
+},
+"mud": {
+"en": "mud patch",
+"lo": "ຂີ້ຕົມ",
+"th": "โคลน",
+"zh": "泥地",
+"ja": "どろ"
+},
+"palm": {
+"en": "palm tree",
+"lo": "ຕົ້ນພ້າວ",
+"th": "ต้นมะพร้าว",
+"zh": "棕榈树",
+"ja": "ヤシのき"
+},
+"peep": {
+"en": "tiny face",
+"lo": "ໃບໜ້ານ້ອຍ",
+"th": "ใบหน้าน้อย",
+"zh": "小脸蛋",
+"ja": "ちいさなかお"
+},
+"pig": {
+"en": "little pig",
+"lo": "ໝູນ້ອຍ",
+"th": "หมูน้อย",
+"zh": "小猪",
+"ja": "こぶた"
+},
+"plough": {
+"en": "wooden plough",
+"lo": "ໄຖນາ",
+"th": "ไถนา",
+"zh": "木犁",
+"ja": "きのすき"
+},
+"pot": {
+"en": "cooking pot",
+"lo": "ໝໍ້ດິນ",
+"th": "หม้อดิน",
+"zh": "砂锅",
+"ja": "どなべ"
+},
+"reeds": {
+"en": "water reeds",
+"lo": "ຕົ້ນອໍ້",
+"th": "ต้นอ้อ",
+"zh": "芦苇",
+"ja": "あし"
+},
+"rice": {
+"en": "rice shoots",
+"lo": "ຕົ້ນກ້າ",
+"th": "ต้นกล้าข้าว",
+"zh": "稻秧",
+"ja": "いねのなえ"
+},
+"rice-bundle": {
+"en": "rice bundle",
+"lo": "ມັດເຂົ້າ",
+"th": "มัดข้าว",
+"zh": "稻束",
+"ja": "いなたば"
+},
+"river": {
+"en": "river bank",
+"lo": "ແຄມນ້ຳ",
+"th": "ริมน้ำ",
+"zh": "河岸",
+"ja": "かわべ"
+},
+"rope": {
+"en": "hemp rope",
+"lo": "ເຊືອກ",
+"th": "เชือก",
+"zh": "麻绳",
+"ja": "ロープ"
+},
+"sand-stupa": {
+"en": "sand stupa",
+"lo": "ພະທາດຊາຍ",
+"th": "เจดีย์ทราย",
+"zh": "沙塔",
+"ja": "すなのとう"
+},
+"sky": {
+"en": "morning sky",
+"lo": "ທ້ອງຟ້າ",
+"th": "ท้องฟ้า",
+"zh": "天空",
+"ja": "そら"
+},
+"spirit-house": {
+"en": "spirit house",
+"lo": "ຫໍພະພູມ",
+"th": "ศาลพระภูมิ",
+"zh": "土地神龛",
+"ja": "ほこら"
+},
+"squirrel": {
+"en": "tree squirrel",
+"lo": "ກະຮອກ",
+"th": "กระรอก",
+"zh": "松鼠",
+"ja": "リス"
+},
+"stones": {
+"en": "river stones",
+"lo": "ກ້ອນຫີນ",
+"th": "ก้อนหิน",
+"zh": "石头",
+"ja": "いし"
+},
+"stump": {
+"en": "tree stump",
+"lo": "ຕໍໄມ້",
+"th": "ตอไม้",
+"zh": "树桩",
+"ja": "きりかぶ"
+},
+"table": {
+"en": "feast table",
+"lo": "ພາເຂົ້າ",
+"th": "โต๊ะอาหาร",
+"zh": "餐桌",
+"ja": "しょくたく"
+},
+"taro": {
+"en": "taro leaves",
+"lo": "ໃບບອນ",
+"th": "ใบบอน",
+"zh": "芋叶",
+"ja": "さといものは"
+},
+"thread": {
+"en": "silk thread",
+"lo": "ເສັ້ນໄໝ",
+"th": "เส้นไหม",
+"zh": "丝线",
+"ja": "きぬいと"
+},
+"tool": {
+"en": "wood chisel",
+"lo": "ສິ່ວໄມ້",
+"th": "สิ่วไม้",
+"zh": "木凿",
+"ja": "のみ"
+},
+"turtle": {
+"en": "pond turtle",
+"lo": "ເຕົ່າ",
+"th": "เต่า",
+"zh": "乌龟",
+"ja": "かめ"
+},
+"villager": {
+"en": "villager",
+"lo": "ຊາວບ້ານ",
+"th": "ชาวบ้าน",
+"zh": "村民",
+"ja": "むらのひと"
+},
+"vine": {
+"en": "giant vine",
+"lo": "ເຄືອໝາກນ້ຳເຕົ້າ",
+"th": "เถาวัลย์ยักษ์",
+"zh": "巨藤",
+"ja": "おおきなつる"
+},
+"water": {
+"en": "lotus pond",
+"lo": "ໜອງບົວ",
+"th": "สระบัว",
+"zh": "莲花池",
+"ja": "はすいけ"
+},
+"white-elephant": {
+"en": "white elephant",
+"lo": "ຊ້າງເຜືອກ",
+"th": "ช้างเผือก",
+"zh": "白象",
+"ja": "しろいぞう"
+}
+},
+"map": {
+"house": "house",
+"mango-tree": "mango-tree",
+"hearth": "fire",
+"knoll": "knoll",
+"plough": "plough",
+"cloud-small": "cloud",
+"posed-egret": "egret",
+"posed-turtle": "turtle",
+"posed-squirrel": "squirrel",
+"buffalo": "buffalo",
+"gecko": "gecko",
+"egret": "egret",
+"stones": "stones",
+"pond-reeds": "reeds",
+"log": "log",
+"lotus-clump": "lotus",
+"frame-left": "flowers",
+"firewood": "firewood",
+"river-bank": "river",
+"backdrop": "sky",
+"far": "hill",
+"mid": "hill",
+"baskets": "basket",
+"garden-a": "fence",
+"garden-c": "gourd-vine",
+"spirit-house": "spirit-house",
+"wing-yard-back-l": "palm",
+"wing-yard-back-r": "bamboo",
+"wing-yard-mid-r": "banana-shrub",
+"wing-yard-front-r": "lotus",
+"yard-ground-row": "river",
+"mud": "mud",
+"posed-dragonfly0": "dragonfly",
+"posed-dragonfly1": "dragonfly",
+"mud0": "mud",
+"mud1": "mud",
+"mud2": "mud",
+"mud3": "mud",
+"mud4": "mud",
+"shoot0": "rice",
+"shoot1": "rice",
+"shoot2": "rice",
+"shoot3": "rice",
+"shoot4": "rice",
+"buffalo-lying": "buffalo",
+"mound": "mound",
+"gourd": "gourd",
+"vine": "vine",
+"posed-duck": "duck",
+"posed-fish": "fish",
+"grass-a": "grass",
+"row-b0": "chilli",
+"leaf": "leaf",
+"leaf0": "leaf",
+"leaf1": "leaf",
+"leaf2": "leaf",
+"leaf3": "leaf",
+"leaf4": "leaf",
+"knot": "knot",
+"water": "water",
+"ground-mat": "mud",
+"iron-stick": "iron-stick",
+"chisel": "tool",
+"mallet": "mallet",
+"c10": "child",
+"c07": "child",
+"c05": "villager",
+"c03": "villager",
+"p4-c04": "villager",
+"p4-c06": "villager",
+"p4-P1": "villager",
+"p4-P2": "villager",
+"p4-P2b": "villager",
+"posed-dog": "dog",
+"posed-pig": "pig",
+"posed-calf": "calf",
+"posed-hen-a": "hen",
+"posed-hen-b": "hen",
+"posed-dragonfly": "dragonfly",
+"peep": "peep",
+"peep0": "peep",
+"peep1": "peep",
+"peep2": "peep",
+"peep3": "peep",
+"peep4": "peep",
+"peep5": "peep",
+"peep6": "peep",
+"peep7": "peep",
+"peep8": "peep",
+"peep9": "peep",
+"mango-basket": "basket",
+"pots-3d": "pot",
+"jars-3d": "jar",
+"c01": "villager",
+"c02": "villager",
+"p5-c03": "villager",
+"p5-c04": "villager",
+"c06": "villager",
+"p5-AB": "child",
+"c08": "child",
+"p5-CD": "child",
+"p5-c12": "child",
+"posed-butterfly-a": "butterfly",
+"posed-butterfly-b": "butterfly",
+"reeds-tall": "reeds",
+"fore-taro-r": "taro",
+"corner-blooms": "flowers",
+"sky-full": "sky",
+"land-full-ne": "hill",
+"mid-village": "hill",
+"wing-lane-back-l": "house",
+"wing-lane-back-r": "bamboo",
+"wing-lane-mid-l": "fence",
+"wing-lane-mid-r": "granary",
+"wing-lane-ground-l": "fence",
+"wing-lane-ground-r": "fence",
+"c": "villager",
+"loom": "loom",
+"house-frame": "house-frame",
+"bamboo-pole": "bamboo-pole",
+"rice-bundle": "rice-bundle",
+"fish-trap": "fish-trap",
+"white-elephant": "white-elephant",
+"c04": "villager",
+"p6-c05": "villager",
+"p6-c02": "villager",
+"p6-c03": "villager",
+"p6-X": "villager",
+"p6-Y": "villager",
+"rice-front": "rice",
+"thread-skein": "thread",
+"sky-palace": "sky",
+"fire": "fire",
+"rice-shoot": "rice",
+"c09": "child",
+"p7-AB": "villager",
+"p7-CD": "villager",
+"p7-EF": "child",
+"p7-c11": "child",
+"p7-c10": "child",
+"posed-moth": "moth",
+"posed-bat": "bat",
+"dry-stones": "stones",
+"sky-night": "sky",
+"p7-c": "villager",
+"drum": "drum",
+"rope": "rope",
+"axe": "mallet",
+"water-jar": "jar",
+"rice-basket": "basket",
+"lamp": "lamp",
+"carrying-basket": "basket",
+"p8-AB": "villager",
+"p8-CD": "villager",
+"p8-EF": "child",
+"p8-c11": "child",
+"p8-c10": "child",
+"p8-CD-drum": "villager",
+"p8-EF-drum": "child",
+"p8-c10-drum": "child",
+"stump": "stump",
+"axe2": "mallet",
+"jar-b": "jar",
+"basket-a": "basket",
+"lamp0": "lamp",
+"lamp1": "lamp",
+"lamp2": "lamp",
+"pole0": "lamp",
+"pole1": "lamp",
+"p9-A": "villager",
+"p9-B": "villager",
+"moon": "moon",
+"sky-day": "sky",
+"table-a": "table",
+"table-b": "table",
+"rice-baskets": "basket",
+"rice-baskets-2": "basket",
+"bowl-stand": "bowls",
+"bowls": "bowls",
+"lamp-a": "lamp",
+"lamp-b": "lamp",
+"pole-a": "lamp",
+"pole-b": "lamp",
+"drum0": "drum",
+"drum1": "drum",
+"drum2": "drum",
+"p10-E": "villager",
+"p10-B": "child",
+"p10-C": "child",
+"p10-F": "villager",
+"p10-E-up": "villager",
+"p10-B-up": "child",
+"p10-C-up": "child",
+"p10-F-up": "villager",
+"posed-crab": "crab",
+"posed-butterfly": "butterfly",
+"flowers-a": "flowers",
+"garland-poles": "garland",
+"garland-lines": "garland",
+"villagers-arriving": "garland",
+"sky-figures": "sky",
+"sky-festival": "sky",
+"sand-stupa": "sand-stupa",
+"small-stupa-a": "sand-stupa",
+"small-stupa-b": "sand-stupa",
+"water-bowl": "bowls",
+"p11-A": "child",
+"p11-B": "child",
+"p11-C": "child",
+"p11-D": "villager",
+"p11-E": "villager",
+"p11-G": "villager",
+"p11-F": "villager"
+},
+"maps": {
+"s08": {
+"water-jar": "jar"
+},
+"s09": {
+"water-jar": "jar"
+},
+"s10": {
+"villagers-arriving": "garland"
+}
+}
 }
