@@ -2229,6 +2229,51 @@
 "who": "narrator",
 "tag": "sound"
 },
+"xm_coconutpalm.0": {
+"en": "A coconut palm. A coconut palm lifts tall feathery fronds toward the sky.",
+"lo": "ຕົ້ນໝາກພ້າວ. ຕົ້ນໝາກພ້າວ ຊູໃບສູງຄືຂົນນົກຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "ต้นมะพร้าว ต้นมะพร้าวชูใบสูงเหมือนขนนกขึ้นสู่ท้องฟ้า",
+"zh": "椰子树。椰子树朝天空高高举起羽状大叶。",
+"ja": "やしの き。やしの きが たかく はっぱを ひろげているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"xm_coconutpalm.1": {
+"en": "The coconut palm leans gracefully in the warm riverbank breeze.",
+"lo": "ຕົ້ນໝາກພ້າວເອນອ່ອນຊ້ອຍໃນສາຍລົມອຸ່ນແຄມແມ່ນ້ຳ.",
+"th": "ต้นมะพร้าวเอนอ่อนช้อยในสายลมอุ่นริมแม่น้ำ",
+"zh": "椰子树在温暖的河岸微风里优雅摇曳。",
+"ja": "かわべの かぜに やさしく ゆれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"xm_coconutpalm.2": {
+"en": "Big feathery green leaves fan out atop a slender ringed trunk.",
+"lo": "ໃບຂຽວໃຫຍ່ຄືຂົນນົກແຜ່ອອກເທິງລຳຕົ້ນຍາວມີປ້ອງ.",
+"th": "ใบเขียวใหญ่เหมือนขนนกแผ่ออกบนลำต้นยาวมีปล้อง",
+"zh": "修长带环纹的树干顶着一蓬羽状大绿叶。",
+"ja": "ながい みきの てっぺんに はっぱが ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"xm_coconutpalm.3": {
+"en": "Sweet refreshing coconut water grows right inside green coconuts!",
+"lo": "ນ້ຳໝາກພ້າວຫວານສົດຊື່ນຢູ່ຂ້າງໃນໝາກພ້າວຂຽວ!",
+"th": "น้ำมะพร้าวหวานสดชื่นอยู่ข้างในลูกมะพร้าวเขียว!",
+"zh": "青青的椰子里藏着清甜爽口的椰子水！",
+"ja": "みどりの みの なかに あまい ジュースが はいっているんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"xm_coconutpalm.4": {
+"en": "Rustle, clack!",
+"lo": "ຊາໆ, ແຄະ!",
+"th": "ซ่าๆ แกร๊ก!",
+"zh": "椰叶沙沙摇响！",
+"ja": "さわさわ、さらさら！",
+"who": "narrator",
+"tag": "sound"
+},
 "xm_banyanroot.0": {
 "en": "A banyan root. A banyan root curves low like a sturdy seat by the tree.",
 "lo": "ຮາກຕົ້ນໄຮ. ຮາກຕົ້ນໄຮ ໂຄ້ງຕ່ຳຄືບ່ອນນັ່ງແຂງແຮງຢູ່ກ້ອງຕົ້ນໄມ້.",
@@ -2406,51 +2451,6 @@
 "th": "ลม ก้อง!",
 "zh": "远山风轻拂！",
 "ja": "そよそよ、とおいね！",
-"who": "narrator",
-"tag": "sound"
-},
-"xm_coconutpalm.0": {
-"en": "A coconut palm. A coconut palm lifts tall feathery fronds toward the sky.",
-"lo": "ຕົ້ນໝາກພ້າວ. ຕົ້ນໝາກພ້າວ ຊູໃບສູງຄືຂົນນົກຂຶ້ນສູ່ທ້ອງຟ້າ.",
-"th": "ต้นมะพร้าว ต้นมะพร้าวชูใบสูงเหมือนขนนกขึ้นสู่ท้องฟ้า",
-"zh": "椰子树。椰子树朝天空高高举起羽状大叶。",
-"ja": "やしの き。やしの きが たかく はっぱを ひろげているよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_coconutpalm.1": {
-"en": "The coconut palm leans gracefully in the warm riverbank breeze.",
-"lo": "ຕົ້ນໝາກພ້າວເອນອ່ອນຊ້ອຍໃນສາຍລົມອຸ່ນແຄມແມ່ນ້ຳ.",
-"th": "ต้นมะพร้าวเอนอ่อนช้อยในสายลมอุ่นริมแม่น้ำ",
-"zh": "椰子树在温暖的河岸微风里优雅摇曳。",
-"ja": "かわべの かぜに やさしく ゆれているよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_coconutpalm.2": {
-"en": "Big feathery green leaves fan out atop a slender ringed trunk.",
-"lo": "ໃບຂຽວໃຫຍ່ຄືຂົນນົກແຜ່ອອກເທິງລຳຕົ້ນຍາວມີປ້ອງ.",
-"th": "ใบเขียวใหญ่เหมือนขนนกแผ่ออกบนลำต้นยาวมีปล้อง",
-"zh": "修长带环纹的树干顶着一蓬羽状大绿叶。",
-"ja": "ながい みきの てっぺんに はっぱが ひろがるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_coconutpalm.3": {
-"en": "Sweet refreshing coconut water grows right inside green coconuts!",
-"lo": "ນ້ຳໝາກພ້າວຫວານສົດຊື່ນຢູ່ຂ້າງໃນໝາກພ້າວຂຽວ!",
-"th": "น้ำมะพร้าวหวานสดชื่นอยู่ข้างในลูกมะพร้าวเขียว!",
-"zh": "青青的椰子里藏着清甜爽口的椰子水！",
-"ja": "みどりの みの なかに あまい ジュースが はいっているんだよ！",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_coconutpalm.4": {
-"en": "Rustle, clack!",
-"lo": "ຊາໆ, ແຄະ!",
-"th": "ซ่าๆ แกร๊ก!",
-"zh": "椰叶沙沙摇响！",
-"ja": "さわさわ、さらさら！",
 "who": "narrator",
 "tag": "sound"
 },
@@ -3469,96 +3469,6 @@
 "who": "narrator",
 "tag": "sound"
 },
-"xm_gardenreeds.0": {
-"en": "Pond reeds. Pond reeds stand slender and green along the water edge.",
-"lo": "ຕົ້ນອໍ້ໜອງນ້ຳ. ຕົ້ນອໍ້ໜອງນ້ຳ ຕັ້ງສູງຂຽວຢູ່ລຽບແຄມໜອງນ້ຳ.",
-"th": "ต้นอ้อริมสระ ต้นอ้อริมสระตั้งสูงเขียวตามขอบสระน้ำ",
-"zh": "池边芦苇。池边芦苇纤细翠绿地立在水岸边。",
-"ja": "いけの あし。いけの あしが みずべで そよそよ ゆれているよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_gardenreeds.1": {
-"en": "Pond reeds bend and whisper whenever a breeze crosses the water.",
-"lo": "ຕົ້ນອໍ້ໜອງນ້ຳກົ່ງ ແລະ ຊາໆເມື່ອລົມພັດຂ້າມໜ້ານ້ຳ.",
-"th": "ต้นอ้อริมสระเอนและซ่าๆ เมื่อลมพัดข้ามผิวน้ำ",
-"zh": "微风拂过水面时，池边芦苇便轻轻弯腰低语。",
-"ja": "かぜが ふくと みずべで さらさら ゆれるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_gardenreeds.2": {
-"en": "Slender green blades and rosy buds frame the edge of the pond.",
-"lo": "ໃບຂຽວຍາວ ແລະ ດອກຕູມສີບົວປະດັບຂອບໜອງນ້ຳ.",
-"th": "ใบเขียวยาวและดอกตูมสีชมพูประดับขอบสระน้ำ",
-"zh": "细长的绿叶和粉红花苞装点着池塘水岸。",
-"ja": "ほそい はっぱが いけの まわりを かこんでいるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_gardenreeds.3": {
-"en": "Pond reeds shelter baby fish and frogs along shallow banks.",
-"lo": "ຕົ້ນອໍ້ໜອງນ້ຳເປັນບ່ອນຫຼົບລີ້ຂອງປານ້ອຍ ແລະ ກົບແຄມຝັ່ງ.",
-"th": "ต้นอ้อริมสระเป็นที่หลบซ่อนของปลาน้อยและกบริมฝั่ง",
-"zh": "池边芦苇在浅水岸边为小鱼和小青蛙遮风挡雨。",
-"ja": "ちいさな さかなや かえるの かくれが なんだよ。",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_gardenreeds.4": {
-"en": "Swish, rustle!",
-"lo": "ວູບ, ຊາໆ!",
-"th": "ซิ่ว ซ่าๆ!",
-"zh": "芦苇沙沙轻摆！",
-"ja": "さらさら、そよそよ！",
-"who": "narrator",
-"tag": "sound"
-},
-"xm_khaen.0": {
-"en": "A bamboo khaen. A bamboo khaen is the joyful pipe instrument of Laos.",
-"lo": "ແຄນໄມ້ໄຜ່. ແຄນໄມ້ໄຜ່ ແມ່ນເຄື່ອງດົນຕີເປົ່າມ່ວນຊື່ນຂອງລາວ.",
-"th": "แคนไม้ไผ่ แคนไม้ไผ่คือเครื่องดนตรีเป่าแสนสนุกของลาว",
-"zh": "竹制芦笙。竹制芦笙是老挝欢快动听的竹管乐器。",
-"ja": "たけの ケーン。たけの ケーンは ラオスの たのしい ふえだよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_khaen.1": {
-"en": "Blow into the bamboo khaen and sweet harmony fills the garden!",
-"lo": "ເປົ່າແຄນໄມ້ໄຜ່ແລ້ວສຽງດົນຕີຫວານຈະດັງທົ່ວສວນ!",
-"th": "เป่าแคนไม้ไผ่แล้วเสียงดนตรีหวานจะดังทั่วสวน!",
-"zh": "吹响竹制芦笙，美妙的和声便飘满整个花园！",
-"ja": "ふくと やさしい わおんが おにわに ひろがるよ！",
-"who": "narrator",
-"tag": "does"
-},
-"xm_khaen.2": {
-"en": "Two neat rows of slender golden bamboo pipes sit in a wooden cup.",
-"lo": "ລູກໄມ້ໄຜ່ສີຄຳສອງແຖວຮຽບຮ້ອຍສຽບຢູ່ໃນເຕົ້າໄມ້.",
-"th": "ลูกไม้ไผ่สีทองสองแถวเรียบร้อยเสียบอยู่ในเต้าไม้",
-"zh": "两排整齐细长的金竹管插在木制风斗里。",
-"ja": "ほそい たけが ふたれつに きれいに ならんでいるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_khaen.3": {
-"en": "The khaen is the traditional bamboo mouth organ of Laos!",
-"lo": "ແຄນແມ່ນເຄື່ອງດົນຕີພື້ນເມືອງປະຈຳຊາດຂອງລາວ!",
-"th": "แคนคือเครื่องดนตรีพื้นเมืองประจำชาติของลาว!",
-"zh": "芦笙是老挝最具代表性的传统竹管乐器！",
-"ja": "ケーンは ラオスの でんとうてきな たけの がっきだよ！",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_khaen.4": {
-"en": "Laaa, lala, laaa!",
-"lo": "ລາ, ລາລາ, ລາ!",
-"th": "ลา ลาลา ลา!",
-"zh": "呜啦啦，乐声悠扬！",
-"ja": "ふわり、きれいな ねいろ！",
-"who": "narrator",
-"tag": "sound"
-},
 "xm_moon.0": {
 "en": "A bright moon. The bright moon glows silver high in the night sky.",
 "lo": "ດວງເດືອນ. ດວງເດືອນ ສ່ອງແສງສີເງິນສູງຢູ່ເທິງທ້ອງຟ້າກາງຄືນ.",
@@ -4234,6 +4144,13 @@
 "xm_buffalo.4",
 "xm_buffalo.5"
 ],
+"xm_coconutpalm": [
+"xm_coconutpalm.0",
+"xm_coconutpalm.1",
+"xm_coconutpalm.2",
+"xm_coconutpalm.3",
+"xm_coconutpalm.4"
+],
 "xm_banyanroot": [
 "xm_banyanroot.0",
 "xm_banyanroot.1",
@@ -4261,13 +4178,6 @@
 "xm_hills.2",
 "xm_hills.3",
 "xm_hills.4"
-],
-"xm_coconutpalm": [
-"xm_coconutpalm.0",
-"xm_coconutpalm.1",
-"xm_coconutpalm.2",
-"xm_coconutpalm.3",
-"xm_coconutpalm.4"
 ],
 "xm_temple": [
 "xm_temple.0",
@@ -4422,20 +4332,6 @@
 "xm_stepstone.2",
 "xm_stepstone.3",
 "xm_stepstone.4"
-],
-"xm_gardenreeds": [
-"xm_gardenreeds.0",
-"xm_gardenreeds.1",
-"xm_gardenreeds.2",
-"xm_gardenreeds.3",
-"xm_gardenreeds.4"
-],
-"xm_khaen": [
-"xm_khaen.0",
-"xm_khaen.1",
-"xm_khaen.2",
-"xm_khaen.3",
-"xm_khaen.4"
 ],
 "xm_moon": [
 "xm_moon.0",
@@ -4786,6 +4682,13 @@
 "zh": "水牛",
 "ja": "すいぎゅう"
 },
+"xm_coconutpalm": {
+"en": "coconut palm",
+"lo": "ຕົ້ນໝາກພ້າວ",
+"th": "ต้นมะพร้าว",
+"zh": "椰子树",
+"ja": "やしの き"
+},
 "xm_banyanroot": {
 "en": "banyan root",
 "lo": "ຮາກຕົ້ນໄຮ",
@@ -4813,13 +4716,6 @@
 "th": "ภูเขาสีฟ้า",
 "zh": "远方青山",
 "ja": "あおい やま"
-},
-"xm_coconutpalm": {
-"en": "coconut palm",
-"lo": "ຕົ້ນໝາກພ້າວ",
-"th": "ต้นมะพร้าว",
-"zh": "椰子树",
-"ja": "やしの き"
 },
 "xm_temple": {
 "en": "village temple",
@@ -4968,20 +4864,6 @@
 "zh": "踏脚石",
 "ja": "とびいし"
 },
-"xm_gardenreeds": {
-"en": "pond reeds",
-"lo": "ຕົ້ນອໍ້ໜອງນ້ຳ",
-"th": "ต้นอ้อริมสระ",
-"zh": "池边芦苇",
-"ja": "いけの あし"
-},
-"xm_khaen": {
-"en": "bamboo khaen",
-"lo": "ແຄນໄມ້ໄຜ່",
-"th": "แคนไม้ไผ่",
-"zh": "竹制芦笙",
-"ja": "たけの ケーン"
-},
 "xm_moon": {
 "en": "bright moon",
 "lo": "ດວງເດືອນ",
@@ -5101,6 +4983,7 @@
 "crab": "xm_crab",
 "fisher-boat": "xm_fisherboat",
 "buffalo": "xm_buffalo",
+"palm-l": "xm_coconutpalm",
 "rice-mid-l": "xm_rice",
 "rice-mid-r": "xm_rice",
 "banyan-root": "xm_banyanroot",
@@ -5117,7 +5000,6 @@
 "urn": "xm_urn",
 "pots-yard": "xm_potsyard",
 "bush-yard": "xm_bushyard",
-"palm-l": "xm_coconutpalm",
 "sala-deck": "xm_saladeck",
 "garden-palms-back-l": "xm_gardenpalms",
 "garden-palms-back-r": "xm_gardenpalms",
@@ -5142,7 +5024,6 @@
 "card-garden-frangipani-l": "xm_frangipani",
 "card-garden-frangipani-r": "xm_frangipani",
 "card-garden-sala": "xm_sala",
-"card-garden-plinth": "xm_saladeck",
 "card-garden-mango": "xm_mango",
 "card-garden-lotus-a": "xm_lotus",
 "card-garden-lotus-d": "xm_lotus",
@@ -5157,18 +5038,13 @@
 "fish-2": "xm_fish",
 "fish-3": "xm_fish",
 "fish-": "xm_fish",
-"card-garden-stones-far": "xm_stepstone",
-"card-garden-stone-1": "xm_stepstone",
-"card-garden-stone-2": "xm_stepstone",
-"card-garden-stone-3": "xm_stepstone",
-"card-garden-stone-front": "xm_stepstone",
-"card-garden-reeds-l": "xm_gardenreeds",
-"card-garden-reeds-r": "xm_gardenreeds",
-"card-garden-front-l": "xm_lotus",
-"card-garden-front-r": "xm_lotus",
-"khaen": "xm_khaen",
-"khaen-king": "xm_khaen",
-"moon": "xm_moon",
+"sala-deck-night": "xm_saladeck",
+"garden-palms-back-l-night": "xm_gardenpalms",
+"garden-palms-back-r-night": "xm_gardenpalms",
+"garden-hibiscus-mid-l-night": "xm_hibiscus",
+"garden-lantern-mid-r-night": "xm_stonelantern",
+"garden-lotus-fg-l-night": "xm_lotus",
+"garden-lotus-fg-r-night": "xm_lotus",
 "kham-calm": "xm_kham",
 "kham-lend": "xm_kham",
 "kham-e": "xm_kham",
@@ -5176,6 +5052,7 @@
 "king-mango": "xm_king",
 "king-dance": "xm_king",
 "king-point": "xm_king",
+"moon": "xm_moon",
 "kham-s": "xm_kham",
 "kham-point": "xm_kham",
 "kham-give": "xm_kham",

@@ -1,0 +1,29 @@
+{
+ "puppet": "xieng-mieng-duck",
+ "size": 0.06,
+ "metres_per_pixel": 0.00010752688172043011,
+ "rest": {},
+ "versions": [
+  "day"
+ ],
+ "hinge_sign_note": "positive = counter-clockwise; hinges listed here are the final (post-neg) limits",
+ "note": "manifest pivot/attach are bottom-up (u, v); the per-part json the viewer reads is top-left. Rest pose = every hinge 0.",
+ "parts": [
+  {
+   "name": "body",
+   "png": "cards/puppets/xieng-mieng-duck/body.png",
+   "size": [
+    0.09774,
+    0.06
+   ],
+   "pivot": [
+    0.5,
+    0.0054
+   ],
+   "parent": null,
+   "attach": null,
+   "z": 0,
+   "hinge": null
+  }
+ ]
+}
