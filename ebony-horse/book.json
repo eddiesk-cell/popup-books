@@ -1,7 +1,7 @@
 {
  "id": "ebony-horse",
  "released": true,
- "words": false,
+ "words": true,
  "chars": "ebony-horse-",
  "title": "The Enchanted Ebony Horse",
  "story": "story.json",

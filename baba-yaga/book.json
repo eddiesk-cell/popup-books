@@ -1,7 +1,7 @@
 {
  "id": "baba-yaga",
  "released": true,
- "words": false,
+ "words": true,
  "chars": "baba-yaga-",
  "title": "Baba Yaga and Vasilissa",
  "story": "story.json",

@@ -20991,6 +20991,70 @@
     "Journey to the West — Chapter 5: Three-Eyed Erlang and the Seventy-Two Tricks"
    ],
    "cut": true
+  },
+  "jttw-05-pheasant-hawk-flap": {
+   "look": "Striped Ming mountain pheasant darting through open stream bank ferns",
+   "size": 0.064,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 5: Three-Eyed Erlang and the Seventy-Two Tricks"
+   ],
+   "cut": true
+  },
+  "jttw-05-snake-crane-flap": {
+   "look": "Rippling Ming emerald-and-silver water-snake gliding through foaming stream",
+   "size": 0.056,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 5: Three-Eyed Erlang and the Seventy-Two Tricks"
+   ],
+   "cut": true
+  },
+  "bamboo-cutter-kaguya-cradle": {
+   "look": "Smiling baby Kaguya tucked warmly inside her cotton-lined woven bamboo cradle",
+   "size": 0.066,
+   "gait": "idle",
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Bamboo Cutter"
+   ],
+   "cut": true
   }
  },
  "jttw-01-waterfall-curtain": {

@@ -1,0 +1,4659 @@
+{
+"lines": {
+"eh_pavilion.0": {
+"en": "A tiled pavilion. A tiled pavilion offers cool shade beside the sunny palace courtyard.",
+"lo": "ສາລາກະເບື້ອງ. ສາລາກະເບື້ອງ ໃຫ້ຮົ່ມເຢັນສະບາຍຢູ່ຂ້າງເດີ່ນພະລາຊະວັງແດດອຸ່ນ.",
+"th": "ศาลากระเบื้อง ศาลากระเบื้องให้ร่มเงาเย็นสบายข้างลานพระราชวังแดดอุ่น",
+"zh": "彩砖凉亭。彩砖凉亭立在阳光庭院一侧，带来凉爽优雅的树荫。",
+"ja": "たいるの あずまや。たいるの あずまやが にわの よこに きれいに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_pavilion.1": {
+"en": "A tiny turquoise onion dome crowns this shaded Persian side pavilion.",
+"lo": "ຫໍໂດມນ້ອຍສີຟ້າຂຽວປະດັບຢູ່ເທິງສາລາຂ້າງເດີ່ນເປີເຊຍ.",
+"th": "โดมเล็กสีฟ้าเขียวประดับอยู่บนศาลาข้างลานเปอร์เซีย",
+"zh": "小巧的绿松石色洋葱圆顶戴在庭院侧面的彩砖凉亭上。",
+"ja": "ちいさな あおい どーむが のった すてきな あずまやだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_pavilion.2": {
+"en": "Courtyard cats love perching on its cool tiled ledges to watch the festival.",
+"lo": "ແມວໃນເດີ່ນມັກປີນຂຶ້ນນັ່ງເທິງຂອບກະເບື້ອງເຢັນເພື່ອເບິ່ງງານບຸນ.",
+"th": "แมวในลานชอบปีนขึ้นนั่งบนขอบกระเบื้องเย็นเพื่อดูงานเทศกาล",
+"zh": "庭院里的小猫最爱趴在凉爽的彩砖屋檐上张望热闹庆典。",
+"ja": "ねこが やねの うえから にわの ようすを のぞいているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_pavilion.3": {
+"en": "Pointed arched niches echo the grand blue palace gate at the centre.",
+"lo": "ຊ່ອງໂຄ້ງແຫຼມຄ້າຍຄືກັນກັບປະຕູວັງສີຟ້າໃຫຍ່ຢູ່ຕົງກາງ.",
+"th": "ช่องโค้งแหลมคล้ายคลึงกับประตูวังสีฟ้าใหญ่ตรงกลาง",
+"zh": "优雅的尖拱壁龛与中央宏伟的蓝釉王宫拱门遥相呼应。",
+"ja": "まんなかの もんと おそろいの たいるで かざられて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_pavilion.4": {
+"en": "Its cool sandstone walls hold back the afternoon desert warmth.",
+"lo": "ກຳແພງຫີນຊາຍເຢັນຂອງມັນຊ່ວຍບັງຄວາມຮ້ອນຍາມບ່າຍ.",
+"th": "กำแพงหินทรายเย็นของมันช่วยบังความร้อนยามบ่าย",
+"zh": "厚实的砂岩墙面为庭院挡住午后的热浪，带来阵阵清凉。",
+"ja": "あつい ひでも なかは すずしくて きもち いいんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cypress.0": {
+"en": "A cypress tree. A cypress tree stands tall and evergreen beside the Persian palace gardens.",
+"lo": "ຕົ້ນໄຊເປຣສ. ຕົ້ນໄຊເປຣສ ຢືນຕົ້ນສູງຂຽວຕະຫຼອດປີຢູ່ຂ້າງສວນພະລາຊະວັງເປີເຊຍ.",
+"th": "ต้นไซเปรส ต้นไซเปรสยืนต้นสูงเขียวตลอดปีข้างสวนพระราชวังเปอร์เซีย",
+"zh": "波斯柏树。波斯柏树挺拔常青，优雅地守护在花园两侧。",
+"ja": "いとすぎの き。いとすぎの きが そらへ まっすぐ のびているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_cypress.1": {
+"en": "Slender deep-green needles taper gracefully like tall garden spires.",
+"lo": "ໃບສີຂຽວເຂັ້ມຮຽວແຫຼມຕັ້ງສູງງົດງາມຄືຍອດຫໍຄອຍໃນສວນ.",
+"th": "ใบสีเขียวเข้มเรียวแหลมตั้งสูงงดงามเหมือนยอดหอคอยในสวน",
+"zh": "苍翠修长的柏树树冠向上收尖，宛如花园里的绿色尖塔。",
+"ja": "ほそくて たかい みどりの きが まっすぐ たっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cypress.2": {
+"en": "Its tall evergreen branches sway softly whenever a spring breeze passes.",
+"lo": "ກິ່ງຂຽວສູງຂອງມັນແກວ່ງໄກວຄ່ອຍໆທຸກຄັ້ງທີ່ສາຍລົມລະດູບານໃໝ່ພັດຜ່ານ.",
+"th": "กิ่งเขียวสูงของมันแกว่งไกวเบาๆ ทุกครั้งที่สายลมฤดูใบไม้ผลิพัดผ่าน",
+"zh": "每当春风轻拂，修长常青的柏树枝就会轻轻摇曳。",
+"ja": "かぜが ふくと やさしく ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cypress.3": {
+"en": "In Persian gardens, evergreen cypress trees stand for grace and long life.",
+"lo": "ໃນສວນເປີເຊຍ ຕົ້ນໄຊເປຣສຂຽວຕະຫຼອດປີເປັນສັນຍາລັກຂອງຄວາມງາມ ແລະ ອາຍຸຍືນ.",
+"th": "ในสวนเปอร์เซีย ต้นไซเปรสเขียวตลอดปีเป็นสัญลักษณ์ของความงามและอายุยืน",
+"zh": "在波斯传统花园里，常青的柏树象征优雅挺拔与生生不息。",
+"ja": "いちねんじゅう みどりの げんきな き なんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_cypress.4": {
+"en": "Paired cypresses frame both sides of the courtyard like quiet green guards.",
+"lo": "ຕົ້ນໄຊເປຣສຄູ່ຢືນຂະໜາບສອງຂ້າງເດີ່ນວັງຄືທະຫານສີຂຽວທີ່ງຽບສະຫງົບ.",
+"th": "ต้นไซเปรสคู่ยืนขนาบสองข้างลานวังเหมือนทหารสีเขียวผู้เงียบสงบ",
+"zh": "成对挺立的波斯柏树像安静优雅的绿衣卫士守护庭院两侧。",
+"ja": "にわの りょうがわを やさしく まもって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gardenwall.0": {
+"en": "A rose parapet. A rose parapet borders the courtyard with turquoise tiles and blooming pink roses.",
+"lo": "ກຳແພງດອກກຸຫຼາບ. ກຳແພງດອກກຸຫຼາບ ກັ້ນຂອບເດີ່ນດ້ວຍກະເບື້ອງສີຟ້າຂຽວ ແລະ ດອກກຸຫຼາບສີບົວ.",
+"th": "กำแพงกุหลาบ กำแพงกุหลาบกั้นขอบลานด้วยกระเบื้องสีฟ้าเขียวและดอกกุหลาบสีชมพู",
+"zh": "玫瑰矮墙。玫瑰矮墙镶着绿松石瓷砖，墙头盛开着芬芳粉红玫瑰。",
+"ja": "ばらの かべ。ばらの かべに ピンクの ばらが きれいに さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_gardenwall.1": {
+"en": "Low sandstone blocks and turquoise mosaic panels line the edge of the court.",
+"lo": "ກ້ອນຫີນຊາຍຕ່ຳ ແລະ ແຜ່ນກະເບື້ອງສີຟ້າຂຽວລຽງຕາມຂອບເດີ່ນວັງ.",
+"th": "ก้อนหินทรายต่ำและแผ่นกระเบื้องสีฟ้าเขียวเรียงตามขอบลานวัง",
+"zh": "低矮的砂岩砖石与绿松石花砖沿着庭院中景整齐延展。",
+"ja": "ひくい いしの かべに あおい たいるが はめこまれて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gardenwall.2": {
+"en": "Climbing pink Shiraz roses spill gracefully over the top of the low wall.",
+"lo": "ດອກກຸຫຼາບຊີຣາຊສີບົວເລືອບານລົ້ນຂອບເທິງຂອງກຳແພງຕ່ຳຢ່າງງົດງາມ.",
+"th": "ดอกกุหลาบชีราซสีชมพูเลื้อยบานล้นขอบบนของกำแพงต่ำอย่างงดงาม",
+"zh": "盛开的粉红设拉子玫瑰顺着低矮墙头优雅垂落。",
+"ja": "ピンクの ばらが かべの うえから ふわっと あふれているよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_gardenwall.3": {
+"en": "Tiny lizards love sunning themselves on its warm carved sandstone ledge.",
+"lo": "ກັບແກ້ນ້ອຍມັກມານອນຕາກແດດເທິງຂອບຫີນຊາຍແກະສະຫຼັກອຸ່ນໆ.",
+"th": "จิ้งจกน้อยชอบมานอนอาบแดดบนขอบหินทรายแกะสลักอุ่นๆ",
+"zh": "机灵的小壁虎最喜欢趴在暖烘烘的雕花砂岩墙头上晒太阳。",
+"ja": "ちいさな やもりが あたたかい いしの うえで ひなたぼっこ するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_gardenwall.4": {
+"en": "It leaves the grand central palace archway wide open for visitors.",
+"lo": "ມັນເປີດຊ່ອງປະຕູໂຄ້ງວັງຕົງກາງໄວ້ກວ້າງຂວາງສຳລັບແຂກທຸກຄົນ.",
+"th": "มันเปิดช่องซุ้มประตูวังตรงกลางไว้กว้างขวางสำหรับแขกทุกคน",
+"zh": "矮墙在中央留出宽阔通道，让宏伟的王宫拱门一览无余。",
+"ja": "まんなかの もんの まえは ひろく あけて あるんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_almondtree.0": {
+"en": "An almond tree. An almond tree showers soft pink Nowruz petals across the courtyard floor.",
+"lo": "ຕົ້ນດອກອາລມອນ. ຕົ້ນດອກອາລມອນ ໂປຍກີບດອກສີບົວນຸ້ມຂອງບຸນໂນຣູຊລົງທົ່ວພື້ນເດີ່ນ.",
+"th": "ต้นดอกอัลมอนด์ ต้นดอกอัลมอนด์โปรยกลีบดอกสีชมพูนุ่มของเทศกาลโนรูซลงทั่วพื้นลาน",
+"zh": "粉红杏花树。粉红杏花树在春风中轻轻飘落诺鲁孜节的柔粉花瓣。",
+"ja": "はなの さく き。はなの さく きから ピンクの はなびらが ひらひら ふるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_almondtree.1": {
+"en": "Twisted brown boughs burst into clouds of five-petalled pink spring flowers.",
+"lo": "ກິ່ງໄມ້ສີນ້ຳຕານຄົດໂຄ້ງອອກດອກສີບົວຫ້າກີບເຕັມພຸ່ມ.",
+"th": "กิ่งไม้สีน้ำตาลคดโค้งออกดอกสีชมพูห้ากลีบเต็มพุ่ม",
+"zh": "苍劲曲折的褐色树枝上开满团团簇簇的五瓣粉红春花。",
+"ja": "えだ いっぱいに ピンクの はなが もこもこ さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_almondtree.2": {
+"en": "Every gentle breeze shakes down a soft snow of pink almond petals!",
+"lo": "ທຸກສາຍລົມເບົາໆພັດໃຫ້ກີບດອກອາລມອນສີບົວປິວລົງມາຄືຫິມະນຸ້ມ!",
+"th": "ทุกสายลมเบาๆ พัดให้กลีบดอกอัลมอนด์สีชมพูปลิวลงมาเหมือนหิมะนุ่ม!",
+"zh": "每阵春风拂过，都会吹落一场轻盈柔和的粉红花瓣雨！",
+"ja": "かぜが ふくと ピンクの はなびらが ゆきみたいに ふるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_almondtree.3": {
+"en": "Almond trees are among the very first trees to bloom each spring in Persia.",
+"lo": "ຕົ້ນອາລມອນແມ່ນຕົ້ນໄມ້ທຳອິດທີ່ອອກດອກໃນທຸກລະດູບານໃໝ່ຂອງເປີເຊຍ.",
+"th": "ต้นอัลมอนด์เป็นต้นไม้แรกๆ ที่ออกดอกในทุกฤดูใบไม้ผลิของเปอร์เซีย",
+"zh": "在波斯，杏花树是每年春天最早绽放报春的树木之一。",
+"ja": "はるに なると いちばん はやく さく はなの き なんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_almondtree.4": {
+"en": "Small garden songbirds love hiding and chirping among its pink blossoms.",
+"lo": "ນົກນ້ອຍໃນສວນມັກລີ້ ແລະ ຮ້ອງເພງຢູ່ໃນພຸ່ມດອກໄມ້ສີບົວ.",
+"th": "นกน้อยในสวนชอบซ่อนตัวและร้องเพลงอยู่ในพุ่มดอกไม้สีชมพู",
+"zh": "花园里的小歌鸟最爱藏在粉红花枝间欢快鸣唱。",
+"ja": "ことりが はなの えだに かくれて うたって いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_pomegranate.0": {
+"en": "A pomegranate arch. A pomegranate arch frames ruby-red fruit beside carved warm sandstone.",
+"lo": "ຊຸ້ມໝາກພິລາ. ຊຸ້ມໝາກພິລາ ປະດັບດ້ວຍໝາກພິລາສີແດງທັບທິມຂ້າງຫີນຊາຍແກະສະຫຼັກ.",
+"th": "ซุ้มต้นทับทิม ซุ้มต้นทับทิมประดับด้วยลูกทับทิมสีแดงทับทิมข้างหินทรายแกะสลัก",
+"zh": "石榴拱廊。石榴拱廊挂满红宝石般的甜石榴，依偎在雕花砂岩旁。",
+"ja": "ざくろの き。ざくろの きに まっかな ざくろが たくさん なっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_pomegranate.1": {
+"en": "Glossy crimson pomegranates hang among lush emerald leaves beside carved sandstone.",
+"lo": "ໝາກພິລາສີແດງເງົາຫ້ອຍຢູ່ທ່າມກາງໃບສີຂຽວສົດຂ້າງຫີນຊາຍແກະສະຫຼັກ.",
+"th": "ลูกทับทิมสีแดงเงาห้อยอยู่ท่ามกลางใบสีเขียวสดข้างหินทรายแกะสลัก",
+"zh": "圆润晶亮的红石榴缀在翠绿枝叶间，映衬着暖色雕花砂岩。",
+"ja": "みどりの はの あいだに まっかな ざくろが ぶらさがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_pomegranate.2": {
+"en": "Inside every pomegranate wait hundreds of sweet, sparkling ruby seeds.",
+"lo": "ທາງໃນໝາກພິລາແຕ່ລະໜ່ວຍມີແກ່ນສີແດງທັບທິມຫວານເຫຼື້ອມຫຼາຍຮ້ອຍແກ່ນ.",
+"th": "ด้านในลูกทับทิมแต่ละลูกมีเมล็ดสีแดงทับทิมหวานใสหลายร้อยเมล็ด",
+"zh": "每颗红石榴里都藏着几百颗像红宝石般晶莹甘甜的果粒。",
+"ja": "なかには ほうせきみたいな あまい つぶが いっぱい はいっているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_pomegranate.3": {
+"en": "Its leafy branches shade the right side of the sunny Shiraz courtyard.",
+"lo": "ກິ່ງໃບດົກຂອງມັນໃຫ້ຮົ່ມເຢັນທາງດ້ານຂວາຂອງເດີ່ນວັງຊີຣາຊ.",
+"th": "กิ่งใบดกของมันให้ร่มเย็นทางด้านขวาของลานวังชีราซ",
+"zh": "繁茂的石榴树枝为设拉子阳光庭院右侧洒下斑驳凉荫。",
+"ja": "ひろい はっぱが にわの みぎがわに すずしい かげを つくるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_pomegranate.4": {
+"en": "Turquoise mosaic inlay trims the warm garden archway behind the boughs.",
+"lo": "ກະເບື້ອງສີຟ້າຂຽວປະດັບຊຸ້ມປະຕູສວນອຸ່ນຢູ່ທາງຫຼັງກິ່ງໄມ້.",
+"th": "กระเบื้องสีฟ้าเขียวประดับซุ้มประตูสวนอุ่นอยู่ด้านหลังกิ่งไม้",
+"zh": "绿松石花砖点缀着树枝后方温润优雅的花园小拱门。",
+"ja": "うしろの あーちにも あおい たいるが はめて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_sabur.0": {
+"en": "King Sabur. King Sabur is the kind and wise ruler of sunny Shiraz in Persia.",
+"lo": "ພະລາຊາຊາບູຣ. ພະລາຊາຊາບູຣ ແມ່ນພະລາຊາຜູ້ໃຈດີ ແລະ ສະຫຼາດແຫ່ງເມືອງຊີຣາຊໃນເປີເຊຍ.",
+"th": "พระราชาซาบูร์ พระราชาซาบูร์คือพระราชาผู้ใจดีและฉลาดแห่งเมืองชีราซในเปอร์เซีย",
+"zh": "萨布尔国王。萨布尔国王是波斯阳光之城设拉子善良又慈爱的国王。",
+"ja": "サブールおう。サブールおうは シーラーズの やさしくて かしこい おうさまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_sabur.1": {
+"en": "Hello, King Sabur!",
+"lo": "ສະບາຍດີ ພະລາຊາຊາບູຣ!",
+"th": "สวัสดีพระราชาซาบูร์!",
+"zh": "你好，萨布尔国王！",
+"ja": "こんにちは、サブールおう！",
+"who": "sabur",
+"tag": "greet"
+},
+"eh_sabur.2": {
+"en": "I am King Sabur of Shiraz! Welcome to our sunny spring courtyard!",
+"lo": "ຂ້ອຍແມ່ນພະລາຊາຊາບູຣແຫ່ງເມືອງຊີຣາຊ! ຍິນດີຕ້ອນຮັບສູ່ເດີ່ນວັງລະດູບານໃໝ່!",
+"th": "ฉันคือพระราชาซาบูร์แห่งเมืองชีราซ! ยินดีต้อนรับสู่ลานวังฤดูใบไม้ผลิ!",
+"zh": "我是设拉子的萨布尔国王！欢迎来到我们阳光明媚的春日庭院！",
+"ja": "わしは シーラーズの サブールおうだ！ はるの にわへ ようこそ！",
+"who": "sabur",
+"tag": "say"
+},
+"eh_sabur.3": {
+"en": "I wear a royal crimson and gold brocade robe and a jewelled Persian crown.",
+"lo": "ຂ້ອຍໃສ່ຊຸດພະລາຊາສີແດງປົນຄຳ ແລະ ມົງກຸດເປີເຊຍປະດັບແກ້ວ.",
+"th": "ฉันใส่ชุดพระราชาสีแดงขลิบทองและมงกุฎเปอร์เซียประดับอัญมณี",
+"zh": "我穿着华丽的深红镶金王袍，戴着精致的波斯宝石王冠。",
+"ja": "あかと きんいろの りっぱな ころもと おうかんを つけているよ。",
+"who": "sabur",
+"tag": "looks"
+},
+"eh_sabur.4": {
+"en": "King Sabur is the traditional name of Persia's ruler in the classic Ebony Horse tale.",
+"lo": "ພະລາຊາຊາບູຣແມ່ນຊື່ດັ້ງເດີມຂອງກະສັດເປີເຊຍໃນນິທານມ້າໄມ້ດຳ.",
+"th": "พระราชาซาบูร์คือชื่อดั้งเดิมของกษัตริย์เปอร์เซียในนิทานม้าไม้ดำ",
+"zh": "在古老的《乌木马》传说里，萨布尔正是波斯国王的名字。",
+"ja": "サブールおうは むかしの ぺるしゃの おはなしの おうさまだよ。",
+"who": "sabur",
+"tag": "fact"
+},
+"eh_sabur.5": {
+"en": "I love celebrating Nowruz beneath the blooming pink almond trees with my son.",
+"lo": "ຂ້ອຍມັກສະຫຼອງບຸນໂນຣູຊກ້ອງຕົ້ນດອກອາລມອນສີບົວກັບລູກຊາຍຂອງຂ້ອຍ.",
+"th": "ฉันชอบฉลองเทศกาลโนรูซใต้ต้นดอกอัลมอนด์สีชมพูกับลูกชายของฉัน",
+"zh": "我最喜欢和儿子一起在盛开的粉红杏花树下欢庆诺鲁孜节。",
+"ja": "むすこと いっしょに はるの おまつりを いわうのが たのしみだよ。",
+"who": "sabur",
+"tag": "does"
+},
+"eh_sabur.6": {
+"en": "When Firuz flew away, I stayed calm and lit five golden beacons to guide him home.",
+"lo": "ຕອນຟີຣູຊບິນໄປໄກ ຂ້ອຍຕັ້ງສະຕິ ແລະ ຈູດເຕົາໄຟສີຄຳຫ້າໜ່ວຍນຳທາງລາວກັບບ້ານ.",
+"th": "ตอนฟีรูซบินไปไกล ฉันตั้งสติและจุดเตาไฟสีทองห้าดวงนำทางเขากลับบ้าน",
+"zh": "菲鲁兹飞远时，我沉着冷静，点亮五座金色火盆照亮他回家的路。",
+"ja": "フィールーズが かえれる ように いつつの ひばちに ひを ともしたよ。",
+"who": "sabur",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_sabur.7": {
+"en": "I welcomed clever Princess Yasmin warmly into our Shiraz palace!",
+"lo": "ຂ້ອຍຕ້ອນຮັບເຈົ້າຍິງຍາສມິນຜູ້ສະຫຼາດຢ່າງອົບອຸ່ນສູ່ວັງຊີຣາຊ!",
+"th": "ฉันต้อนรับเจ้าหญิงยัสมินผู้ฉลาดอย่างอบอุ่นสู่วังชีราซ!",
+"zh": "我热情地欢迎聪明善良的雅斯敏公主来到设拉子王宫！",
+"ja": "かしこい ヤスミンひめを あたたかく おむかえ したよ！",
+"who": "sabur",
+"sp": [
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_sabur.8": {
+"en": "I always listen with a patient heart before making a royal decision.",
+"lo": "ຂ້ອຍຕັ້ງໃຈຟັງດ້ວຍຄວາມອົດທົນສະເໝີກ່ອນຈະຕັດສິນໃຈ.",
+"th": "ฉันตั้งใจฟังด้วยความอดทนเสมอก่อนจะตัดสินใจ",
+"zh": "做每一个决定前，我都会怀着耐心认真倾听大家的心声。",
+"ja": "どんな ときも やさしく みんなの はなしを きくんだよ。",
+"who": "sabur",
+"tag": "does"
+},
+"eh_sabur.9": {
+"en": "Listening carefully and sharing wisdom together keeps every heart safe!",
+"lo": "ການຕັ້ງໃຈຟັງ ແລະ ແບ່ງປັນປັນຍານຳກັນເຮັດໃຫ້ທຸກຫົວໃຈປອດໄພ!",
+"th": "การตั้งใจฟังและแบ่งปันปัญญาร่วมกันทำให้ทุกหัวใจปลอดภัย!",
+"zh": "认真倾听、乐于分享智慧，就能守护每个人的平安与快乐！",
+"ja": "よく きいて ちえを わけあえば、みんな あんしんだよ！",
+"who": "sabur",
+"tag": "say"
+},
+"eh_firuz.0": {
+"en": "Prince Firuz. Prince Firuz is an eager young prince of Shiraz who loves adventure.",
+"lo": "ເຈົ້າຊາຍຟີຣູຊ. ເຈົ້າຊາຍຟີຣູຊ ແມ່ນເຈົ້າຊາຍນ້ອຍຜູ້ຕື່ນເຕັ້ນແຫ່ງເມືອງຊີຣາຊທີ່ມັກການຜະຈົນໄພ.",
+"th": "เจ้าชายฟีรูซ เจ้าชายฟีรูซเป็นเจ้าชายน้อยผู้ตื่นเต้นแห่งเมืองชีราซที่ชอบการผจญภัย",
+"zh": "菲鲁兹王子。菲鲁兹王子是设拉子充满好奇心、热爱冒险的小王子。",
+"ja": "フィールーズおうじ。フィールーズおうじは ぼうけんが だいすきな シーラーズの おうじだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_firuz.1": {
+"en": "Hello, Prince Firuz!",
+"lo": "ສະບາຍດີ ເຈົ້າຊາຍຟີຣູຊ!",
+"th": "สวัสดีเจ้าชายฟีรูซ!",
+"zh": "你好，菲鲁兹王子！",
+"ja": "こんにちは、フィールーズおうじ！",
+"who": "firuz",
+"tag": "greet"
+},
+"eh_firuz.2": {
+"en": "I am Prince Firuz of sunny Shiraz! I love learning how wondrous things work!",
+"lo": "ຂ້ອຍແມ່ນເຈົ້າຊາຍຟີຣູຊແຫ່ງເມືອງຊີຣາຊ! ຂ້ອຍມັກຮຽນຮູ້ວ່າສິ່ງມະຫັດສະຈັນເຮັດວຽກແນວໃດ!",
+"th": "ฉันคือเจ้าชายฟีรูซแห่งเมืองชีราซ! ฉันชอบเรียนรู้ว่าสิ่งมหัศจรรย์ทำงานอย่างไร!",
+"zh": "我是阳光之城设拉子的菲鲁兹王子！我最爱探索神奇机械的奥秘！",
+"ja": "ぼくは シーラーズの フィールーズおうじ！ ふしぎな しくみが だいすきだよ！",
+"who": "firuz",
+"tag": "say"
+},
+"eh_firuz.3": {
+"en": "I wear a turquoise Persian tunic with gold trim and soft riding boots.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອເປີເຊຍສີຟ້າຂຽວຂອບຄຳ ແລະ ເກີບຂີ່ມ້າອ່ອນນຸ້ມ.",
+"th": "ฉันใส่เสื้อเปอร์เซียสีฟ้าเขียวขลิบทองและรองเท้าขี่ม้านุ่มสบาย",
+"zh": "我穿着镶金边的绿松石蓝波斯短袍和轻便的骑马靴。",
+"ja": "あおと きんいろの ふくに やわらかい ぶーつを はいているよ。",
+"who": "firuz",
+"tag": "looks"
+},
+"eh_firuz.4": {
+"en": "At first I jumped onto the Ebony Horse in too much of a hurry!",
+"lo": "ຕອນທຳອິດຂ້ອຍຟ້າວໂດດຂຶ້ນມ້າໄມ້ດຳໄວເກີນໄປໂດຍບໍ່ທັນຟັງ!",
+"th": "ตอนแรกฉันรีบกระโดดขึ้นม้าไม้ดำเร็วเกินไปโดยไม่ทันฟัง!",
+"zh": "一开始我太心急了，还没听完说明就跳上了乌木神马！",
+"ja": "はじめは はやく のりたくて、はなしを きかずに とびのっちゃったんだ！",
+"who": "firuz",
+"tag": "does"
+},
+"eh_firuz.5": {
+"en": "In Persian, the name Firuz means fortunate and bright as turquoise.",
+"lo": "ໃນພາສາເປີເຊຍ ຊື່ຟີຣູຊໝາຍເຖິງໂຊກດີ ແລະ ສົດໃສຄືແກ້ວສີຟ້າຂຽວ.",
+"th": "ในภาษาเปอร์เซีย ชื่อฟีรูซหมายถึงโชคดีและสดใสเหมือนสีฟ้าเขียว",
+"zh": "在波斯语里，菲鲁兹这个名字寓意幸运与绿松石般的光彩。",
+"ja": "フィールーズは こううんと あおい いしって いみ なんだよ。",
+"who": "firuz",
+"tag": "fact"
+},
+"eh_firuz.6": {
+"en": "I love watching the clockwork peacock spread its shimmering silver tail!",
+"lo": "ຂ້ອຍມັກເບິ່ງນົກຍູງກົນໄກກາງຫາງສີເງິນເຫຼື້ອມໃສ!",
+"th": "ฉันชอบดูนกยูงกลไกกางหางสีเงินเงางาม!",
+"zh": "我最喜欢看发条孔雀展开闪闪发光的银色尾羽！",
+"ja": "からくり くじゃくが はねを ひろげるのを みるのが すきだよ！",
+"who": "firuz",
+"sp": [
+"s01",
+"s02",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_firuz.7": {
+"en": "Princess Yasmin taught me how to steer by the stars and listen carefully!",
+"lo": "ເຈົ້າຍິງຍາສມິນສອນຂ້ອຍໃຫ້ຂັບຕາມດວງດາວ ແລະ ຕັ້ງໃຈຟັງຢ່າງລະອຽດ!",
+"th": "เจ้าหญิงยัสมินสอนฉันให้บังคับตามดวงดาวและตั้งใจฟังอย่างละเอียด!",
+"zh": "雅斯敏公主教会我观星导航，也让我懂得认真倾听有多重要！",
+"ja": "ヤスミンひめが ほしの みかたも、よく きく ことも おしえて くれたよ！",
+"who": "firuz",
+"sp": [
+"s05",
+"s06",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_firuz.8": {
+"en": "I apologized to Father and Master Hakim for rushing off without listening.",
+"lo": "ຂ້ອຍຂໍໂທດພໍ່ ແລະ ຊ່າງຮາກີມທີ່ຟ້າວບິນໄປໂດຍບໍ່ຟັງກ່ອນ.",
+"th": "ฉันขอโทษพ่อและช่างฮากีมที่รีบบินไปโดยไม่ฟังก่อน",
+"zh": "我向父王和哈基姆大师真诚道歉，以后再也不莽撞了。",
+"ja": "おとうさんと ハキームさんに あわてて ごめんなさいって あやまったよ。",
+"who": "firuz",
+"sp": [
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_firuz.9": {
+"en": "Now I always listen first before I turn a mysterious golden peg!",
+"lo": "ຕອນນີ້ຂ້ອຍຟັງກ່ອນສະເໝີກ່ອນຈະບິດສະລັກສີຄຳອັນລຶກລັບ!",
+"th": "ตอนนี้ฉันฟังก่อนเสมอก่อนจะบิดสลักสีทองอันลึกลับ!",
+"zh": "现在转动任何神奇旋钮之前，我都会先仔细听明白！",
+"ja": "これからは ふしぎな つまみを まわす まえに ちゃんと きくよ！",
+"who": "firuz",
+"tag": "does"
+},
+"eh_firuz.10": {
+"en": "Look how bright the sun and moon pegs gleam on our safe sky-saddle!",
+"lo": "ເບິ່ງແມ້ ສະລັກຕາເວັນ ແລະ ສະລັກດວງຈັນເຫຼື້ອມສົດໃສເທິງອານມ້າທີ່ປອດໄພ!",
+"th": "ดูสิ สลักตะวันและสลักดวงจันทร์เงางามบนอานม้าที่ปลอดภัย!",
+"zh": "看，安全鞍座上的太阳和月亮铭牌多么闪亮！",
+"ja": "たいようと つきの しるしが ぴかぴか ひかっているよ！",
+"who": "firuz",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "say"
+},
+"eh_hakim.0": {
+"en": "Master Hakim. Master Hakim is the skilled clockwork craftsman who carved the Ebony Horse.",
+"lo": "ຊ່າງຮາກີມ. ຊ່າງຮາກີມ ແມ່ນຊ່າງກົນໄກຜູ້ຊຳນານທີ່ຄວັດມ້າໄມ້ດຳ.",
+"th": "ช่างฮากีม ช่างฮากีมคือช่างกลไกผู้ชำนาญที่แกะสลักม้าไม้ดำ",
+"zh": "哈基姆大师。哈基姆大师是手艺高超的发条工匠，亲手雕刻了乌木神马。",
+"ja": "ハキームさん。ハキームさんは くろきの うまを つくった からくりめいじんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_hakim.1": {
+"en": "Hello, Master Hakim!",
+"lo": "ສະບາຍດີ ຊ່າງຮາກີມ!",
+"th": "สวัสดีช่างฮากีม!",
+"zh": "你好，哈基姆大师！",
+"ja": "こんにちは、ハキームさん！",
+"who": "hakim",
+"tag": "greet"
+},
+"eh_hakim.2": {
+"en": "I am Master Hakim, maker of silver peacocks and the flying Ebony Horse!",
+"lo": "ຂ້ອຍແມ່ນຊ່າງຮາກີມ ຜູ້ສ້າງນົກຍູງສີເງິນ ແລະ ມ້າໄມ້ດຳບິນໄດ້!",
+"th": "ฉันคือช่างฮากีม ผู้สร้างนกยูงสีเงินและม้าไม้ดำบินได้!",
+"zh": "我是哈基姆大师，银孔雀和会飞的乌木神马都是我亲手打造的！",
+"ja": "わしは ハキーム。ぎんの くじゃくと くろきの うまを つくったんだよ！",
+"who": "hakim",
+"tag": "say"
+},
+"eh_hakim.3": {
+"en": "I wear a warm ochre craftsman's coat and carry brass clockwork tools.",
+"lo": "ຂ້ອຍໃສ່ເສື້ອຄຸມຊ່າງສີເຫຼືອງດິນ ແລະ ຖືເຄື່ອງມືກົນໄກທອງເຫຼືອງ.",
+"th": "ฉันใส่เสื้อคลุมช่างสีเหลืองดินและถือเครื่องมือกลไกทองเหลือง",
+"zh": "我穿着温暖的赭黄色工匠长袍，随身带着精致的黄铜工具。",
+"ja": "ちゃいろの しごとぎを きて、はぐるまの どうぐを もっているよ。",
+"who": "hakim",
+"tag": "looks"
+},
+"eh_hakim.4": {
+"en": "In Persian, Hakim means a wise scholar and skilled master craftsman.",
+"lo": "ໃນພາສາເປີເຊຍ ຮາກີມໝາຍເຖິງນັກປາດຜູ້ສະຫຼາດ ແລະ ຊ່າງຜູ້ຊຳນານ.",
+"th": "ในภาษาเปอร์เซีย ฮากีมหมายถึงนักปราชญ์ผู้ฉลาดและช่างผู้ชำนาญ",
+"zh": "在波斯语里，哈基姆意为充满智慧的学者与能工巧匠。",
+"ja": "ハキームは かしこい めいじんって いみ なんだよ。",
+"who": "hakim",
+"tag": "fact"
+},
+"eh_hakim.5": {
+"en": "I spent years carving smooth ebony wood and fitting gleaming golden gears.",
+"lo": "ຂ້ອຍໃຊ້ເວລາຫຼາຍປີຄວັດໄມ້ດຳກ້ຽງງາມ ແລະ ປະກອບກົງຈັກສີຄຳ.",
+"th": "ฉันใช้เวลาหลายปีแกะสลักไม้ดำเรียบงามและประกอบเฟืองสีทอง",
+"zh": "我花了好几年时间打磨温润的乌木，装上精准咬合的金色齿轮。",
+"ja": "なんねんも かけて くろきを ほって はぐるまを つけたんだよ。",
+"who": "hakim",
+"tag": "does"
+},
+"eh_hakim.6": {
+"en": "I kept the silver moon peg a proud secret at first, and I learned my lesson!",
+"lo": "ຕອນທຳອິດຂ້ອຍເກັບສະລັກດວງຈັນໄວ້ເປັນຄວາມລັບ ແລ້ວຂ້ອຍກໍໄດ້ບົດຮຽນແລ້ວ!",
+"th": "ตอนแรกฉันเก็บสลักดวงจันทร์ไว้เป็นความลับ แล้วฉันก็ได้บทเรียนแล้ว!",
+"zh": "起初我出于骄傲隐瞒了月亮旋钮的用法，现在我明白了这可不对！",
+"ja": "はじめは つきの つまみを ひみつに して、はんせい したんだよ！",
+"who": "hakim",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_hakim.7": {
+"en": "I helped King Sabur light five golden braziers to guide Prince Firuz safely home!",
+"lo": "ຂ້ອຍຊ່ວຍພະລາຊາຊາບູຣຈູດເຕົາໄຟຫ້າໜ່ວຍເພື່ອນຳທາງເຈົ້າຊາຍຟີຣູຊກັບບ້ານ!",
+"th": "ฉันช่วยพระราชาซาบูร์จุดเตาไฟห้าดวงเพื่อนำทางเจ้าชายฟีรูซกลับบ้าน!",
+"zh": "我和萨布尔国王一起点燃五座金色火盆，指引菲鲁兹王子平安回家！",
+"ja": "おうさまと いつつの ひばちを つけて おうじを むかえたよ！",
+"who": "hakim",
+"sp": [
+"s08",
+"s09",
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_hakim.8": {
+"en": "With Yasmin's star compass, our sky-saddle is clear and safe for every rider!",
+"lo": "ດ້ວຍເຂັມທິດດາວຂອງຍາສມິນ ອານມ້າບິນຂອງເຮົາຈຶ່ງຊັດເຈນ ແລະ ປອດໄພ!",
+"th": "ด้วยเข็มทิศดาวของยัสมิน อานม้าบินของเราจึงชัดเจนและปลอดภัย!",
+"zh": "装上雅斯敏的星辰罗盘后，飞马的鞍座清楚又安全！",
+"ja": "ヤスミンの らしんばんで みんなが あんぜんに のれる ように なったよ！",
+"who": "hakim",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_hakim.9": {
+"en": "A true craftsman shares how every gear works so no friend is ever lost!",
+"lo": "ຊ່າງທີ່ແທ້ຈິງຈະແບ່ງປັນວິທີໃຊ້ກົງຈັກທຸກອັນເພື່ອບໍ່ໃຫ້ໝູ່ຫຼົງທາງ!",
+"th": "ช่างที่แท้จริงจะแบ่งปันวิธีใช้เฟืองทุกอันเพื่อไม่ให้เพื่อนหลงทาง!",
+"zh": "真正的工匠会大方分享每个齿轮的奥秘，绝不让朋友迷路！",
+"ja": "ほんとうの めいじんは しくみを みんなに おしえるんだよ！",
+"who": "hakim",
+"tag": "say"
+},
+"eh_horse.0": {
+"en": "Ebony Horse. The Ebony Horse is a flying wooden steed powered by gleaming golden gears.",
+"lo": "ມ້າໄມ້ດຳ. ມ້າໄມ້ດຳ ແມ່ນມ້າໄມ້ບິນໄດ້ທີ່ຂັບເຄື່ອນດ້ວຍກົງຈັກທອງເຫຼືອງສີຄຳ.",
+"th": "ม้าไม้ดำ ม้าไม้ดำคือม้าไม้บินได้ที่ขับเคลื่อนด้วยเฟืองทองเหลืองสีทอง",
+"zh": "乌木神马。乌木神马是一匹由闪亮黄铜齿轮驱动、能飞上云端的神奇木马。",
+"ja": "くろきの うま。くろきの うまは きんいろの はぐるまで そらを とぶ うまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_horse.1": {
+"en": "Hello, Ebony Horse!",
+"lo": "ສະບາຍດີ ມ້າໄມ້ດຳ!",
+"th": "สวัสดีม้าไม้ดำ!",
+"zh": "你好，乌木神马！",
+"ja": "こんにちは、くろきの うま！",
+"who": "horse",
+"tag": "greet"
+},
+"eh_horse.2": {
+"en": "Click-whir! Whooosh!",
+"lo": "ກິ໊ກ-ວື້! ຟິ້ວ!",
+"th": "คลิก-วื้ด! ฟิ้ว!",
+"zh": "咔嗒嗡嗡！呼——！",
+"ja": "かちっ、ぶーん！ ひゅーん！",
+"who": "horse",
+"tag": "sound"
+},
+"eh_horse.3": {
+"en": "My body is carved from polished dark ebony wood inlaid with bright golden brass gears.",
+"lo": "ຕົວຂອງມ້າຄວັດຈາກໄມ້ດຳຂັດເງົາປະດັບດ້ວຍກົງຈັກທອງເຫຼືອງສີຄຳສົດໃສ.",
+"th": "ตัวของม้าแกะสลักจากไม้ดำขัดเงาประดับด้วยเฟืองทองเหลืองสีทองสดใส",
+"zh": "我由打磨光亮的深色乌木雕成，胸口镶满闪亮的金色黄铜齿轮。",
+"ja": "つやつやの くろい きに きんいろの はぐるまが ぴかぴか ひかるよ。",
+"who": "horse",
+"tag": "looks"
+},
+"eh_horse.4": {
+"en": "Turn the golden sun peg on my shoulder to soar smoothly above the white clouds!",
+"lo": "ບິດສະລັກຕາເວັນສີຄຳເທິງບ່າເພື່ອບິນຂຶ້ນສູງເໜືອກ້ອນເມກຂາວ!",
+"th": "บิดสลักตะวันสีทองบนบ่าเพื่อบินขึ้นสูงเหนือปุยเมฆขาว!",
+"zh": "转动肩头的金色太阳旋钮，就能平稳腾飞到洁白的云海之上！",
+"ja": "かたの たいようの つまみを まわすと くもの うえへ とぶよ！",
+"who": "horse",
+"tag": "does"
+},
+"eh_horse.5": {
+"en": "Turn the cool silver moon peg gently to glide down and touch the tiles softly!",
+"lo": "ບິດສະລັກດວງຈັນສີເງິນຄ່ອຍໆເພື່ອລ່ອງລົງແຕະພື້ນກະເບື້ອງຢ່າງນຸ້ມນວນ!",
+"th": "บิดสลักดวงจันทร์สีเงินเบาๆ เพื่อร่อนลงแตะพื้นกระเบื้องอย่างนุ่มนวล!",
+"zh": "轻轻转动银色月亮旋钮，就能优雅滑翔、稳稳落在庭院地砖上！",
+"ja": "ぎんいろの つきの つまみを まわすと やさしく おりられるよ！",
+"who": "horse",
+"tag": "does"
+},
+"eh_horse.6": {
+"en": "Ebony is a smooth, heavy dark wood treasured by master carvers for centuries.",
+"lo": "ໄມ້ດຳແມ່ນໄມ້ສີເຂັ້ມເນື້ອກ້ຽງແໜ້ນທີ່ຊ່າງຄວັດຍົກຍ້ອງມາຫຼາຍຮ້ອຍປີ.",
+"th": "ไม้ดำคือไม้สีเข้มเนื้อเรียบแน่นที่ช่างแกะสลักยกย่องมาหลายร้อยปี",
+"zh": "乌木木质细腻坚硬，千百年来深受能工巧匠的珍爱。",
+"ja": "くろきは つるつるで とても じょうぶな めずらしい き なんだよ。",
+"who": "horse",
+"tag": "fact"
+},
+"eh_horse.7": {
+"en": "My hooves clatter softly on stone and kick up swirls of spring blossoms!",
+"lo": "ກີບຕີນຂອງມ້າແຕະພື້ນຫີນເບົາໆ ແລະ ພັດກີບດອກໄມ້ລະດູບານໃໝ່ປິວວົນ!",
+"th": "กีบเท้าของม้าแตะพื้นหินเบาๆ และพัดกลีบดอกไม้ฤดูใบไม้ผลิปลิวว่อน!",
+"zh": "我的马蹄轻踏石板，还能卷起漫天飞舞的春日花瓣！",
+"ja": "ひづめが いしを たたいて はなびらが ふわっと まうよ！",
+"who": "horse",
+"tag": "does"
+},
+"eh_horse.8": {
+"en": "With Yasmin's star compass on my saddle, I carry friends safely over every peak!",
+"lo": "ດ້ວຍເຂັມທິດດາວຂອງຍາສມິນເທິງອານ ມ້າພາໝູ່ບິນຂ້າມທຸກຍອດພູຢ່າງປອດໄພ!",
+"th": "ด้วยเข็มทิศดาวของยัสมินบนอาน ม้าพาเพื่อนบินข้ามทุกยอดเขาอย่างปลอดภัย!",
+"zh": "鞍上有了雅斯敏的星辰罗盘，我能载着朋友平安飞越座座雪峰！",
+"ja": "ほしの らしんばんが あれば どの やまも あんぜんに とべるよ！",
+"who": "horse",
+"sp": [
+"s10",
+"s11"
+],
+"tag": "does"
+},
+"eh_horse.9": {
+"en": "A crimson Persian saddle cloth stitched in gold rests across my back.",
+"lo": "ຜ້າປູອານເປີເຊຍສີແດງປັກລາຍສີຄຳປົກຢູ່ເທິງຫຼັງຂອງມ້າ.",
+"th": "ผ้าปูอานเปอร์เซียสีแดงปักลายสีทองคลุมอยู่บนหลังของม้า",
+"zh": "我的背上披着绣满金线的深红色波斯丝绸鞍毯。",
+"ja": "せなかに あかと きんいろの きれいな くらが のっているよ。",
+"who": "horse",
+"tag": "looks"
+},
+"eh_peacock.0": {
+"en": "A clockwork peacock. A clockwork peacock opens its silver and turquoise fan tail with a soft click.",
+"lo": "ນົກຍູງກົນໄກ. ນົກຍູງກົນໄກ ກາງຫາງວີສີເງິນ ແລະ ສີຟ້າຂຽວດ້ວຍສຽງກິ໊ກເບົາໆ.",
+"th": "นกยูงกลไก นกยูงกลไกกางหางสีเงินและสีฟ้าเขียวด้วยเสียงคลิกเบาๆ",
+"zh": "发条孔雀。发条孔雀轻轻咔嗒一声，展开银色与青蓝色的华丽尾羽。",
+"ja": "からくり くじゃく。からくり くじゃくが ぎんいろの はねを ひろげるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_peacock.1": {
+"en": "Hello, clockwork peacock!",
+"lo": "ສະບາຍດີ ນົກຍູງກົນໄກ!",
+"th": "สวัสดีนกยูงกลไก!",
+"zh": "你好，发条孔雀！",
+"ja": "こんにちは、からくり くじゃく！",
+"who": "peacock",
+"tag": "greet"
+},
+"eh_peacock.2": {
+"en": "Tick-tick-shimmer!",
+"lo": "ຕິ໊ກ-ຕິ໊ກ-ວິບວັບ!",
+"th": "ติ๊ก-ติ๊ก-วิบวับ!",
+"zh": "滴答闪亮！",
+"ja": "かちっ、きらきら！",
+"who": "peacock",
+"tag": "sound"
+},
+"eh_peacock.3": {
+"en": "Real peacocks spread their dazzling tail feathers in a wide fan to show off.",
+"lo": "ນົກຍູງແທ້ກາງຂົນຫາງອັນງົດງາມເປັນວີກວ້າງເພື່ອອວດສີສັນ.",
+"th": "นกยูงจริงกางขนหางอันงดงามเป็นพัดกว้างเพื่ออวดสีสัน",
+"zh": "真正的孔雀会展开华丽的尾羽，像一把闪闪发光的大扇子。",
+"ja": "ほんものの くじゃくも きれいな はねを うちわみたいに ひろげるよ。",
+"who": "peacock",
+"tag": "fact"
+},
+"eh_peacock.4": {
+"en": "Master Hakim winds its brass key so the silver feathers fan open smoothly.",
+"lo": "ຊ່າງຮາກີມໄຂລານກະແຈທອງເຫຼືອງໃຫ້ຂົນສີເງິນກາງອອກຢ່າງນຸ້ມນວນ.",
+"th": "ช่างฮากีมไขลานกุญแจทองเหลืองให้ขนสีเงินกางออกอย่างนุ่มนวล",
+"zh": "哈基姆大师拧紧黄铜发条，银色尾羽就优雅地扇形展开。",
+"ja": "ねじを まくと ぎんいろの はねが ふわっと ひらくよ。",
+"who": "peacock",
+"tag": "does"
+},
+"eh_peacock.5": {
+"en": "Turquoise jewels gleam inside every painted silver eye-spot on its tail.",
+"lo": "ແກ້ວສີຟ້າຂຽວເຫຼື້ອມແສງຢູ່ໃນລາຍຕາສີເງິນທຸກອັນເທິງຫາງຂອງມັນ.",
+"th": "อัญมณีสีฟ้าเขียวส่องประกายอยู่ในลายตาสีเงินทุกอันบนหางของมัน",
+"zh": "每一片银色尾羽的羽眼上都镶嵌着闪亮的绿松石宝石。",
+"ja": "はねの あおい もようが ほうせきみたいに ひかっているよ。",
+"who": "peacock",
+"tag": "looks"
+},
+"eh_springlantern.0": {
+"en": "A spring lantern. A spring lantern glows with warm golden candlelight for the Nowruz festival.",
+"lo": "ໂຄມໄຟລະດູບານໃໝ່. ໂຄມໄຟລະດູບານໃໝ່ ສ່ອງແສງທຽນສີຄຳອົບອຸ່ນໃນງານບຸນໂນຣູຊ.",
+"th": "โคมไฟฤดูใบไม้ผลิ โคมไฟฤดูใบไม้ผลิส่องแสงเทียนสีทองอบอุ่นในเทศกาลโนรูซ",
+"zh": "迎春灯笼。迎春灯笼在诺鲁孜新春庆典里亮起温暖的金色烛光。",
+"ja": "はるの らんたん。はるの らんたんが あたたかい きんいろに ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_springlantern.1": {
+"en": "Each brass lantern is pierced with delicate Persian star patterns.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງແຕ່ລະໜ່ວຍເຈາະລາຍດາວເປີເຊຍຢ່າງລະອຽດງົດງາມ.",
+"th": "โคมไฟทองเหลืองแต่ละดวงเจาะลายดาวเปอร์เซียอย่างละเอียดงดงาม",
+"zh": "每盏黄铜灯笼都镂刻着精巧的波斯星纹。",
+"ja": "ほしの もようが ほられた きれいな らんたんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_springlantern.2": {
+"en": "Tap all four lanterns to brighten Shiraz for the Nowruz celebration!",
+"lo": "ແຕະໂຄມໄຟທັງສີ່ໜ່ວຍເພື່ອໃຫ້ຊີຣາຊສະຫວ່າງສະໄຫວໃນງານບຸນໂນຣູຊ!",
+"th": "แตะโคมไฟทั้งสี่ดวงเพื่อให้ชีราซสว่างไสวในงานเทศกาลโนรูซ!",
+"zh": "点亮全部四盏迎春灯笼，让设拉子在诺鲁孜节绽放暖光！",
+"ja": "よっつの らんたんに さわると みんな あかるく ひかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_springlantern.3": {
+"en": "Nowruz means New Day and welcomes spring across Persia with light and flowers.",
+"lo": "ໂນຣູຊໝາຍເຖິງວັນໃໝ່ ແລະ ຕ້ອນຮັບລະດູບານໃໝ່ໃນເປີເຊຍດ້ວຍແສງໄຟ ແລະ ດອກໄມ້.",
+"th": "โนรูซหมายถึงวันใหม่และต้อนรับฤดูใบไม้ผลิในเปอร์เซียด้วยแสงไฟและดอกไม้",
+"zh": "诺鲁孜意为崭新的一天，人们用灯光与鲜花迎接春天的到来。",
+"ja": "ノウルーズは はるの おまつりで ひかりと はなを かざるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_springlantern.4": {
+"en": "Warm amber glass softens the candle flame inside every lantern.",
+"lo": "ແກ້ວສີເຫຼືອງອຳພັນເຮັດໃຫ້ແສງທຽນໃນໂຄມໄຟອ່ອນໂຍນອົບອຸ່ນ.",
+"th": "แก้วสีเหลืองอำพันทำให้แสงเทียนในโคมไฟอ่อนโยนอบอุ่น",
+"zh": "温润的琥珀色玻璃把烛火映照得柔和又温暖。",
+"ja": "あたたかい いろの がらすが ひかりを やさしく するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cat.0": {
+"en": "A courtyard cat. A courtyard cat naps on warm sandstone and loves playful tumbles.",
+"lo": "ແມວລາຍ. ແມວລາຍ ມັກນອນອາບແດດເທິງພື້ນຫີນອຸ່ນ ແລະ ກິ້ງຫຼິ້ນຢ່າງມ່ວນຊື່ນ.",
+"th": "แมวลาย แมวลายชอบนอนอาบแดดบนพื้นหินอุ่นและกลิ้งเล่นอย่างสนุกสนาน",
+"zh": "虎斑猫。虎斑猫喜欢在温暖的砂岩石板上打盹，也爱翻滚玩耍。",
+"ja": "しまねこ。しまねこが あたたかい いしの うえで ごろごろ あそぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_cat.1": {
+"en": "Hello, courtyard cat!",
+"lo": "ສະບາຍດີ ແມວລາຍ!",
+"th": "สวัสดีแมวลาย!",
+"zh": "你好，虎斑猫！",
+"ja": "こんにちは、しまねこ！",
+"who": "cat",
+"tag": "greet"
+},
+"eh_cat.2": {
+"en": "Purr-meow!",
+"lo": "ແມ້ວ-ຄຣືດ!",
+"th": "เหมียว-ครืด!",
+"zh": "喵呜呼噜！",
+"ja": "にゃあ、ごろごろ！",
+"who": "cat",
+"tag": "sound"
+},
+"eh_cat.3": {
+"en": "Cats use their whiskers and flexible tails to balance when they leap and tumble.",
+"lo": "ແມວໃຊ້ໜວດ ແລະ ຫາງອ່ອນນຸ້ມເພື່ອຊົງຕົວເວລາໂດດ ແລະ ກິ້ງຫຼິ້ນ.",
+"th": "แมวใช้หนวดและหางอ่อนนุ่มเพื่อทรงตัวเวลากระโดดและกลิ้งเล่น",
+"zh": "小猫跳跃翻滚时，会用胡须和灵活的尾巴稳稳保持平衡。",
+"ja": "ねこは ひげと しっぽで じょうずに ばらんすを とるんだよ。",
+"who": "cat",
+"tag": "fact"
+},
+"eh_cat.4": {
+"en": "It copied Hakim's proud bow and tumbled right into a basket of pink petals!",
+"lo": "ມັນຮຽນແບບທ່າກົ້ມຫົວຂອງຊ່າງຮາກີມ ແລ້ວລົ້ມກິ້ງລົງໃສ່ກະບຸງກີບດອກໄມ້!",
+"th": "มันเลียนแบบท่าโค้งคำนับของช่างฮากีม แล้วกลิ้งลงใส่ตะกร้ากลีบดอกไม้!",
+"zh": "它学着哈基姆大师神气地鞠躬，结果一头滚进了粉红花瓣篮！",
+"ja": "おじぎを まねして はなびらの かごに ころんと おちたよ！",
+"who": "cat",
+"tag": "does"
+},
+"eh_cat.5": {
+"en": "Its plump striped fur glows warm caramel and cream in the courtyard sun.",
+"lo": "ຂົນລາຍຕຸ້ຍໆຂອງມັນສີນ້ຳຕານຄາຣາເມລ ແລະ ສີຄີມອຸ່ນໃນແສງແດດ.",
+"th": "ขนลายอ้วนกลมของมันสีน้ำตาลคาราเมลและสีครีมอุ่นในแสงแดด",
+"zh": "它圆滚滚的虎斑毛皮在设拉子阳光下暖融融的。",
+"ja": "ふわふわの しまもようが おひさまに あたって ぽかぽかだよ。",
+"who": "cat",
+"tag": "looks"
+},
+"eh_frog.0": {
+"en": "A garden frog. A garden frog rests beside the cool turquoise water of the Shiraz fountain.",
+"lo": "ກົບນ້ອຍ. ກົບນ້ອຍ ນັ່ງພັກຢູ່ຂ້າງນ້ຳສີຟ້າຂຽວເຢັນໆຂອງນ້ຳພຸເມືອງຊີຣາຊ.",
+"th": "กบน้อย กบน้อยนั่งพักข้างน้ำสีฟ้าเขียวเย็นๆ ของน้ำพุเมืองชีราซ",
+"zh": "小青蛙。小青蛙静静蹲在设拉子庭院清凉碧蓝的喷泉边。",
+"ja": "ちいさな かえる。ちいさな かえるが ふんすいの そばで やすんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_frog.1": {
+"en": "Hello, garden frog!",
+"lo": "ສະບາຍດີ ກົບນ້ອຍ!",
+"th": "สวัสดีกบน้อย!",
+"zh": "你好，小青蛙！",
+"ja": "こんにちは、ちいさな かえる！",
+"who": "narrator",
+"tag": "greet"
+},
+"eh_frog.2": {
+"en": "Ribbit-plop!",
+"lo": "ອົ໊ບ-ຕູມ!",
+"th": "อ๊บ-ตูม!",
+"zh": "呱呱扑通！",
+"ja": "けろっ、ぽちゃん！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_frog.3": {
+"en": "Frogs have strong back legs that launch them from stone to water in one leap.",
+"lo": "ກົບມີຂາຫຼັງແຂງແຮງທີ່ຊ່ວຍໃຫ້ມັນໂດດຈາກກ້ອນຫີນລົງນ້ຳໄດ້ໃນບາດດຽວ.",
+"th": "กบมีขาหลังแข็งแรงที่ช่วยให้มันกระโดดจากก้อนหินลงน้ำได้ในทีเดียว",
+"zh": "青蛙强壮的后腿轻轻一蹬，就能从石阶稳稳跃入清泉。",
+"ja": "かえるは つよい うしろあしで ぴょんと おおきく とべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_frog.4": {
+"en": "It hops softly around the octagonal fountain pool listening to courtyard music.",
+"lo": "ມັນໂດດເບົາໆອ້ອມອ່າງນ້ຳພຸແປດຫຼ່ຽມພ້ອມຟັງສຽງດົນຕີໃນເດີ່ນ.",
+"th": "มันกระโดดเบาๆ รอบอ่างน้ำพุแปดเหลี่ยมพร้อมฟังเสียงดนตรีในลาน",
+"zh": "它绕着八角喷泉轻快地蹦跳，安静听着庭院里的悠扬琴声。",
+"ja": "ふんすいの まわりを ぴょんぴょん はねて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_frog.5": {
+"en": "Its mossy green skin sparkles with cool droplets of fountain spray.",
+"lo": "ຜິວສີຂຽວໄຄນ້ຳຂອງມັນເຫຼື້ອມຢົດນ້ຳເຢັນຈາກນ້ຳພຸ.",
+"th": "ผิวสีเขียวมอสของมันเปียกหยดน้ำเย็นจากน้ำพุ",
+"zh": "它翠绿光滑的皮肤上挂着晶莹清凉的喷泉水珠。",
+"ja": "みどりの せなかに みずの しずくが きらきら ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_butterfly.0": {
+"en": "A spring butterfly. A spring butterfly dances on sunny Nowruz breezes among pink almond blossoms.",
+"lo": "ແມງກະເບື້ອ. ແມງກະເບື້ອ ບິນຟ້ອນໄປຕາມສາຍລົມບຸນໂນຣູຊທ່າມກາງດອກໄມ້ສີບົວ.",
+"th": "ผีเสื้อ ผีเสื้อบินร่ายรำตามสายลมเทศกาลโนรูซท่ามกลางดอกไม้สีชมพู",
+"zh": "春蝶。春蝶乘着诺鲁孜节温暖的春风，在粉红杏花间翩翩起舞。",
+"ja": "ちょうちょ。ちょうちょが はるの かぜに のって ひらひら とぶよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_butterfly.1": {
+"en": "Hello, spring butterfly!",
+"lo": "ສະບາຍດີ ແມງກະເບື້ອ!",
+"th": "สวัสดีผีเสื้อ!",
+"zh": "你好，春蝶！",
+"ja": "こんにちは、ちょうちょ！",
+"who": "narrator",
+"tag": "greet"
+},
+"eh_butterfly.2": {
+"en": "Butterflies taste sweet flower nectar with tiny sensors on their delicate feet.",
+"lo": "ແມງກະເບື້ອຊີມນ້ຳຫວານດອກໄມ້ດ້ວຍຕີນນ້ອຍໆທີ່ລະອຽດອ່ອນຂອງມັນ.",
+"th": "ผีเสื้อชิมน้ำหวานดอกไม้ด้วยเท้าน้อยๆ ที่ละเอียดอ่อนของมัน",
+"zh": "蝴蝶用纤细的小脚感知花蜜，轻盈地停在春花上采蜜。",
+"ja": "ちょうちょは あしで あまい はなの みつが わかるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_butterfly.3": {
+"en": "It flutters gracefully from pink almond blossoms to blooming Shiraz roses.",
+"lo": "ມັນບິນກະພືບປີກຢ່າງອ່ອນຊ້ອຍຈາກດອກອາລມອນສີບົວໄປຫາດອກກຸຫຼາບຊີຣາຊ.",
+"th": "มันกระพือปีกอย่างอ่อนช้อยจากดอกอัลมอนด์สีชมพูไปยังดอกกุหลาบชีราซ",
+"zh": "它拍着轻盈的翅膀，从粉红杏花飞到芬芳的设拉子玫瑰。",
+"ja": "ピンクの はなから ばらへ ふわりと とんで いくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_butterfly.4": {
+"en": "Its painted paper wings shimmer in warm gold and turquoise hues.",
+"lo": "ປີກເຈ້ຍແຕ້ມຂອງມັນເຫຼື້ອມງາມດ້ວຍສີຄຳອຸ່ນ ແລະ ສີຟ້າຂຽວ.",
+"th": "ปีกกระดาษวาดของมันเงางามด้วยสีทองอุ่นและสีฟ้าเขียว",
+"zh": "它彩绘般的双翼泛着温暖的金色与绿松石蓝色。",
+"ja": "きんいろと あおの きれいな はねが ひらひら するよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_butterfly.5": {
+"en": "Tap gently to watch it drift higher above the sunny tiles!",
+"lo": "ແຕະຄ່ອຍໆເພື່ອເບິ່ງມັນບິນລອຍສູງຂຶ້ນເໜືອພື້ນກະເບື້ອງແດດອຸ່ນ!",
+"th": "แตะเบาๆ เพื่อดูมันบินลอยสูงขึ้นเหนือพื้นกระเบื้องแดดอุ่น!",
+"zh": "轻轻点一点，看它乘着微风飞向温暖阳光里！",
+"ja": "そっと さわると そらへ ふわっと まいあがるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_fountain.0": {
+"en": "A courtyard fountain. The courtyard fountain sparkles with cool turquoise water in an eight-sided basin.",
+"lo": "ນ້ຳພຸເດີ່ນວັງ. ນ້ຳພຸເດີ່ນວັງ ສ່ອງປະກາຍນ້ຳສີຟ້າຂຽວເຢັນຊື່ນໃຈໃນອ່າງແປດຫຼ່ຽມ.",
+"th": "น้ำพุในลานวัง น้ำพุในลานวังส่องประกายน้ำสีฟ้าเขียวเย็นชื่นใจในอ่างแปดเหลี่ยม",
+"zh": "庭院喷泉。庭院喷泉在八角水池里溅起清凉晶莹的碧蓝水花。",
+"ja": "にわの ふんすい。にわの ふんすいから つめたい みずが きらきら でるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_fountain.1": {
+"en": "Glazed turquoise tiles line all eight neat sides of the stone pool.",
+"lo": "ກະເບື້ອງເຄືອບສີຟ້າຂຽວປູອ້ອມທັງແປດດ້ານຂອງອ່າງຫີນ.",
+"th": "กระเบื้องเคลือบสีฟ้าเขียวปูรอบทั้งแปดด้านของอ่างหิน",
+"zh": "八角形石池的每一面都贴着精美的绿松石色釉面花砖。",
+"ja": "あおい たいるが はられた きれいな ふんすいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_fountain.2": {
+"en": "Cool water bubbles softly upward and sends gentle ripples across the basin.",
+"lo": "ນ້ຳເຢັນພຸ່ງຂຶ້ນຄ່ອຍໆ ແລະ ສ້າງຄື້ນນ້ຳອ່ອນໆທົ່ວອ່າງ.",
+"th": "น้ำเย็นพุ่งขึ้นเบาๆ และสร้างคลื่นน้ำอ่อนๆ ทั่วอ่าง",
+"zh": "清凉泉水咕嘟嘟轻涌而出，在水池里荡起柔柔涟漪。",
+"ja": "つめたい みずが ぽこぽこ わいて ひろがるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_fountain.3": {
+"en": "Splash-trickle, cool and calm!",
+"lo": "ຊ່າໆ, ເຢັນສະບາຍ!",
+"th": "ซ่าๆ เย็นสบาย!",
+"zh": "哗啦叮咚，清凉宁静！",
+"ja": "ちゃぷちゃぷ、すずしい おとだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_fountain.4": {
+"en": "Little garden frogs and snails love the cool damp stones around its base.",
+"lo": "ກົບນ້ອຍ ແລະ ຫອຍທາກໃນສວນມັກກ້ອນຫີນເຢັນຊຸ່ມອ້ອມຕີນນ້ຳພຸ.",
+"th": "กบน้อยและหอยทากในสวนชอบก้อนหินเย็นชุ่มรอบฐานน้ำพุ",
+"zh": "花园里的小青蛙和小蜗牛最爱躲在喷泉底座清凉湿润的石边。",
+"ja": "かえるや かたつむりが ふんすいの そばが だいすきだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_roseshurb.0": {
+"en": "A rose bush. A rose bush fills the sunny Shiraz air with sweet pink petals.",
+"lo": "ພຸ່ມດອກກຸຫຼາບ. ພຸ່ມດອກກຸຫຼາບ ເຕີມກິ່ນຫອມຫວານ ແລະ ກີບດອກສີບົວໃນອາກາດເມືອງຊີຣາຊ.",
+"th": "พุ่มดอกกุหลาบ พุ่มดอกกุหลาบเติมกลิ่นหอมหวานและกลีบดอกสีชมพูในอากาศเมืองชีราซ",
+"zh": "玫瑰花丛。玫瑰花丛盛开着娇嫩的粉红花朵，让设拉子满院芬芳。",
+"ja": "ばらの しげみ。ばらの しげみから あまい いい かおりが するよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_roseshurb.1": {
+"en": "Velvety pink damask roses open in full layered swirls among green leaves.",
+"lo": "ດອກກຸຫຼາບສີບົວນຸ້ມບານຊ້ອນກັນເປັນຊັ້ນໆທ່າມກາງໃບສີຂຽວ.",
+"th": "ดอกกุหลาบสีชมพูนุ่มบานซ้อนกันเป็นชั้นๆ ท่ามกลางใบสีเขียว",
+"zh": "重瓣丝绒般的粉红大马士革玫瑰在翠绿枝叶间层层绽放。",
+"ja": "やわらかい ピンクの ばらが たくさん さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_roseshurb.2": {
+"en": "Its sweet scent drifts across the courtyard to welcome spring butterflies.",
+"lo": "ກິ່ນຫອມຫວານຂອງມັນລອຍທົ່ວເດີ່ນວັງເພື່ອຕ້ອນຮັບແມງກະເບື້ອ.",
+"th": "กลิ่นหอมหวานของมันลอยทั่วลานวังเพื่อต้อนรับผีเสื้อ",
+"zh": "馥郁甜美的玫瑰花香飘遍庭院，引来翩翩起舞的春蝶。",
+"ja": "あまい かおりで ちょうちょを よんで いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_roseshurb.3": {
+"en": "Persian rosewater has been made from fragrant pink roses for over a thousand years.",
+"lo": "ນ້ຳດອກກຸຫຼາບເປີເຊຍເຮັດຈາກດອກກຸຫຼາບສີບົວຫອມມາໄດ້ກວ່າໜຶ່ງພັນປີແລ້ວ.",
+"th": "น้ำดอกกุหลาบเปอร์เซียทำจากดอกกุหลาบสีชมพูหอมมากว่าหนึ่งพันปีแล้ว",
+"zh": "一千多年前，波斯人就用芬芳的粉红玫瑰酿制清香的玫瑰露。",
+"ja": "いい かおりの ばらから ばらの みずを つくるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_roseshurb.4": {
+"en": "A shy little cricket likes hiding quietly behind these leafy rose stems!",
+"lo": "ຈິ່ງຫຼີດຂີ້ອາຍໂຕນ້ອຍມັກລີ້ຢູ່ງຽບໆທາງຫຼັງກ້ານກຸຫຼາບໃບດົກນີ້!",
+"th": "จิ้งหรีดขี้อายตัวน้อยชอบซ่อนตัวเงียบๆ หลังก้านกุหลาบใบดกนี้!",
+"zh": "一只害羞的小蟋蟀就喜欢静静躲在茂密的玫瑰枝叶后面！",
+"ja": "はっぱの うしろに ちいさな こおろぎが かくれているかもよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brassewer.0": {
+"en": "A brass ewer. A brass ewer pours cool spring water for guests visiting the courtyard.",
+"lo": "ໂຖນ້ຳທອງເຫຼືອງ. ໂຖນ້ຳທອງເຫຼືອງ ໃຊ້ຖອກນ້ຳເຢັນສົດຊື່ນໃຫ້ແຂກທີ່ມາຢ້ຽມເດີ່ນວັງ.",
+"th": "เหยือกน้ำทองเหลือง เหยือกน้ำทองเหลืองใช้รินน้ำเย็นสดชื่นให้แขกที่มาเยือนลานวัง",
+"zh": "黄铜水壶。黄铜水壶雕工精美，用来为庭院宾客斟上清凉甘泉。",
+"ja": "しんちゅうの みずさし。しんちゅうの みずさしが おきゃくさんに みずを そそぐよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_brassewer.1": {
+"en": "A slender curved spout and etched floral handle shine in polished brass.",
+"lo": "ພວຍກາໂຄ້ງຮຽວ ແລະ ຫູຈັບແກະລາຍດອກໄມ້ເຫຼື້ອມງາມດ້ວຍທອງເຫຼືອງຂັດເງົາ.",
+"th": "พวยกาโค้งเรียวและหูจับแกะลายดอกไม้เงางามด้วยทองเหลืองขัดเงา",
+"zh": "细长优雅的壶嘴和雕花手柄泛着温润的抛光黄铜光泽。",
+"ja": "ほそい くちの ついた ぴかぴかの みずさしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brassewer.2": {
+"en": "It pours cool rose-scented water over hands before a festive Persian meal.",
+"lo": "ມັນຖອກນ້ຳເຢັນຫອມກິ່ນກຸຫຼາບລ້າງມືກ່ອນງານລ້ຽງເປີເຊຍ.",
+"th": "มันรินน้ำเย็นหอมกลิ่นกุหลาบล้างมือก่อนงานเลี้ยงเปอร์เซีย",
+"zh": "开宴前，人们用它斟出带玫瑰清香的清水净手。",
+"ja": "おしょくじの まえに てを あらう おみずを そそぐんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brassewer.3": {
+"en": "It rests neatly on a matching carved brass tray beside the fountain.",
+"lo": "ມັນວາງຢູ່ຢ່າງງົດງາມເທິງຖາດທອງເຫຼືອງຄູ່ກັນຢູ່ຂ້າງນ້ຳພຸ.",
+"th": "มันวางอยู่อย่างงดงามบนถาดทองเหลืองคู่กันข้างน้ำพุ",
+"zh": "它整整齐齐摆在喷泉旁配套的雕花黄铜托盘上。",
+"ja": "ふんすいの よこの おぼんに きれいに おいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brassewer.4": {
+"en": "Master metalworkers in Shiraz hammer fine floral scrolls into every brass jug.",
+"lo": "ຊ່າງໂລຫະຊຳນານໃນຊີຣາຊຕີລາຍດອກໄມ້ລະອຽດລົງເທິງໂຖທອງເຫຼືອງທຸກໜ່ວຍ.",
+"th": "ช่างโลหะชำนาญในชีราซตีลายดอกไม้ละเอียดลงบนเหยือกทองเหลืองทุกใบ",
+"zh": "设拉子的金属工匠会在每把铜壶上手工敲出精细花纹。",
+"ja": "てで ほそい もようを ほって つくった どうぐだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_carvedbench.0": {
+"en": "A stone bench. A stone bench invites guests to sit and listen to stories in the shade.",
+"lo": "ຕັ່ງຫີນແກະສະຫຼັກ. ຕັ່ງຫີນແກະສະຫຼັກ ຊວນແຂກນັ່ງພັກ ແລະ ຟັງນິທານໃນຮົ່ມໄມ້ເຢັນ.",
+"th": "ม้านั่งหินแกะสลัก ม้านั่งหินแกะสลักชวนแขกนั่งพักและฟังนิทานในร่มไม้เย็น",
+"zh": "雕花石凳。雕花石凳静静摆在树荫下，请人们坐下来听故事。",
+"ja": "いしの べんち。いしの べんちに すわって ゆっくり やすめるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_carvedbench.1": {
+"en": "Warm sandstone legs carved with Persian arches hold a wide smooth seat.",
+"lo": "ຂາຫີນຊາຍອຸ່ນແກະລາຍໂຄ້ງເປີເຊຍຮອງຮັບແຜ່ນນັ່ງກວ້າງກ້ຽງ.",
+"th": "ขาหินทรายอุ่นแกะลายโค้งเปอร์เซียรองรับแผ่นนั่งกว้างเรียบ",
+"zh": "雕着波斯拱纹的暖色砂岩凳脚托着宽大光滑的石板。",
+"ja": "あたたかい いろの いしで ほられた じょうぶな べんちだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_carvedbench.2": {
+"en": "Storytellers and friends sit here to watch the blossoms drift in the wind.",
+"lo": "ນັກເລົ່ານິທານ ແລະ ໝູ່ເພື່ອນນັ່ງຢູ່ນີ້ເບິ່ງກີບດອກໄມ້ປິວຕາມລົມ.",
+"th": "นักเล่านิทานและเพื่อนฝูงนั่งที่นี่ดูกีบดอกไม้ปลิวตามลม",
+"zh": "讲故事的人和朋友们喜欢坐在这里看花瓣随春风飞舞。",
+"ja": "ここに すわって おはなしを きいたり はなを みたり するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_carvedbench.3": {
+"en": "Shiny garden beetles like scurrying right beside its shaded stone feet.",
+"lo": "ແມງກວາງເຫຼື້ອມໃນສວນມັກຄານໄປມາຢູ່ຂ້າງຕີນຕັ່ງຫີນທີ່ຮົ່ມເຢັນ.",
+"th": "แมลงปีกแข็งเงาในสวนชอบคลานไปมาข้างขาเก้าอี้หินที่ร่มเย็น",
+"zh": "亮晶晶的小甲虫最喜欢在阴凉的石凳脚边悄悄爬过。",
+"ja": "べんちの あしもとを こがねむしが とことこ あるくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_carvedbench.4": {
+"en": "It stands right beside the fruiting pomegranate shrub on the right side.",
+"lo": "ມັນຕັ້ງຢູ່ຂ້າງພຸ່ມໝາກພິລາທີ່ອອກໜ່ວຍທາງດ້ານຂວາ.",
+"th": "มันตั้งอยู่ข้างพุ่มทับทิมที่ออกผลทางด้านขวา",
+"zh": "它静静摆在庭院右侧结满果实的石榴灌木旁。",
+"ja": "ざくろの きの となりに きれいに おいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_tulips.0": {
+"en": "Spring tulips. Spring tulips bloom bright crimson in honour of the Nowruz new year.",
+"lo": "ດອກທິວລິບ. ດອກທິວລິບ ບານສີແດງສົດໃສເພື່ອຕ້ອນຮັບປີໃໝ່ບຸນໂນຣູຊ.",
+"th": "ดอกทิวลิป ดอกทิวลิปบานสีแดงสดใสเพื่อต้อนรับปีใหม่เทศกาลโนรูซ",
+"zh": "春日郁金香。春日郁金香迎着诺鲁孜新年绽放出火红鲜艳的花朵。",
+"ja": "ちゅーりっぷ。ちゅーりっぷが はるの にわで あかく さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_tulips.1": {
+"en": "Cup-shaped crimson petals lift brightly toward the morning Shiraz sun.",
+"lo": "ກີບດອກສີແດງຮູບຖ້ວຍຊູຊໍ່ສົດໃສຮັບແສງແດດຍາມເຊົ້າຂອງຊີຣາຊ.",
+"th": "กลีบดอกสีแดงรูปถ้วยชูช่อสดใสรับแสงแดดยามเช้าของชีราซ",
+"zh": "杯状鲜红的郁金香花瓣迎着设拉子晨光舒展绽放。",
+"ja": "まっかな カップみたいな はなが そらを むいて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_tulips.2": {
+"en": "They sway together in tidy red tufts whenever the courtyard breeze blows.",
+"lo": "ພວກມັນແກວ່ງໄກວພ້ອມກັນເປັນກໍສີແດງທຸກຄັ້ງທີ່ລົມເດີ່ນວັງພັດຜ່ານ.",
+"th": "พวกมันแกว่งไกวพร้อมกันเป็นกอสีแดงทุกครั้งที่ลมลานวังพัดผ่าน",
+"zh": "微风拂过庭院时，一丛丛红郁金香跟着整齐轻晃。",
+"ja": "かぜが ふくと あかい はなが いっしょに ゆらゆら ゆれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_tulips.3": {
+"en": "Wild tulips originally grew across the sunny hills of Persia and Central Asia!",
+"lo": "ດອກທິວລິບປ່າມີຖິ່ນກຳເນີດຕາມເນີນພູແດດອຸ່ນຂອງເປີເຊຍ ແລະ ອາຊີກາງ!",
+"th": "ดอกทิวลิปป่ามีถิ่นกำเนิดตามเนินเขาแดดอุ่นของเปอร์เซียและเอเชียกลาง!",
+"zh": "野生郁金香最早就生长在波斯和中亚阳光明媚的山坡上哦！",
+"ja": "ちゅーりっぷは ぺるしゃの はるに たくさん さく はななんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_tulips.4": {
+"en": "Smooth green sword-shaped leaves wrap closely around each sturdy stem.",
+"lo": "ໃບສີຂຽວຮຽວກ້ຽງໂອບອ້ອມກ້ານດອກທີ່ແຂງແຮງແຕ່ລະກ້ານ.",
+"th": "ใบสีเขียวเรียวยาวโอบรอบก้านดอกที่แข็งแรงแต่ละก้าน",
+"zh": "修长翠绿的叶片温柔环抱着每一根挺拔的花茎。",
+"ja": "みどりの はっぱが はなを やさしく つつんで いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_courtyardsky.0": {
+"en": "The Shiraz sky. The Shiraz sky glows warm turquoise and gold above the spring garden.",
+"lo": "ທ້ອງຟ້າຊີຣາຊ. ທ້ອງຟ້າຊີຣາຊ ສ່ອງແສງສີຟ້າຂຽວອຸ່ນ ແລະ ສີຄຳເໜືອສວນລະດູບານໃໝ່.",
+"th": "ท้องฟ้าชีราซ ท้องฟ้าชีราซส่องแสงสีฟ้าเขียวอุ่นและสีทองเหนือสวนฤดูใบไม้ผลิ",
+"zh": "设拉子晴空。设拉子晴空明朗柔和，温暖地照耀着春日宫廷花园。",
+"ja": "シーラーズの そら。シーラーズの そらが はるの にわの うえに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_courtyardsky.1": {
+"en": "Warm pastel clouds drift gently across the bright spring blue.",
+"lo": "ກ້ອນເມກສີອ່ອນອຸ່ນລອຍຄ່ອຍໆຂ້າມທ້ອງຟ້າສີຟ້າສົດໃສ.",
+"th": "ก้อนเมฆสีอ่อนอุ่นลอยเบาๆ ข้ามท้องฟ้าสีฟ้าสดใส",
+"zh": "柔和的暖色云朵在明媚的春日晴空中悠然飘过。",
+"ja": "やさしい いろの くもが ゆったり ながれて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_courtyardsky.2": {
+"en": "Sunbeams pour down from the Shiraz sky to warm the sandstone flagstones.",
+"lo": "ແສງແດດສ່ອງລົງຈາກທ້ອງຟ້າຊີຣາຊເຮັດໃຫ້ແຜ່ນຫີນຊາຍອົບອຸ່ນ.",
+"th": "แสงแดดส่องลงจากท้องฟ้าชีราซทำให้แผ่นหินทรายอบอุ่น",
+"zh": "温暖的阳光从晴空洒下，照暖了庭院里的砂岩石板。",
+"ja": "おひさまの ひかりが にわの いしを ぽかぽかに あたためるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_courtyardsky.3": {
+"en": "Songbirds wheel high through the clear sky above the palace arch.",
+"lo": "ນົກນ້ອຍບິນວົນສູງຜ່ານທ້ອງຟ້າປອດໂປ່ງເໜືອປະຕູໂຄ້ງວັງ.",
+"th": "นกน้อยบินวนสูงผ่านท้องฟ้าปลอดโปร่งเหนือซุ้มประตูวัง",
+"zh": "欢快的小鸟在王宫拱门上方的清澈晴空中盘旋飞舞。",
+"ja": "ことりたちが もんの うえの そらを きもちよさそうに とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_courtyardsky.4": {
+"en": "Shiraz is famous for bright sunny days and cool fragrant spring breezes.",
+"lo": "ຊີຣາຊມີຊື່ສຽງດ້ານວັນແດດອຸ່ນສົດໃສ ແລະ ສາຍລົມລະດູບານໃໝ່ທີ່ຫອມເຢັນ.",
+"th": "ชีราซมีชื่อเสียงด้านวันแดดอุ่นสดใสและสายลมฤดูใบไม้ผลิที่หอมเย็น",
+"zh": "设拉子以阳光明媚的白昼和清凉芬芳的春风闻名天下。",
+"ja": "はれた ひに やさしい はるの かぜが ふく まち なんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_shirazdomes.0": {
+"en": "Shiraz domes. Shiraz domes rise across the sunlit garden city behind the palace arch.",
+"lo": "ຫໍໂດມຊີຣາຊ. ຫໍໂດມຊີຣາຊ ຕັ້ງສູງງົດງາມທົ່ວເມືອງສວນແດດອຸ່ນທາງຫຼັງປະຕູໂຄ້ງວັງ.",
+"th": "โดมเมืองชีราซ โดมเมืองชีราซตั้งสูงงดงามทั่วเมืองสวนแดดอุ่นด้านหลังซุ้มประตูวัง",
+"zh": "设拉子穹顶。设拉子穹顶连绵起伏，映衬在王宫拱门后的花园之城。",
+"ja": "シーラーズの どーむ。シーラーズの どーむが もんの むこうに ならんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_shirazdomes.1": {
+"en": "Rounded turquoise and golden domes gleam softly in the distance.",
+"lo": "ຫໍໂດມກົມສີຟ້າຂຽວ ແລະ ສີຄຳເຫຼື້ອມອ່ອນໆຢູ່ໄກໆ.",
+"th": "โดมกลมสีฟ้าเขียวและสีทองเงาอ่อนๆ อยู่ไกลๆ",
+"zh": "圆润的绿松石蓝与金色穹顶在远方天际柔和闪亮。",
+"ja": "まるい あおと きんいろの やねが とおくに みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_shirazdomes.2": {
+"en": "Warm sunlight glints off glazed ceramic tiles on every rooftop dome.",
+"lo": "ແສງແດດອຸ່ນສະທ້ອນກະເບື້ອງເຄືອບເທິງຫໍໂດມຫຼັງຄາທຸກແຫ່ງ.",
+"th": "แสงแดดอุ่นสะท้อนกระเบื้องเคลือบบนโดมหลังคาทุกแห่ง",
+"zh": "温暖的阳光洒在彩釉瓷砖穹顶上，泛起温润光泽。",
+"ja": "おひさまが たいるの やねに あたって きらきら ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_shirazdomes.3": {
+"en": "Shiraz in Persia has been celebrated for centuries as a city of gardens and poets.",
+"lo": "ຊີຣາຊໃນເປີເຊຍມີຊື່ສຽງມາຫຼາຍຮ້ອຍປີວ່າເປັນເມືອງແຫ່ງສວນດອກໄມ້ ແລະ ນັກກະວີ.",
+"th": "ชีราซในเปอร์เซียมีชื่อเสียงมาหลายร้อยปีว่าเป็นเมืองแห่งสวนดอกไม้และกวี",
+"zh": "波斯的设拉子数百年来一直被称为花园与诗人之城。",
+"ja": "シーラーズは はなと うたの きれいな まちとして ゆうめいだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_shirazdomes.4": {
+"en": "Pale mountain ridges rise gently behind the peaceful Persian skyline.",
+"lo": "ສັນພູສີອ່ອນຕັ້ງສູງຄ່ອຍໆຢູ່ທາງຫຼັງຂອບຟ້າເມືອງເປີເຊຍທີ່ສະຫງົບ.",
+"th": "สันเขาสีอ่อนตั้งสูงค่อยๆ อยู่ด้านหลังขอบฟ้าเมืองเปอร์เซียอันสงบ",
+"zh": "淡雅的山脉静静起伏在宁静的波斯城市天际线之后。",
+"ja": "やまなみが まちの うしろに やさしく つづいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_palacearch.0": {
+"en": "A palace arch. The palace arch shines with hand-glazed turquoise and lapis mosaic tiles.",
+"lo": "ປະຕູໂຄ້ງວັງ. ປະຕູໂຄ້ງວັງ ເຫຼື້ອມງາມດ້ວຍກະເບື້ອງສີຟ້າຂຽວ ແລະ ສີຄາມແຕ້ມດ້ວຍມື.",
+"th": "ซุ้มประตูวัง ซุ้มประตูวังเงางามด้วยกระเบื้องสีฟ้าเขียวและสีครามวาดมือ",
+"zh": "王宫拱门。王宫拱门贴满手工烧制的绿松石蓝与青金石色波斯花砖。",
+"ja": "きゅうでんの もん。きゅうでんの もんは あおい たいるで きらきら しているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_palacearch.1": {
+"en": "Pointed turquoise arches and delicate floral scrollwork frame the royal gate.",
+"lo": "ປະຕູໂຄ້ງແຫຼມສີຟ້າຂຽວ ແລະ ລາຍດອກໄມ້ລະອຽດປະດັບປະຕູວັງ.",
+"th": "ประตูโค้งแหลมสีฟ้าเขียวและลายดอกไม้ละเอียดประดับประตูวัง",
+"zh": "尖拱形的绿松石蓝瓷砖门楼上缀满细腻的波斯卷花纹。",
+"ja": "あおい たいるに きれいな はなの もようが いっぱい あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_palacearch.2": {
+"en": "Its tall open archway welcomes friends and storytellers straight into the courtyard.",
+"lo": "ຊ່ອງປະຕູໂຄ້ງສູງໂລ່ງຕ້ອນຮັບໝູ່ເພື່ອນ ແລະ ນັກເລົ່ານິທານເຂົ້າສູ່ເດີ່ນວັງ.",
+"th": "ช่องประตูโค้งสูงโล่งต้อนรับเพื่อนฝูงและนักเล่านิทานเข้าสู่ลานวัง",
+"zh": "高大敞开的拱门热情地迎接客人们步入阳光庭院。",
+"ja": "おおきな もんが みんなを にわの なかへ むかえて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_palacearch.3": {
+"en": "A tall vaulted Persian gateway like this is called an iwan.",
+"lo": "ປະຕູໂຄ້ງເປີເຊຍສູງງົດງາມແບບນີ້ເອີ້ນວ່າ ໄອວານ.",
+"th": "ประตูโค้งเปอร์เซียสูงงดงามแบบนี้เรียกว่า ไอวาน",
+"zh": "这种高大典雅的波斯拱顶门楼在建筑上被称为伊万门。",
+"ja": "ぺるしゃの おおきな もんは いわーんって よばれるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_palacearch.4": {
+"en": "Scalloped tile crests crown the top edge against the sky.",
+"lo": "ຍອດກະເບື້ອງໂຄ້ງປະດັບຢູ່ຂອບເທິງສຸດຕັດກັບທ້ອງຟ້າ.",
+"th": "ยอดกระเบื้องโค้งประดับอยู่ขอบบนสุดตัดกับท้องฟ้า",
+"zh": "波浪形的釉砖花冠整齐地排列在门楼顶端。",
+"ja": "てっぺんの ギザギザの かざりが そらに きれいに うかぶよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_sunpeg.0": {
+"en": "A sun peg. The sun peg is the golden brass knob that lifts the Ebony Horse into the sky.",
+"lo": "ສະລັກຕາເວັນ. ສະລັກຕາເວັນ ແມ່ນສະລັກທອງເຫຼືອງສີຄຳທີ່ພາມ້າໄມ້ດຳບິນຂຶ້ນສູ່ທ້ອງຟ້າ.",
+"th": "สลักตะวัน สลักตะวันคือสลักทองเหลืองสีทองที่พาม้าไม้ดำบินขึ้นสู่ท้องฟ้า",
+"zh": "太阳旋钮。太阳旋钮是让乌木神马腾空飞上蓝天的金色黄铜开关。",
+"ja": "たいようの つまみ。たいようの つまみを まわすと うまが そらへ とびあがるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_sunpeg.1": {
+"en": "Its carved golden rays gleam like a miniature noon sun.",
+"lo": "ລັດສະໝີສີຄຳແກະສະຫຼັກຂອງມັນເຫຼື້ອມຄືດວງຕາເວັນນ້ອຍຍາມທ່ຽງ.",
+"th": "รัศมีสีทองแกะสลักของมันเงางามเหมือนดวงอาทิตย์น้อยยามเที่ยง",
+"zh": "精雕的金色光芒像一轮微缩的正午太阳闪闪发亮。",
+"ja": "きんいろの ひかりみたいな かたちが ぴかぴか ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_sunpeg.2": {
+"en": "Turning the sun peg spins the clockwork gears and lifts the horse skyward!",
+"lo": "ການບິດສະລັກຕາເວັນເຮັດໃຫ້ກົງຈັກໝຸນ ແລະ ພາມ້າບິນຂຶ້ນສູ່ທ້ອງຟ້າ!",
+"th": "การบิดสลักตะวันทำให้เฟืองหมุนและพาม้าบินขึ้นสู่ท้องฟ้า!",
+"zh": "转动太阳旋钮，齿轮飞转，乌木神马就会腾空飞向蓝天！",
+"ja": "これを まわすと はぐるまが まわって そらへ とびあがるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_sunpeg.3": {
+"en": "Always listen to the craftsman before turning a flying peg!",
+"lo": "ຕັ້ງໃຈຟັງຊ່າງກ່ອນສະເໝີກ່ອນຈະບິດສະລັກບິນ!",
+"th": "ตั้งใจฟังช่างก่อนเสมอก่อนจะบิดสลักบิน!",
+"zh": "转动飞天旋钮前，可一定要先听清工匠的嘱咐！",
+"ja": "まわす まえに ちゃんと はなしを きくのが だいじだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_sunpeg.4": {
+"en": "It sits cleanly on the horse's right shoulder beside the silver moon peg.",
+"lo": "ມັນຕັ້ງຢູ່ບ່າຂວາຂອງມ້າຢ່າງງົດງາມຄຽງຂ້າງສະລັກດວງຈັນສີເງິນ.",
+"th": "มันตั้งอยู่บ่าขวาของม้าอย่างงดงามเคียงข้างสลักดวงจันทร์สีเงิน",
+"zh": "它工整地装在神马右肩，与银色月亮旋钮并肩而立。",
+"ja": "ぎんいろの つきの つまみの となりに ついているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_petalbasket.0": {
+"en": "A petal basket. A petal basket brims with soft pink blossoms gathered for the spring feast.",
+"lo": "ກະບຸງກີບດອກໄມ້. ກະບຸງກີບດອກໄມ້ ເຕັມໄປດ້ວຍກີບດອກໄມ້ສີບົວນຸ້ມທີ່ເກັບມາໃນງານບຸນ.",
+"th": "ตะกร้ากลีบดอกไม้ ตะกร้ากลีบดอกไม้เต็มไปด้วยกลีบดอกไม้สีชมพูนุ่มที่เก็บมาในงานเทศกาล",
+"zh": "花瓣竹篮。花瓣竹篮里装满了为春日庆典采摘的柔软粉红花瓣。",
+"ja": "はなびらの かご。はなびらの かごに ピンクの はなびらが いっぱい はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_petalbasket.1": {
+"en": "Woven willow reeds hold a soft mound of fragrant pink almond blossoms.",
+"lo": "ຕອກຫວາຍສານໃສ່ກອງດອກອາລມອນສີບົວຫອມອ່ອນນຸ້ມ.",
+"th": "หวายสานใส่กองดอกอัลมอนด์สีชมพูหอมอ่อนนุ่ม",
+"zh": "编织精巧的柳条竹篮里装满柔软芬芳的粉红杏花瓣。",
+"ja": "あんだ かごに ピンクの はなびらが ふわふわ つまっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_petalbasket.2": {
+"en": "When the clumsy cat tumbled in, pink petals puffed into the air like confetti!",
+"lo": "ຕອນແມວລາຍລົ້ມກິ້ງລົງໃສ່ ກີບດອກສີບົວກໍປິວຟຸ້ງຂຶ້ນອາກາດ!",
+"th": "ตอนแมวลายกลิ้งลงใส่ กลีบดอกสีชมพูก็ปลิวฟุ้งขึ้นอากาศ!",
+"zh": "调皮的虎斑猫滚进篮子，粉红花瓣扑啦啦飞了满天！",
+"ja": "しまねこが ころがりこんで はなびらが ふわっと まいたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_petalbasket.3": {
+"en": "Children toss handfuls of petals to celebrate the sunny Persian spring.",
+"lo": "ເດັກນ້ອຍໂຍນກີບດອກໄມ້ຂຶ້ນຟ້າເພື່ອສະຫຼອງລະດູບານໃໝ່ແດດອຸ່ນ.",
+"th": "เด็กๆ โยนกลีบดอกไม้ขึ้นฟ้าเพื่อฉลองฤดูใบไม้ผลิแดดอุ่น",
+"zh": "孩子们抓起花瓣轻轻抛向空中，欢庆温暖的波斯春天。",
+"ja": "はなびらを まいて はるの おまつりを たのしむんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_petalbasket.4": {
+"en": "Soft rose and blush hues brighten the warm sandstone courtyard tiles.",
+"lo": "ສີກຸຫຼາບອ່ອນ ແລະ ສີບົວເຮັດໃຫ້ພື້ນຫີນຊາຍເດີ່ນວັງສົດໃສຂຶ້ນ.",
+"th": "สีกุหลาบอ่อนและสีชมพูทำให้พื้นหินทรายลานวังสดใสขึ้น",
+"zh": "柔美的粉红色花瓣把暖色调砂岩庭院装点得生机勃勃。",
+"ja": "やさしい ピンクいろが にわを あかるく いろどるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_snowpeaks.0": {
+"en": "Snowy peaks. Snowy peaks rise sharp and silver-white beneath the flying Ebony Horse.",
+"lo": "ຍອດພູຫິມະ. ຍອດພູຫິມະ ຕັ້ງສູງແຫຼມສີຂາວເງິນຢູ່ກ້ອງມ້າໄມ້ດຳທີ່ກຳລັງບິນ.",
+"th": "ยอดเขาหิมะ ยอดเขาหิมะตั้งสูงแหลมสีขาวเงินอยู่ใต้ฝีเท้าม้าไม้ดำที่กำลังบิน",
+"zh": "白雪群峰。白雪群峰巍峨耸立在飞翔的乌木神马下方，闪耀银光。",
+"ja": "ゆきの やまなみ。ゆきの やまなみが くもの なかから たかく そびえているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_snowpeaks.1": {
+"en": "Faceted granite cliffs wear thick sparkling coats of winter snow.",
+"lo": "ໜ້າຜາຫີນແກຣນິດຫຼາຍຫຼ່ຽມສວມເສື້ອຫິມະລະດູໜາວໜາເຫຼື້ອມໃສ.",
+"th": "หน้าผาหินแกรนิตหลายเหลี่ยมสวมเสื้อหิมะฤดูหนาวหนาเงางาม",
+"zh": "棱角分明的花岗岩峰顶披着厚厚闪亮的银白积雪。",
+"ja": "いわの やまに まっしろな ゆきが たっぷり つもっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_snowpeaks.2": {
+"en": "Tall snowy summits catch drifting clouds like soft cream scarves.",
+"lo": "ຍອດພູຫິມະສູງກ່ຽວເກາະກ້ອນເມກທີ່ລອຍຜ່ານຄືຜ້າພັນຄໍສີຄີມນຸ້ມ.",
+"th": "ยอดเขาหิมะสูงเกี่ยวเกาะปุยเมฆที่ลอยผ่านเหมือนผ้าพันคอสีครีมนุ่ม",
+"zh": "高耸入云的雪峰把飘过的云朵挽成柔软的乳白围巾。",
+"ja": "たかい やまの まわりに ふわふわの くもが まきついて いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_snowpeaks.3": {
+"en": "The snow-topped Zagros and Alborz ranges stretch high across Persia.",
+"lo": "ສາຍພູຫິມະຊາໂກຣສ ແລະ ອາລບໍຣຊຢຽດຍາວສູງຂ້າມດິນແດນເປີເຊຍ.",
+"th": "เทือกเขาหิมะซากรอสและอัลบอร์ซทอดยาวสูงข้ามดินแดนเปอร์เซีย",
+"zh": "积雪皑皑的扎格罗斯山脉与厄尔布尔士山脉绵延在波斯大地。",
+"ja": "ぺるしゃには ゆきの つもった たかい やまが たくさん あるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_snowpeaks.4": {
+"en": "Cool blue mountain shadows deepen the bright white sunlit snow.",
+"lo": "ເງົາພູສີຟ້າເຢັນເຮັດໃຫ້ຫິມະຂາວແດດອຸ່ນຍິ່ງສົດໃສ.",
+"th": "เงาภูเขาสีฟ้าเย็นทำให้หิมะขาวแดดอุ่นยิ่งสดใส",
+"zh": "清冷的蓝灰色山影衬得阳光下的白雪更加晶莹洁白。",
+"ja": "あおい かげと しろい ゆきが とても きれいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cloudbank.0": {
+"en": "A cloud bank. A cloud bank rolls like soft cream silk beneath the horse's soaring hooves.",
+"lo": "ທະເລເມກ. ທະເລເມກ ລອຍມ້ວນຄືຜ້າໄໝສີຄີມນຸ້ມຢູ່ກ້ອງກີບຕີນມ້າທີ່ກຳລັງບິນ.",
+"th": "ทะเลเมฆ ทะเลเมฆลอยม้วนเหมือนผ้าไหมสีครีมนุ่มอยู่ใต้กีบเท้าม้าที่กำลังบิน",
+"zh": "绵绵云海。绵绵云海像柔软的乳白丝绸，在飞马蹄下缓缓翻卷。",
+"ja": "くもの うみ。くもの うみが ふわふわの じゅうたんみたいに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_cloudbank.1": {
+"en": "Layered curls of cream and pale blue clouds billow across the whole horizon.",
+"lo": "ກ້ອນເມກສີຄີມ ແລະ ສີຟ້າອ່ອນລອຍຊ້ອນກັນເປັນຊັ້ນທົ່ວຂອບຟ້າ.",
+"th": "ก้อนเมฆสีครีมและสีฟ้าอ่อนลอยซ้อนกันเป็นชั้นทั่วขอบฟ้า",
+"zh": "层层叠叠的乳白与淡蓝色卷云在天际间绵延翻涌。",
+"ja": "しろと みずいろの くもが もこもこ ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cloudbank.2": {
+"en": "Soft rolling clouds cushion the skyway far above the sleeping valleys.",
+"lo": "ກ້ອນເມກມ້ວນນຸ້ມປູທາງເທິງຟ້າສູງເໜືອຮ່ອມພູທີ່ງຽບສະຫງົບ.",
+"th": "ก้อนเมฆม้วนนุ่มปูทางบนฟ้าสูงเหนือหุบเขาอันเงียบสงบ",
+"zh": "绵软翻滚的云海像空中丝毯，轻轻铺展在沉睡的山谷之上。",
+"ja": "やわらかい くもが そらの みちを ふわふわ つつむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cloudbank.3": {
+"en": "Each swirling cloud curl is painted with crisp storybook ink outlines.",
+"lo": "ລາຍມ້ວນເມກແຕ່ລະຊັ້ນແຕ້ມດ້ວຍເສັ້ນໝຶກປຶ້ມນິທານທີ່ຄົມງາມ.",
+"th": "ลายม้วนเมฆแต่ละชั้นวาดด้วยเส้นหมึกหนังสือนิทานที่คมงาม",
+"zh": "每一卷舒展的云纹都勾勒着精致典雅的波斯绘本墨线。",
+"ja": "えほんみたいに くるんと まいた くもが かわいいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cloudbank.4": {
+"en": "Tap the drifting sky clouds and watch the high mountain breezes stir!",
+"lo": "ແຕະກ້ອນເມກເທິງຟ້າແລ້ວເບິ່ງສາຍລົມພູສູງພັດໄຫວ!",
+"th": "แตะก้อนเมฆบนฟ้าแล้วดูสายลมภูเขาสูงพัดไหว!",
+"zh": "看着高空云海缓缓流动，仿佛能感受到清凉的高山微风！",
+"ja": "くもが ゆっくり ながれて そらの たびが たのしいよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cragspire.0": {
+"en": "A snow crag. A snow crag lifts rugged limestone ledges high into the drifting clouds.",
+"lo": "ຜາຫິມະ. ຜາຫິມະ ຍົກຊັ້ນຫີນປູນສູງຊັນຂຶ້ນສູ່ກ້ອນເມກທີ່ລອຍຜ່ານ.",
+"th": "ผาหิมะ ผาหิมะยกชั้นหินปูนสูงชันขึ้นสู่ปุยเมฆที่ลอยผ่าน",
+"zh": "雪峰岩柱。雪峰岩柱峭拔嶙峋，直插流动的云海之中。",
+"ja": "ゆきの いわやま。ゆきの いわやまが くもの なかに どっしり たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_cragspire.1": {
+"en": "Warm ochre rock facets peek through crisp drifts of highland snow.",
+"lo": "ຫຼ່ຽມຫີນສີເຫຼືອງດິນອຸ່ນໂຜ່ຜ່ານກອງຫິມະເທິງພູສູງ.",
+"th": "เหลี่ยมหินสีเหลืองดินอุ่นโผล่ผ่านกองหิมะบนภูเขาสูง",
+"zh": "温暖的赭石色岩面从洁白清脆的高山积雪间探出身来。",
+"ja": "ちゃいろの いわと しろい ゆきが かっこよく かさなっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cragspire.2": {
+"en": "Hardy mountain birds perch on these rocky crags to rest above the clouds.",
+"lo": "ນົກພູຜາທີ່ແຂງແຮງມັກມາເກາະພັກເທິງຜາຫີນເຫຼົ່ານີ້ເໜືອກ້ອນເມກ.",
+"th": "นกภูเขาที่แข็งแรงชอบมาเกาะพักบนผาหินเหล่านี้เหนือปุยเมฆ",
+"zh": "矫健的高山飞鸟喜欢停歇在云端峭壁上稍作休息。",
+"ja": "やまの とりが いわの うえに とまって ひとやすみ するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cragspire.3": {
+"en": "Curled wisps of cloud hug the rocky shoulder like delicate paper lace.",
+"lo": "ເມກມ້ວນອ່ອນໆໂອບບ່າຜາຫີນຄືລາຍເຈ້ຍຕັດອັນລະອຽດ.",
+"th": "เมฆม้วนอ่อนๆ โอบบ่าผาหินเหมือนลายกระดาษตัดอันละเอียด",
+"zh": "卷曲的云朵如精致的纸艺花边般紧贴着雪岩山肩。",
+"ja": "ふわふわの くもが いわの かたを やさしく つつんで いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cragspire.4": {
+"en": "Its sturdy limestone ledges shelter tiny alpine creatures from the wind.",
+"lo": "ຂອບຫີນປູນທີ່ແຂງແຮງຊ່ວຍບັງລົມໃຫ້ສັດພູຜານ້ອຍໆ.",
+"th": "ขอบหินปูนที่แข็งแรงช่วยบังลมให้สัตว์ภูเขาน้อยๆ",
+"zh": "坚实的石灰岩缝隙为山间小生灵挡住凛冽的高空山风。",
+"ja": "いわの すきまが ちいさな いきものを かぜから まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_pinecrag.0": {
+"en": "An alpine pine. An alpine pine clings bravely to windswept mountain rock high above the clouds.",
+"lo": "ຕົ້ນແປກພູສູງ. ຕົ້ນແປກພູສູງ ເກາະແໜ້ນຢູ່ເທິງຜາຫີນທີ່ລົມພັດແຮງສູງເໜືອກ້ອນເມກ.",
+"th": "ต้นสนภูเขา ต้นสนภูเขาเกาะแน่นอยู่บนผาหินที่ลมพัดแรงสูงเหนือปุยเมฆ",
+"zh": "高山青松。高山青松迎着清冽山风，坚韧地扎根在云端岩壁上。",
+"ja": "やまの まつのき。やまの まつのきが つよい かぜにも まけないで たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_pinecrag.1": {
+"en": "Twisted dark branches hold tufts of emerald needles against the snow.",
+"lo": "ກິ່ງໄມ້ສີເຂັ້ມຄົດໂຄ້ງຊູໃບເຂັມສີຂຽວສົດຕັດກັບຫິມະຂາວ.",
+"th": "กิ่งไม้สีเข้มคดโค้งชูใบเข็มสีเขียวสดตัดกับหิมะขาว",
+"zh": "苍劲虬曲的深色树枝托着簇簇苍翠松针，与白雪相映成趣。",
+"ja": "みどりの まつが ゆきの なかで げんきに はえているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_pinecrag.2": {
+"en": "Its deep roots grip rocky ledges tightly even when mountain gusts howl!",
+"lo": "ຮາກເລິກຂອງມັນເກາະໜ້າຜາຫີນໄວ້ແໜ້ນແມ່ນແຕ່ຕອນລົມພູພັດແຮງ!",
+"th": "รากลึกของมันเกาะหน้าผาหินไว้แน่นแม้ตอนลมเขาพัดแรง!",
+"zh": "它深扎岩缝的树根抓得牢牢的，再大的山风也吹不倒！",
+"ja": "つよい かぜが ふいても ねっこで しっかり がんばるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_pinecrag.3": {
+"en": "Pine trees keep their green needles all winter long to stay strong in snow.",
+"lo": "ຕົ້ນແປກຮັກສາໃບເຂັມສີຂຽວໄວ້ຕະຫຼອດລະດູໜາວເພື່ອໃຫ້ແຂງແຮງໃນຫິມະ.",
+"th": "ต้นสนรักษาใบเข็มสีเขียวไว้ตลอดฤดูหนาวเพื่อให้แข็งแรงในหิมะ",
+"zh": "松树整个冬天都保持翠绿针叶，在冰雪高山上依然生机勃勃。",
+"ja": "まつは ふゆでも ずっと みどりの ままなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_pinecrag.4": {
+"en": "Highland songbirds tuck safely inside its warm sheltered boughs.",
+"lo": "ນົກພູສູງມັກເຂົ້າໄປລີ້ອຸ່ນຢູ່ໃນກິ່ງໃບທີ່ບັງລົມຂອງມັນ.",
+"th": "นกภูเขาสูงชอบเข้าไปหลบอุ่นอยู่ในกิ่งใบที่บังลมของมัน",
+"zh": "山间小鸟最爱躲进它茂密挡风的松枝间避寒歇脚。",
+"ja": "やまの とりが まつのかげで あったかく やすむよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_crane.0": {
+"en": "A white crane. A white crane glides peacefully with wide snowy wings above the clouds.",
+"lo": "ນົກກະສາຂາວ. ນົກກະສາຂາວ ບິນລ່ອງຢ່າງສະຫງົບດ້ວຍປີກສີຂາວກວ້າງເໜືອກ້ອນເມກ.",
+"th": "นกกระเรียนขาว นกกระเรียนขาวร่อนอย่างสงบด้วยปีกสีขาวกว้างเหนือปุยเมฆ",
+"zh": "白鹤。白鹤展开洁白宽大的翅膀，在云海之上安详翱翔。",
+"ja": "しろい つる。しろい つるが くもの うえを ゆったり とんで いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_crane.1": {
+"en": "Hello, white crane!",
+"lo": "ສະບາຍດີ ນົກກະສາຂາວ!",
+"th": "สวัสดีนกกระเรียนขาว!",
+"zh": "你好，白鹤！",
+"ja": "こんにちは、しろい つる！",
+"who": "narrator",
+"tag": "greet"
+},
+"eh_crane.2": {
+"en": "Kroo-kroo!",
+"lo": "ກຣູ-ກຣູ!",
+"th": "กรู-กรู!",
+"zh": "鹤鸣清亮！",
+"ja": "くるー、くるー！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_crane.3": {
+"en": "Cranes migrate high across snowy mountains by riding warm rising air currents.",
+"lo": "ນົກກະສາບິນຂ້າມພູຫິມະສູງໂດຍອາໄສກະແສລົມອຸ່ນທີ່ລອຍຂຶ້ນ.",
+"th": "นกกระเรียนบินข้ามภูเขาหิมะสูงโดยอาศัยกระแสลมอุ่นที่ลอยขึ้น",
+"zh": "白鹤善于乘着上升气流，优雅地飞越积雪覆盖的高山。",
+"ja": "つるは かぜに のって たかい ゆきの やまも こえて いくよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_crane.4": {
+"en": "Three friendly cranes wheel beside Firuz and guide his eyes toward the peaks.",
+"lo": "ນົກກະສາໃຈດີສາມໂຕບິນວົນຂ້າງຟີຣູຊເພື່ອຊ່ວຍໃຫ້ລາວເຫັນຍອດພູ.",
+"th": "นกกระเรียนใจดีสามตัวบินวนข้างฟีรูซเพื่อช่วยให้เขาเห็นยอดเขา",
+"zh": "三只友善的白鹤在菲鲁兹身旁盘旋伴飞，带他看清云端雪峰。",
+"ja": "さんばの つるが フィールーズの よこを いっしょに とぶよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_crane.5": {
+"en": "Their snow-white wingtips contrast sharply against the bright blue sky.",
+"lo": "ປາຍປີກສີຂາວຫິມະຂອງພວກມັນໂດດເດັ່ນກາງທ້ອງຟ້າສີຟ້າສົດໃສ.",
+"th": "ปลายปีกสีขาวหิมะของพวกมันโดดเด่นกลางท้องฟ้าสีฟ้าสดใส",
+"zh": "它们雪白修长的羽翼在蔚蓝晴空下格外优雅耀眼。",
+"ja": "まっしろな つばさが あおい そらに とても はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_windpuff.0": {
+"en": "A cloud puff. A cloud puff floats soft and white around the horse's glossy ebony shoulder.",
+"lo": "ກ້ອນເມກຂາວ. ກ້ອນເມກຂາວ ລອຍນຸ້ມສີຂາວອ້ອມບ່າໄມ້ດຳເງົາຂອງມ້າ.",
+"th": "ปุยเมฆขาว ปุยเมฆขาวลอยนุ่มสีขาวรอบบ่าไม้ดำเงาของม้า",
+"zh": "白云团。白云团松软洁白，轻轻飘绕在乌木神马光滑的肩膀旁。",
+"ja": "しろい くも。しろい くもが ふわふわ うまの まわりを ただようよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_windpuff.1": {
+"en": "Soft swirling curls of white mist drift right across the saddle.",
+"lo": "ໝອກຂາວນຸ້ມມ້ວນລອຍຜ່ານໜ້າອານມ້າ.",
+"th": "หมอกขาวนุ่มม้วนลอยผ่านหน้าอานม้า",
+"zh": "蓬松卷曲的白云团轻轻飘过乌木神马的鞍头。",
+"ja": "しろい もくもくが くらの まわりを ふわふわ ながれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_windpuff.2": {
+"en": "Tap each puffy cloud away so Firuz can spot the cool silver moon peg!",
+"lo": "ແຕະໄລ່ກ້ອນເມກຂາວແຕ່ລະກ້ອນອອກ ເພື່ອໃຫ້ຟີຣູຊເຫັນສະລັກດວງຈັນສີເງິນ!",
+"th": "แตะไล่ปุยเมฆขาวแต่ละก้อนออก เพื่อให้ฟีรูซเห็นสลักดวงจันทร์สีเงิน!",
+"zh": "轻点拨开三朵白云团，帮菲鲁兹发现闪亮的银色月亮旋钮！",
+"ja": "くもに さわって どかすと つきの つまみが みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_windpuff.3": {
+"en": "High mountain clouds are made of millions of tiny cool water droplets.",
+"lo": "ກ້ອນເມກເທິງພູສູງປະກອບດ້ວຍຢົດນ້ຳເຢັນນ້ອຍໆຫຼາຍລ້ານຢົດ.",
+"th": "ก้อนเมฆบนภูเขาสูงประกอบด้วยหยดน้ำเย็นเล็กๆ หลายล้านหยด",
+"zh": "高山上的白云其实是由无数颗微小的清凉水滴聚成的。",
+"ja": "くもは ちいさな みずの つぶが たくさん あつまって できているよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_windpuff.4": {
+"en": "Sunlight turns the edges of each cloud puff warm golden cream.",
+"lo": "ແສງແດດເຮັດໃຫ້ຂອບກ້ອນເມກແຕ່ລະກ້ອນເປັນສີຄີມຄຳອຸ່ນ.",
+"th": "แสงแดดทำให้ขอบปุยเมฆแต่ละก้อนเป็นสีครีมทองอุ่น",
+"zh": "阳光把每一朵白云的边缘都染上了温暖的奶油金色。",
+"ja": "おひさまに あたって ふちが きんいろに ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_mist.0": {
+"en": "A sky mist. Sky mist curls gently in pale ribbons along the snowy mountain ridges.",
+"lo": "ໝອກເມກຂາວ. ໝອກເມກຂາວ ລອຍມ້ວນອ່ອນໆເປັນສາຍຕາມສັນພູຫິມະ.",
+"th": "หมอกเมฆขาว หมอกเมฆขาวลอยม้วนอ่อนๆ เป็นสายตามสันเขาหิมะ",
+"zh": "云间轻雾。云间轻雾如银白丝带，沿着雪山山脊轻轻飘绕。",
+"ja": "しろい きり。しろい きりが やまの そばを ふわっと ながれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_mist.1": {
+"en": "Translucent ribbons of silvery vapour curl lazily past the snowy rocks.",
+"lo": "ສາຍໝອກສີເງິນບາງໆລອຍມ້ວນຜ່ານຜາຫີນຫິມະຢ່າງຊ້າໆ.",
+"th": "สายหมอกสีเงินบางๆ ลอยม้วนผ่านผาหินหิมะอย่างช้าๆ",
+"zh": "薄纱般的银白轻雾沿着雪岩缓缓缭绕飘散。",
+"ja": "しろい けむりみたいな きりが ふわっと ながれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_mist.2": {
+"en": "It sways gently in the cool breeze whenever the Ebony Horse gallops past!",
+"lo": "ມັນພັດໄຫວຄ່ອຍໆໃນສາຍລົມເຢັນທຸກຄັ້ງທີ່ມ້າໄມ້ດຳຄວບບິນຜ່ານ!",
+"th": "มันพัดไหวเบาๆ ในสายลมเย็นทุกครั้งที่ม้าไม้ดำควบผ่าน!",
+"zh": "乌木神马踏云飞驰而过时，轻雾跟着在清风中轻轻摆动！",
+"ja": "うまが とぶと きりが ふわっと ゆれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_mist.3": {
+"en": "Sunlight turns the misty edges bright pearl and soft pale gold.",
+"lo": "ແສງແດດເຮັດໃຫ້ຂອບໝອກເປັນສີໄຂ່ມຸກສົດໃສ ແລະ ສີຄຳອ່ອນ.",
+"th": "แสงแดดทำให้ขอบหมอกเป็นสีไข่มุกสดใสและสีทองอ่อน",
+"zh": "阳光洒在轻雾边缘，映出柔和的珍珠白与浅金色。",
+"ja": "おひさまに あたって ぴかっと しろく ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_mist.4": {
+"en": "Mist is simply a gentle cloud resting close to rocky mountain slopes.",
+"lo": "ໝອກກໍຄືກ້ອນເມກອ່ອນໆທີ່ລອຍຢູ່ໃກ້ເນີນພູຫີນ.",
+"th": "หมอกก็คือปุยเมฆอ่อนๆ ที่ลอยอยู่ใกล้ไหล่เขาหิน",
+"zh": "山间轻雾其实就是轻轻依偎在山坡上的温柔云朵。",
+"ja": "きりは やまの そばまで おりてきた くも なんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_skywaysky.0": {
+"en": "The mountain sky. The mountain sky stretches wide and bright high above the white cloud sea.",
+"lo": "ທ້ອງຟ້າເໜືອເມກ. ທ້ອງຟ້າເໜືອເມກ ກວ້າງໃຫຍ່ ແລະ ສົດໃສສູງເໜືອທະເລເມກຂາວ.",
+"th": "ท้องฟ้าเหนือเมฆ ท้องฟ้าเหนือเมฆกว้างใหญ่และสดใสสูงเหนือทะเลเมฆขาว",
+"zh": "云端晴空。云端晴空湛蓝辽阔，在洁白的云海之上延展到天边。",
+"ja": "くもの うえの そら。くもの うえの そらが どこまでも ひろく ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_skywaysky.1": {
+"en": "Crisp high-altitude blue fades into warm sunlit white near the distant peaks.",
+"lo": "ສີຟ້າສົດໃສເທິງຟ້າສູງຈາງເປັນສີຂາວແດດອຸ່ນໃກ້ຍອດພູໄກ.",
+"th": "สีฟ้าสดใสบนฟ้าสูงจางเป็นสีขาวแดดอุ่นใกล้ยอดเขาไกล",
+"zh": "高远清澈的蓝天在雪峰天际边渐渐化作明亮的日光白。",
+"ja": "たかい そらが すっきり あおく すみわたって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_skywaysky.2": {
+"en": "Steady mountain breezes carry the Ebony Horse and white cranes smoothly onward.",
+"lo": "ສາຍລົມພູໝັ້ນຄົງພາມ້າໄມ້ດຳ ແລະ ນົກກະສາຂາວບິນໄປຢ່າງນຸ້ມນວນ.",
+"th": "สายลมภูเขามั่นคงพาม้าไม้ดำและนกกระเรียนขาวบินไปอย่างนุ่มนวล",
+"zh": "平稳的山风托着乌木神马与洁白仙鹤一路顺畅前行。",
+"ja": "かぜが うまと つるを やさしく はこんで いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_skywaysky.3": {
+"en": "High above the clouds, the sunlit air feels cool, clean and endless.",
+"lo": "ສູງເໜືອກ້ອນເມກ ອາກາດແດດອຸ່ນເຢັນສະບາຍ ສະອາດ ແລະ ກວ້າງສຸດສາຍຕາ.",
+"th": "สูงเหนือปุยเมฆ อากาศแดดอุ่นเย็นสบาย สะอาด และกว้างสุดสายตา",
+"zh": "云海之上的晴朗空气清凉洁净，一眼望不到尽头。",
+"ja": "くもの うえの くうきは つめたくて とても すんで いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_skywaysky.4": {
+"en": "Soaring high above the cloud sea lets riders see whole mountain ranges at once!",
+"lo": "ການບິນສູງເໜືອທະເລເມກເຮັດໃຫ້ຜູ້ຂີ່ເຫັນສາຍພູທັງໝົດພ້ອມກັນ!",
+"th": "การบินสูงเหนือทะเลเมฆทำให้ผู้ขี่เห็นเทือกเขาทั้งหมดพร้อมกัน!",
+"zh": "飞在云海之上，一眼就能将绵延百里的雪山群峰尽收眼底！",
+"ja": "くもの うえから みると やまなみが ぜんぶ みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_ridgearch.0": {
+"en": "A mountain pass. The mountain pass opens wide between towering snowy cliffs.",
+"lo": "ຊ່ອງພູສູງ. ຊ່ອງພູສູງ ເປີດກວ້າງລະຫວ່າງໜ້າຜາຫິມະສູງຊັນ.",
+"th": "ช่องเขาสูง ช่องเขาสูงเปิดกว้างระหว่างหน้าผาหิมะสูงชัน",
+"zh": "高山隘口。高山隘口在巍峨的雪崖之间敞开一条通往远方的天路。",
+"ja": "たかい とうげ。たかい とうげが ゆきの いわの あいだに ひらけているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_ridgearch.1": {
+"en": "Twin jagged snow-dusted ridges frame a wide sunlit corridor through the sky.",
+"lo": "ສັນພູຫິມະຄູ່ແຫຼມຊັນອ້ອມຊ່ອງທາງແດດອຸ່ນກວ້າງຂວາງກາງທ້ອງຟ້າ.",
+"th": "สันเขาหิมะคู่แหลมชันล้อมช่องทางแดดอุ่นกว้างขวางกลางท้องฟ้า",
+"zh": "两侧嶙峋的积雪山脊在云端敞开一条宽阔明亮的空中走廊。",
+"ja": "ふたつの ゆきの やまの あいだに ひろい みちが みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_ridgearch.2": {
+"en": "Prince Firuz steers the Ebony Horse right through the open mountain pass!",
+"lo": "ເຈົ້າຊາຍຟີຣູຊຂັບມ້າໄມ້ດຳຜ່ານຊ່ອງພູສູງທີ່ເປີດກວ້າງ!",
+"th": "เจ้าชายฟีรูซบังคับม้าไม้ดำผ่านช่องเขาสูงที่เปิดกว้าง!",
+"zh": "菲鲁兹王子驾着乌木神马，稳稳穿过宽阔的高山隘口！",
+"ja": "くろきの うまが この とうげを びゅーんと とおりぬけるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_ridgearch.3": {
+"en": "Far below the pass, green valleys wind like tiny threads between peaks.",
+"lo": "ໄກລົງໄປກ້ອງຊ່ອງພູ ຮ່ອມພູສີຂຽວຄົດລ້ຽວຄືເສັ້ນດ້າຍນ້ອຍລະຫວ່າງຍອດພູ.",
+"th": "ไกลลงไปใต้ช่องเขา หุบเขาสีเขียวคดเคี้ยวเหมือนเส้นด้ายน้อยระหว่างยอดเขา",
+"zh": "隘口极远处，青翠山谷像细丝般蜿蜒在群山脚下。",
+"ja": "とうげの むこうに とおくの たにが ちいさく みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_ridgearch.4": {
+"en": "High winds funnel swiftly through mountain passes as evening falls.",
+"lo": "ລົມສູງພັດໄວຜ່ານຊ່ອງພູເມື່ອຕາເວັນໃກ້ຕົກດິນ.",
+"th": "ลมสูงพัดเร็วผ่านช่องเขาเมื่อพระอาทิตย์ใกล้ตกดิน",
+"zh": "傍晚降临时，清冽的山风会呼呼吹过高高的山口。",
+"ja": "ゆうがたに なると とうげを つよい かぜが ふきぬけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_crescentmoon.0": {
+"en": "A crescent moon. A crescent moon shines silver and calm in the rose-gold Persian twilight.",
+"lo": "ດວງຈັນສ້ຽວ. ດວງຈັນສ້ຽວ ສ່ອງແສງສີເງິນສະຫງົບໃນທ້ອງຟ້າຍາມແລງສີບົວຄຳ.",
+"th": "พระจันทร์เสี้ยว พระจันทร์เสี้ยวส่องแสงสีเงินสงบในท้องฟ้ายามเย็นสีชมพูทอง",
+"zh": "弯弯新月。弯弯新月在玫瑰金色的波斯暮色天空中散发银色柔光。",
+"ja": "みかづき。みかづきが ゆうやけの そらに ぎんいろに ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_crescentmoon.1": {
+"en": "Its slender silver curve glows gently against rose-pink sunset clouds.",
+"lo": "ເສັ້ນໂຄ້ງສີເງິນບາງໆສ່ອງແສງອ່ອນໆທ່າມກາງເມກຍາມແລງສີບົວ.",
+"th": "เส้นโค้งสีเงินบางๆ ส่องแสงอ่อนๆ ท่ามกลางเมฆยามเย็นสีชมพู",
+"zh": "纤细的银色月牙映在玫瑰粉色的晚霞云朵间温柔发亮。",
+"ja": "ほそい ぎんいろの つきが ゆうやけの そらに うかんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_crescentmoon.2": {
+"en": "Its silver shape reminds Firuz to turn the matching silver moon peg!",
+"lo": "ຮູບຊົງສີເງິນຂອງມັນເຕືອນໃຫ້ຟີຣູຊນຶກເຖິງສະລັກດວງຈັນສີເງິນ!",
+"th": "รูปทรงสีเงินของมันเตือนให้ฟีรูซนึกถึงสลักดวงจันทร์สีเงิน!",
+"zh": "它银白色的弯月形状提醒菲鲁兹去转动配套的月亮旋钮！",
+"ja": "ぎんいろの つきの つまみを まわす ひんとに なるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_crescentmoon.3": {
+"en": "The moon shines by reflecting bright sunlight across the evening sky.",
+"lo": "ດວງຈັນສ່ອງແສງໄດ້ດ້ວຍການສະທ້ອນແສງຕາເວັນຂ້າມທ້ອງຟ້າຍາມຄ່ຳ.",
+"th": "ดวงจันทร์ส่องแสงได้ด้วยการสะท้อนแสงอาทิตย์ข้ามท้องฟ้ายามค่ำ",
+"zh": "月亮本身并不发光，它是靠反射明亮的太阳光才照亮夜空的。",
+"ja": "つきは おひさまの ひかりを はんしゃ して ひかっているんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_crescentmoon.4": {
+"en": "A soft pearl halo frames the crescent above the quiet snowy ridges.",
+"lo": "ແສງໄຂ່ມຸກອ່ອນໆອ້ອມດວງຈັນສ້ຽວເໜືອສັນພູຫິມະທີ່ງຽບສະຫງົບ.",
+"th": "แสงไข่มุกอ่อนๆ ล้อมพระจันทร์เสี้ยวเหนือสันเขาหิมะอันเงียบสงบ",
+"zh": "柔和的珍珠光晕笼罩在安静的雪岭上方的新月周围。",
+"ja": "やさしい しろい ひかりが みかづきを つつんで いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_distanttower.0": {
+"en": "A marble tower. A marble tower gleams softly on the horizon, showing Yasmin's rooftop garden.",
+"lo": "ຫໍຄອຍຫີນອ່ອນ. ຫໍຄອຍຫີນອ່ອນ ເຫຼື້ອມແສງອ່ອນໆຢູ່ຂອບຟ້າ ເຊິ່ງແມ່ນສວນດາດຟ້າຂອງຍາສມິນ.",
+"th": "หอคอยหินอ่อน หอคอยหินอ่อนส่องแสงอ่อนๆ ที่ขอบฟ้า ซึ่งเป็นสวนดาดฟ้าของยัสมิน",
+"zh": "大理石塔。大理石塔在远方地平线上柔和闪亮，那里正是雅斯敏的屋顶花园。",
+"ja": "しろい とう。しろい とうが とおくの そらの したで やさしく ひかるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_distanttower.1": {
+"en": "Pale carved marble and a turquoise dome rise gently above the twilight mist.",
+"lo": "ຫີນອ່ອນແກະສະຫຼັກ ແລະ ຫໍໂດມສີຟ້າຂຽວຕັ້ງເດັ່ນເໜືອໝອກຍາມແລງ.",
+"th": "หินอ่อนแกะสลักและโดมสีฟ้าเขียวตั้งเด่นเหนือหมอกยามเย็น",
+"zh": "洁白雕花大理石和绿松石穹顶在暮霭之上温柔耸立。",
+"ja": "しろい いしと あおい やねが きりの むこうに みえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_distanttower.2": {
+"en": "Warm rooftop lanterns on the tower welcome Firuz down for a safe landing!",
+"lo": "ໂຄມໄຟດາດຟ້າອຸ່ນໆເທິງຫໍຄອຍຕ້ອນຮັບຟີຣູຊລົງຈອດຢ່າງປອດໄພ!",
+"th": "โคมไฟดาดฟ้าอุ่นๆ บนหอคอยต้อนรับฟีรูซลงจอดอย่างปลอดภัย!",
+"zh": "塔顶温暖的星灯亮起，指引菲鲁兹稳稳降落在屋顶花园！",
+"ja": "てっぺんの あかりが フィールーズを やさしく まねいて いるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_distanttower.3": {
+"en": "Princess Yasmin's high rooftop garden sits right at the top of this tower.",
+"lo": "ສວນດາດຟ້າສູງຂອງເຈົ້າຍິງຍາສມິນຕັ້ງຢູ່ເທິງຍອດຫໍຄອຍແຫ່ງນີ້.",
+"th": "สวนดาดฟ้าสูงของเจ้าหญิงยัสมินตั้งอยู่บนยอดหอคอยแห่งนี้",
+"zh": "雅斯敏公主香气四溢的屋顶观星花园就建在这座石塔之巅。",
+"ja": "この とうの うえに ヤスミンひめの おくじょうの にわが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_distanttower.4": {
+"en": "Follow the four glowing guide stars straight toward the marble tower.",
+"lo": "ຕາມດາວນຳທາງສີ່ດວງທີ່ສ່ອງແສງມຸ່ງໜ້າຕົງສູ່ຫໍຄອຍຫີນອ່ອນ.",
+"th": "ตามดาวนำทางสี่ดวงที่ส่องแสงมุ่งหน้าตรงสู่หอคอยหินอ่อน",
+"zh": "顺着四颗闪亮的引路星，就能径直飞向远方的大理石塔。",
+"ja": "よっつの ほしを たどると この しろい とうに つくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_guidestar.0": {
+"en": "A guide star. A guide star twinkles brightly to trace a safe glowing path across the dusk sky.",
+"lo": "ດາວນຳທາງ. ດາວນຳທາງ ກະພິບແສງສົດໃສເພື່ອຊີ້ທາງປອດໄພຂ້າມທ້ອງຟ້າຍາມແລງ.",
+"th": "ดาวนำทาง ดาวนำทางกะพริบแสงสดใสเพื่อชี้ทางปลอดภัยข้ามท้องฟ้ายามเย็น",
+"zh": "引路星星。引路星星眨着明亮的光芒，在暮色天际连成安全的星路。",
+"ja": "みちしるべの ほし。みちしるべの ほしが そらで きらきら みちを おしえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_guidestar.1": {
+"en": "Each golden star sparkles with eight crisp Persian points in the twilight.",
+"lo": "ດາວສີຄຳແຕ່ລະດວງສ່ອງປະກາຍແປດແສກຄົມງາມໃນຍາມແລງ.",
+"th": "ดาวสีทองแต่ละดวงส่องประกายแปดแฉกคมงามในยามเย็น",
+"zh": "每颗金色引路星都在暮色天幕中闪耀着八道光芒。",
+"ja": "きんいろの ほしが ゆうぐれの そらで きらきら ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_guidestar.2": {
+"en": "Tap the four twilight stars from left to right to trace the safe sky road!",
+"lo": "ແຕະດາວຍາມແລງທັງສີ່ດວງຈາກຊ້າຍໄປຂວາເພື່ອຂີດທາງປອດໄພເທິງຟ້າ!",
+"th": "แตะดาวยามเย็นทั้งสี่ดวงจากซ้ายไปขวาเพื่อขีดทางปลอดภัยบนฟ้า!",
+"zh": "从左到右依次轻点四颗暮色星星，连出通往石塔的星路！",
+"ja": "ひだりから じゅんばんに さわると ほしの みちが できるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_guidestar.3": {
+"en": "Travellers have followed bright stars across deserts and skies for thousands of years.",
+"lo": "ນັກເດີນທາງໃຊ້ດວງດາວສົດໃສນຳທາງຂ້າມທະເລຊາຍ ແລະ ທ້ອງຟ້າມາຫຼາຍພັນປີ.",
+"th": "นักเดินทางใช้ดวงดาวสดใสนำทางข้ามทะเลทรายและท้องฟ้ามาหลายพันปี",
+"zh": "几千年来，旅人们一直仰望明亮的星星在沙漠与长空中辨认方向。",
+"ja": "むかしから たびびとは ほしを みて みちを みつけて いたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_guidestar.4": {
+"en": "Together the four stars curve gracefully toward the glowing marble tower.",
+"lo": "ດາວທັງສີ່ດວງລຽງໂຄ້ງງາມມຸ່ງໜ້າໄປຫາຫໍຄອຍຫີນອ່ອນທີ່ສ່ອງແສງ.",
+"th": "ดาวทั้งสี่ดวงเรียงโค้งงามมุ่งหน้าไปยังหอคอยหินอ่อนที่ส่องแสง",
+"zh": "四颗星星连成优雅的弧线，笔直伸向温暖的大理石塔。",
+"ja": "よっつの ほしが しろい とうへ まっすぐ ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_dusksky.0": {
+"en": "The sunset sky. The sunset sky glows warm rose and peach as evening arrives over Persia.",
+"lo": "ທ້ອງຟ້າຍາມແລງ. ທ້ອງຟ້າຍາມແລງ ສ່ອງສີບົວອຸ່ນ ແລະ ສີສົ້ມອ່ອນເມື່ອຕາເວັນຕົກດິນ.",
+"th": "ท้องฟ้ายามเย็น ท้องฟ้ายามเย็นส่องสีชมพูอุ่นและสีพีชเมื่อพระอาทิตย์ตกดิน",
+"zh": "晚霞天空。晚霞天空染上温暖的玫瑰色与蜜桃金，傍晚温柔降临。",
+"ja": "ゆうやけの そら。ゆうやけの そらが ピンクと おれんじに そまって いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_dusksky.1": {
+"en": "Soft ribbons of rose pink, apricot and lavender sweep across the sunset.",
+"lo": "ແຖບສີບົວກຸຫຼາບ ສີສົ້ມອ່ອນ ແລະ ສີມ່ວງອ່ອນພາດຂ້າມທ້ອງຟ້າຍາມແລງ.",
+"th": "แถบสีชมพูกุหลาบ สีส้มอ่อน และสีม่วงอ่อนพาดข้ามท้องฟ้ายามเย็น",
+"zh": "玫瑰粉、杏子金与淡紫色的晚霞如丝带般铺满天际。",
+"ja": "ピンクと おれんじと むらさきが そらに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_dusksky.2": {
+"en": "As the sun dips low, the first four bright guide stars twinkle awake!",
+"lo": "ເມື່ອຕາເວັນຄ້ອຍຕ່ຳ ດາວນຳທາງສີ່ດວງທຳອິດກໍກະພິບແສງຕື່ນຂຶ້ນ!",
+"th": "เมื่อพระอาทิตย์คล้อยต่ำ ดาวนำทางสี่ดวงแรกก็กะพริบแสงตื่นขึ้น!",
+"zh": "夕阳缓缓西沉，头四颗明亮的引路星在霞光中眨眼苏醒！",
+"ja": "ひが しずむと ほしが きらきら ひかりはじめるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_dusksky.3": {
+"en": "Warm evening light paints the snowy mountain faces gentle gold.",
+"lo": "ແສງຍາມແລງອຸ່ນແຕ້ມໜ້າຜາຫິມະໃຫ້ເປັນສີຄຳອ່ອນໂຍນ.",
+"th": "แสงยามเย็นอุ่นแต้มหน้าผาหิมะให้เป็นสีทองอ่อนโยน",
+"zh": "温暖的夕阳把皑皑雪峰染上一层柔和的浅金色。",
+"ja": "ゆうやけの ひかりが ゆきの やまを きんいろに てらすよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_dusksky.4": {
+"en": "Twilight signals that it is time for sky travellers to seek a safe landing.",
+"lo": "ແສງຍາມແລງເຕືອນວ່າເຖິງເວລາໃຫ້ນັກເດີນທາງເທິງຟ້າຊອກບ່ອນລົງຈອດປອດໄພ.",
+"th": "แสงยามเย็นเตือนว่าถึงเวลาให้นักเดินทางบนฟ้าหาที่ลงจอดปลอดภัย",
+"zh": "暮色提醒高空中的旅人，该寻找温暖平安的地方降落啦。",
+"ja": "ゆうぐれは そろそろ おりる じかんだよって おしえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_rooftopturret.0": {
+"en": "A tiled turret. A tiled turret crowns the palace roof with turquoise Persian latticework.",
+"lo": "ຫໍໂດມເທິງຫຼັງຄາ. ຫໍໂດມເທິງຫຼັງຄາ ປະດັບຫຼັງຄາວັງດ້ວຍລາຍຕາໜ່າງກະເບື້ອງສີຟ້າຂຽວ.",
+"th": "หอโดมบนดาดฟ้า หอโดมบนดาดฟ้าประดับหลังคาวังด้วยลายตาข่ายกระเบื้องสีฟ้าเขียว",
+"zh": "彩釉圆顶塔。彩釉圆顶塔矗立在宫殿屋顶，精美的绿松石菱格闪闪发亮。",
+"ja": "たいるの やぐら。たいるの やぐらが おくじょうの かどに りっぱに たっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_rooftopturret.1": {
+"en": "Diamond-patterned turquoise tiles shimmer atop its graceful pointed dome.",
+"lo": "ກະເບື້ອງສີຟ້າຂຽວລາຍເຂົ້າຫຼາມຕັດເຫຼື້ອມງາມເທິງຫໍໂດມແຫຼມ.",
+"th": "กระเบื้องสีฟ้าเขียวลายข้าวหลามตัดเงางามบนโดมแหลม",
+"zh": "优雅的尖拱穹顶上镶嵌着菱格纹绿松石釉砖，熠熠生辉。",
+"ja": "あおい たいるが きらきら ひかる とんがり やねだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_rooftopturret.2": {
+"en": "Its tall carved finial catches the first silver starlight at dusk.",
+"lo": "ຍອດແກະສະຫຼັກສູງຂອງມັນຮັບແສງດາວສີເງິນທຳອິດໃນຍາມຄ່ຳ.",
+"th": "ยอดแกะสลักสูงของมันรับแสงดาวสีเงินแรกในยามค่ำ",
+"zh": "高挑的雕花塔尖在黄昏时最先映上清朗的银色星光。",
+"ja": "たかい てっぺんが ほしの ひかりを きらっと うけるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_rooftopturret.3": {
+"en": "White jasmine vines climb playfully around its carved sandstone balcony.",
+"lo": "ເຄືອດອກມະລິສີຂຽວເລືອຂຶ້ນອ້ອມລະບຽງຫີນຊາຍແກະສະຫຼັກຢ່າງງົດງາມ.",
+"th": "เถาดอกมะลิสีขาวเลื้อยขึ้นรอบระเบียงหินทรายแกะสลักอย่างงดงาม",
+"zh": "洁白的茉莉花藤顺着雕花砂岩回廊俏皮地攀援而上。",
+"ja": "しろい じゃすみんの つるが やぐらを のぼって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_rooftopturret.4": {
+"en": "It marks the left edge of Yasmin's high rooftop stargazing garden.",
+"lo": "ມັນຢືນເປັນຫຼັກໝາຍຂອບຊ້າຍຂອງສວນເບິ່ງດາວເທິງດາດຟ້າຂອງຍາສມິນ.",
+"th": "มันยืนเป็นหลักหมายขอบซ้ายของสวนดูดาวบนดาดฟ้าของยัสมิน",
+"zh": "它优雅地矗立在雅斯敏屋顶观星花园的左侧。",
+"ja": "ヤスミンの おくじょうの ひだりがわを かざって いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminerail.0": {
+"en": "A marble rail. A marble rail frames the rooftop edge with carved stone and sweet jasmine vines.",
+"lo": "ຮາວຫີນອ່ອນ. ຮາວຫີນອ່ອນ ກັ້ນຂອບດາດຟ້າດ້ວຍຫີນແກະສະຫຼັກ ແລະ ເຄືອດອກມະລິຫອມ.",
+"th": "ราวหินอ่อน ราวหินอ่อนกั้นขอบดาดฟ้าด้วยหินแกะสลักและเถาดอกมะลิหอม",
+"zh": "白玉栏杆。白玉栏杆由雕花大理石砌成，垂挂着芬芳的白茉莉花藤。",
+"ja": "しろい てすり。しろい てすりが おくじょうの ふちを きれいに かこんでいるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_jasminerail.1": {
+"en": "Turquoise mosaic lattice sits set inside cool carved cream marble.",
+"lo": "ລາຍຕາໜ່າງກະເບື້ອງສີຟ້າຂຽວຝັງຢູ່ໃນຫີນອ່ອນສີຄີມແກະສະຫຼັກເຢັນ.",
+"th": "ลายตาข่ายกระเบื้องสีฟ้าเขียวฝังอยู่ในหินอ่อนสีครีมแกะสลักเย็น",
+"zh": "冰凉温润的雕花米白大理石中镶嵌着绿松石菱格花纹。",
+"ja": "しろい いしと あおい たいるで つくられた てすりだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_jasminerail.2": {
+"en": "It keeps Yasmin and her guests safe high atop the stargazing tower.",
+"lo": "ມັນຊ່ວຍໃຫ້ຍາສມິນ ແລະ ແຂກປອດໄພສູງເທິງຍອດຫໍເບິ່ງດາວ.",
+"th": "มันช่วยให้ยัสมินและแขกปลอดภัยสูงบนยอดหอดูดาว",
+"zh": "它稳稳护卫着高耸观星塔顶的雅斯敏和她的朋友们。",
+"ja": "たかい おくじょうで みんなを あんぜんに まもるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminerail.3": {
+"en": "Trailing green vines and white jasmine flowers soften its straight top edge.",
+"lo": "ເຄືອສີຂຽວ ແລະ ດອກມະລິສີຂາວເຮັດໃຫ້ຂອບເທິງຂອງມັນອ່ອນຊ້ອຍງົດງາມ.",
+"th": "เถาสีเขียวและดอกมะลิสีขาวทำให้ขอบบนของมันอ่อนช้อยงดงาม",
+"zh": "青翠垂蔓与白色茉莉把笔直的栏杆装点得柔美生动。",
+"ja": "みどりの つると しろい はなが てすりを やさしく かざるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_jasminerail.4": {
+"en": "Tiny rooftop beetles and snails explore its cool carved marble corners.",
+"lo": "ແມງກວາງ ແລະ ຫອຍທາກນ້ອຍມັກມາສຳຫຼວດຕາມມຸມຫີນອ່ອນເຢັນໆ.",
+"th": "แมลงปีกแข็งและหอยทากน้อยชอบมาสำรวจตามมุมหินอ่อนเย็นๆ",
+"zh": "小小甲虫和小蜗牛最喜欢在清凉的雕花石栏角落里探险。",
+"ja": "ちいさな むしたちが てすりの すみを たんけん するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_parapetkiosk.0": {
+"en": "A garden kiosk. A garden kiosk gives Yasmin a quiet nook to sketch stars and gears.",
+"lo": "ສາລາດາດຟ້າ. ສາລາດາດຟ້າ ເປັນມຸມງຽບສະຫງົບໃຫ້ຍາສມິນແຕ້ມແຜນທີ່ດາວ ແລະ ກົງຈັກ.",
+"th": "ศาลาดาดฟ้า ศาลาดาดฟ้าเป็นมุมเงียบสงบให้ยัสมินวาดแผนที่ดาวและเฟือง",
+"zh": "屋顶花亭。屋顶花亭是雅斯敏最喜爱的安静角落，她常在这里画星图和齿轮。",
+"ja": "おくじょうの あずまや。おくじょうの あずまやで ヤスミンは ほしを ながめるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_parapetkiosk.1": {
+"en": "Turquoise latticework arches sit beneath a delicate scalloped dome.",
+"lo": "ຊ່ອງໂຄ້ງລາຍຕາໜ່າງສີຟ້າຂຽວຕັ້ງຢູ່ກ້ອງຫໍໂດມໂຄ້ງອັນປະນີດ.",
+"th": "ช่องโค้งลายตาข่ายสีฟ้าเขียวตั้งอยู่ใต้โดมโค้งอันประณีต",
+"zh": "精致的绿松石镂空花窗稳稳立在典雅穹顶之下。",
+"ja": "あおい すかしもようが きれいな ちいさな あずまやだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_parapetkiosk.2": {
+"en": "A sleepy rooftop cat loves peeking out from this shaded kiosk roof!",
+"lo": "ແມວດາດຟ້າຂີ້ເຊົາມັກໂຜ່ໜ້າອອກມາເບິ່ງຈາກຫຼັງຄາສາລາຮົ່ມນີ້!",
+"th": "แมวดาดฟ้าขี้เซาชอบโผล่หน้าออกมาดูจากหลังคาศาลาร่มนี้!",
+"zh": "一只爱打盹的屋顶小猫总喜欢从花亭屋檐探出脑袋张望！",
+"ja": "ねむそうな ねこが やねから ちょこんと のぞくんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_parapetkiosk.3": {
+"en": "Fragrant white jasmine sprays spill along its carved cream stone sill.",
+"lo": "ຊໍ່ດອກມະລິສີຂາວຫອມບານລົ້ນຕາມຂອບຫີນສີຄີມແກະສະຫຼັກ.",
+"th": "ช่อดอกมะลิสีขาวหอมบานล้นตามขอบหินสีครีมแกะสลัก",
+"zh": "芬芳的白茉莉花枝顺着米白色雕花石窗台垂落下来。",
+"ja": "しろい はなが いしの ふちを やさしく かざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_parapetkiosk.4": {
+"en": "Yasmin keeps her stargazing notebooks dry and safe inside this nook.",
+"lo": "ຍາສມິນເກັບປຶ້ມບັນທຶກດວງດາວໄວ້ຢ່າງປອດໄພໃນມຸມນ້ອຍນີ້.",
+"th": "ยัสมินเก็บสมุดบันทึกดวงดาวไว้อย่างปลอดภัยในมุมน้อยนี้",
+"zh": "雅斯敏把珍贵的观星笔记稳妥收在这座安静小亭里。",
+"ja": "ヤスミンの ほしの のーとを ここに しまって あるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminearbor.0": {
+"en": "A jasmine arbor. A jasmine arbor weaves green vines and white blossoms beside the marble terrace.",
+"lo": "ຊຸ້ມມະລິຂາວ. ຊຸ້ມມະລິຂາວ ສານເຄືອສີຂຽວ ແລະ ດອກສີຂາວຢູ່ຂ້າງລະບຽງຫີນອ່ອນ.",
+"th": "ซุ้มมะลิขาว ซุ้มมะลิขาวสานเถาสีเขียวและดอกสีขาวข้างระเบียงหินอ่อน",
+"zh": "白茉莉花架。白茉莉花架编织着青翠藤蔓和洁白花朵，装点着大理石露台。",
+"ja": "じゃすみんの あーち。じゃすみんの あーちが みどりの はと しろい はなで いっぱいだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_jasminearbor.1": {
+"en": "White marble pillars support a leafy canopy twinkling with star blossoms.",
+"lo": "ເສົາຫີນອ່ອນສີຂາວຄ້ຳຊຸ້ມໃບຂຽວທີ່ເຕັມໄປດ້ວຍດອກມະລິຮູບດາວ.",
+"th": "เสาหินอ่อนสีขาวค้ำซุ้มใบเขียวที่เต็มไปด้วยดอกมะลิรูปดาว",
+"zh": "洁白大理石柱托起缀满星形小白花的青翠花棚。",
+"ja": "しろい はしらの うえに はなが いっぱい さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_jasminearbor.2": {
+"en": "Its sweet white blossoms glow softly beside Yasmin's hanging brass lantern.",
+"lo": "ດອກສີຂາວຫອມຂອງມັນສ່ອງແສງອ່ອນໆຂ້າງໂຄມໄຟທອງເຫຼືອງທີ່ແຂວນໄວ້.",
+"th": "ดอกสีขาวหอมของมันส่องแสงอ่อนๆ ข้างโคมไฟทองเหลืองที่แขวนไว้",
+"zh": "清香小白花映着亭下悬挂的黄铜星灯，显得格外温馨。",
+"ja": "らんたんの そばで しろい はなが やさしく ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminearbor.3": {
+"en": "Night fireflies and daytime bees both love visiting these fragrant vines.",
+"lo": "ທັງຫິ່ງຫ້ອຍຍາມຄ່ຳ ແລະ ເຜິ້ງຍາມກາງເວັນຕ່າງກໍມັກມາຢ້ຽມເຄືອດອກໄມ້ຫອມນີ້.",
+"th": "ทั้งหิ่งห้อยยามค่ำและผึ้งยามกลางวันต่างก็ชอบมาเยือนเถาดอกไม้หอมนี้",
+"zh": "夜里的萤火虫和白天的蜜蜂都爱造访这架芬芳的茉莉藤。",
+"ja": "よるは ほたる、ひるは みつばちが あそびに くるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminearbor.4": {
+"en": "It frames the right side of the rooftop terrace with calm Persian grace.",
+"lo": "ມັນອ້ອມຂອບດ້ານຂວາຂອງລະບຽງດາດຟ້າດ້ວຍຄວາມງົດງາມແບບເປີເຊຍ.",
+"th": "มันล้อมขอบด้านขวาของระเบียงดาดฟ้าด้วยความงดงามแบบเปอร์เซีย",
+"zh": "它以优雅宁静的波斯园林气韵，温柔框住屋顶露台右侧。",
+"ja": "おくじょうの みぎがわを きれいに かざって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_yasmin.0": {
+"en": "Princess Yasmin. Princess Yasmin is a clever stargazer who studies the night sky and brass gears.",
+"lo": "ເຈົ້າຍິງຍາສມິນ. ເຈົ້າຍິງຍາສມິນ ແມ່ນເຈົ້າຍິງຜູ້ສະຫຼາດທີ່ເບິ່ງດາວ ແລະ ຮູ້ຈັກກົງຈັກທອງເຫຼືອງ.",
+"th": "เจ้าหญิงยัสมิน เจ้าหญิงยัสมินเป็นเจ้าหญิงผู้ฉลาดที่ดูดาวและรู้จักเฟืองทองเหลือง",
+"zh": "雅斯敏公主。雅斯敏公主是聪明又细心的观星者，热爱星空和黄铜齿轮。",
+"ja": "ヤスミンひめ。ヤスミンひめは ほしと はぐるまが だいすきな かしこい おひめさまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_yasmin.1": {
+"en": "Hello, Princess Yasmin!",
+"lo": "ສະບາຍດີ ເຈົ້າຍິງຍາສມິນ!",
+"th": "สวัสดีเจ้าหญิงยัสมิน!",
+"zh": "你好，雅斯敏公主！",
+"ja": "こんにちは、ヤスミンひめ！",
+"who": "yasmin",
+"tag": "greet"
+},
+"eh_yasmin.2": {
+"en": "I am Princess Yasmin! I map the stars and mend clever brass clockwork!",
+"lo": "ຂ້ອຍແມ່ນເຈົ້າຍິງຍາສມິນ! ຂ້ອຍແຕ້ມແຜນທີ່ດາວ ແລະ ແປງກົງຈັກທອງເຫຼືອງ!",
+"th": "ฉันคือเจ้าหญิงยัสมิน! ฉันวาดแผนที่ดาวและซ่อมเฟืองทองเหลือง!",
+"zh": "我是雅斯敏公主！我喜欢绘制星图，也擅长修理精巧的黄铜发条！",
+"ja": "わたしは ヤスミンひめ！ ほしの ちずを かいて、はぐるまを なおすのよ！",
+"who": "yasmin",
+"tag": "say"
+},
+"eh_yasmin.3": {
+"en": "I wear a starry lapis-blue Persian robe with golden embroidered stars.",
+"lo": "ຂ້ອຍໃສ່ຊຸດເປີເຊຍສີຟ້າຄາມປັກລາຍດວງດາວສີຄຳ.",
+"th": "ฉันใส่ชุดเปอร์เซียสีน้ำเงินครามปักลายดวงดาวสีทอง",
+"zh": "我穿着绣满金色星星的深蓝色波斯长袍。",
+"ja": "ほしの もようが ついた あおい どれすを きているよ。",
+"who": "yasmin",
+"tag": "looks"
+},
+"eh_yasmin.4": {
+"en": "I use my shining brass astrolabe to sight the Evening Star across the clouds.",
+"lo": "ຂ້ອຍໃຊ້ເຄື່ອງວັດດາວທອງເຫຼືອງເພື່ອສ່ອງຫາດາວຍາມແລງຂ້າມກ້ອນເມກ.",
+"th": "ฉันใช้เครื่องวัดดาวทองเหลืองเพื่อส่องหาดาวประจำเมืองข้ามเมฆ",
+"zh": "我用闪亮的黄铜星盘在云海之上寻找明亮的长庚星。",
+"ja": "ほしの どうぐで よいの みょうじょうを みつけるんだよ。",
+"who": "yasmin",
+"tag": "does"
+},
+"eh_yasmin.5": {
+"en": "In Persian, Yasmin is the name of the sweet white jasmine blossom.",
+"lo": "ໃນພາສາເປີເຊຍ ຍາສມິນແມ່ນຊື່ຂອງດອກມະລິສີຂາວທີ່ມີກິ່ນຫອມຫວານ.",
+"th": "ในภาษาเปอร์เซีย ยัสมินคือชื่อของดอกมะลิสีขาวที่มีกลิ่นหอมหวาน",
+"zh": "在波斯语里，雅斯敏正是清香洁白的茉莉花的名字。",
+"ja": "ヤスミンは いい かおりの しろい じゃすみんの はなの なまえだよ。",
+"who": "yasmin",
+"tag": "fact"
+},
+"eh_yasmin.6": {
+"en": "I noticed the loose golden star-gear hiding beneath the horse's saddle!",
+"lo": "ຂ້ອຍສັງເກດເຫັນກົງຈັກຮູບດາວສີຄຳທີ່ຫຼຸດຢູ່ກ້ອງອານມ້າ!",
+"th": "ฉันสังเกตเห็นเฟืองรูปดาวสีทองที่หลุดอยู่ใต้อานม้า!",
+"zh": "我一眼就发现了藏在马鞍下松动的金色星形齿轮！",
+"ja": "くらの したで ゆるんだ ほしの はぐるまを みつけたのよ！",
+"who": "yasmin",
+"tag": "does"
+},
+"eh_yasmin.7": {
+"en": "When we share our knowledge clearly, everyone can travel home safely!",
+"lo": "ເມື່ອເຮົາແບ່ງປັນຄວາມຮູ້ຢ່າງຊັດເຈນ ທຸກຄົນກໍຈະເດີນທາງກັບບ້ານໄດ້ຢ່າງປອດໄພ!",
+"th": "เมื่อเราแบ่งปันความรู้อย่างชัดเจน ทุกคนก็จะเดินทางกลับบ้านได้อย่างปลอดภัย!",
+"zh": "只要大家坦诚分享智慧，每个人都能平安飞回家！",
+"ja": "しっている ことを わけあえば、みんな あんぜんに かえれるのよ！",
+"who": "yasmin",
+"tag": "does"
+},
+"eh_yasmin.8": {
+"en": "My silly crested hoopoe loves wearing jasmine flowers like a tiny hat!",
+"lo": "ນົກຫົວຂວານຂີ້ຫຼິ້ນຂອງຂ້ອຍມັກໃສ່ດອກມະລິເປັນໝວກນ້ອຍ!",
+"th": "นกหัวขวานขี้เล่นของฉันชอบใส่ดอกมะลิเป็นหมวกน้อย!",
+"zh": "我那只调皮的戴胜鸟总爱把小白茉莉顶在头上当花帽！",
+"ja": "やつがしらが じゃすみんの はなを ぼうしみたいに のせるのよ！",
+"who": "yasmin",
+"tag": "does"
+},
+"eh_yasmin.9": {
+"en": "Good inventors write clear signs so every friend stays safe!",
+"lo": "ນັກປະດິດທີ່ດີຈະຂຽນປ້າຍບອກຢ່າງຊັດເຈນເພື່ອໃຫ້ໝູ່ທຸກຄົນປອດໄພ!",
+"th": "นักประดิษฐ์ที่ดีจะเขียนป้ายบอกอย่างชัดเจนเพื่อให้เพื่อนทุกคนปลอดภัย!",
+"zh": "优秀的发明家会做好清楚的标记，让每位朋友都平平安安！",
+"ja": "いい はつめいかは みんなが あんぜんに なる しるしを つくるのよ！",
+"who": "yasmin",
+"tag": "say"
+},
+"eh_astrolabe.0": {
+"en": "A brass astrolabe. A brass astrolabe measures the stars to help travellers find their way home.",
+"lo": "ເຄື່ອງວັດດາວ. ເຄື່ອງວັດດາວ ໃຊ້ວັດແທກດວງດາວເພື່ອຊ່ວຍນັກເດີນທາງຊອກທາງກັບບ້ານ.",
+"th": "เครื่องวัดดาว เครื่องวัดดาวใช้วัดดวงดาวเพื่อช่วยนักเดินทางหาทางกลับบ้าน",
+"zh": "黄铜星盘。黄铜星盘用来观测星星的位置，指引远行者找到回家的路。",
+"ja": "ほしの どうぐ。ほしの どうぐで ほしを みて かえる みちを しらべるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_astrolabe.1": {
+"en": "Engraved golden brass discs pivot neatly inside a carved tabletop stand.",
+"lo": "ແຜ່ນທອງເຫຼືອງແກະສະຫຼັກສີຄຳໝຸນຢ່າງປະນີດໃນຂາຕັ້ງແກະສະຫຼັກ.",
+"th": "แผ่นทองเหลืองแกะสลักสีทองหมุนอย่างประณีตในขาตั้งแกะสลัก",
+"zh": "精雕细刻的黄铜圆盘在支架上灵活转动，刻满精致星宿。",
+"ja": "きんいろの えんばんが くるくる まわる きれいな どうぐだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_astrolabe.2": {
+"en": "Yasmin rotates its brass pointer to measure the height of the Evening Star!",
+"lo": "ຍາສມິນໝຸນເຂັມທອງເຫຼືອງເພື່ອວັດລະດັບຄວາມສູງຂອງດາວຍາມແລງ!",
+"th": "ยัสมินหมุนเข็มทองเหลืองเพื่อวัดระดับความสูงของดาวประจำเมือง!",
+"zh": "雅斯敏转动黄铜指针，精准测出长庚星在夜空中的高度！",
+"ja": "はり を まわして ほしの たかさを はかるんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_astrolabe.3": {
+"en": "Persian astronomers perfected the brass astrolabe over a thousand years ago.",
+"lo": "ນັກດາລາສາດເປີເຊຍພັດທະນາເຄື່ອງວັດດາວທອງເຫຼືອງມາໄດ້ກວ່າໜຶ່ງພັນປີແລ້ວ.",
+"th": "นักดาราศาสตร์เปอร์เซียพัฒนาเครื่องวัดดาวทองเหลืองมากว่าหนึ่งพันปีแล้ว",
+"zh": "一千多年前，波斯天文学家就将黄铜星盘造得无比精巧。",
+"ja": "せんねんも まえから ほしを しらべる ために つかわれて いたんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_astrolabe.4": {
+"en": "Tiny star pointers gleam like polished gold leaves across its face.",
+"lo": "ເຂັມຊີ້ດາວນ້ອຍໆເຫຼື້ອມຄືໃບຄຳຂັດເງົາເທິງໜ້າປັດຂອງມັນ.",
+"th": "เข็มชี้ดาวเล็กๆ เงางามเหมือนใบทองขัดเงาบนหน้าปัดของมัน",
+"zh": "盘面上精致的星针像抛光的金叶一样熠熠生辉。",
+"ja": "ちいさな ほしの はりが ぴかぴか ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starlantern.0": {
+"en": "A star lantern. A star lantern casts warm pierced-brass starlight over Yasmin's rooftop tiles.",
+"lo": "ໂຄມດາວທອງເຫຼືອງ. ໂຄມດາວທອງເຫຼືອງ ສ່ອງແສງດາວອຸ່ນໆລົງເທິງພື້ນດາດຟ້າຂອງຍາສມິນ.",
+"th": "โคมดาวทองเหลือง โคมดาวทองเหลืองส่องแสงดาวอุ่นๆ ลงบนพื้นดาดฟ้าของยัสมิน",
+"zh": "星形铜灯。星形铜灯在雅斯敏的屋顶大理石地砖上洒下温暖星光。",
+"ja": "ほしの らんたん。ほしの らんたんが おくじょうの にわを あたたかく てらすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_starlantern.1": {
+"en": "Each brass lantern is shaped like a twinkling eight-pointed rooftop star.",
+"lo": "ໂຄມໄຟທອງເຫຼືອງແຕ່ລະໜ່ວຍມີຮູບຊົງຄືດາວແປດແສກເທິງດາດຟ້າ.",
+"th": "โคมไฟทองเหลืองแต่ละดวงมีรูปทรงเหมือนดาวแปดแฉกบนดาดฟ้า",
+"zh": "每盏黄铜灯笼都做成八角星形，与屋顶地砖遥相呼应。",
+"ja": "ほしの かたちを した すてきな しんちゅうの らんたんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starlantern.2": {
+"en": "Tap all four star lanterns to warm up Yasmin's starry marble terrace!",
+"lo": "ແຕະໂຄມດາວທັງສີ່ໜ່ວຍເພື່ອໃຫ້ລະບຽງຫີນອ່ອນຂອງຍາສມິນອົບອຸ່ນສະຫວ່າງ!",
+"th": "แตะโคมดาวทั้งสี่ดวงเพื่อให้ระเบียงหินอ่อนของยัสมินอบอุ่นสว่าง!",
+"zh": "轻点亮起四盏星形铜灯，温暖地照亮雅斯敏的屋顶花园！",
+"ja": "よっつの らんたんに さわると おくじょうが ぱっと あかるくなるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_starlantern.3": {
+"en": "Soft honey-gold light spills across the turquoise-and-marble star tiles.",
+"lo": "ແສງສີຄຳນ້ຳເຜິ້ງອ່ອນໆສ່ອງທົ່ວກະເບື້ອງດາວສີຟ້າຂຽວ ແລະ ຫີນອ່ອນ.",
+"th": "แสงสีทองน้ำผึ้งอ่อนๆ ส่องทั่วกระเบื้องดาวสีฟ้าเขียวและหินอ่อน",
+"zh": "蜜糖般的金色灯光洒在镶满绿松石星纹的大理石地面上。",
+"ja": "あたたかい ひかりが しろい いしの うえに ひろがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starlantern.4": {
+"en": "Their gentle glow helps Yasmin spot the shiny gear rolling across the floor.",
+"lo": "ແສງອ່ອນໆຂອງມັນຊ່ວຍໃຫ້ຍາສມິນເຫັນກົງຈັກເຫຼື້ອມກິ້ງເທິງພື້ນ.",
+"th": "แสงอ่อนๆ ของมันช่วยให้ยัสมินเห็นเฟืองเงากลิ้งบนพื้น",
+"zh": "柔和的灯光让雅斯敏一眼看清在地板上滚动的金色星形齿轮。",
+"ja": "やさしい ひかりで ころがった はぐるまが よく みえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_stargear.0": {
+"en": "A star gear. A star gear is the gleaming golden cog that keeps the horse's saddle balanced.",
+"lo": "ກົງຈັກຮູບດາວ. ກົງຈັກຮູບດາວ ແມ່ນກົງຈັກສີຄຳທີ່ຊ່ວຍໃຫ້ອານມ້າທຸ່ນທ່ຽງສະໝ່ຳສະເໝີ.",
+"th": "เฟืองรูปดาว เฟืองรูปดาวคือเฟืองสีทองที่ช่วยให้อานม้าทรงตัวสมดุล",
+"zh": "星形齿轮。星形齿轮是闪耀金光的关键发条，让神马飞得稳稳当当。",
+"ja": "ほしの はぐるま。ほしの はぐるまは うまを まっすぐ とばせる きんいろの はぐるまだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_stargear.1": {
+"en": "Eight neat golden teeth shine around a tiny carved star in its middle.",
+"lo": "ແຂ້ວກົງຈັກສີຄຳແປດແຂ້ວເຫຼື້ອມອ້ອມຮູບດາວແກະສະຫຼັກນ້ອຍຢູ່ກາງ.",
+"th": "ซี่เฟืองสีทองแปดซี่เงางามรอบรูปดาวแกะสลักเล็กๆ ตรงกลาง",
+"zh": "八个整齐的金色轮齿环绕着中央精雕的小星星。",
+"ja": "まんなかに ほしが ほられた きんいろの はぐるまだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_stargear.2": {
+"en": "It rolled out with a soft tink-tink so Yasmin could mend the horse smoothly!",
+"lo": "ມັນກິ້ງອອກມາເບົາໆເພື່ອໃຫ້ຍາສມິນຊ່ວຍແປງມ້າໃຫ້ລື່ນໄຫຼ!",
+"th": "มันกลิ้งออกมาเบาๆ เพื่อให้ยัสมินช่วยซ่อมม้าให้ลื่นไหล!",
+"zh": "它骨碌碌滚出来，让聪明的雅斯敏及时修好了神马的发条！",
+"ja": "ころんと でてきて、ヤスミンが じょうずに なおして くれたよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_stargear.3": {
+"en": "Match the star gear to its shining star pin so the clockwork hums again!",
+"lo": "ຈັບຄູ່ກົງຈັກຮູບດາວກັບແກນຮູບດາວເພື່ອໃຫ້ກົນໄກເຮັດວຽກອີກຄັ້ງ!",
+"th": "จับคู่เฟืองรูปดาวกับแกนรูปดาวเพื่อให้กลไกทำงานอีกครั้ง!",
+"zh": "把星形齿轮配到对应的星形轴销上，发条又会欢快地嗡嗡转动！",
+"ja": "ほしの じくに ぴったり はめると また くるくる まわるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_stargear.4": {
+"en": "Gears pass turning force smoothly from one wheel to the next.",
+"lo": "ກົງຈັກສົ່ງແຮງໝຸນຕໍ່ກັນຢ່າງນຸ້ມນວນຈາກລໍ້ໜຶ່ງໄປຫາອີກລໍ້ໜຶ່ງ.",
+"th": "เฟืองส่งแรงหมุนต่อกันอย่างนุ่มนวลจากล้อหนึ่งไปยังอีกล้อหนึ่ง",
+"zh": "齿轮通过轮齿啮合，把转动的力量平稳地传给下一个轮子。",
+"ja": "はぐるまは となりの はぐるまに まわる ちからを つたえるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_hoopoe.0": {
+"en": "A crested hoopoe. A crested hoopoe is a bright Persian garden bird with a golden crown of feathers.",
+"lo": "ນົກຫົວຂວານ. ນົກຫົວຂວານ ແມ່ນນົກສວນເປີເຊຍສີສົດໃສທີ່ມີຫງອນຂົນສີຄຳ.",
+"th": "นกหัวขวาน นกหัวขวานคือนกสวนเปอร์เซียสีสดใสที่มีหงอนขนสีทอง",
+"zh": "戴胜鸟。戴胜鸟是波斯花园里灵巧可爱的小鸟，头顶戴着金色羽冠。",
+"ja": "やつがしら。やつがしらは きんいろの かんむりを もつ きれいな とりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_hoopoe.1": {
+"en": "Hello, crested hoopoe!",
+"lo": "ສະບາຍດີ ນົກຫົວຂວານ!",
+"th": "สวัสดีนกหัวขวาน!",
+"zh": "你好，戴胜鸟！",
+"ja": "こんにちは、やつがしら！",
+"who": "hoopoe",
+"tag": "greet"
+},
+"eh_hoopoe.2": {
+"en": "Hoop-hoop-sproing!",
+"lo": "ຮຸບ-ຮຸບ-ດຶ໋ງ!",
+"th": "ฮูป-ฮูป-ดึ๋ง!",
+"zh": "呼噗呼噗蹦！",
+"ja": "ぽぽぽっ、ぴょん！",
+"who": "hoopoe",
+"tag": "sound"
+},
+"eh_hoopoe.3": {
+"en": "Hoopoes are famous birds of Persian tales that fold and lift their feathered crown.",
+"lo": "ນົກຫົວຂວານແມ່ນນົກດັງໃນນິທານເປີເຊຍທີ່ພັບ ແລະ ຍົກຫງອນຂົນໄດ້.",
+"th": "นกหัวขวานคือนกดังในนิทานเปอร์เซียที่พับและยกหงอนขนได้",
+"zh": "戴胜鸟是波斯故事里的著名灵鸟，可以自由开合头顶的羽冠。",
+"ja": "やつがしらは あたまの かんむりを パッと ひろげられる とりだよ。",
+"who": "hoopoe",
+"tag": "fact"
+},
+"eh_hoopoe.4": {
+"en": "It bounces happily onto Yasmin's saddlebow and wears a jasmine flower hat!",
+"lo": "ມັນໂດດຂຶ້ນເກາະໜ້າອານມ້າຂອງຍາສມິນ ແລະ ໃສ່ດອກມະລິເປັນໝວກ!",
+"th": "มันกระโดดขึ้นเกาะหน้าอานม้าของยัสมินและใส่ดอกมะลิเป็นหมวก!",
+"zh": "它欢快地蹦到雅斯敏的马鞍前，还顶着一朵白茉莉当小帽！",
+"ja": "くらの うえに ぴょんと のって はなの ぼうしを かぶるよ！",
+"who": "hoopoe",
+"tag": "does"
+},
+"eh_hoopoe.5": {
+"en": "Its warm cinnamon wings show neat black and white stripes like tiny brushstrokes.",
+"lo": "ປີກສີນ້ຳຕານອົບເຊີຍຂອງມັນມີລາຍດຳສະຫຼັບຂາວຄືຮອຍພູ່ກັນ.",
+"th": "ปีกสีน้ำตาลอบเชยของมันมีลายดำสลับขาวเหมือนรอยพู่กัน",
+"zh": "它温暖的栗色翅膀上点缀着工整漂亮的黑白横纹。",
+"ja": "ちゃいろと しろくろの しまもようの はねが とても かわいいよ。",
+"who": "hoopoe",
+"tag": "looks"
+},
+"eh_marbleplinth.0": {
+"en": "A marble plinth. A marble plinth supports Yasmin's polished brass stargazing instruments.",
+"lo": "ແທ່ນຫີນອ່ອນ. ແທ່ນຫີນອ່ອນ ຮອງຮັບເຄື່ອງມືເບິ່ງດາວທອງເຫຼືອງເຫຼື້ອມໃສຂອງຍາສມິນ.",
+"th": "แท่นหินอ่อน แท่นหินอ่อนรองรับเครื่องมือดูดาวทองเหลืองเงางามของยัสมิน",
+"zh": "大理石台。大理石台稳稳托着雅斯敏擦得锃亮的黄铜观星仪器。",
+"ja": "しろい いしだい。しろい いしだいが ほしの どうぐを しっかり ささえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_marbleplinth.1": {
+"en": "Smooth pale marble is edged with delicate carved Persian floral scrollwork.",
+"lo": "ຫີນອ່ອນສີອ່ອນກ້ຽງແກະສະຫຼັກຂອບລາຍດອກໄມ້ເປີເຊຍອັນລະອຽດ.",
+"th": "หินอ่อนสีอ่อนเรียบแกะสลักขอบลายดอกไม้เปอร์เซียอันละเอียด",
+"zh": "温润素雅的大理石台边缘刻着细腻的波斯花卉纹样。",
+"ja": "きれいな もようが ほられた しろい いしのだいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_marbleplinth.2": {
+"en": "It holds scrolls, lanterns and brass tools steady at the edge of the terrace.",
+"lo": "ມັນຮອງຮັບມ້ວນແຜນທີ່ ໂຄມໄຟ ແລະ ເຄື່ອງມືທອງເຫຼືອງຢ່າງໝັ້ນຄົງ.",
+"th": "มันรองรับม้วนแผนที่ โคมไฟ และเครื่องมือทองเหลืองอย่างมั่นคง",
+"zh": "它稳稳承托着星图卷轴、铜灯和雅斯敏的黄铜工具。",
+"ja": "まきものや らんたんを しっかり のせて ささえるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_marbleplinth.3": {
+"en": "Cool moonlight gleams softly across its polished ivory top.",
+"lo": "ແສງຈັນເຢັນໆເຫຼື້ອມອ່ອນໆເທິງໜ້າຫີນສີງາຊ້າງຂັດເງົາ.",
+"th": "แสงจันทร์เย็นๆ เงาอ่อนๆ บนหน้าหินสีงาช้างขัดเงา",
+"zh": "清凉月光洒在抛光的象牙白大理石台面上，泛着柔润微光。",
+"ja": "つきの ひかりが つるつるの うえに やさしく ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_marbleplinth.4": {
+"en": "A shy little snail likes gliding slowly along its cool shady base!",
+"lo": "ຫອຍທາກຂີ້ອາຍໂຕນ້ອຍມັກຄານຊ້າໆໄປຕາມຕີນແທ່ນຫີນທີ່ຮົ່ມເຢັນ!",
+"th": "หอยทากขี้อายตัวน้อยชอบคลานช้าๆ ไปตามฐานแท่นหินที่ร่มเย็น!",
+"zh": "一只害羞的小蜗牛就爱沿着它阴凉的大理石底座慢慢爬行！",
+"ja": "ちいさな かたつむりが したの ほうを ゆっくり あるくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasmineplanter.0": {
+"en": "A jasmine planter. A jasmine planter holds blooming white star flowers beside the terrace corner.",
+"lo": "ກະຖາງດອກມະລິ. ກະຖາງດອກມະລິ ປູກດອກມະລິສີຂາວບານສະພັ່ງຢູ່ມຸມລະບຽງ.",
+"th": "กระถางดอกมะลิ กระถางดอกมะลิปลูกดอกมะลิสีขาวบานสะพรั่งที่มุมระเบียง",
+"zh": "茉莉花盆。茉莉花盆里开满星形小白花，静静摆在露台转角处。",
+"ja": "じゃすみんの はち。じゃすみんの はちに いい かおりの しろい はなが さくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_jasmineplanter.1": {
+"en": "Glazed turquoise ceramic holds a lush bush of star-white jasmine blooms.",
+"lo": "ກະຖາງເຄືອບສີຟ້າຂຽວປູກພຸ່ມດອກມະລິສີຂາວຮູບດາວອັນດົກໜາ.",
+"th": "กระถางเคลือบสีฟ้าเขียวปลูกพุ่มดอกมะลิสีขาวรูปดาวอันดกหนา",
+"zh": "绿松石色釉陶花盆里盛开着茂密芬芳的星形白茉莉。",
+"ja": "あおい はちに しろい じゃすみんが いっぱい さいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_jasmineplanter.2": {
+"en": "Its fragrant blooms scent both the starry midnight and the sunny morning!",
+"lo": "ດອກຫອມຂອງມັນສົ່ງກິ່ນຫອມທັງກາງຄືນທີ່ມີດາວ ແລະ ຍາມເຊົ້າແດດອຸ່ນ!",
+"th": "ดอกหอมของมันส่งกลิ่นหอมทั้งกลางคืนที่มีดาวและยามเช้าแดดอุ่น!",
+"zh": "清甜的花香不仅醉人于星夜，也萦绕在阳光明媚的清晨！",
+"ja": "よるも あさも ずっと あまい いい かおりが するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasmineplanter.3": {
+"en": "A little rooftop cricket hides happily behind its leafy green pot!",
+"lo": "ຈິ່ງຫຼີດນ້ອຍເທິງດາດຟ້າລີ້ຢູ່ຢ່າງມີຄວາມສຸກທາງຫຼັງກະຖາງໃບຂຽວ!",
+"th": "จิ้งหรีดน้อยบนดาดฟ้าซ่อนตัวอยู่อย่างมีความสุขหลังกระถางใบเขียว!",
+"zh": "一只小小的屋顶蟋蟀正开心地躲在绿意盎然的花盆后面！",
+"ja": "はちの うしろに ちいさな こおろぎが かくれているよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasmineplanter.4": {
+"en": "Gold trim circles the ceramic lip to match Yasmin's inlaid star floor.",
+"lo": "ຂອບສີຄຳປະດັບປາກກະຖາງເຂົ້າກັນກັບພື້ນດາວຂອງຍາສມິນ.",
+"th": "ขอบสีทองประดับปากกระถางเข้ากันกับพื้นดาวของยัสมิน",
+"zh": "釉陶盆口描着精致金边，与屋顶星纹大理石地砖完美呼应。",
+"ja": "きんいろの ふちどりが ゆかの ほしと おそろいだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starscrolls.0": {
+"en": "Star scrolls. Star scrolls keep Yasmin's careful maps of constellations and wind routes.",
+"lo": "ມ້ວນແຜນທີ່ດາວ. ມ້ວນແຜນທີ່ດາວ ເກັບແຜນທີ່ກຸ່ມດາວ ແລະ ເສັ້ນທາງລົມທີ່ຍາສມິນແຕ້ມໄວ້.",
+"th": "ม้วนแผนที่ดาว ม้วนแผนที่ดาวเก็บแผนที่กลุ่มดาวและเส้นทางลมที่ยัสมินวาดไว้",
+"zh": "星图卷轴。星图卷轴记录着雅斯敏精心绘制的星座和风向航线。",
+"ja": "ほしの まきもの。ほしの まきものに ヤスミンが かいた ほしの ちずが あるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_starscrolls.1": {
+"en": "Cream parchment scrolls tied with turquoise ribbons hold neat ink star charts.",
+"lo": "ມ້ວນເຈ້ຍສີຄີມມັດດ້ວຍໂບສີຟ້າຂຽວເກັບແຜນທີ່ດາວແຕ້ມດ້ວຍໝຶກ.",
+"th": "ม้วนกระดาษสีครีมผูกด้วยริบบิ้นสีฟ้าเขียวเก็บแผนที่ดาววาดด้วยหมึก",
+"zh": "米白羊皮纸卷轴系着绿松石蓝丝带，上面绘满工整星图。",
+"ja": "あおい ひもで むすばれた ほしの ちずの まきものだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starscrolls.2": {
+"en": "Yasmin unrolls these maps to find the Evening Star and the road back to Shiraz!",
+"lo": "ຍາສມິນຄີ່ແຜນທີ່ເຫຼົ່ານີ້ເພື່ອຊອກຫາດາວຍາມແລງ ແລະ ທາງກັບຊີຣາຊ!",
+"th": "ยัสมินคลี่แผนที่เหล่านี้เพื่อหาดาวประจำเมืองและทางกลับชีราซ!",
+"zh": "雅斯敏展开星图卷轴，就能找到长庚星和回设拉子的航线！",
+"ja": "これを ひろげて シーラーズへ かえる みちを しらべるんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_starscrolls.3": {
+"en": "Old Persian star maps named hundreds of constellations still used today.",
+"lo": "ແຜນທີ່ດາວເປີເຊຍບູຮານຕັ້ງຊື່ກຸ່ມດາວຫຼາຍຮ້ອຍກຸ່ມທີ່ຍັງໃຊ້ມາຮອດທຸກມື້ນີ້.",
+"th": "แผนที่ดาวเปอร์เซียโบราณตั้งชื่อกลุ่มดาวหลายร้อยกลุ่มที่ยังใช้มาจนทุกวันนี้",
+"zh": "古老的波斯星图曾为数百颗亮星和星座命名，至今仍在沿用。",
+"ja": "むかしの ほしの ちずの なまえは いまでも つかわれて いるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_starscrolls.4": {
+"en": "Tiny golden dots mark the brightest stars across each hand-drawn scroll.",
+"lo": "ຈຸດສີຄຳນ້ອຍໆໝາຍດວງດາວທີ່ສະຫວ່າງທີ່ສຸດເທິງມ້ວນແຜນທີ່ແຕ່ລະມ້ວນ.",
+"th": "จุดสีทองเล็กๆ หมายดวงดาวที่สว่างที่สุดบนม้วนแผนที่แต่ละม้วน",
+"zh": "每幅手绘卷轴上都用细小的金点标出夜空中最亮的星星。",
+"ja": "きんいろの てんで あかるい ほしが かいて あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_tiledseat.0": {
+"en": "A tiled seat. A tiled seat invites friends to gaze up at constellations after dusk.",
+"lo": "ຕັ່ງກະເບື້ອງ. ຕັ່ງກະເບື້ອງ ຊວນໝູ່ມານັ່ງແຫງນເບິ່ງກຸ່ມດາວຫຼັງຕາເວັນຕົກດິນ.",
+"th": "ที่นั่งกระเบื้อง ที่นั่งกระเบื้องชวนเพื่อนมานั่งแหงนดูกลุ่มดาวหลังพระอาทิตย์ตกดิน",
+"zh": "彩砖座椅。彩砖座椅镶着漂亮的花纹，傍晚坐在这里看星星再舒服不过。",
+"ja": "たいるの いす。たいるの いすに すわって よぞらの ほしを みるんだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_tiledseat.1": {
+"en": "Mosaic turquoise and ochre tiles cover the wide rooftop garden bench.",
+"lo": "ກະເບື້ອງສີຟ້າຂຽວ ແລະ ສີເຫຼືອງດິນປູເທິງຕັ່ງສວນດາດຟ້າກວ້າງ.",
+"th": "กระเบื้องสีฟ้าเขียวและสีเหลืองดินปูบนม้านั่งสวนดาดฟ้ากว้าง",
+"zh": "绿松石蓝与赭黄花砖铺满宽敞的屋顶花园座椅。",
+"ja": "あおい たいるが きれいに はられた おくじょうの いすだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_tiledseat.2": {
+"en": "Friends sit together here to talk about inventions and count shooting stars!",
+"lo": "ໝູ່ເພື່ອນນັ່ງລົມກັນຢູ່ນີ້ກ່ຽວກັບສິ່ງປະດິດ ແລະ ນັບດາວຕົກ!",
+"th": "เพื่อนฝูงนั่งคุยกันที่นี่เกี่ยวกับสิ่งประดิษฐ์และนับดาวตก!",
+"zh": "好朋友们并肩坐在这里聊发明、数流星，惬意极了！",
+"ja": "ともだちと すわって ながれぼしを かぞえるんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_tiledseat.3": {
+"en": "Its cool glazed surface stays crisp and clean under the open sky.",
+"lo": "ຜິວເຄືອບເຢັນຂອງມັນກ້ຽງສະອາດຢູ່ກ້ອງທ້ອງຟ້າໂລ່ງ.",
+"th": "ผิวเคลือบเย็นของมันเรียบสะอาดอยู่ใต้ท้องฟ้าโล่ง",
+"zh": "光滑清凉的釉砖表面在开阔天幕下显得格外明净典雅。",
+"ja": "つるつるの たいるが そらの したで ぴかぴか しているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_tiledseat.4": {
+"en": "A shiny little beetle likes resting beneath its cool tiled edge.",
+"lo": "ແມງກວາງເຫຼື້ອມໂຕນ້ອຍມັກມາພັກຢູ່ກ້ອງຂອບກະເບື້ອງເຢັນໆ.",
+"th": "แมลงปีกแข็งเงาตัวน้อยชอบมาพักอยู่ใต้ขอบกระเบื้องเย็นๆ",
+"zh": "一只亮晶晶的小甲虫喜欢躲在凉爽的彩砖椅边乘凉。",
+"ja": "いすの したの すずしい ところに こがねむしが いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cushiontray.0": {
+"en": "Tea cushions. Tea cushions make Yasmin's rooftop a welcoming spot to share warm mint tea.",
+"lo": "ໝອນ ແລະ ຖາດຊາ. ໝອນ ແລະ ຖາດຊາ ເຮັດໃຫ້ດາດຟ້າຂອງຍາສມິນອົບອຸ່ນພ້ອມແບ່ງປັນຊາໃບມິ້ນ.",
+"th": "หมอนและถาดชา หมอนและถาดชาทำให้ดาดฟ้าของยัสมินอบอุ่นพร้อมแบ่งปันชามินต์",
+"zh": "茶盘软垫。茶盘软垫把屋顶装点得温馨惬意，正好和朋友共饮薄荷热茶。",
+"ja": "おちゃと くっしょん。おちゃと くっしょんで おくじょうが あたたかく なるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_cushiontray.1": {
+"en": "Plump silk pillows sit beside a brass tray with steaming Persian teacups.",
+"lo": "ໝອນຜ້າໄໝນຸ້ມວາງຢູ່ຂ້າງຖາດທອງເຫຼືອງທີ່ມີຈອກຊາເປີເຊຍອຸ່ນໆ.",
+"th": "หมอนผ้าไหมนุ่มวางอยู่ข้างถาดทองเหลืองที่มีถ้วยชาเปอร์เซียอุ่นๆ",
+"zh": "松软的丝绸靠垫旁摆着黄铜茶盘和热气腾腾的波斯茶杯。",
+"ja": "ふわふわの くっしょんと あたたかい おちゃの せっとだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cushiontray.2": {
+"en": "Yasmin pours warm mint tea here to welcome tired sky travellers!",
+"lo": "ຍາສມິນຖອກຊາໃບມິ້ນອຸ່ນໆຢູ່ນີ້ເພື່ອຕ້ອນຮັບນັກເດີນທາງເທິງຟ້າ!",
+"th": "ยัสมินรินชามินต์อุ่นๆ ที่นี่เพื่อต้อนรับนักเดินทางบนฟ้า!",
+"zh": "雅斯敏在这里斟满温热的薄荷茶，款待远道而来的云端旅人！",
+"ja": "あたたかい おちゃを いれて ともだちを むかえるんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_cushiontray.3": {
+"en": "Delicate blue and gold embroidery matches the starry marble rooftop.",
+"lo": "ລາຍປັກສີຟ້າ ແລະ ສີຄຳລະອຽດເຂົ້າກັນກັບດາດຟ້າຫີນອ່ອນທີ່ມີດາວ.",
+"th": "ลายปักสีฟ้าและสีทองละเอียดเข้ากันกับดาดฟ้าหินอ่อนที่มีดาว",
+"zh": "精致的蓝金刺绣与星纹大理石露台浑然一体。",
+"ja": "あおと きんいろの もようが おくじょうに ぴったりだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_cushiontray.4": {
+"en": "Sharing a cup of warm tea helps new friends feel right at home.",
+"lo": "ການແບ່ງປັນຊາອຸ່ນຈອກໜຶ່ງຊ່ວຍໃຫ້ໝູ່ໃໝ່ຮູ້ສຶກອົບອຸ່ນຄືຢູ່ບ້ານ.",
+"th": "การแบ่งปันชาอุ่นสักถ้วยช่วยให้เพื่อนใหม่รู้สึกอบอุ่นเหมือนอยู่บ้าน",
+"zh": "一起喝一杯暖暖的热茶，新朋友立刻就会感到宾至如归。",
+"ja": "あったかい おちゃを いっしょに のむと ほっと するよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_valleystars.0": {
+"en": "A distant valley. The distant valley stretches far below Yasmin's high marble observatory.",
+"lo": "ຮ່ອມພູໄກ. ຮ່ອມພູໄກ ຢຽດຍາວຢູ່ເບື້ອງລຸ່ມຫໍເບິ່ງດາວຫີນອ່ອນສູງຂອງຍາສມິນ.",
+"th": "หุบเขาไกล หุบเขาไกลทอดยาวอยู่เบื้องล่างหอดูดาวหินอ่อนสูงของยัสมิน",
+"zh": "远方山谷。远方山谷辽阔宁静，静静铺展在雅斯敏高耸的大理石观星台下。",
+"ja": "とおい たに。とおい たにが おくじょうの むこうに ひろがっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_valleystars.1": {
+"en": "Tiny palace roofs and winding green gardens glow softly far below the tower.",
+"lo": "ຫຼັງຄາວັງນ້ອຍໆ ແລະ ສວນສີຂຽວຄົດລ້ຽວສ່ອງແສງອ່ອນໆຢູ່ໄກລຸ່ມຫໍຄອຍ.",
+"th": "หลังคาวังน้อยๆ และสวนสีเขียวคดเคี้ยวส่องแสงอ่อนๆ อยู่ไกลใต้หอคอย",
+"zh": "远方山谷里，错落的花园与宫殿屋顶在观星塔下静静铺展。",
+"ja": "とおくの まちと みどりの にわが しずかに ひろがっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_valleystars.2": {
+"en": "By night, tiny lantern lights twinkle like fallen stars across the valley.",
+"lo": "ຍາມຄ່ຳ ແສງໂຄມໄຟນ້ອຍໆກະພິບຄືດວງດາວຕົກລົງເຕັມຮ່ອມພູ.",
+"th": "ยามค่ำ แสงโคมไฟน้อยๆ กะพริบเหมือนดวงดาวตกลงเต็มหุบเขา",
+"zh": "夜幕降临时，山谷里的点点灯火像落入人间的繁星般闪烁。",
+"ja": "よるは まちの あかりが ほしみたいに きらきら ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_valleystars.3": {
+"en": "Soft blue hills surround the peaceful Persian valley like cradling arms.",
+"lo": "ເນີນພູສີຟ້າອ່ອນໂອບອ້ອມຮ່ອມພູເປີເຊຍທີ່ສະຫງົບ.",
+"th": "เนินเขาสีฟ้าอ่อนโอบล้อมหุบเขาเปอร์เซียอันสงบ",
+"zh": "柔和的青黛色群山像温柔的臂弯环抱着宁静的山谷。",
+"ja": "あおい やまが たにを やさしく かこんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_valleystars.4": {
+"en": "From Yasmin's high terrace, you can see miles of sky and valley at once!",
+"lo": "ຈາກລະບຽງສູງຂອງຍາສມິນ ເຈົ້າສາມາດເຫັນທັງທ້ອງຟ້າ ແລະ ຮ່ອມພູກວ້າງໄກ!",
+"th": "จากระเบียงสูงของยัสมิน คุณสามารถเห็นทั้งท้องฟ้าและหุบเขากว้างไกล!",
+"zh": "站在雅斯敏高高的屋顶露台上，能一眼望尽万里长空与山谷！",
+"ja": "たかい おくじょうから とおくまで ぜんぶ みわたせるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminetrellis.0": {
+"en": "A jasmine arch. The jasmine arch perfumes the rooftop with clusters of tiny white star blooms.",
+"lo": "ຊຸ້ມດອກມະລິ. ຊຸ້ມດອກມະລິ ສົ່ງກິ່ນຫອມທົ່ວດາດຟ້າດ້ວຍຊໍ່ດອກສີຂາວຮູບດາວ.",
+"th": "ซุ้มดอกมะลิ ซุ้มดอกมะลิส่งกลิ่นหอมทั่วดาดฟ้าด้วยช่อดอกสีขาวรูปดาว",
+"zh": "茉莉拱门。茉莉拱门爬满星形小白花，让整个屋顶花园清香四溢。",
+"ja": "じゃすみんの もん。じゃすみんの もんに しろい はなが たくさん さいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_jasminetrellis.1": {
+"en": "Carved cream marble frames an arched doorway draped in green jasmine vines.",
+"lo": "ຫີນອ່ອນສີຄີມແກະສະຫຼັກອ້ອມປະຕູໂຄ້ງທີ່ປົກຄຸມດ້ວຍເຄືອດອກມະລິສີຂຽວ.",
+"th": "หินอ่อนสีครีมแกะสลักล้อมประตูโค้งที่ปกคลุมด้วยเถาดอกมะลิสีเขียว",
+"zh": "雕花乳白大理石拱门上垂满青翠藤蔓与洁白茉莉。",
+"ja": "しろい いしの もんに じゃすみんの つるが たっぷり かかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_jasminetrellis.2": {
+"en": "Its white star blossoms open widest at night to scent the cool rooftop air!",
+"lo": "ດອກສີຂາວຮູບດາວຂອງມັນບານກວ້າງທີ່ສຸດຍາມຄ່ຳເພື່ອສົ່ງກິ່ນຫອມທົ່ວດາດຟ້າ!",
+"th": "ดอกสีขาวรูปดาวของมันบานกว้างที่สุดยามค่ำเพื่อส่งกลิ่นหอมทั่วดาดฟ้า!",
+"zh": "夜幕降临时，洁白的星形茉莉花尽情绽放，让晚风清香醉人！",
+"ja": "よるに なると しろい はなが いい かおりを はなつよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_jasminetrellis.3": {
+"en": "Jasmine flowers are famous across Persia for their sweet evening fragrance.",
+"lo": "ດອກມະລິມີຊື່ສຽງທົ່ວເປີເຊຍດ້ານກິ່ນຫອມຫວານຍາມຄ່ຳຄືນ.",
+"th": "ดอกมะลิมีชื่อเสียงทั่วเปอร์เซียด้านกลิ่นหอมหวานยามค่ำคืน",
+"zh": "茉莉花以夜色中格外馥郁清甜的花香在波斯备受喜爱。",
+"ja": "じゃすみんは よるに いい かおりが する ことで ゆうめいだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_jasminetrellis.4": {
+"en": "Soft white petals flutter down gently whenever a night breeze stirs the arch.",
+"lo": "ກີບດອກສີຂາວນຸ້ມປິວລົງຄ່ອຍໆທຸກຄັ້ງທີ່ສາຍລົມຍາມຄ່ຳພັດຜ່ານຊຸ້ມ.",
+"th": "กลีบดอกสีขาวนุ่มปลิวลงเบาๆ ทุกครั้งที่สายลมยามค่ำพัดผ่านซุ้ม",
+"zh": "每当夜风拂过花拱门，就会飘落几片轻盈洁白的茉莉花瓣。",
+"ja": "かぜが ふくと しろい はなびらが ふわっと まいおりるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_nightsky.0": {
+"en": "The starry sky. The starry sky sparkles deep indigo with tiny golden Persian stars.",
+"lo": "ທ້ອງຟ້າຍາມຄ່ຳ. ທ້ອງຟ້າຍາມຄ່ຳ ເຫຼື້ອມສີຟ້າຄາມເຂັ້ມພ້ອມດວງດາວສີຄຳນ້ອຍໆ.",
+"th": "ท้องฟ้ามีดาว ท้องฟ้ามีดาวเปล่งประกายสีครามเข้มพร้อมดวงดาวสีทองน้อยๆ",
+"zh": "繁星夜空。繁星夜空如深邃的靛蓝丝绒，洒满金色星辰。",
+"ja": "ほしぞら。ほしぞらに きんいろの ほしが たくさん きらめくよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_nightsky.1": {
+"en": "Hundreds of tiny golden stars glitter across the velvet indigo dark.",
+"lo": "ດວງດາວສີຄຳນ້ອຍໆຫຼາຍຮ້ອຍດວງສ່ອງປະກາຍທົ່ວທ້ອງຟ້າສີຄາມເຂັ້ມ.",
+"th": "ดวงดาวสีทองน้อยๆ หลายร้อยดวงส่องประกายทั่วท้องฟ้าสีครามเข้ม",
+"zh": "成百上千颗金色小星星在靛蓝丝绒般的夜空中闪闪发光。",
+"ja": "たくさんの きんいろの ほしが くらい そらで きらめいているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_nightsky.2": {
+"en": "Friendly fireflies drift softly beneath the calm starry sky.",
+"lo": "ຫິ່ງຫ້ອຍໃຈດີບິນລອຍຄ່ອຍໆຢູ່ກ້ອງທ້ອງຟ້າທີ່ມີດາວສະຫງົບ.",
+"th": "หิ่งห้อยใจดีบินลอยเบาๆ อยู่ใต้ท้องฟ้าที่มีดาวสงบ",
+"zh": "友善的小萤火虫在宁静的星空下轻盈飞舞。",
+"ja": "ほたるが ほしぞらの したを ふわっと とんで いるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_nightsky.3": {
+"en": "On clear nights, stargazers like Yasmin read the constellations like a map.",
+"lo": "ໃນຄືນຟ້າໃສ ນັກເບິ່ງດາວຄືຍາສມິນອ່ານກຸ່ມດາວໄດ້ຄືແຜນທີ່.",
+"th": "ในคืนฟ้าใส นักดูดาวอย่างยัสมินอ่านกลุ่มดาวได้เหมือนแผนที่",
+"zh": "在晴朗的夜晚，像雅斯敏一样的观星者能把星座当成地图来读。",
+"ja": "はれた よるは ほしの ならびが ちずみたいに よめるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_nightsky.4": {
+"en": "A gentle silver glow rests along the distant Persian horizon.",
+"lo": "ແສງສີເງິນອ່ອນໆພາດຢູ່ຕາມຂອບຟ້າໄກຂອງເປີເຊຍ.",
+"th": "แสงสีเงินอ่อนๆ พาดอยู่ตามขอบฟ้าไกลของเปอร์เซีย",
+"zh": "柔和的银色星辉温柔地洒在遥远的波斯天际线上。",
+"ja": "とおい そらの はしに やさしい ぎんいろの ひかりが あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gearchest.0": {
+"en": "A tool chest. A tool chest holds Yasmin's polished brass cogs, pins and tiny clockwork keys.",
+"lo": "ຫີບເຄື່ອງມື. ຫີບເຄື່ອງມື ເກັບກົງຈັກທອງເຫຼືອງ ແກນກົງຈັກ ແລະ ກະແຈນ້ອຍຂອງຍາສມິນ.",
+"th": "หีบเครื่องมือ หีบเครื่องมือเก็บเฟืองทองเหลือง แกนเฟือง และกุญแจเล็กๆ ของยัสมิน",
+"zh": "工具木箱。工具木箱里整齐收着雅斯敏擦亮的黄铜齿轮、轴销和小钥匙。",
+"ja": "どうぐばこ。どうぐばこに ヤスミンの はぐるまや どうぐが はいっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_gearchest.1": {
+"en": "Inlaid walnut wood and gleaming brass clasps protect Yasmin's tiny tools.",
+"lo": "ໄມ້ສີອຸ່ນປະດັບລາຍ ແລະ ຕົວລັອກທອງເຫຼືອງປົກປ້ອງເຄື່ອງມືນ້ອຍຂອງຍາສມິນ.",
+"th": "ไม้สีอุ่นประดับลายและตัวล็อกทองเหลืองปกป้องเครื่องมือน้อยของยัสมิน",
+"zh": "镶嵌花纹的胡桃木盒配有黄铜锁扣，妥善保护着小工具。",
+"ja": "きれいな きと きんいろの かなぐで できた どうぐばこだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gearchest.2": {
+"en": "Yasmin opens her tool chest whenever a clockwork friend needs mending.",
+"lo": "ຍາສມິນເປີດຫີບເຄື່ອງມືທຸກຄັ້ງທີ່ໝູ່ກົນໄກຕ້ອງການການແປງ.",
+"th": "ยัสมินเปิดหีบเครื่องมือทุกครั้งที่เพื่อนกลไกต้องการการซ่อม",
+"zh": "每当发条机械需要修理，雅斯敏就会打开她的百宝工具箱。",
+"ja": "こわれた はぐるまを なおす とき、この はこを ひらくんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_gearchest.3": {
+"en": "Inside sit neat velvet trays for small gears, medium gears and brass pins.",
+"lo": "ທາງໃນມີຖາດຜ້າກຳມະຫຍີ່ວາງກົງຈັກນ້ອຍ ກົງຈັກກາງ ແລະ ແກນທອງເຫຼືອງ.",
+"th": "ด้านในมีถาดกำมะหยี่วางเฟืองเล็ก เฟืองกลาง และแกนทองเหลือง",
+"zh": "箱子里铺着绒布隔层，整整齐齐摆着大大小小的齿轮和轴销。",
+"ja": "なかには ちいさな はぐるまや じくが きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gearchest.4": {
+"en": "Keeping tools tidy helps inventors fix tricky puzzles fast and calmly!",
+"lo": "ການເກັບເຄື່ອງມືໃຫ້ເປັນລະບຽບຊ່ວຍໃຫ້ນັກປະດິດແປງຂອງໄດ້ໄວ ແລະ ໃຈເຢັນ!",
+"th": "การเก็บเครื่องมือให้เป็นระเบียบช่วยให้นักประดิษฐ์ซ่อมของได้เร็วและใจเย็น!",
+"zh": "把工具收得整整齐齐，小发明家修东西就能又快又稳！",
+"ja": "どうぐを きれいに しまっておくと すぐ みつかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brassgear.0": {
+"en": "A brass gear. A brass gear turns tooth by tooth inside the Ebony Horse's chest.",
+"lo": "ກົງຈັກທອງເຫຼືອງ. ກົງຈັກທອງເຫຼືອງ ໝຸນຕໍ່ກັນເປັນແຂ້ວໆຢູ່ໃນເອິກຂອງມ້າໄມ້ດຳ.",
+"th": "เฟืองทองเหลือง เฟืองทองเหลืองหมุนต่อกันทีละซี่อยู่ในอกของม้าไม้ดำ",
+"zh": "黄铜齿轮。黄铜齿轮齿齿相扣，在乌木神马胸膛里顺畅转动。",
+"ja": "きんいろの はぐるま。きんいろの はぐるまが うまの なかで くるくる まわるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_brassgear.1": {
+"en": "Smooth golden brass teeth glint warmly in the morning rooftop sun.",
+"lo": "ແຂ້ວກົງຈັກທອງເຫຼືອງກ້ຽງງາມເຫຼື້ອມອຸ່ນໃນແສງແດດຍາມເຊົ້າ.",
+"th": "ซี่เฟืองทองเหลืองเรียบงามเงาอุ่นในแสงแดดยามเช้า",
+"zh": "打磨光滑的金色黄铜轮齿在晨光下闪烁着温暖的光泽。",
+"ja": "あさの ひかりに きんいろの はぐるまが ぴかっと ひかるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brassgear.2": {
+"en": "Pair each brass gear with its matching pin to make the Ebony Horse ready to fly!",
+"lo": "ຈັບຄູ່ກົງຈັກທອງເຫຼືອງແຕ່ລະອັນກັບແກນທີ່ຄູ່ກັນເພື່ອໃຫ້ມ້າໄມ້ດຳພ້ອມບິນ!",
+"th": "จับคู่เฟืองทองเหลืองแต่ละอันกับแกนที่คู่กันเพื่อให้ม้าไม้ดำพร้อมบิน!",
+"zh": "把每枚黄铜齿轮配到对应的轴销上，让乌木神马重新展翅高飞！",
+"ja": "ぴったりの じくに はめると うまが げんきに とべるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brassgear.3": {
+"en": "Small gears spin faster while bigger gears turn with extra steady strength.",
+"lo": "ກົງຈັກນ້ອຍໝຸນໄວກວ່າ ສ່ວນກົງຈັກໃຫຍ່ໝຸນດ້ວຍແຮງທີ່ໝັ້ນຄົງກວ່າ.",
+"th": "เฟืองเล็กหมุนเร็วกว่า ส่วนเฟืองใหญ่หมุนด้วยแรงที่มั่นคงกว่า",
+"zh": "小齿轮转得飞快，大齿轮转得沉稳有力，彼此配合默契。",
+"ja": "ちいさな はぐるまは はやく、おおきな はぐるまは つよく まわるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_brassgear.4": {
+"en": "Click-clack, whir-whir!",
+"lo": "ກິ໊ກ-ກັ໊ກ, ວື້-ວື້!",
+"th": "คลิก-แคล็ก วื้ด-วื้ด!",
+"zh": "咔嗒咔嗒，嗡嗡转！",
+"ja": "かちかち、くるくる！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_gearpin.0": {
+"en": "A gear pin. A gear pin holds each shining brass wheel snug in its exact clockwork slot.",
+"lo": "ແກນກົງຈັກ. ແກນກົງຈັກ ຍຶດກົງຈັກທອງເຫຼືອງແຕ່ລະອັນໃຫ້ແໜ້ນພໍດີໃນຊ່ອງກົນໄກ.",
+"th": "แกนเฟือง แกนเฟืองยึดเฟืองทองเหลืองแต่ละอันให้แน่นพอดีในช่องกลไก",
+"zh": "齿轮轴销。齿轮轴销把每一枚闪亮的黄铜齿轮稳稳固定在发条槽里。",
+"ja": "はぐるまの じく。はぐるまの じくが はぐるまを しっかり とめるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_gearpin.1": {
+"en": "Each polished brass pin matches one exact gear size on the saddle.",
+"lo": "ແກນທອງເຫຼືອງຂັດເງົາແຕ່ລະອັນພໍດີກັບຂະໜາດກົງຈັກເທິງອານມ້າ.",
+"th": "แกนทองเหลืองขัดเงาแต่ละอันพอดีกับขนาดเฟืองบนอานม้า",
+"zh": "每根抛光黄铜轴销都精准对应鞍座上一枚齿轮的大小。",
+"ja": "ぴかぴかの じくが はぐるまの おおきさに ぴったり あうよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gearpin.2": {
+"en": "Tap a brass gear first, then tap its matching pin to snap it snug!",
+"lo": "ແຕະກົງຈັກທອງເຫຼືອງກ່ອນ ແລ້ວແຕະແກນທີ່ຄູ່ກັນເພື່ອໃສ່ໃຫ້ແໜ້ນ!",
+"th": "แตะเฟืองทองเหลืองก่อน แล้วแตะแกนที่คู่กันเพื่อใส่ให้แน่น!",
+"zh": "先轻点一枚齿轮，再点对应的轴销，咔嗒一声就装稳啦！",
+"ja": "はぐるまを えらんで じくに さわると かちっと はまるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_gearpin.3": {
+"en": "Its rounded golden cap keeps the spinning wheel from slipping loose.",
+"lo": "ຫົວມົນສີຄຳຂອງມັນຊ່ວຍປ້ອງກັນບໍ່ໃຫ້ກົງຈັກທີ່ກຳລັງໝຸນຫຼຸດອອກ.",
+"th": "หัวมนสีทองของมันช่วยป้องกันไม่ให้เฟืองที่กำลังหมุนหลุดออก",
+"zh": "圆润的金色顶帽牢牢护住旋转的齿轮，让它再也不松脱。",
+"ja": "まるい あたまが はぐるまを ぬけない ように まもるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_gearpin.4": {
+"en": "Steady pins keep every clockwork wheel humming smoothly in the sky.",
+"lo": "ແກນທີ່ໝັ້ນຄົງຊ່ວຍໃຫ້ກົງຈັກທຸກອັນໝຸນລື່ນໄຫຼເທິງທ້ອງຟ້າ.",
+"th": "แกนที่มั่นคงช่วยให้เฟืองทุกอันหมุนลื่นไหลบนท้องฟ้า",
+"zh": "稳固的轴销让所有发条齿轮在高空中顺畅欢快地转动。",
+"ja": "しっかりした じくの おかげで そらでも あんしんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_stormcloud.0": {
+"en": "A storm cloud. A storm cloud swirls grey and breezy across the high snowy mountain pass.",
+"lo": "ເມກພາຍຸ. ເມກພາຍຸ ລອຍມ້ວນສີເທົາພ້ອມລົມແຮງຂ້າມຊ່ອງພູຫິມະສູງ.",
+"th": "เมฆพายุ เมฆพายุลอยม้วนสีเทาพร้อมลมแรงข้ามช่องเขาหิมะสูง",
+"zh": "山风乌云。山风乌云卷着冷风在险峻的雪山隘口呼啸翻涌。",
+"ja": "あらしの くも。あらしの くもが かぜと いっしょに やまを ながれるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_stormcloud.1": {
+"en": "Swirling slate-blue clouds puff across the cold mountain pass.",
+"lo": "ເມກສີຟ້າເທົາມ້ວນລອຍຜ່ານຊ່ອງພູຫິມະທີ່ໜາວເຢັນ.",
+"th": "เมฆสีฟ้าเทาม้วนลอยผ่านช่องเขาหิมะที่หนาวเย็น",
+"zh": "蓝灰色的翻滚云团带着凛冽山风掠过寒冷的雪山隘口。",
+"ja": "はいいろの くもが つめたい かぜと ぐるぐる まわっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_stormcloud.2": {
+"en": "Strong mountain gusts blow from these clouds, so Yasmin steers smoothly below them!",
+"lo": "ລົມພູແຮງພັດມາຈາກເມກເຫຼົ່ານີ້ ຍາສມິນຈຶ່ງຂັບລ່ອງລົງລຸ່ມຢ່າງນຸ້ມນວນ!",
+"th": "ลมเขาแรงพัดมาจากเมฆเหล่านี้ ยัสมินจึงบังคับร่อนลงด้านล่างอย่างนุ่มนวล!",
+"zh": "阵阵山风从乌云间吹来，雅斯敏机智地领着神马从云下平稳穿行！",
+"ja": "かぜが つよい ので、くもの したを じょうずに すりぬけるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_stormcloud.3": {
+"en": "Whoooosh-whirl!",
+"lo": "ວູ້-ວູ້!",
+"th": "วู้-วู้!",
+"zh": "呼呼——哗啦！",
+"ja": "びゅーっ、ごーっ！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_stormcloud.4": {
+"en": "Cool air rising up tall snowy mountains often gathers into gusty wind clouds.",
+"lo": "ອາກາດເຢັນທີ່ລອຍຂຶ້ນພູຫິມະສູງມັກລວມຕົວກັນເປັນເມກລົມແຮງ.",
+"th": "อากาศเย็นที่ลอยขึ้นภูเขาหิมะสูงมักรวมตัวกันเป็นเมฆลมแรง",
+"zh": "冷空气沿着高耸雪山爬升时，常常聚集成翻涌的山风云团。",
+"ja": "つめたい かぜが やまを のぼると あらしの くもに なるんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_terracesky.0": {
+"en": "The morning sky. The morning sky wakes soft gold and blue over Yasmin's rooftop garden.",
+"lo": "ທ້ອງຟ້າຍາມເຊົ້າ. ທ້ອງຟ້າຍາມເຊົ້າ ຕື່ນຂຶ້ນດ້ວຍສີຄຳອ່ອນ ແລະ ສີຟ້າເໜືອສວນດາດຟ້າຂອງຍາສມິນ.",
+"th": "ท้องฟ้ายามเช้า ท้องฟ้ายามเช้าตื่นขึ้นด้วยสีทองอ่อนและสีฟ้าเหนือสวนดาดฟ้าของยัสมิน",
+"zh": "晨曦晴空。晨曦晴空泛起柔和的淡金与浅蓝，唤醒了雅斯敏的屋顶花园。",
+"ja": "あさの そら。あさの そらが やさしい きんいろに かがやいているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_terracesky.1": {
+"en": "Pale morning gold blends smoothly into fresh spring sky blue.",
+"lo": "ສີຄຳອ່ອນຍາມເຊົ້າປະສານກັບສີຟ້າສົດໃສຂອງລະດູບານໃໝ່.",
+"th": "สีทองอ่อนยามเช้าผสานกับสีฟ้าสดใสของฤดูใบไม้ผลิ",
+"zh": "柔和的晨曦淡金色与清澈的春日蔚蓝自然交融。",
+"ja": "あさの やさしい きんいろと あおが きれいに まざっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_terracesky.2": {
+"en": "Morning sunlight warms the marble terrace while Yasmin and Firuz mend the gears.",
+"lo": "ແສງແດດຍາມເຊົ້າໃຫ້ຄວາມອົບອຸ່ນແກ່ລະບຽງຫີນອ່ອນຕອນຍາສມິນ ແລະ ຟີຣູຊແປງກົງຈັກ.",
+"th": "แสงแดดยามเช้าให้ความอบอุ่นแก่ระเบียงหินอ่อนตอนยัสมินและฟีรูซซ่อมเฟือง",
+"zh": "朝阳洒满大理石露台，温暖陪伴着雅斯敏和菲鲁兹一起修好齿轮。",
+"ja": "あさひが ヤスミンと フィールーズを あたたかく てらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_terracesky.3": {
+"en": "Soft white clouds drift slowly past the white jasmine archway.",
+"lo": "ກ້ອນເມກຂາວນຸ້ມລອຍຊ້າໆຜ່ານຊຸ້ມປະຕູດອກມະລິສີຂາວ.",
+"th": "ก้อนเมฆขาวนุ่มลอยช้าๆ ผ่านซุ้มประตูดอกมะลิสีขาว",
+"zh": "松软的白云慢悠悠飘过盛开小白花的茉莉拱门。",
+"ja": "しろい くもが じゃすみんの もんの うえを ながれるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_terracesky.4": {
+"en": "Bright morning light makes every golden brass gear sparkle clearly!",
+"lo": "ແສງເຊົ້າສົດໃສເຮັດໃຫ້ກົງຈັກທອງເຫຼືອງທຸກອັນເຫຼື້ອມຊັດເຈນ!",
+"th": "แสงเช้าสดใสทำให้เฟืองทองเหลืองทุกอันเงางามชัดเจน!",
+"zh": "明媚晨光照亮露台，让每一枚小小的黄铜齿轮都闪闪发亮！",
+"ja": "あさの ひかりで ちいさな はぐるまも よく みえるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_eveningstar.0": {
+"en": "Evening Star. The Evening Star shines steady and bright to guide Firuz and Yasmin home.",
+"lo": "ດາວຍາມແລງ. ດາວຍາມແລງ ສ່ອງແສງໝັ້ນຄົງ ແລະ ສົດໃສເພື່ອນຳທາງຟີຣູຊ ແລະ ຍາສມິນກັບບ້ານ.",
+"th": "ดาวประจำเมือง ดาวประจำเมืองส่องแสงมั่นคงและสดใสเพื่อนำทางฟีรูซและยัสมินกลับบ้าน",
+"zh": "长庚星。长庚星明亮而坚定地高悬夜空，引领菲鲁兹和雅斯敏平安回家。",
+"ja": "よいの みょうじょう。よいの みょうじょうが かえる みちを あかるく てらすよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_eveningstar.1": {
+"en": "Its clear golden-white light gleams brighter than every nearby star.",
+"lo": "ແສງສີຄຳຂາວໃສຂອງມັນສ່ອງສະຫວ່າງກວ່າດວງດາວອ້ອມຂ້າງ.",
+"th": "แสงสีทองขาวใสของมันส่องสว่างกว่าดวงดาวรอบข้าง",
+"zh": "它清亮耀眼的金白光芒比周围所有的星辰都要明亮。",
+"ja": "まわりの ほしより いちばん あかるく きらきら ひかっているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_eveningstar.2": {
+"en": "Sight the Evening Star with Yasmin's astrolabe to stay right on course for Shiraz!",
+"lo": "ສ່ອງຫາດາວຍາມແລງດ້ວຍເຄື່ອງວັດດາວຂອງຍາສມິນເພື່ອມຸ່ງໜ້າກັບຊີຣາຊ!",
+"th": "ส่องหาดาวประจำเมืองด้วยเครื่องวัดดาวของยัสมินเพื่อมุ่งหน้ากลับชีราซ!",
+"zh": "用雅斯敏的星盘锁定长庚星，就能稳稳飞回设拉子！",
+"ja": "この ほしを めじるしに すれば シーラーズへ かえれるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_eveningstar.3": {
+"en": "The bright Evening Star we see after sunset is really the shining planet Venus!",
+"lo": "ດາວຍາມແລງທີ່ເຮົາເຫັນຫຼັງຕາເວັນຕົກດິນແທ້ຈິງແລ້ວແມ່ນດາວສຸກ!",
+"th": "ดาวประจำเมืองที่เราเห็นหลังพระอาทิตย์ตกดินแท้จริงแล้วคือดาวศุกร์!",
+"zh": "傍晚最明亮的长庚星，其实是闪耀在天空中的金星哦！",
+"ja": "よいの みょうじょうは ほんとうは きんせいって いう ほし なんだよ！",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_eveningstar.4": {
+"en": "Even through gusty mountain clouds, its steady gleam never wavers.",
+"lo": "ແມ່ນແຕ່ຜ່ານເມກພູລົມແຮງ ແສງໝັ້ນຄົງຂອງມັນກໍຍັງສ່ອງສະຫວ່າງ.",
+"th": "แม้ผ่านเมฆเขาลมแรง แสงมั่นคงของมันก็ยังส่องสว่าง",
+"zh": "就算山风乌云翻涌，它沉稳的光芒也始终照亮归途。",
+"ja": "くもが あっても まっすぐ きらめきつづけるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_torchglow.0": {
+"en": "A warm torch. A warm torch lights the courtyard so Sabur and Hakim can kindle the beacons.",
+"lo": "ໄຕ້ໄຟອຸ່ນ. ໄຕ້ໄຟອຸ່ນ ສ່ອງແສງໃນເດີ່ນວັງເພື່ອໃຫ້ຊາບູຣ ແລະ ຮາກີມຈູດເຕົາໄຟນຳທາງ.",
+"th": "คบไฟอุ่น คบไฟอุ่นส่องแสงในลานวังเพื่อให้ซาบูร์และฮากีมจุดเตาไฟนำทาง",
+"zh": "温暖火把。温暖火把照亮庭院，帮助萨布尔国王和哈基姆点燃归家火盆。",
+"ja": "あたたかい たいまつ。あたたかい たいまつが にわを てらして いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_torchglow.1": {
+"en": "A bright amber flame dances gently at the tip of the courtyard torch.",
+"lo": "ແປວໄຟສີຄຳສົດໃສເຕັ້ນລະບຳຄ່ອຍໆຢູ່ປາຍໄຕ້ໄຟເດີ່ນວັງ.",
+"th": "เปลวไฟสีทองสดใสเต้นระบำเบาๆ ที่ปลายคบไฟลานวัง",
+"zh": "温暖的琥珀色火苗在火把顶端轻快地跳动着。",
+"ja": "あたたかい ひが ゆらゆら おどって いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_torchglow.2": {
+"en": "King Sabur and Master Hakim carry its flame to light all five golden beacons.",
+"lo": "ພະລາຊາຊາບູຣ ແລະ ຊ່າງຮາກີມຖືໄຟນີ້ໄປຈູດເຕົາໄຟນຳທາງທັງຫ້າໜ່ວຍ.",
+"th": "พระราชาซาบูร์และช่างฮากีมถือไฟนี้ไปจุดเตาไฟนำทางทั้งห้าดวง",
+"zh": "萨布尔国王和哈基姆大师高举火把，一一引燃五座金色火盆。",
+"ja": "この ひで いつつの ひばちに ひを つけるんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_torchglow.3": {
+"en": "Warm golden sparkles drift upward into the cool Shiraz night.",
+"lo": "ປະກາຍໄຟສີຄຳອຸ່ນລອຍຂຶ້ນສູ່ທ້ອງຟ້າຍາມຄ່ຳເຢັນໆຂອງຊີຣາຊ.",
+"th": "ประกายไฟสีทองอุ่นลอยขึ้นสู่ท้องฟ้ายามค่ำเย็นๆ ของชีราซ",
+"zh": "温暖的金色火花飘向设拉子清凉的繁星夜空。",
+"ja": "きんいろの ひのこが よぞらへ ふわっと とんで いくよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_torchglow.4": {
+"en": "Its steady glow shines like hope across the quiet starlit tiles.",
+"lo": "ແສງອຸ່ນໝັ້ນຄົງຂອງມັນສ່ອງສະຫວ່າງຄືຄວາມຫວັງທົ່ວເດີ່ນວັງຍາມຄ່ຳ.",
+"th": "แสงอุ่นมั่นคงของมันส่องสว่างเหมือนความหวังทั่วลานวังยามค่ำ",
+"zh": "它沉稳的暖光像满怀希望的心愿，照亮静谧的庭院地砖。",
+"ja": "やさしい あかりが しずかな にわを てらすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brazierdark.0": {
+"en": "A brass brazier. A brass brazier waits in the night courtyard for a spark of guiding fire.",
+"lo": "ເຕົາໄຟທອງເຫຼືອງ. ເຕົາໄຟທອງເຫຼືອງ ຕັ້ງລໍຖ້າປະກາຍໄຟນຳທາງຢູ່ໃນເດີ່ນວັງຍາມຄ່ຳ.",
+"th": "เตาไฟทองเหลือง เตาไฟทองเหลืองตั้งรอประกายไฟนำทางอยู่ในลานวังยามค่ำ",
+"zh": "黄铜火盆。黄铜火盆静静立在夜色庭院里，等待点亮指引归途的暖火。",
+"ja": "しんちゅうの ひばち。しんちゅうの ひばちが ひが つくのを まって いるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_brazierdark.1": {
+"en": "Carved Persian vines wrap around each wide hammered-brass bowl.",
+"lo": "ລາຍເຄືອໄມ້ເປີເຊຍແກະສະຫຼັກອ້ອມອ່າງທອງເຫຼືອງກວ້າງແຕ່ລະໜ່ວຍ.",
+"th": "ลายเถาไม้เปอร์เซียแกะสลักรอบอ่างทองเหลืองกว้างแต่ละใบ",
+"zh": "宽口黄铜火盆外壁精雕细刻着优雅的波斯卷草纹。",
+"ja": "きれいな もようが ほられた しんちゅうの ひばちだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brazierdark.2": {
+"en": "Tap all five braziers to kindle bright golden beacons for Firuz!",
+"lo": "ແຕະເຕົາໄຟທັງຫ້າໜ່ວຍເພື່ອຈູດແສງໄຟສີຄຳນຳທາງໃຫ້ຟີຣູຊ!",
+"th": "แตะเตาไฟทั้งห้าดวงเพื่อจุดแสงไฟสีทองนำทางให้ฟีรูซ!",
+"zh": "点亮全部五座黄铜火盆，为夜空中的菲鲁兹照亮回家的方向！",
+"ja": "いつつの ひばちに さわって ひを ともそう！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brazierdark.3": {
+"en": "Five matching bowls stand in a neat welcoming row across the courtyard.",
+"lo": "ເຕົາໄຟຫ້າໜ່ວຍຕັ້ງລຽງກັນຢ່າງເປັນລະບຽບຕ້ອນຮັບກາງເດີ່ນວັງ.",
+"th": "เตาไฟห้าดวงตั้งเรียงกันอย่างเป็นระเบียบต้อนรับกลางลานวัง",
+"zh": "五座成对的火盆在庭院中央排成整齐迎归的一列。",
+"ja": "いつつの ひばちが にわに まっすぐ ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brazierdark.4": {
+"en": "Long ago, glowing fire beacons guided night travellers safely home from afar.",
+"lo": "ສະໄໝກ່ອນ ໄຟນຳທາງທີ່ສ່ອງສະຫວ່າງຊ່ວຍນຳນັກເດີນທາງຍາມຄ່ຳກັບບ້ານຢ່າງປອດໄພ.",
+"th": "สมัยก่อน ไฟนำทางที่ส่องสว่างช่วยนำนักเดินทางยามค่ำกลับบ้านอย่างปลอดภัย",
+"zh": "古时候，夜里高高燃起的温暖火盆能指引远方旅人平安归家。",
+"ja": "むかしは あったかい ひの あかりが みちしるべに なったんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_brazierlit.0": {
+"en": "A golden beacon. A golden beacon blazes warmly to welcome the Ebony Horse back to Shiraz!",
+"lo": "ເຕົາໄຟນຳທາງ. ເຕົາໄຟນຳທາງ ລຸກໂຊນອົບອຸ່ນເພື່ອຕ້ອນຮັບມ້າໄມ້ດຳກັບຄືນສູ່ຊີຣາຊ!",
+"th": "เตาไฟนำทาง เตาไฟนำทางลุกโชนอบอุ่นเพื่อต้อนรับม้าไม้ดำกลับสู่ชีราซ!",
+"zh": "金色火炬。金色火炬熊熊燃烧，发出温暖光芒迎接乌木神马回到设拉子！",
+"ja": "きんいろの ひばち。きんいろの ひばちが あったかく もえて むかえるよ！",
+"who": "narrator",
+"tag": "what"
+},
+"eh_brazierlit.1": {
+"en": "Crackle-pop, warm and bright!",
+"lo": "ແປ໊ະໆ, ອົບອຸ່ນ ແລະ ສະຫວ່າງ!",
+"th": "เปรี๊ยะๆ อบอุ่นและสว่าง!",
+"zh": "噼啪作响，又暖又亮！",
+"ja": "ぱちぱち、あたたかい ひだよ！",
+"who": "narrator",
+"tag": "sound"
+},
+"eh_brazierlit.2": {
+"en": "Five glowing golden flames rise high enough to shine from the starry sky!",
+"lo": "ແປວໄຟສີຄຳຫ້າໜ່ວຍລຸກສູງຈົນເຫັນໄດ້ແຕ່ເທິງທ້ອງຟ້າທີ່ມີດາວ!",
+"th": "เปลวไฟสีทองห้าดวงลุกสูงจนเห็นได้จากบนท้องฟ้าที่มีดาว!",
+"zh": "五团温暖的金色火焰高高跃起，连高空云端都看得清清楚楚！",
+"ja": "いつつの あたたかい ひが そらからも よく みえるよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_brazierlit.3": {
+"en": "Their warm firelight guides Firuz and Yasmin right down to Shiraz!",
+"lo": "ແສງໄຟອຸ່ນຂອງມັນນຳທາງຟີຣູຊ ແລະ ຍາສມິນລົງຈອດເມືອງຊີຣາຊຢ່າງປອດໄພ!",
+"th": "แสงไฟอุ่นของมันนำทางฟีรูซและยัสมินลงจอดเมืองชีราซอย่างปลอดภัย!",
+"zh": "温暖的火光迎着星辉，稳稳把菲鲁兹和雅斯敏迎回设拉子！",
+"ja": "フィールーズと ヤスミンを シーラーズへ むかえる あかりだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_brazierlit.4": {
+"en": "Tiny golden embers dance upward like friendly fireflies in the night.",
+"lo": "ປະກາຍໄຟສີຄຳນ້ອຍໆລອຍຟ້ອນຂຶ້ນຄືຫິ່ງຫ້ອຍໃຈດີໃນຍາມຄ່ຳ.",
+"th": "ประกายไฟสีทองน้อยๆ ลอยร่ายรำขึ้นเหมือนหิ่งห้อยใจดีในยามค่ำ",
+"zh": "点点金色火星在夜风中翩翩升起，像友善的小萤火虫。",
+"ja": "きんいろの ひのこが ほたるみたいに まいあがるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_landingstone.0": {
+"en": "A landing stone. A landing stone glows softly on the courtyard floor to mark a gentle touchdown.",
+"lo": "ແຜ່ນຫີນລົງຈອດ. ແຜ່ນຫີນລົງຈອດ ສ່ອງແສງອ່ອນໆເທິງພື້ນເດີ່ນເພື່ອຊີ້ຈຸດລົງຈອດຢ່າງນຸ້ມນວນ.",
+"th": "แผ่นหินลงจอด แผ่นหินลงจอดส่องแสงอ่อนๆ บนพื้นลานเพื่อชี้จุดลงจอดอย่างนุ่มนวล",
+"zh": "着陆石板。着陆石板在庭院地面泛起柔和光晕，标出轻柔降落的位置。",
+"ja": "ちゃくりくの いし。ちゃくりくの いしが やさしく ひかって ばしょを おしえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_landingstone.1": {
+"en": "Warm turquoise and gold light outlines three smooth sandstone pavers.",
+"lo": "ແສງສີຟ້າຂຽວ ແລະ ສີຄຳອຸ່ນອ້ອມແຜ່ນຫີນຊາຍກ້ຽງສາມແຜ່ນ.",
+"th": "แสงสีฟ้าเขียวและสีทองอุ่นล้อมแผ่นหินทรายเรียบสามแผ่น",
+"zh": "温暖的绿松石金光勾勒出三块平整的砂岩地砖。",
+"ja": "あたたかい ひかりが みっつの いしを てらしているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_landingstone.2": {
+"en": "Tap the three landing stones in order to bring the Ebony Horse softly down!",
+"lo": "ແຕະແຜ່ນຫີນລົງຈອດທັງສາມແຜ່ນຕາມລຳດັບເພື່ອພາມ້າໄມ້ດຳລົງຈອດຢ່າງນຸ້ມນວນ!",
+"th": "แตะแผ่นหินลงจอดทั้งสามแผ่นตามลำดับเพื่อพาม้าไม้ดำลงจอดอย่างนุ่มนวล!",
+"zh": "依次轻点三块着陆石板，引导乌木神马轻柔平稳地落地！",
+"ja": "みっつの いしを じゅんばんに さわって そっと おろそう！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_landingstone.3": {
+"en": "They sit right in the clear open space between the five golden beacons.",
+"lo": "ພວກມັນຢູ່ກາງພື້ນທີ່ໂລ່ງສະບາຍລະຫວ່າງເຕົາໄຟສີຄຳທັງຫ້າໜ່ວຍ.",
+"th": "พวกมันอยู่กลางพื้นที่โล่งสบายระหว่างเตาไฟสีทองทั้งห้าดวง",
+"zh": "它们正好排在五座金色火盆之间宽敞平整的庭院空地上。",
+"ja": "ひばちの まえの ひろい ばしょに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_landingstone.4": {
+"en": "Turning the silver moon peg slowly lets all four hooves touch down gently!",
+"lo": "ການຄ່ອຍໆບິດສະລັກດວງຈັນສີເງິນເຮັດໃຫ້ກີບຕີນທັງສີ່ແຕະພື້ນຢ່າງນຸ້ມນວນ!",
+"th": "การค่อยๆ บิดสลักดวงจันทร์สีเงินทำให้กีบเท้าทั้งสี่แตะพื้นอย่างนุ่มนวล!",
+"zh": "缓缓转动银色月亮旋钮，四只乌木马蹄就会轻飘飘稳稳落地！",
+"ja": "つきの つまみを そっと まわすと やさしく ちゃくりく できるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_sunsign.0": {
+"en": "A sun plaque. A sun plaque shows every rider which golden peg makes the horse climb upward.",
+"lo": "ປ້າຍຕາເວັນ. ປ້າຍຕາເວັນ ບອກໃຫ້ຜູ້ຂີ່ທຸກຄົນຮູ້ວ່າສະລັກສີຄຳອັນໃດພາມ້າບິນຂຶ້ນ.",
+"th": "ป้ายตะวัน ป้ายตะวันบอกให้ผู้ขี่ทุกคนรู้ว่าสลักสีทองอันไหนพาม้าบินขึ้น",
+"zh": "太阳铭牌。太阳铭牌清楚标出哪一枚金色旋钮能带神马向上攀升。",
+"ja": "たいようの しるし。たいようの しるしが のぼる つまみを おしえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_sunsign.1": {
+"en": "A bright golden sun emblem is engraved clearly on polished brass.",
+"lo": "ສັນຍາລັກຕາເວັນສີຄຳສົດໃສແກະສະຫຼັກຢ່າງຊັດເຈນເທິງທອງເຫຼືອງຂັດເງົາ.",
+"th": "สัญลักษณ์ตะวันสีทองสดใสแกะสลักอย่างชัดเจนบนทองเหลืองขัดเงา",
+"zh": "抛光黄铜铭牌上清清楚楚刻着闪亮的金色太阳图案。",
+"ja": "ぴかぴかの いたに たいようの えが ほって あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_sunsign.2": {
+"en": "Match the sun plaque to its front saddle mount so every rider knows how to rise!",
+"lo": "ຈັບຄູ່ປ້າຍຕາເວັນໃສ່ບ່ອນຕິດດ້ານໜ້າອານມ້າເພື່ອໃຫ້ຜູ້ຂີ່ທຸກຄົນຮູ້ວິທີບິນຂຶ້ນ!",
+"th": "จับคู่ป้ายตะวันใส่ที่ติดด้านหน้าอานม้าเพื่อให้ผู้ขี่ทุกคนรู้วิธีบินขึ้น!",
+"zh": "把太阳铭牌装到对应卡槽里，以后谁都知道怎么起飞啦！",
+"ja": "たいようの しるしを つけると のぼりかたが すぐ わかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_sunsign.3": {
+"en": "Its warm golden rays match the gleaming sun peg on the horse's shoulder.",
+"lo": "ລັດສະໝີສີຄຳອຸ່ນຂອງມັນຄູ່ກັນກັບສະລັກຕາເວັນເທິງບ່າມ້າ.",
+"th": "รัศมีสีทองอุ่นของมันคู่กันกับสลักตะวันบนบ่าม้า",
+"zh": "温暖的太阳光芒图案正与马肩上的金色太阳旋钮一一对应。",
+"ja": "たいようの つまみと おそろいの きれいな しるしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_sunsign.4": {
+"en": "Clear picture signs help even young riders stay calm and safe!",
+"lo": "ປ້າຍຮູບພາບທີ່ຊັດເຈນຊ່ວຍໃຫ້ຜູ້ຂີ່ທຸກໄວໃຈເຢັນ ແລະ ປອດໄພ!",
+"th": "ป้ายรูปภาพที่ชัดเจนช่วยให้ผู้ขี่ทุกวัยใจเย็นและปลอดภัย!",
+"zh": "清晰的图画标记让每位骑手都能一目了然、平安自在！",
+"ja": "わかりやすい えの しるしが あると みんな あんしんだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_starcompass.0": {
+"en": "A star compass. A star compass guides riders safely across clouds and mountains by day or night.",
+"lo": "ເຂັມທິດດາວ. ເຂັມທິດດາວ ນຳທາງຜູ້ຂີ່ຢ່າງປອດໄພຂ້າມກ້ອນເມກ ແລະ ພູຜາທັງກາງເວັນ ແລະ ກາງຄືນ.",
+"th": "เข็มทิศดาว เข็มทิศดาวนำทางผู้ขี่อย่างปลอดภัยข้ามเมฆและภูเขาทั้งกลางวันและกลางคืน",
+"zh": "星辰罗盘。星辰罗盘无论白昼黑夜，都能指引骑手安全飞越云山。",
+"ja": "ほしの らしんばん。ほしの らしんばんが そらの たびを あんぜんに あんないするよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_starcompass.1": {
+"en": "A gleaming eight-pointed brass needle spins smoothly inside a turquoise star dial.",
+"lo": "ເຂັມທອງເຫຼືອງແປດແສກເຫຼື້ອມໃສໝຸນຢ່າງລື່ນໄຫຼໃນໜ້າປັດດາວສີຟ້າຂຽວ.",
+"th": "เข็มทองเหลืองแปดแฉกเงางามหมุนอย่างลื่นไหลในหน้าปัดดาวสีฟ้าเขียว",
+"zh": "闪亮的黄铜指针在绿松石星盘中央平稳灵活地转动。",
+"ja": "ほしの はりが くるくる まわる きれいな らしんばんだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_starcompass.2": {
+"en": "Yasmin and Hakim built this compass together so no sky rider ever gets lost!",
+"lo": "ຍາສມິນ ແລະ ຊ່າງຮາກີມສ້າງເຂັມທິດນີ້ຮ່ວມກັນເພື່ອບໍ່ໃຫ້ຜູ້ຂີ່ຫຼົງທາງ!",
+"th": "ยัสมินและช่างฮากีมสร้างเข็มทิศนี้ร่วมกันเพื่อไม่ให้ผู้ขี่หลงทาง!",
+"zh": "雅斯敏和哈基姆联手打造了这枚星辰罗盘，从此再也不怕迷路！",
+"ja": "ヤスミンと ハキームが いっしょに つくった たいせつな どうぐだよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_starcompass.3": {
+"en": "A compass helps travellers tell north, south, east and west anywhere on Earth.",
+"lo": "ເຂັມທິດຊ່ວຍໃຫ້ນັກເດີນທາງຮູ້ທິດເໜືອ ໃຕ້ ອອກ ຕົກ ໄດ້ທຸກບ່ອນເທິງໂລກ.",
+"th": "เข็มทิศช่วยให้นักเดินทางรู้ทิศเหนือ ใต้ ออก ตก ได้ทุกที่บนโลก",
+"zh": "罗盘能帮助旅人在地球任何地方辨认东南西北。",
+"ja": "らしんばんは きたや みなみを おしえて くれる どうぐだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_starcompass.4": {
+"en": "Match the star compass to the center mount to finish the safe sky-saddle!",
+"lo": "ຈັບຄູ່ເຂັມທິດດາວໃສ່ບ່ອນຕິດຕົງກາງເພື່ອເຮັດອານມ້າບິນໃຫ້ສົມບູນ!",
+"th": "จับคู่เข็มทิศดาวใส่ที่ติดตรงกลางเพื่อทำอานม้าบินให้สมบูรณ์!",
+"zh": "把星辰罗盘安进中央卡槽，安全飞天鞍座就大功告成啦！",
+"ja": "まんなかに はめると あんぜんな くらが かんせい するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_moonsign.0": {
+"en": "A moon plaque. A moon plaque shows every rider which silver peg brings the horse softly down.",
+"lo": "ປ້າຍດວງຈັນ. ປ້າຍດວງຈັນ ບອກໃຫ້ຜູ້ຂີ່ທຸກຄົນຮູ້ວ່າສະລັກສີເງິນອັນໃດພາມ້າລົງຈອດຢ່າງນຸ້ມນວນ.",
+"th": "ป้ายดวงจันทร์ ป้ายดวงจันทร์บอกให้ผู้ขี่ทุกคนรู้ว่าสลักสีเงินอันไหนพาม้าลงจอดอย่างนุ่มนวล",
+"zh": "月亮铭牌。月亮铭牌清楚标出哪一枚银色旋钮能让神马平稳降落。",
+"ja": "つきの しるし。つきの しるしが おりる つまみを おしえるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_moonsign.1": {
+"en": "A slender silver crescent moon is inlaid cleanly on a cool blue-silver plaque.",
+"lo": "ດວງຈັນສ້ຽວສີເງິນປະດັບຢ່າງງົດງາມເທິງປ້າຍສີຟ້າເງິນ.",
+"th": "พระจันทร์เสี้ยวสีเงินประดับอย่างงดงามบนป้ายสีฟ้าเงิน",
+"zh": "清雅的银蓝铭牌上清晰镶嵌着一弯柔和的银色新月。",
+"ja": "ぎんいろの みかづきが きれいに かかれた しるしだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_moonsign.2": {
+"en": "Match the moon plaque to its saddle mount so every rider knows how to land!",
+"lo": "ຈັບຄູ່ປ້າຍດວງຈັນໃສ່ບ່ອນຕິດເທິງອານມ້າເພື່ອໃຫ້ຜູ້ຂີ່ທຸກຄົນຮູ້ວິທີລົງຈອດ!",
+"th": "จับคู่ป้ายดวงจันทร์ใส่ที่ติดบนอานม้าเพื่อให้ผู้ขี่ทุกคนรู้วิธีลงจอด!",
+"zh": "把月亮铭牌装到对应卡槽里，以后谁都知道怎么平稳降落啦！",
+"ja": "つきの しるしを つけると おりかたが すぐ わかるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_moonsign.3": {
+"en": "No more hidden secrets — the silver moon sign gleams right beside the sun sign!",
+"lo": "ບໍ່ມີຄວາມລັບອີກຕໍ່ໄປ ປ້າຍດວງຈັນສີເງິນເຫຼື້ອມຄຽງຂ້າງປ້າຍຕາເວັນ!",
+"th": "ไม่มีความลับอีกต่อไป ป้ายดวงจันทร์สีเงินเงางามเคียงข้างป้ายตะวัน!",
+"zh": "再也没有藏起来的秘密啦，月亮铭牌正大大方方亮在太阳铭牌旁！",
+"ja": "もう ひみつじゃ ないよ、たいようの となりに ならんでいるよ！",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_moonsign.4": {
+"en": "Seeing the moon sign reminds riders to turn gently and come home softly.",
+"lo": "ການເຫັນປ້າຍດວງຈັນເຕືອນຜູ້ຂີ່ໃຫ້ບິດຄ່ອຍໆ ແລະ ລົງຈອດຢ່າງນຸ້ມນວນ.",
+"th": "การเห็นป้ายดวงจันทร์เตือนผู้ขี่ให้บิดเบาๆ และลงจอดอย่างนุ่มนวล",
+"zh": "看见月亮铭牌，骑手就会想起轻柔转动旋钮、平安回家。",
+"ja": "つきの しるしを みれば やさしく おうちへ かえれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_saddlemount.0": {
+"en": "A saddle mount. A saddle mount holds each bright guide plaque safely on the Ebony Horse.",
+"lo": "ບ່ອນຕິດເທິງອານ. ບ່ອນຕິດເທິງອານ ຍຶດປ້າຍນຳທາງແຕ່ລະອັນໄວ້ຢ່າງປອດໄພເທິງມ້າໄມ້ດຳ.",
+"th": "ที่ติดบนอาน ที่ติดบนอานยึดป้ายนำทางแต่ละอันไว้อย่างปลอดภัยบนม้าไม้ดำ",
+"zh": "鞍座卡槽。鞍座卡槽把每一块闪亮的指引铭牌稳稳安在乌木神马鞍上。",
+"ja": "くらの とめぐ。くらの とめぐに たいせつな しるしを しっかり つけるよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_saddlemount.1": {
+"en": "Each carved brass frame waits neatly on the wooden sky-saddle.",
+"lo": "ຂອບທອງເຫຼືອງແກະສະຫຼັກແຕ່ລະອັນລໍຖ້າຢ່າງເປັນລະບຽບເທິງອານມ້າໄມ້.",
+"th": "กรอบทองเหลืองแกะสลักแต่ละอันรออย่างเป็นระเบียบบนอานม้าไม้",
+"zh": "每个精雕黄铜卡槽都整整齐齐地镶嵌在飞马鞍座上。",
+"ja": "きんいろの わくが くらの うえに きれいに ならんでいるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_saddlemount.2": {
+"en": "Tap a guide plaque first, then tap its matching saddle mount to lock it in!",
+"lo": "ແຕະປ້າຍນຳທາງກ່ອນ ແລ້ວແຕະບ່ອນຕິດທີ່ຄູ່ກັນເພື່ອລັອກໃຫ້ແໜ້ນ!",
+"th": "แตะป้ายนำทางก่อน แล้วแตะที่ติดที่คู่กันเพื่อล็อกให้แน่น!",
+"zh": "先轻点指引铭牌，再点对应的鞍座卡槽，稳稳装进去吧！",
+"ja": "しるしを えらんで ここに さわると ぴったり つくよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_saddlemount.3": {
+"en": "Three shining slots hold the sun sign, star compass and moon sign side by side.",
+"lo": "ຊ່ອງເຫຼື້ອມສາມຊ່ອງໃສ່ປ້າຍຕາເວັນ ເຂັມທິດດາວ ແລະ ປ້າຍດວງຈັນຄຽງຂ້າງກັນ.",
+"th": "ช่องเงาสามช่องใส่ป้ายตะวัน เข็มทิศดาว และป้ายดวงจันทร์เคียงข้างกัน",
+"zh": "三个闪亮卡槽并排安放着太阳铭牌、星辰罗盘和月亮铭牌。",
+"ja": "みっつの わくに たいよう、ほし、つきが ならんで はまるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_saddlemount.4": {
+"en": "Working together makes every invention clearer, safer and twice as joyful!",
+"lo": "ການຮ່ວມມືກັນເຮັດໃຫ້ສິ່ງປະດິດທຸກຢ່າງຊັດເຈນ ປອດໄພ ແລະ ມ່ວນຂຶ້ນສອງເທົ່າ!",
+"th": "การร่วมมือกันทำให้สิ่งประดิษฐ์ทุกอย่างชัดเจน ปลอดภัย และสนุกขึ้นสองเท่า!",
+"zh": "齐心协力合作，让每一项发明都更清晰、更安全、更快乐！",
+"ja": "みんなで ちからを あわせると もっと すてきに なるよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_silkcushion.0": {
+"en": "A silk cushion. A silk cushion is sewn from rich Persian rose cloth edged with golden tassels.",
+"lo": "ໝອນຜ້າໄໝ. ໝອນຜ້າໄໝ ຫຍິບຈາກຜ້າສີກຸຫຼາບເປີເຊຍປະດັບດ້ວຍພູ່ດ້າຍສີຄຳ.",
+"th": "หมอนผ้าไหม หมอนผ้าไหมเย็บจากผ้าสีกุหลาบเปอร์เซียประดับด้วยพู่ด้ายสีทอง",
+"zh": "丝绸软垫。丝绸软垫由波斯玫瑰色丝绸缝制，四角缀着金色流苏。",
+"ja": "きぬの くっしょん。きぬの くっしょんは きんいろの ふさが ついて ふかふかだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_silkcushion.1": {
+"en": "Soft rose-crimson silk is embroidered with tiny golden Persian blossoms.",
+"lo": "ຜ້າໄໝສີກຸຫຼາບແດງອ່ອນນຸ້ມປັກດ້ວຍລາຍດອກໄມ້ເປີເຊຍສີຄຳນ້ອຍໆ.",
+"th": "ผ้าไหมสีกุหลาบแดงอ่อนนุ่มปักด้วยลายดอกไม้เปอร์เซียสีทองน้อยๆ",
+"zh": "柔软的玫瑰红丝绸上绣着精致的金色波斯花卉。",
+"ja": "あかい きぬに きんいろの はなが ししゅう されて いるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_silkcushion.2": {
+"en": "The courtyard cat and crested hoopoe love curling up on this cosy cushion!",
+"lo": "ແມວລາຍ ແລະ ນົກຫົວຂວານມັກຂົດໂຕນອນເທິງໝອນອຸ່ນນຸ້ມໜ່ວຍນີ້!",
+"th": "แมวลายและนกหัวขวานชอบขดตัวนอนบนหมอนอุ่นนุ่มใบนี้!",
+"zh": "虎斑猫和戴胜鸟最爱蜷在这只松软暖和的丝绸软垫上！",
+"ja": "しまねこと やつがしらが ふかふかの うえで なかよく やすむよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_silkcushion.3": {
+"en": "Four woven silk tassels dangle neatly from its golden-trimmed corners.",
+"lo": "ພູ່ໄໝສານສີ່ອັນຫ້ອຍງາມຢູ່ຕາມມຸມຂອບສີຄຳຂອງມັນ.",
+"th": "พู่ไหมสานสี่อันห้อยงามอยู่ตามมุมขอบสีทองของมัน",
+"zh": "滚着金边的四角垂着四缕漂亮的编织丝绸流苏。",
+"ja": "よつのかどに ふさが ゆらゆら ゆれているよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_silkcushion.4": {
+"en": "Guests rest comfortably on silk cushions during Shiraz spring feasts.",
+"lo": "ແຂກນັ່ງພັກຢ່າງສະບາຍເທິງໝອນຜ້າໄໝໃນງານລ້ຽງລະດູບານໃໝ່ຊີຣາຊ.",
+"th": "แขกนั่งพักอย่างสบายบนหมอนผ้าไหมในงานเลี้ยงฤดูใบไม้ผลิชีราซ",
+"zh": "在设拉子春日欢宴上，客人们都爱舒舒服服靠在丝绸软垫上。",
+"ja": "おまつりの とき、みんな ここに すわって くつろぐんだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"eh_feasttray.0": {
+"en": "A feast tray. A feast tray carries sweet saffron cakes, pomegranates and fragrant tea.",
+"lo": "ຖາດຂະໜົມ. ຖາດຂະໜົມ ໃສ່ເຂົ້າໜົມຫຍ້າຝຣັ່ນຫວານ ໝາກພິລາ ແລະ ນ້ຳຊາຫອມ.",
+"th": "ถาดขนม ถาดขนมใส่ขนมหญ้าฝรั่นหวาน ทับทิม และน้ำชาหอม",
+"zh": "庆典果盘。庆典果盘盛满香甜的藏红花糕、红宝石石榴和清香热茶。",
+"ja": "ごちそうの ぼん。ごちそうの ぼんに おかしや くだものが いっぱい のっているよ。",
+"who": "narrator",
+"tag": "what"
+},
+"eh_feasttray.1": {
+"en": "Hammered golden brass holds ruby pomegranates, honey cakes and sweet almonds.",
+"lo": "ຖາດທອງເຫຼືອງຕີລາຍໃສ່ໝາກພິລາສີແດງ ເຂົ້າໜົມນ້ຳເຜິ້ງ ແລະ ແກ່ນອາລມອນຫວານ.",
+"th": "ถาดทองเหลืองตีลายใส่ทับทิมสีแดง ขนมน้ำผึ้ง และอัลมอนด์หวาน",
+"zh": "雕花黄铜大盘里摆满宝石红石榴、蜂蜜点心和香甜杏仁。",
+"ja": "ざくろや あまい おかしが たくさん のった ごちそうだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"eh_feasttray.2": {
+"en": "Everyone gathers round the feast tray to celebrate Firuz and Yasmin's safe return!",
+"lo": "ທຸກຄົນມາເຕົ້າໂຮມອ້ອມຖາດຂະໜົມເພື່ອສະຫຼອງການກັບມາຢ່າງປອດໄພຂອງຟີຣູຊ ແລະ ຍາສມິນ!",
+"th": "ทุกคนมารวมตัวรอบถาดขนมเพื่อฉลองการกลับมาอย่างปลอดภัยของฟีรูซและยัสมิน!",
+"zh": "大家围着庆典果盘欢聚一堂，庆祝菲鲁兹和雅斯敏平安归来！",
+"ja": "みんなで わけて たべて ぶじに かえった おいわいを するよ！",
+"who": "narrator",
+"tag": "does"
+},
+"eh_feasttray.3": {
+"en": "In Persia, sharing pomegranates and saffron sweets welcomes joy and friendship.",
+"lo": "ໃນເປີເຊຍ ການແບ່ງປັນໝາກພິລາ ແລະ ຂະໜົມຫຍ້າຝຣັ່ນໝາຍເຖິງຄວາມສຸກ ແລະ ມິດຕະພາບ.",
+"th": "ในเปอร์เซีย การแบ่งปันทับทิมและขนมหญ้าฝรั่นหมายถึงความสุขและมิตรภาพ",
+"zh": "在波斯，与亲友分享红石榴和藏红花糕点象征着喜悦与友谊。",
+"ja": "あまい おかしを わけあうのは なかよしの しるしなんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"eh_feasttray.4": {
+"en": "Delicate rose petals decorate the rim of the shining brass tray.",
+"lo": "ກີບດອກກຸຫຼາບອ່ອນໆປະດັບຢູ່ຕາມຂອບຖາດທອງເຫຼືອງເຫຼື້ອມໃສ.",
+"th": "กลีบดอกกุหลาบอ่อนๆ ประดับอยู่ตามขอบถาดทองเหลืองเงางาม",
+"zh": "娇嫩的玫瑰花瓣温柔点缀在闪亮的黄铜果盘边缘。",
+"ja": "ばらの はなびらが ぼんの ふちに きれいに かざって あるよ。",
+"who": "narrator",
+"tag": "looks"
+}
+},
+"chars": {},
+"pools": {
+"eh_pavilion": [
+"eh_pavilion.0",
+"eh_pavilion.1",
+"eh_pavilion.2",
+"eh_pavilion.3",
+"eh_pavilion.4"
+],
+"eh_cypress": [
+"eh_cypress.0",
+"eh_cypress.1",
+"eh_cypress.2",
+"eh_cypress.3",
+"eh_cypress.4"
+],
+"eh_gardenwall": [
+"eh_gardenwall.0",
+"eh_gardenwall.1",
+"eh_gardenwall.2",
+"eh_gardenwall.3",
+"eh_gardenwall.4"
+],
+"eh_almondtree": [
+"eh_almondtree.0",
+"eh_almondtree.1",
+"eh_almondtree.2",
+"eh_almondtree.3",
+"eh_almondtree.4"
+],
+"eh_pomegranate": [
+"eh_pomegranate.0",
+"eh_pomegranate.1",
+"eh_pomegranate.2",
+"eh_pomegranate.3",
+"eh_pomegranate.4"
+],
+"eh_sabur": [
+"eh_sabur.0",
+"eh_sabur.1",
+"eh_sabur.2",
+"eh_sabur.3",
+"eh_sabur.4",
+"eh_sabur.5",
+"eh_sabur.6",
+"eh_sabur.7",
+"eh_sabur.8",
+"eh_sabur.9"
+],
+"eh_firuz": [
+"eh_firuz.0",
+"eh_firuz.1",
+"eh_firuz.2",
+"eh_firuz.3",
+"eh_firuz.4",
+"eh_firuz.5",
+"eh_firuz.6",
+"eh_firuz.7",
+"eh_firuz.8",
+"eh_firuz.9",
+"eh_firuz.10"
+],
+"eh_hakim": [
+"eh_hakim.0",
+"eh_hakim.1",
+"eh_hakim.2",
+"eh_hakim.3",
+"eh_hakim.4",
+"eh_hakim.5",
+"eh_hakim.6",
+"eh_hakim.7",
+"eh_hakim.8",
+"eh_hakim.9"
+],
+"eh_horse": [
+"eh_horse.0",
+"eh_horse.1",
+"eh_horse.2",
+"eh_horse.3",
+"eh_horse.4",
+"eh_horse.5",
+"eh_horse.6",
+"eh_horse.7",
+"eh_horse.8",
+"eh_horse.9"
+],
+"eh_peacock": [
+"eh_peacock.0",
+"eh_peacock.1",
+"eh_peacock.2",
+"eh_peacock.3",
+"eh_peacock.4",
+"eh_peacock.5"
+],
+"eh_springlantern": [
+"eh_springlantern.0",
+"eh_springlantern.1",
+"eh_springlantern.2",
+"eh_springlantern.3",
+"eh_springlantern.4"
+],
+"eh_cat": [
+"eh_cat.0",
+"eh_cat.1",
+"eh_cat.2",
+"eh_cat.3",
+"eh_cat.4",
+"eh_cat.5"
+],
+"eh_frog": [
+"eh_frog.0",
+"eh_frog.1",
+"eh_frog.2",
+"eh_frog.3",
+"eh_frog.4",
+"eh_frog.5"
+],
+"eh_butterfly": [
+"eh_butterfly.0",
+"eh_butterfly.1",
+"eh_butterfly.2",
+"eh_butterfly.3",
+"eh_butterfly.4",
+"eh_butterfly.5"
+],
+"eh_fountain": [
+"eh_fountain.0",
+"eh_fountain.1",
+"eh_fountain.2",
+"eh_fountain.3",
+"eh_fountain.4"
+],
+"eh_roseshurb": [
+"eh_roseshurb.0",
+"eh_roseshurb.1",
+"eh_roseshurb.2",
+"eh_roseshurb.3",
+"eh_roseshurb.4"
+],
+"eh_brassewer": [
+"eh_brassewer.0",
+"eh_brassewer.1",
+"eh_brassewer.2",
+"eh_brassewer.3",
+"eh_brassewer.4"
+],
+"eh_carvedbench": [
+"eh_carvedbench.0",
+"eh_carvedbench.1",
+"eh_carvedbench.2",
+"eh_carvedbench.3",
+"eh_carvedbench.4"
+],
+"eh_tulips": [
+"eh_tulips.0",
+"eh_tulips.1",
+"eh_tulips.2",
+"eh_tulips.3",
+"eh_tulips.4"
+],
+"eh_courtyardsky": [
+"eh_courtyardsky.0",
+"eh_courtyardsky.1",
+"eh_courtyardsky.2",
+"eh_courtyardsky.3",
+"eh_courtyardsky.4"
+],
+"eh_shirazdomes": [
+"eh_shirazdomes.0",
+"eh_shirazdomes.1",
+"eh_shirazdomes.2",
+"eh_shirazdomes.3",
+"eh_shirazdomes.4"
+],
+"eh_palacearch": [
+"eh_palacearch.0",
+"eh_palacearch.1",
+"eh_palacearch.2",
+"eh_palacearch.3",
+"eh_palacearch.4"
+],
+"eh_sunpeg": [
+"eh_sunpeg.0",
+"eh_sunpeg.1",
+"eh_sunpeg.2",
+"eh_sunpeg.3",
+"eh_sunpeg.4"
+],
+"eh_petalbasket": [
+"eh_petalbasket.0",
+"eh_petalbasket.1",
+"eh_petalbasket.2",
+"eh_petalbasket.3",
+"eh_petalbasket.4"
+],
+"eh_snowpeaks": [
+"eh_snowpeaks.0",
+"eh_snowpeaks.1",
+"eh_snowpeaks.2",
+"eh_snowpeaks.3",
+"eh_snowpeaks.4"
+],
+"eh_cloudbank": [
+"eh_cloudbank.0",
+"eh_cloudbank.1",
+"eh_cloudbank.2",
+"eh_cloudbank.3",
+"eh_cloudbank.4"
+],
+"eh_cragspire": [
+"eh_cragspire.0",
+"eh_cragspire.1",
+"eh_cragspire.2",
+"eh_cragspire.3",
+"eh_cragspire.4"
+],
+"eh_pinecrag": [
+"eh_pinecrag.0",
+"eh_pinecrag.1",
+"eh_pinecrag.2",
+"eh_pinecrag.3",
+"eh_pinecrag.4"
+],
+"eh_crane": [
+"eh_crane.0",
+"eh_crane.1",
+"eh_crane.2",
+"eh_crane.3",
+"eh_crane.4",
+"eh_crane.5"
+],
+"eh_windpuff": [
+"eh_windpuff.0",
+"eh_windpuff.1",
+"eh_windpuff.2",
+"eh_windpuff.3",
+"eh_windpuff.4"
+],
+"eh_mist": [
+"eh_mist.0",
+"eh_mist.1",
+"eh_mist.2",
+"eh_mist.3",
+"eh_mist.4"
+],
+"eh_skywaysky": [
+"eh_skywaysky.0",
+"eh_skywaysky.1",
+"eh_skywaysky.2",
+"eh_skywaysky.3",
+"eh_skywaysky.4"
+],
+"eh_ridgearch": [
+"eh_ridgearch.0",
+"eh_ridgearch.1",
+"eh_ridgearch.2",
+"eh_ridgearch.3",
+"eh_ridgearch.4"
+],
+"eh_crescentmoon": [
+"eh_crescentmoon.0",
+"eh_crescentmoon.1",
+"eh_crescentmoon.2",
+"eh_crescentmoon.3",
+"eh_crescentmoon.4"
+],
+"eh_distanttower": [
+"eh_distanttower.0",
+"eh_distanttower.1",
+"eh_distanttower.2",
+"eh_distanttower.3",
+"eh_distanttower.4"
+],
+"eh_guidestar": [
+"eh_guidestar.0",
+"eh_guidestar.1",
+"eh_guidestar.2",
+"eh_guidestar.3",
+"eh_guidestar.4"
+],
+"eh_dusksky": [
+"eh_dusksky.0",
+"eh_dusksky.1",
+"eh_dusksky.2",
+"eh_dusksky.3",
+"eh_dusksky.4"
+],
+"eh_rooftopturret": [
+"eh_rooftopturret.0",
+"eh_rooftopturret.1",
+"eh_rooftopturret.2",
+"eh_rooftopturret.3",
+"eh_rooftopturret.4"
+],
+"eh_jasminerail": [
+"eh_jasminerail.0",
+"eh_jasminerail.1",
+"eh_jasminerail.2",
+"eh_jasminerail.3",
+"eh_jasminerail.4"
+],
+"eh_parapetkiosk": [
+"eh_parapetkiosk.0",
+"eh_parapetkiosk.1",
+"eh_parapetkiosk.2",
+"eh_parapetkiosk.3",
+"eh_parapetkiosk.4"
+],
+"eh_jasminearbor": [
+"eh_jasminearbor.0",
+"eh_jasminearbor.1",
+"eh_jasminearbor.2",
+"eh_jasminearbor.3",
+"eh_jasminearbor.4"
+],
+"eh_yasmin": [
+"eh_yasmin.0",
+"eh_yasmin.1",
+"eh_yasmin.2",
+"eh_yasmin.3",
+"eh_yasmin.4",
+"eh_yasmin.5",
+"eh_yasmin.6",
+"eh_yasmin.7",
+"eh_yasmin.8",
+"eh_yasmin.9"
+],
+"eh_astrolabe": [
+"eh_astrolabe.0",
+"eh_astrolabe.1",
+"eh_astrolabe.2",
+"eh_astrolabe.3",
+"eh_astrolabe.4"
+],
+"eh_starlantern": [
+"eh_starlantern.0",
+"eh_starlantern.1",
+"eh_starlantern.2",
+"eh_starlantern.3",
+"eh_starlantern.4"
+],
+"eh_stargear": [
+"eh_stargear.0",
+"eh_stargear.1",
+"eh_stargear.2",
+"eh_stargear.3",
+"eh_stargear.4"
+],
+"eh_hoopoe": [
+"eh_hoopoe.0",
+"eh_hoopoe.1",
+"eh_hoopoe.2",
+"eh_hoopoe.3",
+"eh_hoopoe.4",
+"eh_hoopoe.5"
+],
+"eh_marbleplinth": [
+"eh_marbleplinth.0",
+"eh_marbleplinth.1",
+"eh_marbleplinth.2",
+"eh_marbleplinth.3",
+"eh_marbleplinth.4"
+],
+"eh_jasmineplanter": [
+"eh_jasmineplanter.0",
+"eh_jasmineplanter.1",
+"eh_jasmineplanter.2",
+"eh_jasmineplanter.3",
+"eh_jasmineplanter.4"
+],
+"eh_starscrolls": [
+"eh_starscrolls.0",
+"eh_starscrolls.1",
+"eh_starscrolls.2",
+"eh_starscrolls.3",
+"eh_starscrolls.4"
+],
+"eh_tiledseat": [
+"eh_tiledseat.0",
+"eh_tiledseat.1",
+"eh_tiledseat.2",
+"eh_tiledseat.3",
+"eh_tiledseat.4"
+],
+"eh_cushiontray": [
+"eh_cushiontray.0",
+"eh_cushiontray.1",
+"eh_cushiontray.2",
+"eh_cushiontray.3",
+"eh_cushiontray.4"
+],
+"eh_valleystars": [
+"eh_valleystars.0",
+"eh_valleystars.1",
+"eh_valleystars.2",
+"eh_valleystars.3",
+"eh_valleystars.4"
+],
+"eh_jasminetrellis": [
+"eh_jasminetrellis.0",
+"eh_jasminetrellis.1",
+"eh_jasminetrellis.2",
+"eh_jasminetrellis.3",
+"eh_jasminetrellis.4"
+],
+"eh_nightsky": [
+"eh_nightsky.0",
+"eh_nightsky.1",
+"eh_nightsky.2",
+"eh_nightsky.3",
+"eh_nightsky.4"
+],
+"eh_gearchest": [
+"eh_gearchest.0",
+"eh_gearchest.1",
+"eh_gearchest.2",
+"eh_gearchest.3",
+"eh_gearchest.4"
+],
+"eh_brassgear": [
+"eh_brassgear.0",
+"eh_brassgear.1",
+"eh_brassgear.2",
+"eh_brassgear.3",
+"eh_brassgear.4"
+],
+"eh_gearpin": [
+"eh_gearpin.0",
+"eh_gearpin.1",
+"eh_gearpin.2",
+"eh_gearpin.3",
+"eh_gearpin.4"
+],
+"eh_stormcloud": [
+"eh_stormcloud.0",
+"eh_stormcloud.1",
+"eh_stormcloud.2",
+"eh_stormcloud.3",
+"eh_stormcloud.4"
+],
+"eh_terracesky": [
+"eh_terracesky.0",
+"eh_terracesky.1",
+"eh_terracesky.2",
+"eh_terracesky.3",
+"eh_terracesky.4"
+],
+"eh_eveningstar": [
+"eh_eveningstar.0",
+"eh_eveningstar.1",
+"eh_eveningstar.2",
+"eh_eveningstar.3",
+"eh_eveningstar.4"
+],
+"eh_torchglow": [
+"eh_torchglow.0",
+"eh_torchglow.1",
+"eh_torchglow.2",
+"eh_torchglow.3",
+"eh_torchglow.4"
+],
+"eh_brazierdark": [
+"eh_brazierdark.0",
+"eh_brazierdark.1",
+"eh_brazierdark.2",
+"eh_brazierdark.3",
+"eh_brazierdark.4"
+],
+"eh_brazierlit": [
+"eh_brazierlit.0",
+"eh_brazierlit.1",
+"eh_brazierlit.2",
+"eh_brazierlit.3",
+"eh_brazierlit.4"
+],
+"eh_landingstone": [
+"eh_landingstone.0",
+"eh_landingstone.1",
+"eh_landingstone.2",
+"eh_landingstone.3",
+"eh_landingstone.4"
+],
+"eh_sunsign": [
+"eh_sunsign.0",
+"eh_sunsign.1",
+"eh_sunsign.2",
+"eh_sunsign.3",
+"eh_sunsign.4"
+],
+"eh_starcompass": [
+"eh_starcompass.0",
+"eh_starcompass.1",
+"eh_starcompass.2",
+"eh_starcompass.3",
+"eh_starcompass.4"
+],
+"eh_moonsign": [
+"eh_moonsign.0",
+"eh_moonsign.1",
+"eh_moonsign.2",
+"eh_moonsign.3",
+"eh_moonsign.4"
+],
+"eh_saddlemount": [
+"eh_saddlemount.0",
+"eh_saddlemount.1",
+"eh_saddlemount.2",
+"eh_saddlemount.3",
+"eh_saddlemount.4"
+],
+"eh_silkcushion": [
+"eh_silkcushion.0",
+"eh_silkcushion.1",
+"eh_silkcushion.2",
+"eh_silkcushion.3",
+"eh_silkcushion.4"
+],
+"eh_feasttray": [
+"eh_feasttray.0",
+"eh_feasttray.1",
+"eh_feasttray.2",
+"eh_feasttray.3",
+"eh_feasttray.4"
+]
+},
+"animals": [],
+"word": {
+"eh_pavilion": {
+"en": "tiled pavilion",
+"lo": "ສາລາກະເບື້ອງ",
+"th": "ศาลากระเบื้อง",
+"zh": "彩砖凉亭",
+"ja": "たいるの あずまや"
+},
+"eh_cypress": {
+"en": "cypress tree",
+"lo": "ຕົ້ນໄຊເປຣສ",
+"th": "ต้นไซเปรส",
+"zh": "波斯柏树",
+"ja": "いとすぎの き"
+},
+"eh_gardenwall": {
+"en": "rose parapet",
+"lo": "ກຳແພງດອກກຸຫຼາບ",
+"th": "กำแพงกุหลาบ",
+"zh": "玫瑰矮墙",
+"ja": "ばらの かべ"
+},
+"eh_almondtree": {
+"en": "almond tree",
+"lo": "ຕົ້ນດອກອາລມອນ",
+"th": "ต้นดอกอัลมอนด์",
+"zh": "粉红杏花树",
+"ja": "はなの さく き"
+},
+"eh_pomegranate": {
+"en": "pomegranate arch",
+"lo": "ຊຸ້ມໝາກພິລາ",
+"th": "ซุ้มต้นทับทิม",
+"zh": "石榴拱廊",
+"ja": "ざくろの き"
+},
+"eh_sabur": {
+"en": "King Sabur",
+"lo": "ພະລາຊາຊາບູຣ",
+"th": "พระราชาซาบูร์",
+"zh": "萨布尔国王",
+"ja": "サブールおう"
+},
+"eh_firuz": {
+"en": "Prince Firuz",
+"lo": "ເຈົ້າຊາຍຟີຣູຊ",
+"th": "เจ้าชายฟีรูซ",
+"zh": "菲鲁兹王子",
+"ja": "フィールーズおうじ"
+},
+"eh_hakim": {
+"en": "Master Hakim",
+"lo": "ຊ່າງຮາກີມ",
+"th": "ช่างฮากีม",
+"zh": "哈基姆大师",
+"ja": "ハキームさん"
+},
+"eh_horse": {
+"en": "Ebony Horse",
+"lo": "ມ້າໄມ້ດຳ",
+"th": "ม้าไม้ดำ",
+"zh": "乌木神马",
+"ja": "くろきの うま"
+},
+"eh_peacock": {
+"en": "clockwork peacock",
+"lo": "ນົກຍູງກົນໄກ",
+"th": "นกยูงกลไก",
+"zh": "发条孔雀",
+"ja": "からくり くじゃく"
+},
+"eh_springlantern": {
+"en": "spring lantern",
+"lo": "ໂຄມໄຟລະດູບານໃໝ່",
+"th": "โคมไฟฤดูใบไม้ผลิ",
+"zh": "迎春灯笼",
+"ja": "はるの らんたん"
+},
+"eh_cat": {
+"en": "courtyard cat",
+"lo": "ແມວລາຍ",
+"th": "แมวลาย",
+"zh": "虎斑猫",
+"ja": "しまねこ"
+},
+"eh_frog": {
+"en": "garden frog",
+"lo": "ກົບນ້ອຍ",
+"th": "กบน้อย",
+"zh": "小青蛙",
+"ja": "ちいさな かえる"
+},
+"eh_butterfly": {
+"en": "spring butterfly",
+"lo": "ແມງກະເບື້ອ",
+"th": "ผีเสื้อ",
+"zh": "春蝶",
+"ja": "ちょうちょ"
+},
+"eh_fountain": {
+"en": "courtyard fountain",
+"lo": "ນ້ຳພຸເດີ່ນວັງ",
+"th": "น้ำพุในลานวัง",
+"zh": "庭院喷泉",
+"ja": "にわの ふんすい"
+},
+"eh_roseshurb": {
+"en": "rose bush",
+"lo": "ພຸ່ມດອກກຸຫຼາບ",
+"th": "พุ่มดอกกุหลาบ",
+"zh": "玫瑰花丛",
+"ja": "ばらの しげみ"
+},
+"eh_brassewer": {
+"en": "brass ewer",
+"lo": "ໂຖນ້ຳທອງເຫຼືອງ",
+"th": "เหยือกน้ำทองเหลือง",
+"zh": "黄铜水壶",
+"ja": "しんちゅうの みずさし"
+},
+"eh_carvedbench": {
+"en": "stone bench",
+"lo": "ຕັ່ງຫີນແກະສະຫຼັກ",
+"th": "ม้านั่งหินแกะสลัก",
+"zh": "雕花石凳",
+"ja": "いしの べんち"
+},
+"eh_tulips": {
+"en": "spring tulips",
+"lo": "ດອກທິວລິບ",
+"th": "ดอกทิวลิป",
+"zh": "春日郁金香",
+"ja": "ちゅーりっぷ"
+},
+"eh_courtyardsky": {
+"en": "Shiraz sky",
+"lo": "ທ້ອງຟ້າຊີຣາຊ",
+"th": "ท้องฟ้าชีราซ",
+"zh": "设拉子晴空",
+"ja": "シーラーズの そら"
+},
+"eh_shirazdomes": {
+"en": "Shiraz domes",
+"lo": "ຫໍໂດມຊີຣາຊ",
+"th": "โดมเมืองชีราซ",
+"zh": "设拉子穹顶",
+"ja": "シーラーズの どーむ"
+},
+"eh_palacearch": {
+"en": "palace arch",
+"lo": "ປະຕູໂຄ້ງວັງ",
+"th": "ซุ้มประตูวัง",
+"zh": "王宫拱门",
+"ja": "きゅうでんの もん"
+},
+"eh_sunpeg": {
+"en": "sun peg",
+"lo": "ສະລັກຕາເວັນ",
+"th": "สลักตะวัน",
+"zh": "太阳旋钮",
+"ja": "たいようの つまみ"
+},
+"eh_petalbasket": {
+"en": "petal basket",
+"lo": "ກະບຸງກີບດອກໄມ້",
+"th": "ตะกร้ากลีบดอกไม้",
+"zh": "花瓣竹篮",
+"ja": "はなびらの かご"
+},
+"eh_snowpeaks": {
+"en": "snowy peaks",
+"lo": "ຍອດພູຫິມະ",
+"th": "ยอดเขาหิมะ",
+"zh": "白雪群峰",
+"ja": "ゆきの やまなみ"
+},
+"eh_cloudbank": {
+"en": "cloud bank",
+"lo": "ທະເລເມກ",
+"th": "ทะเลเมฆ",
+"zh": "绵绵云海",
+"ja": "くもの うみ"
+},
+"eh_cragspire": {
+"en": "snow crag",
+"lo": "ຜາຫິມະ",
+"th": "ผาหิมะ",
+"zh": "雪峰岩柱",
+"ja": "ゆきの いわやま"
+},
+"eh_pinecrag": {
+"en": "alpine pine",
+"lo": "ຕົ້ນແປກພູສູງ",
+"th": "ต้นสนภูเขา",
+"zh": "高山青松",
+"ja": "やまの まつのき"
+},
+"eh_crane": {
+"en": "white crane",
+"lo": "ນົກກະສາຂາວ",
+"th": "นกกระเรียนขาว",
+"zh": "白鹤",
+"ja": "しろい つる"
+},
+"eh_windpuff": {
+"en": "cloud puff",
+"lo": "ກ້ອນເມກຂາວ",
+"th": "ปุยเมฆขาว",
+"zh": "白云团",
+"ja": "しろい くも"
+},
+"eh_mist": {
+"en": "sky mist",
+"lo": "ໝອກເມກຂາວ",
+"th": "หมอกเมฆขาว",
+"zh": "云间轻雾",
+"ja": "しろい きり"
+},
+"eh_skywaysky": {
+"en": "mountain sky",
+"lo": "ທ້ອງຟ້າເໜືອເມກ",
+"th": "ท้องฟ้าเหนือเมฆ",
+"zh": "云端晴空",
+"ja": "くもの うえの そら"
+},
+"eh_ridgearch": {
+"en": "mountain pass",
+"lo": "ຊ່ອງພູສູງ",
+"th": "ช่องเขาสูง",
+"zh": "高山隘口",
+"ja": "たかい とうげ"
+},
+"eh_crescentmoon": {
+"en": "crescent moon",
+"lo": "ດວງຈັນສ້ຽວ",
+"th": "พระจันทร์เสี้ยว",
+"zh": "弯弯新月",
+"ja": "みかづき"
+},
+"eh_distanttower": {
+"en": "marble tower",
+"lo": "ຫໍຄອຍຫີນອ່ອນ",
+"th": "หอคอยหินอ่อน",
+"zh": "大理石塔",
+"ja": "しろい とう"
+},
+"eh_guidestar": {
+"en": "guide star",
+"lo": "ດາວນຳທາງ",
+"th": "ดาวนำทาง",
+"zh": "引路星星",
+"ja": "みちしるべの ほし"
+},
+"eh_dusksky": {
+"en": "sunset sky",
+"lo": "ທ້ອງຟ້າຍາມແລງ",
+"th": "ท้องฟ้ายามเย็น",
+"zh": "晚霞天空",
+"ja": "ゆうやけの そら"
+},
+"eh_rooftopturret": {
+"en": "tiled turret",
+"lo": "ຫໍໂດມເທິງຫຼັງຄາ",
+"th": "หอโดมบนดาดฟ้า",
+"zh": "彩釉圆顶塔",
+"ja": "たいるの やぐら"
+},
+"eh_jasminerail": {
+"en": "marble rail",
+"lo": "ຮາວຫີນອ່ອນ",
+"th": "ราวหินอ่อน",
+"zh": "白玉栏杆",
+"ja": "しろい てすり"
+},
+"eh_parapetkiosk": {
+"en": "garden kiosk",
+"lo": "ສາລາດາດຟ້າ",
+"th": "ศาลาดาดฟ้า",
+"zh": "屋顶花亭",
+"ja": "おくじょうの あずまや"
+},
+"eh_jasminearbor": {
+"en": "jasmine arbor",
+"lo": "ຊຸ້ມມະລິຂາວ",
+"th": "ซุ้มมะลิขาว",
+"zh": "白茉莉花架",
+"ja": "じゃすみんの あーち"
+},
+"eh_yasmin": {
+"en": "Princess Yasmin",
+"lo": "ເຈົ້າຍິງຍາສມິນ",
+"th": "เจ้าหญิงยัสมิน",
+"zh": "雅斯敏公主",
+"ja": "ヤスミンひめ"
+},
+"eh_astrolabe": {
+"en": "brass astrolabe",
+"lo": "ເຄື່ອງວັດດາວ",
+"th": "เครื่องวัดดาว",
+"zh": "黄铜星盘",
+"ja": "ほしの どうぐ"
+},
+"eh_starlantern": {
+"en": "star lantern",
+"lo": "ໂຄມດາວທອງເຫຼືອງ",
+"th": "โคมดาวทองเหลือง",
+"zh": "星形铜灯",
+"ja": "ほしの らんたん"
+},
+"eh_stargear": {
+"en": "star gear",
+"lo": "ກົງຈັກຮູບດາວ",
+"th": "เฟืองรูปดาว",
+"zh": "星形齿轮",
+"ja": "ほしの はぐるま"
+},
+"eh_hoopoe": {
+"en": "crested hoopoe",
+"lo": "ນົກຫົວຂວານ",
+"th": "นกหัวขวาน",
+"zh": "戴胜鸟",
+"ja": "やつがしら"
+},
+"eh_marbleplinth": {
+"en": "marble plinth",
+"lo": "ແທ່ນຫີນອ່ອນ",
+"th": "แท่นหินอ่อน",
+"zh": "大理石台",
+"ja": "しろい いしだい"
+},
+"eh_jasmineplanter": {
+"en": "jasmine planter",
+"lo": "ກະຖາງດອກມະລິ",
+"th": "กระถางดอกมะลิ",
+"zh": "茉莉花盆",
+"ja": "じゃすみんの はち"
+},
+"eh_starscrolls": {
+"en": "star scrolls",
+"lo": "ມ້ວນແຜນທີ່ດາວ",
+"th": "ม้วนแผนที่ดาว",
+"zh": "星图卷轴",
+"ja": "ほしの まきもの"
+},
+"eh_tiledseat": {
+"en": "tiled seat",
+"lo": "ຕັ່ງກະເບື້ອງ",
+"th": "ที่นั่งกระเบื้อง",
+"zh": "彩砖座椅",
+"ja": "たいるの いす"
+},
+"eh_cushiontray": {
+"en": "tea cushions",
+"lo": "ໝອນ ແລະ ຖາດຊາ",
+"th": "หมอนและถาดชา",
+"zh": "茶盘软垫",
+"ja": "おちゃと くっしょん"
+},
+"eh_valleystars": {
+"en": "distant valley",
+"lo": "ຮ່ອມພູໄກ",
+"th": "หุบเขาไกล",
+"zh": "远方山谷",
+"ja": "とおい たに"
+},
+"eh_jasminetrellis": {
+"en": "jasmine arch",
+"lo": "ຊຸ້ມດອກມະລິ",
+"th": "ซุ้มดอกมะลิ",
+"zh": "茉莉拱门",
+"ja": "じゃすみんの もん"
+},
+"eh_nightsky": {
+"en": "starry sky",
+"lo": "ທ້ອງຟ້າຍາມຄ່ຳ",
+"th": "ท้องฟ้ามีดาว",
+"zh": "繁星夜空",
+"ja": "ほしぞら"
+},
+"eh_gearchest": {
+"en": "tool chest",
+"lo": "ຫີບເຄື່ອງມື",
+"th": "หีบเครื่องมือ",
+"zh": "工具木箱",
+"ja": "どうぐばこ"
+},
+"eh_brassgear": {
+"en": "brass gear",
+"lo": "ກົງຈັກທອງເຫຼືອງ",
+"th": "เฟืองทองเหลือง",
+"zh": "黄铜齿轮",
+"ja": "きんいろの はぐるま"
+},
+"eh_gearpin": {
+"en": "gear pin",
+"lo": "ແກນກົງຈັກ",
+"th": "แกนเฟือง",
+"zh": "齿轮轴销",
+"ja": "はぐるまの じく"
+},
+"eh_stormcloud": {
+"en": "storm cloud",
+"lo": "ເມກພາຍຸ",
+"th": "เมฆพายุ",
+"zh": "山风乌云",
+"ja": "あらしの くも"
+},
+"eh_terracesky": {
+"en": "morning sky",
+"lo": "ທ້ອງຟ້າຍາມເຊົ້າ",
+"th": "ท้องฟ้ายามเช้า",
+"zh": "晨曦晴空",
+"ja": "あさの そら"
+},
+"eh_eveningstar": {
+"en": "Evening Star",
+"lo": "ດາວຍາມແລງ",
+"th": "ดาวประจำเมือง",
+"zh": "长庚星",
+"ja": "よいの みょうじょう"
+},
+"eh_torchglow": {
+"en": "warm torch",
+"lo": "ໄຕ້ໄຟອຸ່ນ",
+"th": "คบไฟอุ่น",
+"zh": "温暖火把",
+"ja": "あたたかい たいまつ"
+},
+"eh_brazierdark": {
+"en": "brass brazier",
+"lo": "ເຕົາໄຟທອງເຫຼືອງ",
+"th": "เตาไฟทองเหลือง",
+"zh": "黄铜火盆",
+"ja": "しんちゅうの ひばち"
+},
+"eh_brazierlit": {
+"en": "golden beacon",
+"lo": "ເຕົາໄຟນຳທາງ",
+"th": "เตาไฟนำทาง",
+"zh": "金色火炬",
+"ja": "きんいろの ひばち"
+},
+"eh_landingstone": {
+"en": "landing stone",
+"lo": "ແຜ່ນຫີນລົງຈອດ",
+"th": "แผ่นหินลงจอด",
+"zh": "着陆石板",
+"ja": "ちゃくりくの いし"
+},
+"eh_sunsign": {
+"en": "sun plaque",
+"lo": "ປ້າຍຕາເວັນ",
+"th": "ป้ายตะวัน",
+"zh": "太阳铭牌",
+"ja": "たいようの しるし"
+},
+"eh_starcompass": {
+"en": "star compass",
+"lo": "ເຂັມທິດດາວ",
+"th": "เข็มทิศดาว",
+"zh": "星辰罗盘",
+"ja": "ほしの らしんばん"
+},
+"eh_moonsign": {
+"en": "moon plaque",
+"lo": "ປ້າຍດວງຈັນ",
+"th": "ป้ายดวงจันทร์",
+"zh": "月亮铭牌",
+"ja": "つきの しるし"
+},
+"eh_saddlemount": {
+"en": "saddle mount",
+"lo": "ບ່ອນຕິດເທິງອານ",
+"th": "ที่ติดบนอาน",
+"zh": "鞍座卡槽",
+"ja": "くらの とめぐ"
+},
+"eh_silkcushion": {
+"en": "silk cushion",
+"lo": "ໝອນຜ້າໄໝ",
+"th": "หมอนผ้าไหม",
+"zh": "丝绸软垫",
+"ja": "きぬの くっしょん"
+},
+"eh_feasttray": {
+"en": "feast tray",
+"lo": "ຖາດຂະໜົມ",
+"th": "ถาดขนม",
+"zh": "庆典果盘",
+"ja": "ごちそうの ぼん"
+}
+},
+"map": {
+"pavilion-wing-l": "eh_pavilion",
+"cypress-grove-wing-r": "eh_cypress",
+"garden-wall-row-l": "eh_gardenwall",
+"garden-wall-row-r": "eh_gardenwall",
+"almond-blossom-wing-l": "eh_almondtree",
+"pomegranate-arcade-wing-r": "eh_pomegranate",
+"sabur": "eh_sabur",
+"firuz": "eh_firuz",
+"firuz-clap": "eh_firuz",
+"hakim": "eh_hakim",
+"ebony-horse": "eh_horse",
+"peacock": "eh_peacock",
+"peacock-fan": "eh_peacock",
+"spring-lantern-1": "eh_springlantern",
+"spring-lantern-2": "eh_springlantern",
+"spring-lantern-3": "eh_springlantern",
+"spring-lantern-4": "eh_springlantern",
+"cat": "eh_cat",
+"frog": "eh_frog",
+"butterfly": "eh_butterfly",
+"fountain-basin-l": "eh_fountain",
+"rose-shrub-l": "eh_roseshurb",
+"brass-ewer-l": "eh_brassewer",
+"cypress-leg-l": "eh_cypress",
+"carved-bench-r": "eh_carvedbench",
+"pomegranate-shrub-r": "eh_pomegranate",
+"tulip-clump-r": "eh_tulips",
+"cypress-leg-r": "eh_cypress",
+"sky-courtyard": "eh_courtyardsky",
+"far-shiraz-domes": "eh_shirazdomes",
+"palace-arch": "eh_palacearch",
+"spring-lantern-": "eh_springlantern",
+"hakim-bow": "eh_hakim",
+"horse-firuz": "eh_horse",
+"sun-peg": "eh_sunpeg",
+"petal-basket": "eh_petalbasket",
+"cat-tumble": "eh_cat",
+"snow-peak-wing-l": "eh_snowpeaks",
+"snow-peak-wing-r": "eh_snowpeaks",
+"cloud-ridge-row": "eh_cloudbank",
+"crag-spire-wing-l": "eh_cragspire",
+"wind-crag-wing-r": "eh_pinecrag",
+"horse-firuz-worry": "eh_horse",
+"crane-1": "eh_crane",
+"crane-2": "eh_crane",
+"crane-3": "eh_crane",
+"wind-puff-1": "eh_windpuff",
+"wind-puff-2": "eh_windpuff",
+"wind-puff-3": "eh_windpuff",
+"peak-outcrop-l": "eh_cragspire",
+"alpine-pine-l": "eh_pinecrag",
+"mist-swirl-l": "eh_mist",
+"cloud-leg-l": "eh_cloudbank",
+"peak-outcrop-r": "eh_cragspire",
+"mist-swirl-r": "eh_mist",
+"wind-crest-r": "eh_mist",
+"cloud-leg-r": "eh_cloudbank",
+"sky-skyway": "eh_skywaysky",
+"far-snow-peaks": "eh_snowpeaks",
+"high-ridge-arch": "eh_ridgearch",
+"wind-puff-": "eh_windpuff",
+"crescent-moon": "eh_crescentmoon",
+"distant-tower": "eh_distanttower",
+"guide-star-1": "eh_guidestar",
+"guide-star-2": "eh_guidestar",
+"guide-star-3": "eh_guidestar",
+"guide-star-4": "eh_guidestar",
+"sky-skyway-dusk": "eh_dusksky",
+"guide-star-": "eh_guidestar",
+"dome-turret-wing-l": "eh_rooftopturret",
+"cypress-trellis-wing-r": "eh_cypress",
+"jasmine-rail-row-l": "eh_jasminerail",
+"jasmine-rail-row-r": "eh_jasminerail",
+"parapet-pavilion-wing-l": "eh_parapetkiosk",
+"jasmine-arbor-wing-r": "eh_jasminearbor",
+"yasmin": "eh_yasmin",
+"yasmin-astrolabe": "eh_yasmin",
+"firuz-bow": "eh_firuz",
+"astrolabe-stand": "eh_astrolabe",
+"star-lantern-1": "eh_starlantern",
+"star-lantern-2": "eh_starlantern",
+"star-lantern-3": "eh_starlantern",
+"star-lantern-4": "eh_starlantern",
+"star-gear": "eh_stargear",
+"hoopoe": "eh_hoopoe",
+"marble-plinth-l": "eh_marbleplinth",
+"jasmine-planter-l": "eh_jasmineplanter",
+"star-scrolls-l": "eh_starscrolls",
+"jasmine-leg-l": "eh_jasminearbor",
+"tiled-seat-r": "eh_tiledseat",
+"jasmine-planter-r": "eh_jasmineplanter",
+"cushion-tray-r": "eh_cushiontray",
+"jasmine-leg-r": "eh_jasminearbor",
+"far-valley-stars": "eh_valleystars",
+"jasmine-trellis": "eh_jasminetrellis",
+"sky-terrace-night": "eh_nightsky",
+"star-lantern-": "eh_starlantern",
+"yasmin-kneel": "eh_yasmin",
+"firuz-kneel": "eh_firuz",
+"horse-pair": "eh_horse",
+"gear-chest": "eh_gearchest",
+"gear-small": "eh_brassgear",
+"gear-mid": "eh_brassgear",
+"pin-small": "eh_gearpin",
+"pin-mid": "eh_gearpin",
+"pin-star": "eh_gearpin",
+"storm-cloud-1": "eh_stormcloud",
+"storm-cloud-2": "eh_stormcloud",
+"hoopoe-hat": "eh_hoopoe",
+"sky-terrace": "eh_terracesky",
+"horse-pair-aim": "eh_horse",
+"storm-cloud-3": "eh_stormcloud",
+"evening-star": "eh_eveningstar",
+"sky-skyway-night": "eh_nightsky",
+"hakim-sorry": "eh_hakim",
+"torch-glow": "eh_torchglow",
+"brazier-dark-1": "eh_brazierdark",
+"brazier-dark-2": "eh_brazierdark",
+"brazier-dark-3": "eh_brazierdark",
+"brazier-dark-4": "eh_brazierdark",
+"brazier-dark-5": "eh_brazierdark",
+"brazier-lit-1": "eh_brazierlit",
+"brazier-lit-2": "eh_brazierlit",
+"brazier-lit-3": "eh_brazierlit",
+"brazier-lit-4": "eh_brazierlit",
+"brazier-lit-5": "eh_brazierlit",
+"sky-courtyard-night": "eh_nightsky",
+"brazier-dark-": "eh_brazierdark",
+"sabur-hug": "eh_sabur",
+"landing-stone-1": "eh_landingstone",
+"landing-stone-2": "eh_landingstone",
+"landing-stone-3": "eh_landingstone",
+"landing-stone-": "eh_landingstone",
+"horse-compass": "eh_horse",
+"sun-sign": "eh_sunsign",
+"star-compass": "eh_starcompass",
+"moon-sign": "eh_moonsign",
+"mount-sun": "eh_saddlemount",
+"mount-center": "eh_saddlemount",
+"mount-moon": "eh_saddlemount",
+"silk-cushion": "eh_silkcushion",
+"cushion-pair": "eh_silkcushion",
+"feast-tray": "eh_feasttray"
+},
+"maps": {}
+}
