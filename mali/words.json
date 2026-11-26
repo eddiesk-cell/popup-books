@@ -598,7 +598,7 @@
 },
 "village.5": {
 "en": "Neighbours say hello to each other.",
-"lo": "ຄົນບ້ານໃກ້ເຮືອນຄຽງທັກທາຍກັນ.",
+"lo": "ເພື່ອນບ້ານທັກທາຍກັນ.",
 "th": "เพื่อนบ้านทักทายกัน",
 "zh": "邻居们互相打招呼。",
 "ja": "おとなりさんは あいさつを かわすよ。",
@@ -1054,6 +1054,81 @@
 "ja": "かぜが はなびらを とおくへ はこぶよ。",
 "who": "narrator",
 "tag": "does"
+},
+"lotus.0": {
+"en": "A lotus flower. A lotus is a flower that grows in water.",
+"lo": "ດອກບົວ. ດອກບົວເປັນດອກໄມ້ທີ່ເກີດຢູ່ໃນນ້ຳ.",
+"th": "ดอกบัว ดอกบัวเป็นดอกไม้ที่ขึ้นอยู่ในน้ำ",
+"zh": "莲花。莲花是长在水里的花。",
+"ja": "はす。はすは みずの なかに さく はなだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lotus.1": {
+"en": "A lotus is a pretty flower.",
+"lo": "ດອກບົວເປັນດອກໄມ້ທີ່ງາມ.",
+"th": "ดอกบัวเป็นดอกไม้ที่สวย",
+"zh": "莲花是一种漂亮的花。",
+"ja": "はすは きれいな はなだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lotus.2": {
+"en": "The lotus flowers sing softly.",
+"lo": "ດອກບົວຮ້ອງເພງຄ່ອຍໆ.",
+"th": "ดอกบัวร้องเพลงเบาๆ",
+"zh": "莲花轻轻地唱歌。",
+"ja": "はすの はなが やさしく うたうよ。",
+"who": "narrator",
+"sp": [
+"s05"
+],
+"tag": "does"
+},
+"lotus.3": {
+"en": "Lotus leaves are big and round.",
+"lo": "ໃບບົວໃຫຍ່ ແລະ ມົນ.",
+"th": "ใบบัวใหญ่และกลม",
+"zh": "荷叶又大又圆。",
+"ja": "はすの はは おおきくて まるいよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lotus.4": {
+"en": "A lotus has many petals.",
+"lo": "ດອກບົວມີກີບຫຼາຍກີບ.",
+"th": "ดอกบัวมีหลายกลีบ",
+"zh": "莲花有很多花瓣。",
+"ja": "はすの はなには はなびらが たくさん あるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lotus.5": {
+"en": "Lotus flowers open in the morning.",
+"lo": "ດອກບົວບານໃນຕອນເຊົ້າ.",
+"th": "ดอกบัวบานตอนเช้า",
+"zh": "莲花在早晨开放。",
+"ja": "はすの はなは あさに ひらくよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lotus.6": {
+"en": "Lotus flowers can be pink or white.",
+"lo": "ດອກບົວມີສີບົວ ຫຼື ສີຂາວ.",
+"th": "ดอกบัวมีสีชมพูหรือสีขาว",
+"zh": "莲花有粉色的，也有白色的。",
+"ja": "はすの はなは ピンクや しろだよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"lotus.7": {
+"en": "People give lotus flowers as gifts at the temple.",
+"lo": "ຄົນຖວາຍດອກບົວທີ່ວັດ.",
+"th": "ผู้คนนำดอกบัวไปถวายที่วัด",
+"zh": "人们会把莲花送到寺庙里供奉。",
+"ja": "ひとびとは おてらに はすの はなを そなえるよ。",
+"who": "narrator",
+"tag": "culture"
 },
 "candle.0": {
 "en": "A candle. A candle is wax with a flame on top.",
@@ -1759,6 +1834,72 @@
 "who": "narrator",
 "tag": "does"
 },
+"lantern.0": {
+"en": "A lantern. A lantern is a light you can carry or hang.",
+"lo": "ໂຄມໄຟ. ໂຄມໄຟແມ່ນແສງໄຟທີ່ຖື ຫຼື ແຂວນໄດ້.",
+"th": "โคมไฟ โคมไฟคือแสงสว่างที่ถือหรือแขวนได้",
+"zh": "灯笼。灯笼是可以提着或挂起来的灯。",
+"ja": "ちょうちん。ちょうちんは もったり つるしたり できる あかりだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"lantern.1": {
+"en": "A lantern gives light.",
+"lo": "ໂຄມໄຟໃຫ້ແສງ.",
+"th": "โคมไฟให้แสงสว่าง",
+"zh": "灯笼会发光。",
+"ja": "ちょうちんは ひかりを だすよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lantern.2": {
+"en": "Lanterns glow in the dark.",
+"lo": "ໂຄມໄຟສ່ອງແສງໃນຄວາມມືດ.",
+"th": "โคมไฟส่องแสงในความมืด",
+"zh": "灯笼在黑暗中发亮。",
+"ja": "ちょうちんは くらい ところで ひかるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lantern.3": {
+"en": "Glow, glow!",
+"lo": "ເຮືອງໆ!",
+"th": "เรืองรอง!",
+"zh": "亮晶晶！",
+"ja": "ぴかぴか！",
+"who": "narrator",
+"tag": "sound"
+},
+"lantern.4": {
+"en": "A lantern can be made of paper.",
+"lo": "ໂຄມໄຟເຮັດຈາກເຈ້ຍໄດ້.",
+"th": "โคมไฟทำจากกระดาษได้",
+"zh": "灯笼可以用纸做。",
+"ja": "ちょうちんは かみで つくれるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"lantern.5": {
+"en": "So many lanterns!",
+"lo": "ໂຄມໄຟຫຼາຍແທ້ໆ!",
+"th": "โคมไฟเยอะแยะเลย!",
+"zh": "好多灯笼啊！",
+"ja": "ちょうちんが いっぱい！",
+"who": "narrator",
+"sp": [
+"s03"
+],
+"tag": "looks"
+},
+"lantern.6": {
+"en": "At festivals, people light paper lanterns.",
+"lo": "ໃນງານບຸນ, ຄົນຈູດໂຄມໄຟເຈ້ຍ.",
+"th": "ในงานเทศกาล ผู้คนจุดโคมกระดาษ",
+"zh": "在节日里，人们会点亮纸灯笼。",
+"ja": "おまつりでは、ひとびとが かみの ちょうちんに あかりを ともすよ。",
+"who": "narrator",
+"tag": "culture"
+},
 "moonstone.0": {
 "en": "A moon stone. A moon stone is a stone made of moonlight.",
 "lo": "ຫີນແສງເດືອນ. ຫີນແສງເດືອນແມ່ນກ້ອນຫີນທີ່ເຮັດຈາກແສງເດືອນ.",
@@ -1975,60 +2116,6 @@
 "who": "narrator",
 "tag": "culture"
 },
-"turtle.0": {
-"en": "A turtle. A turtle is a slow animal with a shell.",
-"lo": "ເຕົ່າ. ເຕົ່າເປັນສັດຍ່າງຊ້າທີ່ມີກະດອງ.",
-"th": "เต่า เต่าเป็นสัตว์เดินช้าที่มีกระดอง",
-"zh": "乌龟。乌龟是背着壳的慢动物。",
-"ja": "カメ。カメは こうらを もつ ゆっくりな どうぶつだよ。",
-"who": "narrator",
-"tag": "what"
-},
-"turtle.1": {
-"en": "Hello, turtle!",
-"lo": "ສະບາຍດີ ເຕົ່າ!",
-"th": "สวัสดีเต่า!",
-"zh": "你好，乌龟！",
-"ja": "こんにちは、カメ！",
-"who": "narrator",
-"tag": "greet"
-},
-"turtle.2": {
-"en": "A turtle can hide in its shell.",
-"lo": "ເຕົ່າຫຼົບຢູ່ໃນກະດອງໄດ້.",
-"th": "เต่าซ่อนตัวในกระดองได้",
-"zh": "乌龟能躲进壳里。",
-"ja": "カメは こうらに かくれられるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"turtle.3": {
-"en": "A turtle can swim.",
-"lo": "ເຕົ່າລອຍນ້ຳໄດ້.",
-"th": "เต่าว่ายน้ำได้",
-"zh": "乌龟会游泳。",
-"ja": "カメは およげるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"turtle.4": {
-"en": "A turtle eats plants and little animals.",
-"lo": "ເຕົ່າກິນພືດ ແລະ ສັດນ້ອຍ.",
-"th": "เต่ากินพืชและสัตว์ตัวเล็กๆ",
-"zh": "乌龟吃植物和小动物。",
-"ja": "カメは くさや ちいさな どうぶつを たべるよ。",
-"who": "narrator",
-"tag": "fact"
-},
-"turtle.5": {
-"en": "A turtle lays eggs.",
-"lo": "ເຕົ່າວາງໄຂ່.",
-"th": "เต่าวางไข่",
-"zh": "乌龟会下蛋。",
-"ja": "カメは たまごを うむよ。",
-"who": "narrator",
-"tag": "fact"
-},
 "moth.0": {
 "en": "A moth. A moth is an insect like a butterfly.",
 "lo": "ແມງກະເບື້ອກາງຄືນ. ແມງກະເບື້ອກາງຄືນແມ່ນແມງໄມ້ຄືແມງກະເບື້ອ.",
@@ -2089,6 +2176,60 @@
 "th": "ผีเสื้อกลางคืนพักตอนกลางวันและบินตอนกลางคืน",
 "zh": "飞蛾白天休息，夜里飞。",
 "ja": "ガは ひるまは やすんで、よるに とぶよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"turtle.0": {
+"en": "A turtle. A turtle is a slow animal with a shell.",
+"lo": "ເຕົ່າ. ເຕົ່າເປັນສັດຍ່າງຊ້າທີ່ມີກະດອງ.",
+"th": "เต่า เต่าเป็นสัตว์เดินช้าที่มีกระดอง",
+"zh": "乌龟。乌龟是背着壳的慢动物。",
+"ja": "カメ。カメは こうらを もつ ゆっくりな どうぶつだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"turtle.1": {
+"en": "Hello, turtle!",
+"lo": "ສະບາຍດີ ເຕົ່າ!",
+"th": "สวัสดีเต่า!",
+"zh": "你好，乌龟！",
+"ja": "こんにちは、カメ！",
+"who": "narrator",
+"tag": "greet"
+},
+"turtle.2": {
+"en": "A turtle can hide in its shell.",
+"lo": "ເຕົ່າຫຼົບຢູ່ໃນກະດອງໄດ້.",
+"th": "เต่าซ่อนตัวในกระดองได้",
+"zh": "乌龟能躲进壳里。",
+"ja": "カメは こうらに かくれられるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.3": {
+"en": "A turtle can swim.",
+"lo": "ເຕົ່າລອຍນ້ຳໄດ້.",
+"th": "เต่าว่ายน้ำได้",
+"zh": "乌龟会游泳。",
+"ja": "カメは およげるよ。",
+"who": "narrator",
+"tag": "does"
+},
+"turtle.4": {
+"en": "A turtle eats plants and little animals.",
+"lo": "ເຕົ່າກິນພືດ ແລະ ສັດນ້ອຍ.",
+"th": "เต่ากินพืชและสัตว์ตัวเล็กๆ",
+"zh": "乌龟吃植物和小动物。",
+"ja": "カメは くさや ちいさな どうぶつを たべるよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"turtle.5": {
+"en": "A turtle lays eggs.",
+"lo": "ເຕົ່າວາງໄຂ່.",
+"th": "เต่าวางไข่",
+"zh": "乌龟会下蛋。",
+"ja": "カメは たまごを うむよ。",
 "who": "narrator",
 "tag": "fact"
 },
@@ -2214,7 +2355,7 @@
 },
 "lotusspirits.0": {
 "en": "Lotus spirits. They are little spirits who live on the lotus flowers.",
-"lo": "ເທວະດານ້ອຍເທິງດອກບົວ. ພວກລາວເປັນເທວະດານ້ອຍທີ່ອາໄສຢູ່ເທິງດອກບົວ.",
+"lo": "ເທວະດານ້ອຍເທິງດອກບົວ. ພວກເຂົາເປັນເທວະດານ້ອຍທີ່ອາໄສຢູ່ເທິງດອກບົວ.",
 "th": "ภูตน้อยบนดอกบัว พวกเขาเป็นภูตน้อยที่อาศัยอยู่บนดอกบัว",
 "zh": "莲花上的小精灵。它们是住在莲花上的小精灵。",
 "ja": "はすの うえの ようせい。はすの はなに すむ ちいさな ようせいたちだよ。",
@@ -2319,147 +2460,6 @@
 "ja": "ひとは オールで ふねを こぐよ。",
 "who": "narrator",
 "tag": "does"
-},
-"lotus.0": {
-"en": "A lotus flower. A lotus is a flower that grows in water.",
-"lo": "ດອກບົວ. ດອກບົວເປັນດອກໄມ້ທີ່ເກີດຢູ່ໃນນ້ຳ.",
-"th": "ดอกบัว ดอกบัวเป็นดอกไม้ที่ขึ้นอยู่ในน้ำ",
-"zh": "莲花。莲花是长在水里的花。",
-"ja": "はす。はすは みずの なかに さく はなだよ。",
-"who": "narrator",
-"tag": "what"
-},
-"lotus.1": {
-"en": "A lotus is a pretty flower.",
-"lo": "ດອກບົວເປັນດອກໄມ້ທີ່ງາມ.",
-"th": "ดอกบัวเป็นดอกไม้ที่สวย",
-"zh": "莲花是一种漂亮的花。",
-"ja": "はすは きれいな はなだよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"lotus.2": {
-"en": "The lotus flowers sing softly.",
-"lo": "ດອກບົວຮ້ອງເພງຄ່ອຍໆ.",
-"th": "ดอกบัวร้องเพลงเบาๆ",
-"zh": "莲花轻轻地唱歌。",
-"ja": "はすの はなが やさしく うたうよ。",
-"who": "narrator",
-"sp": [
-"s05"
-],
-"tag": "does"
-},
-"lotus.3": {
-"en": "Lotus leaves are big and round.",
-"lo": "ໃບບົວໃຫຍ່ ແລະ ມົນ.",
-"th": "ใบบัวใหญ่และกลม",
-"zh": "荷叶又大又圆。",
-"ja": "はすの はは おおきくて まるいよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"lotus.4": {
-"en": "A lotus has many petals.",
-"lo": "ດອກບົວມີກີບຫຼາຍກີບ.",
-"th": "ดอกบัวมีหลายกลีบ",
-"zh": "莲花有很多花瓣。",
-"ja": "はすの はなには はなびらが たくさん あるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"lotus.5": {
-"en": "Lotus flowers open in the morning.",
-"lo": "ດອກບົວບານໃນຕອນເຊົ້າ.",
-"th": "ดอกบัวบานตอนเช้า",
-"zh": "莲花在早晨开放。",
-"ja": "はすの はなは あさに ひらくよ。",
-"who": "narrator",
-"tag": "does"
-},
-"lotus.6": {
-"en": "Lotus flowers can be pink or white.",
-"lo": "ດອກບົວມີສີບົວ ຫຼື ສີຂາວ.",
-"th": "ดอกบัวมีสีชมพูหรือสีขาว",
-"zh": "莲花有粉色的，也有白色的。",
-"ja": "はすの はなは ピンクや しろだよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"lotus.7": {
-"en": "People give lotus flowers as gifts at the temple.",
-"lo": "ຄົນຖວາຍດອກບົວທີ່ວັດ.",
-"th": "ผู้คนนำดอกบัวไปถวายที่วัด",
-"zh": "人们会把莲花送到寺庙里供奉。",
-"ja": "ひとびとは おてらに はすの はなを そなえるよ。",
-"who": "narrator",
-"tag": "culture"
-},
-"lantern.0": {
-"en": "A lantern. A lantern is a light you can carry or hang.",
-"lo": "ໂຄມໄຟ. ໂຄມໄຟແມ່ນແສງໄຟທີ່ຖື ຫຼື ແຂວນໄດ້.",
-"th": "โคมไฟ โคมไฟคือแสงสว่างที่ถือหรือแขวนได้",
-"zh": "灯笼。灯笼是可以提着或挂起来的灯。",
-"ja": "ちょうちん。ちょうちんは もったり つるしたり できる あかりだよ。",
-"who": "narrator",
-"tag": "what"
-},
-"lantern.1": {
-"en": "A lantern gives light.",
-"lo": "ໂຄມໄຟໃຫ້ແສງ.",
-"th": "โคมไฟให้แสงสว่าง",
-"zh": "灯笼会发光。",
-"ja": "ちょうちんは ひかりを だすよ。",
-"who": "narrator",
-"tag": "does"
-},
-"lantern.2": {
-"en": "Lanterns glow in the dark.",
-"lo": "ໂຄມໄຟສ່ອງແສງໃນຄວາມມືດ.",
-"th": "โคมไฟส่องแสงในความมืด",
-"zh": "灯笼在黑暗中发亮。",
-"ja": "ちょうちんは くらい ところで ひかるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"lantern.3": {
-"en": "Glow, glow!",
-"lo": "ເຮືອງໆ!",
-"th": "เรืองรอง!",
-"zh": "亮晶晶！",
-"ja": "ぴかぴか！",
-"who": "narrator",
-"tag": "sound"
-},
-"lantern.4": {
-"en": "A lantern can be made of paper.",
-"lo": "ໂຄມໄຟເຮັດຈາກເຈ້ຍໄດ້.",
-"th": "โคมไฟทำจากกระดาษได้",
-"zh": "灯笼可以用纸做。",
-"ja": "ちょうちんは かみで つくれるよ。",
-"who": "narrator",
-"tag": "does"
-},
-"lantern.5": {
-"en": "So many lanterns!",
-"lo": "ໂຄມໄຟຫຼາຍແທ້ໆ!",
-"th": "โคมไฟเยอะแยะเลย!",
-"zh": "好多灯笼啊！",
-"ja": "ちょうちんが いっぱい！",
-"who": "narrator",
-"sp": [
-"s03"
-],
-"tag": "looks"
-},
-"lantern.6": {
-"en": "At festivals, people light paper lanterns.",
-"lo": "ໃນງານບຸນ, ຄົນຈູດໂຄມໄຟເຈ້ຍ.",
-"th": "ในงานเทศกาล ผู้คนจุดโคมกระดาษ",
-"zh": "在节日里，人们会点亮纸灯笼。",
-"ja": "おまつりでは、ひとびとが かみの ちょうちんに あかりを ともすよ。",
-"who": "narrator",
-"tag": "culture"
 },
 "flowerseller.0": {
 "en": "A flower seller. She is a little spirit who sells flowers.",
@@ -3516,6 +3516,16 @@
 "petal.4",
 "petal.5"
 ],
+"lotus": [
+"lotus.0",
+"lotus.1",
+"lotus.2",
+"lotus.3",
+"lotus.4",
+"lotus.5",
+"lotus.6",
+"lotus.7"
+],
 "candle": [
 "candle.0",
 "candle.1",
@@ -3618,6 +3628,16 @@
 "pebbles.4",
 "pebbles.5"
 ],
+"lantern": [
+"lantern.0",
+"lantern.1",
+"lantern.2",
+"lantern.3",
+"lantern.4",
+"lantern.5",
+"lantern.6",
+"lantern.n8"
+],
 "moonstone": [
 "moonstone.0",
 "moonstone.1",
@@ -3651,14 +3671,6 @@
 "fisherman.4",
 "fisherman.5"
 ],
-"turtle": [
-"turtle.0",
-"turtle.1",
-"turtle.2",
-"turtle.3",
-"turtle.4",
-"turtle.5"
-],
 "moth": [
 "moth.0",
 "moth.1",
@@ -3668,6 +3680,14 @@
 "moth.5",
 "moth.6",
 "moth.n2"
+],
+"turtle": [
+"turtle.0",
+"turtle.1",
+"turtle.2",
+"turtle.3",
+"turtle.4",
+"turtle.5"
 ],
 "market": [
 "market.0",
@@ -3701,26 +3721,6 @@
 "boat.3",
 "boat.4",
 "boat.5"
-],
-"lotus": [
-"lotus.0",
-"lotus.1",
-"lotus.2",
-"lotus.3",
-"lotus.4",
-"lotus.5",
-"lotus.6",
-"lotus.7"
-],
-"lantern": [
-"lantern.0",
-"lantern.1",
-"lantern.2",
-"lantern.3",
-"lantern.4",
-"lantern.5",
-"lantern.6",
-"lantern.n8"
 ],
 "flowerseller": [
 "flowerseller.0",
@@ -3923,6 +3923,13 @@
 "zh": "花瓣",
 "ja": "はなびら"
 },
+"lotus": {
+"en": "lotus flower",
+"lo": "ດອກບົວ",
+"th": "ดอกบัว",
+"zh": "莲花",
+"ja": "はす"
+},
 "candle": {
 "en": "candle",
 "lo": "ທຽນ",
@@ -4007,6 +4014,13 @@
 "zh": "小石子",
 "ja": "こいし"
 },
+"lantern": {
+"en": "lantern",
+"lo": "ໂຄມໄຟ",
+"th": "โคมไฟ",
+"zh": "灯笼",
+"ja": "ちょうちん"
+},
 "moonstone": {
 "en": "moon stone",
 "lo": "ຫີນແສງເດືອນ",
@@ -4035,19 +4049,19 @@
 "zh": "渔夫",
 "ja": "りょうし"
 },
-"turtle": {
-"en": "turtle",
-"lo": "ເຕົ່າ",
-"th": "เต่า",
-"zh": "乌龟",
-"ja": "カメ"
-},
 "moth": {
 "en": "moth",
 "lo": "ແມງກະເບື້ອກາງຄືນ",
 "th": "ผีเสื้อกลางคืน",
 "zh": "飞蛾",
 "ja": "ガ"
+},
+"turtle": {
+"en": "turtle",
+"lo": "ເຕົ່າ",
+"th": "เต่า",
+"zh": "乌龟",
+"ja": "カメ"
 },
 "market": {
 "en": "market",
@@ -4076,20 +4090,6 @@
 "th": "เรือ",
 "zh": "船",
 "ja": "ふね"
-},
-"lotus": {
-"en": "lotus flower",
-"lo": "ດອກບົວ",
-"th": "ดอกบัว",
-"zh": "莲花",
-"ja": "はす"
-},
-"lantern": {
-"en": "lantern",
-"lo": "ໂຄມໄຟ",
-"th": "โคมไฟ",
-"zh": "灯笼",
-"ja": "ちょうちん"
 },
 "flowerseller": {
 "en": "flower seller",
@@ -4239,6 +4239,14 @@
 "river-grass-night": "grass",
 "petal0": "petal",
 "petal1": "petal",
+"village-wing-back-l": "village",
+"village-wing-back-r": "village",
+"village-wing-mid-l": "village",
+"village-wing-mid-r": "village",
+"reeds-row-bank-l": "reeds",
+"reeds-row-bank-r": "reeds",
+"reeds-leg-river-l": "reeds",
+"lotus-leg-river-r": "lotus",
 "lb0-flame": "candle",
 "lb1-flame": "candle",
 "lb2-flame": "candle",
@@ -4263,16 +4271,20 @@
 "kite": "kite",
 "reed-night": "reeds",
 "pebbles-night": "pebbles",
+"lantern-river-back-l": "lantern",
+"reeds-river-back-r": "reeds",
+"lantern-river-mid-l": "lantern",
+"reeds-river-mid-r": "reeds",
+"reeds-row-river-l": "reeds",
+"reeds-row-river-r": "reeds",
 "stone": "moonstone",
 "night-heron": "heron",
 "frog-1": "frog",
 "frog-2": "frog",
 "frog-3": "frog",
 "fisherman": "fisherman",
-"turtle": "turtle",
 "moth": "moth",
-"moth-2": "moth",
-"moth-3": "moth",
+"turtle": "turtle",
 "market": "market",
 "basket-stall": "basketstall",
 "mid-market": "market",
@@ -4280,6 +4292,12 @@
 "boatA": "boat",
 "boatB": "boat",
 "lotus": "lotus",
+"market-wing-back-l": "market",
+"market-wing-back-r": "market",
+"market-wing-mid-l": "market",
+"market-wing-mid-r": "market",
+"market-row-l": "market",
+"market-row-r": "market",
 "lantern": "lantern",
 "flower-seller": "flowerseller",
 "fruit-seller": "fruitseller",
@@ -4307,6 +4325,7 @@
 "bell4": "lotusbell",
 "spirit-house": "spirithouse",
 "nok-boat": "noksboat",
+"village-landing-mid-r": "village",
 "bell": "lotusbell",
 "spirit-boatman": "boatman",
 "frogs": "frog",

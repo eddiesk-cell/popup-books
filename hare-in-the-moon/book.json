@@ -1,6 +1,6 @@
 {
  "released": true,
- "words": false,
+ "words": true,
  "chars": "hare-in-the-moon-",
  "title": "The Hare in the Moon",
  "story": "story.json",
@@ -11,156 +11,303 @@
   {
    "dir": "s01",
    "title": "Four Friends by the Banyan Tree",
-   "lines": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+   "lines": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "1.4",
-    "targets": ["firefly-glow-1", "firefly-glow-2", "firefly-glow-3", "firefly-glow-4"],
+    "targets": [
+     "firefly-glow-1",
+     "firefly-glow-2",
+     "firefly-glow-3",
+     "firefly-glow-4"
+    ],
     "start": "Evening has come to the banyan glade! Tap the four glowing fireflies to light the circle for Sasa.",
     "praise": "Warm golden light! All four friends are ready for Full Moon Giving Day!",
-    "voice": {"start": "game.1.start", "praise": "game.1.praise"}
+    "voice": {
+     "start": "game.1.start",
+     "praise": "game.1.praise"
+    }
    }
   },
   {
    "dir": "s02",
    "title": "Three Gifts from the Forest",
-   "lines": ["2.1", "2.2", "2.3", "2.4", "2.5"],
+   "lines": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5"
+   ],
    "game": {
     "type": "match",
     "before": "2.4",
     "pairs": [
-     ["lotus-roots", "otter-roots"],
-     ["red-berries", "jackal"],
-     ["mango-bunch", "monkey"]
+     [
+      "lotus-roots",
+      "otter-roots"
+     ],
+     [
+      "red-berries",
+      "jackal"
+     ],
+     [
+      "mango-bunch",
+      "monkey"
+     ]
     ],
     "start": "Help Sasa's friends pack their forest gifts! Tap the lotus roots, red berries, and golden mangoes, then tap each friend.",
     "praise": "Crisp roots, sweet berries, and ripe mangoes, all ready to share!",
-    "voice": {"start": "game.2.start", "praise": "game.2.praise"}
+    "voice": {
+     "start": "game.2.start",
+     "praise": "game.2.praise"
+    }
    }
   },
   {
    "dir": "s03",
    "title": "A Wish That Warmed the Sky",
-   "lines": ["3.1", "3.2", "3.3", "3.4", "3.5"],
+   "lines": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "3.4",
-    "targets": ["sunbeam-orb-1", "sunbeam-orb-2", "sunbeam-orb-3"],
+    "targets": [
+     "sunbeam-orb-1",
+     "sunbeam-orb-2",
+     "sunbeam-orb-3"
+    ],
     "start": "Sasa's kind wish rises to the sky! Tap the three golden sunbeams to warm King Sakka's cloud seat.",
     "praise": "Golden light! King Sakka felt Sasa's brave wish all the way above the clouds!",
-    "voice": {"start": "game.3.start", "praise": "game.3.praise"}
+    "voice": {
+     "start": "game.3.start",
+     "praise": "game.3.praise"
+    }
    }
   },
   {
    "dir": "s04",
    "title": "Three Kind Offers",
-   "lines": ["4.1", "4.2", "4.3", "4.4", "4.5"],
+   "lines": [
+    "4.1",
+    "4.2",
+    "4.3",
+    "4.4",
+    "4.5"
+   ],
    "game": {
     "type": "order",
     "before": "4.5",
-    "targets": ["lotus-roots", "berry-basket", "mango-bunch"],
+    "targets": [
+     "lotus-roots",
+     "berry-basket",
+     "mango-bunch"
+    ],
     "start": "Three kind friends offer their food! Tap Otter's roots, Jackal's berries, and Monkey's mangoes in order.",
     "praise": "Three generous offers! Now the old traveller walks straight to little Sasa.",
-    "voice": {"start": "game.4.start", "praise": "game.4.praise"}
+    "voice": {
+     "start": "game.4.start",
+     "praise": "game.4.praise"
+    }
    }
   },
   {
    "dir": "s05",
    "title": "A Brave and Glad Heart",
-   "lines": ["5.1", "5.2", "5.3", "5.4", "5.5"],
+   "lines": [
+    "5.1",
+    "5.2",
+    "5.3",
+    "5.4",
+    "5.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "5.4",
-    "targets": ["wood-bundle-1", "wood-bundle-2", "wood-bundle-3"],
+    "targets": [
+     "wood-bundle-1",
+     "wood-bundle-2",
+     "wood-bundle-3"
+    ],
     "start": "The traveller asks for a warm fire! Tap the three bundles of dry wood to kindle the golden light.",
     "praise": "Whoosh! Bright golden flames rise up beside the banyan tree!",
-    "voice": {"start": "game.5.start", "praise": "game.5.praise"}
+    "voice": {
+     "start": "game.5.start",
+     "praise": "game.5.praise"
+    }
    }
   },
   {
    "dir": "s06",
    "title": "The Fire That Did Not Burn",
-   "lines": ["6.1", "6.2", "6.3", "6.4", "6.5"],
+   "lines": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "6.3",
-    "targets": ["gold-flame-1", "gold-flame-2", "gold-flame-3", "gold-flame-4"],
+    "targets": [
+     "gold-flame-1",
+     "gold-flame-2",
+     "gold-flame-3",
+     "gold-flame-4"
+    ],
     "start": "Sasa leaps into the test-fire! Tap the four golden flames to bloom them into cool white lotus flowers!",
     "praise": "Hush, shimmer! Cool white lotus petals cradle little Sasa, safe and unharmed!",
-    "voice": {"start": "game.6.start", "praise": "game.6.praise"}
+    "voice": {
+     "start": "game.6.start",
+     "praise": "game.6.praise"
+    }
    }
   },
   {
    "dir": "s07",
    "title": "The King of the Sky",
-   "lines": ["7.1", "7.2", "7.3", "7.4", "7.5"],
+   "lines": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "7.2",
-    "targets": ["star-ray-1", "star-ray-2", "star-ray-3"],
+    "targets": [
+     "star-ray-1",
+     "star-ray-2",
+     "star-ray-3"
+    ],
     "start": "The patched cloak falls away! Tap the three starlight rays around King Sakka to shine across the hill.",
     "praise": "Ting-a-ling! King Sakka shines in gold and starlight beside little Sasa!",
-    "voice": {"start": "game.7.start", "praise": "game.7.praise"}
+    "voice": {
+     "start": "game.7.start",
+     "praise": "game.7.praise"
+    }
    }
   },
   {
    "dir": "s08",
    "title": "Painting the Hare on the Moon",
-   "lines": ["8.1", "8.2", "8.3", "8.4", "8.5"],
+   "lines": [
+    "8.1",
+    "8.2",
+    "8.3",
+    "8.4",
+    "8.5"
+   ],
    "game": {
     "type": "order",
     "tap": "light",
     "lit_glow": 1,
     "before": "8.2",
-    "targets": ["star-dot-1", "star-dot-2", "star-dot-3", "star-dot-4", "star-dot-5"],
+    "targets": [
+     "star-dot-1",
+     "star-dot-2",
+     "star-dot-3",
+     "star-dot-4",
+     "star-dot-5"
+    ],
     "start": "Help King Sakka paint Sasa on the full moon! Tap the five shining star-dots in order across the moon.",
     "praise": "Swish, sweep! Look up: the silver Hare shines bright upon the full moon!",
-    "voice": {"start": "game.8.start", "praise": "game.8.praise"}
+    "voice": {
+     "start": "game.8.start",
+     "praise": "game.8.praise"
+    }
    }
   },
   {
    "dir": "s09",
    "title": "A Feast Under the Hare Moon",
-   "lines": ["9.1", "9.2", "9.3", "9.4", "9.5"],
+   "lines": [
+    "9.1",
+    "9.2",
+    "9.3",
+    "9.4",
+    "9.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "take",
     "before": "9.4",
-    "targets": ["lotus-roots", "berry-basket", "mango-bunch"],
+    "targets": [
+     "lotus-roots",
+     "berry-basket",
+     "mango-bunch"
+    ],
     "start": "Grandmother and Meera are hungry! Tap the lotus roots, red berries, and golden mangoes to share the feast.",
     "praise": "Yum! Every morning gift fed a hungry guest under the bright Hare Moon!",
-    "voice": {"start": "game.9.start", "praise": "game.9.praise"}
+    "voice": {
+     "start": "game.9.start",
+     "praise": "game.9.praise"
+    }
    }
   },
   {
    "dir": "s10",
    "title": "Shining on River and Sky",
-   "lines": ["10.1", "10.2", "10.3", "10.4", "10.5"],
+   "lines": [
+    "10.1",
+    "10.2",
+    "10.3",
+    "10.4",
+    "10.5"
+   ],
    "game": {
     "type": "collect",
     "tap": "light",
     "lit_glow": 1,
     "before": "10.4",
-    "targets": ["clay-lamp-1", "clay-lamp-2", "clay-lamp-3", "clay-lamp-4", "clay-lamp-5"],
+    "targets": [
+     "clay-lamp-1",
+     "clay-lamp-2",
+     "clay-lamp-3",
+     "clay-lamp-4",
+     "clay-lamp-5"
+    ],
     "start": "Float warm lights on the lotus river! Tap the five clay lamps so they glow beneath the Hare Moon.",
     "praise": "Every clay lamp shines on the water, glowing right back at gentle Sasa!",
-    "voice": {"start": "game.10.start", "praise": "game.10.praise"}
+    "voice": {
+     "start": "game.10.start",
+     "praise": "game.10.praise"
+    }
    }
   },
   {
    "dir": "s11",
    "title": "What Did We Learn?",
-   "lines": ["moral.1", "moral.2", "moral.3", "moral.4", "moral.5"]
+   "lines": [
+    "moral.1",
+    "moral.2",
+    "moral.3",
+    "moral.4",
+    "moral.5"
+   ]
   }
  ]
 }
