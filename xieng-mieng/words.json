@@ -3039,6 +3039,51 @@
 "who": "narrator",
 "tag": "sound"
 },
+"xm_sala.0": {
+"en": "A garden sala. The garden sala offers cool red-roofed shade beside the pond.",
+"lo": "ສາລາສວນ. ສາລາສວນ ໃຫ້ຮົ່ມເຢັນຫຼັງຄາແດງຢູ່ຂ້າງໜອງບົວ.",
+"th": "ศาลาสวน ศาลาสวนให้ร่มเย็นหลังคาแดงข้างสระบัว",
+"zh": "花园凉亭。花园凉亭有着红瓦屋顶，在池边带来清凉绿荫。",
+"ja": "にわの あずまや。にわの あずまやは いけの そばの すずしい やすみばだよ。",
+"who": "narrator",
+"tag": "what"
+},
+"xm_sala.1": {
+"en": "Friends gather in the open garden sala to rest, talk and share fruit.",
+"lo": "ໝູ່ຄູ່ມາເຕົ້າໂຮມຢູ່ສາລາສວນເພື່ອພັກຜ່ອນ ລົມກັນ ແລະ ແບ່ງໝາກໄມ້.",
+"th": "เพื่อนๆ มารวมตัวกันในศาลาสวนเพื่อพักผ่อน คุยกัน และแบ่งผลไม้",
+"zh": "朋友们聚在敞开的花园凉亭里乘凉聊天、分享水果。",
+"ja": "みんなで やすんだり おしゃべり したり する ばしょだよ。",
+"who": "narrator",
+"tag": "does"
+},
+"xm_sala.2": {
+"en": "A bright red roof with gilded corners rises over open teak posts.",
+"lo": "ຫຼັງຄາສີແດງສົດຂອບຄຳຕັ້ງເທິງເສົາໄມ້ສັກໂປ່ງ.",
+"th": "หลังคาสีแดงสดขอบทองตั้งบนเสาไม้สักโปร่ง",
+"zh": "金边红瓦屋顶架在敞开的柚木柱子上方。",
+"ja": "あかい やねと きんの かざりが はすいけに はえるよ。",
+"who": "narrator",
+"tag": "looks"
+},
+"xm_sala.3": {
+"en": "In Laos, an open-sided pavilion for resting in the shade is called a sala.",
+"lo": "ໃນລາວ ເຮືອນໂປ່ງສຳລັບນັ່ງພັກຮົ່ມເອີ້ນວ່າ ສາລາ.",
+"th": "ในลาว เรือนโปร่งสำหรับนั่งพักร่มเรียกว่า ศาลา",
+"zh": "在老挝，这种四面敞开用来乘凉歇脚的亭子叫做“萨拉”。",
+"ja": "かべの ない すずしい やねつきの やすみば なんだよ。",
+"who": "narrator",
+"tag": "fact"
+},
+"xm_sala.4": {
+"en": "Pitter, patter!",
+"lo": "ປ໋ອກ, ແປ໋ກ!",
+"th": "เปาะ แปะ!",
+"zh": "凉亭微风轻拂！",
+"ja": "そよそよ、すずしいね！",
+"who": "narrator",
+"tag": "sound"
+},
 "xm_squirrel.0": {
 "en": "A tree squirrel. A tree squirrel scampers briskly along the mango trunk.",
 "lo": "ກະຮອກ. ກະຮອກ ແລ່ນໄວໆໄປຕາມລຳຕົ້ນໝາກມ່ວງ.",
@@ -3376,51 +3421,6 @@
 "th": "ซ่าๆ จี๊ด!",
 "zh": "绿篱沙沙虫儿鸣！",
 "ja": "がさがさ、りーん！",
-"who": "narrator",
-"tag": "sound"
-},
-"xm_sala.0": {
-"en": "A garden sala. The garden sala offers cool red-roofed shade beside the pond.",
-"lo": "ສາລາສວນ. ສາລາສວນ ໃຫ້ຮົ່ມເຢັນຫຼັງຄາແດງຢູ່ຂ້າງໜອງບົວ.",
-"th": "ศาลาสวน ศาลาสวนให้ร่มเย็นหลังคาแดงข้างสระบัว",
-"zh": "花园凉亭。花园凉亭有着红瓦屋顶，在池边带来清凉绿荫。",
-"ja": "にわの あずまや。にわの あずまやは いけの そばの すずしい やすみばだよ。",
-"who": "narrator",
-"tag": "what"
-},
-"xm_sala.1": {
-"en": "Friends gather in the open garden sala to rest, talk and share fruit.",
-"lo": "ໝູ່ຄູ່ມາເຕົ້າໂຮມຢູ່ສາລາສວນເພື່ອພັກຜ່ອນ ລົມກັນ ແລະ ແບ່ງໝາກໄມ້.",
-"th": "เพื่อนๆ มารวมตัวกันในศาลาสวนเพื่อพักผ่อน คุยกัน และแบ่งผลไม้",
-"zh": "朋友们聚在敞开的花园凉亭里乘凉聊天、分享水果。",
-"ja": "みんなで やすんだり おしゃべり したり する ばしょだよ。",
-"who": "narrator",
-"tag": "does"
-},
-"xm_sala.2": {
-"en": "A bright red roof with gilded corners rises over open teak posts.",
-"lo": "ຫຼັງຄາສີແດງສົດຂອບຄຳຕັ້ງເທິງເສົາໄມ້ສັກໂປ່ງ.",
-"th": "หลังคาสีแดงสดขอบทองตั้งบนเสาไม้สักโปร่ง",
-"zh": "金边红瓦屋顶架在敞开的柚木柱子上方。",
-"ja": "あかい やねと きんの かざりが はすいけに はえるよ。",
-"who": "narrator",
-"tag": "looks"
-},
-"xm_sala.3": {
-"en": "In Laos, an open-sided pavilion for resting in the shade is called a sala.",
-"lo": "ໃນລາວ ເຮືອນໂປ່ງສຳລັບນັ່ງພັກຮົ່ມເອີ້ນວ່າ ສາລາ.",
-"th": "ในลาว เรือนโปร่งสำหรับนั่งพักร่มเรียกว่า ศาลา",
-"zh": "在老挝，这种四面敞开用来乘凉歇脚的亭子叫做“萨拉”。",
-"ja": "かべの ない すずしい やねつきの やすみば なんだよ。",
-"who": "narrator",
-"tag": "fact"
-},
-"xm_sala.4": {
-"en": "Pitter, patter!",
-"lo": "ປ໋ອກ, ແປ໋ກ!",
-"th": "เปาะ แปะ!",
-"zh": "凉亭微风轻拂！",
-"ja": "そよそよ、すずしいね！",
 "who": "narrator",
 "tag": "sound"
 },
@@ -4270,6 +4270,13 @@
 "xm_mango.3",
 "xm_mango.4"
 ],
+"xm_sala": [
+"xm_sala.0",
+"xm_sala.1",
+"xm_sala.2",
+"xm_sala.3",
+"xm_sala.4"
+],
 "xm_squirrel": [
 "xm_squirrel.0",
 "xm_squirrel.1",
@@ -4318,13 +4325,6 @@
 "xm_gardenhedge.2",
 "xm_gardenhedge.3",
 "xm_gardenhedge.4"
-],
-"xm_sala": [
-"xm_sala.0",
-"xm_sala.1",
-"xm_sala.2",
-"xm_sala.3",
-"xm_sala.4"
 ],
 "xm_stepstone": [
 "xm_stepstone.0",
@@ -4808,6 +4808,13 @@
 "zh": "芒果树",
 "ja": "マンゴーの き"
 },
+"xm_sala": {
+"en": "garden sala",
+"lo": "ສາລາສວນ",
+"th": "ศาลาสวน",
+"zh": "花园凉亭",
+"ja": "にわの あずまや"
+},
 "xm_squirrel": {
 "en": "tree squirrel",
 "lo": "ກະຮອກ",
@@ -4849,13 +4856,6 @@
 "th": "พุ่มไม้เขียว",
 "zh": "绿叶矮篱",
 "ja": "みどりの いけがき"
-},
-"xm_sala": {
-"en": "garden sala",
-"lo": "ສາລາສວນ",
-"th": "ศาลาสวน",
-"zh": "花园凉亭",
-"ja": "にわの あずまや"
 },
 "xm_stepstone": {
 "en": "stepping stone",
@@ -5009,6 +5009,7 @@
 "garden-lotus-fg-r": "xm_lotus",
 "card-garden-frangipani-l": "xm_frangipani",
 "card-garden-mango": "xm_mango",
+"card-garden-sala": "xm_sala",
 "king-sit": "xm_king",
 "king-step": "xm_king",
 "king-water": "xm_king",
@@ -5024,7 +5025,6 @@
 "card-garden-wall": "xm_gardenwall",
 "card-garden-hedge": "xm_gardenhedge",
 "card-garden-frangipani-r": "xm_frangipani",
-"card-garden-sala": "xm_sala",
 "card-garden-lotus-a": "xm_lotus",
 "card-garden-lotus-d": "xm_lotus",
 "card-garden-lotus-b": "xm_lotus",
@@ -5047,6 +5047,7 @@
 "garden-lotus-fg-r-night": "xm_lotus",
 "card-garden-frangipani-l-night": "xm_frangipani",
 "card-garden-mango-night": "xm_mango",
+"card-garden-sala-night": "xm_sala",
 "kham-calm": "xm_kham",
 "kham-lend": "xm_kham",
 "kham-e": "xm_kham",

@@ -15035,8 +15035,7 @@
    "uses": [
     "Anansi and the Sky God's Stories"
    ],
-   "cut": true,
-   "selflit": true
+   "cut": true
   },
   "anansi-courtyard-lantern": {
    "look": "Warm glowing carved brass Ashanti courtyard lantern",
@@ -15080,8 +15079,7 @@
    "uses": [
     "Anansi and the Sky God's Stories"
    ],
-   "cut": true,
-   "selflit": true
+   "cut": true
   },
   "anansi-box-ribbon": {
    "look": "Curling golden silk Story Box ribbon",
@@ -15147,8 +15145,7 @@
    "uses": [
     "Anansi and the Sky God's Stories"
    ],
-   "cut": true,
-   "selflit": true
+   "cut": true
   },
   "anansi-leopard-scroll": {
    "look": "Glowing golden story-scroll depicting Osebo the leopard",
@@ -15170,8 +15167,7 @@
    "uses": [
     "Anansi and the Sky God's Stories"
    ],
-   "cut": true,
-   "selflit": true
+   "cut": true
   },
   "anansi-fairy-scroll": {
    "look": "Glowing golden story-scroll depicting fairy Mmoatia",
@@ -15193,8 +15189,7 @@
    "uses": [
     "Anansi and the Sky God's Stories"
    ],
-   "cut": true,
-   "selflit": true
+   "cut": true
   },
   "urashima-villager-net": {
    "look": "Edo Japanese village woman kneeling on the sand mending a woven fishing net",
@@ -20686,6 +20681,48 @@
    ],
    "parts": [
     "body"
+   ]
+  },
+  "xieng-mieng-fruit-bat": {
+   "look": "Moonlit Indian flying fox calibrated for Lotus Garden night (xieng-mieng)",
+   "size": 0.03843,
+   "gait": "fly",
+   "versions": [
+    "day",
+    "evening",
+    "night"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "flap": {
+     "_lift": 0.05
+    },
+    "stretch": {
+     "_tilt": 5.0
+    },
+    "hang": {
+     "_tilt": 180
+    }
+   },
+   "cycles": {
+    "flap": 3
+   },
+   "uses": [
+    "Kapi 1",
+    "Kapi 2",
+    "Kapi 4",
+    "Kapi 5",
+    "Kapi 6",
+    "Kapi 9",
+    "Kapi moral",
+    "Mali 5"
+   ],
+   "cut": true,
+   "books": [
+    "Xieng Mieng"
    ]
   }
  },

@@ -1,0 +1,42 @@
+{
+ "look": "Moonlit Indian flying fox calibrated for Lotus Garden night (xieng-mieng)",
+ "size": 0.03843,
+ "gait": "fly",
+ "versions": [
+  "day",
+  "evening",
+  "night"
+ ],
+ "parts": [
+  "body"
+ ],
+ "hinges": {},
+ "moves": {
+  "flap": {
+   "_lift": 0.05
+  },
+  "stretch": {
+   "_tilt": 5.0
+  },
+  "hang": {
+   "_tilt": 180
+  }
+ },
+ "cycles": {
+  "flap": 3
+ },
+ "uses": [
+  "Kapi 1",
+  "Kapi 2",
+  "Kapi 4",
+  "Kapi 5",
+  "Kapi 6",
+  "Kapi 9",
+  "Kapi moral",
+  "Mali 5"
+ ],
+ "cut": true,
+ "books": [
+  "Xieng Mieng"
+ ]
+}
