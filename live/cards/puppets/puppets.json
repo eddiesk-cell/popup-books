@@ -11512,8 +11512,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-petal-basket": {
       "look": "Woven basket overflowing with pink rose petals",
@@ -11557,8 +11556,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-guide-star": {
       "look": "Bright 8-pointed golden twilight guide-star",
@@ -11580,8 +11578,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-crescent-moon": {
       "look": "Luminous silver crescent moon",
@@ -11603,8 +11600,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-distant-tower": {
       "look": "Glowing distant white marble Persian observatory tower",
@@ -11846,8 +11842,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-evening-star": {
       "look": "Radiant golden 8-pointed Evening Star",
@@ -11869,8 +11864,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-torch-glow": {
       "look": "Bright golden flaming Persian brass courtyard torch",
@@ -11980,8 +11974,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-sun-sign": {
       "look": "Golden sun medallion sign pointing up to rise",
@@ -12025,8 +12018,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-star-compass": {
       "look": "Shining Persian brass star-compass",
@@ -12048,8 +12040,7 @@
       "uses": [
         "The Enchanted Ebony Horse"
       ],
-      "cut": true,
-      "selflit": true
+      "cut": true
     },
     "ebony-horse-mount-sun": {
       "look": "Carved ebony-and-brass right shoulder sun peg mount",
