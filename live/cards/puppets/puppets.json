@@ -10670,7 +10670,8 @@
    "uses": [
     "The Hare in the Moon"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "hare-in-the-moon-moon-hare": {
    "look": "Bright full moon painted with the silver Hare in the Moon",
@@ -10692,7 +10693,8 @@
    "uses": [
     "The Hare in the Moon"
    ],
-   "cut": true
+   "cut": true,
+   "selflit": true
   },
   "hare-in-the-moon-star-ray": {
    "look": "Warm golden radiant starlight ray burst",
@@ -21053,6 +21055,342 @@
    "cycles": {},
    "uses": [
     "Bamboo Cutter"
+   ],
+   "cut": true
+  },
+  "jttw-06-laozi-sage-whisk": {
+   "look": "Serene white-bearded Grand Master Laozi in crane-patterned robes raising his pale-cream horsehair whisk",
+   "size": 0.164,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-furnace-boy-moustache-a": {
+   "look": "Startled young Taoist furnace-boy sitting tumbled with a funny curly black soot moustache",
+   "size": 0.09,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-furnace-boy-moustache-b": {
+   "look": "Giggling young Taoist furnace-boy sitting with twin topknots and a curly black soot moustache",
+   "size": 0.089,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-guard-captain-netted": {
+   "look": "Surprised Ming celestial guard captain lifting a shimmering silver trap-net off his plumed helmet",
+   "size": 0.162,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-west-messenger-a": {
+   "look": "Poised celestial court messenger in azure-and-gold cloud robes bowing respectfully",
+   "size": 0.158,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-west-messenger-b": {
+   "look": "Poised celestial court messenger in celadon-and-gold cloud robes soaring westward",
+   "size": 0.156,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-dizzy-spear-guard": {
+   "look": "Sheepish celestial guard straightening a crooked golden spear across his armoured knee",
+   "size": 0.159,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-thunder-general-ranks-l": {
+   "look": "Three armoured Ming celestial Thunder Generals with bronze cloud-shields and red war-drums on stage-left",
+   "size": 0.18,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-thunder-general-ranks-r": {
+   "look": "Three armoured Ming celestial Thunder Generals with bronze cloud-shields and waist war-drums on stage-right",
+   "size": 0.179,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-furnace-spark-fountain": {
+   "look": "Exuberant Ming paper fan of curling golden-and-amber auspicious spark ribbons rising from a cloud collar",
+   "size": 0.273,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-floating-silk-lanterns": {
+   "look": "Three ornate glowing Ming hexagonal red-and-gold silk palace lanterns linked by silver cloud-threads",
+   "size": 0.139,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-imperial-throne-dais": {
+   "look": "Low carved white-marble Ming celestial cloud dais with crimson-and-gold lotus runner",
+   "size": 0.043,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-miraculous-mist-arch": {
+   "look": "Grand symmetrical vermilion-and-gold Hall of Miraculous Mist ceremonial gateway arch",
+   "size": 0.338,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-golden-lotus-halo": {
+   "look": "Radiant circular Ming temple golden lotus mandorla halo cradled by auspicious clouds (figure-free centre)",
+   "size": 0.249,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-find-golden-lotus-moth": {
+   "look": "Fluffy golden Chinese lunar silk moth with celadon eye-spots resting on a rosy lotus petal",
+   "size": 0.022,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
+   ],
+   "cut": true
+  },
+  "jttw-06-find-marble-cloud-gecko": {
+   "look": "Cute pearl-and-celadon celestial palace gecko resting on a white-marble pebble",
+   "size": 0.022,
+   "versions": [
+    "day"
+   ],
+   "parts": [
+    "body"
+   ],
+   "hinges": {},
+   "moves": {
+    "tilt": {
+     "_tilt": 6
+    }
+   },
+   "cycles": {},
+   "uses": [
+    "Journey to the West — Chapter 6: Havoc in Heaven"
    ],
    "cut": true
   }
