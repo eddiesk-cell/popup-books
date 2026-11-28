@@ -21575,6 +21575,783 @@
         "Journey to the West — Chapter 7: Buddha's Palm"
       ],
       "cut": true
+    },
+    "jttw-08-pine-needle-tuft": {
+      "look": "Dry golden-brown mountain pine needles tumbling off Wukong's furry ears",
+      "size": 0.026,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-moss-nose-tuft": {
+      "look": "Fuzzy green mountain moss tuft blown right off Wukong's nose",
+      "size": 0.022,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-split-mountain-boulders-fold": {
+      "look": "Hinged mossy qinglu boulders opened wide on both sides of the mountain pass",
+      "size": 0.34,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-dry-leaves-shower": {
+      "look": "Swirling cascade of crisp russet and ochre autumn leaves",
+      "size": 0.065,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-wiggling-fern-clump": {
+      "look": "Thick green mountain fern clump wiggling before the tiger bounds out",
+      "size": 0.095,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-thick-bamboo-tuft": {
+      "look": "Lush emerald mountain bamboo clump beside the winding pine trail",
+      "size": 0.175,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-mountain-tiger": {
+      "look": "Big striped Ming mountain tiger bounding cheerfully onto the trail",
+      "size": 0.105,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-tiger-dizzy-kitten": {
+      "look": "Startled striped tiger peeking behind bamboo like an oversized dizzy kitten",
+      "size": 0.086,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-bandits-comic": {
+      "look": "Six bumbling highwaymen in patched Ming tunics waving crooked wooden sticks",
+      "size": 0.152,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-bandits-in-hay": {
+      "look": "Six laughing bootless highwaymen tumbled safely into golden haystacks",
+      "size": 0.12,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-golden-haystack-l": {
+      "look": "Soft golden roadside haystack cushioning dizzy highwaymen",
+      "size": 0.145,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-golden-haystack-r": {
+      "look": "Second soft golden roadside haystack beside the mountain pass",
+      "size": 0.14,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-empty-boots-row": {
+      "look": "Neat comic row of six pairs of empty cloth boots standing on the stones",
+      "size": 0.036,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-hillside-cottage-wing-r": {
+      "look": "Straight-on Ming whitewashed hillside cottage with closed night shutters",
+      "size": 0.36,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-cottage-open-wing-r": {
+      "look": "Straight-on Ming whitewashed hillside cottage with warm open dawn doorway",
+      "size": 0.36,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-firewood-stack-r": {
+      "look": "Neat stack of split dry pine firewood beside the hillside cottage",
+      "size": 0.058,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-upside-down-pocket-sash": {
+      "look": "Little crimson-and-gold cloth pocket stitched upside-down onto Wukong's sash",
+      "size": 0.036,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-whirlpool-bubble-rings": {
+      "look": "Churning silver bubbles rising inside the dark jade canyon whirlpool",
+      "size": 0.068,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-foam-fountain-fold": {
+      "look": "Dazzling white fountain of foaming rapids bursting skyward",
+      "size": 0.3,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-river-dragon": {
+      "look": "Towering coiled silver-and-azure Ming River Dragon rising from Eagle-Sorrow Gorge",
+      "size": 0.34,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-find-gorge-crayfish": {
+      "look": "Hidden azure-clawed canyon crayfish peeking beside wet river pebbles",
+      "size": 0.024,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-08-thick-bamboo-stalks": {
+      "look": "Lush emerald mountain bamboo clump beside the winding pine trail",
+      "size": 0.175,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 8: The Monk and the Golden Band"
+      ],
+      "cut": true
+    },
+    "jttw-09-whirlpool-soup-swirl": {
+      "look": "Spiralling jade-and-foam soup-vortex eddies stirred by Wukong staff",
+      "size": 0.226,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-river-dragon-dizzy": {
+      "look": "Dizzy cross-eyed silver River Dragon popping up from Eagle-Sorrow Gorge",
+      "size": 0.249,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-pearl-spray-fan": {
+      "look": "Shimmering pearl-white spray wings fanning wide across Eagle-Sorrow Gorge",
+      "size": 0.34,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-silver-snort-ring": {
+      "look": "Shimmering silver cloud-ring snorted by White Dragon-Horse",
+      "size": 0.032,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-swaying-paper-lantern": {
+      "look": "Tall Ming courtyard paper lantern rocking in evening wind",
+      "size": 0.155,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-tipped-paper-lantern": {
+      "look": "Knocked-over Ming courtyard paper lantern with tiny warm sparks",
+      "size": 0.068,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-black-wind-swirl": {
+      "look": "Swirling charcoal-and-gold mountain wind cloud carrying Black Bear Spirit",
+      "size": 0.174,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-black-bear-burglar": {
+      "look": "Burly dark-armoured Black Bear Spirit stepping in politely to scoop the robe",
+      "size": 0.196,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-stone-cave-doors-open": {
+      "look": "Twin carved stone cave doors swung open at Black Wind Cave",
+      "size": 0.249,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-stone-cave-doors-shut": {
+      "look": "Twin heavy carved stone cave doors shut tight for lunch",
+      "size": 0.249,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-black-bear-laugh": {
+      "look": "Armoured Black Bear Spirit laughing heartily at Wukong tell-tale monkey tail",
+      "size": 0.196,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-black-bear-gatekeeper": {
+      "look": "Polite Black Bear Spirit bowing humbly as South Sea Gatekeeper",
+      "size": 0.148,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-find-pine-stag-beetle": {
+      "look": "Glossy amber pine stag beetle hiding on a mossy crag rock",
+      "size": 0.022,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-road-signpost-stone": {
+      "look": "Pictorial Ming carved stone signpost pointing toward High Cloud Village",
+      "size": 0.124,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
+    },
+    "jttw-09-black-bear-spear": {
+      "look": "Towering dark-armoured Black Bear Spirit duelling outside Black Wind Cave",
+      "size": 0.196,
+      "versions": [
+        "day"
+      ],
+      "parts": [
+        "body"
+      ],
+      "hinges": {},
+      "moves": {
+        "tilt": {
+          "_tilt": 6
+        }
+      },
+      "cycles": {},
+      "uses": [
+        "Journey to the West — Chapter 9: The White Dragon-Horse"
+      ],
+      "cut": true
     }
   },
   "jttw-01-waterfall-curtain": {
